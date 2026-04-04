@@ -8,8 +8,8 @@
     - trace_sum_sq : ring_nf au lieu de Finset.sum_comm seul
 -/
 import Mathlib.LinearAlgebra.Matrix.PosDef
-import Mathlib.Analysis.Matrix.Order
 import Mathlib.LinearAlgebra.Matrix.Trace
+import Mathlib.Data.Real.StarOrdered
 import Goldbach.Basic
 
 namespace Goldbach
@@ -30,8 +30,14 @@ structure CompactWindowShadow
 theorem trace_nonneg_of_shadow
     {n : Type*} [Fintype n] [DecidableEq n]
     (S : CompactWindowShadow n) :
-    0 ≤ Matrix.trace S.K :=
-  S.hK.trace_nonneg
+    0 ≤ Matrix.trace S.K := by
+  simp only [Matrix.trace, Matrix.diag]
+  apply Finset.sum_nonneg
+  intro i _
+  have h := S.hK.2 (Pi.single i 1)
+  simp only [star_trivial, mulVec_single_one, single_one_dotProduct,
+    Matrix.transpose_apply] at h
+  exact h
 
 -- PositiveWindowShadow : modèle de K_{corr,X} ∈ S₁ ────────────────
 structure PositiveWindowShadow
@@ -40,23 +46,32 @@ structure PositiveWindowShadow
   hK : K.PosDef
 
 theorem trace_pos_of_positiveShadow
-    {n : Type*} [Fintype n] [DecidableEq n]
+    {n : Type*} [Fintype n] [DecidableEq n] [Nonempty n]
     (S : PositiveWindowShadow n) :
-    0 < Matrix.trace S.K :=
-  S.hK.trace_pos
+    0 < Matrix.trace S.K := by
+  simp only [Matrix.trace, Matrix.diag]
+  apply Finset.sum_pos
+  · intro i _
+    have hne : (Pi.single i (1 : ℝ) : n → ℝ) ≠ 0 := by
+      intro heq; have := congr_fun heq i; simp [Pi.single_apply] at this
+    have h := S.hK.2 (Pi.single i 1) hne
+    simp only [star_trivial, mulVec_single_one, single_one_dotProduct,
+      Matrix.transpose_apply] at h
+    exact h
+  · exact Finset.univ_nonempty
 
 -- Factorisation modèle : K = Aᴴ * A (conjTranspose, API Mathlib) ──
 theorem shadow_from_factorisation
     {n : Type*} [Fintype n] [DecidableEq n]
     (A : Matrix n n ℝ) :
     (A.conjTranspose * A).PosSemidef := by
-  simpa using Matrix.posSemidef_conjTranspose_mul_self (A := A)
+  exact Matrix.posSemidef_conjTranspose_mul_self A
 
 -- trace(Aᴴ*A) ≥ 0 ─────────────────────────────────────────────────
 theorem trace_nonneg_of_factorisation
     {n : Type*} [Fintype n] [DecidableEq n]
     (A : Matrix n n ℝ) :
     0 ≤ Matrix.trace (A.conjTranspose * A) :=
-  (shadow_from_factorisation A).trace_nonneg
+  trace_nonneg_of_shadow ⟨_, shadow_from_factorisation A⟩
 
 end Goldbach

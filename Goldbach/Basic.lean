@@ -4,7 +4,7 @@
 -/
 
 import Mathlib.Data.Nat.Prime.Basic
-import Mathlib.Data.Nat.Parity
+import Mathlib.Algebra.Group.Nat.Even
 import Mathlib.Tactic
 
 namespace Goldbach

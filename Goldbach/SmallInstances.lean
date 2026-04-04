@@ -32,6 +32,8 @@ theorem goldbach_100 : GoldbachAt 100 := ⟨3, 97, by decide, by decide, by norm
 theorem verifiedUpTo_20 : VerifiedUpTo 20 := by
   intro n hn4 hn20 hn_even
   obtain ⟨k, rfl⟩ := hn_even  -- n = 2 * k
+  have hk_lower : 2 ≤ k := by omega
+  have hk_upper : k ≤ 10 := by omega
   interval_cases k <;> first
     | exact goldbach_4
     | exact goldbach_6

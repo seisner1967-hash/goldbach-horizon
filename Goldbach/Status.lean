@@ -11,7 +11,6 @@
 -/
 
 import Goldbach.Thresholds
-import Mathlib.Analysis.Asymptotics.Lemmas
 import Mathlib.Analysis.Normed.Operator.Compact
 import Mathlib.Algebra.Star.SelfAdjoint
 import Mathlib.LinearAlgebra.Matrix.Trace

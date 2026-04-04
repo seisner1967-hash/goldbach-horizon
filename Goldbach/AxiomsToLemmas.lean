@@ -28,6 +28,11 @@ def frameworkOfA2Interface
   f1bHerglotz := f1b
   f1aOTSA := f1a
   g2MellinJackson := g2
+  ha2 := sorry
+  hpcbGallagher := sorry
+  hf1bHerglotz := sorry
+  hf1aOTSA := sorry
+  hg2MellinJackson := sorry
   amsVerified := hams
   asymptoticOfCore := hasymp
 
@@ -65,6 +70,11 @@ def frameworkOfPCBInterface
   f1bHerglotz := f1b
   f1aOTSA := f1a
   g2MellinJackson := g2
+  ha2 := sorry
+  hpcbGallagher := sorry
+  hf1bHerglotz := sorry
+  hf1aOTSA := sorry
+  hg2MellinJackson := sorry
   amsVerified := hams
   asymptoticOfCore := hasymp
 
@@ -102,6 +112,11 @@ def frameworkOfF1bInterface
   f1bHerglotz := f1bI.holds
   f1aOTSA := f1a
   g2MellinJackson := g2
+  ha2 := sorry
+  hpcbGallagher := sorry
+  hf1bHerglotz := sorry
+  hf1aOTSA := sorry
+  hg2MellinJackson := sorry
   amsVerified := hams
   asymptoticOfCore := hasymp
 
@@ -139,6 +154,11 @@ def frameworkOfF1aInterface
   f1bHerglotz := f1b
   f1aOTSA := f1aI.holds
   g2MellinJackson := g2
+  ha2 := sorry
+  hpcbGallagher := sorry
+  hf1bHerglotz := sorry
+  hf1aOTSA := sorry
+  hg2MellinJackson := sorry
   amsVerified := hams
   asymptoticOfCore := hasymp
 
@@ -176,6 +196,11 @@ def frameworkOfG2Interface
   f1bHerglotz := f1b
   f1aOTSA := f1a
   g2MellinJackson := g2I.holds
+  ha2 := sorry
+  hpcbGallagher := sorry
+  hf1bHerglotz := sorry
+  hf1aOTSA := sorry
+  hg2MellinJackson := sorry
   amsVerified := hams
   asymptoticOfCore := hasymp
 

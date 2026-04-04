@@ -28,7 +28,7 @@ theorem AMSBound_real_pos : 0 < AMSBound_real := by
 -- Couverture (exact_mod_cast, 0 sorry) ─────────────────────────────
 theorem N0_real_lt_AMSBound_real : N0_real < AMSBound_real := by
   unfold N0_real AMSBound_real
-  exact_mod_cast N0_lt_AMSBound
+  exact_mod_cast (show N0 < AMSBound by norm_num [N0, AMSBound])
 
 -- Encadrement de log(N₀) ───────────────────────────────────────────
 -- exp(42) ≈ 1.74e18 < 2.7e18 = N₀ < 4.73e18 ≈ exp(43)
@@ -49,7 +49,7 @@ theorem log_N0_gt_42 : 42 < Real.log N0_real := by
 
 /-- log(N₀) < 43: proved via N₀ < exp(43) using Taylor lower bound (n=45). -/
 theorem log_N0_lt_43 : Real.log N0_real < 43 := by
-  rw [Real.log_lt' N0_real_pos]
+  rw [Real.log_lt_iff_lt_exp N0_real_pos]
   -- Goal: N0_real = 2700000000000000000 < Real.exp 43
   unfold N0_real N0
   -- Use lower bound: S_45(43) ≤ exp(43) and 2.7e18 < S_45(43)

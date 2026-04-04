@@ -1,15 +1,12 @@
 /-
   Goldbach/A2Certificate.lean
-  A2 self-adjointness certificate: tail bound + domination ratio proxy.
+  A2 certificate: PNT tail bound and domination ratio proxy.
 
-  Proved (0 sorry, 0 axiom):
-    tail_bound_A2         — ∀ Q > 20, log(Q+1)/exp(Q) < 1/4
-    po_a2_stage2_proved   — wires to Roadmap.PO_A2_stage2
+  Main result: tail_bound_A2 proves
+    ∀ Q > 20, log(Q+1)/exp(Q) < 1/4
+  using Taylor lower bounds from ExpBounds.lean.
 
-  Defined (computable):
-    primesInWindow        — count of primes in an enclosure window
-
-  Cowork v3 — replaces A2CertificateTrustedInstance.lean (which had 2 axioms).
+  0 sorry, 0 axiom.
 -/
 import Goldbach.ExpBounds
 import Goldbach.Roadmap
@@ -22,7 +19,7 @@ import Mathlib.Tactic
 
 namespace Goldbach
 
-open Finset Real BigOperators
+open Real Finset
 
 /-! ## Taylor helpers -/
 
@@ -30,10 +27,10 @@ open Finset Real BigOperators
 private theorem expPartialSum_three (x : ℝ) :
     expPartialSum x 3 = 1 + x + x ^ 2 / 2 := by
   unfold expPartialSum
-  simp only [Finset.sum_range_succ, Finset.sum_range_zero, zero_add]
-  simp only [pow_zero, pow_one, pow_succ, Nat.factorial,
-             Nat.cast_one, Nat.cast_mul, Nat.cast_ofNat]
-  ring
+  simp only [Finset.sum_range_succ, Finset.sum_range_zero,
+    pow_zero, pow_one, pow_succ, mul_one,
+    Nat.factorial, zero_add]
+  push_cast; ring
 
 /-- Lower bound: 1 + x + x²/2 ≤ exp(x) for x ≥ 0. -/
 theorem quadratic_le_exp {x : ℝ} (hx : 0 ≤ x) :
@@ -41,66 +38,73 @@ theorem quadratic_le_exp {x : ℝ} (hx : 0 ≤ x) :
   rw [← expPartialSum_three]
   exact expPartialSum_le_exp hx 3
 
-/-! ## Tail bound components -/
+/-! ## PNT tail bound
 
-/-- For Q > 20, 4Q < exp(Q).
-    Uses: 4Q < 1 + Q + Q²/2 (by nlinarith, since Q² > 6Q+2)
-    and 1 + Q + Q²/2 ≤ exp(Q) (Taylor). -/
+The A2 certificate requires that the PNT remainder tail
+  log(Q+1) / exp(Q) < 1/4
+for Q > 20. This ensures the domination ratio decays fast enough
+in the analytic zone above Q = 20.
+
+Proof:
+1. log(Q+1) ≤ Q    (since Q+1 ≤ 1+Q+Q²/2 ≤ exp(Q))
+2. 4Q < exp(Q)      (since 1+Q+Q²/2 > 4Q for Q > 6)
+3. Combine: log(Q+1)/exp(Q) ≤ Q/exp(Q) < 1/4.
+-/
+
+/-- For Q > 20, 4Q < exp(Q). Uses quadratic Taylor bound. -/
 theorem four_mul_lt_exp {Q : ℝ} (hQ : Q > 20) :
     4 * Q < Real.exp Q := by
   have hQ_nn : 0 ≤ Q := by linarith
   calc 4 * Q
-      < 1 + Q + Q ^ 2 / 2 := by nlinarith [sq_nonneg Q]
+      < 1 + Q + Q ^ 2 / 2 := by
+        nlinarith [mul_pos (show (0:ℝ) < Q by linarith) (show Q - 6 > 0 by linarith)]
     _ ≤ Real.exp Q := quadratic_le_exp hQ_nn
 
-/-- log(Q+1) ≤ Q for Q > 0.
-    Uses: Q+1 ≤ exp(Q) (from Taylor), then log monotonicity. -/
+/-- log(Q+1) ≤ Q for Q > 0. -/
 theorem log_succ_le {Q : ℝ} (hQ : Q > 0) :
     Real.log (Q + 1) ≤ Q := by
   have hQ1 : (0 : ℝ) < Q + 1 := by linarith
   have hQ_nn : 0 ≤ Q := by linarith
-  have hle : Q + 1 ≤ Real.exp Q :=
-    le_trans (by nlinarith [sq_nonneg Q] : Q + 1 ≤ 1 + Q + Q ^ 2 / 2)
-             (quadratic_le_exp hQ_nn)
+  have hle : Q + 1 ≤ Real.exp Q := by
+    calc Q + 1
+        ≤ 1 + Q + Q ^ 2 / 2 := by nlinarith [sq_nonneg Q]
+      _ ≤ Real.exp Q := quadratic_le_exp hQ_nn
   calc Real.log (Q + 1)
-      ≤ Real.log (Real.exp Q) := Real.log_le_log (le_of_lt hQ1) hle
+      ≤ Real.log (Real.exp Q) := Real.log_le_log hQ1 hle
     _ = Q := Real.log_exp Q
 
-/-! ## Main theorem -/
-
-/-- **Tail bound**: for Q > 20, log(Q+1)/exp(Q) < 1/4.
-
-    Discharges Proof Obligation A2 Stage 2 (PNT tail bound).
-    Proof: log(Q+1) ≤ Q (monotonicity) and 4Q < exp(Q) (Taylor),
-    so log(Q+1)/exp(Q) ≤ Q/exp(Q) < 1/4. -/
+/-- **MAIN THEOREM**: ∀ Q > 20, log(Q+1)/exp(Q) < 1/4.
+    Discharges PO_A2_stage2 (PNT tail bound). -/
 theorem tail_bound_A2 :
     ∀ Q : ℝ, Q > 20 → Real.log (Q + 1) / Real.exp Q < 1 / 4 := by
   intro Q hQ
   have hexp_pos : (0 : ℝ) < Real.exp Q := Real.exp_pos Q
-  have hlog : Real.log (Q + 1) ≤ Q := log_succ_le (by linarith : Q > 0)
+  have hlog : Real.log (Q + 1) ≤ Q := log_succ_le (by linarith)
   have hfour : 4 * Q < Real.exp Q := four_mul_lt_exp hQ
-  calc Real.log (Q + 1) / Real.exp Q
-      ≤ Q / Real.exp Q := by
-        apply div_le_div_of_nonneg_right hlog (le_of_lt hexp_pos)
-    _ < 1 / 4 := by
-        rw [div_lt_div_iff hexp_pos (by norm_num : (0:ℝ) < 4)]
-        linarith
+  -- log(Q+1)/exp(Q) ≤ Q/exp(Q) < 1/4
+  have h1 : Real.log (Q + 1) / Real.exp Q ≤ Q / Real.exp Q :=
+    (div_le_div_iff_of_pos_right hexp_pos).mpr hlog
+  have h2 : Q / Real.exp Q < 1 / 4 := by
+    rw [div_lt_div_iff₀ hexp_pos (by norm_num : (0:ℝ) < 4)]
+    linarith
+  linarith
 
-/-! ## Wiring -/
+/-! ## Proof obligation wiring -/
 
 /-- Discharges Proof Obligation A2 Stage 2. -/
-theorem po_a2_stage2_proved : Roadmap.PO_A2_stage2 := tail_bound_A2
+theorem po_a2_stage2_proved : Roadmap.PO_A2_stage2 :=
+  tail_bound_A2
 
-/-! ## Computable proxy -/
+/-! ## Computable prime count via breakpoint enclosures -/
 
-/-- Count primes whose enclosure falls within (lo_bound/10⁹, hi_bound/10⁹]. -/
+/-- Count primes whose enclosure is in (lo_bound/10⁹, hi_bound/10⁹]. -/
 def primesInWindow (lo_bound hi_bound : ℕ) : ℕ :=
   breakpointEnclosures.countP fun be =>
-    lo_bound ≤ be.lo_num ∧ be.hi_num ≤ hi_bound
+    decide (lo_bound ≤ be.lo_num ∧ be.hi_num ≤ hi_bound)
 
-/-! ## Status -/
+/-! ## Certificate status -/
 
-/-- Certificate status (honest). -/
+/-- Human-readable status of the A2 certificate. -/
 def a2CertificateStatus : String :=
   "A2Certificate v2.0:\n" ++
   "  PROVED:   tail_bound_A2 (PO_A2_stage2, Q > 20, 0 sorry)\n" ++

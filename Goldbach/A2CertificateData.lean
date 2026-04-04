@@ -4,7 +4,7 @@
 
   Contains the 1229 primes up to 9973 and their log enclosure precision.
 -/
-import Mathlib.Data.Rat.Basic
+import Mathlib.Data.Rat.Defs
 import Mathlib.Data.List.Basic
 
 namespace Goldbach

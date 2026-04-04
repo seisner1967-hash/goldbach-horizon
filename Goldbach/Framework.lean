@@ -21,6 +21,11 @@ structure GoldbachFramework (N0 AMSBound : ℕ) where
   f1bHerglotz : Prop
   f1aOTSA : Prop
   g2MellinJackson : Prop
+  ha2 : a2
+  hpcbGallagher : pcbGallagher
+  hf1bHerglotz : f1bHerglotz
+  hf1aOTSA : f1aOTSA
+  hg2MellinJackson : g2MellinJackson
   amsVerified : VerifiedUpTo AMSBound
   asymptoticOfCore :
     a2 →
@@ -42,10 +47,10 @@ theorem goldbachStrong_of_framework
     GoldbachStrong := by
   apply goldbachStrong_from_two_ranges hcover F.amsVerified
   exact F.asymptoticOfCore
-    F.a2
-    F.pcbGallagher
-    F.f1bHerglotz
-    F.f1aOTSA
-    F.g2MellinJackson
+    F.ha2
+    F.hpcbGallagher
+    F.hf1bHerglotz
+    F.hf1aOTSA
+    F.hg2MellinJackson
 
 end Goldbach

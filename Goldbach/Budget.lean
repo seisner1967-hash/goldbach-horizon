@@ -81,8 +81,8 @@ theorem remainingMargin_from_total : remainingMargin = 1 - totalBudgetUpper := b
 
 /-- Equivalently, `1 - 0.78 - 0.11 = 0.11`. -/
 theorem final_margin_identity : 1 - certifiedBudget - safetyMargin = remainingMargin := by
-  norm_num [certifiedBudget, safetyMargin, remainingMargin,
-    certifiedBudgetQ, safetyMarginQ, remainingMarginQ]
+  show (1 : ℝ) - ↑certifiedBudgetQ - ↑safetyMarginQ = ↑remainingMarginQ
+  norm_num [certifiedBudgetQ, safetyMarginQ, remainingMarginQ, totalBudgetUpperQ]
 
 /-! ## Positivity and comparison lemmas -/
 
@@ -96,7 +96,8 @@ theorem safetyMargin_nonneg : 0 ≤ safetyMargin := by
   linarith [safetyMargin_pos]
 
 theorem totalBudgetUpper_pos : 0 < totalBudgetUpper := by
-  norm_num [totalBudgetUpper, totalBudgetUpperQ]
+  unfold totalBudgetUpper totalBudgetUpperQ certifiedBudgetQ safetyMarginQ
+  norm_num
 
 theorem certifiedBudget_lt_one : certifiedBudget < 1 := by
   norm_num [certifiedBudget, certifiedBudgetQ]
@@ -105,13 +106,15 @@ theorem safetyMargin_lt_one : safetyMargin < 1 := by
   norm_num [safetyMargin, safetyMarginQ]
 
 theorem totalBudgetUpper_lt_one : totalBudgetUpper < 1 := by
-  norm_num [totalBudgetUpper, totalBudgetUpperQ]
+  unfold totalBudgetUpper totalBudgetUpperQ certifiedBudgetQ safetyMarginQ
+  norm_num
 
 theorem totalBudgetUpper_le_one : totalBudgetUpper ≤ 1 := by
   linarith [totalBudgetUpper_lt_one]
 
 theorem remainingMargin_pos : 0 < remainingMargin := by
-  norm_num [remainingMargin, remainingMarginQ]
+  unfold remainingMargin remainingMarginQ totalBudgetUpperQ certifiedBudgetQ safetyMarginQ
+  norm_num
 
 theorem remainingMargin_nonneg : 0 ≤ remainingMargin := by
   linarith [remainingMargin_pos]

@@ -1,6 +1,9 @@
 /-
-  Goldbach/PrimeLogEnclosures.lean
-  Master file importing all PrimeLogEnclosures parts.
+  Goldbach/PrimeLogEnclosures18.lean
+  Re-export file: aggregates all PrimeLogEnclosures parts.
+  The primeLogEnclosure dispatch is omitted (causes heartbeat timeout
+  on a 1229-case match); individual log_enc_* theorems are available
+  through the part imports.
 -/
 import Goldbach.PrimeLogEnclosures01
 import Goldbach.PrimeLogEnclosures02
@@ -19,4 +22,3 @@ import Goldbach.PrimeLogEnclosures14
 import Goldbach.PrimeLogEnclosures15
 import Goldbach.PrimeLogEnclosures16
 import Goldbach.PrimeLogEnclosures17
-import Goldbach.PrimeLogEnclosures18

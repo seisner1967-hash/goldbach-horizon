@@ -1,10 +1,3 @@
-/-
-  Goldbach.lean — Master import file
-  Horizon Goldbach v5 + Phase VII v2 (Analytic Offensive)
-  23 modules total.
--/
-
--- Phase VI (v5)
 import Goldbach.Basic
 import Goldbach.Collage
 import Goldbach.Framework
@@ -23,8 +16,7 @@ import Goldbach.ThresholdReal
 import Goldbach.PrimeLogEnclosures
 import Goldbach.BreakpointGrid
 import Goldbach.A2Certificate
-
--- Phase VII v2
+-- Phase VII modules
 import Goldbach.PCBGallagher
 import Goldbach.HerglotzPositivity
 import Goldbach.A2PureAnalytic

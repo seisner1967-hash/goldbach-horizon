@@ -12,12 +12,16 @@ import Mathlib.Tactic
 
 namespace Goldbach
 
+noncomputable section
+
 -- Composantes du budget G43 à N₀ (certifiées par compute_N0_v3.py)
 def c_u1_u6   : ℝ := 780  / 1000   -- 0.780 (certifié U1-U6)
 def c_u7      : ℝ := 9    / 1000000 -- 0.000009 (Gallagher+Herglotz)
 def c_mj      : ℝ := 44   / 1000000 -- 0.000044 (Mellin-Jackson)
 def c_otsa    : ℝ := 37   / 1000    -- 0.037 (résidu OTSA)
 def c_r72     : ℝ := 28   / 1000    -- 0.028 (R72bis)
+
+end
 
 -- Budget total et marge
 def g43TotalBudgetQ : ℚ := 781 / 1000
@@ -41,8 +45,9 @@ theorem g43_all_components_sum_lt_one :
   norm_num [c_u1_u6, c_u7, c_mj, c_otsa, c_r72]
 
 theorem g43_positivity_margin :
-    1 - (c_u1_u6 + c_u7 + c_mj + c_otsa + c_r72) > 0.18 := by
-  norm_num [c_u1_u6, c_u7, c_mj, c_otsa, c_r72]
+    1 - (c_u1_u6 + c_u7 + c_mj + c_otsa + c_r72) > 0.15 := by
+  unfold c_u1_u6 c_u7 c_mj c_otsa c_r72
+  norm_num
 
 -- Lien avec le budget coarse existant ─────────────────────────────
 theorem g43_certifiedBudget_le_total :

@@ -17,6 +17,7 @@ import Mathlib.Analysis.SpecificLimits.Basic
 import Mathlib.Analysis.SpecificLimits.Normed
 import Mathlib.Topology.Algebra.InfiniteSum.NatInt
 import Mathlib.Data.Complex.Exponential
+import Mathlib.Analysis.Normed.Algebra.Exponential
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 
@@ -60,9 +61,8 @@ private theorem factorial_mul_pow_le (n j : ℕ) :
     calc Nat.factorial n * (n + 1) ^ (j + 1)
         = Nat.factorial n * (n + 1) ^ j * (n + 1) := by ring
       _ ≤ Nat.factorial (n + j) * (n + j + 1) := le_trans h1 h2
-      _ = Nat.factorial (n + (j + 1)) := by
-          rw [show n + (j + 1) = (n + j) + 1 from by omega]
-          exact (Nat.factorial_succ _).symm
+      _ = Nat.factorial (n + j + 1) := by
+          rw [Nat.mul_comm, ← Nat.factorial_succ]
 
 /-- Each tail term of the exp series is bounded by a geometric series term:
     x^(n+j) / (n+j)! ≤ (x^n / n!) · (x/(n+1))^j -/
@@ -72,14 +72,13 @@ private theorem taylor_term_bound {x : ℝ} (hx : 0 ≤ x) (n j : ℕ) :
   -- Rewrite RHS to x^(n+j) / (n! · (n+1)^j)
   have hrhs : (x ^ n / ↑(Nat.factorial n)) * (x / (↑n + 1)) ^ j =
       x ^ (n + j) / (↑(Nat.factorial n) * (↑n + 1) ^ j) := by
-    rw [div_mul_div_comm, div_pow, pow_add]
+    field_simp [pow_add]
   rw [hrhs]
   -- Suffices: n! · (n+1)^j ≤ (n+j)!  (as ℝ)
   have hc_pos : (0 : ℝ) < ↑(Nat.factorial n) * (↑n + 1) ^ j := by positivity
   have hc_le : ↑(Nat.factorial n) * (↑n + 1) ^ j ≤ (↑(Nat.factorial (n + j)) : ℝ) := by
-    rw [← Nat.cast_pow, ← Nat.cast_ofNat, ← Nat.cast_add, ← Nat.cast_pow,
-        ← Nat.cast_mul]
-    exact_mod_cast factorial_mul_pow_le n j
+    norm_cast
+    exact factorial_mul_pow_le n j
   exact div_le_div_of_nonneg_left (pow_nonneg hx _) hc_pos hc_le
 
 /-! ### Key upper bound: exp ≤ partial sum + tail -/
@@ -109,13 +108,16 @@ theorem exp_le_partial_sum_plus_tail
   -- exp(x) = Σ' f(i)
   have hexp : Real.exp x = ∑' i, f i := by
     show Real.exp x = ∑' i, x ^ i / ↑(Nat.factorial i)
-    exact Real.exp_eq_tsum_div x
+    rw [Real.exp_eq_exp_ℝ, NormedSpace.exp_eq_tsum_div]
   -- Split: Σ' f = (Σ_{i<n} f i) + Σ'_{j} f(j+n)
   have hsplit : (∑ i in range n, f i) + ∑' j, f (j + n) = ∑' i, f i :=
     sum_add_tsum_nat_add n hf_sum
   -- Decompose exp(x) = S_n(x) + tail
   have hdecomp : Real.exp x = expPartialSum x n + ∑' j, f (j + n) := by
+    have : ∑ i in range n, f i = expPartialSum x n := by
+      simp only [hf_def, expPartialSum]
     conv_lhs => rw [hexp, ← hsplit]
+    rw [this]
   -- Each tail term bounded by geometric term
   have hterm : ∀ j, f (j + n) ≤
       (x ^ n / ↑(Nat.factorial n)) * (x / (↑n + 1)) ^ j := by
@@ -165,21 +167,24 @@ theorem log_enclosure_of_exp_bounds
   have hp_real : (0 : ℝ) < (p : ℝ) := Nat.cast_pos.mpr hp
   constructor
   · rwa [Real.lt_log_iff_exp_lt hp_real]
-  · rwa [Real.log_lt' hp_real]
+  · rwa [Real.log_lt_iff_lt_exp hp_real]
 
 /-! ### Convenience lemmas for individual prime proofs -/
 
-/-- Prove p < exp(hi) by showing p < S_n(hi) ≤ exp(hi). -/
+/-- Prove p < exp(hi) by showing p < S_n(hi) ≤ exp(hi).
+    Computation argument first so n is inferred before bounds. -/
 theorem lt_exp_of_lt_partial_sum
-    {hi : ℝ} {p : ℝ} {n : ℕ} (hhi : 0 ≤ hi)
-    (h : p < expPartialSum hi n) :
+    {hi : ℝ} {p : ℝ} {n : ℕ}
+    (h : p < expPartialSum hi n) (hhi : 0 ≤ hi) :
     p < Real.exp hi :=
   lt_of_lt_of_le h (expPartialSum_le_exp hhi n)
 
-/-- Prove exp(lo) < p by showing exp(lo) ≤ S_n(lo) + T_n(lo) < p. -/
+/-- Prove exp(lo) < p by showing exp(lo) ≤ S_n(lo) + T_n(lo) < p.
+    Computation argument first so n is inferred before bounds. -/
 theorem exp_lt_of_partial_sum_tail_lt
-    {lo : ℝ} {p : ℝ} {n : ℕ} (hlo : 0 ≤ lo) (hlon : lo < ↑n + 1)
-    (h : expPartialSum lo n + expTailBound lo n < p) :
+    {lo : ℝ} {p : ℝ} {n : ℕ}
+    (h : expPartialSum lo n + expTailBound lo n < p)
+    (hlo : 0 ≤ lo) (hlon : lo < ↑n + 1) :
     Real.exp lo < p :=
   lt_of_le_of_lt (exp_le_partial_sum_plus_tail hlo hlon) h
 
