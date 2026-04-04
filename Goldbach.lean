@@ -22,3 +22,11 @@ import Goldbach.HerglotzPositivity
 import Goldbach.A2PureAnalytic
 import Goldbach.MellinJackson
 import Goldbach.FredholmOTSA
+-- CompactZone infrastructure
+import Goldbach.CompactZone.Defs
+import Goldbach.CompactZone.Grid
+import Goldbach.CompactZone.Wire
+import Goldbach.CompactZone.CellBounds
+import Goldbach.CompactZone.CellBoundsStrong
+import Goldbach.CompactZone.Strong
+import Goldbach.CompactZone.Bridge
