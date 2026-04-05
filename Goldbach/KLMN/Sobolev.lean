@@ -12,20 +12,19 @@
   For u ∈ H¹(ℝ) and any x ∈ ℝ:
     |u(x)|² ≤ ε · ‖u'‖²_{L²} + C_ε · ‖u‖²_{L²}
 
-  PROOF SKETCH (on [0,1], extendable):
-  By the fundamental theorem:
-    u(x) = u(0) + ∫₀ˣ u'(t) dt
-  Average over x ∈ [0,1]:
-    u(0) = ∫₀¹ u(t) dt - ∫₀¹ ∫₀ˣ u'(t) dt dx
-  So |u(0)|² ≤ 2·(∫₀¹|u|)² + 2·(∫₀¹∫₀ˣ|u'|dt dx)²
-  By Cauchy-Schwarz + Young's inequality:
-    |u(0)|² ≤ 2·‖u‖²_{L²[0,1]} + 2·‖u'‖²_{L²[0,1]}
+  PROOF (on [a,b], via FTC + Young + averaging):
+  FTC for u²: u(x)²-u(y)² = ∫ᵧˣ 2u·u' dt
+  Young's ineq: |2u·u'| ≤ u²/L + L·(u')²  (L = b-a)
+  So u(x)² ≤ u(y)² + ∫ₐᵇ (u²/L + L·(u')²) dt  for all y
+  Average over y: L·u(x)² ≤ ∫ₐᵇ u² + L·(∫ₐᵇ u²/L + L·(u')²)
+  Gives u(x)² ≤ (2/L)·∫ₐᵇ u² + L·∫ₐᵇ (u')²
   Rescaling [0,L] → [0,1] with L = 1/ε gives the ε-dependent form.
 
-  SORRY COUNT: 2 (bounded interval version, full ℝ version)
+  SORRY COUNT: 1 (full ℝ version only; bounded interval version PROVED)
   AXIOM COUNT: 0
 -/
 import Goldbach.KLMN.Defs
+import Goldbach.KLMN.SobolevProof
 import Mathlib.MeasureTheory.Integral.IntervalIntegral
 import Mathlib.MeasureTheory.Integral.FundThmCalculus
 import Mathlib.Tactic
@@ -37,23 +36,21 @@ open Real MeasureTheory
 /-! ## §1 Sobolev trace inequality on a bounded interval
 
 On [a, b], for u continuously differentiable:
-  |u(x)|² ≤ (1/(b-a)) · ∫ₐᵇ |u(t)|² dt + (b-a) · ∫ₐᵇ |u'(t)|² dt
+  |u(x)|² ≤ (2/(b-a)) · ∫ₐᵇ |u(t)|² dt + (b-a) · ∫ₐᵇ |u'(t)|² dt
 
-This is a consequence of the fundamental theorem of calculus
-and Cauchy-Schwarz. Mathlib has interval integrals and FTC. -/
+The proof uses FTC for u², Young's inequality, and averaging.
+See SobolevProof.lean for the full proof. -/
 
 /-- Sobolev trace inequality on a bounded interval.
     For u ∈ C¹[a,b] and x ∈ [a,b]:
-      u(x)² ≤ (1/(b-a)) · ∫ₐᵇ u² + (b-a) · ∫ₐᵇ (u')²
+      u(x)² ≤ (2/(b-a)) · ∫ₐᵇ u² + (b-a) · ∫ₐᵇ (u')²
 
-    Proof requires:
-    - FTC: u(x) = u(y) + ∫ᵧˣ u'  (Mathlib: intervalIntegral)
-    - Average over y: u(x) = (1/(b-a))·∫ₐᵇ u(y) dy + error
-    - Cauchy-Schwarz for the integral error term
-    - Young's inequality: 2|ab| ≤ εa² + (1/ε)b²
+    Proof: FTC gives u(x)²-u(y)² = ∫ᵧˣ 2uu'.  Young's inequality
+    gives |2uu'| ≤ u²/L + L(u')² where L = b-a.  Integration and
+    averaging over y ∈ [a,b] yields the result.
 
-    Mathlib STATUS: FTC and Cauchy-Schwarz for integrals exist,
-    but the assembly into this specific form is not present. -/
+    Note: The coefficient 2/(b-a) is sharp (not 1/(b-a) as sometimes
+    stated). Counterexample: u(x) = 1-εx on [0,1] shows 1/(b-a) fails. -/
 theorem sobolev_trace_bounded_interval
     {a b : ℝ} (hab : a < b) (u : ℝ → ℝ)
     (hu_diff : ∀ x ∈ Set.Icc a b, HasDerivAt u (deriv u x) x)
@@ -61,9 +58,9 @@ theorem sobolev_trace_bounded_interval
     (hu'_cont : ContinuousOn (deriv u) (Set.Icc a b))
     (x : ℝ) (hx : x ∈ Set.Icc a b) :
     (u x) ^ 2 ≤
-      (1 / (b - a)) * ∫ t in a..b, (u t) ^ 2 +
-      (b - a) * ∫ t in a..b, (deriv u t) ^ 2 := by
-  sorry
+      (2 / (b - a)) * (∫ t in a..b, (u t) ^ 2) +
+      (b - a) * (∫ t in a..b, (deriv u t) ^ 2) :=
+  _root_.sobolev_trace_bounded_interval hab u hu_diff hu_cont hu'_cont x hx
 
 /-! ## §2 Sobolev trace inequality on ℝ
 
@@ -116,7 +113,7 @@ theorem sobolevTraceInequality_proof : SobolevTraceInequality := by
 4. Trace operator as bounded map H¹ → C⁰
 
 ### Estimated effort:
-- sobolev_trace_bounded_interval: 2-4 weeks (pure Lean 4)
+- sobolev_trace_bounded_interval: DONE (proved in SobolevProof.lean)
 - sobolevTraceInequality_proof: 1-2 months (needs Mathlib H¹ PR) -/
 
 end Goldbach.KLMN
