@@ -8,12 +8,12 @@ Lean 4 formalization — Phase VI (sealed) + Phase VII v2 + CompactZone (proved)
 
 | Metric | Value |
 |--------|-------|
-| Root modules | 35 (18 Phase VI + 5 Phase VII + 9 CompactZone + 3 KLMN) |
+| Root modules | 36 (18 Phase VI + 5 Phase VII + 9 CompactZone + 4 KLMN) |
 | Lean toolchain | v4.15.0 |
 | Mathlib | v4.15.0 (commit `9837ca9d`) |
 | `sorry` in CompactZone | **0** |
 | `axiom` in CompactZone | **0** |
-| `sorry` in KLMN | 3 (Sobolev trace inequality, documented) |
+| `sorry` in KLMN | 2 (whole-line Sobolev trace + assembly, documented) |
 | `axiom` in KLMN | 0 |
 
 ## Main result
@@ -65,18 +65,18 @@ KLMNHypothesis = SobolevTraceInequality ∧ CellWeightBound
 ```
 
 Key proved theorems (0 sorry):
+- `sobolev_trace_bounded_interval`: bounded-interval Sobolev trace inequality (coefficient corrected from 1/(b-a) to 2/(b-a))
 - `formBoundData_of_infinitesimal`: infinitesimal form-bound → FormBoundData
 - `klmnHypothesis_of_infinitesimal`: infinitesimal form-bound → KLMNHypothesis
 
-Remaining sorry (3, all in Sobolev trace proofs — requires Mathlib H¹ infrastructure):
-- `sobolev_trace_bounded_interval`: trace inequality on [a,b]
-- `sobolevTraceInequality_proof`: trace inequality on ℝ
-- `infinitesimal_form_bound_of_sobolev_summable`: assembly
+Remaining sorry (2: whole-line trace inequality and assembly):
+- `sobolevTraceInequality_proof`: trace inequality on ℝ (requires partition of unity or density argument)
+- `infinitesimal_form_bound_of_sobolev_summable`: assembly of Sobolev + cell weights
 
 ## Module architecture
 
 ```
-Goldbach.lean (root, 35 imports)
+Goldbach.lean (root, 36 imports)
 │
 ├── Phase VI (18 modules, sealed)
 │   Basic, Collage, Framework, Thresholds, Interfaces,
@@ -100,9 +100,10 @@ Goldbach.lean (root, 35 imports)
 │   NumeratorBound — cells 10-19 proved
 │   NumeratorAll  — ALL 20 cells proved → CompactZoneBoundStrong
 │
-└── KLMN (3 modules, 3 sorry, 0 axiom)
+└── KLMN (4 modules, 2 sorry, 0 axiom)
     Defs          — QuadForm, IsFormBounded, SobolevTrace
-    Sobolev       — trace inequality statements (2 sorry)
+    SobolevProof  — bounded-interval trace inequality (PROVED)
+    Sobolev       — trace inequality statements (1 sorry)
     Chain         — reduction chain (1 sorry)
 ```
 
