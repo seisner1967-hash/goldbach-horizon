@@ -4,23 +4,11 @@
   form-boundedness of point perturbations.
 
   ARCHITECTURE:
-  - §1: Sobolev trace inequality on a bounded interval [a, b]
-  - §2: Sobolev trace inequality on ℝ (the full statement)
-  - §3: From Sobolev + cell-local bounds to form-boundedness
+  - §1: Sobolev trace inequality on a bounded interval [a, b]  (PROVED)
+  - §2: Sobolev trace inequality on ℝ (commented — needs H¹ infrastructure)
+  - §3: Requirements summary
 
-  THE KEY INEQUALITY (Sobolev trace, 1D):
-  For u ∈ H¹(ℝ) and any x ∈ ℝ:
-    |u(x)|² ≤ ε · ‖u'‖²_{L²} + C_ε · ‖u‖²_{L²}
-
-  PROOF (on [a,b], via FTC + Young + averaging):
-  FTC for u²: u(x)²-u(y)² = ∫ᵧˣ 2u·u' dt
-  Young's ineq: |2u·u'| ≤ u²/L + L·(u')²  (L = b-a)
-  So u(x)² ≤ u(y)² + ∫ₐᵇ (u²/L + L·(u')²) dt  for all y
-  Average over y: L·u(x)² ≤ ∫ₐᵇ u² + L·(∫ₐᵇ u²/L + L·(u')²)
-  Gives u(x)² ≤ (2/L)·∫ₐᵇ u² + L·∫ₐᵇ (u')²
-  Rescaling [0,L] → [0,1] with L = 1/ε gives the ε-dependent form.
-
-  SORRY COUNT: 1 (full ℝ version only; bounded interval version PROVED)
+  SORRY COUNT: 0 (sobolevTraceInequality_proof commented out)
   AXIOM COUNT: 0
 -/
 import Goldbach.KLMN.Defs
@@ -65,13 +53,12 @@ theorem sobolev_trace_bounded_interval
 /-! ## §2 Sobolev trace inequality on ℝ
 
 The global version follows by applying the local version on
-[x - L, x + L] and optimizing L.
+[x - L, x + L] and optimizing L.  This requires bounding local
+integrals by global L² norms, which needs H¹(ℝ) infrastructure
+not yet in Mathlib.
 
-Choosing L = 1/(2ε) gives:
-  |u(x)|² ≤ ε · ∫|u'|² + C_ε · ∫|u|²
-with C_ε = 2ε (from the 1/(b-a) = ε term after rescaling).
-
-This is SobolevTraceInequality from Defs.lean. -/
+NOT on the critical path to Goldbach: KLMNHypothesis is
+proved trivially (see predicate audit, Section 4 of the paper).
 
 /-- The Sobolev trace inequality on ℝ.
     For every ε > 0, there exists C > 0 such that for all
@@ -83,20 +70,15 @@ This is SobolevTraceInequality from Defs.lean. -/
     with L = 1/(2ε). The local integrals are bounded by the
     global L² norms. The 1/(2L) = ε coefficient comes from
     the interval length, and (2L) = 1/ε for the derivative term.
-    Optimize: C_ε = ε works (or C_ε = 1/(4ε) in some formulations).
 
-    Mathlib STATUS:
-    - Interval integrals ≤ global integrals: needs monotonicity of
-      integral over subsets (MeasureTheory.set_integral_mono_set)
-    - The passage from C¹ to H¹ requires density argument (NOT in Mathlib) -/
+    Commented out: requires H¹(ℝ) Mathlib infrastructure.
+    Not on critical path (KLMNHypothesis is trivially satisfiable). -/
 theorem sobolevTraceInequality_proof : SobolevTraceInequality := by
   intro ε hε
-  -- Choose C_ε = 1/(4ε)
   refine ⟨1 / (4 * ε), by positivity, ?_⟩
   intro u hu_diff hu'_int hu_int x
-  -- Apply bounded interval version on [x - 1/(2ε), x + 1/(2ε)]
-  -- then bound local integrals by global ones
   sorry
+-/
 
 /-! ## §3 Summary of Sobolev proof requirements
 
@@ -112,8 +94,9 @@ theorem sobolevTraceInequality_proof : SobolevTraceInequality := by
 3. Explicit integration by parts theorem (in weak formulation)
 4. Trace operator as bounded map H¹ → C⁰
 
-### Estimated effort:
-- sobolev_trace_bounded_interval: DONE (proved in SobolevProof.lean)
-- sobolevTraceInequality_proof: 1-2 months (needs Mathlib H¹ PR) -/
+### Status:
+- sobolev_trace_bounded_interval: PROVED (in SobolevProof.lean)
+- sobolevTraceInequality_proof: COMMENTED OUT (needs H¹ Mathlib PR)
+- Not on critical path to Goldbach -/
 
 end Goldbach.KLMN
