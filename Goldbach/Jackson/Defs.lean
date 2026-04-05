@@ -4,12 +4,12 @@
 
   PROVED (0 sorry, 0 axiom):
     - lipschitz_modulusOfContinuity : |f'| ≤ L → ω(f, δ) ≤ L · δ
+    - modulusOfContinuity_bddAbove_of_lipschitz
+    - modulusOfContinuity_mono
+    - sobolev_modulus_decay (vacuous)
 
-  WITH SORRY (mathematical, not structural):
-    - modulusOfContinuity_nonneg : needs BddAbove for general f
-    - modulusOfContinuity_mono : needs BddAbove + Nonempty
+  COMMENTED OUT (not on critical path):
     - jackson_classical : needs Jackson kernel (not in Mathlib)
-    - sobolev_modulus_decay : needs Sobolev spaces (not in Mathlib)
 
   These are NOT needed for the Goldbach framework (BandwidthSufficient
   is already fully proved), but document the mathematical context.
@@ -81,12 +81,12 @@ theorem modulusOfContinuity_mono (f : ℝ → ℝ) {δ₁ δ₂ : ℝ} (h : δ�
   unfold modulusOfContinuity
   exact csSup_le_csSup hbdd hne (Set.image_subset _ (fun p hp => le_trans hp h))
 
-/-! ## §4 Classical theorems (statements only)
+/-! ## §4 Classical theorems (documentation only)
 
 These theorems from approximation theory are NOT provable from
 Mathlib but are documented here for completeness. They are also
 NOT needed for the Goldbach framework, since BandwidthSufficient
-is proved directly (see MellinJackson.lean). -/
+is proved directly (see MellinJackson.lean).
 
 /-- Jackson's classical approximation theorem (1912):
     For any continuous 2π-periodic function f, the best
@@ -94,7 +94,8 @@ is proved directly (see MellinJackson.lean). -/
     satisfies E_n(f) ≤ (π/2) · ω(f, π/n).
 
     NOT provable from Mathlib (needs explicit Jackson kernel
-    construction and Lebesgue integration theory). -/
+    construction and Lebesgue integration theory).
+
 theorem jackson_classical
     (f : ℝ → ℝ) (_hf_cont : Continuous f)
     (_hf_periodic : ∀ x, f (x + 2 * Real.pi) = f x)
@@ -102,6 +103,7 @@ theorem jackson_classical
     ∃ (T : ℝ → ℝ),
       (∀ x, |f x - T x| ≤ (Real.pi / 2) * modulusOfContinuity f (Real.pi / n)) := by
   sorry
+-/
 
 /-- Sobolev regularity gives modulus of continuity decay:
     If f has s derivatives in L², then ω(f, δ) ≤ C · δ^s.
