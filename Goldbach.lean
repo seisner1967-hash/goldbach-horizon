@@ -15,8 +15,8 @@ import Goldbach.A2CertificateData
 import Goldbach.ThresholdReal
 import Goldbach.PrimeLogEnclosures
 import Goldbach.BreakpointGrid
-import Goldbach.A2Certificate
 -- Phase VII modules
+import Goldbach.A2Certificate
 import Goldbach.PCBGallagher
 import Goldbach.HerglotzPositivity
 import Goldbach.A2PureAnalytic
@@ -30,3 +30,8 @@ import Goldbach.CompactZone.CellBounds
 import Goldbach.CompactZone.CellBoundsStrong
 import Goldbach.CompactZone.Strong
 import Goldbach.CompactZone.Bridge
+import Goldbach.CompactZone.NumeratorBound
+import Goldbach.CompactZone.NumeratorAll
+import Goldbach.KLMN.Defs
+import Goldbach.KLMN.Sobolev
+import Goldbach.KLMN.Chain
