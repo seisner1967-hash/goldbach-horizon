@@ -4,6 +4,8 @@
 
   Each theorem shows how to replace one coarse `Prop` from `GoldbachFramework`
   by a finer interface, while keeping the other inputs coarse.
+
+  Phase X: 0 sorry — proof arguments added to all frameworkOf* functions.
 -/
 
 import Goldbach.Interfaces
@@ -16,10 +18,8 @@ namespace Goldbach
 def frameworkOfA2Interface
     {N0 AMSBound : ℕ}
     (a2I : A2Interface)
-    (pcb : Prop)
-    (f1b : Prop)
-    (f1a : Prop)
-    (g2 : Prop)
+    (pcb : Prop) (f1b : Prop) (f1a : Prop) (g2 : Prop)
+    (ha2I : a2I.holds) (hpcb : pcb) (hf1b : f1b) (hf1a : f1a) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2I.holds → pcb → f1b → f1a → g2 → HoldsAbove N0) :
     GoldbachFramework N0 AMSBound where
@@ -28,11 +28,11 @@ def frameworkOfA2Interface
   f1bHerglotz := f1b
   f1aOTSA := f1a
   g2MellinJackson := g2
-  ha2 := sorry
-  hpcbGallagher := sorry
-  hf1bHerglotz := sorry
-  hf1aOTSA := sorry
-  hg2MellinJackson := sorry
+  ha2 := ha2I
+  hpcbGallagher := hpcb
+  hf1bHerglotz := hf1b
+  hf1aOTSA := hf1a
+  hg2MellinJackson := hg2
   amsVerified := hams
   asymptoticOfCore := hasymp
 
@@ -40,16 +40,14 @@ def frameworkOfA2Interface
 theorem goldbachStrong_of_A2Interface
     {N0 AMSBound : ℕ}
     (a2I : A2Interface)
-    (pcb : Prop)
-    (f1b : Prop)
-    (f1a : Prop)
-    (g2 : Prop)
+    (pcb : Prop) (f1b : Prop) (f1a : Prop) (g2 : Prop)
+    (ha2I : a2I.holds) (hpcb : pcb) (hf1b : f1b) (hf1a : f1a) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2I.holds → pcb → f1b → f1a → g2 → HoldsAbove N0)
     (hcover : N0 ≤ AMSBound) :
     GoldbachStrong := by
   exact goldbachStrong_of_framework
-    (frameworkOfA2Interface a2I pcb f1b f1a g2 hams hasymp)
+    (frameworkOfA2Interface a2I pcb f1b f1a g2 ha2I hpcb hf1b hf1a hg2 hams hasymp)
     hcover
 
 /-! ## Replacing only PCB by a finer interface -/
@@ -59,9 +57,8 @@ def frameworkOfPCBInterface
     {N0 AMSBound : ℕ}
     (a2 : Prop)
     (pcbI : PCBInterface)
-    (f1b : Prop)
-    (f1a : Prop)
-    (g2 : Prop)
+    (f1b : Prop) (f1a : Prop) (g2 : Prop)
+    (ha2 : a2) (hpcbI : pcbI.holds) (hf1b : f1b) (hf1a : f1a) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcbI.holds → f1b → f1a → g2 → HoldsAbove N0) :
     GoldbachFramework N0 AMSBound where
@@ -70,11 +67,11 @@ def frameworkOfPCBInterface
   f1bHerglotz := f1b
   f1aOTSA := f1a
   g2MellinJackson := g2
-  ha2 := sorry
-  hpcbGallagher := sorry
-  hf1bHerglotz := sorry
-  hf1aOTSA := sorry
-  hg2MellinJackson := sorry
+  ha2 := ha2
+  hpcbGallagher := hpcbI
+  hf1bHerglotz := hf1b
+  hf1aOTSA := hf1a
+  hg2MellinJackson := hg2
   amsVerified := hams
   asymptoticOfCore := hasymp
 
@@ -83,15 +80,14 @@ theorem goldbachStrong_of_PCBInterface
     {N0 AMSBound : ℕ}
     (a2 : Prop)
     (pcbI : PCBInterface)
-    (f1b : Prop)
-    (f1a : Prop)
-    (g2 : Prop)
+    (f1b : Prop) (f1a : Prop) (g2 : Prop)
+    (ha2 : a2) (hpcbI : pcbI.holds) (hf1b : f1b) (hf1a : f1a) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcbI.holds → f1b → f1a → g2 → HoldsAbove N0)
     (hcover : N0 ≤ AMSBound) :
     GoldbachStrong := by
   exact goldbachStrong_of_framework
-    (frameworkOfPCBInterface a2 pcbI f1b f1a g2 hams hasymp)
+    (frameworkOfPCBInterface a2 pcbI f1b f1a g2 ha2 hpcbI hf1b hf1a hg2 hams hasymp)
     hcover
 
 /-! ## Replacing only F1b by a finer interface -/
@@ -99,11 +95,10 @@ theorem goldbachStrong_of_PCBInterface
 /-- Build a coarse framework from a refined F1b input and coarse remaining inputs. -/
 def frameworkOfF1bInterface
     {N0 AMSBound : ℕ}
-    (a2 : Prop)
-    (pcb : Prop)
+    (a2 : Prop) (pcb : Prop)
     (f1bI : F1bInterface)
-    (f1a : Prop)
-    (g2 : Prop)
+    (f1a : Prop) (g2 : Prop)
+    (ha2 : a2) (hpcb : pcb) (hf1bI : f1bI.holds) (hf1a : f1a) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcb → f1bI.holds → f1a → g2 → HoldsAbove N0) :
     GoldbachFramework N0 AMSBound where
@@ -112,28 +107,27 @@ def frameworkOfF1bInterface
   f1bHerglotz := f1bI.holds
   f1aOTSA := f1a
   g2MellinJackson := g2
-  ha2 := sorry
-  hpcbGallagher := sorry
-  hf1bHerglotz := sorry
-  hf1aOTSA := sorry
-  hg2MellinJackson := sorry
+  ha2 := ha2
+  hpcbGallagher := hpcb
+  hf1bHerglotz := hf1bI
+  hf1aOTSA := hf1a
+  hg2MellinJackson := hg2
   amsVerified := hams
   asymptoticOfCore := hasymp
 
 /-- Goldbach strong from a refined F1b input. -/
 theorem goldbachStrong_of_F1bInterface
     {N0 AMSBound : ℕ}
-    (a2 : Prop)
-    (pcb : Prop)
+    (a2 : Prop) (pcb : Prop)
     (f1bI : F1bInterface)
-    (f1a : Prop)
-    (g2 : Prop)
+    (f1a : Prop) (g2 : Prop)
+    (ha2 : a2) (hpcb : pcb) (hf1bI : f1bI.holds) (hf1a : f1a) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcb → f1bI.holds → f1a → g2 → HoldsAbove N0)
     (hcover : N0 ≤ AMSBound) :
     GoldbachStrong := by
   exact goldbachStrong_of_framework
-    (frameworkOfF1bInterface a2 pcb f1bI f1a g2 hams hasymp)
+    (frameworkOfF1bInterface a2 pcb f1bI f1a g2 ha2 hpcb hf1bI hf1a hg2 hams hasymp)
     hcover
 
 /-! ## Replacing only F1a by a finer interface -/
@@ -141,11 +135,10 @@ theorem goldbachStrong_of_F1bInterface
 /-- Build a coarse framework from a refined F1a input and coarse remaining inputs. -/
 def frameworkOfF1aInterface
     {N0 AMSBound : ℕ}
-    (a2 : Prop)
-    (pcb : Prop)
-    (f1b : Prop)
+    (a2 : Prop) (pcb : Prop) (f1b : Prop)
     (f1aI : F1aInterface)
     (g2 : Prop)
+    (ha2 : a2) (hpcb : pcb) (hf1b : f1b) (hf1aI : f1aI.holds) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcb → f1b → f1aI.holds → g2 → HoldsAbove N0) :
     GoldbachFramework N0 AMSBound where
@@ -154,28 +147,27 @@ def frameworkOfF1aInterface
   f1bHerglotz := f1b
   f1aOTSA := f1aI.holds
   g2MellinJackson := g2
-  ha2 := sorry
-  hpcbGallagher := sorry
-  hf1bHerglotz := sorry
-  hf1aOTSA := sorry
-  hg2MellinJackson := sorry
+  ha2 := ha2
+  hpcbGallagher := hpcb
+  hf1bHerglotz := hf1b
+  hf1aOTSA := hf1aI
+  hg2MellinJackson := hg2
   amsVerified := hams
   asymptoticOfCore := hasymp
 
 /-- Goldbach strong from a refined F1a input. -/
 theorem goldbachStrong_of_F1aInterface
     {N0 AMSBound : ℕ}
-    (a2 : Prop)
-    (pcb : Prop)
-    (f1b : Prop)
+    (a2 : Prop) (pcb : Prop) (f1b : Prop)
     (f1aI : F1aInterface)
     (g2 : Prop)
+    (ha2 : a2) (hpcb : pcb) (hf1b : f1b) (hf1aI : f1aI.holds) (hg2 : g2)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcb → f1b → f1aI.holds → g2 → HoldsAbove N0)
     (hcover : N0 ≤ AMSBound) :
     GoldbachStrong := by
   exact goldbachStrong_of_framework
-    (frameworkOfF1aInterface a2 pcb f1b f1aI g2 hams hasymp)
+    (frameworkOfF1aInterface a2 pcb f1b f1aI g2 ha2 hpcb hf1b hf1aI hg2 hams hasymp)
     hcover
 
 /-! ## Replacing only G2 by a finer interface -/
@@ -183,11 +175,9 @@ theorem goldbachStrong_of_F1aInterface
 /-- Build a coarse framework from a refined G2 input and coarse remaining inputs. -/
 def frameworkOfG2Interface
     {N0 AMSBound : ℕ}
-    (a2 : Prop)
-    (pcb : Prop)
-    (f1b : Prop)
-    (f1a : Prop)
+    (a2 : Prop) (pcb : Prop) (f1b : Prop) (f1a : Prop)
     (g2I : G2Interface)
+    (ha2 : a2) (hpcb : pcb) (hf1b : f1b) (hf1a : f1a) (hg2I : g2I.holds)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcb → f1b → f1a → g2I.holds → HoldsAbove N0) :
     GoldbachFramework N0 AMSBound where
@@ -196,28 +186,26 @@ def frameworkOfG2Interface
   f1bHerglotz := f1b
   f1aOTSA := f1a
   g2MellinJackson := g2I.holds
-  ha2 := sorry
-  hpcbGallagher := sorry
-  hf1bHerglotz := sorry
-  hf1aOTSA := sorry
-  hg2MellinJackson := sorry
+  ha2 := ha2
+  hpcbGallagher := hpcb
+  hf1bHerglotz := hf1b
+  hf1aOTSA := hf1a
+  hg2MellinJackson := hg2I
   amsVerified := hams
   asymptoticOfCore := hasymp
 
 /-- Goldbach strong from a refined G2 input. -/
 theorem goldbachStrong_of_G2Interface
     {N0 AMSBound : ℕ}
-    (a2 : Prop)
-    (pcb : Prop)
-    (f1b : Prop)
-    (f1a : Prop)
+    (a2 : Prop) (pcb : Prop) (f1b : Prop) (f1a : Prop)
     (g2I : G2Interface)
+    (ha2 : a2) (hpcb : pcb) (hf1b : f1b) (hf1a : f1a) (hg2I : g2I.holds)
     (hams : VerifiedUpTo AMSBound)
     (hasymp : a2 → pcb → f1b → f1a → g2I.holds → HoldsAbove N0)
     (hcover : N0 ≤ AMSBound) :
     GoldbachStrong := by
   exact goldbachStrong_of_framework
-    (frameworkOfG2Interface a2 pcb f1b f1a g2I hams hasymp)
+    (frameworkOfG2Interface a2 pcb f1b f1a g2I ha2 hpcb hf1b hf1a hg2I hams hasymp)
     hcover
 
 /-! ## Fully refined route -/
