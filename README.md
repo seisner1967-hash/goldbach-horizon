@@ -1,65 +1,129 @@
-# Horizon Goldbach — Lean 4 Formalization
+# Horizon Goldbach
 
-## Status: Phase VI (sealed) + Phase VII v2 (29 theorems, 0 sorry)
+**A Machine-Verified Conditional Framework for the Strong Goldbach Conjecture**
 
-A modular Lean 4 formalization of a conditional framework for the Strong Goldbach Conjecture.
+Lean 4 formalization — Phase VI (sealed) + Phase VII v2 + CompactZone (proved) + KLMN (reduction)
 
-**Preprint:** [OSF Thesis Commons](https://osf.io/preprints/thesiscommons/6d83p_v1)  
-**Toolchain:** Lean 4 v4.15.0 / Mathlib v4.15.0 (commit 9837ca9d)  
-**Modules:** 23 total (18 Phase VI + 5 Phase VII v2)
+## Status
 
----
+| Metric | Value |
+|--------|-------|
+| Root modules | 35 (18 Phase VI + 5 Phase VII + 9 CompactZone + 3 KLMN) |
+| Lean toolchain | v4.15.0 |
+| Mathlib | v4.15.0 (commit `9837ca9d`) |
+| `sorry` in CompactZone | **0** |
+| `axiom` in CompactZone | **0** |
+| `sorry` in KLMN | 3 (Sobolev trace inequality, documented) |
+| `axiom` in KLMN | 0 |
 
-## What this project IS
+## Main result
 
-A **machine-verified conditional reduction**: if five explicit analytic hypotheses are supplied, and the AMS computational verification up to 4×10¹⁸ is granted, then the Strong Goldbach Conjecture follows as a compiled Lean theorem.
+The Lean kernel certifies the following conditional reduction:
 
-Phase VII v2 adds 5 modules that **name, formalize, and partially reduce** the 5 analytic hypotheses. It does **NOT** discharge them.
+> If five explicit analytic hypotheses are supplied, and the AMS computational verification
+> up to 4 × 10¹⁸ is granted, then every even integer n ≥ 4 is a sum of two primes.
 
-## What this project is NOT
+## CompactZoneBoundStrong — PROVED
 
-An unconditional proof of the Strong Goldbach Conjecture.
+The compact-zone domination bound is now a **theorem**, not a hypothesis:
 
----
-
-## Build
-```bash
-lake update && lake exe cache get && lake build
+```
+theorem compactZoneBoundStrong_all : CompactZoneBoundStrong
+theorem compactZoneBound_all : Goldbach.CompactZoneBound
+theorem po_a2_stage1_all : Goldbach.Roadmap.PO_A2_stage1
 ```
 
-Or incrementally: `bash BUILD.sh`
+The proof covers all 20 cells of [log 2, 20] with three strategies:
+- **Cells 0–1**: per-prime rational bounds for {2,3,5,7,11,13,17,19} via Taylor log/sqrt enclosures
+- **Cells 2–9**: count × max-term with prime-count filter and `native_decide` verification
+- **Cells 10–19**: tail bound for primes > 9973
 
----
+This reduces the external trust boundary from 6 to **5 open hypotheses**.
 
-## Phase VII v2 — Analytic Offensive (5 modules, 29 theorems)
+## Trust boundary (5 open hypotheses)
 
-| Module | Theorems | Key results |
-|--------|----------|-------------|
-| PCBGallagher.lean | 8 | verified_500 (Goldbach to 500), circle method reduction |
-| HerglotzPositivity.lean | 5 | Rayleigh bound for symmetric operators |
-| A2PureAnalytic.lean | 5 | FormBoundData, KLMN formalized, two-stage A2 |
-| MellinJackson.lean | 5 | Mellin transform, modulus of continuity, Jackson bound |
-| FredholmOTSA.lean | 6 | Fredholm partial determinant, Jost-Pais consequence |
+| Hypothesis | Module | Content |
+|-----------|--------|---------|
+| `KLMNHypothesis` | A2PureAnalytic | KLMN perturbation theory (Reed-Simon X.17) |
+| `PCBAsymptotic` | PCBGallagher | Gallagher/circle-method asymptotic |
+| `SpectralPositivityHypothesis` | HerglotzPositivity | Herglotz-type resolvent positivity |
+| `BandwidthSufficient` | MellinJackson | Mellin-Jackson bandwidth absorption |
+| `FredholmOTSAHypothesis` | FredholmOTSA | Fredholm/Jost-Pais windowed approximation |
 
-## Open hypotheses (trust boundary)
+### Discharged (no longer external)
 
-| Hypothesis | Required mathematics |
-|------------|---------------------|
-| PCBAsymptotic | Hardy-Littlewood circle method + Bombieri-Vinogradov |
-| SpectralPositivityHypothesis | Herglotz representation theorem |
-| CompactZoneBound | Interval arithmetic on [ln 2, 20] |
-| KLMNHypothesis | Reed-Simon Theorem X.17 |
-| BandwidthSufficient | Jackson approximation in Sobolev spaces |
-| FredholmOTSAHypothesis | Trace-class operators + Jost-Pais theorem |
+| Former hypothesis | Status | Module |
+|------------------|--------|--------|
+| ~~`CompactZoneBound`~~ | **PROVED** | CompactZone/NumeratorAll |
 
-## Version history
+## KLMN reduction
 
-| Version | Date | Modules | Description |
-|---------|------|---------|-------------|
-| G44 v4.1 | Mar 2026 | 16 | Initial sorry-free build |
-| G44 v5 | Apr 2026 | 18 | Trust boundary cleanup |
-| Phase VII v2 | Apr 2026 | 23 | 5 analytic offensive modules, 29 theorems |
+The KLMN infrastructure decomposes `KLMNHypothesis` into more elementary components:
 
-## License
+```
+KLMNHypothesis = SobolevTraceInequality ∧ CellWeightBound
+```
 
-CC-By Attribution 4.0 International — Serge Durand, Horizon Research Programme
+Key proved theorems (0 sorry):
+- `formBoundData_of_infinitesimal`: infinitesimal form-bound → FormBoundData
+- `klmnHypothesis_of_infinitesimal`: infinitesimal form-bound → KLMNHypothesis
+
+Remaining sorry (3, all in Sobolev trace proofs — requires Mathlib H¹ infrastructure):
+- `sobolev_trace_bounded_interval`: trace inequality on [a,b]
+- `sobolevTraceInequality_proof`: trace inequality on ℝ
+- `infinitesimal_form_bound_of_sobolev_summable`: assembly
+
+## Module architecture
+
+```
+Goldbach.lean (root, 35 imports)
+│
+├── Phase VI (18 modules, sealed)
+│   Basic, Collage, Framework, Thresholds, Interfaces,
+│   AxiomsToLemmas, Budget, G43Budget, CompactWindowShadow,
+│   SmallInstances, Roadmap, Status, ExpBounds,
+│   A2CertificateData, ThresholdReal, PrimeLogEnclosures,
+│   BreakpointGrid, A2Certificate
+│
+├── Phase VII v2 (5 modules)
+│   PCBGallagher, HerglotzPositivity, A2PureAnalytic,
+│   MellinJackson, FredholmOTSA
+│
+├── CompactZone (9 modules, 0 sorry, 0 axiom)
+│   Defs          — W(Q), ratio_bound, Taylor bounds
+│   Grid          — cell decomposition, monotonicity
+│   Wire          — framework wiring (trivial path)
+│   CellBounds    — rational certificate v1
+│   CellBoundsStrong — rational certificate v2 + tail bounds
+│   Strong        — Taylor upper bounds, sqrt bounds
+│   Bridge        — conditional chain architecture
+│   NumeratorBound — cells 10-19 proved
+│   NumeratorAll  — ALL 20 cells proved → CompactZoneBoundStrong
+│
+└── KLMN (3 modules, 3 sorry, 0 axiom)
+    Defs          — QuadForm, IsFormBounded, SobolevTrace
+    Sobolev       — trace inequality statements (2 sorry)
+    Chain         — reduction chain (1 sorry)
+```
+
+## Build
+
+```bash
+git clone https://github.com/seisner1967-hash/goldbach-horizon.git
+cd goldbach-horizon
+lake exe cache get
+lake build
+```
+
+## Scientific disclaimer
+
+This is a conditional framework, not an unconditional proof of the Goldbach conjecture.
+The five remaining analytic hypotheses are open mathematical problems. The contribution
+is methodological: demonstrating that the conditional structure is logically sound and
+machine-checkable, with an explicit and minimal trust boundary.
+
+## References
+
+- Repository: [github.com/seisner1967-hash/goldbach-horizon](https://github.com/seisner1967-hash/goldbach-horizon)
+- Preprint: OSF Thesis Commons (pending moderation)
+- Technical reports: Horizon Project R22–R24
