@@ -1,0 +1,9 @@
+{
+  "benchmark": "MT1-T4 Pilot",
+  "toolchain": "Lean 4.29.0 / mathlib 4.29.0",
+  "runtime": "4h45 on Google Colab",
+  "variance_ratio": [0.8602, 0.7965, 0.7469, 0.7180, 0.7066],
+  "cluster_gallagher": [0.7746, 0.7833, 0.7830],
+  "R_smooth": [0.1969, 0.1970, 0.1968, 0.1968, 0.1969],
+  "log10_N": [6.0, 7.0, 8.0, 8.7, 9.0]
+}
