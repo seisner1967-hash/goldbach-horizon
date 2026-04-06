@@ -1,0 +1,397 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{\textbf{MT3: Conditional Goldbach from Smooth Cluster Control}\\[6pt]
+\large From PCB($Q^1$) to Goldbach under the Spectral Identity}
+\author{Serge Durand\\
+\textit{Horizon Programme --- Phase VI}\\
+\texttt{seisner1967@gmail.com}}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present MT3, the closing arithmetic-to-spectral bridge in the Horizon--Goldbach programme. The role of MT3 is not to upgrade a prime-cluster bound from Gallagher scale~$Q^1$ to a stronger~$Q^2$ regime: that step is unnecessary, and in fact contradicted by the quantitative analysis of the programme. Instead, MT3 isolates the true remaining obstruction.
+
+From MT1, we obtain explicit control of the normalized smooth residual term, including the canonical bound $|R_{\mathrm{smooth}}(N)| < 0.22$ for the parameter choice $(B,A) = (7,2)$. From MT2, we obtain a mean pair-variance estimate and a Cauchy--Schwarz transfer yielding a prime-cluster bound of the form
+\[
+C(N,Q) \ll \frac{N^2}{Q(\log N)^2},
+\]
+that is, a prime-cluster bound at Gallagher scale~$Q^1$. This arithmetic chain is unconditional.
+
+We then show that, once inserted into the spectral framework of G36, this PCB($Q^1$) bound is sufficient to force $\delta_7(N)/M(N) \to 0$, and hence positivity of the Goldbach representation function $R(2N)$, provided one assumes the spectral identity of Problem~F1. Thus the only remaining gap in the programme is spectral, not combinatorial, dispersion-theoretic, or cluster-theoretic.
+
+The paper therefore establishes the following conditional reduction: PCB($Q^1$) + F1 imply Goldbach for all sufficiently large even integers. In this sense, MT3 identifies the exact frontier between the unconditional arithmetic core of the programme and its final spectral conjecture.
+\end{abstract}
+
+% ============================================================
+\section{Introduction}
+% ============================================================
+
+The purpose of MT3 is to state, with maximal clarity, what remains to be proved in the Horizon--Goldbach programme.
+
+Earlier versions of the programme ledger suggested that a transition from a Gallagher-scale prime-cluster bound PCB($Q^1$) to a stronger PCB($Q^2$) regime might be required in order to deduce Goldbach. This interpretation is no longer tenable. The quantitative analysis developed in G38 shows that the $Q^2$ route is not merely technically difficult, but structurally incorrect for the present framework: the corresponding scaling is off by large factors and is not the correct target. In parallel, G36~v2 established that, within the spectral architecture of the programme, a Gallagher-scale cluster bound PCB($Q^1$) is already sufficient.
+
+This dissolves the former ``MT3 wall''. The true content of MT3 is therefore different:
+
+\begin{quote}
+\emph{MT3 is the explicit bridge from the unconditional arithmetic output of MT1/MT2 to the spectral Goldbach criterion of G36.}
+\end{quote}
+
+The arithmetic side is now straightforward to summarize. MT1 provides explicit control of the smooth residual term, including the canonical safety estimate
+\[
+|R_{\mathrm{smooth}}(N)| < 0.22
+\]
+at the parameter choice $(B,A) = (7,2)$. MT2 upgrades this to a mean pair-variance estimate and, through a Cauchy--Schwarz transfer, to a prime-cluster bound at Gallagher scale
+\[
+C(N,Q) \ll \frac{N^2}{Q(\log N)^2}.
+\]
+Thus the entire dispersion-theoretic and cluster-counting side of the argument is unconditional.
+
+The only remaining step is to inject this PCB($Q^1$) estimate into the spectral formalism of G36. That injection depends on a single unresolved statement: the spectral identity of Problem~F1. Accordingly, the main theorem of the present paper is conditional, but only conditionally spectral:
+
+\begin{quote}
+\emph{Assuming F1, the unconditional arithmetic chain MT1 $\to$ MT2 $\to$ PCB($Q^1$) implies Goldbach for all sufficiently large even integers.}
+\end{quote}
+
+This is the exact logical status of the programme. The role of MT3 is to make this status explicit, rigorous, and auditable.
+
+\medskip
+
+The paper is organized as follows. Section~2 records the unconditional arithmetic output of MT1 and MT2. Section~3 states the three main theorems of MT3 in layered form. Section~4 isolates the sole remaining non-arithmetic input (Problem~F1). Section~5 deduces the Goldbach conclusion inside the G36 framework. Section~6 provides an honest programme-level status summary.
+
+The central thesis of the paper can be summarized in one sentence:
+
+\begin{quote}
+\emph{The arithmetic part of the programme is unconditional; the only remaining obstruction is the spectral identity~F1.}
+\end{quote}
+
+% ============================================================
+\section{The MT1--MT2 Arithmetic Output}
+% ============================================================
+
+This section records the unconditional arithmetic content already established by MT1 and MT2. No new dispersion-theoretic argument is introduced here; the goal is to assemble the exact output that MT3 will later inject into the spectral framework.
+
+\subsection{Canonical smooth control from MT1}
+
+The first input is the canonical smooth estimate obtained in MT1 for the parameter choice $(B,A) = (7,2)$. In this regime, the normalized smooth residual term satisfies an explicit safety bound
+\[
+|R_{\mathrm{smooth}}(N)| < 0.22
+\]
+for all sufficiently large~$N$. This estimate plays two roles. First, it provides a concrete quantitative control of the smoothed residual side. Second, it places the canonical parameter choice inside a stable ``safe region'' suitable for subsequent variance and cluster-transfer arguments.
+
+More generally, MT1 supplies a decomposition of the normalized residual into smooth and rough parts,
+\[
+R_{\mathrm{smooth}}(N) = R_{\le y}(N) + R_{>y}(N),
+\]
+together with a main-term control on the smooth contribution (via the Hildebrand--Tenenbaum saddle-point method and the Dickman $\rho$-function) and a logarithmic decay estimate on the rough contribution (via Mertens-type product bounds). The explicit canonical bound above is the distilled output of this decomposition for the parameter set relevant to the programme.
+
+\subsection{Mean pair-variance from MT2}
+
+The second input is the MT2 mean pair-variance estimate. In the same canonical regime, MT2 yields
+\[
+\overline{V}(N) \ll \bigl(1 + |R_{\mathrm{smooth}}(N)|\bigr) \frac{N^2}{(\log N)^4}.
+\]
+This is the core variance statement extracted from the MT2 layer. It shows that the average pair-fluctuation is controlled at the natural $N^2/\log^4 N$ scale, up to the mild multiplicative factor $1 + |R_{\mathrm{smooth}}(N)|$, which is already bounded in the canonical regime by MT1.
+
+The variance bound combines a rough variance estimate (obtained via Bombieri--Vinogradov-type input at scale $N^2/(\log N)^{4+A_0}$) with a smooth variance estimate (controlled by the MT1 smooth residual and Brun--Titchmarsh). The aggregation uses the exact variance splitting and a weakening of the rough logarithmic power from $\log^5 N$ to $\log^4 N$, made possible by the positivity factor $1 + |R_{\mathrm{smooth}}|$.
+
+\subsection{Cauchy--Schwarz transfer and prime-cluster control}
+
+The third input is the Cauchy--Schwarz transfer mechanism built in MT2. This transfer converts the mean pair-variance bound into a cluster-counting estimate. In the canonical regime, one obtains
+\[
+C(N,Q) \ll \frac{N^2}{Q(\log N)^2}.
+\]
+This is precisely a prime-cluster bound at Gallagher scale~$Q^1$, and it is the final arithmetic output needed by MT3.
+
+The importance of this estimate must be stated carefully. The programme does not require any stronger $Q^2$-type bound. The Gallagher-scale bound above is both the natural output of the MT1--MT2 architecture and, within the G36 spectral framework, the sufficient one.
+
+\subsection{Ledger conclusion}
+
+We therefore isolate the unconditional arithmetic chain:
+\[
+\text{MT1 smooth control} \Longrightarrow \text{MT2 variance control} \Longrightarrow \text{PCB}(Q^1).
+\]
+
+In particular, the following facts are unconditional:
+
+\begin{enumerate}
+    \item canonical smooth safety control,
+    \[
+    |R_{\mathrm{smooth}}(N)| < 0.22;
+    \]
+    \item mean pair-variance bound,
+    \[
+    \overline{V}(N) \ll \bigl(1 + |R_{\mathrm{smooth}}(N)|\bigr) \frac{N^2}{(\log N)^4};
+    \]
+    \item prime-cluster bound at Gallagher scale,
+    \[
+    C(N,Q) \ll \frac{N^2}{Q(\log N)^2}.
+    \]
+\end{enumerate}
+
+This closes the arithmetic side of the programme. The only remaining issue is the spectral insertion of this PCB($Q^1$) estimate into the G36 criterion.
+
+% ============================================================
+\section{Main Theorems}
+% ============================================================
+
+We now state the main layered conclusions of MT3. The first theorem records the unconditional arithmetic output of MT1 and MT2. The second theorem isolates the spectral insertion step, conditional on Problem~F1. The third theorem is the resulting conditional Goldbach statement.
+
+\begin{theorem}[Arithmetic output of MT1--MT2]
+\label{thm:arithmetic-output}
+For the canonical choice $(B,A) = (7,2)$, the MT1 and MT2 chain yields the following unconditional statements for all sufficiently large~$N$:
+\begin{enumerate}
+    \item the canonical smooth bound $|R_{\mathrm{smooth}}(N)| < 0.22$;
+    \item the mean pair-variance estimate
+    \[
+    \overline{V}(N) \ll \bigl(1 + |R_{\mathrm{smooth}}(N)|\bigr) \frac{N^2}{(\log N)^4};
+    \]
+    \item the prime-cluster bound at Gallagher scale
+    \[
+    C(N,Q) \ll \frac{N^2}{Q(\log N)^2}.
+    \]
+\end{enumerate}
+Equivalently, the programme establishes an unconditional prime-cluster bound PCB($Q^1$).
+\end{theorem}
+
+\begin{theorem}[Spectral insertion at Gallagher scale]
+\label{thm:spectral-insertion}
+Assume the spectral identity of Problem~F1. Then the prime-cluster bound PCB($Q^1$),
+\[
+C(N,Q) \ll \frac{N^2}{Q(\log N)^2},
+\]
+is sufficient, within the framework of G36, to force
+\[
+\frac{\delta_7(N)}{M(N)} \to 0 \qquad (N \to \infty).
+\]
+In particular, no transition to a stronger PCB($Q^2$) regime is required.
+\end{theorem}
+
+\begin{theorem}[Conditional Goldbach from smooth cluster control]
+\label{thm:conditional-goldbach}
+Assume Problem~F1. Then every sufficiently large even integer~$2N$ admits a Goldbach representation:
+\[
+R(2N) > 0.
+\]
+Equivalently, Goldbach follows from the unconditional MT1--MT2 arithmetic chain together with the spectral identity~F1.
+\end{theorem}
+
+% ============================================================
+\section{The Spectral Bridge: Problem F1}
+% ============================================================
+
+The purpose of this section is to isolate, in exact and explicit form, the sole remaining non-arithmetic input of the programme. This input is Problem~F1, referred to throughout as the \emph{spectral identity}. No unconditional proof of F1 is claimed in the present paper.
+
+\subsection{Why a spectral bridge is needed}
+
+The output of MT1 and MT2 is an unconditional prime-cluster bound at Gallagher scale,
+\[
+C(N,Q) \ll \frac{N^2}{Q(\log N)^2}.
+\]
+This estimate belongs to the arithmetic side of the programme. However, the criterion in G36 is formulated in a spectral language. In particular, the quantity that must be shown to vanish asymptotically, $\delta_7(N)/M(N)$, is not introduced purely as a raw cluster-counting object. Its definition passes through the spectral formalism developed in the earlier notes of the programme.
+
+Accordingly, one needs an identification principle linking the arithmetic cluster quantity delivered by MT1--MT2 with the spectral quantity entering the G36 criterion. This is exactly the role of Problem~F1.
+
+\subsection{Statement of Problem F1}
+
+We formulate F1 abstractly, at the level needed by MT3.
+
+\begin{conjecture}[Problem F1 --- spectral identity]
+\label{conj:F1}
+The arithmetic cluster-counting side produced by the MT1--MT2 chain coincides, up to the normalizations fixed in G36, with the spectral quantity governing the defect ratio $\delta_7(N)/M(N)$.
+\end{conjecture}
+
+More informally: F1 asserts that the Gallagher-scale prime-cluster bound obtained arithmetically is the correct object to insert into the spectral criterion of G36. MT3 treats F1 as an explicit interface hypothesis.
+
+\subsection{What F1 does not say}
+
+It is important to record what is \emph{not} being assumed.
+
+First, F1 is not a new dispersion estimate. All dispersion-theoretic input has already been discharged in MT1 and MT2.
+
+Second, F1 is not a statement about a stronger cluster regime such as PCB($Q^2$). The programme no longer regards $Q^2$ as the relevant target.
+
+Third, F1 is not a black-box replacement for the arithmetic chain. The arithmetic chain remains fully visible and unconditional:
+\[
+\text{MT1} \Longrightarrow \text{MT2} \Longrightarrow \text{PCB}(Q^1).
+\]
+F1 intervenes only after this chain has been completed, and only to identify its output with the spectral defect quantity used in G36.
+
+\subsection{Why F1 is the only remaining gap}
+
+At this stage of the programme, the logical picture is as follows.
+
+\begin{enumerate}
+    \item MT1 gives canonical smooth control, including $|R_{\mathrm{smooth}}(N)| < 0.22$.
+    \item MT2 gives variance control and the Cauchy--Schwarz transfer.
+    \item Together, MT1 and MT2 imply the unconditional prime-cluster bound $C(N,Q) \ll N^2/(Q(\log N)^2)$.
+    \item G36 shows that such a Gallagher-scale bound is sufficient to force $\delta_7(N)/M(N) \to 0$, provided one can identify the arithmetic cluster quantity with the spectral one.
+\end{enumerate}
+
+Thus there is no remaining combinatorial gap, no remaining variance gap, no remaining Cauchy--Schwarz gap, and no remaining $Q^1$-to-$Q^2$ upgrade gap. The only unresolved interface is spectral. This is the precise reason why F1 is the unique open hypothesis in MT3.
+
+\subsection{A methodological correction}
+
+We record here a methodological correction essential for the interpretation of the programme.
+
+Earlier ledgers sometimes suggested that the path to Goldbach required a strengthening from PCB($Q^1$) to PCB($Q^2$). This is no longer the correct reading. Quantitative diagnostics established in G38 show that the $Q^2$ target is not merely unproved, but inappropriate for the present architecture:
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Candidate target} & \textbf{Status} & \textbf{Role in programme} \\
+\midrule
+PCB($Q^2$) & rejected & quantitatively false target \\
+PCB($Q^1$) & proved & sufficient in G36 framework \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This correction replaces a false missing step by the true remaining problem.
+
+% ============================================================
+\section{Conditional Deduction of Goldbach}
+% ============================================================
+
+We now complete the argument of MT3. The proof is short because all arithmetic work has already been completed upstream, and the sole remaining hypothesis is F1.
+
+\subsection{Input from MT1 and MT2}
+
+By Theorem~\ref{thm:arithmetic-output}, the canonical MT1--MT2 chain yields, unconditionally and for all sufficiently large~$N$,
+\begin{enumerate}
+    \item the smooth safety estimate $|R_{\mathrm{smooth}}(N)| < 0.22$;
+    \item the mean pair-variance bound $\overline{V}(N) \ll (1 + |R_{\mathrm{smooth}}(N)|) \, N^2/(\log N)^4$;
+    \item the prime-cluster bound $C(N,Q) \ll N^2/(Q(\log N)^2)$.
+\end{enumerate}
+
+\subsection{Insertion into the spectral framework}
+
+Assume now Problem~F1. By Theorem~\ref{thm:spectral-insertion}, the unconditional Gallagher-scale bound
+\[
+C(N,Q) \ll \frac{N^2}{Q(\log N)^2}
+\]
+may be inserted into the G36 framework, and this suffices to force
+\[
+\frac{\delta_7(N)}{M(N)} \to 0 \qquad (N \to \infty).
+\]
+
+\subsection{Positivity of the Goldbach representation function}
+
+Once the defect ratio satisfies $\delta_7(N)/M(N) \to 0$, the positivity criterion of G36 applies. Consequently, for all sufficiently large~$N$,
+\[
+R(2N) > 0.
+\]
+
+\begin{proof}[Proof of Theorem~\ref{thm:conditional-goldbach}]
+By Theorem~\ref{thm:arithmetic-output}, the MT1--MT2 chain yields unconditionally a prime-cluster bound PCB($Q^1$):
+\[
+C(N,Q) \ll \frac{N^2}{Q(\log N)^2}.
+\]
+Assume Problem~F1. Then Theorem~\ref{thm:spectral-insertion} applies and gives $\delta_7(N)/M(N) \to 0$. The G36 positivity criterion then implies $R(2N) > 0$ for all sufficiently large even integers~$2N$.
+\end{proof}
+
+\subsection{Final conditional conclusion}
+
+We may therefore summarize the logical status of the programme in the concise form
+\[
+\boxed{
+\text{MT1} + \text{MT2} + \text{F1}
+\Longrightarrow
+\text{Goldbach for all sufficiently large even integers}.
+}
+\]
+Since MT1 and MT2 are unconditional, this may also be reformulated as
+\[
+\boxed{
+\text{PCB}(Q^1) + \text{F1}
+\Longrightarrow
+\text{Goldbach}.
+}
+\]
+
+% ============================================================
+\section{Honest Status of the Programme}
+% ============================================================
+
+We provide a complete and transparent summary of the programme's logical status.
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Layer} & \textbf{Status} & \textbf{Reference} \\
+\midrule
+MT1 smooth control & unconditional & MT1, Theorem~1.1 \\
+MT2 variance and CS transfer & unconditional & MT2, Theorems~A--B \\
+PCB($Q^1$) & unconditional & MT1--MT2 chain \\
+PCB($Q^2$) & rejected & G38, Table~1 \\
+Spectral identity (F1) & \textbf{open} & G36~v2, Problem~F1 \\
+Goldbach conclusion & conditional on F1 & MT3, Theorem~\ref{thm:conditional-goldbach} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{What the programme proves unconditionally}
+
+The entire MT1--MT2 arithmetic chain is unconditional. No hypothesis beyond standard analytic number theory (Gallagher 1976, Brun--Titchmarsh, Mertens, Bombieri--Vinogradov, Hildebrand--Tenenbaum) is required. In particular:
+\begin{itemize}
+    \item no Elliott--Halberstam conjecture is assumed;
+    \item no generalized Riemann hypothesis is assumed;
+    \item no spectral hypothesis is assumed.
+\end{itemize}
+
+\subsection{What the programme assumes}
+
+The sole assumption beyond the unconditional arithmetic core is Problem~F1: the spectral identity connecting the arithmetic cluster-counting output to the G36 positivity criterion. This is a single, sharply defined interface hypothesis.
+
+\subsection{What the programme does \emph{not} claim}
+
+MT3 does not claim an unconditional proof of the binary Goldbach conjecture. The correct description is:
+
+\begin{quote}
+\emph{A conditional reduction of Goldbach to a spectral identification problem (F1), with all arithmetic prerequisites discharged unconditionally.}
+\end{quote}
+
+% ============================================================
+\section{Conclusion}
+% ============================================================
+
+MT3 therefore does not introduce a new arithmetic barrier; it removes a false one, and shows that the true remaining frontier of the programme is purely spectral.
+
+The unconditional arithmetic chain MT1 $\to$ MT2 $\to$ PCB($Q^1$) is complete. The conditional Goldbach deduction, under the spectral identity F1, follows in a few lines. The programme is now a sharply defined conditional reduction, with one remaining spectral question.
+
+\begin{thebibliography}{9}
+
+\bibitem{MT1} S.~Durand, \emph{Prime Cluster Bound via Smooth Number Estimates} (MT1), Horizon Programme, 2026.
+
+\bibitem{MT2} S.~Durand, \emph{Large-Sieve Control for Smooth Prime Clusters} (MT2), Horizon Programme, 2026.
+
+\bibitem{G36} S.~Durand, \emph{Goldbach's Conjecture Reduces to a Prime Cluster Bound} (G36~v2), Horizon Programme, 2026.
+
+\bibitem{G38} S.~Durand, \emph{PCB Bug Found and Corrected} (G38~v1.1), Horizon Programme, 2026.
+
+\bibitem{Gallagher} P.~X.~Gallagher, On the distribution of primes in short intervals, \emph{Mathematika} \textbf{23} (1976), 4--9.
+
+\bibitem{HT} A.~Hildebrand and G.~Tenenbaum, Integers free of large prime factors and the Riemann hypothesis, \emph{Trans.\ Amer.\ Math.\ Soc.} \textbf{296} (1986), 265--290.
+
+\bibitem{BT} V.~Brun, Le crible d'Eratosth\`{e}ne et le th\'{e}or\`{e}me de Goldbach, \emph{Skr.\ Norske Vid.-Akad.\ Kristiania} (1920).
+
+\bibitem{BV} E.~Bombieri, On the large sieve, \emph{Mathematika} \textbf{12} (1965), 201--225.
+
+\end{thebibliography}
+
+\end{document}
