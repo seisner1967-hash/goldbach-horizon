@@ -26,10 +26,12 @@ Conventions:
    MT1 bridges
    ============================================================ -/
 
-/-- Bridge 1: exact splitting of the normalized residual. -/
-axiom Rsmooth_split
+/-- Bridge 1 (Phase 4): exact splitting of the normalized residual.
+    CLOSED — holds by definition since R_smooth := R_smooth_le_y + R_smooth_gt_y. -/
+theorem Rsmooth_split
   (p : MT1Params) (N : ℝ) :
-  R_smooth p N = R_smooth_le_y p N + R_smooth_gt_y p N
+  R_smooth p N = R_smooth_le_y p N + R_smooth_gt_y p N :=
+  rfl
 
 /--
 Bridge 2: control of the smooth part.
@@ -38,22 +40,29 @@ This is the canonical MT1 smooth bound:
 the smooth contribution is bounded by a constant multiple of
 `ρ(B/A) * e^γ * A * log log N`.
 -/
-axiom Rsmooth_le_y_bound
+theorem Rsmooth_le_y_bound
   (p : MT1Params) (N : ℝ)
   (hN : N ≥ Real.exp (Real.exp (Real.exp 1))) :
   ∃ C : ℝ, 0 < C ∧
-    |R_smooth_le_y p N| ≤ C * smoothMainTerm p N
+    |R_smooth_le_y p N| ≤ C * smoothMainTerm p N := by
+  sorry -- Requires: Hildebrand–Tenenbaum (1986) smooth-number approximation
+         -- Ψ(X,y) = X·ρ(u)·(1 + O(1/log y)), giving |R_le_y| ≤ C·ρ(B/A)·e^γ·A·log log N
+         -- Dependencies: hildebrand_tenenbaum, dickmanRho properties, smoothMainTerm def
 
 /--
 Bridge 3: control of the rough part.
 
 This is the canonical MT1 rough bound, with logarithmic decay.
 -/
-axiom Rsmooth_gt_y_bound
+theorem Rsmooth_gt_y_bound
   (p : MT1Params) (N : ℝ)
   (hN : N ≥ Real.exp (Real.exp (Real.exp 1))) :
   ∃ C : ℝ, 0 < C ∧
-    |R_smooth_gt_y p N| ≤ C / (Real.log N) ^ (p.A - 1)
+    |R_smooth_gt_y p N| ≤ C / (Real.log N) ^ (p.A - 1) := by
+  sorry -- Requires: Mertens' third theorem variant giving
+         -- |Λ(y) − e^γ log y| ≤ C·e^γ / log y
+         -- With y = (log N)^A, the bound becomes C / (log N)^(A−1)
+         -- Dependencies: mertens_product_variant, smoothAmplifier def
 
 /--
 Bridge 4: MT1-to-PCB transfer at Gallagher (`Q^1`) quality.
@@ -62,23 +71,30 @@ This is the structural statement that smooth residual control yields
 a cluster-count bound of order `N^2 / (Q log^2 N)`, with explicit dependence
 on the normalized residual.
 -/
-axiom clusterCount_from_Rsmooth
+theorem clusterCount_from_Rsmooth
   (p : MT1Params) (N : ℝ)
   (hN : N ≥ Real.exp (Real.exp (Real.exp 1))) :
   ∃ C : ℝ, 0 < C ∧
     clusterCount p N ≤
       C * (1 + |R_smooth p N|) * N ^ 2 /
-        (Q_of p N * (Real.log N) ^ 2)
+        (Q_of p N * (Real.log N) ^ 2) := by
+  sorry -- Requires: Gallagher (1976) prime-cluster estimate
+         -- The count of primes in intervals of length Q is controlled by
+         -- the singular series sum, which in turn is bounded using the
+         -- smooth-number residual R_smooth
+         -- Dependencies: gallagher_mean_value, singularSeriesSum, R_smooth def
 
 /- ============================================================
    MT2 bridges
    ============================================================ -/
 
-/-- Bridge 5: exact splitting of the mean pair variance. -/
-axiom meanPairVariance_split
+/-- Bridge 5 (Phase 4): exact splitting of the mean pair variance.
+    CLOSED — holds by definition since meanPairVariance := smooth + rough. -/
+theorem meanPairVariance_split
   (p : MT1Params) (N : ℝ) :
   meanPairVariance p N =
-    meanPairVariance_smooth p N + meanPairVariance_rough p N
+    meanPairVariance_smooth p N + meanPairVariance_rough p N :=
+  rfl
 
 /--
 Bridge 6: rough variance bound.
@@ -86,12 +102,16 @@ Bridge 6: rough variance bound.
 This packages the Bombieri–Vinogradov / BDH-type rough contribution
 at scale `N^2 / log^(4+A₀) N`.
 -/
-axiom meanPairVariance_rough_bound
+theorem meanPairVariance_rough_bound
   (p : MT1Params) (N A0 : ℝ)
   (hN : N ≥ 4) (hA0 : 0 < A0) :
   ∃ C : ℝ, 0 < C ∧
     meanPairVariance_rough p N ≤
-      C * N ^ 2 / (Real.log N) ^ (4 + A0)
+      C * N ^ 2 / (Real.log N) ^ (4 + A0) := by
+  sorry -- Requires: Bombieri–Vinogradov theorem for prime pairs
+         -- The rough moduli (non-smooth) contribute pair-error variance
+         -- bounded by the BV large-sieve inequality at level X = N/Q
+         -- Dependencies: bombieri_vinogradov_pairs, pairSecondMoment def
 
 /--
 Bridge 6b: rough variance at base scale (ℕ exponent).
@@ -101,12 +121,15 @@ a natural number exponent `(4 : ℕ)` instead of `(4 + A₀ : ℝ)`.
 This avoids all `rpow` issues in downstream proofs.
 Mathematically implied by Bridge 6 since `log^5 N ≥ log^4 N` for `N ≥ e`.
 -/
-axiom meanPairVariance_rough_bound_base
+theorem meanPairVariance_rough_bound_base
   (p : MT1Params) (N : ℝ)
   (hN : N ≥ 4) :
   ∃ C : ℝ, 0 < C ∧
     meanPairVariance_rough p N ≤
-      C * N ^ 2 / (Real.log N) ^ (4 : ℕ)
+      C * N ^ 2 / (Real.log N) ^ (4 : ℕ) := by
+  sorry -- Requires: Bridge 6 with A₀ = 1, then weaken log^5 N ≥ log^4 N
+         -- This is a direct corollary of meanPairVariance_rough_bound
+         -- Dependencies: meanPairVariance_rough_bound (Bridge 6)
 
 /--
 Bridge 7: smooth variance bound.
@@ -114,12 +137,16 @@ Bridge 7: smooth variance bound.
 This is the MT2 bridge from smooth control to the smooth part
 of the mean pair variance, at the natural scale `N^2 / log^4 N`.
 -/
-axiom meanPairVariance_smooth_bound
+theorem meanPairVariance_smooth_bound
   (p : MT1Params) (N : ℝ)
   (hN : N ≥ 4) :
   ∃ C : ℝ, 0 < C ∧
     meanPairVariance_smooth p N ≤
-      C * (1 + |R_smooth p N|) * N ^ 2 / (Real.log N) ^ 4
+      C * (1 + |R_smooth p N|) * N ^ 2 / (Real.log N) ^ 4 := by
+  sorry -- Requires: Brun–Titchmarsh for individual pairs + smooth-number sieve
+         -- For y-smooth moduli r, each |E(N,r)| ≤ C·𝔖(r)·N/log²N via BT,
+         -- and the sum over smooth r picks up a factor (1 + |R_smooth|)
+         -- Dependencies: brun_titchmarsh_pairs, singularSeries, R_smooth def
 
 /--
 Bridge 8: variance-to-cluster transfer via Cauchy–Schwarz.
@@ -128,7 +155,7 @@ This is the canonical MT2 transfer:
 the cluster count is controlled by a Gallagher-scale main term plus
 `X * sqrt(V̄)`, where `V̄` is the mean pair variance.
 -/
-axiom clusterCount_variance_transfer
+theorem clusterCount_variance_transfer
   (p : MT1Params) (N : ℝ)
   (hN : N ≥ 4) :
   ∃ C : ℝ, 0 < C ∧
@@ -136,7 +163,11 @@ axiom clusterCount_variance_transfer
       C * (
         N ^ 2 / (Q_of p N * (Real.log N) ^ 2) +
         X_of p N * Real.sqrt (meanPairVariance p N)
-      )
+      ) := by
+  sorry -- Requires: Cauchy–Schwarz inequality applied to the cluster sum
+         -- Split cluster count into Gallagher main term + pair-error remainder,
+         -- then bound the remainder by X · √(V̄) via Cauchy–Schwarz
+         -- Dependencies: gallagher_mean_value, meanPairVariance def, sqrt properties
 
 /--
 Bridge 9: canonical safety threshold.
@@ -146,11 +177,17 @@ gives `ρ(3.5) ≤ 0.01537` (Dickman table), and the smooth main term
 evaluates to `≈ 0.01537 × e^γ × 2 × log log N ≈ 0.15` for large `N`,
 while the rough tail is `O(1/log N) → 0`. The sum is `< 0.22`.
 
-This bridge packages the numerical verification as an axiom.
+This bridge packages the numerical verification.
 -/
-axiom Rsmooth_canonical_below_safety
+theorem Rsmooth_canonical_below_safety
   (N : ℝ)
   (hN : N ≥ Real.exp (Real.exp (Real.exp 1))) :
-  |R_smooth canonicalMT1 N| < 0.22
+  |R_smooth canonicalMT1 N| < 0.22 := by
+  sorry -- Requires: Bridges 2 + 3 instantiated at canonical (B,A) = (7,2)
+         -- |R_smooth| ≤ |R_le_y| + |R_gt_y| via triangle inequality
+         -- |R_le_y| ≤ C₁·ρ(3.5)·e^γ·2·log log N ≤ 0.15 (dickmanRho_bound_3_5)
+         -- |R_gt_y| ≤ C₂/(log N) → 0 for large N
+         -- Sum < 0.22 for N ≥ exp(exp(exp 1))
+         -- Dependencies: Rsmooth_le_y_bound, Rsmooth_gt_y_bound, dickmanRho_bound_3_5
 
 end HorizonMT
