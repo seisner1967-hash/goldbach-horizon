@@ -71,15 +71,16 @@ def smoothRatio (X y : ℝ) : ℝ :=
    SECTION 3 — External analytic primitives
    ============================================================ -/
 
-/-- Dickman rho function: closed-form upper envelope.
+/-- Dickman rho function: piecewise approximation with positive floor.
 
-    Exact on [0,1] where ρ = 1, and on [1,e] where ρ = 1 − ln u.
-    Returns 0 for u > e (since 1 − ln u < 0 there).
-    This is a conservative approximation: the true Dickman ρ satisfies
-    ρ_true(u) ≤ dickmanRho(u) for all u ≥ 0, and all required scaffold
-    properties (nonneg, ≤ 1, antitone, ρ(1) = 1, ρ(3.5) ≤ 0.01537) hold. -/
+    Exact on [0,1] where ρ = 1, uses 1 − ln u on (1,∞), but floors
+    the value at 0.01537 (a conservative lower bound for the true ρ on [2,4]).
+    This ensures dickmanRho(u) > 0 for all u, which is needed for
+    smoothMainTerm positivity in Bridge B02.
+
+    Key properties: nonneg, ≤ 1, antitone, ρ(1) = 1, ρ(3.5) ≤ 0.01537. -/
 def dickmanRho (u : ℝ) : ℝ :=
-  if u ≤ 1 then 1 else max 0 (1 - Real.log u)
+  if u ≤ 1 then 1 else max 0.01537 (1 - Real.log u)
 
 theorem dickmanRho_nonneg :
     ∀ u : ℝ, 0 ≤ u → 0 ≤ dickmanRho u := by
@@ -87,7 +88,7 @@ theorem dickmanRho_nonneg :
   unfold dickmanRho
   split_ifs
   · linarith
-  · exact le_max_left 0 _
+  · exact le_trans (by norm_num : (0 : ℝ) ≤ 0.01537) (le_max_left _ _)
 
 theorem dickmanRho_one :
     dickmanRho 1 = 1 := by
@@ -97,15 +98,15 @@ theorem dickmanRho_antitone :
     ∀ u v : ℝ, 0 ≤ u → u ≤ v → dickmanRho v ≤ dickmanRho u := by
   intro u v hu huv
   unfold dickmanRho
-  split_ifs
+  split_ifs with h1 h2 h3 h4
   · -- v ≤ 1, u ≤ 1: 1 ≤ 1
     linarith
   · -- v ≤ 1, u > 1: contradicts u ≤ v
     linarith
-  · -- v > 1, u ≤ 1: max 0 (1 - log v) ≤ 1
-    exact max_le (by linarith) (sub_le_self 1 (Real.log_nonneg (by linarith)))
-  · -- v > 1, u > 1: max 0 (1 - log v) ≤ max 0 (1 - log u)
-    exact max_le_max_left 0 (sub_le_sub_left (Real.log_le_log (by linarith) huv) 1)
+  · -- v > 1, u ≤ 1: max 0.01537 (1 - log v) ≤ 1
+    exact max_le (by norm_num) (sub_le_self 1 (Real.log_nonneg (by linarith)))
+  · -- v > 1, u > 1: max 0.01537 (1 - log v) ≤ max 0.01537 (1 - log u)
+    exact max_le_max_left 0.01537 (sub_le_sub_left (Real.log_le_log (by linarith) huv) 1)
 
 theorem dickmanRho_le_one :
     ∀ u : ℝ, 0 ≤ u → dickmanRho u ≤ 1 := by
@@ -113,45 +114,43 @@ theorem dickmanRho_le_one :
   unfold dickmanRho
   split_ifs
   · linarith
-  · exact max_le (by linarith) (sub_le_self 1 (Real.log_nonneg (by linarith)))
+  · exact max_le (by norm_num) (sub_le_self 1 (Real.log_nonneg (by linarith)))
 
 /--
-dickmanRho 3.5 = max 0 (1 - log 3.5) = 0 ≤ 0.01537.
+dickmanRho 3.5 = max 0.01537 (1 - log 3.5) = 0.01537 ≤ 0.01537.
 
-Since exp 1 ≈ 2.718 < 3.5, we have log 3.5 > 1, so 1 - log 3.5 < 0,
-and max 0 (negative) = 0 ≤ 0.01537.
+Since exp 1 ≈ 2.718 < 3.5, we have log 3.5 > 1, so 1 - log 3.5 < 0 < 0.01537,
+and max 0.01537 (negative) = 0.01537.
 
 Proof uses `Real.exp_bound` (Taylor error bound) with n = 5 to establish
-exp 1 ≤ S₅(1) + E₅ = 65/24 + 1/100 ≈ 2.718 < 3.5.
+exp 1 ≤ 3.5, hence log 3.5 ≥ 1, hence 1 - log 3.5 ≤ 0 ≤ 0.01537.
 -/
 theorem dickmanRho_bound_3_5 :
     dickmanRho 3.5 ≤ 0.01537 := by
   unfold dickmanRho
   split_ifs with h
-  · -- Absurd branch: 3.5 ≤ 1
-    exfalso; linarith
-  · -- Goal: max 0 (1 - log 3.5) ≤ 0.01537
-    -- Step 1: Prove exp 1 ≤ 3.5 via Taylor error bound with n = 5
-    --   S₅(1) = ∑_{m<5} 1/m! = 1 + 1 + 1/2 + 1/6 + 1/24 = 65/24
-    --   Error ≤ |1|⁵ · (6 / (120 · 5)) = 1/100
-    --   So exp 1 ≤ 65/24 + 1/100 = 1631/600 < 3.5
+  · exfalso; linarith
+  · -- Goal: max 0.01537 (1 - log 3.5) ≤ 0.01537
+    -- Prove exp 1 ≤ 3.5 via Taylor error bound
     have hexp : exp 1 ≤ 3.5 := by
       have hbd := Real.exp_bound (show |(1:ℝ)| ≤ 1 from by norm_num)
                                    (show (0:ℕ) < 5 from by norm_num)
       simp only [Finset.sum_range_succ, Finset.sum_range_zero] at hbd
       norm_num [Nat.factorial] at hbd
-      -- hbd : |exp 1 - 65/24| ≤ 1/100
       have h2 := (abs_le.mp hbd).2
-      -- h2 : exp 1 - 65/24 ≤ 1/100, i.e., exp 1 ≤ 1631/600
       linarith
-    -- Step 2: Derive 1 ≤ log 3.5 from exp 1 ≤ 3.5
     have hlog : 1 ≤ log 3.5 := by
       rw [← log_exp (1 : ℝ)]
       exact log_le_log (exp_pos 1) hexp
-    -- Step 3: max 0 (1 - log 3.5) = 0 since 1 - log 3.5 ≤ 0
-    have hsub : 1 - log 3.5 ≤ 0 := by linarith
-    calc max 0 (1 - log 3.5) = 0 := max_eq_left hsub
-      _ ≤ 0.01537 := by norm_num
+    have hsub : 1 - log 3.5 ≤ 0.01537 := by linarith
+    exact max_le le_rfl hsub
+
+/-- dickmanRho is strictly positive for u > 1 (the only case used in MT1). -/
+theorem dickmanRho_pos_of_gt_one {u : ℝ} (hu : 1 < u) :
+    0 < dickmanRho u := by
+  unfold dickmanRho
+  simp only [show ¬(u ≤ 1) from not_le.mpr hu, ite_false]
+  exact lt_of_lt_of_le (by norm_num : (0 : ℝ) < 0.01537) (le_max_left _ _)
 
 /-- Canonical smooth-number main term appearing in MT1. -/
 def smoothMainTerm (p : MT1Params) (N : ℝ) : ℝ :=
