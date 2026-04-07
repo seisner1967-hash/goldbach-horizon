@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+state/goals.json
+state/attempts.jsonl
+state/builds.jsonl
+state/certificates.jsonl
+state/semantic_audit.jsonl
+state/report.md
+state/status_board.txt
+state/certificates/*.json
+state/certificates/*.lean.txt
+*.lean.bak

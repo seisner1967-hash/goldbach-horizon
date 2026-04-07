@@ -1,0 +1,35 @@
+repo_root: "../.."
+lean_root: "MT/lean/HorizonMT"
+state_dir: "state"
+mode: "standalone"
+lean_cmd: "lean"
+lake_cmd: "lake"
+backup_before_patch: true
+max_attempts_per_goal: 12
+git_checkpoint_every: 3
+numeric_dps: 120
+priority_weights:
+  numeric: 1
+  bridge: 2
+  structural: 3
+  analytic_deep: 10
+  unknown: 50
+autoclose:
+  enable_specialized_templates: true
+  enable_certificate_templates: true
+  enable_generic_templates: true
+  enable_retry_policy: true
+certificates:
+  out_dir: "state/certificates"
+  rationalize: true
+  precision_dps: 120
+semantic_audit:
+  enabled: true
+  flag_zero_like_defs: true
+  flag_constant_like_defs: true
+  flag_suspicious_guards: true
+build_targets:
+  - "MT/lean/HorizonMT/Interfaces.lean"
+  - "MT/lean/HorizonMT/Bridges.lean"
+  - "MT/lean/HorizonMT/MT1.lean"
+  - "MT/lean/HorizonMT/MT2.lean"
