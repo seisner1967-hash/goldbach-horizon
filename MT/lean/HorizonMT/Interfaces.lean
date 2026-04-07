@@ -115,12 +115,43 @@ theorem dickmanRho_le_one :
   · linarith
   · exact max_le (by linarith) (sub_le_self 1 (Real.log_nonneg (by linarith)))
 
+/--
+dickmanRho 3.5 = max 0 (1 - log 3.5) = 0 ≤ 0.01537.
+
+Since exp 1 ≈ 2.718 < 3.5, we have log 3.5 > 1, so 1 - log 3.5 < 0,
+and max 0 (negative) = 0 ≤ 0.01537.
+
+Proof uses `Real.exp_bound` (Taylor error bound) with n = 5 to establish
+exp 1 ≤ S₅(1) + E₅ = 65/24 + 1/100 ≈ 2.718 < 3.5.
+-/
 theorem dickmanRho_bound_3_5 :
     dickmanRho 3.5 ≤ 0.01537 := by
-  sorry -- Numerical: dickmanRho 3.5 = max 0 (1 - log 3.5) = 0 ≤ 0.01537
-         -- because exp 1 ≈ 2.718 < 3.5, so log 3.5 > 1, so 1 - log 3.5 < 0
-         -- Requires evaluating Real.exp 1 < 3.5 which needs norm_num extensions
-         -- for transcendental functions not yet available in Mathlib
+  unfold dickmanRho
+  split_ifs with h
+  · -- Absurd branch: 3.5 ≤ 1
+    exfalso; linarith
+  · -- Goal: max 0 (1 - log 3.5) ≤ 0.01537
+    -- Step 1: Prove exp 1 ≤ 3.5 via Taylor error bound with n = 5
+    --   S₅(1) = ∑_{m<5} 1/m! = 1 + 1 + 1/2 + 1/6 + 1/24 = 65/24
+    --   Error ≤ |1|⁵ · (6 / (120 · 5)) = 1/100
+    --   So exp 1 ≤ 65/24 + 1/100 = 1631/600 < 3.5
+    have hexp : exp 1 ≤ 3.5 := by
+      have hbd := Real.exp_bound (show |(1:ℝ)| ≤ 1 from by norm_num)
+                                   (show (0:ℕ) < 5 from by norm_num)
+      simp only [Finset.sum_range_succ, Finset.sum_range_zero] at hbd
+      norm_num [Nat.factorial] at hbd
+      -- hbd : |exp 1 - 65/24| ≤ 1/100
+      have h2 := (abs_le.mp hbd).2
+      -- h2 : exp 1 - 65/24 ≤ 1/100, i.e., exp 1 ≤ 1631/600
+      linarith
+    -- Step 2: Derive 1 ≤ log 3.5 from exp 1 ≤ 3.5
+    have hlog : 1 ≤ log 3.5 := by
+      rw [← log_exp (1 : ℝ)]
+      exact log_le_log (exp_pos 1) hexp
+    -- Step 3: max 0 (1 - log 3.5) = 0 since 1 - log 3.5 ≤ 0
+    have hsub : 1 - log 3.5 ≤ 0 := by linarith
+    calc max 0 (1 - log 3.5) = 0 := max_eq_left hsub
+      _ ≤ 0.01537 := by norm_num
 
 /-- Canonical smooth-number main term appearing in MT1. -/
 def smoothMainTerm (p : MT1Params) (N : ℝ) : ℝ :=

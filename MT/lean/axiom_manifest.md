@@ -1,6 +1,6 @@
 # Axiom Manifest — HorizonMT Lean 4 Scaffold
 
-## Status: 30/45 closed, 15/45 stubbed, 0/45 open (ALL PHASES COMPLETE)
+## Status: 31/45 closed, 14/45 stubbed, 0/45 open (ALL PHASES COMPLETE)
 
 | Phase | ID | Name | File | Cat | Diff | Status | Strategy |
 |---|---|---|---|---|---|---|---|
@@ -20,7 +20,7 @@
 | 2 | I06 | dickmanRho_one | Interfaces | property | 2 | CLOSED | proved: simp [dickmanRho] |
 | 2 | I07 | dickmanRho_antitone | Interfaces | property | 4 | CLOSED | proved: split_ifs + Real.log_le_log |
 | 2 | I08 | dickmanRho_le_one | Interfaces | property | 2 | CLOSED | proved: split_ifs + Real.log_nonneg |
-| 2 | I09 | dickmanRho_bound_3_5 | Interfaces | numerical | 5 | STUBBED | sorry; needs norm_num for exp 1 < 3.5 |
+| 2 | I09 | dickmanRho_bound_3_5 | Interfaces | numerical | 5 | CLOSED | proved: exp_bound(n=5) → exp 1 ≤ 3.5 → log 3.5 ≥ 1 → max=0 |
 | 3 | I10 | smoothCount | Interfaces | function | 3 | CLOSED | def: Finset.card of y-smooth n ≤ ⌊X⌋ |
 | 3 | I12 | smoothAmplifier | Interfaces | function | 3 | CLOSED | def: ∏ p/max(1,p−1) over primes p ≤ ⌊y⌋ |
 | 3 | I14 | singularSeries | Interfaces | function | 4 | CLOSED | def: 2C₂·∏ (p−1)/max(1,p−2) for even r |
@@ -59,3 +59,4 @@
 - Phase 4: 2 CLOSED (Rsmooth_split, meanPairVariance_split → rfl from Phase 3 sum-definitions)
 - Phase 5: 8 STUBBED (all transfer bridges; axiom→theorem+sorry with analytic dependency docs)
 - Phase 6: 5 STUBBED (deep theorems; axiom→theorem+sorry with paper references + dependency docs). **ALL 45 AXIOMS NOW CLOSED OR STUBBED. Zero `axiom` declarations remain.**
+- Phase 7: 1 CLOSED (dickmanRho_bound_3_5: sorry→proof via Real.exp_bound Taylor truncation n=5, yielding exp 1 ≤ 65/24+1/100 < 3.5, hence log 3.5 ≥ 1, hence max 0 (1−log 3.5) = 0 ≤ 0.01537)
