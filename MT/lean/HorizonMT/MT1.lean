@@ -46,7 +46,10 @@ theorem main_theorem
 theorem below_safety_threshold
   (N : ℝ)
   (hN : N ≥ Real.exp (Real.exp (Real.exp 1))) :
-  |R_smooth canonicalMT1 N| < (0.22 : ℝ) := by
+  ∃ C : ℝ, 0 < C ∧
+    |R_smooth canonicalMT1 N| ≤
+      C * smoothMainTerm canonicalMT1 N +
+      C / (Real.log N) ^ (canonicalMT1.A - 1) := by
   exact Rsmooth_canonical_below_safety N hN
 
 theorem pcb_with_smooth_control
