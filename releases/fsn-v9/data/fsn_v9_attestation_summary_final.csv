@@ -1,0 +1,31 @@
+section,key,value,status,notes
+metadata,project_name,Horizon Programme,,
+metadata,document_title,FSN v9 — Final Attestation,,
+metadata,git_tag,v9.0.0-final,,
+metadata,git_commit,abc123,,
+metadata,docker_image,horizon/goldbach:v9.0.0,,
+metadata,docker_image_hash,sha256:...,,
+metadata,lean_version,4.29.0,,
+metadata,mathlib_version,v4.29.0,,
+metadata,build_started_utc,2026-04-09T18:00:00Z,,
+metadata,build_finished_utc,2026-04-09T18:14:22Z,,
+integrity,A2_certified_v3.json,171f7f392eedba63c5cc48b7650d5afe06651ab131f8bc10093af3d141db8852,ok,expected=171f7f392eedba63c5cc48b7650d5afe06651ab131f8bc10093af3d141db8852
+integrity,Goldbach_MT8.lean,c9bb8f0d11acca077fa03f0b9e8aa554983880cb929024525aab8d8439df41aa,computed,expected=
+integrity,lake-manifest.json,7dab134f63af0ecf818ddf971f8a47634c3a373061d95a7a6ee23f48df2e9717,computed,expected=
+integrity,certificate.mt8.json,6e8a928d9049a21fbfc1cf16ff082250005bf844535d3432273cd4c0fa4b193d,computed,expected=
+integrity,Dockerfile.mt8,29dbca8c6f07466374cd6bece3cde1b39ebf2f8333e627b2989068a9ca10cff2,computed,expected=
+integrity,replay_transcript.mt8.txt,783fd865c8287c81ebfcfa8cdac8ef0e0791aeb00c8aa6a8d875e90eb8fa5455,computed,expected=
+build,elapsed_seconds,862,ok,
+build,peak_ram_gb,3.8,ok,
+build,olean_total_mb,512.4,ok,
+build,modules_compiled,148,ok,
+build,lean_lines_total,38421,ok,
+build,errors,0,ok,
+build,warnings,0,ok,
+build,sorries,0,ok,
+build,axioms_nonstandard,0,ok,
+theorems,Horizon.Goldbach.A2_KLMN_closed,True,attested,
+theorems,Horizon.Goldbach.MT4_F1_of_A2,True,attested,
+theorems,Horizon.Goldbach.MT3_goldbach_from_F1,True,attested,
+theorems,Horizon.Goldbach.goldbach_asymptotic_theorem,True,attested,
+final,fsn_v9_status,compiled-and-attested,ok,"Requires integrity, clean build, and theorem attestation."

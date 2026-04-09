@@ -1,0 +1,38 @@
+{
+  "project_name": "Horizon Programme",
+  "document_title": "FSN v9 \u2014 Final Attestation",
+  "status": "compiled-and-attested",
+  "git_tag": "v9.0.0-final",
+  "git_commit": "abc123",
+  "docker_image": "horizon/goldbach:v9.0.0",
+  "docker_image_hash": "sha256:...",
+  "lean_version": "4.29.0",
+  "mathlib_version": "v4.29.0",
+  "build_started_utc": "2026-04-09T18:00:00Z",
+  "build_finished_utc": "2026-04-09T18:14:22Z",
+  "metrics": {
+    "elapsed_seconds": 862,
+    "peak_ram_gb": 3.8,
+    "olean_total_mb": 512.4,
+    "modules_compiled": 148,
+    "lean_lines_total": 38421,
+    "errors": 0,
+    "warnings": 0,
+    "sorries": 0,
+    "axioms_nonstandard": 0
+  },
+  "integrity": {
+    "A2_certified_v3.json": "171f7f392eedba63c5cc48b7650d5afe06651ab131f8bc10093af3d141db8852",
+    "Goldbach_MT8.lean": "c9bb8f0d11acca077fa03f0b9e8aa554983880cb929024525aab8d8439df41aa",
+    "lake-manifest.json": "7dab134f63af0ecf818ddf971f8a47634c3a373061d95a7a6ee23f48df2e9717",
+    "certificate.mt8.json": "6e8a928d9049a21fbfc1cf16ff082250005bf844535d3432273cd4c0fa4b193d",
+    "Dockerfile.mt8": "29dbca8c6f07466374cd6bece3cde1b39ebf2f8333e627b2989068a9ca10cff2",
+    "replay_transcript.mt8.txt": "783fd865c8287c81ebfcfa8cdac8ef0e0791aeb00c8aa6a8d875e90eb8fa5455"
+  },
+  "theorems": {
+    "Horizon.Goldbach.A2_KLMN_closed": true,
+    "Horizon.Goldbach.MT4_F1_of_A2": true,
+    "Horizon.Goldbach.MT3_goldbach_from_F1": true,
+    "Horizon.Goldbach.goldbach_asymptotic_theorem": true
+  }
+}

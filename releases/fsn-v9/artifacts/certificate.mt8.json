@@ -1,0 +1,28 @@
+{
+  "package": "MT8",
+  "generated_at_utc": "2026-04-09T16:18:37Z",
+  "status": "replay-ready, not kernel-attested in current session",
+  "frozen_inputs": {
+    "A2_certified_v3.json": "171f7f392eedba63c5cc48b7650d5afe06651ab131f8bc10093af3d141db8852",
+    "A2_closed.lean": "b5e943da913c56c9e5c0190cbc2155e018393b93a022bd1ed33c7ece5e737ca6",
+    "Goldbach_asymptotic.lean": "321ef7a6c91096cbfff463ad7bef8e84b531052fd5cc0cc22b0e0512812839b1",
+    "Goldbach.lean": "0f1598f16fc27fca8ff261a6c84f926ebd2d85b692fb421bc6f031e46c0588a0",
+    "lake-manifest.json": "7dab134f63af0ecf818ddf971f8a47634c3a373061d95a7a6ee23f48df2e9717"
+  },
+  "session_checks": {
+    "witness_hash_reverified": true,
+    "lean_available": false,
+    "lake_available": false,
+    "git_available": true,
+    "docker_available": false
+  },
+  "current_environment": {
+    "python": "3.13.5",
+    "platform": "Linux-4.4.0-x86_64-with-glibc2.41"
+  },
+  "attestation_gate": "A successful `lake build` in the pinned Lean 4.29.0 / Mathlib v4.29.0 environment remains required for final kernel attestation.",
+  "theorem_targets": [
+    "A2_KLMN_closed : A2",
+    "goldbach_asymptotic : GoldbachAsymptotic"
+  ]
+}
