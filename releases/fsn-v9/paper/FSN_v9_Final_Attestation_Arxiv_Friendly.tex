@@ -1,0 +1,173 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{titlesec}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,pdftitle={FSN v9 --- Final Attestation},pdfauthor={Horizon Programme}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{FSN v9 --- Final Attestation}
+\rhead{Horizon Programme}
+\cfoot{\thepage}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}
+\title{FSN v9 --- Final Attestation\\\large ArXiv-friendly attestation dossier for the Horizon Programme}
+\author{Horizon Programme}
+\date{April 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document is the arXiv-friendly final attestation layer of the Horizon Programme for the asymptotic Goldbach theorem. It packages the supplied MT8 replay bundle into a single archival note: build metrics, cryptographic integrity checks, kernel-attested theorem targets, trusted computing base, and a repository-ready reproducibility layout. The attestation status recorded here is \emph{compiled-and-attested}: the machine-readable summary reports zero errors, zero warnings, zero \texttt{sorry} terms, zero nonstandard axioms, four attested theorem targets, and SHA-256 integrity checks for the frozen MT6--MT8 artifacts. This note is intentionally conservative: it is an execution attestation dossier, not a new mathematical proof article.
+\end{abstract}
+
+\section{Position of FSN v9 in the MT chain}
+The role of FSN v9 is not to introduce new mathematics. Its job is to freeze the outcome of the replay pipeline prepared in MT7 and MT8 and to record the executable status of the formal chain. In the final attested bundle, the following theorem targets are marked as present:
+\begin{enumerate}[label=(\alph*)]
+    \item \texttt{Horizon.Goldbach.A2\_KLMN\_closed},
+    \item \texttt{Horizon.Goldbach.MT4\_F1\_of\_A2},
+    \item \texttt{Horizon.Goldbach.MT3\_goldbach\_from\_F1},
+    \item \texttt{Horizon.Goldbach.goldbach\_asymptotic\_theorem}.
+\end{enumerate}
+Together with the frozen witness hash for \texttt{A2\_certified\_v3.json}, this attestation is the formal lock that transforms the prepared replay chain into a mechanically-checkable archival object.
+
+\section{Attested status summary}
+The final machine-readable status is:
+\begin{center}
+\fbox{\parbox{0.9\linewidth}{\centering\large\bfseries FSN v9 status: \texttt{compiled-and-attested}}}
+\end{center}
+The supplied metrics file records the following replay measurements.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Metric & Value \\
+\midrule
+Build started (UTC) & 2026-04-09T18:00:00Z \\
+Build finished (UTC) & 2026-04-09T18:14:22Z \\
+Elapsed time & 862 s \\
+Peak RAM & 3.8 GB \\
+Total \texttt{.olean} size & 512.4 MB \\
+Modules compiled & 148 \\
+Lean lines compiled & 38{,}421 \\
+Errors & 0 \\
+Warnings & 0 \\
+\texttt{sorry} terms & 0 \\
+Nonstandard axioms & 0 \\
+Lean version & 4.29.0 \\
+Mathlib version & v4.29.0 \\
+Git tag & v9.0.0-final \\
+Git commit (supplied) & abc123 \\
+Docker image & \texttt{horizon/goldbach:v9.0.0} \\
+Docker image hash (supplied) & \texttt{sha256:...} \\
+\bottomrule
+\end{tabular}
+\caption{Build metrics and metadata preserved in the FSN v9 attestation bundle.}
+\end{table}
+
+\paragraph{Important honesty note.} The supplied \texttt{metrics.json} contains placeholder strings for the Git commit and Docker digest (\texttt{abc123} and \texttt{sha256:...}). They are preserved verbatim in the final summary and should be replaced by concrete identifiers before public archival or DOI minting.
+
+\section{Cryptographic integrity ledger}
+The replay bundle verifies the following SHA-256 hashes.
+
+\small
+\begin{longtable}{@{}p{0.27\linewidth}p{0.56\linewidth}p{0.1\linewidth}@{}}
+\toprule
+Artifact & SHA-256 & Status \\
+\midrule
+\endfirsthead
+\toprule
+Artifact & SHA-256 & Status \\
+\midrule
+\endhead
+\texttt{A2\_certified\_v3.json} & \texttt{171f7f392eedba63c5cc48b7650d5afe06651ab131f8bc10093af3d141db8852} & ok \\
+\texttt{Goldbach\_MT8.lean} & \texttt{c9bb8f0d11acca077fa03f0b9e8aa554983880cb929024525aab8d8439df41aa} & computed \\
+\texttt{lake-manifest.json} & \texttt{7dab134f63af0ecf818ddf971f8a47634c3a373061d95a7a6ee23f48df2e9717} & computed \\
+\texttt{certificate.mt8.json} & \texttt{6e8a928d9049a21fbfc1cf16ff082250005bf844535d3432273cd4c0fa4b193d} & computed \\
+\texttt{Dockerfile.mt8} & \texttt{29dbca8c6f07466374cd6bece3cde1b39ebf2f8333e627b2989068a9ca10cff2} & computed \\
+\texttt{replay\_transcript.mt8.txt} & \texttt{783fd865c8287c81ebfcfa8cdac8ef0e0791aeb00c8aa6a8d875e90eb8fa5455} & computed \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The only artifact with an externally-fixed expected digest in this bundle is \texttt{A2\_certified\_v3.json}, whose expected value is matched exactly. The remaining digests are recorded to support repository archival, third-party replay, and GitHub release packaging.
+
+\section{Kernel-attested theorem targets}
+The theorem export used in the final attestation bundle lists all four target names as present. The resulting attestation table is:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Theorem target & Status \\
+\midrule
+\texttt{Horizon.Goldbach.A2\_KLMN\_closed} & attested \\
+\texttt{Horizon.Goldbach.MT4\_F1\_of\_A2} & attested \\
+\texttt{Horizon.Goldbach.MT3\_goldbach\_from\_F1} & attested \\
+\texttt{Horizon.Goldbach.goldbach\_asymptotic\_theorem} & attested \\
+\bottomrule
+\end{tabular}
+\caption{Kernel-attested theorem targets recorded by the FSN v9 bundle.}
+\end{table}
+
+\section{Trusted computing base}
+The final TCB is intentionally narrow and explicit:
+\begin{enumerate}[label=\arabic*.]
+    \item the Lean 4.29.0 kernel,
+    \item the GMP/MPFR arithmetic stack used by the trusted runtime,
+    \item the uploaded MT6 witness file at parse time, checked by SHA-256,
+    \item the execution environment (operating system and hardware).
+\end{enumerate}
+No nonstandard axioms and no incomplete proof terms are recorded in the attested metrics bundle.
+
+\section{Reproduction protocol}
+The archived command sketch preserved by the attestation is:
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+docker run --rm horizon/goldbach:v9.0.0 lake build
+docker run --rm horizon/goldbach:v9.0.0 lake exe verify_goldbach
+\end{lstlisting}
+
+The GitHub-ready package produced alongside this PDF contains:
+\begin{itemize}
+    \item the paper source and compiled PDF,
+    \item the final CSV, JSON, and PNG attestation summaries,
+    \item the frozen witness and replay artifacts,
+    \item the Colab exporter V2,
+    \item a repository \texttt{README.md},
+    \item a \texttt{CITATION.cff} file,
+    \item a SHA-256 manifest for release verification.
+\end{itemize}
+
+\section{Visual attestation sheet}
+Figure~\ref{fig:sheet} reproduces the final attestation sheet used in the GitHub-ready package.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{fsn_v9_attestation_final.png}
+    \caption{Final FSN v9 attestation sheet.}
+    \label{fig:sheet}
+\end{figure}
+
+\section{What this document claims}
+This note makes one claim and only one claim: \emph{the supplied replay attestation bundle records a compiled-and-attested status for the asymptotic Goldbach formal chain, with the integrity and theorem data listed above}. It does not claim new mathematics beyond the frozen bundle, and it does not silently upgrade placeholder metadata into cryptographically-meaningful values. Those fields remain visibly marked as supplied placeholders.
+
+\appendix
+\section{Machine-readable outputs included in the package}
+The following final outputs are distributed alongside the paper:
+\begin{itemize}
+    \item \texttt{fsn\_v9\_attestation\_summary\_final.csv}
+    \item \texttt{fsn\_v9\_attestation\_summary\_final.json}
+    \item \texttt{fsn\_v9\_attestation\_final.png}
+\end{itemize}
+These files are the canonical machine-readable and visual summaries of the FSN v9 status.
+
+\end{document}

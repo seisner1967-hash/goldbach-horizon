@@ -1,0 +1,22 @@
+MT8 replay transcript
+UTC: 2026-04-09T16:18:37Z
+
+$ sha256sum A2_certified_v3.json
+171f7f392eedba63c5cc48b7650d5afe06651ab131f8bc10093af3d141db8852  A2_certified_v3.json
+
+$ which lean
+
+
+$ which lake
+
+
+$ which git
+/usr/bin/git
+
+$ which docker
+
+
+Interpretation:
+- Artifact integrity checks succeeded.
+- The pinned replay toolchain is not installed in this session.
+- No `lake build` attestation is claimed by MT8 in the current environment.

@@ -1,0 +1,11 @@
+FROM ubuntu:24.04
+
+RUN apt-get update && apt-get install -y curl git python3 python3-pip zstd xz-utils ca-certificates && rm -rf /var/lib/apt/lists/*
+
+# Lean bootstrap (repository should still pin its own toolchain)
+RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
+ENV PATH="/root/.elan/bin:${PATH}"
+
+WORKDIR /workspace
+
+CMD ["/bin/bash"]
