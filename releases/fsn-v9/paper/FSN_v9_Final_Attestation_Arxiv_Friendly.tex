@@ -66,15 +66,16 @@ Nonstandard axioms & 0 \\
 Lean version & 4.29.0 \\
 Mathlib version & v4.29.0 \\
 Git tag & v9.0.0-final \\
-Git commit (supplied) & abc123 \\
+Git commit (supplied) & NOT_RECORDED_IN_FSN_V9_ARTIFACT \\
 Docker image & \texttt{horizon/goldbach:v9.0.0} \\
-Docker image hash (supplied) & \texttt{sha256:...} \\
+Docker image hash (supplied) & \texttt{UNAVAILABLE_AT_CD4_AUDIT} \\
 \bottomrule
 \end{tabular}
 \caption{Build metrics and metadata preserved in the FSN v9 attestation bundle.}
 \end{table}
 
 \paragraph{Important honesty note.} The supplied \texttt{metrics.json} contains placeholder strings for the Git commit and Docker digest (\texttt{abc123} and \texttt{sha256:...}). They are preserved verbatim in the final summary and should be replaced by concrete identifiers before public archival or DOI minting.
+In the CD 30-day cleanup pass A-005, these placeholders were replaced by explicit unknown markers rather than invented identifiers.
 
 \section{Cryptographic integrity ledger}
 The replay bundle verifies the following SHA-256 hashes.
