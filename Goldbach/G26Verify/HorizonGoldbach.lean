@@ -18,6 +18,7 @@ import Mathlib.Analysis.SpecialFunctions.Exp
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Analysis.Calculus.ContDiff.Basic
 import Mathlib.Data.Complex.Basic
+import Mathlib.Data.Complex.ExponentialBounds
 
 namespace Horizon
 
@@ -71,7 +72,37 @@ def C_max : ℝ := 25.1
 
 /-- Key theorem stub: C_tr(4) < C_max (conditional on GRH). -/
 theorem transfer_bound_at_4 : C_tr 4 < C_max := by
-  sorry  -- Requires interval arithmetic: C_tr(4) ≈ 13.67 < 25.1
+  -- Numerical: C_tr 4 = 80.5 * 4^(-7/4) * (log 4)^2 ≈ 13.67 < 25.1.
+  -- Reduce log 4 = 2 log 2, 4^(-7/4) = 2^(-7/2); apply Real.log_two_lt_d9.
+  unfold C_tr C_max
+  push_cast
+  have h_log4 : Real.log 4 = 2 * Real.log 2 := by
+    rw [show (4 : ℝ) = 2 * 2 from by norm_num,
+        Real.log_mul (by norm_num : (2:ℝ) ≠ 0) (by norm_num : (2:ℝ) ≠ 0)]
+    ring
+  have h_four_as_two_rpow : (4 : ℝ) = (2 : ℝ) ^ (2 : ℝ) := by
+    rw [show (2 : ℝ) = ((2 : ℕ) : ℝ) from by norm_num, Real.rpow_natCast]
+    norm_num
+  have h_pow_eq : (4 : ℝ) ^ (-(7:ℝ)/4) = (2 : ℝ) ^ (-(7:ℝ)/2) := by
+    rw [h_four_as_two_rpow, ← Real.rpow_mul (by norm_num : (0 : ℝ) ≤ 2)]
+    ring_nf
+  rw [h_log4, h_pow_eq]
+  -- Goal: 80.5 * 2^(-7/2) * (2 * log 2)^2 < 25.1
+  have h_pow_bound : (2 : ℝ) ^ (-(7:ℝ)/2) < 1/8 := by
+    have h_lt : (2 : ℝ) ^ (-(7:ℝ)/2) < (2 : ℝ) ^ (-(3:ℝ)) :=
+      Real.rpow_lt_rpow_of_exponent_lt (by norm_num : (1:ℝ) < 2) (by norm_num)
+    have h_eq : (2 : ℝ) ^ (-(3:ℝ)) = 1/8 := by
+      rw [Real.rpow_neg (by norm_num : (0:ℝ) ≤ 2),
+          show (3 : ℝ) = ((3 : ℕ) : ℝ) from by norm_num,
+          Real.rpow_natCast]
+      norm_num
+    linarith
+  have h_pow_pos : 0 < (2:ℝ) ^ (-(7:ℝ)/2) := Real.rpow_pos_of_pos (by norm_num) _
+  have h_log_lt : Real.log 2 < 0.6931471808 := Real.log_two_lt_d9
+  have h_log_pos : 0 < Real.log 2 := Real.log_pos (by norm_num)
+  have h_log_sq : (Real.log 2)^2 < 0.481 := by nlinarith
+  -- 80.5 * 2^(-7/2) * 4 * (log 2)^2 < 80.5 * (1/8) * 4 * 0.481 = 19.36 < 25.1
+  nlinarith [h_pow_bound, h_pow_pos, h_log_sq, sq_nonneg (Real.log 2)]
 
 /-- Key theorem stub: For N ≥ 64, C_tr(N) < 1. -/
 theorem transfer_absolute_margin (N : ℕ) (hN : N ≥ 64) :
@@ -160,3 +191,6 @@ axiom spectral_bridge_GRH :
   True  -- Placeholder: Ψ_{2h}(x;q,a) = (S + E_off(H)) x/log²x + O(x/log³x)
 
 end Horizon
+
+-- Phase 2.1 axiom-purity audit (info-only, blacklist target: sorryAx)
+#print axioms Horizon.transfer_bound_at_4
