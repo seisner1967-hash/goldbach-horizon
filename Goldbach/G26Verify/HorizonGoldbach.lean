@@ -20,6 +20,10 @@ import Mathlib.Analysis.Calculus.ContDiff.Basic
 import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Complex.ExponentialBounds
 import Mathlib.Analysis.SpecialFunctions.Log.Monotone
+import Mathlib.Analysis.Calculus.BumpFunction.Basic
+import Mathlib.Analysis.Calculus.BumpFunction.InnerProduct
+
+open scoped ContDiff  -- brings `∞ = ((⊤ : ℕ∞) : WithTop ℕ∞)` into scope (smooth level)
 
 namespace Horizon
 
@@ -223,17 +227,42 @@ theorem C₃_bound : C₃ ≤ 475 := le_refl _
 axiom spectral_energy_bound : ∃ K : ℝ, K ≤ 80 ∧
   ∀ (N : ℕ), N ≥ 4 → True  -- placeholder for full SEH_tr
 
-/-- The Urysohn mollifier: b(x) = exp(1 - 1/(1 - (4(x-5/4)/3)²))
-    on [1/2, 2], zero outside. This is C_c^∞([1/2, 2]). -/
-noncomputable def urysohn_mollifier (x : ℝ) : ℝ :=
-  if x ∈ Set.Icc (1/2 : ℝ) 2 then
-    Real.exp (1 - 1 / (1 - ((4 * (x - 5/4) / 3)) ^ 2))
-  else 0
+/-- Smooth bump function centred at 5/4, supported on [1/2, 2].
 
-/-- The Urysohn mollifier is smooth (C^∞) — key property. -/
-theorem urysohn_smooth : ContDiff ℝ ⊤
+    SEMANTIC DIVERGENCE from the original Drive definition: the Drive
+    version defined the mollifier as a piecewise formula on
+    `Set.Icc (1/2) 2`, which is broken at the boundary points
+    `x = 1/2` and `x = 2` — there `1 - g(x)² = 0`, and Lean's classical
+    real division gives `1/0 = 0`, so the if-branch returns
+    `exp(1) = e ≈ 2.718` rather than the intended limiting value `0`.
+    The function was thus discontinuous, making `ContDiff ℝ ⊤`
+    literally false. We replace the definition with a thin wrapper
+    over Mathlib's `ContDiffBump` infrastructure with centre `5/4`,
+    `rIn = 3/8`, `rOut = 3/4` (support `[1/2, 2]`), preserving the
+    downstream contract (C^∞ bump with compact support on `[1/2, 2]`,
+    peak at centre `5/4`). -/
+noncomputable def urysohn_bump : ContDiffBump (5/4 : ℝ) where
+  rIn := 3/8
+  rOut := 3/4
+  rIn_pos := by norm_num
+  rIn_lt_rOut := by norm_num
+
+/-- The Urysohn mollifier, redefined as a wrapper over `urysohn_bump`. -/
+noncomputable def urysohn_mollifier (x : ℝ) : ℝ := urysohn_bump x
+
+/-- The Urysohn mollifier is smooth (C^∞) — key property.
+
+    Note on `∞` vs `⊤`: under the original Drive pin (Lean 4.6 era),
+    `ContDiff` was parameterised by `n : ℕ∞`, and `⊤ : ℕ∞` denoted the
+    smooth level. In current Mathlib (Lean 4.15), `ContDiff` takes
+    `n : WithTop ℕ∞`, where `⊤ : WithTop ℕ∞` now denotes the analytic
+    level (which bump functions do not satisfy); the smooth level is
+    `∞ : WithTop ℕ∞` (= `((⊤ : ℕ∞) : WithTop ℕ∞)`). We adopt `∞` to
+    preserve the original intent (smoothness, not analyticity). -/
+theorem urysohn_smooth : ContDiff ℝ ∞
     (fun x => urysohn_mollifier x) := by
-  sorry  -- Requires careful analysis of bump function composition
+  show ContDiff ℝ ∞ (urysohn_bump : ℝ → ℝ)
+  exact urysohn_bump.contDiff
 
 -- ================================================================
 -- THE U7 PLATINUM SEAL: Fail-Closed Coupling
@@ -305,3 +334,6 @@ end Horizon
 
 -- Phase 2.3 audit:
 #print axioms Horizon.transfer_absolute_margin
+
+-- Phase 2.4 audit:
+#print axioms Horizon.urysohn_smooth
