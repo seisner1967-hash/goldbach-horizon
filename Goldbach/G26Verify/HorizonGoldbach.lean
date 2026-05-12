@@ -19,6 +19,7 @@ import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Analysis.Calculus.ContDiff.Basic
 import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Complex.ExponentialBounds
+import Mathlib.Analysis.SpecialFunctions.Log.Monotone
 
 namespace Horizon
 
@@ -120,7 +121,92 @@ theorem transfer_bound_at_4 : C_tr 4 < C_max := by
 /-- Key theorem stub: For N ≥ 64, C_tr(N) < 1. -/
 theorem transfer_absolute_margin (N : ℕ) (hN : N ≥ 64) :
     C_tr N < 1 := by
-  sorry  -- Follows from N^{-7/4} decay
+  -- Strategy: f(x) := (log x)² / x^(7/4) = (log x / x^(7/8))² is antitone
+  -- on [exp(8/7), ∞) via Real.log_div_self_rpow_antitoneOn (a := 7/8) +
+  -- squaring preservation on non-negatives. Then C_tr N ≤ C_tr 64 ; close
+  -- C_tr 64 < 1 numerically via log_two bounds (Behrend pattern).
+  have hN_real : (64 : ℝ) ≤ (N : ℝ) := by exact_mod_cast hN
+  have hN_pos : (0 : ℝ) < (N : ℝ) := by linarith
+  have h64_pos : (0 : ℝ) < (64 : ℝ) := by norm_num
+  -- exp(8/7) ≤ 64 (since 8/7 ≤ log 64 = 6 log 2, and log 2 > 0.693)
+  have h_exp_le_64 : Real.exp ((1 : ℝ) / ((7:ℝ)/8)) ≤ 64 := by
+    rw [show ((1 : ℝ) / ((7:ℝ)/8)) = 8/7 from by norm_num]
+    rw [show (64 : ℝ) = Real.exp (Real.log 64) from (Real.exp_log h64_pos).symm]
+    apply Real.exp_le_exp.mpr
+    rw [show (64 : ℝ) = (2 : ℝ)^(6 : ℕ) from by norm_num, Real.log_pow]
+    push_cast
+    linarith [Real.log_two_gt_d9]
+  have h_exp_le_N : Real.exp ((1 : ℝ) / ((7:ℝ)/8)) ≤ (N : ℝ) :=
+    le_trans h_exp_le_64 hN_real
+  -- Antitonicity: g(N) ≤ g(64) where g(x) = log x / x^(7/8)
+  have h_anti := Real.log_div_self_rpow_antitoneOn (a := (7:ℝ)/8) (by norm_num)
+  have h_g_le : Real.log (N:ℝ) / (N:ℝ)^((7:ℝ)/8)
+              ≤ Real.log 64 / (64:ℝ)^((7:ℝ)/8) :=
+    h_anti h_exp_le_64 h_exp_le_N hN_real
+  -- Non-negativity of g(N), g(64) (log > 0 since arg ≥ 64 > 1)
+  have h_log_64_pos : (0 : ℝ) < Real.log 64 := Real.log_pos (by norm_num)
+  have h_log_N_pos : (0 : ℝ) < Real.log (N : ℝ) := Real.log_pos (by linarith)
+  have h_rpow_64_pos : (0 : ℝ) < (64 : ℝ)^((7:ℝ)/8) :=
+    Real.rpow_pos_of_pos h64_pos _
+  have h_rpow_N_pos : (0 : ℝ) < (N : ℝ)^((7:ℝ)/8) :=
+    Real.rpow_pos_of_pos hN_pos _
+  have h_g_N_nn : 0 ≤ Real.log (N:ℝ) / (N:ℝ)^((7:ℝ)/8) :=
+    div_nonneg h_log_N_pos.le h_rpow_N_pos.le
+  -- Squaring preserves: g(N)² ≤ g(64)²
+  have h_sq_le : (Real.log (N:ℝ) / (N:ℝ)^((7:ℝ)/8))^2
+              ≤ (Real.log 64 / (64:ℝ)^((7:ℝ)/8))^2 :=
+    pow_le_pow_left₀ h_g_N_nn h_g_le 2
+  -- Algebraic identity (log x / x^(7/8))² = (log x)² / x^(7/4)
+  have h_alg_N : (Real.log (N:ℝ) / (N:ℝ)^((7:ℝ)/8))^2
+              = (Real.log (N:ℝ))^2 / (N:ℝ)^((7:ℝ)/4) := by
+    rw [div_pow]; congr 1
+    rw [← Real.rpow_natCast _ 2, ← Real.rpow_mul hN_pos.le]; norm_num
+  have h_alg_64 : (Real.log 64 / (64:ℝ)^((7:ℝ)/8))^2
+                = (Real.log 64)^2 / (64:ℝ)^((7:ℝ)/4) := by
+    rw [div_pow]; congr 1
+    rw [← Real.rpow_natCast _ 2, ← Real.rpow_mul h64_pos.le]; norm_num
+  rw [h_alg_N, h_alg_64] at h_sq_le
+  -- h_sq_le : (log N)² / N^(7/4) ≤ (log 64)² / 64^(7/4)
+  -- Now: C_tr N < 1 ⇔ 80.5 · (log N)² / N^(7/4) < 1
+  unfold C_tr
+  rw [show (N:ℝ)^(-(7:ℝ)/4) = 1 / (N:ℝ)^((7:ℝ)/4) from by
+    rw [show -(7:ℝ)/4 = -((7:ℝ)/4) from by ring, Real.rpow_neg hN_pos.le]; ring]
+  rw [show (80.5 : ℝ) * (1 / (N:ℝ)^((7:ℝ)/4)) * (Real.log (N:ℝ))^2
+       = 80.5 * ((Real.log (N:ℝ))^2 / (N:ℝ)^((7:ℝ)/4)) from by ring]
+  refine lt_of_le_of_lt
+    (mul_le_mul_of_nonneg_left h_sq_le (by norm_num : (0:ℝ) ≤ 80.5)) ?_
+  -- Goal: 80.5 · (log 64)² / 64^(7/4) < 1
+  have h_log64 : Real.log 64 = 6 * Real.log 2 := by
+    rw [show (64 : ℝ) = (2 : ℝ)^(6 : ℕ) from by norm_num, Real.log_pow]
+    push_cast; ring
+  have h_pow_64 : (64:ℝ)^((7:ℝ)/4) = (2:ℝ)^((21:ℝ)/2) := by
+    rw [show (64 : ℝ) = (2 : ℝ)^((6 : ℕ) : ℝ) from by
+        rw [Real.rpow_natCast]; norm_num,
+        ← Real.rpow_mul (by norm_num : (0:ℝ) ≤ 2)]
+    ring_nf
+  rw [h_log64, h_pow_64]
+  -- Goal: 80.5 · (6 log 2)² / 2^(21/2) < 1
+  have h_log_sq : (Real.log 2)^2 < 0.481 := by
+    have h1 := Real.log_two_lt_d9
+    have h2 : 0 < Real.log 2 := Real.log_pos (by norm_num)
+    nlinarith
+  -- 2^(21/2) > 1448 (since (1448)² = 2,096,704 < 2,097,152 = 2^21)
+  have h_pow_pos : 0 < (2:ℝ)^((21:ℝ)/2) := Real.rpow_pos_of_pos (by norm_num) _
+  have h_pow_sq_eq : ((2:ℝ)^((21:ℝ)/2))^2 = 2097152 := by
+    rw [← Real.rpow_natCast _ 2, ← Real.rpow_mul (by norm_num : (0:ℝ) ≤ 2)]
+    rw [show ((21:ℝ)/2 * ((2:ℕ):ℝ)) = ((21:ℕ):ℝ) from by push_cast; ring,
+        Real.rpow_natCast]
+    norm_num
+  have h_pow_gt : (2:ℝ)^((21:ℝ)/2) > 1448 := by
+    nlinarith [h_pow_sq_eq, h_pow_pos,
+               sq_nonneg ((2:ℝ)^((21:ℝ)/2) - 1448)]
+  -- Final: 80.5 · 36 · (log 2)² / 2^(21/2) < 1 ⇔ 2898 (log 2)² < 2^(21/2)
+  -- 2898 · 0.481 ≈ 1393.6 < 1448 ✓
+  rw [show (6 * Real.log 2)^2 = 36 * (Real.log 2)^2 from by ring]
+  rw [show (80.5 : ℝ) * (36 * (Real.log 2)^2 / (2:ℝ)^((21:ℝ)/2))
+       = (2898 * (Real.log 2)^2) / (2:ℝ)^((21:ℝ)/2) from by ring]
+  rw [div_lt_iff₀ h_pow_pos, one_mul]
+  nlinarith [h_log_sq, h_pow_gt, sq_nonneg (Real.log 2)]
 
 /-- The Mellin decay constant. In the G26 architecture, this was intended
     as the supremum over compact support of |mellin urysohn| weighted by
@@ -216,3 +302,6 @@ end Horizon
 -- Phase 2.2 audit:
 #print axioms Horizon.C₂_pos
 #print axioms Horizon.C₃_bound
+
+-- Phase 2.3 audit:
+#print axioms Horizon.transfer_absolute_margin
