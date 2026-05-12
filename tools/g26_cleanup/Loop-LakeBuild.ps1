@@ -85,8 +85,8 @@ function Invoke-LakeBuildOnce {
     [CmdletBinding()]
     param([Parameter(Mandatory)][string]$Target)
     Write-Host "[Loop-LakeBuild] lake build $Target"
-    & lake build $Target
-    return $LASTEXITCODE
+    & lake build $Target | Out-Host
+    return [int]$LASTEXITCODE
 }
 
 function Invoke-LoopLakeBuild {
