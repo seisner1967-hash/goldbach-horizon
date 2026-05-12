@@ -40,7 +40,7 @@ noncomputable def splitCount (a B : ℕ) : ℕ :=
     primes in P(a) is pi(a). Hence the fraction is <= pi(B)/pi(a).
 
     Since pi(a) → ∞ by Euclid, this fraction → 0. QED. -/
-theorem dispersion_bound_unconditional (a B : ℕ) (ha : a > B) :
+theorem dispersion_bound_unconditional (a B : ℕ) (_ha : a > B) :
     splitCount a B ≤ (PrimeSet B).card := by
   unfold splitCount
   exact Finset.card_filter_le _ _

@@ -13,6 +13,11 @@
 import Mathlib.NumberTheory.ArithmeticFunction
 import Mathlib.Analysis.SpecificLimits.Basic
 import Mathlib.Data.Nat.Prime.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Exp
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Analysis.Calculus.ContDiff.Basic
+import Mathlib.Data.Complex.Basic
 
 namespace Horizon
 
@@ -131,7 +136,7 @@ structure U7PlatinumSeal where
 /-- Main conditional theorem: Goldbach's conjecture
     holds for all even N ≥ 4, conditional on GRH
     and successful Seal construction. -/
-theorem goldbach_conditional_GRH (seal : U7PlatinumSeal) :
+theorem goldbach_conditional_GRH (s : U7PlatinumSeal) :
     ∀ N : ℕ, N ≥ 2 → R N ≥ 1 := by
   sorry  -- The crown jewel: requires full formal chain
 
