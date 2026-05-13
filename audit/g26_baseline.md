@@ -1,108 +1,583 @@
-# G26 — Phase 0 baseline snapshot
+# G26 v5 Watchlist Closure — Audit Baseline
 
-Generated manually because `python -m proof_agent` is not installed on this
-host (the agent CLI returned `No module named proof_agent`). Per the Phase 0
-brief, the manual fallback is acceptable.
+Companion human-readable document to `manifests/G26_v5_watchlist_closed.json`.
+For machine-verifiable claims, refer to the manifest. This document
+explains the work, decisions, and pointers for future contributors.
 
-## Repo identity
+Status: watchlist v2 fully closed at commit `bc78fdb`. Manifest committed
+at `be8b6e6`. This document committed in the Phase 3.2 commit that follows.
 
-- Branch: `feat/g26-sorry-cleanup` (created from `main`)
-- HEAD: `62bdd5c2e316df0e4a0f37331651362f5fde03a6`
-- Subject: "Replace FSN v9 placeholders with explicit unknown markers"
-- Date of snapshot: 2026-05-12
-- Lake target: single library `Goldbach` (no `Goldbach.Certified` /
-  `Goldbach.Goldbach` submodule targets exist; see `lakefile.lean`).
+## 1. Overview
 
-## Discipline boundary (off-limits, do not modify in this track)
+G26 is the Lean formalisation track for the *Horizon Goldbach* programme.
+Its purpose is to mechanically verify, under Mathlib 4.15 + Lean 4.15.0, a
+set of theorem stubs and constant-related axioms shipped from the Drive
+source (`HorizonGoldbach.lean`, `HorizonCertified.lean`) and to bring the
+verified subset to a documented axiom-pure state under an explicit
+whitelist.
 
-These 5 untracked files belong to a separate Lean project (F-MT-004 / M_short_F).
-They are in the same working tree but are not part of the G26 cleanup scope.
-`Loop-LakeBuild.ps1` refuses to proceed if any of them appears in the staged
-index or working-tree diff:
+When this branch (`feat/g26-sorry-cleanup`) started from `main` at commit
+`62bdd5c`, neither of the two Drive files existed in the local repo. The
+existing `Goldbach` library compiled, with zero real `sorry` proof terms
+and zero axiom declarations in the tracked tree (commit `7ed739f` "ZERO
+SORRY" had been the prior milestone). G26 brought in two new files under
+a fresh sub-directory `Goldbach/G26Verify/`, then progressively closed the
+"watchlist v2" subset of their open obligations: five named targets (three
+`sorry`-bearing theorems and two `axiom`-with-`sorry`-definition pairs).
 
-- `Goldbach/M3cTerminalCD12Interval.lean` (untracked, 8401 bytes)
-- `Goldbach/M3cTerminalCD12AbelInterval.lean` (untracked, 5634 bytes)
-- `Goldbach/M3cTerminalCD12Conditional.lean` (untracked, 9113 bytes)
-- `Goldbach/M3cTerminalCD12PublicV022.lean` (untracked, 5315 bytes)
-- `Goldbach/MertensLandauNOverPhiKernelBound.lean` (untracked, 16035 bytes)
+The work fits in eight commits on `feat/g26-sorry-cleanup`, advancing
+through Phase 0 (tooling and WIP triage), Phase 1a / 1b (compile the two
+imported files under Lean 4.15), Phases 2.1 through 2.4 (close the
+watchlist), and Phases 3.1 / 3.2 (machine-readable manifest and this
+narrative). At HEAD, both files compile, eleven theorems verify
+axiom-pure, the watchlist is empty, and the from-scratch build (`lake
+clean` then full rebuild of the two targets) completes in 43 minutes 14
+seconds with exit code 0 and zero `sorryAx` mentions in the log.
 
-Status carried forward unchanged from upstream:
+The work explicitly preserves five out-of-scope `sorry`s and six
+structural axioms. Those are not bugs to fix in this track; they describe
+modules and infrastructure that live outside the `G26Verify` sub-tree.
+The watchlist closure is *the* milestone, not a stepping stone to broader
+closure of the file.
 
-- F-MT-004 = OPEN
-- M_short_F = NOT_ACCEPTED
+## 2. Architecture Context
 
-The G26 track must not create, reference, or delete any artefact under
-`audit/CD*`, `manifests/CD*`, or a top-level `CD*/` folder. All G26 artefacts
-live under `audit/g26_*`, `manifests/G26_*`, `tools/g26_cleanup/*`.
+The two Drive files belong to the *Grand Bridge* three-pillar architecture
+for an attack on Goldbach's strong conjecture:
 
-Build-system files that are also forbidden to mutate from G26:
+- **Pillar 1 — Loss Ledger (GRH-conditional)**: a `LossLedger` structure
+  enumerating seven loss channels U1..U7, with closure condition
+  `∑ U_i < 1`. The first six channels are bounded by an axiom
+  `U1_to_U6_bound` (budget `≤ 0.78`). The seventh, U7, is the "Platinum
+  Seal" coupling between Route A (finite verification up to `N₀ = 4·10^18`)
+  and Route B (spectral rigidity, GRH-conditional).
+- **Pillar 2 — Dispersion bound (unconditional)**: covered in
+  `HorizonCertified.lean`. The certified empirical fit from G29
+  (β = 0.8528, R² = 0.9925, bootstrap CI [0.8503, 0.8554]) yields the
+  formally verifiable theorems `beta_exceeds_half`, `ci_lower_exceeds_half`,
+  `fit_quality`, and the unconditional `dispersion_bound_unconditional`
+  via `Finset.card_filter_le`. Crossing point `A* = 67` is computed
+  rigorously.
+- **Pillar 3 — Finite verification (Route A)**: existence of a prime pair
+  summing to every even `N` in `[2, 2·10^18]`. Encoded as an axiom hypothesis
+  in `ProofPillars`, since the actual finite computational data lives
+  outside the G26 sub-tree.
 
-- `lakefile.lean`
-- `lean-toolchain`
-- `lake-manifest.json`
+`HorizonGoldbach.lean` defines the framework data structures (`LossLedger`,
+`U7PlatinumSeal`, `FiniteLedgerHash`) and the transfer-channel theorems
+that quantify U7's behaviour. `HorizonCertified.lean` carries the
+G29-certified dispersion-bound proofs and the Grand Bridge structure
+theorem `grand_bridge`. The two files are *build-independent*: neither
+imports the other. This independence was exploited when Phase 1a
+(HorizonCertified) preceded Phase 1b (HorizonGoldbach) without risk of
+cross-contamination.
 
-## Watchlist (sorry / axiom census, tracked Goldbach library)
+## 3. Scope of This Baseline
 
-`git grep '\bsorry\b' Goldbach/` (HEAD = 62bdd5c) returns 36 matches across
-25 tracked files. Spot-check of `Goldbach/ThresholdReal.lean` (the file with
-the highest count, 5) shows every match is inside a comment — the words
-`0 sorry` / `sorry` appearing in human-readable documentation, not as
-proof terms. This is consistent with the commit `7ed739f` "ZERO SORRY —
-45/45 closed, 0 axiom, 0 sorry".
+### 3.1 In Scope (Watchlist v2)
 
-- Actual `sorry` proof terms in tracked `Goldbach/**.lean`: **0**
-- Actual `axiom` declarations in tracked `Goldbach/**.lean`: **0**
-  (`git grep -E '^\s*axiom\s' Goldbach/` returns nothing)
+Five targets from the Drive `programme v2` specification, all closed:
 
-Files where the comment-only `sorry` token appears (preserved as-is — these
-are documentation artefacts, not cleanup targets):
+- `transfer_bound_at_4` — Numerical inequality `C_tr(4) < 25.1`. Closed
+  in Phase 2.1 (`8783bae`).
+- `transfer_absolute_margin` — Universal `∀ N ≥ 64, C_tr(N) < 1`. Closed
+  in Phase 2.3 (`9337558`).
+- `urysohn_smooth` — Smoothness of the Urysohn bump mollifier. Closed
+  in Phase 2.4 (`bc78fdb`) via refactor.
+- `C₂` definition + `C₂_pos` axiom — Twin-prime constant `> 0.66`.
+  Closed jointly in Phase 2.2 (`01d9f0b`).
+- `C₃` definition + `C₃_bound` axiom — Mellin decay constant `≤ 475`.
+  Closed jointly in Phase 2.2 (`01d9f0b`).
 
-| count | file |
-|---|---|
-| 5 | Goldbach/ThresholdReal.lean |
-| 3 | Goldbach/A2Certificate.lean |
-| 2 | Goldbach/CompactZone/Grid.lean |
-| 2 | Goldbach/CompactZone/Wire.lean |
-| 2 | Goldbach/Jackson/Defs.lean |
-| 2 | Goldbach/PCBGallagher.lean |
-| 2 | Goldbach/PrimeCrystalModel.lean |
-| 1 | Goldbach/A2PureAnalytic.lean |
-| 1 | Goldbach/AxiomsToLemmas.lean |
-| 1 | Goldbach/BreakpointGrid.lean |
-| 1 | Goldbach/CompactWindowShadow.lean |
-| 1 | Goldbach/CompactZone/Bridge.lean |
-| 1 | Goldbach/CompactZone/CellBounds.lean |
-| 1 | Goldbach/CompactZone/CellBoundsStrong.lean |
-| 1 | Goldbach/CompactZone/Defs.lean |
-| 1 | Goldbach/DominationRatioComputable.lean |
-| 1 | Goldbach/FredholmOTSA.lean |
-| 1 | Goldbach/G43Budget.lean |
-| 1 | Goldbach/HerglotzPositivity.lean |
-| 1 | Goldbach/InterfacesStrong.lean |
-| 1 | Goldbach/InterfacesStrongBridge.lean |
-| 1 | Goldbach/IntervalArith.lean |
-| 1 | Goldbach/MellinJackson.lean |
-| 1 | Goldbach/Roadmap.lean |
-| 1 | Goldbach/SmallInstances.lean |
+See `manifests/G26_v5_watchlist_closed.json` section `watchlist_v2_closure`
+for the canonical tabulation.
 
-## Pre-existing unstaged changes (NOT part of Phase 0)
+### 3.2 Out of Scope
 
-Carried forward from `main` working tree, untouched by this Phase 0 commit:
+Five `sorry`s preserved by construction:
 
-- `Goldbach/CompactZone/NumeratorAll.lean` (modified)
-- `Goldbach/Jackson/Defs.lean` (modified)
-- `Goldbach/KLMN/Chain.lean` (modified)
-- `Goldbach/KLMN/Sobolev.lean` (modified)
-- `Goldbach/Status.lean` (modified)
+- `R_F` (line 38), `Main` (line 41), `N_start` (line 275), `G_euler`
+  (line 312) — definitional stubs. Each expects a non-trivial mathematical
+  definition that the Drive source did not specify in-file. Replacing
+  them with motivated definitions is a multi-week-to-multi-month
+  endeavour per stub, depending on the mathematical content.
+- `goldbach_conditional_GRH` (line 305) — the "crown jewel" theorem that
+  asserts the conditional Goldbach result given a constructed
+  `U7PlatinumSeal`. It depends on the full formal chain of the
+  architecture plus GRH; far beyond the G26Verify perimeter.
 
-None of these are in the forbidden list. They are unrelated to G26 and
-should be triaged outside this track before Phase 1 starts (open question
-for ratification).
+Six structural axioms preserved by construction:
 
-## What `lake build` was not run for
+- `U1_to_U6_bound` (line 78, Loss Ledger budget)
+- `spectral_energy_bound` (line 227, Spectral / U7)
+- `PO4_coverage` (line 278, U7 Seal coverage overlap)
+- `G_holomorphic` (line 315, R72bis)
+- `G_bounded` (line 319, R72bis)
+- `spectral_bridge_GRH` (line 323, R73 Guinand-Weil)
 
-A full `lake build Goldbach` would have to recompile every dependent of
-the 5 pre-existing unstaged files above — minutes of CPU and a dirty cache.
-Phase 0 acceptance focuses on the guard tool, not on rebuilding the
-library; the build will be exercised at the start of Phase 1 against a
-clean tree.
+All six describe hypotheses that depend on modules that do not exist in
+this sub-tree. They are not "axioms to remove" in the G26 track; they
+are architectural placeholders that the broader programme would discharge
+in their respective Lean libraries.
+
+## 4. Achievements Summary
+
+Key numbers, all extractable from the manifest:
+
+- **11 theorems verified axiom-pure** under the whitelist
+  `{propext, Classical.choice, Quot.sound, Lean.ofReduceBool,
+  Lean.ofReduceNat}`. Five live in `HorizonGoldbach.lean`, six in
+  `HorizonCertified.lean`.
+- **5 of 5 watchlist v2 targets closed** (three `sorry`-bearing theorems,
+  two `axiom`-with-`def := sorry` pairs converted to theorems with concrete
+  definitions).
+- **2 axioms removed** from the file inventory (`C₂_pos`, `C₃_bound` are now
+  proved theorems).
+- **0 `sorryAx` mentions** in the from-scratch build log.
+- **12 imports** in `HorizonGoldbach.lean` (3 original + 9 added across
+  Phases 1b, 2.1, 2.3, 2.4). **3 imports** in `HorizonCertified.lean`
+  (unchanged since arrival from Drive).
+- **From-scratch build duration**: 43 minutes 14 seconds, exit 0. Cache
+  Mathlib pré-warmé; pure-source Mathlib rebuild non inclus.
+
+Refer to the manifest for SHA-256 attestations, per-theorem axiom lists,
+and the full commit chain.
+
+## 5. Phase-by-Phase Narrative
+
+### Phase 0 — Tooling and WIP Triage (commit `79e8d75`)
+
+Introduced `tools/g26_cleanup/Loop-LakeBuild.ps1`, a guarded `lake build`
+wrapper that refuses to proceed when forbidden files appear in the
+staged index or working-tree diff. The forbidden list extends the three
+build-system files (`lakefile.lean`, `lean-toolchain`, `lake-manifest.json`)
+with the five CD12 Lean files belonging to a separate Lean project
+(F-MT-004), which were untracked in the working tree but must not be
+touched. Matching is by basename via `Split-Path -Leaf` rather than full
+path, so `Goldbach/M3cTerminalCD12Interval.lean` is caught correctly.
+
+The initial `audit/g26_baseline.md` recorded the discipline boundary and
+the watchlist of (then) zero real `sorry`s in tracked `Goldbach/**.lean`.
+
+Pre-existing WIP from `main` (five `.lean` files unrelated to G26) was
+stashed under `stash@{0}: pre-G26-WIP-2026-05-12` to keep the tracked
+tree clean before Phase 1.
+
+### Phase 1a — HorizonCertified Compiles, G29 6/6 Axiom-Pure (`0e16e17`)
+
+The two Drive files arrived via base64-encoded transmission across the
+session boundary. A subtle markdown rendering bug had collapsed blank
+lines inside ```lean fences in an initial plain-text transmission,
+causing a 35-byte deficit and SHA mismatch. The base64 round-trip with
+fail-closed SHA verification became the reliable transmission protocol.
+
+After decoding, three cosmetic Drive-source corruptions were repaired
+to restore exact byte-identity with the canonical Drive SHA: a French
+slip ("est que pour tous" → "is that for all"), a phantom status line
+in the final comment block, and an extra `=` in a section separator.
+Total +49 bytes restored; after restoration, `HorizonCertified.lean`
+matched `00b394fc4aa58e0a658d3ed996fcd2a6b199c1592239aab4a7705c7f9ab15909`.
+
+Two compile-blocking issues were then fixed: (a) `splitCount` used an
+unbounded existential predicate inside `Finset.filter`, which Lean 4.15
+could not synthesise as `DecidablePred`; replacing with bounded
+existentials over `PrimeSet a` (which `Finset.decidableBEx` handles
+directly) sufficed without invoking `Classical`. (b) An orphan
+doc-comment `/-- Status of each sorry... -/` preceded the `end`
+keyword with no declaration in between, causing a parse error;
+demoting to a plain `/- ... -/` comment fixed it.
+
+Six `#print axioms` lines were appended after `end Horizon.Certified`
+to verify each of the six G29-certified theorems: `beta_exceeds_half`,
+`ci_lower_exceeds_half`, `fit_quality`, `A_star_is_finite`,
+`dispersion_bound_unconditional`, `dispersion_converges_to_zero`. All
+showed `[propext, Classical.choice, Quot.sound]` only — kernel axioms.
+
+A separate fix in this commit: `Loop-LakeBuild.ps1`'s
+`Invoke-LakeBuildOnce` was capturing `lake`'s stdout into the function's
+return-value stream, so the caller's `$code` was an array rather than
+the exit integer; piping `lake build $Target | Out-Host` cleared the
+function output so only the cast `[int]$LASTEXITCODE` returned. Without
+this fix, no Phase 1a / 1b / 2 build would have shown a successful exit.
+
+### Phase 1b — HorizonGoldbach Compiles Under Lean 4.15 (`12b78e9`)
+
+Five missing imports were added so `HorizonGoldbach.lean` would
+elaborate: `Mathlib.Analysis.SpecialFunctions.{Log.Basic, Exp,
+Pow.Real}`, `Mathlib.Analysis.Calculus.ContDiff.Basic`,
+`Mathlib.Data.Complex.Basic`. These cover `Real.log`, `Real.exp`,
+`Real.rpow`, `ContDiff`, and `ℂ`.
+
+The parameter `(seal : U7PlatinumSeal)` in `goldbach_conditional_GRH`
+was renamed to `(s : U7PlatinumSeal)` — `seal` became a Lean 4.15
+keyword (the `seal …` command), and the parameter occurs only inside
+the `sorry`-filled body, so the rename has no external call-sites.
+
+A free silencing: `(ha : a > B)` in `dispersion_bound_unconditional`
+became `(_ha : a > B)` (Lean convention for intentionally unused
+parameter, since the simplified proof goes through `Finset.card_filter_le`
+without consuming the hypothesis).
+
+The first build attempt was a clean success on the first try: exit 0
+in 12 s, exactly ten `sorry`-bearing-warnings matching the original
+inventory, zero errors.
+
+### Phase 2.1 — Close transfer_bound_at_4 (`8783bae`)
+
+The theorem `C_tr(4) < 25.1` reduces, via `log 4 = 2·log 2` and
+`4^(-7/4) = 2^(-7/2)`, to a numerical inequality `2898·(log 2)² < 2^(21/2)`
+solvable with `nlinarith` plus the decimal bound `Real.log_two_lt_d9`.
+The proof imitates the existing pattern in
+`Mathlib/Combinatorics/Additive/AP/Three/Behrend.lean:460-469`.
+
+A single STOP-rapport was required: `Real.log_two_lt_d9` lives in
+`Mathlib.Data.Complex.ExponentialBounds`, which is not transitively
+imported by `Mathlib.Data.Complex.Basic`. Adding it as a ninth import
+(despite the misleading name — the file holds real-valued log/exp/π
+bounds) is necessary and minimal. After authorisation, the proof
+compiled on the first run after the import, with `nlinarith` digesting
+the quadratic-in-log times non-rational constant in one shot.
+
+### Phase 2.2 — Constants Cleanup C₂ and C₃ (`01d9f0b`)
+
+`C₃` was trivialised: the Drive source had `noncomputable def C₃ : ℝ :=
+sorry` and `axiom C₃_bound : C₃ ≤ 475` with no in-file mathematical
+specification — only a doc-string referencing an external Richardson
+extrapolation at 50 digits. Redefining `def C₃ : ℝ := 475` makes
+`C₃_bound : C₃ ≤ 475 := le_refl _` true by reflexivity, and the
+downstream contract `C₃ ≤ 475` is identically preserved.
+
+`C₂` (the Hardy-Littlewood twin-prime constant `≈ 0.6601618`) was defined
+as a finite rational partial product over odd primes up to 100,
+cast to ℝ. The product converges from above (each factor `1 - 1/(p-1)²`
+is less than 1), so any partial product exceeds the limit; the partial
+to `p ≤ 100` exceeds `0.66` with a margin of about 2.4·10⁻³.
+`C₂_pos : C₂ > 0.66` is proved by `native_decide` on the rational
+inequality `C₂_rat > 66/100`, lifted to ℝ via an explicit
+`((66 : ℚ) / 100 : ℝ)` bridge (Lean's `exact_mod_cast` does not match the
+decimal literal `0.66` directly against the rational cast).
+
+The initial attempt used `Finset.range 1001` (≈ 168 odd primes ≤ 1000)
+for fidelity to the true twin-prime constant; this overflowed Lean's
+`maxRecDepth` during elaboration of `Finset.filter`. The fallback to
+`range 101` (24 odd primes) elaborates trivially and still exceeds the
+threshold with comfortable margin. `C₂_pos` consumes
+`Lean.ofReduceBool` (the `native_decide` axiom), which the project's
+whitelist accepts.
+
+### Phase 2.3 — Close transfer_absolute_margin (`9337558`)
+
+Universal quantification `∀ N ≥ 64, C_tr(N) < 1` was the most
+substantive proof of the watchlist. Before writing any code, Phase 2.3.0
+was a 15-30 minute targeted reconnaissance of Mathlib's monotonicity
+infrastructure. The decisive finding: `Real.log_div_self_rpow_antitoneOn`
+in `Mathlib.Analysis.SpecialFunctions.Log.Monotone` states that
+`log x / x^a` is antitone on `{x | exp(1/a) ≤ x}` for any `a > 0`. With
+`a = 7/8`, this gives antitonicity of `log x / x^(7/8)` on
+`[exp(8/7), ∞)`, applicable to `[64, ∞)` since `log 64 = 6 log 2 > 8/7`.
+
+The proof composes (a) antitonicity from `log_div_self_rpow_antitoneOn`,
+(b) squaring preservation via `pow_le_pow_left₀` on non-negatives,
+(c) the algebraic identity `(log x / x^(7/8))² = (log x)² / x^(7/4)` via
+`div_pow` + `Real.rpow_mul`, (d) scalar multiplication by `80.5`, and
+(e) the numerical bound `C_tr(64) < 1` decomposed as `(log 2)² < 0.481`
+and `2^(21/2) > 1448` (from `(2^(21/2))² = 2097152 > 1448² = 2096704`).
+
+The proof passed on the first compilable attempt (~50 lines, 1
+clean-up iteration for two API-drift deprecations: `pow_le_pow_left →
+pow_le_pow_left₀` and `div_lt_iff → div_lt_iff₀`). The reconnaissance
+investment paid off by a factor of roughly 3-5x relative to the
+derivative-based proof initially anticipated.
+
+### Phase 2.4 — Refactor urysohn_mollifier via ContDiffBump (`bc78fdb`)
+
+The reconnaissance in Phase 2.0 had identified a defect in the Drive
+definition of `urysohn_mollifier`: on `Set.Icc (1/2) 2`, at the
+boundary points `x = 1/2` and `x = 2`, the formula evaluates `1 - g(x)²`
+to 0 (since `g(±1) = ±1`); Lean's classical real division returns
+`1 / 0 = 0`, so the if-branch returns `exp(1) = e ≈ 2.718` rather than
+the limiting 0. The function is discontinuous at the boundary, and
+`ContDiff ℝ ⊤ urysohn_mollifier` is mathematically false. This was the
+most significant semantic divergence in the entire programme.
+
+The ratified fix (path B in the reconnaissance) refactors
+`urysohn_mollifier` as a thin wrapper over Mathlib's `ContDiffBump`
+structure: a bump centred at `5/4` with `rIn = 3/8`, `rOut = 3/4` so
+the support is `[1/2, 2]`. The `ContDiffBump.contDiff` theorem then
+proves smoothness essentially for free.
+
+Two separate frictions surfaced during execution. First, the
+`HasContDiffBump ℝ` typeclass instance is not in `BumpFunction.Basic`;
+it lives in `BumpFunction.InnerProduct` (priority-100 instance via
+`InnerProductSpace ℝ ℝ`). A STOP-rapport was issued; after
+authorisation, both `Basic` and `InnerProduct` are imported explicitly.
+Second, the theorem signature `ContDiff ℝ ⊤` was itself broken by API
+drift: Lean 4.15's `ContDiff` takes `n : WithTop ℕ∞` where `⊤` now
+denotes analyticity, not C^∞ smoothness. Bump functions are smooth
+but not analytic, so the original signature is provably false under
+current Mathlib. The fix is the notation `∞`, which is scoped in the
+`ContDiff` namespace and resolves to `((⊤ : ℕ∞) : WithTop ℕ∞)` (the
+inner top, lifted) — the canonical smooth level. `open scoped ContDiff`
+was added to bring the notation into scope.
+
+Five iterations were required to land the proof, all related to the
+two issues above; once both were resolved, the proof body is a
+single `exact urysohn_bump.contDiff` after a coercion-disambiguating
+`show ContDiff ℝ ∞ (urysohn_bump : ℝ → ℝ)`.
+
+## 6. Semantic Divergences from Drive Source
+
+### 6.1 Divergence #1 — C₃ Trivialization
+
+The Drive source declared `noncomputable def C₃ : ℝ := sorry` together
+with `axiom C₃_bound : C₃ ≤ 475`. The doc-string identified `C₃` as
+"the Mellin decay constant for the Urysohn mollifier" and asserted
+"verified by Richardson extrapolation at 50 digits", but no in-file
+formal specification of `C₃` was provided. No other code in
+`G26Verify/` consumes `C₃` apart from `C₃_bound`. Phase 2.0
+reconnaissance confirmed both points.
+
+The pragmatic resolution: define `C₃ := 475` and prove `C₃_bound` by
+`le_refl _`. The downstream contract `C₃ ≤ 475` is preserved
+identically; any consumer relying on this guarantee is unaffected.
+What is lost is the intended mathematical content of `C₃` as a Mellin
+supremum — but that content was never formally present in the Drive
+source. Reifying it would be a research programme in itself: pick a
+weighted norm, prove a sup bound on a compact-support function under
+the Mellin transform, and obtain ≤ 475 via majoration. No precedent
+in Mathlib 4.15 for such a bound on this specific bump.
+
+### 6.2 Divergence #2 — urysohn_mollifier Refactor
+
+The Drive definition (piecewise `if x ∈ Set.Icc (1/2) 2 then exp(1 -
+1/(1 - g(x)²)) else 0`) was *literally false* for the targeted
+smoothness theorem under Lean's classical real division semantics. The
+bug was identified during Phase 2.0 reconnaissance and surfaced
+explicitly in the rapport; the user ratified a refactor via
+`ContDiffBump` rather than a from-scratch patch of the piecewise
+definition.
+
+What is preserved: the downstream contract — a C^∞ bump function with
+compact support `[1/2, 2]` and peak at centre `5/4`. The smoothness
+theorem `urysohn_smooth` is now true (and proved kernel-only). What
+is lost: the pointwise exact values of the explicit formula at every
+`x ∈ Set.Ioo (1/2) 2`. Reconnaissance verified that no other function
+in `G26Verify/` reads these values; the formula was only used
+implicitly through the smoothness theorem.
+
+A secondary signature drift, `ContDiff ℝ ⊤ → ContDiff ℝ ∞`, accompanies
+this divergence but is not itself a semantic change — it is API drift
+correction (see §7 entry 4), preserving the original intent of
+C^∞-smoothness as it was meant in the Drive's Lean 4.6 era.
+
+## 7. Lean 4.6 → 4.15 Migration Register
+
+Four API-drift incidents were documented across Phases 1b through 2.4.
+Each is preserved in the manifest's `lean_46_to_415_drift_register`
+section. Useful for parallel programmes that may inherit the same
+Mathlib pin or a similar 4.x snapshot.
+
+### 7.1 `seal` Became a Lean 4.15 Keyword (Phase 1b)
+
+The `seal …` command was introduced in Lean 4.15 to seal a definition's
+reducibility. Any identifier named `seal` in argument position must
+be renamed. In `goldbach_conditional_GRH`, the parameter
+`(seal : U7PlatinumSeal)` was renamed to `(s : U7PlatinumSeal)`. Since
+the parameter occurs only inside the `sorry`-filled proof body, the
+rename is purely local and breaks no external call-sites.
+
+Parallel programmes inheriting the same pin should sweep their
+identifiers for `seal` in argument or field position. The Phase 0
+subsidiary sweep over `Goldbach/` confirmed this was the only
+occurrence project-wide.
+
+### 7.2 `pow_le_pow_left` → `pow_le_pow_left₀` (Phase 2.3)
+
+Mathlib 4.15 systematically renames lemmas to add a `₀` suffix when
+the version takes an explicit `≠ 0` (or `0 ≤`) hypothesis. The
+unsuffixed name is deprecated, retained as an alias with a deprecation
+warning. Direct rename in the proof body resolves both the warning
+and the migration concern.
+
+### 7.3 `div_lt_iff` → `div_lt_iff₀` (Phase 2.3)
+
+Same pattern as above. The convention `lemma_name + ₀` for
+non-zero-aware variants is now the canonical form in Mathlib 4.15.
+
+### 7.4 `ContDiff ℝ ⊤` Reparameterised via `WithTop ℕ∞` (Phase 2.4)
+
+In Lean 4.6-era Mathlib, `ContDiff` took `n : ℕ∞`, and `⊤ : ℕ∞`
+denoted the smooth level (C^∞). In Lean 4.15 Mathlib, `ContDiff` was
+generalised to `n : WithTop ℕ∞`; the outer `⊤ : WithTop ℕ∞` is the
+new analytic level (strictly stronger than C^∞), while the inner
+`⊤ : ℕ∞` lifted to `WithTop ℕ∞` is the smooth level. The lifted form
+is denoted `∞` via the scoped notation in `ContDiff/FTaylorSeries.lean:114`.
+
+Files that wrote `ContDiff ℝ ⊤` to mean smooth must either (a) use
+`ContDiff ℝ ∞` and `open scoped ContDiff` in their preamble, or
+(b) write the explicit `((⊤ : ℕ∞) : WithTop ℕ∞)`. The former is
+idiomatic Mathlib usage.
+
+This drift is the most significant of the four: it changes the
+semantic meaning of a previously written theorem statement, not just
+a lemma name. Programmes inheriting the same pin should audit for
+`ContDiff ℝ ⊤` and decide whether they meant smooth or analytic.
+
+## 8. Reproducibility
+
+### 8.1 From-Scratch Build
+
+The canonical reproducibility check is `lake clean` followed by
+`lake build Goldbach.G26Verify.HorizonGoldbach
+Goldbach.G26Verify.HorizonCertified`. On the development host, this
+takes 43 minutes 14 seconds (2594 seconds), exits 0, and the build
+log contains zero `sorryAx` mentions.
+
+Pre-requisite: the Mathlib package cache must be present at
+`.lake/packages/mathlib` (≈ 3.95 GB pre-warmed). The 43-minute
+duration reflects only Lake's resolution and `.olean` replay across
+the twelve transitive Mathlib imports; the Mathlib `.olean` files
+themselves are cached, not recompiled. A consumer starting from an
+empty Mathlib cache must add the cost of a full Mathlib source build
+(roughly 30 to 60 additional minutes depending on hardware) before
+the G26Verify rebuild can begin.
+
+The manifest's `reproducibility_checklist` field gives the seven
+canonical verification steps.
+
+### 8.2 Axiom Audit Procedure
+
+To independently verify the axiom purity of the eleven PROVED theorems,
+either:
+
+- Re-run the `#print axioms <name>` lines already present at the end of
+  both source files. Lake's build output streams the resulting `info:`
+  lines through stdout. Each line should report exactly the kernel
+  triple `[propext, Classical.choice, Quot.sound]`, optionally extended
+  by `Lean.ofReduceBool` for theorems that go through `native_decide`
+  (only `C₂_pos` in the current state).
+- Grep the build log: `Select-String -Pattern 'sorryAx' -SimpleMatch`
+  must return zero matches.
+
+Both checks are mechanical and idempotent. The manifest's
+`verified_theorems` section is the canonical record of the expected
+axiom lists per theorem.
+
+## 9. Process Notes
+
+### 9.1 Base64 Round-Trip as File Transmission Protocol
+
+The two Drive files were transmitted across a session boundary. The
+first attempt (plain text inside ```lean fenced code blocks) lost
+about 35 bytes per file to a markdown rendering bug that collapsed
+blank lines inside fences. Fail-closed SHA-256 verification caught the
+discrepancy immediately; switching to base64 transmission (with the
+file bytes encoded outside any code-fence rendering risk) reproduced
+exact byte-identity.
+
+The protocol is:
+
+1. Encode the source file with `base64` (or `certutil -encode` on
+   Windows) and ship the encoded payload inside a fence — base64 uses
+   only `[A-Za-z0-9+/=]`, immune to markdown normalisation.
+2. On the receiver side, strip all whitespace and decode with
+   `[System.Convert]::FromBase64String`.
+3. Write the resulting bytes via `[System.IO.File]::WriteAllBytes`.
+4. Compare size and SHA-256 against the transmitted metadata. Refuse
+   to proceed on any mismatch.
+
+This protocol caught three independent corruptions in the
+`HorizonCertified.lean` transmission (two slips, one stray equals sign)
+and confirmed `HorizonGoldbach.lean` byte-exact on first decode.
+
+### 9.2 STOP-Rapport-Ratification Cadence
+
+Every phase ended with a brief, factual rapport summarising what
+worked, what diverged from the prior plan, and any open questions.
+Ratification was an explicit acknowledgement before the next phase
+could begin. This discipline produced two concrete benefits:
+
+- Every milestone is observable in the commit chain. The eight
+  commits trace exactly the work that was approved, in the order it
+  was approved.
+- Every divergence from a prior plan was negotiated, not silently
+  taken. The two semantic divergences (C₃ and `urysohn_mollifier`)
+  and the `ContDiff` signature change were all surfaced in rapports
+  and approved by name before execution.
+
+The cadence was strict in the early phases (where the work was
+mechanical and predictable) and remained strict in the later phases
+(where the work involved real Mathlib navigation and substantive
+mathematical content). Strictness did not slow execution; the average
+time-per-phase was dominated by Lake builds and reconnaissance, not
+by waiting for ratification.
+
+### 9.3 Reconnaissance Before Substantive Work
+
+Two reconnaissance phases — Phase 2.0 (general survey of the five
+targets) and Phase 2.3.0 (targeted survey for the monotonicity
+infrastructure) — bracketed Phase 2. Each was bounded at 15-30 minutes,
+strictly read-only, and produced a single report listing the relevant
+Mathlib lemmas, the proof sketch, and the estimated difficulty.
+
+Phase 2.0 surfaced the `urysohn_mollifier` definition bug and the
+`C₃` non-specification, both of which would have caused multi-hour
+detours if discovered mid-proof. Phase 2.3.0 surfaced
+`Real.log_div_self_rpow_antitoneOn`, turning a 4-8 hour
+derivative-based proof into a 2-4 hour antitone+squaring proof.
+
+The pattern is reliable: a 15-30 minute up-front reconnaissance
+typically saves a factor of 3 to 5 on subsequent execution time when
+the Mathlib terrain is unfamiliar. The cost is recouped in the first
+iteration that does not have to be rolled back.
+
+## 10. Future Work
+
+### 10.1 Near-Term (G26 Closure)
+
+The four remaining definitional stubs (`R_F`, `Main`, `N_start`,
+`G_euler`) and the crown jewel theorem (`goldbach_conditional_GRH`)
+together account for the five out-of-scope `sorry`s. Closing the
+definitional stubs would require, for each:
+
+- `R_F` — a concrete smoothed representation count, likely involving
+  a Schwartz-bump-weighted analogue of `R`. A research-level definition
+  in itself.
+- `Main` — the Hardy-Littlewood main term, an explicit `2 N ∏ ...`
+  product over primes. Closer to formalisable than `R_F` but still
+  multi-week.
+- `N_start` — a chosen `ℕ` satisfying `N_start ≤ N₀` for the U7 Seal.
+  Trivial as a placeholder (any number ≤ `4·10^18`) but the
+  surrounding U7 architecture would need to consume it meaningfully.
+- `G_euler` — the Euler-product residual function used in the
+  Riemann Bridge. Requires importing or re-developing the relevant
+  L-series infrastructure.
+
+None of these are within the G26 watchlist scope. They are listed here
+so a future contributor can decide whether to pick one up.
+
+### 10.2 Long-Term (Out-of-Scope for G26)
+
+`goldbach_conditional_GRH` is the architecture's "if all three pillars
+hold, then Goldbach for `N ≥ 2`" theorem. Its proof requires the full
+formal chain (R72bis, R73, R74) plus a Lean-formalised GRH hypothesis.
+This is the dependent of all the structural axioms preserved in §3.2;
+discharging them would be the natural follow-on programme, requiring
+work in separate Lean libraries (`HorizonMFE`, `HorizonMT`, `HorizonG80`,
+etc., visible in the parallel `goldbach_lean_v2/` checkout).
+
+The six preserved axioms (`U1_to_U6_bound`, `spectral_energy_bound`,
+`PO4_coverage`, `G_holomorphic`, `G_bounded`, `spectral_bridge_GRH`)
+are the natural shopping list for that programme. None of them are
+within the G26 `G26Verify/` perimeter.
+
+## 11. Manifest Cross-Reference
+
+Machine-verifiable details (SHA-256 attestations, per-theorem axiom
+lists, full commit chain, drift register entries, divergence
+specifications, reproducibility checklist) live in
+[manifests/G26_v5_watchlist_closed.json](../manifests/G26_v5_watchlist_closed.json).
+
+The manifest is the authoritative record. This document is its
+human-readable companion. If the two disagree on a numerical claim,
+the manifest wins.
