@@ -22,6 +22,7 @@ import Mathlib.Data.Complex.ExponentialBounds
 import Mathlib.Analysis.SpecialFunctions.Log.Monotone
 import Mathlib.Analysis.Calculus.BumpFunction.Basic
 import Mathlib.Analysis.Calculus.BumpFunction.InnerProduct
+import Goldbach.Bridge.TS6LargeSieveInterface
 
 open scoped ContDiff  -- brings `∞ = ((⊤ : ℕ∞) : WithTop ℕ∞)` into scope (smooth level)
 
@@ -319,9 +320,13 @@ axiom G_holomorphic : ∀ s : ℂ, s.re > -1/2 →
 axiom G_bounded : ∀ s : ℂ, s.re > -1/2 →
   Complex.abs (G_euler s) ≤ 10  -- Placeholder constant
 
-/-- The Guinand-Weil spectral bridge (R73, Assumption 2.5). -/
-axiom spectral_bridge_GRH :
-  True  -- Placeholder: Ψ_{2h}(x;q,a) = (S + E_off(H)) x/log²x + O(x/log³x)
+/- Note: la dépendance spectrale précédemment encodée comme
+   `axiom spectral_bridge_GRH : True` est désormais typée via
+   `Goldbach.Bridge.spectral_bridge_via_large_sieve`
+   (voir `Goldbach/Bridge/TS6LargeSieveInterface.lean`).
+   L'équation Guinand-Weil originale était :
+   Ψ_{2h}(x; q, a) = (S + E_off(H)) x/log²x + O(x/log³x).
+   Sa formulation typée fail-closed remplace le placeholder cosmétique. -/
 
 end Horizon
 
