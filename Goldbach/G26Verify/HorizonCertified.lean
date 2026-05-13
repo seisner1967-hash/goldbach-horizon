@@ -124,8 +124,14 @@ theorem A_star_is_finite : A_star_rigorous < 100 := by
 
 /-- The three pillars of the proof. -/
 structure ProofPillars where
-  -- Pillar 1: G26 Loss Ledger (conditional on GRH)
-  loss_ledger_closed : Prop
+  -- Pillar 1: G26 Loss Ledger (conditional on GRH).
+  -- Phase 5 fusion: the placeholder Prop is replaced by an explicit
+  -- reference to the G26-side LossLedger / U7PlatinumSeal structures.
+  -- For every Platinum Seal and every N ≥ 4, there exists a closed
+  -- Loss Ledger; this is exactly the contract carried by U7's
+  -- `loss_closure` field, exposed here as a proper pillar.
+  loss_ledger_closed : ∀ _s : Horizon.U7PlatinumSeal, ∀ N : ℕ,
+    N ≥ 4 → ∃ L : Horizon.LossLedger, L.isClosed
   -- Pillar 2: G29 Dispersion bound (unconditional)
   dispersion_bounded : ∀ a : ℕ, a ≥ A_star_rigorous →
     splitCount a 150 * 100 < 22 * (PrimeSet a).card
