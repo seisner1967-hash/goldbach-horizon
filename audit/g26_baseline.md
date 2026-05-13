@@ -571,12 +571,125 @@ The six preserved axioms (`U1_to_U6_bound`, `spectral_energy_bound`,
 are the natural shopping list for that programme. None of them are
 within the G26 `G26Verify/` perimeter.
 
+## 10. Phase 5 Cross-Module Fusion (v6)
+
+After the v5 watchlist closure was tagged (`g26-v5-watchlist-closed-r1`,
+commit `b32b8a2`), a follow-on programme was conducted on branch
+`feat/g26-g29-fusion` to realise the architectural fusion between
+`HorizonGoldbach.lean` and `HorizonCertified.lean`. The fusion had
+been deferred from Phase 4 as the natural v6 amendment cycle.
+
+### 10.1 What changed
+
+Two surgical edits to `HorizonCertified.lean` (Phase 5.2, commit
+`1c7ddd4`, and Phase 5.3, commit `d28fe3f`):
+
+- Added `import Goldbach.G26Verify.HorizonGoldbach` after the three
+  Mathlib imports. No namespace clash: `Horizon.Certified` is a
+  proper sub-namespace of `Horizon`.
+- Retyped the `ProofPillars.loss_ledger_closed` field from a
+  placeholder `Prop` to an explicit reference to the G26-side
+  `Horizon.LossLedger` / `Horizon.U7PlatinumSeal` structures:
+
+  ```lean
+  -- Before (v5, since Phase 1a):
+  loss_ledger_closed : Prop
+
+  -- After (v6, Phase 5.3):
+  loss_ledger_closed : ∀ _s : Horizon.U7PlatinumSeal, ∀ N : ℕ,
+    N ≥ 4 → ∃ L : Horizon.LossLedger, L.isClosed
+  ```
+
+`HorizonGoldbach.lean` was not modified (SHA unchanged at
+`b1b33b86…`). `HorizonCertified.lean` SHA moved from `3bf0cdfe…`
+(6 984 B) to `b6147532…` (7 456 B) — a delta of 472 bytes, reflecting
+the added import line, the retyped field, and the documenting
+comment.
+
+### 10.2 Predicted vs observed (calibration archive)
+
+The Phase 4 ratification, paper v2 §4.7, and the Phase 5 design
+prompt all anticipated that the fusion would *expose* the six G26
+structural axioms (`U1_to_U6_bound`, `spectral_energy_bound`,
+`PO4_coverage`, `G_holomorphic`, `G_bounded`, `spectral_bridge_GRH`)
+in the transitive axiom dependency of `grand_bridge`, making the
+R74 perimeter visible from a single `#print axioms` invocation.
+
+This prediction proved incorrect. The Phase 5.4 axiom audit
+(committed at `35de0f7`, full report in
+`audit/phase5_axiom_delta.md`) found **zero axiom delta** across
+all 11 verified theorems between r1 and v6: identical lists, zero
+new `sorryAx` introductions.
+
+The diagnosis: `grand_bridge`'s proof body never consumes
+`P.loss_ledger_closed` in the current G26Verify scope. The
+small-N branch invokes `P.finite_verified` (Pillar 3); the
+large-N branch is `sorry` (the GRH dependency, preserved per
+the watchlist closure discipline). The structural G26 axioms
+become consumed witnesses only at the call site that constructs
+a concrete `ProofPillars` instance and supplies a real
+`LossLedger.isClosed` proof. No such call site exists in
+`G26Verify/`.
+
+The methodological lesson: *predictions about transitive axiom
+exposure require checking that callers actually consume the
+relevant pillar. Type signatures alone do not propagate axioms.*
+This is now archived in the calibration log for future
+programmes.
+
+### 10.3 What the fusion accomplishes
+
+The improvement is **type-structural, not axiomatic**:
+
+- Before: any Lean term of any `Prop` type satisfied the
+  `loss_ledger_closed` field. A caller could pass `True`, `1 = 1`,
+  or any other proposition as a vacuous witness; the contract
+  between G26's LossLedger architecture and G29's ProofPillars
+  was documentation-only.
+- After: any caller must produce a Lean term of the seal-typed
+  proposition. Lean's typechecker enforces the contract at
+  construction time. The signature is now an executable spec.
+
+The fusion makes the architectural contract *machine-enforceable*
+without changing the provable content. Any future caller that
+constructs a `ProofPillars` will at that point cause the G26
+structural axioms to fire as witnesses in their concrete proof —
+that is when the prediction would have become observable. Until
+then, the axioms remain inert.
+
+### 10.4 v6 release
+
+Phase 5 closed with commits on `feat/g26-g29-fusion`:
+
+- `1c7ddd4` Phase 5.2 — Import HorizonGoldbach into HorizonCertified
+- `d28fe3f` Phase 5.3 — ProofPillars.loss_ledger_closed seal-typed
+- `35de0f7` Phase 5.4 — Axiom audit delta documentation
+- `ff47434` Phase 5.5 — Manifest v2.0 G26_v6_fusion_merged
+- (this commit) Phase 5.6 — Bundle mirror + §10 baseline update
+
+Phase 5.7 merges the branch fast-forward to `main` and creates the
+annotated tag `g26-v6-fusion-merged`. The bundle
+`g26_v6_arxiv/` is provided as a mirror of `g26_v5_arxiv/` with
+the post-fusion artefacts and the v2.0 manifest.
+
+The v5 tag `g26-v5-watchlist-closed-r1` (commit `b32b8a2`) remains
+in place as a historical reference. The v5 manifest
+(`manifests/G26_v5_watchlist_closed.json`) is preserved alongside
+the v6 manifest in `manifests/`, each pointing to its respective
+release.
+
 ## 11. Manifest Cross-Reference
 
 Machine-verifiable details (SHA-256 attestations, per-theorem axiom
 lists, full commit chain, drift register entries, divergence
-specifications, reproducibility checklist) live in
-[manifests/G26_v5_watchlist_closed.json](../manifests/G26_v5_watchlist_closed.json).
+specifications, reproducibility checklist) live in the manifests:
+
+- v5 watchlist closure:
+  [manifests/G26_v5_watchlist_closed.json](../manifests/G26_v5_watchlist_closed.json)
+  (tag `g26-v5-watchlist-closed-r1`, commit `b32b8a2`)
+- v6 fusion merged (current):
+  [manifests/G26_v6_fusion_merged.json](../manifests/G26_v6_fusion_merged.json)
+  (tag `g26-v6-fusion-merged`, commit at Phase 5.7 merge)
 
 The manifest is the authoritative record. This document is its
 human-readable companion. If the two disagree on a numerical claim,
