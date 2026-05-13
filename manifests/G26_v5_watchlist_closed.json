@@ -1,8 +1,17 @@
 {
-  "manifest_version": "1.0",
+  "manifest_version": "1.1",
   "manifest_id": "G26_v5_watchlist_closed",
-  "generated_at": "2026-05-13T00:41:02Z",
+  "generated_at": "2026-05-13T05:38:52Z",
   "scope": "Goldbach G26 horizon files under Goldbach/G26Verify/, watchlist v2 closure",
+
+  "amendment_history": [
+    {
+      "amended_at": "2026-05-13T05:38:52Z",
+      "amended_commit": "self-referential (this commit; resolves via `git log -1 manifests/G26_v5_watchlist_closed.json`)",
+      "supersedes_commit": "be8b6e6",
+      "reason": "Correction of CRLF/LF SHA inconsistency for HorizonGoldbach.lean. The original manifest at be8b6e6 captured a CRLF-version SHA (1b7d6847..., 15584 B) for HorizonGoldbach.lean because Phase 3.1's Get-FileHash invocation on Windows read the working-tree CRLF form, while HorizonCertified.lean happened to be measured at its canonical LF form (3bf0cdfe..., 6984 B). The index itself has always stored canonical LF for both files. This amendment realigns the recorded artifact SHAs with the canonical LF versions, enforced going forward by the .gitattributes file added in commit 221a3db. The original manifest remains accessible at tag g26-v5-watchlist-closed (commit cd65569). manifest_version bumped 1.0 -> 1.1."
+    }
+  ],
 
   "git": {
     "branch": "feat/g26-sorry-cleanup",
@@ -27,8 +36,9 @@
   "artifacts": [
     {
       "path": "Goldbach/G26Verify/HorizonGoldbach.lean",
-      "size_bytes": 15584,
-      "sha256": "1b7d6847eceb4e4e4b4ea5fb7d5d8c797a20177cb9e4cd10806d6b13400e0315",
+      "size_bytes": 15245,
+      "sha256": "b1b33b8608969e0ead58938f43439b29d03443a4c5b1f0049f4d7eee2f88f28f",
+      "eol": "lf",
       "imports_count": 12,
       "imports": [
         "Mathlib.NumberTheory.ArithmeticFunction",
@@ -50,6 +60,7 @@
       "path": "Goldbach/G26Verify/HorizonCertified.lean",
       "size_bytes": 6984,
       "sha256": "3bf0cdfeaadba113fdba8f11b76b53bb7d81932edb89ae8406102ced83c80664",
+      "eol": "lf",
       "imports_count": 3,
       "imports": [
         "Mathlib.NumberTheory.ArithmeticFunction",
@@ -181,10 +192,10 @@
   ],
 
   "reproducibility_checklist": [
-    "1. git checkout bc78fdb",
+    "1. git checkout g26-v5-watchlist-closed-r1 (or any commit at or after the .gitattributes amendment, ensuring canonical LF endings)",
     "2. Verify Lean toolchain: cat lean-toolchain → leanprover/lean4:v4.15.0",
     "3. Verify Mathlib rev: cat lake-manifest.json | grep -A2 mathlib → rev 9837ca9d65d9de6fad1ef4381750ca688774e608",
-    "4. Verify artifact SHAs match the 'artifacts' section of this manifest",
+    "4. Verify artifact SHAs (LF) match the 'artifacts' section of this manifest",
     "5. lake clean && lake build Goldbach.G26Verify.HorizonGoldbach Goldbach.G26Verify.HorizonCertified → exit 0",
     "6. Grep build log for 'sorryAx' → no matches",
     "7. Optional: re-run `#print axioms` on each verified theorem, compare with this manifest"
