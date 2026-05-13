@@ -1,0 +1,18 @@
+# Enforce LF line endings for all text files
+* text=auto eol=lf
+
+# Explicit text declarations for common source/data files
+*.lean text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text eol=lf
+*.toolchain text eol=lf
+lean-toolchain text eol=lf
+lake-manifest.json text eol=lf
+
+# Binary files (no conversion)
+*.olean binary
+*.png binary
+*.jpg binary
+*.pdf binary
