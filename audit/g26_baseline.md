@@ -687,10 +687,147 @@ specifications, reproducibility checklist) live in the manifests:
 - v5 watchlist closure:
   [manifests/G26_v5_watchlist_closed.json](../manifests/G26_v5_watchlist_closed.json)
   (tag `g26-v5-watchlist-closed-r1`, commit `b32b8a2`)
-- v6 fusion merged (current):
+- v6 fusion merged:
   [manifests/G26_v6_fusion_merged.json](../manifests/G26_v6_fusion_merged.json)
   (tag `g26-v6-fusion-merged`, commit at Phase 5.7 merge)
+- v7 TS6 bridge typed (current):
+  [manifests/G26_v7_ts6_bridge.json](../manifests/G26_v7_ts6_bridge.json)
+  (tag `g26-v7-ts6-bridge-typed`, commit at Phase 6.5 merge)
 
 The manifest is the authoritative record. This document is its
 human-readable companion. If the two disagree on a numerical claim,
 the manifest wins.
+
+## 12. Phase 6 TS6 Large Sieve Typed Bridge (v7)
+
+### 12.1 Motivation
+
+The Phase 5 v6 architecture left one cosmetic placeholder in
+`HorizonGoldbach.lean`: `axiom spectral_bridge_GRH : True`. Its
+intended semantics was the Guinand–Weil explicit-formula extraction
+of the Goldbach pair-counting function
+
+> Ψ_{2h}(x; q, a) = (S + E_off(H)) · x/log²x + O(x/log³x),
+
+a non-trivial analytic claim sitting at the boundary of what the
+G26 / R74 programme can prove unconditionally. As written, the
+axiom carried no information: any caller could discharge the
+dependency with `trivial`. Phase 6 v7 replaces it with a typed
+obligation, making the dependency chain visible to the Lean
+type-checker.
+
+### 12.2 Architectural choice: local vendoring
+
+The natural source for the typed obligation is the TS6 programme's
+`TS6.Effective.AveragedBounds` module, which already declares
+`LargeSieveInequality` (Iwaniec–Kowalski Theorem 7.13) and
+`ChebyshevThetaBound` (Montgomery–Vaughan Theorem 2.4). Importing
+TS6 directly is impossible at the time of this writing: the two
+repositories pin different Lean toolchains (`goldbach-horizon`:
+Lean 4.15.0; TS6 v4.1: Lean 4.16.0 GREEN-conditional).
+
+Phase 6.1 (commit `c68c7d4`) introduces a new module,
+`Goldbach/Bridge/TS6LargeSieveInterface.lean`, which **locally
+vendors** signatures shaped identically to the TS6 ones. Three
+structures and one composition theorem are declared in namespace
+`Goldbach.Bridge`:
+
+- `LargeSieveInequality` — shadow of `TS6.Effective.LargeSieveInequality`;
+- `ChebyshevThetaBound` — shadow of `TS6.Effective.ChebyshevThetaBound`;
+- `SpectralBridgeFromLargeSieve` — the R74 obligation proper (open
+  formal-mathematics problem: pointwise extraction from
+  averaged-over-q bounds via Gallagher–Montgomery or stronger);
+- `spectral_bridge_via_large_sieve` — the composition theorem
+  that any future caller will invoke instead of the cosmetic axiom.
+
+The vendoring is documented inside the module itself (§ "RELATION
+TO TS6") with an explicit convergence protocol: when the two
+repositories converge on a common Mathlib pin, the local vendored
+declarations are to be deleted and replaced by `import
+TS6.Effective.AveragedBounds`. The signatures are kept shape-identical
+to make this future migration a one-line edit.
+
+### 12.3 Phase 6.2: cosmetic axiom removal
+
+Phase 6.2 (commit `69db595`) modifies `HorizonGoldbach.lean` in two
+ways:
+
+- adds `import Goldbach.Bridge.TS6LargeSieveInterface` to the import
+  list (now 13 imports, all Mathlib except the new bridge module);
+- removes the declaration `axiom spectral_bridge_GRH : True` and
+  inserts an explanatory block-comment in its place, pointing
+  callers to `Goldbach.Bridge.spectral_bridge_via_large_sieve`.
+
+Both `Goldbach.G26Verify.HorizonGoldbach` and
+`Goldbach.G26Verify.HorizonCertified` build clean under Lean 4.15.0
+with the pinned Mathlib (`9837ca9d65d9de6fad1ef4381750ca688774e608`).
+The 11 verified theorems remain axiom-pure under the documented
+whitelist `{propext, Classical.choice, Quot.sound, Lean.ofReduceBool}`,
+and `sorryAx` is absent throughout.
+
+### 12.4 Phase 6.3: zero-delta confirmation and methodological pattern
+
+Phase 6.3 (commit `24b8981`) records the axiom-delta audit in
+`audit/phase6_axiom_delta.md`. The result mirrors Phase 5.4:
+**zero axiom delta** across the 11 verified theorems.
+
+The result is now the second consecutive confirmation of a
+methodological pattern first identified in Phase 5:
+
+> Predictions about transitive axiom exposure under refactoring
+> require checking actual caller consumption. Type-narrowing alone
+> does not propagate axioms when the narrowed field is unused.
+
+In the current G26Verify scope, no caller constructs a
+`ProofPillars` instance requiring a `SpectralBridgeFromLargeSieve`,
+nor invokes `spectral_bridge_via_large_sieve` directly. The bridge
+therefore remains inert in the verified-theorem dependency closure,
+exactly as the cosmetic axiom was inert before its removal. The
+improvement is type-structural — machine-enforceable for any future
+caller, but invisible to `#print axioms` of the current theorems.
+
+### 12.5 Latent bug: orphan doc-comment
+
+A subtle latent bug surfaced during Phase 6.2. The original
+declaration `axiom spectral_bridge_GRH : True` was preceded by a
+Lean doc-string `/-- … -/`. Removing the axiom left the doc-string
+orphaned — Lean requires a `/--`-prefixed doc-string to attach to
+a declaration. The result was a parse error:
+
+```
+HorizonGoldbach.lean:329:75: unexpected token 'end'; expected 'lemma'
+```
+
+Fixed by converting `/--` → `/-` (regular block comment, no
+attachment requirement). The identical pattern was previously
+observed in Phase 1a on `HorizonCertified.lean`. With two confirmed
+occurrences, the pattern is now archived as a pre-execution
+checklist item for any future refactor that removes a declaration
+preceded by a doc-string.
+
+### 12.6 Bundle and release
+
+Phase 6.5 merges `phase6/ts6-large-sieve-typed-bridge-v1` fast-forward
+to `main` and creates the annotated tag `g26-v7-ts6-bridge-typed`.
+The v6 tag `g26-v6-fusion-merged` and the v5 tag
+`g26-v5-watchlist-closed-r1` remain in place as historical
+references. The v7 manifest (`manifests/G26_v7_ts6_bridge.json`)
+is preserved alongside the v5 and v6 manifests in `manifests/`,
+each pointing to its respective release.
+
+### 12.7 Status of the open R74 obligation
+
+After Phase 6 v7, the R74 obligation is encoded as the
+`SpectralBridgeFromLargeSieve.derivation` field. Producing an
+instance requires:
+
+- a proof of the multiplicative large-sieve inequality
+  (Iwaniec–Kowalski Theorem 7.13);
+- an effective Chebyshev θ bound (Montgomery–Vaughan Theorem 2.4);
+- a pointwise extraction argument from averaged-over-q bounds
+  (Gallagher–Montgomery, or stronger).
+
+Items (1) and (2) are GREEN-conditional in TS6 v4.1. Item (3) is
+the central open formal-mathematics problem of the R74 sub-programme.
+None of the three is in scope for goldbach-horizon Phase 6; they
+are tracked as future work.
