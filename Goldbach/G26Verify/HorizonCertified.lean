@@ -13,6 +13,7 @@
 import Mathlib.NumberTheory.ArithmeticFunction
 import Mathlib.Data.Nat.Prime.Basic
 import Mathlib.Tactic.NormNum
+import Goldbach.G26Verify.HorizonGoldbach
 
 namespace Horizon.Certified
 
