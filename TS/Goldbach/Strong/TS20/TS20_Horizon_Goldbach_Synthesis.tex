@@ -1,0 +1,270 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{DejaVu Sans Mono}[Scale=0.82]
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{caption}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\definecolor{codebg}{RGB}{248,248,248}
+\definecolor{codeframe}{RGB}{220,220,220}
+
+\lstdefinestyle{leanstyle}{
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  framerule=0.3pt,
+  rulecolor=\color{codeframe},
+  backgroundcolor=\color{codebg},
+  xleftmargin=0.5em,
+  xrightmargin=0.5em,
+  aboveskip=0.8em,
+  belowskip=0.8em
+}
+\lstset{style=leanstyle}
+
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\status}[1]{\texttt{#1}}
+\newcommand{\oblig}[1]{\textsf{#1}}
+
+\title{TS20 -- Horizon Goldbach: A Certified Conditional Architecture\\
+\large From Combinatorial Discharge to Analytic Infrastructure Ledger}
+\author{Serge Durand\\Horizon / Goldbach Lean Programme}
+\date{Baseline: Lean 4.15.0 / Mathlib v4.15.0}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present the final synthesis of the Horizon Goldbach formal specification
+programme (TS14--TS19). The programme decomposes a conditional route to the
+binary Goldbach conjecture into a modular Lean 4 architecture. Four layers are
+established: (1) a conditional gluing theorem (TS14); (2) a localisation of the
+analytic residue into the interface \code{ShortIntervalPrimeSecondMoment}
+(TS15); (3) a purely combinatorial discharge (TS16) that eliminates the finite
+counting obligation; and (4) three relative discharge theorems (TS17, TS18,
+TS19) that reduce the remaining analytic obstacles to named local
+infrastructures. In the audited TS15--TS19 specification layer, no \code{sorry}
+and no global \code{axiom} remain. The final ledger records exactly what
+analytic work is needed to turn the conditional architecture into an
+unconditional proof. This document serves as a roadmap for future formalisation
+efforts and as an invitation to the analytic number theory community.
+\end{abstract}
+
+\section{Introduction}
+
+The Horizon programme develops a Lean 4 formal specification of a conditional
+proof architecture for the binary Goldbach conjecture, following the general
+shape of the Hardy--Littlewood circle method. The central TS14 layer is a
+conditional collage:
+\[
+  h_R \wedge h_G \wedge h_S \wedge h_C
+  \Longrightarrow
+  \forall N\ge 4,\; 2\mid N,\; \mathrm{GoldbachAt}(N),
+\]
+where \(h_R\) is the Riemann Hypothesis, \(h_G\) is a strong large sieve input,
+\(h_S\) is a spectral renormalisation bound, and \(h_C\) is the computational
+verification up to \(4\cdot10^{18}\) in the style of Oliveira e Silva et al.
+
+The purpose of TS14--TS19 is not to prove these analytic and computational
+inputs. It is to expose their exact role, remove avoidable finite or
+combinatorial debt, and isolate the remaining analytic content as local,
+typed, auditable infrastructure.
+
+\section{Summary of the Sprints}
+
+\subsection{TS14 -- Conditional collage}
+
+TS14 states the conditional theorem and records the macroscopic hypotheses. The
+proof splits the even integers into a finite interval, covered by computation,
+and an asymptotic interval, covered by analytic estimates. This is the global
+conditional layer.
+
+\subsection{TS15 -- Localisation of the analytic residue}
+
+TS15 introduces the interface \code{ShortIntervalPrimeSecondMoment}, encoding a
+short-interval second-moment estimate for primes. It shows that the downstream
+problem \code{Problem_E1} follows from this interface together with a
+finite-counting comparison between prime-pair counts and short-interval
+energy.
+
+\subsection{TS16 -- Combinatorial discharge}
+
+TS16 proves the finite-counting comparison in full generality. The Lean theorem
+\code{pair_count_le_energy} injects close pairs into energetic triples and
+uses only finite set/cardinality reasoning. This part is
+\status{repo_committed}: no analytic assumption is involved.
+
+\subsection{TS17 -- Mellin--Jackson discharge}
+
+TS17 replaces the abstract Mellin--Jackson projection interface by a relative
+theorem. It proves that the TS15 projection bound follows from two local
+infrastructures:
+\begin{itemize}
+  \item \oblig{MellinFourierNormBridge}, for the logarithmic change of
+    variables and the identification of \(\Theta\) with \(d/du\);
+  \item \oblig{FourierTailInfrastructure}, for the Plancherel-based
+    high-frequency tail estimate.
+\end{itemize}
+The result is \status{repo_committed_relative}.
+
+\subsection{TS18 -- Short-interval second moment discharge}
+
+TS18 reduces \code{ShortIntervalPrimeSecondMoment} to two local structures:
+\begin{itemize}
+  \item \oblig{DirichletCharacterBridge}, for character orthogonality,
+    discrete Parseval, and bridge errors;
+  \item \oblig{LargeSieveInfrastructure}, for a local large-sieve estimate
+    producing a constant \(C\le 1\).
+\end{itemize}
+The relative instance \code{secondMomentInstance} and the downstream theorem
+\code{Problem_E1_from_TS18} are proved mechanically. The result is
+\status{repo_committed_relative}.
+
+\subsection{TS19 -- OTSA residual discharge}
+
+TS19 decomposes the OTSA residual estimate. It introduces:
+\begin{itemize}
+  \item \oblig{KernelSpectralControl}, with constant \(C_k\);
+  \item \oblig{TraceContributionControl}, with constant \(C_t\);
+  \item \oblig{MellinTailDecay}, with constant \(C_m\);
+  \item \oblig{OTSACouplingHypothesis}, the local coupling estimate.
+\end{itemize}
+The residual estimate is reduced to
+\[
+  R(x,B) \le (C_k C_t + C_m) S(x,B),
+\]
+and Lean proves that if \(C_k C_t + C_m \le 26\), then
+\[
+  R(x,B) \le 26\, S(x,B).
+\]
+The constant \(26\) is therefore an explicit threshold condition.
+
+\section{Final Analytic Infrastructure Ledger}
+
+The audited specification layer leaves the following named obligations. They
+can be counted either as eight individual structures or as six analytic
+families, grouping the three OTSA constants and their coupling as one OTSA
+block.
+
+\begin{center}
+\small
+\begin{longtable}{p{0.30\linewidth}p{0.55\linewidth}}
+\toprule
+Obligation & Description \\
+\midrule
+\oblig{MellinFourierNormBridge} &
+Links the Mellin tail norm to the Fourier tail norm via \(u=\log x\) and
+identifies \(\Theta\) with \(d/du\). \\
+\oblig{FourierTailInfrastructure} &
+Provides the Plancherel-based tail estimate
+\(\|(I-P_T)B\|_2 \le T^{-k}\|B^{(k)}\|_2\). \\
+\oblig{DirichletCharacterBridge} &
+Relates the short-interval prime energy to a character-side second moment,
+plus controlled bridge error. \\
+\oblig{LargeSieveInfrastructure} &
+Supplies a local large-sieve bound with constant \(C\le 1\) for the relevant
+moduli and normalisation. \\
+\oblig{KernelSpectralControl} &
+Gives the OTSA spectral-kernel constant \(C_k\). \\
+\oblig{TraceContributionControl} &
+Gives the OTSA trace/pole constant \(C_t\). \\
+\oblig{MellinTailDecay} &
+Gives the OTSA Mellin-tail constant \(C_m\). \\
+\oblig{OTSACouplingHypothesis} &
+States the local inequality \(R(x,B)\le (C_kC_t+C_m)S(x,B)\). \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+Once these obligations are instantiated by genuine analytic proofs in Lean, the
+relative layers TS17--TS19 become unconditional. Together with the TS16
+combinatorial discharge and the TS14 conditional gluing layer, this supplies a
+fully formal route to the Goldbach conclusion under the corresponding TS14
+global hypotheses.
+
+\section{Audit of the Specification Layers}
+
+The audited scope is:
+\[
+  \code{TS/Goldbach/Strong/TS15}
+  \quad\text{through}\quad
+  \code{TS/Goldbach/Strong/TS19}.
+\]
+In this scope, the Lean code contains no \code{sorry} and no global
+\code{axiom}. The analytic assumptions are passed as explicit structures and
+parameters.
+
+A global audit can be run as:
+
+\begin{lstlisting}[language={}]
+rg -n "s[o]rry" TS/Goldbach/Strong/TS15 TS/Goldbach/Strong/TS16 \
+                 TS/Goldbach/Strong/TS17 TS/Goldbach/Strong/TS18 \
+                 TS/Goldbach/Strong/TS19
+rg -n "a[x]iom" TS/Goldbach/Strong/TS15 TS/Goldbach/Strong/TS16 \
+                 TS/Goldbach/Strong/TS17 TS/Goldbach/Strong/TS18 \
+                 TS/Goldbach/Strong/TS19
+\end{lstlisting}
+
+Expected output: no matches.
+
+\section{Build Commands}
+
+The core Lean targets can be built with:
+
+\begin{lstlisting}[language={}]
+lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge \
+          TS.Goldbach.Strong.TS17.MellinJacksonDischarge \
+          TS.Goldbach.Strong.TS18.SecondMomentDischarge \
+          TS.Goldbach.Strong.TS19.OTSAResidualDischarge
+\end{lstlisting}
+
+The local baseline used for the audited files is Lean 4.15.0.
+
+\section{Conclusion}
+
+The Horizon programme has constructed a machine-auditable reduction of the
+Goldbach proof architecture to a compact set of named analytic infrastructure
+obligations. The finite combinatorial core is proven unconditionally. The
+remaining analytic estimates are isolated, exposed, and can be worked on
+independently.
+
+The architecture is modular, auditable, and ready to receive future
+contributions, whether they are formalisations of classical theorems
+(Mellin--Fourier bridge, large sieve) or targeted estimates for the OTSA
+residual block. The present document, together with the Lean 4 source files of
+TS15--TS19, specifies exactly what remains to be done.
+
+\appendix
+
+\section{Lean Source Index}
+
+The associated source tree contains the following audited sprint directories:
+
+\begin{itemize}
+  \item \code{TS/Goldbach/Strong/TS15}
+  \item \code{TS/Goldbach/Strong/TS16}
+  \item \code{TS/Goldbach/Strong/TS17}
+  \item \code{TS/Goldbach/Strong/TS18}
+  \item \code{TS/Goldbach/Strong/TS19}
+\end{itemize}
+
+TS20 is a synthesis document and does not add new Lean theorems.
+
+\end{document}

@@ -1,136 +1,133 @@
 # Horizon Goldbach
 
-**A Machine-Verified Conditional Framework for the Strong Goldbach Conjecture**
+Lean 4 formal specification programme for a conditional architecture around the
+binary Goldbach conjecture.
 
-Lean 4 formalization — Phase VI (sealed) + Phase VII v2 + CompactZone (proved) + KLMN (reduction)
+This repository does **not** claim an unconditional proof of Goldbach. Its goal
+is narrower and auditable: decompose the proof architecture into Lean-checked
+modules, prove the finite/combinatorial layer, and expose the remaining
+analytic work as named local infrastructure obligations.
 
-## Status
+## Current Focus: TS15--TS20
 
-| Metric | Value |
-|--------|-------|
-| Root modules | 36 (18 Phase VI + 5 Phase VII + 9 CompactZone + 4 KLMN) |
-| Lean toolchain | v4.15.0 |
-| Mathlib | v4.15.0 (commit `9837ca9d`) |
-| `sorry` in CompactZone | **0** |
-| `axiom` in CompactZone | **0** |
-| `sorry` in KLMN | 2 (whole-line Sobolev trace + assembly) |
-| `axiom` in KLMN | 0 |
+The current sprint chain lives under:
 
-## Main result
-
-The Lean kernel certifies the following conditional reduction:
-
-> If five explicit interface predicates are supplied, and the AMS computational verification
-> up to 4 × 10¹⁸ is granted, then every even integer n ≥ 4 is a sum of two primes.
-
-## Interface predicate audit
-
-An internal audit (April 2026) revealed that four of the five interface predicates
-are **definitionally weak**: they can be satisfied by trivial witnesses that carry
-no mathematical content. Only `PCBAsymptotic` is genuine.
-
-| Predicate | Status | Mathematical content |
-|-----------|--------|---------------------|
-| `PCBAsymptotic` | **genuine** | Asymptotic Goldbach conjecture (circle method) |
-| `CompactZoneBound` | weak, **strengthened** | Strong version proved via CompactZoneBoundStrong |
-| `KLMNHypothesis` | weak | Witness not tied to actual quadratic form |
-| `SpectralPositivityHypothesis` | weak | Witness not tied to actual resolvent |
-| `FredholmOTSAHypothesis` | weak | Witness not tied to actual operator |
-| `BandwidthSufficient` | weak, discharged | Predicate trivially satisfiable |
-
-**The current priority is strengthening the four weak predicates** to capture the
-intended mathematics. CompactZoneBoundStrong serves as the template for this redesign.
-
-## CompactZoneBoundStrong — PROVED (strengthened predicate)
-
-The only predicate that has been both strengthened and proved:
-
-```
-theorem compactZoneBoundStrong_all : CompactZoneBoundStrong
-theorem compactZoneBound_all : Goldbach.CompactZoneBound
-theorem po_a2_stage1_all : Goldbach.Roadmap.PO_A2_stage1
+```text
+TS/Goldbach/Strong/
+  TS15/
+  TS16/
+  TS17/
+  TS18/
+  TS19/
+  TS20/
 ```
 
-The strong version connects to the actual arithmetic measure and confining weight
-via explicit per-cell rational certificates verified by `native_decide`.
-The proof covers all 20 cells of [log 2, 20] with three strategies:
-- **Cells 0–1**: per-prime rational bounds for {2,3,5,7,11,13,17,19} via Taylor log/sqrt enclosures
-- **Cells 2–9**: count × max-term with prime-count filter and `native_decide` verification
-- **Cells 10–19**: tail bound for primes > 9973
+Status summary:
 
-## KLMN reduction
+| Sprint | Object | Status | Meaning |
+| --- | --- | --- | --- |
+| TS15 | Short-interval reduction | `interface_compiled` | typed Lean interface for the local analytic residue |
+| TS16 | Combinatorial discharge | `repo_committed` | finite counting lemma proved unconditionally |
+| TS17 | Mellin-Jackson projection | `repo_committed_relative` | reduced to Mellin/Fourier infrastructure |
+| TS18 | Short-interval second moment | `repo_committed_relative` | reduced to character bridge and large sieve infrastructure |
+| TS19 | OTSA residual bound | `repo_committed_relative` | reduced to spectral, trace, and Mellin-tail controls |
+| TS20 | Synthesis manuscript | documentation | final ledger and project roadmap |
 
-The KLMN infrastructure decomposes `KLMNHypothesis` into more elementary components:
+## What Is Proved
 
+TS16 proves the finite combinatorial comparison:
+
+```lean
+TS16.Goldbach.pair_count_le_energy
 ```
-KLMNHypothesis = SobolevTraceInequality ∧ CellWeightBound
-```
 
-Key proved theorems (0 sorry):
-- `sobolev_trace_bounded_interval`: bounded-interval Sobolev trace inequality (coefficient corrected from 1/(b-a) to 2/(b-a))
-- `formBoundData_of_infinitesimal`: infinitesimal form-bound → FormBoundData
-- `klmnHypothesis_of_infinitesimal`: infinitesimal form-bound → KLMNHypothesis
+This removes the previous local counting obligation from TS15. The proof uses
+only finite sets, products, sigma finsets, and cardinality comparison: close
+pairs are injected into energetic triples.
 
-Remaining sorry (2: whole-line trace inequality and assembly):
-- `sobolevTraceInequality_proof`: trace inequality on ℝ (requires partition of unity or density argument)
-- `infinitesimal_form_bound_of_sobolev_summable`: assembly of Sobolev + cell weights
+TS17, TS18, and TS19 are relative discharges. They do not hide assumptions as
+global axioms; instead they pass the remaining analytic inputs as explicit
+structures.
 
-**Note:** The current `KLMNHypothesis` predicate is weak (see audit above). The KLMN
-reduction work remains valuable as infrastructure for the strengthened version.
+## Remaining Analytic Infrastructure
 
-## Module architecture
+The final TS20 ledger names the remaining analytic obligations:
 
-```
-Goldbach.lean (root, 36 imports)
-│
-├── Phase VI (18 modules, sealed)
-│   Basic, Collage, Framework, Thresholds, Interfaces,
-│   AxiomsToLemmas, Budget, G43Budget, CompactWindowShadow,
-│   SmallInstances, Roadmap, Status, ExpBounds,
-│   A2CertificateData, ThresholdReal, PrimeLogEnclosures,
-│   BreakpointGrid, A2Certificate
-│
-├── Phase VII v2 (5 modules)
-│   PCBGallagher, HerglotzPositivity, A2PureAnalytic,
-│   MellinJackson, FredholmOTSA
-│
-├── CompactZone (9 modules, 0 sorry, 0 axiom)
-│   Defs          — W(Q), ratio_bound, Taylor bounds
-│   Grid          — cell decomposition, monotonicity
-│   Wire          — framework wiring (trivial path)
-│   CellBounds    — rational certificate v1
-│   CellBoundsStrong — rational certificate v2 + tail bounds
-│   Strong        — Taylor upper bounds, sqrt bounds
-│   Bridge        — conditional chain architecture
-│   NumeratorBound — cells 10-19 proved
-│   NumeratorAll  — ALL 20 cells proved → CompactZoneBoundStrong
-│
-└── KLMN (4 modules, 2 sorry, 0 axiom)
-    Defs          — QuadForm, IsFormBounded, SobolevTrace
-    SobolevProof  — bounded-interval trace inequality (PROVED)
-    Sobolev       — trace inequality statements (1 sorry)
-    Chain         — reduction chain (1 sorry)
-```
+| Obligation | Role |
+| --- | --- |
+| `MellinFourierNormBridge` | logarithmic Mellin/Fourier norm bridge |
+| `FourierTailInfrastructure` | Plancherel tail estimate |
+| `DirichletCharacterBridge` | character orthogonality and bridge error |
+| `LargeSieveInfrastructure` | local large-sieve estimate with `C <= 1` |
+| `KernelSpectralControl` | OTSA spectral-kernel control |
+| `TraceContributionControl` | OTSA trace/pole control |
+| `MellinTailDecay` | OTSA Mellin-tail decay |
+| `OTSACouplingHypothesis` | residual coupling inequality |
+
+These are the objects that must be instantiated by genuine analytic proofs to
+turn the relative architecture into an unconditional formal proof route.
 
 ## Build
 
-```bash
-git clone https://github.com/seisner1967-hash/goldbach-horizon.git
-cd goldbach-horizon
-lake exe cache get
-lake build
+The repository uses Lean 4.15.0 / Mathlib v4.15.0.
+
+Typical build for the current sprint chain:
+
+```powershell
+lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
+  TS.Goldbach.Strong.TS17.MellinJacksonDischarge `
+  TS.Goldbach.Strong.TS18.SecondMomentDischarge `
+  TS.Goldbach.Strong.TS19.OTSAResidualDischarge
 ```
 
-## Scientific disclaimer
+Build all TS15--TS19 targets:
 
-This is a conditional framework, not an unconditional proof of the Goldbach conjecture.
-An internal audit revealed that four of the five interface predicates are currently
-too weak to capture the intended analytic content (see audit table above). The project's
-contribution is methodological: demonstrating the logical skeleton and identifying
-precisely where the mathematical interfaces need strengthening.
+```powershell
+lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
+  TS.Goldbach.Strong.TS15.ProblemE1ShortIntervals `
+  TS.Goldbach.Strong.TS15.PCB_Q1_Discharge `
+  TS.Goldbach.Strong.TS15.MellinJacksonFourier `
+  TS.Goldbach.Strong.TS15.OTSAResidualDecomposition `
+  TS.Goldbach.Strong.TS16.CombinatorialDischarge `
+  TS.Goldbach.Strong.TS17.MellinJacksonDischarge `
+  TS.Goldbach.Strong.TS18.SecondMomentDischarge `
+  TS.Goldbach.Strong.TS19.OTSAResidualDischarge
+```
 
-## References
+## Audit
 
-- Repository: [github.com/seisner1967-hash/goldbach-horizon](https://github.com/seisner1967-hash/goldbach-horizon)
-- Preprint: OSF Thesis Commons (pending update)
-- Technical reports: Horizon Project R22–R24
+Audited scope:
+
+```text
+TS/Goldbach/Strong/TS15
+TS/Goldbach/Strong/TS16
+TS/Goldbach/Strong/TS17
+TS/Goldbach/Strong/TS18
+TS/Goldbach/Strong/TS19
+```
+
+Audit commands:
+
+```powershell
+rg -n "sorry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19
+rg -n "axiom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19
+```
+
+Expected result: no matches.
+
+## TS20 Manuscript
+
+The synthesis document is available at:
+
+```text
+TS/Goldbach/Strong/TS20/TS20_Horizon_Goldbach_Synthesis.tex
+```
+
+It summarizes TS15--TS19 and records the final analytic infrastructure ledger.
+It is written for XeLaTeX because it uses `fontspec`.
+
+## Repository Note
+
+The root project also contains older Horizon/Goldbach modules. Some older
+areas may have their own independent audit status. The sprint chain documented
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS20` layer.

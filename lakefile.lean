@@ -9,3 +9,5 @@ require mathlib from git
 
 @[default_target]
 lean_lib Goldbach
+
+lean_lib TS
