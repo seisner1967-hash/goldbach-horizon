@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS29
+## Current Focus: TS15--TS30
 
 The current sprint chain lives under:
 
@@ -29,6 +29,7 @@ TS/Goldbach/Strong/
   TS27/
   TS28/
   TS29/
+  TS30/
 ```
 
 Status summary:
@@ -50,6 +51,7 @@ Status summary:
 | TS27 | OTSA constant register | `repo_committed_relative` | registers non-final rational OTSA smoke-test constants |
 | TS28 | OTSA constants candidate | `repo_committed_relative` | adds a typed-status candidate-v0 OTSA register |
 | TS29 | OTSA constant provenance | `repo_committed_relative` | records provenance status for OTSA rational bounds |
+| TS30 | Brun-Titchmarsh Selberg roadmap | `repo_committed_relative` | decomposes BT into Selberg majorant and budget comparison |
 
 ## What Is Proved
 
@@ -182,6 +184,20 @@ TS29.Goldbach.candidate_v0_not_certified
 At this point `Ck` is marked as a narrative-source bound, while `Ct`, `Cm`, and
 `Cscale` remain explicit placeholders.
 
+TS30 refines the remaining Brun-Titchmarsh obligation into Selberg-facing
+sub-obligations:
+
+```lean
+TS30.Goldbach.SelbergSieveIntervalBound
+TS30.Goldbach.SelbergMajorantBudgetComparison
+TS30.Goldbach.SelbergBrunTitchmarshInfrastructure
+TS30.Goldbach.brunTitchmarshNatIntervalBound_from_selberg
+```
+
+This keeps Brun-Titchmarsh external, but identifies the exact future Mathlib
+target: a Selberg-sieve interval majorant plus the arithmetic comparison with
+the TS22 ceiling budget.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -196,6 +212,8 @@ The final TS20 ledger names the remaining analytic obligations:
 | `BrunTitchmarshShortInterval` | stronger threshold-form short-interval budget, currently `K = 20` |
 | `BrunTitchmarshScaleBridge` | domination of the exact integer window-budget scale by a chosen closed-form scale |
 | `BrunTitchmarshNatIntervalBound` | natural-interval prime-count Brun-Titchmarsh theorem |
+| `SelbergSieveIntervalBound` | Selberg-sieve theorem producing an explicit local interval majorant |
+| `SelbergMajorantBudgetComparison` | arithmetic comparison from Selberg majorant to TS22 BT budget |
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
 | `ScaleToOTSAControl` | analytic cost of carrying a TS22 scale into OTSA |
 | `ScaledOTSAAdmissible` | local numerical threshold for scaled OTSA constants |
@@ -227,7 +245,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS29 targets:
+Build all TS15--TS30 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -255,7 +273,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS26.OTSANumericalFeasibility `
   TS.Goldbach.Strong.TS27.OTSAConstantRegister `
   TS.Goldbach.Strong.TS28.OTSAConstantsCandidate `
-  TS.Goldbach.Strong.TS29.OTSAConstantProvenance
+  TS.Goldbach.Strong.TS29.OTSAConstantProvenance `
+  TS.Goldbach.Strong.TS30.BrunTitchmarshSelbergRoadmap
 ```
 
 ## Audit
@@ -277,13 +296,14 @@ TS/Goldbach/Strong/TS26
 TS/Goldbach/Strong/TS27
 TS/Goldbach/Strong/TS28
 TS/Goldbach/Strong/TS29
+TS/Goldbach/Strong/TS30
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30
 ```
 
 Expected result: no matches.
@@ -303,4 +323,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS29` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS30` layer.
