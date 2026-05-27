@@ -18,9 +18,14 @@ Status: `repo_committed_relative`.
   - defines `ShortIntervalPrimeSecondMomentK`;
   - proves monotonicity in the transported constant.
 - `BrunTitchmarshShortInterval.lean`:
-  - defines the explicit Brun-Titchmarsh budget constant `20`;
-  - defines the local obligation `BrunTitchmarshShortInterval`;
-  - instantiates `ShortIntervalPrimeSecondMomentK` from that obligation.
+  - defines the explicit threshold budget constant `20`;
+  - defines the threshold-form obligation `BrunTitchmarshShortInterval`;
+  - instantiates `ShortIntervalPrimeSecondMomentK` from that stronger obligation.
+- `BrunTitchmarshEnergyDischarge.lean`:
+  - defines the concrete local count `shortPrimeLocalCount`;
+  - defines `BrunTitchmarshLocalWindowBudget`;
+  - proves that a uniform local-window bound implies
+    `shortPrimeEnergy x Q <= (x+1) * B^2`, the natural energy scale.
 - `ThresholdComputation.lean`:
   - defines the default allowed TS21 constant `KAllowedTS21 = 20`;
   - proves the Brun-Titchmarsh budget is admissible for that threshold.
@@ -44,6 +49,7 @@ Status: `repo_committed_relative`.
 ```powershell
 lake build TS.Goldbach.Strong.TS21.ShortIntervalBudget `
   TS.Goldbach.Strong.TS21.BrunTitchmarshShortInterval `
+  TS.Goldbach.Strong.TS21.BrunTitchmarshEnergyDischarge `
   TS.Goldbach.Strong.TS21.ThresholdComputation `
   TS.Goldbach.Strong.TS21.SecondMomentBudgetDischarge
 
@@ -56,7 +62,19 @@ Expected result: 0 `s[o]rry`, 0 `a[x]iom`.
 ## Conclusion
 
 TS21 relaxes the rigid TS18 downstream requirement `C <= 1` into an explicit
-budgeted interface. The analytic task is now:
+budgeted interface.
+
+Scale correction: a pointwise Brun-Titchmarsh local-window estimate does not by
+itself yield a fixed-constant bound of the form
+`shortPrimeEnergy x Q <= K * x^2 / Q^2`. What it yields mechanically is the
+natural energy estimate
+
+```text
+shortPrimeLocalCount x Q n <= B
+  => shortPrimeEnergy x Q <= (x+1) * B^2.
+```
+
+The threshold-form analytic task is therefore:
 
 ```text
 BrunTitchmarshShortInterval
@@ -64,5 +82,6 @@ BrunTitchmarshShortInterval
   => Problem_E1K 20
 ```
 
-The value `20` can later be replaced by a sharper constant without changing the
-downstream Lean architecture.
+The value `20` remains a downstream threshold target. It can later be replaced
+by a sharper or larger admissible constant without changing the downstream Lean
+architecture.

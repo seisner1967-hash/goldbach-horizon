@@ -57,11 +57,14 @@ TS21 adds a budgeted version of the short-interval second-moment interface:
 TS21.Goldbach.Problem_E1K
 TS21.Goldbach.ShortIntervalPrimeSecondMomentK
 TS21.Goldbach.BrunTitchmarshShortInterval
+TS21.Goldbach.BrunTitchmarshLocalWindowBudget
 ```
 
 This lets later threshold computations carry a concrete constant, currently
 `K = 20`, instead of forcing the TS18-style estimate into the rigid `C <= 1`
-shape too early.
+shape too early. TS21 also records the scale-correct local-window transport:
+a uniform bound `shortPrimeLocalCount x Q n <= B` implies
+`shortPrimeEnergy x Q <= (x+1) * B^2`.
 
 ## Remaining Analytic Infrastructure
 
@@ -73,7 +76,8 @@ The final TS20 ledger names the remaining analytic obligations:
 | `FourierTailInfrastructure` | Plancherel tail estimate |
 | `DirichletCharacterBridge` | character orthogonality and bridge error |
 | `LargeSieveInfrastructure` | local large-sieve estimate with `C <= 1` |
-| `BrunTitchmarshShortInterval` | explicit short-interval budget, currently `K = 20` |
+| `BrunTitchmarshLocalWindowBudget` | pointwise short-window prime count budget |
+| `BrunTitchmarshShortInterval` | stronger threshold-form short-interval budget, currently `K = 20` |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -110,6 +114,7 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS19.OTSAResidualDischarge `
   TS.Goldbach.Strong.TS21.ShortIntervalBudget `
   TS.Goldbach.Strong.TS21.BrunTitchmarshShortInterval `
+  TS.Goldbach.Strong.TS21.BrunTitchmarshEnergyDischarge `
   TS.Goldbach.Strong.TS21.ThresholdComputation `
   TS.Goldbach.Strong.TS21.SecondMomentBudgetDischarge
 ```

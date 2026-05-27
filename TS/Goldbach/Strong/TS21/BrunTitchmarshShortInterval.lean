@@ -5,11 +5,12 @@ namespace TS21
 namespace Goldbach
 
 /--
-Explicit TS21 Brun-Titchmarsh budget constant.
+Explicit TS21 threshold budget constant.
 
-The value `20` is deliberately conservative: it is large enough to absorb the
-short-interval counting constants planned for the Brun-Titchmarsh discharge,
-while remaining a concrete threshold input for the later numerical budget.
+Important scale note: this constant is a downstream threshold target, not the
+raw consequence of a pointwise Brun-Titchmarsh bound on every short window.
+Pointwise local-window control is transported in
+`BrunTitchmarshEnergyDischarge.lean` at the natural scale `(x+1) * B^2`.
 -/
 noncomputable def BTShortIntervalConstant : Real :=
   20
@@ -19,11 +20,12 @@ theorem BTShortIntervalConstant_pos :
   norm_num [BTShortIntervalConstant]
 
 /--
-Local Brun-Titchmarsh short-interval consequence used by TS21.
+Threshold-form short-interval consequence used by the original TS21 budget.
 
-This is the analytic obligation for the sprint: prove that the concrete
-Brun-Titchmarsh interval estimate implies the short-prime energy bound with
-constant `20`.
+This is intentionally stronger than what follows from a pointwise
+Brun-Titchmarsh local-window estimate alone. It should only be instantiated
+after an additional averaging/correlation argument or a threshold computation
+has bridged the natural energy scale to `20 * x^2 / Q^2`.
 -/
 structure BrunTitchmarshShortInterval where
   energy_bound :
