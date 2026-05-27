@@ -14,6 +14,11 @@ ingredients are isolated as explicit local structures.
 - `MellinFourierChangeOfVariables.lean`
   - proves the concrete Bochner change-of-variables lemma for `x = exp u`;
   - records the image, injectivity, and derivative facts needed by the Jacobian theorem.
+- `MellinFourierWeightedMeasure.lean`
+  - defines the weighted Mellin measure `muWeighted`;
+  - defines the representative operators `TsigmaFun` and `TsigmaInvFun`;
+  - proves pointwise inverse identities on representatives;
+  - proves the pre-quotient norm-square integral identity.
 - `MellinJacksonInfrastructure.lean`
   - defines `LogPullback`;
   - defines abstract norms `l2Norm`, `fourierTailNorm`, and `derivativeL2Norm`;
@@ -39,6 +44,7 @@ ingredients are isolated as explicit local structures.
 
 ```powershell
 lake build TS.Goldbach.Strong.TS17.MellinFourierChangeOfVariables `
+  TS.Goldbach.Strong.TS17.MellinFourierWeightedMeasure `
   TS.Goldbach.Strong.TS17.MellinJacksonInfrastructure `
   TS.Goldbach.Strong.TS17.FourierTailBound `
   TS.Goldbach.Strong.TS17.MellinJacksonDischarge
