@@ -23,6 +23,9 @@ ingredients are isolated as explicit local structures.
   - proves measurability of the Mellin density;
   - proves that `muWeighted` is supported almost everywhere on `(0, infinity)`;
   - upgrades the pointwise inverse identities to almost-everywhere identities.
+  - defines the local `MellinFourierAEEqTransport` infrastructure;
+  - descends `TsigmaFun` and `TsigmaInvFun` to `AEEqFun`;
+  - proves the descended maps are inverse to each other on `AEEqFun`.
 - `MellinJacksonInfrastructure.lean`
   - defines `LogPullback`;
   - defines abstract norms `l2Norm`, `fourierTailNorm`, and `derivativeL2Norm`;
