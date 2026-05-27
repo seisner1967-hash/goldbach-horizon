@@ -11,6 +11,9 @@ ingredients are isolated as explicit local structures.
 
 ## Lean Files
 
+- `MellinFourierChangeOfVariables.lean`
+  - proves the concrete Bochner change-of-variables lemma for `x = exp u`;
+  - records the image, injectivity, and derivative facts needed by the Jacobian theorem.
 - `MellinJacksonInfrastructure.lean`
   - defines `LogPullback`;
   - defines abstract norms `l2Norm`, `fourierTailNorm`, and `derivativeL2Norm`;
@@ -35,7 +38,8 @@ ingredients are isolated as explicit local structures.
 ## Audit Commands
 
 ```powershell
-lake build TS.Goldbach.Strong.TS17.MellinJacksonInfrastructure `
+lake build TS.Goldbach.Strong.TS17.MellinFourierChangeOfVariables `
+  TS.Goldbach.Strong.TS17.MellinJacksonInfrastructure `
   TS.Goldbach.Strong.TS17.FourierTailBound `
   TS.Goldbach.Strong.TS17.MellinJacksonDischarge
 
