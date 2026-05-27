@@ -19,6 +19,10 @@ ingredients are isolated as explicit local structures.
   - defines the representative operators `TsigmaFun` and `TsigmaInvFun`;
   - proves pointwise inverse identities on representatives;
   - proves the pre-quotient norm-square integral identity.
+- `MellinFourierNormBridge.lean`
+  - proves measurability of the Mellin density;
+  - proves that `muWeighted` is supported almost everywhere on `(0, infinity)`;
+  - upgrades the pointwise inverse identities to almost-everywhere identities.
 - `MellinJacksonInfrastructure.lean`
   - defines `LogPullback`;
   - defines abstract norms `l2Norm`, `fourierTailNorm`, and `derivativeL2Norm`;
@@ -45,6 +49,7 @@ ingredients are isolated as explicit local structures.
 ```powershell
 lake build TS.Goldbach.Strong.TS17.MellinFourierChangeOfVariables `
   TS.Goldbach.Strong.TS17.MellinFourierWeightedMeasure `
+  TS.Goldbach.Strong.TS17.MellinFourierNormBridge `
   TS.Goldbach.Strong.TS17.MellinJacksonInfrastructure `
   TS.Goldbach.Strong.TS17.FourierTailBound `
   TS.Goldbach.Strong.TS17.MellinJacksonDischarge
