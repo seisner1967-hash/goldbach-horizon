@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS25
+## Current Focus: TS15--TS26
 
 The current sprint chain lives under:
 
@@ -25,6 +25,7 @@ TS/Goldbach/Strong/
   TS23/
   TS24/
   TS25/
+  TS26/
 ```
 
 Status summary:
@@ -42,6 +43,7 @@ Status summary:
 | TS23 | OTSA scale propagation | `repo_committed_relative` | transports TS22 scales into the OTSA residual ledger |
 | TS24 | Closed-form scale bridge | `repo_committed` | proves the ceiling-budget scale is dominated by a padded closed form |
 | TS25 | Padded-scale OTSA feasibility | `repo_committed_relative` | specializes OTSA propagation to the TS24 padded scale |
+| TS26 | OTSA numerical feasibility | `repo_committed_relative` | converts rational OTSA certificates into scaled admissibility |
 
 ## What Is Proved
 
@@ -126,6 +128,17 @@ TS22.Goldbach.BrunTitchmarshNatIntervalBound
   => TS19.OTSA.OTSAResidualBound R
 ```
 
+TS26 adds an exact rational certificate layer for OTSA numerical feasibility:
+
+```lean
+TS26.Goldbach.OTSARationalCertificate
+  => TS26.Goldbach.scaledConstantsOfRat
+  => TS26.Goldbach.scaledOTSAAdmissible_of_rat
+```
+
+The admissibility inequality is checked over `Rat` and then transported to the
+real-valued TS23 constants, avoiding floating-point certificates.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -144,6 +157,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `ScaleToOTSAControl` | analytic cost of carrying a TS22 scale into OTSA |
 | `ScaledOTSAAdmissible` | local numerical threshold for scaled OTSA constants |
 | `PaddedScaleAnalyticInfrastructure` | TS25 package for the padded scale, interval BT, and OTSA admissibility |
+| `OTSARationalCertificate` | rational upper-bound certificate for scaled OTSA admissibility |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -167,7 +181,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS22 targets:
+Build all TS15--TS26 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -191,7 +205,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS22.ScaledLargeSieveDischarge `
   TS.Goldbach.Strong.TS23.OTSAScalePropagation `
   TS.Goldbach.Strong.TS24.ClosedFormScaleBridge `
-  TS.Goldbach.Strong.TS25.PaddedScaleOTSAFeasibility
+  TS.Goldbach.Strong.TS25.PaddedScaleOTSAFeasibility `
+  TS.Goldbach.Strong.TS26.OTSANumericalFeasibility
 ```
 
 ## Audit
@@ -209,13 +224,14 @@ TS/Goldbach/Strong/TS22
 TS/Goldbach/Strong/TS23
 TS/Goldbach/Strong/TS24
 TS/Goldbach/Strong/TS25
+TS/Goldbach/Strong/TS26
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26
 ```
 
 Expected result: no matches.
@@ -235,4 +251,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS25` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS26` layer.
