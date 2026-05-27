@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS20
+## Current Focus: TS15--TS21
 
 The current sprint chain lives under:
 
@@ -20,6 +20,7 @@ TS/Goldbach/Strong/
   TS18/
   TS19/
   TS20/
+  TS21/
 ```
 
 Status summary:
@@ -32,6 +33,7 @@ Status summary:
 | TS18 | Short-interval second moment | `repo_committed_relative` | reduced to character bridge and large sieve infrastructure |
 | TS19 | OTSA residual bound | `repo_committed_relative` | reduced to spectral, trace, and Mellin-tail controls |
 | TS20 | Synthesis manuscript | documentation | final ledger and project roadmap |
+| TS21 | Short-interval constant budget | `repo_committed_relative` | transports explicit constants such as Brun-Titchmarsh `K = 20` |
 
 ## What Is Proved
 
@@ -49,6 +51,18 @@ TS17, TS18, and TS19 are relative discharges. They do not hide assumptions as
 global axioms; instead they pass the remaining analytic inputs as explicit
 structures.
 
+TS21 adds a budgeted version of the short-interval second-moment interface:
+
+```lean
+TS21.Goldbach.Problem_E1K
+TS21.Goldbach.ShortIntervalPrimeSecondMomentK
+TS21.Goldbach.BrunTitchmarshShortInterval
+```
+
+This lets later threshold computations carry a concrete constant, currently
+`K = 20`, instead of forcing the TS18-style estimate into the rigid `C <= 1`
+shape too early.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -59,6 +73,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `FourierTailInfrastructure` | Plancherel tail estimate |
 | `DirichletCharacterBridge` | character orthogonality and bridge error |
 | `LargeSieveInfrastructure` | local large-sieve estimate with `C <= 1` |
+| `BrunTitchmarshShortInterval` | explicit short-interval budget, currently `K = 20` |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -77,10 +92,11 @@ Typical build for the current sprint chain:
 lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS17.MellinJacksonDischarge `
   TS.Goldbach.Strong.TS18.SecondMomentDischarge `
-  TS.Goldbach.Strong.TS19.OTSAResidualDischarge
+  TS.Goldbach.Strong.TS19.OTSAResidualDischarge `
+  TS.Goldbach.Strong.TS21.SecondMomentBudgetDischarge
 ```
 
-Build all TS15--TS19 targets:
+Build all TS15--TS21 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -91,7 +107,11 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS17.MellinJacksonDischarge `
   TS.Goldbach.Strong.TS18.SecondMomentDischarge `
-  TS.Goldbach.Strong.TS19.OTSAResidualDischarge
+  TS.Goldbach.Strong.TS19.OTSAResidualDischarge `
+  TS.Goldbach.Strong.TS21.ShortIntervalBudget `
+  TS.Goldbach.Strong.TS21.BrunTitchmarshShortInterval `
+  TS.Goldbach.Strong.TS21.ThresholdComputation `
+  TS.Goldbach.Strong.TS21.SecondMomentBudgetDischarge
 ```
 
 ## Audit
@@ -104,13 +124,14 @@ TS/Goldbach/Strong/TS16
 TS/Goldbach/Strong/TS17
 TS/Goldbach/Strong/TS18
 TS/Goldbach/Strong/TS19
+TS/Goldbach/Strong/TS21
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "sorry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19
-rg -n "axiom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21
 ```
 
 Expected result: no matches.
@@ -130,4 +151,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS20` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS21` layer.
