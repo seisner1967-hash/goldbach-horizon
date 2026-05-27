@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS22
+## Current Focus: TS15--TS23
 
 The current sprint chain lives under:
 
@@ -22,6 +22,7 @@ TS/Goldbach/Strong/
   TS20/
   TS21/
   TS22/
+  TS23/
 ```
 
 Status summary:
@@ -36,6 +37,7 @@ Status summary:
 | TS20 | Synthesis manuscript | documentation | final ledger and project roadmap |
 | TS21 | Short-interval constant budget | `repo_committed_relative` | transports explicit constants such as Brun-Titchmarsh `K = 20` |
 | TS22 | Energy scale renormalization | `repo_committed_relative` | makes the short-interval normalization scale explicit |
+| TS23 | OTSA scale propagation | `repo_committed_relative` | transports TS22 scales into the OTSA residual ledger |
 
 ## What Is Proved
 
@@ -89,6 +91,16 @@ TS18.Goldbach.DirichletCharacterBridge
   => TS22.Goldbach.Problem_E1Scale S K
 ```
 
+TS23 connects the TS22 scale layer to the TS19 OTSA residual ledger:
+
+```lean
+TS22.Goldbach.Problem_E1Scale S K
+  + TS23.Goldbach.ScaleToOTSAControl S
+  + scaled OTSA coupling
+  + TS23.Goldbach.ScaledOTSAAdmissible
+  => TS19.OTSA.OTSAResidualBound R
+```
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -104,6 +116,8 @@ The final TS20 ledger names the remaining analytic obligations:
 | `BrunTitchmarshScaleBridge` | domination of the exact integer window-budget scale by a chosen closed-form scale |
 | `BrunTitchmarshNatIntervalBound` | natural-interval prime-count Brun-Titchmarsh theorem |
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
+| `ScaleToOTSAControl` | analytic cost of carrying a TS22 scale into OTSA |
+| `ScaledOTSAAdmissible` | local numerical threshold for scaled OTSA constants |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -148,7 +162,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge `
   TS.Goldbach.Strong.TS22.ClosedFormScales `
   TS.Goldbach.Strong.TS22.BrunTitchmarshIntervalBridge `
-  TS.Goldbach.Strong.TS22.ScaledLargeSieveDischarge
+  TS.Goldbach.Strong.TS22.ScaledLargeSieveDischarge `
+  TS.Goldbach.Strong.TS23.OTSAScalePropagation
 ```
 
 ## Audit
@@ -163,13 +178,14 @@ TS/Goldbach/Strong/TS18
 TS/Goldbach/Strong/TS19
 TS/Goldbach/Strong/TS21
 TS/Goldbach/Strong/TS22
+TS/Goldbach/Strong/TS23
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23
 ```
 
 Expected result: no matches.
@@ -189,4 +205,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS22` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS23` layer.
