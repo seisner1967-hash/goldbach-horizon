@@ -41,13 +41,21 @@ making the scale explicit.
   - defines a closed-form Brun-Titchmarsh scale
     `(x+1) * (4 * intervalScale x Q / log Q)^2`;
   - packages it as a `ShortIntervalScale`.
+- `BrunTitchmarshIntervalBridge.lean`:
+  - defines the elementary interval count `primeIntervalCard`;
+  - defines the ceiling budget `brunTitchmarshCeilBudget`;
+  - proves that TS15 local windows are subcounts of the corresponding prime
+    interval;
+  - shows that an interval-count Brun-Titchmarsh theorem instantiates
+    `BrunTitchmarshLocalWindowBudget`.
 
 ## Audit Commands
 
 ```powershell
 lake build TS.Goldbach.Strong.TS22.EnergyScale `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge `
-  TS.Goldbach.Strong.TS22.ClosedFormScales
+  TS.Goldbach.Strong.TS22.ClosedFormScales `
+  TS.Goldbach.Strong.TS22.BrunTitchmarshIntervalBridge
 
 rg -n "s[o]rry" TS\Goldbach\Strong\TS22
 rg -n "a[x]iom" TS\Goldbach\Strong\TS22
@@ -64,6 +72,8 @@ Expected result: 0 `s[o]rry`, 0 `a[x]iom`.
 | TS22-BT1 | `Problem_E1Scale_from_localWindowBudget` | `repo_committed_relative` | relative to local BT window budget |
 | TS22-BT2 | `BrunTitchmarshScaleBridge` | `analytic_infrastructure_obligation` | dominates exact integer budget by closed-form scale |
 | TS22-CF1 | `brunTitchmarshClosedFormScale` | `repo_committed` | proposed natural BT scale |
+| TS22-I1 | `BrunTitchmarshNatIntervalBound` | `analytic_infrastructure_obligation` | interval-count BT theorem |
+| TS22-I2 | `Problem_E1Scale_from_natIntervalBound` | `repo_committed_relative` | bridges interval BT to scaled pair count |
 
 ## Conclusion
 
@@ -79,3 +89,10 @@ BrunTitchmarshLocalWindowBudget
 
 The remaining analytic work is to instantiate the local window budget and prove
 that a chosen closed-form scale dominates the exact integer budget scale.
+
+## Mathlib Note
+
+In the Lean 4.15.0 / Mathlib v4.15.0 baseline used here,
+`Mathlib.NumberTheory.Sieve.Selberg` is not present. The Selberg sieve and the
+Brun-Titchmarsh theorem must therefore be contributed separately or supplied as
+a local interval-count theorem satisfying `BrunTitchmarshNatIntervalBound`.
