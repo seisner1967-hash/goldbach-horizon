@@ -75,12 +75,19 @@ TS22.Goldbach.ShortIntervalScale
 TS22.Goldbach.Problem_E1Scale
 TS22.Goldbach.brunTitchmarshClosedFormScale
 TS22.Goldbach.BrunTitchmarshNatIntervalBound
+TS22.Goldbach.ScaledLargeSieveInfrastructure
 ```
 
 This keeps the raw TS15 energy intact while allowing Brun-Titchmarsh and large
 sieve inputs to use their natural normalization scales. TS22 also provides an
 interval bridge from a future natural-number Brun-Titchmarsh theorem to the
-local window budget used by TS21.
+local window budget used by TS21, and a scale-aware large-sieve discharge:
+
+```lean
+TS18.Goldbach.DirichletCharacterBridge
+  + TS22.Goldbach.ScaledLargeSieveInfrastructure S
+  => TS22.Goldbach.Problem_E1Scale S K
+```
 
 ## Remaining Analytic Infrastructure
 
@@ -96,6 +103,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `BrunTitchmarshShortInterval` | stronger threshold-form short-interval budget, currently `K = 20` |
 | `BrunTitchmarshScaleBridge` | domination of the exact integer window-budget scale by a chosen closed-form scale |
 | `BrunTitchmarshNatIntervalBound` | natural-interval prime-count Brun-Titchmarsh theorem |
+| `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -139,7 +147,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS22.EnergyScale `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge `
   TS.Goldbach.Strong.TS22.ClosedFormScales `
-  TS.Goldbach.Strong.TS22.BrunTitchmarshIntervalBridge
+  TS.Goldbach.Strong.TS22.BrunTitchmarshIntervalBridge `
+  TS.Goldbach.Strong.TS22.ScaledLargeSieveDischarge
 ```
 
 ## Audit

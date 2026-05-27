@@ -48,6 +48,10 @@ making the scale explicit.
     interval;
   - shows that an interval-count Brun-Titchmarsh theorem instantiates
     `BrunTitchmarshLocalWindowBudget`.
+- `ScaledLargeSieveDischarge.lean`:
+  - defines `ScaledLargeSieveInfrastructure`;
+  - combines `DirichletCharacterBridge` with a scale-aware large-sieve bound;
+  - proves `Problem_E1Scale_from_scaledLargeSieve`.
 
 ## Audit Commands
 
@@ -55,7 +59,8 @@ making the scale explicit.
 lake build TS.Goldbach.Strong.TS22.EnergyScale `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge `
   TS.Goldbach.Strong.TS22.ClosedFormScales `
-  TS.Goldbach.Strong.TS22.BrunTitchmarshIntervalBridge
+  TS.Goldbach.Strong.TS22.BrunTitchmarshIntervalBridge `
+  TS.Goldbach.Strong.TS22.ScaledLargeSieveDischarge
 
 rg -n "s[o]rry" TS\Goldbach\Strong\TS22
 rg -n "a[x]iom" TS\Goldbach\Strong\TS22
@@ -74,6 +79,8 @@ Expected result: 0 `s[o]rry`, 0 `a[x]iom`.
 | TS22-CF1 | `brunTitchmarshClosedFormScale` | `repo_committed` | proposed natural BT scale |
 | TS22-I1 | `BrunTitchmarshNatIntervalBound` | `analytic_infrastructure_obligation` | interval-count BT theorem |
 | TS22-I2 | `Problem_E1Scale_from_natIntervalBound` | `repo_committed_relative` | bridges interval BT to scaled pair count |
+| TS22-LS1 | `ScaledLargeSieveInfrastructure` | `analytic_infrastructure_obligation` | scale-aware large sieve |
+| TS22-LS2 | `Problem_E1Scale_from_scaledLargeSieve` | `repo_committed_relative` | TS18 bridge plus scaled sieve implies scaled E1 |
 
 ## Conclusion
 
