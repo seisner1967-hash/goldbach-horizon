@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS24
+## Current Focus: TS15--TS25
 
 The current sprint chain lives under:
 
@@ -24,6 +24,7 @@ TS/Goldbach/Strong/
   TS22/
   TS23/
   TS24/
+  TS25/
 ```
 
 Status summary:
@@ -40,6 +41,7 @@ Status summary:
 | TS22 | Energy scale renormalization | `repo_committed_relative` | makes the short-interval normalization scale explicit |
 | TS23 | OTSA scale propagation | `repo_committed_relative` | transports TS22 scales into the OTSA residual ledger |
 | TS24 | Closed-form scale bridge | `repo_committed` | proves the ceiling-budget scale is dominated by a padded closed form |
+| TS25 | Padded-scale OTSA feasibility | `repo_committed_relative` | specializes OTSA propagation to the TS24 padded scale |
 
 ## What Is Proved
 
@@ -113,6 +115,17 @@ TS22.Goldbach.BrunTitchmarshNatIntervalBound
 The padded closed form keeps the unavoidable `+1` loss from `Nat.ceil`
 explicit, so no unproved rounding claim is smuggled into the closed-form scale.
 
+TS25 packages the padded-scale OTSA entry point:
+
+```lean
+TS22.Goldbach.BrunTitchmarshNatIntervalBound
+  + TS23.Goldbach.ScaleToOTSAControl
+      TS24.Goldbach.brunTitchmarshPaddedClosedFormScale
+  + TS23.Goldbach.ScaledOTSAAdmissible
+  + local OTSA coupling
+  => TS19.OTSA.OTSAResidualBound R
+```
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -130,6 +143,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
 | `ScaleToOTSAControl` | analytic cost of carrying a TS22 scale into OTSA |
 | `ScaledOTSAAdmissible` | local numerical threshold for scaled OTSA constants |
+| `PaddedScaleAnalyticInfrastructure` | TS25 package for the padded scale, interval BT, and OTSA admissibility |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -176,7 +190,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS22.BrunTitchmarshIntervalBridge `
   TS.Goldbach.Strong.TS22.ScaledLargeSieveDischarge `
   TS.Goldbach.Strong.TS23.OTSAScalePropagation `
-  TS.Goldbach.Strong.TS24.ClosedFormScaleBridge
+  TS.Goldbach.Strong.TS24.ClosedFormScaleBridge `
+  TS.Goldbach.Strong.TS25.PaddedScaleOTSAFeasibility
 ```
 
 ## Audit
@@ -193,13 +208,14 @@ TS/Goldbach/Strong/TS21
 TS/Goldbach/Strong/TS22
 TS/Goldbach/Strong/TS23
 TS/Goldbach/Strong/TS24
+TS/Goldbach/Strong/TS25
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25
 ```
 
 Expected result: no matches.
@@ -219,4 +235,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS24` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS25` layer.
