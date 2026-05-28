@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS33
+## Current Focus: TS15--TS34
 
 The current sprint chain lives under:
 
@@ -33,6 +33,7 @@ TS/Goldbach/Strong/
   TS31/
   TS32/
   TS33/
+  TS34/
 ```
 
 Status summary:
@@ -58,6 +59,7 @@ Status summary:
 | TS31 | OTSA asymptotic majorants | `repo_committed_relative` | records candidate-v1 rational majorants and provenance gaps |
 | TS32 | OTSA trace majorant roadmap | `repo_committed_relative` | records the conditional trace target `Ct <= 1/2` |
 | TS33 | OTSA final majorants roadmap | `repo_committed_relative` | replaces final raw placeholders by Mellin-tail and scale-transfer contracts |
+| TS34 | Mellin-Fourier measure transport | `repo_committed_relative` | isolates a.e. transport under weighted, restricted, exp, and log measures |
 
 ## What Is Proved
 
@@ -271,6 +273,20 @@ This removes raw placeholder constants from the v3 package by replacing them
 with explicit local contracts. Those contracts still need genuine analytic
 instantiations before a final certificate can be claimed.
 
+TS34 begins the harmonic-analysis front by isolating the measure-transport
+layer needed for the concrete Mellin/Fourier bridge:
+
+```lean
+TS34.MellinJackson.MellinFourierMeasureTransport
+TS34.MellinJackson.tsigmaFun_congr_of_measureTransport
+TS34.MellinJackson.tsigmaInvFun_congr_of_measureTransport
+```
+
+It does not construct the `Lp`-level isometry. It records the four local
+almost-everywhere transport facts needed to move between the weighted Mellin
+measure, Lebesgue measure restricted to `(0, infinity)`, and Lebesgue measure
+under `exp`/`log`.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -278,6 +294,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | Obligation | Role |
 | --- | --- |
 | `MellinFourierNormBridge` | logarithmic Mellin/Fourier norm bridge |
+| `MellinFourierMeasureTransport` | a.e. transport between weighted, restricted, exp, and log measures |
 | `FourierTailInfrastructure` | Plancherel tail estimate |
 | `DirichletCharacterBridge` | character orthogonality and bridge error |
 | `LargeSieveInfrastructure` | local large-sieve estimate with `C <= 1` |
@@ -325,7 +342,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS33 targets:
+Build all TS15--TS34 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -357,7 +374,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS30.BrunTitchmarshSelbergRoadmap `
   TS.Goldbach.Strong.TS31.OTSAAsymptoticMajorants `
   TS.Goldbach.Strong.TS32.OTSATraceMajorantRoadmap `
-  TS.Goldbach.Strong.TS33.OTSAFinalMajorantsRoadmap
+  TS.Goldbach.Strong.TS33.OTSAFinalMajorantsRoadmap `
+  TS.Goldbach.Strong.TS34.MellinFourierMeasureTransport
 ```
 
 ## Audit
@@ -383,13 +401,14 @@ TS/Goldbach/Strong/TS30
 TS/Goldbach/Strong/TS31
 TS/Goldbach/Strong/TS32
 TS/Goldbach/Strong/TS33
+TS/Goldbach/Strong/TS34
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34
 ```
 
 Expected result: no matches.
@@ -409,4 +428,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS33` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS34` layer.
