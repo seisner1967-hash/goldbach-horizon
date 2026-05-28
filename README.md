@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS38
+## Current Focus: TS15--TS39
 
 The current sprint chain lives under:
 
@@ -38,6 +38,7 @@ TS/Goldbach/Strong/
   TS36/
   TS37/
   TS38/
+  TS39/
 ```
 
 Status summary:
@@ -68,6 +69,7 @@ Status summary:
 | TS36 | Mellin-Fourier L2 isometry roadmap | `repo_committed_relative` | packages the remaining `Lp`-level inputs for the future isometry |
 | TS37 | Mellin-Fourier Lp norm inputs | `repo_committed_relative` | isolates `Memℒp` and `snorm` preservation for the future isometry |
 | TS38 | Mellin-Fourier Lp linearity inputs | `repo_committed_relative` | isolates a.e. additivity and scalar compatibility for the future isometry |
+| TS39 | Mellin-Fourier Lp isometry spec | `repo_committed_relative` | specifies the final `LinearIsometryEquiv` and its a.e. representative behaviour |
 
 ## What Is Proved
 
@@ -353,6 +355,19 @@ and `TsigmaInvFun`. Together, TS37 and TS38 reconstruct the full TS36
 `MellinFourierLpIsometryInfrastructure`, leaving the final
 `LinearIsometryEquiv` assembly to TS39.
 
+TS39 gives the final specification of the Mellin-Fourier `L²` isometry:
+
+```lean
+TS39.MellinJackson.MellinFourierLpIsometry
+TS39.MellinJackson.MellinFourierLpIsometryTarget
+TS39.MellinJackson.weakTarget_of_isometryTarget
+```
+
+The specification includes the `LinearIsometryEquiv`, but also requires that
+its forward and inverse maps agree a.e. with `TsigmaFun` and `TsigmaInvFun`.
+This keeps the contract tied to the Mellin-Fourier transport rather than to an
+unrelated abstract isometry.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -366,6 +381,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `MellinFourierLpIsometryInfrastructure` | `Memℒp`, norm, and linearity inputs for the future `Lp` isometry |
 | `MellinFourierLpNormInputs` | `Memℒp` and `snorm` preservation inputs for the future `Lp` isometry |
 | `MellinFourierLpLinearityInputs` | a.e. additivity and scalar-compatibility inputs for the future `Lp` isometry |
+| `MellinFourierLpIsometry` | final `LinearIsometryEquiv` specification tied to `TsigmaFun`/`TsigmaInvFun` |
 | `FourierTailInfrastructure` | Plancherel tail estimate |
 | `DirichletCharacterBridge` | character orthogonality and bridge error |
 | `LargeSieveInfrastructure` | local large-sieve estimate with `C <= 1` |
@@ -413,7 +429,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS38 targets:
+Build all TS15--TS39 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -450,7 +466,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS35.MellinFourierAEEqTransport `
   TS.Goldbach.Strong.TS36.MellinFourierLpIsometryRoadmap `
   TS.Goldbach.Strong.TS37.MellinFourierLpNormInputs `
-  TS.Goldbach.Strong.TS38.MellinFourierLpLinearityInputs
+  TS.Goldbach.Strong.TS38.MellinFourierLpLinearityInputs `
+  TS.Goldbach.Strong.TS39.MellinFourierLpIsometry
 ```
 
 ## Audit
@@ -481,13 +498,14 @@ TS/Goldbach/Strong/TS35
 TS/Goldbach/Strong/TS36
 TS/Goldbach/Strong/TS37
 TS/Goldbach/Strong/TS38
+TS/Goldbach/Strong/TS39
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39
 ```
 
 Expected result: no matches.
@@ -507,4 +525,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS38` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS39` layer.
