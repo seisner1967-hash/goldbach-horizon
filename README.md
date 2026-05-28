@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS30
+## Current Focus: TS15--TS31
 
 The current sprint chain lives under:
 
@@ -30,6 +30,7 @@ TS/Goldbach/Strong/
   TS28/
   TS29/
   TS30/
+  TS31/
 ```
 
 Status summary:
@@ -52,6 +53,7 @@ Status summary:
 | TS28 | OTSA constants candidate | `repo_committed_relative` | adds a typed-status candidate-v0 OTSA register |
 | TS29 | OTSA constant provenance | `repo_committed_relative` | records provenance status for OTSA rational bounds |
 | TS30 | Brun-Titchmarsh Selberg roadmap | `repo_committed_relative` | decomposes BT into Selberg majorant and budget comparison |
+| TS31 | OTSA asymptotic majorants | `repo_committed_relative` | records candidate-v1 rational majorants and provenance gaps |
 
 ## What Is Proved
 
@@ -198,6 +200,26 @@ This keeps Brun-Titchmarsh external, but identifies the exact future Mathlib
 target: a Selberg-sieve interval majorant plus the arithmetic comparison with
 the TS22 ceiling budget.
 
+TS31 adds a first asymptotic-majorant candidate package after the TS29
+provenance ledger:
+
+```lean
+TS31.Goldbach.OTSACert_candidate_v1
+TS31.Goldbach.OTSARegister_candidate_v1
+TS31.Goldbach.OTSAProvenance_candidate_v1
+TS31.Goldbach.candidate_v1_scaledOTSAAdmissible
+```
+
+The rational admissibility calculation is exact:
+
+```text
+Cscale * (Ck * Ct + Cm) = 53/50 <= 26.
+```
+
+Only `Ck` is currently attached to a narrative source. `Ct`, `Cm`, and
+`Cscale` remain explicit placeholders until sourced rational upper bounds are
+available.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -222,6 +244,8 @@ The final TS20 ledger names the remaining analytic obligations:
 | `OTSAConstantRegister` | labelled register for candidate rational OTSA constants |
 | `LabelledOTSAConstantRegister` | typed-status register for smoke, candidate, and certified OTSA packages |
 | `OTSAConstantProvenanceRegister` | provenance ledger for rational OTSA constant sources |
+| `OTSACert_candidate_v1` | candidate-v1 rational OTSA admissibility package |
+| `OTSAProvenance_candidate_v1` | candidate-v1 provenance ledger with remaining placeholders |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -245,7 +269,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS30 targets:
+Build all TS15--TS31 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -274,7 +298,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS27.OTSAConstantRegister `
   TS.Goldbach.Strong.TS28.OTSAConstantsCandidate `
   TS.Goldbach.Strong.TS29.OTSAConstantProvenance `
-  TS.Goldbach.Strong.TS30.BrunTitchmarshSelbergRoadmap
+  TS.Goldbach.Strong.TS30.BrunTitchmarshSelbergRoadmap `
+  TS.Goldbach.Strong.TS31.OTSAAsymptoticMajorants
 ```
 
 ## Audit
@@ -297,13 +322,14 @@ TS/Goldbach/Strong/TS27
 TS/Goldbach/Strong/TS28
 TS/Goldbach/Strong/TS29
 TS/Goldbach/Strong/TS30
+TS/Goldbach/Strong/TS31
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31
 ```
 
 Expected result: no matches.
@@ -323,4 +349,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS30` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS31` layer.
