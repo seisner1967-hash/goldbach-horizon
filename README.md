@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS39
+## Current Focus: TS15--TS40
 
 The current sprint chain lives under:
 
@@ -39,6 +39,7 @@ TS/Goldbach/Strong/
   TS37/
   TS38/
   TS39/
+  TS40/
 ```
 
 Status summary:
@@ -70,6 +71,7 @@ Status summary:
 | TS37 | Mellin-Fourier Lp norm inputs | `repo_committed_relative` | isolates `Memℒp` and `snorm` preservation for the future isometry |
 | TS38 | Mellin-Fourier Lp linearity inputs | `repo_committed_relative` | isolates a.e. additivity and scalar compatibility for the future isometry |
 | TS39 | Mellin-Fourier Lp isometry spec | `repo_committed_relative` | specifies the final `LinearIsometryEquiv` and its a.e. representative behaviour |
+| TS40 | Fourier tail roadmap | `repo_committed_relative` | records Plancherel, derivative-control, and high-frequency tail obligations |
 
 ## What Is Proved
 
@@ -368,6 +370,22 @@ its forward and inverse maps agree a.e. with `TsigmaFun` and `TsigmaInvFun`.
 This keeps the contract tied to the Mellin-Fourier transport rather than to an
 unrelated abstract isometry.
 
+TS40 records the Fourier-tail side of the TS17 harmonic front:
+
+```lean
+TS40.MellinJackson.FourierTailInfrastructure
+TS40.MellinJackson.FourierTailTarget
+TS40.MellinJackson.FourierTailTarget.of_infrastructure
+```
+
+It keeps the Fourier transform and Sobolev derivative representatives abstract
+until Mathlib's Fourier normalization is inspected. It records the needed
+Plancherel `snorm` control, a derivative-control marker, and the high-frequency
+tail estimate. TS40 completes the architectural roadmap of the TS17 harmonic
+front; it does not discharge the other analytic obligations such as
+Brun-Titchmarsh/Selberg, Dirichlet character bridges, large sieve inputs, or
+OTSA analytic constants.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -382,7 +400,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `MellinFourierLpNormInputs` | `Memℒp` and `snorm` preservation inputs for the future `Lp` isometry |
 | `MellinFourierLpLinearityInputs` | a.e. additivity and scalar-compatibility inputs for the future `Lp` isometry |
 | `MellinFourierLpIsometry` | final `LinearIsometryEquiv` specification tied to `TsigmaFun`/`TsigmaInvFun` |
-| `FourierTailInfrastructure` | Plancherel tail estimate |
+| `FourierTailInfrastructure` | Plancherel, derivative-control, and high-frequency tail estimate |
 | `DirichletCharacterBridge` | character orthogonality and bridge error |
 | `LargeSieveInfrastructure` | local large-sieve estimate with `C <= 1` |
 | `BrunTitchmarshLocalWindowBudget` | pointwise short-window prime count budget |
@@ -429,7 +447,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS39 targets:
+Build all TS15--TS40 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -467,7 +485,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS36.MellinFourierLpIsometryRoadmap `
   TS.Goldbach.Strong.TS37.MellinFourierLpNormInputs `
   TS.Goldbach.Strong.TS38.MellinFourierLpLinearityInputs `
-  TS.Goldbach.Strong.TS39.MellinFourierLpIsometry
+  TS.Goldbach.Strong.TS39.MellinFourierLpIsometry `
+  TS.Goldbach.Strong.TS40.FourierTailRoadmap
 ```
 
 ## Audit
@@ -499,13 +518,14 @@ TS/Goldbach/Strong/TS36
 TS/Goldbach/Strong/TS37
 TS/Goldbach/Strong/TS38
 TS/Goldbach/Strong/TS39
+TS/Goldbach/Strong/TS40
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40
 ```
 
 Expected result: no matches.
@@ -525,4 +545,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS39` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS40` layer.
