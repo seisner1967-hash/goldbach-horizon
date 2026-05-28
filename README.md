@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS32
+## Current Focus: TS15--TS33
 
 The current sprint chain lives under:
 
@@ -32,6 +32,7 @@ TS/Goldbach/Strong/
   TS30/
   TS31/
   TS32/
+  TS33/
 ```
 
 Status summary:
@@ -56,6 +57,7 @@ Status summary:
 | TS30 | Brun-Titchmarsh Selberg roadmap | `repo_committed_relative` | decomposes BT into Selberg majorant and budget comparison |
 | TS31 | OTSA asymptotic majorants | `repo_committed_relative` | records candidate-v1 rational majorants and provenance gaps |
 | TS32 | OTSA trace majorant roadmap | `repo_committed_relative` | records the conditional trace target `Ct <= 1/2` |
+| TS33 | OTSA final majorants roadmap | `repo_committed_relative` | replaces final raw placeholders by Mellin-tail and scale-transfer contracts |
 
 ## What Is Proved
 
@@ -243,6 +245,32 @@ is:
 The trace constant is deliberately marked as conditional evidence, not as a
 certified analytic derivation.
 
+TS33 adds the last two asymptotic-majorant contracts:
+
+```lean
+TS33.Goldbach.MellinTailMajorantContract
+TS33.Goldbach.ScaleTransferMajorantContract
+TS33.Goldbach.OTSACert_candidate_v3
+TS33.Goldbach.OTSAProvenance_candidate_v3
+TS33.Goldbach.candidate_v3_scaledOTSAAdmissible
+```
+
+It proves that the contracted bounds
+
+```text
+Ck = 3/50, Ct <= 1/2, Cm <= 1, Cscale <= 2
+```
+
+imply the exact rational OTSA threshold:
+
+```text
+2 * ((3/50) * (1/2) + 1) = 103/50 <= 26.
+```
+
+This removes raw placeholder constants from the v3 package by replacing them
+with explicit local contracts. Those contracts still need genuine analytic
+instantiations before a final certificate can be claimed.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -271,6 +299,9 @@ The final TS20 ledger names the remaining analytic obligations:
 | `OTSAProvenance_candidate_v1` | candidate-v1 provenance ledger with remaining placeholders |
 | `TraceMajorantContract` | conditional trace-contribution contract with target `Ct <= 1/2` |
 | `OTSACert_candidate_v2` | trace-conditional candidate-v2 rational OTSA package |
+| `MellinTailMajorantContract` | conditional Mellin-tail contract with target `Cm <= 1` |
+| `ScaleTransferMajorantContract` | conditional scale-transfer contract with target `Cscale <= 2` |
+| `OTSACert_candidate_v3` | final-majorants conditional rational OTSA package |
 | `KernelSpectralControl` | OTSA spectral-kernel control |
 | `TraceContributionControl` | OTSA trace/pole control |
 | `MellinTailDecay` | OTSA Mellin-tail decay |
@@ -294,7 +325,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS32 targets:
+Build all TS15--TS33 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -325,7 +356,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS29.OTSAConstantProvenance `
   TS.Goldbach.Strong.TS30.BrunTitchmarshSelbergRoadmap `
   TS.Goldbach.Strong.TS31.OTSAAsymptoticMajorants `
-  TS.Goldbach.Strong.TS32.OTSATraceMajorantRoadmap
+  TS.Goldbach.Strong.TS32.OTSATraceMajorantRoadmap `
+  TS.Goldbach.Strong.TS33.OTSAFinalMajorantsRoadmap
 ```
 
 ## Audit
@@ -350,13 +382,14 @@ TS/Goldbach/Strong/TS29
 TS/Goldbach/Strong/TS30
 TS/Goldbach/Strong/TS31
 TS/Goldbach/Strong/TS32
+TS/Goldbach/Strong/TS33
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33
 ```
 
 Expected result: no matches.
@@ -376,4 +409,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS32` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS33` layer.
