@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS44
+## Current Focus: TS15--TS45
 
 The current sprint chain lives under:
 
@@ -44,6 +44,7 @@ TS/Goldbach/Strong/
   TS42/
   TS43/
   TS44/
+  TS45/
 ```
 
 Status summary:
@@ -80,6 +81,7 @@ Status summary:
 | TS42 | Mellin tail spline roadmap | `repo_committed_relative` | records the triangle-spline route to the `Cm <= 1` Mellin-tail contract |
 | TS43 | Triangle spline pointwise facts | `repo_committed` | proves elementary branch values and the pointwise derivative bound |
 | TS44 | Triangle spline measurability and support | `repo_committed` | proves measurability and support containment for the derivative representative |
+| TS45 | Triangle spline derivative snorm roadmap | `repo_committed_relative` | packages TS43/TS44 inputs and isolates the derivative `snorm <= 2` obligation |
 
 ## What Is Proved
 
@@ -455,6 +457,22 @@ It still does not compute any Lebesgue integral. It prepares that computation
 by proving that the derivative representative is measurable and vanishes
 outside `[-1, 1]`.
 
+TS45 isolates the `L2`/`snorm` side of the triangle-spline derivative route:
+
+```lean
+TS45.MellinJackson.TriangleSplineDerivativeSnormInputs
+TS45.MellinJackson.triangleSplineDerivativeSnormInputs
+TS45.MellinJackson.TriangleSplineDerivativeSnormInfrastructure
+TS45.MellinJackson.deriv_snorm_bound_of_infrastructure
+TS45.MellinJackson.TriangleSplineDerivativeSnormInputsTarget
+TS45.MellinJackson.triangleSplineDerivativeSnormInputsTarget
+TS45.MellinJackson.TriangleSplineDerivativeSnormTarget
+```
+
+It proves that the elementary data needed for the future norm calculation are
+available from TS43 and TS44, and it keeps the actual Lebesgue/snorm estimate
+as an explicit local obligation.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -472,6 +490,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `FourierTailInfrastructure` | Plancherel, derivative-control, and high-frequency tail estimate |
 | `FourierAPINormalizationLedger` | concrete Fourier API and normalization choices for a future TS40 instance |
 | `TriangleSplineTailInfrastructure` | triangle-spline derivative norm, Sobolev agreement, and Mellin-tail route |
+| `TriangleSplineDerivativeSnormInfrastructure` | local triangle-spline derivative `snorm <= 2` estimate |
 | `DirichletCharacterBridge` | character orthogonality and bridge error |
 | `LargeSieveInfrastructure` | local large-sieve estimate with `C <= 1` |
 | `BrunTitchmarshLocalWindowBudget` | pointwise short-window prime count budget |
@@ -518,7 +537,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS44 targets:
+Build all TS15--TS45 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -561,7 +580,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS41.FourierAPIProbe `
   TS.Goldbach.Strong.TS42.MellinTailSplineRoadmap `
   TS.Goldbach.Strong.TS43.TriangleSplinePointwise `
-  TS.Goldbach.Strong.TS44.TriangleSplineMeasurabilitySupport
+  TS.Goldbach.Strong.TS44.TriangleSplineMeasurabilitySupport `
+  TS.Goldbach.Strong.TS45.TriangleSplineDerivativeSnorm
 ```
 
 ## Audit
@@ -598,13 +618,14 @@ TS/Goldbach/Strong/TS41
 TS/Goldbach/Strong/TS42
 TS/Goldbach/Strong/TS43
 TS/Goldbach/Strong/TS44
+TS/Goldbach/Strong/TS45
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45
 ```
 
 Expected result: no matches.
@@ -624,4 +645,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS44` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS45` layer.
