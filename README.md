@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS61
+## Current Focus: TS15--TS62
 
 The current sprint chain lives under:
 
@@ -61,6 +61,7 @@ TS/Goldbach/Strong/
   TS59/
   TS60/
   TS61/
+  TS62/
 ```
 
 Status summary:
@@ -114,6 +115,7 @@ Status summary:
 | TS59 | Triangle spline off-corner classical derivative | `repo_committed` | proves the pointwise derivative agreement away from `{ -1, 0, 1 }` |
 | TS60 | Triangle spline a.e. classical derivative | `repo_committed` | lifts TS59 through the null corner set to prove a.e. derivative agreement |
 | TS61 | Triangle spline distributional derivative ledger | `repo_committed_relative` | records the weak-derivative identity contract and the TS60 a.e. input package |
+| TS62 | Triangle spline test-function API probe | `repo_committed_relative` | binds the TS61 abstract test-function API to a concrete C1 compact-support package |
 
 ## What Is Proved
 
@@ -769,6 +771,19 @@ It does not prove the weak derivative identity. It fixes the test-function
 interface and records the TS60 a.e. classical derivative bridge as an input for
 the future integration-by-parts proof.
 
+TS62 records the concrete test-function API probe:
+
+```lean
+TS62.MellinJackson.TriangleSplineConcreteTestFunction
+TS62.MellinJackson.triangleSplineConcreteTestFunctionAPI
+TS62.MellinJackson.TriangleSplineConcreteTestFunctionAPITarget
+TS62.MellinJackson.triangleSplineConcreteTestFunctionAPITarget
+```
+
+It does not prove the distributional derivative identity or integration by
+parts. It chooses a concrete C1 compact-support function package that can feed
+the TS61 test-function interface.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -841,7 +856,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS61 targets:
+Build all TS15--TS62 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -901,7 +916,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS58.TriangleSplineBoundaryExteriorControl `
   TS.Goldbach.Strong.TS59.TriangleSplineOffCornerClassicalDerivative `
   TS.Goldbach.Strong.TS60.TriangleSplineAEClassicalDerivative `
-  TS.Goldbach.Strong.TS61.TriangleSplineDistributionalDerivativeLedger
+  TS.Goldbach.Strong.TS61.TriangleSplineDistributionalDerivativeLedger `
+  TS.Goldbach.Strong.TS62.TriangleSplineTestFunctionAPIProbe
 ```
 
 ## Audit
@@ -955,13 +971,14 @@ TS/Goldbach/Strong/TS58
 TS/Goldbach/Strong/TS59
 TS/Goldbach/Strong/TS60
 TS/Goldbach/Strong/TS61
+TS/Goldbach/Strong/TS62
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62
 ```
 
 Expected result: no matches.
@@ -981,4 +998,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS61` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS62` layer.
