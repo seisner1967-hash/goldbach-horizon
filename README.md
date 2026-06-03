@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS99
+## Current Focus: TS15--TS100
 
 The current sprint chain lives under:
 
@@ -99,6 +99,7 @@ TS/Goldbach/Strong/
   TS97/
   TS98/
   TS99/
+  TS100/
 ```
 
 Status summary:
@@ -190,6 +191,7 @@ Status summary:
 | TS97 | Brun-Titchmarsh final input ledger | `repo_committed_relative` | isolates the exact TS22 natural-interval Brun-Titchmarsh input feeding the TS84/TS25 final assembly |
 | TS98 | Final three-obligation assembly | `repo_committed_relative` | packages the TS97, TS95, and TS83 final inputs as the root dashboard feeding TS84/TS25 |
 | TS99 | Selberg sieve weight ledger | `repo_committed_relative` | refines the TS97 arithmetic input into Selberg weights, majorant, sieve, and budget obligations feeding TS30/TS98 |
+| TS100 | Selberg quadratic form ledger | `repo_committed_relative` | refines the TS99 Selberg-weight front into divisor-algebra, quadratic-kernel, diagonalization, and budget obligations feeding TS99/TS98 |
 
 ## What Is Proved
 
@@ -1634,6 +1636,31 @@ diagonalization, Brun-Titchmarsh, or any prime-count estimate. It records the
 Selberg weight data and local obligations that feed TS30, then shows that those
 inputs feed TS97 and the TS98 root dashboard.
 
+TS100 opens the Selberg quadratic-form layer below the TS99 Selberg-weight
+front:
+
+```lean
+TS100.Goldbach.SelbergQuadraticFormRoadmap
+TS100.Goldbach.selbergQuadraticFormRoadmap
+TS100.Goldbach.SelbergQuadraticFormLedger
+TS100.Goldbach.SelbergQuadraticFormInfrastructure
+TS100.Goldbach.SelbergQuadraticFormRoadmapTarget
+TS100.Goldbach.SelbergQuadraticFormLedgerTarget
+TS100.Goldbach.SelbergQuadraticFormInfrastructureTarget
+TS100.Goldbach.selbergQuadraticFormRoadmapTarget
+TS100.Goldbach.selbergSieveWeightInfrastructure_of_quadraticFormInfrastructure
+TS100.Goldbach.selbergSieveWeightInfrastructureTarget_of_quadraticFormInfrastructureTarget
+TS100.Goldbach.brunTitchmarshFinalInputLedgerTarget_of_quadraticFormInfrastructureTarget
+TS100.Goldbach.finalHorizonInputsTarget_of_selbergQuadratic_trace_mellin
+TS100.Goldbach.paddedScaleTransferFinalAPIContractsTarget_of_selbergQuadratic_trace_mellin
+TS100.Goldbach.paddedScaleAnalyticInfrastructureTarget_of_selbergQuadratic_trace_mellin
+```
+
+TS100 does not prove Selberg's sieve, Mobius inversion, quadratic-form
+diagonalization, Brun-Titchmarsh, or any prime-count estimate. It records the
+quadratic-kernel and divisor-algebra obligations that feed TS99, then shows
+that those inputs feed TS97 and the TS98 root dashboard.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -1676,6 +1703,8 @@ The final TS20 ledger names the remaining analytic obligations:
 | `BrunTitchmarshFinalInputLedger` | TS97 wrapper around the exact TS22 natural-interval Brun-Titchmarsh input feeding the TS84/TS25 final assembly |
 | `SelbergSieveWeightLedger` | TS99 finite Selberg weight data and normalization feeding the TS30 Selberg roadmap |
 | `SelbergSieveWeightInfrastructure` | TS99 package joining Selberg weights with the TS30 sieve and budget obligations |
+| `SelbergQuadraticFormLedger` | TS100 finite quadratic-kernel and divisor-algebra data feeding the TS99 Selberg-weight front |
+| `SelbergQuadraticFormInfrastructure` | TS100 package joining quadratic-form data with the TS30 sieve and budget obligations through TS99 |
 | `SelbergSieveIntervalBound` | Selberg-sieve theorem producing an explicit local interval majorant |
 | `SelbergMajorantBudgetComparison` | arithmetic comparison from Selberg majorant to TS22 BT budget |
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
@@ -1720,7 +1749,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS99 targets:
+Build all TS15--TS100 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -1818,7 +1847,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS96.SpectralTraceMajorantDischarge `
   TS.Goldbach.Strong.TS97.BrunTitchmarshFinalInputLedger `
   TS.Goldbach.Strong.TS98.FinalThreeObligationAssembly `
-  TS.Goldbach.Strong.TS99.SelbergSieveWeightLedger
+  TS.Goldbach.Strong.TS99.SelbergSieveWeightLedger `
+  TS.Goldbach.Strong.TS100.SelbergQuadraticFormLedger
 ```
 
 ## Audit
@@ -1910,13 +1940,14 @@ TS/Goldbach/Strong/TS96
 TS/Goldbach/Strong/TS97
 TS/Goldbach/Strong/TS98
 TS/Goldbach/Strong/TS99
+TS/Goldbach/Strong/TS100
 ```
 
 Audit commands:
 
 ```powershell
-rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99
-rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99
+rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100
+rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100
 ```
 
 Expected result: no matches.
@@ -1936,4 +1967,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS99` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS100` layer.
