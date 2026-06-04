@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS119
+## Current Focus: TS15--TS120
 
 The current sprint chain lives under:
 
@@ -119,6 +119,7 @@ TS/Goldbach/Strong/
   TS117/
   TS118/
   TS119/
+  TS120/
 ```
 
 Status summary:
@@ -230,6 +231,7 @@ Status summary:
 | TS117 | Selberg diagonal coefficient calculation ledger | `repo_committed` | proves the current gcd-only coefficient shape cannot match the pair-dependent `gcd/lcm` kernel and records the needed diagonal refinement |
 | TS118 | Selberg lcm absorption bridge | `repo_committed` | proves the original `gcd/lcm` dense side equals the absorbed-weight gcd-square dense side |
 | TS119 | Selberg Jordan-two gcd-square diagonalization ledger | `repo_committed_relative` | proves the local `J2` divisor-sum collapse and packages the corrected gcd-square diagonal side |
+| TS120 | Selberg gcd-square global reindexing ledger | `repo_committed_relative` | expands and reorders the corrected Jordan-two diagonal side into pair-first local-coefficient form |
 
 ## What Is Proved
 
@@ -2293,6 +2295,55 @@ for the absorbed gcd-square form. The global finite reindexing identity between
 the corrected dense side and this diagonal side remains an explicit
 proposition-valued obligation.
 
+TS120 opens the corrected global reindexing layer above TS119:
+
+```lean
+TS120.Goldbach.selbergJordanTwoDiagonalFilterTerm
+TS120.Goldbach.selbergJordanTwoDiagonalTripleTerm
+TS120.Goldbach.selbergJordanTwoDiagonalTripleSum
+TS120.Goldbach.selbergJordanTwoDiagonalSquareTerm_triple_expansion
+TS120.Goldbach.selbergJordanTwoDiagonalSide_triple_expansion
+TS120.Goldbach.selbergJordanTwoDivisorPairFilter
+TS120.Goldbach.selbergJordanTwoGcdFilterTerm
+TS120.Goldbach.selbergJordanTwoDiagonalFilterTerm_mul_eq_pairFilter
+TS120.Goldbach.selbergJordanTwoDivisorPairFilter_eq_gcdFilter
+TS120.Goldbach.selbergJordanTwoDiagonalTripleTerm_eq_gcdFilter
+TS120.Goldbach.selbergJordanTwoGcdFilteredTripleSum
+TS120.Goldbach.selbergJordanTwoDiagonalTripleSum_eq_gcdFilteredTripleSum
+TS120.Goldbach.selbergJordanTwoPairCoefficient
+TS120.Goldbach.selbergJordanTwoPairFirstTerm
+TS120.Goldbach.selbergJordanTwoPairFirstSide
+TS120.Goldbach.selbergJordanTwoInnerGcdSum_factor
+TS120.Goldbach.selbergJordanTwoGcdFilteredTripleSum_reordered
+TS120.Goldbach.selbergJordanTwoDiagonalSide_eq_pairFirst
+TS120.Goldbach.SelbergJordanTwoLocalCoefficientCollapse
+TS120.Goldbach.selbergJordanTwoPairFirstSide_eq_gcdSquareDenseSide_of_localCollapse
+TS120.Goldbach.selbergGcdSquareDenseSide_eq_jordanDiagonalSide_of_localCollapse
+TS120.Goldbach.SelbergGcdSquareGlobalReindexing
+TS120.Goldbach.selbergGcdSquareGlobalReindexing
+TS120.Goldbach.SelbergGcdSquareGlobalReindexingTarget
+TS120.Goldbach.selbergGcdSquareGlobalReindexingTarget
+TS120.Goldbach.selbergGcdSquareDiagonalizationTarget
+TS120.Goldbach.selbergLCMAbsorptionBridgeTarget
+```
+
+TS120 proves the finite reindexing chain
+
+```text
+corrected Jordan-two diagonal side
+= diagonal-first triple sum
+= gcd-filtered triple sum
+= pair-first local-coefficient sum
+```
+
+using `Finset.sum_mul_sum`, the divisor equivalence
+`d | m and d | n <-> d | gcd(m,n)`, and `Finset.sum_comm`. It then proves that
+the remaining support-local coefficient collapse implies the corrected
+absorbed gcd-square dense side equals the corrected Jordan-two diagonal side.
+TS120 does not yet prove that support-local coefficient collapse, the
+unconditional corrected dense-to-diagonal identity, the square-sum majorant,
+Selberg's sieve, Brun-Titchmarsh, or any prime-count estimate.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -2378,6 +2429,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `SelbergDiagonalCoefficientCalculation` | TS117 package proving the current gcd-only coefficient shape cannot match the pair-dependent `gcd/lcm` kernel |
 | `SelbergLCMAbsorptionBridge` | TS118 package rewriting the original `gcd/lcm` dense side as an absorbed-weight gcd-square dense side |
 | `SelbergGcdSquareDiagonalization` | TS119 corrected gcd-square diagonalization package using the Jordan-two coefficient and retaining the global reindexing obligation |
+| `SelbergGcdSquareGlobalReindexing` | TS120 corrected global reindexing package reducing the gcd-square dense identity to a support-local Jordan-two coefficient collapse |
 | `SelbergSieveIntervalBound` | Selberg-sieve theorem producing an explicit local interval majorant |
 | `SelbergMajorantBudgetComparison` | arithmetic comparison from Selberg majorant to TS22 BT budget |
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
@@ -2422,7 +2474,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS119 targets:
+Build all TS15--TS120 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -2540,7 +2592,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS116.SelbergGcdCoefficientKernelMatchLedger `
   TS.Goldbach.Strong.TS117.SelbergDiagonalCoefficientCalculationLedger `
   TS.Goldbach.Strong.TS118.SelbergLCMAbsorptionBridge `
-  TS.Goldbach.Strong.TS119.SelbergJordanTwoGcdSquareDiagonalizationLedger
+  TS.Goldbach.Strong.TS119.SelbergJordanTwoGcdSquareDiagonalizationLedger `
+  TS.Goldbach.Strong.TS120.SelbergGcdSquareGlobalReindexingLedger
 ```
 
 ## Audit
@@ -2652,6 +2705,7 @@ TS/Goldbach/Strong/TS116
 TS/Goldbach/Strong/TS117
 TS/Goldbach/Strong/TS118
 TS/Goldbach/Strong/TS119
+TS/Goldbach/Strong/TS120
 ```
 
 Audit commands:
@@ -2659,6 +2713,7 @@ Audit commands:
 ```powershell
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS118
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS119
+rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS120
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -2680,4 +2735,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS119` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS120` layer.
