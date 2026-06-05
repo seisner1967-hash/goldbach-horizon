@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS123
+## Current Focus: TS15--TS124
 
 The current sprint chain lives under:
 
@@ -123,6 +123,7 @@ TS/Goldbach/Strong/
   TS121/
   TS122/
   TS123/
+  TS124/
 ```
 
 Status summary:
@@ -238,6 +239,7 @@ Status summary:
 | TS121 | Selberg Jordan-two finite-support collapse | `repo_committed` | proves the finite-support collapse and closes the corrected dense-to-diagonal identity with absorbed weights |
 | TS122 | Selberg diagonal optimization ledger | `repo_committed_relative` | proves finite weighted Cauchy for the corrected Jordan-two diagonal energy and isolates the remaining positivity/optimal-vector inputs |
 | TS123 | Selberg Jordan-two positivity probe | `repo_committed_relative` | proves denominator positivity from supportwise `J2` positivity and records the current support is positive-bounded, not squarefree-only |
+| TS124 | Selberg Jordan-two positivity API probe | `repo_committed_relative` | proves `J2(1) = 1`, `J2(p) = p^2 - 1`, prime positivity, and the bridge from global `J2` positivity to the TS123/TS122 lower bound |
 
 ## What Is Proved
 
@@ -2466,6 +2468,47 @@ from only the local `J2` positivity input. TS123 does not yet prove the
 multiplicative positivity of `J2`, the equality case for the optimal vector,
 Selberg's sieve, Brun-Titchmarsh, or any prime-count estimate.
 
+TS124 starts discharging the `J2` positivity input with concrete local
+arithmetic:
+
+```lean
+TS124.Goldbach.selbergJordanTwoCoefficient_one
+TS124.Goldbach.selbergJordanTwoCoefficient_prime
+TS124.Goldbach.selbergJordanTwoCoefficient_pos_of_prime
+TS124.Goldbach.SelbergJordanTwoPositiveOnPositiveNat
+TS124.Goldbach.selbergJordanTwoPositiveOnSupport_of_positiveNat
+TS124.Goldbach.selbergOptimizationDenominator_pos_of_positiveNat
+TS124.Goldbach.selbergDiagonalEnergy_lower_bound_of_positiveNat
+TS124.Goldbach.SelbergJordanTwoPositivityAPIProbe
+TS124.Goldbach.selbergJordanTwoPositivityAPIProbe
+TS124.Goldbach.SelbergJordanTwoPositivityAPIProbeTarget
+TS124.Goldbach.selbergJordanTwoPositivityAPIProbeTarget
+TS124.Goldbach.selbergJordanTwoPositivityProbeTarget
+```
+
+The concrete prime calculation expands the Dirichlet convolution defining
+Jordan-two, rewrites the antidiagonal convolution through
+`Nat.sum_divisorsAntidiagonal`, applies `Nat.sum_divisors_prime_pow`, and
+normalizes the two terms. Thus TS124 proves:
+
+```text
+J2(1) = 1
+J2(p) = p^2 - 1 for prime p
+J2(p) > 0 for prime p.
+```
+
+It also names the future global positivity theorem:
+
+```text
+forall d > 0, J2(d) > 0
+```
+
+and proves that this single input supplies TS123 supportwise positivity,
+positivity of the TS122 optimization denominator, and the constrained TS122
+diagonal lower bound. TS124 does not yet prove the full multiplicative
+positivity theorem, the optimal vector normalization, Selberg's sieve,
+Brun-Titchmarsh, or any prime-count estimate.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -2555,6 +2598,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `SelbergJordanTwoFiniteSupportCollapse` | TS121 package closing the corrected dense-to-diagonal identity with absorbed weights |
 | `SelbergDiagonalOptimization` | TS122 package proving finite weighted Cauchy for the corrected Jordan-two diagonal energy and isolating positivity/optimal-vector obligations |
 | `SelbergJordanTwoPositivityProbe` | TS123 package proving denominator positivity from supportwise `J2` positivity and recording the support-shape diagnostic |
+| `SelbergJordanTwoPositivityAPIProbe` | TS124 package proving local `J2` facts at `1` and primes, and bridging global positive-integer `J2` positivity into TS123/TS122 |
 | `SelbergSieveIntervalBound` | Selberg-sieve theorem producing an explicit local interval majorant |
 | `SelbergMajorantBudgetComparison` | arithmetic comparison from Selberg majorant to TS22 BT budget |
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
@@ -2599,7 +2643,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS123 targets:
+Build all TS15--TS124 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -2721,7 +2765,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS120.SelbergGcdSquareGlobalReindexingLedger `
   TS.Goldbach.Strong.TS121.SelbergJordanTwoFiniteSupportCollapse `
   TS.Goldbach.Strong.TS122.SelbergDiagonalOptimizationLedger `
-  TS.Goldbach.Strong.TS123.SelbergJordanTwoPositivityProbe
+  TS.Goldbach.Strong.TS123.SelbergJordanTwoPositivityProbe `
+  TS.Goldbach.Strong.TS124.SelbergJordanTwoPositivityAPIProbe
 ```
 
 ## Audit
@@ -2837,6 +2882,7 @@ TS/Goldbach/Strong/TS120
 TS/Goldbach/Strong/TS121
 TS/Goldbach/Strong/TS122
 TS/Goldbach/Strong/TS123
+TS/Goldbach/Strong/TS124
 ```
 
 Audit commands:
@@ -2848,6 +2894,7 @@ rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS120
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS121
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS122
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS123
+rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS124
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -2869,4 +2916,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS123` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS124` layer.
