@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS127
+## Current Focus: TS15--TS128
 
 The current sprint chain lives under:
 
@@ -127,6 +127,7 @@ TS/Goldbach/Strong/
   TS125/
   TS126/
   TS127/
+  TS128/
 ```
 
 Status summary:
@@ -246,6 +247,7 @@ Status summary:
 | TS125 | Selberg Jordan-two prime-power positivity probe | `repo_committed_relative` | proves `J2(p^(k+1)) = p^(2*(k+1)) - p^(2*k)`, prime-power positivity, and the concrete non-squarefree value `J2(4) = 12` |
 | TS126 | Selberg Jordan-two multiplicativity API probe | `repo_committed_relative` | proves multiplicativity of `J2`, exposes the `Nat.factorization` product formula, and rewrites prime-power positivity in factorization shape |
 | TS127 | Selberg Jordan-two full positivity discharge | `repo_committed` | proves `J2(n) > 0` for every positive natural number and feeds the TS123/TS122 denominator and energy lower-bound route |
+| TS128 | Selberg optimal vector normalization | `repo_committed` | proves the finite optimal vector satisfies the Mobius constraint and attains energy `1 / D` for the TS122 weighted Cauchy problem |
 
 ## What Is Proved
 
@@ -2626,6 +2628,51 @@ optimal vector, prove the equality case in weighted Cauchy, prove Selberg's
 sieve, discharge Brun-Titchmarsh, or address the spectral trace and Mellin-tail
 terminal packages.
 
+TS128 closes the finite optimal-vector algebra for the TS122 weighted Cauchy
+problem:
+
+```lean
+TS128.Goldbach.finiteWeightedCauchyDenominator
+TS128.Goldbach.finiteWeightedCauchyOptimalVector
+TS128.Goldbach.finiteWeightedCauchyOptimalVector_linear_constraint
+TS128.Goldbach.finiteWeightedCauchyOptimalVector_energy_eq
+TS128.Goldbach.selbergOptimalDiagonalVector
+TS128.Goldbach.selbergOptimalDiagonalVector_eq_candidate
+TS128.Goldbach.finiteWeightedCauchyDenominator_selberg
+TS128.Goldbach.selbergJordanTwoPenalty_ne_on_support
+TS128.Goldbach.selbergOptimizationDenominator_ne
+TS128.Goldbach.selbergOptimalDiagonalVector_linear_constraint
+TS128.Goldbach.selbergOptimalDiagonalVector_energy_eq
+TS128.Goldbach.selbergOptimalDiagonalVector_lower_bound_sharp
+TS128.Goldbach.SelbergOptimalVectorNormalization
+TS128.Goldbach.selbergOptimalVectorNormalization
+TS128.Goldbach.SelbergOptimalVectorNormalizationTarget
+TS128.Goldbach.selbergOptimalVectorNormalizationTarget
+TS128.Goldbach.selbergJordanTwoFullPositivityDischargeTarget
+```
+
+For a finite weighted Cauchy problem with denominator
+
+```text
+D = sum_i c_i^2 / a_i,
+```
+
+TS128 proves over `Rat` that the vector
+
+```text
+y_i = c_i / (D * a_i)
+```
+
+has linear form `1` and weighted energy `1 / D`, provided the penalties and
+denominator are nonzero. The Selberg specialization uses the TS122 support with
+`c_d = mobius(d)` and `a_d = J2(d)`. TS127 supplies the required non-vanishing
+facts from `J2(d) > 0` and `D > 0` for `0 < level`.
+
+Consequently the TS123 candidate vector is now proved to satisfy the Mobius
+linear constraint and to attain the TS122 Cauchy lower-bound energy exactly.
+TS128 does not yet prove the Selberg sieve bound, Brun-Titchmarsh, any
+prime-count estimate, or the spectral trace and Mellin-tail terminal packages.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -2719,6 +2766,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `SelbergJordanTwoPrimePowerPositivityProbe` | TS125 package proving the normalized prime-power formula and positivity for `J2(p^(k+1))` |
 | `SelbergJordanTwoMultiplicativityAPIProbe` | TS126 package proving multiplicativity of `J2`, the factorization formula, and the factorization-shaped prime-power positivity input |
 | `SelbergJordanTwoFullPositivityDischarge` | TS127 package proving global positive-integer `J2` positivity and feeding the TS123/TS122 optimization route |
+| `SelbergOptimalVectorNormalization` | TS128 package proving the optimal diagonal vector satisfies the Mobius constraint and attains energy `1 / D` |
 | `SelbergSieveIntervalBound` | Selberg-sieve theorem producing an explicit local interval majorant |
 | `SelbergMajorantBudgetComparison` | arithmetic comparison from Selberg majorant to TS22 BT budget |
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
@@ -2763,7 +2811,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS127 targets:
+Build all TS15--TS128 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -2889,7 +2937,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS124.SelbergJordanTwoPositivityAPIProbe `
   TS.Goldbach.Strong.TS125.SelbergJordanTwoPrimePowerPositivityProbe `
   TS.Goldbach.Strong.TS126.SelbergJordanTwoMultiplicativityAPIProbe `
-  TS.Goldbach.Strong.TS127.SelbergJordanTwoFullPositivityDischarge
+  TS.Goldbach.Strong.TS127.SelbergJordanTwoFullPositivityDischarge `
+  TS.Goldbach.Strong.TS128.SelbergOptimalVectorNormalization
 ```
 
 ## Audit
@@ -3009,6 +3058,7 @@ TS/Goldbach/Strong/TS124
 TS/Goldbach/Strong/TS125
 TS/Goldbach/Strong/TS126
 TS/Goldbach/Strong/TS127
+TS/Goldbach/Strong/TS128
 ```
 
 Audit commands:
@@ -3024,6 +3074,7 @@ rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS124
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS125
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS126
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS127
+rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS128
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -3045,4 +3096,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS127` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS128` layer.
