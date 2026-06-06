@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS137
+## Current Focus: TS15--TS138
 
 The current sprint chain lives under:
 
@@ -137,6 +137,7 @@ TS/Goldbach/Strong/
   TS135/
   TS136/
   TS137/
+  TS138/
 ```
 
 Status summary:
@@ -266,6 +267,7 @@ Status summary:
 | TS135 | Selberg finite Mobius reconstruction expansion discharge | `repo_committed` | proves the TS131 finite Fubini expansion and combines it with TS134 to close the TS130 finite reconstruction identity and optimal dense budget |
 | TS136 | Selberg interval majorant ledger | `repo_committed_relative` | packages the TS135 optimal weights as the TS99 Selberg weight ledger and bridges supplied TS30 interval majorant data to TS99/TS97 |
 | TS137 | Concrete Selberg interval majorant interface | `repo_committed_relative` | names the concrete interval majorant data and proof fields that instantiate TS30 and feed TS136/TS99/TS97 |
+| TS138 | Concrete Selberg interval majorant formulation | `repo_committed_relative` | instantiates the TS137 data side with the finite Selberg square majorant built from TS136 optimal weights |
 
 ## What Is Proved
 
@@ -3076,6 +3078,56 @@ Given those two inputs, TS137 constructs the TS30 majorant, sieve theorem, and
 budget-comparison packages, then feeds them through TS136 to produce the TS99
 Selberg weight infrastructure and the TS97 final Brun-Titchmarsh input ledger.
 
+TS138 instantiates the data side of the TS137 interface with the concrete
+finite Selberg square majorant:
+
+```lean
+TS138.Goldbach.selbergConcreteInterval
+TS138.Goldbach.selbergConcreteDivisorWeight
+TS138.Goldbach.selbergConcreteSquareMajorantRat
+TS138.Goldbach.selbergConcreteMajorantValue
+TS138.Goldbach.selbergConcreteMainTerm
+TS138.Goldbach.selbergConcreteErrorTerm
+TS138.Goldbach.selbergConcreteMajorantRat
+TS138.Goldbach.concreteSelbergIntervalMajorantData
+TS138.Goldbach.ConcreteSelbergSquareMajorantProofs
+TS138.Goldbach.concreteSelbergIntervalMajorantProofs
+TS138.Goldbach.ConcreteSelbergSquareMajorantLedger
+TS138.Goldbach.concreteSelbergSquareMajorantLedger
+TS138.Goldbach.ConcreteSelbergSquareMajorantBridgeTarget
+TS138.Goldbach.concreteSelbergSquareMajorantBridgeTarget
+TS138.Goldbach.selbergSieveWeightInfrastructure_of_squareMajorant
+TS138.Goldbach.brunTitchmarshFinalInputLedger_of_squareMajorant
+TS138.Goldbach.selbergSieveWeightInfrastructureTarget_of_squareMajorantTarget
+TS138.Goldbach.brunTitchmarshFinalInputLedgerTarget_of_squareMajorantTarget
+TS138.Goldbach.primeIntervalCard_le_concreteInterval_card
+TS138.Goldbach.concreteSelbergIntervalMajorantBridgeTarget
+```
+
+The rational majorant is the explicit finite square sum
+
+```text
+sum_{n <= k <= n + h}
+  (sum_{d in support, d | k} lambda_d)^2
+```
+
+where `lambda_d` is the TS136 optimal reconstructed Selberg weight.  The
+natural TS30 majorant is the ceiling of this rational square sum.  TS138 proves
+the TS137 rational data formula with `mainTerm = square sum`, `errorTerm = 0`,
+and `majorantRat = square sum`, then packages the two remaining analytic
+proofs specialized to this concrete majorant:
+
+```text
+primeIntervalCard <= selbergConcreteMajorantValue
+selbergConcreteMajorantValue <= brunTitchmarshCeilBudget
+```
+
+Given those two future inputs, TS138 constructs the TS137 concrete ledger and
+therefore feeds the TS99 Selberg infrastructure and TS97 final
+Brun-Titchmarsh input ledger.  TS138 also proves the sanity bound
+`primeIntervalCard <= interval cardinality` for the same TS22 window; this is
+not the Selberg sieve theorem.
+
 ## Remaining Analytic Infrastructure
 
 The final TS20 ledger names the remaining analytic obligations:
@@ -3181,6 +3233,7 @@ The final TS20 ledger names the remaining analytic obligations:
 | `SelbergFiniteMobiusReconstructionExpansionDischarge` | TS135 package proving the finite Fubini expansion and closing the TS130 finite Mobius reconstruction identity |
 | `SelbergIntervalMajorantFromOptimalBudget` | TS136 package bridging the TS135 optimal weights and exact budget to supplied TS30 interval Selberg majorant data |
 | `ConcreteSelbergIntervalMajorantLedger` | TS137 package naming concrete interval-majorant data and proofs that instantiate TS30 and feed TS136/TS99/TS97 |
+| `ConcreteSelbergSquareMajorantLedger` | TS138 package instantiating the TS137 data side with the explicit finite Selberg square majorant |
 | `SelbergSieveIntervalBound` | Selberg-sieve theorem producing an explicit local interval majorant |
 | `SelbergMajorantBudgetComparison` | arithmetic comparison from Selberg majorant to TS22 BT budget |
 | `ScaledLargeSieveInfrastructure` | large-sieve estimate targeting an explicit `ShortIntervalScale` |
@@ -3225,7 +3278,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS137 targets:
+Build all TS15--TS138 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -3361,7 +3414,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS134.SelbergProperDivisorQuotientReindexingDischarge `
   TS.Goldbach.Strong.TS135.SelbergFiniteMobiusReconstructionExpansionDischarge `
   TS.Goldbach.Strong.TS136.SelbergIntervalMajorantLedger `
-  TS.Goldbach.Strong.TS137.ConcreteSelbergIntervalMajorantInterface
+  TS.Goldbach.Strong.TS137.ConcreteSelbergIntervalMajorantInterface `
+  TS.Goldbach.Strong.TS138.ConcreteSelbergIntervalMajorantFormulation
 ```
 
 ## Audit
@@ -3491,6 +3545,7 @@ TS/Goldbach/Strong/TS134
 TS/Goldbach/Strong/TS135
 TS/Goldbach/Strong/TS136
 TS/Goldbach/Strong/TS137
+TS/Goldbach/Strong/TS138
 ```
 
 Audit commands:
@@ -3516,6 +3571,7 @@ rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS134
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS135
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS136
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS137
+rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS138
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -3537,4 +3593,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS137` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS138` layer.
