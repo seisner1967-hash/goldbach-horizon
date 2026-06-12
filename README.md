@@ -299,6 +299,7 @@ Status summary:
 | TS152 | Finite-head prime interval budget reduction | `repo_committed_relative` | proves `primeIntervalCard n h <= h+1`, reduces every head window `n <= level(x,Q)` to the cumulative count on `[0, level(x,Q)+h]`, and supplies two explicit constructors for the TS151 finite-head package |
 | TS153 | Dependent Selberg budget feasibility probe | `repo_committed_relative` | splits the refined budget into principal and quadratic terms, proves each is necessarily below the TS22 ceiling, and extracts the exact requirement `(intervalScale+1)/BTceil <= D(level)` from any dependent scale comparison |
 | TS154 | Selberg denominator upper-bound obstruction probe | `repo_committed` | rewrites `D(level)` as a squarefree reciprocal-Jordan sum, dominates it by a telescoping finite Euler product, proves `D(level) <= 2*level/(level+1) < 2` for positive levels, and rules out any dependent comparison whose TS153 threshold is at least `2` |
+| TS155 | Brun-Titchmarsh threshold obstruction geometry | `repo_committed` | proves the exact equivalence between the TS153 threshold obstruction and `0 < BTceil` together with `2*BTceil <= intervalScale+1`, then proves every successful dependent comparison requires the strict opposite inequality |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -335,6 +336,16 @@ TS151 comparison forces the exact TS153 threshold to be strictly below `2`;
 if that threshold is at least `2` at one admissible `(x,Q)`, the late-window
 comparison is impossible for every level selection.  The cumulative head
 prime-count obligation from TS152 remains separate.
+
+TS155 converts the rational TS153/TS154 obstruction into exact natural-number
+geometry.  The threshold is at least `2` exactly when the TS22 ceiling is
+positive and `2 * brunTitchmarshCeilBudget x Q <= intervalScale x Q + 1`.
+Every successful dependent comparison therefore forces the strict inequality
+`intervalScale x Q + 1 < 2 * brunTitchmarshCeilBudget x Q`.  The opposite
+inequality rules out every level selection at that admissible `(x,Q)`.  TS155
+does not yet prove that this obstruction occurs eventually under
+`Q = (Nat.log 2 x)^2`; that quantitative evaluation is the next separate
+task.
 
 ## What Is Proved
 
@@ -3726,7 +3737,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS154 targets:
+Build all TS15--TS155 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -3879,7 +3890,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS151.DependentSelbergScaleSplitInterface `
   TS.Goldbach.Strong.TS152.FiniteHeadPrimeIntervalBudgetReduction `
   TS.Goldbach.Strong.TS153.DependentSelbergBudgetFeasibilityProbe `
-  TS.Goldbach.Strong.TS154.SelbergDenominatorUpperBoundObstructionProbe
+  TS.Goldbach.Strong.TS154.SelbergDenominatorUpperBoundObstructionProbe `
+  TS.Goldbach.Strong.TS155.BrunTitchmarshThresholdObstructionGeometry
 ```
 
 ## Audit
@@ -4026,6 +4038,7 @@ TS/Goldbach/Strong/TS151
 TS/Goldbach/Strong/TS152
 TS/Goldbach/Strong/TS153
 TS/Goldbach/Strong/TS154
+TS/Goldbach/Strong/TS155
 ```
 
 Audit commands:
@@ -4068,6 +4081,7 @@ rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS151
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS152
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS153
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS154
+rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS155
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -4089,4 +4103,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS154` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS155` layer.
