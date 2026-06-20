@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS185
+## Current Focus: TS15--TS186
 
 The current sprint chain lives under:
 
@@ -185,6 +185,7 @@ TS/Goldbach/Strong/
   TS183/
   TS184/
   TS185/
+  TS186/
 ```
 
 Status summary:
@@ -361,7 +362,8 @@ Status summary:
 | TS182 | Triangle spline discrete sieve-trace bridge | `repo_committed` | defines the discrete smoothing weight `triangleSpline(n / X)`, proves its affine formula for `n <= X`, proves vanishing for `X <= n`, and records this as the first bridge from the continuous kernel to natural-number sums |
 | TS183 | Triangle spline finite weighted prime-sum interface | `repo_committed` | turns the TS182 pointwise weight into a finite generic arithmetic sum, proves range-extension invariance, affine rewriting, and nonnegativity for nonnegative weights, then names a local von Mangoldt weight contract |
 | TS184 | Triangle spline Von Mangoldt API probe | `repo_committed` | binds Mathlib's `ArithmeticFunction.vonMangoldt` to the TS183 contract and inherits nonnegativity, range-extension, and affine-support properties |
-| TS185 | Explicit formula zeta zero family ledger | `repo_committed` | probes Mathlib's `riemannZeta`, names the local nontrivial-zero predicate and critical-strip contract, and wires any future zero-family contract into the existing TS93 ledger without proving summability or the explicit formula |
+| TS185 | Explicit formula zeta zero family ledger | `repo_committed_relative` | probes Mathlib's `riemannZeta` and `riemannZeta_neg_two_mul_nat_add_one`, defines local nontrivial-zero predicate and API binding contract, and wires the contract conditionally into the TS93 zero-family ledger |
+| TS186 | Triangle spline main-term normalization bridge | `repo_committed` | reuses the TS162 origin value `triangleSpline 0 = 1`, proves `X * triangleSpline 0 = X`, and normalizes the discrete origin weight for positive scales without proving the explicit formula |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -673,16 +675,29 @@ range extension invariance beyond `X`, and the affine smoothing formula on the
 support.  TS184 does not prove a prime-number estimate, the explicit formula,
 zeta-zero summability, Plancherel, or Goldbach.
 
-TS185 opens the right-hand zeta-zero vocabulary for the explicit-formula
-front.  It imports `Mathlib.NumberTheory.LSeries.RiemannZeta`, records
-`riemannZeta : Complex -> Complex` as the API target, names the zero predicate
-`riemannZeta rho = 0`, names the critical-strip predicate, and packages these
-requirements into a local `RiemannZetaZeroFamilyAPIBindingContract`.  A future
-contract of this type supplies the existing TS93 `ZetaZeroFamilyLedger` and
-the TS92 zero-family target.  TS185 also verifies the trivial-zero Mathlib
-theorem as an API probe, but it does not construct the nontrivial zero family,
-prove zeta-zero summability, prove RH, prove the explicit formula, prove
-Plancherel, or prove Goldbach.
+TS185 opens the right-hand zero-family vocabulary for the explicit-formula
+front after TS184 made the finite von Mangoldt side concrete.  It imports
+`Mathlib.NumberTheory.LSeries.RiemannZeta`, stabilizes `riemannZeta` as the
+API target, and defines the local predicates `riemannZetaZeroPredicate`,
+`criticalStripPredicate`, and `nontrivialRiemannZetaZeroPredicate`.  The sprint
+proves the trivial-zero probe at negative even integers using
+`riemannZeta_neg_two_mul_nat_add_one`.  It then defines a local
+`RiemannZetaZeroFamilyAPIBindingContract` whose fields record the zero set,
+multiplicities, critical-strip containment, conjugation closure, and symmetry
+about the half line, and proves that any populated contract supplies the
+existing TS93 `ZetaZeroFamilyLedger` and therefore the TS92 zero-family target.
+TS185 does not construct a nontrivial zero family, does not prove zeta-zero
+summability, does not prove the explicit formula, does not prove the Riemann
+hypothesis, does not prove Plancherel, and does not prove Goldbach.
+
+TS186 normalizes the future explicit-formula main term.  It reuses the TS162
+theorem `triangleSpline_zero` to record `triangleSpline 0 = 1`, proves
+`(X : Real) * triangleSpline 0 = (X : Real)` for every natural scale, and uses
+the TS182 affine discrete-weight formula to prove
+`triangleSplineDiscreteWeight X 0 = 1` and
+`(X : Real) * triangleSplineDiscreteWeight X 0 = (X : Real)` for `0 < X`.
+TS186 does not prove the explicit formula, zeta-zero summability, Plancherel,
+a sieve-trace comparison, or Goldbach.
 
 ## What Is Proved
 
@@ -4074,7 +4089,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS185 targets:
+Build all TS15--TS186 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -4258,7 +4273,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS182.TriangleSplineDiscreteSieveTraceBridge `
   TS.Goldbach.Strong.TS183.TriangleSplineFiniteWeightedPrimeSumInterface `
   TS.Goldbach.Strong.TS184.TriangleSplineVonMangoldtAPIProbe `
-  TS.Goldbach.Strong.TS185.ExplicitFormulaZetaZeroFamilyLedger
+  TS.Goldbach.Strong.TS185.ExplicitFormulaZetaZeroFamilyLedger `
+  TS.Goldbach.Strong.TS186.TriangleSplineMainTermNormalizationBridge
 ```
 
 ## Audit
@@ -4436,6 +4452,7 @@ TS/Goldbach/Strong/TS182
 TS/Goldbach/Strong/TS183
 TS/Goldbach/Strong/TS184
 TS/Goldbach/Strong/TS185
+TS/Goldbach/Strong/TS186
 ```
 
 Audit commands:
@@ -4509,6 +4526,7 @@ rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS182
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS183
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS184
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS185
+rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS186
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -4530,4 +4548,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS185` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS186` layer.
