@@ -365,7 +365,7 @@ Status summary:
 | TS184 | Triangle spline Von Mangoldt API probe | `repo_committed` | binds Mathlib's `ArithmeticFunction.vonMangoldt` to the TS183 contract and inherits nonnegativity, range-extension, and affine-support properties |
 | TS185 | Explicit formula zeta zero family ledger | `repo_committed_relative` | probes Mathlib's `riemannZeta` and `riemannZeta_neg_two_mul_nat_add_one`, defines local nontrivial-zero predicate and API binding contract, and wires the contract conditionally into the TS93 zero-family ledger |
 | TS186 | Triangle spline main-term normalization bridge | `repo_committed` | reuses the TS162 origin value `triangleSpline 0 = 1`, proves `X * triangleSpline 0 = X`, and normalizes the discrete origin weight for positive scales without proving the explicit formula |
-| TS187 | Analytic frontier transform compatibility ledger | `repo_committed_relative` | registers the Mellin/Fourier compatibility wall and the four remaining analytic walls as explicit local contract and evidence types without proving those analytic obligations |
+| TS187 | Analytic frontier transform compatibility ledger | `repo_committed_relative` | names five analytic walls as local contract/evidence types: Wall 0 Mellin/Fourier logarithmic coordinate compatibility, Wall 1 Plancherel, Wall 2 contour explicit formula, Wall 3 zeta-zero summability, Wall 4 circle-method/Gallagher correlation; no wall is populated |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -701,16 +701,21 @@ the TS182 affine discrete-weight formula to prove
 TS186 does not prove the explicit formula, zeta-zero summability, Plancherel,
 a sieve-trace comparison, or Goldbach.
 
-TS187 records the analytic frontier after the TS186 main-term cleanup.  It
-names Wall 0, the Mellin/Fourier logarithmic-coordinate compatibility gap:
-classical explicit formulae are Mellin and Dirichlet-series statements, while
-the triangle-spline package is a real Fourier statement, so future work must
-justify `x = exp u`, `dx / x = du`, and the compatibility of kernels, analytic
-continuation, and inversion.  TS187 also registers the four remaining analytic
-walls as explicit local contract and evidence types: Plancherel, the contour
+TS187 halts supporting-cleanup drift and names the real analytic walls that
+stand between the Fourier kernel package and a Goldbach-level trace argument.
+The central wall is Wall 0: classical explicit formulae use Mellin and
+Dirichlet-series language, while the recent triangle-spline work built a real
+Fourier identity.  A future proof must justify the logarithmic coordinate
+change `x = exp u`, the measure transport `dx / x = du`, and the compatibility
+of kernels, analytic continuation, and inversion.  TS187 defines
+`MellinFourierDiffeomorphismContract` and `MellinFourierDiffeomorphismEvidence`
+for Wall 0, and `AnalyticFrontierContracts` and `AnalyticFrontierEvidence` for
+the full set of five walls: Mellin/Fourier compatibility, Plancherel, contour
 explicit formula, zeta-zero summability or bounds, and circle-method/Gallagher
-correlation.  TS187 does not populate an analytic evidence package, does not
-prove any of those walls, and does not prove Goldbach.
+correlation.  The ledger stores the contract and evidence types but does not
+populate any `AnalyticFrontierEvidence` value.  TS187 does not prove the
+explicit formula, does not prove Plancherel, does not prove zeta-zero
+summability, and does not prove Goldbach.
 
 ## What Is Proved
 
