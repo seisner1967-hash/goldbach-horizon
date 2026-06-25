@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS201
+## Current Focus: TS15--TS202
 
 The current sprint chain lives under:
 
@@ -201,6 +201,7 @@ TS/Goldbach/Strong/
   TS199/
   TS200/
   TS201/
+  TS202/
 ```
 
 Status summary:
@@ -394,6 +395,7 @@ Status summary:
 | TS199 | OTSA strategic dashboard synthesis | `repo_committed` | collects the post-TS198 sieve, critical-energy, and analytic-wall status into one governance ledger, proves the u-side and x-side energy scalars agree because both are `X / 3`, and records that trace, Mellin-tail, sieve-budget, final OTSA, and Goldbach obligations remain unproved |
 | TS200 | OTSA non-circular consumption interface | `repo_committed_relative` | refactors the final OTSA interface so Goldbach is an output of a future conclusion bridge, not an input contract; registers trace, Mellin-tail, sieve-budget, final-inequality, and combinatorial-reduction obligations without proving them |
 | TS201 | Strategic decision ledger | `repo_committed_relative` | records the post-TS200 open fronts and fixes the next recommended target as Wall 0 measure transport, while explicitly keeping all analytic walls, sieve replacement, bundle generation, OTSA inputs, and Goldbach unproved |
+| TS202 | Wall 0 measure transport bridge | `repo_committed_relative` | refines the selected Wall 0 target into Haar measure-transport contract and evidence types, records the TS196 compact change of variables and TS198 x-side energy `X / 3` as available inputs, and keeps full Haar transport and Mellin/Fourier compatibility unproved |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -932,6 +934,20 @@ and the ledger records that this is the selected next sprint target.  TS201
 does not prove Wall 0, Plancherel, the explicit formula, zero summability,
 circle/Gallagher correlation, a replacement sieve budget, a bundle, any OTSA
 input contract, or Goldbach.
+
+TS202 starts the selected Wall 0 measure-transport front by refining the target
+before any global improper theorem is attempted.  It defines
+`Wall0HaarMeasureTransportContract` and
+`Wall0HaarMeasureTransportEvidence` with proposition slots for truncated Haar
+transport, improper Haar transport, Mellin/Fourier kernel compatibility, and
+effective integrability.  The sprint proves only the safe evidence-routing
+facts and records the concrete inputs already available: the TS196 compact
+change-of-variables target and the TS198 x-side critical energy value
+`criticalLineXSideImproperEnergy X hX = X / 3`.  TS202 does not prove full
+Haar transport `dx / x = du`, does not prove improper transport, does not prove
+Mellin/Fourier compatibility, does not prove Plancherel, does not prove the
+explicit formula, does not prove zeta-zero summability, does not prove
+circle/Gallagher correlation, and does not prove Goldbach.
 
 ## What Is Proved
 
@@ -4323,7 +4339,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS201 targets:
+Build all TS15--TS202 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -4523,7 +4539,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS198.CriticalLineXSideImproperEnergyObject `
   TS.Goldbach.Strong.TS199.OTSAStrategicDashboardSynthesis `
   TS.Goldbach.Strong.TS200.OTSANonCircularConsumptionInterface `
-  TS.Goldbach.Strong.TS201.StrategicDecisionLedger
+  TS.Goldbach.Strong.TS201.StrategicDecisionLedger `
+  TS.Goldbach.Strong.TS202.Wall0MeasureTransportBridge
 ```
 
 ## Audit
@@ -4717,6 +4734,7 @@ TS/Goldbach/Strong/TS198
 TS/Goldbach/Strong/TS199
 TS/Goldbach/Strong/TS200
 TS/Goldbach/Strong/TS201
+TS/Goldbach/Strong/TS202
 ```
 
 Audit commands:
@@ -4806,6 +4824,7 @@ rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS198
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS199
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS200
 rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS201
+rg -n "s[o]rry|a[x]iom|[^\x00-\x7F]" TS\Goldbach\Strong\TS202
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
