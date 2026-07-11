@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS265
+## Current Focus: TS15--TS266
 
 The current sprint chain lives under:
 
@@ -265,6 +265,7 @@ TS/Goldbach/Strong/
   TS263/
   TS264/
   TS265/
+  TS266/
 ```
 
 Status summary:
@@ -522,6 +523,7 @@ Status summary:
 | TS263 | Riemann-zeta Schwarz reflection | `repo_committed` | proves Schwarz reflection first on `1 < re s` by termwise conjugation of the Dirichlet series, extends equality across `Complex \ {1}` by the analytic identity principle, checks Mathlib's real assigned value at one, assembles the complete TS261 input, and routes every future concrete order realization to conjugate multiplicities and lossless finite zero-sum reality; no concrete zero family, realization, explicit formula, bound, Gallagher estimate, or Goldbach statement is constructed |
 | TS264 | Concrete Riemann-zeta zero family realization | `repo_committed` | instantiates the TS185 family with the actual nontrivial zeros of `riemannZeta`, proves their analytic order finite and nonzero, defines positive natural multiplicity by `order.toNat`, proves conjugation and functional-equation symmetry, builds the concrete TS260 realization, and obtains reality and lossless projection for every future valid TS256 truncation; global summability, exact enumeration, a concrete truncation, the explicit formula, all bounds, Gallagher, and Goldbach remain open |
 | TS265 | Concrete finite-height zero truncation | `repo_committed` | proves the global `riemannZeta` zero set closed and discrete using isolated zeros away from one and the zeta residue at one, derives finite intersection with compact sets, proves the concrete nontrivial zeros below every real height finite, constructs the exact noncomputable `Finset` and TS256 truncation with height `X`, and obtains real finite spectral sums with lossless projection; no numerical enumeration, zero-counting bound, density theorem, spectral bound, explicit formula, Gallagher estimate, or Goldbach statement is constructed |
+| TS266 | Concrete finite zero-sum triangle majorization | `repo_committed` | names the exact multiplicity-weighted TS257 terms and their finite norm mass, proves the complex truncated sum and the real TS255 zero contribution bounded by that mass, and reduces an effective contribution bound to a nonnegative uniform per-term majorant plus a real zero-counting majorant; neither analytic majorant, a density theorem, the explicit formula, a residual bound, Gallagher, nor Goldbach is proved |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -1795,6 +1797,17 @@ fields and produces a concrete real finite spectral sum with lossless real
 projection.  No numerical zero-enumeration algorithm, zero-counting or density
 bound, global summability, explicit formula, Gallagher estimate, OTSA bridge,
 or Goldbach theorem is supplied.
+
+TS266 takes the first unconditional estimate of that concrete finite sum.  It
+names each multiplicity-weighted TS257 summand and defines the finite norm mass
+as the sum of their complex moduli.  `norm_sum_le` bounds the complex spectral
+sum by this mass, while TS265 transports the same inequality exactly to the
+real TS255 contribution.  A second theorem shows that a nonnegative uniform
+per-term bound and a real upper bound for the selected `Finset` cardinality
+imply `abs zeroContribution <= countBound * termBound`.  The two effective
+majorants remain explicit open inputs; no zero-density estimate, contour or
+residue identity, explicit formula, residual estimate, Gallagher theorem,
+OTSA bridge, or Goldbach theorem is supplied.
 
 ## What Is Proved
 
@@ -5186,7 +5199,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS265 targets:
+Build all TS15--TS266 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -5450,7 +5463,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS262.DoubleConjugationAnalyticity `
   TS.Goldbach.Strong.TS263.RiemannZetaSchwarzReflection `
   TS.Goldbach.Strong.TS264.ConcreteRiemannZetaZeroFamilyRealization `
-  TS.Goldbach.Strong.TS265.ConcreteFiniteHeightZeroTruncation
+  TS.Goldbach.Strong.TS265.ConcreteFiniteHeightZeroTruncation `
+  TS.Goldbach.Strong.TS266.ConcreteFiniteZeroSumTriangleMajorization
 ```
 
 ## Audit
@@ -5708,6 +5722,7 @@ TS/Goldbach/Strong/TS262
 TS/Goldbach/Strong/TS263
 TS/Goldbach/Strong/TS264
 TS/Goldbach/Strong/TS265
+TS/Goldbach/Strong/TS266
 ```
 
 Audit commands:
@@ -5864,6 +5879,8 @@ rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS264
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS264
 rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS265
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS265
+rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS266
+rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS266
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -5885,4 +5902,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS265` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS266` layer.
