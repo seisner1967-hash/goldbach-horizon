@@ -50,11 +50,12 @@ finite Jensen boundary estimate and multiplicity-count quotient.
 
 ## Unicode bridge exception
 
-The locked Mathlib API spells three declarations with the Unicode
-subscript-zero character.  `CompletedRiemannZetaZeroBridge.lean` contains the
-only three unavoidable non-ASCII occurrences and exposes ASCII aliases.  The
-main TS282 module and this audit are ASCII-only.  This exception is explicit
-and mechanically limited to the three Mathlib identifier references.
+The locked Mathlib API spells the completed-zeta declarations with a Unicode
+subscript-zero character and its real Gamma factor with a Unicode suffix.
+`CompletedRiemannZetaZeroBridge.lean` contains the only six unavoidable
+non-ASCII occurrences and exposes ASCII aliases.  The main TS282 module and
+this audit are ASCII-only.  This exception is explicit and mechanically
+limited to the six Mathlib identifier references.
 
 ## Non-claims
 
@@ -82,5 +83,5 @@ git diff --check
 ```
 
 Expected result: the build succeeds, the incomplete-declaration and main-file
-ASCII scans print no matches, and the bridge scan prints exactly the three
+ASCII scans print no matches, and the bridge scan prints exactly the six
 documented Mathlib identifier lines.
