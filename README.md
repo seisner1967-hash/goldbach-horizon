@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS285
+## Current Focus: TS15--TS286
 
 The current sprint chain lives under:
 
@@ -285,6 +285,7 @@ TS/Goldbach/Strong/
   TS283/
   TS284/
   TS285/
+  TS286/
 ```
 
 Status summary:
@@ -562,6 +563,7 @@ Status summary:
 | TS283 | Riemann xi finite zero geometry | `repo_committed` | proves the xi-candidate zero set closed and discrete and finite on every compact, constructs exact closed-ball zero `Finset`s, and for every positive inner radius builds explicit `r < R < S` buffered Jensen geometry with exact inner/factor selections and a zero-free closed collar `[R,S]`; multiplicities, local normal forms, quotient assembly, effective xi growth, zero counting, explicit formula, Gallagher, OTSA, and Goldbach remain open |
 | TS284 | Riemann xi multiplicity and local normal form | `repo_committed` | defines the canonical natural xi multiplicity by `AnalyticAt.order.toNat`, proves the order finite everywhere and positive at every xi zero, extracts the exact analytic nonvanishing local factor through `order_eq_nat_iff`, and enriches every TS283 geometry datum into the genuine TS282 `XiFiniteZeroFactorizationSpec`; finite quotient assembly, effective xi growth, zero counting, explicit formula, Gallagher, OTSA, and Goldbach remain open |
 | TS285 | Riemann xi finite quotient assembly | `repo_committed` | fills the removable values of `xi/P` at every selected root using the TS284 local factor divided by the `Finset.erase` complementary product, proves this quotient analytic on the whole complex plane, proves the global factorization and nonvanishing on the buffered analytic ball, constructs the first concrete TS282 xi buffered factorization, and activates the TS280 canonical Jensen boundary and multiplicity-count bounds; effective xi growth, quantitative zero counting, explicit formula, Gallagher, OTSA, and Goldbach remain open |
+| TS286 | Riemann xi master API | `repo_committed` | publishes `TS.Goldbach.MasterAPI` as a thin stable facade over the concrete TS282--TS285 xi/Jensen construction, exposing xi, entirety, symmetry, the complete certificate, three-radius geometry, finite zero specification, buffered factorization, the real-valued canonical boundary norm, pointwise sphere control, and the canonical Jensen boundary and multiplicity-count estimates; effective xi growth, quantitative zero counting, explicit formula, Gallagher, OTSA, and Goldbach remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -2058,6 +2060,14 @@ each removable point.  The quotient is entire, the identity `xi = P*g` holds
 globally, and `g` is nonzero on the analytic closed ball.  This gives the first
 concrete TS282 buffered xi construction and activates the canonical TS280
 Jensen estimate and finite multiplicity-count inequality for xi.
+
+TS286 freezes the resulting downstream interface in
+`TS.Goldbach.MasterAPI`.  It reexports the entire xi candidate, its functional
+equation, the concrete TS285 certificate and geometry, the finite zero data,
+the buffered factorization, and the TS280 canonical boundary majorant.  The
+majorant is correctly exposed as a real number, together with its positivity,
+pointwise control on the averaging sphere, and the two canonical Jensen
+facades.  No duplicate certificate or new analytic assumption is introduced.
 
 ## What Is Proved
 
@@ -5449,7 +5459,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS285 targets:
+Build all TS15--TS286 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -5734,7 +5744,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS282.RiemannXiCandidateBufferedSpec `
   TS.Goldbach.Strong.TS283.RiemannXiFiniteZeroGeometry `
   TS.Goldbach.Strong.TS284.RiemannXiMultiplicityAndLocalNormalForm `
-  TS.Goldbach.Strong.TS285.RiemannXiFiniteQuotientAssembly
+  TS.Goldbach.Strong.TS285.RiemannXiFiniteQuotientAssembly `
+  TS.Goldbach.Strong.TS286.RiemannXiMasterAPI
 ```
 
 ## Audit
@@ -6012,6 +6023,7 @@ TS/Goldbach/Strong/TS282
 TS/Goldbach/Strong/TS283
 TS/Goldbach/Strong/TS284
 TS/Goldbach/Strong/TS285
+TS/Goldbach/Strong/TS286
 ```
 
 Audit commands:
@@ -6209,6 +6221,8 @@ rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS284
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS284
 rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS285
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS285
+rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS286
+rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS286
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -6230,4 +6244,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS285` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS286` layer.
