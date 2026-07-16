@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS280
+## Current Focus: TS15--TS281
 
 The current sprint chain lives under:
 
@@ -280,6 +280,7 @@ TS/Goldbach/Strong/
   TS278/
   TS279/
   TS280/
+  TS281/
 ```
 
 Status summary:
@@ -552,6 +553,7 @@ Status summary:
 | TS278 | Holomorphic primitive on a ball backport | `repo_committed` | backports the missing open-ball primitive theorem using an axis-parallel wedge integral, locked rectangle Cauchy-Goursat, and explicit horizontal and vertical little-o estimates, proving every complex-differentiable `Complex -> Complex` function on a ball has a primitive there; no closed-ball uniform extension, quotient logarithm, complete Jensen theorem, xi function, effective count, explicit formula, Gallagher, OTSA, or Goldbach is claimed |
 | TS279 | Buffered quotient holomorphic-log construction | `repo_committed` | proves the analytic-and-nonzero locus open, uses compactness and the exact thickening identity to enlarge the TS275 closed disk uniformly, applies TS278 to `deriv g / g`, proves `g*exp(-P)` constant, constructs `P-P(center)+log(g(center))` with exponential exactly `g`, closes the TS277 construction statement and quotient angular mean, and reduces TS274 to the remaining boundary norm input; no concrete factorization, xi growth bound, effective count, explicit formula, Gallagher, OTSA, or Goldbach is claimed |
 | TS280 | Canonical boundary norm | `repo_committed` | defines the boundary norm value set as the continuous real image of the compact averaging sphere, takes the canonical noncomputable majorant `max 1 (sSup values)`, proves it fills `BoundaryNormOnAveragingSphereStatement`, and exposes direct weighted-Jensen and multiplicity-count quotient facades for every supplied buffered TS275 datum; no concrete factorization, computable majorant, effective radius growth, xi function, effective count, explicit formula, Gallagher, OTSA, or Goldbach is claimed |
+| TS281 | Polynomial buffered Jensen realization | `repo_committed` | constructs a genuine TS275 buffered factorization for every finite zero polynomial by taking `f = P` and `g = 1`, proves the explicit finite-product boundary majorant `max 1 (product (R + abs(rho-c))^m)`, routes it through TS279 and TS274 to a complete Jensen estimate and multiplicity-count quotient, and proves the TS280 canonical norm is no larger; no Riemann xi factorization, xi growth estimate, zeta-zero count, explicit formula, Gallagher, OTSA, or Goldbach is claimed |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -1997,6 +1999,17 @@ each already-supplied buffered factorization datum, but the majorant remains
 noncomputable and no effective radius-growth formula, concrete xi datum,
 explicit formula, Gallagher theorem, OTSA bridge, or Goldbach theorem is
 supplied.
+
+TS281 gives the first concrete end-to-end realization of that generic Jensen
+machine.  For any finite factor-zero datum it takes the zero polynomial itself
+as `f` and the constant function `1` as the analytic nonvanishing quotient.
+On the averaging sphere each factor satisfies
+`abs(z-rho) <= R + abs(rho-center)`, so a finite product gives an explicit
+boundary norm with no compact supremum.  TS279 and TS274 then yield the full
+weighted Jensen estimate and multiplicity-count quotient, and the TS280
+canonical norm is proved no larger than the product bound.  This validates the
+pipeline on a concrete polynomial class; it does not yet construct Riemann xi,
+factor xi on buffered disks, or prove effective xi growth.
 
 ## What Is Proved
 
@@ -5388,7 +5401,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS280 targets:
+Build all TS15--TS281 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -5667,7 +5680,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS277.NonvanishingQuotientHolomorphicLogReduction `
   TS.Goldbach.Strong.TS278.HolomorphicPrimitiveOnBallBackport `
   TS.Goldbach.Strong.TS279.BufferedQuotientHolomorphicLogConstruction `
-  TS.Goldbach.Strong.TS280.CanonicalBoundaryNorm
+  TS.Goldbach.Strong.TS280.CanonicalBoundaryNorm `
+  TS.Goldbach.Strong.TS281.PolynomialBufferedJensenRealization
 ```
 
 ## Audit
@@ -5940,6 +5954,7 @@ TS/Goldbach/Strong/TS277
 TS/Goldbach/Strong/TS278
 TS/Goldbach/Strong/TS279
 TS/Goldbach/Strong/TS280
+TS/Goldbach/Strong/TS281
 ```
 
 Audit commands:
@@ -6126,6 +6141,8 @@ rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS279
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS279
 rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS280
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS280
+rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS281
+rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS281
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -6147,4 +6164,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS280` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS281` layer.
