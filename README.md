@@ -8,7 +8,7 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS288
+## Current Focus: TS15--TS289
 
 The current sprint chain lives under:
 
@@ -288,6 +288,7 @@ TS/Goldbach/Strong/
   TS286/
   TS287/
   TS288/
+  TS289/
 ```
 
 Status summary:
@@ -568,6 +569,7 @@ Status summary:
 | TS286 | Riemann xi master API | `repo_committed` | publishes `TS.Goldbach.MasterAPI` as a thin stable facade over the concrete TS282--TS285 xi/Jensen construction, exposing xi, entirety, symmetry, the complete certificate, three-radius geometry, finite zero specification, buffered factorization, the real-valued canonical boundary norm, pointwise sphere control, and the canonical Jensen boundary and multiplicity-count estimates; effective xi growth, quantitative zero counting, explicit formula, Gallagher, OTSA, and Goldbach remain open |
 | TS287 | Riemann xi growth API probe | `repo_committed` | records the exact locked Gamma and zeta APIs on safe regions, defines the target exponential growth and primary regularized-completed-zeta circle contracts, proves `abs(z*(z-1)) <= R*(R+1)`, transports every supplied bound `abs LambdaZero(z) <= A(R)` to the explicit xi majorant `max 1 ((R*(R+1)*A(R)+1)/2)`, fills the concrete TS275 boundary contract, and routes it through TS279/TS274 to an explicit finite Jensen multiplicity-count quotient; complex Stirling, critical-strip zeta growth, effective completed-zeta growth, a concrete quantitative zero count, explicit formula, Gallagher, OTSA, and Goldbach remain open |
 | TS288 | Completed-zeta theta-Mellin circle growth | `repo_committed` | unfolds Mathlib's entire regularized completed zeta as the Mellin transform of its modified theta kernel, proves the circle power bounded by the maximum of the two endpoint real powers, obtains integrability from the strong functional-equation pair at both endpoint exponents, constructs the unconditional radial integral majorant `completedZetaThetaMellinMajorant`, fills the TS287 growth contract, and routes it to concrete xi Jensen boundary and multiplicity-count estimates; a closed theta-integral bound, exponential radius envelope, log-linear zero count, explicit formula, Gallagher, OTSA, and Goldbach remain open |
+| TS289 | Closed completed-zeta theta-integral bound | `repo_committed` | proves the exact inversion law for the modified theta kernel, extracts its explicit geometric exponential decay on `[1,infinity)`, transports the lower Mellin tail to the upper tail by `x -> 1/x`, and uses the tangent inequality for `log` to prove `completedZetaThetaMellinMajorant(R) <= (2/(1-exp(-pi))) * exp(R*log(R+2))` for `R >= 2`; this closed majorant fills the TS287 circle-growth contract and is routed to concrete xi Jensen boundary and multiplicity-count estimates, while transport to TS270 global counting, Riemann-von Mangoldt asymptotics, explicit formula, Gallagher, OTSA, and Goldbach remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -2092,6 +2094,17 @@ pair has a Mellin transform at every complex exponent.  The resulting finite
 radial integral fills the TS287 circle-growth contract and activates the
 concrete xi Jensen count.  Turning this integral into a closed
 `exp(C*R*log(R+2))` estimate is the next quantitative lock.
+
+TS289 closes that theta-integral lock.  The modified kernel is self-dual
+under `x -> 1/x`; on `[1,infinity)` its nonconstant theta series is bounded
+by `2*exp(-pi*x)/(1-exp(-pi*x))`.  Inversion sends the lower Mellin tail
+exactly to an upper tail with exponent `R/2-1/2`.  A tangent bound for `log`
+at `R+2` then dominates the remaining integrand by
+`exp(R*log(R+2))*exp(-x)`.  Hence for `R >= 2` the TS288 radial majorant is at
+most `(2/(1-exp(-pi)))*exp(R*log(R+2))`, and this closed function is routed
+through TS287 to the concrete xi Jensen count.  Relating that finite disk
+count to the global multiplicity-count interface of TS270 remains a separate
+transport problem.
 
 ## What Is Proved
 
@@ -5483,7 +5496,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS288 targets:
+Build all TS15--TS289 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -5771,7 +5784,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS285.RiemannXiFiniteQuotientAssembly `
   TS.Goldbach.Strong.TS286.RiemannXiMasterAPI `
   TS.Goldbach.Strong.TS287.RiemannXiGrowthAPIProbe `
-  TS.Goldbach.Strong.TS288.CompletedZetaThetaMellinCircleGrowth
+  TS.Goldbach.Strong.TS288.CompletedZetaThetaMellinCircleGrowth `
+  TS.Goldbach.Strong.TS289.CompletedZetaThetaIntegralClosedBound
 ```
 
 ## Audit
@@ -6052,6 +6066,7 @@ TS/Goldbach/Strong/TS285
 TS/Goldbach/Strong/TS286
 TS/Goldbach/Strong/TS287
 TS/Goldbach/Strong/TS288
+TS/Goldbach/Strong/TS289
 ```
 
 Audit commands:
@@ -6255,6 +6270,8 @@ rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS287
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS287
 rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS288
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS288
+rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS289
+rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS289
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -6276,4 +6293,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS288` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS289` layer.
