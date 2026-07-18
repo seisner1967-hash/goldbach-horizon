@@ -576,6 +576,7 @@ Status summary:
 | TS290 | Riemann xi log-linear zero counting | `repo_committed` | proves the analytic nonvanishing zeta-to-xi multiplier and exact equality of TS264 zeta and TS284 xi multiplicities, replaces the shrinking `r+3` Jensen gap by exact constant-ratio geometry with ambient radius `4r` and averaging radius at least `2r`, routes the TS289 closed theta majorant through this geometry, proves `N_mult(T) <= xiGlobalLogLinearConstant*T*log(T+2)` for `T >= 1`, and constructs the unconditional TS270 global counting contract through the TS273 safe envelope; Riemann-von Mangoldt asymptotics, explicit formula, Gallagher, OTSA, and Goldbach remain open |
 | TS291 | Log-linear zero-contribution assembly | `repo_committed` | injects the concrete TS290 global counting contract into the exact TS271--TS273 finite Abel machinery, proves finite reciprocal-square partial sums at most two, closes the amortized shell expression by `5*C*log(X+3)`, absorbs the height-one boundary into `xiClosedHighResidualConstant = 6*xiGlobalLogLinearConstant`, and proves the unconditional finite contribution bound `abs zeroContribution(X) <= lowExactMass(X) + max(1,X)*xiClosedHighResidualConstant*log(X+3)`; the low zone remains exact, while infinite spectral convergence, explicit formula, residual estimates, Gallagher, OTSA, and Goldbach remain open |
 | TS292 | Effective infinite zero-tail convergence | `repo_committed` | separates arithmetic scale `x` from spectral height `T`, applies the TS271 finite Abel identity to shifted unit shells through the potential `(log(t+3)+2)/t`, proves an upper-cutoff-independent reciprocal-square tail bound with constant `15*xiGlobalLogLinearConstant`, obtains absolute `Summable` and `HasSum` results for the complete concrete zero series, defines the infinite contribution, proves the exact finite-plus-tail decomposition and the effective remainder `max(1,x)*Ctail*(log(T+2)+1)/T`, and proves truncation convergence and the Cauchy property; von Mangoldt identities, explicit formulae, contour residuals, Gallagher, OTSA, and Goldbach remain open |
+| TS293 | Truncated Perron contour residual | `repo_committed_relative` | defines the concrete logarithmic-derivative Perron integrand and proves its right-half-plane rewrite to Mathlib's von Mangoldt L-series, defines an oriented rectangular contour, a real contour height `tau in [T,T+1]`, exact real-height zero truncation, certified exceptional local residues, and a residual made from actual boundary integrals and cutoff adjustments; assuming the explicitly named Perron inversion and meromorphic rectangle residue statements, proves the truncated identity and routes it to `TS255.NamedExplicitFormulaIdentityStatement`; clean-height existence, Perron inversion, the residue theorem, contour bounds, the infinite explicit formula, Gallagher, OTSA, and Goldbach remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
@@ -2143,6 +2144,18 @@ the TS265 truncation plus a complementary `tsum`, gives the corresponding
 effective norm remainder, and proves convergence and the Cauchy property.
 It does not identify this series with a von Mangoldt sum or prove an explicit
 formula or contour estimate.
+
+TS293 starts the independent contour front.  It defines the concrete
+logarithmic-derivative Perron integrand and proves its equality with the von
+Mangoldt L-series integrand on `re(s)>1`.  The rectangle is positively
+oriented, the clean contour height is a real `tau in [T,T+1]`, and the
+exceptional poles carry local principal-part certificates.  The residual is
+the explicit sum of exceptional residues, the three non-right boundary
+integrals, the finite right-line cutoff, and the exact spectral adjustment
+between heights `T` and `tau`; it is not defined from the desired identity.
+Perron inversion and the meromorphic rectangle residue theorem remain named
+analytic premises.  From precisely those premises, TS293 proves the
+truncated explicit identity and its TS255 routing.
 
 ## What Is Proved
 
@@ -5534,7 +5547,7 @@ lake build TS.Goldbach.Strong.TS16.CombinatorialDischarge `
   TS.Goldbach.Strong.TS22.BrunTitchmarshScaleDischarge
 ```
 
-Build all TS15--TS292 targets:
+Build all TS15--TS293 targets:
 
 ```powershell
 lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
@@ -5826,7 +5839,8 @@ lake build TS.Goldbach.Strong.TS15.ShortIntervalSecondMoment `
   TS.Goldbach.Strong.TS289.CompletedZetaThetaIntegralClosedBound `
   TS.Goldbach.Strong.TS290.RiemannXiLogLinearZeroCounting `
   TS.Goldbach.Strong.TS291.LogLinearZeroContributionAssembly `
-  TS.Goldbach.Strong.TS292.EffectiveInfiniteZeroTailConvergence
+  TS.Goldbach.Strong.TS292.EffectiveInfiniteZeroTailConvergence `
+  TS.Goldbach.Strong.TS293.TruncatedPerronContourResidual
 ```
 
 ## Audit
@@ -6111,6 +6125,7 @@ TS/Goldbach/Strong/TS289
 TS/Goldbach/Strong/TS290
 TS/Goldbach/Strong/TS291
 TS/Goldbach/Strong/TS292
+TS/Goldbach/Strong/TS293
 ```
 
 Audit commands:
@@ -6322,6 +6337,8 @@ rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS291
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS291
 rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS292
 rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS292
+rg -n "s[o]rry|a[x]iom|o[p]aque" TS\Goldbach\Strong\TS293
+rg --pcre2 -n "[^\x00-\x7F]" TS\Goldbach\Strong\TS293
 rg -n "s[o]rry" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 rg -n "a[x]iom" TS\Goldbach\Strong\TS15 TS\Goldbach\Strong\TS16 TS\Goldbach\Strong\TS17 TS\Goldbach\Strong\TS18 TS\Goldbach\Strong\TS19 TS\Goldbach\Strong\TS21 TS\Goldbach\Strong\TS22 TS\Goldbach\Strong\TS23 TS\Goldbach\Strong\TS24 TS\Goldbach\Strong\TS25 TS\Goldbach\Strong\TS26 TS\Goldbach\Strong\TS27 TS\Goldbach\Strong\TS28 TS\Goldbach\Strong\TS29 TS\Goldbach\Strong\TS30 TS\Goldbach\Strong\TS31 TS\Goldbach\Strong\TS32 TS\Goldbach\Strong\TS33 TS\Goldbach\Strong\TS34 TS\Goldbach\Strong\TS35 TS\Goldbach\Strong\TS36 TS\Goldbach\Strong\TS37 TS\Goldbach\Strong\TS38 TS\Goldbach\Strong\TS39 TS\Goldbach\Strong\TS40 TS\Goldbach\Strong\TS41 TS\Goldbach\Strong\TS42 TS\Goldbach\Strong\TS43 TS\Goldbach\Strong\TS44 TS\Goldbach\Strong\TS45 TS\Goldbach\Strong\TS46 TS\Goldbach\Strong\TS47 TS\Goldbach\Strong\TS48 TS\Goldbach\Strong\TS49 TS\Goldbach\Strong\TS50 TS\Goldbach\Strong\TS51 TS\Goldbach\Strong\TS52 TS\Goldbach\Strong\TS53 TS\Goldbach\Strong\TS54 TS\Goldbach\Strong\TS55 TS\Goldbach\Strong\TS56 TS\Goldbach\Strong\TS57 TS\Goldbach\Strong\TS58 TS\Goldbach\Strong\TS59 TS\Goldbach\Strong\TS60 TS\Goldbach\Strong\TS61 TS\Goldbach\Strong\TS62 TS\Goldbach\Strong\TS63 TS\Goldbach\Strong\TS64 TS\Goldbach\Strong\TS65 TS\Goldbach\Strong\TS66 TS\Goldbach\Strong\TS67 TS\Goldbach\Strong\TS68 TS\Goldbach\Strong\TS69 TS\Goldbach\Strong\TS70 TS\Goldbach\Strong\TS71 TS\Goldbach\Strong\TS72 TS\Goldbach\Strong\TS73 TS\Goldbach\Strong\TS74 TS\Goldbach\Strong\TS75 TS\Goldbach\Strong\TS76 TS\Goldbach\Strong\TS77 TS\Goldbach\Strong\TS78 TS\Goldbach\Strong\TS79 TS\Goldbach\Strong\TS80 TS\Goldbach\Strong\TS81 TS\Goldbach\Strong\TS82 TS\Goldbach\Strong\TS83 TS\Goldbach\Strong\TS84 TS\Goldbach\Strong\TS85 TS\Goldbach\Strong\TS86 TS\Goldbach\Strong\TS87 TS\Goldbach\Strong\TS88 TS\Goldbach\Strong\TS89 TS\Goldbach\Strong\TS90 TS\Goldbach\Strong\TS91 TS\Goldbach\Strong\TS92 TS\Goldbach\Strong\TS93 TS\Goldbach\Strong\TS94 TS\Goldbach\Strong\TS95 TS\Goldbach\Strong\TS96 TS\Goldbach\Strong\TS97 TS\Goldbach\Strong\TS98 TS\Goldbach\Strong\TS99 TS\Goldbach\Strong\TS100 TS\Goldbach\Strong\TS101 TS\Goldbach\Strong\TS102 TS\Goldbach\Strong\TS103 TS\Goldbach\Strong\TS104 TS\Goldbach\Strong\TS105 TS\Goldbach\Strong\TS106 TS\Goldbach\Strong\TS107 TS\Goldbach\Strong\TS108 TS\Goldbach\Strong\TS109 TS\Goldbach\Strong\TS110 TS\Goldbach\Strong\TS111 TS\Goldbach\Strong\TS112 TS\Goldbach\Strong\TS113 TS\Goldbach\Strong\TS114 TS\Goldbach\Strong\TS115 TS\Goldbach\Strong\TS116 TS\Goldbach\Strong\TS117
 ```
@@ -6343,4 +6360,4 @@ It is written for XeLaTeX because it uses `fontspec`.
 
 The root project also contains older Horizon/Goldbach modules. Some older
 areas may have their own independent audit status. The sprint chain documented
-above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS292` layer.
+above is specifically the audited `TS/Goldbach/Strong/TS15`--`TS293` layer.
