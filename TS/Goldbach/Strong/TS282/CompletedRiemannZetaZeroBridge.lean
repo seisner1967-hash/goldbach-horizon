@@ -45,6 +45,20 @@ theorem completedRiemannZetaGammaInv_ne_zero_of_re_pos
   unfold completedRiemannZetaGammaInv
   exact inv_ne_zero (Complex.Gammaℝ_ne_zero_of_re_pos hs)
 
+/-- The reciprocal archimedean Gamma factor is nonzero off the real axis. -/
+theorem completedRiemannZetaGammaInv_ne_zero_of_im_ne_zero
+    {s : Complex}
+    (hs : Not (s.im = 0)) :
+    Not (completedRiemannZetaGammaInv s = 0) := by
+  unfold completedRiemannZetaGammaInv
+  apply inv_ne_zero
+  intro hGamma
+  rw [Complex.Gammaℝ_eq_zero_iff] at hGamma
+  obtain ⟨n, hn⟩ := hGamma
+  apply hs
+  rw [hn]
+  simp
+
 theorem riemannZeta_eq_completed_mul_gammaInv
     {s : Complex}
     (hs : Not (s = 0)) :
