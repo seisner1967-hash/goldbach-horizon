@@ -8,7 +8,20 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-## Current Focus: TS15--TS292
+### Current verified milestone
+
+The TS292--TS312 chain now proves absolute convergence of the nontrivial-zero
+series, the finite-height and infinite-height triangle-spline explicit
+identities, the four quantitative Perron boundary controls, the complete
+singularity census, the rectangle residue theorem, and scalar Mellin-Perron
+inversion.  TS312 routes these results into the high-level TS204 effective
+explicit-formula contract.
+
+This closes the project ledger's Wall 2 explicit-formula front and records the
+Wall 3 spectral summability component.  The TS181 rational trace packaging,
+the trace budget at most one half, Gallagher, OTSA, and Goldbach remain open.
+
+## Current Focus: TS15--TS312
 
 The current sprint chain lives under:
 
@@ -292,6 +305,26 @@ TS/Goldbach/Strong/
   TS290/
   TS291/
   TS292/
+  TS293/
+  TS294/
+  TS295/
+  TS296/
+  TS297/
+  TS298/
+  TS299/
+  TS300/
+  TS301/
+  TS302/
+  TS303/
+  TS304/
+  TS305/
+  TS306/
+  TS307/
+  TS308/
+  TS309/
+  TS310/
+  TS311/
+  TS312/
 ```
 
 Status summary:
@@ -588,6 +621,14 @@ Status summary:
 | TS302 | Finite macroscopic correction decay | `repo_committed` | embeds the TS295 height-zero values into the TS301 macroscopic factor set with exact multiplicity compatibility, rewrites `macroSum-heightSum` as the rational sum over an explicit `Finset.sdiff`, proves every extra root has `abs(im)>T+2` and hence denominator norm greater than one on both finite-grid horizontals, bounds the correction by a TS290 dyadic count at radius `256*(T+4)`, proves its closed `O(T log T)` envelope divided by `T^2` tends to zero, and routes the fixed-scale component through the exact width `7/2`; the anchored quotient-envelope rate and full horizontal decay remain open |
 | TS303 | Closed anchored macroscopic envelope | `repo_committed` | places a quantitative outer circle at `8*64*(T+4)`, proves all finite factor roots lie within half that radius, bounds the exact polynomial ratio between the fixed anchor and the outer circle, combines TS289 xi growth with TS290 multiplicity control, transports the resulting quotient bound inward by the maximum-modulus principle, constructs the explicit quadratic anchored real-part envelope `K_closed*(T+4)^2`, and obtains a closed linear bound for `Q_macro'/Q_macro` whose fixed-scale horizontal component tends to zero; the completion correction, fixed-left side, residues, Perron, and the infinite explicit formula remain open |
 | TS304 | Closed completion correction and horizontal decay | `repo_committed` | bounds complex Gamma on a compact real strip through Euler's integral, obtains a complementary lower bound by reflection, constructs a centered logarithm of the xi/zeta completion multiplier, derives an explicit linear completion-correction envelope by Borel-Caratheodory and Cauchy, combines it with the TS300 load, TS302 finite correction, and TS303 macroscopic quotient, and proves the complete top and bottom Perron integrals tend to zero along the TS299 finite-grid heights for every fixed arithmetic scale; the fixed-left side, exceptional residues, Perron inversion, the residue theorem, and the infinite explicit formula remain open |
+| TS305 | Fixed left boundary convergence | `repo_committed` | reflects the left-line logarithmic derivative to `Re(s)=5/2`, isolates the archimedean correction, proves absolute integrability and convergence of the truncated left boundary, and routes a height-independent bound while retaining the logarithmic Gamma rate as an explicit input |
+| TS306 | Exceptional residue inventory | `repo_committed` | constructs reusable local simple-pole certificates, proves the exact exceptional set `{0,-1}`, evaluates both symbolic residues, excludes the main pole at `1`, and routes a height-independent exceptional bound |
+| TS307 | Fixed-left archimedean rate | `repo_committed` | derives the logarithmic Gamma-derivative bound from finite Euler Gamma approximants and locally uniform convergence, proves the exact tangent norm identity, discharges the TS305 archimedean input, and closes the left boundary unconditionally |
+| TS308 | Complete Perron singularity census | `repo_committed` | proves regularity away from the main pole, Mellin-kernel poles, and zeta zeros; certifies every local residue, proves strict rectangle containment and boundary analyticity, and assembles the exact finite residue accounting |
+| TS309 | Meromorphic rectangle residue theorem | `repo_committed` | evaluates the simple Cauchy kernel on the oriented rectangle, regularizes the finite pole set by subtracting principal parts, applies rectangle Cauchy-Goursat, and proves the canonical normalized residue identity without winding-number infrastructure |
+| TS310 | Scalar Mellin-Perron inversion | `repo_committed` | proves the scalar kernel inversion by finite rectangles in all three regimes, justifies the von Mangoldt sum-integral exchange by absolute domination, and obtains the unconditional truncated explicit identity |
+| TS311 | Infinite explicit identity | `repo_committed` | assembles the previously proved spectral, horizontal, right-cutoff, and fixed-left limits along the canonical heights, preserves the nonzero left-boundary limit and symbolic exceptional residues, and proves developed and aggregated complex and real infinite identities |
+| TS312 | Post-Wall-2 contract discharge | `repo_committed` | instantiates all six TS204 effective explicit-formula fields from TS292 and TS311, records spectral summability and the effective tail, routes the componentwise residual bound, and registers the exact conditional TS181 rational trace adapter without claiming its existence or the half-budget |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
