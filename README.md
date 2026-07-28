@@ -10,18 +10,19 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS312 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS313 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, and scalar Mellin-Perron
 inversion.  TS312 routes these results into the high-level TS204 effective
-explicit-formula contract.
+explicit-formula contract, and TS313 provides the certified `2/x`
+normalization and rational TS95/TS181 packaging bridge.
 
 This closes the project ledger's Wall 2 explicit-formula front and records the
 Wall 3 spectral summability component.  The TS181 rational trace packaging,
 the trace budget at most one half, Gallagher, OTSA, and Goldbach remain open.
 
-## Current Focus: TS15--TS312
+## Current Focus: TS15--TS313
 
 The current sprint chain lives under:
 
@@ -325,6 +326,7 @@ TS/Goldbach/Strong/
   TS310/
   TS311/
   TS312/
+  TS313/
 ```
 
 Status summary:
@@ -629,6 +631,7 @@ Status summary:
 | TS310 | Scalar Mellin-Perron inversion | `repo_committed` | proves the scalar kernel inversion by finite rectangles in all three regimes, justifies the von Mangoldt sum-integral exchange by absolute domination, and obtains the unconditional truncated explicit identity |
 | TS311 | Infinite explicit identity | `repo_committed` | assembles the previously proved spectral, horizontal, right-cutoff, and fixed-left limits along the canonical heights, preserves the nonzero left-boundary limit and symbolic exceptional residues, and proves developed and aggregated complex and real infinite identities |
 | TS312 | Post-Wall-2 contract discharge | `repo_committed` | instantiates all six TS204 effective explicit-formula fields from TS292 and TS311, records spectral summability and the effective tail, routes the componentwise residual bound, and registers the exact conditional TS181 rational trace adapter without claiming its existence or the half-budget |
+| TS313 | Normalized trace budget packaging | `repo_committed` | proves the canonical `2/x` factor sends the Perron main term to one, separates normalized spectral, exceptional, and fixed-left contributions, routes the closed residual envelopes into rational majorant certificates, allocates the TS95 slots without double counting, and constructs the conditional TS181 adapter from certified normalized budget data; the pointwise spectral bound, genuine Gallagher variance theorem, and half-budget remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
