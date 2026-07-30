@@ -10,7 +10,7 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS316 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS317 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
@@ -18,17 +18,22 @@ inversion, and the finite dyadic quadratic moment with good-scale selection
 and effective tail transfer, and its exact expansion as a weighted pair
 correlation with diagonal/off-diagonal separation. TS316 additionally closes
 the diagonal correlation uniformly from TS292 absolute summability, without a
-separate zero-multiplicity hypothesis. TS312 routes the explicit formula into
-the high-level TS204 contract, and TS313 provides the certified `2/x`
-normalization and rational TS95/TS181 packaging bridge.
+separate zero-multiplicity hypothesis. TS317 exposes the exact weighted
+off-diagonal exponent, closes a coarse absolute pair bound, and reduces every
+sharper estimate to finite weighted Kusmin-Landau and close-pair contracts. It
+also gives a coarse unconditional finite-moment bound from the TS292 linear
+mass.
+TS312 routes the explicit formula into the high-level TS204 contract, and TS313
+provides the certified `2/x` normalization and rational TS95/TS181 packaging
+bridge.
 
 This closes the project ledger's Wall 2 explicit-formula front and records the
 Wall 3 spectral summability component. The concrete TS181 rational trace data,
-the weighted off-diagonal close-pair estimate, the finite moment estimate, the
-rational trace budget at most one half, Gallagher, OTSA, and Goldbach remain
-open.
+the sharp weighted Kusmin-Landau estimate, close-pair and finite-moment
+smallness, the rational trace budget at most one half, Gallagher, OTSA, and
+Goldbach remain open.
 
-## Current Focus: TS15--TS316
+## Current Focus: TS15--TS317
 
 The current sprint chain lives under:
 
@@ -336,6 +341,7 @@ TS/Goldbach/Strong/
   TS314/
   TS315/
   TS316/
+  TS317/
 ```
 
 Status summary:
@@ -644,6 +650,7 @@ Status summary:
 | TS314 | Finite quadratic spectral moment and good-scale selection | `repo_committed` | defines the half-open dyadic window `[X, 2X)` with exact cardinality `X`, preserves the complex truncated trace, forms its finite quadratic mean, proves good-scale selection without `Real.sqrt`, and transfers the effective TS292 tail uniformly to the TS313 rational interface; the finite moment estimate, weighted close-pair correlation analysis, rational tail certificate, and half-budget remain open |
 | TS315 | Discrete spectral correlation identity | `repo_committed` | expands the finite dyadic quadratic moment as a weighted ordered-pair correlation over the concrete TS292 zero truncation, proves finite Fubini reordering, and separates the exact diagonal and weighted off-diagonal parts without introducing `1/zeta'(rho)` or RH |
 | TS316 | Quantitative diagonal zero-correlation bound | `repo_committed` | identifies the exact scale-one spectral coefficient, derives global quadratic summability from the TS292 nonnegative linear mass, proves the quadratic mass is bounded by the square of the linear mass, and closes the TS315 diagonal contract uniformly in height and positive scale; rational smallness and the weighted off-diagonal correlation remain open |
+| TS317 | Weighted off-diagonal correlation reduction | `repo_committed` | proves the exact normalized pair exponent `rho + conj sigma - 2`, preserves the finite ordered zero-pair truncation, closes coarse absolute off-diagonal and complete finite-moment contracts from the TS292 linear mass, and reduces sharp control to a safe weighted Kusmin-Landau kernel statement plus a finite close-pair envelope bound; oscillatory smallness and the rational half-budget remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
