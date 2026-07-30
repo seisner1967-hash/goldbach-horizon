@@ -10,7 +10,7 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS322 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS323 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
@@ -41,17 +41,22 @@ the canonical TS317 global envelope contract. TS322 defines the exact linear
 coefficient tail outside a finite zero core, routes the closed TS292 tail
 rate, proves the tail tends to zero, and uniformly bounds every higher TS317
 pair envelope by the finite TS321 core plus the real error `2*L*R(H)`. It does
-not rationalize the core or claim the TS181 half-budget.
+not rationalize the core or claim the TS181 half-budget. TS323 defines the
+complete rational certificate boundary, routes the TS322 pair majorant through
+the TS320 constant `96`, combines it with the TS316 diagonal bound and TS315
+moment identity, invokes TS314 good-scale selection, and conditionally builds
+the exact TS313 normalized budget and TS181 adapter. It does not construct a
+concrete numerical certificate.
 TS312 routes the explicit formula into the high-level TS204 contract, and TS313
 provides the certified `2/x` normalization and rational TS95/TS181 packaging
 bridge.
 
 This closes the project ledger's Wall 2 explicit-formula front and records the
-Wall 3 spectral summability component. The concrete TS181 rational trace data,
-close-pair and finite-moment smallness, the rational trace budget at most one
-half, Gallagher, OTSA, and Goldbach remain open.
+Wall 3 spectral summability component. A concrete inhabitant of the TS323
+rational certificate, and hence an unconditional rational trace budget at most
+one half, Gallagher, OTSA, and Goldbach remain open.
 
-## Current Focus: TS15--TS322
+## Current Focus: TS15--TS323
 
 The current sprint chain lives under:
 
@@ -365,6 +370,7 @@ TS/Goldbach/Strong/
   TS320/
   TS321/
   TS322/
+  TS323/
 ```
 
 Status summary:
@@ -679,6 +685,7 @@ Status summary:
 | TS320 | Uniform discrete Kusmin-Landau bound | `repo_committed` | proves a purely discrete monotone unit-phase estimate with constant `12/gap`, instantiates it on the TS319 logarithmic phase with an absolute height-independent constant `24`, and closes the TS317 weighted pointwise kernel contract with constant `96`; close-pair envelope smallness and the rational half-budget remain open |
 | TS321 | Weighted shell envelope assembly | `repo_committed` | partitions the exact TS317 envelope into the gap-at-most-one coefficient mass and disjoint shells `(k,k+1]`, separates coefficient and gap-weighted shell masses, proves the correct `1/k` shell bound, and routes certified local majorants to the canonical global envelope contract; effective local smallness and the rational half-budget remain open |
 | TS322 | Finite core and effective coefficient tail | `repo_committed` | defines the exact coefficient `tsum` outside a finite zero core, derives its explicit TS292 logarithmic-rate bound and convergence to zero, rewrites the TS317 envelope as a monotone ordered-pair sum, bounds all new pairs by the two rectangles `tail*total` and `total*tail`, and proves the uniform real estimate `envelope T <= core H + 2*L*R(H)` for `H <= T`; rationalization and the TS181 half-budget are deferred to TS323 |
+| TS323 | Certified rational trace-budget packaging | `repo_committed` | defines the complete rational certificate for the TS322 core and tail, the TS316 diagonal mass, the TS314 truncation tail, and uniform TS313 residuals; routes the TS320 constant `96` through TS317 and TS315, selects a good dyadic scale through TS314, and conditionally constructs `NormalizedTraceBudgetData` and the exact TS181 adapter without claiming that a concrete half-budget certificate exists |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
