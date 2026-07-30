@@ -10,21 +10,22 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS314 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS315 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
 inversion, and the finite dyadic quadratic moment with good-scale selection
-and effective tail transfer. TS312 routes these results into the high-level
-TS204 effective explicit-formula contract, and TS313 provides the certified
+and effective tail transfer, and its exact expansion as a weighted pair
+correlation with diagonal/off-diagonal separation. TS312 routes the explicit
+formula into the high-level TS204 contract, and TS313 provides the certified
 `2/x` normalization and rational TS95/TS181 packaging bridge.
 
 This closes the project ledger's Wall 2 explicit-formula front and records the
 Wall 3 spectral summability component. The concrete TS181 rational trace data,
-the finite moment estimate, the trace budget at most one half, Gallagher,
-OTSA, and Goldbach remain open.
+the weighted close-pair estimate, the finite moment estimate, the trace budget
+at most one half, Gallagher, OTSA, and Goldbach remain open.
 
-## Current Focus: TS15--TS314
+## Current Focus: TS15--TS315
 
 The current sprint chain lives under:
 
@@ -330,6 +331,7 @@ TS/Goldbach/Strong/
   TS312/
   TS313/
   TS314/
+  TS315/
 ```
 
 Status summary:
@@ -636,6 +638,7 @@ Status summary:
 | TS312 | Post-Wall-2 contract discharge | `repo_committed` | instantiates all six TS204 effective explicit-formula fields from TS292 and TS311, records spectral summability and the effective tail, routes the componentwise residual bound, and registers the exact conditional TS181 rational trace adapter without claiming its existence or the half-budget |
 | TS313 | Normalized trace budget packaging | `repo_committed` | proves the canonical `2/x` factor sends the Perron main term to one, separates normalized spectral, exceptional, and fixed-left contributions, routes the closed residual envelopes into rational majorant certificates, allocates the TS95 slots without double counting, and constructs the conditional TS181 adapter from certified normalized budget data; the pointwise spectral bound, genuine Gallagher variance theorem, and half-budget remain open |
 | TS314 | Finite quadratic spectral moment and good-scale selection | `repo_committed` | defines the half-open dyadic window `[X, 2X)` with exact cardinality `X`, preserves the complex truncated trace, forms its finite quadratic mean, proves good-scale selection without `Real.sqrt`, and transfers the effective TS292 tail uniformly to the TS313 rational interface; the finite moment estimate, weighted close-pair correlation analysis, rational tail certificate, and half-budget remain open |
+| TS315 | Discrete spectral correlation identity | `repo_committed` | expands the finite dyadic quadratic moment as a weighted ordered-pair correlation over the concrete TS292 zero truncation, proves finite Fubini reordering, and separates the exact diagonal and weighted off-diagonal parts without introducing `1/zeta'(rho)` or RH |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
