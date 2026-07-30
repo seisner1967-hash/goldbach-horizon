@@ -10,7 +10,7 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS317 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS318 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
@@ -23,17 +23,21 @@ off-diagonal exponent, closes a coarse absolute pair bound, and reduces every
 sharper estimate to finite weighted Kusmin-Landau and close-pair contracts. It
 also gives a coarse unconditional finite-moment bound from the TS292 linear
 mass.
+TS318 separates each exact off-diagonal power into its decreasing real
+amplitude and pure logarithmic phase, proves a finite Abel transfer without
+variation loss, and reduces the TS317 pointwise kernel contract to one named
+nonresonant discrete phase-partial-sum estimate.
 TS312 routes the explicit formula into the high-level TS204 contract, and TS313
 provides the certified `2/x` normalization and rational TS95/TS181 packaging
 bridge.
 
 This closes the project ledger's Wall 2 explicit-formula front and records the
 Wall 3 spectral summability component. The concrete TS181 rational trace data,
-the sharp weighted Kusmin-Landau estimate, close-pair and finite-moment
+the pure nonresonant logarithmic-phase estimate, close-pair and finite-moment
 smallness, the rational trace budget at most one half, Gallagher, OTSA, and
 Goldbach remain open.
 
-## Current Focus: TS15--TS317
+## Current Focus: TS15--TS318
 
 The current sprint chain lives under:
 
@@ -342,6 +346,7 @@ TS/Goldbach/Strong/
   TS315/
   TS316/
   TS317/
+  TS318/
 ```
 
 Status summary:
@@ -651,6 +656,7 @@ Status summary:
 | TS315 | Discrete spectral correlation identity | `repo_committed` | expands the finite dyadic quadratic moment as a weighted ordered-pair correlation over the concrete TS292 zero truncation, proves finite Fubini reordering, and separates the exact diagonal and weighted off-diagonal parts without introducing `1/zeta'(rho)` or RH |
 | TS316 | Quantitative diagonal zero-correlation bound | `repo_committed` | identifies the exact scale-one spectral coefficient, derives global quadratic summability from the TS292 nonnegative linear mass, proves the quadratic mass is bounded by the square of the linear mass, and closes the TS315 diagonal contract uniformly in height and positive scale; rational smallness and the weighted off-diagonal correlation remain open |
 | TS317 | Weighted off-diagonal correlation reduction | `repo_committed` | proves the exact normalized pair exponent `rho + conj sigma - 2`, preserves the finite ordered zero-pair truncation, closes coarse absolute off-diagonal and complete finite-moment contracts from the TS292 linear mass, and reduces sharp control to a safe weighted Kusmin-Landau kernel statement plus a finite close-pair envelope bound; oscillatory smallness and the rational half-budget remain open |
+| TS318 | Weighted Kusmin-Landau kernel reduction | `repo_committed` | separates the exact TS317 power into a nonnegative decreasing amplitude and pure logarithmic phase, proves finite Abel transfer with exact telescoping variation, bounds every concrete ordinate gap by `2*T`, and routes a named nonresonant phase-partial-sum estimate to the TS317 pointwise kernel contract with constant `4*C`; the pure Kusmin-Landau estimate, close-pair smallness, and rational half-budget remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
