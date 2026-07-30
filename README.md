@@ -10,7 +10,7 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS320 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS321 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
@@ -34,7 +34,10 @@ uniform oscillatory Kusmin-Landau statement needed for smallness.
 TS320 proves that uniform statement by a purely discrete summation-by-parts
 argument with absolute constant `24`, then closes the TS317 pointwise weighted
 kernel contract with constant `96`. The weighted close-pair envelope remains
-the spectral smallness obstruction.
+the spectral smallness obstruction. TS321 partitions that exact finite
+envelope into the gap-at-most-one mass and disjoint unit shells, proves the
+correct `1/k` shell weighting, and packages local weighted certificates into
+the canonical TS317 global envelope contract.
 TS312 routes the explicit formula into the high-level TS204 contract, and TS313
 provides the certified `2/x` normalization and rational TS95/TS181 packaging
 bridge.
@@ -44,7 +47,7 @@ Wall 3 spectral summability component. The concrete TS181 rational trace data,
 close-pair and finite-moment smallness, the rational trace budget at most one
 half, Gallagher, OTSA, and Goldbach remain open.
 
-## Current Focus: TS15--TS320
+## Current Focus: TS15--TS321
 
 The current sprint chain lives under:
 
@@ -356,6 +359,7 @@ TS/Goldbach/Strong/
   TS318/
   TS319/
   TS320/
+  TS321/
 ```
 
 Status summary:
@@ -668,6 +672,7 @@ Status summary:
 | TS318 | Weighted Kusmin-Landau kernel reduction | `repo_committed` | separates the exact TS317 power into a nonnegative decreasing amplitude and pure logarithmic phase, proves finite Abel transfer with exact telescoping variation, bounds every concrete ordinate gap by `2*T`, and routes a named nonresonant phase-partial-sum estimate to the TS317 pointwise kernel contract with constant `4*C`; the pure Kusmin-Landau estimate, close-pair smallness, and rational half-budget remain open |
 | TS319 | Nonresonant discrete logarithmic phase bound | `repo_committed` | proves the unit-modulus and small-frequency bounds, conjugation symmetry, and monotone dyadic phase-increment geometry, closes the indexed TS318 and TS317 contracts with an unconditional height-dependent constant, and isolates the still-open uniform oscillatory Kusmin-Landau estimate without introducing an axiom; close-pair smallness and the rational half-budget remain open |
 | TS320 | Uniform discrete Kusmin-Landau bound | `repo_committed` | proves a purely discrete monotone unit-phase estimate with constant `12/gap`, instantiates it on the TS319 logarithmic phase with an absolute height-independent constant `24`, and closes the TS317 weighted pointwise kernel contract with constant `96`; close-pair envelope smallness and the rational half-budget remain open |
+| TS321 | Weighted shell envelope assembly | `repo_committed` | partitions the exact TS317 envelope into the gap-at-most-one coefficient mass and disjoint shells `(k,k+1]`, separates coefficient and gap-weighted shell masses, proves the correct `1/k` shell bound, and routes certified local majorants to the canonical global envelope contract; effective local smallness and the rational half-budget remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
