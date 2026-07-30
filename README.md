@@ -10,7 +10,7 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS325 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS326 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
@@ -60,6 +60,12 @@ comparison, and conditionally routes a successful check plus an independent
 analytic zero cover to a real upper bound for the TS322 finite core. It neither
 decides analytic coverage nor asserts that any checked value can satisfy the
 TS323 half-budget.
+TS326 separates exact global and local multiplicity-count certificates, proves
+that disjoint saturated local lower counts force exhaustive coverage of the
+finite zero truncation, and derives each TS324 coefficient-mass certificate
+from a positive rational ordinate lower bound and a total multiplicity bound
+per box. It constructs the TS324 semantic cover conditionally, without
+evaluating zeta or inhabiting the required global and local count certificates.
 TS312 routes the explicit formula into the high-level TS204 contract, and TS313
 provides the certified `2/x` normalization and rational TS95/TS181 packaging
 bridge.
@@ -69,7 +75,7 @@ Wall 3 spectral summability component. A concrete inhabitant of the TS323
 rational certificate, and hence an unconditional rational trace budget at most
 one half, Gallagher, OTSA, and Goldbach remain open.
 
-## Current Focus: TS15--TS325
+## Current Focus: TS15--TS326
 
 The current sprint chain lives under:
 
@@ -386,6 +392,7 @@ TS/Goldbach/Strong/
   TS323/
   TS324/
   TS325/
+  TS326/
 ```
 
 Status summary:
@@ -703,6 +710,7 @@ Status summary:
 | TS323 | Certified rational trace-budget packaging | `repo_committed` | defines the complete rational certificate for the TS322 core and tail, the TS316 diagonal mass, the TS314 truncation tail, and uniform TS313 residuals; routes the TS320 constant `96` through TS317 and TS315, selects a good dyadic scale through TS314, and conditionally constructs `NormalizedTraceBudgetData` and the exact TS181 adapter without claiming that a concrete half-budget certificate exists |
 | TS324 | Certified zero-cover semantics | `repo_committed` | defines proof-free rational zero-box payloads, separates rational well-formedness from analytic coverage and per-box coefficient-mass certification, rewrites the TS322 finite core exactly with its stepwise shell weight, proves interval distance gives the safe maximal compatible weight, and bounds the core by an executable ordered rational box-pair sum without requiring disjoint boxes; payload checking, analytic cover construction, empirical data, and TS323 certificate habitation remain open |
 | TS325 | Executable payload budget checker | `repo_committed` | checks rational interval validity, nonnegative box masses, and `computedCoreMajorant <= declared`, proves exact Boolean reflection to `PayloadWellFormed` plus the rational comparison, and conditionally bounds the TS322 finite core from an independent TS324 analytic cover; analytic cover construction, empirical data, numerical smallness, and TS323 certificate habitation remain open |
+| TS326 | Zero-count saturation cover | `repo_committed` | separates exact global multiplicity counts from local box-count lower certificates, proves that disjoint saturated lower counts force exhaustive finite-zero coverage and exact box multiplicities, derives coefficient-mass bounds from positive rational ordinate lower bounds and total box multiplicities, and conditionally constructs the TS324 semantic cover without a zeta evaluator or empirical certificate habitation |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
