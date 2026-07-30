@@ -10,7 +10,7 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS323 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS324 chain now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
@@ -47,6 +47,13 @@ the TS320 constant `96`, combines it with the TS316 diagonal bound and TS315
 moment identity, invokes TS314 good-scale selection, and conditionally builds
 the exact TS313 normalized budget and TS181 adapter. It does not construct a
 concrete numerical certificate.
+TS324 defines proof-free rational zero-box payloads and separates their
+decidable structural well-formedness from semantic coverage of the true finite
+zero truncation. It rewrites the TS322 finite core exactly as a stepwise
+weighted ordered-pair sum and proves that an executable rational double sum of
+certified box masses is a non-circular upper bound, without requiring box
+disjointness. Boolean payload checking, analytic cover construction, and
+concrete TS323 certificate habitation remain open.
 TS312 routes the explicit formula into the high-level TS204 contract, and TS313
 provides the certified `2/x` normalization and rational TS95/TS181 packaging
 bridge.
@@ -56,7 +63,7 @@ Wall 3 spectral summability component. A concrete inhabitant of the TS323
 rational certificate, and hence an unconditional rational trace budget at most
 one half, Gallagher, OTSA, and Goldbach remain open.
 
-## Current Focus: TS15--TS323
+## Current Focus: TS15--TS324
 
 The current sprint chain lives under:
 
@@ -371,6 +378,7 @@ TS/Goldbach/Strong/
   TS321/
   TS322/
   TS323/
+  TS324/
 ```
 
 Status summary:
@@ -686,6 +694,7 @@ Status summary:
 | TS321 | Weighted shell envelope assembly | `repo_committed` | partitions the exact TS317 envelope into the gap-at-most-one coefficient mass and disjoint shells `(k,k+1]`, separates coefficient and gap-weighted shell masses, proves the correct `1/k` shell bound, and routes certified local majorants to the canonical global envelope contract; effective local smallness and the rational half-budget remain open |
 | TS322 | Finite core and effective coefficient tail | `repo_committed` | defines the exact coefficient `tsum` outside a finite zero core, derives its explicit TS292 logarithmic-rate bound and convergence to zero, rewrites the TS317 envelope as a monotone ordered-pair sum, bounds all new pairs by the two rectangles `tail*total` and `total*tail`, and proves the uniform real estimate `envelope T <= core H + 2*L*R(H)` for `H <= T`; rationalization and the TS181 half-budget are deferred to TS323 |
 | TS323 | Certified rational trace-budget packaging | `repo_committed` | defines the complete rational certificate for the TS322 core and tail, the TS316 diagonal mass, the TS314 truncation tail, and uniform TS313 residuals; routes the TS320 constant `96` through TS317 and TS315, selects a good dyadic scale through TS314, and conditionally constructs `NormalizedTraceBudgetData` and the exact TS181 adapter without claiming that a concrete half-budget certificate exists |
+| TS324 | Certified zero-cover semantics | `repo_committed` | defines proof-free rational zero-box payloads, separates rational well-formedness from analytic coverage and per-box coefficient-mass certification, rewrites the TS322 finite core exactly with its stepwise shell weight, proves interval distance gives the safe maximal compatible weight, and bounds the core by an executable ordered rational box-pair sum without requiring disjoint boxes; payload checking, analytic cover construction, empirical data, and TS323 certificate habitation remain open |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
