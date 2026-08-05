@@ -66,6 +66,21 @@ finite zero truncation, and derives each TS324 coefficient-mass certificate
 from a positive rational ordinate lower bound and a total multiplicity bound
 per box. It constructs the TS324 semantic cover conditionally, without
 evaluating zeta or inhabiting the required global and local count certificates.
+TS327 transports positive zero data to a symmetric payload through conjugation.
+TS328 adds executable grouped allocation, strict imaginary-disjointness, and
+saturation-arithmetic checks. TS329 turns explicit positive count certificates
+into a symmetric finite-zero cover, while keeping every analytic counting
+premise visible. TS330 completes the conditional TS323 certificate from a
+template that deliberately omits the finite-core proof, then routes it to the
+TS181 adapter. TS331 derives the necessary executable rejection threshold
+`core <= 1/384` without claiming that a template is inhabited.
+TS332 retains the pre-uniformized TS290 zero-count envelope, proves the local
+factor-two log-linear bound above height two, and improves the infinite-zero
+residual constant to `20760/19`. TS333 combines abstract finite linear and
+quadratic caps with this shifted tail, including the exact quadratic
+core-plus-tail partition and the bound `Q_tail <= L_tail^2`. TS334 packages
+rational outer bounds for the public TS314 truncation-tail envelope and proves
+the exact reference bound at height `1132490`.
 TS312 routes the explicit formula into the high-level TS204 contract, and TS313
 provides the certified `2/x` normalization and rational TS95/TS181 packaging
 bridge.
@@ -75,7 +90,19 @@ Wall 3 spectral summability component. A concrete inhabitant of the TS323
 rational certificate, and hence an unconditional rational trace budget at most
 one half, Gallagher, OTSA, and Goldbach remain open.
 
-## Current Focus: TS15--TS326
+### Current probe frontier
+
+The permanent Lean chain currently ends at TS334 (`b06e8cf`). Isolated Q335
+probes have verified the abstract exceptional-residue envelope, the cap at
+`-1`, and the cap at `0`, but no `TS335` source module has been committed.
+Accordingly TS335 is recorded as `probe_pass_packaging_pending`, not as a
+repository theorem. No empirical zero table or Q512 payload is part of this
+status.
+
+Published reference commits for the latest chain are TS331 `a35298f`, TS332
+`76564af`, TS333 `ac34f73`, and TS334 `b06e8cf`.
+
+## Current Focus: TS15--TS334, with TS335 packaging pending
 
 The current sprint chain lives under:
 
@@ -393,6 +420,14 @@ TS/Goldbach/Strong/
   TS324/
   TS325/
   TS326/
+  TS327/
+  TS328/
+  TS329/
+  TS330/
+  TS331/
+  TS332/
+  TS333/
+  TS334/
 ```
 
 Status summary:
@@ -711,6 +746,15 @@ Status summary:
 | TS324 | Certified zero-cover semantics | `repo_committed` | defines proof-free rational zero-box payloads, separates rational well-formedness from analytic coverage and per-box coefficient-mass certification, rewrites the TS322 finite core exactly with its stepwise shell weight, proves interval distance gives the safe maximal compatible weight, and bounds the core by an executable ordered rational box-pair sum without requiring disjoint boxes; payload checking, analytic cover construction, empirical data, and TS323 certificate habitation remain open |
 | TS325 | Executable payload budget checker | `repo_committed` | checks rational interval validity, nonnegative box masses, and `computedCoreMajorant <= declared`, proves exact Boolean reflection to `PayloadWellFormed` plus the rational comparison, and conditionally bounds the TS322 finite core from an independent TS324 analytic cover; analytic cover construction, empirical data, numerical smallness, and TS323 certificate habitation remain open |
 | TS326 | Zero-count saturation cover | `repo_committed` | separates exact global multiplicity counts from local box-count lower certificates, proves that disjoint saturated lower counts force exhaustive finite-zero coverage and exact box multiplicities, derives coefficient-mass bounds from positive rational ordinate lower bounds and total box multiplicities, and conditionally constructs the TS324 semantic cover without a zeta evaluator or empirical certificate habitation |
+| TS327 | Positive symmetry adapter | `repo_committed` | transports positive zero counts and box masses to a conjugation-symmetric payload, preserving the no-zero-ordinate premise explicitly and introducing no empirical zero data |
+| TS328 | Executable grouped zero payload | `repo_committed` | reflects grouped coefficient allocation, strict imaginary-interval disjointness, and saturation arithmetic into Boolean checks; routes a successful grouped budget check to TS325 while retaining analytic coverage as an independent premise |
+| TS329 | Positive count saturation | `repo_committed` | derives symmetric global and local saturation from explicit positive count certificates and constructs the TS324 finite-zero cover conditionally; no positive count certificate is inhabited by declaration |
+| TS330 | Conditional trace-budget assembly | `repo_committed` | defines a non-circular TS323 template without `core_bound`, obtains the cover through TS329 and the finite-core inequality through TS328, then conditionally constructs the TS323 certificate and TS181 adapter |
+| TS331 | Trace-budget feasibility filter | `repo_committed` | proves every inhabitable template must have declared finite core at most `1/384` and exposes the corresponding executable rejection check; passing it does not construct a template or a zero certificate |
+| TS332 | Shifted infinite-zero tail provider | `repo_committed` | retains the shifted TS290 Jensen envelope, proves a uniform factor-two log-linear bound above height two, replays the TS292 Abel transport, and obtains residual constant `20760/19` plus the reference-height tail bound `31140/2151731` |
+| TS333 | Abstract shifted spectral-mass assembly | `repo_committed` | proves the exact finite-plus-tail quadratic partition, bounds the quadratic tail by the square of the linear tail, and derives conditional global linear, global quadratic, effective-tail, and diagonal majorants from abstract finite caps |
+| TS334 | Rational truncation-tail provider | `repo_committed` | packages rational outer bounds for the public TS314 normalized truncation-tail envelope and proves the exact historical reference bound `124560/2151731` at height `1132490`, without zero data or budget assembly |
+| TS335 | Exceptional residue provider | `probe_pass_packaging_pending` | isolated no-placeholder probes validate the abstract `C0 + C1/x` envelope and rational caps at `-1` and `0`; no permanent TS335 module or commit exists yet |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
