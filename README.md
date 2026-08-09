@@ -10,7 +10,7 @@ analytic work as named local infrastructure obligations.
 
 ### Current verified milestone
 
-The TS292--TS326 chain now proves absolute convergence of the nontrivial-zero
+The TS292--TS339 chain, together with TS341, now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
 identities, the four quantitative Perron boundary controls, the complete
 singularity census, the rectangle residue theorem, scalar Mellin-Perron
@@ -81,6 +81,14 @@ quadratic caps with this shifted tail, including the exact quadratic
 core-plus-tail partition and the bound `Q_tail <= L_tail^2`. TS334 packages
 rational outer bounds for the public TS314 truncation-tail envelope and proves
 the exact reference bound at height `1132490`.
+TS335 proves the explicit exceptional-residue envelope `3 + 9/x`. TS336
+closes the fixed-left boundary by `1440/x`. TS337 assembles the exact
+reference trace-budget template while retaining the finite linear and
+quadratic spectral caps as explicit premises. TS338 instantiates its abstract
+zero-family ledger with the concrete Riemann zeta ledger from TS264, and TS339
+turns a checked rational payload plus an independent certified analytic cover
+into those two finite spectral caps. TS341 proves the signed eta identity and
+closes `NoZeroOrdinateInTruncation H` for every height `H`.
 TS312 routes the explicit formula into the high-level TS204 contract, and TS313
 provides the certified `2/x` normalization and rational TS95/TS181 packaging
 bridge.
@@ -90,19 +98,25 @@ Wall 3 spectral summability component. A concrete inhabitant of the TS323
 rational certificate, and hence an unconditional rational trace budget at most
 one half, Gallagher, OTSA, and Goldbach remain open.
 
-### Current probe frontier
+### Current analytic frontier
 
-The permanent Lean chain currently ends at TS334 (`b06e8cf`). Isolated Q335
-probes have verified the abstract exceptional-residue envelope, the cap at
-`-1`, and the cap at `0`, but no `TS335` source module has been committed.
-Accordingly TS335 is recorded as `probe_pass_packaging_pending`, not as a
-repository theorem. No empirical zero table or Q512 payload is part of this
-status.
+The permanent Lean chain currently reaches TS341 (`0e289dc`). TS335 through
+TS339 and TS341 are repository theorems; there is deliberately no permanent
+TS340 completion module. TS341 closes the no-zero-ordinate premise without
+empirical data. The only missing analytic certificates for an unconditional
+TS340 completion are the exact positive global zero count `2001050` at height
+`1132490` and certified local lower counts summing to the same total.
+
+No empirical zero table or Q512 payload is committed as proof. Native or
+rational checks alone do not construct these analytic counting certificates,
+and no call to `TS330.complete` is claimed unconditionally.
 
 Published reference commits for the latest chain are TS331 `a35298f`, TS332
-`76564af`, TS333 `ac34f73`, and TS334 `b06e8cf`.
+`76564af`, TS333 `ac34f73`, TS334 `b06e8cf`, TS335 `46a713d`, TS336
+`2fa9bab`, TS337 `117144b`, TS338 `ea99d13`, TS339 `6dc620a`, and TS341
+`0e289dc`.
 
-## Current Focus: TS15--TS334, with TS335 packaging pending
+## Current Focus: TS15--TS341, with TS340 counting certificates open
 
 The current sprint chain lives under:
 
@@ -428,6 +442,12 @@ TS/Goldbach/Strong/
   TS332/
   TS333/
   TS334/
+  TS335/
+  TS336/
+  TS337/
+  TS338/
+  TS339/
+  TS341/
 ```
 
 Status summary:
@@ -754,7 +774,13 @@ Status summary:
 | TS332 | Shifted infinite-zero tail provider | `repo_committed` | retains the shifted TS290 Jensen envelope, proves a uniform factor-two log-linear bound above height two, replays the TS292 Abel transport, and obtains residual constant `20760/19` plus the reference-height tail bound `31140/2151731` |
 | TS333 | Abstract shifted spectral-mass assembly | `repo_committed` | proves the exact finite-plus-tail quadratic partition, bounds the quadratic tail by the square of the linear tail, and derives conditional global linear, global quadratic, effective-tail, and diagonal majorants from abstract finite caps |
 | TS334 | Rational truncation-tail provider | `repo_committed` | packages rational outer bounds for the public TS314 normalized truncation-tail envelope and proves the exact historical reference bound `124560/2151731` at height `1132490`, without zero data or budget assembly |
-| TS335 | Exceptional residue provider | `probe_pass_packaging_pending` | isolated no-placeholder probes validate the abstract `C0 + C1/x` envelope and rational caps at `-1` and `0`; no permanent TS335 module or commit exists yet |
+| TS335 | Rational exceptional-residue provider | `repo_committed` | proves rational caps `3` and `9` for the exceptional logarithmic derivatives, packages `concreteExceptionalResidueBound x <= 3 + 9/x`, and transports it uniformly over dyadic windows without empirical zero data |
+| TS336 | Rational fixed-left boundary provider | `repo_committed` | proves the reflected von Mangoldt mass is at most `6`, the logarithmic kernel mass is at most `40`, and packages the fixed-left contribution by `1440/x` uniformly on dyadic windows |
+| TS337 | Conditional reference trace-budget assembly | `repo_committed` | instantiates the rational reference parameters and proves the exact positive spectral and total-budget margins, while retaining the concrete zero ledger and finite linear and quadratic caps as explicit premises |
+| TS338 | Concrete zeta-ledger reference bridge | `repo_committed` | closes the abstract zero-family parameter of TS337 with the concrete Riemann zeta ledger from TS264; the finite spectral caps remain explicit premises |
+| TS339 | Checked reference finite spectral caps | `repo_committed` | defines executable rational linear and quadratic majorants and proves that a successful checker plus an independent `CertifiedTruncatedZeroCover` yields the two finite spectral caps required by TS338 |
+| TS340 | Empirical trace-budget completion | `closed_certificates_missing` | no permanent completion module is claimed; exact positive global count `2001050` and certified local lower counts summing to it remain required |
+| TS341 | Eta no-zero certificate | `repo_committed` | proves `expZeta(1/2,x) = -realEtaLimit x` for positive real `x` and closes `NoZeroOrdinateInTruncation H` for every height, without empirical data or nonstandard axioms |
 
 TS151 records a necessary correction to the TS150 assembly route.  The TS140
 structure asks a positive fixed level to satisfy `level < n` for every
