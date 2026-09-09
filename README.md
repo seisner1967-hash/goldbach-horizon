@@ -8,7 +8,40 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
-### Current verified milestone
+## Q341-Q396: certified analytic continuation and historical zero brackets
+
+**Updated September 9, 2026. Latest documented closeout: Q395.**
+The continuation is now documented in a dedicated [Q341-Q396 section](Q341-Q396/README.md)
+([résumé en français](Q341-Q396/README.fr.md)).
+
+| Milestones | Documented advance |
+| --- | --- |
+| TS341 / Q341 | The zero-ordinate premise is discharged by the real eta argument. |
+| Q347-Q365 | Rational certificate kernels, a genuine zero in `(14,15)`, an entire Riemann-Siegel auxiliary function, and exact coefficient recurrences. |
+| Q366-Q389 | Independent contour remainder, source Riemann-Siegel representation, and auxiliary-zeta transport on the entire critical line. |
+| Q390-Q391 | The canonical endpoint is bound to the true formula; its normalized source remainder is proved at most `2.5e-30`, without a residual premise. |
+| Q392-Q393 | All eight actual finite atoms, canonical endpoint membership and positivity, and a concrete `AnalyticLeaf` are certified. |
+| Q394-Q395 | Six exact historical brackets, **410-415** (Lean indices **409-414**), contain distinct genuine zeta zeros. Multiplicity is at least **6**, or at least **7** with the separate `(14,15)` interval. |
+| Q396 | Continuation mandate: a certified reciprocal kernel and brackets 405-409. **No Q396 results report has been supplied.** |
+
+**Bridge A remains OPEN.** The other **643** historical rows, the complete sign family,
+the Turing bounds, exact counting, and saturation remain open. The separate interval
+`(14,15)` does not count as another exact ledger row. `TS340_UNCONDITIONAL` remains
+`OPEN_FROZEN`; no unconditional proof of Goldbach or the Riemann hypothesis is claimed.
+
+- [Full chronology of all 56 milestones](Q341-Q396/CHRONOLOGY.md)
+- [Current Bridge A obligations](Q341-Q396/BRIDGE_A.md) and [machine-readable status](Q341-Q396/STATUS.json)
+- [English synthesis, 28 pages](Q341-Q396/pdf/Q341-Q396-Horizon-Goldbach-Continuation-Synthesis-English.pdf)
+- [Synthèse française, 28 pages](Q341-Q396/pdf/Q341-Q396-Horizon-Goldbach-Synthese-Continuation.pdf)
+- [Campaign reports and verification scope](Q341-Q396/EVIDENCE.md)
+
+This publication adds documentation and the two synthesis PDFs. The Q-campaign proof
+sources and replay artifacts remain in the separately verified research packages;
+this documentation update does not claim to install or rebuild them as main-branch
+Lake targets. Their reported results and remaining obligations are recorded separately
+from the permanent TS source tree below.
+
+### Permanent TS chain: verified milestones through TS341
 
 The TS292--TS339 chain, together with TS341, now proves absolute convergence of the nontrivial-zero
 series, the finite-height and infinite-height triangle-spline explicit
@@ -98,7 +131,7 @@ Wall 3 spectral summability component. A concrete inhabitant of the TS323
 rational certificate, and hence an unconditional rational trace budget at most
 one half, Gallagher, OTSA, and Goldbach remain open.
 
-### Current analytic frontier
+### Permanent TS analytic frontier and TS340 reference contract
 
 The permanent Lean chain currently reaches TS341 (`0e289dc`). TS335 through
 TS339 and TS341 are repository theorems; there is deliberately no permanent
@@ -116,7 +149,7 @@ Published reference commits for the latest chain are TS331 `a35298f`, TS332
 `2fa9bab`, TS337 `117144b`, TS338 `ea99d13`, TS339 `6dc620a`, and TS341
 `0e289dc`.
 
-## Current Focus: TS15--TS341, with TS340 counting certificates open
+## Permanent source tree: TS15--TS341, with TS340 counting certificates open
 
 The current sprint chain lives under:
 

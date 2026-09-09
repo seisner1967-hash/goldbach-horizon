@@ -1,0 +1,112 @@
+{
+  "snapshot_date": "2026-09-09",
+  "scope": "Documentation publication of reported research-package results; no Q-probe source integration or new Lean build performed by this publication.",
+  "historical_main_commit": "433e29eff1d9da2bc5937bb82bf5df3a2d59c08f",
+  "milestone_range": {
+    "first": 341,
+    "last": 396,
+    "entries": 56
+  },
+  "latest_documented_closeout": "Q395",
+  "q396": {
+    "status": "MANDATE_ONLY_RESULTS_NOT_SUPPLIED",
+    "target_historical_rows": [
+      405,
+      406,
+      407,
+      408,
+      409
+    ],
+    "results_counted": false
+  },
+  "critical_line_auxiliary_zeta_transport": "PROVEN_Q389",
+  "requested_remainder_transport": "PROVEN_UNCONDITIONALLY_Q391",
+  "canonical_endpoint": {
+    "rational": "751937898017/1073741824",
+    "K": 63,
+    "ell": 10,
+    "actual_atoms_certified": 8,
+    "membership": "PROVEN_Q393",
+    "positive_sign": "PROVEN_Q393",
+    "analytic_leaf": "CONSTRUCTED_Q393",
+    "historical_bracket": 415,
+    "side": "right"
+  },
+  "remainder_bounds": {
+    "canonical_radius": "1/400000000000000000000000000000",
+    "uniform_radius": "1/200000000000000000000000000000",
+    "uniform_domain": [
+      "685",
+      "7003/10"
+    ],
+    "covered_historical_spans": [
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      415
+    ]
+  },
+  "historical_family": {
+    "total_rows": 649,
+    "certified_rows": [
+      410,
+      411,
+      412,
+      413,
+      414,
+      415
+    ],
+    "certified_lean_indices": [
+      409,
+      410,
+      411,
+      412,
+      413,
+      414
+    ],
+    "certified_cardinality": 6,
+    "remaining_uncertified_rows": 643,
+    "multiplicity_lower_bound": 6,
+    "separate_interval": [
+      "14",
+      "15"
+    ],
+    "lower_bound_with_separate_interval": 7,
+    "separate_interval_adds_ledger_row": false
+  },
+  "bridge_a": "OPEN",
+  "ts340_unconditional": "OPEN_FROZEN",
+  "open_obligations": [
+    "other_endpoint_signs",
+    "full_H1000_sign_family",
+    "initial_Turing_bound",
+    "upper_Turing_bound",
+    "exact_global_count",
+    "TS329_saturation",
+    "first_serialized_bracket_leaves",
+    "serialized_refinement",
+    "family_level_carrier_membership"
+  ],
+  "generic_2011_Arias_remainder_theorem": "NOT_OBTAINED_NOT_CLAIMED",
+  "reported_terminal_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "historical_exception": "Q343 structural replay used Lean.ofReduceBool; not a semantic endpoint proof.",
+  "latest_archive": {
+    "name": "RS23H_Q395_Certified_Batch_To_Bridge_A_2026-09-09.zip",
+    "sha256": "181f59421bd1e4867a83527aae4f8e7292b78ee52c2077ae8bf37ec82826531d",
+    "manifest_sha256": "ddf656fc8d30502739cdfcf89e34e3ec5fee97f3c45426383cd2b7f8b33f2f89",
+    "manifest_entries_verified": 24532,
+    "zip_entries_verified": 24533,
+    "archive_included_in_this_documentation_directory": false
+  }
+}
