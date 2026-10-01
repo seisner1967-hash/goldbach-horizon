@@ -1,0 +1,2902 @@
+% !TEX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,tabularx,longtable}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\tabularxcolumn}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{pdftitle={Finite Identities and Explicit Error Budgets in a Framework for Binary Goldbach},pdfauthor={Durand Serge},pdfsubject={Research synthesis, finite Lean verification and explicit analytic budgets},pdfkeywords={binary Goldbach, Moebius function, Vaughan identity, Lean 4, sieve methods}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{2pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.16}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{analyticinput}[theorem]{Reported analytic input}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\Sing}{\mathfrak S}
+\newcommand{\muMob}{\mu}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\ph}{\varphi}
+\DeclareMathOperator{\lcm}{lcm}
+\title{Finite Identities and Explicit Error Budgets\\
+in a Framework for Binary Goldbach}
+\author{Durand Serge\\\small Independent researcher\\\small\texttt{seisner1967@gmail.com}}
+\date{1 October 2026\\[4pt]\small Research synthesis and reproducibility report, version 2}
+\begin{document}
+\maketitle
+\begin{abstract}
+We consolidate a research corpus on binary Goldbach into a support-preserving framework with a documented verification boundary. Exact Fej\'er grid covariance and Ramanujan-proxy identities yield short-average variance bounds, including an even-support correction and a logarithmic refinement. Arithmetic reductions retain actual Vaughan coefficients, M\"obius signs, coprimality masks, divisor caps and moving endpoints. The canonical Lean4 inventory contains 658 individually axiom-audited declarations; the last cycle contributes 19 finite conclusions. Written reductions to a reported primitive-character remainder input give a conditional universal reference gap $N-F_N\ge N/(256\log N\log\log N)$ and a conditional effective exterior assembly for $\alpha=\lceil N^{1/4}\rceil$. The input's full direct remainder substitution remains outside the self-contained verification in this report. A separate classical sieve argument at $\alpha=\lceil N^{1/8}\rceil$ gives a negative composite sector and a one-sided bound for its rough complement, with an unevaluated onset. These profiles are not combined. We supply statements, parameter and dependency tables, explicit estimates, a formal appendix and reproduction material. The global signed remainder, a complete positive prime-pair margin and finite coverage below the analytic thresholds remain open. No proof of binary Goldbach or claim to overcome the parity barrier is made.
+\end{abstract}
+\noindent\textbf{Keywords:} binary Goldbach; M\"obius correlation; Vaughan coefficients; explicit error budgets; sieve methods; Lean4.
+\par\noindent\textbf{Mathematics Subject Classification:} 11P32.
+\par\noindent{\small Copyright 2026 Durand Serge. Manuscript licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}. Licences of software and retained evidence are specified separately.}
+\clearpage
+\tableofcontents
+\clearpage
+
+
+\section{Main results, scope and conventions}\label{sec:scope}
+Binary Goldbach asks whether every even integer $N\ge4$ is a sum of two primes. This report closes a research phase of Project Horizon by separating exact finite identities, written analytic arguments, reproducible computations and remaining hypotheses. It concentrates on binary Goldbach. Neither the global signed estimate needed here nor an unconditional positive prime-pair margin has been proved.
+
+The mathematical objects are the actual M\"obius function $\mu$, von Mangoldt function $\Lambda$ and Euler totient $\varphi$. We write $u=\log N$, $L=1+u$ and $\ell=\log u$ when $u>1$. All logarithms are natural. Indicator functions are denoted by $\ind$. Strict inequalities in integer selectors are literal; replacing an integer floor by a real endpoint can change a coefficient. The Goldbach singular factor is
+\begin{equation}\label{eq:singular-definition}
+ \Sing(N)=2C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2},\qquad
+ C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right)
+\end{equation}
+for even $N$. The same expression defines $\Sing(K)$ for an even positive mask $K$. A reference term involving $\Sing(N)$ is distinct from an actual count of prime pairs.
+
+\subsection{Four contributions and their scope}
+The report makes four concrete contributions within a partial research framework.
+\begin{enumerate}
+\item It gives explicit finite Fej\'er covariance and Ramanujan-proxy identities, with the even-support main term corrected and the proxy energy refinement stated with its exact constants. These use classical harmonic tools and do not estimate the true prime-pair remainder.
+\item It assembles support-preserving Vaughan, character and divisor identities with a terminal error ledger. The finite Lean statements retain actual coefficients and literal boundaries; they do not supply the missing analytic cancellation.
+\item It exposes the dependency chain for explicit exterior allowances in the quarter profile, conditionally on the stated primitive-character input, and proves a separate eventual signed sector estimate in the eighth profile using classical sieve arguments. The two profiles remain distinct.
+\item It supplies a versioned reproduction record connecting formal statements, retained compiler evidence, rational checks and written deductions. Specific counterexamples delimit particular naive envelopes; they do not establish the failure of every possible analytic method.
+\end{enumerate}
+These contributions concern precise formulation, explicit calculations and finite formalization. The declaration count is an inventory measure, and priority or novelty beyond these descriptions is not claimed.
+
+\subsection{What this report establishes and what it does not}
+The earlier geometric stage gives exact Fej\'er grid defects and gcd covariance, actual Ramanujan-proxy variance bounds and a correction of the proxy's even-support main term. The later arithmetic stage retains the actual Vaughan coefficients, coprimality masks, character corrections and moving support. Its finite conclusions have been formalized in Lean4; its analytic distribution, zero-free-region and sieve inputs have not.
+
+The most recent written arguments reduce a universal reference gap and a scoped effective exterior assembly to explicit reported analytic inputs in one parameter profile. A signed negative composite sector has a separate classical proof in a different profile. The direct primitive-character remainder substitution is documented in the retained sources, but has not been completely reproduced in this manuscript; the consequences depending on that input are stated conditionally. The finite ingredients include literal divisor completion, the exact small-divisor credit and cutoff invariance. They do not by themselves prove the mass of a prime sector or the smallness of the complementary signed sum.
+
+\begin{table}[htbp]\centering\small
+\begin{tabularx}{\textwidth}{@{}P{.24\textwidth}XP{.23\textwidth}@{}}\toprule
+Result family & Retained conclusion & Evidence and boundary\\\midrule
+Fej\'er and Ramanujan geometry & Exact covariance; short-centre proxy bounds; corrected even main & Written proofs and finite formal ingredients; proxy only\\
+Finite arithmetic infrastructure & 658 individually audited declarations across 71 canonical sources; 19 latest public conclusions & Retained compiler/axiom evidence; imports and copies not recounted\\
+Universal reference & Conditional bound $N-F_N\ge N/(256u\ell)$ for $u\ge8\cdot10^6$ & Reduction to the explicitly reported primitive-character input\\
+Quarter-profile exterior & Conditional assembly $\varepsilon_{\rm tr}<(8\cdot10^{-6}+2\cdot10^{-12})N/(u\ell)$ for $u\ge10^{24}$ & Reported primitive input and completion bridges; no Lean analytic certificate\\
+Eighth-profile sector & $F_C+F_{\rm rough}<-N/3000$ eventually & Classical sieve deduction; onset unevaluated\\
+Global signed remainder & A sufficient target is $D_N\le N/(256u\ell)$ in the quarter profile & Open; covered bridge is a separate premise\\\bottomrule
+\end{tabularx}
+\caption{Evidence classes. ``Audited'' refers to the retained source, compilation and axiom records; it does not mean that the analytic estimates have been checked by Lean.}\label{tab:results}
+\end{table}
+
+\begin{table}[htbp]\centering\small
+\begin{tabularx}{\textwidth}{@{}P{.24\textwidth}XP{.24\textwidth}@{}}\toprule
+Profile & Parameters & Admissibility and status\\\midrule
+Earlier polylogarithmic Vaughan & Fixed $U,V\le L^{B_0}$; $Q\le C_0N^{1-\theta}$ & Written Type-I removal; constants not all numerically evaluated\\
+Effective terminal quarter & $U=V=1$, $\alpha=\lceil N^{1/4}\rceil$, $Q=\lfloor(N-1)/\alpha\rfloor$ & Common onset $u\ge10^{24}$ for the final exterior assembly\\
+Qualitative signed eighth & $U=V=1$, $\alpha=\lceil N^{1/8}\rceil$, $Q=\lfloor(N-1)/\alpha\rfloor$ & Classical eventual sector estimates; no evaluated common exterior budget\\
+Auxiliary square/conductor cuts & $B=\lceil L^{20}\rceil$, $R_c=\lfloor L^{16}\rfloor$ & Used with their stated profile; not independent free parameters\\\bottomrule
+\end{tabularx}
+\caption{Profiles that must remain separate. The onset $u\ge10^{24}$ is not assigned to the eighth profile.}\label{tab:profiles}
+\end{table}
+
+\subsection{Relation to existing work}
+The circle-method reference in \eqref{eq:singular-definition} is classical \cite{HL}. The prime/M\"obius transfer belongs to the same general problem as the twisted distribution hypotheses studied by Huang--Li \cite{HLi}. The proxy estimates use ordinary Ramanujan algebra and the large sieve \cite{MV,GY}; the sector counts use classical sieve distribution, rather than a new theorem overcoming the parity barrier. Recent work on the Goldbach exceptional set is surveyed by Bhowmik--Grimmelt \cite{BG}. This report claims no improved exceptional-set exponent and no new formula generating primes.
+
+The defensible contribution is a source-bound formal and analytic research synthesis: explicit support-preserving identities, particular constants and error components, and a reproducible record of the residual arithmetic obstruction. Priority for a standalone analytic result or a broader publication claim has not been established. Finite computational verification, including the published range up to $4\cdot10^{18}$ \cite{OeS}, cannot bridge the interval below $\exp(10^{24})$ if a future argument only works above that onset.
+
+\subsection{Reading the proof status}
+An exact finite theorem may be fully kernel checked while the subsequent analytic consequence remains a written argument using external theorems. Rational scripts check algebraic comparisons, exponents and finite configurations; they do not verify a region free of zeros or an asymptotic sieve estimate. Repeated archive hashes certify provenance. Reviews by separate AI agents are internal checks, and are not external peer review. The electronic registry records the distinction for each formal declaration and excludes the weak historical interfaces described in Section~\ref{sec:historical-audit}.
+
+\section{Ordered pairs and the CS21 reference audit}\label{sec:cs21}
+Let
+\[G(N)=\#\{p\le N/2:p,N-p\text{ prime}\},\quad
+R_2(N)=\#\{(p,q):p+q=N,\ p,q\text{ prime}\}.\]
+Then $R_2(N)=2G(N)-\ind_{N/2\text{ prime}}$. The baseline
+\[B_0(N)=C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2}\frac{N}{\log^2N}\]
+is an unordered baseline. The original CS21 residual used $G(N)-2B_0(N)$ \cite{CS21}; the factor2 belongs to the ordered count. A more accurate classical unordered reference is
+\[ B_{\rm int}(N)=C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2}
+ \int_2^{N-2}\frac{dt}{\log t\log(N-t)}.\]
+Correcting a baseline changes the residual being predicted, not the prime data.
+
+\begin{table}[htbp]\centering\small
+\begin{tabular}{@{}llrr@{}}\toprule
+Residual reference & Predictor & Test correlation & Test $R^2$\\\midrule
+$2B_0$ (original) & 23 torus modes & $0.178892$ & $0.031662$\\
+$2B_0$ (original) & Five $k=0$ modes & $0.178941$ & $0.031773$\\
+$B_0$ (normalized) & 23 torus modes & $0.154728$ & $0.021582$\\
+$B_{\rm int}$ & 23 torus modes & $-0.013187$ & $-0.030667$\\\bottomrule
+\end{tabular}
+\caption{Retained CS21 reanalysis on the second half of $[120000,240000]$. Parameters were fit on the first half. These are floating-point diagnostics, not formal asymptotic theorems.}\label{tab:cs21}
+\end{table}
+The reproduction uses $M=997$, weights $p^{-1/2}$, 23 nonzero modes in $\{0,1,2,3\}\times\{0,1,2,3,4,5\}$, training-only standardization and ridge parameter1 with an unpenalized intercept. The five $k=0$ features do not depend on $M$ and account for the original test signal. On this window the signal disappears after the integral reference. No new permutation-significance test or universal absence of subleading arithmetic structure is claimed. Further windows and perturbations are preserved in the companion CSV.
+
+Two mathematical checks explain why this distinction matters. First, fixed-modulus features of the form
+\[\sum_{p\le N}p^{-1/2}\cos\left(2\pi\left(\frac{kp}{M}+\frac{j\log p}{\log X}\right)\right)\]
+have leading term $(c_M(k)/\varphi(M))\,2\sqrt N/\log N$, uniformly for $N/X$ in a fixed compact subset of $(0,\infty)$, for fixed $M,k,j$. The PNT in fixed residue classes and Abel summation prove this: on $[\epsilon X,bX]$ the logarithmic phase tends uniformly to1, and the smaller primes cost $O(\sqrt{\epsilon X}/\log X)$. Taking $X\to\infty$ then $\epsilon\to0$ gives the claim. Standardization can amplify lower terms, so this is not a theorem about the fitted ridge model.
+
+Second, the classical PNT and summation by parts yield, for each fixed $A>0$,
+\begin{equation}\label{eq:cumulative-baseline}
+ \sum_{\substack{4\le N\le X\\N\ {\rm even}}}(G(N)-B_{\rm int}(N))
+ =O_A(X^2\log^{-A}X).
+\end{equation}
+For completeness, expand $f(m)=\prod_{p\mid m,p>2}(1+1/(p-2))$ as a divisor sum with coefficient $a(d)=\mu(d)^2\ind_{2\nmid d}\prod_{p\mid d}(p-2)^{-1}$. Its mean is $Y/C_2+O_\epsilon(Y^\epsilon)$ because $\sum a(d)/d=1/C_2$ and $\sum a(d)d^{-\epsilon}<\infty$. Twice replacing the prime measure by $dt/\log t$ gives the triangular double integral with an arbitrary logarithmic saving. Removing the prime2 pairs and the diagonal costs $O(\pi(X))$. Abel summation of the mean of $f$ matches the integral reference, proving \eqref{eq:cumulative-baseline}. This is signed cumulative agreement; it gives neither a bound at each even $N$ nor positivity at that $N$.
+
+
+\section{Exact grid covariance and Ramanujan proxies}\label{sec:proxy}
+These results concern a geometric or Ramanujan proxy. They preserve useful arithmetic coefficients, but do not replace the convolution of two actual prime sequences.
+
+\subsection{The exact Fej\'er defect}
+For integers $H,d\ge1$ and $s\in\mathbb Z$, put
+\[ B_{H,s}(n)=\left(1-\frac{|n-s|}{H}\right)_+,
+ \quad\Delta_{H,d}(s)=\sum_{d\mid n}B_{H,s}(n)-\frac Hd.\]
+The sum runs over all integers; it is finite because of the triangular support. Write $r=H\bmod d$, $v=s\bmod d$ with $0\le r,v<d$.
+\begin{theorem}[Exact defect and covariance]\label{thm:fejer}
+One has
+\begin{equation}\label{eq:fejer-defect}
+ \Delta_{H,d}(s)=\frac{(r-v)_++(r+v-d)_+-r^2/d}{H},
+ \qquad |\Delta_{H,d}(s)|\le\frac d{4H}.
+\end{equation}
+In particular it vanishes if $d\mid H$. Its mean over $s\bmod d$ is zero. If $g=\gcd(d,e)$ and $a_g=\min(H\bmod g,g-H\bmod g)$, then the covariance over a common period is
+\begin{equation}\label{eq:fejer-cov}
+ \mathbb E_s[\Delta_{H,d}(s)\Delta_{H,e}(s)]
+ =\frac{g(2a_g^3+a_g)/3-a_g^4}{deH^2}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The triangle is the autocorrelation of $\ind_{\{0,\ldots,H-1\}}$ divided by $H$. The residue counts of this interval are $t+\ind_{\{0,\ldots,r-1\}}$, where $H=td+r$. Its cyclic intersection at shift $v$ is $(r-v)_++(r+v-d)_+$. Subtracting $H/d$ gives \eqref{eq:fejer-defect}. The largest positive deviation is $r-r^2/d\le d/4$ before division by $H$; complementing the interval gives the same bound on the negative deviation.
+
+For $r\le d/2$, the cyclic intersection has value $r$ once, each value $1,\ldots,r-1$ twice, and zero elsewhere. Its sums are $r^2$ and $(2r^3+r)/3$. Complementing handles $r>d/2$, so
+\[\operatorname{Var}(\Delta_{H,d})
+ =\frac1{H^2}\left(\frac{2a_d^3+a_d}{3d}-\frac{a_d^4}{d^2}\right).\]
+Let $e(t)=\exp(2\pi it)$ and $\widehat B_H(t)=H^{-1}|\sum_{j=0}^{H-1}e(jt)|^2$. Finite Fourier orthogonality gives
+\[ \Delta_{H,d}(s)=\frac1d\sum_{j=1}^{d-1}\widehat B_H(j/d)e(js/d).\]
+The covariance retains only the common opposite frequencies $j/g$, whence it equals $g^2/(de)$ times the variance with modulus $g$. This proves \eqref{eq:fejer-cov}.
+\end{proof}
+For arbitrary finite complex coefficients $\omega_d$, the exact energy is therefore
+\[\mathbb E_s\left|\sum_d\omega_d\Delta_{H,d}(s)\right|^2
+ =\sum_{d,e}\omega_d\overline{\omega_e}
+ \frac{g(2a_g^3+a_g)/3-a_g^4}{deH^2}.\]
+This retains covariance instead of separately paying every entry. Markov's inequality bounds the proportion of large defects. It gives no estimate at a prescribed centre, and a common period may vastly exceed the interval of interest.
+
+\subsection{Actual proxy coefficients and short averages}
+Let $c_q(n)=\sum_{a\bmod q,(a,q)=1}e(an/q)$ be the Ramanujan sum and define
+\[ A_Q(n)=\sum_{q\le Q}\frac{\mu(q)}{\varphi(q)}c_q(n),\quad
+ G_Q=\sum_{q\le Q}\frac{\mu(q)^2}{\varphi(q)},\quad
+ \mathcal P_Q=\prod_{p\le Q}\left(1+\frac{9p}{(p-1)^2}\right).\]
+The exact expansion $A_Q(n)^2=\sum_g S_gc_g(n)$ is supported on squarefree $g\le Q^2$, with primes at most $Q$. For squarefree $g$, set
+\[\xi(t)=\prod_{p\mid t}\frac{p-2}{p-1},\qquad
+ \Gamma_Q(t,v,w;g)=\sum_{\substack{j\le Q/(t\max(v,w))\\(j,g)=1}}
+ \frac{\mu(j)^2}{\varphi(j)}.\]
+Then
+\begin{equation}\label{eq:proxy-coefficients}
+ S_g=\frac{\mu(g)}{\varphi(g)}\sum_{tvw=g}\mu(t)\xi(t)\Gamma_Q(t,v,w;g),
+ \quad S_1=G_Q,\quad |S_g|\le\frac{G_Q3^{\omega(g)}}{\varphi(g)}.
+\end{equation}
+To verify this, use $c_p^2=(p-2)c_p+(p-1)$. In a pair $q=tjv$, $r=tjw$, common primes retained in the Ramanujan term belong to $t$, common primes replaced by the constant belong to $j$, and primes occurring in just one factor belong to $v,w$. These four factors are pairwise coprime and squarefree. Their actual cutoffs give the displayed $\Gamma_Q$; there are $3^{\omega(g)}$ choices of $t,v,w$. The signs are present in the identity and only afterwards bounded absolutely.
+
+Put $K_H(g)=\sum_{1\le a<g,(a,g)=1}|\widehat B_H(a/g)|^2$. Parseval on a residue period gives $0\le K_H(g)\le gH$: reduce the geometric sum to length $a_g\le H$, and compare its triangular square norm with that of a nonoverlapping triangle modulo $g$. The centred proxy defect
+\[\mathcal E_{H,Q}(s)=\sum_nB_{H,s}(n)A_Q(n)^2-HG_Q\]
+has complete-period energy $\sum_{g>1}S_g^2K_H(g)\le HG_Q^2\mathcal P_Q$.
+Distinct reduced frequencies have denominators at most $Q^2$ and separation at least $Q^{-4}$. The dual large sieve \cite{MV} consequently yields
+\begin{equation}\label{eq:proxy-short}
+ \frac1T\sum_{s=s_0+1}^{s_0+T}|\mathcal E_{H,Q}(s)|^2
+ \le\left(1+\frac{Q^4}{T}\right)HG_Q^2\mathcal P_Q
+ \ll H\left(1+\frac{Q^4}{T}\right)\log^{11}(2Q).
+\end{equation}
+The last estimate uses only classical harmonic prime bounds. It assumes no cancellation in a shifted M\"obius correlation.
+
+\subsection{The parity correction and the later coefficient-energy refinement}
+On even integers the proxy compresses exactly:
+\begin{equation}\label{eq:proxy-parity}
+ A_Q(2m)=V_Q(m):=\sum_{\substack{Q/2<q\le Q\\q\ {\rm odd}}}
+ \frac{\mu(q)}{\varphi(q)}c_q(m).
+\end{equation}
+Pair $q$ with $2q$ for odd $q\le Q/2$ and use $c_{2q}(2m)=c_q(m)$ to see the cancellation. For $H=2h,s=2t$, the even-support sum becomes $\sum_mB_{h,t}(m)V_Q(m)^2$. Its main term is
+\[hG_Q^{\rm term},\qquad G_Q^{\rm term}=
+ \sum_{\substack{Q/2<q\le Q\\q\ {\rm odd}}}\frac{\mu(q)^2}{\varphi(q)}
+ \longrightarrow\frac{\log2}{2}.\]
+For $Q=6$ the correct main is $H/8$, whereas incorrectly using $(H/2)G_Q$ gives $13H/8$.
+
+The elementary dyadic bound $\sum_{x<n\le2x}1/\varphi(n)<2$ follows from
+$n/\varphi(n)=\sum_{d\mid n}\mu(d)^2/\varphi(d)$, the harmonic dyadic sum at most1, and $\prod_p(1+1/[p(p-1)])<2$. Applying it to \eqref{eq:proxy-coefficients} bounds the terminal coefficients by $2\,3^{\omega(g)}/\varphi(g)$ and replaces the exponent11 in \eqref{eq:proxy-short} by9. The limit of $G_Q^{\rm term}$ follows by convolving the odd harmonic sequence with the absolutely summable local correction $b(p)=1/[p(p-1)]$, $b(p^2)=-1/[p(p-1)]$.
+
+Define the even-support defect explicitly by
+\[\mathcal E^{\rm even}_{h,Q}(t)
+ =\sum_m B_{h,t}(m)V_Q(m)^2-hG_Q^{\rm term}.\]
+The subsequent finite coefficient audit improves this further. If $V_Q^2=\sum_gR_gc_g$, define
+\[\mathcal K_Q=\prod_{\substack{p\le Q\\p\ {\rm odd}}}
+ \left(1+\frac{2p-1}{p(p-1)^2}\right),\quad H_Q^{\rm harm}=\sum_{n\le Q}\frac1n,\]
+and
+\begin{align*}
+ P(x)={}&1+\frac{31x}{12}+\frac{17x^2}{12}+\frac{739x^3}{2592}
+ +\frac{199x^4}{7776}\\
+ &+\frac{17x^5}{15552}+\frac{x^6}{46656}+\frac{x^7}{6531840}.
+\end{align*}
+The retained arithmetic coefficient theorem is
+\begin{equation}\label{eq:proxy-log7}
+ \sum_g gR_g^2\le8\mathcal K_Q^{11}
+ \min\{(H_Q^{\rm harm})^7,P(2\log Q)\}.
+\end{equation}
+Its finite reconstruction assigns each prime in a quadruple of squarefree moduli to one of eleven incidence patterns. Four anchor fibres have total mass at most $8\mathcal K_Q^4$; the seven remaining variables have full harmonic masses or a constrained simplex mass. Their degrees are $(d_1,\ldots,d_7)=(2,2,3,3,3,3,4)$ and their actual product constraint is $\prod_jD_j^{d_j}\le Q^4$. The positive odd harmonic simplex bound expands to
+\[P(t)=\sum_{I\subseteq\{1,\ldots,7\}}
+ \frac{t^{|I|}}{|I|!\prod_{j\in I}d_j},\]
+evaluated at $t=2\log Q$; the four terminal anchor diameters are $(4,4,2,4)$, which give the factor8. The source-bound finite proof, including the coefficient identity and that polynomial identification, is in the canonical phase4 modules and the electronic statement registry. The full harmonic sum used above is a harmless larger envelope for the formal odd harmonic sum. The resulting variance transfer is still a written Fourier/large-sieve argument; it is not identified with an actual prime-pair variance theorem in Lean. Since $\mathcal K_Q$ is bounded by an absolutely convergent Euler product, \eqref{eq:proxy-log7} gives
+\begin{equation}\label{eq:terminal-log7}
+ \frac1T\sum_{t=t_0+1}^{t_0+T}|\mathcal E^{\rm even}_{h,Q}(t)|^2
+ \ll h(1+Q^4/T)\log^7(2Q).
+\end{equation}
+For $h\asymp X^\theta,Q\asymp X^\kappa,T\asymp X$ and $4\kappa<1+\theta$, Chebyshev gives a relative defect tending to zero for almost all centres, for any power saving $X^{-\delta}$ with
+$2\delta<\min(\theta,1+\theta-4\kappa)$. Neither the $Q^4/T$ loss nor the exceptional centres are removed. The result is an explicit internal proxy improvement using classical tools, not a resolution of the parity obstruction.
+
+\section{Finite additive certificates and limits of linear information}\label{sec:certificates}
+\begin{theorem}[A phase-preserving finite certificate]\label{thm:additive-certificate}
+For real $f$ on $\mathbb Z/M\mathbb Z$, put $E=\sum_xf(x)^2$ and
+$C_k(N)=\sum_xf(x)\cos(2\pi k(x-N/2)/M)$. For any distinct residues $K$,
+\[\sum_xf(x)f(N-x)\ge\frac2M\sum_{k\in K}C_k(N)^2-E.\]
+If $f$ is the indicator of primes at most $N-2$ and $M>2(N-2)$, a positive right side proves an actual prime representation of $N$.
+\end{theorem}
+\begin{proof}
+Set $z_k=e(-kN/(2M))\sum_xf(x)e(kx/M)$. Fourier convolution and the identity $\Re z^2=2(\Re z)^2-|z|^2$, together with Parseval, give the equality with all $M$ modes. Dropping nonnegative real squares gives the inequality. The stated modulus prevents sums of two support elements from wrapping around.
+\end{proof}
+At $N=100,M=201,E=25$, the 19 modes
+\[\{0,\pm1,\pm3,\pm15,\pm21,\pm40,\pm60,\pm67,\pm99,\pm100\}\]
+have a rigorously evaluated lower side exceeding $0.417911728893458011239466727237$. Rational intervals for $\pi$ and cosine, with explicit Taylor remainders, certify the sign. The mode selection used the full spectrum, so no efficient uniform mode-selection algorithm follows. Larger FFT examples are diagnostics. The later finite formalization and the rational interval computation have separate evidence records.
+
+A different limitation is elementary. For every fixed $B$, one can remove only $O(x/\log^2x)$ primes below $x$, preserve all primes below $B$ and every fixed reduced-class PNT, yet create infinitely many holes in the sumset of the remaining primes. Indeed take $X_j=4^jX_0>2B$. By averaging pairs over even targets in $[X_j,2X_j]$, choose $N_j$ with $O(X_j/\log^2X_j)$ unordered representations. Remove the larger member of each pair. Each removed member belongs to $[X_j/2,2X_j]$ and determines its unique partner, so summing the geometric scales gives the claimed removal bound at every $x$. The remaining set has the same fixed-class densities, and its normalized Mangoldt Fourier transform differs from that of the primes by at most $O(1/\log x)$, uniformly in phase. Every $N_j$ is nevertheless missing from its binary sumset.
+
+This construction is not a counterexample to Goldbach for actual primes. It shows why qualitative linear density or Fourier proximity at that rate does not supply the desired pointwise binary conclusion. Likewise an absolutely summable linear zero expansion $Z(x)=\sum_\rho c_\rho x^\rho$ with $\Re\rho<1$ satisfies $Z(x)=o(x)$ by finite-core/tail splitting; that qualitative fact alone does not prove a bound on the additive quadratic prime correlation.
+
+\section{From finite Vaughan fibres to the signed arithmetic remainder}\label{sec:arithmetic-road}
+The standard actual coefficient
+\[\beta_V(b)=\sum_{\substack{d\mid b\\d>V}}\Lambda(d)\]
+obeys $\sum_{ab=n}\mu(a)\beta_V(b)=\Lambda(n)\ind_{n>V}$. This is Dirichlet inversion of the divisor identity for $\log n$, rather than a new prime-generation formula. Splitting the $a$ fibre at $U$ gives the actual short component and the Type-II component used later. A completed fibre cancels composites, but an incomplete dyadic rectangle need not.
+
+Expanding the real coefficient energy produces the four signs
+\[\mu(a)\mu(c)\mu(N-ab)\mu(N-cb),\]
+with the actual $\beta_V(b)$ weights, support and centring. Their smallness does not follow from orthogonality. Retaining $\mu(a)$ in a signed correlation is more informative than absorbing it in a generic $L^2$ norm, but its quantitative cancellation remains an arithmetic input. On the coprime arithmetic line, $a=a_0+kt$, $r=r_0-bt$, preserving the linear relation $ba+kr=N$. The CRT divisor modulus in the separate two-divisor expansion remains $ar$. Replacing the retained coefficients by a bare $\mu(a_0+kt)\mu(r_0-bt)$ correlation requires a proved transfer.
+
+The exact completed character decomposition $R_k=B_k+C_k+E_k$ keeps nonunits, the mask $(n,Nk)=1$, and the unit correction. Character orthogonality diagonalizes residues; it does not diagonalize the arithmetic four-sign correlation. For the actual squarefree primitive trace on unit-$n$, unit-$N$ support,
+\[P_q(N-n)=\prod_{p\mid q}\bigl((p-1)\ind_{p\mid N-n}-1\bigr),\]
+one has $P_q(m)=\mu(q)$ if $(q,m)=1$. Thus $\mu(q)P_q(m)/\varphi(q)=1/\varphi(q)$ there: the two displayed factors are not independent sign oscillators. For a unit $t$, the map $x\mapsto t/x$ on the unit group in the relevant finite Kloosterman geometry is a permutation and preserves energy. An entrywise bound cannot by itself contract arbitrary coefficient directions.
+
+The four energy sectors have different diagonals. If $\mathcal E=\sum_b w_b(\sum_{a,k}x_{a,k,b})^2$, let $D_{00}$ keep $a=c,k=k'$, $D_a$ keep $a=c$, and $D_k$ keep $k=k'$. Removing nonzero shifts $c-a$ subtracts $D_a$, not just $D_{00}$. A multiplicity estimate $\mathcal E\le M D_a$ is valid but too costly in the parameter range considered. Local multiplicity improves constants; large Gram eigenvalues only exclude particular uniform operator bounds and do not determine the projection of the actual M\"obius direction.
+
+The later $HH$ expansion keeps coefficients $H_y(a)H_y(r)$ and the actual CRT modulus $ar$. The sign conductor $T$ in a grouping $\sum_T\mu(T)A_T$ is not automatically the CRT modulus. A discrepancy $C_{a,r}-M_{a,r}$ can be signed, so positive masses must be defined before subtracting the model. The Rosser remainder uses $\Phi(n,p(e))$, where $\Phi(n,z)=\ind_{(n,\prod_{p<z}p)=1}$; it must not exclude the prime $p(e)$ itself \cite{Motohashi}. On a fixed short cofactor sector $\zeta\le L^B$ with fixed $B$, the written absolute amplitude improves to $NL^{3+o(1)}$. Setting another short rough divisor to1 only changes two factors of type $L^{o(1)}$ and supplies no second full logarithmic saving. Neither estimate is the necessary signed global budget.
+
+These reductions explain the final choice of exact scalar error accounting. No enumeration of finite identities, nor a sharper proxy amplitude, replaces the missing bound for the aggregate on its complete arithmetic support.
+
+
+% Manuscript fragment. No preamble. Written analytic results are distinct
+% from the finite Lean certificates; no Goldbach proof is asserted.
+
+\section{The literal terminal scalar and its transfer identities}
+\label{sec:terminal-ledger}
+
+All logarithms in this section are natural.  We use the actual arithmetic
+functions $\mu$, $\Lambda$ and $\varphi$.  Let $N\geq2$ be an integer,
+put $u=\log N$, and, when $u>1$, put $\ell=\log u$.  For even $K$ define
+\begin{equation}
+ C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right),\qquad
+ \mathfrak S(K)=2C_2\prod_{\substack{p\mid K\\p>2}}
+                       \frac{p-1}{p-2}.
+ \label{eq:sector-singular-definition}
+\end{equation}
+The infinite product in this definition converges.  The scalar
+\begin{equation}
+ F_N=\sum_{1\leq n<N}\Lambda(n)\mu(N-n)
+ \label{eq:sector-FN}
+\end{equation}
+is a signed prime--M\"obius correlation.  It is not a prime-pair count.
+
+Let $\alpha,Q$ be positive integers, write $m=N-n$, and retain the
+literal kernels
+\begin{align}
+ D_Q(m)&=\sum_{\substack{k\mid m\\ k\leq Q\\\alpha k<m}}
+                         \mu(k)\log\frac{k}{m},\label{eq:sector-D}\\
+ W_Q(n,m)&=\sum_{\substack{1\leq k\leq Q\\(k,nN)=1\\\alpha k<m}}
+                         \frac{\mu(k)}{\varphi(k)}\log\frac{k}{m}.
+ \label{eq:sector-W}
+\end{align}
+Inactive and empty sums are zero.  In particular the strict inequality
+$\alpha k<m$ is part of the definition; it is not replaced by a real
+endpoint or an unproved completion.  If
+\[
+ R=\min\left(Q,\left\lfloor\frac{m-1}{\alpha}\right\rfloor\right),
+\]
+then the second kernel is the prefix through this exact integer $R$.
+For $V\geq1$, set
+\[
+ \rho(n)=\mathbf1_{\{n>V\}}\mathbf1_{\{(n,N)=1\}}.
+\]
+The complete fixed scalar is
+\begin{equation}
+ \mathcal F_{\rm fixed}
+ =\sum_{1\leq n<N}\rho(n)\Lambda(n)\mu(m)
+                            \bigl(W_Q(n,m)-D_Q(m)\bigr).
+ \label{eq:sector-fixed-scalar}
+\end{equation}
+Every unit, divisor and moving-boundary restriction in this expression
+remains in force below.
+
+\begin{lemma}[The omitted-divisor coefficient]
+\label{lem:sector-omitted-divisors}
+For $m\geq1$, define
+\[
+ J_{Q,\alpha}(m)
+ =-\sum_{\substack{d\mid m\\ d\leq\alpha\ \text{or}\ m>Qd}}
+                                      \mu(d)\log d.
+\]
+Then
+\begin{equation}
+ \mu(m)D_Q(m)=\mu(m)^2
+                 \bigl(\Lambda(m)-J_{Q,\alpha}(m)\bigr).
+ \label{eq:sector-muD}
+\end{equation}
+If $1\leq m<N$, $Q\geq\alpha$, and $Q(\alpha+1)>N-1$, this becomes
+\[
+ J_{Q,\alpha}(m)=j_\alpha(m),\qquad
+ j_\alpha(m)=-\sum_{\substack{d\mid m\\d\leq\alpha}}\mu(d)\log d.
+\]
+\end{lemma}
+\begin{proof}
+For complementary divisors $kd=m$, the exact identity
+$\mu(k)\mu(m)=\mu(m)^2\mu(d)$ holds.  It follows either by
+multiplicativity when $m$ is squarefree, or because both sides vanish
+when it is not.  Substitution in \eqref{eq:sector-D} gives
+\[
+ \mu(m)D_Q(m)
+ =-\mu(m)^2\sum_{\substack{d\mid m\\ d>\alpha\\m/d\leq Q}}
+                                  \mu(d)\log d.
+\]
+The full divisor sum is $-\Lambda(m)$.  Its omitted part is exactly
+the union defining $J_{Q,\alpha}$, proving \eqref{eq:sector-muD}.
+If $d>\alpha$ and $m>Qd$, then
+$m\geq Q(\alpha+1)+1>N$, contradicting $m<N$.  Thus the extra
+condition contributes no omitted divisor under the stated hypotheses.
+\end{proof}
+
+For the profiles used below,
+$\alpha=\lceil N^\vartheta\rceil$ and
+$Q=\lfloor(N-1)/\alpha\rfloor$, with fixed $0<\vartheta<1/2$.
+For sufficiently large $N$, $Q\geq\alpha$.  Writing
+$N-1=\alpha Q+r$, $0\leq r<\alpha$, gives $Q>r$ and hence
+$Q(\alpha+1)>N-1$.  This proves the required cap condition; it does
+not identify $\alpha$ with $N^\vartheta$.
+
+At $U=V=1$ the actual Vaughan short component is $h_1(n)=\log n$,
+and $f_{\rm II}(n)=\Lambda(n)-\log n$ on $n>1$.  Introduce
+\begin{align*}
+ \mathcal S_{\rm full}
+ &=\sum_{1\leq n<N}\mathbf1_{\{(n,N)=1\}}
+                  f_{\rm II}(n)\mu(m)(D_Q-W_Q),\\
+ I&=\sum_{1\leq n<N}\mathbf1_{\{(n,N)=1\}}
+                  h_1(n)\mu(m)(D_Q-W_Q),\\
+ J_{\rm ref}&=\sum_{1\leq n<N}\rho(n)\Lambda(n)\mu(m)^2J_{Q,\alpha}(m),\\
+ Z_{\rm ref}&=\sum_{1\leq n<N}\rho(n)\Lambda(n)\mu(m)W_Q(n,m),\\
+ R_{\rm unit}&=\sum_{1\leq n<N}\rho(n)\Lambda(n)\mu(m)^2\Lambda(m),\\
+ R_{\rm sf}&=\sum_{1\leq n<N}\mu(n)^2\Lambda(n)\mu(m)^2\Lambda(m).
+\end{align*}
+The last quantity is the actual weighted ordered prime-pair detector
+on \emph{both} axes: its nonzero summands are
+$\log p\log q$, with $p+q=N$ and $p,q$ prime.
+
+\begin{proposition}[Exact complete transfer]
+\label{prop:sector-transfer}
+For $U=V=1$, with the preceding actual kernels and coefficients,
+\begin{equation}
+ \mathcal S_{\rm full}=R_{\rm unit}-J_{\rm ref}-Z_{\rm ref}-I.
+ \label{eq:sector-first-ledger}
+\end{equation}
+There are nonnegative quantities $P_{\rm ret}$ and $T_{\rm pairs}$
+such that
+$R_{\rm unit}=R_{\rm sf}+P_{\rm ret}-T_{\rm pairs}$: the former
+counts retained proper prime powers on the first axis with a prime
+second axis, and the latter counts the union of omitted actual prime
+pairs.  For even $N$, put
+\[
+ E_J=\mathfrak S(N)N-J_{\rm ref},\quad
+ E_Z=-\mathfrak S(N)F_N-Z_{\rm ref},\quad
+ \varepsilon_{\rm tr}=P_{\rm ret}-T_{\rm pairs}+E_J+E_Z-I.
+\]
+Then
+\begin{align}
+ \mathcal S_{\rm full}
+ &=R_{\rm sf}-\mathfrak S(N)(N-F_N)+\varepsilon_{\rm tr},
+ \label{eq:sector-transfer-ledger}\\
+ R_{\rm sf}
+ &=\mathfrak S(N)(N-F_N)-\mathcal F_{\rm fixed}
+                         -P_{\rm ret}+T_{\rm pairs}-E_J-E_Z.
+ \label{eq:sector-direct-ledger}
+\end{align}
+\end{proposition}
+\begin{proof}
+Recombine $f_{\rm II}+h_1=\Lambda$ and apply
+\eqref{eq:sector-muD} to obtain \eqref{eq:sector-first-ledger}.
+The support of $\mu(m)^2\Lambda(m)$ is precisely the prime support,
+so the first-axis proper powers and the omitted prime pairs give the
+stated nonnegative partition.  This is a union partition, without
+double counting its low-$n$ and nonunit faces.  For even $N$ the
+nonunit prime-pair face is confined to $p=q=N/2$.  Substitution gives
+\eqref{eq:sector-transfer-ledger}.  Finally
+$\mathcal F_{\rm fixed}=-(\mathcal S_{\rm full}+I)$ gives
+\eqref{eq:sector-direct-ledger}.
+\end{proof}
+
+\begin{remark}[The remaining quantitative premise]
+If a covered decomposition with the \emph{same complete kernels}
+has been proved in the form
+$\mathcal S_{\rm full}=-E_{\rm cov}+e+\mathcal S_{\rm unc}$,
+then the definition
+$D_N=E_{\rm cov}-\mathcal S_{\rm unc}+|e|$ gives
+\[
+ D_N=-\mathcal S_{\rm full}+2\max(e,0),\qquad
+ R_{\rm sf}\geq\mathfrak S(N)(N-F_N)-D_N-\varepsilon_{\rm tr}.
+\]
+The existence and scope of that covered decomposition, and the desired
+bound on $D_N$, are separate obligations.  No such bound is deduced
+from the identities.  Equivalently,
+\[
+ D_N+\varepsilon_{\rm tr}
+ =\mathfrak S(N)(N-F_N)-R_{\rm sf}+2\max(e,0).
+\]
+For the complete direct identity \eqref{eq:sector-direct-ledger}, $I$
+and this artificial covered excess cancel.  These are alternative
+accounting choices; their overlapping losses must not be added.
+\end{remark}
+
+\section{An elementary rational singular-factor enclosure}
+\label{sec:sector-rational-singular}
+
+\begin{lemma}
+\label{lem:sector-C2-rational}
+The infinite Euler product satisfies
+\[
+ \frac{2541}{4096}\leq C_2\leq\frac{11011}{16384}.
+\]
+Consequently $\mathfrak S(N)\geq2541/2048$ for every even $N\geq2$.
+\end{lemma}
+\begin{proof}
+For integers $Z>Y\geq2$,
+\[
+ \prod_{j=Y+1}^Z\left(1-\frac1{(j-1)^2}\right)
+                  =\frac{(Y-1)Z}{Y(Z-1)}.
+\]
+Every factor is in $(0,1)$.  The prime tail, indexed by $j=p>Y$,
+is a subproduct of the all-integer tail and is therefore at least
+the latter.  The convergence of $C_2$ follows from the summability
+of the deficits.  Passing to the limit gives
+\[
+ \frac{Y-1}{Y}C_2(Y)\leq C_2\leq C_2(Y),\qquad
+ C_2(Y)=\prod_{2<p\leq Y}\left(1-\frac1{(p-1)^2}\right).
+\]
+Direct rational multiplication gives $C_2(13)=11011/16384$; its
+$12/13$ multiple is $2541/4096$.  All finite factors multiplying
+$2C_2$ in \eqref{eq:sector-singular-definition} are at least one.
+\end{proof}
+
+A finite prime product is an upper bound for $C_2$ until the tail has
+been paid.  The passage to the infinite product in this proof is
+written analysis; it is distinct from the finite telescoping Lean
+certificate.  We also use the standard uniform bound
+\begin{equation}
+ \mathfrak S(N)\leq \frac{N}{\varphi(N)}=O(\log\log N)
+ \quad(N\text{ even}).
+ \label{eq:sector-S-upper}
+\end{equation}
+The first inequality follows by comparing the factors in
+\eqref{eq:sector-singular-definition} with $N/\varphi(N)$; the
+remaining finite subproduct of the $C_2$ factors bounds the full
+product from above.  The usual totient estimate~\cite[Theorem 15]{RS} gives the second
+assertion.  Numerical versions, when used, belong to the explicitly
+calibrated analytical appendix.
+
+\subsection{An earlier explicit reference on a restricted family}
+The published small-modulus bounds also give a reference estimate that
+does not use the reported primitive input below. Suppose $x=N-1\ge
+8\cdot10^9$ and an odd prime $p\le97$ does not divide $N$. Then
+\begin{equation}\label{eq:fixed-prime-reference}
+ N-F_N\ge\frac{N}{60000}.
+\end{equation}
+Indeed, $1-\mu(m)\ge0$, and it equals1 if $p^2\mid m$; hence
+\[N-F_N\ge N-\psi(x)+\psi(x;p^2,N).\]
+Bennett--Martin--O'Bryant--Rechnitzer~\cite[Theorem 1.1 and Table 1]{BMOR}
+give $|\psi(x;q,a)-x/\varphi(q)|<x/(840\log x)$ for the
+reduced progression $q=p^2\le9409$, and the sharper coefficient
+$c_\psi(3)=0.0003964$ for the two reduced classes modulo3 at this onset.
+The powers of3 contribute at most $\log x$ to $\psi(x)$. Therefore
+\[N-F_N>
+1+x\left[\frac1{9312}
+-\frac{2(0.0003964)+1/840}{\log x}-\frac{\log x}{x}\right].\]
+For $x\ge8\cdot10^9$, $\log x>22$ and
+$\log x/x<24/(8\cdot10^9)$. The remaining coefficient is at least
+\[\frac1{9312}-\frac{2(0.0003964)+1/840}{22}
+-\frac{24}{8\cdot10^9}
+=\frac{386215979}{22407000000000}>\frac1{60000}.
+\]
+This proves~\eqref{eq:fixed-prime-reference}. Its condition on $p$
+does not cover every even integer, and this earlier reference is not
+spent a second time in the later universal-profile ledger.
+
+\section{A conditional universal reference gap from missing prime squares}
+\label{sec:sector-universal-reference}
+
+The universal estimate below is conditional on a reported project-derived primitive-character
+input. We state the exact needed input, rather than attributing its
+numerical constant to a different published theorem.
+
+\begin{analyticinput}[Project primitive input for the reference]
+\label{lem:primitive-reference-input}
+Let $u=\log N\geq8\,000\,000$.  Choose the at most one possible
+primitive real Page pair $(\chi_*,\beta_*)$ among conductors at most
+$u^{10}$.  For every integer $1<r\leq u^{10}$, the complete primitive
+nonprincipal group satisfies
+\begin{equation}
+ \sum_{\substack{\chi\bmod r\ \mathrm{primitive}\\\chi\ne\chi_0}}
+ \left|\psi(N,\chi)
+        +\mathbf1_{\{\chi=\chi_*\}}\frac{N^{\beta_*}}{\beta_*}\right|
+                    \leq \frac{100N}{u^8}.
+ \label{eq:sector-primitive-reference-input}
+\end{equation}
+When no exceptional pair exists, its correction is absent.
+\end{analyticinput}
+
+The retained source derives this input from the signed explicit formula,
+zero-free region and direct remainder estimates of
+Bordignon~\cite{Bordignon}, including the actual Perron endpoint and
+the reflected exceptional-zero fee. The analytical section identifies
+its direct remainder envelope; the complete substitution into every
+printed primary-source formula has not been independently reproduced
+in this manuscript. It remains a reported written input, rather than
+a new self-contained certificate or a Lean theorem. In the
+application below the exceptional character is absent from the
+retained groups, so no model sign is assumed.  A stronger uniform
+prefix estimate using $(y^{\beta_*}-1)/\beta_*$ also supplies this
+endpoint lemma after paying the constant $1/\beta_*$ correction.
+
+\begin{theorem}[Conditional universal signed reference]
+\label{thm:universal-reference}
+Assume Input~\ref{lem:primitive-reference-input}. Then for every integer
+$N$ with $u=\log N\geq8\,000\,000$,
+\begin{equation}
+                    N-F_N\geq\frac{N}{256u\log u}.
+ \label{eq:sector-universal-gap}
+\end{equation}
+For even $N$,
+\begin{equation}
+ \mathfrak S(N)(N-F_N)
+                      \geq\frac{2541N}{524288u\log u}.
+ \label{eq:sector-universal-singular-gap}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Put $X=N-1$.  The explicit ordinary estimates used below are
+Akbary--Hambrook~\cite[Lemma 3.1(d),(f)]{AH} and
+Johnston--Yang~\cite[Theorem 1.1]{JY}.  A convenient conservative
+consequence of the latter is
+\begin{equation}
+ |\psi(N)-N|\leq NE(u),\qquad
+ E(u)=34u^2\exp\left(-\frac45\sqrt u\right).
+ \label{eq:sector-ordinary-E}
+\end{equation}
+
+\emph{Choice of the square obstructions.}
+Consider the literal real interval $(2u,4u]$.  The explicit theta
+bound gives
+\[
+ \theta(4u)-\theta(2u)
+               \geq2u-\frac{6u}{5(\log u)^2}.
+\]
+Remove its primes dividing $N$; their logarithmic mass is at most
+$\log\operatorname{rad}(N)\leq u$.  Remove at most one additional
+prime if the possible Page conductor itself is a prime in that
+interval.  Call the remaining set $\mathcal P$.  This second removal
+costs at most $\log(4u)$, regardless of whether the pair exists.
+Since $\log u>15$ and $\log(4u)/u<1/100$ at the stated onset,
+\begin{equation}
+              \sum_{\lambda\in\mathcal P}\log\lambda>\frac u2.
+ \label{eq:sector-absent-prime-mass}
+\end{equation}
+The logarithmic ratio decreases thereafter.  Put
+\[
+ M=|\mathcal P|,\qquad
+ A=\sum_{\lambda\in\mathcal P}\frac1{\varphi(\lambda^2)}.
+\]
+Because $\lambda\leq4u$ and $\log(4u)\leq2\log u$,
+\begin{equation}
+ \frac1{64u\log u}\leq A\leq\frac2u,\qquad M\leq4u.
+ \label{eq:sector-A-bounds}
+\end{equation}
+Indeed \eqref{eq:sector-absent-prime-mass} gives
+$M>u/[2\log(4u)]$, while
+$\varphi(\lambda^2)\leq16u^2$ supplies the lower bound.  For the
+upper bound use $\lambda>2u$,
+$\varphi(\lambda^2)\geq2u^2$, and $M\leq4u$.
+
+\emph{The individual square progressions.}
+For every $\lambda\in\mathcal P$, the class $N$ modulo
+$q=\lambda^2$ is reduced and $q\leq16u^2\leq u^{10}$.
+An odd real character modulo $\lambda^2$ factors through $\lambda$:
+the kernel of reduction has odd order $\lambda$, whereas the real
+character has image of order at most two.  Thus a possible primitive
+real conductor dividing $\lambda^2$ is $\lambda$, not
+$\lambda^2$.  That prime was removed if necessary.  Composite or
+even Page conductors cannot divide these retained moduli.
+
+Every nonprincipal character modulo $\lambda^2$ has primitive
+conductor $\lambda$ or $\lambda^2$.  Induction between them changes
+no prime support, hence no von Mangoldt term.  Applying
+Input~\ref{lem:primitive-reference-input} to the two complete groups
+costs at most $200N/u^8$.  The principal character removes at most
+$u$ in $\lambda$-power weight.  Character orthogonality therefore
+gives
+\[
+ \psi(N;\lambda^2,N)
+ \geq\frac{N-NE(u)-u-200N/u^8}{\varphi(\lambda^2)}.
+\]
+Passing to $X=N-1$ removes the actual face $\Lambda(N)\leq u$.
+Since $\varphi(\lambda^2)\leq16u^2$,
+\begin{align}
+ \psi(X;\lambda^2,N)
+ &\geq\frac{N}{\varphi(\lambda^2)}
+       \left(1-E(u)-\frac{200}{u^8}-17u^3e^{-u}\right)\notag\\
+ &\geq\frac{3N}{4\varphi(\lambda^2)}.
+ \label{eq:sector-single-square-AP}
+\end{align}
+All three error envelopes decrease from this onset, and their sum
+is less than $1/4$ there.  These are endpoint estimates at $N$ with
+the $n=N$ face paid; no altered logarithmic threshold at $N-1$ is
+silently used.
+
+\emph{Intersections and finite Bonferroni.}
+For distinct $\lambda,\nu\in\mathcal P$ the intersection is the
+reduced class $N$ modulo $(\lambda\nu)^2$.  Its modulus is at most
+$256u^4\leq N^{3/8}$.  Brun--Titchmarsh at $N$ gives the prime-log
+bound $16N/[5\varphi((\lambda\nu)^2)]$, because
+$\log(N/q)\geq5u/8$.  Grouping proper powers by their prime base
+gives total von Mangoldt weight at most $\sqrt N\,u$ for each
+intersection.  CRT and
+$\varphi((\lambda\nu)^2)=\varphi(\lambda^2)\varphi(\nu^2)$ yield
+\begin{align}
+ \sum_{\substack{\lambda,\nu\in\mathcal P\\\lambda<\nu}}
+               \psi(X;(\lambda\nu)^2,N)
+ &\leq\frac85 NA^2+\frac12M^2\sqrt N\,u\notag\\
+ &\leq\frac85 NA^2+8\sqrt N\,u^3
+ \leq\frac14 NA.
+ \label{eq:sector-square-intersections}
+\end{align}
+For the last comparison, $A\leq2/u$ gives
+$(8/5)A^2< A/8$.  The remaining ratio is bounded by
+$512u^4\log u\,e^{-u/2}<1/8$, a decreasing envelope on this range.
+No exceptional-character estimate is required for these upper
+intersection counts.
+
+Let $G$ be the actual nonnegative $\Lambda$ mass of the union
+$\{\lambda^2\mid N-n\text{ for some }\lambda\in\mathcal P\}$,
+with $1\leq n<N$.  Finite Bonferroni and
+\eqref{eq:sector-single-square-AP}--\eqref{eq:sector-square-intersections}
+give
+\begin{equation}
+                 G\geq\frac12 NA\geq\frac{N}{128u\log u}.
+ \label{eq:sector-lost-square-mass}
+\end{equation}
+If the union indicator is one, $\mu(N-n)=0$; otherwise
+$\mu(N-n)\leq1$.  Thus, pointwise,
+$\mu(N-n)\leq1-\mathbf1_{\rm union}$, and
+$F_N\leq\psi(X)-G$.  Equation~\eqref{eq:sector-ordinary-E} implies
+\[
+                  N-F_N\geq G-NE(u).
+\]
+Finally $E(u)\leq1/[256u\log u]$ on this range.  Its normalized
+envelope $8704u^3\log u\,e^{-(4/5)\sqrt u}$ decreases here.  At
+$u=8\,000\,000$, $\sqrt u>2800$, $u<2^{23}$ and $e>2$ already
+give a very generous rational comparison.  The same elementary
+comparisons verify the previous endpoint and overlap inequalities.
+This proves \eqref{eq:sector-universal-gap}.  Multiplication by
+Lemma~\ref{lem:sector-C2-rational} proves
+\eqref{eq:sector-universal-singular-gap} when $N$ is even.
+\end{proof}
+
+\begin{remark}[What this estimate does not establish]
+The proof removes at most one actual prime to pay the possible Page
+uncertainty, and thus also treats multiples of every fixed primorial.
+It does not assume squarefree $N$ or a favourable M\"obius sign.
+Its scale $N/(\log N\log\log N)$ is smaller than a fixed positive
+multiple of $N$.  It neither estimates $\mathcal F_{\rm fixed}$
+nor implies positivity of $R_{\rm sf}$.  A fixed linear exterior
+allowance cannot automatically be spent against this shrinking
+reference, and no lower-range finite coverage is supplied.
+\end{remark}
+
+\section{A negative small-part sector at the eighth-power cutoff}
+\label{sec:sector-eighth-negative}
+
+The next results use a \emph{different} parameter profile:
+\begin{equation}
+ U=V=1,\qquad\alpha=\lceil N^{1/8}\rceil,\qquad
+ Q=\left\lfloor\frac{N-1}{\alpha}\right\rfloor.
+ \label{eq:sector-eighth-profile}
+\end{equation}
+They have an unevaluated onset under classical
+Bombieri--Vinogradov.  In particular the numerical onset of an
+exterior estimate proved with $\alpha=\lceil N^{1/4}\rceil$ must
+not be assigned to \eqref{eq:sector-eighth-profile}.
+
+\begin{definition}[The actual composite sector]
+Let $a=21/500$, $b=3/50$, and let $\mathcal P_N$ consist of the
+products $P=p_1p_2p_3$ of three distinct primes in
+$(N^a,N^b]$, none dividing $N$.  Let $\mathcal C$ be the physical
+rows with $N/2<n\leq3N/4$ prime, $m=N-n=PL$, $P\in\mathcal P_N$,
+and $L$ squarefree with every prime divisor strictly greater than
+$\alpha$.  Both parities of $L$ are retained.  Define
+\[
+ A_{\mathcal C}=\sum_{n\in\mathcal C}\Lambda(n),\qquad
+ F_{\mathcal C}=\sum_{n\in\mathcal C}
+              \Lambda(n)\mu(m)(W_Q(n,m)-D_Q(m)).
+\]
+The divisor and centering kernels are still
+\eqref{eq:sector-D}--\eqref{eq:sector-W}.
+\end{definition}
+
+\begin{theorem}[A classical negative composite sector]
+\label{thm:eighth-composite}
+For every sufficiently large even $N$ in
+\eqref{eq:sector-eighth-profile},
+\begin{equation}
+ A_{\mathcal C}>\frac{N}{260\log N},\qquad
+                     F_{\mathcal C}<-\frac{N}{2500}.
+ \label{eq:sector-eighth-composite-result}
+\end{equation}
+The threshold is unevaluated and is not asserted effective under
+the classical inputs used in the proof.
+\end{theorem}
+\begin{proof}
+We give the fibre-distribution argument explicitly.  In particular
+we do not assume Bombieri--Vinogradov separately for every $P$.
+
+\emph{The exact coefficient and its uniform sign.}
+The fixed gaps
+\[
+ 3a=\frac{63}{500}>\frac18,\qquad
+ 2b=\frac3{25}<\frac18
+\]
+imply that $P>\alpha$ eventually, whereas every proper divisor of
+$P$ is at most $\alpha$.  The primes of $L$ exceed $\alpha$, so
+$P$ is the unique entire small-prime part of $m$.  The product $m$
+is squarefree.  Also $n$ is a unit modulo $N$: a prime $n>N/2$
+cannot divide even $N$ in this physical interval.
+
+All divisors of $m$ at most $\alpha$ are therefore proper divisors
+of $P$.  For a squarefree product of three primes,
+$\sum_{d\mid P}\mu(d)\log d=0$ and $\mu(P)=-1$.  Removing its
+top divisor gives $j_\alpha(m)=-\log P$.  The cap condition in
+Lemma~\ref{lem:sector-omitted-divisors} holds eventually.  Consequently
+the exact actual row is
+\begin{equation}
+        \Lambda(n)\left[-\log P+\mu(m)W_Q(n,m)\right].
+ \label{eq:sector-C-row}
+\end{equation}
+No pointwise sign for a character-minus-model discrepancy is being
+assumed here.
+
+The true prefix $R$ is at least $N^{7/8}/16$ eventually, since
+$m\geq N/4$ and $\alpha=N^{1/8}+O(1)$.  The mask is the actual
+even integer $nN<N^2$, and the true phase is $\log(k/m)$.
+The fixed-polynomial-mask prefix estimate proved below gives
+$W_Q(n,m)=-\mathfrak S(nN)+o(1)$ uniformly.  Since $n$ is prime
+and $(n,N)=1$,
+\[
+ \mathfrak S(nN)=\mathfrak S(N)\frac{n-1}{n-2}
+                    \leq2\mathfrak S(N)=O(\log u).
+\]
+Because $\log P>63u/500$, the gap
+$63/500-3/25=3/500$ absorbs this logarithmic term.  Thus, for
+\emph{both} parities of the retained $L$,
+\begin{equation}
+ \Lambda(n)\left[-\log P+\mu(m)W_Q(n,m)\right]
+                    \leq-\frac{3u}{25}\Lambda(n)
+ \label{eq:sector-negative-row}
+\end{equation}
+eventually.  It remains to lower-bound the actual nonnegative mass.
+
+\emph{The weighted sequence and its local density.}
+For $P\in\mathcal P_N$, put $x_P=N/P$,
+$X_P=N/[4\varphi(P)]$, and let $a_P(L)$ equal $\log(N-PL)$
+when $N-PL$ is prime in $(N/2,3N/4]$, and zero otherwise.  Before
+removing squareful $L$, this is a nonnegative sequence supported
+in $L\leq x_P$.  For squarefree $d$ coprime to $N$, its
+$d$-divisibility count is the prime-log sum in the reduced class
+$N$ modulo $Pd$ on the same two physical endpoints.  Relative to
+$X_P$, its multiplicative local density $v_P(p)=g_P(p)/p$ is
+\begin{equation}
+ v_P(p)=
+ \begin{cases}
+ 0,&p\mid N,\\
+ 1/p,&p\mid P,\\
+ 1/(p-1),&p\nmid NP.
+ \end{cases}
+ \label{eq:sector-local-density}
+\end{equation}
+If $p\mid P$ and $p\mid d$, the actual modulus has $p^2$;
+$\varphi(Pp)=p\varphi(P)$ proves its displayed density.  That
+overlap is not removed.  If $d$ has a prime divisor of $N$, the
+central prime count is exactly zero, as is the model.  No nonunit
+class is fed into a reduced-class theorem.
+
+For odd primes $v_P(p)\leq1/(p-1)$, and $v_P(2)=0$.  The inverse
+dimension product is bounded by the ordinary odd-prime baseline.
+Mertens' product estimate and the convergent quadratic correction
+give its logarithmic-ratio upper bound with absolute constants,
+independently of the growing masks $P,N$.  Thus the density
+condition in~\cite[Definition 2.4]{MTZ} is uniform.
+
+\emph{Joint distribution and the good--bad partition.}
+Take the \emph{fixed} exponent $\theta_0=31/82$ and individual
+level $D'_P=x_P^{\theta_0}$.  Then
+\begin{equation}
+ PD'_P\leq N^{49/100},\qquad
+ x_P\geq N^{41/50},\qquad
+ \liminf\frac{\log D'_P}{\log(\alpha+1)}\geq\frac{62}{25}>\frac{12}{5}.
+ \label{eq:sector-level-gaps}
+\end{equation}
+The positive gaps absorb the integer ceilings.  Define the actual error
+\[
+ E_P=\sum_{d\leq D'_P}\mu(d)^2
+       \left|\sum_{L\leq x_P/d}a_P(dL)-X_P\frac{g_P(d)}d\right|.
+\]
+Call $P$ good when $E_P\leq X_P/(\log x_P)^{100}$, and bad
+otherwise.  This is an exact classification, not an assertion of
+individual good distribution for all fibres.
+
+Let $E_\theta(q)$ be the maximum of
+$|\theta(y;q,c)-y/\varphi(q)|$ over $y\leq N$ and reduced
+classes $c\bmod q$.  An integer $q\leq N^{49/100}$ has at most
+eleven distinct primes in $(N^a,N^b]$, because twelve would give
+$q>N^{12a}>N^{49/100}$.  Each possible $P$ is a triplet of those
+primes and determines $d=q/P$ uniquely.  Hence there are at most
+$\binom{11}{3}=165$ representations, even when $q$ is not squarefree.
+Paying both actual endpoints gives
+\begin{equation}
+       \sum_PE_P\leq330\sum_{q\leq N^{49/100}}E_\theta(q).
+ \label{eq:sector-joint-BV}
+\end{equation}
+Classical all-prefix Bombieri--Vinogradov, in the form recalled
+in~\cite{AH} and~\cite[(6.24)]{Richert}, bounds the corresponding
+$\psi$ sum by $O_A(N/u^A)$ for every fixed $A$, since
+$N^{49/100}<\sqrt N/u^B$ eventually for every fixed $B$.
+The complete $\psi$-to-$\theta$ proper-power difference is
+$O(N^{99/100}u^2)$ after summing these moduli, again smaller than
+$N/u^A$ for any fixed $A$ eventually.  Exceptional characters are
+included in this classical input; its constants and onset are not
+evaluated.  Thus $\sum_PE_P=O_A(N/u^A)$.
+
+Choosing $A=300$ pays the lost bad main mass:
+\begin{equation}
+ \sum_{P\ \mathrm{bad}}X_P
+       \leq u^{100}\sum_PE_P=O(N/u^{200}),\qquad
+ \sum_{P\ \mathrm{bad}}\frac1{\varphi(P)}=O(u^{-200}).
+ \label{eq:sector-bad-mass}
+\end{equation}
+Only the nonnegative actual count is discarded on bad fibres in
+the lower estimate.  Their model errors, or signed discrepancies,
+are not called positive.  Each good sequence meets
+\cite[Definition 2.4]{MTZ} with distribution constant one and the
+same uniform density constants.  Its Lemma~2.5 therefore supplies
+a relative $o(1)$ uniformly in $P,N$; its constants do not depend
+on the particular physical sequence.
+
+\emph{The main mass and its constants.}
+Write $z=\alpha+1$ so that primes $p\leq\alpha$ are excluded.
+The baseline product satisfies
+\[
+ V_0(z)=\prod_{2<p<z}\left(1-\frac1{p-1}\right)
+                \sim\frac{2e^{-\gamma}C_2}{\log z}.
+\]
+The true product $V_P(z)=\prod_{p<z}(1-v_P(p))$ is at least
+$V_0(z)$.  The lower sieve function in~\cite[(2.4)--(2.5)]{MTZ}
+is $f(s)=2e^\gamma\log(s-1)/s$ for $2\leq s\leq4$.
+The gap in \eqref{eq:sector-level-gaps} and monotonicity on the
+present interval give
+\begin{equation}
+ \liminf u f(s_P)V_P(z)
+    \geq\frac{40}{3}C_2\log\frac75
+    >\frac{40}{9}C_2>\frac{27}{10}.
+ \label{eq:sector-fV}
+\end{equation}
+Here $s_P=\log D'_P/\log z$.  The strict logarithm inequality
+$\log(7/5)>1/3$ follows, for example, from
+$e<11743/4320<49/18<(7/5)^3$.  This rational upper bound for $e$
+is obtained by summing through $1/5!$ and bounding the remaining
+tail by $7/4320$.  Lemma~\ref{lem:sector-C2-rational} proves the
+last rational comparison.  The uniform relative sieve error is
+absorbed \emph{before} using $V_P\geq V_0$.
+
+The reciprocal-prime mass in the window tends to
+$\log(b/a)=\log(10/7)>1/3$.  At most twenty-three of its primes
+divide $N$, and their removed reciprocal mass is at most $24N^{-a}$.
+The equal-prime diagonals tend to zero.  The unordered distinct
+triples therefore have limiting reciprocal mass greater than
+$1/162$.  Since $1/\varphi(P)\geq1/P$, subtracting the paid bad
+mass in \eqref{eq:sector-bad-mass} leaves
+\begin{equation}
+             \sum_{P\ \mathrm{good}}\frac1{\varphi(P)}>\frac1{170}
+ \label{eq:sector-good-harmonic}
+\end{equation}
+eventually, uniformly over even $N$.  The lower sieve on the good
+fibres consequently supplies rough-$L$ prime-log mass at least
+$(27/6800-o(1))N/u$.
+
+\emph{Squarefree $L$ and the actual signed sum.}
+For each $P$, an offending squared prime $p>\alpha$ contributes
+at most $N/(Pp^2)+1$ possible integers $L$.  Keeping this $+1$,
+the total lost prime-log mass is at most
+\begin{align}
+ u\left[\frac N\alpha\sum_P\frac1P
+                         +\sum_P\sqrt{\frac NP}\right]
+ &=O(N^{7/8}u)+O(N^{617/1000}u)
+ =o(N/u).
+ \label{eq:sector-squarefree-L-loss}
+\end{align}
+We used the bounded $P$ harmonic mass, $P>N^{63/500}$ and at most
+$N^{9/50}$ distinct integer products $P$.  The exponent in the
+second term is $1/2+9/50-63/1000=617/1000$.  The remaining
+original summands have unique $P$ and all their original masks.
+The combined qualitative losses are eventually less than
+$N/(10000u)$.  Since
+$27/6800-1/10000>1/260$, this proves
+$A_{\mathcal C}>N/(260u)$.  Applying
+\eqref{eq:sector-negative-row} gives
+$F_{\mathcal C}<-3N/6500<-N/2500$.
+\end{proof}
+
+\begin{remark}[Scope of the lower sieve]
+Only $P$, the small part of $m$, has three prime factors.  The
+cofactor $L$ may have further rough factors, with both parities
+retained; the theorem is not a prime-plus-three-primes theorem.
+The good--bad argument uses classical BV with an unevaluated,
+ineffective threshold.  The rational parameter checks do not
+evaluate it.  The proof uses the normalized primary lower sieve
+of~\cite{MTZ}; it does not adopt a preliminary argument based on
+the erroneous printed remainder sign in Richert's~(11.80).
+\end{remark}
+
+\section{Uniform prefixes and the entire rough complement}
+\label{sec:sector-eighth-rough}
+
+We record the polynomial-mask prefix estimate needed both in the
+preceding theorem and in the rough complement.  It is a written
+ordinary Mertens consequence; no shifted-prime cancellation is
+assumed.
+
+\begin{lemma}[A fixed-polynomial-mask prefix]
+\label{lem:sector-masked-prefix}
+Let $K$ be even and positive, and define
+\[
+ A_K(x)=\sum_{\substack{r\leq x\\(r,K)=1}}\frac{\mu(r)}{\varphi(r)},
+ \qquad
+ W_K(R)=\sum_{\substack{r\leq R\\(r,K)=1}}
+                          \frac{\mu(r)}{\varphi(r)}\log\frac rR.
+\]
+There is an absolute $c$ such that, for every fixed $D>1$,
+\begin{align*}
+ |A_K(x)|&\ll_D
+       \frac{\log(2K)}{\log(2x)^D}
+                 +x^{-1/4}\exp(c\sqrt{\log(2K)}),\\
+ |W_K(R)+\mathfrak S(K)|&\ll_D
+       \frac{\log(2K)}{\log(2R)^{D-1}}
+                 +R^{-1/4}\exp(c\sqrt{\log(2K)}).
+\end{align*}
+For every fixed $C$, these save any prescribed logarithmic power
+uniformly when $K\leq R^C$.  For the actual phase one has exactly
+\begin{equation}
+ \sum_{\substack{r\leq R\\(r,K)=1}}
+                 \frac{\mu(r)}{\varphi(r)}\log\frac rm
+          =W_K(R)+\log\frac Rm\,A_K(R).
+ \label{eq:sector-shifted-prefix}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $a_K(r)=\mu(r)\mathbf1_{\{(r,K)=1\}}/\varphi(r)$ and
+$b(r)=\mu(r)/r$.  The exact convolution $a_K=h_K*b$ has
+\[
+ h_K(p^j)=
+ \begin{cases}p^{-j},&p\mid K,\\
+              -p^{-j}/(p-1),&p\nmid K,
+ \end{cases}\qquad j\geq1.
+\]
+Its absolute Euler products give
+\[
+ \sum_d|h_K(d)|\ll\log(2K),\qquad
+ \sum_d|h_K(d)|\sqrt d\ll\exp(c\sqrt{\log(2K)}).
+\]
+The first product is the reciprocal-totient product on the mask
+times an absolutely convergent quadratic correction.  The second
+is bounded by splitting its mask primes at a logarithmic scale;
+the remaining prime mass is limited by $\log K$.  These are
+uniform absolute moments, not fixed-$K$ unspecified constants.
+The ordinary phase-zero Mertens estimate and partial summation give
+$B(t)=\sum_{j\leq t}\mu(j)/j\ll_D\log(2t)^{-D}$, with total
+harmonic sum zero.  Such an ordinary input follows, for example,
+from~\cite{LL}; no effectivity of the final classical lower-sieve
+threshold is claimed here.
+
+In $A_K(x)=\sum_{d\leq x}h_K(d)B(x/d)$ split at $\sqrt x$.
+The first moment handles the head, and boundedness of $B$ with
+the half moment gives the tail $x^{-1/4}\sum|h_K(d)|\sqrt d$.
+Moreover
+$W_K(R)=-\int_1^RA_K(t)\,dt/t$.
+For each fixed $K$, its convergent full integral is the value
+$\mathfrak S(K)$, obtained from
+$\zeta(1+s)^{-1}H_K(s)/s$ as $s\downarrow0$.
+The absolutely convergent $H_K$ at zero gives
+$H_K(0)=\mathfrak S(K)$ for even $K$ by its Euler factors.
+Subtracting the finite integral and applying the already uniform
+tail estimate yields the second bound.  Thus a fixed-$K$ limit
+has not been used as an unproved uniform limit.  Finally
+\eqref{eq:sector-shifted-prefix} is the exact finite logarithmic
+identity.  Its endpoint term must be retained.
+\end{proof}
+
+\begin{theorem}[A one-sided upper for all rough rows]
+\label{thm:eighth-rough}
+On \eqref{eq:sector-eighth-profile}, let $F_{\rm rough}$ be the
+complete physical contribution to \eqref{eq:sector-fixed-scalar}
+with squarefree $m=N-n$ and all prime factors of $m$ greater than
+$\alpha$.  Include $m=1$ with its zero value.  Uniformly over even
+$N$,
+\begin{equation}
+                         F_{\rm rough}\leq o(N).
+ \label{eq:sector-all-rough-upper}
+\end{equation}
+This is a one-sided upper, not an absolute-value estimate.
+\end{theorem}
+\begin{proof}
+\emph{Literal completion and the actual prefix.}
+If $m$ is $\alpha$-rough, every proper divisor $k\mid m$ has
+$m/k>\alpha$ and $k<m/\alpha\leq(N-1)/\alpha$.  Its integer
+$k$ is therefore at most $Q$, and the strict boundary admits it.
+The omitted $k=m$ term has zero logarithm.  Full divisor
+convolution gives $D_Q(m)=-\Lambda(m)$ exactly.
+
+For every rough composite $m$, $m>\alpha^2\geq N^{1/4}$.
+The same lower endpoint can be used for rough prime $m\geq N^{1/4}$.
+Since $\alpha\leq2N^{1/8}$, the exact integer prefix has
+$R\geq N^{1/8}/8$ eventually.  Hence the actual even mask
+$K=nN<N^2$ satisfies $K\leq R^{18}$ eventually, while
+$|\log(R/m)|\leq u=O(\log R)$.  Lemma~\ref{lem:sector-masked-prefix}
+and its \emph{shifted} identity give
+\begin{equation}
+                 W_Q(n,m)=-\mathfrak S(nN)+o(1)
+ \label{eq:sector-eighth-real-prefix}
+\end{equation}
+uniformly on these rows.  The safe fixed exponent $18$ absorbs
+the factor $8$ in the endpoint; $K\leq R^{16}$ does not follow
+automatically from this lower bound.  No previously evaluated
+prefix theorem requiring $R\geq N^{1/5}$ is invoked.
+
+Whenever a unit first-axis prime power $n=p^j$ contributes,
+$p$ is odd, $p\nmid N$ and
+\[
+ \mathfrak S(nN)=\mathfrak S(N)\frac{p-1}{p-2}
+                            \leq2\mathfrak S(N).
+\]
+Equations~\eqref{eq:sector-S-upper} and
+\eqref{eq:sector-eighth-real-prefix} show that $W_Q<0$ and
+$|W_Q|\leq3\mathfrak S(N)$ eventually.
+
+\emph{Favourable signs and the corner budgets.}
+For a rough prime $m\geq N^{1/4}$, the actual row is
+$\Lambda(n)[-\log m-W_Q]\leq0$ eventually.  For a rough
+squarefree composite with even $\Omega(m)$ it is
+$\Lambda(n)W_Q\leq0$.  Odd composite parity contributes
+$-\Lambda(n)W_Q\leq3\mathfrak S(N)\Lambda(n)$.
+Eight primes greater than $\alpha$ would force $m>N$; thus
+the only positive composite parities are $3,5,7$.
+
+We pay the exceptional faces absolutely without changing their
+support.  For every $k\geq1$,
+$\varphi(k)\geq\sqrt{k/2}$: in $\varphi(k)^2/k$ every
+prime-power factor is at least one except the single possible
+factor $p=2$, exponent one, which equals $1/2$.
+Consequently
+\[
+ \sum_{k\leq Q}\frac1{\varphi(k)}\leq2\sqrt{2Q},\qquad
+ |W_Q-D_Q|\leq u(1+2\sqrt{2Q})=O(uN^{7/16}).
+\]
+Grouping all proper first-axis prime powers by their base gives
+total von Mangoldt mass at most $\sqrt N\,u$.  Their complete
+contribution is $O(N^{15/16}u^2)=o(N)$.  Prime $m<N^{1/4}$
+costs $O(N^{11/16}u^2)$, and prime $n\leq N^{1/8}$ costs
+$O(N^{9/16}u^2)$.  Overlap among these nonnegative upper
+allowances is harmless.  These are single-Mangoldt corner
+budgets, not another two-axis detector fee or a second Type-I
+allowance.  Nonsquarefree $m$ already contributes zero.
+
+\emph{A single finite upper sieve for the positive union.}
+Put $z=N^{1/8}$.  For the remaining prime $n>z$ and rough $m$,
+both forms $n,N-n$ avoid every prime below $z$.  Let $B(N,z)$
+count all integers $1\leq n<N$ with this property.  The root
+number for $n(N-n)$ is
+\[
+ \omega(p)=\begin{cases}1,&p\mid N,\\2,&p\nmid N.\end{cases}
+\]
+In particular $\omega(2)=1$.  Put
+$g(p)=\omega(p)/(p-\omega(p))$ and
+$G(z)=\sum_{d<z}\mu(d)^2g(d)$.
+The finite Selberg identities~\cite[(9.28)--(9.33)]{Richert}
+give optimal weights with $\lambda_1=1$, $|\lambda_d|\leq1$
+and quadratic main $1/G(z)$.  CRT has remainder at most
+$\omega([d,e])\leq[d,e]\leq de$.  The full double remainder
+is therefore at most $z^4$, giving
+\begin{equation}
+                    B(N,z)\leq\frac N{G(z)}+z^4.
+ \label{eq:sector-Selberg-finite}
+\end{equation}
+This is a count of all integers in two forms, with no prime-AP
+distribution assumption.
+
+For completeness, the needed lower $G$ bound is uniform in the
+growing mask.  Take $y=z^{1/16}$ and the finite positive Euler
+mass $\mathcal E(y)=\prod_{p\leq y}(1-\omega(p)/p)^{-1}$.
+Under its divisor probability, the mean of $\log d$ is
+$\sum_{p\leq y}\omega(p)\log p/p\leq4+4\log y$,
+using the published global $\theta(t)\leq2t$ bound in~\cite{AH}.
+For $\log z\geq16$, this is at most $\tfrac12\log z$;
+Markov gives $G(z)\geq\mathcal E(y)/2$.
+The exact Euler factors, including the factor at two, imply
+\[
+ \mathcal E(y)\geq\frac{C_2}{\mathfrak S(N)}
+             \left[\prod_{p\leq y}(1-1/p)^{-1}\right]^2.
+\]
+The full identity has the extra factors $1/C_2(y)\geq1$
+and $\prod_{p\mid N,p>y}(p-1)/(p-2)\geq1$; they are not
+discarded in an adverse direction.  The harmonic Euler product
+is at least $\sum_{j\leq\lfloor y\rfloor}1/j\geq\log y$.
+Lemma~\ref{lem:sector-C2-rational} thus gives
+\[
+ G(z)\geq\frac{2541}{2097152\mathfrak S(N)}(\log z)^2,
+ \qquad
+ B(N,z)\leq\frac{134217728}{2541}
+                  \frac{\mathfrak S(N)N}{u^2}+\sqrt N.
+\]
+The entire positive parity union $3,5,7$ is counted \emph{once}.
+Since prime first-axis weights are at most $u$, its contribution
+and the paid corners satisfy
+\[
+ F_{\rm rough}\leq\frac{402653184}{2541}
+                \frac{\mathfrak S(N)^2N}{u}
+              +3\mathfrak S(N)u\sqrt N+o(N)=o(N),
+\]
+because $\mathfrak S(N)=O(\log u)$.  The favourable rough
+prime and even-parity contributions have been retained, not
+asserted absolutely small.  This proves
+\eqref{eq:sector-all-rough-upper}.
+\end{proof}
+
+\begin{corollary}[A disjoint combined negative sector]
+\label{cor:eighth-combined}
+On \eqref{eq:sector-eighth-profile}, for every sufficiently
+large even $N$,
+\begin{equation}
+                     F_{\mathcal C}+F_{\rm rough}< -\frac N{3000}.
+ \label{eq:sector-combined-credit}
+\end{equation}
+The onset remains unevaluated and ineffective under the
+classical lower-sieve input.
+\end{corollary}
+\begin{proof}
+The sector $\mathcal C$ has a nontrivial $\alpha$-small part,
+so it is disjoint from the all-rough sector.  Eventually the
+one-sided upper in Theorem~\ref{thm:eighth-rough} is less than
+$N/15000$.  Theorem~\ref{thm:eighth-composite} and
+$1/2500-1/15000=1/3000$ give the claim.
+\end{proof}
+
+\begin{remark}[The unestimated complementary scalar]
+The exact partition is
+\[
+ \mathcal F_{\rm fixed}
+       =F_{\mathcal C}+F_{\rm rough}+F_{\rm nonrough,rem}.
+\]
+There is no sufficient upper bound for $F_{\rm nonrough,rem}$
+in this work.  In particular positive one-small-prime rows are
+not removed.  The negative $j_\alpha$ credit is already inside
+$J_{\rm ref}$ and cannot be spent a second time after replacing
+the \emph{entire} $J_{\rm ref}$ by its main.  The new
+eighth-power profile has not inherited the evaluated exterior
+estimates of a quarter-power profile.  Neither this corollary
+nor the universal reference theorem proves a bound on $D_N$
+or an effective positive prime-pair margin.
+\end{remark}
+
+\section{Relation to the finite formal ingredients}
+\label{sec:sector-formal-boundary}
+
+The manuscript distinguishes finite identities from their analytical
+uses.  The actual Vaughan fibre identity
+$\mu*\beta_V=\Lambda\mathbf1_{\{n>V\}}$, literal cap and
+coprimality identities, character decompositions and finite
+dispersion partitions have separate Lean certificates.  Complete
+fibre cancellation is not assumed on an incomplete selected fibre.
+The exact prime support of $\mu(n)^2\Lambda(n)$ likewise supplies
+the finite detector interpretation in Proposition~\ref{prop:sector-transfer}.
+The infinite Euler limits, ordinary Mertens bounds, prime-AP estimates,
+linear sieve and asymptotic conclusions above are written analysis;
+they have not been formalized in Lean.
+
+Two earlier conventions are particularly relevant to the use of
+upper-sieve and bilinear reductions.  If $I_W(n)$ denotes absence
+of prime factors at most $W$ and
+$\Phi(n,z)=\mathbf1_{\{(n,\prod_{p<z}p)=1\}}$, then for integer
+$W$ one has $I_W=\Phi(\,\cdot\,,W+1)$, while for real $W$ the
+exact endpoint is $\lfloor W\rfloor+1$.  The stopped term in
+Rosser's identity~\cite[Lemma 8]{Motohashi} uses $\Phi(n,p(e))$,
+not $I_{p(e)}(n)$, which vanishes whenever $e\mid n$.  Its
+fundamental-lemma bound is an additional analytical input, not
+the finite primorial-boundary certificate.
+
+Similarly, completion of selected bilinear or HH roots cannot
+erase their actual support or alter the modulus $ar$ to a proper
+sign carrier $T\mid ar$.  A small continuous density main or a
+local positive amplitude is not a bound for the discrete signed
+observable.  These cautions explain why the sector inequalities
+above preserve the actual scalar and identify its remaining
+complement rather than announce a global cancellation theorem.
+
+The source audits and isolated compilation replays were performed
+within an AI-assisted workflow.  They are internal reproducibility
+checks, not external peer review.  No claim of external priority,
+a new general sieve theorem, a completed parity-barrier argument,
+or a proof of binary Goldbach is made here.
+
+
+\section{Explicit exterior estimates and their analytic scope}
+\label{sec:exterior}
+
+This section records the analytic component of the project. Its finite
+coefficient identities, written analytic deductions, published inputs and
+numerical certificates have different verification statuses. In particular,
+none of the complex analysis in this section is claimed to have been
+formalized in Lean. Independent agent reviews are useful reproducibility
+evidence, but are not external mathematical peer review.
+
+There is also a distinction between a detailed proof and a reported
+analytic certificate. The ordinary Mertens transport, the coefficient
+moments, the finite growing-mask estimate and the smoothed contour argument
+are explained below. The direct substitution in the long explicit remainder
+formula of Bordignon is recorded as an explicit reported analytic input in
+Lemma~\ref{lem:ext-primitive}. The final numerical assembly is conditional
+on that certificate and on the stated literal completion estimates. This
+qualification prevents a compilation receipt or a finite rational test from
+being substituted for an unprovided infinite-range analytic proof.
+
+\subsection{Parameters, genuine weights and historical allowances}
+
+All logarithms are natural. Write
+\[
+ u=\log N,\qquad \ell=\log u,\qquad L=1+u,
+ \qquad X=N-1,
+\]
+and, for the quarter-power profile, use
+\[
+ \alpha=\lceil N^{1/4}\rceil,\quad
+ Q=\left\lfloor\frac{N-1}{\alpha}\right\rfloor,\quad
+ B=\lceil L^{20}\rceil,\quad Y=B^2\alpha,\quad
+ R=\lfloor L^{16}\rfloor.
+\]
+Unless otherwise stated, $N$ is even and $1\leq V\leq N^{1/4}$.
+The Type-I bounds below further require $U=V=1$. On this specialization
+the genuine Vaughan coefficient is
+\[
+ \beta_1(n)=\sum_{d\mid n,\ d>1}\Lambda(d)=\log n.
+\]
+It is not an arbitrary coefficient with the same size. At $u\geq10^6$,
+the rounding guards give
+\[
+ B\leq2L^{20},\quad \alpha\leq2N^{1/4},\quad
+ Y\leq8L^{40}N^{1/4}\leq N^{3/8},\quad
+ R\geq L^{16}/2.
+\]
+For example, $\log8<3$ and $\log L\leq\sqrt L$ reduce the third
+inequality to $3+40\sqrt{1+u}\leq u/8$; its left-to-right ratio
+decreases after the displayed onset.
+
+The finite, repeated-modulus coefficient is
+\begin{equation}\label{eq:ext-w}
+ w_B(q)=\sum_{\substack{b\leq B,\ d\leq\alpha\\
+                 [b^2,d]=q,\ (bd,N)=1}}
+                   \mu(b)\mu(d)\log d.
+\end{equation}
+Each active $q$ is odd, coprime to $N$, and cube-free. Its unique
+factorization $q=b^2c$, with $b,c$ square-free and $(b,c)=1$, gives
+\begin{equation}\label{eq:ext-fibre}
+ w_B(b^2c)=\mu(b)\mu(c)
+       \sum_{\substack{e\mid b\\ce\leq\alpha}}\mu(e)\log(ce).
+\end{equation}
+The constraint $ce\leq\alpha$ is literal. A complete-fibre identity
+cannot be used when $bc>\alpha$.
+
+The following allowances describe different historical evaluations of the
+same components. They are not cumulative errors.
+\begin{center}
+\begin{tabular}{lll}
+\hline
+Quantity & Written allowance & Stated onset in $u=\log N$\\
+\hline
+$R_{\rm main}$, finite reference model & $10^{-30}N$ & $10^6$\\
+$R_{\rm main}$, refined evaluation & $10^{-40}N$ & $8\cdot10^6$\\
+Whole $E_J$, all-prefix evaluation & $10^{-6}N$ & $8\cdot10^6$\\
+Whole $I$, shrinking evaluation & $N/(10^{12}u\ell)$ & $2^{128}$\\
+Whole $E_J$, shrinking evaluation & $N/(10^{12}u\ell)$ & $2^{128}$\\
+Whole $E_Z$, shrinking evaluation & $N/(10^{100}u\ell)$ & $2^{128}$\\
+Adaptive exterior assembly & see \eqref{eq:ext-final} & $10^{24}$\\
+\hline
+\end{tabular}
+\end{center}
+These are bounds for exterior components; their onsets are not Goldbach
+thresholds. The qualitative sector with $\alpha=\lceil N^{1/8}\rceil$
+elsewhere in this manuscript has a different profile and no evaluated
+onset. Its conclusions cannot be imported into this table.
+
+\subsection{Ordinary Mertens input and exact harmonic transport}
+
+We pin the ordinary Mertens input to Lee--Leong
+\cite{LL}, arXiv:2208.06141v5, dated 9 September 2026. The constants used
+belong to the classical block of their table, with
+\[
+ c=\frac{839}{25}=33.56,\qquad
+ w=\frac{139}{25}=5.56,\qquad s_0=\frac{22946}{5}=4589.20.
+\]
+Their published theorem supplies
+\begin{equation}\label{eq:ext-Mertens}
+ |M(t)|\leq ct\log t\exp\{-\sqrt{\log t/w}\},
+ \qquad \log t\geq s_0,
+ \quad M(t)=\sum_{n\leq t}\mu(n).
+\end{equation}
+The computation underlying the published constant is an external input,
+not a computation revalidated by this manuscript. The unversioned 2022
+preprint must not be cited as though all its constants coincided with v5.
+
+Put $B_\mu(t)=\sum_{n\leq t}\mu(n)/n$. A useful global short-argument
+bound is $|B_\mu(t)|\leq1$ for $t\geq1$. Indeed, for $m=\lfloor t\rfloor$,
+Dirichlet inversion gives
+\[
+ \sum_{n\leq m}\mu(n)\lfloor m/n\rfloor=1,
+ \qquad mB_\mu(m)=1+\sum_{n\leq m}\mu(n)\{m/n\}.
+\]
+The $n=1$ fractional part vanishes and there are at most $m-1$
+remaining summands of absolute value at most one.
+Partial summation and \eqref{eq:ext-Mertens} show that $B_\mu(t)$
+converges. Its limit is zero: for $\eta>0$, absolute Dirichlet
+convolution gives $\sum\mu(n)n^{-1-\eta}=1/\zeta(1+\eta)$, while
+partial summation gives its Abel limit as the limit of $B_\mu$.
+The inequality $\zeta(1+\eta)\geq1/\eta$ forces that limit to be zero.
+Consequently,
+\[
+ B_\mu(t)=\frac{M(t)}t-\int_t^\infty\frac{M(v)}{v^2}\,dv.
+\]
+For $s=\log t\geq s_0$ and $z=\sqrt{s/w}$ this proves
+\begin{equation}\label{eq:ext-harmonic}
+ |B_\mu(t)|\leq c e^{-z}\{s+2w^2P_3(z)\},
+ \qquad P_3(z)=z^3+3z^2+6z+6.
+\end{equation}
+Here the integral is obtained by substituting $\log v=wz^2$ and
+integrating $z^3e^{-z}$ three times. Omitting the integral would not
+give the stated harmonic-prefix bound.
+
+For a positive integer $K$ let
+\[
+ a_K(r)=\frac{\mu(r)}{\varphi(r)}\mathbf1_{(r,K)=1}.
+\]
+Division of local Euler factors yields the exact convolution
+$a_K=h_K*(\mu(r)/r)$, where $h_K$ is multiplicative and
+\[
+ h_K(p^j)=\begin{cases}
+ p^{-j},&p\mid K,\\
+ -p^{-j}/(p-1),&p\nmid K,
+ \end{cases}\qquad j\geq1,
+ \quad h_K(1)=1.
+\]
+The absolutely convergent products give the uniform moments
+\begin{equation}\label{eq:ext-maskmoments}
+ \sum_d|h_K(d)|\leq8(1+\log K),\qquad
+ \sum_d\sqrt d\,|h_K(d)|
+ \leq32\exp\{6\sqrt{\max(2,\log(2K))}\}.
+\end{equation}
+For the first bound, the unmasked product is at most
+$2\exp(1/2)<4$; the masked product is at most
+$\zeta(2)\sum_{d\mid\operatorname{rad}K}1/d\leq2(1+\log K)$.
+For the second, isolate the factors at $2,3$, bound the rest by
+$\exp\{(5/2)\sum_{p\geq5}p^{-3/2}\}<5$, and use
+$-\log(1-p^{-1/2})\leq2p^{-1/2}$ on the masked factors.
+Splitting the prime divisors of $K$ at
+$Y_0=\max(2,\log(2K))$ bounds their reciprocal-square-root sum by
+$3\sqrt{Y_0}$. These estimates retain every prime of the growing mask.
+
+Define
+\[
+ A_K(x)=\sum_{r\leq x}a_K(r),\qquad
+ W_K(R)=\sum_{r\leq R}a_K(r)\log(r/R).
+\]
+For $s\geq2s_0$ set $z=\sqrt{s/(2w)}$ and
+\begin{align*}
+ \Phi_A(s)&=ce^{-z}\{wz^2+2w^2P_3(z)\},\\
+ \Phi_W(s)&=ce^{-z}\{4w^2P_3(z)+8w^3Q_4(z)\},\\
+ Q_4(z)&=z^4+7z^3+27z^2+60z+60.
+\end{align*}
+Split the convolution at $d=\sqrt x$ and use the global short bound
+on its tail. With $L_0=\sum|h_K|$ and $L_{1/2}=\sum\sqrt d|h_K(d)|$,
+\begin{align}
+ |A_K(x)|&\leq L_0\Phi_A(\log x)+L_{1/2}x^{-1/4},\label{eq:ext-A}\\
+ |W_K(R)+H_K(0)|&\leq L_0\Phi_W(\log R)
+                       +4L_{1/2}R^{-1/4},\label{eq:ext-W}
+\end{align}
+where $H_K(0)=\sum h_K(d)$. To justify the nonzero main term,
+$W_K(R)=-\int_1^R A_K(t)dt/t$ exactly. Absolute integrability on the
+large tail, the Dirichlet series $H_K(s)/\zeta(1+s)$ and the residue-one
+pole of $\zeta$ imply $\int_1^\infty A_K(t)dt/t=H_K(0)$.
+For even $K$, this value is $\mathfrak S(K)$; for odd $K$ it is zero.
+The integral giving \eqref{eq:ext-W} is verified by
+$Q_4-Q_4'=zP_3$. The real phase is
+\begin{equation}\label{eq:ext-logshift}
+ \sum_{r\leq R}a_K(r)\log(r/m)
+       =W_K(R)+\log(R/m)A_K(R).
+\end{equation}
+Thus the endpoint term must be retained. An empty $R=0$ prefix is
+zero and has no limiting main term.
+
+Using $P_3(z)\leq16z^3$, $Q_4(z)\leq155z^4$, $c<34,w<6$,
+\eqref{eq:ext-maskmoments} implies the useful explicit envelope
+\begin{equation}\label{eq:ext-prefix-envelope}
+ u\{|W_K(R)+H_K(0)|+u|A_K(R)|\}
+ \leq4\cdot10^8u^5e^{-\sqrt{u/60}}+160u^2e^{-u/40}
+\end{equation}
+when $K\leq N^3$, $R\geq N^{1/5}$ and $u\geq10^6$.
+Indeed, the head has $z\geq\sqrt{u/60}$ and the half-moment tail
+has exponent $12\sqrt u-u/20\leq-u/40$. These statements use the
+actual quotient arguments and do not invoke an asymptotic notation
+with an unevaluated constant.
+
+\subsection{The finite model and the signed conductor projection}
+
+Write $T=X-V$ and
+\[
+ C_B=-\sum_q\frac{w_B(q)}{\varphi(q)},\qquad
+ R_{\rm main}=\mathfrak S(N)N-TC_B.
+\]
+For $p\nmid N$ put $a_p=1/[p(p-1)]$. Completing the $b$ sum first,
+at each fixed square-free $d$, gives a Dirichlet series
+\[
+ F_1(s)=\prod_{p\nmid N}(1-a_p-p^{-1-s})
+           =\frac{H_1(s)}{\zeta(1+s)},\qquad \Re s>0.
+\]
+For an odd square-free conductor $r$ coprime to $N$, forcing
+$r\mid[b^2,d]$ changes the local factor at $p\mid r$ to
+$-a_p-p^{-1-s}$. Hence
+\[
+ F_r(s)=\prod_{p\nmid Nr}(1-a_p-p^{-1-s})
+                  \prod_{p\mid r}(-a_p-p^{-1-s})
+       =\frac{H_r(s)}{\zeta(1+s)}.
+\]
+The quotient of the changed and unchanged factors at $s=0$ is
+$-1/(p-2)$. Consequently
+\begin{equation}\label{eq:ext-Hr}
+ H_r(0)=\mathfrak S(N)\kappa(r),\qquad
+ \kappa(r)=\frac{\mu(r)}{\prod_{p\mid r}(p-2)}.
+\end{equation}
+This $\kappa$ is signed. It differs from the positive coefficient
+$g$ in the Type-I divisor expansion below.
+
+The coefficients of $H_r$ have local factors
+\[
+\begin{array}{ll}
+ p\mid N:& (1-z/p)^{-1},\\
+ p\nmid Nr:&1-a_p-a_p\sum_{j\geq1}z^j/p^j,\\
+ p\mid r:&-a_p-(1+a_p)\sum_{j\geq1}z^j/p^j,
+\end{array}\qquad z=p^{-s}.
+\]
+Their coefficient at $1$ is not generally $1$. The unmasked absolute
+zeroth-moment factors are at most $1$, and the forced factor is
+$p/(p-1)^2\leq1$ for $p\geq3$. Their half-moment factors are at most
+$1$ for $p\geq5$, since $p(1-a_p)^2\geq5(19/20)^2>4$; the factor
+at $3$ is less than $2$. Thus, uniformly in $r$,
+\[
+ \sum|h_r(d)|\leq1+2u,\qquad
+ \sum\sqrt d|h_r(d)|\leq2e^{12\sqrt u}.
+\]
+This gives a conductor-uniform harmonic transport; it does not assert
+that the singular projection itself is zero.
+
+A conservative weakening of \eqref{eq:ext-Mertens} is
+$|M(t)|\leq34t\log t\,e^{-\sqrt{\log t}/6}$ for $\log t\geq5000$.
+Repeated partial summation gives, with $v=\sqrt{\log t}$,
+\begin{align*}
+ \beta(v)&=34e^{-v/6}(12v^3+217v^2+2592v+15552),\\
+ \omega(v)&=68e^{-v/6}(72v^4+3030v^3+70092v^2
+                                      +934416v+5606496).
+\end{align*}
+They bound $|B_\mu(t)|$ and
+$|\sum_{n\leq t}\mu(n)n^{-1}\log(n/t)+1|$, respectively.
+The polynomial identities
+$(B_0-v^2)'-(B_0-v^2)/6=-2v^3$ and
+$T_0'-T_0/6=-vB_0$ verify the integrations. Splitting the new
+coefficient convolution at $\sqrt\alpha$ retains its coefficient tail
+and its $\log\alpha$ endpoint. The resulting error is at most
+\begin{align*}
+ \mathcal H(u)&=9(1+2u)
+            [\omega(\sqrt{u/8})+u\beta(\sqrt{u/8})],\\
+ \mathcal G(u)&=(1+2u+2u^2)
+                       e^{16+12\sqrt u-u/16}.
+\end{align*}
+
+The infinite model $b>B$ tail is distinct from a physical prime
+progression tail. Put $b=gh,d=gk$, where $g=(b,d)$; then
+$[b^2,d]=g^2h^2k$. Taking absolute values before removing masks gives
+\[
+ |\text{model tail}|\leq\frac{3uL}{B}
+    [L(6+2\log B)+4(\log B)^2+16\log B+16]
+ \leq7000L^{-16}.
+\]
+For example, $\sum_{gh>t}(gh)^{-2}\leq(6+2\log t)/t$ follows
+from the harmonic hyperbola decomposition; integrating this estimate
+gives the log-weighted tail. The factor $3$ in $q/\varphi(q)$ is
+already included in $7000$ and is not charged again.
+
+For $M_r(B)=\sum_{r\mid q}w_B(q)/\varphi(q)$ this proves the
+reported finite projection envelope
+\begin{equation}\label{eq:ext-projection}
+ |M_r(B)+\mathfrak S(N)\kappa(r)|
+       \leq\mathcal H(u)+\mathcal G(u)+7000L^{-16}.
+\end{equation}
+The same calculation at $r=1$, together with the exact endpoint
+$N-T=V+1$, gives
+\begin{equation}\label{eq:ext-Rmain}
+ \frac{|R_{\rm main}|}{N}
+ \leq\mathcal H(u)+\mathcal G(u)+7000L^{-16}
+                              +4Le^{-3u/4}.
+\end{equation}
+At $u\geq8\cdot10^6$ these displayed envelopes were evaluated in
+the project below $10^{-40}$. At $u\geq8\cdot10^{10}$ each of
+$\mathcal H,\mathcal G,7000L^{-16},4Le^{-3u/4}$ is at most $u^{-4}$.
+For instance, with $v=\sqrt{u/8}$,
+$u^4\mathcal H(u)<2^{49}v^{15}e^{-v/6}$; at the latter onset
+$v=10^5$, the positive factor is less than $2^{304}$ and the
+negative exponential is less than $2^{-16000}$. The envelope decreases
+because $15/v-1/6<0$. Similar comparisons give
+$u^4\mathcal G\leq5u^6e^{-u/32}$ and the two elementary polynomial
+and endpoint bounds. This variable evaluation is needed when the
+reference itself decreases like $N/(u\log u)$.
+
+An active real primitive exceptional character has odd square-free
+conductor. Indeed, odd prime-power unit kernels have odd order, so a
+real character factors through the prime modulus locally. The active
+moduli are odd and unit against $N$. Even or nonunit conductors have
+zero actual projection. This is a statement about real primitive
+characters, not a claim that every primitive conductor is square-free.
+
+\subsection{Arithmetic moments and all-module conductor transport}
+
+By \eqref{eq:ext-fibre}, $|w_B(b^2c)|\leq\tau(b)\log\alpha$ and
+$\varphi(b^2c)=b\varphi(b)\varphi(c)$. Dropping masks only after a
+positive majorization gives
+\[
+ \sum_q\frac{|w_B(q)|^2}{\varphi(q)}
+ \leq(\log\alpha)^2
+ \prod_{p\geq3}\left(1+\frac4{p(p-1)}\right)
+ \sum_{\substack{c\leq\alpha\\c\ \mathrm{odd}}}\frac1{\varphi(c)}.
+\]
+The product is at most $e^2<9$. From
+$c/\varphi(c)=\sum_{d\mid c}\mu(d)^2/\varphi(d)$, the odd reciprocal
+totient sum is at most $e^{1/2}(1+\log\alpha)<2(1+\log\alpha)$.
+Consequently, including every truncated fibre,
+\begin{equation}\label{eq:ext-moment}
+ \sum_q\frac{|w_B(q)|^2}{\varphi(q)}\leq18L^3.
+\end{equation}
+
+Let $E(q)$ be the maximum over all reduced classes and all
+$1\leq y\leq N$ of
+$|\psi(y;q,a)-\psi(y)/\varphi(q)|$. Brun--Titchmarsh, in the form
+quoted in \cite{AH}, gives a prime contribution at endpoint $N$ at
+most $16N/(5\varphi(q))$ for $q\leq N^{3/8}$. Proper prime powers
+cost at most $\sqrt N u\leq N^{5/8}\leq N/\varphi(q)$.
+Using monotonicity of the positive prefixes, not Brun--Titchmarsh
+at an inadmissibly short argument, proves $E(q)<7N/\varphi(q)$.
+Thus
+\begin{equation}\label{eq:ext-BTmoments}
+ \sum_q|w_B(q)|^2E(q)\leq126NL^3.
+\end{equation}
+For a fixed Page pair $(\chi_*,r_*,\beta_*)$ define
+\[
+ H_{\beta_*}(y)=\frac{y^{\beta_*}-1}{\beta_*}
+       =\int_1^y t^{\beta_*-1}dt,\qquad
+ \Delta^\#(y;q,a)=\psi(y;q,a)-\frac{\psi(y)}{\varphi(q)}
+       +\mathbf1_{r_*\mid q}\frac{\chi_*(a)H_{\beta_*}(y)}{\varphi(q)}.
+\]
+If there is no pair the added term is zero. Since $0\leq H\leq y-1$,
+the corresponding maximum $E^\#(q)$ satisfies
+\begin{equation}\label{eq:ext-correctedmoment}
+ E^\#(q)\leq\frac{8N}{\varphi(q)},\qquad
+ \sum_q|w_B(q)|^2E^\#(q)\leq144NL^3.
+\end{equation}
+
+The high-conductor input is Theorem 1.2 of \cite{AH}. It states
+\[
+ \mathcal M(t):=\sum_{d\leq t}\frac d{\varphi(d)}
+       \sum_{\chi\ ({\rm mod}\ d)}^{*}\max_{y\leq N}|\psi(y,\chi)|
+ \leq c_0u^{7/2}
+       [4N+2\sqrt N t^2+6N^{2/3}t^{3/2}+5N^{5/6}t],
+\]
+where the published formula permits $c_0<50$. A rational check uses
+$693/1000<\log2<694/1000$, $\log(4/3)>287/1000$,
+$\log(\log2/\log(4/3))<89/100$, $\pi>157/50$,
+$\sqrt2<283/200$ and $\sqrt{\psi(113)/113}<51/50$; substitution
+in that formula gives $2567195785600/52251571449<50$.
+The identification of its maximum with $\psi(113)/113$ remains a
+published input.
+
+The exchange $q=dm$, $\varphi(dm)\geq\varphi(d)\varphi(m)$ and
+$\sum_{m\leq z}1/\varphi(m)<3(1+\log z)$ give, on all modules,
+\begin{align*}
+ H_{>R}&\leq3L\sum_{R<d\leq Y}\frac{A(d)}{\varphi(d)}\\
+ &\leq3c_0Lu^{7/2}
+ [4N/R+4\sqrt N Y+18N^{2/3}\sqrt Y
+                         +5N^{5/6}(1+\log(Y/R))]\\
+ &\leq5250NL^{-23/2},
+\end{align*}
+where $A(d)=\sum_\chi^*\max_{y\leq N}|\psi(y,\chi)|$.
+The second line is Stieltjes summation of $\mathcal M(t)/t$; only
+favorable endpoint terms are dropped. The normalized bracket is at
+most $8L^{-16}+4e^{-u/8}+18e^{-7u/48}+5Le^{-u/6}
+\leq35L^{-16}$. This use of AH1.2 does not impose a least-prime
+condition. AH1.3 would have such a condition and cannot replace it.
+
+Induction is exact:
+\[
+ \psi(y,\chi_q)-\psi(y,\chi_r)
+   =-\sum_{\substack{p\mid q\\p\nmid r}}\log p
+                  \sum_{p^j\leq y}\chi_r(p)^j.
+\]
+Its absolute value is at most $u\omega(q)$. The principal character
+has the same lost-prime-power correction. Averaging over the actual
+characters does not add an extra $\varphi(q)$; summing over $q\leq Y$
+costs at most $2YL^2$. It is absorbed by $2NL^{-23/2}$.
+The printed inequality (12) in \cite{Bordignon}, which omits this
+logarithmic factor, is not used. Thus the full corrected mean satisfies
+\begin{equation}\label{eq:ext-mean}
+ \sum_{q\leq Y}E^\#(q)
+ \leq N[5252L^{-23/2}+\delta_{\rm low}(N)],
+\end{equation}
+where
+\[
+ \delta_{\rm low}(N)=\frac{3L}{N}
+ \sum_{2\leq r\leq R}\frac1{\varphi(r)}
+ \sum_{\chi\ ({\rm mod}\ r)}^*
+       \sup_{1\leq y\leq N}|\psi(y,\chi)
+                          +\mathbf1_{\chi=\chi_*}H_{\beta_*}(y)|.
+\]
+The suprema are required; an endpoint-only estimate does not prove
+this norm.
+
+\subsection{Reported primitive all-prefix certificate}
+
+The following certificate is the explicit analytic dependency of the
+low-conductor part. Its internal reviews and rational tests are recorded
+in the corpus. The proof below shows the reduction to direct remainder
+envelopes. It does not reproduce every lengthy remainder definition
+from \cite{Bordignon}; the substitution asserted in part (b) is therefore
+identified as a reported project-derived analytic step, rather than as
+a new fully independently established theorem of this manuscript.
+
+\begin{lemma}[Reported primitive certificate]\label{lem:ext-primitive}
+Assume $u\geq8\cdot10^6$, $R=\lfloor L^{16}\rfloor$, and select
+at most one primitive real Page pair up to $R$ with
+\[
+ \beta_*\geq1-\frac1{2(2.0452)\log R}.
+\]
+Use the signed primitive explicit formula, the zero count and the
+local and common Page zero-free regions of \cite{Bordignon}.
+Assume also the direct remainder substitution in part (b) below.
+Then, for each conductor $1<r\leq R$,
+\[
+ \sum_{\chi\ ({\rm mod}\ r)}^*
+ \sup_{1\leq y\leq N}
+ |\psi(y,\chi)+\mathbf1_{\chi=\chi_*}H_{\beta_*}(y)|
+ \leq100N/u^{14},
+\]
+and $\delta_{\rm low}(N)<40000\ell/u^{13}$.
+\end{lemma}
+
+\begin{proof}
+(a) Fix the same height $T_0=u^{34}$ for all characters and all
+prefixes. Since $R\leq2u^{16}\leq u^{17}$,
+$\log(r(T_0+2))\leq52\ell$. The published local constant
+$6.3970$ and common Page constant $2.0452$ give, for every unselected
+zero in the signed sum with real part at least $1/2$,
+\[
+ 1-\Re\rho\geq\frac1{340\ell}.
+\]
+The selected zero is removed before absolute values. Its reflected
+zero $1-\beta_*$ remains in the remainder containing zeros with real part below $1/2$. The pair
+is selected once, not at a new height or modulus for each prefix.
+
+For $y<N^{7/8}$, use $|\psi(y,\chi)|\leq\psi(y)\leq2y$ and
+$H_{\beta_*}(y)\leq y-1$. After at most $2u^{16}$ characters and
+division by $N/u^{14}$ this costs at most
+$6u^{30}e^{-u/8}$.
+For $N^{7/8}\leq y\leq N$, the zero count is at most
+$200T_0\ell$ per character and $|\rho|\geq1/2$. The remaining-zero
+sum, after the same normalization, is bounded by
+\begin{equation}\label{eq:ext-zero-fee}
+ 800u^{65}\exp\{-7u/(2720\ell)\}.
+\end{equation}
+The same lower value of $\log y$ applies to every character, so this
+allows the supremum inside each character sum.
+
+(b) The direct remainder certificate uses the signed formula (21)
+and the direct remainders on pp.~1425--1429 of \cite{Bordignon},
+with the half-integer Perron endpoint transported back to $y$.
+The asserted generous substitutions, uniform on the above long range,
+are
+\[
+\begin{array}{ll}
+ R_2\leq1000Nu\ell/T_0,&R_3\leq100Nu^2/T_0,\\
+ R_5\leq36uT_0,&R_7\leq100000N\ell^2/T_0,\\
+ R_8\leq4000\ell/T_0,&R_{11}\leq10000\sqrt N u^{10},
+\end{array}
+\]
+with the additional $Nr_4/(T_0-1)$ at most $200N\ell/T_0$.
+For clarity, the substitution checks recorded in the project are:
+$r_1(r,1)\leq10\ell$, $r_1(r,T_0\pm1)\leq16\ell$,
+$r_4<100\ell$, the shifted $r_5$ maximum below $250\ell$, and
+the shifted $r_6$ maximum below $70\ell$. In $R_7$, the first
+factor is below $3N/T_0$ and the bracket below $11000\ell^2$.
+In $R_8$, the first factor is below $12/T_0$ and the bracket below
+$270\ell$. In $R_{11}$, $\sqrt r\leq2u^8$ bounds the first term
+by $18\sqrt N u^8\ell^2$, and the remaining bracket is below
+$1700\ell^2$ with multiplier below $2\sqrt N$. These estimates
+include the inverse gap of the reflected real zero. In $R_3$ the
+first $\log y$ term is additive, not a multiplier of the entire
+numerator. $R_2$ must keep both near-floor neighbors and the
+half-integer padding. These last substitutions are the reported
+analytic certificate, not a consequence of rational arithmetic alone.
+
+After the characters and normalization, the complete direct fee is
+bounded by
+\begin{equation}\label{eq:ext-direct-fees}
+ \frac{2000\ell}{u^3}+\frac{200}{u^2}
+ +\frac{200000\ell^2+400\ell}{u^4}
+ +20000u^{66}e^{-u}+20000u^{40}e^{-u/2}.
+\end{equation}
+Changing $y^{\beta_*}/\beta_*$ to $H_{\beta_*}(y)$ adds the constant
+$1/\beta_*<2$ on only the selected character; it is included in
+the exponential group. The source's Table 6 and equation (33) are
+not inputs of this certificate.
+
+(c) At $u_0=8\cdot10^6$, $u_0<2^{23}$ and $15<\ell_0<16$.
+The zero exponent in \eqref{eq:ext-zero-fee} exceeds $1280$.
+Using $e>8/3$ gives
+$800\,2^{1495}(3/8)^{1280}<10^{-80}$.
+The first four terms of \eqref{eq:ext-direct-fees} total less than
+$10^{-6}$, and its exponential terms and the short-prefix fee are
+less than $10^{-100}$. Each term decreases thereafter; for the zero
+fee its logarithmic derivative in $\log u$ is at most
+$65-(7/2720)(u/\ell)(1-1/\ell)<0$.
+There is ample slack for the conservative bound $100N/u^{14}$.
+Finally,
+\[
+ \delta_{\rm low}\leq
+ 900L(1+17\ell)/u^{14}
+ \leq32400\ell/u^{13}<40000\ell/u^{13}.
+\]
+This proves the stated implications of the certificate.
+\end{proof}
+
+The numerical direction of this bound matters. It is less than
+$10^{-70}$, not $10^{70}$. A stronger immediate consequence is
+\begin{equation}\label{eq:ext-deltasharp}
+ \delta_{\rm low}<\frac{640000}{(8\cdot10^6)^{13}}
+                         <2\cdot10^{-84}
+ \qquad(u\geq8\cdot10^6),
+\end{equation}
+because $\ell/u^{13}$ decreases and $\ell_0<16$. These are upper
+bounds for a corrected norm, not measured sizes of a Goldbach error.
+
+Combining \eqref{eq:ext-correctedmoment} and \eqref{eq:ext-mean},
+two-prefix Cauchy gives the complete weighted remainder
+\begin{equation}\label{eq:ext-Wsharp}
+ \frac{|W^\#|}{N}
+ \leq24\sqrt{5252L^{-17/2}+L^3\delta_{\rm low}}.
+\end{equation}
+The factor $24$ already contains both endpoints $X$ and $V$.
+It is not doubled a second time. At $u_0$, retain
+$L^{-17/2}<u_0^{-8}/2828$ and use
+$L^3\delta_{\rm low}\leq320000\ell_0/u_0^{10}$.
+The exact rational comparison
+\[
+ 576\left[\frac{5252}{2828u_0^8}
+                     +\frac{320000\cdot16}{u_0^{10}}\right]
+       <\frac{64}{10^{54}}
+\]
+therefore proves the reported sharpened allowance
+$|W^\#|<8\cdot10^{-27}N$, conditional on
+Lemma~\ref{lem:ext-primitive}. This is not the exceptional main term.
+
+\subsection{A zero-avoiding contour for the genuine Type-I head}
+
+For the adaptive quarter-profile evaluation assume now
+\begin{equation}\label{eq:ext-adaptiveparams}
+ u\geq10^{24},\quad U=V=1,\quad
+ \delta=\frac1{\sqrt u\,\ell^4},\quad
+ E=\delta u=\frac{\sqrt u}{\ell^4},\quad
+ T_1=e^{E/120},\quad h=T_1^{-1/2},\quad J=32.
+\end{equation}
+Use the same Page pair up to $R$ as before. In the Type-I head
+$d\leq u^8$, exclude only that one primitive character if its
+conductor $r>u\ell^4$. If it is absent, outside the head, even,
+non-square-free or nonunit, its actual head contribution is zero.
+All other characters on every multiple of its conductor are retained.
+
+For a retained primitive nonprincipal character of conductor $q\leq u^8$,
+and any $K$ with $\log K\leq2u$, use the real arithmetic series
+\[
+ F(s)=\sum_{n\geq1}\mu(n)\chi(n)\mathbf1_{(n,K)=1}n^{-s}
+ =\frac1{L(s,\chi)}\prod_{p\mid K}(1-\chi(p)p^{-s})^{-1}.
+\]
+The series identity initially holds on $\Re s>1$.
+The local published real-zero gap is
+$1-\beta\geq100/(\sqrt q\log^2q)$ when a local Siegel zero exists.
+For the selected $r\leq u\ell^4$, this is at least $25\delta$.
+Every other local real zero has common Page gap above $1/(80\ell)$.
+The ordinary zero-free-region check is
+\[
+ 28\delta(8\ell+E/120+1)<1.
+\]
+It follows that the disks of radius $4\delta$ centered at
+$1+2\delta+it$, $|t|\leq T_1$, are zero-free. No possible
+reciprocal-$L$ pole is crossed.
+
+Here is the finite growing-mask bound. If
+$\delta\leq\min(1/4,1/(2\ell))$ and $\Re s\geq1-\delta$,
+then
+\[
+ \left|\prod_{p\mid K}(1-\chi(p)p^{-s})^{-1}\right|\leq u^6.
+\]
+Indeed $p^{-1+\delta}<3/5$ and
+$-\log(1-t)\leq(5/2)t$ on that range. For $p\leq u$ enlarge to
+the integers and use $p^\delta<2$ to bound the sum by $2\ell$.
+There are at most $2u/\ell$ mask primes above $u$, with sum at most
+$4/\ell$. Thus the logarithm of the product is at most
+$5\ell+10/\ell\leq6\ell$. Every actual mask prime remains.
+
+Nonprincipal periodicity supplies $|\sum_{n\leq t}\chi(n)|\leq q$.
+Partial summation continues $L$ to $\Re s>0$ and bounds it by
+$q|s|/\Re s$. On the larger disk use $|L(s)|\leq4q(T_1+3)$.
+At its center the Euler logarithm is bounded by
+$\log\zeta(1+2\delta)\leq\log(1/\delta)$.
+Borel--Caratheodory with radii $4\delta,3\delta$ then gives
+\[
+ |1/L(s,\chi)|\leq[4q(T_1+3)]^6\delta^{-7}
+\]
+on the inner disk. On the rectangle
+$1-\delta\leq\Re s\leq c=1+1/\log x$, $|\Im s|\leq T_1$,
+$N^{1/8}\leq x\leq N$, this proves
+\begin{equation}\label{eq:ext-inverse-norm}
+ |F(s)|\leq2^{24}u^{74}T_1^6.
+\end{equation}
+Here $q^6\leq u^{48}$, $\delta^{-7}=u^{7/2}\ell^{28}$ and
+$\ell^{28}\leq u^{14}$ give exponent $6+48+7/2+14<74$.
+
+Let $M_f(x)=\sum_{n\leq x}\mu(n)\chi(n)\mathbf1_{(n,K)=1}$.
+Use the exact multiplicative box average
+\[
+ M_h(x)=h^{-32}\int_{[1,1+h]^{32}}
+                         M_f(xt_1\cdots t_{32})\,dt_1\cdots dt_{32}.
+\]
+Its absolutely convergent Mellin representation is
+\[
+ M_h(x)=\frac1{2\pi i}\int_{c-i\infty}^{c+i\infty}
+       F(s)x^sG_h(s)\frac{ds}{s},\qquad
+ G_h(s)=\left[\frac{(1+h)^{s+1}-1}{h(s+1)}\right]^{32}.
+\]
+The apparent singularity at $s=-1$ is removable. To justify the
+identity, average the Mellin step kernel over the box. Its averaged
+weight is continuous, zero below $(1+h)^{-32}$ and one above $1$;
+its Mellin transform is $G_h(s)/s$. The decay $|t|^{-32}$ gives
+absolute integrability and licenses Fubini on $\Re s=c>1$.
+Also $|M_h-M_f|\leq64hx+1$. The $+1$ is the integer endpoint,
+not an omitted small error.
+
+On the rectangle $|G_h|\leq2$; for $|t|\geq T_1$,
+$|G_h(s)|\leq[3/(h|t|)]^{32}$. Truncating and shifting to
+$\Re s=1-\delta$ crosses neither a zero of $L$ nor the pole at
+$s=0$. Divide every resulting fee by $x/u^4$. The five upper bounds
+are precisely
+\begin{align}
+ A_1&=2^{26}u^{79}e^{-3E/40},&
+ A_2&=6\cdot2^{24}3^{32}u^{78}e^{-11E/120},\nonumber\\
+ A_3&=6\cdot3^{32}u^5e^{-2E/15},&
+ A_4&=64u^4e^{-E/240},&
+ A_5&=u^4e^{-u/8}.\label{eq:ext-fivefees}
+\end{align}
+$A_1$ is the shifted vertical integral: $x^{-\delta}\leq e^{-E/8}$,
+the inverse norm costs $T_1^6$, and the logarithmic integration
+costs at most $u$. $A_2$ is the horizontal integral, whose smoothing
+decay $T_1^{-17}$ beats that $T_1^6$. $A_3$ is the two tails on
+the original absolute-convergence line, using $|F(c+it)|\leq2u$.
+$A_4$ and $A_5$ are the box-averaging fee and its endpoint.
+An unsmoothed degree-one Perron estimate would not justify $A_2$.
+
+At $u_0=10^{24}$, $u_0<2^{80}$, $54<\ell_0<56$ and
+$E_0>10^{12}/56^4>100000$. With $e>2$, the five fees are below
+\[
+ 2^{6346-7500},\quad2^{6331-9166},\quad
+ 2^{467-13333},\quad2^{326-416},\quad2^{320-10000},
+\]
+respectively, hence each is below $1/8$.
+Their uniform monotonicity follows from
+$d\log E/d\log u=1/2-4/\ell>2/5$ and
+$a-(2/5)bE<0$ for each $u^ae^{-bE}$ above.
+We obtain the explicit retained nonprincipal bound
+\begin{equation}\label{eq:ext-mobiusprefix}
+ |M_f(x)|<x/u^4\qquad(N^{1/8}\leq x\leq N).
+\end{equation}
+This proof controls $1/L$ itself and avoids the possible pole.
+It does not infer a Mertens-in-progressions estimate from a
+$\psi$-formula, and does not assume a bound for $1/L'(\beta_*)$.
+
+\subsection{Whole Type-I error accounting, including the paid primitive line}
+
+The genuine scalar is $I=I_D-I_W$. A complementary-divisor switch,
+with the strict face retained, gives
+\[
+ I_D=-\sum_{\substack{k\leq Q\\(k,N)=1}}\mu(k)^2
+ \sum_{\substack{\alpha<r\leq\lfloor(N-1)/k\rfloor\\(r,kN)=1}}
+                  \mu(r)\log r\log(N-kr).
+\]
+The identity used is
+$\mu(k)\mu(kr)=\mu(k)^2\mu(r)\mathbf1_{(k,r)=1}$.
+For $K\leq N^2$, ordinary masked Mertens convolution split at
+$\sqrt x$ gives, for $x\geq N^{1/4}$,
+\[
+ |M_K(x)|/x\leq26u^2e^{-\sqrt{u/48}}+e^{-u/32}.
+\]
+The mask-smooth coefficient has reciprocal moment at most
+$2(1+\log K)$ and half-moment at most $e^{12\sqrt u}$.
+The weight $\log t\log(N-kt)$ has supremum at most $u^2$ and
+variation at most $2u^2$. Abel summation, with both endpoints,
+then costs at most $4Ru^2$ times the normalized prefix bound.
+The outer sum is harmonic, not of size $Q$. Thus
+\[
+ |I_D|/N\leq208u^5e^{-\sqrt{u/48}}+8u^3e^{-u/32}.
+\]
+
+Let
+\[
+ T_{\rm sing}=\sum_{\substack{1\leq n<N\\(n,N)=1}}
+                   \mu(N-n)\log n\,\mathfrak S(nN).
+\]
+For physical $m=N-n\geq\sqrt N$, the exact prefix
+$\min(Q,\lfloor(m-1)/\alpha\rfloor)$ is at least $N^{1/5}$.
+Its mask is $nN$, and \eqref{eq:ext-logshift} has main
+$-\mathfrak S(nN)$, not $-\mathfrak S(N)$ on a general log-weighted
+row. All physical short $m$, including empty prefixes, cost at most
+$8\sqrt N L^3$. The literal completion therefore gives
+\begin{align*}
+ |I-T_{\rm sing}|/N\leq{}&4\cdot10^8u^5e^{-\sqrt{u/60}}
+        +160u^2e^{-u/40}+8L^3e^{-u/2}\\
+        &+208u^5e^{-\sqrt{u/48}}+8u^3e^{-u/32}<u^{-4}
+\end{align*}
+at the adaptive onset, by elementary decreasing-envelope comparisons.
+
+Define the positive odd-square-free coefficient
+$g(d)=\prod_{p\mid d}(p-2)^{-1}$, $g(1)=1$, zero off that support.
+Finite Euler expansion gives exactly
+\[
+ \mathfrak S(nN)=\mathfrak S(N)
+               \sum_{\substack{d\mid n\\(d,N)=1}}g(d),
+\]
+hence $T_{\rm sing}$ is a weighted sum of actual reduced classes
+$m\equiv N\pmod d$, with the unit-$N$ mask retained.
+Its coefficient moments are
+\[
+ \sum_{d\leq D}g(d)<8(1+\log D),\qquad
+ \sum_{d>D}\frac{g(d)}d<\frac{6(1+\log D)}D\quad(D\geq e).
+\]
+For the second bound, compare local Euler factors to obtain
+$\sum g(d)d^{-\sigma}<2\zeta(1+\sigma)\leq2(1+1/\sigma)$.
+For $\sigma=1/\log D\leq1$, Rankin's inequality gives the displayed
+tail. For the first, factor $g=h*(1/n)$; the absolute moment is
+$(3/2)\prod_{p>2}(1+3/[p(p-2)])<8$, by telescoping the odd reciprocal
+quadratic series.
+
+Take $D=u^8$. Orthogonality on each actual $d$ induces a primitive
+character with exact mask $K=Nd$, $\log K\leq2u$. There is no
+unrestricted-conductor dimension factor: its $\varphi(d)$ characters
+cancel its own $1/\varphi(d)$. The principal character is separate.
+Ordinary masked Mertens, now calibrated at $x\geq N^{1/8}$, bounds
+its normalized prefix by
+$13u^2e^{-\sqrt{u/96}}+e^{-u/64}<u^{-4}$.
+For smaller prefixes all characters use the direct maximum
+$N^{1/8}<N/u^4$. Abel summation for the decreasing weight
+$\log(N-m)$ costs at most $u$. The retained head, bridge and entire
+$d>u^8$ tail, normalized by $N/(u\ell)$, total at most
+\begin{equation}\label{eq:ext-Iretained}
+ \frac\ell{u^3}
+ +\frac{648\ell(1+\ell)(1+8\ell)}{u^2}
+ +\frac{486\ell(1+\ell)(1+8\ell)}{u^6}<10^{-12}.
+\end{equation}
+The absence of a $+1$ in this positive divisor tail is justified
+by the original positive multiples $n=dj$, whose count is exactly
+$\lfloor(N-1)/d\rfloor\leq N/d$. It is not an arbitrary interval count.
+
+The one excluded primitive character is paid on all its actual
+multiples. Its positive coefficient mass is
+\[
+ P_g(r)=\sum_{r\mid d}\frac{g(d)}{\varphi(d)}
+       <3\frac{g(r)}{\varphi(r)}
+       <\frac6{r^2}\left(\frac r{\varphi(r)}\right)^3
+       <\frac{162(\log\log r)^3}{r^2}.
+\]
+The first Euler product is below $e<3$; the second comparison uses
+$\prod_{p\mid r}(1+1/[p(p-2)])<e^{1/2}<2$.
+The last step uses the universal Rosser--Schoenfeld totient bound
+\cite{RS}; its $2.50637$ version covers its small exceptional integer.
+Also $\mathfrak S(N)<3\ell$. Exactly one induced character occurs
+on each multiple, not $\varphi(d/r)$ characters.
+Bounding the genuine masked, log-weighted inner sum by $Nu$ pays
+this line with normalized allowance
+\[
+ 486\frac{[\log(\ell+4\log\ell)]^3}{\ell^6}
+ \leq486\frac{[\log(2\ell)]^3}{\ell^6}
+ <\frac{486\cdot125}{54^6}<\frac1{400000}.
+\]
+This decreases with $\ell$. Together with \eqref{eq:ext-Iretained},
+it proves the reported $|I|<3\cdot10^{-6}N/(u\ell)$.
+No active modulus has been discarded, and no favorable character
+phase has been assumed.
+
+\subsection{Whole $E_J$, centering corrections and exceptional main}
+
+The literal omitted-divisor union reduces on this cap family to
+$J(m)=-\sum_{d\mid m,d\leq\alpha}\mu(d)\log d$.
+Indeed $Q\geq\alpha$ and $Q(\alpha+1)>X$, so the other union
+branch cannot occur for $d>\alpha$. Expanding $\mu(m)^2$ before
+grouping gives the exact error allocation
+\[
+ E_J=R_{\rm main}+\sum_qw_B(q)\Delta^*(q)-T_B,
+\]
+where
+\[
+ \Delta^*(q)=\psi(X;q,N)-\psi(V;q,N)-U_N(q;V,X)
+                                -\frac{X-V}{\varphi(q)}.
+\]
+$U_N$ is the exact lost nonunit prime-power mass. $T_B$ is the
+signed physical remainder with $B<b\leq\sqrt X$ in the square-free
+expansion; it is not the infinite model tail used above.
+The elementary AP count $\psi_s(X;q,N)\leq(N/q+1)u$ and the
+$b=gh,d=gk$ decomposition give
+\[
+ |T_B|/N\leq2u^2L(2+\log B)/B+2u^2e^{-u/4}
+                     \leq46L^{-16}+2u^2e^{-u/4}.
+\]
+The second term pays the physical counting $+1$ and must remain.
+
+Put $\Omega=\psi(X)-\psi(V)$ and
+$J_\beta=(X^{\beta_*}-V^{\beta_*})/\beta_*\leq N$.
+On every active modulus, including multiples of $r_*$,
+the two-prefix identity is
+\[
+ \sum_qw_B(q)\left[\psi(X;q,N)-\psi(V;q,N)
+                            -\frac\Omega{\varphi(q)}\right]
+   =-\chi_*(N)J_\beta M_{r_*}(B)+W^\#.
+\]
+Inserting \eqref{eq:ext-projection}, the exceptional main is
+\[
+       +\chi_*(N)\mathfrak S(N)\kappa(r_*)J_\beta.
+\]
+Its effective sign depends on $\chi_*(N)\mu(r_*)$. It is not
+automatically favorable. The projection error and $W^\#$ have
+different error components.
+
+Recentering from $\Omega$ to $X-V$ adds exactly
+$(\Omega-(X-V))/\varphi(q)$, and the retained unit correction
+subtracts $U_N(q;V,X)$. The exact endpoint identity is
+\[
+ \Omega-(X-V)=(\psi(N)-N)-\Lambda(N)+1-(\psi(V)-V).
+\]
+It retains $\Lambda(N)$, including $N=2^t$. From
+\eqref{eq:ext-moment} and $\sum1/\varphi(q)<3L$,
+$\sum|w_B(q)|/\varphi(q)<8L^2$.
+The ordinary published estimate in \cite{JY} implies the safe
+weakening $|\psi(N)-N|\leq34Nu^2e^{-(4/5)\sqrt u}$.
+The endpoint and lower-prefix cost is at most $8L^2(u+1+3V)$.
+The nonunit prime-power mass is at most $2u^2$, and
+$\sum|w_B(q)|\leq u\alpha B(1+\log B)$.
+Their joint variable envelope is therefore
+\[
+ 272u^2L^2e^{-(4/5)\sqrt u}+220L^{24}e^{-3u/4}
+\]
+after division by $N$. At $u\geq8\cdot10^{10}$ this is at most
+$2u^{-4}$. All the projection, model and physical-tail rates then
+give, using \eqref{eq:ext-Wsharp}, the total nonexceptional allowance
+\[
+ |\text{nonexceptional components}|/N\leq14411u^{-4},
+ \qquad14411=14400+3+4+2+2.
+\]
+The first constant pays $W^\#$ by
+$24\sqrt{(5252+320000)/u^8}<14400/u^4$; the next constants pay
+projection, $R_{\rm main}$, $T_B$ and the corrections exactly once.
+
+The exceptional main requires two alternative cases, not two added
+fees. If $r_*>u^{3/2}$, the totient bound and
+$\prod_{p\mid r}(1+1/[p(p-2)])<2$ give its normalized cost
+\[
+ 54\ell^2[\log(1.5\ell)]^2/\sqrt u.
+\]
+If $3\leq r_*\leq u^{3/2}$, the published local gap and the
+coefficient bound $\mathfrak S(N)|\kappa(r)|\leq54\ell^3/r$
+give at most $2\cdot54\ell^3r^{-1}
+\exp\{-100u/(\sqrt r\log^2r)\}$ before normalization.
+Using $\log r\leq1.5\ell$ and setting $t=1/\sqrt r$, the
+elementary maximum of $t^2e^{-at}$, namely $4e^{-2}/a^2$, yields
+\[
+ |\text{small-conductor main}|/N
+          \leq(2187/10000)\ell^7/u^2.
+\]
+At $u_0=10^{24}$ the normalized large and small alternatives are
+respectively below
+$54\cdot56^2\cdot25/10^{12}<9/(2\cdot10^6)$ and
+$0.2187\cdot56^8/10^{24}<10^{-10}$.
+Both functions decrease thereafter. Adding the nonexceptional
+$14411\ell/u^3<10^{-12}$ gives the reported whole bound
+\[
+          |E_J|<5\cdot10^{-6}\frac{N}{u\ell}.
+\]
+This conclusion depends on the all-prefix certificate, not just a
+small endpoint value or an exceptional-modulus-free theorem.
+
+\subsection{The complete centering component and detector losses}
+
+Use the literal endpoint
+$x(m)=\min(Q,\lfloor(m-1)/\alpha\rfloor)$ in $W_Q(n,m)$.
+For a retained prime row $n=p>Q$, all $k\leq x(m)$ are less than
+$p$, so the finite mask $nN$ is exactly the mask $N$ before taking
+any limit. On the further physical bulk $m>\lceil\sqrt N\rceil$,
+$x(m)\geq N^{1/5}$; \eqref{eq:ext-prefix-envelope} therefore gives
+main $-\mathfrak S(N)$. Its total Mangoldt weight is at most $Nu$,
+so its whole error is bounded by $N$ times that envelope.
+
+The literal physical partition keeps low primes $p\leq Q$, primes
+with short $m$, proper prime powers, $n\leq V$ omissions and nonunit
+omissions. The separate original corner estimates sum to
+\[
+ 6QL^3+6\lceil\sqrt N\rceil L^3+12\sqrt N L^4
+                      +3VL^2+6L^3\leq40N^{3/4}L^4.
+\]
+This is the reported literal corner certificate; it does not apply
+the bulk mask to those other rows. Together with the bulk it gives
+the complete, variable error envelope
+\begin{equation}\label{eq:ext-EZ}
+ |E_Z|/N\leq4\cdot10^8u^5e^{-\sqrt{u/60}}
+                +160u^2e^{-u/40}+40L^4e^{-u/4}.
+\end{equation}
+The proper powers here belong to the one-Mangoldt centering component,
+not to the two-Mangoldt detector conversion. The latter has its own
+nonnegative retained proper-power mass, satisfying
+\[
+ P_{\rm retained}\leq\sqrt N(\log N)^2.
+\]
+For each prime base $p\leq\sqrt N$, the sum of $\log p$ over its
+proper powers below $N$ is at most $u$, and the second Mangoldt
+factor is at most $u$, proving this estimate.
+
+Normalize \eqref{eq:ext-EZ} and the detector estimate by $N/(u\ell)$.
+At $u_0=10^{24}$ every negative exponent is larger than $10^{11}$,
+while the positive factors are below $2^{516},2^{254},2^{416}$ and
+$2^{246}$, respectively. They are individually below $2^{-1000}$;
+the corresponding polynomial-exponential envelopes decrease.
+Thus
+\[
+ |E_Z|<10^{-12}N/(u\ell),\qquad
+ P_{\rm retained}<10^{-12}N/(u\ell).
+\]
+The omitted-prime-pair selector loss $T_{\rm pairs}$ is nonnegative
+and appears with a favorable minus sign. It need not be charged as
+an additional positive upper error.
+
+\subsection{Conditional exterior conclusion and the unresolved target}
+
+Under the analytic certificate and literal completion estimates
+specified above, the quarter-power assembly gives
+\begin{equation}\label{eq:ext-final}
+ \begin{split}
+ |I|&<3\cdot10^{-6}N/(u\ell),\qquad
+ |E_J|<5\cdot10^{-6}N/(u\ell),\\
+ |E_Z|&<10^{-12}N/(u\ell),\qquad
+ P_{\rm retained}<10^{-12}N/(u\ell),
+ \end{split}\qquad u\geq10^{24},\quad U=V=1.
+\end{equation}
+Their useful exterior sum is
+\[
+ \epsilon_{\rm tr}=P_{\rm retained}-T_{\rm pairs}+E_J+E_Z-I
+   <(8\cdot10^{-6}+2\cdot10^{-12})N/(u\ell).
+\]
+This reevaluates the original components; no old fixed allowance is added
+to it. The universal reference lower bound from the separate prime-square
+argument is
+$\mathfrak S(N)(N-F_N)\geq2541N/(524288u\ell)$.
+If the exact covered/uncovered bridge holds and if the still-open
+analytic target
+\[
+             D_N\leq N/(256u\ell)
+\]
+is established on the same support and profile, the terminal ledger
+would leave the positive coefficient
+\[
+ \frac{2541}{524288}-\frac1{256}
+                  -\frac8{10^6}-\frac2{10^{12}}
+       =\frac{119337327869}{128000000000000}>0.
+\]
+The equality of rational numbers is a certificate of a conditional
+margin. Neither the covered bridge nor the required bound for $D_N$
+is proved by this arithmetic. A smaller Type-I component also does not
+make $D_N$ smaller: at fixed $V,\alpha,Q$, changing $U$ redistributes
+the same arithmetic term between $I_U$ and $D_U$, with its covered
+positive error still present.
+
+\subsection{Relation to prior work and responsible scope claims}
+
+The external tools are classical: ordinary Mertens cancellation,
+primitive character mean values, zero-free regions, partial summation,
+Euler products, Borel--Caratheodory and a smoothed Perron contour.
+Their coefficient-specific combination and explicit error allocation are
+project deductions; no priority claim for a new distribution theorem
+has been established. The formal contribution concerns exact finite
+bridges and certificates with declared hypotheses. It does not establish
+binary Goldbach, overcome the parity barrier or prove an analytic
+infinite-range statement in Lean.
+
+Sedunova's two papers have different bibliographic identities. The
+2018 Besancon paper is \emph{A partial Bombieri--Vinogradov theorem
+with explicit constants}; the 2019 Bordeaux paper \cite{Sedunova} is
+\emph{A logarithmic improvement in the Bombieri--Vinogradov theorem},
+31(3), 635--651. A corollary with an effective implied constant does
+not provide a particular numerical constant unless it is evaluated.
+The explicit assembly here uses the stated AH primitive theorem,
+not an invented numerical Sedunova constant.
+
+M.~Ram Murty and A.~Vatwani, \emph{A remark on a conjecture of Chowla},
+Journal of the Ramanujan Mathematical Society 33(2) (2018), 111--123,
+is relevant qualitative context for raw
+Mertens cancellation in progressions with maximal prefixes. Such a
+theorem cannot by itself provide the numerical $10^{24}$ budget here;
+the manuscript's explicit route treats the reciprocal-$L$ function
+and its mask directly. The latest author publication page confirms
+the 2018 journal entry, but the former institutional PDF redirects.
+No fresh primary-PDF verification of its Proposition 3 is claimed in
+this manuscript support review.
+
+Weighted sieves with switching \cite{MTZ} and the sieve framework
+\cite{Richert} support the separate qualitative sector. That sector
+has a different $\alpha$ and an unevaluated onset. In particular, the
+printed sign of the absolute remainder in Richert's (11.80) is not
+used as a lower-bound input; the adopted sector proof uses a good/bad
+partition and the stated modern linear-sieve lemma instead. Chen-type
+prime plus at-most-two-prime-factor conclusions do not imply a prime
+plus prime conclusion or a sign comparison of proper semiprime and
+triple-prime masses. Prime credit must remain in the exact terminal row.
+
+The historical repository's own \texttt{AUDIT\_NOTE.md} states that
+four interface predicates were weak enough to admit trivial witnesses,
+while \texttt{PCBAsymptotic} already expresses asymptotic Goldbach.
+Accordingly, compiling a conditional interface theorem is not a proof
+of the corresponding number-theoretic hypothesis. The present corpus
+should be described by its exact theorem statements, source hashes,
+axiom checks and open assumptions, without an unsupported claim of
+being a first formal proof of Goldbach.
+
+Finally, arXiv's published policy \cite{arxivpolicy} requires disclosure
+of significant generative-tool use and keeps responsibility for all
+content with the named human authors; a language model is not an author.
+An appropriate disclosure is that generative tools assisted research,
+proof drafting, code generation and language editing, while the human
+author takes responsibility for the mathematical statements and references.
+The reviews in this corpus are internal computational-assistant reviews.
+An arXiv-friendly source package is a technical format, not a guarantee
+of moderation acceptance or external peer review.
+
+
+\section{The unresolved terminal estimate}\label{sec:open}
+The reference lower bound and a numerical loss allowance must be compared on the same support and the same parameter profile. In the quarter profile, a sufficient covered-route target remains
+\begin{equation}\label{eq:open-target}
+ D_N\le\frac{N}{256\log N\log\log N}.
+\end{equation}
+It is not an established theorem, and it is not asserted necessary. If the reported primitive input, the exact covered identity and the stated written exterior assembly apply, \eqref{eq:open-target} leaves the conditional coefficient
+\[\frac{2541}{524288}-\frac1{256}-\frac8{10^6}-\frac2{10^{12}}
+ =\frac{119337327869}{128000000000000}>\frac9{10000}.
+\]
+The positive rational comparison is a consequence of the premises. It does not discharge \eqref{eq:open-target}, nor prove that the covered decomposition has the required complete support.
+
+The complete direct scalar formulation avoids the artificial covered excess:
+\[R_{\rm sf}=\Sing(N)(N-F_N)-F_{\rm fixed}-P_{\rm retained}
+ +T_{\rm pairs}-E_J-E_Z.\]
+An upper bound for $F_{\rm fixed}+E_J+E_Z+P_{\rm retained}-T_{\rm pairs}$ below the reference would suffice in that convention. It must not be added to the covered-route losses as if they were different errors. The cutoff-invariance identity in the formal appendix shows that completing a Vaughan fibre redistributes the same prime row between the short and long components. It does not supply new cancellation simply by changing $U$.
+
+The eighth-profile sector result has a different remaining object:
+\[F_{\rm fixed}=F_C+F_{\rm rough}+F_{\rm nonrough,remaining}.
+\]
+The two first supports are disjoint and have a negative combined upper bound. The third includes potentially large positive rows; no usable global upper bound has been obtained for it. In addition, the quarter-profile effective exterior bounds have not been transferred to this eighth profile. A negative coefficient already included in $J_{\rm ref}$ cannot also be spent as an extra credit after the whole $J_{\rm ref}$ has been replaced by its main term.
+
+\subsection{What a subsequent proof would have to add}
+A future argument must supply a quantitative estimate for the actual signed aggregate, with its masks, weights, strict faces and complement retained. It may use a combined estimate rather than separate absolute bounds, but no proof has shown that every possible absolute or spectral method fails. The $N/64$ obstruction concerns the particular positive envelope tested. Similarly, a large Gram eigenvalue rules out a specified uniform operator bound; it does not determine the projection of the actual arithmetic vector. A failed local sign matching shows that matching is not automatic, whereas other complete fibres do cancel at one fixed CRT root. For coprime $a,r$, that root is unique modulo $ar$; multiple sign conductors inside the same $ar$ are a different matter.
+
+Once a sufficient large-$N$ estimate is proved, its constants and onset must be effective and compatible with every external input. Finally the entire interval below that onset must be covered by an independent theorem or verified computation. A statement above $N\ge\exp(10^{24})$ would leave an enormous gap above the published finite verification range. The present report supplies no coverage of that gap.
+
+No extension to twin primes or to other additive conjectures is implied. The shared vocabulary of Type-II decomposition and sieve masks is not itself a transfer theorem. For one fixed $N$ there are only finitely many prime representations; any prospective quantitative conclusion concerns their finite number as $N$ varies.
+
+\section{Corpus audit, reproducibility and documentary scope}\label{sec:corpus}
+The synthesis uses the supplied local mathematical collections, the accessible Google Drive research folder and the public GitHub repository. Corpus triage and file integrity are distinct from proof validation. The electronic coverage record lists inspected sources and the exclusions; no whole-computer proof review is claimed.
+
+\begin{table}[htbp]\centering\small
+\begin{tabularx}{\textwidth}{@{}P{.23\textwidth}P{.24\textwidth}X@{}}\toprule
+Collection & Inventory evidence & Review scope\\\midrule
+Local earlier manuscripts & 936 selected files; 616 PDF copies; 560 distinct PDF hashes; 5,643 extracted pages & Retained extraction index from the initial audit; selected mathematical chains read in detail\\
+Current formal corpus & 894 physical Lean files; 502 distinct hashes; 71 canonical recent sources & Deduplication, theorem headers, source-bound logs, receipts and axiom vocabulary checked\\
+Google Drive & 900 folders visited; 770 PDF metadata entries outside dependency/build/Git exclusions & Recursive research metadata and selected source text; pending dependency directories excluded, not silently treated as reviewed proofs\\
+GitHub & 1,254 tree nodes; response not truncated & Pinned tree and interface audit read; conditional historical architecture separated from recent certificates\\
+Primary literature & Versioned arXiv articles, publisher and author-hosted sources & Theorem applicability and proof inputs identified; no exhaustive literature novelty certification\\\bottomrule
+\end{tabularx}
+\caption{Coverage evidence. Metadata counts include copies and are not counts of independently proved mathematical results.}\label{tab:corpus}
+\end{table}
+
+The GitHub snapshot is commit
+\begin{center}\small\nolinkurl{979c05416140504f11c6e9ba6ad1dd565838bea1}.\end{center}
+It was retrieved from \url{https://github.com/seisner1967-hash/goldbach-horizon}. The supplied Drive entry is the
+\href{https://drive.google.com/drive/folders/1QOC1q-F6ITUfc6mmh81q3fvOHm37fYDF}{Project Horizon research folder}.
+The recursive inventory stopped traversing third-party Mathlib/build/Git directories after classifying the remaining queued directories; it also excluded unrelated topics. Source documents such as CS21 and the E4 family were retrieved directly. The descriptive \emph{L'Horloge Invisible} is background context rather than an arithmetic proof. Retrieved documents about other conjectures are outside this report's mathematical scope.
+
+\subsection{The historical interface audit}\label{sec:historical-audit}
+The repository's own \texttt{AUDIT\_NOTE.md} records that four of five old interface predicates were trivially satisfiable or not sufficiently connected to the intended arithmetic operators. Its \texttt{PCBAsymptotic} predicate already asserts eventual positivity of the Goldbach representation count for every even integer. Consequently inhabiting that architecture cannot be described as an independent proof of asymptotic Goldbach. Historical source flags include gaps, custom axioms and finite native certificates; these are separated from the canonical recent standard-axiom inventory. The mathematical content of an individual finite certificate remains meaningful within its exact scope, but a repository-wide assertion of ``no gaps and no nonstandard axioms'' would be false.
+
+\subsection{Frozen packages and current checks}
+The three immutable packages preserve complementary evidence. Their complete SHA256 values are in the electronic manifest; Table~\ref{tab:packages} gives distinguishing prefixes. During final preparation all ZIP CRC, payload byte sizes and manifest hashes were replayed: 398/398, 67/67 and 7/7 payloads matched. This final preparation did not recompile Lean or re-execute every previously reported finite test.
+\begin{table}[htbp]\centering\small
+\begin{tabular}{@{}lrrl@{}}\toprule
+Package & Payloads & New latest conclusions & SHA256 prefix\\\midrule
+Sprint21 audit snapshot &398&16&\texttt{3b88e4f9367fb2b9}\\
+Reviewed continuation addendum &67&3&\texttt{66dc5eecb878c78a2}\\
+Post-freeze rough supplement &7&0&\texttt{9d44c84e76e78af0}\\\bottomrule
+\end{tabular}
+\caption{Frozen evidence packages. Manifests are not counted as payloads. The rough supplement does not add Lean theorems.}\label{tab:packages}
+\end{table}
+
+The companion folder contains the standalone English TeX source, the full electronic formal-statement registry, 71 canonical Lean sources, original compilation scripts, retained receipts and axiom logs, selected written proofs and exact-constant checkers. Lean4.15.0 and the exact Mathlib revision are pinned. A portable replay driver accepts an explicit compiler, the pinned dependency library directories and a fresh build directory; it performs no installation or network update. The original scripts retain their host-specific provenance. An old matching compiled file is not a fresh source replay.
+
+The computational examples are reproducible with the retained Python scripts. The initial grid checker reports 51,000 defect cases and 3,072 covariance cases; subsequent reports include exact rational onset guards and finite fibre tests. These counts describe the individual delivered checkers and are not added into an artificial total of independent mathematical evidence. The complete axiom-audited theorem appendix is supplied electronically instead of printing hundreds of historical helper statements inside the main analytic narrative.
+
+\subsection{Public, versioned reproduction material}
+The frozen evidence snapshot is publicly available at the following commit-addressed directory:
+\begin{center}\small
+\href{https://github.com/seisner1967-hash/goldbach-horizon/tree/8ef89b3cef4cddffd9bf9ca81141280b31ea6af6/publications/2026-10-goldbach-framework}{Project Horizon: reproducibility snapshot, 1 October 2026}.
+\end{center}
+The exact revision is
+\begin{center}\small\nolinkurl{8ef89b3cef4cddffd9bf9ca81141280b31ea6af6}.\end{center}
+The file \texttt{goldbach\_verification\_bundle.zip} contains 362 manifest-listed payloads. Its SHA256 is
+\begin{center}\scriptsize\nolinkurl{310c63cdb09e9a190da5bc01ddd781515a7cc717d73b680c8f30ef8fae7b8625}.\end{center}
+This is the unchanged evidence snapshot accompanying version 1. The present editorial revision changes presentation and scope explanations, without rewriting retained Lean sources or historical receipts. Within the archive, \texttt{review/lean\_inventory\_full\_statement\_appendix.txt} supplies the complete statement registry; \texttt{reproducibility/lean} supplies canonical sources, dependency pins and replay instructions. The selected analytic notes retain the unresolved primitive-input boundary. Historical wording in archived notes is provenance; the current manuscript governs current claims.
+
+The manuscript and its standalone TeX source are CC BY 4.0. This licence does not relicense software dependencies or historical evidence files. No DOI, journal acceptance, or fresh Lean compilation is inferred from this public repository link.
+
+\subsection{AI assistance and author responsibility}
+Substantial generative-AI assistance was used in corpus retrieval, code generation, derivation, drafting and internal cross-checks. The named human author is Durand Serge; no AI system is listed as an author. This version has internal source and numerical checks, but has not undergone external mathematical peer review. The human author must inspect and accept responsibility for its content before submission. This disclosure follows the arXiv policy on substantial AI assistance \cite{arxivpolicy}. This public research report is formatted for arXiv-compatible source processing. Repository dissemination does not imply endorsement, moderation approval, journal acceptance or external mathematical validation.
+
+\clearpage
+\section{Priorities for independent review}\label{sec:review-priorities}
+The next work should proceed in the following order, with each result retaining its evidence status.
+\begin{enumerate}
+\item \textbf{Complete the primitive analytic input.} For every remainder in the Bordignon-based argument, state the original formula, its domain, each substitution, and the final numerical majorant. Until this chain has been independently checked, Lemma~\ref{lem:ext-primitive} and its dependent estimates keep their conditional status.
+\item \textbf{Estimate the actual signed complement.} Obtain a quantitative upper bound on the nonrough remaining sector or on the complete covered-route aggregate, with the original masks, logarithmic weights, endpoints and favourable terms retained. A new identity or a finer absolute envelope is not a substitute for this estimate.
+\item \textbf{Reconcile parameters and thresholds.} Establish the complete transfer identity on the same support as the chosen analytic bounds. Do not import the effective quarter-profile allowance into the eighth profile without a new argument; then evaluate the resulting common onset.
+\item \textbf{Reproduce and review.} Rebuild the canonical Lean sources with pinned dependencies, inspect the full declaration registry, rerun the rational checkers and obtain external specialist review of the analytic passages. Finally, any Goldbach theorem would require coverage of the entire interval below its effective onset.
+\end{enumerate}
+This version is intended to make these tasks inspectable. It does not assert proximity to a proof or replace them by a publication claim.
+
+
+
+\appendix
+
+
+% LaTeX fragment only. Embed into the single standalone manuscript.
+% Existing exact theorem headers; this fragment has not been TeX-compiled.
+\section{Finite Lean certificates, inventory and trust boundary}
+\label{app:lean-certificates}
+\begingroup
+\lstdefinestyle{GoldbachLeanAppendix}{
+  basicstyle=\scriptsize\ttfamily,
+  breaklines=true,breakatwhitespace=false,
+  columns=fullflexible,keepspaces=true,
+  showstringspaces=false,tabsize=2,escapeinside={(*@}{@*)},
+  aboveskip=0.6\baselineskip,belowskip=0.6\baselineskip,
+}
+\lstset{style=GoldbachLeanAppendix}
+The printed listings render Lean Unicode symbols with ordinary mathematical
+fonts. The electronic statement inventory and bundled Lean sources retain
+their original Unicode text.
+
+\subsection{What the formal count means}
+
+The canonical numbered-sprint inventory contains 71 source files,
+66 of which contain theorem or lemma declarations. There are 852
+lexical declarations (833 public declarations and 19 private helpers).
+The individually printed, standard-axiom subset contains
+\emph{658 distinct fully qualified name/statement pairs}; copies,
+extracted archives and repeated imports do not increase that count.
+These are accumulated finite identities, inequalities and conditional
+interfaces, not 658 estimates resolving the remaining arithmetic problem.
+The last research cycle contributes exactly \emph{19 new public conclusions}
+in six modules: 16 in the immutable snapshot and three in its separate
+continuation addendum. Private helpers and old dependencies recompiled
+for a fresh replay are excluded from those 19.
+
+\begin{longtable}{@{}P{0.09\linewidth}r P{0.72\linewidth}@{}}
+\caption{Individually axiom-audited formal families.}\label{tab:lean-families}\\
+\toprule Phase & Count & Finite formal content and boundary \\
+\midrule\endfirsthead
+\toprule Phase & Count & Finite formal content and boundary \\
+\midrule\endhead
+3 & 52 & Fourier/Parseval and convolution; interval semantics; a finite
+spectral example and arithmetic variance/Gram identities. \\
+4 & 132 & Proxy coefficient energy, four-modulus combinatorics, anchors,
+diagonal and finite mass/simplex geometry; no signed cancellation. \\
+5 & 51 & Ramanujan/Fourier formulas, folded windows, smoothing and
+signed cofactor kernels; no final arithmetic contraction. \\
+6 & 57 & Exact Vaughan and finite Heath--Brown-type identities;
+Type-II rectangle assembly and variance reduction. \\
+7--9 & 25 & Four-sign structure, genuine beta-weighted fibers and
+literal cutoff/calibration geometry. \\
+10--12 & 123 & CRT/coprimality masks, character/nonunit splitting,
+Kloosterman energy, conductor support and shifted dispersion sectors. \\
+13--15 & 135 & Multiplicity, diagonal and conditional off-diagonal
+budgets; finite Euler factors, margin interfaces and cofactor boundaries. \\
+16--18 & 58 & Ratio pushforward, finite Gauss factorization, Rosser
+boundary, signed assembly and actual parity/reference interfaces. \\
+19 & 0 & Explicit analytic prefix/mask transport was written outside Lean. \\
+20 & 6 & Actual M\"obius-log fibers and exact truncated-prime branches. \\
+21 & 19 & The latest coefficient/support identities displayed below. \\
+\midrule Total & 658 & Repeated imports and physical replay copies are not counted. \\
+\bottomrule
+\end{longtable}
+
+The accepted recent toolchain is Lean~4.15.0 (commit
+\texttt{11651562caae}) with Mathlib pinned to
+\nolinkurl{9837ca9d65d9de6fad1ef4381750ca688774e608}.
+Every one of the latest 19 conclusions has a retained production
+compilation and a separate fresh replay, with exit code zero and
+source/log/compiled-artifact hashes. The printed axioms are drawn only
+from \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+No latest theorem uses \texttt{sorry}, \texttt{admit},
+\texttt{native\_decide}, or a custom analytic axiom.
+The final inventory checked existing evidence; it did not run another
+compilation or turn written analytic estimates into Lean theorems.
+
+The electronic \texttt{lean\_inventory.json} records all canonical source
+hashes, exact headers and hypotheses, receipt and log hashes, imports,
+compile-script references and physical-copy groups. The full electronic
+statement appendix lists the 658 explicitly audited statements. The
+historical Horizon repository is separate: its own interface audit
+identifies weak predicates, while \texttt{PCBAsymptotic} already assumes
+eventual Goldbach positivity. Historical files containing gaps or custom
+axioms are not included in the latest trust claim.
+
+\subsection{Definitions needed to read the latest statements}
+
+Multiplication of arithmetic functions denotes Dirichlet convolution,
+\((f*g)(n)=\sum_{ab=n}f(a)g(b)\), and arithmetic functions vanish at zero.
+Write \(\muMob\) for the actual M\"obius function,
+\(\Lam\) for von Mangoldt, and \(\ph\) for Euler's totient.
+Lean's natural subtraction is truncated subtraction and its divisions
+between natural numbers are integer divisions. \texttt{Real.log} is the
+total real logarithm; in particular it is defined at zero. No positive
+logarithm argument may be inferred without the displayed hypotheses.
+\texttt{n.divisors} and \texttt{n.divisorsAntidiagonal} are finite divisor
+sets; the latter consists of pairs whose product is \(n\).
+
+\paragraph{Local Euler projection and literal-cut coefficient.}
+For a Boolean selector \(\varepsilon\), put \(d=p\) if it is true
+and \(d=1\) otherwise. The definitions in the first two modules are
+\begin{align*}
+ \mathrm{localProjection}(p,\varepsilon)
+ &=\sum_{b\in\{1,p\}}
+   \frac{\muMob(b)\muMob(d)}{\ph(\operatorname{lcm}(b^2,d))},\\
+ w_\alpha(r,s)
+ &=\muMob(s)\muMob(r)
+   \sum_{t\mid s}\mathbf1_{rt\le\alpha}\muMob(t)\log(rt).
+\end{align*}
+The Lean name for the second definition is
+\texttt{signedDivisorCoefficient r s alpha}. The factor
+\texttt{s.divisors.card} in its bound is the actual number of divisors
+of \(s\). The bound does not assume that the complete fiber is admitted.
+
+\paragraph{Literal divisor and harmonic kernels.}
+For \(m=N-n\), define
+\begin{align*}
+ D_{\alpha,Q}(m)
+ &=\sum_{k\mid m}\mathbf1_{k\le Q}\mathbf1_{\alpha k<m}
+       \muMob(k)\log(k/m),\\
+ W_{N,\alpha,Q}(n)
+ &=\sum_{1\le k\le Q}\mathbf1_{(k,N)=1}\mathbf1_{(n,k)=1}
+       \mathbf1_{\alpha k<m}\frac{\muMob(k)}{\ph(k)}\log(k/m),\\
+ K_{N,\alpha,Q}(n)
+ &=\mathbf1_{(n,N)=1}\muMob(m)
+       \bigl(D_{\alpha,Q}(m)-W_{N,\alpha,Q}(n)\bigr).
+\end{align*}
+\texttt{divisorKernel alpha Q m} is \(D_{\alpha,Q}(m)\).
+\texttt{literalKernel N alpha Q n} is \(K_{N,\alpha,Q}(n)\).
+The strict moving face is part of these definitions.
+
+Let \(\mu_{\le U}=\muMob\mathbf1_{n\le U}\),
+\(\mu_{>U}=\muMob\mathbf1_{n>U}\), and
+\(\beta_V=\Lam\mathbf1_{n>V}*\zeta\), where the arithmetic
+function \(\zeta\) equals one on positive integers.
+The code defines
+\(T_{U,V}=\mu_{>U}*\beta_V\) and
+\(A_{U,V}=\mu_{\le U}*\beta_V\).
+Its three rows and its formal deficit are
+\begin{align*}
+ \mathrm{fullRow}&=\sum_{0\le n<N}T_{U,V}(n)K_{N,\alpha,Q}(n),\\
+ \mathrm{smallRow}&=\sum_{0\le n<N}A_{U,V}(n)K_{N,\alpha,Q}(n),\\
+ \mathrm{primeRow}&=\sum_{0\le n<N}\Lam(n)\mathbf1_{n>V}
+                           K_{N,\alpha,Q}(n),\\
+ \mathrm{ledgerDeficit}&=-\mathrm{fullRow}+e+|e|.
+\end{align*}
+The name \texttt{primeRow} does not exclude proper prime powers of
+the first axis. The formal \texttt{ledgerDeficit} equals a proposed
+external ledger quantity only after its exact covered bridge is supplied;
+the module does not prove that bridge or a deficit bound.
+
+\paragraph{Complete H and small-divisor credit.}
+For natural \(y\), put \(\mu_{>y}(n)=\muMob(n)\mathbf1_{n>y}\)
+and define the actual integer coefficient
+\[
+ H_y(n)=(\mu_{>y}*\mu_{>y}*\zeta)(n)
+   =\sum_{d\mid n}\sum_{uv=d}
+       \muMob(u)\mathbf1_{u>y}\muMob(v)\mathbf1_{v>y}.
+\]
+The predicate \texttt{rough y n} used in this module means exactly
+\(\forall d\mid n,\ d\le y\Rightarrow d=1\).
+The hypotheses explicitly require positive arguments where necessary;
+the special value \(n=1\) is retained in the rough formula.
+The final coefficient definition is
+\[
+ j_\alpha(m)=-\sum_{d\mid m,\ d\le\alpha}\muMob(d)\log d,
+ \qquad
+ \texttt{smallDivisorCredit alpha m}=j_\alpha(m).
+\]
+\texttt{IsPrimePow P} means that \(P\) is a positive prime power.
+The last theorem assumes both its negation and \(\muMob(P)=-1\);
+those assumptions are not conclusions of a density estimate.
+
+\subsection{The 19 exact latest-cycle declarations}
+
+The displayed headers retain every hypothesis and the original Lean
+parameter order. They omit only the proof bodies and normalize blank
+lines. Names are relative to the indicated namespace; the full
+qualified name is the namespace followed by the displayed theorem name.
+The lettered labels below are exposition labels, not additional Lean
+declarations. The subsequent analytic use of an identity is separate
+from its finite kernel-checked statement.
+
+\subsubsection{GoldbachActualEulerProjection}
+Namespace: \nolinkurl{GoldbachResearch.ActualEulerProjection}.
+
+This is a finite two-choice projection with actual M\"obius signs and the actual lcm totient. No infinite Euler product or analytic remainder is formalized.
+
+\paragraph{Certificate A.1 (\texttt{actual\_local\_euler\_projection}).}
+\begin{lstlisting}
+theorem actual_local_euler_projection {p : (*@$\mathbb N$@*)} (hp : p.Prime)
+    (dSelected : Bool) :
+    localProjection p dSelected =
+      if dSelected then -(1 : (*@$\mathbb R$@*)) / (p : (*@$\mathbb R$@*))
+      else 1 - 1 / ((p : (*@$\mathbb R$@*)) * ((p : (*@$\mathbb R$@*)) - 1))
+\end{lstlisting}
+
+\subsubsection{GoldbachActualDivisorFibreBound}
+Namespace: \nolinkurl{GoldbachResearch.ActualDivisorFibreBound}.
+
+The actual finite cutoff is retained. This is the coefficient bound used by a later written weighted-distribution argument, not that distribution theorem.
+
+\paragraph{Certificate A.2 (\texttt{actual\_truncated\_fibre\_abs\_bound}).}
+\begin{lstlisting}
+theorem actual_truncated_fibre_abs_bound {r s alpha : (*@$\mathbb N$@*)}
+    (hr : 1 (*@$\le$@*) r) (hs : 1 (*@$\le$@*) s) (ha : 1 (*@$\le$@*) alpha) :
+    |signedDivisorCoefficient r s alpha| (*@$\le$@*)
+      (s.divisors.card : (*@$\mathbb R$@*)) * Real.log (alpha : (*@$\mathbb R$@*))
+\end{lstlisting}
+
+\subsubsection{GoldbachActualTerminalCutoffInvariant}
+Namespace: \nolinkurl{GoldbachResearch.ActualTerminalCutoffInvariant}.
+
+These identities retain the actual kernel and genuine Vaughan coefficients. Changing the U cut transfers terms between the two rows; it does not make their sum small or discharge a covered-support hypothesis.
+
+\paragraph{Certificate A.3 (\texttt{actual\_rows\_complete}).}
+\begin{lstlisting}
+theorem actual_rows_complete (N alpha Q U V : (*@$\mathbb N$@*)) :
+    fullRow N alpha Q U V + smallRow N alpha Q U V =
+      primeRow N alpha Q V
+\end{lstlisting}
+
+\paragraph{Certificate A.4 (\texttt{actual\_terminal\_defect}).}
+\begin{lstlisting}
+theorem actual_terminal_defect (N alpha Q U V : (*@$\mathbb N$@*)) (e : (*@$\mathbb R$@*)) :
+    ledgerDeficit N alpha Q U V e - smallRow N alpha Q U V =
+      -primeRow N alpha Q V + e + |e|
+\end{lstlisting}
+
+\paragraph{Certificate A.5 (\texttt{actual\_terminal\_U\_invariant}).}
+\begin{lstlisting}
+theorem actual_terminal_U_invariant (N alpha Q U U' V : (*@$\mathbb N$@*)) (e e' : (*@$\mathbb R$@*)) :
+    (ledgerDeficit N alpha Q U V e - smallRow N alpha Q U V) -
+      (ledgerDeficit N alpha Q U' V e' - smallRow N alpha Q U' V) =
+        (e + |e|) - (e' + |e'|)
+\end{lstlisting}
+
+\subsubsection{GoldbachCompleteHPrimeOrbit}
+Namespace: \nolinkurl{GoldbachResearch.CompleteHPrimeOrbit}.
+
+The complete arithmetic coefficient is retained. The last inequality allows arbitrary real high, requires nonnegative low, and exposes the boundary through max(high-low,0); it does not assert favorable closure of the actual selectors.
+
+\paragraph{Certificate A.6 (\texttt{H\_literal\_finite\_sum}).}
+\begin{lstlisting}
+theorem H_literal_finite_sum (y n : (*@$\mathbb N$@*)) :
+    H y n = (*@$\sum$@*) d (*@$\in$@*) n.divisors, (*@$\sum$@*) uv (*@$\in$@*) d.divisorsAntidiagonal,
+      (if y < uv.1 then ArithmeticFunction.moebius uv.1 else 0) *
+      (if y < uv.2 then ArithmeticFunction.moebius uv.2 else 0)
+\end{lstlisting}
+
+\paragraph{Certificate A.7 (\texttt{H\_rough\_formula}).}
+\begin{lstlisting}
+theorem H_rough_formula {y n : (*@$\mathbb N$@*)} (hy : 1 (*@$\le$@*) y) (hn : 0 < n)
+    (hr : rough y n) :
+    H y n = ArithmeticFunction.moebius n + 1 - 2 * (if n = 1 then 1 else 0)
+\end{lstlisting}
+
+\paragraph{Certificate A.8 (\texttt{prime\_divisor\_orbit\_partition}).}
+\begin{lstlisting}
+theorem prime_divisor_orbit_partition {p L k : (*@$\mathbb N$@*)} (hp : p.Prime)
+    (hk : k (*@$\mid$@*) p * L) :
+    (k (*@$\mid$@*) L (*@$\land$@*) (*@$\neg$@*)p (*@$\mid$@*) k) (*@$\lor$@*) (*@$\exists$@*) x, x (*@$\mid$@*) L (*@$\land$@*) k = p * x
+\end{lstlisting}
+
+\paragraph{Certificate A.9 (\texttt{H\_one\_small\_prime}).}
+\begin{lstlisting}
+theorem H_one_small_prime {y p e : (*@$\mathbb N$@*)} (hy : 1 (*@$\le$@*) y) (hp : p.Prime)
+    (hpy : p (*@$\le$@*) y) (he : 0 < e) (hr : rough y e) :
+    H y (p * e) = -H y e
+\end{lstlisting}
+
+\paragraph{Certificate A.10 (\texttt{actual\_complete\_orbit\_upper}).}
+\begin{lstlisting}
+theorem actual_complete_orbit_upper {y p a e b : (*@$\mathbb N$@*)}
+    (hy : 1 (*@$\le$@*) y) (hp : p.Prime) (hpy : p (*@$\le$@*) y)
+    (ha : 0 < a) (hra : rough y a) (he : 0 < e) (hre : rough y e)
+    (hb : 1 (*@$\le$@*) b) (low high : (*@$\mathbb R$@*)) (hlow : 0 (*@$\le$@*) low) :
+    0 (*@$\le$@*) (H y a : (*@$\mathbb R$@*)) * Real.log b * (H y e : (*@$\mathbb R$@*)) * low * Real.log p (*@$\land$@*)
+    (H y a : (*@$\mathbb R$@*)) * Real.log b *
+      ((H y e : (*@$\mathbb R$@*)) * high * Real.log e +
+       (H y (p*e) : (*@$\mathbb R$@*)) * low * Real.log (p*e))
+      (*@$\le$@*) (H y a : (*@$\mathbb R$@*)) * Real.log b * (H y e : (*@$\mathbb R$@*)) *
+        (max (high-low) 0 * Real.log e - low * Real.log p)
+\end{lstlisting}
+
+\subsubsection{GoldbachLiteralDivisorCompletion}
+Namespace: \nolinkurl{GoldbachResearch.LiteralDivisorCompletion}.
+
+These conclusions preserve the integer floor cap and strict face. They require the written proper-divisor or prime-roughness assumptions; no analytic sign or size estimate for W is included.
+
+\paragraph{Certificate A.11 (\texttt{full\_literal\_divisor\_sum}).}
+\begin{lstlisting}
+theorem full_literal_divisor_sum (m : (*@$\mathbb N$@*)) (hm : m (*@$\ne$@*) 0) :
+    ((*@$\sum$@*) k (*@$\in$@*) m.divisors, muReal k * Real.log ((k : (*@$\mathbb R$@*)) / (m : (*@$\mathbb R$@*)))) =
+      -ArithmeticFunction.vonMangoldt m
+\end{lstlisting}
+
+\paragraph{Certificate A.12 (\texttt{literal\_completion\_of\_proper\_admission}).}
+\begin{lstlisting}
+theorem literal_completion_of_proper_admission (alpha Q m : (*@$\mathbb N$@*)) (hm : m (*@$\ne$@*) 0)
+    (hadmit : (*@$\forall$@*) k (*@$\in$@*) m.divisors, k (*@$\ne$@*) m (*@$\to$@*) k (*@$\le$@*) Q (*@$\land$@*) alpha * k < m) :
+    divisorKernel alpha Q m = -ArithmeticFunction.vonMangoldt m
+\end{lstlisting}
+
+\paragraph{Certificate A.13 (\texttt{actual\_floor\_cap\_admits\_proper\_divisors}).}
+\begin{lstlisting}
+theorem actual_floor_cap_admits_proper_divisors (N alpha m : (*@$\mathbb N$@*))
+    (hm : m (*@$\ne$@*) 0) (hN : m (*@$\le$@*) N - 1) (ha : 0 < alpha)
+    (hcofactor : (*@$\forall$@*) c (*@$\in$@*) m.divisors, c (*@$\ne$@*) 1 (*@$\to$@*) alpha < c) :
+    (*@$\forall$@*) k (*@$\in$@*) m.divisors, k (*@$\ne$@*) m (*@$\to$@*)
+      k (*@$\le$@*) (N - 1) / alpha (*@$\land$@*) alpha * k < m
+\end{lstlisting}
+
+\paragraph{Certificate A.14 (\texttt{literal\_completion\_at\_original\_floor}).}
+\begin{lstlisting}
+theorem literal_completion_at_original_floor (N alpha m : (*@$\mathbb N$@*))
+    (hm : m (*@$\ne$@*) 0) (hN : m (*@$\le$@*) N - 1) (ha : 0 < alpha)
+    (hcofactor : (*@$\forall$@*) c (*@$\in$@*) m.divisors, c (*@$\ne$@*) 1 (*@$\to$@*) alpha < c) :
+    divisorKernel alpha ((N - 1) / alpha) m =
+      -ArithmeticFunction.vonMangoldt m
+\end{lstlisting}
+
+\paragraph{Certificate A.15 (\texttt{rough\_prime\_factors\_control\_cofactors}).}
+\begin{lstlisting}
+theorem rough_prime_factors_control_cofactors (alpha m : (*@$\mathbb N$@*)) (hm : m (*@$\ne$@*) 0)
+    (hrough : (*@$\forall$@*) p : (*@$\mathbb N$@*), Nat.Prime p (*@$\to$@*) p (*@$\mid$@*) m (*@$\to$@*) alpha < p) :
+    (*@$\forall$@*) c (*@$\in$@*) m.divisors, c (*@$\ne$@*) 1 (*@$\to$@*) alpha < c
+\end{lstlisting}
+
+\paragraph{Certificate A.16 (\texttt{rough\_literal\_completion\_at\_original\_floor}).}
+\begin{lstlisting}
+theorem rough_literal_completion_at_original_floor (N alpha m : (*@$\mathbb N$@*))
+    (hm : m (*@$\ne$@*) 0) (hN : m (*@$\le$@*) N - 1) (ha : 0 < alpha)
+    (hrough : (*@$\forall$@*) p : (*@$\mathbb N$@*), Nat.Prime p (*@$\to$@*) p (*@$\mid$@*) m (*@$\to$@*) alpha < p) :
+    divisorKernel alpha ((N - 1) / alpha) m =
+      -ArithmeticFunction.vonMangoldt m
+\end{lstlisting}
+
+\subsubsection{GoldbachActualSmallDivisorCredit}
+Namespace: \nolinkurl{GoldbachResearch.ActualSmallDivisorCredit}.
+
+The support equality is proved from roughness of L and the full proper-divisor condition on P. The negative coefficient does not by itself prove that a sector contains enough prime first-axis mass.
+
+\paragraph{Certificate A.17 (\texttt{literal\_small\_divisors\_product}).}
+\begin{lstlisting}
+theorem literal_small_divisors_product {alpha P L : (*@$\mathbb N$@*)}
+    (hP : alpha < P) (hL : 0 < L)
+    (hproper : (*@$\forall$@*) d (*@$\in$@*) P.divisors, d (*@$\ne$@*) P (*@$\to$@*) d (*@$\le$@*) alpha)
+    (hrough : (*@$\forall$@*) p : (*@$\mathbb N$@*), p.Prime (*@$\to$@*) p (*@$\mid$@*) L (*@$\to$@*) alpha < p) :
+    (P * L).divisors.filter (fun d => d (*@$\le$@*) alpha) = P.divisors.erase P
+\end{lstlisting}
+
+\paragraph{Certificate A.18 (\texttt{actual\_small\_divisor\_credit}).}
+\begin{lstlisting}
+theorem actual_small_divisor_credit {alpha P L : (*@$\mathbb N$@*)}
+    (hP : alpha < P) (hL : 0 < L)
+    (hproper : (*@$\forall$@*) d (*@$\in$@*) P.divisors, d (*@$\ne$@*) P (*@$\to$@*) d (*@$\le$@*) alpha)
+    (hrough : (*@$\forall$@*) p : (*@$\mathbb N$@*), p.Prime (*@$\to$@*) p (*@$\mid$@*) L (*@$\to$@*) alpha < p) :
+    smallDivisorCredit alpha (P * L) = ArithmeticFunction.vonMangoldt P +
+      (ArithmeticFunction.moebius P : (*@$\mathbb R$@*)) * Real.log (P : (*@$\mathbb R$@*))
+\end{lstlisting}
+
+\paragraph{Certificate A.19 (\texttt{actual\_negative\_composite\_credit}).}
+\begin{lstlisting}
+theorem actual_negative_composite_credit {alpha P L : (*@$\mathbb N$@*)}
+    (hP : alpha < P) (hL : 0 < L)
+    (hproper : (*@$\forall$@*) d (*@$\in$@*) P.divisors, d (*@$\ne$@*) P (*@$\to$@*) d (*@$\le$@*) alpha)
+    (hrough : (*@$\forall$@*) p : (*@$\mathbb N$@*), p.Prime (*@$\to$@*) p (*@$\mid$@*) L (*@$\to$@*) alpha < p)
+    (hpow : (*@$\neg$@*)IsPrimePow P) (hmu : ArithmeticFunction.moebius P = -1) :
+    smallDivisorCredit alpha (P * L) = -Real.log (P : (*@$\mathbb R$@*))
+\end{lstlisting}
+
+\subsection{Source hashes and reproduction references}
+
+The exact source identifiers are as follows. Full production and
+independent-replay receipt paths and hashes are in
+\texttt{lean\_inventory.json}; source-copy equality, compiler exit zero,
+and log/compiled-artifact hashes were checked against those receipts.
+Compiled-artifact hashes can differ between fresh directories because
+build paths are embedded; each must match its own receipt.
+
+\noindent\texttt{GoldbachActualEulerProjection.lean}
+\begin{lstlisting}
+SHA256 7521a244da3f6000d4841156dee78f819bf9a1e075d6da127dacf6c0170520c0
+\end{lstlisting}
+
+\noindent\texttt{GoldbachActualDivisorFibreBound.lean}
+\begin{lstlisting}
+SHA256 f9cdd1d266889b5f672ef76c35b845e51e1b81a6d3bedcd49737b01c26281e44
+\end{lstlisting}
+
+\noindent\texttt{GoldbachActualTerminalCutoffInvariant.lean}
+\begin{lstlisting}
+SHA256 52a6a5b0d0f59879d2567df1415d8d4d9e2f5ff695a57421db18282a97a5c039
+\end{lstlisting}
+
+\noindent\texttt{GoldbachCompleteHPrimeOrbit.lean}
+\begin{lstlisting}
+SHA256 df14ac670788ddbf2091cc62c41b93156267425ef937927f12945edf5f2ffa5e
+\end{lstlisting}
+
+\noindent\texttt{GoldbachLiteralDivisorCompletion.lean}
+\begin{lstlisting}
+SHA256 fd3c4885ff79241c25b977af1954cbd8c1512e133dc4ccf9f391b6558c474fde
+\end{lstlisting}
+
+\noindent\texttt{GoldbachActualSmallDivisorCredit.lean}
+\begin{lstlisting}
+SHA256 25feafb7ce3ce408ec76cd83e36682e947b508d0e580cd419ab6630c62c11a16
+\end{lstlisting}
+
+The read-only reproduction folder contains the 71 canonical sources
+and their dependency-closed local import graph, the original compile
+scripts, retained source-bound receipts and axiom logs, and a byte-hash
+manifest. Its original scripts record the authoring host's absolute
+paths. They are evidence and templates, not automatically portable
+commands; a replay on another host must resolve equivalent pinned
+libraries and build into a new empty directory. The original accepted
+fresh replays imported exactly the eight dependency library roots
+aesop, batteries, importGraph, LeanSearchClient, mathlib, plausible,
+proofwidgets and Qq. Standard Lean system libraries are implicit.
+The reproduction folder contains no dependency cache or copied olean
+that could silently replace a requested fresh compilation.
+
+The immutable latest-cycle archives are identified by:
+\begin{lstlisting}
+base snapshot (16 new public conclusions):
+3b88e4f9367fb2b9718450df362149d1f4bcfa1fda886851e0db22091c35d720
+continuation addendum (3 new public conclusions; combined19):
+66dc5eecb878c78a260a469200bb6f81d48d8b14146b5fd4a06a357c7b1a5347
+post-freeze rough-sector supplement (0 new Lean conclusions):
+9d44c84e76e78af0a0de3219881a821976f397688c5db271fa21b6034eff1442
+\end{lstlisting}
+Independent exterior receipts checked every CRC, hash, payload size and
+byte correspondence, and the unchanged prior archives. These integrity
+checks establish provenance, not another mathematical estimate.
+
+No declaration above formalizes Davenport, a large-sieve or
+Bombieri--Vinogradov input, a zero-avoiding contour, or the lower-sieve
+density used by the written alpha-eighth credit theorem. The negative
+aggregate credit has a separate qualitative, unevaluated/ineffective
+onset and a still uncontrolled complement. A one-sided transfer to a
+positive prime-pair mass also requires the stated sufficient reference
+and loss reserve. Neither the 19 latest finite certificates nor the
+658-entry historical/current inventory discharges the remaining signed
+arithmetic estimate or proves Goldbach.
+\endgroup
+
+
+
+\clearpage
+
+
+\begin{thebibliography}{99}
+\bibitem{HL} G. H. Hardy and J. E. Littlewood, \emph{Some problems of Partitio Numerorum; III: On the expression of a number as a sum of primes}, Acta Mathematica 44 (1923), 1--70. \url{https://doi.org/10.1007/BF02403921}.
+\bibitem{BG} G. Bhowmik and L. Grimmelt, \emph{The exceptional set of the Goldbach problem}, arXiv:2607.27282v2, 13 August 2026. \url{https://arxiv.org/abs/2607.27282v2}.
+\bibitem{OeS} T. Oliveira e Silva, S. Herzog and S. Pardi, \emph{Empirical verification of the even Goldbach conjecture and computation of prime gaps up to $4\cdot10^{18}$}, Mathematics of Computation 83 (2014), 2033--2060. \url{https://doi.org/10.1090/S0025-5718-2013-02787-1}.
+\bibitem{HLi} J.-J. Huang and H. Li, \emph{On the connection between the Goldbach conjecture and the Elliott--Halberstam conjecture}, arXiv:2005.03811v2, 28 August 2022. \url{https://arxiv.org/abs/2005.03811v2}.
+\bibitem{MV} H. L. Montgomery and R. C. Vaughan, \emph{The large sieve}, Mathematika 20 (1973), 119--134. \url{https://doi.org/10.1112/S0025579300004708}.
+\bibitem{GY} D. A. Goldston and C. Y. Yildirim, \emph{Higher correlations of divisor sums related to primes II: variations of the error term in the prime number theorem}, Proceedings of the London Mathematical Society 95 (2007), 199--247. \url{https://arxiv.org/abs/math/0412366}.
+\bibitem{AH} A. Akbary and K. Hambrook, \emph{A variant of the Bombieri--Vinogradov theorem with explicit constants and applications}, arXiv:1309.2730v2. Author-hosted final text: \url{https://www.cs.uleth.ca/~akbary/EBVT-Final.pdf}.
+\bibitem{Bordignon} M. Bordignon, \emph{Medium-sized values for the prime number theorem for primes in arithmetic progressions}, New York Journal of Mathematics 27 (2021), 1415--1438. \url{https://nyjm.albany.edu/j/2021/27-54p.pdf}.
+\bibitem{JY} D. R. Johnston and A. Yang, \emph{Some explicit estimates for the error term in the prime number theorem}, arXiv:2204.01980v2. \url{https://arxiv.org/abs/2204.01980v2}.
+\bibitem{LL} E. S. Lee and N. Leong, \emph{New explicit bounds for Mertens function and the reciprocal of the Riemann zeta-function}, arXiv:2208.06141v5, 9 September 2026. \url{https://arxiv.org/abs/2208.06141v5}. The version is material to the constants used here.
+\bibitem{BMOR} M. A. Bennett, G. Martin, K. O'Bryant and A. Rechnitzer, \emph{Explicit bounds for primes in arithmetic progressions}, Illinois Journal of Mathematics 62 (2018), 427--532. \url{https://personal.math.ubc.ca/~bennett/BeMaObRe-IJM-2018.pdf}.
+\bibitem{Sedunova} A. Sedunova, \emph{A logarithmic improvement in the Bombieri--Vinogradov theorem}, Journal de Th\'eorie des Nombres de Bordeaux 31 (2019), 635--651. \url{https://jtnb.centre-mersenne.org/articles/10.5802/jtnb.1098/}.
+\bibitem{MTZ} K. Matom\"aki and S. Zuniga--Alterman, \emph{Weighted sieves with switching}, Mathematical Proceedings of the Cambridge Philosophical Society 179 (2025), 351--372. \url{https://doi.org/10.1017/S0305004125000258}.
+\bibitem{Richert} H.-E. Richert, \emph{Lectures on Sieve Methods}, Tata Institute of Fundamental Research, Bombay (1976). \url{https://mathweb.tifr.res.in/Documents/Publications/Lectures/tifr55.pdf}.
+\bibitem{RS} J. B. Rosser and L. Schoenfeld, \emph{Approximate formulas for some functions of prime numbers}, Illinois Journal of Mathematics 6 (1962), 64--94. \url{https://doi.org/10.1215/ijm/1255631807}.
+\bibitem{Motohashi} Y. Motohashi, \emph{Lectures on Sieve Methods and Prime Number Theory}, Tata Institute of Fundamental Research, Bombay (1983). Accessible text: \url{https://www.math.utoledo.edu/~codenth/Spring_13/3200/NT-books/Lectures_on_Sieve_Methods_and_Prime_Number_Theory-Motohashi.pdf}.
+\bibitem{Repo} S. Durand, \emph{goldbach-horizon}, Project Horizon public repository, commit \nolinkurl{979c05416140504f11c6e9ba6ad1dd565838bea1}. \url{https://github.com/seisner1967-hash/goldbach-horizon}. Source and interface audit retrieved 1 October 2026.
+\bibitem{CS21} S. Durand, \emph{CS21: The Shadow Equation}, Project Horizon computational note, version9.0 (January 2026), supplied corpus. \url{https://drive.google.com/file/d/1KxZSfj0eWZ7zfwYhKgovQbaWzdysnwlY/view}.
+\bibitem{lean} L. de Moura and S. Ullrich, \emph{The Lean4 theorem prover and programming language}, CADE28 (2021), 625--635. \url{https://doi.org/10.1007/978-3-030-79876-5_37}.
+\bibitem{mathlib} The Mathlib Community, \emph{Mathlib4}, mathematical library, revision \nolinkurl{9837ca9d65d9de6fad1ef4381750ca688774e608}. \url{https://github.com/leanprover-community/mathlib4}.
+\bibitem{arxivpolicy} arXiv, \emph{Moderation: content guidelines and policy on generative AI}. \url{https://info.arxiv.org/help/moderation/index.html}. Accessed 1 October 2026.
+\end{thebibliography}
+
+
+
+\end{document}
