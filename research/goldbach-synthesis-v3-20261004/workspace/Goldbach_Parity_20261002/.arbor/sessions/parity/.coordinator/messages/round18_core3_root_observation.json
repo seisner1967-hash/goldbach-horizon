@@ -1,0 +1,52 @@
+{
+  "status": "ROOT_READ_AUTHOR_CORE18_PASS03_INDEPENDENT_JUDGE_PENDING",
+  "actual_attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 1,
+      "receipt_sha256": "5a286d7a43d3252cb5d37957761c213191476542ddd758256eff2791a690ac1f",
+      "source_snapshot_sha256": "4c146142daa3e265bf1013bb4d4e5ab1099b4b538de698f122f913f100ed6d48",
+      "log_sha256": "c8b1353eee5cc92cd269f798f8bede0a625af7a5b74e992751b7ebe2d990793b",
+      "error_diagnostics": 8,
+      "warning_diagnostics": 1,
+      "Lean_generated_sorryAx_in_failed_log": true
+    },
+    {
+      "attempt": 2,
+      "exit_code": 1,
+      "receipt_sha256": "eec8811bb93b3fc75440e966292d01db989868a12d0606f8e3f65e146ae144e0",
+      "source_snapshot_sha256": "71bf05520fca0a811ae21fd8c1cced058f2b13fe6e2309bb4ea7aacf8421bc05",
+      "log_sha256": "805a9c8e01236afad87b991a8eafe7942b732e32f4015ec25a06253b50ff8659",
+      "error_diagnostics": 13,
+      "warning_diagnostics": 2,
+      "Lean_generated_sorryAx_in_failed_log": true
+    },
+    {
+      "attempt": 3,
+      "exit_code": 0,
+      "receipt_sha256": "4609b8371caab531425d2cec57429b8bafc71733facaec18329c076941f1d6c8",
+      "source_snapshot_sha256": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+      "log_sha256": "aab20695b18c648e5f1c560d8f68fdd0ff58f15ca1358ca97e07ace277ede6b3",
+      "error_diagnostics": 0,
+      "warning_diagnostics": 0,
+      "Lean_generated_sorryAx_in_failed_log": false
+    }
+  ],
+  "declaration_counts": {
+    "theorem": 30,
+    "def": 26,
+    "structure": 2
+  },
+  "standard_axiom_prints": 58,
+  "source_sha256": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+  "log_sha256": "aab20695b18c648e5f1c560d8f68fdd0ff58f15ca1358ca97e07ace277ede6b3",
+  "olean_sha256": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+  "role3_attempt02_classification": "technical missing Decidable instances and cascading elaboration after local-attribute repair",
+  "mathematical_content": "actual beta support, periodic separated coefficients, inverse product/divisor reindexing and actual calibration identities",
+  "CRT_source_lower_bound_or_R6_or_global_Gamma_estimate_proved": false,
+  "independent_judge18_completed": false,
+  "cumulative_verified_modules": 22,
+  "cumulative_verified_auxiliary_theorems": 337,
+  "producer_Lean_audit_rerun_by_root": false,
+  "victory": false
+}

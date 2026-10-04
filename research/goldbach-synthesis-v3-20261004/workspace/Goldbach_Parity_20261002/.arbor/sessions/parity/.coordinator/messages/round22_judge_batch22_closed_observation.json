@@ -1,0 +1,33 @@
+{
+  "schema": "ROUND22_ROOT_JUDGE_STAGE_CLOSED_OBSERVATION",
+  "time_utc": "2026-10-03T21:03:33.933666+00:00",
+  "batch": "batch22",
+  "status": "INDEPENDENT_BATCH22_AUX_PASS",
+  "new_modules": 2,
+  "new_declarations": 28,
+  "modules_failed": 0,
+  "modules_not_invoked": 0,
+  "official_modules": 82,
+  "official_declarations": 1367,
+  "includes_definitions": true,
+  "receipt_sha256": "4b589cbef28c140100562714d445e4ad9f6474f68d81b528d0fa2153d2f0e57f",
+  "adjudication_sha256": "6972ea6238f127dd5f3b7ec82c7ab3fd1fbd1815ce1e9fb31b0820b6a724be23",
+  "completion_sha256": "426d0a6916870af30100830122c75e3d03684ab692da411e6f5af3974a65ac32",
+  "ROOT_FULL_read_receipts": "aac5d3,a1206b,52dd52,d080eb",
+  "source_math_audit_owner": "ROLE5",
+  "source_binding_scope": "exact frozen catalogue paths, including source_final; no guessed sources path",
+  "inputs_verified": 8441,
+  "old_judge_files_verified": 1330,
+  "archives_verified": 3089,
+  "captures_verified": 95,
+  "large_PRE_POST_scope": "every entry parsed and all bytes hash-verified; raw FULL source/import text not claimed",
+  "actual_receipt_module_count_fields": [
+    "modules_passed"
+  ],
+  "ROOT_Lean_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "ROUND20_UNIQUE_INDEPENDENT_JUDGE_GATE_ISSUED_ACTUAL_START_PENDING",
+  "observed_utc": "2026-10-03T04:41:19.449361+00:00",
+  "authorization_sha256": "a321f065d36d8d18529d12356d2502e12a75e78fd87a59effeb6db562fba7c03",
+  "preparation_sha256": "fe440243022cf4111c61827f7b6a387e4a2182cd3523b4aef41ae411abcda6a7",
+  "judge_code_sha256": {
+    "audit.py": "6ecf1f28163623c7a691341aeb724eba8e3e4265e6555bf359346e84344f8726",
+    "run_once.py": "858c657259a4dc844736ffe33e6fd4934168323d1ce64ca8ba08cdd170308299",
+    "prepare.py": "3395bc352fc9439f2c086d55f98f2221e9e99326484c46e1dcd22c85be4f31b9"
+  },
+  "group_counts": {
+    "final_input_sha256": 1054,
+    "historical_dependencies_sha256": 26,
+    "numeric_frozen_sha256": 677,
+    "previous_artifacts_sha256": 1808,
+    "new_module_sources_sha256": 16,
+    "original_documents_sha256": 2,
+    "runtime_bindings_sha256": 5
+  },
+  "unique_bindings_verified": 2837,
+  "source_read_scope": "All semantic fields and module-plan projection reviewed; every entry of all seven hash dictionaries machine parsed and byte verified. The 565KB opaque digest lists were not claimed individually displayed FULL.",
+  "static_unexecuted_schema_revision02_not_a_Lean_Judge_failure": true,
+  "cross_scope_root_FULL_read": "3b751a",
+  "cross_scope_final_hashes": {
+    "inventory.md": "775b9132cff1c18fd3be9f3c5bbc3b53403f7b8b446e59c66c747616d77a35e0",
+    "input_manifest.json": "4aa64966fc559419db43ade6d41e1d5b0a9a32108475a80bdb8f0c7195f7fab2",
+    "final_receipt.json": "c8d6bd15b13fbdd7a02e3e19900bc6351247738bdeb38e602fcd5e7a902d9942"
+  },
+  "root_mathematical_compiler_Judge_executions": 0,
+  "independent_Judge_started": false,
+  "victory": false
+}

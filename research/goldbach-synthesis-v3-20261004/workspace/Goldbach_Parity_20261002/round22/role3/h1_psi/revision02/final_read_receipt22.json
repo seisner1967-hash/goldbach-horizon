@@ -1,0 +1,96 @@
+{
+  "schema": "round22.psi.revision02.final_read_receipt.v1",
+  "time": "2026-10-03T10:40:25.3960611Z",
+  "status": "PREPARED_SOURCE_ONLY_GATE_CLOSED",
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\GammaPsiCore22.lean",
+      "sha256": "67ee5fb9877347104a95d9b7852769e597f0764e257fb42ee4e3187979aed504",
+      "scope": "FULL",
+      "capture": "0de37d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\GammaPsiBetaLimit22.lean",
+      "sha256": "5067102f920c1cf05058f1787a38c17cf071e07abd403b8bbf1b044e89ea5254",
+      "scope": "FULL",
+      "capture": "e0f033"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\GammaPsiIntegral22.lean",
+      "sha256": "e35a279d8a4d5371c772728ec63ee3abc41274ae430011b7bae33fb0d485feaf",
+      "scope": "FULL",
+      "capture": "e0f033"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\GammaPsiDuplication22.lean",
+      "sha256": "8a7f2c014866bfe49814c9310dfc012acd05e87c962b5976a32cf0fec9a2179f",
+      "scope": "FULL",
+      "capture": "e0f033"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\run_psi_batch_once22.py",
+      "sha256": "7d228a424b8b9ba19ea8046b4cf8ec2a7a845abd3dc4b782ed924e8701ebb2d4",
+      "scope": "FULL",
+      "capture": "8d7993"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\prepare_psi_metadata22.ps1",
+      "sha256": "32f1a0bb779f2f67703e8ca4d0da2dc8fc0bc88422d2bc15c65e7927cb4970b4",
+      "scope": "FULL",
+      "capture": "8d7993"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\preparation22.md",
+      "sha256": "2245d37b0490a162073dea7dd3b6d72707b88999e7308a410c90703ea8102d2e",
+      "scope": "FULL",
+      "capture": "1ca1d9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\read_scope22.md",
+      "sha256": "2a758d071a2563d5bc661eef82e50740ba108fbc7ba6c3890d064113ab8d5140",
+      "scope": "FULL",
+      "capture": "1ca1d9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\failure01_diagnosis22.md",
+      "sha256": "5dc77fa7f52dbad23701f02bb4b999fd6643b4ae2b5edc788b2d50731e8d3396",
+      "scope": "FULL",
+      "capture": "1ca1d9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_source_manifest22.json",
+      "sha256": "ac2e76173f00e65e20914de041f654ba8394cfff2eaa7da2529c963deccc8ebf",
+      "scope": "FULL",
+      "capture": "69a020"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_prepared_receipt22.json",
+      "sha256": "3bbf392f96aa67dfa3032d738e29c3573c1ad2c364ebaae2827bcbc8d835aa01",
+      "scope": "FULL",
+      "capture": "69a020"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_cache_closure22.json",
+      "sha256": "90b9cf230702ca94abb0e055bc6b7bd5f6283371bcc7d471f7e47fc545c16d43",
+      "scope": "HEADER_PARSE_BYTE_HASH_NOT_FULL",
+      "capture": "2dcdef/f8a681"
+    }
+  ],
+  "metadata_run": "2dcdef/f8a681 exit0",
+  "all_56_bindings_verified": true,
+  "actual_Lean_invocations_revision02": 0,
+  "previous_actual_Core_exit": 1,
+  "previous_actual_receipt_sha256": "273774ecce0500c970ecac573a6a541be786dae1ea9d52e647aaad21ef048f20",
+  "independent_role4_targeted_review": {
+    "capture": "65c06b",
+    "lines": "143-169",
+    "source_sha256": "67ee5fb9877347104a95d9b7852769e597f0764e257fb42ee4e3187979aed504",
+    "API_probe_invocations": 0,
+    "compile_invocations": 0
+  },
+  "numeric_PASS": false,
+  "counterexample_established": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "victory": false
+}

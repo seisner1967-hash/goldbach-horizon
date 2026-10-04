@@ -1,0 +1,63 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZetaSummandHom"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZetaSummand_norm_summable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZetaSummand_tsum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZeta_euler_exp_log"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZeta_ne_zero_on_right"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\batch06_attempt01\\ZetaEulerDirect22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\sources\\ZetaEulerDirect22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-03T13:06:34.403027+00:00",
+  "launch_error": null,
+  "log_sha256": "e8baadfec45f2aa93a5019a703488a9b85f3c1e66a03461a6daa9289fd308eaa",
+  "module": "ZetaEulerDirect22",
+  "olean_sha256": "555b108cb867d2f87686539b647cda24600e4b747ebc25aa253b0c71a327c454",
+  "source_prior_status": "SOURCE_NOT_COMPILED",
+  "source_sha256": "0d790ed67706e2f3c3556d2c5e7fefd50664177f5fb54584beee1d137e430a71",
+  "started_at": "2026-10-03T13:06:18.421201+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

@@ -1,0 +1,402 @@
+import Mathlib
+
+/-!
+Finite Selberg weights on the actual squarefree prime support. The principal
+term is derived by finite Boolean-lattice inversion, rather than postulated.
+The definitions take a local root density, later instantiated by four forms.
+-/
+
+namespace GoldbachRound17.Selberg
+open scoped BigOperators
+open Finset
+noncomputable section
+
+def sign (s : Finset ℕ) : ℝ := ∏ _p ∈ s, (-1 : ℝ)
+def gprod (g : ℕ → ℝ) (s : Finset ℕ) : ℝ := ∏ p ∈ s, g p
+def hprod (g : ℕ → ℝ) (s : Finset ℕ) : ℝ := ∏ p ∈ s, g p / (1 - g p)
+def primeProduct (s : Finset ℕ) : ℕ := ∏ p ∈ s, p
+def support (P : Finset ℕ) (z : ℕ) : Finset (Finset ℕ) :=
+  P.powerset.filter fun s => primeProduct s ≤ z
+def G (P : Finset ℕ) (z : ℕ) (g : ℕ → ℝ) : ℝ :=
+  ∑ s ∈ support P z, hprod g s
+def y (P : Finset ℕ) (z : ℕ) (g : ℕ → ℝ) (s : Finset ℕ) : ℝ :=
+  if s ∈ support P z then sign s * hprod g s / G P z g else 0
+def transform (P : Finset ℕ) (f : Finset ℕ → ℝ) (d : Finset ℕ) : ℝ :=
+  ∑ r ∈ P.powerset, if d ⊆ r then sign (r \ d) * f r else 0
+def weight (P : Finset ℕ) (z : ℕ) (g : ℕ → ℝ) (d : Finset ℕ) : ℝ :=
+  transform P (y P z g) d / gprod g d
+def upperSum (P : Finset ℕ) (f : Finset ℕ → ℝ) (r : Finset ℕ) : ℝ :=
+  ∑ d ∈ P.powerset, if r ⊆ d then f d else 0
+def principal (P : Finset ℕ) (g : ℕ → ℝ) (w : Finset ℕ → ℝ) : ℝ :=
+  ∑ d ∈ P.powerset, ∑ t ∈ P.powerset, w d * w t * gprod g (d ∪ t)
+
+lemma sign_square (s : Finset ℕ) : sign s * sign s = 1 := by
+  rw [sign, ← prod_mul_distrib]
+  simp
+
+lemma alternating_powerset (s : Finset ℕ) :
+    ∑ t ∈ s.powerset, sign t = if s = ∅ then 1 else 0 := by
+  simp only [sign]
+  rw [← prod_one_add]
+  by_cases hs : s = ∅
+  · simp [hs]
+  · rw [if_neg hs]
+    obtain ⟨p, hp⟩ := Finset.nonempty_iff_ne_empty.mpr hs
+    exact prod_eq_zero hp (by norm_num)
+
+lemma interval_alternating (r t : Finset ℕ) :
+    (∑ d ∈ t.powerset, if r ⊆ d then sign (t \ d) else 0) =
+      if r = t then 1 else 0 := by
+  classical
+  by_cases hrt : r ⊆ t
+  · have heq :
+        (∑ d ∈ t.powerset, if r ⊆ d then sign (t \ d) else 0) =
+          ∑ s ∈ (t \ r).powerset, sign s := by
+      rw [← sum_filter]
+      apply sum_bij' (fun d _ => t \ d) (fun s _ => t \ s)
+      · intro d hd
+        simp only [mem_filter, mem_powerset] at hd ⊢
+        exact sdiff_subset_sdiff Subset.rfl hd.2
+      · intro s hs
+        simp only [mem_powerset] at hs
+        simp only [mem_filter, mem_powerset]
+        constructor
+        · exact sdiff_subset
+        · intro x hx
+          simp only [mem_sdiff]
+          exact ⟨hrt hx, fun hxs => (mem_sdiff.mp (hs hxs)).2 hx⟩
+      · intro d hd
+        simp only [mem_filter, mem_powerset] at hd
+        ext x
+        simp only [mem_sdiff]
+        have hdsub := hd.1
+        constructor
+        · rintro ⟨hxt, hn⟩
+          by_contra hxd
+          exact hn ⟨hxt, hxd⟩
+        · intro hxd
+          exact ⟨hdsub hxd, fun h => h.2 hxd⟩
+      · intro s hs
+        simp only [mem_powerset] at hs
+        ext x
+        simp only [mem_sdiff]
+        constructor
+        · rintro ⟨hxt, hn⟩
+          by_contra hxs
+          exact hn ⟨hxt, hxs⟩
+        · intro hxs
+          exact ⟨(mem_sdiff.mp (hs hxs)).1, fun h => h.2 hxs⟩
+      · intro d hd
+        rfl
+    rw [heq, alternating_powerset]
+    congr 1
+    exact propext ⟨fun h => hrt.antisymm (sdiff_eq_empty_iff_subset.mp h),
+      fun h => by simp [h]⟩
+  · have hne : r ≠ t := fun h => hrt (h ▸ Subset.rfl)
+    rw [if_neg hne]
+    apply sum_eq_zero
+    intro d hd
+    exact if_neg fun hrd => hrt (hrd.trans (mem_powerset.mp hd))
+
+lemma inverse_transform (P : Finset ℕ) (f : Finset ℕ → ℝ)
+    (r : Finset ℕ) (hr : r ⊆ P) : upperSum P (transform P f) r = f r := by
+  classical
+  unfold upperSum transform
+  have spread (d : Finset ℕ) :
+      (if r ⊆ d then ∑ t ∈ P.powerset,
+        if d ⊆ t then sign (t \ d) * f t else 0 else 0) =
+      ∑ t ∈ P.powerset,
+        if r ⊆ d then (if d ⊆ t then sign (t \ d) * f t else 0) else 0 := by
+    by_cases h : r ⊆ d <;> simp [h]
+  simp_rw [spread]
+  rw [sum_comm]
+  have hinner (t : Finset ℕ) (ht : t ∈ P.powerset) :
+      (∑ d ∈ P.powerset,
+        if r ⊆ d then (if d ⊆ t then sign (t \ d) * f t else 0) else 0) =
+        (if r = t then 1 else 0) * f t := by
+    have hs :
+        (∑ d ∈ P.powerset,
+          if r ⊆ d then (if d ⊆ t then sign (t \ d) * f t else 0) else 0) =
+          (∑ d ∈ t.powerset, if r ⊆ d then sign (t \ d) else 0) * f t := by
+      rw [sum_mul]
+      calc
+        _ = ∑ d ∈ t.powerset,
+          if r ⊆ d then (if d ⊆ t then sign (t \ d) * f t else 0) else 0 := by
+            symm
+            apply sum_subset (powerset_mono.mpr (mem_powerset.mp ht))
+            intro d hd hdt
+            have hnot : ¬ d ⊆ t := fun h => hdt (mem_powerset.mpr h)
+            simp [hnot]
+        _ = _ := by
+          apply sum_congr rfl
+          intro d hd
+          simp [mem_powerset.mp hd, ite_mul]
+    rw [hs, interval_alternating]
+  rw [sum_congr rfl hinner]
+  simp [mem_powerset.mpr hr]
+
+lemma gprod_pos {P : Finset ℕ} {g : ℕ → ℝ}
+    (hg : ∀ p ∈ P, 0 < g p) {s : Finset ℕ} (hs : s ⊆ P) : 0 < gprod g s := by
+  exact prod_pos fun p hp => hg p (hs hp)
+
+lemma hprod_pos {P : Finset ℕ} {g : ℕ → ℝ}
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) {s : Finset ℕ} (hs : s ⊆ P) :
+    0 < hprod g s := by
+  apply prod_pos
+  intro p hp
+  exact div_pos (hg p (hs hp)).1 (sub_pos.mpr (hg p (hs hp)).2)
+
+lemma G_pos {P : Finset ℕ} {z : ℕ} {g : ℕ → ℝ} (hz : 1 ≤ z)
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) : 0 < G P z g := by
+  unfold G
+  apply sum_pos'
+  · intro s hs
+    exact le_of_lt (hprod_pos hg (mem_powerset.mp (mem_filter.mp hs).1))
+  · refine ⟨∅, ?_, ?_⟩
+    · simp [support, primeProduct, hz]
+    · simp [hprod]
+
+lemma weight_transform {P : Finset ℕ} {z : ℕ} {g : ℕ → ℝ}
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) {r : Finset ℕ} (hr : r ⊆ P) :
+    upperSum P (fun d => weight P z g d * gprod g d) r = y P z g r := by
+  have heq : ∀ d ∈ P.powerset,
+      weight P z g d * gprod g d = transform P (y P z g) d := by
+    intro d hd
+    unfold weight
+    exact div_mul_cancel₀ _ (ne_of_gt (gprod_pos (fun p hp => (hg p hp).1)
+      (mem_powerset.mp hd)))
+  rw [upperSum, sum_congr rfl (fun d hd => by rw [heq d hd])]
+  exact inverse_transform P (y P z g) r hr
+
+lemma reciprocal_kernel {P : Finset ℕ} {g : ℕ → ℝ}
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) {s : Finset ℕ} (hs : s ⊆ P) :
+    (∑ r ∈ s.powerset, (hprod g r)⁻¹) = (gprod g s)⁻¹ := by
+  have hp (r : Finset ℕ) : (hprod g r)⁻¹ = ∏ p ∈ r, (1 - g p) / g p := by
+    simp [hprod, ← prod_inv_distrib, inv_div]
+  simp_rw [hp]
+  rw [← prod_one_add]
+  simp only [gprod, ← prod_inv_distrib]
+  apply prod_congr rfl
+  intro p hp
+  have hn : g p ≠ 0 := ne_of_gt (hg p (hs hp)).1
+  field_simp
+
+lemma union_kernel {P : Finset ℕ} {g : ℕ → ℝ}
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1)
+    {d t : Finset ℕ} (hd : d ⊆ P) (ht : t ⊆ P) :
+    gprod g (d ∪ t) = gprod g d * gprod g t *
+      (∑ r ∈ P.powerset, if r ⊆ d ∧ r ⊆ t then (hprod g r)⁻¹ else 0) := by
+  classical
+  have heq :
+      (∑ r ∈ P.powerset, if r ⊆ d ∧ r ⊆ t then (hprod g r)⁻¹ else 0) =
+        ∑ r ∈ (d ∩ t).powerset, (hprod g r)⁻¹ := by
+    rw [← sum_filter]
+    congr 1
+    ext r
+    simp only [mem_filter, mem_powerset, subset_inter_iff]
+    constructor
+    · exact fun h => h.2
+    · exact fun h => ⟨h.1.trans hd, h⟩
+  rw [heq, reciprocal_kernel hg (inter_subset_left.trans hd)]
+  have hn : gprod g (d ∩ t) ≠ 0 :=
+    ne_of_gt (gprod_pos (fun p hp => (hg p hp).1) (inter_subset_right.trans ht))
+  have hprodEq : gprod g (d ∪ t) * gprod g (d ∩ t) = gprod g d * gprod g t :=
+    prod_union_inter
+  exact (eq_mul_inv_iff_mul_eq₀ hn).mpr hprodEq
+
+lemma diagonalization {P : Finset ℕ} {g : ℕ → ℝ}
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) (w : Finset ℕ → ℝ) :
+    principal P g w = ∑ r ∈ P.powerset,
+      (upperSum P (fun d => w d * gprod g d) r)^2 / hprod g r := by
+  classical
+  unfold principal upperSum
+  simp only [pow_two, sum_mul, mul_sum, sum_div]
+  symm
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro d hd
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro t ht
+  rw [union_kernel hg (mem_powerset.mp hd) (mem_powerset.mp ht), mul_sum, mul_sum]
+  apply sum_congr rfl
+  intro r hr
+  by_cases hrd : r ⊆ d <;> by_cases hrt : r ⊆ t
+  all_goals simp [hrd, hrt, div_eq_mul_inv]
+  all_goals ring
+
+lemma principal_optimum {P : Finset ℕ} {z : ℕ} {g : ℕ → ℝ} (hz : 1 ≤ z)
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) :
+    principal P g (weight P z g) = 1 / G P z g := by
+  classical
+  rw [diagonalization hg]
+  have hG : G P z g ≠ 0 := ne_of_gt (G_pos hz hg)
+  have hterm (r : Finset ℕ) (hr : r ∈ P.powerset) :
+      (upperSum P (fun d => weight P z g d * gprod g d) r)^2 / hprod g r =
+        if r ∈ support P z then hprod g r / (G P z g)^2 else 0 := by
+    rw [weight_transform hg (mem_powerset.mp hr)]
+    unfold y
+    by_cases hm : r ∈ support P z
+    · rw [if_pos hm, if_pos hm]
+      have hh : hprod g r ≠ 0 := ne_of_gt (hprod_pos hg (mem_powerset.mp hr))
+      have hs := sign_square r
+      simp only [pow_two]
+      field_simp [hh, hG]
+      linear_combination (hprod g r)^2 * (G P z g)^2 * hs
+    · simp [hm]
+  rw [sum_congr rfl hterm, ← sum_filter, ← sum_div]
+  have hfilter : P.powerset.filter (fun a => a ∈ support P z) = support P z := by
+    ext s
+    simp [support]
+  rw [hfilter]
+  change G P z g / (G P z g)^2 = 1 / G P z g
+  field_simp
+  ring
+
+lemma weight_empty {P : Finset ℕ} {z : ℕ} {g : ℕ → ℝ} (hz : 1 ≤ z)
+    (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) : weight P z g ∅ = 1 := by
+  classical
+  have hG : G P z g ≠ 0 := ne_of_gt (G_pos hz hg)
+  unfold weight transform
+  simp only [gprod, prod_empty, div_one, empty_subset, if_true, sdiff_empty]
+  have hterm (r : Finset ℕ) :
+      sign r * y P z g r = if r ∈ support P z then hprod g r / G P z g else 0 := by
+    unfold y
+    by_cases hr : r ∈ support P z
+    · simp only [if_pos hr]
+      rw [mul_div_assoc, ← mul_assoc, sign_square, one_mul]
+    · simp [hr]
+  simp_rw [hterm]
+  rw [← sum_filter, ← sum_div]
+  have hfilter : P.powerset.filter (fun a => a ∈ support P z) = support P z := by
+    ext s
+    simp [support]
+  rw [hfilter]
+  exact div_self hG
+
+def divides (F : ℕ → ℤ) (d : Finset ℕ) (q : ℕ) : Prop :=
+  ∀ p ∈ d, (p : ℤ) ∣ F q
+def rough (P : Finset ℕ) (F : ℕ → ℤ) (q : ℕ) : Prop :=
+  ∀ p ∈ P, ¬ (p : ℤ) ∣ F q
+local instance (F : ℕ → ℤ) (d : Finset ℕ) (q : ℕ) : Decidable (divides F d q) :=
+  Classical.propDecidable _
+local instance (P : Finset ℕ) (F : ℕ → ℤ) (q : ℕ) : Decidable (rough P F q) :=
+  Classical.propDecidable _
+def sieveValue (P : Finset ℕ) (F : ℕ → ℤ) (w : Finset ℕ → ℝ) (q : ℕ) : ℝ :=
+  ∑ d ∈ P.powerset, if divides F d q then w d else 0
+def remainder (J : Finset ℕ) (F : ℕ → ℤ) (g : ℕ → ℝ) (d : Finset ℕ) : ℝ :=
+  ((J.filter fun q => divides F d q).card : ℝ) - (J.card : ℝ) * gprod g d
+
+lemma divides_union (F : ℕ → ℤ) (d t : Finset ℕ) (q : ℕ) :
+    divides F (d ∪ t) q ↔ divides F d q ∧ divides F t q := by
+  simp only [divides, mem_union, or_imp, forall_and]
+
+lemma indicator_pair_sum (J : Finset ℕ) (F : ℕ → ℤ)
+    (w : Finset ℕ → ℝ) (d t : Finset ℕ) :
+    (∑ q ∈ J, (if divides F d q then w d else 0) *
+      (if divides F t q then w t else 0)) =
+      w d * w t * ((J.filter fun q => divides F (d ∪ t) q).card : ℝ) := by
+  classical
+  calc
+    _ = ∑ q ∈ J, if divides F (d ∪ t) q then w d * w t else 0 := by
+      apply sum_congr rfl
+      intro q hq
+      rw [divides_union]
+      split_ifs <;> simp_all
+    _ = _ := by
+      rw [← sum_filter, sum_const]
+      simp [nsmul_eq_mul, mul_comm]
+
+lemma square_decomposition (P J : Finset ℕ) (F : ℕ → ℤ)
+    (g : ℕ → ℝ) (w : Finset ℕ → ℝ) :
+    (∑ q ∈ J, (sieveValue P F w q)^2) =
+      (J.card : ℝ) * principal P g w +
+        ∑ d ∈ P.powerset, ∑ t ∈ P.powerset,
+          w d * w t * remainder J F g (d ∪ t) := by
+  classical
+  have hsq : (∑ q ∈ J, (sieveValue P F w q)^2) =
+      ∑ d ∈ P.powerset, ∑ t ∈ P.powerset,
+        w d * w t * ((J.filter fun q => divides F (d ∪ t) q).card : ℝ) := by
+    unfold sieveValue
+    simp only [pow_two, sum_mul, mul_sum]
+    rw [sum_comm]
+    apply sum_congr rfl
+    intro d hd
+    rw [sum_comm]
+    apply sum_congr rfl
+    intro t ht
+    exact indicator_pair_sum J F w t d |>.trans (by simp [union_comm, mul_comm])
+  rw [hsq]
+  unfold remainder principal
+  calc
+    _ = ∑ d ∈ P.powerset, ∑ t ∈ P.powerset,
+      ((J.card : ℝ) * (w d * w t * gprod g (d ∪ t)) +
+        w d * w t *
+          (((J.filter fun q => divides F (d ∪ t) q).card : ℝ) -
+            (J.card : ℝ) * gprod g (d ∪ t))) := by
+        apply sum_congr rfl
+        intro d hd
+        apply sum_congr rfl
+        intro t ht
+        ring
+    _ = _ := by simp_rw [sum_add_distrib, ← mul_sum]
+
+lemma sieveValue_on_rough {P : Finset ℕ} {F : ℕ → ℤ}
+    {w : Finset ℕ → ℝ} (hw : w ∅ = 1) {q : ℕ} (hq : rough P F q) :
+    sieveValue P F w q = 1 := by
+  classical
+  unfold sieveValue
+  have hterm (d : Finset ℕ) (hd : d ∈ P.powerset) :
+      (if divides F d q then w d else 0) = if d = ∅ then 1 else 0 := by
+    by_cases he : d = ∅
+    · simp [he, divides, hw]
+    · have hn : ¬ divides F d q := by
+        intro hdiv
+        obtain ⟨p, hp⟩ := Finset.nonempty_iff_ne_empty.mpr he
+        exact hq p ((mem_powerset.mp hd) hp) (hdiv p hp)
+      simp [he, hn]
+  rw [sum_congr rfl hterm]
+  simp
+
+lemma rough_count_le_square {P J : Finset ℕ} {F : ℕ → ℤ}
+    {w : Finset ℕ → ℝ} (hw : w ∅ = 1) :
+    ((J.filter fun q => rough P F q).card : ℝ) ≤
+      ∑ q ∈ J, (sieveValue P F w q)^2 := by
+  classical
+  have hc : ((J.filter fun q => rough P F q).card : ℝ) =
+      ∑ q ∈ J, if rough P F q then (1 : ℝ) else 0 := by
+    rw [← sum_filter]
+    simp
+  rw [hc]
+  apply sum_le_sum
+  intro q hq
+  by_cases hr : rough P F q
+  · simp [hr, sieveValue_on_rough hw hr]
+  · simp [hr, sq_nonneg]
+
+lemma finite_upper_bound {P J : Finset ℕ} {z : ℕ} {F : ℕ → ℤ} {g : ℕ → ℝ}
+    (hz : 1 ≤ z) (hg : ∀ p ∈ P, 0 < g p ∧ g p < 1) :
+    ((J.filter fun q => rough P F q).card : ℝ) ≤
+      (J.card : ℝ) / G P z g +
+        ∑ d ∈ P.powerset, ∑ t ∈ P.powerset,
+          |weight P z g d * weight P z g t * remainder J F g (d ∪ t)| := by
+  classical
+  calc
+    _ ≤ ∑ q ∈ J, (sieveValue P F (weight P z g) q)^2 :=
+      rough_count_le_square (weight_empty hz hg)
+    _ = (J.card : ℝ) / G P z g +
+        ∑ d ∈ P.powerset, ∑ t ∈ P.powerset,
+          weight P z g d * weight P z g t * remainder J F g (d ∪ t) := by
+      rw [square_decomposition P J F g, principal_optimum hz hg]
+      simp [div_eq_mul_inv]
+    _ ≤ _ := by
+      gcongr with d hd t ht
+      exact le_abs_self _
+
+#print axioms finite_upper_bound
+
+#print axioms principal_optimum
+
+
+end
+end GoldbachRound17.Selberg

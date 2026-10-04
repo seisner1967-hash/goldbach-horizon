@@ -1,0 +1,67 @@
+{
+  "schema": "ROUND22_TRUE_UNIFORM_PHASE_PAPER_READS22",
+  "status": "PAPER_DERIVATION_NOT_LEAN_OR_NUMERIC_CERTIFIED",
+  "time_utc": "2026-10-03T14:42:16.1610981Z",
+  "note_sha256": "7fedc4de0d175fcdfbdfb0d36667e7bf5393c788fa88e3f28bd89c9ef0320306",
+  "note_FULL_read": "9cc9eb",
+  "references": [
+    {
+      "path": "round22/judge5/continuous_correlation_source_review22.md",
+      "sha256": "04f40ed82430c203c8695180d7762a06a52bd5d0ce11a9657e80740e24e6f59c",
+      "scope": "FULL",
+      "chunk": "fb20fa"
+    },
+    {
+      "path": "round22/role4/h1_contour/c5_mellin_source01/continuous_correlation_obligation22.md",
+      "sha256": "783215437541c0b69c298547228678bb28907be14ba2766aef8deff905e9056e",
+      "scope": "FULL",
+      "chunk": "04c47b"
+    },
+    {
+      "path": "round22/judge5/batch02_sources/GammaPrerequisites22.lean",
+      "sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "scope": "TARGETED lines201-310",
+      "chunk": "f0222d"
+    },
+    {
+      "path": "round22/judge5/batch02_adjudication.json",
+      "sha256": "6488a47dfb747394fbb16df8df7282ea660e7016c24e06753a7dad3f50519f02",
+      "scope": "FULL",
+      "chunk": "79ec8e"
+    },
+    {
+      "path": "Mathlib/Analysis/Fourier/Inversion.lean",
+      "sha256": "2f843ba6ac45c6113c2db7728f7c5beb7472928d1efcbcb0570b2d914e890506",
+      "scope": "TARGETED lines155-172 +1-65",
+      "chunks": [
+        "0d9b59",
+        "a1dbe9"
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Fourier/FourierTransform.lean",
+      "sha256": "a48146f6cc8f5b8cf795e74c955eabb3367626e86ac302a681d43c0bd6a84858",
+      "scope": "TARGETED lines379-405 + rg matches",
+      "chunks": [
+        "b137f7",
+        "a1dbe9"
+      ]
+    }
+  ],
+  "failed_read": {
+    "chunk": "2477fd",
+    "wrong_path": "round22/judge5/batch02/sources/GammaPrerequisites22.lean",
+    "classification": "READ_PATH_ERROR_ONLY",
+    "FULL_claim": false,
+    "corrected_path": "round22/judge5/batch02_sources/GammaPrerequisites22.lean",
+    "corrected_chunk": "f0222d"
+  },
+  "new_Python_math": 0,
+  "new_Lean": 0,
+  "new_probes": 0,
+  "new_Gamma_compile_credit": 0,
+  "Mellin_uniform_identity_formal": "OPEN",
+  "primitive_enclosures_source_prepared": false,
+  "D_N": "UNPAID",
+  "WIN": false
+}

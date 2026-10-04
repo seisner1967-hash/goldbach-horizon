@@ -1,0 +1,53 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch18\sources\ThermalGammaMellinInverse22.lean:40:16: error: application type mismatch
+  ContinuousAt.comp hg (Continuous.continuousAt harg)
+argument
+  Continuous.continuousAt harg
+has type
+  ContinuousAt (fun u => 2 + ↑u * Complex.I) ?m.4423 : Prop
+but is expected to have type
+  ContinuousAt (HAdd.hAdd 2) (↑t * Complex.I) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch18\sources\ThermalGammaMellinInverse22.lean:62:26: error: application type mismatch
+  abs_of_pos ht
+argument
+  ht
+has type
+  t ∈ Ioi 0 : Prop
+but is expected to have type
+  0 < ?m.12813 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch18\sources\ThermalGammaMellinInverse22.lean:61:4: error: type mismatch, term
+  hbound
+after simplification has type
+  ‖Complex.Gamma (2 + ↑t * Complex.I)‖ ≤ 2 * Real.exp (-(Real.pi / 4) * |t|) : Prop
+but is expected to have type
+  ‖(gammaLine ∘ fun t => t) t‖ ≤ 2 * Real.exp (-(Real.pi / 4) * t) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch18\sources\ThermalGammaMellinInverse22.lean:62:26: error: application type mismatch
+  abs_of_pos ht
+argument
+  ht
+has type
+  t ∈ Ioi 0 : Prop
+but is expected to have type
+  0 < ?m.24044 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch18\sources\ThermalGammaMellinInverse22.lean:61:4: error: type mismatch, term
+  hbound
+after simplification has type
+  ‖Complex.Gamma (2 + ↑(-t) * Complex.I)‖ ≤ 2 * Real.exp (-(Real.pi / 4) * |t|) : Prop
+but is expected to have type
+  ‖(gammaLine ∘ fun t => -t) t‖ ≤ 2 * Real.exp (-(Real.pi / 4) * t) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch18\sources\ThermalGammaMellinInverse22.lean:44:82: error: unsolved goals
+unknown goal
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch18\sources\ThermalGammaMellinInverse22.lean:44:82: error: unknown metavariable '?_uniq.26102'
+'GoldbachThermalMellin22.expKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.gammaLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.expKernel_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.gammaLine_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.gammaLine_half_integrable' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.gammaLine_integrable' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.expKernel_mellin_convergent_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.mellin_expKernel_eq_Gamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.expKernel_mellin_vertical_two' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachThermalMellin22.mellinInv_Gamma_two' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachThermalMellin22.real_exp_eq_Gamma_integral' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

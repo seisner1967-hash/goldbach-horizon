@@ -1,0 +1,49 @@
+{
+  "bank": "typeii",
+  "attempt": 1,
+  "state": "FINISHED",
+  "command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\typeii_checks.py",
+    "--output-dir",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\isolated_typeii"
+  ],
+  "started_at_utc": "2026-10-02T21:58:31.965826+00:00",
+  "finished_at_utc": "2026-10-02T21:58:39.174897+00:00",
+  "elapsed_seconds": 7.171999999991385,
+  "exit_code": 0,
+  "source_helper_launcher_registry_sha256_before": {
+    "typeii_checks.py": "39dc54f832069e4171c666ab244123a371575f48d90cc6e2e0fe8ef97254aec8",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a",
+    "role6/replay_once.py": "5b72ca284c70fd2917a5762ef2b834b068e79799c5803a8d68c710cbad92b7df",
+    "previous_artifacts_sha256.json": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc"
+  },
+  "source_helper_launcher_registry_sha256_after": {
+    "typeii_checks.py": "39dc54f832069e4171c666ab244123a371575f48d90cc6e2e0fe8ef97254aec8",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a",
+    "role6/replay_once.py": "5b72ca284c70fd2917a5762ef2b834b068e79799c5803a8d68c710cbad92b7df",
+    "previous_artifacts_sha256.json": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc"
+  },
+  "snapshots_sha256": {
+    "role6/typeii_replay_snapshots/typeii_checks.py.txt": "39dc54f832069e4171c666ab244123a371575f48d90cc6e2e0fe8ef97254aec8",
+    "role6/typeii_replay_snapshots/role6__strict.py.txt": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a",
+    "role6/typeii_replay_snapshots/role6__replay_once.py.txt": "5b72ca284c70fd2917a5762ef2b834b068e79799c5803a8d68c710cbad92b7df",
+    "role6/typeii_replay_snapshots/previous_artifacts_sha256.json.txt": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc"
+  },
+  "log_sha256": "b4705e9e66599af582bc5fed8174a2d802f92b42bb3aacebd7380cb8454a3e2e",
+  "canonical_output_sha256_before": "31e873ab0170b1d479c95fdbbe38d989e260cbdd30b5fbba5974f9fc51c63687",
+  "canonical_output_sha256_after": "31e873ab0170b1d479c95fdbbe38d989e260cbdd30b5fbba5974f9fc51c63687",
+  "canonical_receipt_sha256_before": "623a5c64d7f60f4b8e390aa6b51ebeedb49a775bbaebc7c08b194fbfe9f4db22",
+  "canonical_receipt_sha256_after": "623a5c64d7f60f4b8e390aa6b51ebeedb49a775bbaebc7c08b194fbfe9f4db22",
+  "old_rounds1_through17_producer_kernel_sign_or_Lean_replayed": false,
+  "explicitly_authorized_new_round18_replay": true,
+  "victory": false,
+  "output_sha256": "31e873ab0170b1d479c95fdbbe38d989e260cbdd30b5fbba5974f9fc51c63687",
+  "bytes_identical": true,
+  "all_fields_identical": true,
+  "status": "PASS_UNIQUE_ISOLATED_REPLAY",
+  "comparison_exit_code": 0
+}

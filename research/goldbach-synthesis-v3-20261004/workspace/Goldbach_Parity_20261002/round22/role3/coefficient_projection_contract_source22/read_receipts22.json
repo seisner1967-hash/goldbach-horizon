@@ -1,0 +1,86 @@
+{
+  "schema": "ROUND22_CIRCLE_COEFFICIENT_NUMERIC_SPEC_SOURCE_READS22",
+  "status": "SOURCE_SPECIFICATION_NOT_PREPARED",
+  "time_utc": "2026-10-03T15:16:48.2563419Z",
+  "final_note": "coefficient_circle_contract22_revision02.md",
+  "final_note_sha256": "9e6d349ff283b1914750c05473d50982795a641cf6b429369504fc7b9ef73ddf",
+  "final_note_FULL_read": "d623c5",
+  "preserved_first_draft": {
+    "path": "coefficient_circle_contract22.md",
+    "sha256": "a0886dfe735519c51afc88bd9fc183dcf0c0a86b6d5833c84840e44606e80ce6",
+    "FULL_read": "e9242e",
+    "classification": "PAPER_DRAFT_SUPERSEDED_NOT_EXECUTED",
+    "corrections": [
+      "qP squared degree is at most2K-1; leading coefficient may vanish",
+      "Wrong conjugation continuous coefficient zero differs from discrete K=N+1, which aliases adjacent weights"
+    ]
+  },
+  "references": [
+    {
+      "path": "round22/judge5/batch10/sources/ThermalProjectionIdentity22.lean",
+      "sha256": "5b6da908dce97e0ad1ba08a893bd545a4a4c908f969d958102cf9e3509c5e99c",
+      "scope": "FULL",
+      "chunk": "9a6c51"
+    },
+    {
+      "path": "round22/judge5/projection_source_review22.md",
+      "sha256": "c25aee9a13a3b010d214de2607d18f9add2cafbb3a47aefd03e28d5f79d81ba2",
+      "scope": "FULL",
+      "chunk": "a2c47e"
+    },
+    {
+      "path": "round22/judge5/batch10/sources/ThermalProjectionEnvelope22.lean",
+      "sha256": "3a348820aa1d2bd05eb5ceedc1f3c3d412ac6a0e3e4c9bf45c9e287f4d488aaa",
+      "scope": "TARGETED21-65 definitions + rg declaration names",
+      "chunks": [
+        "3ab26d",
+        "a2c47e"
+      ]
+    },
+    {
+      "path": "round22/role3/performance_sourcepack02/dyadic_r01.py",
+      "sha256": "1a267168a01bd8d581cc8ccf6e69e89f3285dad079a30971e8a32b9b05511072",
+      "scope": "Historical FULLbb0b0b; newTARGETED236-327,326-380",
+      "chunks": [
+        "340213",
+        "3ab26d"
+      ]
+    },
+    {
+      "path": "round22/judge5/performance_source_review02/review22.md",
+      "sha256": "dfdc7d3a573c9d31364e198b8db749216316bec2162b19f4533babc1d2005286",
+      "scope": "FULL",
+      "chunk": "bf4abc"
+    },
+    {
+      "path": "round22/role3/spectral_uniform_phase_source22/uniform_phase_contract22.md",
+      "sha256": "7fedc4de0d175fcdfbdfb0d36667e7bf5393c788fa88e3f28bd89c9ef0320306",
+      "scope": "FULL",
+      "chunk": "9cc9eb"
+    }
+  ],
+  "API_search_only": {
+    "scope": "rg primitive-root exp definitions in Mathlib",
+    "chunk": "51d1bc",
+    "FULL_claim": false
+  },
+  "counts_symbolic": {
+    "N": 100000000,
+    "M": 100000000,
+    "K": 100000001,
+    "distinct_phases": 50000001,
+    "nontrivial_roots": 50000000,
+    "Horner_complex_products": "5000000000000000",
+    "coefficient_minimum_payload_bytes": "12800000128",
+    "complex_array_minimum_payload_bytes": "25600000256",
+    "Bluestein_power_two_length": "268435456"
+  },
+  "no_new_math_or_Lean_or_FFT_or_import_or_probe": true,
+  "existing_phase0_child_unique": "session57318/start14:48:16UTC",
+  "phase0_does_not_test_coefficient": true,
+  "performance_time_measured_for_this_contract": false,
+  "new_PREPARED": false,
+  "new_gate": false,
+  "D_N": "UNPAID",
+  "WIN": false
+}

@@ -1,0 +1,123 @@
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:16:75: error: unsolved goals
+m n : ℕ
+h : m.Coprime n
+⊢ { toFun := fun n => (↑n.totient)⁻¹, map_zero' := inverseTotient.proof_1 } (m * n) =
+    { toFun := fun n => (↑n.totient)⁻¹, map_zero' := inverseTotient.proof_1 } m *
+      { toFun := fun n => (↑n.totient)⁻¹, map_zero' := inverseTotient.proof_1 } n
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:22:91: error: unsolved goals
+m n : ℕ
+h : m.Coprime n
+⊢ { toFun := fun n => (↑n.totient)⁻¹ * (↑n)⁻¹, map_zero' := ⋯ } (m * n) =
+    { toFun := fun n => (↑n.totient)⁻¹ * (↑n)⁻¹, map_zero' := ⋯ } m *
+      { toFun := fun n => (↑n.totient)⁻¹ * (↑n)⁻¹, map_zero' := ⋯ } n
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:32:61: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  (Nat.primeFactorsList ?n).toFinset
+f : ArithmeticFunction ℝ
+hf : f.IsMultiplicative
+n : ℕ
+hn : n ≠ 0
+⊢ ∑ i ∈ (↑n.primeFactorsList).toFinset.powerset, f i.val.prod = ∏ p ∈ n.primeFactors, (1 + f p)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:39:42: error: unsolved goals
+p : ℕ
+hp : Nat.Prime p
+⊢ { toFun := fun n => (↑n.totient)⁻¹, map_zero' := inverseTotient.proof_1 } p = (↑p - 1)⁻¹
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:51:2: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:74:51: error: unsolved goals
+n : ℕ
+hn : n ≠ 0
+hp : ↑n.totient = ↑n * ∏ p ∈ n.primeFactors, (1 - (↑p)⁻¹)
+hnR : ↑n ≠ 0
+hprod : ∏ p ∈ n.primeFactors, (1 - (↑p)⁻¹) ≠ 0
+⊢ ↑n / (↑n * ∏ x ∈ n.primeFactors, (1 - 1 / ↑x)) = 1 / ∏ x ∈ n.primeFactors, (1 - 1 / ↑x)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:140:53: error: failed to prove positivity/nonnegativity/nonzeroness
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:142:64: error: unsolved goals
+X : ℕ
+hh : ∑ d ∈ squarefreeUpTo X, weightedInverseTotient d ≤ ∏ p ∈ (X + 1).primesBelow, (1 + weightedInverseTotient p)
+p : ℕ
+hp : p ∈ (X + 1).primesBelow
+⊢ { toFun := fun n => (↑n * ↑n.totient)⁻¹, map_zero' := weightedInverseTotient.proof_1 } p = (↑p * (↑p - 1))⁻¹
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:175:46: error: failed to prove positivity/nonnegativity/nonzeroness
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:178:8: error: type mismatch
+  Real.add_one_le_exp (weightedInverseTotient p)
+has type
+  weightedInverseTotient p + 1 ≤ Real.exp (weightedInverseTotient p) : Prop
+but is expected to have type
+  1 + weightedInverseTotient p ≤ Real.exp (weightedInverseTotient p) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:193:22: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  (fun n => n / d) n
+d X : ℕ
+hd : 1 ≤ d
+S : Finset ℕ := filter (fun n => d ∣ n) (Icc 1 X)
+n : ℕ
+hn : n ∈ ↑S
+m : ℕ
+hm : m ∈ ↑S
+he : (fun n => n / d) n = (fun n => n / d) m
+hn' : n / d * d = n
+hm' : m / d * d = m
+⊢ n / d * d = m / d * d
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:278:17: error: don't know how to synthesize implicit argument 'X'
+  @multiples_inverse_sum_le_harmonic d ?m.511035 (mem_Icc.mp hd).left
+context:
+X : ℕ
+hX0 : ¬X = 0
+hX : 1 ≤ X
+hlog : 0 ≤ Real.log ↑X
+hexp : totientInverseSum X = ∑ d ∈ Icc 1 X, ∑ n ∈ Icc 1 X, (↑n)⁻¹ * if Squarefree d ∧ d ∣ n then (↑d.totient)⁻¹ else 0
+d : ℕ
+hd : d ∈ Icc 1 X
+hs : Squarefree d
+he :
+  (∑ n ∈ Icc 1 X, (↑n)⁻¹ * if Squarefree d ∧ d ∣ n then (↑d.totient)⁻¹ else 0) =
+    (↑d.totient)⁻¹ * ∑ n ∈ filter (fun n => d ∣ n) (Icc 1 X), (↑n)⁻¹
+⊢ ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableTotientEnvelope.lean:278:11: error: failed to infer 'have' declaration type
+'GoldbachRound20.Friable.inverseTotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.weightedInverseTotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.inverseTotient_multiplicative' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.weightedInverseTotient_multiplicative' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.squarefree_divisor_sum_product' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.inverseTotient_prime' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.one_add_inverseTotient_prime' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.nat_div_totient_squarefree_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.squarefreeUpTo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.squarefree_sum_le_prime_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.reciprocal_successive_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.squarefree_weighted_inverse_sum_le_three' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.multiples_inverse_sum_le_harmonic' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.inverseTotient_interval_expansion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.totient_inverse_sum_le_three_one_add_log' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_TotientSumBound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_harmonicKernel_abs_unconditional' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

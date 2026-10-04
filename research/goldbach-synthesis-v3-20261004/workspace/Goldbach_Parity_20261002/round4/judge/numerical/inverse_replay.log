@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "inverse_completion": [
+    {
+      "q": 11,
+      "conductor": 11,
+      "tau_squared": -11,
+      "tau_H_delta1": 11,
+      "nonunit_remainder_delta1": 0,
+      "exact_double_unit_projection": "1/1",
+      "primal_delta1_projection": 1,
+      "dropping_remainder_is_false": false,
+      "cyclotomic": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "general_support_Fchi": 3,
+      "general_support_Gchi": 0,
+      "all_h_retained": "Unit h in H and every nonunit h in E"
+    },
+    {
+      "q": 15,
+      "conductor": 3,
+      "tau_squared": -3,
+      "tau_H_delta1": 3,
+      "nonunit_remainder_delta1": 12,
+      "exact_double_unit_projection": "1/25",
+      "primal_delta1_projection": 1,
+      "dropping_remainder_is_false": true,
+      "cyclotomic": [
+        1,
+        -1,
+        0,
+        1,
+        -1,
+        1,
+        0,
+        -1,
+        1
+      ],
+      "general_support_Fchi": 4,
+      "general_support_Gchi": -8,
+      "all_h_retained": "Unit h in H and every nonunit h in E"
+    },
+    {
+      "q": 100,
+      "conductor": 5,
+      "tau_squared": 0,
+      "tau_H_delta1": 0,
+      "nonunit_remainder_delta1": 100,
+      "exact_double_unit_projection": "0/1",
+      "primal_delta1_projection": 1,
+      "dropping_remainder_is_false": true,
+      "cyclotomic": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "general_support_Fchi": -7,
+      "general_support_Gchi": -11,
+      "all_h_retained": "Unit h in H and every nonunit h in E"
+    }
+  ],
+  "script_sha256": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c"
+}
+{
+  "large_N": 100000000,
+  "tau_induced_mod5": 0,
+  "coupled_C_counterexample": {
+    "actual_C": 33,
+    "frozen_C": 21,
+    "eta": 3,
+    "actual_primal": 1,
+    "frozen_primal": 2
+  },
+  "energy_by_C": {
+    "21": 6,
+    "33": 2
+  }
+}

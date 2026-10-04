@@ -1,0 +1,43 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage03\revision03\EpsteinUnfold22.lean:83:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  |↑n| ^ ↑3
+case h.e'_4
+a : ℝ
+ha : 0 < a
+R : ℕ
+n : ℤ
+v : ℝ
+hv : |v| ≤ ↑R
+hn : n ∉ Finset.Icc (-(2 * ↑R)) (2 * ↑R)
+hlarge : 2 * ↑R < |↑n|
+hnpos : 0 < |↑n|
+htri : |↑n| ≤ |v + ↑n| + |v|
+hvn : |↑n| / 2 ≤ |v + ↑n|
+hd : 0 < |↑n| / 2
+hsq : (|↑n| / 2) ^ 2 ≤ radicand a (v + ↑n)
+hk : kernel a (v + ↑n) ≤ 1 / (|↑n| / 2) ^ 3
+⊢ 8 * (|↑n| ^ 3)⁻¹ = 1 / (|↑n| / 2) ^ 3
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage03\revision03\EpsteinUnfold22.lean:145:41: warning: unused variable `hy`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage03\revision03\EpsteinUnfold22.lean:145:62: warning: unused variable `hm`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage03\revision03\EpsteinUnfold22.lean:175:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Epstein22.periodized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.translateBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.infiniteShiftIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel_upper_of_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel_upper_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.summable_translateBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.translateBound_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel_translate_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.continuousOn_periodized' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.continuous_periodized' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.periodic_periodized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.intervalIntegrable_periodized' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.summable_integral_norm_cells' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.integral_periodized_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.summable_kernel_translate' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.infiniteSum_shiftKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.unfoldFullRealThreeHalves' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.abs_cast_eq_natAbs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.unfoldFullRealThreeHalves_natAbs' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

@@ -1,0 +1,35 @@
+{"stage": "STAGE_STARTED", "name": "01_preservation"}
+{"stage": "STAGE_PASS", "name": "01_preservation", "receipt_sha256": "fe7fb0e3f862467bc18350f8aa2a6ca2d8d92aa4978f0d7a0ca3ad2278f90118"}
+{"stage": "STAGE_STARTED", "name": "02_stored_numeric"}
+{"stage": "STAGE_PASS", "name": "02_stored_numeric", "receipt_sha256": "5ab060377c210b09d7126f6a378567e77fb5f28d12e358832e49968376e7c0e3"}
+{"stage": "STAGE_STARTED", "name": "03_typeii_integers"}
+{"stage": "STAGE_PASS", "name": "03_typeii_integers", "receipt_sha256": "f39952304df268c7e3a3f79bebfd2119ba6b4a2a2eec8785abd79f2c7e8b1690"}
+{"stage": "STAGE_STARTED", "name": "04_semiprime_integers"}
+{"stage": "STAGE_PASS", "name": "04_semiprime_integers", "receipt_sha256": "d26b4a9bf0ca5ef0e5144d4ee74aacbbe0ad1cb0ebf6a9022c30c474557cfe87"}
+{"stage": "STAGE_STARTED", "name": "04b_distinct_CRT_integers"}
+{"stage": "STAGE_PASS", "name": "04b_distinct_CRT_integers", "receipt_sha256": "7e5ba7d6ed774d6e68b8c8ffc34645e1189923eb9982d1d732df64942603ffc6"}
+{"stage": "STAGE_STARTED", "name": "05_author_failures"}
+{"stage": "STAGE_PASS", "name": "05_author_failures", "receipt_sha256": "dd43db5b3b2925c7f0e70b3f097ef45c4de09b78d4c24155976d9163aa991759"}
+{"stage": "STAGE_STARTED", "name": "05b_distinct_content_review"}
+{"stage": "STAGE_PASS", "name": "05b_distinct_content_review", "receipt_sha256": "ae756effb94ffd28356f36afd8d10d50c02e1e47f357b4c46262b4f05217d77b"}
+{"stage": "STAGE_STARTED", "name": "06_independent_Lean"}
+{"stage": "FRESH_LEAN_STARTED", "module": "SeparatedTypeII", "declarations": 58}
+{"stage": "FRESH_LEAN_PASS", "module": "SeparatedTypeII", "declarations": 58, "olean_sha256": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5"}
+{"stage": "FRESH_LEAN_STARTED", "module": "SeparatedTypeIIPrice", "declarations": 14}
+{"stage": "FRESH_LEAN_PASS", "module": "SeparatedTypeIIPrice", "declarations": 14, "olean_sha256": "4d93de985a4e7dc95fbc49bd045315c8be18c5e2dee1b2e8afafacb394c41ac2"}
+{"stage": "FRESH_LEAN_STARTED", "module": "SeparatedTypeIICount", "declarations": 19}
+{"stage": "FRESH_LEAN_PASS", "module": "SeparatedTypeIICount", "declarations": 19, "olean_sha256": "5ee894fa6a17f05bca328f743783ede1c27b40bd2e465efb22364b106f45a2fc"}
+{"stage": "FRESH_LEAN_STARTED", "module": "SeparatedTypeIILower", "declarations": 5}
+{"stage": "FRESH_LEAN_PASS", "module": "SeparatedTypeIILower", "declarations": 5, "olean_sha256": "e4921faffa9a4861ac99c581d3492fe2add9e326c4838325504eef4b8dc34d23"}
+{"stage": "FRESH_LEAN_STARTED", "module": "DoubleExtractionArithmetic", "declarations": 51}
+{"stage": "FRESH_LEAN_PASS", "module": "DoubleExtractionArithmetic", "declarations": 51, "olean_sha256": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724"}
+{"stage": "FRESH_LEAN_STARTED", "module": "DividedFourForms", "declarations": 31}
+{"stage": "FRESH_LEAN_PASS", "module": "DividedFourForms", "declarations": 31, "olean_sha256": "5f74f8fabb3be9c22fbb922303117fe45663e5e26b1d54b8c22e747201566369"}
+{"stage": "FRESH_LEAN_STARTED", "module": "DividedRootCounts", "declarations": 44}
+{"stage": "FRESH_LEAN_PASS", "module": "DividedRootCounts", "declarations": 44, "olean_sha256": "d160fa61132fc53527f5633cf96363695b38ff6f1be888349f61a616f3cf311e"}
+{"stage": "FRESH_LEAN_STARTED", "module": "DividedSelbergBridge", "declarations": 20}
+{"stage": "FRESH_LEAN_PASS", "module": "DividedSelbergBridge", "declarations": 20, "olean_sha256": "4cd21d1786234affa081e9a26abe28c18ad27788a03eecc89eacfe4fa9b48609"}
+{"stage": "STAGE_PASS", "name": "06_independent_Lean", "receipt_sha256": "e7ccdac6de3111cca32042ba2933af031280345ccc85879077341a2c096fad6c"}
+{"stage": "STAGE_STARTED", "name": "07_preservation_after"}
+{"stage": "STAGE_PASS", "name": "07_preservation_after", "receipt_sha256": "fe7fb0e3f862467bc18350f8aa2a6ca2d8d92aa4978f0d7a0ca3ad2278f90118"}
+{"stage": "AUDIT_COMPLETE_AUXILIARY_ONLY", "counts": {"modules": 8, "theorems": 170, "defs": 68, "structures": 4, "instances": 0, "axioms_printed": 242}, "score": 0, "victory": false}

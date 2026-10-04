@@ -1,0 +1,89 @@
+{
+  "schema": "ROUND22_COMPONENT_R01_METADATA_CLOSURE",
+  "time_utc": "2026-10-03T10:51:12.4837256Z",
+  "status": "CLOSED_AUX_PASS_NO_REPLAY",
+  "actor": "ROLE6",
+  "scope": "THERMAL_COMPONENT_R01_AUX_ONLY",
+  "attempt_token": "b18e551101074db984ae7a7f0875d94f",
+  "actual_START_utc": "2026-10-03T10:41:16.513468+00:00",
+  "actual_FINISH_utc": "2026-10-03T10:44:48.631579+00:00",
+  "exit_code": 0,
+  "case_count": 46,
+  "mutation_count": 19,
+  "preparation_sha256": "13774751f2ff3f009b1e27d8e8d7b567cc8c216687117f8cf8b163bc7668b555",
+  "prepared_manifest_sha256": "b7219b88f0d1dcf0840133324aa00c63aacdcc03291643f3ee3e2f130ff2a9bb",
+  "gate_sha256": "0fc9adeec4e979a11f81aa44725b32f9c942231b3ad5b2e28e9b5e582a32524e",
+  "new_bindings_verified": 33,
+  "PREEXEC_copies_verified": 35,
+  "POSTEXEC_bindings_verified": 33,
+  "original_bindings_verified": 25,
+  "sqrt_certificate_lines": 15,
+  "mathematical_invocations": 1,
+  "posthoc_math_invocations": 0,
+  "Lean_invocations": 0,
+  "old_bank_replays": 0,
+  "previous_partial_values_as_oracle": false,
+  "independent_checker_ran_in_unique_child": true,
+  "independent_checker_rerun": false,
+  "whole_result_JSON_parsed": true,
+  "all46_case_decisions_and19_mutations_read": true,
+  "raw3395_lines_FULL_read_claim": false,
+  "reading_receipts": [
+    "6e379e",
+    "61bc29",
+    "e02c33",
+    "744b84"
+  ],
+  "truncated_read_recovered_scope": "c22c78 raw rational output truncated;744b84 complete catalogue/decision/mutation projection",
+  "report": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\closure_report_r01.md",
+    "sha256": "d1ecf5c0a84889d9d4003aa25ec5b1d0c2c22c01e349992e93e32bfa48faab41",
+    "bytes": 4119
+  },
+  "actual_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\actual_START.json",
+      "sha256": "df86cad087232ff8acbbd25bb4cc94a09140f2cf65264ade1825bf5442011271",
+      "bytes": 1304
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\attempt_reservation.json",
+      "sha256": "1ea4983dc2b5c4ce75b1d5aee58e89a85811f2a57398aae8629f945ce6a00eb6",
+      "bytes": 269
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\PREEXEC_captures.json",
+      "sha256": "5e1f3ae2769704ba834fe62f960359e6794919022cadac561dc5c1bc2e95af59",
+      "bytes": 15106
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\actual_receipt.json",
+      "sha256": "675fd4efcb6fc038b142c89eb6ff7843d57072a596e144cb52e8c681bdb76500",
+      "bytes": 1749
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\actual.log",
+      "sha256": "97d4abaca2a3767297a524b8aba1c00f7b064d0c1b1324ba831c53f2463c4dd4",
+      "bytes": 482
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\result_r01.json",
+      "sha256": "c43622616022e65991aee5a12d189d3bae142db1f2d347cb131e8abd685c7a6c",
+      "bytes": 235516
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\sqrt_certificates_r01.jsonl",
+      "sha256": "553cd8b9debcbacce4b68696e636d5a692bdcde0a39630f4b524eeb98f7e6e77",
+      "bytes": 13037
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\actual_r01\\POSTEXEC_integrity.json",
+      "sha256": "643831b85dcbb15f81393833a4fc4d3b05f2a07c3d07d681f8f82352fa76c7df",
+      "bytes": 12832
+    }
+  ],
+  "global_H1_claim": false,
+  "coefficient_N_claim": false,
+  "D_N_claim": false,
+  "WIN": false
+}

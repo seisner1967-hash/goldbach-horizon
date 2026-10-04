@@ -1,0 +1,37 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC04_EXPLICIT_TRUST_SOURCE_POLICY",
+  "status": "SOURCE_POLICY_ONLY_NOT_A_REVIEW_NOT_A_NUMERIC_AUTHORIZATION",
+  "scope": "NATIVE_NUMERIC04_FULL_N1E8_ONLY",
+  "operational_assumptions_proposed": [
+    "Windows loader, API-set, Kernel32 and installed operating-system services are trusted under the bound historical snapshot",
+    "The two byte-frozen images actually produced by BUILD04 from the reviewed CPP02/GMP/GCC toolchain are trusted to implement the audited source until a separate machine-refinement proof exists",
+    "The canonical isolated Python runtime and its selected byte-frozen library files are trusted operationally",
+    "The backend's PATH includes installed C:/msys64/ucrt64/bin and C:/Windows/System32; no assertion that all effective loads stay within selected files is made"
+  ],
+  "binary_sha256": ["44d2d571a0190f7dbbb975225559d16a012693bda4197738e6311c14892cadb0", "2e7e095c2972fea09ee26500df9dae207ff52497d0f61f2052d76d464ebe6990"],
+  "source_sha256": ["bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74", "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb"],
+  "backend_sha256": "88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3",
+  "build_receipt_sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8",
+  "ROOT_numeric_gate_explicit_acknowledgment_required": true,
+  "acknowledgment_field": "accept_installed_Windows_and_frozen_native_runtime_trust",
+  "required_independent_trust_review_status": "NUMERIC04_FIXED_IMAGES_REVIEWED_WITH_EXPLICIT_WINDOWS_NATIVE_TRUST",
+  "required_independent_source_review_status": "NUMERIC04_SOURCE_REVIEW_CLOSED_WITH_NATIVE_REFINEMENT_OPEN",
+  "required_review_scope": "NATIVE_NUMERIC04_FULL_N1E8_ONLY",
+  "selected_reviewer_for_ROLE3_parent": "ROLE4",
+  "review_scope_note": "ROOT-selected independent review of this ROLE3 consumer and proposed numerical trust; the already acquired independent CPP/backend reviews are reused without alleging a new complete audit of ROLE4's own old CPP.",
+  "required_review_resource_fields": {
+    "job_limit_flags_requested": 8968,
+    "working_set_limit_flag_requested": false,
+    "rss_os_enforced": false,
+    "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM"
+  },
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "all_non_OS_imports_bound": false,
+  "native_GMP_catalogue_NTT_CRT_Lean_refinement": false,
+  "installed_Windows_and_frozen_native_runtime_trusted_is_operational_assumption": true,
+  "numeric_authorization": false,
+  "produced_binary_invocations": 0,
+  "D_N": false,
+  "WIN": false
+}

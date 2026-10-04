@@ -1,0 +1,88 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationEstimator.lean:51:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationEstimator.lean:132:41: error: unsolved goals
+F : Parameters
+I : Finset ℕ
+K t : ℕ
+hK : K ≠ 0
+hKt : K.Coprime t
+hdt : (GoldbachRound18.SeparatedTypeII.conductor F).Coprime t
+ht : 1 < t
+hfront : ∀ b ∈ I, GoldbachRound18.SeparatedTypeII.conductor F * b ≤ F.N
+X : ℝ
+he :
+  supportPrice F I (units I (F.N * K)) (outsideUnits I (F.N * K) t) (theta F.N) =
+    -rankMainMass F I K X * rankChi t +
+            (↑(structureCount F I) / ↑(#(outsideUnits I (F.N * K) t)) -
+                ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t))) *
+              (∑ b ∈ units I (F.N * K), theta F.N (candidate F b) -
+                ∑ b ∈ filter (fun b => t ∣ b) (units I (F.N * K)), theta F.N (candidate F b)) -
+          (↑(structureCount F I) / ↑(#(units I (F.N * K))) -
+              ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K))) *
+            ∑ b ∈ units I (F.N * K), theta F.N (candidate F b) +
+        ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t)) *
+          (eulerRemainder F I K X - faceEulerRemainder F I K t X) -
+      ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K)) * eulerRemainder F I K X
+hring :
+  -rankMainMass F I K X * rankChi t +
+              (↑(structureCount F I) / ↑(#(outsideUnits I (F.N * K) t)) -
+                  ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t))) *
+                (∑ b ∈ units I (F.N * K), theta F.N (candidate F b) -
+                  ∑ b ∈ filter (fun b => t ∣ b) (units I (F.N * K)), theta F.N (candidate F b)) -
+            (↑(structureCount F I) / ↑(#(units I (F.N * K))) -
+                ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K))) *
+              ∑ b ∈ units I (F.N * K), theta F.N (candidate F b) +
+          ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t)) *
+            (eulerRemainder F I K X - faceEulerRemainder F I K t X) -
+        ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K)) * eulerRemainder F I K X +
+      rankMainMass F I K X * rankChi t =
+    (↑(structureCount F I) / ↑(#(outsideUnits I (F.N * K) t)) -
+              ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t))) *
+            (∑ b ∈ units I (F.N * K), theta F.N (candidate F b) -
+              ∑ b ∈ filter (fun b => t ∣ b) (units I (F.N * K)), theta F.N (candidate F b)) +
+          -((↑(structureCount F I) / ↑(#(units I (F.N * K))) -
+                ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K))) *
+              ∑ b ∈ units I (F.N * K), theta F.N (candidate F b)) +
+        ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t)) *
+          (eulerRemainder F I K X - faceEulerRemainder F I K t X) +
+      -(↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K)) * eulerRemainder F I K X)
+htriangle : ∀ (v₁ v₂ v₃ v₄ : ℝ), |v₁ + v₂ + v₃ + v₄| ≤ |v₁| + |v₂| + |v₃| + |v₄|
+⊢ |↑(structureCount F I) / ↑(#(outsideUnits I (F.N * K) t)) -
+                ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t))| *
+            |∑ b ∈ units I (F.N * K), theta F.N (candidate F b) -
+                ∑ b ∈ filter (fun b => t ∣ b) (units I (F.N * K)), theta F.N (candidate F b)| +
+          |↑(structureCount F I) / ↑(#(units I (F.N * K))) -
+                ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K))| *
+            |∑ b ∈ units I (F.N * K), theta F.N (candidate F b)| +
+        |↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t))| *
+          |eulerRemainder F I K X - faceEulerRemainder F I K t X| +
+      |↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K))| * |eulerRemainder F I K X| ≤
+    |↑(structureCount F I) / ↑(#(outsideUnits I (F.N * K) t)) -
+                ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t))| *
+            |∑ b ∈ units I (F.N * K), theta F.N (candidate F b) -
+                ∑ b ∈ filter (fun b => t ∣ b) (units I (F.N * K)), theta F.N (candidate F b)| +
+          |↑(structureCount F I) / ↑(#(units I (F.N * K))) -
+                ↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K))| *
+            |∑ b ∈ units I (F.N * K), theta F.N (candidate F b)| +
+        |↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K) * (1 - 1 / ↑t))| *
+          |eulerRemainder F I K X - faceEulerRemainder F I K t X| +
+      |↑(structureCount F I) / (↑(#I) * integerDensity (F.N * K))| * |eulerRemainder F I K X|
+'GoldbachRound19.RankCalibration.integerDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.faceEulerRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.outsideUnits' depends on axioms: [propext, Quot.sound]
+'GoldbachRound19.RankCalibration.rankMainMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.actual_density_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.normalized_density_error_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_main_normalization_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.outside_unit_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.rank_price_exact_euler_estimator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_price_estimator_error_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

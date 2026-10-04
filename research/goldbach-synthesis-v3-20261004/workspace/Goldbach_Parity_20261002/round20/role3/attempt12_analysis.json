@@ -1,0 +1,18 @@
+{
+  "attempt": 12,
+  "module": "SwitchedIncidenceEstimator",
+  "actual_lean_exit_code": 1,
+  "classification": "TECHNICAL_CONTRADICTION_GOAL_AND_IF_SIMPLIFICATION_FAILURE",
+  "actual_log": "round20/role3/attempt12_SwitchedIncidenceEstimator.log",
+  "actual_receipt": "round20/role3/attempt12_SwitchedIncidenceEstimator_receipt.json",
+  "errors": [
+    {"line": 72, "obligation": "sum_eq_single impossible missing-minFac case", "repair": "Enter exfalso before contradicting the absence of the actual constructed minFac cell"},
+    {"line": 251, "obligation": "positive cell if simplification", "repair": "Give the conjunction p divides j and p^2 <= j its explicit proposition type"},
+    {"lines": [272, 281], "obligation": "negative cell if simplification", "repair": "Include the actual square-cap or divisibility negation in the simp rules"}
+  ],
+  "actual_signed_cells_omitted": false,
+  "small_remainder_hypothesis_added": false,
+  "mathematical_identity_changed": false,
+  "parity_obstacle_inferred_from_this_failure": false,
+  "victory": false
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH15",
+  "time_utc": "2026-10-03T17:18:46.816072+00:00",
+  "status": "INDEPENDENT_BATCH15_AUX_PASS",
+  "role": "ROLE5",
+  "actual_child_invocations": 1,
+  "modules_passed": 1,
+  "declarations_passed": 29,
+  "module_count_passed": 1,
+  "declaration_count_passed": 29,
+  "theorems_passed": 20,
+  "definitions_passed": 9,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "input_count": 8060,
+  "closed_judge_file_count": 956,
+  "protected_archive_count": 3089,
+  "capture_count": 24,
+  "print_count": 29,
+  "standard_print_count": 29,
+  "recovery_sorryAx_print_count": 0,
+  "declarations_without_axioms": [],
+  "warnings": 7,
+  "errors": 0,
+  "source_sha256": "f24c702b0a6cd71e88ae1279061a45e02fa04f12f8e8641444d3b5e1803e8f02",
+  "actual_links": {
+    "START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\START.json",
+      "sha256": "074c3cefc061cb64ef96c4e101dbf21574e124ac83d975c78bd04558ad1292e3"
+    },
+    "FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\FIN.json",
+      "sha256": "98a02e657f512026ccb7a5627377b5801f634cf92272f5212ea8f8de207d1698"
+    },
+    "receipt.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\receipt.json",
+      "sha256": "ee18a68ce36db7757a139a803a7c555fb33dc9f99820cc1e3cf7b15222049845"
+    },
+    "PREEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\PREEXEC.json",
+      "sha256": "aa32a4e33ea22c9b37fa394d779ae8ee2c9558e9be9c29c5824285da36ebe420"
+    },
+    "POSTEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\POSTEXEC.json",
+      "sha256": "5e76670b511503473a16572f838b3ae7177519b195f05ed2bc41a7688f6547d5"
+    },
+    "DiscreteThermalProjection22_START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\DiscreteThermalProjection22_START.json",
+      "sha256": "738c7ed04664be98929f0942957b1ce331f1e618b494271119d46c72cd602439"
+    },
+    "DiscreteThermalProjection22_FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\DiscreteThermalProjection22_FIN.json",
+      "sha256": "eb57f9231a9053a5856d0f3837af38438f75104b3e2bdaac940c9c203d314ead"
+    },
+    "DiscreteThermalProjection22.log": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\DiscreteThermalProjection22.log",
+      "sha256": "5a99f3e74a991301a707747540267ab38d0ea673b9ac5a53aed5f38359a1f0da"
+    },
+    "DiscreteThermalProjection22.olean": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\batch15_attempt01\\DiscreteThermalProjection22.olean",
+      "sha256": "0835250ba8f951b5322f9fc4ffbdc5bde65c05be12e74b95a1873a7f6ca71546"
+    }
+  },
+  "adjudication_sha256": "e2fda965a5cc1060a42920e5e889dc41f1867a2a6f091fb75ba132b7baaf1f49",
+  "metadata_close_source_sha256": "6e5998399b28cc00a767428aac29ab92b200eebd11ea236251f7e5567ba1c255",
+  "readonly_local_dependencies": [],
+  "recompiled_dependencies": [],
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "retry_count": 0,
+  "numeric_bank_replayed": false,
+  "numeric_PASS_used_as_proof": false,
+  "previous_official_modules": 75,
+  "previous_official_declarations": 1223,
+  "proposed_new_official_modules": 76,
+  "proposed_new_official_declarations": 1252,
+  "official_count_requires_ROOT_observation": true,
+  "H1_paid": false,
+  "C5_paid": false,
+  "global_trace_certified": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "full_log_read": "652cc7",
+  "full_actual_receipt_read": "652cc7",
+  "full_START_read": "652cc7"
+}

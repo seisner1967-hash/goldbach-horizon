@@ -1,0 +1,74 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_TAIL_REVISION03_SOURCE_READS",
+  "status": "SOURCE_READS_ONLY_NOT_PREPARED",
+  "new_source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source03/ComplexGammaMellinTail22.lean",
+    "scope": "FULL",
+    "chunk": "029894",
+    "sha256": "e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0"
+  },
+  "new_contract": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source03/source_contract22.md",
+    "scope": "FULL",
+    "chunk": "7a7302"
+  },
+  "preserved_previous_read_receipts": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_read_receipts22.json",
+    "sha256": "1010d969ddbd0b1d94443eaccb9231969f7e9421972860f65df508d26817acd4",
+    "scope": "HISTORICAL_SAME_AUTHOR_READS_NOT_NEW_CACHE_FULL"
+  },
+  "previous_source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/ComplexGammaMellinTail22.lean",
+    "scope": "FULL",
+    "chunk": "8cacc3",
+    "sha256": "3002a4d39dfd6bd072f1a8f778de3752cf91bf60f831dd3345f5dd9631723852"
+  },
+  "actual29": {
+    "log": {
+      "scope": "FULL",
+      "chunk": "cd3228",
+      "sha256": "8721138526d8c726d4cab54519f096a9980b1945d3530ed7657002611bc026c3"
+    },
+    "receipt": {
+      "scope": "FULL",
+      "chunk": "cd3228",
+      "sha256": "15dedac77bad915d04ec44613a4583744db683f430dae0efdf9752377d38e8df"
+    },
+    "FIN": {
+      "scope": "FULL",
+      "chunk": "378f98",
+      "sha256": "6fe65f3bef058628674ec44c08f9f9a735f968555bd2c381812530cc47aa4461"
+    }
+  },
+  "new_API": {
+    "path": "Mathlib/Topology/Basic.lean",
+    "scope": "TARGETED1399-1458;globalvariables1361-1362 search only",
+    "chunks": [
+      "378f98",
+      "029894"
+    ],
+    "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+    "signature": "ContinuousAt.comp uses inner f, outer g and domain x; explicit f/g/x supplied"
+  },
+  "readonly_Local26": {
+    "scope": "INHERITED_SAME_AUTHOR_FULL_READS_AND_ACTUAL_READONLY_PROVENANCE",
+    "source_sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+    "olean_scope": "BYTE_HASH_NOT_TEXT",
+    "olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+    "global26_status": "FAILED; only Local22 row PASS"
+  },
+  "scope_exclusions": [
+    "No new FULL cache claim",
+    "No candidate source parser, compiler, Lean, API probe or numerical runtime",
+    "No transitive import closure or preparation",
+    "No Gamma envelope promoted to Lambda or D_N bound"
+  ],
+  "author_Lean_invocations": 0,
+  "API_probe_invocations": 0,
+  "candidate_parser_invocations": 0,
+  "Python_math_invocations": 0,
+  "native_invocations": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "WIN": false
+}

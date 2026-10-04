@@ -1,0 +1,176 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaPsi"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaGammaRatio"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaStep"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaDifferenceIntegrand"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaDifferentiableAt_of_re_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.deriv_Gamma_add_one_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaPsi_add_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaPsi_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaGammaRatio_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.hasDerivAt_betaGammaRatio_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.hasDerivAt_betaGammaRatio_real_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaStep_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaStep_le_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaStep_tendsto_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaStep_tendsto_zero_right"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaGammaRatio_eq_mul_betaIntegral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaDifference_eq_ratio"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaDifference_tendsto"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.betaDifference_eq_integral"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_batch01_attempt01\\GammaPsiCore22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\source_final\\GammaPsiCore22.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\source_final",
+  "exact_axiom_coverage_standard_only": false,
+  "exit_code": 1,
+  "finished_at": "2026-10-03T10:29:02.682817+00:00",
+  "log_sha256": "1128364831728b06a269a279a56534a2d3c4144fa0da80d7c34c641f9e6a38ed",
+  "module": "GammaPsiCore22",
+  "olean_sha256": null,
+  "source_sha256": "ecd6303389ce8cd60c87c9d79363e109f24841a18221dff46562d53759b460e8",
+  "started_at": "2026-10-03T10:28:31.682668+00:00",
+  "status": "AUTHOR_LEAN_FAIL",
+  "timed_out": false
+}

@@ -1,0 +1,182 @@
+{
+  "schema": "ROUND22_GLOBAL_THERMAL_EXECUTION_CLOSURE_22",
+  "actor": "ROLE6",
+  "source_author": "ROLE3",
+  "metadata_owner": "ROLE3",
+  "status": "THERMAL_TRACE_NUMERICAL_AUX_PASS_SOURCE_AUDITED",
+  "actual_attempt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01",
+  "bank_id": "THERMAL_GLOBAL_H1_22_SOURCEPACK02",
+  "actual_START": "2026-10-03T16:48:16.467623+02:00",
+  "actual_FINISH": "2026-10-03T18:03:41.019653+02:00",
+  "child_exit_code": 0,
+  "token": "b104f84087a84a55a8ebfccdf5558a21",
+  "new_math_evaluations_for_documentation": 0,
+  "new_Lean_invocations": 0,
+  "retries": 0,
+  "old_bank_replays": 0,
+  "level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER",
+  "analytic_certification_level": "PAPER_DERIVATIONS_WITH_EXACT_DOMAINS_NOT_LEAN_CERTIFICATION",
+  "structural_PASS_is_enclosure_PASS": false,
+  "structural_checker_alone_is_primitive_certificate": false,
+  "root_gate_sha256": "6847fff85e007303594f3257f2a027a7a4ccfb31393674338ebae22307f7a5c9",
+  "preparation_sha256": "8d08bc4db8f702a53ae3340a2ba9102969caf7ea7995aa282638cd0e84919433",
+  "independent_review_receipt_sha256": "638b1aaba849473a1806fe3b4bb967265b35f2ecb901b4003c0b661b114a1ddf",
+  "resource_limits": {
+    "catalogue_parameter_change_allowed": false,
+    "expected_arch_nodes": 12288,
+    "expected_arithmetic_integers": 999999,
+    "expected_vertical_nodes": 204800,
+    "max_artifact_bytes": 2147483648,
+    "max_children": 1,
+    "max_wall_seconds": 10800,
+    "retry_count": 0
+  },
+  "artifact_bytes_observed": 668069381,
+  "resource_failure": null,
+  "actual_all_guard_checks": true,
+  "observed_E_total_exact_location": "decision_projection22.json:E_total",
+  "observed_guard": "E_total < 1/100000000 and tau = 1/1000000",
+  "observed_mutants": {
+    "omit_Y": "DISJOINT",
+    "omit_one": "DISJOINT",
+    "remove_primal_four": "DISJOINT_PRIMAL_ONLY_DUAL_PRESERVED"
+  },
+  "pre_bindings_count": 1016,
+  "pre_captures_count": 1018,
+  "post_bindings_count": 1016,
+  "post_captures_count": 1018,
+  "successful_metadata_verification": {
+    "tool_chunk": "676736",
+    "exit_code": 0,
+    "bindings": 1016,
+    "captures": 1018,
+    "outputs": 7,
+    "archives": 3089,
+    "sha256_mismatches": 0,
+    "primitive_revalidation": false
+  },
+  "closed_attempt": {
+    "bindings": 1003,
+    "captures": 1005,
+    "numeric_values_reused": false,
+    "outputs": 3,
+    "receipt_sha256": "2827054b4690eee57de7c36095c8babf6f235b8174470462ccfbcb7f90dd3e93",
+    "unchanged": true
+  },
+  "inventory_rows": [
+    {
+      "name": "START.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\START.json",
+      "bytes": 914,
+      "sha256": "7e8bdc07bed4d5868bac50bad7c09fbd23cedd80f59babe732b99cc7423eeb6f"
+    },
+    {
+      "name": "child_START.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child_START.json",
+      "bytes": 219,
+      "sha256": "d1dfab90daffff388138495a9f0a3070fa37969a4d0f079e9d8d16db61f56354"
+    },
+    {
+      "name": "FIN.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\FIN.json",
+      "bytes": 4476,
+      "sha256": "e9b676e9ee2b922d64f93c2c5e2df2d41871efc58e64a348663f3a974cbfd0c5"
+    },
+    {
+      "name": "receipt.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\receipt.json",
+      "bytes": 4476,
+      "sha256": "e9b676e9ee2b922d64f93c2c5e2df2d41871efc58e64a348663f3a974cbfd0c5"
+    },
+    {
+      "name": "child_FIN.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child_FIN.json",
+      "bytes": 1411,
+      "sha256": "c620aa37845fa9434ed8b5cecf92227d9d9798d1f97d20fed0c31a4d9014ad41"
+    },
+    {
+      "name": "PREEXEC.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\PREEXEC.json",
+      "bytes": 932387,
+      "sha256": "0261f5f04cfa18e7ef9dcfd0e49c662e9cefb10346db0f4457a2da2af8f31622"
+    },
+    {
+      "name": "POSTEXEC.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\POSTEXEC.json",
+      "bytes": 831131,
+      "sha256": "b9e720753212490df80239bbb11921d0bd1307538f1e886bf1afc6ec166489e3"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 569088,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\global_thermal_result.json",
+      "sha256": "95ed53517770a7390df16fa78b32317bb15cd146da3ec0e9ef876a86bd7a09e0"
+    },
+    {
+      "bytes": 381,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\structural_checker_result.json",
+      "sha256": "10f4d49fde68193885fe79cab5aada62fa719e88de17e8d5c9ffc23f6afa561e"
+    },
+    {
+      "bytes": 495574057,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\new_nodes.ndjson",
+      "sha256": "3fe08917bfe62e5e6fd682ba6c405c7d2a9a0b440d746ba2518244bd6161aeb8"
+    },
+    {
+      "bytes": 120583189,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\new_arithmetic.ndjson",
+      "sha256": "9ef22d7f5b1fe6f466ce8dd2045a94348df8d9bdac5f60be3097d4ad80e4ef45"
+    },
+    {
+      "bytes": 106026,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child.stdout.log",
+      "sha256": "e3a65552d0b85a46eae6a18d76a70aa0d0b9e74e216ca553b2e27490699ad9c9"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1411,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child_FIN.json",
+      "sha256": "c620aa37845fa9434ed8b5cecf92227d9d9798d1f97d20fed0c31a4d9014ad41"
+    }
+  ],
+  "report": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\global_h1_execution03\\closure22.md",
+    "sha256": "66db74f839b6a551504efc4dcae3831dd832bad4206bf31960c065885c88eba6"
+  },
+  "decision_projection": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\global_h1_execution03\\decision_projection22.json",
+    "sha256": "d76f6f9c373b6289e4c5466dd32bc98b2a091595724c9087b7839261d60e5b54",
+    "scope": "PARSED_METADATA_EXACT_FIELDS_NOT_PRIMITIVE_REVALIDATION"
+  },
+  "read_scopes": {
+    "parent_receipt": "FULL cace0f/e74956",
+    "child_FIN": "FULL cace0f/e74956",
+    "structural_result": "FULL cace0f/e74956",
+    "stdout": "FULL 1-100 9abd7d;101-200 210e42;201-300 48fe5e;301-400 869fd8;401-487 a0f124",
+    "stderr": "FULL EMPTY cace0f",
+    "global_non_catalogue": "FULL 1-55 df38c7;6110-6346 6cffac",
+    "global_catalogue": "TARGETED/PARSED_METADATA complete indices/counts and endpoint boxes 825f18",
+    "PREPOST": "PARSED_METADATA headers/counts 96d581/6ef7d1; ALL_SHA_VERIFIED 676736",
+    "raw_ndjson": "HASH_BOUND_NOT_FULL_READ",
+    "truncated_not_FULL": [
+      "30875b",
+      "b50264",
+      "9d8ccd"
+    ]
+  },
+  "documentation_only_technical_errors": [
+    "c956f2: report field files absent after verification loops",
+    "10c7e6: pipeline parse error before verification display"
+  ],
+  "H1_FORMAL": "OPEN",
+  "COEFFICIENT_N": "OPEN",
+  "CONTOUR_BOUNDARY": "UNIMPLEMENTED",
+  "FINITE_ZERO_TRACE": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false
+}

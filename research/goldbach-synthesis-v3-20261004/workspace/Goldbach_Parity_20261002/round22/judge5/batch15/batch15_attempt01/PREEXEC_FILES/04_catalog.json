@@ -1,0 +1,193 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH15",
+  "time_utc": "2026-10-03T17:08:53.934253+00:00",
+  "modules": [
+    {
+      "module": "DiscreteThermalProjection22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\sources\\DiscreteThermalProjection22.lean",
+      "source_sha256": "f24c702b0a6cd71e88ae1279061a45e02fa04f12f8e8641444d3b5e1803e8f02",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\revision03\\DiscreteThermalProjection22.lean",
+      "source_status": "SOURCE_REVISION03_NOT_COMPILED",
+      "theorem_count": 20,
+      "definition_count": 9,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.gridRoot"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.gridCharacter"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.gridAngle"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.gridRoot_primitive"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.gridCharacter_eq_root_pow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.gridCharacter_eq_angle"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.sum_gridCharacter"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.grid_divides_iff_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.sum_gridCharacter_no_alias"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.rectangle_frequency_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.sum_rectangle_character"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.heatRatio"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.discreteHeatTerm"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.discreteHeatPartial"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.trueCircleHeatPartial"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.lambdaCoefficient"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachDiscreteCircle22.discreteThermalProjection"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.heatRatio_pow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.discreteHeatPartial_eq_trueCircle"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.gridCharacter_pair"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.discreteHeat_pair"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.discrete_normalizer_cancel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.normalized_discrete_pair"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.discretePartial_square_expansion"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.discreteProjection_eq_rectangle"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.rectangle_filter_antidiagonal"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.discreteThermalProjection_eq_coefficient"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.lambdaCoefficient_eq_sum"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachDiscreteCircle22.sampled_trueCircle_eq_coefficient"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachDiscreteCircle22.gridRoot",
+        "GoldbachDiscreteCircle22.gridCharacter",
+        "GoldbachDiscreteCircle22.gridAngle",
+        "GoldbachDiscreteCircle22.gridRoot_primitive",
+        "GoldbachDiscreteCircle22.gridCharacter_eq_root_pow",
+        "GoldbachDiscreteCircle22.gridCharacter_eq_angle",
+        "GoldbachDiscreteCircle22.sum_gridCharacter",
+        "GoldbachDiscreteCircle22.grid_divides_iff_zero",
+        "GoldbachDiscreteCircle22.sum_gridCharacter_no_alias",
+        "GoldbachDiscreteCircle22.rectangle_frequency_bounds",
+        "GoldbachDiscreteCircle22.sum_rectangle_character",
+        "GoldbachDiscreteCircle22.heatRatio",
+        "GoldbachDiscreteCircle22.discreteHeatTerm",
+        "GoldbachDiscreteCircle22.discreteHeatPartial",
+        "GoldbachDiscreteCircle22.trueCircleHeatPartial",
+        "GoldbachDiscreteCircle22.lambdaCoefficient",
+        "GoldbachDiscreteCircle22.discreteThermalProjection",
+        "GoldbachDiscreteCircle22.heatRatio_pow",
+        "GoldbachDiscreteCircle22.discreteHeatPartial_eq_trueCircle",
+        "GoldbachDiscreteCircle22.gridCharacter_pair",
+        "GoldbachDiscreteCircle22.discreteHeat_pair",
+        "GoldbachDiscreteCircle22.discrete_normalizer_cancel",
+        "GoldbachDiscreteCircle22.normalized_discrete_pair",
+        "GoldbachDiscreteCircle22.discretePartial_square_expansion",
+        "GoldbachDiscreteCircle22.discreteProjection_eq_rectangle",
+        "GoldbachDiscreteCircle22.rectangle_filter_antidiagonal",
+        "GoldbachDiscreteCircle22.discreteThermalProjection_eq_coefficient",
+        "GoldbachDiscreteCircle22.lambdaCoefficient_eq_sum",
+        "GoldbachDiscreteCircle22.sampled_trueCircle_eq_coefficient"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "CONCRETE_FINITE_CHARACTER_ORTHOGONALITY_A0_CIRCLE_TRUE_LAMBDA_PP_AUX_ONLY",
+      "author_olean_allowed": false
+    }
+  ],
+  "module_count": 1,
+  "total_declarations": 29,
+  "theorem_count": 20,
+  "definition_count": 9,
+  "common_source_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\sources",
+  "readonly_local_dependencies": [],
+  "dependency_bindings": [],
+  "support_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\discrete_source_review_revision03.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\discrete_source_review_revision02.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\revision03\\source_review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\revision03\\read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\source_contract22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\DiscreteThermalProjection22.log",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\DiscreteThermalProjection22_FIN.json"
+  ],
+  "author_provenance_capture_paths": [],
+  "modules_author_PASS_claimed": false,
+  "compiler_invocations": 0,
+  "win": false
+}

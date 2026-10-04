@@ -1,0 +1,39 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:63:79: error: failed to prove nonzeroness, but it would be possible to prove nonnegativity if desired
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:65:71: error: failed to prove nonzeroness, but it would be possible to prove nonnegativity if desired
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:67:53: error: failed to prove nonzeroness, but it would be possible to prove nonnegativity if desired
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:69:33: error: failed to prove nonzeroness, but it would be possible to prove nonnegativity if desired
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:71:34: error: failed to prove nonzeroness, but it would be possible to prove nonnegativity if desired
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:73:27: error: failed to prove nonzeroness, but it would be possible to prove nonnegativity if desired
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:97:39: error: unknown constant 'Nat.mul_eq_one'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:131:6: warning: try 'simp at this' instead of 'simpa using this'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'GoldbachRound13.PrimeSemiprimeSwitch.divisor_prime_extension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.divisor_three_primes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_filter_large_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_filter_image' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.mu_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.image_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_sum_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_sum_image' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.actual_source_coefficients' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.mu' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.shortDivisorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound11.harmonicKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.sourceBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.theta' depends on axioms: [propext, Classical.choice, Quot.sound]

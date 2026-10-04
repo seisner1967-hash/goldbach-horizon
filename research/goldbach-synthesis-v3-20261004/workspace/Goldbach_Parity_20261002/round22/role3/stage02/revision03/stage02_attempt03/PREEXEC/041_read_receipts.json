@@ -1,0 +1,18 @@
+{
+  "schema": "round22.role3.finite_revision03.read_receipts.v1",
+  "time": "2026-10-03T07:32:41.1986403+00:00",
+  "inherited_read_receipts": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision02\\read_receipts.json",
+  "failure_log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision02\\stage02_attempt02\\EpsteinFinite22.log",
+  "failure_log_sha256": "87786212873900e217c2604efdc8f20d69fc2dba3e213a62eb767490256f3463",
+  "failure_log_scope": "FULL",
+  "failure_log_chunk": "3df208",
+  "additional_API_read": {
+    "path": "Mathlib/MeasureTheory/Integral/IntervalIntegral.lean",
+    "scope": "TARGETED",
+    "lines": "552-572",
+    "reason": "integral_const_mul is unconditional"
+  },
+  "new_compiler_calls": 0,
+  "Python_math_calls": 0,
+  "old_PASS_replays": 0
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "round22.role3.finite_revision03.prepared_receipt.v1",
+  "time": "2026-10-03T07:32:41.1986403+00:00",
+  "status": "PREPARED_SOURCE_ONLY_REQUEST_ROOT_FULL_SHA_REVIEW",
+  "source_manifest_sha256": "1ee8a02a9d56e9c5d9dfc65819a987c58cf05a5aea1a9a20c1f06a0a7dd08b70",
+  "launcher_sha256": "9f3a51558e27a5ce6bbcec870651bae6f6309a14451437c7fd749389d29c4be6",
+  "input_count": 43,
+  "module_rows": [
+    {
+      "module": "EpsteinFinite22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\EpsteinFinite22.lean",
+      "sha256": "fb6205d1d88bbe864fd6c45f6ae60c5296812c966d9b2ce8bd2cccfc2128cc2d",
+      "theorem_count": 14,
+      "definition_count": 4,
+      "axiom_print_count": 18,
+      "status": "SOURCE_ONLY_UNCOMPILED"
+    }
+  ],
+  "Lean_gate": "CLOSED",
+  "new_compiler_calls": 0,
+  "Python_math_calls": 0,
+  "no_win": true,
+  "metadata_exit_credit": "actual tool return required separately"
+}

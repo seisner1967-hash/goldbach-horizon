@@ -1,0 +1,158 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_LAMBDA_REVISION02_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_READS_ONLY_NOT_PREPARED_NOT_ELABORATED",
+  "new_source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/ComplexGammaMellinLambda22.lean",
+    "bytes": 16648,
+    "sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+    "scope": "FULL_FINAL_SOURCE",
+    "chunk": "d925dd"
+  },
+  "new_contract": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_contract22.md",
+    "bytes": 5881,
+    "sha256": "37c828bcdddf04cb51d8c891d91f07760c1c7ef3e52da44bf808c59e69ab9589",
+    "scope": "FULL",
+    "chunk": "50be61"
+  },
+  "new_catalog": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_catalog22.json",
+    "bytes": 2806,
+    "sha256": "6a00ebf0f9ad320c602bef18fdb949775468462babd645f1c7b2b66b96cce907",
+    "scope": "FULL_MANUAL_CATALOG",
+    "chunk": "50be61"
+  },
+  "actual_fail31": {
+    "log": {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch31/batch31_attempt01/ComplexGammaMellinLambda22.log",
+      "bytes": 5744,
+      "sha256": "baf6fe9d6f7ba57c9259eaec5481de08f993228748891793a9234626737bc367",
+      "scope": "FULL",
+      "chunk": "85c9a4"
+    },
+    "receipt": {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch31/batch31_attempt01/receipt.json",
+      "bytes": 8925,
+      "sha256": "470f798110abde794b6742605c5dc66e4c7aabe7bc6a9e81e502e3c41aab9d1c",
+      "scope": "FULL",
+      "chunk": "85c9a4"
+    },
+    "status": "INDEPENDENT_BATCH31_FAILED",
+    "child_invocations": 1,
+    "exit_code": 1,
+    "error_diagnostics": 5,
+    "error_sites": 3,
+    "standard_prints": 20,
+    "recovery_sorryAx_prints": 10,
+    "olean_present": false,
+    "whole_module_credit": 0
+  },
+  "previous_sources": {
+    "source": {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinLambda22.lean",
+      "bytes": 16534,
+      "sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+      "scope": "FULL",
+      "chunk": "cdeedc"
+    },
+    "contract_and_catalog": {
+      "scope": "FULL",
+      "chunk": "c75999"
+    },
+    "reads": {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_read_receipts22.json",
+      "scope": "FULL",
+      "chunk": "e059d7"
+    },
+    "handoff": {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_handoff22.json",
+      "sha256": "7cbd95b3bb74cbfec4587aa5a40c4b0be420865b83e15794888a3f3bae56e1e3",
+      "scope": "FULL",
+      "chunk": "9ec8e0"
+    },
+    "paid_dependency_read_scope": "Historical FULL Holo27/Local26/receipt/ROOT-observation reads as recorded in preserved SOURCE01 receipts; not re-read FULL in this repair. Their current bytes were checked e6094f."
+  },
+  "targeted_API": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Order/Interval/Set/UnorderedInterval.lean",
+      "bytes": 15091,
+      "sha256": "9325266d2b69ec674fbddfe7f1c0b900e9c766820e4ba0e4acb27454f7ed55a4",
+      "scope": "TARGETED41-75",
+      "chunk": "6743aa",
+      "signatures": "Set.uIcc; scoped Interval notation; uIcc_of_le"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/BigOperators/Group/Finset.lean",
+      "bytes": 105225,
+      "sha256": "a67817959f6217811364eed2700027060dc7cd62188a94a583453ec41c5c6630",
+      "scope": "TARGETED1307-1338",
+      "chunk": "db0470",
+      "signatures": "prod_range_succ with to_additive yields Finset.sum_range_succ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+      "bytes": 49324,
+      "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+      "scope": "TARGETED100-139",
+      "chunk": "6743aa",
+      "signatures": "zero_rpow requires exponent !=0; one_rpow"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction.lean",
+      "bytes": 54060,
+      "sha256": "48c9529038f4e11220c2b09d28468f6c0d1107f328b5a15cc5587efa11223631",
+      "scope": "TARGETED94-111",
+      "chunk": "db0470",
+      "signatures": "ArithmeticFunction.map_zero, simp"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/VonMangoldt.lean",
+      "bytes": 6152,
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "scope": "TARGETED1-90_IN_THIS_REPAIR; historical FULL as SOURCE01 receipts",
+      "chunk": "8f6bb8",
+      "signatures": "Actual prime-power definition, zero constructor and nonnegative; divisor formulas are excluded from proof"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Basic.lean",
+      "bytes": 80226,
+      "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+      "scope": "TARGETED1473-1484",
+      "chunk": "db0470",
+      "signatures": "continuous_const : Continuous (fun _ : X => y)"
+    }
+  ],
+  "excluded_truncated_reads": [
+    "fcb897 mixed reads/handoff aggregate output, not FULL; actual reads recovered separately e059d7 and handoff9ec8e0.",
+    "95c9e2 mixed aggregate not used as final FULL evidence; contract/catalog recovered c75999."
+  ],
+  "pre_freeze_drafts": [
+    "9a903b FULL intermediate revision before the final zero-coefficient continuity proof; replaced by final d925dd."
+  ],
+  "metadata": {
+    "prior_binding_count": 32,
+    "prior_mismatches": 0,
+    "chunk": "e6094f",
+    "scope": "FILESYSTEM_BYTE_HASH_AND_CONTROL_JSON_ONLY_NOT_CANDIDATE_PARSER_OR_IMPORT_CLOSURE",
+    "fixed_failure_log_receipt_hash": "6a2a2b",
+    "catalog_control_copy_read": "8c873f"
+  },
+  "preserved_statement_and_count_scope": "Manual FULL inspection: 30 declarations=24 theorems+6 definitions; all statement headers, definitions, imports and 30 qualified prints unchanged; three proof blocks only.",
+  "remaining_risks": [
+    "Elaboration of reduced finite sum with conditional zero_rpow",
+    "Simplifier transport of continuous_const at n=0; no compiler result claimed"
+  ],
+  "guards": {
+    "author_Lean_compiler_calls": 0,
+    "API_probes": 0,
+    "candidate_parser_or_imports": 0,
+    "Python_math": 0,
+    "native_calls": 0,
+    "PREP_created": false,
+    "gate_created": false,
+    "actual_attempt_created": false,
+    "new_source_credit": 0,
+    "D_N_paid": false,
+    "WIN": false
+  }
+}

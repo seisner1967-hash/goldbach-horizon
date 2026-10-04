@@ -1,0 +1,44 @@
+{
+  "schema": "round22.root.role3.compiler_authorization.v1",
+  "role": "ROLE3",
+  "actor_task": "/root/round22_formal3_prepare",
+  "node_id": "16.1",
+  "attempt": "stage01_attempt01",
+  "stage": "G0_KERNEL_STAGE01",
+  "authorized": true,
+  "created_utc": "2026-10-03T07:01:18.239930+00:00",
+  "numeric_verdict": "EPSTEIN_UNFOLDING_AUX_PASS",
+  "numeric_receipt_sha256": "054707ed73a7db70bd6bb026a1974663dd5362b6318ee109b22315c21c2e66da",
+  "numeric_result_sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+  "source_manifest_sha256": "23b93f300ebba68e462f0e258048b4baca07bb7dea4804f656194d9f2b6ed443",
+  "launcher_sha256": "25a364f023e00e0cad5d9e8308b1a46e8d1ae2a49fc75d892dd81b1e04bd06a0",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "modules": [
+    "EpsteinKernel22"
+  ],
+  "no_win": true,
+  "child_invocations_maximum": 1,
+  "hidden_retries_allowed": false,
+  "unchanged_PASS_replay_allowed": false,
+  "root_FULL_reads": {
+    "source": "5633bf",
+    "launcher": "ba6811",
+    "preparation": "0ba86a",
+    "manifest_receipt": "19e5bb",
+    "phase_reads": "2dfcf3",
+    "metadata_builder": "09ba87",
+    "numeric": "115c5c+d0c146"
+  },
+  "formal_scope": "Real positive kernel, derived primitive/FTC, limits/integrability/full integral and deficit. Infinite periodized row and finite window not in this invocation.",
+  "forbidden_credits": [
+    "full_G0_unfolding",
+    "Weil",
+    "heat",
+    "operator_scattering",
+    "coefficient_N",
+    "D_N_bound",
+    "WIN"
+  ],
+  "independent_judge_pending": true
+}

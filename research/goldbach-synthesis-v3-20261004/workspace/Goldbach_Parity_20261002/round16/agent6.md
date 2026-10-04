@@ -1,0 +1,45 @@
+# Boucle16 — rôle6 numérique FINAL
+
+Les deux nouvelles banques sélectionnées et leurs uniques copies isolées sont terminées, exit0 et octets/champs identiques. Quatre falsifications locales et un NO_COUNTEREXAMPLE_IN_WINDOW sont conservés. Les701 artefacts anciens sont intacts. Aucun Lean n’est appelé par ce rôle ; score0/victoryfalse, résidu entier non contrôlé.
+
+## Conservation et compteurs réels
+
+Protection exacte701=651+50 finaux15, avec les49 bindings du controller15, ses35 bindings numériques et ses trois copies intégrales. L’inventaire réel vérifie mutations/ajouts/suppressions ; rounds de numéro≥16, caches, .arbor, .git et REPORT.md vivant sont exclus. Registry SHA `5939d791139dbb3f9b26e5d1f372bbdf98d1927f9aaf2c5e9c22aa0a4e35d043`. Controller15 `7b2522fbeec0c17965b9bfba4df418552f0e31b2b4881c91edff00b79a81869f`. PDF `bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24` et ZIP `32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd` originaux intacts.
+
+Les helpers historiques sont SHA-vérifiés et chargés inertement ; aucun ancien main/PASS, Lean, dépendance ou rendu n’est exécuté. N=100000000, alpha100,a3163,Q999999,M1000000, ceil/floor entiers, vrais premiers/unités et logarithmes symboliques rationnels sont gardés. Les propres bornes de complétude de chaque support sont démontrées ; le cap9889 du d141 ancien n’est pas transporté. Deux essais canoniques, chacun essai1 exit0, sources snapshots/logs réels, puis deux rejeux isolés seulement. Zéro véritable échec numérique, zéro essai Lean de ce rôle, aucune erreur fabriquée. Les compteurs des formaliseurs3/4 sont indépendants et appartiennent au controller/Juge, pas à ce reçu numérique.
+
+**Clarification des champs de conservation.** Les flags `numeric_contract_round16_launched=false` et `mathematical_identity_round16_certified=false` dans les objets conservation_before/after sont statiques : ils décrivent uniquement ce que le préflight de conservation lance ou certifie. Ils ne suivent pas l’exécution globale. Les deux launches effectifs sont prouvés par leurs reçus canoniques, commandes, journaux et reçus de copie isolée. Aucun PASS, préflight ou reçu stocké n’a été réécrit pour changer ces champs.
+
+## Banque1 — candidat entier d77 et correction modulo3
+
+FINAL1 `agent1_bilinear_covariance.md`, SHA `f60827e9e72e73cde93512448bd6acc289807d43180b844040326456a5e2d754`. Le support neuf c7/r11/d77, x20000000, j∈(10000000,20000000] donne I_b=[1038962,1168831],129870 entiers examinés, J51948 et J0=J1=J2=17316. Les fronts sont n_lo10000013,n_hi19999926,X9999914 ; X−77#I=−76,phi77=60,phi231=120. Tous points sont unitaires dans le masque approprié, bulk, j>Q. β est structurel sans filtre jpremier :216 incidences, classes[0,106,110]. Les caps donnent s≥288, premier admissible293, s≤451 et q≤3989 ; les bases des diviseurs/powers de j≤2·10^7 sont couvertes jusqu’à4472. Les listes sont complètes pour ces propres bornes.
+
+rho=2/481 et rho*=3/481. Le vrai drift TypeI3 A2−rhoJ2 vaut38, celui corrigé A2−rho*J2 vaut2, différence exacte36. Le normalisé x/A vaut95000000/27 ; aucune borne source x/8 n’est appliquée à N=10^8. La promotion « référence uniforme exactement centrée TypeI3 » est réfutée par ce drift non nul. La réduction locale ne prouve pas TypeI entier ou TypeII.
+
+Theta a les comptes[5067,5079,0], soit10146 axes premiers, dont28β. T2=0 vient de j divisible3 et j>3 ; cette annulation n’a pas été imposée au raw. Les neuf properpowers réellement présents sont tous en classe0 et horsβ, conservés avec bases/exposants/logp ; raw−theta est exact, sans mu(j)^2. Gamma uniforme, Gamma* corrigée et L3 sont strictement NEGATIVE ; Gamma=Gamma*+L3 est vérifié sur les vrais vecteurs. Les normes sont103464/481 et103248/481. Le raw garde sa propre décomposition, même si une classe interdite pour theta contenait des powers.
+
+Le principal local AP garde coefficient rho*−2rho=−1/481 et L3_principal=−4999957/28860, exactement−1/4 du principal uniforme4999957/7215. Les deux endpoints AP de231, leurs erreurs et E_divN restent littéraux ; E_divN est vide ici car2/5 hors fenêtre. Aucun théorème AP/source n’est invoqué au banc. Aucun D/W n’est recomputé : Gamma*/TypeII, l’agrégat pondéré, les vrais parents et les erreurs W restent non estimés.
+
+Source `typei_checks.py` SHA `e59caddb2a123374a70e85686cdbe5d00677317b48d9f8c6fc2b7bbd934f9a6e`, gate `typei.json` SHA `a1443ee83b346fc6a3cf330a09bf07a05a4e4a5d00230ed418aebeb8a9b65b1c`. Rejeu unique `role6/typei_replay_receipt.json` SHA `807e63f1f95241c5da64cfc3142778253e3c9d382a46427cf1162b92e577abc9`, copies intégrales identiques.
+
+## Banque2 — demande entière et ressources physiques une fois
+
+FINAL2 `agent2_or_incidence.md`, SHA `f6f12c39afc445ce82482850c34482fa2450b9df1df7dbeef2089574b308128b`. Tous201 entiers q1000100..1000300 sont factorisés/testés, donnant18 q réellement premiers unitaires. Cette énumération n’est pas limitée à une liste q≤10000 ; les diviseurs≤sqrtN=10000 suffisent à leurs factorisations et à celles de n≤N. Pour chaque q, TOUS e SF/unit1..98 sont retenus :34 cœurs, avec e1,23 cœurs premiers et10 rang2. Rangs≥3 vides au cap fini car minimum231>98. Tous612 vertices candidats ont leurs facteurs/unités/bulk/Q/theta/raw/courts entiers ;128 vrais profils D/W couvrent chaque axe actif plus tous les contrôles e1/e3. Les484 autres brackets sont exactement nuls, avec kernels littéraux non estimés. Le raw est testé intégralement ; aucun properpower dans cette fenêtre seulement.
+
+Les vrais coefficients restent C_q=−logq−W pour e1 ; C_eq=loge+W pour eprime ; C_eq=−W pour rang2. Λ(e) est conservé sur chaque cœur premier. Whole U_a, ses diviseurs≤alpha, U_alpha+annulus, Q original, R/front strict, unités et k1 conjoint sont présents dans les profils physiques. Les modèles bilatéraux utilisent S(bN) au cofacteur réellement supprimé b=m/l, avec poids logl/logm et b1 conservés ; aucun S(bN) long n’est remplacé par S(N).
+
+Le principal source demeure affine en S_N∈[847/512,11011/6144], enclosure issue des inputs C2 acquis et des facteurs N2/5. P1=theta(S_N−logq), P_eprime=theta(loge−S_N), P_rang2=thetaS_N. La demande principale somme tous e≠1,3 ; la ressource−P1−P3 est comptée une fois. Le déficit est leur différence EXACTE ΣTOUS P_e, positif strict aux deux endpoints de S_N. Cela ne fixe aucun W réel.
+
+Le ledger réel mesure B_e=thetaC_e sans signe imposé : D+=Σmax(B_e,0), R13+=Σe1,3 max(−B_e,0), Rother+=Σautres max(−B_e,0). D+−R13+ est le déficit après les seules ressources sélectionnées ; D+−R13+−Rother+=ΣB_e est la somme entière. La comparaison orientée selon le source est aussi conservée signée, sans prétendre ses deux termes positifs. Chaque m a son unique q>a et e=m/q, et chaque ressource physique compte une fois.
+
+Il y a95 premières incidences : e1 en a zéro et e3 en a trois, aux q1000117,1000133,1000159. Les92 autres vertices premiers sont des demandes. Rother+=0 ici ; D+−R13+ et la somme entière sont POSITIVE, sur chacun des18 q et globalement. La capacité du premier absent n’offre donc pas gratuitement une couverture de ce corps fini. Les trois C3+1/288 sont NEGATIVE mesurés : la promotion du signe source au fini a statut NO_COUNTEREXAMPLE_IN_WINDOW, sans preuve universelle ni application de U4 au banc.
+
+Trois falsifiers banque2 ont de vrais témoins : capacité gratuite pour toute la famille (déficit principal positif sur toute l’enclosure), suppression du terme Λ(e) (différence theta loge strictement positive), et reuse d’un même e3 pour chaque autre cœur positif (trois témoins de capacité artificiellement multipliée). Aucune première incidence ou arête n’est inventée. Les comparaisons raw restent physiques séparées, sans U4 sur leurs n properpowers.
+
+Source `capacity_checks.py` SHA `abedd2b6494ebb684fcaeef2ca0d869003f2ee17271dbde1cd70f52820367128`, gate `capacity.json` SHA `7da550e67c38774e580dd6300b1c78a9d19cb4f49e3063483a6727d7ecd2a166`. Rejeu unique `role6/capacity_replay_receipt.json` SHA `f9ab59636b1824d585d1607033d8582d7f8385f577446a796ce5c6e6633ea5d5`, copies intégrales identiques.
+
+## Raccord et limites
+
+Le seul ledger reste D_N=B_prime^a+B_pp^a+P_band_ge2+Z_face_ge2+I_alpha+2max(e,0). P5/K2 porte sur J2bulk ENTIER avant retraits ; U4/variation sont alternatives, sans deuxième NG54. c1/e1/b1,−S(N)N,S(bN),cofacteurs longs,J0/J1/J2 restants,célibataires/faces/nonbulk,fronts,terme couvert et onset BV effectif supplémentaire restent présents. Source54 garde−sqrt(u/60) et sa borne volontairement plus faible−sqrtu/60. Sourceu≥10^24 est distinct de N=10^8.
+
+Les quatre falsifications concernent leurs promotions finies précises. La covariance corrigée, TypeII, la disponibilité du premier absent, F6 et les capacités globales après union restent sans estimation suffisante. Aucun no-go source n’est inféré. Les banques sont gelées et ne seront plus relancées ; `numeric_manifest.json`, `role6_final_receipt.json` et l’audit lecture seule `role6/closure_receipt.json` lient sources/gates/logs/copies et les deux FINAL conceptuels. Le certificat global D_N≤N/(256u ell) reste ouvert. Recherche active, score0,victoryfalse.

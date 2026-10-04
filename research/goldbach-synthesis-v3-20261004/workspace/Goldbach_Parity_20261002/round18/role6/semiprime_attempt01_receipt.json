@@ -1,0 +1,39 @@
+{
+  "attempt": 1,
+  "state": "FINISHED",
+  "bank": "semiprime",
+  "command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\semiprime_checks.py",
+    "--output-dir",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18"
+  ],
+  "started_at_utc": "2026-10-02T21:49:25.033659+00:00",
+  "finished_at_utc": "2026-10-02T21:49:49.517146+00:00",
+  "elapsed_seconds": 24.469000000011874,
+  "exit_code": 1,
+  "sources_before_sha256": {
+    "semiprime_checks.py": "09144e7fcb040e34c4a61f3d6e5153559648e08fa30f602297ed2c765e9b33b8",
+    "role6/semiprime_helpers.py": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a"
+  },
+  "sources_after_sha256": {
+    "semiprime_checks.py": "09144e7fcb040e34c4a61f3d6e5153559648e08fa30f602297ed2c765e9b33b8",
+    "role6/semiprime_helpers.py": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a"
+  },
+  "snapshots_sha256": {
+    "role6/semiprime_attempt01_semiprime_checks.py.txt": "09144e7fcb040e34c4a61f3d6e5153559648e08fa30f602297ed2c765e9b33b8",
+    "role6/semiprime_attempt01_semiprime_helpers.py.txt": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/semiprime_attempt01_strict.py.txt": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a"
+  },
+  "log_sha256": "e51d6cf583a5dd8139e9f5fb5bd5e09680f7f582655072454faa5dba06aeed84",
+  "launcher_sha256": "c774bdf29c6fd33697326b2363b3c4612b0aa025a974f68a906fc53125810ac7",
+  "protected_registry_sha256": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc",
+  "old_producer_or_old_kernel_or_old_Lean_replayed": false,
+  "victory": false,
+  "canonical_pass": false
+}

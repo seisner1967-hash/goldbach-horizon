@@ -1,0 +1,1244 @@
+{
+  "D_N_bound_proved": false,
+  "Float": false,
+  "Lean_compiled": false,
+  "N": 100000000,
+  "Weil_trace_computed": false,
+  "Y": 10000,
+  "actual_cases": 24,
+  "bank_id": "EPSTEIN_UNFOLDING_AUX22",
+  "cases": [
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573285757308082115629253174",
+        "lo_integer": "4573285757308082115629244889"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573285757308082115629249052",
+        "lo_integer": "4573285757308082115629249037"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_yhalf_mminus7",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16404,
+      "m": -7,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "834602536081725456667"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32013011985592079953561107561",
+        "lo_integer": "32013011985592079953561107554"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1675330014262212719748",
+        "lo_integer": "1675330014262212719747"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573287426513154279080158223",
+        "lo_integer": "4573287426513154279080158222"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573287432638096377841972922",
+        "lo_integer": "4573285757308082115629244889"
+      },
+      "y": [
+        1,
+        2
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022769305584704554409649515",
+        "lo_integer": "56022769305584704554409638452"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022769305584704554409643966",
+        "lo_integer": "56022769305584704554409643961"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_yhalf_mminus2",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16394,
+      "m": -2,
+      "max_distance": {
+        "denominator": "618970019642690137449562112",
+        "numerator": "13040636213783767967"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045541949572279837463876456",
+        "lo_integer": "112045541949572279837463876452"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1671240353845898257066",
+        "lo_integer": "1671240353845898257065"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022770974786139918731938228",
+        "lo_integer": "56022770974786139918731938226"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022770976825058400307906581",
+        "lo_integer": "56022769305584704554409638452"
+      },
+      "y": [
+        1,
+        2
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091082229943366763527300266",
+        "lo_integer": "224091082229943366763527268841"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091082229943366763527284611",
+        "lo_integer": "224091082229943366763527284599"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_yhalf_mminus1",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16392,
+      "m": -1,
+      "max_distance": {
+        "denominator": "79228162514264337593543950336",
+        "numerator": "1669201192911400484071"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1670424218903190254614",
+        "lo_integer": "1670424218903190254613"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091083899144559674927752912",
+        "lo_integer": "224091083899144559674927752907"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091083900367585666717554880",
+        "lo_integer": "224091082229943366763527268841"
+      },
+      "y": [
+        1,
+        2
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091082229943366763527300266",
+        "lo_integer": "224091082229943366763527268841"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091082229943366763527284611",
+        "lo_integer": "224091082229943366763527284599"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_yhalf_m1",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16392,
+      "m": 1,
+      "max_distance": {
+        "denominator": "79228162514264337593543950336",
+        "numerator": "1669201192911400484071"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1670424218903190254614",
+        "lo_integer": "1670424218903190254613"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091083899144559674927752912",
+        "lo_integer": "224091083899144559674927752907"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "224091083900367585666717554880",
+        "lo_integer": "224091082229943366763527268841"
+      },
+      "y": [
+        1,
+        2
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022769305584704554409649515",
+        "lo_integer": "56022769305584704554409638452"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022769305584704554409643966",
+        "lo_integer": "56022769305584704554409643961"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_yhalf_m2",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16394,
+      "m": 2,
+      "max_distance": {
+        "denominator": "618970019642690137449562112",
+        "numerator": "13040636213783767967"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045541949572279837463876456",
+        "lo_integer": "112045541949572279837463876452"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1671240353845898257066",
+        "lo_integer": "1671240353845898257065"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022770974786139918731938228",
+        "lo_integer": "56022770974786139918731938226"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022770976825058400307906581",
+        "lo_integer": "56022769305584704554409638452"
+      },
+      "y": [
+        1,
+        2
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573285757308082115629253174",
+        "lo_integer": "4573285757308082115629244889"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573285757308082115629249052",
+        "lo_integer": "4573285757308082115629249037"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_yhalf_m7",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16404,
+      "m": 7,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "834602536081725456667"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32013011985592079953561107561",
+        "lo_integer": "32013011985592079953561107554"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1675330014262212719748",
+        "lo_integer": "1675330014262212719747"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573287426513154279080158223",
+        "lo_integer": "4573287426513154279080158222"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4573287432638096377841972922",
+        "lo_integer": "4573285757308082115629244889"
+      },
+      "y": [
+        1,
+        2
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233797830385477571743376743",
+        "lo_integer": "3233797830385477571743368478"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233797830385477571743372582",
+        "lo_integer": "3233797830385477571743372567"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y1_mminus7",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16404,
+      "m": -7,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "2360608574226241457605"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "22636617861218382169583985816",
+        "lo_integer": "22636617861218382169583985809"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4738548855240663971651",
+        "lo_integer": "4738548855240663971650"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233802551602626024226283688",
+        "lo_integer": "3233802551602626024226283687"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233802568934332812407348394",
+        "lo_integer": "3233797830385477571743368478"
+      },
+      "y": [
+        1,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614076535918185356917043699",
+        "lo_integer": "39614076535918185356917034529"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614076535918185356917039182",
+        "lo_integer": "39614076535918185356917039180"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y1_mminus2",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16394,
+      "m": -2,
+      "max_distance": {
+        "denominator": "79228162514264337593543950336",
+        "numerator": "4721213983439854940639"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "79228162514264337593543950336",
+        "lo_integer": "79228162514264337593543950336"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4726981548788159349185",
+        "lo_integer": "4726981548788159349184"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614081257132168796771975168",
+        "lo_integer": "39614081257132168796771975168"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614081262899734145076392884",
+        "lo_integer": "39614076535918185356917034529"
+      },
+      "y": [
+        1,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456320307314902750187222540",
+        "lo_integer": "158456320307314902750187206140"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456320307314902750187214341",
+        "lo_integer": "158456320307314902750187214339"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y1_mminus1",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16392,
+      "m": -1,
+      "max_distance": {
+        "denominator": "19807040628566084398385987584",
+        "numerator": "1180303443109225173633"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4724673170578750857224",
+        "lo_integer": "4724673170578750857223"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456325028528675187087900672",
+        "lo_integer": "158456325028528675187087900672"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456325031988073328938079764",
+        "lo_integer": "158456320307314902750187206140"
+      },
+      "y": [
+        1,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456320307314902750187222540",
+        "lo_integer": "158456320307314902750187206140"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456320307314902750187214341",
+        "lo_integer": "158456320307314902750187214339"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y1_m1",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16392,
+      "m": 1,
+      "max_distance": {
+        "denominator": "19807040628566084398385987584",
+        "numerator": "1180303443109225173633"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4724673170578750857224",
+        "lo_integer": "4724673170578750857223"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456325028528675187087900672",
+        "lo_integer": "158456325028528675187087900672"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "158456325031988073328938079764",
+        "lo_integer": "158456320307314902750187206140"
+      },
+      "y": [
+        1,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614076535918185356917043699",
+        "lo_integer": "39614076535918185356917034529"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614076535918185356917039182",
+        "lo_integer": "39614076535918185356917039180"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y1_m2",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16394,
+      "m": 2,
+      "max_distance": {
+        "denominator": "79228162514264337593543950336",
+        "numerator": "4721213983439854940639"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "79228162514264337593543950336",
+        "lo_integer": "79228162514264337593543950336"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4726981548788159349185",
+        "lo_integer": "4726981548788159349184"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614081257132168796771975168",
+        "lo_integer": "39614081257132168796771975168"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "39614081262899734145076392884",
+        "lo_integer": "39614076535918185356917034529"
+      },
+      "y": [
+        1,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233797830385477571743376743",
+        "lo_integer": "3233797830385477571743368478"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233797830385477571743372582",
+        "lo_integer": "3233797830385477571743372567"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y1_m7",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16404,
+      "m": 7,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "2360608574226241457605"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "22636617861218382169583985816",
+        "lo_integer": "22636617861218382169583985809"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "4738548855240663971651",
+        "lo_integer": "4738548855240663971650"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233802551602626024226283688",
+        "lo_integer": "3233802551602626024226283687"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "3233802568934332812407348394",
+        "lo_integer": "3233797830385477571743368478"
+      },
+      "y": [
+        1,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286630359725663070130982711",
+        "lo_integer": "2286630359725663070130974470"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286630359725663070130978606",
+        "lo_integer": "2286630359725663070130978591"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y2_mminus7",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16404,
+      "m": -7,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "6676765457034704552321"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "16006505992796039976780553784",
+        "lo_integer": "16006505992796039976780553777"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "13402640114097701757977",
+        "lo_integer": "13402640114097701757976"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286643713256577139540079112",
+        "lo_integer": "2286643713256577139540079111"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286643762365777167832740688",
+        "lo_integer": "2286630359725663070130974470"
+      },
+      "y": [
+        2,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011372133790539150866585346",
+        "lo_integer": "28011372133790539150866575712"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011372133790539150866580522",
+        "lo_integer": "28011372133790539150866580516"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y2_mminus2",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16394,
+      "m": -2,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "6676801265404249696701"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022770974786139918731938228",
+        "lo_integer": "56022770974786139918731938226"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "13369922830767186056527",
+        "lo_integer": "13369922830767186056526"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011385487393069959365969114",
+        "lo_integer": "28011385487393069959365969113"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011385503713369918052641873",
+        "lo_integer": "28011372133790539150866575712"
+      },
+      "y": [
+        2,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045528595964974572863234572",
+        "lo_integer": "112045528595964974572863214846"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045528595964974572863224681",
+        "lo_integer": "112045528595964974572863224677"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y2_mminus1",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16392,
+      "m": -1,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "6676803652632300330805"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "13363393751225522036907",
+        "lo_integer": "13363393751225522036906"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045541949572279837463876456",
+        "lo_integer": "112045541949572279837463876454"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045541959358725798385271479",
+        "lo_integer": "112045528595964974572863214846"
+      },
+      "y": [
+        2,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045528595964974572863234572",
+        "lo_integer": "112045528595964974572863214846"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045528595964974572863224681",
+        "lo_integer": "112045528595964974572863224677"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y2_m1",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16392,
+      "m": 1,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "6676803652632300330805"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "13363393751225522036907",
+        "lo_integer": "13363393751225522036906"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045541949572279837463876456",
+        "lo_integer": "112045541949572279837463876454"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "112045541959358725798385271479",
+        "lo_integer": "112045528595964974572863214846"
+      },
+      "y": [
+        2,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011372133790539150866585346",
+        "lo_integer": "28011372133790539150866575712"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011372133790539150866580522",
+        "lo_integer": "28011372133790539150866580516"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y2_m2",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16394,
+      "m": 2,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "6676801265404249696701"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "56022770974786139918731938228",
+        "lo_integer": "56022770974786139918731938226"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "13369922830767186056527",
+        "lo_integer": "13369922830767186056526"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011385487393069959365969114",
+        "lo_integer": "28011385487393069959365969113"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "28011385503713369918052641873",
+        "lo_integer": "28011372133790539150866575712"
+      },
+      "y": [
+        2,
+        1
+      ]
+    },
+    {
+      "Q": 4096,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286630359725663070130982711",
+        "lo_integer": "2286630359725663070130974470"
+      },
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286630359725663070130978606",
+        "lo_integer": "2286630359725663070130978591"
+      },
+      "finite_two_routes_intersect": true,
+      "id": "original_y2_m7",
+      "individually_evaluated_integer_shifts": 8193,
+      "integer_square_certificates": 16404,
+      "m": 7,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "6676765457034704552321"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "16006505992796039976780553784",
+        "lo_integer": "16006505992796039976780553777"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 8193,
+      "route": "all_shifts_and_endpoints",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "13402640114097701757977",
+        "lo_integer": "13402640114097701757976"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286643713256577139540079112",
+        "lo_integer": "2286643713256577139540079111"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "2286643762365777167832740688",
+        "lo_integer": "2286630359725663070130974470"
+      },
+      "y": [
+        2,
+        1
+      ]
+    },
+    {
+      "Q": 1048576,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": null,
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32266207944079478904879348",
+        "lo_integer": "32266207944079478904879333"
+      },
+      "finite_two_routes_intersect": null,
+      "id": "scale_Y_mminus7",
+      "individually_evaluated_integer_shifts": 0,
+      "integer_square_certificates": 17,
+      "m": -7,
+      "max_distance": {
+        "denominator": "4951760157141521099596496896",
+        "numerator": "4488598246673833586469"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "226366178612183821695839859",
+        "lo_integer": "226366178612183821695839852"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 2097153,
+      "route": "endpoints_finite_telescope",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "72058556120236117750716",
+        "lo_integer": "72058556120236117750715"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32338025516026260242262837",
+        "lo_integer": "32338025516026260242262836"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32338266500199715022630064",
+        "lo_integer": "32266207944079478904879333"
+      },
+      "y": [
+        10000,
+        1
+      ]
+    },
+    {
+      "Q": 1048576,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": null,
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "396068774700806891425302014",
+        "lo_integer": "396068774700806891425302009"
+      },
+      "finite_two_routes_intersect": null,
+      "id": "scale_Y_mminus2",
+      "individually_evaluated_integer_shifts": 0,
+      "integer_square_certificates": 7,
+      "m": -2,
+      "max_distance": {
+        "denominator": "79228162514264337593543950336",
+        "numerator": "72037870514796542417743"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "792281625142643375935439504",
+        "lo_integer": "792281625142643375935439502"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 2097153,
+      "route": "endpoints_finite_telescope",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "72057868916621314000005",
+        "lo_integer": "72057868916621314000004"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "396140812571321687967719752",
+        "lo_integer": "396140812571321687967719751"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "396140832569723512739302019",
+        "lo_integer": "396068774700806891425302009"
+      },
+      "y": [
+        10000,
+        1
+      ]
+    },
+    {
+      "Q": 1048576,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": null,
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1584491197674786329068933668",
+        "lo_integer": "1584491197674786329068933665"
+      },
+      "finite_two_routes_intersect": null,
+      "id": "scale_Y_mminus1",
+      "individually_evaluated_integer_shifts": 0,
+      "integer_square_certificates": 5,
+      "m": -1,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "36026305250211400972671"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 2097153,
+      "route": "endpoints_finite_telescope",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "72057731477078016250001",
+        "lo_integer": "72057731477078016250000"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1584563250285286751870879007",
+        "lo_integer": "1584563250285286751870879006"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1584563255406263407085183669",
+        "lo_integer": "1584491197674786329068933665"
+      },
+      "y": [
+        10000,
+        1
+      ]
+    },
+    {
+      "Q": 1048576,
+      "endpoint_terms_evaluated": 2,
+      "finite_direct": null,
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1584491197674786329068933668",
+        "lo_integer": "1584491197674786329068933665"
+      },
+      "finite_two_routes_intersect": null,
+      "id": "scale_Y_m1",
+      "individually_evaluated_integer_shifts": 0,
+      "integer_square_certificates": 5,
+      "m": 1,
+      "max_distance": {
+        "denominator": "39614081257132168796771975168",
+        "numerator": "36026305250211400972671"
+      },
+      "mutated_target": null,
+      "mutation_factor_abs_m_detected": null,
+      "represented_integer_shifts": 2097153,
+      "route": "endpoints_finite_telescope",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "72057731477078016250001",
+        "lo_integer": "72057731477078016250000"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1584563250285286751870879007",
+        "lo_integer": "1584563250285286751870879006"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "1584563255406263407085183669",
+        "lo_integer": "1584491197674786329068933665"
+      },
+      "y": [
+        10000,
+        1
+      ]
+    },
+    {
+      "Q": 1048576,
+      "endpoint_terms_evaluated": 4,
+      "finite_direct": null,
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "396068774700806891425302014",
+        "lo_integer": "396068774700806891425302009"
+      },
+      "finite_two_routes_intersect": null,
+      "id": "scale_Y_m2",
+      "individually_evaluated_integer_shifts": 0,
+      "integer_square_certificates": 7,
+      "m": 2,
+      "max_distance": {
+        "denominator": "79228162514264337593543950336",
+        "numerator": "72037870514796542417743"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "792281625142643375935439504",
+        "lo_integer": "792281625142643375935439502"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 2097153,
+      "route": "endpoints_finite_telescope",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "72057868916621314000005",
+        "lo_integer": "72057868916621314000004"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "396140812571321687967719752",
+        "lo_integer": "396140812571321687967719751"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "396140832569723512739302019",
+        "lo_integer": "396068774700806891425302009"
+      },
+      "y": [
+        10000,
+        1
+      ]
+    },
+    {
+      "Q": 1048576,
+      "endpoint_terms_evaluated": 14,
+      "finite_direct": null,
+      "finite_endpoints": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32266207944079478904879348",
+        "lo_integer": "32266207944079478904879333"
+      },
+      "finite_two_routes_intersect": null,
+      "id": "scale_Y_m7",
+      "individually_evaluated_integer_shifts": 0,
+      "integer_square_certificates": 17,
+      "m": 7,
+      "max_distance": {
+        "denominator": "4951760157141521099596496896",
+        "numerator": "4488598246673833586469"
+      },
+      "mutated_target": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "226366178612183821695839859",
+        "lo_integer": "226366178612183821695839852"
+      },
+      "mutation_factor_abs_m_detected": true,
+      "represented_integer_shifts": 2097153,
+      "route": "endpoints_finite_telescope",
+      "tail_cap_satisfied": true,
+      "tail_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "72058556120236117750716",
+        "lo_integer": "72058556120236117750715"
+      },
+      "target_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32338025516026260242262837",
+        "lo_integer": "32338025516026260242262836"
+      },
+      "target_intersects": true,
+      "tolerance_satisfied": true,
+      "whole_line_enclosure": {
+        "denominator": "79228162514264337593543950336",
+        "hi_integer": "32338266500199715022630064",
+        "lo_integer": "32266207944079478904879333"
+      },
+      "y": [
+        10000,
+        1
+      ]
+    }
+  ],
+  "cases_before_any_filter": 24,
+  "certification_basis": "exact dyadic outward integer arithmetic; analytic primitive and tail are paper-audited, not Lean-certified",
+  "coefficient_N_computed": false,
+  "heat_signal_computed": false,
+  "integer_square_certificates": 295198,
+  "interval_overlap_alone_is_never_FALSE": true,
+  "new_D_N_estimate": false,
+  "old_results_replayed": false,
+  "original_cases_before_any_filter": 18,
+  "precision_bits": 96,
+  "scale_cases_before_any_filter": 6,
+  "schema": "round22.epstein_unfolding_aux.result.v1",
+  "scope": "EPSTEIN_UNFOLDING_AUX_ONLY",
+  "source_onset_satisfied": false,
+  "sqrt_certificate_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\actual_epstein22\\epstein_sqrt_certificates22.jsonl",
+  "status": "EPSTEIN_UNFOLDING_AUX_PASS"
+}

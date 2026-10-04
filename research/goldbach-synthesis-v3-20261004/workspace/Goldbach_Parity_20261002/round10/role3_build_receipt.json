@@ -1,0 +1,81 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-02T12:33:03.786198+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\PrimeCofactorIdentity.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean",
+      "source_sha256": "1b436a3b4370cec00e59821d5338e4caac191190acd2246a42c8196d86f8b7d2",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\attempt01_source.txt",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\attempt01.log",
+      "log_sha256": "99e096d3ead7943a6fcdef83fa2b9074944411943526f3cae39ddd76e45c63c7",
+      "gate_sha256": "909df1b5cd38a4ed42cad65ca8930c47930d7ba8afd356148d87f4c7edcf34b2",
+      "gate_script_sha256": "bdee7952e47419fef2a0512d8e74a7234bf3da6800e2dc9561b94f9bd34d5ef2",
+      "gate_status": "PASS_IDENTITY_ONLY",
+      "gate_N": 100000000
+    },
+    {
+      "attempt": 2,
+      "timestamp_utc": "2026-10-02T12:33:39.616185+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\PrimeCofactorIdentity.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean",
+      "source_sha256": "c491c9ccbd515f7fc1f3fa59519ab87b0f288c8b3de0812cbf4cf1785356f6d6",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\attempt02_source.txt",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\attempt02.log",
+      "log_sha256": "6657ed57588302261afcbcbab56c627e3f304abfcb2d739a02bb3edaec3a6534",
+      "gate_sha256": "909df1b5cd38a4ed42cad65ca8930c47930d7ba8afd356148d87f4c7edcf34b2",
+      "gate_script_sha256": "bdee7952e47419fef2a0512d8e74a7234bf3da6800e2dc9561b94f9bd34d5ef2",
+      "gate_status": "PASS_IDENTITY_ONLY",
+      "gate_N": 100000000
+    },
+    {
+      "attempt": 3,
+      "timestamp_utc": "2026-10-02T12:34:36.947592+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\PrimeCofactorIdentity.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean",
+      "source_sha256": "a31895518a60c169a81cdc43201742b4f91efce6d9b032a6a07cc1a8617a4819",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\attempt03_source.txt",
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\attempt03.log",
+      "log_sha256": "e2374db365b5240dcd7309657555d893f55f927c8fca1244c141402635245b89",
+      "gate_sha256": "909df1b5cd38a4ed42cad65ca8930c47930d7ba8afd356148d87f4c7edcf34b2",
+      "gate_script_sha256": "bdee7952e47419fef2a0512d8e74a7234bf3da6800e2dc9561b94f9bd34d5ef2",
+      "gate_status": "PASS_IDENTITY_ONLY",
+      "gate_N": 100000000
+    }
+  ],
+  "compiler": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+  "compiler_version": "Lean (version 4.15.0, x86_64-w64-windows-gnu, commit 11651562caae, Release)",
+  "lean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean",
+  "source_sha256": "a31895518a60c169a81cdc43201742b4f91efce6d9b032a6a07cc1a8617a4819",
+  "status": "COMPILED_AUXILIARY_IDENTITY",
+  "only_new_module_compiled": true,
+  "old_bank_replayed": false,
+  "victory": false,
+  "unresolved": [
+    "E11/E12 signed compensation",
+    "source physical-band BV onset",
+    "covered bridge e"
+  ],
+  "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\role3_build\\PrimeCofactorIdentity.olean",
+  "olean_sha256": "489d17d3ccbe9752fb1d4711edc06ccd4d80712e0682158f42acede5bcac4e5b",
+  "axiom_output": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean:129:33: warning: unused variable `hn`\nnote: this linter can be disabled with `set_option linter.unusedVariables false`\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean:129:52: warning: unused variable `hunit`\nnote: this linter can be disabled with `set_option linter.unusedVariables false`\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean:130:5: warning: unused variable `hpoint`\nnote: this linter can be disabled with `set_option linter.unusedVariables false`\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean:130:30: warning: unused variable `hpc`\nnote: this linter can be disabled with `set_option linter.unusedVariables false`\n'GoldbachRound10.physical_prime_cofactor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound10.actual_prime_bracket_cofactor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound10.source_prime_bracket_cofactor' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}

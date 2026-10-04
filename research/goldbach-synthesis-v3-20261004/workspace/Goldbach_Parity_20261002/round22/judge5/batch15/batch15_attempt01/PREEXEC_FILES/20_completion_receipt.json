@@ -1,0 +1,84 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH14",
+  "time_utc": "2026-10-03T16:51:56.753193+00:00",
+  "status": "INDEPENDENT_BATCH14_FAILED",
+  "role": "ROLE5",
+  "actual_child_invocations": 1,
+  "modules_passed": 0,
+  "declarations_passed": 0,
+  "module_count_passed": 0,
+  "declaration_count_passed": 0,
+  "theorems_passed": 0,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "input_count": 8015,
+  "closed_judge_file_count": 911,
+  "protected_archive_count": 3089,
+  "capture_count": 20,
+  "print_count": 29,
+  "standard_print_count_in_failed_module": 22,
+  "recovery_sorryAx_print_count": 7,
+  "declarations_without_axioms": [],
+  "partial_credit_in_failed_module": 0,
+  "source_sha256": "7ee2abb27d959f1511abb59e8425578b420d3e972a8d03eaff26635ac8fd581c",
+  "actual_links": {
+    "START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\START.json",
+      "sha256": "5ad5fba70cd40cecda864f251b9ae2f2cedf7b287cb1562d678aeebb35f26faa"
+    },
+    "FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\FIN.json",
+      "sha256": "2dc67553fa575a8f684e0a732afd0452ac9f1dc5058a2107ffb8353d6559490a"
+    },
+    "receipt.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\receipt.json",
+      "sha256": "ae9796da1bc74630389a1a547c8cb5bb2fbfda16b6295e41d8becea46855c45d"
+    },
+    "PREEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\PREEXEC.json",
+      "sha256": "8565a71d0d691b60a7e28a0f389da8e32d58e498064859e46fc409d6e2d5932c"
+    },
+    "POSTEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\POSTEXEC.json",
+      "sha256": "5725b7fcfe9f4d12a8cbbaa0382928f4f16d0e156d47d20c2d474ec9d77dfa87"
+    },
+    "DiscreteThermalProjection22_START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\DiscreteThermalProjection22_START.json",
+      "sha256": "9c20b2055ac2250c7575336621df897985cad1a220cb3fbb2f22b1aacf8340e2"
+    },
+    "DiscreteThermalProjection22_FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\DiscreteThermalProjection22_FIN.json",
+      "sha256": "1ef1a87c885aafa907c810a4a17f973923ea17755a5b4748c616616ccfc84104"
+    },
+    "DiscreteThermalProjection22.log": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\DiscreteThermalProjection22.log",
+      "sha256": "879f2978a6de8935608661b3194a36c728fbff743c864c3f114405fc463c3d0a"
+    }
+  },
+  "adjudication_sha256": "c4538d181f80e2b9b7a89d546bdd0a8a59a9a2de163a9da287280d3972499327",
+  "metadata_close_source_sha256": "0cf8b07eee97220fe166787e10c84a61096682aab58bc759a0471e45155cf225",
+  "readonly_local_dependencies": [],
+  "recompiled_dependencies": [],
+  "failure_class": "TECHNICAL_ITE_DEPENDENT_DECIDABLE_AND_CAST_NORMALIZATIONS",
+  "analytic_counterexample_observed": false,
+  "parity_obstruction_observed": false,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "retry_count": 0,
+  "numeric_bank_replayed": false,
+  "numeric_PASS_used_as_proof": false,
+  "previous_official_modules": 75,
+  "previous_official_declarations": 1223,
+  "proposed_new_official_modules": 75,
+  "proposed_new_official_declarations": 1223,
+  "official_count_requires_ROOT_observation": true,
+  "H1_paid": false,
+  "C5_paid": false,
+  "global_trace_certified": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "full_log_read": "8a6633",
+  "full_actual_receipt_read": "bc32b7",
+  "full_START_read": "2f0ae7"
+}

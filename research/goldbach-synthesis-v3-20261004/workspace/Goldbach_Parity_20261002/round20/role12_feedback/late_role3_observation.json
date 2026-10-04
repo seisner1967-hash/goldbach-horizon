@@ -1,0 +1,96 @@
+{
+  "created_utc": "2026-10-03T04:25:17.7491821Z",
+  "round": 20,
+  "role3_final_observed_cutoff": 14,
+  "observed_author_passes": 6,
+  "observed_actual_technical_failures": 8,
+  "copied_stored_receipt_projection": [
+    {
+      "attempt": 8,
+      "module": "PhysicalCompositeSubtraction",
+      "actual_exit_code": 1,
+      "status": "FAIL_ACTUAL_NEW_ATTEMPT",
+      "source_sha256": "18f3abf95d07024a35a59cc02f28817a526c5bec74b0a541f0bc63b32c75154c",
+      "log_path": "round20/role3/attempt08_PhysicalCompositeSubtraction.log",
+      "log_sha256": "74283eb482da052a7e6f601fb2e9a0214008501521ab5ee86852bc94dc8015af"
+    },
+    {
+      "attempt": 9,
+      "module": "PhysicalCompositeSubtraction",
+      "actual_exit_code": 0,
+      "status": "PASS_NEW_AUXILIARY_MODULE",
+      "source_sha256": "3d6ef57fd5fc23aa0dfa44b6aa7b40cde178c93745011c2166731ff889af871c",
+      "log_path": "round20/role3/attempt09_PhysicalCompositeSubtraction.log",
+      "log_sha256": "0b44e32e570e3f56deba4686c2aaec3e9b9a6894a30d382b864f665f791bfad0"
+    },
+    {
+      "attempt": 10,
+      "module": "CompositeAPConductor",
+      "actual_exit_code": 1,
+      "status": "FAIL_ACTUAL_NEW_ATTEMPT",
+      "source_sha256": "aad40a8bef72bcd6eac733302f643634f337cc2aa7cc6824548ed544bdda2c48",
+      "log_path": "round20/role3/attempt10_CompositeAPConductor.log",
+      "log_sha256": "5e396d5e56dbc061d045ad5cac3d0f63ee8ea7de60b9b1334edcdbae7eedddac"
+    },
+    {
+      "attempt": 11,
+      "module": "CompositeAPConductor",
+      "actual_exit_code": 0,
+      "status": "PASS_NEW_AUXILIARY_MODULE",
+      "source_sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c",
+      "log_path": "round20/role3/attempt11_CompositeAPConductor.log",
+      "log_sha256": "8710fbed46ab7ada06798d4fa736b5a91baf5385382eb2ad9400b0cc1273ada5"
+    },
+    {
+      "attempt": 12,
+      "module": "SwitchedIncidenceEstimator",
+      "actual_exit_code": 1,
+      "status": "FAIL_ACTUAL_NEW_ATTEMPT",
+      "source_sha256": "7ae215c13c6f8ae5feb3a4b6628025070afe94c9b717d2de779c39d083538c7b",
+      "log_path": "round20/role3/attempt12_SwitchedIncidenceEstimator.log",
+      "log_sha256": "ee67c088bdc477dd710256183dfab5b36da457a7ffbcc75e8f11af24e23a112c"
+    },
+    {
+      "attempt": 13,
+      "module": "SwitchedIncidenceEstimator",
+      "actual_exit_code": 1,
+      "status": "FAIL_ACTUAL_NEW_ATTEMPT",
+      "source_sha256": "22a091d9b60608ff62d03bc2b5fb978d9c9132a6f8b8ae3421ba1833971861fe",
+      "log_path": "round20/role3/attempt13_SwitchedIncidenceEstimator.log",
+      "log_sha256": "3f43e7007880ba31f3ba3816a741a67c9f05e9e1651181ebd56713426c006405"
+    },
+    {
+      "attempt": 14,
+      "module": "SwitchedIncidenceEstimator",
+      "actual_exit_code": 0,
+      "status": "PASS_NEW_AUXILIARY_MODULE",
+      "source_sha256": "7ea6cc8506983c09c0700dec5ff6507aebfb2d79d581a602d07889048a7c7413",
+      "log_path": "round20/role3/attempt14_SwitchedIncidenceEstimator.log",
+      "log_sha256": "d25be59a37d02cde06a1e1abbcd8eee8d749646ff45e6f7ae3a145bca47eeb04"
+    }
+  ],
+  "input_bindings_sha256": {
+    "round20/role3/attempt08_PhysicalCompositeSubtraction.log": "74283eb482da052a7e6f601fb2e9a0214008501521ab5ee86852bc94dc8015af",
+    "round20/role3/attempt08_PhysicalCompositeSubtraction_receipt.json": "1f9cdb284c26203b6d6f716bc7abd5e6d525be69ef321184d68cf614c9659f15",
+    "round20/role3/attempt09_PhysicalCompositeSubtraction.log": "0b44e32e570e3f56deba4686c2aaec3e9b9a6894a30d382b864f665f791bfad0",
+    "round20/role3/attempt09_PhysicalCompositeSubtraction_receipt.json": "e1bda9cab7511cca35a33d9df02eb367c07825e352ced10306b53943c2e30c6b",
+    "round20/role3/attempt10_CompositeAPConductor.log": "5e396d5e56dbc061d045ad5cac3d0f63ee8ea7de60b9b1334edcdbae7eedddac",
+    "round20/role3/attempt10_CompositeAPConductor_receipt.json": "81e70426db02ae25430a52a379eed7164a0e8a7eb7c40dbfaf8b3c6c63ee8ab3",
+    "round20/role3/attempt11_CompositeAPConductor.log": "8710fbed46ab7ada06798d4fa736b5a91baf5385382eb2ad9400b0cc1273ada5",
+    "round20/role3/attempt11_CompositeAPConductor_receipt.json": "dfd62d5f3e3305e487b9eca7244e8cd2fe458c5c1f863024ed489ccd63772a00",
+    "round20/role3/attempt12_SwitchedIncidenceEstimator.log": "ee67c088bdc477dd710256183dfab5b36da457a7ffbcc75e8f11af24e23a112c",
+    "round20/role3/attempt12_SwitchedIncidenceEstimator_receipt.json": "34c644332e57ce96da943bc44c85480f7e29d8ad4d8ff84c59e63c44b3167683",
+    "round20/role3/attempt13_SwitchedIncidenceEstimator.log": "3f43e7007880ba31f3ba3816a741a67c9f05e9e1651181ebd56713426c006405",
+    "round20/role3/attempt13_SwitchedIncidenceEstimator_receipt.json": "e949eac36d82511481eb595f893cb75fc2e18a365ee5b2ab42aaf60862e79e61",
+    "round20/role3/attempt14_SwitchedIncidenceEstimator.log": "d25be59a37d02cde06a1e1abbcd8eee8d749646ff45e6f7ae3a145bca47eeb04",
+    "round20/role3/attempt14_SwitchedIncidenceEstimator_receipt.json": "761bcb34e925f5f389330e900baa445d4104e8d4fd61a10c18af8aa79020d799",
+    "round20/role3/attempt08_analysis.json": "59172272a4ca8e45f1661e73bd2d3d9bd70f56fdc8df764d996a77be2ee3d001",
+    "round20/role3/attempt10_analysis.json": "6fdd65b74633bc3ee833e7cd6bd121325e1b68c8ccab347e3298c7a4249d7ec3",
+    "round20/role3/attempt12_analysis.json": "19815cb78f7551ab8d5235fae63c6d98bb3959015a7e3dd929817e91b6ab4cce",
+    "round20/role3/attempt13_analysis.json": "44dd2928fdb4a69957a643611c48519409046c80e1f4ed22abc864f71678b311"
+  },
+  "mathematical_recomputation": false,
+  "own_Lean_invocations": 0,
+  "own_numeric_invocations": 0,
+  "victory": false
+}

@@ -1,0 +1,85 @@
+import Mathlib.NumberTheory.EulerProduct.Basic
+import Mathlib.NumberTheory.Harmonic.EulerMascheroni
+import Mathlib.Topology.Algebra.InfiniteSum.Order
+import ThreeAdicPrimePairing
+
+open Finset Filter Topology
+namespace GoldbachRound16.Anchor
+
+lemma real_prod_antitone {ι : Type*} (f : ι → ℝ)
+    (h0 : ∀ i, 0 ≤ f i) (h1 : ∀ i, f i ≤ 1) :
+    Antitone (fun s : Finset ι => ∏ i ∈ s, f i) := by
+  classical
+  intro s t hst
+  change (∏ i ∈ t, f i) ≤ (∏ i ∈ s, f i)
+  rw [← Finset.prod_sdiff hst]
+  have he : ∏ i ∈ t \ s, f i ≤ 1 := Finset.prod_le_one (fun i _ => h0 i) (fun i _ => h1 i)
+  simpa using mul_le_mul_of_nonneg_right he (Finset.prod_nonneg (fun i _ => h0 i))
+
+lemma real_multipliable_of_unit_interval {ι : Type*} (f : ι → ℝ)
+    (h0 : ∀ i, 0 ≤ f i) (h1 : ∀ i, f i ≤ 1) : Multipliable f := by
+  refine ⟨⨅ s : Finset ι, ∏ i ∈ s, f i, ?_⟩
+  exact tendsto_atTop_ciInf (real_prod_antitone f h0 h1)
+    ⟨0, by rintro _ ⟨s, rfl⟩; exact Finset.prod_nonneg (fun i _ => h0 i)⟩
+
+noncomputable def inverseNat : ℕ →* ℝ where
+  toFun n := (n : ℝ)⁻¹
+  map_one' := by simp
+  map_mul' m n := by simp [Nat.cast_mul, mul_inv_rev, mul_comm]
+
+noncomputable def eulerPrefix (p : ℕ) : ℝ :=
+  ∏ l ∈ p.primesBelow, (l : ℝ) / ((l : ℝ) - 1)
+
+lemma harmonic_le_eulerPrefix {p : ℕ} (hp : 1 ≤ p) :
+    (harmonic (p-1) : ℝ) ≤ eulerPrefix p := by
+  classical
+  have hh : ∀ {l : ℕ}, l.Prime → ‖inverseNat l‖ < 1 := by
+    intro l hl
+    have hlR : (1 : ℝ) < l := by exact_mod_cast hl.one_lt
+    simp only [inverseNat, MonoidHom.coe_mk, OneHom.coe_mk, Real.norm_eq_abs]
+    rw [abs_of_pos (inv_pos.mpr (by positivity : (0 : ℝ) < l))]
+    exact (inv_lt_one₀ (by positivity : (0 : ℝ) < l)).mpr hlR
+  have hs := (EulerProduct.summable_and_hasSum_smoothNumbers_prod_primesBelow_geometric hh p).2
+  let emb : {j // j ∈ Finset.Icc 1 (p-1)} → p.smoothNumbers :=
+    fun j => ⟨j, Nat.mem_smoothNumbers_of_lt (Finset.mem_Icc.mp j.property).1
+      (by have := (Finset.mem_Icc.mp j.property).2; omega)⟩
+  have hinj : Function.Injective emb := by
+    intro a b h
+    apply Subtype.ext
+    change (a.val : ℕ) = b.val
+    exact congrArg (fun z : p.smoothNumbers => z.val) h
+  have hbound := sum_le_hasSum ((Finset.Icc 1 (p-1)).attach.image emb)
+    (fun j _ => by change 0 ≤ (j.val : ℝ)⁻¹; positivity) hs
+  rw [Finset.sum_image hinj.injOn, Finset.sum_attach] at hbound
+  have hprod : (∏ l ∈ p.primesBelow, (1 - inverseNat l)⁻¹) = eulerPrefix p := by
+    unfold eulerPrefix
+    apply Finset.prod_congr rfl
+    intro l hl
+    have hl0 : (l : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr (Nat.prime_of_mem_primesBelow hl).ne_zero
+    change (1 - (l : ℝ)⁻¹)⁻¹ = _
+    field_simp
+  rw [hprod] at hbound
+  simpa [harmonic_eq_sum_Icc, Rat.cast_sum, Rat.cast_inv, Rat.cast_natCast, emb, inverseNat] using hbound
+
+lemma integer_tail_product (k n : ℕ) (hk : 2 ≤ k) :
+    (∏ i ∈ Finset.range n, (1 - 1 / (((k+i : ℕ) : ℝ)^2))) =
+      (((k : ℝ)-1) * ((k+n : ℕ) : ℝ)) /
+        ((k : ℝ) * (((k+n : ℕ) : ℝ)-1)) := by
+  have hkR : (2 : ℝ) ≤ k := by exact_mod_cast hk
+  induction n with
+  | zero =>
+    simp only [Finset.range_zero, Finset.prod_empty, Nat.add_zero]
+    field_simp [show (k : ℝ) ≠ 0 by nlinarith, show (k : ℝ)-1 ≠ 0 by nlinarith]
+    <;> ring
+  | succ n ih =>
+    rw [Finset.prod_range_succ, ih]
+    have hnR : (0 : ℝ) ≤ n := by positivity
+    simp only [Nat.cast_add, Nat.cast_one]
+    field_simp [show (k : ℝ) ≠ 0 by nlinarith, show (k : ℝ)+(n : ℝ)-1 ≠ 0 by nlinarith,
+      show (k : ℝ)+(n : ℝ) ≠ 0 by nlinarith]
+    <;> ring
+
+#print axioms harmonic_le_eulerPrefix
+#print axioms integer_tail_product
+end GoldbachRound16.Anchor
+

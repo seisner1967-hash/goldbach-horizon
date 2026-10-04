@@ -1,0 +1,43 @@
+{
+  "authorization": "ROOT20_JUDGE_AUTHORIZED",
+  "root_authorized": true,
+  "round": 20,
+  "role": 5,
+  "issued_utc": "2026-10-03T04:41:19.449361+00:00",
+  "all_required_FINALs_inspected": true,
+  "independent_new_module_compile_authorized": true,
+  "canonical_NEW_numeric_results_inspected": true,
+  "root_FULL_judge_sources_and_preparation_read": true,
+  "root_preparation_read_scope": "All semantic fields and module-plan projection reviewed; every entry of all seven hash dictionaries machine parsed and byte verified. The 565KB opaque digest lists were not claimed individually displayed FULL.",
+  "root_source_read_chunks": [
+    "84606b (full auditv1 and runv1)",
+    "8b8d5f (full prepare and only run integrity-return delta)",
+    "7eeb36 (complete unique auditv2 delta)"
+  ],
+  "root_preparation_semantic_projection_read": "bfd2e6",
+  "root_author_finals_observation_sha256": "715e6db355426a2da9f013a6107423886811e03cd815301701d20bbf5bd87ba1",
+  "preparation_sha256": "fe440243022cf4111c61827f7b6a387e4a2182cd3523b4aef41ae411abcda6a7",
+  "judge_code_sha256": {
+    "audit.py": "6ecf1f28163623c7a691341aeb724eba8e3e4265e6555bf359346e84344f8726",
+    "run_once.py": "858c657259a4dc844736ffe33e6fd4934168323d1ce64ca8ba08cdd170308299",
+    "prepare.py": "3395bc352fc9439f2c086d55f98f2221e9e99326484c46e1dcd22c85be4f31b9"
+  },
+  "checked_binding_group_counts": {
+    "final_input_sha256": 1054,
+    "historical_dependencies_sha256": 26,
+    "numeric_frozen_sha256": 677,
+    "previous_artifacts_sha256": 1808,
+    "new_module_sources_sha256": 16,
+    "original_documents_sha256": 2,
+    "runtime_bindings_sha256": 5
+  },
+  "unique_byte_bindings_verified": 2837,
+  "new_modules": 16,
+  "canonical_independent_audit_attempt": 1,
+  "old_producer_Lean_PASS_PDF_sign_or_log_replay_authorized": false,
+  "root_execution_scope": "byte/receipt metadata only; ROLE5 owns one actual audit with sixteen fresh Lean invocations",
+  "source_onset": "log N>=10^24",
+  "source_friable_cost_scope": "theta demand on H19 F0-or-F1 plus unique F1 reciprocal, partial ledger",
+  "global_DN_target_proved": false,
+  "victory": false
+}

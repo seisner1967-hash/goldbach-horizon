@@ -1,0 +1,13 @@
+# Addendum futur de ressources — SOURCE non exécutée
+
+ROOT a demandé un contrat de ressources distinct pour SOURCEPACK02 après la clôture réelle du premier calcul global à MAX_WALL_SECONDS. Le futur plafond proposé et fixé dans les outils de cette révision est10800 secondes mur enfant et2147483648 octets d'artefacts, avec un seul enfant et zéro retry. Cet addendum ne modifie ni le contrat SOURCEPACK02 déjà gelé mentionnant3600s comme proposition initiale, ni la préparation/gate/résultat du calcul clos. Pour la seule future préparation launch_prepare03, cet addendum remplace explicitement la proposition de plafond3600s. Il est lui-même à relire par le Juge et ROOT avant toute préparation exécutable ou gate.
+
+Les paramètres mathématiques restent N=100000000,Y=10000,T=100,X=Q=R=1000000,tau=1/1000000. Les204800 nœuds verticaux,12288 nœuds Arch,999999 certificats arithmétiques,32768 graines et26181632 avances sont obligatoires. Ni catalogue, ni précision, ni restes, ni gardes, ni mutants n'est réduit. Les formules d'extrémités et de rayon du candidat gardent les mêmes enclosures.
+
+Le précédent calcul unique a réellement observé86400 nœuds à3594.844s et conservé86507 enregistrements lors de sa coupure à3600s. Ce coût observé justifie de proposer une fenêtre plus longue pour un nouveau calcul complet. Il n'établit aucun gain temporel du candidat optimisé, aucune durée complète garantie, ni aucun PASS. La réduction d'opérations décrite dans integer_endpoint_equivalence22.md reste théorique.
+
+Le plafond mur commence au Popen de l'enfant et comprend chargement, primitives, producteur et checker. Le contrôleur contrôle toutes les cinq secondes, avec un timeout réduit au temps restant. Il tue l'unique enfant sur dépassement, conserve les sorties partielles et clôt sans retry. Les checks metadata PRE/POST sont horodatés séparément ; ils ne sont pas présentés comme des travaux mathématiques mesurés.
+
+Le plafond de volume couvre actual_attempt01 complet : captures, contexte, données, journaux et reçus. Deux MiB sont réservés pour deux reçus finaux d'au plus un MiB chacun. Le contrôle est discret ; aucun dépassement observé ne peut recevoir de PASS. Aucun fichier de sortie ou d'archive n'est supprimé ni déplacé. Un essai consommé exige une révision et une gate distinctes pour tout essai suivant.
+
+Niveau futur conservé : PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER, sous revue neuve des sources et outils. Les restes analytiques sont audités sur papier et ne sont pas un certificat Lean H1. Le checker structurel n'est pas un certificat des primitives. H1/C5 global, coefficient additifN,D_N et WIN restent ouverts.

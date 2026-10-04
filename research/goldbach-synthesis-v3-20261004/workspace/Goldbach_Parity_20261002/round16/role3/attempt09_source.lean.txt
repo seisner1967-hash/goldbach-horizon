@@ -1,0 +1,341 @@
+import Mathlib.NumberTheory.EulerProduct.Basic
+import Mathlib.NumberTheory.Harmonic.EulerMascheroni
+import Mathlib.Topology.Algebra.InfiniteSum.Order
+import ThreeAdicPrimePairing
+
+open Finset Filter Topology
+namespace GoldbachRound16.Anchor
+
+lemma real_prod_antitone {ι : Type*} (f : ι → ℝ)
+    (h0 : ∀ i, 0 ≤ f i) (h1 : ∀ i, f i ≤ 1) :
+    Antitone (fun s : Finset ι => ∏ i ∈ s, f i) := by
+  classical
+  intro s t hst
+  change (∏ i ∈ t, f i) ≤ (∏ i ∈ s, f i)
+  rw [← Finset.prod_sdiff hst]
+  have he : ∏ i ∈ t \ s, f i ≤ 1 := Finset.prod_le_one (fun i _ => h0 i) (fun i _ => h1 i)
+  simpa using mul_le_mul_of_nonneg_right he (Finset.prod_nonneg (fun i _ => h0 i))
+
+lemma real_multipliable_of_unit_interval {ι : Type*} (f : ι → ℝ)
+    (h0 : ∀ i, 0 ≤ f i) (h1 : ∀ i, f i ≤ 1) : Multipliable f := by
+  refine ⟨⨅ s : Finset ι, ∏ i ∈ s, f i, ?_⟩
+  exact tendsto_atTop_ciInf (real_prod_antitone f h0 h1)
+    ⟨0, by rintro _ ⟨s, rfl⟩; exact Finset.prod_nonneg (fun i _ => h0 i)⟩
+
+noncomputable def inverseNat : ℕ →* ℝ where
+  toFun n := (n : ℝ)⁻¹
+  map_one' := by simp
+  map_mul' m n := by simp [Nat.cast_mul, mul_inv_rev, mul_comm]
+
+noncomputable def eulerPrefix (p : ℕ) : ℝ :=
+  ∏ l ∈ p.primesBelow, (l : ℝ) / ((l : ℝ) - 1)
+
+lemma harmonic_le_eulerPrefix {p : ℕ} (hp : 1 ≤ p) :
+    (harmonic (p-1) : ℝ) ≤ eulerPrefix p := by
+  classical
+  have hh : ∀ {l : ℕ}, l.Prime → ‖inverseNat l‖ < 1 := by
+    intro l hl
+    have hlR : (1 : ℝ) < l := by exact_mod_cast hl.one_lt
+    simp only [inverseNat, MonoidHom.coe_mk, OneHom.coe_mk, Real.norm_eq_abs]
+    rw [abs_of_pos (inv_pos.mpr (by positivity : (0 : ℝ) < l))]
+    exact (inv_lt_one₀ (by positivity : (0 : ℝ) < l)).mpr hlR
+  have hs := (EulerProduct.summable_and_hasSum_smoothNumbers_prod_primesBelow_geometric hh p).2
+  let emb : {j // j ∈ Finset.Icc 1 (p-1)} → p.smoothNumbers :=
+    fun j => ⟨j, Nat.mem_smoothNumbers_of_lt (Finset.mem_Icc.mp j.property).1
+      (by have := (Finset.mem_Icc.mp j.property).2; omega)⟩
+  have hinj : Function.Injective emb := by
+    intro a b h
+    apply Subtype.ext
+    change (a.val : ℕ) = b.val
+    exact congrArg (fun z : p.smoothNumbers => z.val) h
+  have hbound := sum_le_hasSum ((Finset.Icc 1 (p-1)).attach.image emb)
+    (fun j _ => by change 0 ≤ (j.val : ℝ)⁻¹; positivity) hs
+  rw [Finset.sum_image hinj.injOn, Finset.sum_attach] at hbound
+  have hprod : (∏ l ∈ p.primesBelow, (1 - inverseNat l)⁻¹) = eulerPrefix p := by
+    unfold eulerPrefix
+    apply Finset.prod_congr rfl
+    intro l hl
+    have hl0 : (l : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr (Nat.prime_of_mem_primesBelow hl).ne_zero
+    change (1 - (l : ℝ)⁻¹)⁻¹ = _
+    field_simp
+  rw [hprod] at hbound
+  simpa [harmonic_eq_sum_Icc, Rat.cast_sum, Rat.cast_inv, Rat.cast_natCast, emb, inverseNat] using hbound
+
+lemma integer_tail_product (k n : ℕ) (hk : 2 ≤ k) :
+    (∏ i ∈ Finset.range n, (1 - 1 / (((k+i : ℕ) : ℝ)^2))) =
+      (((k : ℝ)-1) * ((k+n : ℕ) : ℝ)) /
+        ((k : ℝ) * (((k+n : ℕ) : ℝ)-1)) := by
+  have hkR : (2 : ℝ) ≤ k := by exact_mod_cast hk
+  induction n with
+  | zero =>
+    simp only [Finset.range_zero, Finset.prod_empty, Nat.add_zero]
+    field_simp [show (k : ℝ) ≠ 0 by nlinarith, show (k : ℝ)-1 ≠ 0 by nlinarith]
+    ring
+  | succ n ih =>
+    rw [Finset.prod_range_succ, ih]
+    have hnR : (0 : ℝ) ≤ n := by positivity
+    simp only [Nat.cast_add, Nat.cast_one]
+    have heq : (k : ℝ) + ((n : ℝ) + 1) - 1 = (k : ℝ) + (n : ℝ) := by ring
+    rw [heq]
+    field_simp [show (k : ℝ) ≠ 0 by nlinarith, show (k : ℝ)+(n : ℝ)-1 ≠ 0 by nlinarith,
+      show (k : ℝ)+(n : ℝ) ≠ 0 by nlinarith]
+    ring
+
+
+
+
+
+
+lemma real_prod_reverse_subset {ι : Type*} {s t : Finset ι} (f : ι → ℝ)
+    (hst : s ⊆ t) (h0 : ∀ i ∈ t, 0 ≤ f i) (h1 : ∀ i ∈ t, f i ≤ 1) :
+    (∏ i ∈ t, f i) ≤ (∏ i ∈ s, f i) := by
+  classical
+  rw [← Finset.prod_sdiff hst]
+  have he : ∏ i ∈ t \ s, f i ≤ 1 :=
+    Finset.prod_le_one (fun i hi => h0 i (Finset.mem_sdiff.mp hi).1)
+      (fun i hi => h1 i (Finset.mem_sdiff.mp hi).1)
+  simpa using mul_le_mul_of_nonneg_right he
+    (Finset.prod_nonneg (fun i hi => h0 i (hst hi)))
+
+lemma integer_factor_nonneg {j : ℕ} (hj : 2 ≤ j) :
+    0 ≤ (1 - 1 / ((j : ℝ)^2)) := by
+  have hjR : (2 : ℝ) ≤ j := by exact_mod_cast hj
+  have hsq : 1 ≤ (j : ℝ)^2 := by nlinarith
+  have hdiv : 1 / ((j : ℝ)^2) ≤ 1 := (div_le_one (by positivity : 0 < (j : ℝ)^2)).mpr hsq
+  linarith
+
+lemma integer_tail_lower (k : ℕ) (hk : 2 ≤ k) (s : Finset ℕ)
+    (hs : ∀ i ∈ s, k ≤ i) :
+    ((k : ℝ)-1)/(k : ℝ) ≤ ∏ i ∈ s, (1 - 1 / ((i : ℝ)^2)) := by
+  classical
+  let T := max k (s.sup id) + 1
+  have hkT : k ≤ T := by dsimp [T]; omega
+  have hsub : s ⊆ Finset.Ico k T := by
+    intro i hi
+    apply Finset.mem_Ico.mpr
+    exact ⟨hs i hi, by have hisup : i ≤ s.sup id := Finset.le_sup (f := id) hi; dsimp [T]; omega⟩
+  have hsmall := real_prod_reverse_subset (fun i : ℕ => 1 - 1 / ((i : ℝ)^2)) hsub
+    (fun i hi => integer_factor_nonneg (le_trans hk (Finset.mem_Ico.mp hi).1))
+    (fun i _ => by
+      have h : 0 ≤ 1 / ((i : ℝ)^2) := by positivity
+      dsimp only
+      linarith)
+  have htel : (∏ i ∈ Finset.Ico k T, (1 - 1 / ((i : ℝ)^2))) =
+      (((k : ℝ)-1) * ((k+(T-k) : ℕ) : ℝ)) /
+        ((k : ℝ) * (((k+(T-k) : ℕ) : ℝ)-1)) := by
+    rw [Finset.prod_Ico_eq_prod_range]
+    simpa [Nat.add_comm] using integer_tail_product k (T-k) hk
+  rw [htel] at hsmall
+  have hkR : (2 : ℝ) ≤ k := by exact_mod_cast hk
+  have hnR : (0 : ℝ) ≤ (T-k : ℕ) := by positivity
+  have hb : ((k : ℝ)-1)/(k : ℝ) ≤
+      (((k : ℝ)-1) * ((k+(T-k) : ℕ) : ℝ)) /
+        ((k : ℝ) * (((k+(T-k) : ℕ) : ℝ)-1)) := by
+    simp only [Nat.cast_add]
+    apply (div_le_div_iff₀ (by positivity : (0:ℝ)<k) (by nlinarith :
+      (0:ℝ) < (k:ℝ)*((k:ℝ)+(T-k:ℕ)-1))).mpr
+    nlinarith
+  exact hb.trans hsmall
+
+noncomputable def twinFactor (l : ℕ) : ℝ :=
+  if l.Prime ∧ l ≠ 2 then 1 - 1 / ((l : ℝ)-1)^2 else 1
+
+lemma twinFactor_nonneg (l : ℕ) : 0 ≤ twinFactor l := by
+  unfold twinFactor
+  split_ifs with h
+  · have hl3 : 3 ≤ l := by have := h.1.two_le; omega
+    have hl1 : 1 ≤ l := by omega
+    simpa [Nat.cast_sub hl1] using integer_factor_nonneg (j := l-1) (by omega)
+  · norm_num
+
+lemma twinFactor_le_one (l : ℕ) : twinFactor l ≤ 1 := by
+  unfold twinFactor
+  split_ifs
+  · have h : 0 ≤ 1 / ((l : ℝ)-1)^2 := by positivity
+    linarith
+  · exact le_refl _
+
+lemma twinFactor_multipliable : Multipliable twinFactor :=
+  real_multipliable_of_unit_interval _ twinFactor_nonneg twinFactor_le_one
+
+lemma tail_finite_lower {p : ℕ} (hp : 3 ≤ p) (s : Finset ℕ)
+    (hs : ∀ l ∈ s, p ≤ l) :
+    ((p : ℝ)-2)/((p : ℝ)-1) ≤ ∏ l ∈ s, twinFactor l := by
+  classical
+  let t := s.filter (fun l => l.Prime ∧ l ≠ 2)
+  have htel := integer_tail_lower (p-1) (by omega) (t.image (fun l => l-1))
+    (by intro i hi; obtain ⟨l, hl, rfl⟩ := Finset.mem_image.mp hi
+        have := hs l (Finset.mem_filter.mp hl).1; omega)
+  rw [Finset.prod_image] at htel
+  · have hid : (∏ l ∈ t, (1 - 1 / ((l-1 : ℕ) : ℝ)^2)) = ∏ l ∈ s, twinFactor l := by
+      rw [show t = s.filter (fun l => l.Prime ∧ l ≠ 2) from rfl, Finset.prod_filter]
+      apply Finset.prod_congr rfl
+      intro l hl
+      by_cases hc : l.Prime ∧ l ≠ 2
+      · have hl1 : 1 ≤ l := le_trans (by omega) (hs l hl)
+        simp [hc, twinFactor, Nat.cast_sub hl1]
+      · simp [hc, twinFactor]
+    rw [hid] at htel
+    have hp1 : 1 ≤ p := by omega
+    norm_num [Nat.cast_sub hp1, sub_sub] at htel
+    exact htel
+  · intro l hl j hj h
+    have hlp := hs l (Finset.mem_filter.mp hl).1
+    have hjp := hs j (Finset.mem_filter.mp hj).1
+    omega
+
+
+
+noncomputable def tailFactor (p l : ℕ) : ℝ := if p ≤ l then twinFactor l else 1
+
+lemma tailFactor_multipliable (p : ℕ) : Multipliable (tailFactor p) := by
+  apply real_multipliable_of_unit_interval
+  · intro l; unfold tailFactor; split_ifs; exact twinFactor_nonneg l; norm_num
+  · intro l; unfold tailFactor; split_ifs; exact twinFactor_le_one l; exact le_refl _
+
+lemma tail_infinite_lower {p : ℕ} (hp : 3 ≤ p) :
+    ((p : ℝ)-2)/((p : ℝ)-1) ≤ ∏' l, tailFactor p l := by
+  apply le_hasProd_of_le_prod (tailFactor_multipliable p).hasProd
+  intro s
+  have h := tail_finite_lower hp (s.filter (fun l => p ≤ l))
+    (fun l hl => (Finset.mem_filter.mp hl).2)
+  simpa [Finset.prod_filter, tailFactor] using h
+
+noncomputable def localMultiplier (s : Finset ℕ) (l : ℕ) : ℝ :=
+  if l ∈ s then ((l : ℝ)-1)/((l : ℝ)-2) else 1
+
+lemma localMultiplier_hasProd (s : Finset ℕ) :
+    HasProd (localMultiplier s) (∏ l ∈ s, ((l : ℝ)-1)/((l : ℝ)-2)) := by
+  classical
+  convert (hasProd_prod_of_ne_finset_one (f := localMultiplier s)
+    (s := s) (by intro l hl; simp [localMultiplier, hl])) using 1
+  apply Finset.prod_congr rfl
+  intro l hl
+  simp [localMultiplier, hl]
+
+noncomputable def forcedPrefix (p : ℕ) : Finset ℕ := p.primesBelow.erase 2
+noncomputable def prefixFactor (p l : ℕ) : ℝ :=
+  if l ∈ forcedPrefix p then (l : ℝ)/((l : ℝ)-1) else 1
+
+lemma prefixFactor_hasProd (p : ℕ) :
+    HasProd (prefixFactor p) (∏ l ∈ forcedPrefix p, (l : ℝ)/((l : ℝ)-1)) := by
+  classical
+  convert (hasProd_prod_of_ne_finset_one (f := prefixFactor p)
+    (s := forcedPrefix p) (by intro l hl; simp [prefixFactor, hl])) using 1
+  apply Finset.prod_congr rfl
+  intro l hl
+  simp [prefixFactor, hl]
+
+lemma cancellation_pointwise {p : ℕ} (_hp : 3 ≤ p) (l : ℕ) :
+    twinFactor l * localMultiplier (forcedPrefix p) l =
+      prefixFactor p l * tailFactor p l := by
+  classical
+  by_cases hl : l ∈ forcedPrefix p
+  · have hler : l ≠ 2 ∧ l ∈ p.primesBelow := Finset.mem_erase.mp hl
+    have hprime := Nat.prime_of_mem_primesBelow hler.2
+    have hlt := Nat.lt_of_mem_primesBelow hler.2
+    have hl3 : 3 ≤ l := by have := hprime.two_le; omega
+    have hlR : (3 : ℝ) ≤ l := by exact_mod_cast hl3
+    simp [localMultiplier, prefixFactor, hl, tailFactor,
+      Nat.not_le.mpr hlt, twinFactor, hprime, hler.1]
+    field_simp [show (l : ℝ)-1 ≠ 0 by nlinarith, show (l : ℝ)-2 ≠ 0 by nlinarith]
+    ring
+  · by_cases hpl : p ≤ l
+    · simp [localMultiplier, prefixFactor, tailFactor, hl, hpl]
+    · have hfac : twinFactor l = 1 := by
+        unfold twinFactor
+        split_ifs with hc
+        · exfalso
+          apply hl
+          exact Finset.mem_erase.mpr ⟨hc.2, Nat.mem_primesBelow.mpr ⟨by omega, hc.1⟩⟩
+        · rfl
+      simp [localMultiplier, prefixFactor, tailFactor, hl, hpl, hfac]
+
+lemma twin_prefix_tail {p : ℕ} (hp : 3 ≤ p) :
+    GoldbachRound11.twinConstant *
+      (∏ l ∈ forcedPrefix p, ((l : ℝ)-1)/((l : ℝ)-2)) =
+      (∏ l ∈ forcedPrefix p, (l : ℝ)/((l : ℝ)-1)) * (∏' l, tailFactor p l) := by
+  have h1 := twinFactor_multipliable.hasProd.mul (localMultiplier_hasProd (forcedPrefix p))
+  have h2 := (prefixFactor_hasProd p).mul (tailFactor_multipliable p).hasProd
+  have heq : (fun l => twinFactor l * localMultiplier (forcedPrefix p) l) =
+      (fun l => prefixFactor p l * tailFactor p l) := funext (cancellation_pointwise hp)
+  rw [heq] at h1
+  change HasProd _ (GoldbachRound11.twinConstant * _) at h1
+  exact tendsto_nhds_unique h1 h2
+
+lemma eulerPrefix_eq_forced {p : ℕ} (hp : 3 ≤ p) :
+    eulerPrefix p = 2 * ∏ l ∈ forcedPrefix p, (l : ℝ)/((l : ℝ)-1) := by
+  classical
+  have h2 : 2 ∈ p.primesBelow := Nat.mem_primesBelow.mpr ⟨by omega, Nat.prime_two⟩
+  unfold eulerPrefix forcedPrefix
+  rw [← Finset.mul_prod_erase p.primesBelow (fun l => (l : ℝ)/((l : ℝ)-1)) h2]
+  norm_num
+
+lemma localFactor_ge_one {l : ℕ} (hl : l.Prime) (hl2 : l ≠ 2) :
+    1 ≤ ((l : ℝ)-1)/((l : ℝ)-2) := by
+  have hl3 : 3 ≤ l := by have := hl.two_le; omega
+  have hlR : (3 : ℝ) ≤ l := by exact_mod_cast hl3
+  apply (one_le_div (by nlinarith : (0 : ℝ) < (l : ℝ)-2)).mpr
+  linarith
+
+lemma singularSeries_ge_euler_tail {N p : ℕ} (hN : N ≠ 0) (heven : Even N)
+    (hp : 3 ≤ p) (hforced : ∀ l, l.Prime → l < p → l ∣ N) :
+    eulerPrefix p * (((p : ℝ)-2)/((p : ℝ)-1)) ≤ GoldbachRound11.singularSeries N := by
+  classical
+  have hsub : forcedPrefix p ⊆ N.primeFactors.erase 2 := by
+    intro l hl
+    obtain ⟨hl2, hlp⟩ := Finset.mem_erase.mp hl
+    exact Finset.mem_erase.mpr ⟨hl2, Nat.mem_primeFactors.mpr
+      ⟨Nat.prime_of_mem_primesBelow hlp, hforced l (Nat.prime_of_mem_primesBelow hlp)
+        (Nat.lt_of_mem_primesBelow hlp), hN⟩⟩
+  have hprod : (∏ l ∈ forcedPrefix p, ((l : ℝ)-1)/((l : ℝ)-2)) ≤
+      ∏ l ∈ N.primeFactors.erase 2, ((l : ℝ)-1)/((l : ℝ)-2) := by
+    rw [← Finset.prod_sdiff hsub]
+    have hx : 1 ≤ ∏ l ∈ (N.primeFactors.erase 2) \ forcedPrefix p,
+        ((l : ℝ)-1)/((l : ℝ)-2) := by
+      have hb := Finset.prod_le_prod (s := (N.primeFactors.erase 2) \ forcedPrefix p)
+        (f := fun _ : ℕ => (1 : ℝ)) (g := fun l : ℕ => ((l : ℝ)-1)/((l : ℝ)-2))
+        (fun _ _ => by norm_num)
+        (fun l hl => by
+          obtain ⟨hl2, hlf⟩ := Finset.mem_erase.mp (Finset.mem_sdiff.mp hl).1
+          exact localFactor_ge_one (Nat.mem_primeFactors.mp hlf).1 hl2)
+      simpa using hb
+    have hn : 0 ≤ ∏ l ∈ forcedPrefix p, ((l : ℝ)-1)/((l : ℝ)-2) :=
+      Finset.prod_nonneg (fun l hl => by
+        obtain ⟨hl2, hlf⟩ := Finset.mem_erase.mp hl
+        exact le_trans (by norm_num) (localFactor_ge_one (Nat.prime_of_mem_primesBelow hlf) hl2))
+    simpa using mul_le_mul_of_nonneg_right hx hn
+  have hC : 0 ≤ GoldbachRound11.twinConstant :=
+    le_hasProd_of_le_prod twinFactor_multipliable.hasProd
+      (fun s => Finset.prod_nonneg (fun l _ => twinFactor_nonneg l))
+  have hS : 2 * GoldbachRound11.twinConstant *
+      (∏ l ∈ forcedPrefix p, ((l : ℝ)-1)/((l : ℝ)-2)) ≤ GoldbachRound11.singularSeries N := by
+    unfold GoldbachRound11.singularSeries
+    rw [if_pos heven]
+    exact mul_le_mul_of_nonneg_left hprod (by positivity)
+  have hE : 0 ≤ ∏ l ∈ forcedPrefix p, (l : ℝ)/((l : ℝ)-1) :=
+    Finset.prod_nonneg (fun l hl => by
+      have hpR : (2 : ℝ) ≤ l := by
+        exact_mod_cast (Nat.prime_of_mem_primesBelow (Finset.mem_erase.mp hl).2).two_le
+      apply div_nonneg (by positivity); linarith)
+  rw [mul_assoc, twin_prefix_tail hp, ← mul_assoc, ← eulerPrefix_eq_forced hp] at hS
+  exact (mul_le_mul_of_nonneg_left (tail_infinite_lower hp)
+    (by rw [eulerPrefix_eq_forced hp]; positivity)).trans hS
+
+lemma singularSeries_ge_harmonic_tail {N p : ℕ} (hN : N ≠ 0) (heven : Even N)
+    (hp : 3 ≤ p) (hforced : ∀ l, l.Prime → l < p → l ∣ N) :
+    (harmonic (p-1) : ℝ) * (((p : ℝ)-2)/((p : ℝ)-1)) ≤ GoldbachRound11.singularSeries N := by
+  have hpR : (3 : ℝ) ≤ p := by exact_mod_cast hp
+  exact (mul_le_mul_of_nonneg_right (harmonic_le_eulerPrefix (by omega))
+    (div_nonneg (by linarith) (by linarith))).trans
+      (singularSeries_ge_euler_tail hN heven hp hforced)
+
+#print axioms harmonic_le_eulerPrefix
+#print axioms integer_tail_product
+#print axioms twinFactor_multipliable
+#print axioms tail_infinite_lower
+#print axioms twin_prefix_tail
+#print axioms singularSeries_ge_harmonic_tail
+end GoldbachRound16.Anchor
+
+

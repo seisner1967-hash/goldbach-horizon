@@ -1,0 +1,222 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_LAMBDA_MAIN30_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_READS_ONLY_NOT_PREPARED",
+  "new_source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinLambda22.lean",
+    "sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+    "scope": "FULL",
+    "chunks": [
+      "04ad2f",
+      "909df9"
+    ],
+    "bytes": 16534
+  },
+  "contract": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_contract22.md",
+    "sha256": "f22355b45749755605a2e28245984760f72e1d49a45323a94a8d4a11c9e6a09a",
+    "scope": "FULL",
+    "chunk": "e10458"
+  },
+  "catalog": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_catalog22.json",
+    "sha256": "c580f9713f97677d0b866db62102d1c8802be3980278c20ae313e6a6c3f60b4a",
+    "scope": "FULL",
+    "chunk": "e10458",
+    "count_method": "MANUAL_SOURCE_INSPECTION_30"
+  },
+  "pending_bridge": {
+    "source": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinExpTailBridge22.lean",
+    "source_sha256": "4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c",
+    "catalog": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/pending_bridge_catalog22.json",
+    "catalog_sha256": "86164d7575b79c3ace42ebb1f56d2b88be0078873f76c0998175c1c0ae6604cb",
+    "scope": "FULL",
+    "chunk": "e10458",
+    "status": "PENDING_TAIL_DEPENDENCY_NOT_MAIN30_NOT_SELECTED"
+  },
+  "readonly_Holo27": {
+    "source": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/sources/ComplexGammaMellinHolomorphy22.lean",
+    "source_sha256": "b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2",
+    "source_scope": "FULL",
+    "source_chunk": "851b8a",
+    "receipt_and_ROOT_observation_scope": "FULL",
+    "receipt_and_ROOT_observation_chunk": "c58bac",
+    "olean_scope": "BYTE_HASH_ONLY",
+    "olean_sha256": "f831358e15e1a088988b8bc102a3f7ca23df4a32c3210cfb072273ae4abcccbf",
+    "provenance": "Independent actual PASS27, ROOT observed"
+  },
+  "readonly_Local26": {
+    "source_sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+    "source_scope": "FULL",
+    "source_chunk": "91c20c",
+    "receipt_and_ROOT_observation_scope": "FULL",
+    "receipt_and_ROOT_observation_chunk": "ac4cfa",
+    "olean_scope": "BYTE_HASH_ONLY",
+    "olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+    "provenance": "Actual Local row PASS22 in globally FAILED26; only Local independently acquired"
+  },
+  "API_reads": [
+    {
+      "path": "Mathlib/NumberTheory/VonMangoldt.lean",
+      "scope": "FULL",
+      "chunks": "c629ac",
+      "purpose": "True prime-power definition/nonnegative; divisor formulas read as context and excluded from this proof",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/NumberTheory/ArithmeticFunction.lean",
+      "scope": "TARGETED101-110",
+      "chunks": "fb36b7",
+      "purpose": "map_zero",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/PSeries.lean",
+      "scope": "TARGETED283-302",
+      "chunks": "b7d959",
+      "purpose": "summable_nat_rpow",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/SumIntegralComparisons.lean",
+      "scope": "TARGETED71-130;39-45;94-106",
+      "chunks": "55968c;d0c640;d1ae86",
+      "purpose": "AntitoneOn.sum_le_integral",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/NormedSpace/FunctionSeries.lean",
+      "scope": "TARGETED110-114",
+      "chunks": "6db402",
+      "purpose": "continuous_tsum",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Integrals.lean",
+      "scope": "TARGETED338-357;299-318",
+      "chunks": "d0c640;360ae2",
+      "purpose": "integral_rpow is global after intervalIntegral ends at307",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Complex/Log.lean",
+      "scope": "TARGETED73-93;56-64",
+      "chunks": "0c04f9;fb36b7",
+      "purpose": "log_ofReal_mul; forward ofReal_log",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Pow/Complex.lean",
+      "scope": "TARGETED41-80;170-203;25-38",
+      "chunks": "0c04f9;fb36b7",
+      "purpose": "principal cpow and norm on positive real base",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+      "scope": "TARGETED593-607;460-464;599-603",
+      "chunks": "bc0f2f;582d04;b56350",
+      "purpose": "rpow monotonicity, log_rpow",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Data/Complex/Basic.lean",
+      "scope": "TARGETED435-442",
+      "chunks": "fb36b7",
+      "purpose": "natCast_re and natCast_im",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+      "scope": "TARGETED127-159",
+      "chunks": "b7d959",
+      "purpose": "integral_tsum_of_summable_integral_norm",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/Bochner.lean",
+      "scope": "TARGETED818-825",
+      "chunks": "439fca",
+      "purpose": "integral_mul_left",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Topology/Algebra/InfiniteSum/Real.lean",
+      "scope": "TARGETED82-98",
+      "chunks": "f75ab9",
+      "purpose": "Real.tsum_le_of_sum_range_le",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Topology/Algebra/InfiniteSum/Ring.lean",
+      "scope": "TARGETED90-104",
+      "chunks": "439fca",
+      "purpose": "tsum_mul_left/right",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Data/Nat/Prime/Defs.lean",
+      "scope": "TARGETED270-282",
+      "chunks": "582d04",
+      "purpose": "minFac_pos/le",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "scope": "TARGETED172-174;276-278;121-135",
+      "chunks": "582d04;d4d261",
+      "purpose": "log_le_sub_one/log_le_log",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Group/InfiniteSum.lean",
+      "scope": "TARGETED99-107;152-165",
+      "chunks": "d1ae86;b56350",
+      "purpose": "Summable.of_norm_bounded/of_norm",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    },
+    {
+      "path": "Mathlib/Topology/Algebra/InfiniteSum/NatInt.lean",
+      "scope": "TARGETED16-115;219-233",
+      "chunks": "06e8ed;b56350",
+      "purpose": "to_additive prod_mul_tprod_nat_add yields sum_add_tsum_nat_add",
+      "read_context": "SAME_AUTHOR_THIS_CONVERSATION; cache not FULL except VonMangoldt"
+    }
+  ],
+  "metadata": {
+    "initial_external_bytes": "ceca80/d4d261",
+    "final_external_and_new_own_byte_verification": "5bfb25 exit0;26 external expected bindings unchanged;2 new API files hashed; own main30 source unchanged",
+    "scope": "FILESYSTEM_SHA_AND_CONTROL_JSON_ONLY_NOT_CANDIDATE_SOURCE_PARSER_OR_IMPORT_CLOSURE"
+  },
+  "excluded_CONTEXT_reads": [
+    {
+      "module": "MellinLambdaInterchange22",
+      "scope": "FULL",
+      "chunk": "68a7f1",
+      "used_as_dependency": false
+    },
+    {
+      "module": "ThermalArithmeticTrace22",
+      "scope": "FULL",
+      "chunk": "5cb8f9",
+      "used_as_dependency": false
+    },
+    {
+      "module": "ZetaEulerLambda22",
+      "scope": "FULL",
+      "chunk": "9ae57f",
+      "used_as_dependency": false
+    }
+  ],
+  "excluded_truncated_outputs": [
+    "2ddeb4 mixed output not FULL",
+    "d2d3e9 Tailreview not FULL; later retrieved separately4abc03"
+  ],
+  "author_compiler_invocations": 0,
+  "API_probes": 0,
+  "candidate_parser_invocations": 0,
+  "Python_math_invocations": 0,
+  "native_invocations": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "WIN": false
+}

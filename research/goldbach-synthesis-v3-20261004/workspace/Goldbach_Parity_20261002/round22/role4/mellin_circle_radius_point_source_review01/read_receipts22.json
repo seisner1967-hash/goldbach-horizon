@@ -1,0 +1,122 @@
+{
+  "schema": "ROUND22_MELLIN_CIRCLE_RADIUS_POINT_INDEPENDENT_SOURCE_REVIEW_READS",
+  "status": "SOURCE_ONLY_NO_EXECUTION",
+  "reviewer": "ROLE4",
+  "source_author": "ROLE6",
+  "scope": "Independent review of new ROLE6 scalar Python source and PAPER connectors; upstream ROLE4 mathematical sources referenced, not newly independently adjudicated.",
+  "receipts": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/radius_point22.py",
+      "bytes": 6987,
+      "sha256": "a612d5863785a1aa2c29da8333a448087a38afccc5567ef95a7584807dfa7078",
+      "read_scope": "FULL_NEW_ROLE6_SOURCE",
+      "chunk": "4d785d",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/source_contract22.md",
+      "bytes": 4431,
+      "sha256": "d62fe8d04d8ec4685caca029305c3be80817f180e868570e174dc18096559c41",
+      "read_scope": "FULL_NEW_ROLE6_CONTRACT",
+      "chunk": "e93d1d",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/source_read_receipts22.json",
+      "bytes": 5041,
+      "sha256": "3ac881f7d042bf7ff7c6f6cc36f204934c2788f175bc92282e9fdbd03ea2d851",
+      "read_scope": "FULL_NEW_ROLE6_AUTHOR_READ_RECEIPTS",
+      "chunk": "6ab573",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/source_handoff22.json",
+      "bytes": 6040,
+      "sha256": "a338cb739b13f2d7997b94a97c248e6d4041a8cb8ce0c468385bc8b843ab5f15",
+      "read_scope": "FULL_NEW_ROLE6_HANDOFF",
+      "chunk": "c9c87d",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean",
+      "bytes": 20097,
+      "sha256": "bf9b8257760a20d33dd21714221401cd8fd327596f72e56c4d024200b2cb6c4c",
+      "read_scope": "TARGETED1-45_AND346-371_DEFINITIONS_CONTINUITY_NOT_ELABORATION",
+      "chunk": "fc733d",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_contract22.md",
+      "bytes": 6806,
+      "sha256": "b690408851652f6031f226d3f01c13105c68c8a3be7338593654dce8002cdbcf",
+      "read_scope": "FULL_UPSTREAM_CONTRACT",
+      "chunk": "e38e69",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_catalog22.json",
+      "bytes": 6962,
+      "sha256": "c9f14b5e8fe96c02a746810500ab18de75739ea3bed42440a00bd98a4e0a13ab",
+      "read_scope": "BYTE_HASH_ONLY_MANUAL_CATALOG_HISTORICALLY_FROZEN",
+      "chunk": "e3748c",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_handoff22.json",
+      "bytes": 21709,
+      "sha256": "e55aa804e43110b4a1f46c6cd1733bd22eddfe45019c8824726af344d3939920",
+      "read_scope": "BYTE_HASH_ONLY_CONTROL_HANDOFF_HISTORICALLY_FROZEN",
+      "chunk": "e3748c",
+      "hash_chunk": "e3748c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+      "bytes": 12480,
+      "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+      "read_scope": "FULL_PAPER_ONLY",
+      "chunk": "c8d067",
+      "hash_chunk": "e3748c"
+    }
+  ],
+  "runtime_metadata": {
+    "path": "C:/Users/Utilisateur/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "bytes": 107312,
+    "sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+    "scope": "BYTE_HASH_AND_SIZE_ONLY_NOT_EXECUTABLE_RUN_OR_FULL_CONTENT_READ",
+    "chunk": "280fc4"
+  },
+  "observations": [
+    {
+      "chunk": "eace2d",
+      "scope": "RG_FILENAMES_ONLY"
+    },
+    {
+      "chunk": "7abefc",
+      "scope": "TARGETED_SOURCE_TEXT_SEARCH_ONLY"
+    },
+    {
+      "chunk": "280fc4",
+      "scope": "NEW_REVIEW_AND_FUTURE_ACTUAL_ABSENT_FILE_METADATA_ONLY"
+    }
+  ],
+  "mathematical_review": "Manual finite Taylor recurrence, multinomial positive subset, q directed reciprocal and square, all radius factors, PAPER U/atan/d/epsilon substitutions and scalar-only boundary.",
+  "execution": {
+    "python_calls": 0,
+    "candidate_imports": 0,
+    "candidate_parsers": 0,
+    "math_runtime_calls": 0,
+    "Lean_calls": 0,
+    "native_calls": 0,
+    "probes": 0,
+    "PREP_created": 0,
+    "ROOT_gate_created": 0,
+    "actual_created": 0
+  },
+  "conservation": "Reads and byte hashes only on prior artifacts; writes only to a new ROLE4 review directory. No fresh full archive sweep claimed.",
+  "independent_scope_exclusions": [
+    "No new independent review of ROLE4 upstream mathematical authoring",
+    "No candidate syntax parser",
+    "No actual scalar comparison",
+    "No coefficient or D_N"
+  ]
+}

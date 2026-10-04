@@ -1,0 +1,277 @@
+{
+  "asymptotic": false,
+  "canonical_attempts": 3,
+  "conservation_after": {
+    "all13_role3_invocation_log_snapshot_pairs_preserved": true,
+    "baseline_sha256": "1c21af8d00924e126bf541c03f13277fa699c6f8e9d3a9edbbda337b9cead420",
+    "controller_97_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "files": 799,
+    "flags_describe_this_readonly_verification_not_global_execution": true,
+    "fresh_judge_Lean_sources_oleans_logs_manifests_preserved": true,
+    "mathematical_identity_certified_by_conservation": false,
+    "nine_real_failed_Lean_attempts_preserved": true,
+    "numeric30_bindings_preserved": true,
+    "numeric_contract_launched_by_this_verification": false,
+    "old_Lean_recompiled": false,
+    "old_PASS_replayed": false,
+    "old_PDF_rerendered": false,
+    "old_W_recomputed": false,
+    "old_dependency_recompiled": false,
+    "old_producer_executed_by_this_verification": false,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "previous_protected_files": 701,
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\previous_artifacts_sha256.json",
+    "round16_controller_sha256": "10d9f68fc649d965aa5eecac96fecf5fd20f705527d42f52b855662acec02332",
+    "round16_files": 98,
+    "scope": "READ_ONLY_CONSERVATION_VERIFICATION",
+    "status": "PRESERVED",
+    "two_round16_numeric_copies_bytes_and_fields_preserved": true
+  },
+  "conservation_before": {
+    "all13_role3_invocation_log_snapshot_pairs_preserved": true,
+    "baseline_sha256": "1c21af8d00924e126bf541c03f13277fa699c6f8e9d3a9edbbda337b9cead420",
+    "controller_97_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "files": 799,
+    "flags_describe_this_readonly_verification_not_global_execution": true,
+    "fresh_judge_Lean_sources_oleans_logs_manifests_preserved": true,
+    "mathematical_identity_certified_by_conservation": false,
+    "nine_real_failed_Lean_attempts_preserved": true,
+    "numeric30_bindings_preserved": true,
+    "numeric_contract_launched_by_this_verification": false,
+    "old_Lean_recompiled": false,
+    "old_PASS_replayed": false,
+    "old_PDF_rerendered": false,
+    "old_W_recomputed": false,
+    "old_dependency_recompiled": false,
+    "old_producer_executed_by_this_verification": false,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "previous_protected_files": 701,
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\previous_artifacts_sha256.json",
+    "round16_controller_sha256": "10d9f68fc649d965aa5eecac96fecf5fd20f705527d42f52b855662acec02332",
+    "round16_files": 98,
+    "scope": "READ_ONLY_CONSERVATION_VERIFICATION",
+    "status": "PRESERVED",
+    "two_round16_numeric_copies_bytes_and_fields_preserved": true
+  },
+  "conservation_scope_clarification": "Conservation flags describe only READ_ONLY_CONSERVATION_VERIFICATION. numeric_contract_launched_by_this_verification=false does not deny the two selected launches, proven by canonical/replay receipts. mathematical_identity_certified_by_conservation=false is not a claim about the new finite gate identities. Frozen preflight/PASS artifacts were not rewritten.",
+  "falsifiers_new_local": 3,
+  "formal_roles_and_historical_dependencies_counted_separately": true,
+  "interval_certificate_positions": 390,
+  "isolated_replays": 2,
+  "new_Lean_modules_by_this_role": 0,
+  "new_Lean_theorems_by_this_role": 0,
+  "new_bank_bindings": {
+    "rough": {
+      "bytes_and_fields_identical": true,
+      "canonical_attempts": 1,
+      "canonical_receipt_sha256": "2d56e554e755420e5ae3cb91115cf7f213af52db3b50a253d1b3c773674ce689",
+      "gate_sha256": "e4dd2c8e12cbfd34c90208ffb90745472bc8e2c3a3f777681a9d52735fcadfbb",
+      "isolated_replays": 1,
+      "real_failed_attempts": 0,
+      "replay_receipt_sha256": "7273b4a611a130e6d92cf14347718a2b966b8e13be8029ac788b3b76ddf2b392",
+      "source_sha256": "5fe6120ab216dd3320798574e9043db071141802a00c2f300278c3ac5929a698"
+    },
+    "typeii": {
+      "bytes_and_fields_identical": true,
+      "canonical_attempts": 2,
+      "canonical_receipt_sha256": "e7834a25b30680e98c531d0674ae540c4c6533b77d3c861242f019518e431c75",
+      "gate_sha256": "b3af5c0357201e2a710a2a6c761f34ec1d63d2c87fbbd459a54154f925e6ad5e",
+      "isolated_replays": 1,
+      "real_failed_attempts": 1,
+      "replay_receipt_sha256": "f70dbd1d68322743a99af8970760dbb433a84451862dd0b67b892f91832717d5",
+      "source_sha256": "7ec02d82d4610547456078fec5b099b8b09865aea1d9ded2041b3f90965ed1b2"
+    }
+  },
+  "new_banks": 2,
+  "noGlobal": true,
+  "numeric_noLean": true,
+  "old_producer_PASS_Lean_dependency_render_W_runs": 0,
+  "own_assets_before_receipt": 32,
+  "own_assets_sha256": {
+    "agent6.md": "629f3ea869c027919970544edf68e9701d8fe3a6d9336a52994d34e1178328af",
+    "conservation.json": "b3994fd8eb7ac9164eb01dccec1b5ad9556ab963811882b83c7c75cd35a91412",
+    "conservation.py": "95dd8a69f704c2f96fee6cea9a1e388513a29dcb3e097b57c9a612a87647db37",
+    "finalize_numeric.py": "f96effb77dee8560c7bbc1887c50cba2cd546c3ff047314a0d8a2bd3ea2bcde5",
+    "isolated_rough/rough.json": "e4dd2c8e12cbfd34c90208ffb90745472bc8e2c3a3f777681a9d52735fcadfbb",
+    "isolated_typeii/typeii.json": "b3af5c0357201e2a710a2a6c761f34ec1d63d2c87fbbd459a54154f925e6ad5e",
+    "previous_artifacts_sha256.json": "1c21af8d00924e126bf541c03f13277fa699c6f8e9d3a9edbbda337b9cead420",
+    "replay_new.py": "8b87b0d538f42c72e696b1dbec2cde81b82f847b5fdea0c4475adcbfaae7a12f",
+    "role6/closure_receipt.json": "676f87b535133824bc4d3ffcd5f5a450176403197ce6ee80ebf8703b489252be",
+    "role6/conservation_after.json": "9adb53e93114a4c88ac24379b3e5d1624eae08e3fb0dcdf0c1206d98283d457f",
+    "role6/conservation_attempt01.log": "b3994fd8eb7ac9164eb01dccec1b5ad9556ab963811882b83c7c75cd35a91412",
+    "role6/conservation_attempt01_source.txt": "95dd8a69f704c2f96fee6cea9a1e388513a29dcb3e097b57c9a612a87647db37",
+    "role6/conservation_final_receipt.json": "b6c71dccfadaf14a452b274e43d1a5788850454d0fb47be1ff097a83e35207f0",
+    "role6/rough_attempt01.log": "278f13b64998e0b4bc348554bd8c0f279777987a158b81f79a26ea784c6f5acf",
+    "role6/rough_attempt01_source.txt": "5fe6120ab216dd3320798574e9043db071141802a00c2f300278c3ac5929a698",
+    "role6/rough_canonical_success.json": "2d56e554e755420e5ae3cb91115cf7f213af52db3b50a253d1b3c773674ce689",
+    "role6/rough_isolated_replay.log": "278f13b64998e0b4bc348554bd8c0f279777987a158b81f79a26ea784c6f5acf",
+    "role6/rough_replay_receipt.json": "7273b4a611a130e6d92cf14347718a2b966b8e13be8029ac788b3b76ddf2b392",
+    "role6/typeii_attempt01.log": "da05cdd2526935204ce54d3c3f8b1c4d37d62eaaf170cf0839f5d1cdcca4d649",
+    "role6/typeii_attempt01_failure.json": "ec07e982b90dd7e355e80bcd88491757b30a18d5b52dfbc4462bb23c111a7172",
+    "role6/typeii_attempt01_source.txt": "a58db7311d56c51bcbe0591d1f3c22f3cb21fc13c39a9ffd4e8eeb6e74ebdc1f",
+    "role6/typeii_attempt02.log": "4d69bb649a51087835f850bb576dcc183c46cd650a3ec055b0c2293aa9f07f43",
+    "role6/typeii_attempt02_source.txt": "7ec02d82d4610547456078fec5b099b8b09865aea1d9ded2041b3f90965ed1b2",
+    "role6/typeii_canonical_success.json": "e7834a25b30680e98c531d0674ae540c4c6533b77d3c861242f019518e431c75",
+    "role6/typeii_isolated_replay.log": "4d69bb649a51087835f850bb576dcc183c46cd650a3ec055b0c2293aa9f07f43",
+    "role6/typeii_replay_receipt.json": "f70dbd1d68322743a99af8970760dbb433a84451862dd0b67b892f91832717d5",
+    "rough.json": "e4dd2c8e12cbfd34c90208ffb90745472bc8e2c3a3f777681a9d52735fcadfbb",
+    "rough_checks.py": "5fe6120ab216dd3320798574e9043db071141802a00c2f300278c3ac5929a698",
+    "run_new.py": "7949db5255ad4d40dc4a0cd762a31b53231dd93f9cfcf8ddbfeedab3cf7465fc",
+    "shared.py": "f04f49f66622605cde1a3495ab6a19a75f976dc75b0563092d3c82e95a795280",
+    "typeii.json": "b3af5c0357201e2a710a2a6c761f34ec1d63d2c87fbbd459a54154f925e6ad5e",
+    "typeii_checks.py": "7ec02d82d4610547456078fec5b099b8b09865aea1d9ded2041b3f90965ed1b2"
+  },
+  "payments": false,
+  "post_replay_runs": 0,
+  "protected_previous_artifacts": 799,
+  "real_failed_numeric_attempts": 1,
+  "reports_FINAL_sha256": {
+    "agent1_calibrated_typeii.md": "446c2d8fe21c86b05fbaf0e2864e7129da1b964287f31ff4287c0a19251103a9",
+    "agent2_capacity_incidence.md": "2c3b2dfadb507925b0fdc92a69b5174353f8f93ba2fc188175dadf05b38ad8d7",
+    "role1/unit_mask_addendum.md": "51735b4ecd379b8b58066d24b952ff779347af5ae8a32ecd4b4ac303b7636cac"
+  },
+  "score": 0,
+  "status": "FINAL_ROUND17_ROLE6_NUMERIC_PARTIAL",
+  "summary": {
+    "rough": {
+      "active_A_R_S": {
+        "A": 11,
+        "R": 0,
+        "S": 18
+      },
+      "candidates": 252,
+      "cores": 28,
+      "entire_signed_sign": "POSITIVE",
+      "falsifier_statuses": [
+        "REFUTED_NEW_SMALL_FACTOR_ABSENCE_VERTEX",
+        "REFUTED_NEW_EXACT_LOCAL_COLLISIONS",
+        "REFUTED_NEW_FINITE_PROMOTION_ONLY"
+      ],
+      "first_resource_count_e1": 0,
+      "first_resource_count_e3": 4,
+      "kernels": 47,
+      "positive_deficit_sign": "POSITIVE",
+      "q_primes": 9,
+      "saturating_e": [
+        11,
+        17,
+        23,
+        29,
+        41,
+        47,
+        53,
+        59,
+        71,
+        77
+      ]
+    },
+    "typeii": {
+      "Gamma_signs": {
+        "0:1": "NEGATIVE",
+        "0:3": "POSITIVE",
+        "0:39": "POSITIVE",
+        "77:1": "NEGATIVE",
+        "77:3": "POSITIVE",
+        "77:39": "POSITIVE"
+      },
+      "J": {
+        "0:1": 64936,
+        "0:3": 43291,
+        "0:39": 39961,
+        "77:1": 50599,
+        "77:3": 33732,
+        "77:39": 31136
+      },
+      "TypeII_exact": {
+        "0:1": "-259563/64936",
+        "0:3": "-173345/43291",
+        "0:39": "-93236/39961",
+        "77:1": "-202939/50599",
+        "77:3": "-11425/2811",
+        "77:39": "-18647/7784"
+      },
+      "b_count": 162338,
+      "beta": 181,
+      "multiplicity_counts": {
+        "0": 144747,
+        "1": 17088,
+        "2": 503
+      },
+      "price_signs": {
+        "II": {
+          "E77": {
+            "1": "POSITIVE",
+            "3": "POSITIVE",
+            "39": "POSITIVE"
+          },
+          "L13": {
+            "0": "NEGATIVE",
+            "77": "NEGATIVE"
+          },
+          "L3": {
+            "0": "POSITIVE",
+            "77": "POSITIVE"
+          }
+        },
+        "II_raw": {
+          "E77": {
+            "1": "ZERO",
+            "3": "ZERO",
+            "39": "ZERO"
+          },
+          "L13": {
+            "0": "ZERO",
+            "77": "ZERO"
+          },
+          "L3": {
+            "0": "ZERO",
+            "77": "ZERO"
+          }
+        },
+        "theta": {
+          "E77": {
+            "1": "NEGATIVE",
+            "3": "NEGATIVE",
+            "39": "NEGATIVE"
+          },
+          "L13": {
+            "0": "NEGATIVE",
+            "77": "NEGATIVE"
+          },
+          "L3": {
+            "0": "NEGATIVE",
+            "77": "NEGATIVE"
+          }
+        }
+      },
+      "properpowers": 8,
+      "theta_count": 12460
+    }
+  },
+  "victory": false,
+  "whole_D_N_uncontrolled": true
+}

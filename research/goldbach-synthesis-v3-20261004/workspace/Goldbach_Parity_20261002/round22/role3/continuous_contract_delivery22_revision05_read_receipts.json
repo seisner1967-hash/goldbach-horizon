@@ -1,0 +1,139 @@
+{
+  "schema": "ROUND22_CONTINUOUS_CONTRACT_DELIVERY_REVISION05_READ_RECEIPT",
+  "utc": "2026-10-03T22:22:19.0898835Z",
+  "author": "ROLE3; actual numeric executor ROLE6",
+  "status": "DOCUMENTARY_DELIVERY_AFTER_EXTERNAL_METADATA_CLOSURE",
+  "official_Lean_modules": 82,
+  "official_auxiliary_declarations_including_defs": 1367,
+  "parent_session_id": 17351,
+  "parent_invocations": 1,
+  "retry_count": 0,
+  "parent_launch_tool_chunk": "676a58",
+  "parent_completion_tool_chunk": "b762cb",
+  "parent_exit_code_observed": 1,
+  "watchdog_wall_seconds": 3600,
+  "parent_receipt_present": false,
+  "parent_POST_present": false,
+  "checker_FIN_present": false,
+  "coefficient_report_present": false,
+  "closure_helper_invocations": 1,
+  "closure_helper_initial_chunk": "932a95",
+  "closure_helper_completion_chunk": "252cee",
+  "closure_helper_exit_code": 0,
+  "physically_preserved_inputs": 6456,
+  "capture_original_copy_pairs": 66,
+  "protected_archives": 3089,
+  "separate_metadata_controls": 5,
+  "actual_output_bindings": 83,
+  "large_payload_scope": "BYTES_AND_SHA_ONLY; no payload primitive arithmetic or coefficients recomputed",
+  "unknown_universal_process_graph": true,
+  "no_synthetic_parent_receipt": true,
+  "no_synthetic_parent_POST": true,
+  "new_native_invocations_in_documentation": 0,
+  "new_compiler_invocations": 0,
+  "mathematical_falsity_established": false,
+  "mutant_runs": 0,
+  "H1": false,
+  "D_N": false,
+  "WIN": false,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\continuous_contract_delivery22_revision05.txt",
+      "bytes": 9006,
+      "sha256": "a151870e9807771ba578fcbfb886002456f9e67db08409274b49709ebeb02020",
+      "scope": "FULL",
+      "tool_chunk": "f22260"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\continuous_contract_delivery22_revision04.txt",
+      "bytes": 8020,
+      "sha256": "f6cdd64d1f1d7853ed91ebdd004a46b97fbf49bd1b7964b52e140974f3af8e32",
+      "scope": "FULL_PREVIOUS_RECORDED_READING",
+      "tool_chunk": "3ad266"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\numeric_execution_closure22.json",
+      "bytes": 28419,
+      "sha256": "a99a5e58768d09a16c7a1ae248448be41016cac228fc57c69372d6abb2774df3",
+      "scope": "FULL",
+      "tool_chunk": "62e9a7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\closure_evidence_bindings22.json",
+      "bytes": 72941,
+      "sha256": "ad229461cba2a9b411801c024e443148b9ba2673508107e868a173b42c0ea184",
+      "scope": "PARSED_METADATA_ALL_ROWS_COUNTS_AND_SHA_NOT_RAW_FULL",
+      "tool_chunk": "62e9a7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\quiescence_evidence22.json",
+      "bytes": 1010,
+      "sha256": "2763645031ab61fdbeae88a8cd5d699d4a11b60381f132dd8e5c5da2ba94402a",
+      "scope": "FULL",
+      "tool_chunk": "932a95"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\actual_closure01_attempt01\\FIN.json",
+      "bytes": 294,
+      "sha256": "8cddbe1557c5f51cd5356ca92ba1063266a555330424c36045c7824d51c73d34",
+      "scope": "FULL",
+      "tool_chunk": "62e9a7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01\\WATCHDOG_TERMINATION_REQUEST.json",
+      "bytes": 208,
+      "sha256": "cd559e4e5a3355639dfe3d46d358537ee3ee9984d29206efa1781fc7f7e1f706",
+      "scope": "FULL",
+      "tool_chunk": "03842b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01\\producer_FIN.json",
+      "bytes": 997,
+      "sha256": "fdbb8187fb1ab37ac19d301d0b475da3ee9e48df004732bd60d930905280a520",
+      "scope": "FULL",
+      "tool_chunk": "03842b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch22\\adjudication.md",
+      "bytes": 2964,
+      "sha256": "6972ea6238f127dd5f3b7ec82c7ab3fd1fbd1815ce1e9fb31b0820b6a724be23",
+      "scope": "FULL_PREVIOUS_RECORDED_READING",
+      "tool_chunk": "d0d9ec"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch22\\sources\\ConcreteNTTA32Projection22.lean",
+      "bytes": 3783,
+      "sha256": "cefc07197945f1e9710895d4a01455861ae6db21365cc44dec206178e76af4c3",
+      "scope": "FULL",
+      "tool_chunk": "753653"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch24\\adjudication.md",
+      "bytes": 2766,
+      "sha256": "9d39695aeeda4d93535ecd18c15bd222244a514ce6fd6fa123cdcf4872212096",
+      "scope": "FULL",
+      "tool_chunk": "f22260"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\complex_gamma_mellin_source_review02.md",
+      "bytes": 5517,
+      "sha256": "ca32797494416b44fc688dd1d27898256419a0183ecfce3adab8ac037ba1923e",
+      "scope": "FULL",
+      "tool_chunk": "753653"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\signed_weil_source_review01\\review22.md",
+      "bytes": 6308,
+      "sha256": "4c356fc0030838251249cc0d9620060525ad764bc94de3726682ef8807ae9445",
+      "scope": "FULL_PREVIOUS_RECORDED_READING",
+      "tool_chunk": "925001"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\zero_orbit_source_review01\\review22.md",
+      "bytes": 4955,
+      "sha256": "aeb411a7605600e8d80e96c03a4958557ea4cd3e53e51f208c010d10a88c8b83",
+      "scope": "FULL_PREVIOUS_RECORDED_READING",
+      "tool_chunk": "925001"
+    }
+  ]
+}

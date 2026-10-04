@@ -1,0 +1,296 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_TAIL_SOURCE_HANDOFF_REVISION02",
+  "status": "SOURCE_ONLY_FROZEN_FOR_INDEPENDENT_REVIEW_NOT_PREPARED_NOT_COMPILED",
+  "author": "ROLE4",
+  "source": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/ComplexGammaMellinTail22.lean",
+  "source_sha256": "3002a4d39dfd6bd072f1a8f778de3752cf91bf60f831dd3345f5dd9631723852",
+  "source_bytes": 13314,
+  "catalog": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_catalog22.json",
+  "catalog_sha256": "0e259314344d92066fd25f4ada0737fa8cb184d0af844ee764e3c7e16fa986da",
+  "contract": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_contract22.md",
+  "contract_sha256": "bada33d12c4321a041cfe6fa2dd9c3bcf3cc53047676be519a85ba7b7e5713c3",
+  "read_receipts": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_read_receipts22.json",
+  "read_receipts_sha256": "1010d969ddbd0b1d94443eaccb9231969f7e9421972860f65df508d26817acd4",
+  "counts": {
+    "modules": 1,
+    "declarations": 22,
+    "theorems": 18,
+    "definitions": 4,
+    "qualified_print_axioms": 22,
+    "scope": "MANUAL_FULL_SOURCE_INSPECTION"
+  },
+  "revision": {
+    "old_source_sha256": "7dcce5beacdadc61dd067f9a6e176d70d5ff3c44cb6720b6f1d650068b67dcd5",
+    "changed_sites": 3,
+    "changes": [
+      "IntegrableOn.mono_set called explicitly on a typed restricted-domain integrability fact",
+      "integral_add_compl supplied the exact set Icc(-H)H",
+      "ContinuousAt composition supplied z -> (z,H) explicitly and beta-normalized"
+    ],
+    "declaration_statements_changed": false,
+    "domains_changed": false,
+    "free_majorant_or_L1_premise_added": false,
+    "old_source_and_attempt28_preserved": true
+  },
+  "previous_real_attempt": {
+    "directory": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch28/batch28_attempt01",
+    "START": "2026-10-03T23:54:17.724277UTC",
+    "FIN": "2026-10-03T23:54:52.190834UTC",
+    "exit_code": 1,
+    "olean_created": false,
+    "errors": 9,
+    "logical_sites": 3,
+    "axiom_prints": {
+      "standard": 15,
+      "recovery_sorryAx": 7
+    },
+    "module_credit": 0,
+    "log_sha256": "9f97625c6e08c35f5d06eef3c152b6588db84b315fb9616c67541fe3307cb7e0",
+    "receipt_sha256": "3d724ee2096e676738e55c33c65a36909418930b4a0e40c0a0d7086ad38c06da",
+    "FIN_sha256": "f426a2c77b5c2614751a554ba28de7022f376ed48626678e0c1cf004b367ec89",
+    "mathematical_counterexample_or_parity_failure": false
+  },
+  "mathematical_scope": {
+    "actual_functions": "Complex.Gamma(2+it) and principal complex cpow; complexGammaInverse and its actual interval truncation",
+    "error_domain": "Re(w)>0 and H>=0",
+    "radius_continuity_domain": "Re(w)>0 and H real",
+    "radius": "|w|^(-2)*sec(eta(w))^2*exp(-delta(w)*H)/(pi*delta(w))",
+    "eta": "(pi/2+|Arg(w)|)/2",
+    "delta": "(pi/2-|Arg(w)|)/2 > 0",
+    "both_signed_tails_constructed": true,
+    "final_exponential_identity_claimed": false,
+    "arithmetic_Lambda_series_identity_claimed": false,
+    "open": [
+      "Independent elaboration of this SOURCE revision",
+      "Continuity of the complex moving-threshold tail and a formal limit H->infinity",
+      "Separate exp(-w) bridge using genuine independently PASS27 holomorphy",
+      "Separate genuine Lambda infinite Mellin interchange and weighted truncation error",
+      "Uniform phased zeta/spectral producer with certified global remainder",
+      "Canonical prime-power and boundary raccords from monograph",
+      "A new quantitative signed cancellation that pays D_N target"
+    ]
+  },
+  "dependencies": {
+    "direct_local_import": "ComplexGammaMellinLocal22",
+    "direct_local_provenance": "Independently PASS22 row in actual26, whose global receipt is FAILED; ROOT26 observation validates only the Local row",
+    "source_sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+    "olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+    "readonly": true,
+    "recompilation_requested": false,
+    "transitive": "Gamma02 and Thermal20 remain readonly; actual closure is for a future preparation",
+    "excluded": [
+      "Holo27 is not an import of this Tail module",
+      "Old MellinLambdaInterchange SOURCE",
+      "Suspended Lambda-Mellin DRAFT30 and PENDING exp-tail bridge2",
+      "Numeric05 candidate inputs or verdicts"
+    ]
+  },
+  "bindings_count": 29,
+  "bindings_scope": "SOURCE_AND_TARGETED_API_BYTE_BINDINGS_ONLY_NOT_TRANSITIVE_IMPORT_PREPARATION",
+  "bindings": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source01/ComplexGammaMellinTail22.lean",
+      "bytes": 13010,
+      "sha256": "7dcce5beacdadc61dd067f9a6e176d70d5ff3c44cb6720b6f1d650068b67dcd5",
+      "scope": "PRESERVED_OLD_OWN_SOURCE_FULL_READ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source01/source_contract22.md",
+      "bytes": 3707,
+      "sha256": "35c816f307b724beb597c77115157a1503daaed80bba596e9d5682699a8cdca8",
+      "scope": "PRESERVED_OLD_OWN_SOURCE_FULL_READ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source01/source_catalog22.json",
+      "bytes": 1735,
+      "sha256": "2292627179524c8743c52a6295dc8e5361e64999af5e0b90f0a72375b90d3fe5",
+      "scope": "PRESERVED_OLD_OWN_SOURCE_FULL_READ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source01/source_read_receipts22.json",
+      "bytes": 5613,
+      "sha256": "1586831e195de9100fd7a33bb76054eedab077bd233f835a04365120f431db13",
+      "scope": "PRESERVED_OLD_OWN_SOURCE_FULL_READ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/sources/ComplexGammaMellinLocal22.lean",
+      "bytes": 10837,
+      "sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+      "scope": "PRESERVED_OLD_READONLY_ACTUAL26_LOCAL_PASS_OR_ROOT_OBSERVATION"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/batch26_attempt01/ComplexGammaMellinLocal22.olean",
+      "bytes": 414008,
+      "sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+      "scope": "PRESERVED_OLD_READONLY_ACTUAL26_LOCAL_PASS_OR_ROOT_OBSERVATION"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/batch26_attempt01/receipt.json",
+      "bytes": 11262,
+      "sha256": "53201e46ee6a6418915358d37a61655a286bd2d814930d0fe68520fec4c92cdb",
+      "scope": "PRESERVED_OLD_READONLY_ACTUAL26_LOCAL_PASS_OR_ROOT_OBSERVATION"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch26_closed_observation.json",
+      "bytes": 1423,
+      "sha256": "9b7697d2d35d12903e436403e77fb44e8ea76c6f586940e28d168ab851340e9b",
+      "scope": "PRESERVED_OLD_READONLY_ACTUAL26_LOCAL_PASS_OR_ROOT_OBSERVATION"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean",
+      "bytes": 9580,
+      "sha256": "4356decb7750e59fc41f86931c9b13c95f66cb9c2e53c72b639a8e4f4fcfcd23",
+      "scope": "PRESERVED_OLD_TARGETED1-68"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/IntegralEqImproper.lean",
+      "bytes": 72376,
+      "sha256": "b7566d4908de6f28c73b0490a6bd79c3990bde03007f1b5b291d1b11a8ef1533",
+      "scope": "PRESERVED_OLD_TARGETED1081-1108"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Lebesgue/Integral.lean",
+      "bytes": 6147,
+      "sha256": "132142d926ca7394613ad983efdac6b88e1870076cc8a2ce298a7c70163b9423",
+      "scope": "PRESERVED_OLD_TARGETED75-120"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/SetIntegral.lean",
+      "bytes": 83514,
+      "sha256": "2fc90a7ecb3b4d9e47299a2b3b8eebf97a4e2a177d28daf3c48a4c0e059c4c86",
+      "scope": "PRESERVED_OLD_TARGETED97-181;719-747"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/Bochner.lean",
+      "bytes": 99539,
+      "sha256": "b58d6339786ee0602d5d1577042e7d407112682b670150d909a853115b9b339b",
+      "scope": "PRESERVED_OLD_TARGETED817-828;1328-1339; normintegral signature"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Continuity.lean",
+      "bytes": 21819,
+      "sha256": "47b6018f8597ae353961ae3835d8b96915803978d12d0c9c3dd555fb0118b8c1",
+      "scope": "PRESERVED_OLD_TARGETED263-274"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/Basic.lean",
+      "bytes": 46759,
+      "sha256": "42e804660dd9e27b2014b017ab0b9f203222dcee1f4595f11126651e114d2ed6",
+      "scope": "PRESERVED_OLD_TARGETED439-440 cos-positive signature"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Constructions.lean",
+      "bytes": 86894,
+      "sha256": "a2761653618b7e79b33969e83107d346e377233fd92a06601e315aa460cb1d1b",
+      "scope": "PRESERVED_OLD_TARGETED581-583 ContinuousAt.prod"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Order/Interval/Set/Basic.lean",
+      "bytes": 59907,
+      "sha256": "36e786359ad9fdd7ef3958e385adc6140972a578a656246574e6f3b5bfb618cd",
+      "scope": "PRESERVED_OLD_TARGETED384 Ioi_subset"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/Order/Field/Basic.lean",
+      "bytes": 40002,
+      "sha256": "d03d5df4940327ebe5e3d30b064a34b8cc593301ef2b376c0a7f40e5cb8bcabe",
+      "scope": "PRESERVED_OLD_TARGETED169-176 and div order usage"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+      "bytes": 56512,
+      "sha256": "5f5b4453900a47279c02b3319b600714c87afeb44ece5a6a36d9599b7832d2bf",
+      "scope": "PRESERVED_OLD_TARGETED698-713 eventually_nhds_iff_ball"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source01/source_handoff22.json",
+      "bytes": 8699,
+      "sha256": "b80e83e1029995309836b313b5897a54ec5c27c07cb6e2a48371705c4cf41587",
+      "scope": "READONLY_FULL_ACTUAL_FAIL_OR_OLD_HANDOFF"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/complex_gamma_mellin_tail_source_review01.md",
+      "bytes": 8174,
+      "sha256": "024dd84e4ed371175b90eef1bf4ef747b9050817e4675492bb7ac1e59745454d",
+      "scope": "READONLY_FULL_ACTUAL_FAIL_OR_OLD_HANDOFF"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch28/batch28_attempt01/ComplexGammaMellinTail22.log",
+      "bytes": 7340,
+      "sha256": "9f97625c6e08c35f5d06eef3c152b6588db84b315fb9616c67541fe3307cb7e0",
+      "scope": "READONLY_FULL_ACTUAL_FAIL_OR_OLD_HANDOFF"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch28/batch28_attempt01/receipt.json",
+      "bytes": 6984,
+      "sha256": "3d724ee2096e676738e55c33c65a36909418930b4a0e40c0a0d7086ad38c06da",
+      "scope": "READONLY_FULL_ACTUAL_FAIL_OR_OLD_HANDOFF"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch28/batch28_attempt01/ComplexGammaMellinTail22_FIN.json",
+      "bytes": 5259,
+      "sha256": "f426a2c77b5c2614751a554ba28de7022f376ed48626678e0c1cf004b367ec89",
+      "scope": "READONLY_FULL_ACTUAL_FAIL_OR_OLD_HANDOFF"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/IntegrableOn.lean",
+      "bytes": 36007,
+      "sha256": "377d50adedf2a1705a1e4acc6126076e7b40c8213f0600fec8898f7a019e7492",
+      "scope": "TARGETED100-110_NEW_API"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/ComplexGammaMellinTail22.lean",
+      "bytes": 13314,
+      "sha256": "3002a4d39dfd6bd072f1a8f778de3752cf91bf60f831dd3345f5dd9631723852",
+      "scope": "NEW_SOURCE_FULL_READ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_contract22.md",
+      "bytes": 4169,
+      "sha256": "bada33d12c4321a041cfe6fa2dd9c3bcf3cc53047676be519a85ba7b7e5713c3",
+      "scope": "NEW_SOURCE_FULL_READ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_catalog22.json",
+      "bytes": 1811,
+      "sha256": "0e259314344d92066fd25f4ada0737fa8cb184d0af844ee764e3c7e16fa986da",
+      "scope": "NEW_SOURCE_FULL_READ"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_read_receipts22.json",
+      "bytes": 3302,
+      "sha256": "1010d969ddbd0b1d94443eaccb9231969f7e9421972860f65df508d26817acd4",
+      "scope": "NEW_SOURCE_FULL_READ"
+    }
+  ],
+  "read_evidence": {
+    "new_source_FULL": "e36345",
+    "new_contract_FULL": "a7b5f1",
+    "new_catalog_and_reads_FULL": "825fab",
+    "new_contract_catalog_reads_reconfirmation_FULL": "7bc6f9",
+    "new_byte_projection": "825fab exit0; 29 bindings verified; 19 inherited old bindings preserved; no compiler",
+    "cache_scope": "TARGETED only; see read_receipts; binary oleans BYTE_HASH only"
+  },
+  "official_baseline": {
+    "ROOT27_modules": 85,
+    "ROOT27_declarations_including_definitions": 1434,
+    "Tail_credit_added": 0
+  },
+  "guards": {
+    "author_Lean_or_compiler_invocations": 0,
+    "API_probes": 0,
+    "candidate_parser_invocations": 0,
+    "Python_math_invocations": 0,
+    "native_invocations": 0,
+    "PREP_created": false,
+    "gate_created": false,
+    "actual_future_attempt_created": false,
+    "archive_count_preserved_by_existing_ROOT_evidence": 3089,
+    "independent_review_required": true,
+    "future_compiler_requires_distinct_ROOT_gate": true,
+    "H1": false,
+    "additive_N_numeric_certificate": false,
+    "D_N": false,
+    "WIN": false
+  }
+}

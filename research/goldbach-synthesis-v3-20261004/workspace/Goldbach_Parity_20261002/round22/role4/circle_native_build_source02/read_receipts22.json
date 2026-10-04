@@ -1,0 +1,85 @@
+{
+  "schema": "ROUND22_NATIVE_BUILD_ONLY02_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_NOT_IMPORTED_NOT_PREPARED",
+  "utc": "2026-10-03T18:39:35.7376384Z",
+  "author": "ROLE4",
+  "source_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\run_build_only_once22.py",
+      "sha256": "4489a9e290b41a270bb44e20b738cd7f85131a945bc26d836d65748ec14d3e8b",
+      "bytes": 16483,
+      "scope": "FULL",
+      "tool_chunk": "df5e2c",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\build_execution_plan22.json",
+      "sha256": "34c3a25272f591c44eeeafec41d1727631df99b84043ff0ae6b0219c6040a25a",
+      "bytes": 2908,
+      "scope": "FULL",
+      "tool_chunk": "df5e2c",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\build_controls_contract22.md",
+      "sha256": "f3df147ca765e23cb6747133b16ad61cb28843837d25d716f553c1e664fdc4cd",
+      "bytes": 2835,
+      "scope": "FULL",
+      "tool_chunk": "df5e2c",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\windows_build_job22.py",
+      "sha256": "a4dcc246f5e491e63f6d9cff849ef2ae774dbf8b9a99a565bc251e94fd12dbed",
+      "bytes": 16756,
+      "scope": "BYTEIDENTICAL_TO_FULL_READ_SOURCE01",
+      "source01_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\windows_build_job22.py",
+      "source01_full_chunk": "09da54",
+      "targeted_environment_and_cwd_chunk": "aaf8f8",
+      "import_or_execution": false
+    }
+  ],
+  "critical_legacy_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\run_build_only_once22.py",
+      "sha256": "d19714a2000c1167875789e144ac729b7f29e140a884286a2c4ffe9d995173b6",
+      "scope": "FULL",
+      "tool_chunk": "6b3b09"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build_plan22.json",
+      "sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92",
+      "scope": "FULL",
+      "tool_chunk": "19065d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\run_native_once22.py",
+      "scope": "TARGETED",
+      "tool_chunk": "19065d",
+      "topic": "legacy build receipt linkage, not independent actual-build CWD guard"
+    }
+  ],
+  "prior_API_receipts": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\read_receipts22.json",
+    "bytes": 5808,
+    "sha256": "27c8e82f0d8f983487eb51f7cfdcd1c63e3b2b537bcab7f39207f24c3385aa3e",
+    "kind": "IMMUTABLE_TARGETED_API_READ_RECEIPTS",
+    "capture": true
+  },
+  "no_new_API_probes": true,
+  "conservation": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\revision_conservation22.json",
+    "bytes": 1986,
+    "sha256": "df7ea6c2f10591a680cbd5e9a10b1ea4678439161c61490184b2f21c6d8b898f",
+    "kind": "SOURCE_METADATA_REVISION_CONSERVATION",
+    "capture": true
+  },
+  "source_cause": "ROLE5 exact CWD mismatch message, confirmed in old parent/native plan FULL source",
+  "candidate_compiler_calls": 0,
+  "candidate_imports": 0,
+  "candidate_parser_calls": 0,
+  "PE_analysis_calls": 0,
+  "native_program_calls": 0,
+  "D_N": false,
+  "WIN": false
+}

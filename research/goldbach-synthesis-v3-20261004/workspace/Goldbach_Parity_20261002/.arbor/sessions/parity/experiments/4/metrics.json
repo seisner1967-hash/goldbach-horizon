@@ -1,0 +1,8 @@
+{
+  "node_id": "4",
+  "hypothesis": "Mechanism: Transport à premier avec commutateur de projection harmonique conservé.\nHypothesis: La projection du vrai coefficient pourrait rendre le couplage de frontière favorable après orbite complète.\nObservable: Calcul symbolique exact du noyau réel à N=100000000 puis réfutation avant compilation si un terme reste défavorable.\nConflicts: L'orbite divisorielle seule ignore le changement de totiente ; le commutateur et les faces sont ici conservés.",
+  "score": 0.0,
+  "insight": "Le facteur harmonique laisse un commutateur non nul ; m303 donne D-W=log101/2 et une contribution Sfull négative. La fermeture favorable point par point est fausse.",
+  "result": "Falsification exacte rationnelle-logarithmique à N=100000000. Aucun théorème faux envoyé au compilateur ; aucune réfutation de la compensation globale.",
+  "branch": "null"
+}

@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-03T21:16:43.225669+00:00",
+  "executable": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build-final04\\producer_dit22.exe",
+  "sha256": "44d2d571a0190f7dbbb975225559d16a012693bda4197738e6311c14892cadb0",
+  "arguments": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01\\payload"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01",
+  "ordinal": 1,
+  "max_children": 2,
+  "retry_count": 0,
+  "created": false,
+  "resumed": false,
+  "limits": {
+    "scope": "NATIVE_NUMERIC04_FULL_N1E8_ONLY",
+    "fixed_N": 100000000,
+    "fixed_M": 100000000,
+    "fixed_K": 134217728,
+    "fixed_S": "288230376151711744",
+    "max_children": 2,
+    "max_retries": 0,
+    "wall_seconds": 3600,
+    "output_bytes": 2147483648,
+    "commit_job_bytes": 2147483648,
+    "rss_per_process_monitor_bytes": 2147483648,
+    "sampled_job_rss_cap_bytes": 4294967296,
+    "max_active_job_processes": 16,
+    "max_total_job_processes": 32,
+    "job_limit_flags_requested": 8968,
+    "working_set_limit_flag_requested": false,
+    "rss_os_enforced": false,
+    "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM",
+    "log_bytes": 1048576,
+    "metadata_bytes": 16777216,
+    "capture_bytes": 33554432,
+    "compiler_invocations": 0
+  }
+}

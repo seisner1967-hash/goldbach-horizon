@@ -1,0 +1,36 @@
+CONTRAT DE LIVRAISON — PIVOT CONTINU, BOUCLE 22, RÉVISION03
+État officiel au 3 octobre 2026, 18:16:18 UTC : 78 modules Lean et 1304 déclarations auxiliaires, définitions comprises. Cette livraison distincte conserve les deux textes antérieurs et le journal technique du FAIL16. Aucun nouveau calcul, build, probe ou compilateur n'est lancé pour ce rapport.
+
+ACQUIS CONTRÔLÉS. Envelope42 du lot11, Identity20 du lot13 et Discrete29 du lot15 sont validés indépendamment. Le lot17 a ajouté deux modules réels PASS38+PASS14 : 32 théorèmes et 20 définitions, zéro erreur et zéro sorryAx. Les audits n'utilisent que propext, Classical.choice et Quot.sound ; clampInteger ne dépend d'aucun axiome. ROOT a observé et crédité ces 52 déclarations. Les quatre erreurs d'élaboration de16 sont réparées dans une source distincte ; l'ancien lot échoué reste conservé, sans être requalifié en réfutation analytique ou obstruction de parité.
+
+OBJET ET IDENTITÉ CONTINUE. Λ(n)=log p si n=p^k, p premier, k≥1 ; Λ(n)=0 sinon, y compris n=0,1. Il s'agit de la vraie vonMangoldt Lean, définie par IsPrimePow et log(minFac n), avec toutes les puissances premières propres. Poser C_N=Σ(n=0..N) Λ(n)Λ(N−n). Pour a>0,
+T_a(θ)=Σ(n≥0) Λ(n)exp(−an)exp(inθ),
+C_N=exp(aN)/(2π) ∫(θ=0..2π) T_a(θ)conj(T_a(−θ))exp(−iNθ)dθ.
+La convergence absolue, la continuité, l'intégrabilité et le passage à la série infinie sont prouvés. Les poids étant réels, conj(T_a(−θ))=T_a(θ). L'orthogonalité et la normalisation sont exactes, sans identité finale supposée.
+
+ENVELOPPE CONTINUE ACQUISE. Avec r=exp(−a), A=r/(1−r)^2 et B_M=r^(M+1)((M+1)/(1−r)+A), |T_a−T_(a,M)|≤B_M uniformément. L'écart des projections est ≤2exp(aN)AB_M. Cette enveloppe fermée est continue en a>0 et tend vers zéro lorsque M→∞. Elle ne définit aucune trace infinie T_0.
+
+PROJECTION FINIE ACQUISE SANS ALIAS. Pour tout a réel, P_(a,M)(θ)=Σ(n=0..M)Λ(n)exp(−an)exp(inθ). Si N≤M et K>max(N,2M−N),
+C_N=exp(aN)/K Σ(j=0..K−1)P_(a,M)(2πj/K)^2 exp(−2πiNj/K).
+Les caractères exp(2πikj/K) sont construits et leur orthogonalité discrète prouvée ; la garde exclut tout alias signé non nul. Paramètres fixés du contrat numérique : N=M=100000000, K=2^27=134217728, S=2^58=288230376151711744 ; a=0 est employé seulement pour le polynôme fini.
+
+CONSTRUCTION CANONIQUE ET PRÉCISION MAINTENANT PROUVÉES. Pour 2≤p≤10^8, k=Nat.log2 p et z=(p−2^k)/(p+2^k) appartiennent aux domaines prouvés k≤26, 0≤z≤1/3. La vraie série logarithmique donne L32(z)=2Σ(j<32)z^(2j+1)/(2j+1), R32=9/(4·65·3^65), puis log p dans [kL32(1/3)+L32(z), kL32(1/3)+L32(z)+(k+1)R32]. Le constructeur entier A32(p) arrondit S fois le milieu rationnel au plus proche, choisit l'entier pair en cas de demi, puis clamp dans [0,32S]. Le poids est A32(p)/S. Sa précision |log p−A32(p)/S|≤1/S est désormais compilée, sans boîte, précision ou majorant libre en prémisse.
+
+Définir A_n=A32(minFac n) si IsPrimePow n, zéro sinon, et I_N=Σ(n=0..N)A_nA_(N−n). Pour n≤N≤10^8, la vraie borne 0≤Λ(n)≤32 et la précision des poids sont prouvées. La normalisation entière et l'enveloppe du coefficient le sont aussi :
+|C_N−I_N/S^2|≤E(N,S),  E(N,S)=(N+1)(64/S+1/S^2).
+L'expression E(N,s) est continue pour le paramètre réel s>0 ; la précision construite porte sur le S fixé. Au N fixé, la garde entière compilée 2(N+1)(64S+1)·10^6≤S^2 donne 2E≤10^−6.
+
+MODULES INDÉPENDANTS DU JUGE17 :
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch17\sources\RationalLogQuantization22.lean
+SHA256 dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch17\sources\QuantizedLambdaEnvelope22.lean
+SHA256 526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331.
+Leurs objets indépendants sont dans le dossier sibling batch17_attempt01 ; le reçu réel est 9449666ee8bdbbae74ea849e5a9ce2eb5c0c5bd7dd24c14a2d28065068178298.
+
+CONTRAT NUMÉRIQUE ENCORE À EXÉCUTER COMPLÈTEMENT. Le rôle6 doit certifier toutes les entrées 0..N, les primalités/facteurs et la classification PP ; vérifier chaque record natif égal au constructeur canonique A32 ; payer le transport entre mots/GMP et entiers Lean. Il doit recalculer indépendamment les cinq transformées DIT/DIF, ordres/inverses, résidus, CRT, absence d'alias et débordements. Le résultat CRT doit égaler exactement le fold direct des mêmes A. Une référence B issue de boîtes log40 fraîches et de leurs restes fermés doit recevoir sa propre précision construite, puis satisfaire |I_A−I_B|≤2(N+1)(64S+1). Les intervalles de coefficient sont les centres I_A/S² et I_B/S² avec rayonE ; ce rayon provient des constructeurs vérifiés, jamais d'une tolérance libre. Budgets : logarithmes E, alias 0, transformation/CRT 0 et accumulation 0, ces trois zéros exigeant leurs invariants effectivement contrôlés.
+
+Le seul parameter_guard01 révision02 est un AUX réel, fermé ROOTc0d54e : cinq paramètres modulaires et cinq arguments log {2,3,4,99999989,100000000}, plus garde tau et quatre mutants rejetés (modulus composite, racine d'ordre1, point32S pour log2, échelle1). Il ne couvre ni le catalogue complet ni deux implémentations indépendantes des logs ; log4 n'est pas Λ(4)=log2. Les futurs mutants de records/folds/PP/alias nécessitent leurs témoins propres. Une mauvaise conjugaison se rejette structurellement ; retirer Λ4 seul ne garantit aucune séparation numérique. Limite de ressources=>NO_VERDICT, précision insuffisante=>INCONCLUSIVE.
+
+OPEN. Native55 reste SOURCE, sans build, binaire ni runtime préparé ; son coefficient N à 10^8, catalogue complet, NTT/CRT et invariants de mots ne sont ni calculés ni certifiés. Une préparation distincte des ressources est en cours au niveau SOURCE ; aucun nouveau paquet build/runtime remis ne fonde ce contrat. Aucun temps de fin ou mémoire disponible n'est présumé.
+
+L'orthogonalité extrait exactement le coefficient ; elle n'apporte pas d'annulation analytique uniforme sur la frontière ni de séparation des puissances premières. L'identité ne produit aucune nouvelle minoration utile à Goldbach ou estimation de D_N. Restent OPEN le mécanisme continu/spectral global en phase, le traitement PP/frontière et le raccord prouvé à D_N≤N/(256 log N log log N). Aucune annulation modulaire, preuve Goldbach ou WIN n'est déclarée. Les acquis de projection et de précision sont conservés dans leur portée exacte.

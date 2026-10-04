@@ -1,0 +1,8 @@
+{
+  "node_id": "10",
+  "hypothesis": "Mechanism: Twisted squarefree moment on a genuine long zeta factor with both arithmetic axes and additive masks retained.\nHypothesis: Square-divisor expansion and periodic character orthogonality can yield a quantitative saving on an actual HH sector rather than a separable surrogate.\nObservable: Exact arithmetic expansion, all endpoints and exceptional principal cases, finite N=100000000 checks, and a total cost audit covering short-factor and coupled-mask sectors.\nConflicts: The elementary bound for mu squared times a character only applies to a literal fixed multiplicative mask; moving squarefree and roughness selectors cannot be dropped.",
+  "score": 0.0,
+  "insight": "Corrected two-square expansion and general CRT retain L=lcm(d^2,f), compatibility g|N, gcd(C,N)=1, shared e/A and every counting +1. Initial S3 misses gcd(d,ell) and fails on empty cells. The full compensator character equals chi(-1); raw zeta length does not estimate the true progression. No full signed HH saving is obtained.",
+  "result": "Judge replay reproduced 1066 finite cases, 558 compatible cells and 23544 signed cells, exact JSON hashes. 160 prior artifacts unchanged. False contracts rejected before compilation, zero new Lean conclusions, victory false.",
+  "branch": "round6/squarefree_checks.py"
+}

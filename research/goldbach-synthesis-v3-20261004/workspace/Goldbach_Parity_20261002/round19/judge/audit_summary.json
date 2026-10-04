@@ -1,0 +1,466 @@
+{
+  "actual_audit_exit_code": 0,
+  "actual_audit_finished_utc": "2026-10-03T01:36:25.585304+00:00",
+  "actual_audit_started_utc": "2026-10-03T01:31:37.321820+00:00",
+  "allowed_axioms_only": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audit_log_sha256": "912a9dbfb9b23f8bd37751b553c5f57b545bf324ce46cc14cafb3936089eb6e3",
+  "audit_receipt_bytes": 15341862,
+  "audit_receipt_sha256": "758e6fe25589d37d0e75d12317fe3cfca34015761df31f8e3df735a392331057",
+  "author_PASS_count": 11,
+  "author_invocation_totals": {
+    "failures": 18,
+    "invocations": 29,
+    "invocations_with_warnings": 9
+  },
+  "authorization_sha256": "6da21513c45dac50c777390ffb8d55f0dd3b87c3a5f59ff81e82b2603dd07c3e",
+  "candidate_cumulative_counts_subject_to_root_closure": {
+    "modules": 41,
+    "theorems": 692
+  },
+  "compiler_logs_fully_read_after_execution": [
+    "RankCalibrationFace",
+    "RankCalibrationPrice",
+    "RankCalibrationArithmetic",
+    "RankCalibrationUnitLoss",
+    "RankCalibrationEuler",
+    "RankCalibrationEstimator",
+    "TerminalPrimeExtraction",
+    "BalancedResourceSwitch",
+    "SignedHyperbolicCRT",
+    "NonSSBracketSwitch",
+    "RankTwoHarmonic"
+  ],
+  "full_fixed_D_N_ledger_paid": false,
+  "independent_Lean_PASS_replays": 0,
+  "independent_Lean_actual_invocations": 11,
+  "independent_Lean_failures": 0,
+  "input_manifest_sha256": "e3f8bc9d3ad8cbd4649d86ba5bf3fa4680eb12ae802ed6901f668127991280df",
+  "large_receipt_reading_note": "One raw display was truncated. Selected metadata and all eleven complete compiler logs were read; no claim of a full human display of the fifteen-megabyte certificate index.",
+  "launch_receipt_sha256": "5a7f74b19ac6d4ad78ee359c9b53ec9774f4d0f51f091fc6cb54ca5007883ef5",
+  "metadata_review_completed_utc": "2026-10-03T01:43:53.409162+00:00",
+  "modules": [
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 22,
+      "declaration_counts": {
+        "def": 3,
+        "theorem": 19
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:32:37.215222+00:00",
+      "fresh_import_olean_sha256": {},
+      "generated_axiom_prints": [],
+      "log_sha256": "0685518b5848b29042201c5da404f019255e208b44f7cb1fb6c3abc4c0108379",
+      "module": "RankCalibrationFace",
+      "olean_sha256": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationFace.lean",
+      "source_sha256": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+      "started_utc": "2026-10-03T01:32:20.498652+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0685518b5848b29042201c5da404f019255e208b44f7cb1fb6c3abc4c0108379"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 31,
+      "declaration_counts": {
+        "def": 7,
+        "theorem": 24
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:33:13.432136+00:00",
+      "fresh_import_olean_sha256": {
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "69686356fcbc536db491932acad52539c5683aab02d8c37b4119c4377f1e92af",
+      "module": "RankCalibrationPrice",
+      "olean_sha256": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationPrice.lean",
+      "source_sha256": "ce00b2b3d416d43d522cdd64f23fc075e179a669df551b87cb002b9444563574",
+      "started_utc": "2026-10-03T01:32:37.241990+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "69686356fcbc536db491932acad52539c5683aab02d8c37b4119c4377f1e92af"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 19,
+      "declaration_counts": {
+        "def": 3,
+        "theorem": 16
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:33:34.265163+00:00",
+      "fresh_import_olean_sha256": {
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "a2053ea19ee44005d7a80d88de1c231f1c4ec2115832ebf4dc55a7ce3dd238a4",
+      "module": "RankCalibrationArithmetic",
+      "olean_sha256": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationArithmetic.lean",
+      "source_sha256": "3ac4ec121db2be08222863ba188277ed87151f8466e00bbbd140a030faabe11d",
+      "started_utc": "2026-10-03T01:33:13.453541+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a2053ea19ee44005d7a80d88de1c231f1c4ec2115832ebf4dc55a7ce3dd238a4"
+    },
+    {
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankCalibrationUnitLoss.lean:25:4: warning: try 'simp' instead of 'simpa'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankCalibrationUnitLoss.lean:26:4: warning: try 'simp' instead of 'simpa'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankCalibrationUnitLoss.lean:29:6: warning: try 'simp' instead of 'simpa'"
+      ],
+      "axiom_prints": 9,
+      "declaration_counts": {
+        "def": 1,
+        "theorem": 8
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:33:53.465591+00:00",
+      "fresh_import_olean_sha256": {
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "997c8157ebbfba59bd7fe04b666ea268d377299e787ca2f5980d7dbac9801ab6",
+      "module": "RankCalibrationUnitLoss",
+      "olean_sha256": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationUnitLoss.lean",
+      "source_sha256": "2a3eaafd2e74c1a8dd819f7e5dc84e901773ac95ea134cfa0b196aecbbed642f",
+      "started_utc": "2026-10-03T01:33:34.282203+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "997c8157ebbfba59bd7fe04b666ea268d377299e787ca2f5980d7dbac9801ab6"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 17,
+      "declaration_counts": {
+        "def": 5,
+        "theorem": 12
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:34:13.265172+00:00",
+      "fresh_import_olean_sha256": {
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+        "RankCalibrationUnitLoss": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "79f5c4276b677af0a7b4e43e2861a06d3b8cda85cf74361b9c41fc2c541726d1",
+      "module": "RankCalibrationEuler",
+      "olean_sha256": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationEuler.lean",
+      "source_sha256": "30449aa225e946eb1fe6f7681602550f774c3ea71ae2df09d4a755b03922bb69",
+      "started_utc": "2026-10-03T01:33:53.482775+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "79f5c4276b677af0a7b4e43e2861a06d3b8cda85cf74361b9c41fc2c541726d1"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 10,
+      "declaration_counts": {
+        "def": 4,
+        "theorem": 6
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:34:33.098664+00:00",
+      "fresh_import_olean_sha256": {
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationEuler": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+        "RankCalibrationUnitLoss": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "d02ad2e291ab225826b345950b9060746963cf385894b9662d1e8ba6c4f80cfc",
+      "module": "RankCalibrationEstimator",
+      "olean_sha256": "0bd26e528500b1e1c5c92fd71fbffd440da43ae067dd54007ef7d4bd035b234e",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationEstimator.lean",
+      "source_sha256": "2d175fb994792cf98de647d860b4315da1dfbe94914c7fe14970a3ede3f2885e",
+      "started_utc": "2026-10-03T01:34:13.282007+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d02ad2e291ab225826b345950b9060746963cf385894b9662d1e8ba6c4f80cfc"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 22,
+      "declaration_counts": {
+        "def": 4,
+        "theorem": 18
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:34:48.270435+00:00",
+      "fresh_import_olean_sha256": {
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationEstimator": "0bd26e528500b1e1c5c92fd71fbffd440da43ae067dd54007ef7d4bd035b234e",
+        "RankCalibrationEuler": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+        "RankCalibrationUnitLoss": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "4a98e5a28db60c00a9eef1fa36b17cec5b0222f701555cddd7003ccd1d76c542",
+      "module": "TerminalPrimeExtraction",
+      "olean_sha256": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\TerminalPrimeExtraction.lean",
+      "source_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+      "started_utc": "2026-10-03T01:34:33.114929+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4a98e5a28db60c00a9eef1fa36b17cec5b0222f701555cddd7003ccd1d76c542"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 41,
+      "declaration_counts": {
+        "def": 13,
+        "structure": 2,
+        "theorem": 25
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:35:13.815370+00:00",
+      "fresh_import_olean_sha256": {
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationEstimator": "0bd26e528500b1e1c5c92fd71fbffd440da43ae067dd54007ef7d4bd035b234e",
+        "RankCalibrationEuler": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+        "RankCalibrationUnitLoss": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7",
+        "TerminalPrimeExtraction": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d"
+      },
+      "generated_axiom_prints": [
+        "GoldbachRound19.Switch.FactorTuple.ext"
+      ],
+      "log_sha256": "6807e5ae3e9de436d7990a90ee5e65e17fbf01664c29100dc675a921719425a6",
+      "module": "BalancedResourceSwitch",
+      "olean_sha256": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\BalancedResourceSwitch.lean",
+      "source_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+      "started_utc": "2026-10-03T01:34:48.289581+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6807e5ae3e9de436d7990a90ee5e65e17fbf01664c29100dc675a921719425a6"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 34,
+      "declaration_counts": {
+        "def": 13,
+        "structure": 1,
+        "theorem": 19
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:35:38.514662+00:00",
+      "fresh_import_olean_sha256": {
+        "BalancedResourceSwitch": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationEstimator": "0bd26e528500b1e1c5c92fd71fbffd440da43ae067dd54007ef7d4bd035b234e",
+        "RankCalibrationEuler": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+        "RankCalibrationUnitLoss": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7",
+        "TerminalPrimeExtraction": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d"
+      },
+      "generated_axiom_prints": [
+        "GoldbachRound19.SignedCRT.SignedCoordinates.ext"
+      ],
+      "log_sha256": "1e5315ae68f1f7f0c49100a6169dd643dfdc99337ec32f09f1f9fea5abf36b4a",
+      "module": "SignedHyperbolicCRT",
+      "olean_sha256": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\SignedHyperbolicCRT.lean",
+      "source_sha256": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+      "started_utc": "2026-10-03T01:35:13.831667+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1e5315ae68f1f7f0c49100a6169dd643dfdc99337ec32f09f1f9fea5abf36b4a"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 39,
+      "declaration_counts": {
+        "def": 18,
+        "theorem": 21
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:36:03.260290+00:00",
+      "fresh_import_olean_sha256": {
+        "BalancedResourceSwitch": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationEstimator": "0bd26e528500b1e1c5c92fd71fbffd440da43ae067dd54007ef7d4bd035b234e",
+        "RankCalibrationEuler": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+        "RankCalibrationUnitLoss": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7",
+        "SignedHyperbolicCRT": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+        "TerminalPrimeExtraction": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "e84088ec8e406ae076a0b1d9c9f66764dbffd456544a11f5eb60d4d8c12b755e",
+      "module": "NonSSBracketSwitch",
+      "olean_sha256": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\NonSSBracketSwitch.lean",
+      "source_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+      "started_utc": "2026-10-03T01:35:38.532312+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e84088ec8e406ae076a0b1d9c9f66764dbffd456544a11f5eb60d4d8c12b755e"
+    },
+    {
+      "actual_warning_lines": [],
+      "axiom_prints": 24,
+      "declaration_counts": {
+        "def": 7,
+        "theorem": 17
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-03T01:36:22.511618+00:00",
+      "fresh_import_olean_sha256": {
+        "BalancedResourceSwitch": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+        "NonSSBracketSwitch": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+        "RankCalibrationArithmetic": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010",
+        "RankCalibrationEstimator": "0bd26e528500b1e1c5c92fd71fbffd440da43ae067dd54007ef7d4bd035b234e",
+        "RankCalibrationEuler": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be",
+        "RankCalibrationFace": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+        "RankCalibrationPrice": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3",
+        "RankCalibrationUnitLoss": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7",
+        "SignedHyperbolicCRT": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+        "TerminalPrimeExtraction": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d"
+      },
+      "generated_axiom_prints": [],
+      "log_sha256": "0dca9a76f4ca9ebbf8133874a78ebdac2b5fdc00035aa59abd4ab1c6c2b89431",
+      "module": "RankTwoHarmonic",
+      "olean_sha256": "24f5fc8f86ef7484def0ec4cbe722b4c6f71a297514e9f54a756ee51f33594c6",
+      "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\RankTwoHarmonic.lean",
+      "source_sha256": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b",
+      "started_utc": "2026-10-03T01:36:03.267389+00:00",
+      "status": "PASS_FRESH_NEW_INDEPENDENT_LEAN",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0dca9a76f4ca9ebbf8133874a78ebdac2b5fdc00035aa59abd4ab1c6c2b89431"
+    }
+  ],
+  "new_Lean_audit_numeric_or_sign_invocations_by_finalizer": 0,
+  "new_counts": {
+    "axiom_prints": 268,
+    "defs": 78,
+    "instances": 0,
+    "modules": 11,
+    "structures": 3,
+    "theorems": 185
+  },
+  "nonss_stored_integer_checks": {
+    "H8_pairs_with_diagonal": 47895,
+    "all_q_integer_positions": 1001,
+    "capacity_or_ledger_payment_inferred": false,
+    "fresh_primality_or_factorization_called": false,
+    "kernel_log_or_logarithmic_sign_computed": false,
+    "stored_H8_rational_identity_checked": true,
+    "stored_encoded_and_decoded_labels": 5120,
+    "unique_m1": 48,
+    "unique_physical_union": 220
+  },
+  "parity_obstacle_bypass_proved": false,
+  "preparation_sha256": "4763b4463708b6458186cd9872c94010c055487443801915e7fd487e307c7dae",
+  "preservation_after": {
+    "exact_protected_inventory": 1361,
+    "hashes_preserved": true,
+    "old_scripts_or_Lean_or_PDF_executed": false
+  },
+  "preservation_before": {
+    "exact_protected_inventory": 1361,
+    "hashes_preserved": true,
+    "old_scripts_or_Lean_or_PDF_executed": false
+  },
+  "previous_official_counts_before_root_closure": {
+    "modules": 30,
+    "theorems": 507
+  },
+  "rank_stored_integer_checks": {
+    "K4_and_raw_theta_PP_exact_coefficient_maps_checked": true,
+    "all_conductor_fibers": 514,
+    "all_integer_b_axes": 8868261,
+    "bitmap_not_resieved_and_primality_not_retested": true,
+    "combined_AP_multiplicities_both_R": {
+      "17": 10,
+      "2": 10
+    },
+    "complete_IE_divisor_products_with_mu0_checked": true,
+    "finite_data_does_not_close_K14_K18_BV_Gamma_or_ledger": true,
+    "no_new_factorization_kernel_log_sign_or_S_evaluation": true,
+    "stored_bitmap_integer_axes": 12000000,
+    "stored_bitmap_one_bits": 719062,
+    "stored_prime_member_positions": 726183,
+    "stored_properpower_member_positions": 728,
+    "unique_physical_beta_images": 28136
+  },
+  "role": 5,
+  "round": 19,
+  "score": 0,
+  "semantic_obligations": [
+    "Actual real IE coefficient and rankMainMass positivity are validated on guarded paper only; not formally proved by these Lean modules or supplied free.",
+    "Face P=1771 requires gcd(P,N)=1 and is not a covering theorem for all even N.",
+    "NonSS reindexings retain the declared composite ResourceCell guards; full original support including prime/singleton and e1/p0 incidence cases still needs its ledger bridge.",
+    "K14 and conversion to ordinary unmasked APs, N exceptions and source endpoints remain open.",
+    "A single expansion multiplicity <=32 does not alone discharge the combined AP families <=40/64.",
+    "K18 with constants and onset BV, aggregate analytic errors and Gamma_rank remain open.",
+    "The medium and long channels remain literal sums; they have not been quantitatively paid.",
+    "New composite rho/Selberg source, analytic H7/H9 and written local rank3short onset 10^40 remain open.",
+    "Fixed source onset 10^24 and segment 10^24..10^40 are preserved and not discharged.",
+    "Ranks >=4, T_A, parent comparisons, unique physical capacities and full fixed D_N ledger remain open.",
+    "Neither the finite signs nor a negative principal price give the required D_N target."
+  ],
+  "separate_author_Python_SyntaxError_before_any_Lean": 1,
+  "source_onset_applied_to_N_10power8": false,
+  "source_onset_logN": "10^24",
+  "status": "FINAL_FROZEN_INDEPENDENT_AUXILIARIES_PASS_NO_WIN",
+  "stored_numeric_banks": {
+    "nonss": {
+      "actual_exit_code": 0,
+      "new_logarithmic_signs_computed": false,
+      "producer_kernel_log_or_replay_executed": false,
+      "result_sha256": "fa5d00bdc408e74d940c2583f4d015a4efd863dc2e15f3d13e77c4fa2f0c6cfe",
+      "stored_certificate_index": {
+        "full_array_preserved_in": "round19/judge/audit_receipt.json",
+        "new_numeric_evaluation": false,
+        "stored_array_rows": 973
+      },
+      "stored_certificate_positions_including_repeated_JSON_fields": 973,
+      "stored_sign_labels": {
+        "NEGATIVE": 275,
+        "POSITIVE": 532,
+        "ZERO": 166
+      }
+    },
+    "rank": {
+      "actual_exit_code": 0,
+      "new_logarithmic_signs_computed": false,
+      "producer_kernel_log_or_replay_executed": false,
+      "result_sha256": "29251df2d05db105d6339747fdda6af327279bc95478df7a9154414e156e8e2b",
+      "stored_certificate_index": {
+        "full_array_preserved_in": "round19/judge/audit_receipt.json",
+        "new_numeric_evaluation": false,
+        "stored_array_rows": 48308
+      },
+      "stored_certificate_positions_including_repeated_JSON_fields": 48308,
+      "stored_sign_labels": {
+        "NEGATIVE": 4970,
+        "POSITIVE": 2687,
+        "ZERO": 40651
+      }
+    }
+  },
+  "summary_operation": "stored receipts and artifact hashes only; no new mathematical calculation",
+  "victory": false,
+  "written_rank3_local_onset_logN": "10^40"
+}

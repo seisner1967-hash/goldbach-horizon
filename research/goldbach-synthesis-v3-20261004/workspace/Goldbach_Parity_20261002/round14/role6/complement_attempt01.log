@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round14\complement_checks.py", line 81, in <module>
+    args=parser.parse_args();data=run();d=s.conservation.output_directory(args.output_dir)
+                                  ^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round14\complement_checks.py", line 73, in run
+    assert any(v['p']==3217 and v['q']==3917 for v in C2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

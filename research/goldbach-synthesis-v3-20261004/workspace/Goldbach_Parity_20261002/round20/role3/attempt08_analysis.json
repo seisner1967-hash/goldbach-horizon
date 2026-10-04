@@ -1,0 +1,12 @@
+{
+  "attempt": 8,
+  "module": "PhysicalCompositeSubtraction",
+  "actual_lean_exit_code": 1,
+  "classification": "TECHNICAL_REDUNDANT_TACTIC_AFTER_CLOSED_GOAL",
+  "actual_log": "round20/role3/attempt08_PhysicalCompositeSubtraction.log",
+  "actual_receipt": "round20/role3/attempt08_PhysicalCompositeSubtraction_receipt.json",
+  "error": {"line": 124, "message": "no goals to be solved", "repair": "Remove le_rfl because rewriting the prime zero branch already closes the goal"},
+  "mathematical_identity_changed": false,
+  "parity_obstacle_inferred_from_this_failure": false,
+  "victory": false
+}

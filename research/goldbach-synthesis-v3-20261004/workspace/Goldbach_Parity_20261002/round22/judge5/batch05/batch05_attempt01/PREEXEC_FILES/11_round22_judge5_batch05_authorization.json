@@ -1,0 +1,43 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH05_AUTHORIZATION",
+  "time_utc": "2026-10-03T12:36:28.313290+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch05_attempt01",
+  "modules": [
+    "GammaBoxBounds22",
+    "GammaContourComponent22"
+  ],
+  "compiler_invocations_maximum": 2,
+  "source_manifest_sha256": "2d878cac720a4b12de8cc0e7f9f6eafa87f4d14f3cd5ff13ff86e06e542f2743",
+  "launcher_sha256": "5209336d77f3c4a85a420a9e9fd4193cd9a677328279920a6be78c635cf73147",
+  "preparation_receipt_sha256": "8980b407f46f1a1f5344bea6a5db993827037e3bba3c10b2c93b2c5dfce3f6d5",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "GammaDerivative22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "source_FULL_ROOT_receipts": {
+    "Box": "629aa7",
+    "corrected_Contour": "2d6dc7",
+    "launcher": "61ed7b",
+    "builder": "cb39a3",
+    "preparation": "dae070",
+    "catalog": "98a2f9",
+    "reads_and_prepared_receipt": "534216"
+  },
+  "large_JSON_scope": "Completely parsed and all bound bytes checked; no raw FULL display or mathematical import-closure audit",
+  "inputs_verified": 6707,
+  "old_judge_files_verified": 209,
+  "archives_verified": 3089,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

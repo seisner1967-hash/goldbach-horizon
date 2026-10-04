@@ -1,0 +1,199 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.verticalS"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.rotationAngle"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.decayGap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.kernelCoefficient"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.verticalS_re"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.verticalS_im"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.verticalS_continuous"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.rightHalfPlane_mem_slitPlane"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.rightHalfPlane_ne_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.rotationAngle_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.rotationAngle_lt_pi_half"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.decayGap_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.norm_Gamma_fixed_rotation"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.norm_principal_power"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel_continuous"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel_half_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel_hasDerivAt_w"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_real"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch26\\batch26_attempt01\\ComplexGammaMellinLocal22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch26\\sources\\ComplexGammaMellinLocal22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-03T22:45:06.480563+00:00",
+  "launch_error": null,
+  "log_sha256": "de64611ca93c9f58c160f4f808a62328917df4b2b569ea3109f9d07fe64fd260",
+  "module": "ComplexGammaMellinLocal22",
+  "olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+  "source_prior_status": "SOURCE_ONLY_NOT_ELABORATED",
+  "source_sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+  "started_at": "2026-10-03T22:44:35.108996+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

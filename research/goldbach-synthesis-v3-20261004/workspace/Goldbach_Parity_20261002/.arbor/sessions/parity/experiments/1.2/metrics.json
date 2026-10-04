@@ -1,0 +1,8 @@
+{
+  "node_id": "1.2",
+  "hypothesis": "Mechanism: Détecteur composite E=mu+mu²Lambda/logm, convolution gardée V-P puis raccord au vrai moment bilatéral.\nHypothesis: Le facteur inverse-log fournirait un gain absolu après couverture complète des diviseurs premiers ; la correction properpower reste littérale et aucun signe du détecteur n’est supposé.\nObservable: Couverture logarithmique L1 sur les deux parités J1, E=V-P sur m=17³ à complément premier et maintien de Lambda_N sur n=8017².\nConflicts: La couverture7 ne paie pas sa tête ; la somme de logp/logm pourrait retrouver toute la masse. Prime diagonal, unité, référence -S(N)N et parité composite restent explicites, aucune cible assumée.",
+  "score": 0.0,
+  "insight": "Complete absolute coverage on squarefree composites is exactly sum logp/logm=1, not1/logm. E=V-P annihilates primes/properpowers but leaves mu on composites; both J1 signs retained. New17³ needs correction, raw first8017² preserved. Guarded signed moment and prime diagonal remain unestimated; no new Lean.",
+  "result": "FREE_INVERSE_LOG_COVERAGE_REJECTED_BEFORE_LEAN; corrected detector identities valid, coupled parity estimate open.",
+  "branch": "round12/star_detector_checks.py"
+}

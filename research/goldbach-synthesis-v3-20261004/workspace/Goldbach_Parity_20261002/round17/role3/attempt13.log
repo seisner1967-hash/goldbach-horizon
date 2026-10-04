@@ -1,0 +1,97 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:752:2: error: type mismatch, term
+  finite_support_upper_bound hz
+    (fun p hp =>
+      le_trans
+        (of_eq_true
+          (eq_true
+            (Mathlib.Meta.NormNum.isNat_le_true (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 1))
+              (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 2)) (Eq.refl true))))
+        (Nat.Prime.two_le (mem_primeSupport.mp hp).left))
+    (actual_density_properties hns)
+after simplification has type
+  ↑(#(@filter ℕ (fun q => ∀ p ∈ primeSupport z, ¬↑p ∣ FourFormRoots.integerForm N e p0 q)
+          (instDecidableRough (primeSupport z) (FourFormRoots.integerForm N e p0)) J)) ≤
+    ↑(#J) / G (primeSupport z) z (actualDensity N e p0) +
+      ∑ d ∈ support (primeSupport z) z,
+        ∑ t ∈ support (primeSupport z) z,
+          |remainder J (FourFormRoots.integerForm N e p0) (actualDensity N e p0) (d ∪ t)| : Prop
+but is expected to have type
+  ↑(#(@filter ℕ (fun q => ∀ l ∈ primeSupport z, ¬↑l ∣ FourFormRoots.integerForm N e p0 q)
+          (fun a => decidableDforallFinset) J)) ≤
+    ↑(#J) / G (primeSupport z) z (actualDensity N e p0) +
+      ∑ x ∈ support (primeSupport z) z,
+        ∑ x_1 ∈ support (primeSupport z) z,
+          |remainder J (FourFormRoots.integerForm N e p0) (actualDensity N e p0) (x ∪ x_1)| : Prop
+'GoldbachRound17.Selberg.sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.gprod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.hprod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.primeProduct' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.Selberg.support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.upperSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.principal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.sign_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.alternating_powerset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.interval_alternating' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.inverse_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.gprod_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.hprod_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.G_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.weight_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.reciprocal_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.union_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.diagonalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.weight_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.divides' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.Selberg.rough' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.Selberg.sieveValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.divides_union' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.Selberg.indicator_pair_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.square_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.sieveValue_on_rough' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.rough_count_le_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.finite_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.sign_sdiff_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.explicit_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.support_downward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.weight_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.upperMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.one_prime_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.upperMass_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.weight_abs_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.cofactorSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.cofactorG' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.upperMass_cofactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.local_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.canonical_weight_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.sign_eq_moebius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.canonical_moebius_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.product_exceeds_weight_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.supported_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.finite_support_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.primeSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actualDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actualG' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actualWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actualRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.mem_primeSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actual_density_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actual_principal_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actual_weight_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actual_weight_abs_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.actual_weight_zero_if_product_exceeds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.Selberg.actual_four_form_upper_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.Selberg.actual_four_form_sieve_dichotomy' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

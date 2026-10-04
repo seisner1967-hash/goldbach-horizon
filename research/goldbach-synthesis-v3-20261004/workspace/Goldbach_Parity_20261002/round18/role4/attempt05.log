@@ -1,0 +1,260 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:147:12: error: type mismatch
+  ↑N - ↑e * ↑q
+has type
+  ℤ : outParam Type
+but is expected to have type
+  ℕ : Type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:149:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  modularAffine ?m.86079 ?m.86080 ?m.86081 ?m.86082 ?i ↑?x
+case «0»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+h : Cell N q
+⊢ modularAffine l N e q ((fun i => i) ⟨0, ⋯⟩) ↑(progressionIndex N q) =
+    ↑(![q, sorry, quotient1 N q, quotient0 N q] ((fun i => i) ⟨0, ⋯⟩))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:151:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  modularAffine ?m.86107 ?m.86108 ?m.86109 ?m.86110 ?i ↑?x
+case «1»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+h : Cell N q
+⊢ modularAffine l N e q ((fun i => i) ⟨1, ⋯⟩) ↑(progressionIndex N q) =
+    ↑(![q, sorry, quotient1 N q, quotient0 N q] ((fun i => i) ⟨1, ⋯⟩))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:153:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  modularAffine ?m.86118 ?m.86119 ?m.86120 ?m.86121 ?i ↑?x
+case «2»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+h : Cell N q
+⊢ modularAffine l N e q ((fun i => i) ⟨2, ⋯⟩) ↑(progressionIndex N q) =
+    ↑(![q, sorry, quotient1 N q, quotient0 N q] ((fun i => i) ⟨2, ⋯⟩))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:155:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  modularAffine ?m.86129 ?m.86130 ?m.86131 ?m.86132 ?i ↑?x
+case «3»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+h : Cell N q
+⊢ modularAffine l N e q ((fun i => i) ⟨3, ⋯⟩) ↑(progressionIndex N q) =
+    ↑(![q, sorry, quotient1 N q, quotient0 N q] ((fun i => i) ⟨3, ⋯⟩))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:177:59: error: application type mismatch
+  neg_eq_zero.mp ha
+argument
+  ha
+has type
+  ↑(slope N e q ((fun i => i) ⟨1, ⋯⟩)) = 0 : Prop
+but is expected to have type
+  -?m.103782 = 0 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:192:41: error: application type mismatch
+  neg_eq_zero.mp ha
+argument
+  ha
+has type
+  ↑(slope N e q ((fun i => i) ⟨2, ⋯⟩)) = 0 : Prop
+but is expected to have type
+  -↑(witness0 N q) = 0 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:203:50: error: application type mismatch
+  neg_eq_zero.mp ha
+argument
+  ha
+has type
+  ↑(slope N e q ((fun i => i) ⟨3, ⋯⟩)) = 0 : Prop
+but is expected to have type
+  -?m.109589 = 0 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:249:86: error: unsolved goals
+case «0»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+ha : ↑(slope N e q ((fun i => i) ⟨0, ⋯⟩)) ≠ 0
+hi :
+  modularAffine l N e q ((fun i => i) ⟨0, ⋯⟩)
+      (-↑(constant N e q ((fun i => i) ⟨0, ⋯⟩)) / ↑(slope N e q ((fun i => i) ⟨0, ⋯⟩))) =
+    0
+⊢ ((modularAffine l N e q 0 (-↑(constant N e q 0) / ↑(slope N e q 0)) = 0 ∨
+        modularAffine l N e q 1 (-↑(constant N e q 0) / ↑(slope N e q 0)) = 0) ∨
+      modularAffine l N e q 2 (-↑(constant N e q 0) / ↑(slope N e q 0)) = 0) ∨
+    modularAffine l N e q 3 (-↑(constant N e q 0) / ↑(slope N e q 0)) = 0
+
+case «1»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+ha : ↑(slope N e q ((fun i => i) ⟨1, ⋯⟩)) ≠ 0
+hi :
+  modularAffine l N e q ((fun i => i) ⟨1, ⋯⟩)
+      (-↑(constant N e q ((fun i => i) ⟨1, ⋯⟩)) / ↑(slope N e q ((fun i => i) ⟨1, ⋯⟩))) =
+    0
+⊢ ((modularAffine l N e q 0 (-↑(constant N e q 1) / ↑(slope N e q 1)) = 0 ∨
+        modularAffine l N e q 1 (-↑(constant N e q 1) / ↑(slope N e q 1)) = 0) ∨
+      modularAffine l N e q 2 (-↑(constant N e q 1) / ↑(slope N e q 1)) = 0) ∨
+    modularAffine l N e q 3 (-↑(constant N e q 1) / ↑(slope N e q 1)) = 0
+
+case «2»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+ha : ↑(slope N e q ((fun i => i) ⟨2, ⋯⟩)) ≠ 0
+hi :
+  modularAffine l N e q ((fun i => i) ⟨2, ⋯⟩)
+      (-↑(constant N e q ((fun i => i) ⟨2, ⋯⟩)) / ↑(slope N e q ((fun i => i) ⟨2, ⋯⟩))) =
+    0
+⊢ ((modularAffine l N e q 0 (-↑(constant N e q 2) / ↑(slope N e q 2)) = 0 ∨
+        modularAffine l N e q 1 (-↑(constant N e q 2) / ↑(slope N e q 2)) = 0) ∨
+      modularAffine l N e q 2 (-↑(constant N e q 2) / ↑(slope N e q 2)) = 0) ∨
+    modularAffine l N e q 3 (-↑(constant N e q 2) / ↑(slope N e q 2)) = 0
+
+case «3»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+ha : ↑(slope N e q ((fun i => i) ⟨3, ⋯⟩)) ≠ 0
+hi :
+  modularAffine l N e q ((fun i => i) ⟨3, ⋯⟩)
+      (-↑(constant N e q ((fun i => i) ⟨3, ⋯⟩)) / ↑(slope N e q ((fun i => i) ⟨3, ⋯⟩))) =
+    0
+⊢ ((modularAffine l N e q 0 (-↑(constant N e q 3) / ↑(slope N e q 3)) = 0 ∨
+        modularAffine l N e q 1 (-↑(constant N e q 3) / ↑(slope N e q 3)) = 0) ∨
+      modularAffine l N e q 2 (-↑(constant N e q 3) / ↑(slope N e q 3)) = 0) ∨
+    modularAffine l N e q 3 (-↑(constant N e q 3) / ↑(slope N e q 3)) = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:290:2: error: unsolved goals
+case mpr.intro.«0»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+x : ZMod l
+hi : modularAffine l N e q ((fun i => i) ⟨0, ⋯⟩) x = 0
+⊢ ((modularAffine l N e q 0 x = 0 ∨ modularAffine l N e q 1 x = 0) ∨ modularAffine l N e q 2 x = 0) ∨
+    modularAffine l N e q 3 x = 0
+
+case mpr.intro.«1»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+x : ZMod l
+hi : modularAffine l N e q ((fun i => i) ⟨1, ⋯⟩) x = 0
+⊢ ((modularAffine l N e q 0 x = 0 ∨ modularAffine l N e q 1 x = 0) ∨ modularAffine l N e q 2 x = 0) ∨
+    modularAffine l N e q 3 x = 0
+
+case mpr.intro.«2»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+x : ZMod l
+hi : modularAffine l N e q ((fun i => i) ⟨2, ⋯⟩) x = 0
+⊢ ((modularAffine l N e q 0 x = 0 ∨ modularAffine l N e q 1 x = 0) ∨ modularAffine l N e q 2 x = 0) ∨
+    modularAffine l N e q 3 x = 0
+
+case mpr.intro.«3»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+x : ZMod l
+hi : modularAffine l N e q ((fun i => i) ⟨3, ⋯⟩) x = 0
+⊢ ((modularAffine l N e q 0 x = 0 ∨ modularAffine l N e q 1 x = 0) ∨ modularAffine l N e q 2 x = 0) ∨
+    modularAffine l N e q 3 x = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:294:17: warning: unused variable `hi`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:379:2: error: unsolved goals
+case right.intro.intro.intro.intro.intro.«1».«0»
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+hn : ¬l ∣ actualDelta N e q
+hs : ¬0 = ↑(signedDelta N e q)
+ha : ¬0 = ↑(slopeProduct N e q)
+h23 : ¬↑(slope N e q 2) * ↑(constant N e q 3) = ↑(slope N e q 3) * ↑(constant N e q 2)
+h13 : ¬↑(slope N e q 1) * ↑(constant N e q 3) = ↑(slope N e q 3) * ↑(constant N e q 1)
+h12 : ¬↑(slope N e q 1) * ↑(constant N e q 2) = ↑(slope N e q 2) * ↑(constant N e q 1)
+h03 : ¬↑(slope N e q 0) * ↑(constant N e q 3) = ↑(slope N e q 3) * ↑(constant N e q 0)
+h01 : ¬↑(slope N e q 0) * ↑(constant N e q 1) = ↑(slope N e q 1) * ↑(constant N e q 0)
+h02 : ¬↑(slope N e q 0) * ↑(constant N e q 2) = ↑(slope N e q 2) * ↑(constant N e q 0)
+⊢ ¬↑(slope N e q 1) * ↑(constant N e q 0) = ↑(slope N e q 0) * ↑(constant N e q 1)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:411:8: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:444:4: error: application type mismatch
+  (dividedForm_dvd_iff ↑x).mpr (saturation_forces_modularForm_zero hs ↑x)
+argument
+  saturation_forces_modularForm_zero hs ↑x
+has type
+  modularForm l N e q ↑x = 0 : Prop
+but is expected to have type
+  modularForm l N e q ↑↑x = 0 : Prop
+'GoldbachRound18.DoubleExtraction.TargetGuards' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularAffine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedRoots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedRho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedRoughCell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedCandidates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularAffine_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularForm_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedForm_dvd_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularForm_actual_relation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.mem_dividedRoots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_le_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modular_constant_identities' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.unit_cast_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness1_q_cast_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0_q_cast_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.target_constant_nonzero_witness1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.target_constant_nonzero_witness0' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.affine_at_index_cast' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.actual_primitivity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularAffine_root_candidate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.roots_subset_candidates' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_le_four' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.root_of_nonzero_slope' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.exists_nonzero_slope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_lower' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_bounds' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.form_zero_iff_exists_affine' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_eq_one_single_live' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_at_witness1' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_at_witness0' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_eq_four_of_actual_separation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.signedDelta_cast_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.separated_of_not_dvd_actualDelta' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_eq_four_of_not_dvd_actualDelta' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_transport_off_modulus' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_mod_three_saturation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.saturation_forces_modularForm_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.saturation_roughCell_empty' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

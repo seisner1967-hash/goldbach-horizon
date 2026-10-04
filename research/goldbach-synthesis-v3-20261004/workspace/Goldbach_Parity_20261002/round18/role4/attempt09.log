@@ -1,0 +1,127 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:19:85: error: unknown identifier 'p'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:49:6: error: failed to synthesize
+  DecidablePred fun x => Selberg.rough (Selberg.primeSupport z) (fun x => dividedForm N e q ↑x) x
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:49:101: error: unsolved goals
+case h
+N e q z : ℕ
+J : Finset ℕ
+h : Cell N q
+hz : 1 ≤ z
+hns : ∀ p ∈ Selberg.primeSupport z, dividedRho p N e q < p
+x : ℕ
+⊢ (x ∈ J ∧ ∀ l ∈ Selberg.primeSupport z, ¬↑l ∣ dividedForm N e q ↑x) ↔ x ∈ sorry
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:54:61: error: invalid occurrence of `·` notation, it must be surrounded by parentheses (e.g. `(· + 1)`)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:107:2: error: tactic 'apply' failed, failed to unify
+  Finset.sum ?m.26924 ?m.26919 = Finset.sum ?m.26924 ?m.26920
+with
+  ∏ p ∈ Selberg.primeSupport y, (1 + switchH N e q p) = switchEuler N e q y
+case e_a
+N e q y : ℕ
+h : Cell N q
+hns : ∀ p ∈ Selberg.primeSupport y, dividedRho p N e q < p
+⊢ ∏ p ∈ Selberg.primeSupport y, (1 + switchH N e q p) = switchEuler N e q y
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:123:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:134:44: error: linarith failed to find a contradiction
+N e q y z : ℕ
+h : Cell N q
+hyz : y ≤ z
+hz : 0 < ↑z
+hlogz : 0 < Real.log ↑z
+hns : ∀ p ∈ Selberg.primeSupport z, dividedRho p N e q < p
+hm : ∑ p ∈ Selberg.primeSupport y, dividedDensity p N e q * Real.log ↑p ≤ Real.log ↑z / 2
+hsub : Selberg.primeSupport y ⊆ Selberg.primeSupport z
+hny : ∀ p ∈ Selberg.primeSupport y, dividedRho p N e q < p
+p : ℕ
+hp : p ∈ Selberg.primeSupport y
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:134:4: error: type mismatch
+  prod_nonneg fun p hp => ?m.32947
+has type
+  0 ≤ ∏ i ∈ Selberg.primeSupport y, ?m.32057 i : Prop
+but is expected to have type
+  0 ≤ switchEuler N e q y : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:141:4: error: 'change' tactic failed, pattern
+  switchEuler N e q y * ?m.41530 ≤ Real.log ↑z / 2 * switchEuler N e q y
+is not definitionally equal to target
+  switchEuler N e q y * ∑ p ∈ Selberg.primeSupport y, dividedDensity p N e q * Real.log ↑p ≤
+    Real.log ↑z / 2 * ∏ p ∈ Selberg.primeSupport y, (1 + switchH N e q p)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:147:2: error: 'change' tactic failed, pattern
+  switchEuler N e q y / 2 ≤ Selberg.G (Selberg.primeSupport y) z fun x => dividedDensity x N e q
+is not definitionally equal to target
+  (∏ p ∈ Selberg.primeSupport y, (1 + switchH N e q p)) / 2 ≤
+    ∑ s ∈ filter (fun s => ∏ p ∈ s, p ≤ z) (Selberg.primeSupport y).powerset,
+      PowersetMoment.subsetWeight (switchH N e q) s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:204:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:207:8: warning: declaration uses 'sorry'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:207:36: warning: unused variable `h`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:207:51: warning: unused variable `hg`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:208:5: warning: unused variable `hns`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:214:2: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:220:2: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:213:2: warning: 'apply Finset.prod_le_prod' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:214:2: warning: '·
+  intro p hp
+  apply
+    mul_nonneg
+      (pow_nonneg (one_div_nonneg.mpr (FourFormCollisionLoss.primeBase_positive (Selberg.mem_primeSupport.mp hp).1).le)
+        4)
+  split_ifs
+  · exact pow_nonneg (FourFormCollisionLoss.primeBase_positive (Selberg.mem_primeSupport.mp hp).1).le 3
+  · norm_num' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedSelbergBridge.lean:220:2: warning: '·
+  intro p hp
+  exact switch_collision_factor_le h hg hns hp' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+'GoldbachRound18.DoubleExtraction.switchG' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchEuler' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchCollisionLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switch_density_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switch_principal_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switch_finite_upper_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.switch_sieve_dichotomy' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchH_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchH_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switch_weighted_moment' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.switch_density_log_sum_le_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchG_half_euler_of_log_moment' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchG_half_euler_of_prime_log_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchEuler_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switch_collision_factor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchEuler_collision_loss' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.switchG_collision_loss_half' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

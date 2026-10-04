@@ -1,0 +1,139 @@
+{
+  "critical_differentiableAt_api_read": "TARGETED_037a81",
+  "helper_read": "FULL_56c1f6",
+  "schema": "ROUND22_ROLE4_ANALYTIC_BATCH02_READS",
+  "preparation_read": "FULL_56c1f6",
+  "new_lean_invocations": 0,
+  "previous_metadata_failure": "0e0a0b: empty pipe parse before execution, corrected795901; no Lean/math/file mutation",
+  "cache_scope": "IMPORT_HEADERS_ONLY_AND_BYTE_HASHES_NOT_FULL_API",
+  "launcher_read": "FULL_198a26",
+  "judged_dependencies": [
+    {
+      "independent_log_sha256": "c32bcee851c6f6c2a8ba9873fe09f2f821539dac0a4a13dccbe5ecba6885c28e",
+      "recompile": false,
+      "log_read_scope": "TARGETED_80a204_ROOT_FULL_INDEPENDENT_AUDIT",
+      "independent_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\receipt.json",
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\GammaPrerequisites22.lean",
+      "independent_log_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22.log",
+      "staged_olean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\GammaPrerequisites22.olean",
+      "olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "module": "GammaPrerequisites22",
+      "receipt_read_full": "57db21",
+      "independent_receipt_sha256": "a159b22e7ac4e8718f0572fdbf3e6d424294571eab01d5ed1ff979a821af48f9",
+      "fin_read_full": "c686d1",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "independent_fin_sha256": "255aaa06b1ff8494ad3ef1a5a36d42fc6062b489e2b2ff692ad5e1bc8ddf9c51",
+      "independent_fin_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22_FIN.json",
+      "independent_log_fin_field": "log_sha256"
+    },
+    {
+      "independent_log_sha256": "481976d42be39d2c68d818081eb257a30b408fba26803a89c75cf1205ba06add",
+      "recompile": false,
+      "log_read_scope": "FULL_51b3a1",
+      "independent_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\receipt.json",
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\GammaDerivative22.lean",
+      "independent_log_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22.stdout.log",
+      "staged_olean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\GammaDerivative22.olean",
+      "olean_sha256": "0618f801c5feec7b760ba18ab3dddc960519b398dd1d1b719acc809132518125",
+      "module": "GammaDerivative22",
+      "receipt_read_full": "FULL_51b3a1",
+      "independent_receipt_sha256": "74959436b372e6dc180b1f5b79e51e17bded56361ba70774695a906dc3f3d4ee",
+      "fin_read_full": "FULL_51b3a1",
+      "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "independent_fin_sha256": "943d3a1ff4ff5206649bf924295525ddb74c0f3c26395323bad1f3c80ec0f003",
+      "independent_fin_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22_FIN.json",
+      "independent_log_fin_field": "stdout_sha256"
+    }
+  ],
+  "time_utc": "2026-10-03T11:22:11.2850452Z",
+  "sources": [
+    {
+      "read_scope": "FULL",
+      "declarations": [
+        "weightedGammaTerm",
+        "spectralBoxDomain",
+        "gammaBoxRadius",
+        "weightedGammaTerm_eq_cpow",
+        "spectralBoxDomain_convex",
+        "norm_weightedGamma_exponential_le",
+        "hasDerivAt_weightedGammaTerm",
+        "norm_deriv_weightedGammaTerm_le",
+        "weightedGammaTerm_lipschitz_on_boxDomain",
+        "weightedGammaTerm_box_error_le",
+        "gammaBoxRadius_nonneg",
+        "gammaBoxRadius_continuousAt"
+      ],
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\GammaBoxBounds22.lean",
+      "source_sha256": "4874192b1c2ca9edc7262d8a46f9d4a1e339c565e5bb48fefbf4d6d100071edf",
+      "compiled": false,
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_revision02\\GammaBoxBounds22.lean",
+      "qualified_print_count": 12,
+      "read_capture": "f2080d",
+      "module": "GammaBoxBounds22"
+    },
+    {
+      "read_scope": "FULL",
+      "declarations": [
+        "gammaContourPoint",
+        "gammaContourFactor",
+        "gammaContourEnvelope",
+        "norm_weightedGammaTerm_on_outer_strip",
+        "gammaContourFactor_continuous",
+        "norm_gammaContourFactor_le",
+        "real_exponential_tail_integrable",
+        "integral_real_exponential_tail",
+        "gammaContourFactor_tail_integrable_and_bound",
+        "gammaContourEnvelope_nonneg",
+        "gammaContourEnvelope_continuous"
+      ],
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\GammaContourComponent22.lean",
+      "source_sha256": "244f20f0d0198101b6b2a27841b273b01f7c52f28a38b7b51b4db588446f4265",
+      "compiled": false,
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\gamma_revision02\\GammaContourComponent22.lean",
+      "qualified_print_count": 11,
+      "read_capture": "FULL_198a26",
+      "module": "GammaContourComponent22"
+    },
+    {
+      "read_scope": "FULL",
+      "declarations": [
+        "thermalUnitTest",
+        "thermalTest",
+        "thermalDualTest",
+        "thermalTest_eq_real",
+        "thermalTest_continuous",
+        "thermalUnitTest_mellin_convergent",
+        "mellin_thermalUnitTest",
+        "thermalTest_mellin_convergent",
+        "mellin_thermalTest",
+        "hasMellin_thermalTest",
+        "thermalDualTest_mellin_convergent",
+        "mellin_thermalDualTest"
+      ],
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\MellinThermal22.lean",
+      "source_sha256": "1396cb0a0045c621ea3e8f0f8b905c1c2a0af3ec33a351e4e7150542f38352fe",
+      "compiled": false,
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinThermal22.lean",
+      "qualified_print_count": 12,
+      "read_capture": "f2080d",
+      "module": "MellinThermal22"
+    },
+    {
+      "read_scope": "FULL",
+      "declarations": [
+        "gammaContourFactor_vertical_integrable",
+        "thermalTest_mellin_vertical_integrable",
+        "thermalTest_mellin_inversion",
+        "thermalTest_gamma_inversion"
+      ],
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\MellinThermalInversion22.lean",
+      "source_sha256": "ad42b7bf8cd9b94e4f2c04125201b6a82b62821b1cb38652aa4e2f6c41a1df66",
+      "compiled": false,
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinThermalInversion22.lean",
+      "qualified_print_count": 4,
+      "read_capture": "f2080d",
+      "module": "MellinThermalInversion22"
+    }
+  ],
+  "new_mathematical_python_invocations": 0
+}

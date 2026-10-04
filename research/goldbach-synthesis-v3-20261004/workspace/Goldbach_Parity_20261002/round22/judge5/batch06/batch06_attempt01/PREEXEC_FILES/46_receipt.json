@@ -1,0 +1,261 @@
+{
+  "C3_paid": false,
+  "C5_paid": false,
+  "C6_paid": false,
+  "D_N_paid": false,
+  "H1_paid": false,
+  "actual_child_invocations": 2,
+  "all_inputs_unchanged": true,
+  "attempt": "batch05_attempt01",
+  "author_olean_used": false,
+  "capture_count": 32,
+  "closed_judge_file_count": 209,
+  "declarations_passed": 23,
+  "global_trace_certified": false,
+  "hidden_retries": false,
+  "input_count": 6707,
+  "module_count_passed": 2,
+  "numeric_PASS_used_as_proof": false,
+  "numeric_bank_replayed": false,
+  "old_batches_recompiled": false,
+  "protected_archive_count": 3089,
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "GammaDerivative22"
+  ],
+  "rows": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.spectralBoxDomain"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaBoxRadius"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm_eq_cpow"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.spectralBoxDomain_convex"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_weightedGamma_exponential_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.hasDerivAt_weightedGammaTerm"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_deriv_weightedGammaTerm_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm_lipschitz_on_boxDomain"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm_box_error_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaBoxRadius_nonneg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaBoxRadius_continuousAt"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\batch05_attempt01\\GammaBoxBounds22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\sources\\GammaBoxBounds22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T12:37:27.615637+00:00",
+      "launch_error": null,
+      "log_sha256": "51ec0900b9e0f6791268a86023661a5954e9ae9e10f3c5a3f1a2da011ea83162",
+      "module": "GammaBoxBounds22",
+      "olean_sha256": "4cb4d50f6d7dd8087e9d227d7052cb445527f018249dc3ffe6493ea2a87bfce3",
+      "source_prior_status": "AUTHOR_PASS_PENDING_INDEPENDENT_JUDGE",
+      "source_sha256": "4874192b1c2ca9edc7262d8a46f9d4a1e339c565e5bb48fefbf4d6d100071edf",
+      "started_at": "2026-10-03T12:37:05.313458+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    },
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourPoint"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourFactor"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourEnvelope"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourFactor_continuous"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_gammaContourFactor_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.real_exponential_tail_integrable"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integral_real_exponential_tail"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourEnvelope_nonneg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourEnvelope_continuous"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\batch05_attempt01\\GammaContourComponent22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\sources\\GammaContourComponent22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T12:37:50.937286+00:00",
+      "launch_error": null,
+      "log_sha256": "607a6e735964ffef61d4ae707a2ff503528311fc0df1722e0b6d5e42549e99b0",
+      "module": "GammaContourComponent22",
+      "olean_sha256": "f9b5a9b2f47dd0ee03a58e6cd666d702ff5fc6eba39d07e89566a254df44648b",
+      "source_prior_status": "CORRECTED_SOURCE_NOT_COMPILED",
+      "source_sha256": "891454d4714e68039a0976e7eb9347e10653237f4608993b52b481cc95b0a3fe",
+      "started_at": "2026-10-03T12:37:27.615637+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    }
+  ],
+  "status": "INDEPENDENT_BATCH05_AUX_PASS",
+  "time_utc": "2026-10-03T12:37:59.713232+00:00",
+  "victory": false
+}

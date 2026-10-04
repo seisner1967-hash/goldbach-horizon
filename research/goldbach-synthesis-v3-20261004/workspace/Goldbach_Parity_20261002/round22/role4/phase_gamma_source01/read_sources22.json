@@ -1,0 +1,305 @@
+{
+  "schema": "ROUND22_PHASE_GAMMA_SOURCE_READ_RECEIPT_01",
+  "created_utc": "2026-10-03T14:50:09.1923538Z",
+  "status": "SOURCE_ONLY_NOT_PREPARED",
+  "source_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\PhaseGammaSharp22.lean",
+      "scope": "FULL",
+      "chunk": "5ac1ad"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\PhaseGammaTails22.lean",
+      "scope": "FULL",
+      "chunk": "39de78"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\source_contract22.md",
+      "scope": "FULL",
+      "chunk": "9324b8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\erratum_bank02_status22.md",
+      "scope": "FULL",
+      "chunk": "9324b8"
+    }
+  ],
+  "api_sources": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\Basic.lean",
+      "sha256": "88b9514033ef73a5c20979290e447a09b3a96ae7de91a401ab9f4e00bb71067e",
+      "bytes": 27388,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "414-425",
+        "664-677"
+      ],
+      "read_chunks": [
+        "ba41fc",
+        "f561b8"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Gamma\\Basic.lean",
+      "sha256": "f4ca5a690e26e33f833cfd686b4b12b8ff50b4001ce758a2e3d8f6061c4e0a7e",
+      "bytes": 24073,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "304-318",
+        "353-368"
+      ],
+      "read_chunks": [
+        "ba41fc"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Gamma\\Beta.lean",
+      "sha256": "6ed0322724e35b5ac2b83b8b38516ed95fba308ee892e1baa622a49a13c722da",
+      "bytes": 29210,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "396-411"
+      ],
+      "read_chunks": [
+        "5d174d"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Gamma\\Deriv.lean",
+      "sha256": "81ce20b55a1104cbf30f241ff1449535bace75085dbd6206ba60a314066a8f3f",
+      "bytes": 4982,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "78-88"
+      ],
+      "read_chunks": [
+        "60c7ff"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Trigonometric\\Basic.lean",
+      "sha256": "42e804660dd9e27b2014b017ab0b9f203222dcee1f4595f11126651e114d2ed6",
+      "bytes": 46759,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "1114-1126"
+      ],
+      "read_chunks": [
+        "634a66"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Exponential.lean",
+      "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+      "bytes": 59817,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "309-323",
+        "427-439",
+        "870-902",
+        "1052-1070"
+      ],
+      "read_chunks": [
+        "a358e3",
+        "d3cfbd"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Real.lean",
+      "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+      "bytes": 49324,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "278-292",
+        "437-445"
+      ],
+      "read_chunks": [
+        "1cc497",
+        "802351"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Continuity.lean",
+      "sha256": "47b6018f8597ae353961ae3835d8b96915803978d12d0c9c3dd555fb0118b8c1",
+      "bytes": 21819,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "124-135",
+        "231-266",
+        "215-225"
+      ],
+      "read_chunks": [
+        "956edf",
+        "d3cfbd"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Complex\\Arg.lean",
+      "sha256": "2617fea0f21bd7d4b718fe6fc24565a99dfc9b9ac7ee76e23fee00a1052bf89d",
+      "bytes": 29377,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "355-377",
+        "538-551"
+      ],
+      "read_chunks": [
+        "1cc497"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Asymptotics.lean",
+      "sha256": "22bcf9704b22c3e5ee0c0fb4f5035bbe1fb3026022d097d63e5e4185cb035cbe",
+      "bytes": 16944,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "134-146"
+      ],
+      "read_chunks": [
+        "e4448f"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Basic.lean",
+      "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+      "bytes": 80226,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "1440-1458"
+      ],
+      "read_chunks": [
+        "c390ab"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Exp.lean",
+      "sha256": "5d3d5d5a380d40a0dec62ee11eedad258381ca537d58ee92f1fb47efe9ac427b",
+      "bytes": 21402,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "185-199"
+      ],
+      "read_chunks": [
+        "71183a"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\GroupWithZero\\Unbundled.lean",
+      "sha256": "88097fc3af252bef1867c8ff416aa643e82f9208bfdef41c55606628b70fab02",
+      "bytes": 87329,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "1273-1284"
+      ],
+      "read_chunks": [
+        "99dabd"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\IntegralEqImproper.lean",
+      "sha256": "b7566d4908de6f28c73b0490a6bd79c3990bde03007f1b5b291d1b11a8ef1533",
+      "bytes": 72376,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "791-826"
+      ],
+      "read_chunks": [
+        "6fd79f"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\Bochner.lean",
+      "sha256": "b58d6339786ee0602d5d1577042e7d407112682b670150d909a853115b9b339b",
+      "bytes": 99539,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "815-827",
+        "1363-1379"
+      ],
+      "read_chunks": [
+        "6eed2b",
+        "60c7ff"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\L1Space.lean",
+      "sha256": "7d041392ff5a34fb256b5ce97cc04b8c681919350c849647d4309bdc29af4a2a",
+      "bytes": 72775,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "430-443",
+        "1165-1178"
+      ],
+      "read_chunks": [
+        "60c7ff",
+        "6eed2b"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Measure\\Restrict.lean",
+      "sha256": "73437971f83d0e54f26c617cb25e0bffa35c6775e06c27c188e336ea1e260c4d",
+      "bytes": 47468,
+      "scope": "TARGETED",
+      "requested_ranges_1based": [
+        "578-586"
+      ],
+      "read_chunks": [
+        "802351"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Group\\Basic.lean",
+      "sha256": "565eaf5e8b86cf25e60d4f1836e53275b4a20005d99b645428587a405e7d8112",
+      "bytes": 67947,
+      "scope": "TARGETED_SEARCH_SIGNATURE",
+      "requested_ranges_1based": [
+        "norm_ne_zero_iff generated signature"
+      ],
+      "read_chunks": [
+        "802351"
+      ],
+      "full_text_read": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Basic.lean",
+      "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b",
+      "bytes": 31542,
+      "scope": "TARGETED_SEARCH_SIGNATURE",
+      "requested_ranges_1based": [
+        "natCast_re signature"
+      ],
+      "read_chunks": [
+        "71183a"
+      ],
+      "full_text_read": false
+    }
+  ],
+  "api_binding_count": 19,
+  "honest_scope": "Cache sources are byte-bound with targeted extracts or signatures; no claim of full-text cache review or transitive Lean import closure.",
+  "operations": {
+    "source_reads": true,
+    "sha256_metadata": true,
+    "textual_count": true,
+    "compiler_invocations": 0,
+    "numerical_invocations": 0,
+    "python_imports": 0,
+    "lean_probes": 0
+  },
+  "historical_missing_guessed_paths": "Missing guessed source paths were resolved by targeted actual API reads. These incidents are metadata/source lookup only, not Lean or mathematical failures."
+}

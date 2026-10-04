@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-03T08:09:48.882474+00:00",
+  "status": "AUTHOR_STAGE_FAILED",
+  "started": "2026-10-03T08:05:00.920285+00:00",
+  "finished": "2026-10-03T08:05:26.220717+00:00",
+  "exit_code": 1,
+  "source_sha256": "930f6d68ea6ab6549e4e1e08fe701239685948e38b77b8c56487401c20da2935",
+  "log_sha256": "d787a49762a25c8380211b856873ac93d5c3f90a4442070042edc498095a5f43",
+  "receipt_sha256": "4506b667d4a6472fc9055b78a1e56f6f356f30fc42ce9ac27ee1167942431245",
+  "copies_verified": 47,
+  "inputs_verified": 47,
+  "root_FULL_reads": {
+    "log": "c8ca39",
+    "receipt": "7678c7"
+  },
+  "error_lines": [
+    83
+  ],
+  "error_count": 1,
+  "classes": [
+    "explicit rpow_natCast rewrite pattern absent; square normalization now resolved"
+  ],
+  "sorryAx_recovery_zero_formal_credit": true,
+  "infinite_G0_complete": false,
+  "analytic_or_parity_refutation_claim": false,
+  "revision_policy": "Distinct SOURCE ONLY input and root gate required.",
+  "WIN": false,
+  "root_compiler_invocations": 0,
+  "stage": "G0_UNFOLD_REVISION03",
+  "cumulative_author_PASS": 2,
+  "cumulative_author_FAIL": 7,
+  "negSucc_cast_resolved": true
+}

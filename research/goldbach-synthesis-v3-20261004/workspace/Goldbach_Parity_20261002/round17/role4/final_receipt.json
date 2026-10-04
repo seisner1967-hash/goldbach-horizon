@@ -1,0 +1,624 @@
+{
+  "status": "FINAL_PASS_PARTIAL",
+  "timestamp_utc": "2026-10-02T20:17:39.413931+00:00",
+  "score": 0,
+  "victory": false,
+  "source_onset": "log N >= 10^24, not instantiated by finite tests",
+  "runtime": "Lean 4.15.0",
+  "ownership": [
+    "round17/role4/**",
+    "round17/agent4_formalisation.md"
+  ],
+  "old_Lean_rebuilds": 0,
+  "old_numeric_bank_reruns": 0,
+  "protected_archive_claim": "799 protected by root preflight; no old path written by role4",
+  "modules": [
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean",
+      "source_sha256": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.olean",
+      "olean_sha256": "4a13fc20feabfd5ff552f5dbd18c99c6b66bcfe1a65a3f44fff555417d7b4021",
+      "success_attempt": 8,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "actualForm"
+        },
+        {
+          "kind": "def",
+          "name": "residueUniverse"
+        },
+        {
+          "kind": "def",
+          "name": "actualRoots"
+        },
+        {
+          "kind": "def",
+          "name": "actualRho"
+        },
+        {
+          "kind": "def",
+          "name": "localDensity"
+        },
+        {
+          "kind": "def",
+          "name": "candidates"
+        },
+        {
+          "kind": "def",
+          "name": "collisionProduct"
+        },
+        {
+          "kind": "def",
+          "name": "natDelta"
+        },
+        {
+          "kind": "def",
+          "name": "integerForm"
+        },
+        {
+          "kind": "def",
+          "name": "fourFormRoughCell"
+        },
+        {
+          "kind": "theorem",
+          "name": "residueUniverse_eq_univ"
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_actualRoots"
+        },
+        {
+          "kind": "theorem",
+          "name": "zero_mem_actualRoots"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_lower"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_le_modulus"
+        },
+        {
+          "kind": "theorem",
+          "name": "coprime_cast_not_both_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "linear_root_eq_div_of_nonzero"
+        },
+        {
+          "kind": "theorem",
+          "name": "linear_root_eq_div"
+        },
+        {
+          "kind": "theorem",
+          "name": "roots_subset_candidates"
+        },
+        {
+          "kind": "theorem",
+          "name": "candidates_card_le_four"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_le_four"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_bounds"
+        },
+        {
+          "kind": "theorem",
+          "name": "roots_eq_candidates_of_nonzero"
+        },
+        {
+          "kind": "theorem",
+          "name": "density_positive"
+        },
+        {
+          "kind": "theorem",
+          "name": "density_lt_one_of_nonsaturated"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_eq_four_of_collision_nonzero"
+        },
+        {
+          "kind": "theorem",
+          "name": "natDelta_cast"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_eq_four_of_not_dvd_delta"
+        },
+        {
+          "kind": "theorem",
+          "name": "saturated_roots_eq_univ"
+        },
+        {
+          "kind": "theorem",
+          "name": "saturation_forces_actualForm_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "nonsaturated_of_actualForm_nonzero"
+        },
+        {
+          "kind": "theorem",
+          "name": "roots_of_N_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_eq_one_of_dvd_N"
+        },
+        {
+          "kind": "instance",
+          "name": "primeThreeFact"
+        },
+        {
+          "kind": "theorem",
+          "name": "roots_mod_three_e_two"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_mod_three_e_two"
+        },
+        {
+          "kind": "theorem",
+          "name": "roots_mod_three_e_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "roots_mod_three_e_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_mod_three_e_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "rho_mod_three_e_one"
+        },
+        {
+          "kind": "theorem",
+          "name": "integerForm_cast"
+        },
+        {
+          "kind": "theorem",
+          "name": "integerForm_dvd_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "saturation_integerForm_dvd"
+        },
+        {
+          "kind": "theorem",
+          "name": "saturation_roughCell_empty"
+        }
+      ],
+      "theorems": 33,
+      "defs": 10,
+      "instances": 1,
+      "axioms_printed": 44
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean",
+      "source_sha256": "971f351decef7e78112ec940c5ee553806abecccaf19440a4d661881c4ae188d",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.olean",
+      "olean_sha256": "f1b9c19267d9c6df430156f3731613bd1fbcf58bf50e626417a74dc8449f1905",
+      "success_attempt": 11,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "subsetWeight"
+        },
+        {
+          "kind": "def",
+          "name": "subsetLog"
+        },
+        {
+          "kind": "theorem",
+          "name": "total_weight"
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_moment"
+        },
+        {
+          "kind": "theorem",
+          "name": "subsetLog_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "name": "log_primeProduct"
+        },
+        {
+          "kind": "theorem",
+          "name": "cutoff_markov"
+        }
+      ],
+      "theorems": 5,
+      "defs": 2,
+      "instances": 0,
+      "axioms_printed": 7
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.lean",
+      "source_sha256": "577ff585207e72bf5d31121743fc218effc91eb8a460cef9fa9ee2e05a3996e0",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.olean",
+      "olean_sha256": "340667c515537e2d5501e19329c4becb39cef6989699439107f85a4ec520dbc1",
+      "success_attempt": 13,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "actualH"
+        },
+        {
+          "kind": "def",
+          "name": "actualEuler"
+        },
+        {
+          "kind": "theorem",
+          "name": "primeSupport_mono"
+        },
+        {
+          "kind": "theorem",
+          "name": "G_mono_support"
+        },
+        {
+          "kind": "theorem",
+          "name": "actualH_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "name": "actualH_ratio"
+        },
+        {
+          "kind": "theorem",
+          "name": "actual_weighted_moment"
+        },
+        {
+          "kind": "theorem",
+          "name": "actual_density_log_sum_le_four"
+        },
+        {
+          "kind": "theorem",
+          "name": "actual_G_half_euler_of_log_moment"
+        },
+        {
+          "kind": "theorem",
+          "name": "actual_G_half_euler_of_prime_log_sum"
+        }
+      ],
+      "theorems": 8,
+      "defs": 2,
+      "instances": 0,
+      "axioms_printed": 10
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean",
+      "source_sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.olean",
+      "olean_sha256": "e8f5c07ef6225671165e1fb942d4f0c39e3540ee8d1a3ee1e21d0205e10a3091",
+      "success_attempt": 16,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "primeBase"
+        },
+        {
+          "kind": "def",
+          "name": "mertensEuler"
+        },
+        {
+          "kind": "def",
+          "name": "collisionLoss"
+        },
+        {
+          "kind": "theorem",
+          "name": "primeBase_positive"
+        },
+        {
+          "kind": "theorem",
+          "name": "actualEuler_factor"
+        },
+        {
+          "kind": "theorem",
+          "name": "collision_factor_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "actualEuler_collision_loss"
+        },
+        {
+          "kind": "theorem",
+          "name": "actualG_collision_loss_half"
+        }
+      ],
+      "theorems": 5,
+      "defs": 3,
+      "instances": 0,
+      "axioms_printed": 8
+    }
+  ],
+  "totals": {
+    "modules": 4,
+    "theorems": 51,
+    "defs": 17,
+    "instances": 1,
+    "axioms_printed": 69
+  },
+  "attempts": 16,
+  "exit_zero": 5,
+  "exit_nonzero": 11,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "build_receipt_sha256": "de1944e0e7e3b698126d1b282348dcec9ffc7932d5116ccabe735967fc7bff4f",
+  "fresh_dependency": {
+    "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean",
+    "source_sha256": "b1b658aa92f8e02cef29667e9e60b763ca3ef57bb25dcbc8aa9c50ba33591ce1",
+    "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.olean",
+    "olean_sha256": "9639c1f7ae9eb03d07c1de2fd79cdea4dd503d29716e5de3adb4085de21fc46c",
+    "rebuilt_by_role4": false,
+    "dependency_declarations_recounted": false
+  },
+  "report": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\agent4_formalisation.md",
+  "report_sha256": "59a035188ecab816f3aaf70be0ce4efe4f2d0c4ed5779d9aba597ea429d3fa1c",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt01.log",
+      "sha256": "87551993212aab1a41b1dca778b3061f8c9d59dc3c03416c8aca5763d64b8805",
+      "bytes": 5579
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt01_source.lean.txt",
+      "sha256": "e0c2c0149869388d754480a824187ec1bdb7294b4bda1ab272100350f636e35b",
+      "bytes": 5898
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt02.log",
+      "sha256": "1c24aeca8c622fbe5f21fa789069f547ea9cfd7eb51879bf8d83377f79f9603b",
+      "bytes": 3162
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt02_source.lean.txt",
+      "sha256": "df37c509c630771c2aa16b159b1d5e25aa85c26c6b30dc61d186d408ba928c99",
+      "bytes": 6380
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt03.log",
+      "sha256": "ee3112e1a11dca4f391b199c7531e36aa09b335bf79264be9af23a414ccc0535",
+      "bytes": 5436
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt03_source.lean.txt",
+      "sha256": "d6559c907a9dab02312f771a87aaa00123ce229f56dcffc29d601b5b87b0b632",
+      "bytes": 11735
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt04.log",
+      "sha256": "32eb9c75f9080403235a8ed783bdef158d3cf797af114df33fbce27201e75334",
+      "bytes": 5354
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt04_source.lean.txt",
+      "sha256": "eb0fbd486bbfb26a6d64e9a764b26eba3018be6361e032cf1a5e1cf74c29cc74",
+      "bytes": 11772
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt05.log",
+      "sha256": "83a44c0ab01d619b1e2bbc4098c167911b84828fe29cffa30a1f23d3a37618ad",
+      "bytes": 5168
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt05_source.lean.txt",
+      "sha256": "13e299cec1244cb9bbb645f3e1919e4d226d2f6270a8e45c7b44857b876cdcde",
+      "bytes": 11832
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt06.log",
+      "sha256": "a0898674414140bbc4ab350864221c894b5a31a951798d76e8466d876acd946e",
+      "bytes": 5670
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt06_source.lean.txt",
+      "sha256": "63e021799876142d2e8a4d7ba6ef34bb030a23c0d7cf789f63990e7c495a0cd5",
+      "bytes": 13445
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt07.log",
+      "sha256": "65908f83de213998675c9f0ae05ff5d58f33227de652d60682c3527acb6ec855",
+      "bytes": 5652
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt07_source.lean.txt",
+      "sha256": "c1ff5736b5aad01e0a8d8f5dd9127b257b96a64c3baf2fe997337aad1afb1a68",
+      "bytes": 13487
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt08.log",
+      "sha256": "3b943e6e6ea23b1baef7ea519b64ffedf9655c60912947e3a3b2f4ad4af99edd",
+      "bytes": 4836
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt08.olean",
+      "sha256": "4a13fc20feabfd5ff552f5dbd18c99c6b66bcfe1a65a3f44fff555417d7b4021",
+      "bytes": 592464
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt08_source.lean.txt",
+      "sha256": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa",
+      "bytes": 13703
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt09.log",
+      "sha256": "2ff6a4fd137565b08c06ae313fdba0e846cea3bafeb996f4836c3875f880b700",
+      "bytes": 1394
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt09_source.lean.txt",
+      "sha256": "e4f616483c33fdc7b7c735d7c989718d7d5ad79f3627291c66ac6e6e38107050",
+      "bytes": 4038
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt10.log",
+      "sha256": "71b73a709cf0c937a3c7be1433d193a9c391cf7665e1bec1ff867a4aa792617e",
+      "bytes": 978
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt10_source.lean.txt",
+      "sha256": "b9fac37c1a7a678f48126e06de54adec1f66529f61c5c07e781aa6c987769841",
+      "bytes": 4046
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt11.log",
+      "sha256": "c30608116846aa2c3cfe25a94fdb865d3decd8859af08c083e77c8692db911b1",
+      "bytes": 751
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt11.olean",
+      "sha256": "f1b9c19267d9c6df430156f3731613bd1fbcf58bf50e626417a74dc8449f1905",
+      "bytes": 292080
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt11_source.lean.txt",
+      "sha256": "971f351decef7e78112ec940c5ee553806abecccaf19440a4d661881c4ae188d",
+      "bytes": 4077
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt12.log",
+      "sha256": "78693fb6e4e55b0360ede2cad16c95fd4bf304973a892a782d3f621805465db8",
+      "bytes": 1819
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt12_source.lean.txt",
+      "sha256": "3de4dc236219f6f10115798ad2654db12a7ff44bb00b8fe891cd904975f37e89",
+      "bytes": 6218
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt13.log",
+      "sha256": "fb1c9d7c230bd3f9e0d9516bd4c09d84b9a8028e10244f622991b63c24d852ca",
+      "bytes": 1189
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt13.olean",
+      "sha256": "340667c515537e2d5501e19329c4becb39cef6989699439107f85a4ec520dbc1",
+      "bytes": 271512
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt13_source.lean.txt",
+      "sha256": "577ff585207e72bf5d31121743fc218effc91eb8a460cef9fa9ee2e05a3996e0",
+      "bytes": 6216
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt14.log",
+      "sha256": "b2a9eba610295601b7e386aec87655766df7a877a57f236193e26b58e3bbc83e",
+      "bytes": 3211
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt14_source.lean.txt",
+      "sha256": "deb060fdafbd4079c21efce60396cd1170ad0c11a52c45145e466571ea408097",
+      "bytes": 5046
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt15.log",
+      "sha256": "87a7545dec3e733e9fff613ff52579acba63c79c516e42c065d4515537088b95",
+      "bytes": 1218
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt15.olean",
+      "sha256": "f2e96aa56c58648ed70b95ce25b2ae5d26fa56daafac5ac7e675b76b7c75327b",
+      "bytes": 273392
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt15_source.lean.txt",
+      "sha256": "c4b7f33ea941d17e2c9ced1d52dcd93b1c36dfd5ad009f77a5af871457b27d2a",
+      "bytes": 5126
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt16.log",
+      "sha256": "16f84da8a2c1e9dbeb01d22812823ff575666f31fb358341208b7949bf3907ac",
+      "bytes": 958
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt16.olean",
+      "sha256": "e8f5c07ef6225671165e1fb942d4f0c39e3540ee8d1a3ee1e21d0205e10a3091",
+      "bytes": 273392
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt16_source.lean.txt",
+      "sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5",
+      "bytes": 5123
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\build.py",
+      "sha256": "8e351f7a03dd1da51092a3b8b03e8c29553080ceeb65d1c68c48e48496a709df",
+      "bytes": 2278
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\build_receipt.json",
+      "sha256": "de1944e0e7e3b698126d1b282348dcec9ffc7932d5116ccabe735967fc7bff4f",
+      "bytes": 20188
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\finalize.py",
+      "sha256": "e83cff1b38344740d27e5e79ef004aa5e6288b68b076d97f3e06ff387f74d16b",
+      "bytes": 4664
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean",
+      "sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5",
+      "bytes": 5123
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.olean",
+      "sha256": "e8f5c07ef6225671165e1fb942d4f0c39e3540ee8d1a3ee1e21d0205e10a3091",
+      "bytes": 273392
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean",
+      "sha256": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa",
+      "bytes": 13703
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.olean",
+      "sha256": "4a13fc20feabfd5ff552f5dbd18c99c6b66bcfe1a65a3f44fff555417d7b4021",
+      "bytes": 592464
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.lean",
+      "sha256": "577ff585207e72bf5d31121743fc218effc91eb8a460cef9fa9ee2e05a3996e0",
+      "bytes": 6216
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.olean",
+      "sha256": "340667c515537e2d5501e19329c4becb39cef6989699439107f85a4ec520dbc1",
+      "bytes": 271512
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean",
+      "sha256": "971f351decef7e78112ec940c5ee553806abecccaf19440a4d661881c4ae188d",
+      "bytes": 4077
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.olean",
+      "sha256": "f1b9c19267d9c6df430156f3731613bd1fbcf58bf50e626417a74dc8449f1905",
+      "bytes": 292080
+    }
+  ],
+  "not_proved_in_Lean": [
+    "analytic prime log sum input",
+    "Mertens lower bound log y",
+    "totient price for collision loss",
+    "CRT +1 bound",
+    "C6 total source weighted sum and onset",
+    "T_S and T_A payments",
+    "prime availability",
+    "single-consumption global capacity",
+    "Goldbach target"
+  ]
+}

@@ -1,0 +1,50 @@
+BUILD_ONLY04 — outils SOURCE / assemblage metadata, revue04 attendue
+
+Le parent d7d28b2eb0da5e712a242cb8f6428e7a35b53832753200a3da4c9c0ff7a89cc7
+est lu FULL0f5e9d, le backend88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3
+FULL656a21, handoff277af8bac79d344907222f1b3c481d97e551afb2d8b1cf5a2aca299dac7508b6
+FULLab1ee8. Plan effectif538cc14faf3466bb8a0505e8f6aae3007fc84b2b6246afb2da55d37be5718156,
+contrat574aef1f43b9ca328a62bc73a7b65466ff82e61c6a9bf822bdc5f5936ad154a5,
+policy72fd49d9, conservation5ee37df5 et reçusaf53dbff sont lus FULL910b3e.
+
+Le nouveau helper metadata SOURCE est écrit et lu FULL5bd762, jamais exécuté :
+prepare_build04_metadata22.ps1, 15754 octets,
+SHA78d64b8f825ddf904e155fc3feef3fc165d00dc1fc5153bdbdd53ea64eb0c509.
+Ses deux paramètres de SHA de revue sont obligatoires. Les chemins attendus
+du Juge sont circle_native_build_controls_source_review04.md et
+circle_native_build_trust_review04.json. Il n'accepte ni une ancienne revue03
+comme revue04 ni une fermeture de chargeur all_non_OS_imports_bound=true.
+
+Une projection metadata c2bb4c assemble 6332/12/29 bindings gelés sans conflit :
+réunion6372 chemins. L'ensemble exact du parent projeté avec les contrôles
+et deux futures revues contiendrait6375 chemins. C'est un compte structurel,
+pas un manifeste final ou une préparation PREPARED. Les29 bindings du handoff04
+ont été physiquement vérifiés ici (tailles/SHA). Les6332 inputs et3089 archives
+n'ont pas été réévalués dans cette seule projection. Le helper final les
+rehashéra, ainsi que les6358 anciens inputs03, leurs30 contrôles/copies et
+les sorties du vrai échec03, sans relancer aucun programme.
+
+Les FIXED du parent sont conservés textuellement : deux drivers fixes maximum,
+STOP_FIRST_FAIL, zéro retry,300s global, Job actif16, total32 observé,
+commit Job/processus2147483648 octets. Job flags8968 (0x2308), aucun bit
+WORKINGSET et aucune API Set/GetProcessWorkingSetSizeEx. rss_os_enforced=false,
+rss_control=SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM. Peak RSS des processus
+énumérés surveillé à2GiB, somme RSS vivante échantillonnée à4GiB. Ces moniteurs
+ne constituent pas une limite RSS universelle imposée au système. La demande
+et la relecture des commits Job ne sont encore qu'en SOURCE, non exercées.
+Les pics de descendants très courts peuvent échapper au RSS monitor ; le
+parent reste hors Job. Aucun privilège ni fallback n'est activé.
+
+Chemins04 futurs exclusifs : actual_build04_attempt01, TEMP/TMP actual/tmp,
+native02/build-final04, native02/build_receipt04.json et gate ROOT04.
+CPP et arguments de compilation inchangés hormis la destination−o.
+BUILD03 et son vrai défaut de contrôle Win32 1314 restent immuables.
+
+À cet instant, les deux nouvelles revues sont absentes. Aucun builder,
+compilateur, backend importé, probe/API, exécutable produit ou calcul numérique
+n'a été lancé. Aucun PREPARED final, copie de préparation parent ou gate n'est
+créé. Les imports PE déclarés antérieurs et la confiance Windows/GCC restent
+scopés ; chargements effectifs/fermeture universelle restent non observés.
+La prochaine étape metadata attend les octets et SHA exacts du Juge puis la
+coordination ROOT. Le futur BUILD_ONLY n'autorise aucun banc numérique.
+Coefficient N, primitive/refinement GMP/NTT/CRT, D_N et WIN restent ouverts.

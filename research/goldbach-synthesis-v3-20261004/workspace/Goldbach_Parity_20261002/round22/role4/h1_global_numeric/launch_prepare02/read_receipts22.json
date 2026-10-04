@@ -1,0 +1,29 @@
+{
+  "schema": "ROUND22_GLOBAL_THERMAL_LAUNCH_PREPARATION_READ_RECEIPTS_22",
+  "status": "PREPARED_METADATA_ONLY_NO_NUMERIC_EXECUTION",
+  "owner": "ROLE4",
+  "numeric_actor_after_distinct_ROOT_gate": "ROLE6",
+  "directory": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/h1_global_numeric/launch_prepare02",
+  "source_read_receipts": [
+    {"file": "prepare_metadata_source22.ps1", "sha256": "6d6136ecae7736e81eaae725aab1f52094b84652454280b5c417ae0462bd83ff", "scope": "FULL_TEXT", "receipt": "1995dc"},
+    {"file": "run_global_once_source22.py", "sha256": "0b2d45142e9bdeda91fa9d4d5d3f2e636439eed24a3503a973ac4e8f6e0299ae", "scope": "FULL_TEXT", "receipt": "230be8"},
+    {"file": "thermal_child_source22.py", "sha256": "059860cb5578dda6a6e0a700bd4c7896cc1469752581c44ef3882620dc7e27c6", "scope": "FULL_TEXT", "receipt": "8ca7ab"},
+    {"file": "launch_contract_source22.md", "sha256": "ad782625a35f32a3c2e48451cdf43521df2a25b5c2b7b8fb92d9e9133654d8b3", "scope": "FULL_TEXT", "receipt": "90b0f6"}
+  ],
+  "administrative_metadata_execution": {"receipt": "e2f06b", "exit_code": 0, "PowerShell_metadata_only": true, "binding_count_manifest": 1002, "binding_count_preparation": 1003, "runtime_inventory_files": 972, "source_paths": 14, "runtime_aliases": 9, "explicit_all_path_sets_equal": true, "protected_archives_byte_verified": 3089},
+  "metadata_observation": {"receipt": "d40cfb", "scope": "HEADER_AND_ALIAS_AND_KIND_COUNT_PROJECTION_BYTE_HASH_NOT_FULL_1003_BINDING_TEXT", "prepared_manifest_sha256": "afe78750ae9d7c9d89199c82561c09ef7b72804bd56963c3eed959681e4b2b24", "preparation_sha256": "60f88dc205fd8f9c6a4953bf9bc5b5d0d38522329fde9399c9b75118e6b12cba", "metadata_log_sha256": "bcc871e99abdf12181361353faf9060f5213b204edc9a0b9fcabdcc1950e65c7", "metadata_log_read_FULL": true},
+  "independent_review": {"receipt_sha256": "973da581891aa1c1746999efd7684a88507feaae0e2b83b80197bb01a61217b6", "report_sha256": "55679d2dc4ee4251d2f7357d290073d10500f0ada59384101499807f02e6c28c", "domain_addendum_sha256": "a26a64dea1e392d62dfbad3a0751cc5e3414dd3be0e52603f7b05884f9b0a1c2", "FULL_ROLE4_receipt": "9f1352", "evaluation_level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER"},
+  "previous_preparation": {"directory": "launch_prepare01", "status": "INVALID_BINDING_METADATA_NO_NUMERIC_RUN", "metadata_execution_receipt": "8b2946", "manifest_FULL_read_receipt": "8ce696", "preparation_FULL_read_receipt": "b2e8ae", "manifest_bindings": 1, "preparation_bindings": 2, "manifest_sha256": "2cf83b5b923ec0da9b090e85ba4669fd0e5739c331e579ec25d98e6a44890024", "preparation_sha256": "4520a77cffe62ca4996ed24cb37f416406a2a4bacbe87a1a4cc5e73513a57643", "six_source_and_metadata_files_preserved_and_bound_readonly": true},
+  "limits": {"max_wall_seconds": 3600, "max_artifact_bytes": 2147483648, "max_numeric_children": 1, "retry_count": 0},
+  "new_Python_parser_imports_or_math": 0,
+  "new_Lean_invocations": 0,
+  "numeric_launcher_invocations": 0,
+  "old_bank_replays": 0,
+  "ROOT_gate_created": false,
+  "future_actual_directory_created": false,
+  "structural_PASS_is_enclosure_PASS": false,
+  "H1_FORMAL": "OPEN",
+  "COEFFICIENT_N": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false
+}

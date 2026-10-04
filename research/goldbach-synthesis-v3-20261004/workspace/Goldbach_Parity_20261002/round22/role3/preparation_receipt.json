@@ -1,0 +1,20 @@
+{
+  "schema": "round22.role3.preparation_receipt.v1",
+  "captured_at": "2026-10-03T06:35:26.2659439+00:00",
+  "status": "READ_ONLY_PREPARATION_READY",
+  "writer_command": "native PowerShell command: & ([scriptblock]::Create([IO.File]::ReadAllText(abs role3 writer path)))",
+  "writer_exit_claim": "actual tool result required separately",
+  "previous_script_launcher_failure": {
+    "chunk": "499d11",
+    "exit_code": 1,
+    "cause": "local PowerShell script execution policy; no writer action executed",
+    "not_math_failure": true
+  },
+  "input_manifest_sha256": "d4f7a72e02188351e092290b50ccfebbb09399b0d9818f3b8d8d9e1d4575cc57",
+  "preparation_manifest_sha256": "1ccf7fb13d2f33080f4b23201d9c2480f0e7349d0cd7f66ea307ac9e3c2efd05",
+  "compiler_calls": 0,
+  "math_python_calls": 0,
+  "proof_sources_written": 0,
+  "selected_FINAL2": false,
+  "victory": false
+}

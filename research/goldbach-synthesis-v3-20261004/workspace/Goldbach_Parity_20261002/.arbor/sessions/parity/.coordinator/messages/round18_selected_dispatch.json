@@ -1,0 +1,22 @@
+{
+  "status": "ROUND18_TWO_FROZEN_CONCEPTS_SELECTED_REAL_DISPATCHES_ACCEPTED",
+  "frozen_inputs_sha256": {
+    "round18/agent1_calibrated_typeii.md": "228766a630e37e4cee7f92bc46cb862582da59379b15653f4c00abcbc37313f0",
+    "round18/agent2_capacity_incidence.md": "48dbcc5875c140d6d4991fa7d6cd58749048e3cf151e35f476893c27f81ae595"
+  },
+  "nodes": [
+    "13.10",
+    "14.3"
+  ],
+  "selectors_actual_exit_codes": [
+    0,
+    0
+  ],
+  "role3": "followup accepted; actual startup message confirms writing SeparatedTypeII.lean, no compile before numericPASS",
+  "role4": "followup accepted; specific startup message pending",
+  "role6": "both contracts accepted by actual message; TypeII preparation first then SS, no canonical execution reported yet",
+  "numeric_results_presumed": false,
+  "new_Lean_compiles_reported": false,
+  "protected_artifacts": 997,
+  "victory": false
+}

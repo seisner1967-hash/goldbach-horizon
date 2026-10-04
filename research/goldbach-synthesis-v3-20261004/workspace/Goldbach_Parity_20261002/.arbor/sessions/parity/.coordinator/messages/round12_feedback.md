@@ -1,0 +1,15 @@
+# Retour définitif12 — sélection d’un mécanisme indépendant
+
+Juge12 FINAL, SHA rapport fc276b16f95e757753ab89c3576f1e19ae2f280a4288f8c818aeb386ab1d5583 ; reçu f3be32fd176a20aeff5a915eb5d242b22f06823ab0323a7fca5714af54d8ae57. Controller12 d84cca25948c6794764f3afbc7b6fa23d46faa4152fdad17f2f87da69929a400 lie26 fichiers, vérifie20 inputs/13 bindings/3 copies/487 anciens. Aucun producteur/Lean relancé, nouveaux modules0, cumul13/169, victoirefalse.
+
+La capacité Hall par composant du graphe bulk prime-deletion est une promotion universelle réfutée : grands facteurs invariants, étoile entière t3167*3169/c1,3,7 réellement déficitaire. Le complément nonbulk ne disparaît pas ; la charge corner ne paie pas sa multiplicité de parents. Un opérateur nouveau pourrait traverser ces noyaux, mais doit fournir une estimation de ses incidences réellement premières et conserver modèle, faces, entropie, diagonales, long complement, J0/J1 et vraie masse favorable. Aucun pool Goldbach ne peut être postulé comme capacité.
+
+La normalisation1/logm ne gagne rien absolument après couverture complète sur les composites squarefree : L1=1 exactement. E=V-P garde mu sur ces composites ; m17³ avec complément premier impose la correction. La variante signée conserve R_tilt+S(P_even-P_odd)+endpoint-SN N : cette compensation est encore le contenu à établir. Ne pas reproposer cette convolution comme nouveau gain.
+
+Le transfert normalisé exact garde mu(c)Lambda_N(N-pc), logp/logpc, S(cN), c1, unités et c>a. D8/D9 dispersion non estimée, pas réfutée : trois formes premières dans la branche première, raw properpowers ailleurs, quatre termes DD-DM-MD+MM, collisions/diagonales/conducteurs/+1. Le modèle signé D11 est aussi un poste, c1 garde R_N^Lambda-S L_N^Lambda et la référence -SN N. Le polynôme sélectionné Az+Bz³ réfute seulement la log-concavité héritée sur toute sélection ; aucun no-go global.
+
+Critère13 : deux familles conceptuelles indépendantes, chacune avec premier lemme utile exprimant une information indépendante, observable neuf falsifiable et audit du coût total. Le théorème ne peut prendre la petitesse du moment ciblé comme hypothèse. Refuser une compilation d’identité ordinaire sans prise nouvelle ; ne pas fabriquer d’échec Lean pour une absence d’estimation.
+
+Cadre : alpha/Q/I/e intacts, a=ceilN^(7/16), u>=10^24 source, whole U_a contient r<=alpha. Raw Lambda_N conserve first-axis properpowers (n8017²), mu(m)² seulement après entier bracket, masque physique q|k donne phase1. P5 paie modèle commun seulement/3 coprimeN/remplaceP4 ; crédits rough/properpowers/harmonic face/corner/mobility une fois. H2+singles+faces/J0/J1, principal B13, onset physique BV effectif et2max(e,0) ouverts. N1e8 ne valide pas le seuil source.
+
+Après lecture constraints : orienter vers une structure traversant effectivement les grands noyaux avec défaut réel estimable, ou information signée arithmétique indépendante sur le moment couplé. Si une source primaire neuve est utilisée, distinguer hypothèses/onset/transfert réel ; aucune citation de norme générique comme borne du vrai coefficient. Aucun ancien PASS à relancer.

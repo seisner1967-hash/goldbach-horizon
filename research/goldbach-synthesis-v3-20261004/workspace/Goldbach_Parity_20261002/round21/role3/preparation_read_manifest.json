@@ -1,0 +1,221 @@
+{
+  "kind": "ROLE3_ROUND21_READONLY_API_INVENTORY",
+  "created_utc": "2026-10-03T05:29:18.9796195Z",
+  "selected_contract": false,
+  "new_math_executions": 0,
+  "Lean_invocations": 0,
+  "old_PASS_replays": 0,
+  "old_file_writes": 0,
+  "report_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role3\\preparation_readonly.md",
+  "report_sha256": "f51ef4a25fbf420fb6897bf29364acb1e0edd6b5bed14362ca777abbb2b5359c",
+  "entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\PROBE_BLOCK.md",
+      "sha256": "015cccf57d59c53abd34f4b6623b891199fdb61a9f8acafcd4f352df0b8fd7de",
+      "bytes": 7915,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "91313d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\agent1_signed.md",
+      "sha256": "0e6bac077503477d03f78c3c121b40134a67e1504b733bfb26175efeca884d70",
+      "bytes": 30076,
+      "read_mode": "FULL",
+      "scope": "Entire file; finalized hash reported by ROLE1 and current bytes read",
+      "actual_output_chunks": "b1b295"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent3_formalisation.md",
+      "sha256": "43363b11060a822b75f52c8753c4ad33d41bd3de2a20620a4e1bfb9074ba7e02",
+      "bytes": 8059,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "91313d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent5_judge.md",
+      "sha256": "fb4abdd6cb56bcbf6d8fb85abb9f4990119f3ca495faeefd6cc077c0df95e672",
+      "bytes": 7480,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "31e1ff"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\PhysicalCompositeSubtraction.lean",
+      "sha256": "3d6ef57fd5fc23aa0dfa44b6aa7b40cde178c93745011c2166731ff889af871c",
+      "bytes": 8059,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "260382"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\CompositeAPConductor.lean",
+      "sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c",
+      "bytes": 10926,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "260382"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean",
+      "sha256": "7ea6cc8506983c09c0700dec5ff6507aebfb2d79d581a602d07889048a7c7413",
+      "bytes": 21530,
+      "read_mode": "FULL",
+      "scope": "Entire file separately; supersedes globally truncated first output",
+      "actual_output_chunks": "b8291d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\SeparatedTypeII.lean",
+      "sha256": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+      "bytes": 26493,
+      "read_mode": "TARGETED",
+      "scope": "Lines17-138; Parameters/PhysicalWitness/conductor and adjoining declarations",
+      "actual_output_chunks": "b2abd1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\AbelSummation.lean",
+      "sha256": "41acf403b57a90e917221b83efb70a7d5fc4c75579e1fb01e440fff42ba8d9cd",
+      "bytes": 9850,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "e5b00c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Deriv.lean",
+      "sha256": "b21ae1d96f59f3c8edd6fce834940b4e070a91e8d38477e8ad2f07b3407a41af",
+      "bytes": 13974,
+      "read_mode": "TARGETED",
+      "scope": "Lines21-116 and rg declaration hits",
+      "actual_output_chunks": "41eadf,1ba7e8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Basic.lean",
+      "sha256": "4766375ac5a937f01afffced804fb17498f39e0dfbf0f6efe5f3023072d20ded",
+      "bytes": 22941,
+      "read_mode": "TARGETED",
+      "scope": "Lines326-383 and rg declaration hits",
+      "actual_output_chunks": "41eadf,1ba7e8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\FundThmCalculus.lean",
+      "sha256": "29e0b7ef2682df171ad02c149d129de77f86a506858076024823b4b83c7f5707",
+      "bytes": 92970,
+      "read_mode": "TARGETED",
+      "scope": "Lines1131-1175,1339-1351 and rg declaration hits",
+      "actual_output_chunks": "ca16b9,1b318e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\IntervalIntegral.lean",
+      "sha256": "a642c4dbf6c6a924b1b4f4ac94150d4ead8c06a9aa8b6e32192d26eb3be1fb2c",
+      "bytes": 54351,
+      "read_mode": "TARGETED",
+      "scope": "Lines326-343,1028-1036,1051-1076 plus named rg signatures",
+      "actual_output_chunks": "ca16b9,1b318e,8418d3,5acc6d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\LocallyIntegrable.lean",
+      "sha256": "08a89109c50b646ca29569e0d6560a00a87e825acb7ccd32a7871d3ece328400",
+      "bytes": 34484,
+      "read_mode": "TARGETED",
+      "scope": "Lines447-459 and rg named declarations",
+      "actual_output_chunks": "17478b,8418d3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Lattice\\Fold.lean",
+      "sha256": "03d5818ecaeddb373ddc946e62a1e76960f2362fbd3f10c1e359e67f79a674ec",
+      "bytes": 52079,
+      "read_mode": "TARGETED",
+      "scope": "Lines709-760 and rg sup declarations",
+      "actual_output_chunks": "d103fa,1b318e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Floor.lean",
+      "sha256": "f1a613a55899438013392c2938ab136efc19c0e4ff40dc6aebb4aa4070ea58ff",
+      "bytes": 61384,
+      "read_mode": "TARGETED",
+      "scope": "Lines127-163,211-240,261-272 and rg floor/ceil declarations",
+      "actual_output_chunks": "8418d3,94f6e8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Defs.lean",
+      "sha256": "730de581b6ed6d6aa266cd981741495cfdccaef46c11a405f8889d30d636bf0f",
+      "bytes": 58815,
+      "read_mode": "TARGETED",
+      "scope": "Lines386-415 and rg div declarations",
+      "actual_output_chunks": "d103fa,94f6e8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Real.lean",
+      "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+      "bytes": 49324,
+      "read_mode": "TARGETED",
+      "scope": "Lines458-466 and rg log_rpow declarations",
+      "actual_output_chunks": "8418d3,94f6e8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\MeanValue.lean",
+      "sha256": "bc441942872e5fa25a45c38ab6f378d8f76de28809fdbacf78534136c4156acc",
+      "bytes": 70309,
+      "read_mode": "TARGETED",
+      "scope": "Lines1095-1121 and rg monotonicity declarations",
+      "actual_output_chunks": "17478b,8418d3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Inv.lean",
+      "sha256": "ad3669cc88e89d944a86bfc9525c96c01851ce74c64f8550e114936781d73886",
+      "bytes": 7563,
+      "read_mode": "TARGETED",
+      "scope": "Lines130-150 and rg HasDerivAt.div declaration",
+      "actual_output_chunks": "17478b,8418d3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Basic.lean",
+      "sha256": "9576d3ea4e2988124154e7ddf538e48b2d6b6d5eca409cbbe31128759374f1d6",
+      "bytes": 32095,
+      "read_mode": "TARGETED",
+      "scope": "rg hasDerivAt_id/id declarations only",
+      "actual_output_chunks": "17478b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Add.lean",
+      "sha256": "02d06a0157abb2273db1e3199cf04db2a01853b60e99881d6c0bd2f99cdd3a6a",
+      "bytes": 14236,
+      "read_mode": "TARGETED",
+      "scope": "rg HasDerivAt.sub/sub_const declarations only",
+      "actual_output_chunks": "17478b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Mul.lean",
+      "sha256": "a42829c5fa17c2eb91757f24576fa46c8c0549a3e9256d5d413592913580d664",
+      "bytes": 21359,
+      "read_mode": "TARGETED",
+      "scope": "rg HasDerivAt.const_mul/div_const declarations only",
+      "actual_output_chunks": "17478b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Totient.lean",
+      "sha256": "cea69134e95c917a0babbec5b668dc997246b33b8bd2b3e0f72cc5a5760d44cc",
+      "bytes": 15948,
+      "read_mode": "TARGETED",
+      "scope": "Lines38-72 and rg totient_pos declaration",
+      "actual_output_chunks": "94f6e8,5dcbde"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Factorization\\Defs.lean",
+      "sha256": "49f634d8a2ea21a2d88ac5b31369e31d5d523a4e7029c8534fcba4a05a325736",
+      "bytes": 13310,
+      "read_mode": "TARGETED",
+      "scope": "Lines78-89 and rg support/positive/zero factorization declarations",
+      "actual_output_chunks": "94f6e8,5dcbde"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\Floor.lean",
+      "sha256": "0e69087bc57267c5412fab56c1eba82b063b54fed4e82b787ed4c2baaf589bf8",
+      "bytes": 3010,
+      "read_mode": "TARGETED",
+      "scope": "Lines53-74 and rg measurable floor declarations",
+      "actual_output_chunks": "5acc6d,5dcbde"
+    }
+  ]
+}

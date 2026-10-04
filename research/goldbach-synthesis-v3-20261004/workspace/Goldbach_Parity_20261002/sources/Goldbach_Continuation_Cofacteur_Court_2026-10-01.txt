@@ -1,0 +1,303 @@
+GOLDBACH — CONTINUATION : COFACTEUR COMPLÉMENTAIRE COURT
+1 octobre 2026 — déduction écrite et vérifications finies
+
+STATUT
+
+Une borne d'amplitude plus fine est obtenue ci-dessous pour le secteur où
+le cofacteur zeta du côté complémentaire est au plus une puissance fixée
+de log N. Elle porte aussi sur toute sélection de ce secteur, avec ses
+restrictions originales. Elle ne contrôle pas globalement E_HH.
+
+Sous l'entrée analytique de Rosser explicitée ci-dessous, cette amplitude
+est O(N L^(3+o(1))), avec L=1+log N. La borne générale O(N L^(4+o(1)))
+du précédent addendum n'est pas remplacée globalement.
+
+La somme signée agrégée, le budget terminal et une marge positive pour
+les paires de premiers restent ouverts. Aucun nouveau théorème Lean,
+aucune relecture par un second chercheur et aucune preuve de Goldbach
+ne sont revendiqués. Les contrôles Python sont finis et exacts ; ils ne
+prouvent pas l'estimation asymptotique. Aucun PDF n'est produit.
+
+1. SUPPORT, NOTATION ET OBJET EXACT
+
+Tous les facteurs ci-dessous sont des entiers strictement positifs.
+N>=3, 2<=W<N et y>=1. On conserve les identités
+
+ a=u*v*w, r=s*t*zeta, n=a*b, m=r*k=N-n,
+ u,v,s,t>y.
+
+Le signe développé est mu(u)mu(v)mu(s)mu(t). Le module CRT original
+reste R=a*r, quel que soit le produit T indexant un signe mu(T).
+
+I_W(n)=1 signifie qu'aucun premier <=W ne divise n ; I_W(1)=1.
+Les sélecteurs I_W(n), gcd(n,N)=1 et les détecteurs carrés-libres du
+problème original sont conservés dans la somme exacte. Les intervalles,
+caps, faces mobiles et fenêtres peuvent être inclus dans un poids chi
+tel que |chi|<=1. Un autre majorant uniforme pour |chi| se multiplie
+simplement dans les bornes suivantes.
+
+On suppose W>=V_original, donc beta_V(b)=log b sur le support rugueux.
+Le poids logarithmique est log b * log r. La preuve fonctionnerait
+également avec 0<=beta_V(b)<=log b.
+
+Pour 1<=Z<=N-1, soit A_Z la somme POSITIVE des amplitudes développées
+sur zeta<=Z, avec |chi|, |mu(u)mu(v)mu(s)mu(t)|, les sélecteurs réels
+et log b * log r. Alors toute somme signée T_Z sur ce support satisfait
+
+                         |T_Z| <= A_Z.                    (1)
+
+Une sélection de termes développés est autorisée : on n'utilise pas
+une annulation de H_y(a) après avoir supprimé certains de ses termes.
+La restriction sur zeta n'est ni une restriction sur T, ni un changement
+du module CRT.
+
+2. ENTRÉE ANALYTIQUE ET CONVENTION DE ROSSER
+
+P(z)=produit des premiers p<z ; Phi(n,z)=1_(gcd(n,P(z))=1).
+Ainsi I_W(n)=Phi(n,W+1). Dans le reste de Rosser, le facteur est
+Phi(n,p(e)), et non l'indicateur excluant les premiers <=p(e).
+
+On utilise les poids supérieurs de Rosser, de niveau D=N^delta,
+0<delta<1/4, h=log D/log(W+1) suffisamment grand. Ils ont |xi(e)|<=1,
+xi(e)=0 pour e>=D, et un reste positif dont la masse de densité est
+O(V(W+1) epsilon(h)), où epsilon(h)=exp[-h log h/2].
+V(z)=produit_(p<z)(1-1/p). Cette entrée est la même que dans la note
+archivée et l'addendum corrigé ; elle n'est pas démontrée par le script.
+
+Source primaire : Y. Motohashi, Lectures on Sieve Methods and Prime
+Number Theory, Lemma 8, p.44, et preuve du théorème 7, pp.46-48,
+équations (2.2.4)-(2.2.5) :
+https://www.math.utoledo.edu/~codenth/Spring_13/3200/NT-books/Lectures_on_Sieve_Methods_and_Prime_Number_Theory-Motohashi.pdf
+
+Fixons C_R tel que le facteur d'erreur de densité soit majoré par
+c_h=1+C_R epsilon(h). Pour gcd(q,N)=1, posons
+
+ F_q=produit_(p|q,p<=W)(1-1/p)^(-1).
+
+Le calcul de densité CRT du précédent addendum, avec Phi corrigé,
+donne pour 0<=X<=(N-1)/q :
+
+ sum_(1<=x<=X) I_W(N-q*x)
+               <= c_h X V(W+1) F_q + D.                  (2)
+
+Les premiers divisant N mais pas q restent actifs. Le terme D vient
+d'au plus une erreur de plancher par e<D. Il n'est pas multiplié par
+F_q. Ce raisonnement autorise des facteurs premiers communs entre q
+et P(W+1), dès lors que gcd(q,N)=1.
+
+3. RÉDUCTION POSITIVE À TROIS DIVISEURS
+
+Notons d_j la fonction comptant les factorisations ordonnées en j
+facteurs, unités comprises. Pour n rugueux et n<N,
+
+ d_4(n) <= 4^Omega(n) <= R_W,
+ R_W=4^(log N / log(W+1)).                               (3)
+
+En effet chaque premier de n est >=W+1 ; la borne d_j<=j^Omega vaut
+aussi hors du support carré-libre. À n fixé, les quadruplets u,v,w,b
+sont au plus d_4(n), après suppression POSITIVE des autres contraintes.
+Les deux logarithmes sont au plus L=1+log N.
+
+Du côté complémentaire, fixer zeta laisse trois facteurs s,t,k avec
+produit m/zeta. Le nombre de choix est donc au plus d_3(m/zeta).
+Il en résulte, sans utiliser les signes,
+
+ A_Z <= L^2 R_W
+   * sum_(1<=m<N,gcd(m,N)=1) I_W(N-m)
+                  sum_(zeta|m,zeta<=Z) d_3(m/zeta).       (4)
+
+La condition gcd(m,N)=1 est héritée exactement de gcd(n,N)=1.
+En particulier chaque zeta et chaque v=m/zeta dans (4) sont premiers
+à N. L'identité sum_(a|n)d_3(a)=d_4(n) donne également (3)-(4) en
+partant des fibres non développées. Aucun prolongement signé de
+support n'est effectué.
+
+4. MOMENT DÉCALÉ UNIFORME POUR UN ZETA FIXÉ
+
+Pour gcd(zeta,N)=1 et X=N/zeta>1, définissons
+
+ S_3(zeta)=sum_(1<=v<X,gcd(v,N)=1) d_3(v) I_W(N-zeta*v).
+
+Dans une factorisation ordonnée v=x1*x2*x3, choisir une position de
+facteur maximal coûte au plus 3. Le produit d des deux autres facteurs
+vérifie d<=v^(2/3)<X^(2/3). En supprimant positivement la condition
+de maximalité et la condition d'unité sur le facteur maximal, on obtient
+
+ S_3(zeta) <= 3 sum_(d<=X^(2/3),gcd(d,N)=1) d_2(d)
+                    sum_(1<=x<=(N-1)/(zeta*d)) I_W(N-zeta*d*x).
+
+On applique (2) à q=zeta*d ; gcd(q,N)=1 a bien été conservé jusque-là.
+Le facteur local satisfait F_(zeta*d)<=F_zeta F_d.
+
+Pour tout Y>=1,
+
+ sum_(d<=Y) d_2(d)F_d/d <= exp(2)(1+log Y)^2,             (5)
+ sum_(d<=Y) d_2(d) <= Y(1+log Y).                        (6)
+
+Preuve de (5) : développer
+ F_d=sum_(e|d,e|P(W+1))1/phi(e),
+utiliser d_2(e*v)<=d_2(e)d_2(v) et
+ sum_(v<=Y)d_2(v)/v <= (1+log Y)^2.
+Le facteur restant est au plus
+ produit_(p<=W)(1+2/[p(p-1)]) <= exp(2),
+car sum_(p<=W)1/[p(p-1)]<=sum_(j>=2)1/[j(j-1)]=1.
+La borne (6) est le comptage élémentaire des couples ordonnés.
+
+Comme 1+log(X^(2/3))<=L, on en déduit la borne uniforme
+
+ S_3(zeta) <= 3 exp(2)c_h (N/zeta)V(W+1)F_zeta L^2
+                       +3D (N/zeta)^(2/3)L.              (7)
+
+5. SOMMATION DES COFACTEURS COURTS
+
+La même expansion positive, cette fois sans d_2, donne
+
+ sum_(zeta<=Z) F_zeta/zeta <= exp(1)(1+log Z).            (8)
+
+On a aussi sum_(zeta<=Z)zeta^(-2/3)<=3 Z^(1/3).
+Appliquer (7) à (4), puis (8), prouve
+
+ A_Z <= B_Z,
+
+ B_Z = R_W [3 exp(3)c_h N V(W+1)L^4(1+log Z)
+                              +9D N^(2/3)Z^(1/3)L^3].  (9)
+
+Il s'agit d'une borne écrite explicite relativement au coefficient
+C_R de l'entrée Rosser. Elle ne fournit pas un seuil numérique effectif
+pour Goldbach : C_R et son onset n'ont pas été évalués ici.
+
+Pour le seuil du précédent addendum,
+
+ W=floor exp[L (log log L)^(1-epsilon)/log L],
+ 0<epsilon<1 fixé,
+
+on a R_W=L^o(1) et 1/log(W+1)=L^(-1+o(1)). L'inégalité élémentaire
+V(W+1)<=1/log(W+1) suit de l'expansion du produit d'Euler réciproque,
+qui contient au moins tous les entiers <=W.
+
+Si Z<=L^B avec B>=0 fixé, (9) donne donc
+
+ A_Z << N L^(3+o(1)) + N^(2/3+delta)L^(3+B/3+o(1))
+     << N L^(3+o(1)).                                  (10)
+
+Le second terme est plus petit par une puissance de N, puisque
+delta<1/4. Le seuil asymptotique dépend des paramètres fixés.
+La conclusion est uniforme en y et en toute sélection |chi|<=1
+du support indiqué. En particulier, elle inclut zeta=1, et toute
+sous-sélection supplémentaire w=1.
+
+Si l'on prend au contraire Z=N^eta avec eta>0 fixé, le facteur
+1+log Z coûte une puissance supplémentaire de L : le gain logarithmique
+annoncé dans (10) disparaît. Le terme d'erreur a alors l'exposant
+2/3+delta+eta/3 en N ; il n'est plus petit par une puissance si
+eta>=1-3delta. Cette extension ne ferme donc pas le complément.
+
+6. SENS EXACT DE CE PROGRÈS ET RACCORDEMENT UNILATÉRAL
+
+Le résultat (10) améliore d'un facteur logarithmique le majorant général
+précédent UNIQUEMENT sur le secteur zeta<=L^B. Il ne déclare pas les
+zeta>L^B négligeables. Il ne produit aucune annulation de Möbius.
+
+Dans le développement exact, écrivons
+
+ T_HH=T_court+T_long,
+ E_HH=T_HH-M_HH.
+
+Pour ne retirer le modèle continu qu'une fois, on peut définir pour
+ce raccord E_long^*=T_long-M_HH. Ce n'est pas une revendication sur
+la densité naturelle du seul secteur long : c'est une convention
+de comptabilité explicite. On a exactement
+
+ E_HH=T_court+E_long^*,
+ E_HH-S_C,non_couvert <= B_Z+E_long^*-S_C,non_couvert.    (11)
+
+Dans le contrat S_C,total=-E_HH+e+S_C,non_couvert, une condition
+suffisante demeure donc
+
+ E_long^*-S_C,non_couvert
+               <= R_disponible-|e|-B_Z.                 (12)
+
+Les bornes sur e, le budget R_disponible et les conditions de couverture
+doivent être les mêmes que dans le raccord original. Il ne faut pas
+leur ajouter à nouveau une erreur de modèle déjà incluse.
+
+Le membre B_Z n'est pas démontré suffisamment petit pour être payé par
+le budget final. En particulier (10) n'est pas O_A(N L^(-A)). Une borne
+positive plus fine sur un secteur ne remplace pas la compensation avec
+les autres secteurs. Les exemples de coefficients 4 et -4 du compte
+rendu précédent restent compatibles avec (9)-(12).
+
+7. TEST DE L'APPARIEMENT DES PARITÉS À MODULE FIXÉ
+
+Sur a,r carrés-libres et premiers entre eux, notons
+ D_y(t)=nombre de u*v=t avec u,v>y,
+ U_y(a)=sum_(d|a)D_y(d).
+Dans le développement de H_y(a)H_y(r) en un signe mu(T), soient P_(a,r)
+et Q_(a,r) les sommes POSITIVES des multiplicités D_y des indices de
+signe +1 et -1, à a,r et racine CRT fixés. Alors
+
+ P_(a,r)-Q_(a,r)=H_y(a)H_y(r),
+ P_(a,r)+Q_(a,r)=U_y(a)U_y(r),
+ min(P_(a,r),Q_(a,r))
+              =[U_y(a)U_y(r)-|H_y(a)H_y(r)|]/2.          (13)
+
+La troisième expression est la capacité maximale d'annulation interne
+par simple appariement de masses à cette racine. Elle ne change pas le
+coefficient net. Un coefficient positif peut ne contenir aucune masse
+négative à apparier :
+
+ a=15, r=77, y=2 : P=4, Q=0, H_y(a)H_y(r)=4.
+ Avec b=13,k=17, N=1504, le tuple satisfait les conditions d'unité,
+ de produits carrés-libres et de core a,b<=m ; n est 2-rugueux.
+
+ À l'inverse a=105,r=2431,y=2 donne P=Q=72 et H_y(a)=H_y(r)=0.
+ Le tuple b=19,k=23 donne N=57908 et satisfait les mêmes conditions.
+
+L'exemple a=105,r=143,y=6 donne P=0,Q=4 et un coefficient -4.
+Avec b=17,k=19, N=4502, il est également admissible dans ce test fini.
+
+Ces identités sont entières ; les poids log b*log r sont communs aux
+termes appariés et sont positifs. Elles ne constituent pas un test
+asymptotique du choix presque-puissance de W, ni une réfutation d'une
+future borne agrégée. Elles écartent simplement une annulation interne
+automatique de tous les coefficients positifs. Une compensation entre
+racines ou tuples distincts reste une question arithmétique ouverte.
+
+8. VÉRIFICATION, PROVENANCE ET LIMITES
+
+exact_checks.py vérifie, en entiers et rationnels : les identités de
+coefficients sur support carré-libre, le comptage absolu des cofacteurs
+courts, la densité CRT des premiers actifs, l'inégalité hyperbolique
+à trois facteurs et les identités (13). EXACT_CHECKS.json fixe les
+domaines de tests et les exemples. Aucun résultat asymptotique ne se
+déduit d'un passage de ces tests.
+
+Sources locales effectivement consultées :
+ - goldbach_sprint15_checked.zip ;
+ - agents/one_sided_root_discrepancy_and_fixed_modulus_contract.txt ;
+ - agents/one_sided_actual_scalar_round3.txt ;
+ - agents/rough_direction_combinatorial_amplitude.txt ;
+ - agents/rosser_almost_power_rough_reduction.txt ;
+ - agents/weighted_hh_root_main_raw_prefixes.txt ;
+ - agents/hh_four_signs_and_fibre_pressure_test.txt ;
+ - agents/hh_partition_orientation_sign_audit.txt.
+
+Le dernier compte rendu de continuation a été fourni comme texte,
+sans les fichiers de son nouveau certificat Lean. La présente note
+ne prétend ni avoir modifié ces fichiers ni les avoir recompilés.
+Lean, Lake et Elan ne sont pas disponibles dans cet environnement.
+
+Les 42 identités du sprint15 restent des résultats antérieurs avec
+leurs reçus archivés. Cette continuation ajoute une déduction écrite
+sectorielle et des diagnostics exacts séparés. L'archive antérieure
+n'est ni réécrite ni enrichie silencieusement.
+
+FRONTIÈRE FINALE
+
+Convention de seuil : Phi(n,p(e)), explicitement conservée.
+Borne d'amplitude pour zeta<=L^B : DÉDUCTION ÉCRITE (10).
+Annulation signée globale E_HH : NON OBTENUE.
+Traitement signé du complément : NON OBTENU.
+Budget final effectif et marge strictement positive : NON OBTENUS.
+Nouvelle compilation Lean : AUCUNE.
+Preuve de Goldbach : AUCUNE.

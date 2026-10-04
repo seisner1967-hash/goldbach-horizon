@@ -1,0 +1,866 @@
+{
+  "Lean_invocations": [
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:30:42: error: unexpected token '\u03bb'; expected '_' or identifier",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:39:6: error: failed to rewrite using equation theorems for 'GoldbachRound17.Selberg.sign'.",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:56:33: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:90:28: error: type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:102:11: error: unknown identifier 'ite_sum'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:102:11: error: simp made no progress"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 1,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt01.log",
+      "log_sha256": "cebc6723f4d266439f37d446aee8387039c2deade5a3c247c3f475a4ca75e10a",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt01_source.lean.txt",
+      "snapshot_sha256": "b8696c811f224562026ed57b6af4ab4515a3fce8f5047a9a0cf3e92d9cd748c1"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:43:14: error: unknown constant 'Finset.prod_const_zero'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:43:62: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:103:11: error: simp made no progress"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 2,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt02.log",
+      "log_sha256": "ff74eb111a85206cd582622842925f77dd8384dd392263cda3d2fec4ab802fcd",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt02_source.lean.txt",
+      "snapshot_sha256": "8728cc91cda169448ecbc3e1e15254d0167202c44739ff901294eca2a1862f25"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:122:6: error: tactic 'apply' failed, failed to unify",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:129:11: error: simp made no progress",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:177:2: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:217:2: error: tactic 'apply' failed, failed to unify",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:237:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:242:2: error: 'change' tactic failed, pattern"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 3,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt03.log",
+      "log_sha256": "89a1b854c955f81cdffc1ea9e78c56be2947204083e2c52e34dbde1431083905",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt03_source.lean.txt",
+      "snapshot_sha256": "176e3c0637d009d86fcb06bf4e65bfe6548b4d4aeaba41f06130b5e360f582ac"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:244:6: error: linarith failed to find a contradiction",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:229:50: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 4,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt04.log",
+      "log_sha256": "8a56aec715b7757f2f9d808ea30ae7191ca1dd76f4dac097e7beb6bd3d73ec35",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt04_source.lean.txt",
+      "snapshot_sha256": "81be9e15926f27d0e067b13c6ad02ae9e9ee7d5fbc11858de33b25922aa2e923"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:282:20: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:284:4: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:292:15: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:293:7: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:294:20: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:301:20: error: simp_all made no progress",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:297:65: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:297:65: error: unknown metavariable '?_uniq.99654'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:302:13: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:324:49: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:311:49: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:344:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:349:6: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:356:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:365:6: error: failed to synthesize"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 5,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt05.log",
+      "log_sha256": "2f859c12175221637da1dbf060af3a2853d1b251e3ac8a81de4b2bba15940e87",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt05_source.lean.txt",
+      "snapshot_sha256": "d219e7f2aabdbbf2814db43d1ca586b3ed415a008d7a4ea1cf8cd3b8e0b56a22"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:304:10: error: tactic 'rewrite' failed, motive is not type correct:"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 6,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt06.log",
+      "log_sha256": "e5e30b2fcf575200dee14c8784c45c5275ab939b6979cf2d9fad69497008f6e9",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt06_source.lean.txt",
+      "snapshot_sha256": "8cf0ba2593a9a90494764022716a3918b85d1d2b7ac841b312dbf70bc1311504"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:414:4: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 7,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt07.log",
+      "log_sha256": "68fa48d6cedf355b47259a070bd9846463a0ded570d25cc3845240ada4748104",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt07_source.lean.txt",
+      "snapshot_sha256": "bc880c5761f8f0d6207b28b84f84457a49d87135fd1e9225ec4de62f93f2be10"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:414:4: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:474:41: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:543:40: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 8,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt08.log",
+      "log_sha256": "c2774a348473f9becf12a2aeb01c86fdf970fbafc65209e4716ae6888ded4567",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt08_source.lean.txt",
+      "snapshot_sha256": "4a59b95ef6657da43ce6047c31a5cd37cfb0c89cb3a87d05299aa8a86c05ae49"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:573:32: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:589:28: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:618:2: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 9,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt09.log",
+      "log_sha256": "21aee2bceeefe50bc7dc47f6c6cd81eb397f450bd7b9787de1d18efc167c0a60",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt09_source.lean.txt",
+      "snapshot_sha256": "8cea9c519d55cb4ebc863577df40a34da28e3cf2286589a92025354bdf07cdc4"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:671:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:645:6: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:679:14: error: unknown constant 'finite_support_upper_bound'"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 10,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt10.log",
+      "log_sha256": "47dc7e354cf80d784813c02c874fb0918f0c2af1f5fa3b971af1f014019ca5c8",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt10_source.lean.txt",
+      "snapshot_sha256": "8b41cbcba9fba67ce5c69483cddb9c65e3ac1201e18d4bfbd664ea0b1357de1e"
+    },
+    {
+      "attempt": 11,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt11.log",
+      "log_sha256": "581b7ac9feb1540499833cfe6dbfa0b9aef233ff3c18bfd0fb38d03c3ae774b1",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt11_source.lean.txt",
+      "snapshot_sha256": "b7e5e8a76b2c301bb4a15569ed20d706de855546f5d7427ae06869ce0c751256"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:634:20: error: unknown constant 'ArithmeticFunction.map_prod_of_prime'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:634:20: error: tactic 'rewrite' failed, equality or iff proof expected",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:754:2: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:785:6: error: unknown identifier 'actual_four_form_upper_bound'"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 12,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt12.log",
+      "log_sha256": "0aa339029c03be18092027b9d08772165125857b5677889a5a3875e1ea039687",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt12_source.lean.txt",
+      "snapshot_sha256": "0ce530b083f05059da11d19cc018f247b9ac2439aed2fd9ca7b7a75fd3514854"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:752:2: error: type mismatch, term"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 13,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt13.log",
+      "log_sha256": "51ff2a961c2ab705379043ce46db7226c46cfdaa517832ddae84c04f093299f2",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt13_source.lean.txt",
+      "snapshot_sha256": "3b9b865e463baded0f244daaa52b90307e3c2e1f6f21f68f50928509c5ce7a11"
+    },
+    {
+      "attempt": 14,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt14.log",
+      "log_sha256": "772f8de4075a4d31edbdcedb6544f236745e4e066388cf616abc69b613e539b1",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt14_source.lean.txt",
+      "snapshot_sha256": "b1b658aa92f8e02cef29667e9e60b763ca3ef57bb25dcbc8aa9c50ba33591ce1"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:12:2: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:19:20: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:20:4: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:31:60: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:34:70: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:73:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:75:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:112:4: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:116:4: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:154:0: error: invalid 'end', name mismatch (expected nothing)"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 1,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt01.log",
+      "log_sha256": "87551993212aab1a41b1dca778b3061f8c9d59dc3c03416c8aca5763d64b8805",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt01_source.lean.txt",
+      "snapshot_sha256": "e0c2c0149869388d754480a824187ec1bdb7294b4bda1ab272100350f636e35b"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:12:2: error: application type mismatch"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 2,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt02.log",
+      "log_sha256": "1c24aeca8c622fbe5f21fa789069f547ea9cfd7eb51879bf8d83377f79f9603b",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt02_source.lean.txt",
+      "snapshot_sha256": "df37c509c630771c2aa16b159b1d5e25aa85c26c6b30dc61d186d408ba928c99"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:144:16: error: rcases tactic failed: h : \u2191N * \u2191e * \u2191p0 * (\u2191e - 1) * (\u2191e - \u2191p0) * (\u2191p0 - 1) = 0 \u2192 False is not an inductive datatype",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:222:67: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:233:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:238:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 3,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt03.log",
+      "log_sha256": "ee3112e1a11dca4f391b199c7531e36aa09b335bf79264be9af23a414ccc0535",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt03_source.lean.txt",
+      "snapshot_sha256": "d6559c907a9dab02312f771a87aaa00123ce229f56dcffc29d601b5b87b0b632"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:224:90: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:235:90: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:240:90: error: failed to synthesize"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 4,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt04.log",
+      "log_sha256": "32eb9c75f9080403235a8ed783bdef158d3cf797af114df33fbce27201e75334",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt04_source.lean.txt",
+      "snapshot_sha256": "eb0fbd486bbfb26a6d64e9a764b26eba3018be6361e032cf1a5e1cf74c29cc74"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:222:67: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:234:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:240:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 5,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt05.log",
+      "log_sha256": "83a44c0ab01d619b1e2bbc4098c167911b84828fe29cffa30a1f23d3a37618ad",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt05_source.lean.txt",
+      "snapshot_sha256": "13e299cec1244cb9bbb645f3e1919e4d226d2f6270a8e45c7b44857b876cdcde"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:236:2: error: ring failed, ring expressions not equal",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:245:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:251:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 6,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt06.log",
+      "log_sha256": "a0898674414140bbc4ab350864221c894b5a31a951798d76e8466d876acd946e",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt06_source.lean.txt",
+      "snapshot_sha256": "63e021799876142d2e8a4d7ba6ef34bb030a23c0d7cf789f63990e7c495a0cd5"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:248:75: error: unknown identifier 'zero_eq_sub'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:245:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:254:75: error: unknown identifier 'zero_eq_sub'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:251:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 7,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt07.log",
+      "log_sha256": "65908f83de213998675c9f0ae05ff5d58f33227de652d60682c3527acb6ec855",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt07_source.lean.txt",
+      "snapshot_sha256": "c1ff5736b5aad01e0a8d8f5dd9127b257b96a64c3baf2fe997337aad1afb1a68"
+    },
+    {
+      "attempt": 8,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt08.log",
+      "log_sha256": "3b943e6e6ea23b1baef7ea519b64ffedf9655c60912947e3a3b2f4ad4af99edd",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt08_source.lean.txt",
+      "snapshot_sha256": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean:47:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean:74:34: error: application type mismatch"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 9,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt09.log",
+      "log_sha256": "2ff6a4fd137565b08c06ae313fdba0e846cea3bafeb996f4836c3875f880b700",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt09_source.lean.txt",
+      "snapshot_sha256": "e4f616483c33fdc7b7c735d7c989718d7d5ad79f3627291c66ac6e6e38107050"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean:48:61: error: mod_cast has type"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 10,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt10.log",
+      "log_sha256": "71b73a709cf0c937a3c7be1433d193a9c391cf7665e1bec1ff867a4aa792617e",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt10_source.lean.txt",
+      "snapshot_sha256": "b9fac37c1a7a678f48126e06de54adec1f66529f61c5c07e781aa6c987769841"
+    },
+    {
+      "attempt": 11,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt11.log",
+      "log_sha256": "c30608116846aa2c3cfe25a94fdb865d3decd8859af08c083e77c8692db911b1",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt11_source.lean.txt",
+      "snapshot_sha256": "971f351decef7e78112ec940c5ee553806abecccaf19440a4d661881c4ae188d"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.lean:51:2: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.lean:59:6: error: failed to rewrite using equation theorems for 'GoldbachRound17.PowersetMoment.subsetLog'."
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 12,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt12.log",
+      "log_sha256": "78693fb6e4e55b0360ede2cad16c95fd4bf304973a892a782d3f621805465db8",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt12_source.lean.txt",
+      "snapshot_sha256": "3de4dc236219f6f10115798ad2654db12a7ff44bb00b8fe891cd904975f37e89"
+    },
+    {
+      "attempt": 13,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt13.log",
+      "log_sha256": "fb1c9d7c230bd3f9e0d9516bd4c09d84b9a8028e10244f622991b63c24d852ca",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt13_source.lean.txt",
+      "snapshot_sha256": "577ff585207e72bf5d31121743fc218effc91eb8a460cef9fa9ee2e05a3996e0"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:19:22: error: function expected at",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:19:33: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:50:74: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:68:6: error: linarith failed to find a contradiction",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:81:37: error: failed to prove positivity/nonnegativity/nonzeroness"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 14,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt14.log",
+      "log_sha256": "b2a9eba610295601b7e386aec87655766df7a877a57f236193e26b58e3bbc83e",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt14_source.lean.txt",
+      "snapshot_sha256": "deb060fdafbd4079c21efce60396cd1170ad0c11a52c45145e466571ea408097"
+    },
+    {
+      "attempt": 15,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt15.log",
+      "log_sha256": "87a7545dec3e733e9fff613ff52579acba63c79c516e42c065d4515537088b95",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt15_source.lean.txt",
+      "snapshot_sha256": "c4b7f33ea941d17e2c9ced1d52dcd93b1c36dfd5ad009f77a5af871457b27d2a"
+    },
+    {
+      "attempt": 16,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt16.log",
+      "log_sha256": "16f84da8a2c1e9dbeb01d22812823ff575666f31fb358341208b7949bf3907ac",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt16_source.lean.txt",
+      "snapshot_sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5"
+    }
+  ],
+  "PASS15_warning": [
+    {
+      "attempt": 15,
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt15.log",
+      "log_sha256": "87a7545dec3e733e9fff613ff52579acba63c79c516e42c065d4515537088b95",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt15_source.lean.txt",
+      "snapshot_sha256": "c4b7f33ea941d17e2c9ced1d52dcd93b1c36dfd5ad009f77a5af871457b27d2a"
+    }
+  ],
+  "numeric_classification": "TECHNICAL_FACTOR_DOMAIN_RAD_HN_EXCEEDS_N_CORRECTED_BY_BOUNDED_FACTOR_UNION",
+  "numeric_failure": {
+    "attempt": 1,
+    "command_argv": [
+      "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\typeii_checks.py"
+    ],
+    "exit_code": 1,
+    "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\typeii_attempt01.log",
+    "log_sha256": "da05cdd2526935204ce54d3c3f8b1c4d37d62eaaf170cf0839f5d1cdcca4d649",
+    "producer": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\typeii_checks.py",
+    "producer_sha256": "a58db7311d56c51bcbe0591d1f3c22f3cb21fc13c39a9ffd4e8eeb6e74ebdc1f",
+    "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\typeii_attempt01_source.txt",
+    "source_snapshot_sha256": "a58db7311d56c51bcbe0591d1f3c22f3cb21fc13c39a9ffd4e8eeb6e74ebdc1f"
+  },
+  "parity_deduction_failure_invented": false,
+  "real_Lean_failures23": [
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:30:42: error: unexpected token '\u03bb'; expected '_' or identifier",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:39:6: error: failed to rewrite using equation theorems for 'GoldbachRound17.Selberg.sign'.",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:56:33: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:90:28: error: type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:102:11: error: unknown identifier 'ite_sum'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:102:11: error: simp made no progress"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 1,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt01.log",
+      "log_sha256": "cebc6723f4d266439f37d446aee8387039c2deade5a3c247c3f475a4ca75e10a",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt01_source.lean.txt",
+      "snapshot_sha256": "b8696c811f224562026ed57b6af4ab4515a3fce8f5047a9a0cf3e92d9cd748c1"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:43:14: error: unknown constant 'Finset.prod_const_zero'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:43:62: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:103:11: error: simp made no progress"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 2,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt02.log",
+      "log_sha256": "ff74eb111a85206cd582622842925f77dd8384dd392263cda3d2fec4ab802fcd",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt02_source.lean.txt",
+      "snapshot_sha256": "8728cc91cda169448ecbc3e1e15254d0167202c44739ff901294eca2a1862f25"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:122:6: error: tactic 'apply' failed, failed to unify",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:129:11: error: simp made no progress",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:177:2: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:217:2: error: tactic 'apply' failed, failed to unify",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:237:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:242:2: error: 'change' tactic failed, pattern"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 3,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt03.log",
+      "log_sha256": "89a1b854c955f81cdffc1ea9e78c56be2947204083e2c52e34dbde1431083905",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt03_source.lean.txt",
+      "snapshot_sha256": "176e3c0637d009d86fcb06bf4e65bfe6548b4d4aeaba41f06130b5e360f582ac"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:244:6: error: linarith failed to find a contradiction",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:229:50: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 4,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt04.log",
+      "log_sha256": "8a56aec715b7757f2f9d808ea30ae7191ca1dd76f4dac097e7beb6bd3d73ec35",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt04_source.lean.txt",
+      "snapshot_sha256": "81be9e15926f27d0e067b13c6ad02ae9e9ee7d5fbc11858de33b25922aa2e923"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:282:20: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:284:4: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:292:15: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:293:7: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:294:20: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:301:20: error: simp_all made no progress",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:297:65: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:297:65: error: unknown metavariable '?_uniq.99654'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:302:13: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:324:49: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:311:49: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:344:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:349:6: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:356:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:365:6: error: failed to synthesize"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 5,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt05.log",
+      "log_sha256": "2f859c12175221637da1dbf060af3a2853d1b251e3ac8a81de4b2bba15940e87",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt05_source.lean.txt",
+      "snapshot_sha256": "d219e7f2aabdbbf2814db43d1ca586b3ed415a008d7a4ea1cf8cd3b8e0b56a22"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:304:10: error: tactic 'rewrite' failed, motive is not type correct:"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 6,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt06.log",
+      "log_sha256": "e5e30b2fcf575200dee14c8784c45c5275ab939b6979cf2d9fad69497008f6e9",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt06_source.lean.txt",
+      "snapshot_sha256": "8cf0ba2593a9a90494764022716a3918b85d1d2b7ac841b312dbf70bc1311504"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:414:4: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 7,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt07.log",
+      "log_sha256": "68fa48d6cedf355b47259a070bd9846463a0ded570d25cc3845240ada4748104",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt07_source.lean.txt",
+      "snapshot_sha256": "bc880c5761f8f0d6207b28b84f84457a49d87135fd1e9225ec4de62f93f2be10"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:414:4: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:474:41: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:543:40: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 8,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt08.log",
+      "log_sha256": "c2774a348473f9becf12a2aeb01c86fdf970fbafc65209e4716ae6888ded4567",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt08_source.lean.txt",
+      "snapshot_sha256": "4a59b95ef6657da43ce6047c31a5cd37cfb0c89cb3a87d05299aa8a86c05ae49"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:573:32: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:589:28: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:618:2: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 9,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt09.log",
+      "log_sha256": "21aee2bceeefe50bc7dc47f6c6cd81eb397f450bd7b9787de1d18efc167c0a60",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt09_source.lean.txt",
+      "snapshot_sha256": "8cea9c519d55cb4ebc863577df40a34da28e3cf2286589a92025354bdf07cdc4"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:671:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:645:6: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:679:14: error: unknown constant 'finite_support_upper_bound'"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 10,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt10.log",
+      "log_sha256": "47dc7e354cf80d784813c02c874fb0918f0c2af1f5fa3b971af1f014019ca5c8",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt10_source.lean.txt",
+      "snapshot_sha256": "8b41cbcba9fba67ce5c69483cddb9c65e3ac1201e18d4bfbd664ea0b1357de1e"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:634:20: error: unknown constant 'ArithmeticFunction.map_prod_of_prime'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:634:20: error: tactic 'rewrite' failed, equality or iff proof expected",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:754:2: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:785:6: error: unknown identifier 'actual_four_form_upper_bound'"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 12,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt12.log",
+      "log_sha256": "0aa339029c03be18092027b9d08772165125857b5677889a5a3875e1ea039687",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt12_source.lean.txt",
+      "snapshot_sha256": "0ce530b083f05059da11d19cc018f247b9ac2439aed2fd9ca7b7a75fd3514854"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\SelbergFourForms.lean:752:2: error: type mismatch, term"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 13,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt13.log",
+      "log_sha256": "51ff2a961c2ab705379043ce46db7226c46cfdaa517832ddae84c04f093299f2",
+      "role": "role3",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role3\\attempt13_source.lean.txt",
+      "snapshot_sha256": "3b9b865e463baded0f244daaa52b90307e3c2e1f6f21f68f50928509c5ce7a11"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:12:2: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:19:20: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:20:4: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:31:60: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:34:70: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:73:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:75:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:112:4: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:116:4: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:154:0: error: invalid 'end', name mismatch (expected nothing)"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 1,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt01.log",
+      "log_sha256": "87551993212aab1a41b1dca778b3061f8c9d59dc3c03416c8aca5763d64b8805",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt01_source.lean.txt",
+      "snapshot_sha256": "e0c2c0149869388d754480a824187ec1bdb7294b4bda1ab272100350f636e35b"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:12:2: error: application type mismatch"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 2,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt02.log",
+      "log_sha256": "1c24aeca8c622fbe5f21fa789069f547ea9cfd7eb51879bf8d83377f79f9603b",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt02_source.lean.txt",
+      "snapshot_sha256": "df37c509c630771c2aa16b159b1d5e25aa85c26c6b30dc61d186d408ba928c99"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:144:16: error: rcases tactic failed: h : \u2191N * \u2191e * \u2191p0 * (\u2191e - 1) * (\u2191e - \u2191p0) * (\u2191p0 - 1) = 0 \u2192 False is not an inductive datatype",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:222:67: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:233:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:238:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 3,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt03.log",
+      "log_sha256": "ee3112e1a11dca4f391b199c7531e36aa09b335bf79264be9af23a414ccc0535",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt03_source.lean.txt",
+      "snapshot_sha256": "d6559c907a9dab02312f771a87aaa00123ce229f56dcffc29d601b5b87b0b632"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:224:90: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:235:90: error: failed to synthesize",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:240:90: error: failed to synthesize"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 4,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt04.log",
+      "log_sha256": "32eb9c75f9080403235a8ed783bdef158d3cf797af114df33fbce27201e75334",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt04_source.lean.txt",
+      "snapshot_sha256": "eb0fbd486bbfb26a6d64e9a764b26eba3018be6361e032cf1a5e1cf74c29cc74"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:222:67: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:234:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:240:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 5,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt05.log",
+      "log_sha256": "83a44c0ab01d619b1e2bbc4098c167911b84828fe29cffa30a1f23d3a37618ad",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt05_source.lean.txt",
+      "snapshot_sha256": "13e299cec1244cb9bbb645f3e1919e4d226d2f6270a8e45c7b44857b876cdcde"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:236:2: error: ring failed, ring expressions not equal",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:245:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:251:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 6,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt06.log",
+      "log_sha256": "a0898674414140bbc4ab350864221c894b5a31a951798d76e8466d876acd946e",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt06_source.lean.txt",
+      "snapshot_sha256": "63e021799876142d2e8a4d7ba6ef34bb030a23c0d7cf789f63990e7c495a0cd5"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:248:75: error: unknown identifier 'zero_eq_sub'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:245:61: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:254:75: error: unknown identifier 'zero_eq_sub'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormRoots.lean:251:61: error: unsolved goals"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 7,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt07.log",
+      "log_sha256": "65908f83de213998675c9f0ae05ff5d58f33227de652d60682c3527acb6ec855",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt07_source.lean.txt",
+      "snapshot_sha256": "c1ff5736b5aad01e0a8d8f5dd9127b257b96a64c3baf2fe997337aad1afb1a68"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean:47:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean:74:34: error: application type mismatch"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 9,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt09.log",
+      "log_sha256": "2ff6a4fd137565b08c06ae313fdba0e846cea3bafeb996f4836c3875f880b700",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt09_source.lean.txt",
+      "snapshot_sha256": "e4f616483c33fdc7b7c735d7c989718d7d5ad79f3627291c66ac6e6e38107050"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\PowersetMoment.lean:48:61: error: mod_cast has type"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 10,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt10.log",
+      "log_sha256": "71b73a709cf0c937a3c7be1433d193a9c391cf7665e1bec1ff867a4aa792617e",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt10_source.lean.txt",
+      "snapshot_sha256": "b9fac37c1a7a678f48126e06de54adec1f66529f61c5c07e781aa6c987769841"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.lean:51:2: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormTruncation.lean:59:6: error: failed to rewrite using equation theorems for 'GoldbachRound17.PowersetMoment.subsetLog'."
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 12,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt12.log",
+      "log_sha256": "78693fb6e4e55b0360ede2cad16c95fd4bf304973a892a782d3f621805465db8",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt12_source.lean.txt",
+      "snapshot_sha256": "3de4dc236219f6f10115798ad2654db12a7ff44bb00b8fe891cd904975f37e89"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:19:22: error: function expected at",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:19:33: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:50:74: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:68:6: error: linarith failed to find a contradiction",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\FourFormCollisionLoss.lean:81:37: error: failed to prove positivity/nonnegativity/nonzeroness"
+      ],
+      "analytic_parity_failure": false,
+      "attempt": 14,
+      "classification": "TECHNICAL_LEAN_API_CAST_FINITESET_OR_PROOF_ELABORATION",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt14.log",
+      "log_sha256": "b2a9eba610295601b7e386aec87655766df7a877a57f236193e26b58e3bbc83e",
+      "role": "role4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role4\\attempt14_source.lean.txt",
+      "snapshot_sha256": "deb060fdafbd4079c21efce60396cd1170ad0c11a52c45145e466571ea408097"
+    }
+  ]
+}

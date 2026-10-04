@@ -1,0 +1,910 @@
+% !TEX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,tabularx}
+\usepackage{microtype}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{pdftitle={Continuous Identities, Formalization and Explicit Budgets for Binary Goldbach -- Synthesis V3},pdfauthor={Durand Serge},pdfsubject={Research synthesis and verification boundary},pdfkeywords={binary Goldbach, von Mangoldt, Mellin, projection, Lean 4}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.14}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\Sing}{\mathfrak S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\paid}{\textbf{Compiled Lean proof.}\space}
+\newcommand{\source}{\textbf{SOURCE: not compiled.}\space}
+\newcommand{\paper}{\textbf{PAPER: written argument.}\space}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\sech}{sech}
+\title{Continuous Identities, Formalization and Explicit Budgets\\
+for Binary Goldbach\\[5pt]\large Synthesis V3 and Stage Closure}
+\author{Durand Serge\\\small Independent researcher\\\small\texttt{seisner1967@gmail.com}}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This synthesis continues the V2 monograph while preserving its balance
+framework and notation. Research in round 22 transfers the additive coupling
+to continuous traces, Mellin integrals and character projections.
+The inventory frozen after independent batch 35 contains 88 modules and
+1\,488 auxiliary declarations, including definitions. The new established
+results include exact extraction of the coefficient of the genuine von
+Mangoldt function on the circle, its alias-free discrete projection, canonical
+logarithm quantization at scale $2^{58}$, the five finite-field roots specified
+by the contract, and a Mellin representation with a justified interchange
+of sum and integral. The weighted truncation envelopes, their uniform geometry
+and their complete connection to the coefficient remain uncompiled proof
+sources. An exact rational test validates a scalar upper bound below $10^{-6}$
+at $N=10^8$; it does not evaluate the coefficient. The independent native
+checker stops at its time limit without a mathematical verdict.
+The target bound for $D_N$, the global signed contribution and the binary
+Goldbach conjecture remain open.
+\end{abstract}
+\noindent\textbf{Keywords:} binary Goldbach; von Mangoldt; Mellin;
+continuous projection; explicit errors; Lean 4.
+\par\noindent\textbf{Classification:} 11P32.
+\par\noindent\textbf{Scope.} This text closes a research stage and provides
+a continuation contract. It announces neither a proof of Goldbach nor a
+breakthrough of the parity barrier. The statuses refer to preserved receipts,
+not to the number of identities that might still be formalized.
+\par\noindent{\small The manuscript was prepared with assistance from research
+agents and writing tools. This assistance does not constitute external
+scientific validation. Compiled proofs are identified by their sources and
+independent audits of their axioms.}
+
+\clearpage
+\section{Preserved framework and verification boundary}\label{sec:frame}
+For an even integer $N$, we retain the notation
+\[
+u=\log N,\qquad L=1+u,\qquad \ell=\log u,
+\]
+with natural logarithms. The onset of the fixed analytic framework is
+\begin{equation}\label{eq:onset}
+u\ge 10^{24}.
+\end{equation}
+The point $N=10^8$ serves as a finite testing guide; it lies outside this regime.
+A check at this point covers neither the onset \eqref{eq:onset} nor all even
+integers below it. This stage preserves the established framework and examines
+its connection to new continuous objects.
+
+The reference quantity in the balance remains
+\begin{equation}\label{eq:reference}
+R_{\mathrm{ref}}=\Sing(N)(N-F_N),\quad
+\Sing(N)=2C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2},\quad
+C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right).
+\end{equation}
+The earlier analytic dependencies of $F_N$ and the reference retain their
+status in the monograph. This synthesis does not turn a reported analytic
+input into a new self-contained Lean theorem. The research target remains
+\begin{equation}\label{eq:target}
+D_N\le \tau_N:=\frac{N}{256u\ell}.
+\end{equation}
+The cutoffs of the preserved profile are
+\[
+\alpha=\lceil N^{1/4}\rceil,\quad Q=\left\lfloor\frac{N-1}{\alpha}\right\rfloor,
+\quad a_{\mathrm{cut}}=\lceil N^{7/16}\rceil,
+\quad M_{\mathrm{cut}}=\lceil N^{3/4}\rceil.
+\]
+The thermal parameter $a>0$ introduced below is distinct from
+$a_{\mathrm{cut}}$. All boundary faces, bands, corners, units and support
+restrictions in the balance retain their positions.
+
+\subsection*{Four levels of evidence}
+\begin{tabularx}{\textwidth}{@{}p{29mm}Y@{}}
+\toprule
+Level & Exact meaning in this synthesis\\
+\midrule
+Compiled Lean & Frozen source, successful independent compilation, exact
+catalogue and axiom audit; credit applies to the whole module.\\
+SOURCE & Written and possibly reviewed Lean proof text; elaboration and
+compilation are still absent or have failed.\\
+PAPER & Identity or estimate derived in a note; its formalization and
+evaluation obligations remain explicit.\\
+Observed computation & Program actually run under a precise contract;
+its result receives credit only within the scope of that contract.\\
+\bottomrule
+\end{tabularx}
+The 1\,488 counted declarations include definitions. They are not 1\,488
+Goldbach theorems. The standard axioms appearing in the audits include
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+No \texttt{sorryAx} is accepted in a credited module. Recovery output after
+failed elaboration remains evidence of a technical failure, with no proof credit.
+
+\clearpage
+\section{The genuine thermal trace and the additive coefficient}\label{sec:heat}
+We use the real arithmetic function
+\[
+\Lam(0)=\Lam(1)=0,\qquad
+\Lam(n)=\begin{cases}\log p,&n=p^k,\ p\text{ prime},\ k\ge1,\\0,&\text{otherwise}.
+\end{cases}
+\]
+All prime powers are retained. For $a>0$ and $\theta\in\R$,
+\begin{equation}\label{eq:heat}
+T_a(\theta)=\sum_{n\ge0}\Lam(n)e^{-an}e^{in\theta},\qquad
+C_N=\sum_{n=0}^{N}\Lam(n)\Lam(N-n).
+\end{equation}
+No abstract trace function is needed: the series above is the object
+actually formalized.
+
+Set $r=e^{-a}\in(0,1)$ and
+\begin{align}
+U(a)&=\frac{r}{(1-r)^2},\label{eq:U}\\
+B(a,M)&=r^{M+1}\left(\frac{M+1}{1-r}+U(a)\right).
+\label{eq:heat-tail}
+\end{align}
+\paid Batch 11 directly constructs $0\le\Lam(n)\le n$, summability
+of the terms, continuity of $T_a$, and the uniform bounds
+\[
+|T_a(\theta)|\le U(a),\qquad
+|T_a(\theta)-T_{a,M}(\theta)|\le B(a,M),
+\quad T_{a,M}(\theta)=\sum_{n=0}^{M}\Lam(n)r^ne^{in\theta}.
+\]
+It also proves continuity of the envelopes for $a>0$ and bounds the difference
+between the full and partial integral projections by
+$2e^{aN}U(a)B(a,M)$. The geometric majorant is constructed; it is not
+supplied as a precision hypothesis.
+
+\begin{theorem}[Exact continuous projection; batch 13]\label{thm:circle}
+For every $a>0$ and every $N\in\N$,
+\begin{equation}\label{eq:circle}
+C_N=\frac{e^{aN}}{2\pi}\int_0^{2\pi}
+T_a(\theta)\,\overline{T_a(-\theta)}\,e^{-iN\theta}\,d\theta
+=\frac{e^{aN}}{2\pi}\int_0^{2\pi}T_a(\theta)^2e^{-iN\theta}\,d\theta.
+\end{equation}
+\end{theorem}
+\paid The proof first extracts the characters on a finite rectangle,
+establishes integral orthogonality and the normalization factor, then passes
+to the limit using the envelope \eqref{eq:heat-tail}. Once $M\ge N$, the
+integral projection of the polynomial $T_{a,M}$ already equals $C_N$ exactly.
+
+Conjugation applies to the reflected phase:
+$\overline{T_a(-\theta)}=T_a(\theta)$. The product $|T_a(\theta)|^2$
+would select frequency differences; it does not yield the required additive
+coefficient. The form centered on $[-\pi,\pi]$ relies on periodicity of the
+genuine series. Its combination with the Mellin truncation is written
+separately, with the SOURCE status described in Section~\ref{sec:radius}.
+
+\clearpage
+\section{Alias-free finite projector and finite-field projection}\label{sec:finite}
+The continuous identity has a fully finite counterpart. It provides an exact
+contract for a possible computation without replacing the genuine function
+$\Lam$. For $K\ge1$, set $\theta_j=2\pi j/K$.
+
+\begin{theorem}[Discrete orthogonality and extraction; batch 15]
+For $N\le M$ and
+\begin{equation}\label{eq:alias}
+K>\max(N,2M-N),
+\end{equation}
+for every real $a$, we have
+\begin{equation}\label{eq:discrete}
+C_N=\frac{e^{aN}}{K}\sum_{j=0}^{K-1}
+T_{a,M}(\theta_j)^2e^{-iN\theta_j}.
+\end{equation}
+\end{theorem}
+\paid Batch 15 proves orthogonality of the actual exponential characters,
+then their expansion and selection of the antidiagonal. Condition
+\eqref{eq:alias} excludes spurious frequencies $m+n-N\in K\Z$ with
+$0\le m,n\le M$. It is a mathematical guard, not an experimental tolerance.
+The choice $a=0$ is valid for this finite polynomial; no infinite trace
+$T_0$ is introduced.
+
+An analogous projection exists in a finite field. For a prime $p$, an element
+$\omega\in\mathbb F_p$ of exact order $K$ and $K\ne0$ in $\mathbb F_p$,
+orthogonality gives
+\[
+\frac1K\sum_{j=0}^{K-1}\omega^{jk}
+=\begin{cases}1,&K\mid k,\\0,&K\nmid k.\end{cases}
+\]
+\paid Batch 19 proves this identity from the primitive root;
+the resulting orthogonality is not a premise. For a finite sequence $A_n$
+and \eqref{eq:alias}, its projection selects
+$\sum_{n=0}^N A_nA_{N-n}$ in $\mathbb F_p$.
+
+The continuous-circle representation and this character projection share
+one object: the exact additive coefficient. A projection identity does not
+show that this coefficient is sufficiently large. Nor does it establish
+that a fast-transform program implements the theorem's finite sum.
+That correspondence requires stage invariants, normalizations, machine-word
+bounds and integer reconstruction.
+
+The final contract fixes
+\begin{equation}\label{eq:fixed}
+N=M=100\,000\,000,\qquad K=2^{27}=134\,217\,728,
+\qquad S=2^{58}=288\,230\,376\,151\,711\,744.
+\end{equation}
+Here $K>N$ satisfies \eqref{eq:alias}. The finite proofs remain valid
+regardless of whether a computation of this size is completed. The validation
+contract must retain coefficients from all prime powers, including those
+of exponent at least two.
+
+\clearpage
+\section{Canonical logarithms and explicitly constructed precision}\label{sec:quant}
+The quantization in batch 17 does not assume oracle-supplied precision.
+For $2\le p\le10^8$, set
+\[
+k=\lfloor\log_2p\rfloor,\qquad
+z=\frac{p-2^k}{p+2^k},\qquad 0\le z<\frac13,
+\]
+and define the rational sum
+\begin{equation}\label{eq:log32}
+L_{32}(z)=2\sum_{j=0}^{31}\frac{z^{2j+1}}{2j+1},\qquad
+\rho_{32}=\frac{9}{4\cdot65\cdot3^{65}}.
+\end{equation}
+The real series representation of $\log(1+z)-\log(1-z)$, its geometric
+tail and the decomposition using $2^k$ give the interval
+\begin{equation}\label{eq:logbox}
+b_p=kL_{32}(1/3)+L_{32}(z),\qquad
+\log p\in[b_p,b_p+(k+1)\rho_{32}].
+\end{equation}
+\paid On the fixed domain, the width satisfies
+\[
+(k+1)\rho_{32}\le\frac{243}{260\cdot3^{65}}<2^{-96}.
+\]
+The canonical point $A_p$ is obtained by multiplying the midpoint of
+\eqref{eq:logbox} by $S$, rounding to the nearest integer with ties to even,
+then clamping to $[0,32S]$. The constructor uses exact rational quotient
+and remainder. It is not identified with a different rounding function
+without proof.
+
+For all integers, define
+\[
+A_n=\begin{cases}
+A_{\min\mathrm{Fac}(n)},& n\text{ is a prime power},\\
+0,&\text{otherwise},
+\end{cases}\qquad q_n=A_n/S.
+\]
+The cases $0$ and $1$ are handled separately. Using the direct definition
+of $\Lam$ and its least prime factor retains every $p^k$.
+\paid The proof establishes, for $0\le n\le10^8$,
+\begin{equation}\label{eq:q-error}
+0\le\Lam(n),q_n\le32,\qquad |\Lam(n)-q_n|\le 1/S.
+\end{equation}
+Precision follows from \eqref{eq:log32}--\eqref{eq:logbox} and the constructed
+rounding rule; it is not a free hypothesis of the theorem.
+
+Set $I_N=\sum_{n=0}^{N}A_nA_{N-n}\in\Z_{\ge0}$. The same batch proves
+\begin{equation}\label{eq:E-log}
+\left|C_N-\frac{I_N}{S^2}\right|\le E_{\log}(N,S),\qquad
+E_{\log}(N,s)=(N+1)\left(\frac{64}{s}+\frac1{s^2}\right),\quad s>0.
+\end{equation}
+The envelope is continuous for $s>0$. The fixed integer guard
+\begin{equation}\label{eq:q-guard}
+2(N+1)(64S+1)10^6\le S^2
+\end{equation}
+is compiled, hence $2E_{\log}(10^8,2^{58})\le10^{-6}$. This result proves
+the real quantization bound without computing $I_N$ or $C_N$.
+
+\clearpage
+\section{Five prime moduli, exact residues and native-code obligations}\label{sec:crt}
+The contract fixes the following five pairs; their primality and the root
+orders were independently compiled in batch 22.
+\begin{center}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$i$ & $p_i$ & $(p_i-1)/K$ & $g_i$\\
+\midrule
+1 & 2\,013\,265\,921 & 15 & 31\\
+2 & 2\,281\,701\,377 & 17 & 3\\
+3 & 3\,221\,225\,473 & 24 & 5\\
+4 & 3\,489\,660\,929 & 26 & 3\\
+5 & 3\,892\,314\,113 & 29 & 3\\
+\bottomrule
+\end{tabular}
+\end{center}
+In $\mathbb F_{p_i}$, set $\omega_i=g_i^{(p_i-1)/K}$. The proof establishes
+order $K$ from primality certificates and the required power checks.
+
+\begin{theorem}[Concrete canonical projection; batch 22]
+With parameters \eqref{eq:fixed} and the canonical integers $A_n$,
+\begin{equation}\label{eq:ntt-projection}
+F_i(j)=\sum_{n=0}^{N}A_n\omega_i^{jn},\qquad
+r_i=K^{-1}\sum_{j=0}^{K-1}F_i(j)^2\omega_i^{-Nj}
+=I_N\pmod {p_i}.
+\end{equation}
+\end{theorem}
+\paid The theorem instantiates the finite-field projection with the
+actual roots in the table. Neither the final residue nor coefficient
+precision is taken as a premise.
+
+\paper For $\Pi=\prod_{i=1}^5p_i$, the contract bounds are
+\begin{equation}\label{eq:crt-size}
+0\le I_N\le(N+1)(32S)^2<2^{153}<\Pi.
+\end{equation}
+They provide the domain for unique reconstruction by the Chinese remainder
+theorem. A reconstruction $c\in[0,\Pi)$ with the five correct residues must
+therefore equal $I_N$, provided the exact connection to the constructor and
+projections is established. Proving the behavior of the CRT code, its machine
+words and the fast transform remains separate from \eqref{eq:ntt-projection}.
+
+The native producer and checker were both built in BUILD04: two compilations
+completed with exit code zero. This establishes the existence of two frozen
+executable images without proving their refinement of the Lean functions.
+The checker must still certify the entire catalogue up to $N$, the
+classification of prime powers, equality of every recorded point to the
+canonical $A32$ constructor, residues, reconstruction and integer guards.
+An auxiliary check using a $B40$ series is not the primary $A32$ constructor;
+its code and real precision have no complete Lean proof at this stage.
+
+The resource window is an operational constraint. Declared trust in Windows,
+GCC and the native images is neither universal loader closure nor observation
+of all dynamic dependencies. None of these operational assumptions replaces
+a program-refinement theorem.
+
+\clearpage
+\section{Mellin: exact identity with the genuine von Mangoldt series}\label{sec:mellin}
+Let $w\in\C$ satisfy $\Re w>0$. The principal logarithm determines
+$w^{-s}=\exp(-s\Log w)$. Set
+\begin{equation}\label{eq:mellin-objects}
+s(t)=2+it,\quad
+D(t)=\sum_{n\ge2}\Lam(n)n^{-2-it},\quad
+P(w)=\sum_{n\ge0}\Lam(n)e^{-nw},\quad
+K(w,t)=\Gamma(2+it)w^{-2-it}.
+\end{equation}
+The index-zero and index-one terms of $D$ vanish in the formal definition.
+For $n\ge1$, the powers use the real logarithm of the positive number $n$.
+In particular, $P(a-i\theta)=T_a(\theta)$.
+
+\begin{theorem}[Inversion and infinite interchange; batch 35]\label{thm:mellin}
+For $\Re w>0$, the function $t\mapsto D(t)K(w,t)$ is integrable and
+\begin{equation}\label{eq:mellin}
+P(w)=\frac1{2\pi}\int_{\R}D(t)\Gamma(2+it)w^{-2-it}\,dt.
+\end{equation}
+Moreover, $D$ is continuous and $|D(t)|\le6$ for every $t\in\R$.
+\end{theorem}
+\paid Batch 35 contains 30 declarations: 24 theorems and 6 definitions.
+Its independent compilation and exact axiom audit succeeded. The interchange
+does not rely on an assumed final integrability statement or an externally
+supplied equality.
+
+The proof begins with the positive series
+\[
+b_n=\Lam(n)n^{-2},\qquad
+0\le b_n\le 2n^{-3/2}\ (n\ge1),\qquad \sum_n b_n\le6.
+\]
+It constructs uniform convergence of the series $D$ and its bound.
+The Gamma inversion identities, holomorphy on the right half-plane and
+integrable kernel majorants come from independently compiled dependencies.
+For each $n>0$, the branch identity $(nw)^{-s}=n^{-s}w^{-s}$ is established
+with $n$ a positive real number. Finally, summability of the integrals of
+norms justifies the actual interchange between the series in $n$ and the
+integral in $t$. The terms $\Lam(p^k)$ remain present.
+
+On the line $\Re s=2$, the classical identification of this series with
+$-\zeta'(s)/\zeta(s)$ belongs to a separate zeta connection. Theorem
+\ref{thm:mellin} directly uses the genuine series $D$; its credit does not
+validate all explicit formulas in zeros, all contour shifts or a uniform
+evaluator for $\zeta$.
+
+Identity \eqref{eq:mellin} transfers the coupling exactly into a continuous
+representation. It does not yet give a favorable sign for coefficient
+\eqref{eq:circle}. Absolute domination ensures existence of the integrals
+and the interchanges; a new signed cancellation remains a separate obligation.
+
+\clearpage
+\section{Signed truncations and right-half-plane geometry}\label{sec:tails}
+We retain the concrete definitions of the truncation packages. For
+$\Re w>0$, let
+\begin{equation}\label{eq:Cdelta}
+\eta(w)=\frac{\pi/2+|\Arg w|}{2},\quad
+\delta(w)=\frac{\pi/2-|\Arg w|}{2}>0,\quad
+C(w)=|w|^{-2}\sec^2\eta(w).
+\end{equation}
+The Gamma kernel has constructed exponential majorants on this domain.
+Independent, compiled batch 30 establishes the unweighted tails in both
+orientations. The bridge in batch 32 connects full Gamma inversion to the
+corresponding truncation. These credits do not automatically include the
+new tail weighted by $D$.
+
+\source The $E_\Lam$ package defines, for $H\ge0$,
+\begin{align}
+P_H(w)&=\frac1{2\pi}\int_{-H}^{H}D(t)K(w,t)\,dt,\\
+T_+(w,H)&=\int_H^\infty D(t)K(w,t)\,dt,\qquad
+T_-(w,H)=\int_H^\infty D(-t)K(w,-t)\,dt.
+\end{align}
+It aims to establish the exact statements
+\begin{equation}\label{eq:lambda-tail}
+P(w)-P_H(w)=\frac{T_-(w,H)+T_+(w,H)}{2\pi},\qquad
+|P(w)-P_H(w)|\le
+\frac{6C(w)e^{-\delta(w)H}}{\pi\delta(w)}.
+\end{equation}
+The factor 6 comes from Theorem \ref{thm:mellin}. Reflection applies to both
+factors $D$ and $K$. The source contains concrete integrability and tail
+proofs; no premise equal to \eqref{eq:lambda-tail} is added.
+
+Batch 36 fails on a reflection rewrite at line 118:6. It produced no compiled
+proof object for this module; the following geometry module was not invoked.
+The repair is preserved in a new SOURCE02 package, with no further compilation
+at the close of this stage. The diagnostic concerns elaboration, without
+an analytic refutation or a proof of a parity obstruction.
+
+\source The Geometry25 package constructs, for $a>0$,
+\begin{equation}\label{eq:geometry}
+C(a-i\theta)=\frac2{a^2}
+\left(1+\frac{|\theta|}{\sqrt{a^2+\theta^2}}\right)\le\frac4{a^2}.
+\end{equation}
+For $|\theta|\le\pi$, it also aims to establish
+\begin{equation}\label{eq:d}
+\delta(a-i\theta)\ge d(a):=\tfrac12\arctan(a/\pi)>0.
+\end{equation}
+Branches, quadrants, signs, square roots and continuity are explicitly
+written out. The radii are closed expressions and continuous on their domains:
+$\Re w>0$ and $H\in\R$ for the expression, $H\ge0$ for the tail bound.
+Continuity of an expression is not an additional proof of continuity of
+an integral with a moving boundary.
+
+\clearpage
+\section{Coefficient envelope and remaining scalar connection}\label{sec:radius}
+From \eqref{eq:lambda-tail}--\eqref{eq:d}, the proposed uniform radius is
+\begin{equation}\label{eq:eps}
+\varepsilon(a,H)=\frac{24e^{-d(a)H}}{\pi a^2d(a)},\qquad a>0,\ H\ge0.
+\end{equation}
+The coefficient source defines the centered projection of the truncation
+\[
+C_{N,H}=\frac{e^{aN}}{2\pi}\int_{-\pi}^{\pi}
+P_H(a-i\theta)^2e^{-iN\theta}\,d\theta
+\]
+and the closed-form radius
+\begin{equation}\label{eq:E-mellin}
+\mathcal E_N(a,H)=e^{aN}\bigl(2U(a)\varepsilon(a,H)
++\varepsilon(a,H)^2\bigr).
+\end{equation}
+\source The 34 declarations in this package construct transport to the
+centered circle, angular continuity and integrability at fixed $H$, then
+aim to establish
+\begin{equation}\label{eq:coef-error}
+|C_N-C_{N,H}|\le\mathcal E_N(a,H).
+\end{equation}
+The elementary inequality used is
+$|x^2-y^2|\le2|x||x-y|+|x-y|^2$. Together with $|T_a|\le U(a)$, it explains
+the two budget terms. Joint continuity of the radius is written for $a>0$
+and $H\in\R$; its interpretation as a truncation error requires $H\ge0$.
+The theorem is not compiled at stage closure.
+
+The genuine series $T_a$ is periodic. The complex power
+$(a-i\theta)^{-2-it}$, taken alone on its principal branch, is not.
+The source does not postulate periodicity of $P_H$. Shifting the projection
+interval concerns the full trace, whose periodicity follows from the series;
+the truncation then receives its own budget.
+
+\source The scalar package of 26 declarations defines the same functions
+$U$, $d$, $\varepsilon$ and $\mathcal E_N$, and writes a real-variable
+chain at the point
+\begin{equation}\label{eq:point}
+N=10^8,\qquad a=10^{-8}=1/N,\qquad H=10^{11},\qquad\tau=10^{-6}.
+\end{equation}
+It aims in particular to prove $d(a)>1/(8N)$, a bound for $U$ through the
+$\sinh$ identity, $e^{125}>10^{50}$, then
+$\mathcal E_N(a,H)\le576/10^{10}<\tau$.
+It is not compiled. A separate bridge of eight theorems writes the equalities
+between the two radius definitions and the instantiation of
+\eqref{eq:coef-error} by this scalar result. Its two imports are prospective;
+the bridge is also uncompiled.
+
+These sources address precise theoretical obligations without establishing
+a numerical coefficient. Before their independent compilation, no complete
+Lean chain supports promoting \eqref{eq:coef-error} and its instantiation
+at \eqref{eq:point} to an established formal result.
+
+\clearpage
+\section{The completed rational test and its scope}\label{sec:scalar-test}
+The observed scalar test uses only exact fractions. At \eqref{eq:point},
+it defines
+\[
+S_{150}(125)=\sum_{k=0}^{150}\frac{125^k}{k!},\qquad
+q=\frac1{S_{150}(125)},\qquad
+\mathcal B=3\bigl(128N^5q+4096N^6q^2\bigr).
+\]
+\textbf{Observed computation: rational PASS.} One actual invocation,
+with no retry, verifies exactly
+\begin{equation}\label{eq:B-test}
+\mathcal B<10^{-6}.
+\end{equation}
+The preserved checks include
+$S_6(5)>100$ and
+$S_{150}(125)\ge S_6(5)^{25}>10^{50}$.
+The result is linked to the executor's receipt and the ROOT physical
+observation listed in the appendix. It uses no floating-point approximation.
+
+Comparison \eqref{eq:B-test} is a scalar result. The program does not integrate
+$D$, compute $P_H$ or $C_{N,H}$, or evaluate $C_N$. It does not verify a prime
+catalogue, the native transform or a Goldbach identity. The connection between
+$\mathcal B$ and the real radius \eqref{eq:E-mellin} uses the analytic
+inequalities written in the scalar package and the bridge of Section
+\ref{sec:radius}. Their status remains SOURCE.
+
+\paper The analytic connection to the same radius is explicitly as follows.
+The real inequalities in the connectors give $3<\pi<7/2$,
+$d(1/N)>1/(8N)$ and
+$U(1/N)=1/(4\sinh^2(1/(2N)))\le N^2$.
+Thus $dH>125$ at the fixed point. The positive Taylor series gives
+$S_{150}(125)\le e^{125}$, hence $e^{-dH}\le e^{-125}\le q$.
+Expression \eqref{eq:eps} therefore satisfies
+\[
+\varepsilon(1/N,H)\le
+\frac{24}{3}N^2(8N)q=64N^3q.
+\]
+Since $aN=1$ and $e<3$, \eqref{eq:E-mellin} implies
+\[
+\mathcal E_N(1/N,H)\le
+3\bigl(2N^2\cdot64N^3q+(64N^3q)^2\bigr)=\mathcal B<\tau.
+\]
+This chain explains the proposed analytic scope of the test exactly.
+It remains PAPER/SOURCE until compilation of the connectors and the bridge
+to the coefficient; the rational computation alone does not verify
+these dependencies.
+
+\subsection*{Feasibility of a literal Mellin evaluation}
+\paper The sharper geometry gives the uniform radius
+\[
+\overline C(a)=\frac2{a^2}\left(1+
+\frac{\pi}{\sqrt{a^2+\pi^2}}\right)<\frac4{a^2},\qquad
+\overline\varepsilon=
+\frac{6\overline C(a)e^{-d(a)H}}{\pi d(a)}.
+\]
+The cost note studies the threshold of the majorant
+$e^{aN}(2U\overline\varepsilon+\overline\varepsilon^2)$.
+For parameters \eqref{eq:point}, it places this threshold between
+$5\cdot10^{10}$ and $10^{11}$ using closed-form inequalities.
+This estimate concerns a sufficient condition obtained from a majorant;
+it is not a lower bound for the actual error and does not impose this
+height on every possible method.
+
+The same note bounds a literal tail of $D$ on paper by $(\log M+1)/M$
+and angular quadrature through a derivative majorant. Extremely crude
+choices such as $M=10^{52}$ and $J=10^{67}$ illustrate symbolic closure
+of these budgets. They describe neither an available program nor a run
+that could finish within this stage's resource window. Directed certification
+of the primitives at every node and vertical quadrature remain open.
+The scalar success \eqref{eq:B-test} is therefore not a performance
+measurement of a global Mellin evaluation.
+
+\clearpage
+\section{Falsifiable numerical contract and native stop without a verdict}\label{sec:numeric}
+The finite contract in Section \ref{sec:crt} gives a falsifiable target:
+produce $I_N$ from the canonical coefficients, reconstruct the same integer
+from the five residues, and verify all guards. Then \eqref{eq:E-log}
+provides the interval
+\[
+C_N\in\left[I_N/S^2-E_{\log},\ I_N/S^2+E_{\log}\right].
+\]
+The radius is not chosen after observation; its real construction and guard
+are already compiled. A valid native result still requires correspondence
+of the records to $A32$, complete catalogue coverage and verification
+of the integer computation.
+
+\paper For $K=2^{27}$, a radix-2 transform has
+$K\cdot27/2=1\,811\,939\,328$ butterflies per transform. The contract counts
+give tens of billions of modular products for the five moduli and their
+independent check. An array of $K$ 32-bit words occupies 536\,870\,912 bytes;
+the 64-bit points on $0,\ldots,N$ occupy 800\,000\,008 bytes, and the 32-bit
+factors occupy 400\,000\,004 bytes. These payload counts are neither a total
+memory measurement nor a runtime promise.
+
+\textbf{Observed computation: STOP without a verdict.} Consumer05 reuses
+three frozen producer04 payloads as identical copies and a checker image
+from BUILD04. The payloads remain unvalidated until the checker completes
+its contract. The attempt creates one checker, no producer and no compiler,
+with no retry. The parent budget is 3\,600 seconds; the checker has a deadline
+at 3\,300 seconds, leaving a 300-second reserve for logs and preservation checks.
+
+The checker stops with code 238 and status \texttt{HARD\_WALL\_NO\_VERDICT}.
+The parent exits with code 1 after approximately 3\,312 seconds, or 55 minutes.
+No coefficient is present. Closure documents quiescence and the POST actually
+produced; the ROOT observation verifies preservation of 6\,576 inputs,
+109 capture pairs, three payload pairs and 3\,089 archive files.
+The stop is a resource failure without a mathematical verdict, not a
+counterexample to the identity or the constructed precision.
+
+The OS resource controls distinguish a 2 GiB Job commit-memory limit from
+RSS monitoring, which is not an OS-enforced RSS limit. Operational trust
+in Windows/GCC/native code remains declared and bounded in scope; universal
+loader closure is not asserted. No new attempt or throughput extrapolation
+is included in this closure.
+
+\clearpage
+\section{Connection to the balance: the signed obligation remains}\label{sec:dn}
+The coefficient $C_N$ includes proper prime powers.
+Define directly
+\[
+P_{\mathrm{pr}}(n)=\begin{cases}\log n,&n\text{ prime},\\0,&\text{otherwise},\end{cases}
+\qquad V_{\mathrm{pp}}(n)=\Lam(n)-P_{\mathrm{pr}}(n).
+\]
+The notation $V_{\mathrm{pp}}$ avoids confusing this weight with the amplitude
+$U(a)$. In the ledger audit, the coefficient of prime pairs and the
+correction are
+\begin{align}
+R_{\mathrm{sf}}&=\sum_{n=0}^N P_{\mathrm{pr}}(n)P_{\mathrm{pr}}(N-n),\\
+Q_N&=C_N-R_{\mathrm{sf}}\nonumber\\
+&=\sum_{n=0}^N\bigl(2P_{\mathrm{pr}}(n)V_{\mathrm{pp}}(N-n)
++V_{\mathrm{pp}}(n)V_{\mathrm{pp}}(N-n)\bigr)\ge0.
+\label{eq:PP}
+\end{align}
+\paper The direct upper bound $Q_N\le2\sqrt N\,u^2$ for $N\ge2$
+is retained in this note. It is not credited here as a new
+Lean theorem. This global term is not interchangeable with the
+prime-power terms whose supports are separately retained in the balance.
+
+The monograph's bridge, within its stated scope, under its conditions and with exactly
+the same support, retains
+\begin{equation}\label{eq:ledger}
+D_N+\varepsilon_{\mathrm{tr}}
+=R_{\mathrm{ref}}-R_{\mathrm{sf}}+2\max(e,0).
+\end{equation}
+Its connection to the continuous coefficient is therefore
+\begin{equation}\label{eq:gap}
+D_N=R_{\mathrm{ref}}-C_N+Q_N+2\max(e,0)-\varepsilon_{\mathrm{tr}}.
+\end{equation}
+The ledger retains each of
+$B_{\mathrm{prime}}^{(a_{\mathrm{cut}})}$,
+$B_{\mathrm{pp}}^{(a_{\mathrm{cut}})}$,
+$P_{\mathrm{band},\ge2}$, $Z_{\mathrm{face},\ge2}$, $I_\alpha$ and
+$2\max(e,0)$ exactly once. This transposition does not redevelop these objects
+using the arithmetic methods abandoned in loop 22.
+
+Knowing a narrow interval for $C_N$ does not give the sign
+of $R_{\mathrm{ref}}-C_N$, or control of $e$, the boundaries and the corners.
+To establish \eqref{eq:target}, a signed estimate
+compatible with \eqref{eq:gap} remains to be proved, retaining these obligations and the
+bridge conditions. Assuming this estimate as a premise equivalent to
+the target would not constitute a way around the parity barrier.
+
+The continuous identities establish exact representations, and the
+budgets describe a truncation or quantization error. No
+global cancellation of the true spectral contribution transferred to the
+ledger has been proved. This obligation remains open even if a future
+finite computation produces $C_N$ at $10^8$. It must be addressed at the
+threshold \eqref{eq:onset} and with the finite coverage required by the framework.
+
+\clearpage
+\section{Boundaries, zeros and invariance: directions with precise scope}\label{sec:strategy}
+The continuous pivot preserves phase before taking a norm. For
+$a>0$, $N\ge1$ and $q\in\C$, consider
+\[
+J_{a,N}(q)=\frac1{2\pi}\int_{-\pi}^{\pi}
+(a-i\theta)^{-q}e^{-iN\theta}\,d\theta.
+\]
+\paid Batch 25 formalizes integration by parts and the true boundary term
+on the principal branch:
+\begin{equation}\label{eq:bord}
+J_{a,N}(q)=\frac{i(-1)^N}{2\pi N}
+\bigl((a-i\pi)^{-q}-(a+i\pi)^{-q}\bigr)
++\frac qN J_{a,N}(q+1).
+\end{equation}
+The boundary term does not vanish pointwise. This module of 30 declarations
+provides no favorable sign for the full spectral projection.
+Periodicity of the trace after inversion does not make
+each truncated kernel periodic.
+
+\paper The signed explicit-formula strategy localizes a smooth test
+function near $x+y=N$, then aims for the decomposition
+\[
+C_N=\mathcal B_N-2\mathcal L_N+\mathcal Z_N.
+\]
+The three terms respectively denote the background, coupling to the
+zero channel, and the two-zero contribution in the proposed explicit formula.
+The full identity, archimedean corrections, multiplicities,
+interchanges and zero tails remain to be established in this channel.
+The retained reviews find consistency subject to these obligations; they
+credit neither a sign for $\mathcal Z_N-2\mathcal L_N$ nor a
+Lean proof of the global formula.
+
+Organization into conjugation--reflection orbits retains zeros off
+the critical line. A four-point orbit generates a density
+of the form
+\[
+4m x^{-1/2}\cosh\bigl((\beta-1/2)\log x\bigr)
+\cos(\gamma\log x),
+\]
+and a two-point critical orbit gives the density
+$2m x^{-1/2}\cos(\gamma\log x)$, with multiplicity $m$.
+Stabilizers prevent double counting a degenerate orbit.
+The cosine phase can change sign: correct organization of the
+orbits does not automatically give positivity of the additive coefficient.
+
+The review of the canonical kernel exhibits a negative direction in a
+two-dimensional restriction; it rules out the naive positivity argument
+examined there. Its scope is this specific kernel. It is neither a
+universal impossibility result for every operator approach nor a
+refutation of Goldbach. Likewise, any proposed modularity or exact
+invariance must be proved for the true objects and must
+isolate the signed term required in \eqref{eq:gap}. No such
+sufficient connection is presented as imminent at this closure.
+
+\clearpage
+\section{Continuous Fej\'er: reconstruction and the remaining sign}\label{sec:fejer}
+The new spectral note starts from the true series $D$ of batch 35, with
+$c_n=\Lam(n)/n^2$ for $n\ge2$ and $c_0=c_1=0$.
+The mass bound $\sum c_n\le6$ makes $D$ positive definite: for finite
+families $(z_j,t_j)$,
+\[
+\sum_{j,k}\overline z_jz_kD(t_k-t_j)
+=\sum_{n\ge2}c_n\left|\sum_k z_ke^{-it_k\log n}\right|^2\ge0.
+\]
+\paper For $T>0$ and an integer $m\ge1$, the triangular average
+\begin{equation}\label{eq:fejer-cont}
+\begin{split}
+A_T(m)&=\frac1T\int_{-T}^{T}\left(1-\frac{|t|}{T}\right)
+D(t)e^{it\log m}\,dt\\
+&=\sum_{n\ge2}c_n\operatorname{sinc}^2\!\left(\frac T2\log\frac mn\right)
+\end{split}
+\end{equation}
+is real and nonnegative. Here $\operatorname{sinc}(x)=\sin(x)/x$ if
+$x\ne0$ and $\operatorname{sinc}(0)=1$. The interchange over the compact interval is
+justified by summability; the triangle is the autocorrelation of an
+interval indicator. Distinct frequencies satisfy
+$|\log(m/n)|\ge\log(1+1/m)$. The note therefore derives the closed radius
+\begin{equation}\label{eq:fejer-radius}
+0\le A_T(m)-c_m\le
+\frac{24}{T^2\log^2(1+1/m)},\qquad T>0.
+\end{equation}
+For $m=1$, $c_1=0$ and the same bound holds. The radius is continuous
+for $T>0$ and tends to zero for fixed $m$. Neither this identity nor its
+connecting results are compiled in this stage.
+
+This mechanism reconstructs amplitudes from the true vertical data,
+then can insert them into the reflected blocks $n,N-n$. It does not create
+shared mass for a pair. The note retains a bounded countermodel:
+the sector consisting solely of powers of 2 is positive definite and satisfies the
+same reconstruction, while its additive coefficient at $N=14$ is zero.
+This observation rules out deducing a uniform strict lower bound from
+this positivity alone. It does not replace the true zeta function and does not rule out an
+additional identity specific to its full data.
+
+A future evaluator would have to produce intervals for the true
+integrals $A_T(m)$, with controlled primitives, locations and quadratures.
+\eqref{eq:fejer-radius} does not account for any of these evaluation
+errors. The cost increases with $m$, and no feasibility at $10^8$
+is asserted. The earlier identities for divisible grids and their
+covariances remain in V2, with their support conventions; this
+direction concerns the continuous spectral variable $t$.
+
+Research is frozen. Any resumption must establish an additional signed
+connection to the ledger \eqref{eq:gap}, rather than rename this
+reconstruction as parity cancellation. No mechanism sufficient
+for \eqref{eq:target} or imminent discovery is claimed.
+
+\clearpage
+\section{Frozen formal inventory and record of limitations}\label{sec:inventory}
+The independent observation of batch 35 fixes the official inventory at
+\textbf{88 modules / 1\,488 auxiliary declarations, including definitions}.
+Batch 36 adds no credit. The following table isolates the elements
+used in this synthesis; it is not an exhaustive total of the
+historical inventory.
+
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\noindent
+\begin{tabularx}{\textwidth}{@{}p{12mm}Yp{22mm}p{25mm}@{}}
+\toprule
+Batch & Object & Declarations & Status\\
+\midrule
+11 & Geometric envelope of the true thermal trace & 42 & Row PASS ; batch FAILED\\
+13 & Continuous extraction identity & 20 & Lean PASS\\
+15 & Orthogonality and discrete complex projector & 29 & Lean PASS\\
+17 & Canonical logarithms and envelope & 52 & Lean PASS\\
+19 & Generic finite-field projector & 24 & Lean PASS\\
+22 & Five concrete roots and $A32$ projection & 28 & Lean PASS\\
+25 & Integration by parts and boundary term & 30 & Lean PASS\\
+26/27 & Local and holomorphic Gamma inversion & 22/15 & Row PASS26 ; PASS27\\
+30/32 & Gamma tails and unweighted bridge & 22/2 & Lean PASS\\
+35 & Mellin transform of the true $\Lam$ series & 30 & Lean PASS\\
+36 & Weighted tail $E_\Lam$ ; geometry & 16 ; 25 & FAIL ; not invoked\\
+\bottomrule
+\end{tabularx}
+\endgroup
+
+Batches 11 and 26 have a global FAILED status: each retains one
+whole-module PASS row (Envelope42 and Local22, respectively),
+while another module in the same batch fails. Their partial credits
+are attested by the adjudications and observations; the failed
+modules are not counted as established. Batches 13 and 27
+later validate distinct corrected sources.
+
+The coefficient sources (34), scalar connecting results (26) and the
+coefficient--scalar bridge (8) have not been compiled. Their declaration
+counts are source catalogues; they do not add to
+1\,488. Earlier \texttt{SOURCE ONLY} comments in some
+files that subsequently became PASS remain in the historical captures; the current
+status comes from the adjudication and receipt, not from retroactive rewriting.
+
+Correction batches have preserved their failures: batch 16 contains
+series and rational-cast connecting issues, repaired and compiled
+in batch 17; batches 31 and 33 contain instance
+or continuity issues, repaired in the source actually compiled in batch
+35. Batch 36 fails on reflection of the product of two functions.
+These diagnostics are not proofs of the parity barrier. Conversely,
+an auxiliary PASS is not a victory over that obstruction.
+
+Verification is a property of the exact file, exact catalogue
+and its dependencies. The checks retain earlier logs,
+captures, sources and archives; they distinguish full reading of a
+text, targeted reading, metadata inventory and byte hashing.
+The companion file \path{evidence_v3.json} specifies this boundary
+for the main claims of this manuscript.
+
+\clearpage
+\appendix
+\section{Compact provenance and resumption}\label{app:provenance}
+All paths below are relative to the corpus root
+\path{Goldbach_Parity_20261002}. SHA-256 prefixes aid reading;
+complete hashes, sizes, statuses and reading scopes are
+retained in \path{synthesis_v3/evidence_v3.json}. Source paths
+do not replace execution receipts.
+The published corpus is available in the repository
+\href{https://github.com/seisner1967-hash/goldbach-horizon}{\texttt{goldbach-horizon}},
+with the V3 companion registry.
+
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\noindent
+\begin{tabularx}{\textwidth}{@{}p{20mm}Yp{23mm}@{}}
+\toprule
+Item & Relative path & SHA prefix\\
+\midrule
+Mellin PASS & \path{round22/judge5/batch35/sources/ComplexGammaMellinLambda22.lean} & \texttt{4a94415678e4}\\
+Receipt 35 & \path{round22/judge5/batch35/batch35_attempt01/receipt.json} & \texttt{3cffa331b392}\\
+Observation 35 & \path{.arbor/sessions/parity/.coordinator/messages/round22_judge_batch35_closed_observation.json} & \texttt{dc5985976051}\\
+Repaired tail & \path{round22/role4/complex_gamma_mellin_lambda_tail_source02/ComplexGammaMellinLambdaTail22.lean} & See JSON\\
+Geometry SOURCE & \path{round22/role4/complex_gamma_circle_geometry_source01/ComplexGammaCircleGeometry22.lean} & \texttt{2322915060c6}\\
+Coefficient SOURCE & \path{round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean} & \texttt{bf9b8257760a}\\
+Scalar SOURCE & \path{round22/role4/scalar_radius_real_connectors_source01/ScalarRadiusRealConnectors22.lean} & \texttt{6ba4b8d4cca0}\\
+Bridge SOURCE & \path{round22/role3/lambda_circle_scalar_bridge_source01/LambdaCircleScalarRadiusBridge22.lean} & \texttt{cfb0d2cfd238}\\
+Rational point & \path{round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/receipt.json} & \texttt{d46e3ffeb6d0}\\
+Ledger & \path{round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md} & See JSON\\
+\bottomrule
+\end{tabularx}
+\endgroup
+
+\subsection*{Self-contained handoff contract}
+The document \path{synthesis_v3/HANDOFF_THEORY_V3.txt} summarizes the objects,
+parameters, established results and remaining obligations. The computation of $C_N$ at $10^8$ remains
+absent. Any native resumption would require a new resource
+contract and a complete verdict; STOP outputs
+cannot serve as an oracle. Any resumption of analytical implementation
+would have to compile independently the tail,
+geometry, coefficient and connecting sources, then establish the primitives and
+quadratures actually chosen. Theoretical work on the sign of
+$D_N$ may resume from the compiled foundation, retaining these open statuses.
+A signed bound on the ledger remains the central obligation.
+
+\subsection*{Local documentary sources}
+This synthesis uses the earlier monograph, frozen Lean sources,
+adjudications and reviews actually consulted. It does not claim
+to have verified new external references or secondary citations
+in the notes. The bibliography below identifies the local documents that
+contain the written arguments and their limitations.
+\begin{thebibliography}{9}\small
+\bibitem{v2} Durand Serge, \emph{Finite Identities and Explicit Error Budgets
+in a Framework for Binary Goldbach}, V2 synthesis, 1 October 2026.
+Title, author and continuity recorded from the retained public source.
+\bibitem{mono} Durand Serge, final monograph and local extraction
+\path{monographie.txt}; conventions updated by the source framework
+\path{Goldbach_Final_20261001/goldbach_synthesis.tex}.
+\bibitem{ntt} ROLE4, \emph{Finite projection contract},
+\path{round22/role4/circle_ntt_paper01/projection_contract22_final.md}.
+\bibitem{cost} ROLE4, \emph{Mellin--Lambda feasibility},
+\path{round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md}.
+\bibitem{gap} ROLE4, \emph{Audit of the spectral connection to $D_N$},
+\path{round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md}.
+\bibitem{weil} Independent Judge, \emph{Signed explicit-formula review},
+\path{round22/judge5/signed_weil_source_review01/review22.md}.
+\bibitem{orbit} ROLE4, \emph{Zero-orbit review},
+\path{round22/role4/zero_orbit_source_review01/review22.md}.
+\bibitem{fejer} ROLE1, \emph{True positivity of $D$ and reconstruction
+of the retained blocks},
+\path{round22/role1/spectral_next_paper01/spectral_next22.md}.
+\end{thebibliography}
+\end{document}

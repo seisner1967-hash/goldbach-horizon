@@ -1,0 +1,34 @@
+{
+  "schema": "ROUND22_ZERO_ORBIT_INDEPENDENT_SOURCE_REVIEW_HANDOFF_01",
+  "reviewer": "ROLE4",
+  "author": "ROLE1",
+  "status": "PAPER_COHERENT_UNDER_EXPLICIT_ANALYTIC_DEBTS_NO_GLOBAL_SIGN",
+  "note_sha256": "8cbca7b5bbbbc244f5064d5540cf5acda8c275370448b147024ff61d32ee6cb7",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\zero_orbit_source_review01\\review22.md",
+      "sha256": "aeb411a7605600e8d80e96c03a4958557ea4cd3e53e51f208c010d10a88c8b83",
+      "size": 4955
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\zero_orbit_source_review01\\read_receipts22.json",
+      "sha256": "c2e0d2a7222d645f1f7aa86f25dccdca4cc699348b01a6205872e2317d6cdcbd",
+      "size": 4106
+    }
+  ],
+  "read_observations": [
+    "c10d07",
+    "f988f0",
+    "43d411"
+  ],
+  "local_hash_check": "All selected five input files hashed; expected note/reads/source01/priorreview hashes matched. No archive-wide conservation audit claimed.",
+  "concrete_algebraic_defect_identified": false,
+  "independent_lean_verdict": "NOT_INVOKED",
+  "new_proof_credit": 0,
+  "numeric_N_100000000": "NOT_PREPARED",
+  "BORD_source_modified": false,
+  "old_sources_modified": 0,
+  "proof_boundary": "Exact finite grouping and individual-block negative tests do not establish the sign of the total canonical coefficient, new cancellation, D_N or WIN.",
+  "D_N_target_proved": false,
+  "WIN": false
+}

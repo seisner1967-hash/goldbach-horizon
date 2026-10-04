@@ -1,0 +1,822 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "alpha": 100,
+  "Q": 999999,
+  "sign_oracle": "Certified rational artanh-series bounds with exact range reduction; no floating log oracle",
+  "checks": {
+    "actual_four_site_block_with_moving_prefixes": 1,
+    "actual_two_site_transport_identity": 3084,
+    "actual_pair_sign_certificate": 3084,
+    "finite_global_transport_with_unpaired_upper_face": 2,
+    "separable_exact_unit_quotient_histogram": 1,
+    "coupled_selector_factorization_counterexample": 1,
+    "exact_Legendre_Kloosterman_Gauss_phase_histogram": 2,
+    "unit_squarefree_HH_point_mass_nonzero_primitive_character": 1
+  },
+  "four_site_counterexample": {
+    "p": 3,
+    "q": 7,
+    "base": 101,
+    "sites": [
+      {
+        "n": 99999899,
+        "m": 101,
+        "factor_n": [
+          [
+            17,
+            1
+          ],
+          [
+            5882347,
+            1
+          ]
+        ],
+        "factor_m": [
+          [
+            101,
+            1
+          ]
+        ],
+        "mu_m": -1,
+        "alpha": 100,
+        "Q": 999999,
+        "prefix": 1,
+        "admitted_divisors": [
+          1
+        ],
+        "admitted_harmonic_k": [
+          1
+        ],
+        "unit_excluded_k": [],
+        "D": {
+          "101": "-1/1"
+        },
+        "W": {
+          "101": "-1/1"
+        },
+        "D_minus_W": {},
+        "literal_kernel": {},
+        "fII": {
+          "17": "-1/1",
+          "5882347": "-1/1"
+        },
+        "Sfull_log_product_coefficients": {}
+      },
+      {
+        "n": 99999697,
+        "m": 303,
+        "factor_n": [
+          [
+            7,
+            1
+          ],
+          [
+            41,
+            1
+          ],
+          [
+            348431,
+            1
+          ]
+        ],
+        "factor_m": [
+          [
+            3,
+            1
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "mu_m": 1,
+        "alpha": 100,
+        "Q": 999999,
+        "prefix": 3,
+        "admitted_divisors": [
+          1,
+          3
+        ],
+        "admitted_harmonic_k": [
+          1,
+          3
+        ],
+        "unit_excluded_k": [
+          2
+        ],
+        "D": {
+          "3": "-1/1"
+        },
+        "W": {
+          "3": "-1/1",
+          "101": "-1/2"
+        },
+        "D_minus_W": {
+          "101": "1/2"
+        },
+        "literal_kernel": {
+          "101": "1/2"
+        },
+        "fII": {
+          "7": "-1/1",
+          "41": "-1/1",
+          "348431": "-1/1"
+        },
+        "Sfull_log_product_coefficients": {
+          "7,101": "-1/2",
+          "41,101": "-1/2",
+          "101,348431": "-1/2"
+        }
+      },
+      {
+        "n": 99999293,
+        "m": 707,
+        "factor_n": [
+          [
+            577,
+            1
+          ],
+          [
+            173309,
+            1
+          ]
+        ],
+        "factor_m": [
+          [
+            7,
+            1
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "mu_m": 1,
+        "alpha": 100,
+        "Q": 999999,
+        "prefix": 7,
+        "admitted_divisors": [
+          1,
+          7
+        ],
+        "admitted_harmonic_k": [
+          1,
+          3,
+          7
+        ],
+        "unit_excluded_k": [
+          2,
+          4,
+          5,
+          6
+        ],
+        "D": {
+          "7": "-1/1"
+        },
+        "W": {
+          "3": "-1/2",
+          "7": "-1/2",
+          "101": "-1/3"
+        },
+        "D_minus_W": {
+          "3": "1/2",
+          "7": "-1/2",
+          "101": "1/3"
+        },
+        "literal_kernel": {
+          "3": "1/2",
+          "7": "-1/2",
+          "101": "1/3"
+        },
+        "fII": {
+          "577": "-1/1",
+          "173309": "-1/1"
+        },
+        "Sfull_log_product_coefficients": {
+          "3,577": "-1/2",
+          "3,173309": "-1/2",
+          "7,577": "1/2",
+          "7,173309": "1/2",
+          "101,577": "-1/3",
+          "101,173309": "-1/3"
+        }
+      },
+      {
+        "n": 99997879,
+        "m": 2121,
+        "factor_n": [
+          [
+            99997879,
+            1
+          ]
+        ],
+        "factor_m": [
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "mu_m": -1,
+        "alpha": 100,
+        "Q": 999999,
+        "prefix": 21,
+        "admitted_divisors": [
+          1,
+          3,
+          7,
+          21
+        ],
+        "admitted_harmonic_k": [
+          1,
+          3,
+          7,
+          9,
+          11,
+          13,
+          17,
+          19,
+          21
+        ],
+        "unit_excluded_k": [
+          2,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12,
+          14,
+          15,
+          16,
+          18,
+          20
+        ],
+        "D": {},
+        "W": {
+          "3": "-383/720",
+          "7": "-143/720",
+          "11": "-1/10",
+          "13": "-1/12",
+          "17": "-1/16",
+          "19": "-1/18",
+          "101": "-83/720"
+        },
+        "D_minus_W": {
+          "3": "383/720",
+          "7": "143/720",
+          "11": "1/10",
+          "13": "1/12",
+          "17": "1/16",
+          "19": "1/18",
+          "101": "83/720"
+        },
+        "literal_kernel": {
+          "3": "-383/720",
+          "7": "-143/720",
+          "11": "-1/10",
+          "13": "-1/12",
+          "17": "-1/16",
+          "19": "-1/18",
+          "101": "-83/720"
+        },
+        "fII": {},
+        "Sfull_log_product_coefficients": {}
+      }
+    ],
+    "block_coefficients": {
+      "3,577": "-1/2",
+      "3,173309": "-1/2",
+      "7,101": "-1/2",
+      "7,577": "1/2",
+      "7,173309": "1/2",
+      "41,101": "-1/2",
+      "101,577": "-1/3",
+      "101,173309": "-1/3",
+      "101,348431": "-1/2"
+    },
+    "certificate": {
+      "sign": "NEGATIVE",
+      "justification": "Rational artanh bounds enclose every log and every signed product",
+      "terms": 6,
+      "lower": "-378244839481402013234537929/6000000000000000000000000",
+      "upper": "-63040778582100425823285213/1000000000000000000000000"
+    },
+    "verdict": "Strictly negative actual Sfull block; pointwise favorable closure is false"
+  },
+  "actual_pair_scan": {
+    "p_domain": [
+      3,
+      7,
+      11,
+      13,
+      17,
+      19
+    ],
+    "m_cap": 20000,
+    "domain": "Every 1<=m<=floor(20000/p), p-free, unit to N, both m and pm squarefree, both N-m and N-pm squarefree",
+    "first_axis_roughness": "W=2; retained exactly on all accepted pairs",
+    "rough_alpha_selector": "Recorded on each example, not imposed; departing faces are retained",
+    "accepted": 3084,
+    "signs": {
+      "ZERO": 216,
+      "NEGATIVE": 1602,
+      "POSITIVE": 1266
+    },
+    "rejected": {
+      "nonsquarefree_first_axis": 1210,
+      "nonunit_complement": 7243,
+      "p_divides_m": 3037,
+      "nonsquarefree_complement_axis": 533
+    },
+    "first_example_by_sign": {
+      "ZERO": {
+        "p": 3,
+        "m": 7,
+        "pm": 21,
+        "original_alpha_rough": false,
+        "switched_alpha_rough": false,
+        "original": {
+          "n": 99999993,
+          "m": 7,
+          "factor_n": [
+            [
+              3,
+              1
+            ],
+            [
+              33333331,
+              1
+            ]
+          ],
+          "factor_m": [
+            [
+              7,
+              1
+            ]
+          ],
+          "mu_m": -1,
+          "alpha": 100,
+          "Q": 999999,
+          "prefix": 0,
+          "admitted_divisors": [],
+          "admitted_harmonic_k": [],
+          "unit_excluded_k": [],
+          "D": {},
+          "W": {},
+          "D_minus_W": {},
+          "literal_kernel": {},
+          "fII": {
+            "3": "-1/1",
+            "33333331": "-1/1"
+          },
+          "Sfull_log_product_coefficients": {}
+        },
+        "switched": {
+          "n": 99999979,
+          "m": 21,
+          "factor_n": [
+            [
+              67,
+              1
+            ],
+            [
+              109,
+              1
+            ],
+            [
+              13693,
+              1
+            ]
+          ],
+          "factor_m": [
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "mu_m": 1,
+          "alpha": 100,
+          "Q": 999999,
+          "prefix": 0,
+          "admitted_divisors": [],
+          "admitted_harmonic_k": [],
+          "unit_excluded_k": [],
+          "D": {},
+          "W": {},
+          "D_minus_W": {},
+          "literal_kernel": {},
+          "fII": {
+            "67": "-1/1",
+            "109": "-1/1",
+            "13693": "-1/1"
+          },
+          "Sfull_log_product_coefficients": {}
+        },
+        "pair_coefficients": {},
+        "certificate": {
+          "sign": "ZERO",
+          "justification": "All exact symbolic coefficients vanish",
+          "terms": 0,
+          "lower": "0/1",
+          "upper": "0/1"
+        }
+      },
+      "NEGATIVE": {
+        "p": 3,
+        "m": 101,
+        "pm": 303,
+        "original_alpha_rough": true,
+        "switched_alpha_rough": false,
+        "original": {
+          "n": 99999899,
+          "m": 101,
+          "factor_n": [
+            [
+              17,
+              1
+            ],
+            [
+              5882347,
+              1
+            ]
+          ],
+          "factor_m": [
+            [
+              101,
+              1
+            ]
+          ],
+          "mu_m": -1,
+          "alpha": 100,
+          "Q": 999999,
+          "prefix": 1,
+          "admitted_divisors": [
+            1
+          ],
+          "admitted_harmonic_k": [
+            1
+          ],
+          "unit_excluded_k": [],
+          "D": {
+            "101": "-1/1"
+          },
+          "W": {
+            "101": "-1/1"
+          },
+          "D_minus_W": {},
+          "literal_kernel": {},
+          "fII": {
+            "17": "-1/1",
+            "5882347": "-1/1"
+          },
+          "Sfull_log_product_coefficients": {}
+        },
+        "switched": {
+          "n": 99999697,
+          "m": 303,
+          "factor_n": [
+            [
+              7,
+              1
+            ],
+            [
+              41,
+              1
+            ],
+            [
+              348431,
+              1
+            ]
+          ],
+          "factor_m": [
+            [
+              3,
+              1
+            ],
+            [
+              101,
+              1
+            ]
+          ],
+          "mu_m": 1,
+          "alpha": 100,
+          "Q": 999999,
+          "prefix": 3,
+          "admitted_divisors": [
+            1,
+            3
+          ],
+          "admitted_harmonic_k": [
+            1,
+            3
+          ],
+          "unit_excluded_k": [
+            2
+          ],
+          "D": {
+            "3": "-1/1"
+          },
+          "W": {
+            "3": "-1/1",
+            "101": "-1/2"
+          },
+          "D_minus_W": {
+            "101": "1/2"
+          },
+          "literal_kernel": {
+            "101": "1/2"
+          },
+          "fII": {
+            "7": "-1/1",
+            "41": "-1/1",
+            "348431": "-1/1"
+          },
+          "Sfull_log_product_coefficients": {
+            "7,101": "-1/2",
+            "41,101": "-1/2",
+            "101,348431": "-1/2"
+          }
+        },
+        "pair_coefficients": {
+          "7,101": "-1/2",
+          "41,101": "-1/2",
+          "101,348431": "-1/2"
+        },
+        "certificate": {
+          "sign": "NEGATIVE",
+          "justification": "Rational artanh bounds enclose every log and every signed product",
+          "terms": 6,
+          "lower": "-21253412012343203333289727/500000000000000000000000",
+          "upper": "-17002724695914081069696933/400000000000000000000000"
+        }
+      },
+      "POSITIVE": {
+        "p": 3,
+        "m": 133,
+        "pm": 399,
+        "original_alpha_rough": false,
+        "switched_alpha_rough": false,
+        "original": {
+          "n": 99999867,
+          "m": 133,
+          "factor_n": [
+            [
+              3,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              59,
+              1
+            ],
+            [
+              51361,
+              1
+            ]
+          ],
+          "factor_m": [
+            [
+              7,
+              1
+            ],
+            [
+              19,
+              1
+            ]
+          ],
+          "mu_m": 1,
+          "alpha": 100,
+          "Q": 999999,
+          "prefix": 1,
+          "admitted_divisors": [
+            1
+          ],
+          "admitted_harmonic_k": [
+            1
+          ],
+          "unit_excluded_k": [],
+          "D": {
+            "7": "-1/1",
+            "19": "-1/1"
+          },
+          "W": {
+            "7": "-1/1",
+            "19": "-1/1"
+          },
+          "D_minus_W": {},
+          "literal_kernel": {},
+          "fII": {
+            "3": "-1/1",
+            "11": "-1/1",
+            "59": "-1/1",
+            "51361": "-1/1"
+          },
+          "Sfull_log_product_coefficients": {}
+        },
+        "switched": {
+          "n": 99999601,
+          "m": 399,
+          "factor_n": [
+            [
+              13,
+              1
+            ],
+            [
+              7692277,
+              1
+            ]
+          ],
+          "factor_m": [
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              19,
+              1
+            ]
+          ],
+          "mu_m": -1,
+          "alpha": 100,
+          "Q": 999999,
+          "prefix": 3,
+          "admitted_divisors": [
+            1,
+            3
+          ],
+          "admitted_harmonic_k": [
+            1,
+            3
+          ],
+          "unit_excluded_k": [
+            2
+          ],
+          "D": {
+            "3": "-1/1"
+          },
+          "W": {
+            "3": "-1/1",
+            "7": "-1/2",
+            "19": "-1/2"
+          },
+          "D_minus_W": {
+            "7": "1/2",
+            "19": "1/2"
+          },
+          "literal_kernel": {
+            "7": "-1/2",
+            "19": "-1/2"
+          },
+          "fII": {
+            "13": "-1/1",
+            "7692277": "-1/1"
+          },
+          "Sfull_log_product_coefficients": {
+            "7,13": "1/2",
+            "7,7692277": "1/2",
+            "13,19": "1/2",
+            "19,7692277": "1/2"
+          }
+        },
+        "pair_coefficients": {
+          "7,13": "1/2",
+          "7,7692277": "1/2",
+          "13,19": "1/2",
+          "19,7692277": "1/2"
+        },
+        "certificate": {
+          "sign": "POSITIVE",
+          "justification": "Rational artanh bounds enclose every log and every signed product",
+          "terms": 6,
+          "lower": "1407554928070215176669467/31250000000000000000000",
+          "upper": "22520885229246751265521071/500000000000000000000000"
+        }
+      }
+    }
+  },
+  "finite_global_transport": {
+    "cap": 1000,
+    "first_axis_extra_selector": "mu(N-m)^2",
+    "receipts": [
+      {
+        "p": 3,
+        "cap": 1000,
+        "bases": 252,
+        "paired_bases": 85,
+        "upper_face_bases": 167,
+        "identity": "Direct scalar sum equals paired base sum plus retained unpaired upper face",
+        "upper_face_symbolic_nonzero": true
+      },
+      {
+        "p": 7,
+        "cap": 1000,
+        "bases": 294,
+        "paired_bases": 43,
+        "upper_face_bases": 251,
+        "identity": "Direct scalar sum equals paired base sum plus retained unpaired upper face",
+        "upper_face_symbolic_nonzero": true
+      }
+    ],
+    "direct_sign": {
+      "sign": "NEGATIVE",
+      "justification": "Rational artanh bounds enclose every log and every signed product",
+      "terms": 6,
+      "lower": "-11118039239227814163852411947/6000000000000000000000000",
+      "upper": "-11118025796107145538906687409/6000000000000000000000000"
+    },
+    "scope": "Finite cap only; every omitted partner above cap is kept in the upper face"
+  },
+  "separable_spectral_histogram": {
+    "N": 100000000,
+    "y": 2,
+    "a_interval": [
+      1,
+      120
+    ],
+    "s_t_interval": [
+      1,
+      60
+    ],
+    "selector": "Separate squarefree and unit masks on a,s,t; product-squarefree or moving faces are not assumed separable",
+    "triples": 18081,
+    "nonzero_quotient_residues": 2214,
+    "status": "PASS: direct quotient histogram equals three-factor group convolution",
+    "direct_histogram_sha256": "b3aa4ecf7c2d247203c01f792be0dee4228e7ecc3f9a9f372a4070eaaf663f88",
+    "false_coupled_factorization": {
+      "selector": "a<s",
+      "eta": 122399,
+      "factorized_coefficient": -4,
+      "actual_coupled_coefficient": -2
+    }
+  },
+  "gauss_phase_diagnostics": [
+    {
+      "q": 11,
+      "character": "Legendre",
+      "phase_at_zero": -10,
+      "phase_at_nonzero": 1,
+      "exact_value_after_sum_of_nontrivial_qth_roots_equals_minus_one": -11,
+      "scope": "Exact finite phase coefficients; no conductor-uniform saving inferred"
+    },
+    {
+      "q": 829,
+      "character": "Legendre",
+      "phase_at_zero": 828,
+      "phase_at_nonzero": -1,
+      "exact_value_after_sum_of_nontrivial_qth_roots_equals_minus_one": 829,
+      "scope": "Exact finite phase coefficients; no conductor-uniform saving inferred"
+    }
+  ],
+  "primitive_HH_point_mass": {
+    "N": 1658,
+    "conductor": 829,
+    "a": 15,
+    "s": 7,
+    "t": 11,
+    "b": 13,
+    "k": 19,
+    "n": 195,
+    "m": 1463,
+    "eta": 129,
+    "HH_coefficient": 4,
+    "Legendre_character": -1,
+    "projected_point_mass": -4,
+    "scope": "Separate finite diagnostic; not the N=1e8 analytical sector or cutoff onset"
+  },
+  "previous_numerical_artifacts_preserved": true,
+  "previous_artifact_sha256": {
+    "numerical\\agent6.md": "a33bf44277c99c7f684fac7924b6492256ec4d8bddc5f1e335d1cad3de898d06",
+    "numerical\\agent6_round2.md": "7825d429f353a056cf0e374c2c68b08ad476b604db6772ba7a1b540cfb36a469",
+    "numerical\\chen_multiplicity.json": "4386b2d1dc044e1d27525395ee98c69e9a34b854d0687886a42808619261f8d7",
+    "numerical\\chen_multiplicity_checks.py": "afddd7e071e4aa2ea1cb86f6e5026535d79fbf0a7dd3494499be6198bd3b3846",
+    "numerical\\numerical.json": "65b4f36cd219209079c0dd3a2e8900c7be1ca095244aa3c1ebb36b67e380c565",
+    "numerical\\numerical_run.log": "95dc532be41ea8c0d9636ced8f6f7a6d0d311accc1b96676166b2a2215467020",
+    "numerical\\parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical\\round2.json": "aeda3a3d6661224de8cc7fcdf41b9d1c1cf1e2a143c2ea6a926ab93e10c1da65",
+    "numerical\\round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "numerical\\round2_run.log": "e880f9aba10806148b1ed5b61ced5a4c77ca23cbe973209b0df22244d4c0cb5d"
+  },
+  "script_sha256": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+  "limitations": "No global D_N bound; accepted finite domains and their boundary faces are explicit",
+  "elapsed_seconds": 5.938
+}

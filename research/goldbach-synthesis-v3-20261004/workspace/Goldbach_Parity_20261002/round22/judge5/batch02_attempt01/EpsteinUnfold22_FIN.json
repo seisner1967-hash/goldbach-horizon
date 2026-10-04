@@ -1,0 +1,173 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.periodized"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.translateBound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.infiniteShiftIntegral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.kernel_upper_of_sq_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.kernel_upper_a"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.summable_translateBound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.translateBound_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.kernel_translate_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.continuousOn_periodized"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.continuous_periodized"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.periodic_periodized"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.intervalIntegrable_periodized"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.summable_integral_norm_cells"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.integral_periodized_unit"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.summable_kernel_translate"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.infiniteSum_shiftKernel"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.unfoldFullRealThreeHalves"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.abs_cast_eq_natAbs"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "Epstein22.unfoldFullRealThreeHalves_natAbs"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\EpsteinUnfold22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\EpsteinUnfold22.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources",
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-03T09:11:53.111182+00:00",
+  "log_sha256": "0551350479f3880b12cf3ae45b909107ce6444873087520b5d5b61f0364e8309",
+  "module": "EpsteinUnfold22",
+  "olean_sha256": "b3e0d60e7633cc46e2084c0131e2fd42aef0f1fca60d4db7682d45ece1774bc0",
+  "source_sha256": "79384d3502ab8042b44104e0ba4e56087c47430c267c2b9f16f9c6f228426aea",
+  "started_at": "2026-10-03T09:11:27.628422+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

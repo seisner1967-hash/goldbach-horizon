@@ -1,0 +1,53 @@
+{
+  "schema": "round22.root.role3.compiler_authorization.unfold.v3",
+  "role": "ROLE3",
+  "actor_task": "/root/round22_formal3_prepare",
+  "node_id": "16.1",
+  "attempt": "stage03_attempt03",
+  "stage": "G0_UNFOLD_REVISION03",
+  "authorized": true,
+  "created_utc": "2026-10-03T08:04:26.553025+00:00",
+  "numeric_verdict": "EPSTEIN_UNFOLDING_AUX_PASS",
+  "numeric_receipt_sha256": "054707ed73a7db70bd6bb026a1974663dd5362b6318ee109b22315c21c2e66da",
+  "numeric_result_sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+  "source_manifest_sha256": "56a45886e972c2137048b43df094822a72097dfdc839b044bdf3d6c7f8c6e405",
+  "launcher_sha256": "b610d1132062a4d96014847c497058b17a9538e10171ebaf7566f797a4122683",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "modules": [
+    "EpsteinUnfold22"
+  ],
+  "no_win": true,
+  "child_invocations_maximum": 1,
+  "hidden_retries_allowed": false,
+  "unchanged_PASS_replay_allowed": false,
+  "root_FULL_reads": {
+    "source": "9bf20f",
+    "launcher": "4694e3",
+    "preparation": "85629a",
+    "metadata_builder": "34b3e5",
+    "manifest": "345070",
+    "read_receipts": "8af208",
+    "prepared_receipt": "269371",
+    "previous_actual_failure": "f698a6+94bbe8"
+  },
+  "formal_scope": "Derived finite affine geometric window, signed substitution, negation isometry and endpoint telescope only; genuine infinite integral and continuous tail remain outside this child.",
+  "forbidden_credits": [
+    "full_G0_unfolding",
+    "Weil",
+    "heat",
+    "operator_scattering",
+    "coefficient_N",
+    "D_N_bound",
+    "WIN"
+  ],
+  "independent_judge_pending": true,
+  "source_sha256": "930f6d68ea6ab6549e4e1e08fe701239685948e38b77b8c56487401c20da2935",
+  "dependency_olean_sha256": "679f572be0d81f8c86bfa418fb460d5168774fc56b2b2537a9469ff0aca7a544",
+  "Kernel_recompile": false,
+  "previous_actual_exit": 1,
+  "dependency_pass_observation_sha256": "700d4559ff8857c8312502472767f65a80256ba80d6bb37c4a9effc766abd656",
+  "Finite_recompile": false,
+  "previous_failure_observation_sha256": "7b23c78ab2a51dc347f36014d59e31d51f7f91526dde2ea05ff3d8d0d23af526",
+  "previous_actual_attempt": "stage03_attempt02"
+}

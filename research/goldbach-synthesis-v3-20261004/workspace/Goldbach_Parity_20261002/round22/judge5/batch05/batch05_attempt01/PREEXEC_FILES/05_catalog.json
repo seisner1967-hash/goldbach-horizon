@@ -1,0 +1,190 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH05",
+  "time_utc": "2026-10-03T12:31:13.711846+00:00",
+  "modules": [
+    {
+      "module": "GammaBoxBounds22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\sources\\GammaBoxBounds22.lean",
+      "source_sha256": "4874192b1c2ca9edc7262d8a46f9d4a1e339c565e5bb48fefbf4d6d100071edf",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch02\\source-final\\GammaBoxBounds22.lean",
+      "source_status": "AUTHOR_PASS_PENDING_INDEPENDENT_JUDGE",
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.spectralBoxDomain"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaBoxRadius"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm_eq_cpow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.spectralBoxDomain_convex"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_weightedGamma_exponential_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_weightedGammaTerm"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_deriv_weightedGammaTerm_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm_lipschitz_on_boxDomain"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm_box_error_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaBoxRadius_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaBoxRadius_continuousAt"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.weightedGammaTerm",
+        "GoldbachContinuous22.spectralBoxDomain",
+        "GoldbachContinuous22.gammaBoxRadius",
+        "GoldbachContinuous22.weightedGammaTerm_eq_cpow",
+        "GoldbachContinuous22.spectralBoxDomain_convex",
+        "GoldbachContinuous22.norm_weightedGamma_exponential_le",
+        "GoldbachContinuous22.hasDerivAt_weightedGammaTerm",
+        "GoldbachContinuous22.norm_deriv_weightedGammaTerm_le",
+        "GoldbachContinuous22.weightedGammaTerm_lipschitz_on_boxDomain",
+        "GoldbachContinuous22.weightedGammaTerm_box_error_le",
+        "GoldbachContinuous22.gammaBoxRadius_nonneg",
+        "GoldbachContinuous22.gammaBoxRadius_continuousAt"
+      ],
+      "theorem_count": 9,
+      "definition_count": 3,
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "author_olean_allowed": false,
+      "scope": "TRUE_WEIGHTED_GAMMA_BOX_AND_FACTOR_TAIL_AUX_ONLY"
+    },
+    {
+      "module": "GammaContourComponent22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\sources\\GammaContourComponent22.lean",
+      "source_sha256": "891454d4714e68039a0976e7eb9347e10653237f4608993b52b481cc95b0a3fe",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\contour_dependency_source22\\GammaContourComponent22.lean",
+      "source_status": "CORRECTED_SOURCE_NOT_COMPILED",
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaContourPoint"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaContourFactor"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaContourEnvelope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourFactor_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_gammaContourFactor_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.real_exponential_tail_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integral_real_exponential_tail"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourEnvelope_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourEnvelope_continuous"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.gammaContourPoint",
+        "GoldbachContinuous22.gammaContourFactor",
+        "GoldbachContinuous22.gammaContourEnvelope",
+        "GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip",
+        "GoldbachContinuous22.gammaContourFactor_continuous",
+        "GoldbachContinuous22.norm_gammaContourFactor_le",
+        "GoldbachContinuous22.real_exponential_tail_integrable",
+        "GoldbachContinuous22.integral_real_exponential_tail",
+        "GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound",
+        "GoldbachContinuous22.gammaContourEnvelope_nonneg",
+        "GoldbachContinuous22.gammaContourEnvelope_continuous"
+      ],
+      "theorem_count": 8,
+      "definition_count": 3,
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "author_olean_allowed": false,
+      "scope": "TRUE_WEIGHTED_GAMMA_BOX_AND_FACTOR_TAIL_AUX_ONLY"
+    }
+  ],
+  "module_count": 2,
+  "total_declarations": 23,
+  "theorem_count": 17,
+  "definition_count": 6,
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "GammaDerivative22"
+  ],
+  "dependency_bindings": [
+    {
+      "module": "GammaPrerequisites22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\readonly_oleans\\GammaPrerequisites22.olean",
+      "olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaDerivative22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\sources\\GammaDerivative22.lean",
+      "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\readonly_oleans\\GammaDerivative22.olean",
+      "olean_sha256": "0618f801c5feec7b760ba18ab3dddc960519b398dd1d1b719acc809132518125",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\receipt.json",
+      "recompiled": false
+    }
+  ],
+  "corrected_contour_author_PASS_claimed": false,
+  "compiler_invocations": 0,
+  "win": false
+}

@@ -1,0 +1,22 @@
+{
+ "schema": "ROUND22_CHECKER_ONLY05_FUTURE_CLOSURE_SOURCE_READ_RECEIPT",
+ "status": "SOURCE_ONLY_NOT_AUTHORIZED_NOT_INVOKED_WHILE_SESSION_ACTIVE",
+ "helper_source": {"file": "close_checker_only05_metadata22.ps1", "bytes": 14918, "sha256": "c46fcddf3c94497c741c5d2135826d1f8ee8a3ec01ab62bd43ec24e4f2c29f64", "scope": "FULL_SOURCE", "chunk": "4b6694"},
+ "contract_source": {"file": "closure_source_contract22.txt", "bytes": 3770, "sha256": "624cec0655a3a9e7518d45e4f62e4b9c4c23f786f3e027bdc5888f8ccdf19330", "scope": "FULL_SOURCE", "chunk": "4b6694"},
+ "previous_helper": {"sha256": "81c3e40726052f95df83576071ffe062b6182ead44fc9c4edc7333dc9d515ab7", "scope": "FULL_SOURCE_READ_NO_REPLAY", "chunk": "c800cc"},
+ "actual_references": [
+  {"source": "Fresh ROOT05 gate and5metadata_controls", "sha256": "e417407398e27d22a19a932bed6da09f09b0866bce8abbb2c08cfaaee28551cc", "scope": "FULL_GATE_AND_CONTROL_SHA", "chunk": "d63158"},
+  {"source": "Actual05 parent_START/checker_START_REQUEST/CREATED/START", "scope": "FULL_SMALL_ACTUAL_METADATA", "chunk": "ac312c", "session_id": 81191, "checker_pid": 23088},
+  {"source": "Actual05 PRE", "sha256": "48eb512cf9725773ce510d0163d23f54b6ba97f0c899f9fa00fc9a7d8e61575a", "scope": "PARSED_METADATA_HEADERS_COUNTS_SHA_NOT_RAW_FULL", "chunk": "9765a3", "inputs": 6576, "capture_pairs": 109, "payload_pairs": 3, "archives": 3089}
+ ],
+ "source_scope": "Future helper only. The independently authorized actual parent remains active; no result, receipt, output freeze, POST or quiescence is asserted by this source receipt.",
+ "helper_invocations": 0,
+ "candidate_invocations_by_helper": 0,
+ "candidate_imports_by_helper": 0,
+ "compiler_invocations_by_helper": 0,
+ "coefficient_arithmetic_recomputed_here": false,
+ "old04_missing_receipt_or_POST_reconstructed": false,
+ "global_loader_closure_verified": false,
+ "D_N": false,
+ "WIN": false
+}

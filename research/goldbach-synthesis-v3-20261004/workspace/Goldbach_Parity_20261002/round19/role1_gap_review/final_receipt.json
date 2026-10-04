@@ -1,0 +1,27 @@
+{
+  "status": "FINAL_PAPER_REVIEW_AUXILIARY_NO_WIN",
+  "agent": "/root/round19_gap_review",
+  "observation_utc": "2026-10-03T01:09:30.1603142Z",
+  "input_hash_scope": "READONLY_METADATA_OBSERVED_AT_END_OF_REVIEW_NOT_PREEXEC_OR_COMPILE_ATTESTATION",
+  "inputs_sha256": {
+    "round19/role3/RankCalibrationArithmetic.lean": "3ac4ec121db2be08222863ba188277ed87151f8466e00bbbd140a030faabe11d",
+    "round19/PROBE_BLOCK.md": "5f9e429bc264002044da60139f3942e7c3de909116d41e6cc52f70afb9a5a12d",
+    "round19/role3/RankCalibrationUnitLoss.lean": "88c1a65e460b45629ed7089a840aeebff6b83d2f2249f22e0545956ace08998f",
+    "round19/role3/RankCalibrationEstimator.lean": "446ab2130a8741b28eaea860c13aaf1465887e627bfeacb0245833aeba179e2d",
+    "round19/role3/RankCalibrationPrice.lean": "ce00b2b3d416d43d522cdd64f23fc075e179a669df551b87cb002b9444563574",
+    "round19/agent1_weighted_aggregate.md": "d1cd64e27c46ad5aacfe2ee33c1b13681b77ae84e6d78c8585a3ef47acaf42bb",
+    "round19/agent6_rank.md": "5b1dcb3369b28ad6ee791fee148f3c2897bf8dbe5a6c604eb5530c0da93cb17c",
+    "round19/role3/RankCalibrationEuler.lean": "6f00691c13c21fd77fe5caf4c11709d960922f9448e23385a75367bfdb23c6eb",
+    "round19/role3/RankCalibrationFace.lean": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b"
+  },
+  "report": "round19/agent1_gap_review.md",
+  "report_sha256": "fa023d133e631516f29ab3680e0ec8c029c4eb85ad1e89ea30ce618dfb06b9d3",
+  "math_execution_count": 0,
+  "lean_execution_count": 0,
+  "producer_execution_count": 0,
+  "old_replay_count": 0,
+  "score": 0,
+  "victory": false,
+  "new_node_created": false,
+  "conclusion": "Effective principal validated on paper with guards; rank compensation and true prime-pair incidence remain to be estimated."
+}

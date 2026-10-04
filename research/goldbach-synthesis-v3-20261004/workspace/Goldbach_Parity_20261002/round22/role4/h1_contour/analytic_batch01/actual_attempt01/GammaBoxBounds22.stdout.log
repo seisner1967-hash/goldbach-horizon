@@ -1,0 +1,29 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\h1_contour\analytic_batch01\sources\GammaBoxBounds22.lean:53:59: error: application type mismatch
+  DifferentiableOn.differentiableAt Gamma_differentiableOn_rightHalfPlane rightHalfPlane_isOpen
+argument
+  rightHalfPlane_isOpen
+has type
+  IsOpen rightHalfPlane : Prop
+but is expected to have type
+  rightHalfPlane ∈ 𝓝 ?m.8802 : Prop
+'GoldbachContinuous22.weightedGammaTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.spectralBoxDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaBoxRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.weightedGammaTerm_eq_cpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.spectralBoxDomain_convex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_weightedGamma_exponential_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.hasDerivAt_weightedGammaTerm' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_deriv_weightedGammaTerm_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.weightedGammaTerm_lipschitz_on_boxDomain' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.weightedGammaTerm_box_error_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.gammaBoxRadius_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaBoxRadius_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]

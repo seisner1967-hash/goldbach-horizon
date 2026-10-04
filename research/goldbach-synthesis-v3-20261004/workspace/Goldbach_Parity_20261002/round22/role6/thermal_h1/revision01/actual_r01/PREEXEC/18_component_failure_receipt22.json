@@ -1,0 +1,73 @@
+{
+  "schema": "ROUND22_COMPONENT_FAILURE_CLOSURE_V1",
+  "time_utc": "2026-10-03T10:13:48.5905828Z",
+  "classification": "TECHNICAL_SERIALIZATION_FAILURE_NO_COMPLETED_RESULT",
+  "bank_id": "THERMAL_COMPONENT_AUX22",
+  "actual_START": "2026-10-03T12:06:52.935732+02:00",
+  "actual_FINISH": "2026-10-03T12:10:21.151549+02:00",
+  "exit_code": 1,
+  "attempt_token": "0836684068fe4c5da140a88078ef1359",
+  "attempt_consumed": true,
+  "automatic_retry": 0,
+  "preparation_sha256": "b417be88862b3adb9636d90214243c943c4d8e054856dff3e93baf9be1280a5e",
+  "bindings_verified": 25,
+  "PREEXEC_copies_verified": 27,
+  "POSTEXEC_all_unchanged": true,
+  "certificate_line_count": 15,
+  "certificate_scope": "READ_FULL_METADATA_NO_NEW_INTEGER_SQUARE_CHECK",
+  "artifacts": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\attempt_reservation.json",
+      "sha256": "8994beed2dae28e5ea8781f72ca64ad30ef66dec6e3cf5cf04c1be7bbd145950",
+      "bytes": 265
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\actual_START.json",
+      "sha256": "289e1e8ab1700ed4e470c845edef9904760a62efeb9f0e6dd5c6c485236b43f8",
+      "bytes": 1284
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\actual.log",
+      "sha256": "5e311aa6a0bcd7fa6d8a92134a1dd9f56a183540f1031b698c6539f81ae66d45",
+      "bytes": 1493
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\PREEXEC_captures.json",
+      "sha256": "e7fb0991a1939e94f36e74814af676003c887ff9236abb1b3e3270e565564fff",
+      "bytes": 11568
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\POSTEXEC_integrity.json",
+      "sha256": "0ddce257d2b7ae46310ddbb4e19107809a7247a767ac18de863dbbf21b965737",
+      "bytes": 9704
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\actual_receipt.json",
+      "sha256": "2c7409087b6f4c18d9de616592d3c8b3274622bd05feb9fd12d54f93a0548f48",
+      "bytes": 1670
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\component_sqrt_certificates22.jsonl",
+      "sha256": "eadd921cb6c220f3d870d6ec0ce7af51bfe8cb41a681a1c83431af86c0eb94a8",
+      "bytes": 12981
+    }
+  ],
+  "raw_FULL_reads": [
+    "8ee9d7",
+    "2a6c38",
+    "44eab4",
+    "19233f",
+    "67b1e1",
+    "b93fc7"
+  ],
+  "completed_result": false,
+  "partial_PASS": false,
+  "H1_claim": false,
+  "coefficientN_claim": false,
+  "D_N_claim": false,
+  "WIN": false,
+  "current_bank_math_invocations": 1,
+  "Lean_invocations": 0,
+  "old_bank_replays": 0,
+  "new_revision_math_invocations": 0
+}

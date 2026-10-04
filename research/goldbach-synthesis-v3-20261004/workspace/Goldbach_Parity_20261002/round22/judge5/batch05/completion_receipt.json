@@ -1,0 +1,249 @@
+{
+  "schema": "ROUND22_JUDGE5_DOCUMENTARY_COMPLETION_BATCH05",
+  "time_utc": "2026-10-03T12:42:30.817526+00:00",
+  "status": "INDEPENDENT_BATCH05_AUX_PASS",
+  "adjudication_sha256": "9b49e4c18e172e0a8b1509d72ce9fa1800dfadf2fe83f32233182a7249b3b4e1",
+  "helper_sha256": "f483a17c9f6e34a8795e1adaa8db9be41ca75d8875eb6864600887ff2a7bbabd",
+  "actual_receipt_sha256": "090538a9240c53bf248f7c9dbfef3fc708f5de272313e2d4733cb216ad252607",
+  "PREEXEC_sha256": "1f884f40b1f14e095dfdc81aa6308224d6cfcee9dfa1e70d51816921a1dd649e",
+  "POSTEXEC_sha256": "61cd916351caeaafc94ac5e7bf65c9596ccd4bbb678b7d16b3a2e4437ede92dd",
+  "compiler_invocations_in_this_adjudication": 0,
+  "numeric_invocations": 0,
+  "actual_fresh_compiler_invocations_in_batch": 2,
+  "declarations": 23,
+  "theorems": 17,
+  "definitions": 6,
+  "inputs_verified": 6707,
+  "closed_judge_verified": 209,
+  "archives_verified": 3089,
+  "captures_verified": 32,
+  "all_current_bytes_preserved": true,
+  "all_23_axiom_prints_exact_standard_only": true,
+  "combined_logs_FULL": "ac5b92",
+  "actual_receipt_and_START_FIN_FULL": "dd3834",
+  "sources_FULL": [
+    "9ca5d5",
+    "2e798b"
+  ],
+  "large_PRE_POST_raw_FULL_claimed": false,
+  "previous_official_modules": 66,
+  "previous_official_declarations": 1109,
+  "possible_modules_after_ROOT_observation": 68,
+  "possible_declarations_after_ROOT_observation": 1132,
+  "official_count_requires_ROOT_observation": true,
+  "module_facts": [
+    {
+      "module": "GammaBoxBounds22",
+      "started_at": "2026-10-03T12:37:05.313458+00:00",
+      "finished_at": "2026-10-03T12:37:27.615637+00:00",
+      "exit_code": 0,
+      "source_sha256": "4874192b1c2ca9edc7262d8a46f9d4a1e339c565e5bb48fefbf4d6d100071edf",
+      "log_sha256": "51ec0900b9e0f6791268a86023661a5954e9ae9e10f3c5a3f1a2da011ea83162",
+      "olean_sha256": "4cb4d50f6d7dd8087e9d227d7052cb445527f018249dc3ffe6493ea2a87bfce3",
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.spectralBoxDomain"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaBoxRadius"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm_eq_cpow"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.spectralBoxDomain_convex"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_weightedGamma_exponential_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.hasDerivAt_weightedGammaTerm"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_deriv_weightedGammaTerm_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm_lipschitz_on_boxDomain"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.weightedGammaTerm_box_error_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaBoxRadius_nonneg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaBoxRadius_continuousAt"
+        }
+      ]
+    },
+    {
+      "module": "GammaContourComponent22",
+      "started_at": "2026-10-03T12:37:27.615637+00:00",
+      "finished_at": "2026-10-03T12:37:50.937286+00:00",
+      "exit_code": 0,
+      "source_sha256": "891454d4714e68039a0976e7eb9347e10653237f4608993b52b481cc95b0a3fe",
+      "log_sha256": "607a6e735964ffef61d4ae707a2ff503528311fc0df1722e0b6d5e42549e99b0",
+      "olean_sha256": "f9b5a9b2f47dd0ee03a58e6cd666d702ff5fc6eba39d07e89566a254df44648b",
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourPoint"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourFactor"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourEnvelope"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourFactor_continuous"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_gammaContourFactor_le"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.real_exponential_tail_integrable"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integral_real_exponential_tail"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourEnvelope_nonneg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaContourEnvelope_continuous"
+        }
+      ]
+    }
+  ],
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "C6_paid": false,
+  "D_N_paid": false,
+  "global_trace_certified": false,
+  "WIN": false
+}

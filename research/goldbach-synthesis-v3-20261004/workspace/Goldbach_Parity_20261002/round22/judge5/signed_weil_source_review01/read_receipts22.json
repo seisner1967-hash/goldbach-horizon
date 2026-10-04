@@ -1,0 +1,65 @@
+{
+  "schema": "ROUND22_SIGNED_WEIL_INDEPENDENT_SOURCE_REVIEW01",
+  "reviewer": "ROLE5",
+  "source_author": "ROLE1",
+  "status": "PAPER_AUX_IDENTITY_COHERENT_WITH_EXPLICIT_DEBTS_NOT_SUFFICIENT_FOR_D_N",
+  "scope": "PAPER_SOURCE_ONLY_NO_COMPILER_NO_NUMERIC_NO_PREPARATION",
+  "local_reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role1/signed_trace_ideation_source01/signed_weil_localization22.txt",
+      "sha256": "ab424c4bce032eedd9bf3ae4c478eb177f317975900d9cb7859e5e0476747648",
+      "scope": "FULL",
+      "chunk": "c1f828"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role1/signed_trace_ideation_source01/source_handoff22.json",
+      "sha256": "839d157bc9acd5d48ac3c665a771767e608dc98317056eb1b98b326d64616872",
+      "scope": "FULL",
+      "chunk": "f1648a"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role1/signed_trace_ideation_source01/source_read_receipts22.json",
+      "sha256": "45c54f331247720083dd817717e0555adcd28bdc6620c9dcbba9188107bf5482",
+      "scope": "FULL",
+      "chunk": "f1648a"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md",
+      "sha256": "51aea90f4290f160cbeb602f235148813c51b6c55121ab1ddd19e7d8d7879b72",
+      "scope": "FULL",
+      "chunk": "456732"
+    }
+  ],
+  "primary_web_reads": [
+    {
+      "url": "https://alainconnes.org/wp-content/uploads/Selecta.pdf",
+      "scope": "TARGETED Appendix B equations148-151, PDFpage46 and opening zero/positivity conventions",
+      "whole_document_FULL": false,
+      "references": ["turn182view0", "turn183view0", "turn184view0", "turn184view2"]
+    },
+    {
+      "url": "https://arxiv.org/html/2412.15470v1",
+      "scope": "TARGETED definition N(T), theorem1.1 and domainT>=e",
+      "whole_document_FULL": false,
+      "references": ["turn182view1", "turn183view2", "turn183view3", "turn184view1"]
+    }
+  ],
+  "derivative_constants_defect_detected": false,
+  "tail_factor_defect_detected": false,
+  "mixed_norm_clarification_required": true,
+  "true_zeta_explicit_formula_proved_in_this_audit": false,
+  "zero_count_proved_in_Lean_by_this_audit": false,
+  "catalogue_or_integral_producer_ready": false,
+  "coefficient_N_computed": false,
+  "signed_cancellation_proved": false,
+  "compiler_invocations": 0,
+  "candidate_imports": 0,
+  "tactic_probes": 0,
+  "numeric_invocations": 0,
+  "native_invocations": 0,
+  "new_Lean_modules": 0,
+  "new_preparation": false,
+  "compiled_credit": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

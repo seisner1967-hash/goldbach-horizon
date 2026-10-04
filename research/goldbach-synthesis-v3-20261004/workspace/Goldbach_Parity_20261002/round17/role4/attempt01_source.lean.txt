@@ -1,0 +1,154 @@
+import Mathlib
+
+namespace GoldbachRound17.FourFormRoots
+open Finset
+noncomputable section
+
+def actualForm (l N e p0 : ℕ) (x : ZMod l) : ZMod l :=
+  x * ((N : ZMod l) - (e : ZMod l) * x) * ((N : ZMod l) - x) *
+    ((N : ZMod l) - (p0 : ZMod l) * x)
+
+def actualRoots (l N e p0 : ℕ) : Finset (ZMod l) :=
+  Finset.univ.filter fun x => actualForm l N e p0 x = 0
+
+def actualRho (l N e p0 : ℕ) : ℕ := (actualRoots l N e p0).card
+
+def localDensity (l N e p0 : ℕ) : ℝ := (actualRho l N e p0 : ℝ) / l
+
+def candidates (l N e p0 : ℕ) : Finset (ZMod l) :=
+  {0, (N : ZMod l), (N : ZMod l) / (e : ZMod l),
+    (N : ZMod l) / (p0 : ZMod l)}
+
+def collisionProduct (l N e p0 : ℕ) : ZMod l :=
+  (N : ZMod l) * (e : ZMod l) * (p0 : ZMod l) * ((e : ZMod l) - 1) *
+    ((e : ZMod l) - (p0 : ZMod l)) * ((p0 : ZMod l) - 1)
+
+def natDelta (N e p0 : ℕ) : ℕ := N * e * p0 * (e - 1) * (e - p0) * (p0 - 1)
+
+variable {l N e p0 : ℕ} [Fact l.Prime]
+
+theorem mem_actualRoots (x : ZMod l) :
+    x ∈ actualRoots l N e p0 ↔ actualForm l N e p0 x = 0 := by
+  simp [actualRoots]
+
+theorem zero_mem_actualRoots : (0 : ZMod l) ∈ actualRoots l N e p0 := by
+  simp [actualRoots, actualForm]
+
+theorem rho_lower : 1 ≤ actualRho l N e p0 := by
+  exact Finset.one_le_card.mpr ⟨0, zero_mem_actualRoots⟩
+
+theorem rho_le_modulus : actualRho l N e p0 ≤ l := by
+  have h := Finset.card_le_card (Finset.subset_univ (actualRoots l N e p0))
+  simpa [actualRho, ZMod.card] using h
+
+theorem coprime_cast_not_both_zero (h : e.Coprime N) :
+    ¬ ((e : ZMod l) = 0 ∧ (N : ZMod l) = 0) := by
+  rintro ⟨he, hN⟩
+  have dle := (ZMod.natCast_zmod_eq_zero_iff_dvd e l).mp he
+  have dlN := (ZMod.natCast_zmod_eq_zero_iff_dvd N l).mp hN
+  exact (Nat.not_coprime_of_dvd_of_dvd (Fact.out : l.Prime).one_lt dle dlN) h
+
+theorem linear_root_eq_div_of_nonzero {x : ZMod l} (he : (e : ZMod l) ≠ 0)
+    (hx : (N : ZMod l) - (e : ZMod l) * x = 0) :
+    x = (N : ZMod l) / (e : ZMod l) := by
+  apply (eq_div_iff he).mpr
+  simpa [mul_comm] using (sub_eq_zero.mp hx).symm
+
+theorem linear_root_eq_div {x : ZMod l} (h : e.Coprime N)
+    (hx : (N : ZMod l) - (e : ZMod l) * x = 0) :
+    x = (N : ZMod l) / (e : ZMod l) := by
+  have he : (e : ZMod l) ≠ 0 := by
+    intro hz
+    have hN : (N : ZMod l) = 0 := by simpa [hz] using hx
+    exact coprime_cast_not_both_zero h ⟨hz, hN⟩
+  exact linear_root_eq_div_of_nonzero he hx
+
+theorem roots_subset_candidates (heN : e.Coprime N) (hpN : p0.Coprime N) :
+    actualRoots l N e p0 ⊆ candidates l N e p0 := by
+  intro x hx
+  have hf := (mem_actualRoots x).mp hx
+  simp only [actualForm, mul_eq_zero] at hf
+  rcases hf with ((hx0 | hxe) | hxN) | hxp
+  · simp [candidates, hx0]
+  · simp [candidates, linear_root_eq_div heN hxe]
+  · simp [candidates, sub_eq_zero.mp hxN]
+  · simp [candidates, linear_root_eq_div hpN hxp]
+
+theorem candidates_card_le_four : (candidates l N e p0).card ≤ 4 := by
+  have h1 := Finset.card_insert_le (0 : ZMod l)
+    ({(N : ZMod l), (N : ZMod l) / (e : ZMod l), (N : ZMod l) / (p0 : ZMod l)} : Finset (ZMod l))
+  have h2 := Finset.card_insert_le (N : ZMod l)
+    ({(N : ZMod l) / (e : ZMod l), (N : ZMod l) / (p0 : ZMod l)} : Finset (ZMod l))
+  have h3 := Finset.card_insert_le ((N : ZMod l) / (e : ZMod l))
+    ({(N : ZMod l) / (p0 : ZMod l)} : Finset (ZMod l))
+  simp only [Finset.card_singleton] at h3
+  dsimp [candidates]
+  omega
+
+theorem rho_le_four (heN : e.Coprime N) (hpN : p0.Coprime N) :
+    actualRho l N e p0 ≤ 4 := by
+  exact (Finset.card_le_card (roots_subset_candidates heN hpN)).trans candidates_card_le_four
+
+theorem rho_bounds (heN : e.Coprime N) (hpN : p0.Coprime N) :
+    1 ≤ actualRho l N e p0 ∧ actualRho l N e p0 ≤ min 4 l := by
+  exact ⟨rho_lower, le_min (rho_le_four heN hpN) rho_le_modulus⟩
+
+theorem roots_eq_candidates_of_nonzero (he : (e : ZMod l) ≠ 0)
+    (hp : (p0 : ZMod l) ≠ 0) :
+    actualRoots l N e p0 = candidates l N e p0 := by
+  ext x
+  simp only [mem_actualRoots, candidates, Finset.mem_insert, Finset.mem_singleton]
+  constructor
+  · intro hf
+    simp only [actualForm, mul_eq_zero] at hf
+    rcases hf with ((hx0 | hxe) | hxN) | hxp
+    · exact Or.inl hx0
+    · exact Or.inr (Or.inr (Or.inl (linear_root_eq_div_of_nonzero he hxe)))
+    · exact Or.inr (Or.inl (sub_eq_zero.mp hxN).symm)
+    · exact Or.inr (Or.inr (Or.inr (linear_root_eq_div_of_nonzero hp hxp)))
+  · rintro (hx0 | hxN | hxe | hxp)
+    · simp [actualForm, hx0]
+    · simp [actualForm, hxN]
+    · rw [hxe]
+      have hmul : (e : ZMod l) * ((N : ZMod l) / (e : ZMod l)) = N := by
+        field_simp
+      simp [actualForm, hmul]
+    · rw [hxp]
+      have hmul : (p0 : ZMod l) * ((N : ZMod l) / (p0 : ZMod l)) = N := by
+        field_simp
+      simp [actualForm, hmul]
+
+theorem density_positive : 0 < localDensity l N e p0 := by
+  have hl : 0 < (l : ℝ) := by exact_mod_cast (Fact.out : l.Prime).pos
+  have hr : 0 < (actualRho l N e p0 : ℝ) := by exact_mod_cast rho_lower
+  exact div_pos hr hl
+
+theorem density_lt_one_of_nonsaturated (h : actualRho l N e p0 < l) :
+    localDensity l N e p0 < 1 := by
+  have hl : 0 < (l : ℝ) := by exact_mod_cast (Fact.out : l.Prime).pos
+  apply (div_lt_one hl).mpr
+  exact_mod_cast h
+
+#print axioms actualForm
+#print axioms actualRoots
+#print axioms actualRho
+#print axioms localDensity
+#print axioms candidates
+#print axioms collisionProduct
+#print axioms natDelta
+#print axioms mem_actualRoots
+#print axioms zero_mem_actualRoots
+#print axioms rho_lower
+#print axioms rho_le_modulus
+#print axioms coprime_cast_not_both_zero
+#print axioms linear_root_eq_div_of_nonzero
+#print axioms linear_root_eq_div
+#print axioms roots_subset_candidates
+#print axioms candidates_card_le_four
+#print axioms rho_le_four
+#print axioms rho_bounds
+#print axioms roots_eq_candidates_of_nonzero
+#print axioms density_positive
+#print axioms density_lt_one_of_nonsaturated
+
+end GoldbachRound17.FourFormRoots

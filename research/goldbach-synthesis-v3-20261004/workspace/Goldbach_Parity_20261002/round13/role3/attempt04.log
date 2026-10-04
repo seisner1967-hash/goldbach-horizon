@@ -1,0 +1,80 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:144:55: error: unknown constant 'Nat.divisors_prime'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:144:55: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.119118
+a c p q : ℕ
+hc : Nat.Prime c
+hca : c ≤ a
+hp : Nat.Prime p
+hq : Nat.Prime q
+hap : a < p
+hpq : p < q
+⊢ c.divisors = {1, c}
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:241:16: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 2
+  f ≥ 2
+  f - g ≤ -1
+  e ≥ 0
+  d ≥ 0
+  d - e ≤ -1
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+  a - d ≤ -1
+where
+ a := ↑r'
+ b := ↑c'
+ d := ↑s'
+ e := ↑q'
+ f := ↑p
+ g := ↑p'
+ h := ↑(c' * r' * s') * ↑q'
+'GoldbachRound13.PrimeSemiprimeSwitch.divisor_prime_extension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.divisor_three_primes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_filter_large_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_filter_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.mu_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.image_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_sum_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_sum_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.actual_source_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.downward_displacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.actual_source_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_filter_parent' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.parent_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.ordered_two_primes_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.ordered_three_primes_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.ordered_four_primes_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.parent_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.image_canonical' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.parent_image_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.mu' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.shortDivisorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound11.harmonicKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.sourceBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.theta' depends on axioms: [propext, Classical.choice, Quot.sound]

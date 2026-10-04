@@ -1,0 +1,183 @@
+{
+  "schema": "ROUND22_ELAMBDA02_OWN_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "author": "ROLE4",
+  "reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/ComplexGammaMellinLambdaTail22.lean",
+      "sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+      "scope": "FULL",
+      "tool_chunk": "f55a36"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch36/batch36_attempt01/ComplexGammaMellinLambdaTail22.log",
+      "sha256": "cf48c948d8ff6de63793d7aa8410802f3c035f31bfcc3f07b8deb601f25d6d6e",
+      "scope": "FULL",
+      "tool_chunk": "f55a36"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch36/batch36_attempt01/ComplexGammaMellinLambdaTail22_FIN.json",
+      "sha256": "6ed445296daf7da9ab32f9b44014445af058c6f3a6f53ee5acc3ac16e6dcd8dc",
+      "scope": "FULL",
+      "tool_chunk": "f55a36"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch36/batch36_attempt01/receipt.json",
+      "sha256": "4307d388d3dac634c08c9e342538bab45bf4c10945898ddc0ae453959c0574e7",
+      "scope": "FULL",
+      "tool_chunk": "f55a36"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Lebesgue/Integral.lean",
+      "sha256": "132142d926ca7394613ad983efdac6b88e1870076cc8a2ce298a7c70163b9423",
+      "scope": "TARGETED",
+      "lines": [
+        77,
+        102
+      ],
+      "tool_chunk": "d4e90c",
+      "signature": "integral_comp_neg_Ioi (c : ℝ) (f : ℝ → E) : (∫ x in Ioi c, f (-x)) = ∫ x in Iic (-c), f x"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/SetIntegral.lean",
+      "sha256": "2fc90a7ecb3b4d9e47299a2b3b8eebf97a4e2a177d28daf3c48a4c0e059c4c86",
+      "scope": "TARGETED",
+      "lines": [
+        735,
+        748
+      ],
+      "tool_chunk": "d4e90c",
+      "signature": "integral_Iic_eq_integral_Iio, applicable to non-atomic Lebesgue volume"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/sources/ComplexGammaMellinTail22.lean",
+      "sha256": "e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0",
+      "scope": "TARGETED",
+      "lines": [
+        118,
+        129
+      ],
+      "tool_chunk": "d4e90c",
+      "note": "Paid single-kernel reflection; distinct from product reflection"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_contract22.md",
+      "sha256": "17e038d03f977e026853905eb3b7cb88f2d7fd574b71cbc73e9de774392c90bc",
+      "scope": "FULL",
+      "tool_chunk": "d4e90c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_catalog22.json",
+      "sha256": "f094c54a6a10aa0ad026dce78233f98e53d972341e2f2ce08d86306492e330ea",
+      "scope": "FULL",
+      "tool_chunk": "d4e90c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_handoff22.json",
+      "sha256": "31bbd5ddef991c58a9c58bdb0f1aca2d90f3a71a0dcffdbb751871c7434c4298",
+      "scope": "FULL",
+      "tool_chunk": "d4e90c",
+      "note": "Historical frozen dependency statuses preserved"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch35/batch35_attempt01/ComplexGammaMellinLambda22_FIN.json",
+      "sha256": "e51e55b286384f9b0672779ac887ff862f48e6bbce0c0376373db1de8b52bb7e",
+      "scope": "FULL",
+      "tool_chunk": "2bc403"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch35/batch35_attempt01/receipt.json",
+      "sha256": "3cffa331b39283808678dbfa5dc36081f4e5a2698c8a9f278d6b8b6a63ec6832",
+      "scope": "FULL",
+      "tool_chunk": "2bc403"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/receipt.json",
+      "sha256": "aabb463dcbbb3736ecd0396454dc31f3dd69c08031a6a996ee3e1477b9a2cd50",
+      "scope": "FULL",
+      "tool_chunk": "2bc403"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source02/ComplexGammaMellinLambdaTail22.lean",
+      "sha256": "0da22247d6f1085d0ca481f7f943c026570b1b7d6497fa420eabbffcd1c3cd37",
+      "scope": "FULL",
+      "tool_chunk": "365458"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source02/byte_comparison22.json",
+      "sha256": "83e3e0d5f9528a110d22f651eef99433e1524bb9a0a59ae2891efd5c8781877d",
+      "scope": "FULL",
+      "tool_chunk": "d7c66f",
+      "note": "Control-only UTF8 substitution/byte equality, not candidate Lean parsing"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source02/source_contract22.md",
+      "sha256": "50fbf0c1b4253f56a62e72180fe3ce1885d6f0899eadd32d1de2d49e8f92c9fa",
+      "scope": "FULL",
+      "tool_chunk": "3fc6f7"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source02/source_catalog22.json",
+      "sha256": "0a35135d3b7d6efd20bda972dee1538f6ea8d9abaebfbea4e1b6d0e3621dee1a",
+      "scope": "FULL",
+      "tool_chunk": "3fc6f7"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch36/adjudication.md",
+      "sha256": "6aa8ae6880fda07dff158f9677766d5914cc5d967fe7ac3f67dbaa9ac4d2cacb",
+      "scope": "FULL",
+      "tool_chunk": "d88091"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch36/completion_receipt.json",
+      "sha256": "2702aa00c4274af54a59c6ac5553fac2d9ff23f555b7239d4b01cec74bc2630a",
+      "scope": "FULL",
+      "tool_chunk": "d88091"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch35/sources/ComplexGammaMellinLambda22.lean",
+      "sha256": "4a94415678e4c3295b989dccbcda9e049483e131c17efce68099d05686e1c72d",
+      "scope": "BYTE_METADATA_ONLY",
+      "tool_chunk": "d88091",
+      "note": "No new full-source reading claimed here"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch35/batch35_attempt01/ComplexGammaMellinLambda22.olean",
+      "sha256": "8b557d2ccc8f8f6efbf5a33147aca94e12a3d7b2fcdd095af9024ffb492777c5",
+      "scope": "BYTE_METADATA_ONLY",
+      "tool_chunk": "d88091"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/ComplexGammaMellinTail22.olean",
+      "sha256": "168112f8064e3355b387c53dc50b82fac024309acdbd68bbbd0d1ed4060d2ad5",
+      "scope": "BYTE_METADATA_ONLY",
+      "tool_chunk": "d88091"
+    }
+  ],
+  "excluded_truncated_reads": [
+    {
+      "tool_chunk": "ae97cf",
+      "reason": "Combined stdout truncated; excluded from FULL. Three needed receipts cleanly re-read untruncated in 2bc403; binary metadata re-read d88091."
+    }
+  ],
+  "scope": {
+    "mathlib": "Two real API fragments TARGETED, full-file SHA metadata only",
+    "old_attempt36": "Actual FULL failure evidence; no replay",
+    "repair": "Single explicit product-lambda reflection proof block, +203 UTF8 bytes, no mathematical hypothesis or schema changes",
+    "catalogue": "Manual inventory, not semantic parser"
+  },
+  "current_task_invocations": {
+    "Lean": 0,
+    "tactic_or_API_probes": 0,
+    "candidate_parser": 0,
+    "candidate_imports": 0,
+    "Python_math": 0,
+    "native": 0,
+    "PREP": 0,
+    "gate": 0,
+    "actual": 0
+  },
+  "new_credit": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

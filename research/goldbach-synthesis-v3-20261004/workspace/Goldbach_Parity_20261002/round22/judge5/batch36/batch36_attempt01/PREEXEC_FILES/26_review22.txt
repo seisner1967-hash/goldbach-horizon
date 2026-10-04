@@ -1,0 +1,142 @@
+REVUE INDÉPENDANTE SOURCE EΛ16 — ROLE3
+
+Verdict : SOURCE_ANALYTIC_CHAIN_COHERENT_PENDING_DEPENDENCIES_AND_ELABORATION.
+Cette revue ne compile aucun module, ne charge aucun candidat et ne lance aucun
+calcul numérique. Elle ne délivre ni PASS Lean, ni autorisation d'évaluation.
+Le contrat humain07 reste DRAFT. Baseline reçue : 85 modules / 1434 déclarations
+auxiliaires. D_N et WIN restent ouverts.
+
+Objet relu FULL : ComplexGammaMellinLambdaTail22.lean, 11335 octets, SHA256
+68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e,
+dans round22/role4/complex_gamma_mellin_lambda_tail_source01. Contrat,
+catalogue, reçus et handoff du même paquet également lus FULL. Le catalogue
+contient 16 déclarations : quatre définitions, douze théorèmes, seize commandes
+qualifiées #print axioms. Ce sont des commandes écrites ; aucune sortie d'axiomes
+n'a été observée pour ce module. Aucun sorry, admit, axiome ajouté, unsafe ou
+native_decide n'est présent comme commande de preuve dans la source relue.
+
+1. Objets arithmétiques et dépendances
+
+D(t)=Σ_{n≥0} Λ(n)n^(-2-it), P(w)=Σ_{n≥0} Λ(n)e^(-nw),
+K(w,t)=Γ(2+it)w^(-2-it), avec la vraie Λ et la puissance complexe principale.
+Λ(0)=Λ(1)=0 ; toutes les puissances premières sont conservées.
+
+ComplexGammaMellinLambda22.lean, SHA c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c,
+a été relu FULL. Ses preuves SOURCE construisent la masse ΣΛ(n)n^(-2)≤6,
+la continuité de D, |D(t)|≤6, l'intégrabilité de D·K et l'échange somme/intégrale
+pour P. Aucune de ces conclusions n'est fournie comme prémisse libre de EΛ16.
+Le statut du handoff examiné est cependant PENDING_COMPILER : Λ30 n'est pas
+traité ici comme un verdict. Λ30 désigne trente déclarations du module principal,
+pas le numéro du lot30. Sa future compilation doit être rapportée séparément
+par le Juge et ROOT.
+
+ComplexGammaMellinTail22.lean, réparation Tail03, SHA
+e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0,
+a également été relu FULL. Elle fournit l'intégrale Laplace sur Ioi,
+son intégrabilité, le rayon R et sa continuité. Son handoff gelé PENDING est
+conservé. Pendant la revue, le vrai reçu indépendant du lot30 a été lu FULL
+(chunk980c21, SHA aabb463dcbbb3736ecd0396454dc31f3dd69c08031a6a996ee3e1477b9a2cd50) :
+le même SHA scientifique e5ba996… est maintenant PASS22, exit0,
+22 impressions standard-only, olean168112f8064e3355b387c53dc50b82fac024309acdbd68bbbd0d1ed4060d2ad5.
+FIN Lean : 2026-10-04T01:00:57.144831+00:00. L'observation physique ROOT30
+était absente lors de cette lecture ; la baseline officielle n'est pas modifiée
+par le présent reviewer. Les vrais FAIL techniques28/29 demeurent conservés.
+Les revues SOURCE antérieures ne sont pas utilisées comme verdicts Lean.
+
+Les dépendances Local26 et Holomorphy27 disposent de PASS indépendants observés
+par ROOT : domination Gamma réelle, puis inversion Mellin de e^(-w) pour Re(w)>0.
+Le reçu global26 est FAILED ; seule sa ligne Local22 est acquise. Cette revue
+n'étend pas ce PASS à l'ancienne Holomorphy défaillante ou à Tail.
+
+2. Deux queues signées et facteur6
+
+Lignes17–24 : T_-(w,H)=∫_{H}^{∞}D(-t)K(w,-t)dt et
+T_+(w,H)=∫_{H}^{∞}D(t)K(w,t)dt ; TΛ=(T_-+T_+)/(2π).
+Les deux facteurs de l'intégrande négative sont effectivement réfléchis.
+Aucune égalité D(-t)=D(t), positivité ou périodicité de cpow n'est supposée.
+
+Lignes34–62 : |D(t)K(w,t)|≤6C(w)e^(-δ(w)|t|) est obtenu par multiplication
+de |D|≤6 et du vrai majorant Local26. La continuité du produit composé assure
+la mesurabilité. Re(w)>0 donne δ(w)>0 ; H≥0 et t∈Ioi(H) donnent t>0 et
+|±t|=t. Le majorant Laplace concret paie l'intégrabilité de chaque queue.
+
+Lignes65–110 : norm_integral_le_integral_norm puis integral_mono_ae utilisent
+les deux intégrabilités avant l'évaluation du majorant. Chaque queue est
+majorée par 6C(w)e^(-δ(w)H)/δ(w). Les deux rayons, multipliés par 1/(2π),
+donnent exactement EΛ=6C(w)e^(-δ(w)H)/(πδ(w))=6R(w,H).
+Le facteur6 vient de la masse Λ ; le facteur1/π vient des deux queues.
+Aucune borne d'intégrale Gamma non pondérée n'est substituée à la norme du
+produit pondéré. π≠0 et δ>0 paient les simplifications des dénominateurs.
+
+3. Identité de troncature
+
+Lignes113–118 : integral_comp_neg_Ioi transporte la vraie intégrande vers
+Iic(-H), puis integral_Iic_eq_integral_Iio retire l'extrémité de mesure nulle.
+La signature du cache correspond à ce changement de variable de Lebesgue.
+
+Lignes121–159 : pour H≥0, Iio(-H) et Ioi(H) sont disjoints et forment le
+complément de Icc(-H)H. L'intégrabilité du produit sur ℝ vient de la preuve
+SOURCE Λ30 ; elle est transmise à setIntegral_union et integral_add_compl.
+Le dernier théorème reçoit explicitement volume, le produit réel et Icc(-H)H.
+L'identité Mellin de Λ30 donne P(w)-P_H(w)=TΛ(w,H), puis la borne EΛ.
+H=0 est inclus : le singleton du centre a mesure nulle. Aucun terme de bord
+supplémentaire n'est omis. H<0 est exclu des théorèmes de troncature.
+
+4. Domaine et continuité du rayon
+
+C(w)=|w|^(-2)sec²η(w), η=(π/2+|Arg w|)/2,
+δ=η-|Arg w|=(π/2-|Arg w|)/2. Re(w)>0 implique w≠0, δ>0 et cosη>0.
+Les définitions et la domination du module Local26 ont été inspectées TARGETED.
+
+Lignes167–184 : la forme fermée, la positivité, la continuité conjointe et
+la décroissance en H portent sur Re(w)>0 et H réel quelconque. Les bornes
+des queues et de P-P_H requièrent en plus H≥0.
+
+Lignes186–209 : le voisinage local est déduit de la continuité du rayon et
+de la condition ouverte Re(w)>0. ContinuousAt.comp fixe explicitement la
+fonction intérieure z↦(z,H), la fonction extérieure et x=w. La signature
+réelle du cache est respectée ; eventually_lt puis eventually_nhds_iff_ball
+construisent une boule positive. Pour T≥H, l'antitonie complète la borne
+|TΛ(z,T)|≤2EΛ(w,H). Il n'y a pas de rayon libre offert en hypothèse.
+Cette existence locale ne fournit pas un rayon numérique de boule.
+La continuité d'une intégrale complexe à seuil mobile et la limite H→∞ ne
+sont ni déclarées ni créditées par cette source.
+
+5. API, objections et portée numérique
+
+Les signatures ont été relues TARGETED dans le cache mathlib : Integrable.mono',
+Integrable.norm, integral_mono_ae, norm_integral_le_integral_norm,
+integral_mul_left, integral_comp_neg_Ioi, integral_Iic_eq_integral_Iio,
+setIntegral_union, integral_add_compl, ContinuousAt.comp/mul/eventually_lt et
+Metric.eventually_nhds_iff_ball. Les chemins, lignes, SHA et chunks exacts sont
+consignés dans read_receipts22.json. Aucune lecture FULL du cache n'est prétendue.
+
+Aucune objection mathématique précise sur les signes, le facteur6, la
+partition ou les domaines n'a été identifiée dans cette revue SOURCE.
+L'élaboration des compositions, restrictions de mesure et égalités de fonctions
+reste à décider par une vraie invocation Lean autorisée, avec les dépendances
+préalablement acquises. Ce risque d'élaboration n'est pas un FAIL observé.
+La fermeture transitive des imports n'a pas été préparée par cette revue.
+
+EΛ est une formule analytique fermée à primitives fixées ; elle n'est pas
+un évaluateur numérique. Produire un rayon effectif exige encore des enclosures
+dirigées de Arg, cos, exp et des constantes, l'évaluation contrôlée de D et K
+sur la fenêtre finie, et une erreur de quadrature payée. Aucun nombre EΛ,
+comparaison à une tolérance ou mutation numérique n'a été calculé ici.
+
+Le compact w=a-iθ, a>0, |θ|≤Θ proposé dans le contrat reste PAPER : le pont
+Arg(a-iθ)=-atan(θ/a), les constantes uniformes et le coût près du bord ne sont
+pas prouvés par EΛ16. Une enveloppe absolue des queues n'implique aucune
+annulation canonique des corrélations ni le raccord PP/front r>α.
+Le coefficient à N=10^8, le STOP checker05 et la cible D_N sont séparés de ce
+module. Aucun verdict numérique05 n'est importé comme preuve ou prémisse.
+
+6. Conservation et conclusion de scope
+
+Les 32 bindings du handoff ont été rehashés physiquement comme métadonnées :
+tailles et SHA tous identiques. Aucune source scientifique de ROLE4, aucun
+ancien lot, aucune archive, aucun reçu ni olean n'a été modifié. Le rapport
+est un nouvel artefact sous role3 ; il n'est ni PREPARED ni une gate.
+Les seules pièces créées sont ce rapport, ses reçus de lecture et son handoff.
+La chaîne analytique écrite est cohérente au scope examiné, sous dépendances
+en attente et élaboration future. Elle ne paie pas D_N ou WIN.

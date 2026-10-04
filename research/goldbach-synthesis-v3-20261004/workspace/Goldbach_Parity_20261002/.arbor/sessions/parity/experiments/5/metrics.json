@@ -1,0 +1,8 @@
+{
+  "node_id": "5",
+  "hypothesis": "Mechanism: Regroupement des coefficients HH réels par quotient modulo N puis projection multiplicative.\nHypothesis: La direction signée H(a)mu(s)mu(t) peut admettre un contrôle plus fin que la norme du noyau à coefficients arbitraires.\nObservable: Histogramme rationnel exact N=100000000, identité de transformée validée, puis estimation indépendante avec masques et non-unités conservés.\nConflicts: Les masques joints empêchent une factorisation naïve et les grands conducteurs ne sont pas couverts par le seul input de petits modules.",
+  "score": 0.0,
+  "insight": "Transformée exacte Kloosterman vers carré de Gauss prouvée pour ZMod N composite sur unités, avec conjugaison et poids réels extérieurs. Les grands conducteurs, les masques couplés et les phases non unitaires restent sans estimation suffisante.",
+  "result": "11 théorèmes nouveaux compilés et audités par rejeu frais ; source sans preuve incomplète, axiomes standards seulement. Histogramme N=100000000 PASS. Statut PARTIAL, victoire false.",
+  "branch": "round3/lean/QuotientGauss.lean"
+}

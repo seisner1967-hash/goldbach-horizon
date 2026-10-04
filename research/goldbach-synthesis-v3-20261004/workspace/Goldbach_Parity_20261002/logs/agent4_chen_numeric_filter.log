@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "alpha": 100,
+  "case_count": 24121,
+  "counts": {
+    "single_prime_sample": 1204,
+    "Omega_1": 1204,
+    "all_prime_squares_below_N": 1204,
+    "Omega_2": 1204,
+    "all_prime_cubes_below_N": 65,
+    "Omega_3": 21713,
+    "all_distinct_p_squared_q_below_N": 21648
+  },
+  "examples": [
+    {
+      "n": 101,
+      "factorization": [
+        [
+          101,
+          1
+        ]
+      ],
+      "Omega": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 10201,
+      "factorization": [
+        [
+          101,
+          2
+        ]
+      ],
+      "Omega": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1030301,
+      "factorization": [
+        [
+          101,
+          3
+        ]
+      ],
+      "Omega": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1050703,
+      "factorization": [
+        [
+          101,
+          2
+        ],
+        [
+          103,
+          1
+        ]
+      ],
+      "Omega": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    }
+  ],
+  "domain": "All p^2, p^3 and p^2 q with 100<p,q prime and n<N; primes sampled through 10000",
+  "Omega": "sum of factor exponents, including multiplicity",
+  "squarefree_assumption": false,
+  "outside_counterexample": {
+    "n": 104060401,
+    "Omega": 4,
+    "weight": 1,
+    "prime_indicator": 0,
+    "failed_hypothesis": "n<N"
+  },
+  "rough_cofactor_only_counterexample": {
+    "n": 3339363,
+    "r": 1113121,
+    "k": 3,
+    "factorization": [
+      [
+        3,
+        1
+      ],
+      [
+        101,
+        1
+      ],
+      [
+        103,
+        1
+      ],
+      [
+        107,
+        1
+      ]
+    ],
+    "Omega": 4,
+    "weight": 1,
+    "prime_indicator": 0,
+    "failed_hypothesis": "all prime divisors of n exceed alpha"
+  },
+  "script_sha256": "afddd7e071e4aa2ea1cb86f6e5026535d79fbf0a7dd3494499be6198bd3b3846",
+  "scope": "Finite exact filter only; no signed aggregate or D_N estimate"
+}

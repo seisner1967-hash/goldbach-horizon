@@ -1,0 +1,31 @@
+{
+  "schema": "ROUND22_GLOBAL_PREPARATION01_METADATA_FAILURE_ROOT_OBSERVATION",
+  "time_utc": "2026-10-03T12:52:05.467695+00:00",
+  "status": "INVALID_BINDING_METADATA_NO_NUMERIC_RUN",
+  "ROOT_FULL_prepared_JSON_read": "313370",
+  "actual_manifest_binding_count": 1,
+  "actual_preparation_binding_count": 2,
+  "required_source_packet_binding_count": 14,
+  "actual_metadata_producer_command_receipt": "8b2946 exit0 (reported ROLE4; metadata only)",
+  "cause_reported_ROLE4": "Sort-Object path -Unique reduced OrderedDictionary rows to a single path binding",
+  "old_launch01_files_sha256": {
+    "prepare_metadata_source22.ps1": "5f2adf672ad68a09281563762f0f9f2937bfee931224df959af94495d73175b4",
+    "run_global_once_source22.py": "77d7f76a682f90b1578d9d17b0f1043c80758f213d7cdfa9c7eac8d2f459fee4",
+    "thermal_child_source22.py": "059860cb5578dda6a6e0a700bd4c7896cc1469752581c44ef3882620dc7e27c6",
+    "launch_contract_source22.md": "d5f04c449343c94820eb86089b1e000a63586179e3d12a8c15f07186d6cf00f4",
+    "prepared_manifest22.json": "2cf83b5b923ec0da9b090e85ba4669fd0e5739c331e579ec25d98e6a44890024",
+    "preparation22.json": "4520a77cffe62ca4996ed24cb37f416406a2a4bacbe87a1a4cc5e73513a57643"
+  },
+  "source_packet_14_bindings_unchanged": true,
+  "gate_created": false,
+  "numeric_child_invocations": 0,
+  "mathematical_identity_tested": false,
+  "repair_scope": "Separate launch_prepare02, explicit keyed deduplication and exact expected path-set guard; preserve01 bytes",
+  "official_modules": 68,
+  "official_declarations": 1132,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

@@ -1,0 +1,33 @@
+{
+  "state": "PRE_EXECUTION",
+  "bank": "semiprime",
+  "attempt": 1,
+  "authorized_distinct_replay": true,
+  "started_at_utc": "2026-10-02T21:58:52.852809+00:00",
+  "command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\semiprime_checks.py",
+    "--output-dir",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\isolated_semiprime"
+  ],
+  "source_helper_launcher_registry_sha256": {
+    "semiprime_checks.py": "3c196ecbfe8d66a864bc421e0bf76bdfd95e9d7a2849a4c6c743133b5a04e23c",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a",
+    "role6/semiprime_helpers.py": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/replay_once.py": "5b72ca284c70fd2917a5762ef2b834b068e79799c5803a8d68c710cbad92b7df",
+    "previous_artifacts_sha256.json": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc"
+  },
+  "canonical_output_sha256": "c30c84e1a7d01cb6146caedb08e5addb81b8795d90c89875e878a6fc1e924f0c",
+  "canonical_receipt_sha256": "5b0ef9f42846574090e8ba43fe20b53cb92021324bba238e6607c55521a1889f",
+  "snapshots_sha256": {
+    "role6/semiprime_replay_snapshots/semiprime_checks.py.txt": "3c196ecbfe8d66a864bc421e0bf76bdfd95e9d7a2849a4c6c743133b5a04e23c",
+    "role6/semiprime_replay_snapshots/role6__strict.py.txt": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a",
+    "role6/semiprime_replay_snapshots/role6__semiprime_helpers.py.txt": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/semiprime_replay_snapshots/role6__replay_once.py.txt": "5b72ca284c70fd2917a5762ef2b834b068e79799c5803a8d68c710cbad92b7df",
+    "role6/semiprime_replay_snapshots/previous_artifacts_sha256.json.txt": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc"
+  },
+  "snapshot_completed_at_utc": "2026-10-02T21:58:52.899567+00:00"
+}

@@ -1,0 +1,197 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH27",
+  "time_utc": "2026-10-03T23:17:23.762298+00:00",
+  "status": "INDEPENDENT_BATCH27_AUX_PASS",
+  "actual_status": "INDEPENDENT_BATCH27_AUX_PASS",
+  "attempt": "batch27_attempt01",
+  "actual_child_invocations": 1,
+  "modules_passed": 1,
+  "module_count_passed": 1,
+  "declarations_passed": 15,
+  "theorems_passed": 11,
+  "definitions_passed": 4,
+  "all_current_bytes_preserved": true,
+  "input_count": 9138,
+  "closed_judge_file_count": 1890,
+  "protected_archive_count": 3089,
+  "capture_count": 94,
+  "axiom_counts": {
+    "standard_triplet": 15,
+    "empty": 0,
+    "recovery": 0
+  },
+  "axiom_rows": [
+    {
+      "declaration": "GoldbachComplexGammaMellin22.localArgRadius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.localDecayGap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.localDerivativeCoefficient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.localDerivativeEnvelope",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.local_parameters",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.exists_local_kernel_ball",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.verticalS_norm_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel_local_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaDerivative_local_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.weightedExponential_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.localDerivativeEnvelope_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_hasDerivAt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_analytic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_eq_exp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complex_exp_eq_Gamma_integral",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "module_evidence": [
+    {
+      "module": "ComplexGammaMellinHolomorphy22",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "started_at": "2026-10-03T23:08:51.099145+00:00",
+      "finished_at": "2026-10-03T23:09:22.345924+00:00",
+      "exit_code": 0,
+      "declarations_passed": 15,
+      "theorems_passed": 11,
+      "definitions_passed": 4,
+      "source_sha256": "b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2",
+      "log_sha256": "65b5ceb5887621801f24990a295983e5f9bbb93b71b61f732abcef4810c878af",
+      "olean_sha256": "f831358e15e1a088988b8bc102a3f7ca23df4a32c3210cfb072273ae4abcccbf",
+      "error_sites": [],
+      "warning_count": 0,
+      "axiom_counts": {
+        "standard_triplet": 15,
+        "empty": 0,
+        "recovery": 0
+      },
+      "scope": "SCALAR_COMPLEX_GAMMA_MELLIN_AUX_ONLY"
+    }
+  ],
+  "actual_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch27\\batch27_attempt01\\receipt.json",
+  "actual_receipt_sha256": "63bc0f7463b2c5e42841b30846cda0a44f17bd40c3256e2952248c5e64a86f11",
+  "adjudication_sha256": "1ae20a5d789917f6aec425dd19766a382f87da17550fad51669ad435b29a1344",
+  "PREEXEC_sha256": "7a97f779b87c8ae2c4ee9622aa21d42ee74a81f068b8184b55adb5ed510780e0",
+  "POSTEXEC_sha256": "fa08ee6f1d4694fe58b00337f0154657fb1a1dca6d6b80d5ed751f39ea9d426f",
+  "START_sha256": "e51f6ef0464771d8a774b84763bf13401f2b31634ca7fda2737d4c5c7d65d2a1",
+  "FIN_sha256": "c5bff6d1245199b3717957c0038ac83b48b8bff9bc41882149c5325102be212b",
+  "gate_sha256": "9d043f99858791e0bc0395e77138f43b09f50e7617516d49e0f57352bd0c206d",
+  "metadata_helper_sha256": "8dcc51a7cd900441c25af4f67fab7cb8a40f85c01ae0a00a25454b0ad9169302",
+  "logs_read_scope": "FULL8395d3",
+  "actual_receipt_read_scope": "FULLb652ee",
+  "module_START_FIN_read_scope": "FULL8395d3 plus exact equality to receipt row",
+  "large_PRE_POST_read_scope": "CONTROL_HEADER_PLUS_ALL_JSON_ROWS_AND_CURRENT_BYTE_HASH_NOT_RAW_FULL",
+  "compiler_invocations_in_closure": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "official_modules_before_ROOT_observation": 84,
+  "official_declarations_before_ROOT_observation": 1419,
+  "hypothetical_after_ROOT_modules": 85,
+  "hypothetical_after_ROOT_declarations": 1434,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "complex_Gamma_full_inverse_paid": true,
+  "native_refinement_paid": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false
+}

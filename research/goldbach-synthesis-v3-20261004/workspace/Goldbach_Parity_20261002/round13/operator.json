@@ -1,0 +1,3353 @@
+{
+  "status": "PASS_NEW_ACTUAL_OPERATOR_IDENTITIES_ONLY",
+  "N": 100000000,
+  "alpha": 100,
+  "a": 3163,
+  "Q": 999999,
+  "complete_cubes": {
+    "small": {
+      "top": 561,
+      "dimension": 3,
+      "vertices": [
+        1,
+        3,
+        11,
+        17,
+        33,
+        51,
+        187,
+        561
+      ],
+      "nodes": {
+        "1": {
+          "m": 1,
+          "n": 99999999,
+          "m_factors": [],
+          "n_factors": [
+            [
+              3,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              73,
+              1
+            ],
+            [
+              101,
+              1
+            ],
+            [
+              137,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "1",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "3": {
+          "m": 3,
+          "n": 99999997,
+          "m_factors": [
+            [
+              3,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              1297,
+              1
+            ],
+            [
+              77101,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "2",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "11": {
+          "m": 11,
+          "n": 99999989,
+          "m_factors": [
+            [
+              11,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              99999989,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {
+            "99999989": "1"
+          },
+          "theta": {
+            "99999989": "1"
+          },
+          "ratio": "10/9",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "17": {
+          "m": 17,
+          "n": 99999983,
+          "m_factors": [
+            [
+              17,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              19,
+              1
+            ],
+            [
+              43,
+              1
+            ],
+            [
+              122399,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "16/15",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "33": {
+          "m": 33,
+          "n": 99999967,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              17,
+              1
+            ],
+            [
+              5882351,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "20/9",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "51": {
+          "m": 51,
+          "n": 99999949,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              17,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              7,
+              1
+            ],
+            [
+              229,
+              1
+            ],
+            [
+              62383,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "32/15",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "187": {
+          "m": 187,
+          "n": 99999813,
+          "m_factors": [
+            [
+              11,
+              1
+            ],
+            [
+              17,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              271,
+              1
+            ],
+            [
+              123001,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "32/27",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "561": {
+          "m": 561,
+          "n": 99999439,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              17,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              99999439,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {
+            "99999439": "1"
+          },
+          "theta": {
+            "99999439": "1"
+          },
+          "ratio": "64/27",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        }
+      },
+      "edges": [
+        {
+          "child": 1,
+          "parent": 3,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "1"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-1"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-1"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "1"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "1"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 1,
+          "parent": 11,
+          "removed_prime": 11,
+          "denominator_log_parent": {
+            "11": "1"
+          },
+          "rate_numerator": {
+            "11": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "11,99999989": "1"
+          },
+          "Qmatch_S_numerator": {
+            "11": "1"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "11,99999989": "1"
+            },
+            "S": {
+              "11": "-1"
+            }
+          },
+          "TV_minus_VT": {
+            "11,99999989": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "11": "-1"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "11,99999989": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "11": "1/9"
+          },
+          "Hphys_numerator": {
+            "11,99999989": "1"
+          },
+          "Hmatch_S_numerator": {
+            "11": "1"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 1,
+          "parent": 17,
+          "removed_prime": 17,
+          "denominator_log_parent": {
+            "17": "1"
+          },
+          "rate_numerator": {
+            "17": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "17": "1"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "17": "-1"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "17": "-1"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "17": "1/15"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "17": "1"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 11,
+          "parent": 33,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "11": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "10/9"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-10/9"
+            }
+          },
+          "TV_minus_VT": {
+            "3,99999989": "-1"
+          },
+          "V_minus_M_T": {
+            "constant": {
+              "3,99999989": "1"
+            },
+            "S": {
+              "3": "-10/9"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "3,99999989": "-1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "3": "10/9"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "-10/9"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 3,
+          "parent": 33,
+          "removed_prime": 11,
+          "denominator_log_parent": {
+            "3": "1",
+            "11": "1"
+          },
+          "rate_numerator": {
+            "11": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "11": "2"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "11": "-2"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "11": "-2"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "11": "2/9"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "11": "-2"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 17,
+          "parent": 51,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "17": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "16/15"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-16/15"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-16/15"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "16/15"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "-16/15"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 3,
+          "parent": 51,
+          "removed_prime": 17,
+          "denominator_log_parent": {
+            "3": "1",
+            "17": "1"
+          },
+          "rate_numerator": {
+            "17": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "17": "2"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "17": "-2"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "17": "-2"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "17": "2/15"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "17": "-2"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 17,
+          "parent": 187,
+          "removed_prime": 11,
+          "denominator_log_parent": {
+            "11": "1",
+            "17": "1"
+          },
+          "rate_numerator": {
+            "11": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "11": "16/15"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "11": "-16/15"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "11": "-16/15"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "11": "16/135"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "11": "-16/15"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 11,
+          "parent": 187,
+          "removed_prime": 17,
+          "denominator_log_parent": {
+            "11": "1",
+            "17": "1"
+          },
+          "rate_numerator": {
+            "17": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "17": "10/9"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "17": "-10/9"
+            }
+          },
+          "TV_minus_VT": {
+            "17,99999989": "-1"
+          },
+          "V_minus_M_T": {
+            "constant": {
+              "17,99999989": "1"
+            },
+            "S": {
+              "17": "-10/9"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "17,99999989": "-1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "17": "2/27"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "17": "-10/9"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 187,
+          "parent": 561,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "11": "1",
+            "17": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "3,99999439": "1"
+          },
+          "Qmatch_S_numerator": {
+            "3": "32/27"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "3,99999439": "1"
+            },
+            "S": {
+              "3": "-32/27"
+            }
+          },
+          "TV_minus_VT": {
+            "3,99999439": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-32/27"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "3,99999439": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "3": "32/27"
+          },
+          "Hphys_numerator": {
+            "3,99999439": "1"
+          },
+          "Hmatch_S_numerator": {
+            "3": "32/27"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 51,
+          "parent": 561,
+          "removed_prime": 11,
+          "denominator_log_parent": {
+            "3": "1",
+            "11": "1",
+            "17": "1"
+          },
+          "rate_numerator": {
+            "11": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "11,99999439": "1"
+          },
+          "Qmatch_S_numerator": {
+            "11": "32/15"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "11,99999439": "1"
+            },
+            "S": {
+              "11": "-32/15"
+            }
+          },
+          "TV_minus_VT": {
+            "11,99999439": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "11": "-32/15"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "11,99999439": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "11": "32/135"
+          },
+          "Hphys_numerator": {
+            "11,99999439": "1"
+          },
+          "Hmatch_S_numerator": {
+            "11": "32/15"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 33,
+          "parent": 561,
+          "removed_prime": 17,
+          "denominator_log_parent": {
+            "3": "1",
+            "11": "1",
+            "17": "1"
+          },
+          "rate_numerator": {
+            "17": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "17,99999439": "1"
+          },
+          "Qmatch_S_numerator": {
+            "17": "20/9"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "17,99999439": "1"
+            },
+            "S": {
+              "17": "-20/9"
+            }
+          },
+          "TV_minus_VT": {
+            "17,99999439": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "17": "-20/9"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "17,99999439": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "17": "4/27"
+          },
+          "Hphys_numerator": {
+            "17,99999439": "1"
+          },
+          "Hmatch_S_numerator": {
+            "17": "20/9"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        }
+      ],
+      "edge_count": 12,
+      "degrees": {
+        "1": 3,
+        "3": 3,
+        "11": 3,
+        "17": 3,
+        "33": 3,
+        "51": 3,
+        "187": 3,
+        "561": 3
+      },
+      "Q0_symmetric": true,
+      "Q0_norm_upper_bound": 3,
+      "norm_bound_certificate": "Symmetric matrix, at most dimension positive rates per row, each <= 1",
+      "V_norm_strictly_below_log_N_by_base_order": true,
+      "active_raw_vertices": [
+        11,
+        561
+      ],
+      "oriented_J_TV_ones": {
+        "99999439": "1",
+        "99999989": "1"
+      },
+      "signed_symmetric_J_Qphys_ones": {},
+      "Hphys_ones": {
+        "99999439": "2",
+        "99999989": "2"
+      },
+      "matching_oriented_groups": {
+        "3": {
+          "denominator_log_parent": {
+            "3": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "1"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "2"
+          }
+        },
+        "11": {
+          "denominator_log_parent": {
+            "11": "1"
+          },
+          "oriented_S_numerator": {
+            "11": "1"
+          },
+          "Hmatch_ones_S_numerator": {
+            "11": "2"
+          }
+        },
+        "17": {
+          "denominator_log_parent": {
+            "17": "1"
+          },
+          "oriented_S_numerator": {
+            "17": "1"
+          },
+          "Hmatch_ones_S_numerator": {
+            "17": "2"
+          }
+        },
+        "33": {
+          "denominator_log_parent": {
+            "3": "1",
+            "11": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "-10/9",
+            "11": "-2"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "-20/9",
+            "11": "-4"
+          }
+        },
+        "51": {
+          "denominator_log_parent": {
+            "3": "1",
+            "17": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "-16/15",
+            "17": "-2"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "-32/15",
+            "17": "-4"
+          }
+        },
+        "187": {
+          "denominator_log_parent": {
+            "11": "1",
+            "17": "1"
+          },
+          "oriented_S_numerator": {
+            "11": "-16/15",
+            "17": "-10/9"
+          },
+          "Hmatch_ones_S_numerator": {
+            "11": "-32/15",
+            "17": "-20/9"
+          }
+        },
+        "561": {
+          "denominator_log_parent": {
+            "3": "1",
+            "11": "1",
+            "17": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "32/27",
+            "11": "32/15",
+            "17": "20/9"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "64/27",
+            "11": "64/15",
+            "17": "40/9"
+          }
+        }
+      },
+      "signed_symmetric_J_Qmatch_ones": {},
+      "constant_S_commutator_exactly_zero": true,
+      "actual_matching_is_S_cN": true,
+      "matching_not_replaced_by_constant": true,
+      "all_nonedge_entries_zero": true,
+      "diagonal_zero": true,
+      "complete_cube": true,
+      "global_c_long_complement_not_discarded": true,
+      "reference_minus_S_N_N_retained_outside_selected_cube": true,
+      "raw_properpowers_not_masked": true
+    },
+    "raw_long": {
+      "top": 35727711,
+      "dimension": 4,
+      "vertices": [
+        1,
+        3,
+        43,
+        129,
+        419,
+        661,
+        1257,
+        1983,
+        18017,
+        28423,
+        54051,
+        85269,
+        276959,
+        830877,
+        11909237,
+        35727711
+      ],
+      "nodes": {
+        "1": {
+          "m": 1,
+          "n": 99999999,
+          "m_factors": [],
+          "n_factors": [
+            [
+              3,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              73,
+              1
+            ],
+            [
+              101,
+              1
+            ],
+            [
+              137,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "1",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "3": {
+          "m": 3,
+          "n": 99999997,
+          "m_factors": [
+            [
+              3,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              1297,
+              1
+            ],
+            [
+              77101,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "2",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "43": {
+          "m": 43,
+          "n": 99999957,
+          "m_factors": [
+            [
+              43,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              33333319,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "42/41",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "129": {
+          "m": 129,
+          "n": 99999871,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              43,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              7451,
+              1
+            ],
+            [
+              13421,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "84/41",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "419": {
+          "m": 419,
+          "n": 99999581,
+          "m_factors": [
+            [
+              419,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              11,
+              1
+            ],
+            [
+              9090871,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "418/417",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "661": {
+          "m": 661,
+          "n": 99999339,
+          "m_factors": [
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              3030283,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "660/659",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "1257": {
+          "m": 1257,
+          "n": 99998743,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              419,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              13,
+              1
+            ],
+            [
+              17,
+              1
+            ],
+            [
+              71,
+              1
+            ],
+            [
+              6373,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "836/417",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "1983": {
+          "m": 1983,
+          "n": 99998017,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              7,
+              1
+            ],
+            [
+              109,
+              1
+            ],
+            [
+              131059,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "1320/659",
+          "raised_front_nonempty": false,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "18017": {
+          "m": 18017,
+          "n": 99981983,
+          "m_factors": [
+            [
+              43,
+              1
+            ],
+            [
+              419,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              241,
+              1
+            ],
+            [
+              577,
+              1
+            ],
+            [
+              719,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "5852/5699",
+          "raised_front_nonempty": true,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "28423": {
+          "m": 28423,
+          "n": 99971577,
+          "m_factors": [
+            [
+              43,
+              1
+            ],
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              3,
+              4
+            ],
+            [
+              17,
+              1
+            ],
+            [
+              79,
+              1
+            ],
+            [
+              919,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "27720/27019",
+          "raised_front_nonempty": true,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "54051": {
+          "m": 54051,
+          "n": 99945949,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              43,
+              1
+            ],
+            [
+              419,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              353,
+              1
+            ],
+            [
+              283133,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "11704/5699",
+          "raised_front_nonempty": true,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "85269": {
+          "m": 85269,
+          "n": 99914731,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              43,
+              1
+            ],
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              7,
+              1
+            ],
+            [
+              227,
+              2
+            ],
+            [
+              277,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "55440/27019",
+          "raised_front_nonempty": true,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "276959": {
+          "m": 276959,
+          "n": 99723041,
+          "m_factors": [
+            [
+              419,
+              1
+            ],
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              11,
+              1
+            ],
+            [
+              1427,
+              1
+            ],
+            [
+              6353,
+              1
+            ]
+          ],
+          "mu": 1,
+          "raw": {},
+          "theta": {},
+          "ratio": "91960/91601",
+          "raised_front_nonempty": true,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "830877": {
+          "m": 830877,
+          "n": 99169123,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              419,
+              1
+            ],
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              23,
+              1
+            ],
+            [
+              4311701,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {},
+          "theta": {},
+          "ratio": "183920/91601",
+          "raised_front_nonempty": true,
+          "bulk_m": false,
+          "n_above_Q": true
+        },
+        "11909237": {
+          "m": 11909237,
+          "n": 88090763,
+          "m_factors": [
+            [
+              43,
+              1
+            ],
+            [
+              419,
+              1
+            ],
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              88090763,
+              1
+            ]
+          ],
+          "mu": -1,
+          "raw": {
+            "88090763": "1"
+          },
+          "theta": {
+            "88090763": "1"
+          },
+          "ratio": "3862320/3755641",
+          "raised_front_nonempty": true,
+          "bulk_m": true,
+          "n_above_Q": true
+        },
+        "35727711": {
+          "m": 35727711,
+          "n": 64272289,
+          "m_factors": [
+            [
+              3,
+              1
+            ],
+            [
+              43,
+              1
+            ],
+            [
+              419,
+              1
+            ],
+            [
+              661,
+              1
+            ]
+          ],
+          "n_factors": [
+            [
+              8017,
+              2
+            ]
+          ],
+          "mu": 1,
+          "raw": {
+            "8017": "1"
+          },
+          "theta": {},
+          "ratio": "7724640/3755641",
+          "raised_front_nonempty": true,
+          "bulk_m": true,
+          "n_above_Q": true
+        }
+      },
+      "edges": [
+        {
+          "child": 1,
+          "parent": 3,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "1"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-1"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-1"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "1"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "1"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 1,
+          "parent": 43,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "43": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "43": "1"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "43": "-1"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-1"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "43": "1/41"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "43": "1"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 43,
+          "parent": 129,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "42/41"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-42/41"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-42/41"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "42/41"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "-42/41"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 3,
+          "parent": 129,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "43": "2"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "43": "-2"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-2"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "43": "2/41"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "43": "-2"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 1,
+          "parent": 419,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "419": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "419": "1"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "419": "-1"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-1"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "419": "1/417"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "419": "1"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 1,
+          "parent": 661,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "661": "1"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "661": "-1"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-1"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "661": "1/659"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "661": "1"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 419,
+          "parent": 1257,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "419": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "418/417"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-418/417"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-418/417"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "418/417"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "-418/417"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 3,
+          "parent": 1257,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "3": "1",
+            "419": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "419": "2"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "419": "-2"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-2"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "419": "2/417"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "419": "-2"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 661,
+          "parent": 1983,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "660/659"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-660/659"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-660/659"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "660/659"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "-660/659"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 3,
+          "parent": 1983,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "3": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "661": "2"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "661": "-2"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-2"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "661": "2/659"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "661": "-2"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 419,
+          "parent": 18017,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "43": "1",
+            "419": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "43": "418/417"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "43": "-418/417"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-418/417"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "43": "418/17097"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "43": "-418/417"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 43,
+          "parent": 18017,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "43": "1",
+            "419": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "419": "42/41"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "419": "-42/41"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-42/41"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "419": "14/5699"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "419": "-42/41"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 661,
+          "parent": 28423,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "43": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "43": "660/659"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "43": "-660/659"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-660/659"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "43": "660/27019"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "43": "-660/659"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 43,
+          "parent": 28423,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "43": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "661": "42/41"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "661": "-42/41"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-42/41"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "661": "42/27019"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "661": "-42/41"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 18017,
+          "parent": 54051,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "5852/5699"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-5852/5699"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-5852/5699"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "5852/5699"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "5852/5699"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 1257,
+          "parent": 54051,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "43": "836/417"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "43": "-836/417"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-836/417"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "43": "836/17097"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "43": "836/417"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 129,
+          "parent": 54051,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "419": "84/41"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "419": "-84/41"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-84/41"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "419": "28/5699"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "419": "84/41"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 28423,
+          "parent": 85269,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "27720/27019"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-27720/27019"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-27720/27019"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "27720/27019"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "27720/27019"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 1983,
+          "parent": 85269,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "43": "1320/659"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "43": "-1320/659"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-1320/659"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "43": "1320/27019"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "43": "1320/659"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 129,
+          "parent": 85269,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "661": "84/41"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "661": "-84/41"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-84/41"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "661": "84/27019"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "661": "84/41"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 661,
+          "parent": 276959,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "419": "660/659"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "419": "-660/659"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-660/659"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "419": "220/91601"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "419": "-660/659"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 419,
+          "parent": 276959,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "661": "418/417"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "661": "-418/417"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-418/417"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "661": "418/274803"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "661": "-418/417"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 276959,
+          "parent": 830877,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "3": "91960/91601"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "3": "-91960/91601"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "3": "-91960/91601"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "3": "91960/91601"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "3": "91960/91601"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 1983,
+          "parent": 830877,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "3": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "419": "1320/659"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "419": "-1320/659"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-1320/659"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "419": "440/91601"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "419": "1320/659"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 1257,
+          "parent": 830877,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "3": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {},
+          "Qmatch_S_numerator": {
+            "661": "836/417"
+          },
+          "TV_minus_MT": {
+            "constant": {},
+            "S": {
+              "661": "-836/417"
+            }
+          },
+          "TV_minus_VT": {},
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-836/417"
+            }
+          },
+          "Q0_V_commutator_numerator": {},
+          "Q0_M_commutator_S_numerator": {
+            "661": "836/274803"
+          },
+          "Hphys_numerator": {},
+          "Hmatch_S_numerator": {
+            "661": "836/417"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": false
+        },
+        {
+          "child": 276959,
+          "parent": 11909237,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "43,88090763": "1"
+          },
+          "Qmatch_S_numerator": {
+            "43": "91960/91601"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "43,88090763": "1"
+            },
+            "S": {
+              "43": "-91960/91601"
+            }
+          },
+          "TV_minus_VT": {
+            "43,88090763": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-91960/91601"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "43,88090763": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "43": "91960/3755641"
+          },
+          "Hphys_numerator": {
+            "43,88090763": "1"
+          },
+          "Hmatch_S_numerator": {
+            "43": "91960/91601"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 28423,
+          "parent": 11909237,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "419,88090763": "1"
+          },
+          "Qmatch_S_numerator": {
+            "419": "27720/27019"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "419,88090763": "1"
+            },
+            "S": {
+              "419": "-27720/27019"
+            }
+          },
+          "TV_minus_VT": {
+            "419,88090763": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-27720/27019"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "419,88090763": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "419": "9240/3755641"
+          },
+          "Hphys_numerator": {
+            "419,88090763": "1"
+          },
+          "Hmatch_S_numerator": {
+            "419": "27720/27019"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 18017,
+          "parent": 11909237,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "661,88090763": "1"
+          },
+          "Qmatch_S_numerator": {
+            "661": "5852/5699"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "661,88090763": "1"
+            },
+            "S": {
+              "661": "-5852/5699"
+            }
+          },
+          "TV_minus_VT": {
+            "661,88090763": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-5852/5699"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "661,88090763": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "661": "5852/3755641"
+          },
+          "Hphys_numerator": {
+            "661,88090763": "1"
+          },
+          "Hmatch_S_numerator": {
+            "661": "5852/5699"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 11909237,
+          "parent": 35727711,
+          "removed_prime": 3,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "3": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "3,8017": "1"
+          },
+          "Qmatch_S_numerator": {
+            "3": "3862320/3755641"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "3,8017": "1"
+            },
+            "S": {
+              "3": "-3862320/3755641"
+            }
+          },
+          "TV_minus_VT": {
+            "3,8017": "1",
+            "3,88090763": "-1"
+          },
+          "V_minus_M_T": {
+            "constant": {
+              "3,88090763": "1"
+            },
+            "S": {
+              "3": "-3862320/3755641"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "3,8017": "1",
+            "3,88090763": "-1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "3": "3862320/3755641"
+          },
+          "Hphys_numerator": {
+            "3,8017": "-1"
+          },
+          "Hmatch_S_numerator": {
+            "3": "-3862320/3755641"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 830877,
+          "parent": 35727711,
+          "removed_prime": 43,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "43": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "43,8017": "1"
+          },
+          "Qmatch_S_numerator": {
+            "43": "183920/91601"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "43,8017": "1"
+            },
+            "S": {
+              "43": "-183920/91601"
+            }
+          },
+          "TV_minus_VT": {
+            "43,8017": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "43": "-183920/91601"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "43,8017": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "43": "183920/3755641"
+          },
+          "Hphys_numerator": {
+            "43,8017": "-1"
+          },
+          "Hmatch_S_numerator": {
+            "43": "-183920/91601"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 85269,
+          "parent": 35727711,
+          "removed_prime": 419,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "419": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "419,8017": "1"
+          },
+          "Qmatch_S_numerator": {
+            "419": "55440/27019"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "419,8017": "1"
+            },
+            "S": {
+              "419": "-55440/27019"
+            }
+          },
+          "TV_minus_VT": {
+            "419,8017": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "419": "-55440/27019"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "419,8017": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "419": "18480/3755641"
+          },
+          "Hphys_numerator": {
+            "419,8017": "-1"
+          },
+          "Hmatch_S_numerator": {
+            "419": "-55440/27019"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        },
+        {
+          "child": 54051,
+          "parent": 35727711,
+          "removed_prime": 661,
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "rate_numerator": {
+            "661": "1"
+          },
+          "rate_between_0_and_1_by_integer_order": true,
+          "Qphys_numerator": {
+            "661,8017": "1"
+          },
+          "Qmatch_S_numerator": {
+            "661": "11704/5699"
+          },
+          "TV_minus_MT": {
+            "constant": {
+              "661,8017": "1"
+            },
+            "S": {
+              "661": "-11704/5699"
+            }
+          },
+          "TV_minus_VT": {
+            "661,8017": "1"
+          },
+          "V_minus_M_T": {
+            "constant": {},
+            "S": {
+              "661": "-11704/5699"
+            }
+          },
+          "Q0_V_commutator_numerator": {
+            "661,8017": "1"
+          },
+          "Q0_M_commutator_S_numerator": {
+            "661": "11704/3755641"
+          },
+          "Hphys_numerator": {
+            "661,8017": "-1"
+          },
+          "Hmatch_S_numerator": {
+            "661": "-11704/5699"
+          },
+          "orientations_T_and_Tstar_retained": true,
+          "parity_anticommutation": true,
+          "child_long": true
+        }
+      ],
+      "edge_count": 32,
+      "degrees": {
+        "1": 4,
+        "3": 4,
+        "43": 4,
+        "129": 4,
+        "419": 4,
+        "661": 4,
+        "1257": 4,
+        "1983": 4,
+        "18017": 4,
+        "28423": 4,
+        "54051": 4,
+        "85269": 4,
+        "276959": 4,
+        "830877": 4,
+        "11909237": 4,
+        "35727711": 4
+      },
+      "Q0_symmetric": true,
+      "Q0_norm_upper_bound": 4,
+      "norm_bound_certificate": "Symmetric matrix, at most dimension positive rates per row, each <= 1",
+      "V_norm_strictly_below_log_N_by_base_order": true,
+      "active_raw_vertices": [
+        11909237,
+        35727711
+      ],
+      "oriented_J_TV_ones": {
+        "8017": "-1",
+        "88090763": "1"
+      },
+      "signed_symmetric_J_Qphys_ones": {},
+      "Hphys_ones": {
+        "8017": "-2",
+        "88090763": "2"
+      },
+      "matching_oriented_groups": {
+        "3": {
+          "denominator_log_parent": {
+            "3": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "1"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "2"
+          }
+        },
+        "43": {
+          "denominator_log_parent": {
+            "43": "1"
+          },
+          "oriented_S_numerator": {
+            "43": "1"
+          },
+          "Hmatch_ones_S_numerator": {
+            "43": "2"
+          }
+        },
+        "129": {
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "-42/41",
+            "43": "-2"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "-84/41",
+            "43": "-4"
+          }
+        },
+        "419": {
+          "denominator_log_parent": {
+            "419": "1"
+          },
+          "oriented_S_numerator": {
+            "419": "1"
+          },
+          "Hmatch_ones_S_numerator": {
+            "419": "2"
+          }
+        },
+        "661": {
+          "denominator_log_parent": {
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "661": "1"
+          },
+          "Hmatch_ones_S_numerator": {
+            "661": "2"
+          }
+        },
+        "1257": {
+          "denominator_log_parent": {
+            "3": "1",
+            "419": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "-418/417",
+            "419": "-2"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "-836/417",
+            "419": "-4"
+          }
+        },
+        "1983": {
+          "denominator_log_parent": {
+            "3": "1",
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "-660/659",
+            "661": "-2"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "-1320/659",
+            "661": "-4"
+          }
+        },
+        "18017": {
+          "denominator_log_parent": {
+            "43": "1",
+            "419": "1"
+          },
+          "oriented_S_numerator": {
+            "43": "-418/417",
+            "419": "-42/41"
+          },
+          "Hmatch_ones_S_numerator": {
+            "43": "-836/417",
+            "419": "-84/41"
+          }
+        },
+        "28423": {
+          "denominator_log_parent": {
+            "43": "1",
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "43": "-660/659",
+            "661": "-42/41"
+          },
+          "Hmatch_ones_S_numerator": {
+            "43": "-1320/659",
+            "661": "-84/41"
+          }
+        },
+        "54051": {
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "5852/5699",
+            "43": "836/417",
+            "419": "84/41"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "11704/5699",
+            "43": "1672/417",
+            "419": "168/41"
+          }
+        },
+        "85269": {
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "27720/27019",
+            "43": "1320/659",
+            "661": "84/41"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "55440/27019",
+            "43": "2640/659",
+            "661": "168/41"
+          }
+        },
+        "276959": {
+          "denominator_log_parent": {
+            "419": "1",
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "419": "-660/659",
+            "661": "-418/417"
+          },
+          "Hmatch_ones_S_numerator": {
+            "419": "-1320/659",
+            "661": "-836/417"
+          }
+        },
+        "830877": {
+          "denominator_log_parent": {
+            "3": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "91960/91601",
+            "419": "1320/659",
+            "661": "836/417"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "183920/91601",
+            "419": "2640/659",
+            "661": "1672/417"
+          }
+        },
+        "11909237": {
+          "denominator_log_parent": {
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "43": "91960/91601",
+            "419": "27720/27019",
+            "661": "5852/5699"
+          },
+          "Hmatch_ones_S_numerator": {
+            "43": "183920/91601",
+            "419": "55440/27019",
+            "661": "11704/5699"
+          }
+        },
+        "35727711": {
+          "denominator_log_parent": {
+            "3": "1",
+            "43": "1",
+            "419": "1",
+            "661": "1"
+          },
+          "oriented_S_numerator": {
+            "3": "-3862320/3755641",
+            "43": "-183920/91601",
+            "419": "-55440/27019",
+            "661": "-11704/5699"
+          },
+          "Hmatch_ones_S_numerator": {
+            "3": "-7724640/3755641",
+            "43": "-367840/91601",
+            "419": "-110880/27019",
+            "661": "-23408/5699"
+          }
+        }
+      },
+      "signed_symmetric_J_Qmatch_ones": {},
+      "constant_S_commutator_exactly_zero": true,
+      "actual_matching_is_S_cN": true,
+      "matching_not_replaced_by_constant": true,
+      "all_nonedge_entries_zero": true,
+      "diagonal_zero": true,
+      "complete_cube": true,
+      "global_c_long_complement_not_discarded": true,
+      "reference_minus_S_N_N_retained_outside_selected_cube": true,
+      "raw_properpowers_not_masked": true
+    }
+  },
+  "false_small_commutator_promotion": {
+    "status": "ERROR_FALSIFIER",
+    "cube_top": 561,
+    "child": 187,
+    "parent": 561,
+    "entry_denominator_log_m": {
+      "3": "1",
+      "11": "1",
+      "17": "1"
+    },
+    "entry_numerator": {
+      "3,99999439": "1"
+    },
+    "strict_entry_greater_than": "3",
+    "Delta": {
+      "3": "-3",
+      "3,99999439": "1",
+      "11": "-3",
+      "17": "-3"
+    },
+    "sign": {
+      "sign": "POSITIVE",
+      "lower": "489618756349966438858372686668609444104307341888028695383/392318858461667547739736838950479151006397215279002157056",
+      "upper": "7833948491325410690942832273756236724425230218695698986759/6277101735386680763835789423207666416102355444464034512896",
+      "terms": 6,
+      "bits": 96
+    },
+    "Q0_norm_upper_bound": 3,
+    "V_norm_below_u": true,
+    "promoted_RHS_at_most": "3",
+    "assertion_rejected": "norm([Q0,V]) <= norm(Q0)*norm(V)/u on every physical cube",
+    "no_global_asymptotic_claim": true
+  },
+  "false_oriented_mass_equals_symmetrization": {
+    "status": "ERROR_FALSIFIER",
+    "cube_top": 561,
+    "oriented_J_TV_ones": {
+      "99999439": "1",
+      "99999989": "1"
+    },
+    "oriented_sign": {
+      "sign": "POSITIVE",
+      "lower": "2918872482005106746905448634685/79228162514264337593543950336",
+      "upper": "2918872929267415811581114848615/79228162514264337593543950336",
+      "terms": 6,
+      "bits": 96
+    },
+    "signed_symmetric_J_Qphys_ones": {},
+    "proper_H_ones": {
+      "99999439": "2",
+      "99999989": "2"
+    }
+  },
+  "false_full_H_positive_semidefinite": {
+    "status": "ERROR_FALSIFIER",
+    "cube_top": 561,
+    "vector": {
+      "child": 187,
+      "child_value": 1,
+      "parent": 561,
+      "parent_value": -1
+    },
+    "quadratic_numerator": {
+      "3,99999439": "-2"
+    },
+    "denominator_log_m": {
+      "3": "1",
+      "11": "1",
+      "17": "1"
+    },
+    "sign": {
+      "sign": "NEGATIVE",
+      "lower": "-127030838640937186910000287504932898136866791874989506082567/3138550867693340381917894711603833208051177722232017256448",
+      "upper": "-7939425413012245571415069554729715282836514690450676538199/196159429230833773869868419475239575503198607639501078528",
+      "terms": 6,
+      "bits": 96
+    },
+    "compression_complement_not_free": true
+  },
+  "false_theta_substituted_for_raw_on_long_edge": {
+    "status": "ERROR_FALSIFIER",
+    "cube_top": 35727711,
+    "child": 54051,
+    "parent": 35727711,
+    "child_exceeds_a": true,
+    "raw_numerator": {
+      "661,8017": "1"
+    },
+    "theta_numerator": {},
+    "denominator_log_m": {
+      "3": "1",
+      "43": "1",
+      "419": "1",
+      "661": "1"
+    },
+    "sign": {
+      "sign": "POSITIVE",
+      "lower": "91605529172392910882141863310593788160278182106168768759849/1569275433846670190958947355801916604025588861116008628224",
+      "upper": "45802778490237983251468744438872476592665247052199085068553/784637716923335095479473677900958302012794430558004314112",
+      "terms": 6,
+      "bits": 96
+    }
+  },
+  "imports": {
+    "round13/conservation.py": "e64bd0ac1a8217d0026fe3c60c2ffcd880c9d06e51696f1c6ad4ad550d48bf89",
+    "numerical/parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical/round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "round3/multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "round6/exact_tools.py": "f48bb0b2b608aa734944cbfe978c19ad55f5aa249068dcc313a1de6da5a393cc",
+    "round4/inverse_checks.py": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c",
+    "round11/shared.py": "1959d27b60cfe7dc8e6211c36a0bc6b710c0fd13c80b95be55ad045092b3d4ee",
+    "round11/exact11.py": "a41e33ae49a98f0b15e0de990337ddabcc47dc92a84894cce1141559eb1571f8"
+  },
+  "script_sha256": "64fcc468c5df6672ac123ee6103cef9ce0739052c3367be7593bac3aea78c9f2",
+  "shared_sha256": "2eba4c18b1013677a168e99a7e896146a63bdcff4dee1180c1c4ba2e4323b43d",
+  "conservation_before": {
+    "status": "PRESERVED",
+    "files": 514,
+    "round12_files": 27,
+    "previous_protected_files": 487,
+    "round12_controller_sha256": "d84cca25948c6794764f3afbc7b6fa23d46faa4152fdad17f2f87da69929a400",
+    "baseline_sha256": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "conservation_after": {
+    "status": "PRESERVED",
+    "files": 514,
+    "round12_files": 27,
+    "previous_protected_files": 487,
+    "round12_controller_sha256": "d84cca25948c6794764f3afbc7b6fa23d46faa4152fdad17f2f87da69929a400",
+    "baseline_sha256": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "global_D_N": false,
+  "asymptotic": false,
+  "payments": false,
+  "Lean_called": false,
+  "victory": false
+}

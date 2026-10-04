@@ -1,0 +1,21 @@
+{
+  "schema": "round22.gamma_h2_aux.read_scope.v1",
+  "phase": "SOURCE_ONLY",
+  "Gamma_math_executions": 0,
+  "Gamma_Lean_executions_by_ROLE6": 0,
+  "G0_actual_unique_math_executions_historical": 1,
+  "old_G0_or_other_producers_reexecuted": 0,
+  "actual_reads": [
+    {"path": "round22/role6/interval22.py", "scope": "FULL source text only", "tool_chunk": "3a6c44", "sha256": "6e29ec2c7fb5d8e1eba796f3d863fb4c95db5b2bb5cf9671a9fb80d6469df588"},
+    {"path": "round22/role4/GammaPrerequisites22.lean", "scope": "FULL source text only", "tool_chunk": "767cf9", "sha256": "8bcfef577be2dbf3412646bd7938fe3d929dc0efdd4d1d7c29149ff6102ed7a0"},
+    {"path": "round22/role6/run_epstein_once22.py", "scope": "FULL metadata launcher text only, no execution", "tool_chunk": "0b1c01"}
+  ],
+  "primary_source_targeted_reads": [
+    {"url": "https://dlmf.nist.gov/5.4.E3", "tool_reference": "turn157view0", "scope": "Gamma modulus formulas 5.4.3 and 5.4.4 section; not whole-site read"},
+    {"url": "https://dlmf.nist.gov/5.4.E4", "tool_reference": "turn157view1", "scope": "same official section, half-integer modulus"},
+    {"url": "https://dlmf.nist.gov/5.9.E1", "tool_reference": "turn158view0", "scope": "official formula5.9.1 and conditions Re(nu)>0, mu>0, Re(z)>0, principal powers"}
+  ],
+  "paper_audit": "ROLE4 accepted Cauchy disc radius1/8, majorant2^26, ratio1/64, degree12, two tail bounds via message; FULL gamma_paper22.md audit064d71 confirms signs/normalized references/domains/recurrence, but no FULL producer/arithmetic audit or evaluation by ROLE4; finite samples do not prove H2",
+  "no_originals_extracted": true,
+  "no_library_import_probe_or_experimental_math_during_preparation": true
+}

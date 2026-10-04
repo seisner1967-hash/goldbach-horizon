@@ -1,0 +1,90 @@
+{
+  "status": "ROOT_OBSERVED_CANONICAL_TYPEII_AWAITING_REPLAY_FINAL_AND_JUDGE",
+  "bindings_checked": {
+    "attempt": 2,
+    "exit_code": 0,
+    "producer": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\typeii_checks.py",
+    "producer_sha256": "7ec02d82d4610547456078fec5b099b8b09865aea1d9ded2041b3f90965ed1b2",
+    "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\typeii_attempt02_source.txt",
+    "source_snapshot_sha256": "7ec02d82d4610547456078fec5b099b8b09865aea1d9ded2041b3f90965ed1b2",
+    "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\typeii_attempt02.log",
+    "log_sha256": "4d69bb649a51087835f850bb576dcc183c46cd650a3ec055b0c2293aa9f07f43",
+    "command_argv": [
+      "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\typeii_checks.py"
+    ],
+    "output": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\typeii.json",
+    "output_sha256": "b3af5c0357201e2a710a2a6c761f34ec1d63d2c87fbbd459a54154f925e6ad5e",
+    "status": "CANONICAL_NEW_SUCCESS_DO_NOT_RERUN"
+  },
+  "real_numeric_failures": [
+    {
+      "attempt": 1,
+      "exit_code": 1,
+      "producer": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\typeii_checks.py",
+      "producer_sha256": "a58db7311d56c51bcbe0591d1f3c22f3cb21fc13c39a9ffd4e8eeb6e74ebdc1f",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\typeii_attempt01_source.txt",
+      "source_snapshot_sha256": "a58db7311d56c51bcbe0591d1f3c22f3cb21fc13c39a9ffd4e8eeb6e74ebdc1f",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\typeii_attempt01.log",
+      "log_sha256": "da05cdd2526935204ce54d3c3f8b1c4d37d62eaaf170cf0839f5d1cdcca4d649",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\typeii_checks.py"
+      ]
+    }
+  ],
+  "failure_classification": "out_of_domain_auxiliary_radical_factorization; bounded-factor union correction only",
+  "source_full_read_then_exact_diff_read": true,
+  "integer_count": 162338,
+  "beta": 181,
+  "theta_candidates": 12460,
+  "properpowers": 8,
+  "unit_J": {
+    "0:1": 64936,
+    "0:3": 43291,
+    "0:39": 39961,
+    "77:1": 50599,
+    "77:3": 33732,
+    "77:39": 31136
+  },
+  "sign_position_counts": {
+    "POSITIVE": 36,
+    "NEGATIVE": 34,
+    "ZERO": 32
+  },
+  "TypeII": {
+    "0:1": "-259563/64936",
+    "0:3": "-173345/43291",
+    "0:39": "-93236/39961",
+    "77:1": "-202939/50599",
+    "77:3": "-11425/2811",
+    "77:39": "-18647/7784"
+  },
+  "L13_theta_signs": {
+    "0": "NEGATIVE",
+    "77": "NEGATIVE"
+  },
+  "AP_decomposition": {
+    "A_all_prime_before_unit_removal": 181,
+    "A_unit_beta": 181,
+    "B2_actual_beta_character_sum": "-4",
+    "BV_not_applied": true,
+    "actual_character_sum_before_unit_removal": "-4",
+    "h0": "36/323",
+    "hV": "17/144",
+    "hV_minus_h0": "307/46512",
+    "hV_minus_h0_le_hV_overV_verified": true,
+    "principal_exact": "-3077/1728",
+    "residual_AP_exact": "-3835/1728",
+    "unit_residual_exact": "0"
+  },
+  "multiplicity_counts": {
+    "0": 144747,
+    "1": 17088,
+    "2": 503
+  },
+  "x_over_A": "25000000/181",
+  "root_reran_math_producer": false,
+  "root_reran_Lean": false,
+  "victory": false
+}

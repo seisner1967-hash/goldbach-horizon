@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "phase_checks": 89988,
+  "divisor_strata": 81,
+  "active_Gauss_frequencies": 8,
+  "stratum_contributions": {
+    "5": 50000000,
+    "10": 50000000
+  },
+  "order4": [
+    {
+      "N": 5,
+      "kappa": 5,
+      "two_Gauss_distinct": true
+    },
+    {
+      "N": 10,
+      "kappa": 5,
+      "two_Gauss_distinct": true
+    }
+  ],
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 120,
+    "baseline_sha256": "b2a48fef1f5eccbc30ed516a0f5e20bd20042cb559aa997ac2d38602ddc32558"
+  },
+  "script_sha256": "b841dab845ff60c94461345b34c66cec6983a8d25c205aec064d58d748c67601"
+}

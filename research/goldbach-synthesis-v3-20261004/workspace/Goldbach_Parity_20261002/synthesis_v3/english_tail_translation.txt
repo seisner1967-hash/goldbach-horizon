@@ -1,0 +1,291 @@
+\section{Connection to the balance: the signed obligation remains}\label{sec:dn}
+The coefficient $C_N$ includes proper prime powers.
+Define directly
+\[
+P_{\mathrm{pr}}(n)=\begin{cases}\log n,&n\text{ prime},\\0,&\text{otherwise},\end{cases}
+\qquad V_{\mathrm{pp}}(n)=\Lam(n)-P_{\mathrm{pr}}(n).
+\]
+The notation $V_{\mathrm{pp}}$ avoids confusing this weight with the amplitude
+$U(a)$. In the ledger audit, the coefficient of prime pairs and the
+correction are
+\begin{align}
+R_{\mathrm{sf}}&=\sum_{n=0}^N P_{\mathrm{pr}}(n)P_{\mathrm{pr}}(N-n),\\
+Q_N&=C_N-R_{\mathrm{sf}}\nonumber\\
+&=\sum_{n=0}^N\bigl(2P_{\mathrm{pr}}(n)V_{\mathrm{pp}}(N-n)
++V_{\mathrm{pp}}(n)V_{\mathrm{pp}}(N-n)\bigr)\ge0.
+\label{eq:PP}
+\end{align}
+\paper The direct upper bound $Q_N\le2\sqrt N\,u^2$ for $N\ge2$
+is retained in this note. It is not credited here as a new
+Lean theorem. This global term is not interchangeable with the
+prime-power terms whose supports are separately retained in the balance.
+
+The monograph's bridge, within its stated scope, under its conditions and with exactly
+the same support, retains
+\begin{equation}\label{eq:ledger}
+D_N+\varepsilon_{\mathrm{tr}}
+=R_{\mathrm{ref}}-R_{\mathrm{sf}}+2\max(e,0).
+\end{equation}
+Its connection to the continuous coefficient is therefore
+\begin{equation}\label{eq:gap}
+D_N=R_{\mathrm{ref}}-C_N+Q_N+2\max(e,0)-\varepsilon_{\mathrm{tr}}.
+\end{equation}
+The ledger retains each of
+$B_{\mathrm{prime}}^{(a_{\mathrm{cut}})}$,
+$B_{\mathrm{pp}}^{(a_{\mathrm{cut}})}$,
+$P_{\mathrm{band},\ge2}$, $Z_{\mathrm{face},\ge2}$, $I_\alpha$ and
+$2\max(e,0)$ exactly once. This transposition does not redevelop these objects
+using the arithmetic methods abandoned in loop 22.
+
+Knowing a narrow interval for $C_N$ does not give the sign
+of $R_{\mathrm{ref}}-C_N$, or control of $e$, the boundaries and the corners.
+To establish \eqref{eq:target}, a signed estimate
+compatible with \eqref{eq:gap} remains to be proved, retaining these obligations and the
+bridge conditions. Assuming this estimate as a premise equivalent to
+the target would not constitute a way around the parity barrier.
+
+The continuous identities establish exact representations, and the
+budgets describe a truncation or quantization error. No
+global cancellation of the true spectral contribution transferred to the
+ledger has been proved. This obligation remains open even if a future
+finite computation produces $C_N$ at $10^8$. It must be addressed at the
+threshold \eqref{eq:onset} and with the finite coverage required by the framework.
+
+\clearpage
+\section{Boundaries, zeros and invariance: directions with precise scope}\label{sec:strategy}
+The continuous pivot preserves phase before taking a norm. For
+$a>0$, $N\ge1$ and $q\in\C$, consider
+\[
+J_{a,N}(q)=\frac1{2\pi}\int_{-\pi}^{\pi}
+(a-i\theta)^{-q}e^{-iN\theta}\,d\theta.
+\]
+\paid Batch 25 formalizes integration by parts and the true boundary term
+on the principal branch:
+\begin{equation}\label{eq:bord}
+J_{a,N}(q)=\frac{i(-1)^N}{2\pi N}
+\bigl((a-i\pi)^{-q}-(a+i\pi)^{-q}\bigr)
++\frac qN J_{a,N}(q+1).
+\end{equation}
+The boundary term does not vanish pointwise. This module of 30 declarations
+provides no favorable sign for the full spectral projection.
+Periodicity of the trace after inversion does not make
+each truncated kernel periodic.
+
+\paper The signed explicit-formula strategy localizes a smooth test
+function near $x+y=N$, then aims for the decomposition
+\[
+C_N=\mathcal B_N-2\mathcal L_N+\mathcal Z_N.
+\]
+The three terms respectively denote the background, coupling to the
+zero channel, and the two-zero contribution in the proposed explicit formula.
+The full identity, archimedean corrections, multiplicities,
+interchanges and zero tails remain to be established in this channel.
+The retained reviews find consistency subject to these obligations; they
+credit neither a sign for $\mathcal Z_N-2\mathcal L_N$ nor a
+Lean proof of the global formula.
+
+Organization into conjugation--reflection orbits retains zeros off
+the critical line. A four-point orbit generates a density
+of the form
+\[
+4m x^{-1/2}\cosh\bigl((\beta-1/2)\log x\bigr)
+\cos(\gamma\log x),
+\]
+and a two-point critical orbit gives the density
+$2m x^{-1/2}\cos(\gamma\log x)$, with multiplicity $m$.
+Stabilizers prevent double counting a degenerate orbit.
+The cosine phase can change sign: correct organization of the
+orbits does not automatically give positivity of the additive coefficient.
+
+The review of the canonical kernel exhibits a negative direction in a
+two-dimensional restriction; it rules out the naive positivity argument
+examined there. Its scope is this specific kernel. It is neither a
+universal impossibility result for every operator approach nor a
+refutation of Goldbach. Likewise, any proposed modularity or exact
+invariance must be proved for the true objects and must
+isolate the signed term required in \eqref{eq:gap}. No such
+sufficient connection is presented as imminent at this closure.
+
+\clearpage
+\section{Continuous Fej\'er: reconstruction and the remaining sign}\label{sec:fejer}
+The new spectral note starts from the true series $D$ of batch 35, with
+$c_n=\Lam(n)/n^2$ for $n\ge2$ and $c_0=c_1=0$.
+The mass bound $\sum c_n\le6$ makes $D$ positive definite: for finite
+families $(z_j,t_j)$,
+\[
+\sum_{j,k}\overline z_jz_kD(t_k-t_j)
+=\sum_{n\ge2}c_n\left|\sum_k z_ke^{-it_k\log n}\right|^2\ge0.
+\]
+\paper For $T>0$ and an integer $m\ge1$, the triangular average
+\begin{equation}\label{eq:fejer-cont}
+\begin{split}
+A_T(m)&=\frac1T\int_{-T}^{T}\left(1-\frac{|t|}{T}\right)
+D(t)e^{it\log m}\,dt\\
+&=\sum_{n\ge2}c_n\operatorname{sinc}^2\!\left(\frac T2\log\frac mn\right)
+\end{split}
+\end{equation}
+is real and nonnegative. Here $\operatorname{sinc}(x)=\sin(x)/x$ if
+$x\ne0$ and $\operatorname{sinc}(0)=1$. The interchange over the compact interval is
+justified by summability; the triangle is the autocorrelation of an
+interval indicator. Distinct frequencies satisfy
+$|\log(m/n)|\ge\log(1+1/m)$. The note therefore derives the closed radius
+\begin{equation}\label{eq:fejer-radius}
+0\le A_T(m)-c_m\le
+\frac{24}{T^2\log^2(1+1/m)},\qquad T>0.
+\end{equation}
+For $m=1$, $c_1=0$ and the same bound holds. The radius is continuous
+for $T>0$ and tends to zero for fixed $m$. Neither this identity nor its
+connecting results are compiled in this stage.
+
+This mechanism reconstructs amplitudes from the true vertical data,
+then can insert them into the reflected blocks $n,N-n$. It does not create
+shared mass for a pair. The note retains a bounded countermodel:
+the sector consisting solely of powers of 2 is positive definite and satisfies the
+same reconstruction, while its additive coefficient at $N=14$ is zero.
+This observation rules out deducing a uniform strict lower bound from
+this positivity alone. It does not replace the true zeta function and does not rule out an
+additional identity specific to its full data.
+
+A future evaluator would have to produce intervals for the true
+integrals $A_T(m)$, with controlled primitives, locations and quadratures.
+\eqref{eq:fejer-radius} does not account for any of these evaluation
+errors. The cost increases with $m$, and no feasibility at $10^8$
+is asserted. The earlier identities for divisible grids and their
+covariances remain in V2, with their support conventions; this
+direction concerns the continuous spectral variable $t$.
+
+Research is frozen. Any resumption must establish an additional signed
+connection to the ledger \eqref{eq:gap}, rather than rename this
+reconstruction as parity cancellation. No mechanism sufficient
+for \eqref{eq:target} or imminent discovery is claimed.
+
+\clearpage
+\section{Frozen formal inventory and record of limitations}\label{sec:inventory}
+The independent observation of batch 35 fixes the official inventory at
+\textbf{88 modules / 1\,488 auxiliary declarations, including definitions}.
+Batch 36 adds no credit. The following table isolates the elements
+used in this synthesis; it is not an exhaustive total of the
+historical inventory.
+
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\noindent
+\begin{tabularx}{\textwidth}{@{}p{12mm}Yp{22mm}p{25mm}@{}}
+\toprule
+Batch & Object & Declarations & Status\\
+\midrule
+11 & Geometric envelope of the true thermal trace & 42 & Row PASS ; batch FAILED\\
+13 & Continuous extraction identity & 20 & Lean PASS\\
+15 & Orthogonality and discrete complex projector & 29 & Lean PASS\\
+17 & Canonical logarithms and envelope & 52 & Lean PASS\\
+19 & Generic finite-field projector & 24 & Lean PASS\\
+22 & Five concrete roots and $A32$ projection & 28 & Lean PASS\\
+25 & Integration by parts and boundary term & 30 & Lean PASS\\
+26/27 & Local and holomorphic Gamma inversion & 22/15 & Row PASS26 ; PASS27\\
+30/32 & Gamma tails and unweighted bridge & 22/2 & Lean PASS\\
+35 & Mellin transform of the true $\Lam$ series & 30 & Lean PASS\\
+36 & Weighted tail $E_\Lam$ ; geometry & 16 ; 25 & FAIL ; not invoked\\
+\bottomrule
+\end{tabularx}
+\endgroup
+
+Batches 11 and 26 have a global FAILED status: each retains one
+whole-module PASS row (Envelope42 and Local22, respectively),
+while another module in the same batch fails. Their partial credits
+are attested by the adjudications and observations; the failed
+modules are not counted as established. Batches 13 and 27
+later validate distinct corrected sources.
+
+The coefficient sources (34), scalar connecting results (26) and the
+coefficient--scalar bridge (8) have not been compiled. Their declaration
+counts are source catalogues; they do not add to
+1\,488. Earlier \texttt{SOURCE ONLY} comments in some
+files that subsequently became PASS remain in the historical captures; the current
+status comes from the adjudication and receipt, not from retroactive rewriting.
+
+Correction batches have preserved their failures: batch 16 contains
+series and rational-cast connecting issues, repaired and compiled
+in batch 17; batches 31 and 33 contain instance
+or continuity issues, repaired in the source actually compiled in batch
+35. Batch 36 fails on reflection of the product of two functions.
+These diagnostics are not proofs of the parity barrier. Conversely,
+an auxiliary PASS is not a victory over that obstruction.
+
+Verification is a property of the exact file, exact catalogue
+and its dependencies. The checks retain earlier logs,
+captures, sources and archives; they distinguish full reading of a
+text, targeted reading, metadata inventory and byte hashing.
+The companion file \path{evidence_v3.json} specifies this boundary
+for the main claims of this manuscript.
+
+\clearpage
+\appendix
+\section{Compact provenance and resumption}\label{app:provenance}
+All paths below are relative to the corpus root
+\path{Goldbach_Parity_20261002}. SHA-256 prefixes aid reading;
+complete hashes, sizes, statuses and reading scopes are
+retained in \path{synthesis_v3/evidence_v3.json}. Source paths
+do not replace execution receipts.
+The published corpus is available in the repository
+\href{https://github.com/seisner1967-hash/goldbach-horizon}{\texttt{goldbach-horizon}},
+with the V3 companion registry.
+
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\noindent
+\begin{tabularx}{\textwidth}{@{}p{20mm}Yp{23mm}@{}}
+\toprule
+Item & Relative path & SHA prefix\\
+\midrule
+Mellin PASS & \path{round22/judge5/batch35/sources/ComplexGammaMellinLambda22.lean} & \texttt{4a94415678e4}\\
+Receipt 35 & \path{round22/judge5/batch35/batch35_attempt01/receipt.json} & \texttt{3cffa331b392}\\
+Observation 35 & \path{.arbor/sessions/parity/.coordinator/messages/round22_judge_batch35_closed_observation.json} & \texttt{dc5985976051}\\
+Repaired tail & \path{round22/role4/complex_gamma_mellin_lambda_tail_source02/ComplexGammaMellinLambdaTail22.lean} & See JSON\\
+Geometry SOURCE & \path{round22/role4/complex_gamma_circle_geometry_source01/ComplexGammaCircleGeometry22.lean} & \texttt{2322915060c6}\\
+Coefficient SOURCE & \path{round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean} & \texttt{bf9b8257760a}\\
+Scalar SOURCE & \path{round22/role4/scalar_radius_real_connectors_source01/ScalarRadiusRealConnectors22.lean} & \texttt{6ba4b8d4cca0}\\
+Bridge SOURCE & \path{round22/role3/lambda_circle_scalar_bridge_source01/LambdaCircleScalarRadiusBridge22.lean} & \texttt{cfb0d2cfd238}\\
+Rational point & \path{round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/receipt.json} & \texttt{d46e3ffeb6d0}\\
+Ledger & \path{round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md} & See JSON\\
+\bottomrule
+\end{tabularx}
+\endgroup
+
+\subsection*{Self-contained handoff contract}
+The document \path{synthesis_v3/HANDOFF_THEORY_V3.txt} summarizes the objects,
+parameters, established results and remaining obligations. The computation of $C_N$ at $10^8$ remains
+absent. Any native resumption would require a new resource
+contract and a complete verdict; STOP outputs
+cannot serve as an oracle. Any resumption of analytical implementation
+would have to compile independently the tail,
+geometry, coefficient and connecting sources, then establish the primitives and
+quadratures actually chosen. Theoretical work on the sign of
+$D_N$ may resume from the compiled foundation, retaining these open statuses.
+A signed bound on the ledger remains the central obligation.
+
+\subsection*{Local documentary sources}
+This synthesis uses the earlier monograph, frozen Lean sources,
+adjudications and reviews actually consulted. It does not claim
+to have verified new external references or secondary citations
+in the notes. The bibliography below identifies the local documents that
+contain the written arguments and their limitations.
+\begin{thebibliography}{9}\small
+\bibitem{v2} Durand Serge, \emph{Finite Identities and Explicit Error Budgets
+in a Framework for Binary Goldbach}, V2 synthesis, 1 October 2026.
+Title, author and continuity recorded from the retained public source.
+\bibitem{mono} Durand Serge, final monograph and local extraction
+\path{monographie.txt}; conventions updated by the source framework
+\path{Goldbach_Final_20261001/goldbach_synthesis.tex}.
+\bibitem{ntt} ROLE4, \emph{Finite projection contract},
+\path{round22/role4/circle_ntt_paper01/projection_contract22_final.md}.
+\bibitem{cost} ROLE4, \emph{Mellin--Lambda feasibility},
+\path{round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md}.
+\bibitem{gap} ROLE4, \emph{Audit of the spectral connection to $D_N$},
+\path{round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md}.
+\bibitem{weil} Independent Judge, \emph{Signed explicit-formula review},
+\path{round22/judge5/signed_weil_source_review01/review22.md}.
+\bibitem{orbit} ROLE4, \emph{Zero-orbit review},
+\path{round22/role4/zero_orbit_source_review01/review22.md}.
+\bibitem{fejer} ROLE1, \emph{True positivity of $D$ and reconstruction
+of the retained blocks},
+\path{round22/role1/spectral_next_paper01/spectral_next22.md}.
+\end{thebibliography}
+\end{document}

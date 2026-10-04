@@ -1,0 +1,20 @@
+# Réparation Identity20 — SOURCE révision02
+
+Statut SOURCE_REVISION_NOT_COMPILED, aucun PREPARED/gate. Aucun compiler, probe, import de source candidate, calcul Python, nouveau banc ou rejeu. Les trois sources Re2, Identity originale et tous les artefacts du lot11 sont préservés.
+
+Le vrai lot11 a produit Envelope02 indépendant PASS42, puis Identity20 exit1. Identity START2026-10-03T15:33:09.201738UTC, FIN15:33:33.418385UTC. Le log2305f7f0c755f283ec5d1098abea15ab0e347d460b25d7aa51150cf8587fed5c a été lu FULL64ef45 ; reçu0b25b00e57663172cacc25945ad232d807ff58cd3c34bae6f2e64bf2e852f62b FULL8254db ; les deux FIN FULL6df7ab. Le log comporte cinq lignes d’erreur sur quatre sites, dix audits standards et dix audits contenant recovery sorryAx. Aucun olean Identity, aucun crédit partiel Identity. Ces diagnostics n’exhibent aucune réfutation analytique ou obstruction de parité.
+
+Révision distincte ThermalProjectionIdentity22.lean, SHA533f81f523f465240ebf7f129d32c9d6c0119e0e0d7936a42bc65e75823880d0, FULLfa946e. Original5b6da908dce97e0ad1ba08a893bd545a4a4c908f969d958102cf9e3509c5e99c FULLc3da78 conservé. Les vingt déclarations et leurs énoncés restent identiques :deux définitions, dix-huit théorèmes et vingt commandes d’audit qualifiées, aucune commande d’audit exécutée.
+
+1. Site51 : `integral_exp_mul_complex` est global. Mathlib/Analysis/SpecialFunctions/Integrals.lean termine `namespace intervalIntegral` ligne307 et déclare ce théorème ligne443. Signature hc:c≠0 et intégrale complexe réelles bornes. Lecture TARGETED503857/6f1ea9 (307–332 et431–451). Le remplacement est `_root_.integral_exp_mul_complex hc` ; aucune nouvelle prémisse.
+2. Site58 : la forme résiduelle est conj(−↑theta). Ajout `map_neg` au même simp only avant ring. Lecture TARGETED278638 de Complex/Basic.lean477–506, puis008a58 de Group/Hom/Defs.lean417–429 : `map_neg` est généré par to_additive du vrai théorème map_inv. Ring/Hom/Defs.lean514–523 confirme le pont ring hom. Aucune hypothèse sur conjugaison n’est introduite.
+3. Site152 : le développement finit donne les mêmes deux sommes avec les indices transposés. Après le simp existant, `exact Finset.sum_comm` fournit la permutation. Lecture TARGETED278638/008a58 de Group/Finset.lean785–809 et832–847 : le théorème est généré par to_additive de prod_comm, avec deux finsets constants et une fonction à deux arguments. Aucun échange infini ni prémisse d’intégrabilité.
+4. Site261 : `change` expose le corps des deux applications lambda avant la réécriture par le théorème fini stable pour M≥N. Les mêmes hypothèses a>0 et M≥N paient l’étape ; aucune égalité finale ni limite n’est ajoutée en prémisse.
+
+Les recherches de chemins inexistants dans BigOperators/Group/Finset/ et Basic.lean ont été rectifiées vers Group/Finset.lean ; ces recherches sont des lectures de source, pas des erreurs Lean supplémentaires. Toutes les API sont TARGETED et les sources/logs/FIN cités FULL ; aucune revendication de lecture FULL du cache ou de fermeture transitive.
+
+Envelope02 est désormais une dépendance readonly déjà indépendante PASS : source77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5 ; olean9c2bb947ccd03436c8cb3c9e3e9f5ce95508ee719e506d9ca90c49623f6dac67. Son FIN2ba6f8e9b9d6eef9160d71cb7c564a8e2c3c907fdc02d665a06408ca1327b9e1 et le reçu réel seront liés à toute préparation future. Elle ne doit pas être recompilée.
+
+La projection finie reste valable pour tout a réel, M≥N. La projection de la vraie série infinie reste sous a>0, avec convergence uniforme et intégrabilité construites par Envelope. Toutes les puissances premières demeurent présentes. Cette révision ne fournit ni producteur zeta uniforme en phase, ni coefficient numérique à N=10^8, ni suppression PP, ni minoration de frontière, ni cible D_N. Pas de PASS ou WIN anticipé.
+
+L’étude pratique CIRCLE a été suspendue après lecture FULL du contrat révision02 (fdddd9) et de sa revue indépendante (ee35d8). Aucun nouveau contrat radix2 ou NTT n’est gelé ni évalué à ce point ; l’idée a=0/quantification rationnelle/transformée entière n’est qu’une piste PAPER à développer après ce handoff.

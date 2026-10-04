@@ -1,0 +1,90 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC04_METADATA_HELPER_SOURCE_READS",
+  "status": "SOURCE_FROZEN_NO_HELPER_INVOCATION",
+  "actor": "ROLE3_ROLE6_METADATA_SOURCE",
+  "utc": "2026-10-03T21:12:49.8911168Z",
+  "rows": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_metadata_source01\\prepare_numeric04_metadata22.ps1",
+      "bytes": 24607,
+      "sha256": "6944ecda1f24f20dca6350ed5b1198bc3fe9e48ec06dedabaf536c1c7f67c172",
+      "scope": "FULL",
+      "tool_chunk": "1b3d35"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_metadata_source01\\metadata_source_contract22.txt",
+      "bytes": 5103,
+      "sha256": "f58a314bdda794db5406a648eaa1fa85bb4e7e1b4d2fb4afef5af66687fac30f",
+      "scope": "FULL",
+      "tool_chunk": "0d6642"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric04_consumer_review_source01\\source_review22.json",
+      "bytes": 6952,
+      "sha256": "f1afc6db690b7ee706f66d2ea9d14878eb36b3374eceffbadc6157e9c2cf9012",
+      "scope": "FULL",
+      "tool_chunk": "bf203b",
+      "review_claim": "READ_THE_REAL_INDEPENDENT_REVIEW_NOT_NEW_REVIEW"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric04_consumer_review_source01\\trust_review22.json",
+      "bytes": 3197,
+      "sha256": "5fdf1c49cef3b85d1b617d79b31cca39573c5bc964f23df1535f933406b5c2c7",
+      "scope": "FULL",
+      "tool_chunk": "bf203b",
+      "review_claim": "READ_THE_REAL_INDEPENDENT_REVIEW_NOT_NEW_REVIEW"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\run_native04_once22.py",
+      "bytes": 27241,
+      "sha256": "97473b226ce5206e021e444720651e00ca1fdb4c1c1052e20db60d4effec3f55",
+      "scope": "HISTORICAL_FULL_PLUS_CURRENT_TARGETED",
+      "historical_FULL": "278afd",
+      "current_TARGETED": [
+        "03c1b7",
+        "84a7aa"
+      ],
+      "source_parsed_or_imported": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\authorize_round22_native_numeric04.py",
+      "sha256": "3f843ef54a8dfd90c6d60e62adb66827ce7705c48452580ebba86ecedd16f755",
+      "scope": "TARGETED_METADATA_RECEIPT_REQUIREMENTS_ONLY",
+      "tool_chunk": "0d6642",
+      "not_author_owned": true,
+      "not_invoked": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_build_metadata04\\build_manifest22.json",
+      "sha256": "24ea81c9ae7134f71837baed91dabc9c64f45a2438ca6223e1aedc2154a85c2f",
+      "scope": "PARSED_METADATA_TARGETED_PRIOR_CONSUMER_BINDINGS_ONLY",
+      "tool_chunks": [
+        "84a7aa",
+        "04b862"
+      ],
+      "raw_FULL_claimed": false,
+      "all_6375_rehashed_in_this_SOURCE_phase": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build_receipt04.json",
+      "sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8",
+      "scope": "FULL",
+      "tool_chunk": "03c1b7"
+    }
+  ],
+  "source01_handoff_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\source_handoff22.json",
+  "source01_handoff_sha256": "0c839fc7c602c52c6c3f0d47d6f643342c8641a0cc8527b656a4e7cf70e74616",
+  "source01_all_25_bindings_hash_size_verified_here": true,
+  "expected_runtime_set_count_not_computed_yet": true,
+  "future_metadata_count_is_actual_not_family_sum": true,
+  "all_3089_archives_rehashed_in_this_SOURCE_phase": false,
+  "helper_invocations": 0,
+  "candidate_imports_or_parses": 0,
+  "compiler_invocations": 0,
+  "produced_binary_invocations": 0,
+  "numeric_preparation_created": false,
+  "ROOT_gate_created": false,
+  "numeric_authorization": false,
+  "D_N": false,
+  "WIN": false
+}

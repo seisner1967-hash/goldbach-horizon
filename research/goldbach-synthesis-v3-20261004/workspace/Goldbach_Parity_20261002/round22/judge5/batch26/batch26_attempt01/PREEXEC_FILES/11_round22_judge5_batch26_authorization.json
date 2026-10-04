@@ -1,0 +1,43 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH26_AUTHORIZATION",
+  "time_utc": "2026-10-03T22:43:46.959818+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch26_attempt01",
+  "modules": [
+    "ComplexGammaMellinLocal22",
+    "ComplexGammaMellinHolomorphy22"
+  ],
+  "compiler_invocations_maximum": 2,
+  "source_manifest_sha256": "68e098b61000081b97ec9b59ce62e5f3fc629af4ac3bf0db8f2eebf2d49145c7",
+  "launcher_sha256": "69c0dac5e2c19c9d53d514e8d5af586c41ce628c0a1d502ae8f97dd1e3361940",
+  "preparation_receipt_sha256": "e7d33cfcdd4c4ee6ef492ff678ec342b408c83e7e7c9a64fb893ebda98d59300",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "ROOT_FULL_read_receipts": "helperbd62a2;builder0090f4;launcherf0c5ee;doc345856;catalog974963;prep535f31;reads3a5bdc;sourceReview7e767f;metadataActor36d323/session26282/9b60abexit0",
+  "source_math_review_owner": "ROLE5",
+  "large_JSON_scope": "All entries parsed and bound bytes hashed; raw FULL import source text not claimed",
+  "inputs_verified": 9020,
+  "old_judge_files_verified": 1770,
+  "archives_verified": 3089,
+  "prior_modules": 83,
+  "prior_declarations": 1397,
+  "stop_first_failure": true,
+  "retries": 0,
+  "ROOT_compiler_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "child_wall_seconds": 300,
+  "max_heartbeats": 1000000,
+  "retry_count_maximum": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

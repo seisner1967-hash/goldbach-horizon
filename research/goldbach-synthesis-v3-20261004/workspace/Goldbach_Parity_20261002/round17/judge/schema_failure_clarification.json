@@ -1,0 +1,9 @@
+{
+  "status": "READ_ONLY_FACTUAL_CLARIFICATION_OF_FROZEN_FAILURE_ANALYSIS",
+  "kernel_ref": {"string": 47, "null": 205},
+  "C_recipe": {"dictionary": 47, "absent": 205, "null": 0},
+  "small_factor_exclusion_verified": {"true_under_guard": 37, "false_outside_guard": 215},
+  "clarification": "The frozen incident summary described C_recipe:null imprecisely because dict.get returned None for an absent key. C_recipe is absent on the205 inactive rows; kernel_ref is explicitly null. The actual failing assertion and repaired non-null kernel_ref branch remain correctly described.",
+  "frozen_incident_sources_or_logs_modified": false,
+  "new_identity_or_producer_run": false
+}

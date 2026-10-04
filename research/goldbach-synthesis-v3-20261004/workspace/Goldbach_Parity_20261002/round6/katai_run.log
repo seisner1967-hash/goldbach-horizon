@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "receipts": [
+    {
+      "X": 512,
+      "P": [
+        3,
+        7,
+        11,
+        13
+      ],
+      "a": "41/64",
+      "Gram_terms": 192,
+      "residual_terms": 143
+    },
+    {
+      "X": 1024,
+      "P": [
+        3,
+        7,
+        11,
+        13
+      ],
+      "a": "329/512",
+      "Gram_terms": 1924,
+      "residual_terms": 760
+    },
+    {
+      "X": 303,
+      "P": [
+        2,
+        5
+      ],
+      "a": "211/303",
+      "Gram_terms": 0,
+      "residual_terms": 3
+    },
+    {
+      "X": 1024,
+      "P": [
+        2,
+        5
+      ],
+      "a": "179/256",
+      "Gram_terms": 0,
+      "residual_terms": 757
+    }
+  ],
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 160,
+    "baseline_sha256": "bff50b025ed0ca2f072739edcfc04e91c94acd8f7d9cff24b27c53a2f5928684"
+  },
+  "script_sha256": "baa5f38424d501a5114409257488ac05a6c10a5a3cba7b35b89ddd63accfebb0"
+}

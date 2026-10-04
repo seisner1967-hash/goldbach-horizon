@@ -1,0 +1,41 @@
+{
+  "attempt": 3,
+  "state": "FINISHED",
+  "started_at_utc": "2026-10-02T22:13:58.157022+00:00",
+  "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\SeparatedTypeIILower.lean",
+  "source_sha256": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+  "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\lower_attempt03_SeparatedTypeIILower_source.lean.txt",
+  "snapshot_sha256": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+  "builder_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\lower_attempt03_builder.py.txt",
+  "builder_sha256": "69659f3d3579452f1cca5413f745d9b48c77354f0ea428e96e18e2de02744aa3",
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\SeparatedTypeIILower.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\SeparatedTypeIILower.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3",
+  "LEAN_PATH": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "lean_exe_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "root_observation_sha256": "32de18a97b6e7989f6841007b7c24b4b4fcf93d6354b835600d49ceef6188b86",
+  "numeric_receipt_sha256": "623a5c64d7f60f4b8e390aa6b51ebeedb49a775bbaebc7c08b194fbfe9f4db22",
+  "numeric_output_sha256": "31e873ab0170b1d479c95fdbbe38d989e260cbdd30b5fbba5974f9fc51c63687",
+  "new_declarations": [
+    "admissible_rows_front",
+    "admissible_rows_at_most_width",
+    "omitted_count_lower_R5",
+    "omitted_ratio_lower_R5",
+    "normalized_adversarial_lower_R5"
+  ],
+  "old_Lean_rebuilds": 0,
+  "old_producers_replayed": 0,
+  "old_oleans_copied": 0,
+  "finished_at_utc": "2026-10-02T22:14:22.895814+00:00",
+  "exit_code": 0,
+  "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\lower_attempt03.log",
+  "log_sha256": "693ccff368b960578b96f30dca6dc204b00c1c0159b5e3ddbd2675941a9b4a4f",
+  "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\SeparatedTypeIILower.olean",
+  "olean_sha256": "e4921faffa9a4861ac99c581d3492fe2add9e326c4838325504eef4b8dc34d23",
+  "preserved_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\lower_attempt03_fresh_pass.olean",
+  "preserved_olean_sha256": "e4921faffa9a4861ac99c581d3492fe2add9e326c4838325504eef4b8dc34d23"
+}

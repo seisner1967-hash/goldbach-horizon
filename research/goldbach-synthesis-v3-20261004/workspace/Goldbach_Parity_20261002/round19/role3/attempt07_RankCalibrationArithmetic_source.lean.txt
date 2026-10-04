@@ -1,0 +1,273 @@
+import RankCalibrationPrice
+
+/-!
+Actual two-prime conductors give the short module level. Their squarefree
+factorization reconstructs d and the repeated-factor selector from d*k.
+Fixed-factor overlaps are allowed and the representation bound counts them.
+The rank principal uses the actual Euler totient, not an arbitrary density.
+No Bombieri--Vinogradov estimate or small Gamma is assumed in this module.
+-/
+namespace GoldbachRound19.RankCalibration
+
+open scoped BigOperators
+open Finset
+open GoldbachRound18.SeparatedTypeII
+noncomputable section
+attribute [local instance] Classical.propDecidable
+set_option maxHeartbeats 4000000
+
+def smallSelector (c r R : ℕ) : Finset ℕ := ({c, r} : Finset ℕ).filter fun p => p ≤ R
+
+def smallConductor (c r R : ℕ) : ℕ := ∏ p ∈ smallSelector c r R, p
+
+def rankChi (t : ℕ) : ℝ :=
+  ((t : ℝ) - Nat.totient t) / ((Nat.totient t : ℝ) * ((t : ℝ) - 1))
+
+theorem selector_cases {c r : ℕ} {K : Finset ℕ} (hK : K ⊆ ({c, r} : Finset ℕ)) :
+    K = ∅ ∨ K = {c} ∨ K = {r} ∨ K = {c, r} := by
+  by_cases hc : c ∈ K <;> by_cases hr : r ∈ K
+  · right; right; right
+    ext p
+    constructor
+    · intro hp; exact hK hp
+    · intro hp
+      rcases mem_insert.mp hp with hp | hp
+      · simpa [hp] using hc
+      · simp only [mem_singleton] at hp
+        simpa [hp] using hr
+  · right; left
+    ext p
+    constructor
+    · intro hp
+      have hh := hK hp
+      simp only [mem_insert, mem_singleton] at hh
+      rcases hh with e | e
+      · simp [e]
+      · subst p; exact (hr hp).elim
+    · intro hp
+      simp only [mem_singleton] at hp
+      simpa [hp] using hc
+  · right; right; left
+    ext p
+    constructor
+    · intro hp
+      have hh := hK hp
+      simp only [mem_insert, mem_singleton] at hh
+      rcases hh with e | e
+      · subst p; exact (hc hp).elim
+      · simp [e]
+    · intro hp
+      simp only [mem_singleton] at hp
+      simpa [hp] using hr
+  · left
+    apply eq_empty_iff_forall_not_mem.mpr
+    intro p hp
+    have hh := hK hp
+    simp only [mem_insert, mem_singleton] at hh
+    rcases hh with e | e
+    · subst p; exact hc hp
+    · subst p; exact hr hp
+
+theorem small_unit_modulus_bound {c r a R : ℕ} {K : Finset ℕ}
+    (hne : c ≠ r) (ha : c * r ≤ a) (hR : 1 ≤ R)
+    (hK : K ⊆ smallSelector c r R) :
+    c * r * (∏ p ∈ K, p) ≤ max (a * R) (R ^ 4) := by
+  have hsub : K ⊆ ({c, r} : Finset ℕ) :=
+    fun p hp => (mem_filter.mp (hK hp)).1
+  rcases selector_cases hsub with e | e | e | e
+  · rw [e]
+    simp only [prod_empty, mul_one]
+    exact le_trans (le_trans ha (Nat.le_mul_of_pos_right _ (by omega))) (le_max_left _ _)
+  · have hcR : c ≤ R := (mem_filter.mp (hK (by simp [e]))).2
+    rw [e]
+    simp only [prod_singleton]
+    exact le_trans (Nat.mul_le_mul ha hcR) (le_max_left _ _)
+  · have hrR : r ≤ R := (mem_filter.mp (hK (by simp [e]))).2
+    rw [e]
+    simp only [prod_singleton]
+    exact le_trans (Nat.mul_le_mul ha hrR) (le_max_left _ _)
+  · have hcR : c ≤ R := (mem_filter.mp (hK (by simp [e]))).2
+    have hrR : r ≤ R := (mem_filter.mp (hK (by simp [e]))).2
+    rw [e]
+    simp only [prod_insert (show c ∉ ({r} : Finset ℕ) by simpa using hne), prod_singleton]
+    have hm : c * r ≤ R * R := Nat.mul_le_mul hcR hrR
+    have hh := Nat.mul_le_mul hm hm
+    have he : R * R * (R * R) = R ^ 4 := by ring
+    exact le_trans (he ▸ hh) (le_max_right _ _)
+
+theorem final_small_unit_modulus_bound {c r a R f : ℕ} {K : Finset ℕ}
+    (hne : c ≠ r) (ha : c * r ≤ a) (hR : 1 ≤ R)
+    (hK : K ⊆ smallSelector c r R) (hf : f ≤ 39 * 1771) :
+    f * (c * r * (∏ p ∈ K, p)) ≤ 39 * 1771 * max (a * R) (R ^ 4) :=
+  Nat.mul_le_mul hf (small_unit_modulus_bound hne ha hR hK)
+
+theorem squarefree_conductor_of_primes {c r : ℕ}
+    (hc : c.Prime) (hr : r.Prime) (hne : c ≠ r) : Squarefree (c * r) := by
+  exact (Nat.squarefree_mul ((Nat.coprime_primes hc hr).mpr hne)).mpr
+    ⟨hc.prime.squarefree, hr.prime.squarefree⟩
+
+theorem squarefree_subdivisor_reconstruction {d k d' k' : ℕ}
+    (hd : Squarefree d) (hd' : Squarefree d') (hk : k ∣ d) (hk' : k' ∣ d')
+    (he : d * k = d' * k') : d = d' ∧ k = k' := by
+  have hd0 : d ≠ 0 := hd.ne_zero
+  have hd'0 : d' ≠ 0 := hd'.ne_zero
+  have hk0 : k ≠ 0 := ne_zero_of_dvd_ne_zero hd0 hk
+  have hk'0 : k' ≠ 0 := ne_zero_of_dvd_ne_zero hd'0 hk'
+  have hle := (Nat.factorization_le_iff_dvd hk0 hd0).mpr hk
+  have hle' := (Nat.factorization_le_iff_dvd hk'0 hd'0).mpr hk'
+  have hdEq : d = d' := by
+    apply Nat.eq_of_factorization_eq hd0 hd'0
+    intro p
+    have hf := congrArg (fun n : ℕ => n.factorization p) he
+    simp only [Nat.factorization_mul hd0 hk0, Nat.factorization_mul hd'0 hk'0,
+      Finsupp.add_apply] at hf
+    have hb := hd.natFactorization_le_one p
+    have hb' := hd'.natFactorization_le_one p
+    have hkp := hle p
+    have hkp' := hle' p
+    omega
+  refine ⟨hdEq, ?_⟩
+  subst d'
+  exact Nat.eq_of_mul_eq_mul_left (Nat.pos_of_ne_zero hd0) he
+
+theorem fixed_factor_representation_multiplicity (F q : ℕ)
+    (S : Finset (ℕ × ℕ × ℕ)) (hF : F ≠ 0)
+    (hS : ∀ z ∈ S, z.1 ∣ F ∧ Squarefree z.2.1 ∧ z.2.2 ∣ z.2.1 ∧
+      q = z.1 * (z.2.1 * z.2.2)) :
+    S.card ≤ F.divisors.card := by
+  apply card_le_card_of_injOn (fun z : ℕ × ℕ × ℕ => z.1)
+  · intro z hz
+    exact Nat.mem_divisors.mpr ⟨(hS z hz).1, hF⟩
+  · intro z hz z' hz' hsame
+    change z.1 = z'.1 at hsame
+    obtain ⟨hf, hd, hk, he⟩ := hS z hz
+    obtain ⟨hf', hd', hk', he'⟩ := hS z' hz'
+    have hf0 : z.1 ≠ 0 := ne_zero_of_dvd_ne_zero hF hf
+    have hm : z.2.1 * z.2.2 = z'.2.1 * z'.2.2 := by
+      apply Nat.eq_of_mul_eq_mul_left (Nat.pos_of_ne_zero hf0)
+      rw [← he, hsame, ← he']
+    obtain ⟨hde, hke⟩ := squarefree_subdivisor_reconstruction hd hd' hk hk' hm
+    exact Prod.ext hsame (Prod.ext hde hke)
+
+theorem fixed_factor_divisor_count : (39 * 1771 : ℕ).divisors.card = 32 := by
+  have h39 : (39 : ℕ).divisors.card = 4 := by
+    change (3 * 13 : ℕ).divisors.card = 4
+    rw [(by norm_num : Nat.Coprime 3 13).card_divisors_mul]
+    decide
+  have h77 : (77 : ℕ).divisors.card = 4 := by
+    change (7 * 11 : ℕ).divisors.card = 4
+    rw [(by norm_num : Nat.Coprime 7 11).card_divisors_mul]
+    decide
+  have h1771 : (1771 : ℕ).divisors.card = 8 := by
+    change (77 * 23 : ℕ).divisors.card = 8
+    rw [(by norm_num : Nat.Coprime 77 23).card_divisors_mul, h77]
+    decide
+  rw [(by norm_num : Nat.Coprime 39 1771).card_divisors_mul, h39, h1771]
+
+theorem rank_ap_representation_multiplicity (q : ℕ)
+    (S : Finset (ℕ × ℕ × ℕ))
+    (hS : ∀ z ∈ S, z.1 ∣ 39 * 1771 ∧ Squarefree z.2.1 ∧ z.2.2 ∣ z.2.1 ∧
+      q = z.1 * (z.2.1 * z.2.2)) : S.card ≤ 32 := by
+  have hh := fixed_factor_representation_multiplicity (39 * 1771) q S (by norm_num) hS
+  simpa only [fixed_factor_divisor_count] using hh
+
+theorem rank_chi_positive {t : ℕ} (ht : 1 < t) : 0 < rankChi t := by
+  have hp : 0 < Nat.totient t := Nat.totient_pos.mpr (by omega)
+  have hl : Nat.totient t < t := Nat.totient_lt t ht
+  unfold rankChi
+  apply div_pos
+  · exact sub_pos.mpr (by exact_mod_cast hl)
+  · apply mul_pos
+    · exact_mod_cast hp
+    · exact sub_pos.mpr (by exact_mod_cast ht)
+
+theorem rank_price_principal_identity {t : ℕ} (ht : 1 < t) :
+    (1 - 1 / (Nat.totient t : ℝ)) / (1 - 1 / (t : ℝ)) - 1 = -rankChi t := by
+  have hp : 0 < (Nat.totient t : ℝ) := by
+    exact_mod_cast Nat.totient_pos.mpr (show 0 < t by omega)
+  have ht0 : (t : ℝ) ≠ 0 := by exact_mod_cast (show t ≠ 0 by omega)
+  have ht1 : (t : ℝ) - 1 ≠ 0 := by
+    have htr : (1 : ℝ) < t := by exact_mod_cast ht
+    linarith
+  unfold rankChi
+  field_simp
+  ring
+
+theorem rank_price_principal_nonpositive {t : ℕ} (ht : 1 < t)
+    {M : ℝ} (hM : 0 ≤ M) : -M * rankChi t ≤ 0 := by
+  exact mul_nonpos_of_nonpos_of_nonneg (neg_nonpos.mpr hM) (le_of_lt (rank_chi_positive ht))
+
+theorem rank_price_principal_negative {t : ℕ} (ht : 1 < t)
+    {M : ℝ} (hM : 0 < M) : -M * rankChi t < 0 :=
+  mul_neg_of_neg_of_pos (neg_neg_of_pos hM) (rank_chi_positive ht)
+
+theorem fixed_rank_chi_values :
+    rankChi 7 = (1 : ℝ) / 36 ∧ rankChi 11 = (1 : ℝ) / 100 ∧
+    rankChi 23 = (1 : ℝ) / 484 ∧ rankChi 77 = (17 : ℝ) / 4560 ∧
+    rankChi 161 = (29 : ℝ) / 21120 ∧ rankChi 253 = (11 : ℝ) / 18480 ∧
+    rankChi 1771 = (451 : ℝ) / 2336400 := by
+  have h7 : Nat.totient 7 = 6 := by rw [Nat.totient_prime (by norm_num)]; norm_num
+  have h11 : Nat.totient 11 = 10 := by rw [Nat.totient_prime (by norm_num)]; norm_num
+  have h23 : Nat.totient 23 = 22 := by rw [Nat.totient_prime (by norm_num)]; norm_num
+  have h77 : Nat.totient 77 = 60 := by
+    change Nat.totient (7 * 11) = 60
+    rw [Nat.totient_mul (by norm_num : Nat.Coprime 7 11), h7, h11]
+  have h161 : Nat.totient 161 = 132 := by
+    change Nat.totient (7 * 23) = 132
+    rw [Nat.totient_mul (by norm_num : Nat.Coprime 7 23), h7, h23]
+  have h253 : Nat.totient 253 = 220 := by
+    change Nat.totient (11 * 23) = 220
+    rw [Nat.totient_mul (by norm_num : Nat.Coprime 11 23), h11, h23]
+  have h1771 : Nat.totient 1771 = 1320 := by
+    change Nat.totient (77 * 23) = 1320
+    rw [Nat.totient_mul (by norm_num : Nat.Coprime 77 23), h77, h23]
+  norm_num [rankChi, h7, h11, h23, h77, h161, h253, h1771]
+
+set_option maxRecDepth 10000 in
+theorem fixed_rank_divisor_list :
+    (1771 : ℕ).divisors = {1, 7, 11, 23, 77, 161, 253, 1771} := by decide
+
+theorem fixed_rank_chi_lower_bound {t : ℕ} (hd : t ∣ 1771) (ht : 1 < t) :
+    (451 : ℝ) / 2336400 ≤ rankChi t := by
+  have hm : t ∈ (1771 : ℕ).divisors := Nat.mem_divisors.mpr ⟨hd, by norm_num⟩
+  rw [fixed_rank_divisor_list] at hm
+  simp only [mem_insert, mem_singleton] at hm
+  rcases hm with e | e | e | e | e | e | e | e
+  · omega
+  all_goals subst t
+  all_goals
+    rcases fixed_rank_chi_values with ⟨h7, h11, h23, h77, h161, h253, h1771⟩
+    norm_num [h7, h11, h23, h77, h161, h253, h1771]
+
+theorem canonical_fixed_rank_chi_lower_bound (F : Parameters)
+    (hc : F.c.Prime) (hr : F.r.Prime) :
+    (451 : ℝ) / 2336400 ≤ rankChi (remainingModulus 1771 (conductor F)) := by
+  apply fixed_rank_chi_lower_bound (remaining_modulus_dvd 1771 (conductor F))
+  have hh := canonical_remaining_modulus_gt_one F hc hr
+    (by norm_num : Nat.Prime 7) (by norm_num : Nat.Prime 11) (by norm_num : Nat.Prime 23)
+    (by norm_num) (by norm_num) (by norm_num)
+  simpa [fixed_rank_product] using hh
+
+end
+end GoldbachRound19.RankCalibration
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound19.RankCalibration.smallSelector
+#print axioms GoldbachRound19.RankCalibration.smallConductor
+#print axioms GoldbachRound19.RankCalibration.rankChi
+#print axioms GoldbachRound19.RankCalibration.selector_cases
+#print axioms GoldbachRound19.RankCalibration.small_unit_modulus_bound
+#print axioms GoldbachRound19.RankCalibration.final_small_unit_modulus_bound
+#print axioms GoldbachRound19.RankCalibration.squarefree_conductor_of_primes
+#print axioms GoldbachRound19.RankCalibration.squarefree_subdivisor_reconstruction
+#print axioms GoldbachRound19.RankCalibration.fixed_factor_representation_multiplicity
+#print axioms GoldbachRound19.RankCalibration.fixed_factor_divisor_count
+#print axioms GoldbachRound19.RankCalibration.rank_ap_representation_multiplicity
+#print axioms GoldbachRound19.RankCalibration.rank_chi_positive
+#print axioms GoldbachRound19.RankCalibration.rank_price_principal_identity
+#print axioms GoldbachRound19.RankCalibration.rank_price_principal_nonpositive
+#print axioms GoldbachRound19.RankCalibration.rank_price_principal_negative
+#print axioms GoldbachRound19.RankCalibration.fixed_rank_chi_values
+#print axioms GoldbachRound19.RankCalibration.fixed_rank_divisor_list
+#print axioms GoldbachRound19.RankCalibration.fixed_rank_chi_lower_bound
+#print axioms GoldbachRound19.RankCalibration.canonical_fixed_rank_chi_lower_bound

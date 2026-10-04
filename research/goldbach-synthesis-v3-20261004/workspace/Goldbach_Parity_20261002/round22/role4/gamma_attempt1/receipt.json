@@ -1,0 +1,68 @@
+{
+  "schema": "ROUND22_ROLE4_GAMMA_ACTUAL_RECEIPT_3",
+  "start_utc": "2026-10-03T07:49:03.589923+00:00",
+  "finish_utc": "2026-10-03T07:50:40.633827+00:00",
+  "exit_code": 1,
+  "compiler_invocations": 1,
+  "old_archive_replay": 0,
+  "source_sha256": "8bcfef577be2dbf3412646bd7938fe3d929dc0efdd4d1d7c29149ff6102ed7a0",
+  "preexec_sha256": "67504365d2dbd6933d609c2e0e02c2d1deebb9be3303ded190497905090b91f5",
+  "start_sha256": "82410e4d5c1adde6ecac66960f98a7f5b558a65835e5e14d13054736edbf5f75",
+  "captured_inputs": [
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\GammaPrerequisites22.lean",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\GammaPrerequisites22.lean",
+      "sha256": "8bcfef577be2dbf3412646bd7938fe3d929dc0efdd4d1d7c29149ff6102ed7a0"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\run_gamma_once22_v3.py",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\run_gamma_once22_v3.py",
+      "sha256": "944d9e16ef89bf44fb4f96589dad51c341ce38ec0ccfdb9db30663812c04ebe4"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_preparation3.md",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\gamma_preparation3.md",
+      "sha256": "15da74f01b756fb264fc30efac9945df5ee115b4b43a2f320448f9d5541a09ff"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\prepare_gamma_metadata3.py",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\prepare_gamma_metadata3.py",
+      "sha256": "05691ebf9c5118438599955c5062e9c1547b19369fc0657d139bef5c4d7ef31e"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_read_receipts3.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\gamma_read_receipts3.json",
+      "sha256": "82bc397d675f4aa2ebe2c2850071074fddd9da0359daef31ed69e8f4c2b674bc"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_prepared_manifest3.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\gamma_prepared_manifest3.json",
+      "sha256": "764c2bd544170e8f232000d690894c79719a8cff27723aa2f9552308daa7f01c"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_gamma_role4_authorization1.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\root_authorization.json",
+      "sha256": "c1bf99ded36a426e9bf0b741b3cdec6c329b353cdc0048b6671bafbba9e21e83"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\actual_gamma22\\gamma_result22.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\PREEXEC_FILES\\informative_gamma_bank.json",
+      "sha256": "595b15340efe03bd215eebe7f6d526cd1f2f5d07865f074a3b7927687beb967a"
+    }
+  ],
+  "olean_sha256": null,
+  "stdout_sha256": "3735c5ebe7fbfe53920bc03d47a5d1894422e4aab4557a61576490649911cf0f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exit_sha256": "f948f693a45c0f8d553a1f3c5f7ddd415c1d9f5b2f628a8493e0ab082d021064",
+  "changed_immutable_inputs": [],
+  "status": "AUTHOR_GAMMA_H2_COMPILE_FAIL",
+  "weil_certified": false,
+  "zero_count_certified": false,
+  "D_N_paid": false,
+  "win": false,
+  "archive_after": {
+    "checked": 3089,
+    "changed": [],
+    "scope": "metadata byte conservation only"
+  }
+}

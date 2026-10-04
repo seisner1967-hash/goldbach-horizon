@@ -1,0 +1,39 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.deriv_Gamma_duplication"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaPsi_duplication"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\batch07_attempt01\\GammaPsiDuplication22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\sources\\GammaPsiDuplication22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-03T13:30:39.959350+00:00",
+  "launch_error": null,
+  "log_sha256": "a767ded576bae81839b844fc66efae89001e9d9d302822d8a06440b87fdca8e2",
+  "module": "GammaPsiDuplication22",
+  "olean_sha256": "535c3f53fe81ff03d6c05540a67bd82335b6379d98f81a97ccd7784744f67bcf",
+  "source_prior_status": "AUTHOR_PASS_PENDING_INDEPENDENT_JUDGE",
+  "source_sha256": "0491177c6cfc1ef35b28796be404a3ca7975bac357cc6551b80d12333726812e",
+  "started_at": "2026-10-03T13:30:25.952408+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

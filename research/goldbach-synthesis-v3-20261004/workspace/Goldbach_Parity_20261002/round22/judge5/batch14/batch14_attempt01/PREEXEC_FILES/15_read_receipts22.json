@@ -1,0 +1,40 @@
+{
+  "schema": "ROUND22_DISCRETE_CIRCLE_SOURCE_REVISION_READS_22",
+  "actor": "ROLE3",
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\revision02\\DiscreteThermalProjection22.lean",
+  "source_sha256": "7ee2abb27d959f1511abb59e8425578b420d3e972a8d03eaff26635ac8fd581c",
+  "report_sha256": "ff8764229a61cb1cf4b9cf2f7d66a50dcacbf95e0e5bd2d88250419ac8190bd9",
+  "original_source_sha256": "2a964deed343671d87b518b4da956cd36ad33fd6965f1feb69e5d3739ef0e696",
+  "original_source_read": "FULL 3045d4",
+  "final_source_and_report_read": "FULL 89e4d7",
+  "proof_change_metadata_check": "1fc942 exit 0; only explicit import and square expansion body changed",
+  "definition_count": 9,
+  "theorem_count": 20,
+  "qualified_axiom_print_count": 29,
+  "new_math_runtime_invocations": 0,
+  "new_Lean_invocations": 0,
+  "new_builders_invoked": 0,
+  "observed_Lean_FAILURE": false,
+  "issue_kind": "ANTICIPATED_SOURCE_DISTRIBUTION_ORDER_RISK",
+  "api_read": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Ring.lean",
+    "sha256": "0e11d9b338fa211ed86b6692fa08b4c6cf47033aaf8bc14a055d6e8976dc5d10",
+    "scope": "TARGETED lines 9-74 ea5a24",
+    "lemmas_used": ["Finset.sum_mul_sum", "Finset.sum_mul"],
+    "final_rg_no_match_does_not_invalidate_read": true
+  },
+  "read_path_failure": {
+    "chunk": "e755b8",
+    "missing_path": "Mathlib/Algebra/BigOperators/Ring/Finset.lean",
+    "corrected_search": "1d4c60",
+    "classification": "READ_PATH_ONLY_NOT_LEAN_FAILURE"
+  },
+  "sum_product_prior_read_provenance": "../read_receipts22.json",
+  "guards_unchanged": ["max N (2*M-N) < K", "N <= M for coefficient identity"],
+  "weights": "ArithmeticFunction.vonMangoldt including prime powers",
+  "H1_FORMAL": "OPEN",
+  "COEFFICIENT_N_NUMERICAL_EVALUATION": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false
+}

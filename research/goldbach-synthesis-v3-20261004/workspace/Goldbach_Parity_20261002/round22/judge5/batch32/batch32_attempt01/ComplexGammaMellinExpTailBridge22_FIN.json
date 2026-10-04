@@ -1,0 +1,39 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complex_exp_sub_truncated_eq_tail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complex_exp_truncation_error_le"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch32\\batch32_attempt01\\ComplexGammaMellinExpTailBridge22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch32\\sources\\ComplexGammaMellinExpTailBridge22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-04T02:07:24.952591+00:00",
+  "launch_error": null,
+  "log_sha256": "12e79a8d0935c1cbb36d7c280bae6e1d1686c083fbd7e6cd4c8e369adb4e69cb",
+  "module": "ComplexGammaMellinExpTailBridge22",
+  "olean_sha256": "54edc77d7f7848b55a0a1a36ebec0460e82afd1204b7c5127e80c8a0b344448d",
+  "source_prior_status": "SOURCE_ONLY_NOT_ELABORATED",
+  "source_sha256": "4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c",
+  "started_at": "2026-10-04T02:07:12.252554+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

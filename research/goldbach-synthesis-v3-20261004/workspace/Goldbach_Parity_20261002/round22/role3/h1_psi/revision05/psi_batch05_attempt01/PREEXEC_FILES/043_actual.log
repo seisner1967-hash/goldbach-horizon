@@ -1,0 +1,29 @@
+GAMMA_PHASE 1 15 1 0
+GAMMA_PHASE 2 15 1 -3
+GAMMA_PHASE 3 15 1 3
+GAMMA_PHASE 4 15 1 -23
+GAMMA_PHASE 5 15 1 23
+GAMMA_PHASE 6 15 3/2 0
+GAMMA_PHASE 7 15 3/2 -3
+GAMMA_PHASE 8 15 3/2 3
+GAMMA_PHASE 9 15 3/2 -23
+GAMMA_PHASE 10 15 3/2 23
+GAMMA_PHASE 11 15 2 0
+GAMMA_PHASE 12 15 2 -3
+GAMMA_PHASE 13 15 2 3
+GAMMA_PHASE 14 15 2 -23
+GAMMA_PHASE 15 15 2 23
+Traceback (most recent call last):
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role6\thermal_h1\component_bank22.py", line 199, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role6\thermal_h1\component_bank22.py", line 141, in main
+    "agreement": agreement, "four_budgets": total.as_json()})
+                                            ^^^^^^^^^^^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role6\thermal_h1\thermal_kernel22.py", line 99, in as_json
+    return {"E_function": rational_json(self.function),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role6\thermal_h1\thermal_dyadic22.py", line 47, in rational_json
+    return {"numerator": str(q.numerator), "denominator": str(q.denominator)}
+                         ^^^^^^^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

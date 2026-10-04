@@ -1,0 +1,16 @@
+Préflight ROLE6 clos — METADATA_CONDITIONAL / PENDING_LOADER_SCOPE.
+
+Conservation observée : union ancienne exacte 6 332 + 12 + 5, une occurrence commune, soit 6 348 chemins distincts ; 972 fichiers runtime et 3 089 archives, tous intacts. Les huit bindings du handoff BUILD_ONLY02 sont également intacts. Les catalogues ont le scope ALL_ENTRIES_PARSED_METADATA/SHA, sans raw FULL revendiqué.
+
+Lecture PE statique : 66 images, 825 imports déclarés ; 119 arêtes locales ont des candidats déjà liés et hachés, 706 arêtes Windows/API-set demeurent dans la base de confiance du système. Zéro gap de parsing observé et aucun import retardé relevé. Aucun compilateur, outil PE externe, LoadLibrary ou programme candidat appelé.
+
+Le raccord CWD/TMP SOURCE02 est désormais revu indépendamment :
+Handoff role4/circle_native_build_source02/source_handoff22.json SHA13ee77e4b0dd922596c390e64f399b8ea423d075bb9eb5f25fa29785d94c3027, FULL c64490.
+Plan effectif SHA34c3a25272f591c44eeeafec41d1727631df99b84043ff0ae6b0219c6040a25a et parent SHA4489a9e290b41a270bb44e20b738cd7f85131a945bc26d836d65748ec14d3e8b, FULL 5bf85b.
+Revue ROLE5 judge5/circle_native_build_controls_source_review02.md SHA1fee0de6627591ae3fb91e26c72649f66d026039230b2b6b6f6d11f10dbe6720, FULL propre 4a397e : SOURCE_CWD_REPAIR_COHERENT_RUNTIME_OPEN. Elle ferme le désaccord de CWD/TMP au niveau SOURCE, sans build ni crédit mathématique supplémentaire.
+
+Le blocage restant est exact : le préflight du parent exige COMPILER_LOADER_CLOSURE_REVIEWED_WITH_WINDOWS_TRUST_BASE et all_non_OS_imports_bound=true. La lecture PE établit seulement la fermeture des imports déclarés vers des candidats locaux liés. Elle ne paie pas la résolution effective du chargeur, les forwarders, LoadLibrary, plugins/helpers/specs GCC choisis ni les transitifs OS complets. Aucun reçu global, flag de fermeture, préparation BUILD_ONLY_METADATA_PREPARED ou gate n’a donc été fabriqué. Aucun build, candidat, calcul mathématique, probe, compiler Lean ou import de source candidate n’a été exécuté.
+
+Pièces dans ce dossier : pe_static_import_observation22.json SHA36032c45c476e72c97393f60d02fbf5ff2e2679e82d2c3dd5eaea558cfdcadbc ; frozen6348_conservation22.json SHAa1fe2a248fd1f5d6292732b6a524ab8cdc6b248a519b26dbeab6bbe7de6bcfc5. Helpers lus FULL avant leurs seules lectures de bytes/SHA ; anciens rapports conservés. Le manifeste de ce dossier est un manifeste de pièces d’observation, pas le manifeste exact d’un futur build.
+
+Les acquis officiels demeurent 78 modules / 1 304 déclarations. Le contrat mathématique autonome continuous_contract_delivery22_revision03.txt SHAaf466104a72bb89b5e0a5e7ecf117c06c610d23d14a82139cfda7cb96c6fcb82 et l’enveloppe Lean passée demeurent acquis. Native construit/runtime et coefficient N complet à 10^8, D_N et WIN restent ouverts. Arrêt de cette mission bornée avant tout build ; aucun échec mathématique ou de parité déduit.

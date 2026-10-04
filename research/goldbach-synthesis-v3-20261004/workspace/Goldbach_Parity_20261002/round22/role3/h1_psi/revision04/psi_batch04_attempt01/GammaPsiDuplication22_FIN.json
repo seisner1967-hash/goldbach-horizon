@@ -1,0 +1,40 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.deriv_Gamma_duplication"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaPsi_duplication"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision04\\psi_batch04_attempt01\\GammaPsiDuplication22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision04\\source_final\\GammaPsiDuplication22.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision04\\source_final",
+  "exact_axiom_coverage_standard_only": false,
+  "exit_code": 1,
+  "finished_at": "2026-10-03T11:22:58.645746+00:00",
+  "log_sha256": "4d6056cff6d751980700d7cbede7ef910ce65c16bb2fa3eb929ae4afb0077f43",
+  "module": "GammaPsiDuplication22",
+  "olean_sha256": null,
+  "source_sha256": "a2732111060af2b1b89ac8ba3ad3d68f600818f2e58dfdacff601c2374256cd7",
+  "started_at": "2026-10-03T11:22:44.393634+00:00",
+  "status": "AUTHOR_LEAN_FAIL",
+  "timed_out": false
+}

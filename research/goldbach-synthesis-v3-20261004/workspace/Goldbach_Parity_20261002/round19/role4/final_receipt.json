@@ -1,0 +1,31 @@
+{
+  "status": "FINAL",
+  "round": 19,
+  "role": 4,
+  "node_id": "14.4",
+  "finished_utc": "2026-10-03T00:49:21.939335+00:00",
+  "exit_code": 0,
+  "operation": "Bind and freeze existing producer results only",
+  "metadata_command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\finalize.py"
+  ],
+  "manifest_sha256": "62ae333e6376e4eceedd1fd61f85204f0844567f1cf1f8afcc0e0710d0a73996",
+  "report_sha256": "442a58cdec079b611a1be704f77dc729343e4a4a24cc526f601a280a7a5c068b",
+  "build_receipt_sha256": "297ec6c8efb69415240eef9fb91a557863dd22370063a23ec7332ab5ee6a1d2b",
+  "finalize_log_sha256": "0eacc8c3931df8df690fd9012c06e24a85059055563ff1fab713cc883bbef749",
+  "finalize_source_PREEXEC_sha256": "f91b9c3ea5b08505b6341cfa44768de2ad7760b500499677fa3f242592ec1d0e",
+  "finalize_started_sha256": "81ff6009c4527521ffc33998266bfd4dff7f46aaeb4fce71688bdc0042e65856",
+  "producer_Lean_executions": 12,
+  "producer_PASS_count": 5,
+  "producer_FAIL_count": 7,
+  "new_Lean_executions_in_finalization": 0,
+  "new_numeric_executions_in_finalization": 0,
+  "Judge_executions": 0,
+  "score": 0,
+  "victory": false,
+  "independent_Judge_pending": true
+}

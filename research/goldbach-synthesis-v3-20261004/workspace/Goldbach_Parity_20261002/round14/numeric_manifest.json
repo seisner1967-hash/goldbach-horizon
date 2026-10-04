@@ -1,0 +1,105 @@
+{
+  "Lean_called": false,
+  "all_JSON_fields_and_bytes_replayed": true,
+  "all_failed_bank_sources_and_logs_preserved": true,
+  "asymptotic": false,
+  "conservation": {
+    "baseline_sha256": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "controller_88_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "files": 603,
+    "old_Lean_recompiled": false,
+    "old_PASS_replayed": false,
+    "old_PDF_rerendered": false,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "previous_protected_files": 514,
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\previous_artifacts_sha256.json",
+    "round13_controller_sha256": "64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d",
+    "round13_files": 89,
+    "status": "PRESERVED"
+  },
+  "file_count": 32,
+  "final_conceptual_report_sha256": {
+    "agent1_coverage.md": "4224fdd0f202da0a1dae1787965cb24aaeb7cf88fbcba8e92f607aff98716aec",
+    "agent2_complement.md": "b512cffb393253b004660442dd5cdde7af228d1550dbdc8c926d8e899c186d67"
+  },
+  "finite_N": 100000000,
+  "finite_N_outside_source": true,
+  "genuine_failed_new_bank_attempts": {
+    "complement": [
+      1
+    ],
+    "coverage": []
+  },
+  "global_D_N": false,
+  "historical_inert_helper_sha256": {
+    "numerical/parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical/round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "round11/exact11.py": "a41e33ae49a98f0b15e0de990337ddabcc47dc92a84894cce1141559eb1571f8",
+    "round11/shared.py": "1959d27b60cfe7dc8e6211c36a0bc6b710c0fd13c80b95be55ad045092b3d4ee",
+    "round13/conservation.py": "e64bd0ac1a8217d0026fe3c60c2ffcd880c9d06e51696f1c6ad4ad550d48bf89",
+    "round13/shared.py": "2eba4c18b1013677a168e99a7e896146a63bdcff4dee1180c1c4ba2e4323b43d",
+    "round3/multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "round4/inverse_checks.py": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c",
+    "round6/exact_tools.py": "f48bb0b2b608aa734944cbfe978c19ad55f5aa249068dcc313a1de6da5a393cc"
+  },
+  "local_ERROR_FALSIFIER_count": 4,
+  "new_canonical_banks": 2,
+  "old_Lean_recompiled": false,
+  "old_PASS_replayed": false,
+  "old_PDF_rerendered": false,
+  "payments": false,
+  "round": 14,
+  "score": 0,
+  "separate_isolated_replays": 2,
+  "sha256": {
+    "agent6.md": "6a5020f476b597fc5b4b4482d71acb2612bca242384de905886d058680539b31",
+    "candidate_proposal.json": "c02b075e2dc48565030669a0d3b9428965cb36e204a9b0768b8d17cb508ff578",
+    "complement.json": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+    "complement_checks.py": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2",
+    "conservation.json": "3993f31853350c7c4fa1edfa0cb82ac155c3c1055926b8ba462d356fd6289fcd",
+    "conservation.py": "e44a5f0ed1e2b389c0e9026f595629e02a38ac40c6c5d485ef79db6808be9f99",
+    "coverage.json": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+    "coverage_checks.py": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce",
+    "coverage_pair_supplement.json": "f3403e4095edc96ee9bab254dd1aaeb52ec02e3b6b1154029ed9ebdc3baa8950",
+    "coverage_pair_supplement.py": "0d7bf62c065bbd5188a3505cfedc08ba5d171c14c6bc9a790f99801cc0df7038",
+    "isolated_complement/complement.json": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+    "isolated_coverage/coverage.json": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+    "numerical_replay.json": "8b6efe9c987e1be8926a3763339325479adf07972da3ce8e1b2f66b0b43a623d",
+    "prepare_candidates.py": "1ce00521ea73d647ae19635290addd60cfaa3bcbe175b4b9d6a28b9525ef7f90",
+    "previous_artifacts_sha256.json": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "replay_checks.py": "e11d1ba26969ed6123fdf60e5f6108e58a59fdc6f1db8968f173d76f1ec174dd",
+    "role6/complement_attempt01.log": "2532d9fbf84927d05b102c750a1231be5855febb275d27c52e40e02613847a56",
+    "role6/complement_attempt01_failure.json": "63d63ef08f9161568f5b674597f81a778fcb5c425a0a1a5a6c9c7658712450c8",
+    "role6/complement_attempt01_source.txt": "d6da4a23ef0d85981db2e31e414d4dad68687907943040d48a34a9fe6c064a6a",
+    "role6/complement_attempt02.log": "1ffa6701e43b78ee71ddf89744644d0fefb56869a37f577fdab5191dac91ee56",
+    "role6/complement_attempt02_source.txt": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2",
+    "role6/complement_canonical_success.json": "b6f0c43a3ca679dc1167d46becffdee1da038a3140b62928fedef750e9169cc2",
+    "role6/complement_isolated_replay.log": "1ffa6701e43b78ee71ddf89744644d0fefb56869a37f577fdab5191dac91ee56",
+    "role6/coverage_attempt01.log": "29cc26d7104e9292f5929c5749ac2486520b5f8dca160a3c860103d5d27fd19d",
+    "role6/coverage_attempt01_source.txt": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce",
+    "role6/coverage_canonical_success.json": "e8212a85b1285ebcae9a656aeccf45a085b56ce96701fb223c8a76c72a61fc27",
+    "role6/coverage_isolated_replay.log": "29cc26d7104e9292f5929c5749ac2486520b5f8dca160a3c860103d5d27fd19d",
+    "role6/finalize.py": "8cd8ade5330bff0bb82ba5ba0c9eae3e3624b1bb3c87bfcf324d421ec2f813f8",
+    "role6/read_only_audit.json": "9a550cb73d6e65abfc7812acd971a1e7dd88f013b5b1b2e29ed2cee66de9aa9d",
+    "role6/read_only_audit.py": "6720c338ab5c359772238b2beba6a12ba1f78042377cb020b66c7dd1df1fa58f",
+    "run_new.py": "5dcbe7130995406623c2acd8a850774eb3f0d12da7a0bf7f031ecc3cd54fbc68",
+    "shared.py": "0e84b6ba37cd74a5a52b667c2f28c777b42d5fab774af014a72583c2cdfa4b3b"
+  },
+  "source_u_minimum": "10^24",
+  "status": "FROZEN_NUMERICAL_INPUTS_TERMINATED",
+  "strict_rational_sign_certificates": 27,
+  "targeted_stored_vector_supplements": 2,
+  "victory": false
+}

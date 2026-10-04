@@ -1,0 +1,15 @@
+{
+  "attempt": 5,
+  "module": "SwitchedSelbergWeight",
+  "actual_lean_exit_code": 1,
+  "classification": "TECHNICAL_DEFINITION_REDUCTION_FAILURE",
+  "actual_log": "round20/role3/attempt05_SwitchedSelbergWeight.log",
+  "actual_receipt": "round20/role3/attempt05_SwitchedSelbergWeight_receipt.json",
+  "errors": [
+    {"line": 88, "obligation": "identical prime-product and G definitions in namespaces17/20", "repair": "Close by definitional reflexivity after the acquired explicit-weight rewrite"},
+    {"line": 96, "obligation": "empty prime product divides the candidate", "repair": "Expose primeProduct in the empty summand simplification"}
+  ],
+  "mathematical_identity_changed": false,
+  "parity_obstacle_inferred_from_this_failure": false,
+  "victory": false
+}

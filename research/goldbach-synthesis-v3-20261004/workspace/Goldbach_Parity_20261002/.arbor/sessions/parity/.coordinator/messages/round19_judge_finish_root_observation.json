@@ -1,0 +1,65 @@
+{
+  "status": "ROOT_VERIFIED_ACTUAL_JUDGE19_AUDIT_EXIT0_FULL_FINAL_CLOSURE_PENDING",
+  "observed_utc": "2026-10-03T01:40:00.655592+00:00",
+  "actual_started_utc": "2026-10-03T01:31:37.321820+00:00",
+  "actual_finished_utc": "2026-10-03T01:36:25.585304+00:00",
+  "audit_receipt_sha256": "758e6fe25589d37d0e75d12317fe3cfca34015761df31f8e3df735a392331057",
+  "launch_receipt_sha256": "5a7f74b19ac6d4ad78ee359c9b53ec9774f4d0f51f091fc6cb54ca5007883ef5",
+  "frozen_inputs_verified": 307,
+  "historical_dependencies_verified": 26,
+  "new_counts": {
+    "axiom_prints": 268,
+    "defs": 78,
+    "instances": 0,
+    "modules": 11,
+    "structures": 3,
+    "theorems": 185
+  },
+  "actual_independent_Lean_invocations": 11,
+  "actual_independent_Lean_failures": 0,
+  "actual_independent_style_warnings": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankCalibrationUnitLoss.lean:25:4: warning: try 'simp' instead of 'simpa'",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankCalibrationUnitLoss.lean:26:4: warning: try 'simp' instead of 'simpa'",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankCalibrationUnitLoss.lean:29:6: warning: try 'simp' instead of 'simpa'"
+  ],
+  "FULL_root_log_read_chunks": [
+    "de258a",
+    "2491c5",
+    "2988f3"
+  ],
+  "stored_certificates_hash_and_labels_only": {
+    "nonss": {
+      "stored_positions": 973,
+      "stored_sign_labels": {
+        "POSITIVE": 532,
+        "ZERO": 166,
+        "NEGATIVE": 275
+      }
+    },
+    "rank": {
+      "stored_positions": 48308,
+      "stored_sign_labels": {
+        "NEGATIVE": 4970,
+        "POSITIVE": 2687,
+        "ZERO": 40651
+      }
+    }
+  },
+  "new_log_or_sign_evaluation_by_root": false,
+  "root_compiler_audit_producer_invocations": 0,
+  "official_counts_not_recorded_until_FINAL5_closed": true,
+  "semantic_obligations": [
+    "Actual real IE coefficient and rankMainMass positivity are validated on guarded paper only; not formally proved by these Lean modules or supplied free.",
+    "Face P=1771 requires gcd(P,N)=1 and is not a covering theorem for all even N.",
+    "NonSS reindexings retain the declared composite ResourceCell guards; full original support including prime/singleton and e1/p0 incidence cases still needs its ledger bridge.",
+    "K14 and conversion to ordinary unmasked APs, N exceptions and source endpoints remain open.",
+    "A single expansion multiplicity <=32 does not alone discharge the combined AP families <=40/64.",
+    "K18 with constants and onset BV, aggregate analytic errors and Gamma_rank remain open.",
+    "The medium and long channels remain literal sums; they have not been quantitatively paid.",
+    "New composite rho/Selberg source, analytic H7/H9 and written local rank3short onset 10^40 remain open.",
+    "Fixed source onset 10^24 and segment 10^24..10^40 are preserved and not discharged.",
+    "Ranks >=4, T_A, parent comparisons, unique physical capacities and full fixed D_N ledger remain open.",
+    "Neither the finite signs nor a negative principal price give the required D_N target."
+  ],
+  "victory": false
+}

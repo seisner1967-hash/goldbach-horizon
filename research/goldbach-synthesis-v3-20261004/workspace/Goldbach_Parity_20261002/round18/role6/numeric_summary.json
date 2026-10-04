@@ -1,0 +1,84 @@
+{
+  "Lean_called": false,
+  "SS_excluded_class_raw_proper_power_count": 0,
+  "SS_selected_measure_signs": {
+    "SS_raw_proper_power_signed": "ZERO",
+    "partial_SS_minus_measured_m1": "POSITIVE",
+    "positive_debt_SS_theta": "POSITIVE",
+    "signed_SS_theta": "POSITIVE",
+    "unique_m1_capacity_measured": "POSITIVE",
+    "unique_physical_union_signed": "POSITIVE"
+  },
+  "actual_false_arithmetic_identities": 0,
+  "actual_numeric_failures": 1,
+  "all_target_proper_power_axis_count": 0,
+  "canonical_attempts": [
+    {
+      "attempt": 1,
+      "bank": "typeii",
+      "exit_code": 0,
+      "log_sha256": "b4705e9e66599af582bc5fed8174a2d802f92b42bb3aacebd7380cb8454a3e2e",
+      "receipt_sha256": "623a5c64d7f60f4b8e390aa6b51ebeedb49a775bbaebc7c08b194fbfe9f4db22"
+    },
+    {
+      "attempt": 1,
+      "bank": "semiprime",
+      "exit_code": 1,
+      "log_sha256": "e51d6cf583a5dd8139e9f5fb5bd5e09680f7f582655072454faa5dba06aeed84",
+      "receipt_sha256": "a4a196250e9ffbfcef66389137b29d7623825471203b9908f31692f5b5e23e3c"
+    },
+    {
+      "attempt": 2,
+      "bank": "semiprime",
+      "exit_code": 0,
+      "log_sha256": "8ab8df1c047cfefa87c08c4361cdd82d14527846b68eb4c1068ab460d97cbdd1",
+      "receipt_sha256": "5b0ef9f42846574090e8ba43fe20b53cb92021324bba238e6607c55521a1889f"
+    }
+  ],
+  "canonical_new_bank_invocations": 3,
+  "canonical_receipts_sha256": {
+    "semiprime": "5b0ef9f42846574090e8ba43fe20b53cb92021324bba238e6607c55521a1889f",
+    "typeii": "623a5c64d7f60f4b8e390aa6b51ebeedb49a775bbaebc7c08b194fbfe9f4db22"
+  },
+  "certificate_counts_by_bank": {
+    "semiprime": {
+      "positions": 222,
+      "signs": {
+        "NEGATIVE": 58,
+        "POSITIVE": 151,
+        "ZERO": 13
+      }
+    },
+    "typeii": {
+      "positions": 98,
+      "signs": {
+        "NEGATIVE": 25,
+        "POSITIVE": 40,
+        "ZERO": 33
+      }
+    }
+  },
+  "combined_sign_counts": {
+    "NEGATIVE": 83,
+    "POSITIVE": 191,
+    "ZERO": 46
+  },
+  "global_D_N": false,
+  "isolated_new_bank_replay_invocations": 2,
+  "isolated_replay_exit_codes": [
+    0,
+    0
+  ],
+  "isolated_replay_receipts_sha256": {
+    "semiprime": "730c3661d7ff6f5fe88875daeff322d7b7ba8ad60ff1f38e885c8d7948fad759",
+    "typeii": "3c8c34b9972dc49fa5009483b257a3ce9230a6aaeeb8be74318c17303f1401c7"
+  },
+  "old_rounds1_through17_mathematics_replayed": false,
+  "protected_inventory_preflight": 997,
+  "resource_proper_power_axis_count": 0,
+  "round": 18,
+  "score": 0,
+  "status": "FINAL6_BOTH_CANONICAL_PASS_TWO_UNIQUE_ISOLATED_REPLAYS_IDENTICAL",
+  "strict_sign_positions": 320,
+  "victory": false
+}

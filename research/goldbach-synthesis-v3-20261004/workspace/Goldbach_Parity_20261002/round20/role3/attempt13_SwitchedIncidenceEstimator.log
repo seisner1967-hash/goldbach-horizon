@@ -1,0 +1,124 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role3\SwitchedIncidenceEstimator.lean:268:10: error: tactic 'rewrite' failed, motive is not type correct:
+  fun _a =>
+    ((if primeProduct d ∣ j ∧ primeProduct e ∣ j then Real.log ↑j * switchedLambda N t z d * switchedLambda N t z e
+        else 0) *
+        if primeProduct h ∣ j / p ∧ #h ≤ 2 * K + 1 then ↑(ArithmeticFunction.moebius (primeProduct h)) else 0) =
+      if p ^ 2 ≤ j ∧ _a ∧ #h ≤ 2 * K + 1 then
+        Real.log ↑j * switchedLambda N t z d * switchedLambda N t z e * ↑(ArithmeticFunction.moebius (primeProduct h))
+      else 0
+Error: application type mismatch
+  @instDecidableAnd _a (#h ≤ 2 * K + 1)
+    ((compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p).decidable_dvd j)
+argument
+  (compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p).decidable_dvd j
+has type
+  Decidable
+    ((fun x1 x2 => x1 ∣ x2) (compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p) j) : Type
+but is expected to have type
+  Decidable _a : Type
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+case pos
+N t z j P K : ℕ
+hj : 2 ≤ j
+hu : j.Coprime (t * N)
+p : ℕ
+hp : p ∈ compositePrimeCatalogue N t P
+hpp : Nat.Prime p
+hpj : p ∣ j
+hsq : p ^ 2 ≤ j
+hcell : p ∣ j ∧ p ^ 2 ≤ j
+d : Finset ℕ
+hd : d ∈ (switchedPrimeSupport N t z).powerset
+e : Finset ℕ
+he : e ∈ (switchedPrimeSupport N t z).powerset
+h : Finset ℕ
+hh : h ∈ (smallSievePrimes N t p).powerset
+hdP : ∀ l ∈ d, Nat.Prime l
+heP : ∀ l ∈ e, Nat.Prime l
+⊢ ((if primeProduct d ∣ j ∧ primeProduct e ∣ j then Real.log ↑j * switchedLambda N t z d * switchedLambda N t z e
+      else 0) *
+      if primeProduct h ∣ j / p ∧ #h ≤ 2 * K + 1 then ↑(ArithmeticFunction.moebius (primeProduct h)) else 0) =
+    if p ^ 2 ≤ j ∧ compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p ∣ j ∧ #h ≤ 2 * K + 1 then
+      Real.log ↑j * switchedLambda N t z d * switchedLambda N t z e * ↑(ArithmeticFunction.moebius (primeProduct h))
+    else 0
+'GoldbachRound20.SwitchedComposite.compositeCellPrimes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.lowCompositeMask' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.roughCompositeCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalLowCompositeMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalLargeCompositeMass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalBonferroniSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.mem_compositeCellPrimes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.roughCompositeCoefficient_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient_le_mask' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass_le_low' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalBonferroniSlack_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalCompositeMass_partition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalLargeCompositeMass_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.bonferroniComposite_exact_with_slack' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.bonferroniCompositeUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.actualPrimeAP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.actualCompositeAP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalSelbergMass_AP_expansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.frameLower' does not depend on any axioms
+'GoldbachRound20.SwitchedComposite.frameUpper' does not depend on any axioms
+'GoldbachRound20.SwitchedComposite.frameInterval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.logarithmicAPIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.compositeAPIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.compatibleAPMain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.actualAPMain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.compositePrimeCatalogue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.compositeCells_catalogue_reindex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient_catalogue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.lowerCompositeWeight_literal_expansion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass_AP_expansion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.constructedSelbergMain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.constructedCompositeMain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.actualSelbergRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.actualCompositeRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.actualPrimeAP_nonunit_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.constructed_main_actual_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.switchedIncidenceEstimator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.switchedIncidence_reference_price' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

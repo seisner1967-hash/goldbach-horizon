@@ -1,0 +1,39 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH19_AUTHORIZATION",
+  "time_utc": "2026-10-03T19:47:07.843705+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch19_attempt01",
+  "modules": [
+    "FiniteFieldProjection22"
+  ],
+  "compiler_invocations_maximum": 1,
+  "source_manifest_sha256": "b292d8b43765b43e6356a3dee0cf35db3de85197df641019ecc3c0cc70476fcf",
+  "launcher_sha256": "79622a2f25ebdc5206522b50e09d7e4183b8fc87a36c774bd99f9aa0f1083aac",
+  "preparation_receipt_sha256": "93866bbed09c49709b314a54600923ca2e77b6b60172d4672df3c6b9a2437305",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "QuantizedLambdaEnvelope22",
+    "RationalLogQuantization22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "ROOT_FULL_read_receipts": "source-contractea9bc6;review3fcf42;builderd783e5;launcher316eb0;catalog-prepared-audit423d59;readsa74619;generichelper3c7673",
+  "source_math_review_owner": "ROLE5",
+  "large_JSON_scope": "All entries parsed and bound bytes hashed; raw FULL import source text not claimed",
+  "inputs_verified": 8262,
+  "old_judge_files_verified": 1159,
+  "archives_verified": 3089,
+  "prior_modules": 78,
+  "prior_declarations": 1304,
+  "stop_first_failure": true,
+  "retries": 0,
+  "ROOT_compiler_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

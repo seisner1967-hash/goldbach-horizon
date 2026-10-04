@@ -1,0 +1,449 @@
+import CompositeAPConductor
+
+/-! Round20 / 13.12. The lower composite mass is built from the actual signed
+Bonferroni weight. Slack and the minFac tail are exact physical sums. The AP
+principal is constructed; its true remainder is retained without assuming
+variation bounds, BV, signed distribution, or a favorable comparison to M0. -/
+namespace GoldbachRound20.SwitchedComposite
+
+open scoped BigOperators
+open Finset
+open GoldbachRound18.SeparatedTypeII
+noncomputable section
+attribute [local instance] Classical.propDecidable
+set_option maxHeartbeats 8000000
+
+def compositeCellPrimes (j P : ℕ) : Finset ℕ :=
+  j.primeFactors.filter fun p => p ≤ P ∧ p ^ 2 ≤ j
+
+def lowCompositeMask (j P : ℕ) : ℤ := if ¬ j.Prime ∧ j.minFac ≤ P then 1 else 0
+
+def lowerCompositeCoefficient (N t j P K : ℕ) : ℤ :=
+  ∑ p ∈ compositeCellPrimes j P, oddBonferroniWeight N t p K (j / p)
+
+def roughCompositeCoefficient (N t j P : ℕ) : ℤ :=
+  ∑ p ∈ compositeCellPrimes j P, roughIndicator N t p (j / p)
+
+def physicalLowCompositeMass (F : Parameters) (s z P : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J,
+    switchedWeight F.N (switchedConductor F s) z (switchedCandidate F s q) *
+      (lowCompositeMask (switchedCandidate F s q) P : ℝ)
+
+def physicalLargeCompositeMass (F : Parameters) (s z P : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J,
+    if ¬ (switchedCandidate F s q).Prime ∧ P < (switchedCandidate F s q).minFac
+    then switchedWeight F.N (switchedConductor F s) z (switchedCandidate F s q) else 0
+
+def physicalLowerCompositeMass (F : Parameters) (s z P K : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J,
+    switchedWeight F.N (switchedConductor F s) z (switchedCandidate F s q) *
+      (lowerCompositeCoefficient F.N (switchedConductor F s) (switchedCandidate F s q) P K : ℝ)
+
+def physicalBonferroniSlack (F : Parameters) (s z P K : ℕ) (J : Finset ℕ) : ℝ :=
+  physicalLowCompositeMass F s z P J - physicalLowerCompositeMass F s z P K J
+
+theorem mem_compositeCellPrimes {j P p : ℕ} :
+    p ∈ compositeCellPrimes j P ↔
+      p.Prime ∧ p ∣ j ∧ j ≠ 0 ∧ p ≤ P ∧ p ^ 2 ≤ j := by
+  simp [compositeCellPrimes, Nat.mem_primeFactors, and_assoc]
+
+theorem roughCompositeCoefficient_exact {N t j P : ℕ} (hj : 2 ≤ j)
+    (hu : Nat.Coprime j (t * N)) :
+    roughCompositeCoefficient N t j P = lowCompositeMask j P := by
+  unfold roughCompositeCoefficient lowCompositeMask
+  by_cases hprime : j.Prime
+  · have hempty : compositeCellPrimes j P = ∅ := by
+      apply eq_empty_iff_forall_not_mem.mpr
+      intro p hp
+      obtain ⟨hpp, hpd, _, _, hsq⟩ := mem_compositeCellPrimes.mp hp
+      have he := (Nat.prime_dvd_prime_iff_eq hpp hprime).mp hpd
+      have := hprime.two_le
+      rw [he] at hsq
+      nlinarith
+    simp [hempty, hprime]
+  · have hcomp : compositeLeastFactor j := ⟨hj, hprime⟩
+    by_cases hcut : j.minFac ≤ P
+    · rw [if_pos ⟨hprime, hcut⟩, sum_eq_single j.minFac]
+      · simpa [leastPrimeQuotient] using minFac_roughIndicator (N := N) (t := t) hcomp
+      · intro p hp hn
+        obtain ⟨hpp, hpd, _, _, _⟩ := mem_compositeCellPrimes.mp hp
+        exact nonminimal_prime_roughIndicator_zero hcomp hu hpp hpd hn
+      · intro hn
+        exfalso
+        apply hn
+        exact mem_compositeCellPrimes.mpr
+          ⟨(leastPrimeCompositeWitness hcomp).1, Nat.minFac_dvd j, by omega,
+            hcut, (leastPrimeCompositeWitness hcomp).2.2.1⟩
+    · rw [if_neg (by tauto)]
+      apply sum_eq_zero
+      intro p hp
+      obtain ⟨hpp, hpd, _, hpP, _⟩ := mem_compositeCellPrimes.mp hp
+      have hn : p ≠ j.minFac := by intro he; exact hcut (he ▸ hpP)
+      exact nonminimal_prime_roughIndicator_zero hcomp hu hpp hpd hn
+
+theorem lowerCompositeCoefficient_le_mask {N t j P K : ℕ} (hj : 2 ≤ j)
+    (hu : Nat.Coprime j (t * N)) :
+    lowerCompositeCoefficient N t j P K ≤ lowCompositeMask j P := by
+  rw [← roughCompositeCoefficient_exact hj hu]
+  unfold lowerCompositeCoefficient roughCompositeCoefficient
+  exact sum_le_sum fun p hp => oddBonferroni_le_roughIndicator _ _ _ _ _
+
+theorem physicalLowerCompositeMass_le_low (F : Parameters) (s z P K : ℕ) (J : Finset ℕ) :
+    physicalLowerCompositeMass F s z P K J ≤ physicalLowCompositeMass F s z P J := by
+  unfold physicalLowerCompositeMass physicalLowCompositeMass
+  apply sum_le_sum
+  intro q hq
+  have hj := (mem_physicalQDomain.mp hq).2.2.1
+  have hu := physicalCandidate_unit_tN hq
+  have hcoeff :
+      (lowerCompositeCoefficient F.N (switchedConductor F s) (switchedCandidate F s q) P K : ℝ)
+        ≤ (lowCompositeMask (switchedCandidate F s q) P : ℝ) := by
+    exact_mod_cast lowerCompositeCoefficient_le_mask hj hu
+  exact mul_le_mul_of_nonneg_left hcoeff (switchedWeight_nonneg _ _ _ (by omega))
+
+theorem physicalBonferroniSlack_nonneg (F : Parameters) (s z P K : ℕ) (J : Finset ℕ) :
+    0 ≤ physicalBonferroniSlack F s z P K J :=
+  sub_nonneg.mpr (physicalLowerCompositeMass_le_low _ _ _ _ _ _)
+
+theorem physicalCompositeMass_partition (F : Parameters) (s z P : ℕ) (J : Finset ℕ) :
+    physicalCompositeMass F s z J =
+      physicalLowCompositeMass F s z P J + physicalLargeCompositeMass F s z P J := by
+  unfold physicalCompositeMass physicalLowCompositeMass physicalLargeCompositeMass
+  rw [← sum_add_distrib]
+  apply sum_congr rfl
+  intro q hq
+  unfold lowCompositeMask
+  by_cases hp : (switchedCandidate F s q).Prime
+  · simp [hp]
+  · by_cases hc : (switchedCandidate F s q).minFac ≤ P
+    · simp [hp, hc, not_lt_of_ge hc]
+    · have ht : P < (switchedCandidate F s q).minFac := Nat.lt_of_not_ge hc
+      simp [hp, hc, ht]
+
+theorem physicalLargeCompositeMass_nonneg (F : Parameters) (s z P : ℕ) (J : Finset ℕ) :
+    0 ≤ physicalLargeCompositeMass F s z P J := by
+  unfold physicalLargeCompositeMass
+  apply sum_nonneg
+  intro q hq
+  have hj := (mem_physicalQDomain.mp hq).2.2.1
+  split_ifs
+  · exact switchedWeight_nonneg _ _ _ (by omega)
+  · exact le_rfl
+
+theorem bonferroniComposite_exact_with_slack (F : Parameters) (s z P K : ℕ) (J : Finset ℕ)
+    (heven : Even F.N) (hz : 1 ≤ z) :
+    physicalPrimeMass F s z J = physicalSelbergMass F s z J -
+      physicalLowerCompositeMass F s z P K J - physicalLargeCompositeMass F s z P J -
+        physicalBonferroniSlack F s z P K J := by
+  have h := physicalCompositeSubtraction F s z J heven hz
+  rw [physicalCompositeMass_partition F s z P J] at h
+  unfold physicalBonferroniSlack
+  linarith
+
+theorem bonferroniCompositeUpper (F : Parameters) (s z P K : ℕ) (J : Finset ℕ)
+    (heven : Even F.N) (hz : 1 ≤ z) :
+    physicalPrimeMass F s z J ≤ physicalSelbergMass F s z J -
+      physicalLowerCompositeMass F s z P K J - physicalLargeCompositeMass F s z P J := by
+  rw [bonferroniComposite_exact_with_slack F s z P K J heven hz]
+  exact sub_le_self _ (physicalBonferroniSlack_nonneg _ _ _ _ _ _)
+
+/-- The exact prime AP sum, not a prime-pair distribution hypothesis. -/
+def actualPrimeAP (F : Parameters) (s z nu : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J,
+    if nu ∣ switchedCandidate F s q then Real.log (switchedCandidate F s q : ℝ) else 0
+
+def actualCompositeAP (F : Parameters) (s z k l h p : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalCompositeWindow F s z p J,
+    if compositeAPConductor k l h p ∣ switchedCandidate F s q
+    then Real.log (switchedCandidate F s q : ℝ) else 0
+
+theorem physicalSelbergMass_AP_expansion (F : Parameters) (s z : ℕ) (J : Finset ℕ) :
+    physicalSelbergMass F s z J =
+      ∑ d ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+        ∑ e ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+          switchedLambda F.N (switchedConductor F s) z d *
+            switchedLambda F.N (switchedConductor F s) z e *
+              actualPrimeAP F s z (Nat.lcm (primeProduct d) (primeProduct e)) J := by
+  unfold physicalSelbergMass
+  simp_rw [switchedWeight_doubleExpansion]
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro d hd
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro e he
+  unfold actualPrimeAP
+  rw [mul_sum]
+  apply sum_congr rfl
+  intro q hq
+  simp only [Nat.lcm_dvd_iff]
+  split_ifs <;> ring
+
+def frameLower (F : Parameters) (s x : ℕ) : ℕ :=
+  max (F.a + 1) (max (F.r * s + 1)
+    (max ((F.N - x + switchedConductor F s - 1) / switchedConductor F s)
+      ((F.M + switchedConductor F s - 1) / switchedConductor F s)))
+
+def frameUpper (F : Parameters) (s x : ℕ) : ℕ :=
+  min ((F.N - x / 2 - 1) / switchedConductor F s)
+    ((F.N - F.Q - 1) / switchedConductor F s)
+
+def frameInterval (F : Parameters) (s x : ℕ) : Finset ℕ := Icc (frameLower F s x) (frameUpper F s x)
+
+def logarithmicAPIntegral (F : Parameters) (s L U : ℕ) : ℝ :=
+  if L ≤ U then
+    ∫ y in ((L : ℝ) - 1)..(U : ℝ),
+      Real.log ((F.N : ℝ) - (switchedConductor F s : ℝ) * y) / Real.log y
+  else 0
+
+def compositeAPIntegral (F : Parameters) (s x p : ℕ) : ℝ :=
+  if p ^ 2 ≤ F.N then logarithmicAPIntegral F s (frameLower F s x)
+    (min (frameUpper F s x) ((F.N - p ^ 2) / switchedConductor F s)) else 0
+
+def compatibleAPMain (F : Parameters) (s nu : ℕ) (I : ℝ) : ℝ :=
+  if Nat.Coprime nu (switchedConductor F s * F.N) then I / (Nat.totient nu : ℝ) else 0
+
+def actualAPMain (F : Parameters) (s x nu : ℕ) : ℝ :=
+  compatibleAPMain F s nu (logarithmicAPIntegral F s (frameLower F s x) (frameUpper F s x))
+
+def compositePrimeCatalogue (N t P : ℕ) : Finset ℕ :=
+  (range (P + 1)).filter fun p => p.Prime ∧ Nat.Coprime p (t * N)
+
+theorem compositeCells_catalogue_reindex {N t j P : ℕ} (hj : 2 ≤ j)
+    (hu : Nat.Coprime j (t * N)) :
+    compositeCellPrimes j P = (compositePrimeCatalogue N t P).filter
+      (fun p => p ∣ j ∧ p ^ 2 ≤ j) := by
+  ext p
+  rw [mem_compositeCellPrimes]
+  simp only [compositePrimeCatalogue, mem_filter, mem_range, Nat.lt_succ_iff]
+  constructor
+  · rintro ⟨hp, hpd, _, hP, hsq⟩
+    exact ⟨⟨hP, hp, hu.coprime_dvd_left hpd⟩, hpd, hsq⟩
+  · rintro ⟨⟨hP, hp, _⟩, hpd, hsq⟩
+    exact ⟨hp, hpd, by omega, hP, hsq⟩
+
+theorem lowerCompositeCoefficient_catalogue {N t j P K : ℕ} (hj : 2 ≤ j)
+    (hu : Nat.Coprime j (t * N)) :
+    lowerCompositeCoefficient N t j P K =
+      ∑ p ∈ compositePrimeCatalogue N t P,
+        if p ∣ j ∧ p ^ 2 ≤ j then oddBonferroniWeight N t p K (j / p) else 0 := by
+  unfold lowerCompositeCoefficient
+  rw [compositeCells_catalogue_reindex hj hu, sum_filter]
+
+theorem lowerCompositeWeight_literal_expansion {N t z j P K : ℕ} (hj : 2 ≤ j)
+    (hu : Nat.Coprime j (t * N)) :
+    switchedWeight N t z j * (lowerCompositeCoefficient N t j P K : ℝ) =
+      ∑ p ∈ compositePrimeCatalogue N t P,
+        ∑ d ∈ (switchedPrimeSupport N t z).powerset,
+          ∑ e ∈ (switchedPrimeSupport N t z).powerset,
+            ∑ h ∈ (smallSievePrimes N t p).powerset,
+              if p ^ 2 ≤ j ∧ compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p ∣ j ∧
+                  h.card ≤ 2 * K + 1
+              then Real.log (j : ℝ) * switchedLambda N t z d * switchedLambda N t z e *
+                (ArithmeticFunction.moebius (primeProduct h) : ℝ) else 0 := by
+  rw [lowerCompositeCoefficient_catalogue hj hu]
+  simp only [Int.cast_sum, Int.cast_ite, Int.cast_zero]
+  rw [mul_sum]
+  apply sum_congr rfl
+  intro p hp
+  have hpp : p.Prime := (mem_filter.mp hp).2.1
+  by_cases hpj : p ∣ j
+  · by_cases hsq : p ^ 2 ≤ j
+    · have hcell : p ∣ j ∧ p ^ 2 ≤ j := ⟨hpj, hsq⟩
+      simp only [if_pos hcell]
+      rw [switchedWeight_doubleExpansion]
+      unfold oddBonferroniWeight
+      simp only [Int.cast_sum, Int.cast_ite, Int.cast_zero]
+      rw [sum_mul]
+      apply sum_congr rfl
+      intro d hd
+      rw [sum_mul]
+      apply sum_congr rfl
+      intro e he
+      rw [mul_sum]
+      apply sum_congr rfl
+      intro h hh
+      have hdP : ∀ l ∈ d, l.Prime := fun l hl => switchedSupport_prime ((mem_powerset.mp hd) hl)
+      have heP : ∀ l ∈ e, l.Prime := fun l hl => switchedSupport_prime ((mem_powerset.mp he) hl)
+      simp only [arithmetic_subset_conductor_dvd_iff hdP heP hpp hpj]
+      by_cases hdd : primeProduct d ∣ j <;>
+        by_cases hed : primeProduct e ∣ j <;>
+          by_cases hhd : primeProduct h ∣ j / p <;>
+            by_cases hc : h.card ≤ 2 * K + 1
+      all_goals simp [hsq, hdd, hed, hhd, hc] <;> ring
+    · simp only [hsq, and_false, if_false, mul_zero]
+      symm
+      apply sum_eq_zero
+      intro d hd
+      apply sum_eq_zero
+      intro e he
+      apply sum_eq_zero
+      intro h hh
+      simp [hsq]
+  · simp only [hpj, false_and, if_false, mul_zero]
+    symm
+    apply sum_eq_zero
+    intro d hd
+    apply sum_eq_zero
+    intro e he
+    apply sum_eq_zero
+    intro h hh
+    have hn : ¬ compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p ∣ j := by
+      intro hc
+      exact hpj (dvd_trans (dvd_mul_right p _) hc)
+    simp [hn]
+
+theorem physicalLowerCompositeMass_AP_expansion (F : Parameters) (s z P K : ℕ) (J : Finset ℕ) :
+    physicalLowerCompositeMass F s z P K J =
+      ∑ p ∈ compositePrimeCatalogue F.N (switchedConductor F s) P,
+        ∑ d ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+          ∑ e ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+            ∑ h ∈ (smallSievePrimes F.N (switchedConductor F s) p).powerset,
+              if h.card ≤ 2 * K + 1 then
+                switchedLambda F.N (switchedConductor F s) z d *
+                  switchedLambda F.N (switchedConductor F s) z e *
+                    (ArithmeticFunction.moebius (primeProduct h) : ℝ) *
+                      actualCompositeAP F s z (primeProduct d) (primeProduct e) (primeProduct h) p J
+              else 0 := by
+  unfold physicalLowerCompositeMass
+  have hpoint (q : ℕ) (hq : q ∈ physicalQDomain F s z J) :=
+    lowerCompositeWeight_literal_expansion (z := z) (P := P) (K := K)
+      (mem_physicalQDomain.mp hq).2.2.1 (physicalCandidate_unit_tN hq)
+  rw [sum_congr rfl hpoint, sum_comm]
+  apply sum_congr rfl
+  intro p hp
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro d hd
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro e he
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro h hh
+  by_cases hc : h.card ≤ 2 * K + 1
+  · rw [if_pos hc]
+    unfold actualCompositeAP physicalCompositeWindow
+    rw [sum_filter, mul_sum]
+    apply sum_congr rfl
+    intro q hq
+    by_cases hsq : p ^ 2 ≤ switchedCandidate F s q <;>
+      by_cases hdiv : compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p ∣ switchedCandidate F s q
+    all_goals simp [hc, hsq, hdiv] <;> ring
+  · rw [if_neg hc]
+    apply sum_eq_zero
+    intro q hq
+    simp [hc]
+
+def constructedSelbergMain (F : Parameters) (s z x : ℕ) : ℝ :=
+  ∑ d ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+    ∑ e ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+      switchedLambda F.N (switchedConductor F s) z d *
+        switchedLambda F.N (switchedConductor F s) z e *
+          actualAPMain F s x (Nat.lcm (primeProduct d) (primeProduct e))
+
+/-- All p/h/d/e representations remain signed. No multiplicity cap is reused. -/
+def constructedCompositeMain (F : Parameters) (s z x P K : ℕ) : ℝ :=
+  ∑ p ∈ compositePrimeCatalogue F.N (switchedConductor F s) P,
+    ∑ d ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+      ∑ e ∈ (switchedPrimeSupport F.N (switchedConductor F s) z).powerset,
+        ∑ h ∈ (smallSievePrimes F.N (switchedConductor F s) p).powerset,
+          if h.card ≤ 2 * K + 1 then
+            switchedLambda F.N (switchedConductor F s) z d *
+              switchedLambda F.N (switchedConductor F s) z e *
+                (ArithmeticFunction.moebius (primeProduct h) : ℝ) *
+                  compatibleAPMain F s
+                    (compositeAPConductor (primeProduct d) (primeProduct e) (primeProduct h) p)
+                    (compositeAPIntegral F s x p)
+          else 0
+
+def actualSelbergRemainder (F : Parameters) (s z x : ℕ) : ℝ :=
+  physicalSelbergMass F s z (frameInterval F s x) - constructedSelbergMain F s z x
+
+def actualCompositeRemainder (F : Parameters) (s z x P K : ℕ) : ℝ :=
+  physicalLowerCompositeMass F s z P K (frameInterval F s x) - constructedCompositeMain F s z x P K
+
+theorem actualPrimeAP_nonunit_zero (F : Parameters) (s z nu : ℕ) (J : Finset ℕ)
+    (hn : ¬ Nat.Coprime nu (switchedConductor F s * F.N)) :
+    actualPrimeAP F s z nu J = 0 := by
+  unfold actualPrimeAP
+  apply sum_eq_zero
+  intro q hq
+  simp [physical_nonunit_conductor_zero hq hn]
+
+theorem constructed_main_actual_remainder (F : Parameters) (s z x P K : ℕ)
+    (heven : Even F.N) (hz : 1 ≤ z) :
+    physicalPrimeMass F s z (frameInterval F s x) =
+      constructedSelbergMain F s z x - constructedCompositeMain F s z x P K +
+        (actualSelbergRemainder F s z x - actualCompositeRemainder F s z x P K) -
+          physicalLargeCompositeMass F s z P (frameInterval F s x) -
+            physicalBonferroniSlack F s z P K (frameInterval F s x) := by
+  rw [bonferroniComposite_exact_with_slack F s z P K (frameInterval F s x) heven hz]
+  unfold actualSelbergRemainder actualCompositeRemainder
+  ring
+
+theorem switchedIncidenceEstimator (F : Parameters) (s z x P K : ℕ)
+    (heven : Even F.N) (hz : 1 ≤ z) :
+    physicalPrimeMass F s z (frameInterval F s x) ≤
+      constructedSelbergMain F s z x - constructedCompositeMain F s z x P K +
+        |actualSelbergRemainder F s z x| + |actualCompositeRemainder F s z x P K| -
+          physicalLargeCompositeMass F s z P (frameInterval F s x) := by
+  rw [constructed_main_actual_remainder F s z x P K heven hz]
+  have hs := le_abs_self (actualSelbergRemainder F s z x)
+  have hc := neg_le_abs (actualCompositeRemainder F s z x P K)
+  have hslack := physicalBonferroniSlack_nonneg F s z P K (frameInterval F s x)
+  linarith
+
+theorem switchedIncidence_reference_price (F : Parameters) (s z x P K : ℕ)
+    (M0 : ℝ) (heven : Even F.N) (hz : 1 ≤ z) :
+    physicalPrimeMass F s z (frameInterval F s x) - M0 ≤
+      constructedSelbergMain F s z x - constructedCompositeMain F s z x P K - M0 +
+        |actualSelbergRemainder F s z x| + |actualCompositeRemainder F s z x P K| -
+          physicalLargeCompositeMass F s z P (frameInterval F s x) := by
+  have h := switchedIncidenceEstimator F s z x P K heven hz
+  linarith
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound20.SwitchedComposite.compositeCellPrimes
+#print axioms GoldbachRound20.SwitchedComposite.lowCompositeMask
+#print axioms GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient
+#print axioms GoldbachRound20.SwitchedComposite.roughCompositeCoefficient
+#print axioms GoldbachRound20.SwitchedComposite.physicalLowCompositeMass
+#print axioms GoldbachRound20.SwitchedComposite.physicalLargeCompositeMass
+#print axioms GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass
+#print axioms GoldbachRound20.SwitchedComposite.physicalBonferroniSlack
+#print axioms GoldbachRound20.SwitchedComposite.mem_compositeCellPrimes
+#print axioms GoldbachRound20.SwitchedComposite.roughCompositeCoefficient_exact
+#print axioms GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient_le_mask
+#print axioms GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass_le_low
+#print axioms GoldbachRound20.SwitchedComposite.physicalBonferroniSlack_nonneg
+#print axioms GoldbachRound20.SwitchedComposite.physicalCompositeMass_partition
+#print axioms GoldbachRound20.SwitchedComposite.physicalLargeCompositeMass_nonneg
+#print axioms GoldbachRound20.SwitchedComposite.bonferroniComposite_exact_with_slack
+#print axioms GoldbachRound20.SwitchedComposite.bonferroniCompositeUpper
+#print axioms GoldbachRound20.SwitchedComposite.actualPrimeAP
+#print axioms GoldbachRound20.SwitchedComposite.actualCompositeAP
+#print axioms GoldbachRound20.SwitchedComposite.physicalSelbergMass_AP_expansion
+#print axioms GoldbachRound20.SwitchedComposite.frameLower
+#print axioms GoldbachRound20.SwitchedComposite.frameUpper
+#print axioms GoldbachRound20.SwitchedComposite.frameInterval
+#print axioms GoldbachRound20.SwitchedComposite.logarithmicAPIntegral
+#print axioms GoldbachRound20.SwitchedComposite.compositeAPIntegral
+#print axioms GoldbachRound20.SwitchedComposite.compatibleAPMain
+#print axioms GoldbachRound20.SwitchedComposite.actualAPMain
+#print axioms GoldbachRound20.SwitchedComposite.compositePrimeCatalogue
+#print axioms GoldbachRound20.SwitchedComposite.compositeCells_catalogue_reindex
+#print axioms GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient_catalogue
+#print axioms GoldbachRound20.SwitchedComposite.lowerCompositeWeight_literal_expansion
+#print axioms GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass_AP_expansion
+#print axioms GoldbachRound20.SwitchedComposite.constructedSelbergMain
+#print axioms GoldbachRound20.SwitchedComposite.constructedCompositeMain
+#print axioms GoldbachRound20.SwitchedComposite.actualSelbergRemainder
+#print axioms GoldbachRound20.SwitchedComposite.actualCompositeRemainder
+#print axioms GoldbachRound20.SwitchedComposite.actualPrimeAP_nonunit_zero
+#print axioms GoldbachRound20.SwitchedComposite.constructed_main_actual_remainder
+#print axioms GoldbachRound20.SwitchedComposite.switchedIncidenceEstimator
+#print axioms GoldbachRound20.SwitchedComposite.switchedIncidence_reference_price
+
+end
+end GoldbachRound20.SwitchedComposite

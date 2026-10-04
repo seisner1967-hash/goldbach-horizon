@@ -1,0 +1,54 @@
+ThermalGammaMellinInverse22 — révision02 SOURCE, non compilée
+
+Source conservée du vrai lot18 : judge5/batch18/sources/ThermalGammaMellinInverse22.lean,
+SHA5271bbf9a9917a3ab61c6c7e0e747af4014e214b0867a9c81b43b5aa08fccec1,
+lue FULL60c875. Log réel FULLca1767 :
+judge5/batch18/batch18_attempt01/ThermalGammaMellinInverse22.log,
+SHAad9e08512e1a5af905830b98d083925ec8ea4f36c5d01773864c0ca885d2395e.
+Le FAIL18 conserve ses sept diagnostics, ses onze prints dont six recovery
+sorryAx et l'absence d'olean. Aucune réfutation analytique ou de parité n'est
+déduite de ces erreurs d'élaboration.
+
+Nouvelle source distincte : thermal_gamma_mellin_revision02/ThermalGammaMellinInverse22.lean,
+7284 octets, SHAdaad8b5d5fb1181bfc714e1b470edd7d9a6ae07e9a1b76c384481964a42caf91,
+FULLa4c29e. Les onze déclarations (9 théorèmes, 2 définitions), leurs domaines,
+fonctions et onze prints qualifiés sont conservés. Scan de lignes textuel65846c,
+sans parseur Lean. Les changements sont limités à trois sites :
+
+1. Ancienne ligne40 : ContinuousAt.comp choisissait une fonction d'addition
+   comme fonction intérieure. La preuve déclare hargAt au point réel t,
+   fixe explicitement f:ℝ→ℂ, g=Complex.Gamma et x=t, puis présente la
+   composition Gamma∘f. Le domaine de Γ est toujours vérifié par Re(2+it)=2.
+2. Ancienne ligne62 : ht est une appartenance à Ioi0. htpos:0<t est extrait
+   par Set.mem_Ioi.mp avant abs_of_pos. Aucune positivité n'est ajoutée
+   en prémisse du théorème d'intégrabilité.
+3. Ancienne ligne61 : Function.comp_apply réduit les compositions id/neg
+   laissées dans le but de mono'. gammaLine, |−t| et |t| sont ensuite
+   normalisés contre la majoration réelle de Γ déjà démontrée.
+   Les diagnostics recovery de la ligne44 ne justifient aucun changement
+   de contenu analytique et ne sont pas comptés comme corrigés avant Lean.
+
+APIs cache lues uniquement en SOURCE ciblée : Topology/Basic.lean1425–1459
+(ContinuousAt.comp, TARGETED80ac6a), Order/Interval/Set/Defs.lean67–79
+(mem_Ioi, TARGETED80ac6a), MeasureTheory/Function/L1Space.lean427–446
+(Integrable.mono', TARGETED34a23e). Aucun probe de compilateur.
+
+La dépendance GammaPrerequisites22 est l'acquis indépendant readonly du
+Juge02 : source9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7,
+oleanfc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477.
+Ses deux obligations employées ici sont relues TARGETED99d597 :
+real_laplace_integrable(a=1,r=π/4) et Gamma_strip_exponential_bound(Re=2).
+Elles fournissent réellement l'enveloppe intégrable 2exp(−πt/4) sur t>0.
+Aucune nouvelle exécution/recompilation de cette dépendance n'a lieu.
+
+L'identité proposée conserve x>0 et le facteur 1/(2π) :
+exp(−x)=(1/(2π))∫ Γ(2+it) x^(−2−it) dt.
+Le module construit d'abord la continuité, l'intégrabilité des deux demi-droites,
+la convergence Mellin, l'égalité du transformé à Γ puis l'inversion réelle.
+Sa validation Lean est OPEN jusqu'à une nouvelle préparation indépendante
+et une gate ROOT propre. Cette remise ne crée aucun builder ou lot19.
+
+L'échange avec la vraie série Λ, le prolongement à a−iθ, le contrat M global,
+le coefficient N, D_N et WIN restent distincts et non payés. Aucun axiome cible,
+sorry/admit, unsafe ou native_decide n'est ajouté à la source. Le journal
+du vrai FAIL18 et tous ses fichiers gelés restent immuables.

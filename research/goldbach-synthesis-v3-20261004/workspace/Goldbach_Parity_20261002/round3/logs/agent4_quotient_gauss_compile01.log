@@ -1,0 +1,92 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:19:4: error: failed to synthesize
+  Fintype Rˣ
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:22:4: error: failed to synthesize
+  Fintype Rˣ
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:27:32: error: unknown constant 'Units.val_injective'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:29:58: error: unsolved goals
+R : Type u_1
+inst✝¹ : CommRing R
+inst✝ : Fintype R
+χ : MulChar R ℂ
+ψ : AddChar R ℂ
+e : Rˣ ↪ R := { toFun := Units.val, inj' := ⋯ }
+⊢ ∑ u ∈ sorry, χ ↑u * ψ ↑u = ∑ u : Rˣ, χ ↑u * ψ ↑u
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:41:0: warning: automatically included section variable(s) unused in theorem 'GoldbachResearch.QuotientGauss.inverse_character_unit':
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:46:7: error: failed to synthesize
+  Fintype Rˣ
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:50:4: error: application type mismatch
+  Equiv.Perm.sum_comp (Equiv.mulLeft a⁻¹) fun u => χ ↑u * ψ (↑a * ↑u)
+argument
+  fun u => χ ↑u * ψ (↑a * ↑u)
+has type
+  Rˣ → ℂ : Type u_1
+but is expected to have type
+  Finset Rˣ : Type u_1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:47:44: error: unsolved goals
+R : Type u_1
+inst✝¹ : CommRing R
+inst✝ : Fintype R
+χ : MulChar R ℂ
+ψ : AddChar R ℂ
+a : Rˣ
+⊢ ∑ u ∈ sorry, χ ↑u * ψ (↑a * ↑u) = χ ↑a⁻¹ * unitGauss χ ψ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:60:7: error: failed to synthesize
+  Fintype Rˣ
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:65:7: error: failed to synthesize
+  Fintype Rˣ
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:69:4: error: application type mismatch
+  Equiv.Perm.sum_comp (Equiv.inv Rˣ) fun x => χ ↑x * ψ (↑a * ↑x⁻¹)
+argument
+  fun x => χ ↑x * ψ (↑a * ↑x⁻¹)
+has type
+  Rˣ → ℂ : Type u_1
+but is expected to have type
+  Finset Rˣ : Type u_1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:66:37: error: unsolved goals
+R : Type u_1
+inst✝¹ : CommRing R
+inst✝ : Fintype R
+χ : MulChar R ℂ
+ψ : AddChar R ℂ
+a : Rˣ
+⊢ ∑ x ∈ sorry, χ ↑x * ψ (↑a * ↑x⁻¹) = χ ↑a * unitGauss χ⁻¹ ψ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:76:7: error: failed to synthesize
+  Fintype Rˣ
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:97:15: error: simp made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:111:7: error: failed to synthesize
+  Fintype Rˣ
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:116:8: warning: declaration uses 'sorry'
+'GoldbachResearch.QuotientGauss.unitGauss_eq_gaussSum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuotientGauss.inverse_character_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuotientGauss.unitGauss_shift' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachResearch.QuotientGauss.inverse_unitGauss_shift' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuotientGauss.inverse_phase_sum' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachResearch.QuotientGauss.kloosterman_unit_transform' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuotientGauss.kloosterman_gaussSum_transform' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuotientGauss.zmod_standard_transform' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

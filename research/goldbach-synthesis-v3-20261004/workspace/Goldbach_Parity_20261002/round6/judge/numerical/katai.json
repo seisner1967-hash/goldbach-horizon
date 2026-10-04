@@ -1,0 +1,456 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "alpha": 100,
+  "Q": 999999,
+  "raw_profile_definition": "rho1(N-m)*(Lambda(N-m)-log(N-m))*(D_alpha_Q(m)-W_alpha_Q(N-m,m)) with 0<m<N",
+  "finite_receipts": [
+    {
+      "X": 512,
+      "P": [
+        3,
+        7,
+        11,
+        13
+      ],
+      "a": "41/64",
+      "M": 170,
+      "coverage_identity": "a*S=-sum_m mu(m)B(m)+R",
+      "Gram_identity": "G=sum_p E_p+2sum_{p<q}C_pq",
+      "actual_first_axis_mask": "rho1 only: n>1 and gcd(n,N)=1; no mu(n)^2",
+      "norms": {
+        "F_squared_symbolic_terms": 517,
+        "Gram_symbolic_terms": 192,
+        "Q_squarefree": 104,
+        "V": "1999/8"
+      },
+      "diagonal_nonzero": {
+        "3": true,
+        "7": true,
+        "11": true,
+        "13": true
+      },
+      "correlations": {
+        "3,7": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        },
+        "3,11": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        },
+        "3,13": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        },
+        "7,11": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        },
+        "7,13": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        },
+        "11,13": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        }
+      },
+      "residual_symbolic_terms": 143,
+      "uncovered_nonzero_profile_arguments": 13,
+      "uncovered_symbolic_terms": 69,
+      "outside_prefix_argument_count": 99999487,
+      "outside_prefix_mass": "Retained as an uncomputed exterior term; no global D_N conclusion",
+      "S_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-1526401616830036635057672589/2000000000000000000000000",
+        "upper": "-1526400537985424260463962149/2000000000000000000000000"
+      },
+      "S_sha256": "938226c01f69caf1ba09be66f00eea8435c499f43a90451e827dd63a5e033f6f",
+      "R_sha256": "108799785e28cca4259390a0d5108b08867e37e62eb6d24f430b21b1ab746871"
+    },
+    {
+      "X": 1024,
+      "P": [
+        3,
+        7,
+        11,
+        13
+      ],
+      "a": "329/512",
+      "M": 341,
+      "coverage_identity": "a*S=-sum_m mu(m)B(m)+R",
+      "Gram_identity": "G=sum_p E_p+2sum_{p<q}C_pq",
+      "actual_first_axis_mask": "rho1 only: n>1 and gcd(n,N)=1; no mu(n)^2",
+      "norms": {
+        "F_squared_symbolic_terms": 3516,
+        "Gram_symbolic_terms": 1924,
+        "Q_squarefree": 209,
+        "V": "129839/256"
+      },
+      "diagonal_nonzero": {
+        "3": true,
+        "7": true,
+        "11": true,
+        "13": true
+      },
+      "correlations": {
+        "3,7": {
+          "symbolic_terms": 124,
+          "certificate": {
+            "sign": "POSITIVE",
+            "terms": 6,
+            "lower": "6639452583515477244011707477778989127290469737762049/400000000000000000000000000000000000000000000000",
+            "upper": "39836747438606068123257346995935153054859005837843089/2400000000000000000000000000000000000000000000000"
+          }
+        },
+        "3,11": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        },
+        "3,13": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        },
+        "7,11": {
+          "symbolic_terms": 210,
+          "certificate": {
+            "sign": "POSITIVE",
+            "terms": 6,
+            "lower": "12165787590064757241221307311288961339316295041036697/3000000000000000000000000000000000000000000000000",
+            "upper": "48663193422335023880011073395257175967199376378534573/12000000000000000000000000000000000000000000000000"
+          }
+        },
+        "7,13": {
+          "symbolic_terms": 96,
+          "certificate": {
+            "sign": "POSITIVE",
+            "terms": 6,
+            "lower": "4340369097882784251451408800995006658738936221869313/1000000000000000000000000000000000000000000000000",
+            "upper": "17361496114545968741495254306961872637070428588370949/4000000000000000000000000000000000000000000000000"
+          }
+        },
+        "11,13": {
+          "symbolic_terms": 156,
+          "certificate": {
+            "sign": "POSITIVE",
+            "terms": 6,
+            "lower": "10477131534502602772747174197032026384703345241937439/6000000000000000000000000000000000000000000000000",
+            "upper": "10477146825646370921903689770973347444483718067910037/6000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      "residual_symbolic_terms": 760,
+      "uncovered_nonzero_profile_arguments": 80,
+      "uncovered_symbolic_terms": 427,
+      "outside_prefix_argument_count": 99998975,
+      "outside_prefix_mass": "Retained as an uncomputed exterior term; no global D_N conclusion",
+      "S_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-14328903383917206112674463537/6000000000000000000000000",
+        "upper": "-4776295787537178777442439717/2000000000000000000000000"
+      },
+      "S_sha256": "76aebb94df2249de09b7bf2742f28e6159a4b7e46489852d8613b0fc652c8a26",
+      "R_sha256": "edf4e237eefd9a0bbf74da1150e23ff02350943eb085049eca94179a2a47c99f"
+    },
+    {
+      "X": 303,
+      "P": [
+        2,
+        5
+      ],
+      "a": "211/303",
+      "M": 151,
+      "coverage_identity": "a*S=-sum_m mu(m)B(m)+R",
+      "Gram_identity": "G=sum_p E_p+2sum_{p<q}C_pq",
+      "actual_first_axis_mask": "rho1 only: n>1 and gcd(n,N)=1; no mu(n)^2",
+      "norms": {
+        "F_squared_symbolic_terms": 6,
+        "Gram_symbolic_terms": 0,
+        "Q_squarefree": 93,
+        "V": "37592/303"
+      },
+      "diagonal_nonzero": {
+        "2": false,
+        "5": false
+      },
+      "correlations": {
+        "2,5": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        }
+      },
+      "residual_symbolic_terms": 3,
+      "uncovered_nonzero_profile_arguments": 1,
+      "uncovered_symbolic_terms": 3,
+      "outside_prefix_argument_count": 99999696,
+      "outside_prefix_mass": "Retained as an uncomputed exterior term; no global D_N conclusion",
+      "S_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-21253412012343203333289727/500000000000000000000000",
+        "upper": "-17002724695914081069696933/400000000000000000000000"
+      },
+      "S_sha256": "27507e25060aba298e832c5d77b7a93f4dada2e1a8086a7c1e31bdf21a16ebec",
+      "R_sha256": "9635286e7db92d704c2ad345ccc57f133e8c4f8b8d24e1a4b4cc7dcba083a043",
+      "zero_correlation_counterexample": "P={2,5}: all dilation profiles vanish by unit mask, but R=a*S carries the entire nonzero prefix mass",
+      "explicit_S303": {
+        "S": "-1/2*log(99999697)*log(101)",
+        "S_coefficients": {
+          "7,101": "-1/2",
+          "41,101": "-1/2",
+          "101,348431": "-1/2"
+        },
+        "R_coefficients": {
+          "7,101": "-211/606",
+          "41,101": "-211/606",
+          "101,348431": "-211/606"
+        },
+        "B": "0",
+        "G": "0",
+        "R": "(211/303)*S303",
+        "only_nonzero_raw_argument": 303
+      }
+    },
+    {
+      "X": 1024,
+      "P": [
+        2,
+        5
+      ],
+      "a": "179/256",
+      "M": 512,
+      "coverage_identity": "a*S=-sum_m mu(m)B(m)+R",
+      "Gram_identity": "G=sum_p E_p+2sum_{p<q}C_pq",
+      "actual_first_axis_mask": "rho1 only: n>1 and gcd(n,N)=1; no mu(n)^2",
+      "norms": {
+        "F_squared_symbolic_terms": 3516,
+        "Gram_symbolic_terms": 0,
+        "Q_squarefree": 314,
+        "V": "26839/64"
+      },
+      "diagonal_nonzero": {
+        "2": false,
+        "5": false
+      },
+      "correlations": {
+        "2,5": {
+          "symbolic_terms": 0,
+          "certificate": {
+            "sign": "ZERO",
+            "lower": "0/1",
+            "upper": "0/1",
+            "terms": 0
+          }
+        }
+      },
+      "residual_symbolic_terms": 757,
+      "uncovered_nonzero_profile_arguments": 189,
+      "uncovered_symbolic_terms": 757,
+      "outside_prefix_argument_count": 99998975,
+      "outside_prefix_mass": "Retained as an uncomputed exterior term; no global D_N conclusion",
+      "S_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-14328903383917206112674463537/6000000000000000000000000",
+        "upper": "-4776295787537178777442439717/2000000000000000000000000"
+      },
+      "S_sha256": "76aebb94df2249de09b7bf2742f28e6159a4b7e46489852d8613b0fc652c8a26",
+      "R_sha256": "ebb9433b443db7d1a721670b70442a01ea6b16a11b411c6164f9cf92f5c3a5a1",
+      "zero_correlation_counterexample": "P={2,5}: all dilation profiles vanish by unit mask, but R=a*S carries the entire nonzero prefix mass"
+    }
+  ],
+  "diagnostics": {
+    "raw_prime_argument_311": {
+      "metadata": {
+        "n": 99999689,
+        "m": 311,
+        "factor_n": [
+          [
+            113,
+            1
+          ],
+          [
+            199,
+            1
+          ],
+          [
+            4447,
+            1
+          ]
+        ],
+        "factor_m": [
+          [
+            311,
+            1
+          ]
+        ],
+        "mu_m": -1,
+        "alpha": 100,
+        "Q": 999999,
+        "prefix": 3,
+        "admitted_divisors": [
+          1
+        ],
+        "admitted_harmonic_k": [
+          1,
+          3
+        ],
+        "unit_excluded_k": [
+          2
+        ],
+        "D": {
+          "311": "-1/1"
+        },
+        "W": {
+          "3": "-1/2",
+          "311": "-1/2"
+        },
+        "D_minus_W": {
+          "3": "1/2",
+          "311": "-1/2"
+        },
+        "literal_kernel": {
+          "3": "-1/2",
+          "311": "1/2"
+        },
+        "fII": {
+          "113": "-1/1",
+          "199": "-1/1",
+          "4447": "-1/1"
+        },
+        "Sfull_log_product_coefficients": {
+          "3,113": "1/2",
+          "3,199": "1/2",
+          "3,4447": "1/2",
+          "113,311": "-1/2",
+          "199,311": "-1/2",
+          "311,4447": "-1/2"
+        }
+      },
+      "certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "85493660906624094057557397/2000000000000000000000000",
+        "upper": "10686712191525579572692041/250000000000000000000000"
+      },
+      "HH_carrier": 0,
+      "verdict": "Raw F_N is not the HH carrier profile"
+    },
+    "active_first_axis_prime_square": {
+      "n": 99341089,
+      "m": 658911,
+      "factor_n": [
+        [
+          9967,
+          2
+        ]
+      ],
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          41,
+          1
+        ],
+        [
+          487,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "mu_n_squared": 0,
+      "fII": "-log(9967)",
+      "prefix": 6589,
+      "symbolic_terms": 850,
+      "polynomial_sha256": "2254aaa776f11dde8a355ec7cd1ba61705a6d6481ef2f12c4e542d10fae83372",
+      "certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "16703666392038347172914237068734060275535508263903365170605625632577350185920913038628916888409882636617817890111228631567000312896077475211170579593942457864581893435742271590067840366322562362921889364666217077453428986062084943858592763633454146959995322407466462161474131482435136686292813367541297753799152869843325074528057046586834976694966574761979279920378265931870061940185142654429928067134689488398707203822680053694836908744733711771239167955076313182913930530622994174190056723846787856434025877220613120601632438762038377160498812669467576783926453392135248551918174313/922171673029644587646989937478011871334322921790383265526492187962468686185366773513269048908510543300432563199118164743543533981293289516167180715853944645965454116079858426172855379475948435407062377057800600908974316850529450093494255546804137874287253967650371333589388676737712537143945611741924740263182982344589790687083693965836937165624440778875821069543859033317997097247533008111935549313698880219898851843396347194907664464092735570249527126297313036102623407472922570993225993983463880686412982376389335147369722803975599406347310874966474240000000000000000000000000000",
+        "upper": "1148101695099116682581379111584791530910989242221083737328424015800620263919980887230069799872769886933861054974701860548928554556614518984947852810749215614972875679372134777211432546236382791063474778403076055433251247734574561624165110193060694159279371582056750570467095087483487338668048145988213758734957183407973944689547891150901103751955608334223489945426296199624067539450319404190749674018703726299938656315229699040711484699722493489342017828986986546150783134310973781361100481116005248017759099880101627382357020490489793814076367430874631809830966317935561212336983439337/63384046004138677898361398441618275516657478618868052722979906985486519568303398949328387881871539934828077151798211944716610807159076081431998261298703757825908630246952180906303741716884536669679171581926879170197534340731887258172506818291458675105652046147821754658530941198345238007994982295298360226435064141262053058052842649037884039632101958020121002961975060872781671807320784386605481846302416967467349208228736797729397944810462271520588361726806675979619837920625087963249472685727385960929536441241863291351656811329874333460904964937263673360000000000000000000000000000"
+      },
+      "verdict": "Actual raw F_N and its mu(m)-weighted contribution are nonzero although mu(n)^2=0"
+    },
+    "uncovered_HH_tuple": {
+      "a": 21,
+      "b": 13,
+      "r": 99999727,
+      "k": 1,
+      "n": 273,
+      "m": 99999727,
+      "P": [
+        3,
+        7,
+        11,
+        13
+      ],
+      "c_P": 0,
+      "HH_carrier": 4,
+      "positive_weight": "4*log13*logr",
+      "verdict": "Finite prime-dilation coverage misses a genuine positive HH tuple"
+    },
+    "strict_terminal_faces": "F(0)=F(N)=F(N-1)=0; the last value is removed by n>1"
+  },
+  "actual_log_arithmetic": "Rational coefficients of symbolic prime logarithms; signs enclosed by rational artanh intervals",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 160,
+    "baseline_sha256": "bff50b025ed0ca2f072739edcfc04e91c94acd8f7d9cff24b27c53a2f5928684"
+  },
+  "limitations": "No small correlation assumed, no diagonal removed, no first-axis squarefree mask invented, no global profile or D_N computed",
+  "script_sha256": "baa5f38424d501a5114409257488ac05a6c10a5a3cba7b35b89ddd63accfebb0"
+}

@@ -1,0 +1,509 @@
+{
+  "C3_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "H1_paid": false,
+  "actual_child_invocations": 3,
+  "all_inputs_unchanged": true,
+  "attempt": "batch04_attempt01",
+  "author_olean_used": false,
+  "capture_count": 26,
+  "closed_judge_file_count": 134,
+  "declarations_passed": 52,
+  "global_trace_certified": false,
+  "hidden_retries": false,
+  "input_count": 6648,
+  "module_count_passed": 3,
+  "numeric_PASS_used_as_proof": false,
+  "numeric_bank_replayed": false,
+  "old_batches_recompiled": false,
+  "protected_archive_count": 3089,
+  "readonly_local_dependencies": [],
+  "rows": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaPsi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaGammaRatio"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaStep"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifferenceIntegrand"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaDifferentiableAt_of_re_pos"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.deriv_Gamma_add_one_right"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaPsi_add_one"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaPsi_one"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaGammaRatio_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.hasDerivAt_betaGammaRatio_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.hasDerivAt_betaGammaRatio_real_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaStep_pos"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaStep_le_one"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaStep_tendsto_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaStep_tendsto_zero_right"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaGammaRatio_eq_mul_betaIntegral"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_eq_ratio"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_tendsto"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_eq_integral"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\GammaPsiCore22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiCore22.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources",
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T11:40:52.083426+00:00",
+      "log_sha256": "97465d86ca898f7e67e878fee7783dfdd9cf6cd6a2041109de704cc340701c39",
+      "module": "GammaPsiCore22",
+      "olean_sha256": "15f66830eab0ee8e192d4fffee9518abd001b3167c28c527881bbdaabefb9a4b",
+      "source_sha256": "450962be9526866fa0ffebc39ef29a819d94b57a90000291337550e9f4dc7284",
+      "started_at": "2026-10-03T11:40:20.031839+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    },
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaEndpointConstant"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifferenceMajorant"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.psiBetaIntegrand"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaEndpointConstant_nonneg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifferenceMajorant_nonneg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.rpow_le_half_endpoint_sum"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_ofReal_cpow"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.hasDerivAt_ofReal_cpow"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_cpow_sub_one_le_endpoint"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_betaFactor_le_two"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_betaDifference_le_left"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_betaDifference_le_right"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.norm_betaDifference_le_majorant"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.intervalIntegrable_betaDifferenceMajorant"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.intervalIntegrable_betaDifference"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_pointwise_tendsto"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_limit_aestronglyMeasurable"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integrableOn_betaDifference_limit"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_dominated_limit"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_zero_integral"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.betaDifference_zero_eq_neg_psiBeta"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integrableOn_psiBetaIntegrand"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaPsi_eq_beta_integral"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\GammaPsiBetaLimit22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiBetaLimit22.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources",
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T11:41:26.232271+00:00",
+      "log_sha256": "925136a4863e2fabe1a09ec658265a5c7e2df4ca65e81fe1f471c6a9b2346bad",
+      "module": "GammaPsiBetaLimit22",
+      "olean_sha256": "28e54d352bde19a6ab175dfa6dfa7667f41e2f644b81c90ac6256ead16b40cd0",
+      "source_sha256": "b4adf3ac71dd7c9d0e6e78f83ce805ddc7eaf5e8f5978aa4c1d6b87bc8caceb8",
+      "started_at": "2026-10-03T11:40:52.090499+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    },
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.psiExpIntegrand"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.expNeg_image_Ioi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.hasDerivAt_expNeg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.expNeg_injOn_Ioi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.ofReal_exp_cpow"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.expNeg_mul_cpow"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.psiBeta_exp_jacobian"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.psiBeta_integral_eq_exp_integral"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integrableOn_psiExpIntegrand"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.gammaPsi_eq_exp_integral"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\GammaPsiIntegral22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiIntegral22.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources",
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T11:41:42.045503+00:00",
+      "log_sha256": "52fc1cb84f13400b57394d762f4ca8a2c0511ab1a7a2fd8a36deb65481a30548",
+      "module": "GammaPsiIntegral22",
+      "olean_sha256": "5dd15ee927c32894e7cafb4f05c78fb65c48e1cca93d91eee7ae96518f43ee1e",
+      "source_sha256": "3f254cdfeee333aa66eba719b944f64a693fa2e15f0265f340ace9c2a99f6aaf",
+      "started_at": "2026-10-03T11:41:26.232271+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    }
+  ],
+  "status": "INDEPENDENT_BATCH04_AUX_PASS",
+  "time_utc": "2026-10-03T11:41:50.680927+00:00",
+  "victory": false
+}

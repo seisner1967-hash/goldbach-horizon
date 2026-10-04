@@ -1,0 +1,403 @@
+{
+  "schema": "ROUND22_JUDGE5_MODULE_CATALOG_BATCH02",
+  "time_utc": "2026-10-03T08:59:33.295736+00:00",
+  "modules": [
+    {
+      "module": "EpsteinUnfold22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\EpsteinUnfold22.lean",
+      "source_sha256": "79384d3502ab8042b44104e0ba4e56087c47430c267c2b9f16f9c6f228426aea",
+      "author_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\EpsteinUnfold22.lean",
+      "author_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\receipt.json",
+      "author_log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\EpsteinUnfold22.log",
+      "author_provenance": {
+        "command": [
+          "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+          "-o",
+          "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\EpsteinUnfold22.olean",
+          "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\EpsteinUnfold22.lean"
+        ],
+        "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04",
+        "exit_code": 0,
+        "finished_at": "2026-10-03T08:29:29.900322+00:00",
+        "log_sha256": "12cc50cc686994a04af46290727ed38de7e11eaf09622c67d5fcfb1544c63060",
+        "module": "EpsteinUnfold22",
+        "olean_sha256": "b3e0d60e7633cc46e2084c0131e2fd42aef0f1fca60d4db7682d45ece1774bc0",
+        "source_sha256": "79384d3502ab8042b44104e0ba4e56087c47430c267c2b9f16f9c6f228426aea",
+        "started_at": "2026-10-03T08:29:04.716790+00:00",
+        "status": "LEAN_PASS_AUX",
+        "invocations": 1
+      },
+      "dependencies": [
+        "EpsteinFinite22"
+      ],
+      "namespace": "Epstein22",
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.periodized"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.translateBound"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.infiniteShiftIntegral"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.kernel_upper_of_sq_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.kernel_upper_a"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.summable_translateBound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.translateBound_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.kernel_translate_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuousOn_periodized"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuous_periodized"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.periodic_periodized"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.intervalIntegrable_periodized"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.summable_integral_norm_cells"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.integral_periodized_unit"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.summable_kernel_translate"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.infiniteSum_shiftKernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.unfoldFullRealThreeHalves"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.abs_cast_eq_natAbs"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.unfoldFullRealThreeHalves_natAbs"
+        }
+      ],
+      "qualified_prints": [
+        "Epstein22.periodized",
+        "Epstein22.translateBound",
+        "Epstein22.infiniteShiftIntegral",
+        "Epstein22.kernel_upper_of_sq_le",
+        "Epstein22.kernel_upper_a",
+        "Epstein22.summable_translateBound",
+        "Epstein22.translateBound_nonneg",
+        "Epstein22.kernel_translate_bound",
+        "Epstein22.continuousOn_periodized",
+        "Epstein22.continuous_periodized",
+        "Epstein22.periodic_periodized",
+        "Epstein22.intervalIntegrable_periodized",
+        "Epstein22.summable_integral_norm_cells",
+        "Epstein22.integral_periodized_unit",
+        "Epstein22.summable_kernel_translate",
+        "Epstein22.infiniteSum_shiftKernel",
+        "Epstein22.unfoldFullRealThreeHalves",
+        "Epstein22.abs_cast_eq_natAbs",
+        "Epstein22.unfoldFullRealThreeHalves_natAbs"
+      ],
+      "theorem_count": 16,
+      "definition_count": 3,
+      "compiler_options": [],
+      "source_forbidden_tokens": [],
+      "scope": "AUXILIARY_CONTINUOUS_ANALYSIS_ONLY"
+    },
+    {
+      "module": "EpsteinTail22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\EpsteinTail22.lean",
+      "source_sha256": "5f9d3f180df2e165d43aebfe2e72b963091bb2b90fdfa4e786a66cc82745af8e",
+      "author_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\EpsteinTail22.lean",
+      "author_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\receipt.json",
+      "author_log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\EpsteinTail22.log",
+      "author_provenance": {
+        "command": [
+          "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+          "-o",
+          "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\EpsteinTail22.olean",
+          "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\EpsteinTail22.lean"
+        ],
+        "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04",
+        "exit_code": 0,
+        "finished_at": "2026-10-03T08:35:31.051697+00:00",
+        "log_sha256": "af4334b90177fa791f1ee4cd1befd21c2039c70db2a08dbbd32b02663cce535d",
+        "module": "EpsteinTail22",
+        "olean_sha256": "d6ca888b83bbd4644152da951df39b7712a2735ae10e233b84ea1dcb9584b025",
+        "source_sha256": "5f9d3f180df2e165d43aebfe2e72b963091bb2b90fdfa4e786a66cc82745af8e",
+        "started_at": "2026-10-03T08:35:09.799051+00:00",
+        "status": "LEAN_PASS_AUX",
+        "invocations": 1
+      },
+      "dependencies": [
+        "EpsteinUnfold22"
+      ],
+      "namespace": "Epstein22",
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.endpointDeficit"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.truncationEnvelope"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.truncationEnvelopeReal"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.endpointSum_range"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.endpointDeficit_eq"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.boundary_deficit_uniform"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.endpointDeficit_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.complete_mass_prefactor"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.actual_error_eq_endpointDeficit"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.actual_truncation_error_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.truncationEnvelope_eq_rpow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuous_truncationEnvelope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.truncationEnvelope_eq_real"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuousOn_truncationEnvelopeReal"
+        }
+      ],
+      "qualified_prints": [
+        "Epstein22.endpointDeficit",
+        "Epstein22.truncationEnvelope",
+        "Epstein22.truncationEnvelopeReal",
+        "Epstein22.endpointSum_range",
+        "Epstein22.endpointDeficit_eq",
+        "Epstein22.boundary_deficit_uniform",
+        "Epstein22.endpointDeficit_bounds",
+        "Epstein22.complete_mass_prefactor",
+        "Epstein22.actual_error_eq_endpointDeficit",
+        "Epstein22.actual_truncation_error_bounds",
+        "Epstein22.truncationEnvelope_eq_rpow",
+        "Epstein22.continuous_truncationEnvelope",
+        "Epstein22.truncationEnvelope_eq_real",
+        "Epstein22.continuousOn_truncationEnvelopeReal"
+      ],
+      "theorem_count": 11,
+      "definition_count": 3,
+      "compiler_options": [],
+      "source_forbidden_tokens": [],
+      "scope": "AUXILIARY_CONTINUOUS_ANALYSIS_ONLY"
+    },
+    {
+      "module": "GammaPrerequisites22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "author_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\GammaPrerequisites22.lean",
+      "author_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\receipt.json",
+      "author_log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\stdout.log",
+      "author_provenance": {
+        "status": "AUTHOR_GAMMA_H2_COMPILE_PASS_PENDING_INDEPENDENT_JUDGE",
+        "exit_code": 0,
+        "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+        "log_sha256": "baea3821834d83192bd3925a2371b3563d6b02d63895cbc3d19622af18753664",
+        "olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+        "invocations": 1
+      },
+      "dependencies": [],
+      "namespace": "GoldbachContinuous22",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.realGamma_le_one_on_unit_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.real_laplace_integrable"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.laplaceIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_laplaceIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplaceIntegrand_aestronglyMeasurable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.complex_laplace_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.real_rate_laplace_identity"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.laplaceTransform"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.rightHalfPlane"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_laplaceIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplace_derivative_local_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_laplaceTransform"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.rightHalfPlane_isOpen"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.rightHalfPlane_isPreconnected"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplaceTransform_analytic"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplace_rhs_analytic"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplaceTransform_real_rate"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.complex_rate_laplace_identity"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_laplaceTransform_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_rotation_power"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_rotation_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.quarter_angle_coefficient_le_two"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_strip_exponential_bound"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.realGamma_le_one_on_unit_strip",
+        "GoldbachContinuous22.real_laplace_integrable",
+        "GoldbachContinuous22.laplaceIntegrand",
+        "GoldbachContinuous22.norm_laplaceIntegrand",
+        "GoldbachContinuous22.laplaceIntegrand_aestronglyMeasurable",
+        "GoldbachContinuous22.complex_laplace_integrable",
+        "GoldbachContinuous22.real_rate_laplace_identity",
+        "GoldbachContinuous22.laplaceTransform",
+        "GoldbachContinuous22.rightHalfPlane",
+        "GoldbachContinuous22.hasDerivAt_laplaceIntegrand",
+        "GoldbachContinuous22.laplace_derivative_local_bound",
+        "GoldbachContinuous22.hasDerivAt_laplaceTransform",
+        "GoldbachContinuous22.rightHalfPlane_isOpen",
+        "GoldbachContinuous22.rightHalfPlane_isPreconnected",
+        "GoldbachContinuous22.laplaceTransform_analytic",
+        "GoldbachContinuous22.laplace_rhs_analytic",
+        "GoldbachContinuous22.laplaceTransform_real_rate",
+        "GoldbachContinuous22.complex_rate_laplace_identity",
+        "GoldbachContinuous22.norm_laplaceTransform_le",
+        "GoldbachContinuous22.norm_rotation_power",
+        "GoldbachContinuous22.Gamma_rotation_bound",
+        "GoldbachContinuous22.quarter_angle_coefficient_le_two",
+        "GoldbachContinuous22.Gamma_strip_exponential_bound"
+      ],
+      "theorem_count": 20,
+      "definition_count": 3,
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "source_forbidden_tokens": [],
+      "scope": "AUXILIARY_CONTINUOUS_ANALYSIS_ONLY"
+    }
+  ],
+  "module_count": 3,
+  "total_declarations": 56,
+  "theorem_count": 47,
+  "definition_count": 9,
+  "readonly_local_dependencies": [
+    "EpsteinKernel22",
+    "EpsteinFinite22"
+  ],
+  "compiler_invocations": 0,
+  "win": false
+}

@@ -1,0 +1,50 @@
+"""Observe actual Judge startup and frozen hashes only; never run the audit."""
+import sys
+sys.dont_write_bytecode = True
+from pathlib import Path
+from hashlib import sha256
+from datetime import datetime, timezone
+import json
+B = Path(r'D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002')
+R = B/'round18'; J = R/'judge'; C = B/'.arbor/sessions/parity/.coordinator'
+def read(p): return json.loads(p.read_bytes())
+def h(p):
+    q = sha256()
+    with p.open('rb') as f:
+        for block in iter(lambda: f.read(1048576), b''): q.update(block)
+    return q.hexdigest()
+m = read(J/'input_manifest.json'); a = read(J/'authorization.json'); s = read(J/'audit_started.json')
+assert s['status'] == 'PREEXEC' and s['started_at_utc'] == '2026-10-02T22:59:14.940258+00:00'
+assert h(J/'input_manifest.json') == s['input_manifest_sha256'] == 'a1e5fa8eaa4d3e455c46f0e1bea20ce516bc0f0473195b6ef0a3e73e7ad2114e'
+assert h(J/'authorization.json') == m['authorization_sha256'] == s['authorization_sha256'] == '9eaf09385fa9d8d703850c0899561b3001d74857ca49b97e6fac94855d60fd57'
+assert len(m['round18_sha256']) == 267 and len(m['historical_dependencies_sha256']) == 22
+for root, bindings in [(R,m['round18_sha256']), (B,m['historical_dependencies_sha256']), (J,m['judge_code_sha256'])]:
+    for name, value in bindings.items(): assert h(root/name) == value, name
+for path, value in m['original_documents_sha256'].items(): assert h(Path(path)) == value, path
+assert h(Path(m['lean_executable'])) == m['lean_sha256'] == '8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08'
+assert h(Path(m['mathlib_HEAD_path'])) == m['mathlib_HEAD_sha256']
+assert Path(m['mathlib_HEAD_path']).read_text(encoding='utf-8').strip() == m['mathlib_commit_expected']
+assert len(m['cache_library_dirs']) == 8 and all(Path(p).is_dir() for p in m['cache_library_dirs'])
+assert m['new_module_sources'] == a['new_module_source_order']
+for name in ['audit.py','run_once.py','authorization.json']:
+    assert h(J/name) == h(J/'preexec'/(name+'.txt'))
+for name in m['new_module_sources']:
+    p = R/name
+    assert h(p) == h(J/'preexec'/(p.stem+'.lean.txt')) == a['new_module_sources_sha256'][name]
+assert not m['old_sources_compiled'] and not m['author18_oleans_in_Lean_path']
+stages = [p.name for p in sorted(J.glob('*_PASS.json')) if not p.name.startswith(('06','07'))]
+assert len(stages) == 7
+v = dict(round=18, status='ACTUAL_JUDGE_STARTUP_AND_FREEZE_VERIFIED', observed_at_utc=datetime.now(timezone.utc).isoformat(),
+    started_at_utc=s['started_at_utc'], input_manifest_sha256=h(J/'input_manifest.json'),
+    authorization_sha256=h(J/'authorization.json'), round18_bindings=267, historical_dependency_bindings=22,
+    PREEXEC_captures=11, passed_pre_Lean_stages=stages, audit_or_compiler_executed_by_root=False,
+    old_producer_kernel_sign_PDF_or_Lean_replayed=False, victory=False)
+out = C/'messages/round18_judge_start_root_observation.json'
+assert not out.exists()
+out.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+cp = read(C/'checkpoint.json')
+cp.update(phase='ROUND18_INDEPENDENT_JUDGE_ACTUALLY_RUNNING', in_flight_executors=[dict(role=5,agent='/root/round18_independent_judge',status='actual_audit_started_22_59_14_UTC_fresh_Lean_in_progress')])
+cp['last_progress'] += ' Explicit root authorization then actual independent Judge startup22:59:14.940258UTC; seven pre-Lean stages PASS, first freshcompile actually started. Root metadata verifies267frozen18bindings/22historicaldependencies/11PREEXECcaptures/originals/code/Lean/mathlibHEAD, no audit or compiler execution byroot. Countnormalization falsealarm was prior-version rootread error, no actualfailure. Official22/337 remains until FINAL5; Winfalse.'
+cp['previous_goal_turn_evidence'] = list(dict.fromkeys(cp['previous_goal_turn_evidence']+['round18/judge/authorization.json','round18/judge/input_manifest.json','round18/judge/audit_started.json','.arbor/sessions/parity/.coordinator/messages/round18_judge_start_root_observation.json']))
+(C/'checkpoint.json').write_text(json.dumps(cp,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+print(json.dumps(v,ensure_ascii=False))

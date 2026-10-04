@@ -1,0 +1,97 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:260:104: error: unsolved goals
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+i : Fin 4
+ha : ↑(slope N e q i) ≠ 0
+hi : modularAffine l N e q i (-↑(constant N e q i) / ↑(slope N e q i)) = 0
+⊢ ((modularAffine l N e q 3 (-↑(constant N e q i) / ↑(slope N e q i)) =
+          modularAffine l N e q (Fin.succ 2) (-↑(constant N e q i) / ↑(slope N e q i)) ∨
+        modularAffine l N e q 2 (-↑(constant N e q i) / ↑(slope N e q i)) = 0) ∨
+      modularAffine l N e q 1 (-↑(constant N e q i) / ↑(slope N e q i)) = 0) ∨
+    modularAffine l N e q 0 (-↑(constant N e q i) / ↑(slope N e q i)) = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedRootCounts.lean:289:78: error: unsolved goals
+l N e q : ℕ
+inst✝ : Fact (Nat.Prime l)
+x : ZMod l
+⊢ ((modularAffine l N e q 3 x = modularAffine l N e q (Fin.succ 2) x ∨ modularAffine l N e q 2 x = 0) ∨
+      modularAffine l N e q 1 x = 0) ∨
+    modularAffine l N e q 0 x = 0
+'GoldbachRound18.DoubleExtraction.TargetGuards' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularAffine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedRoots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedRho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedRoughCell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedCandidates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularAffine_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularForm_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedForm_dvd_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularForm_actual_relation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.mem_dividedRoots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_le_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modular_constant_identities' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.unit_cast_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness1_q_cast_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0_q_cast_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.target_constant_nonzero_witness1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.target_constant_nonzero_witness0' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.affine_at_index_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.actual_primitivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modularAffine_root_candidate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.roots_subset_candidates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.root_of_nonzero_slope' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.exists_nonzero_slope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_lower' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_bounds' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.form_zero_iff_exists_affine' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_eq_one_single_live' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_at_witness1' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_at_witness0' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_eq_four_of_actual_separation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.signedDelta_cast_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.separated_of_not_dvd_actualDelta' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_eq_four_of_not_dvd_actualDelta' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_transport_off_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_mod_three_saturation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.rho_eq_modulus_of_form_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.target_excluded_witness1_saturation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.target_excluded_witness0_saturation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.saturation_forces_modularForm_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.saturation_roughCell_empty' depends on axioms: [propext, Classical.choice, Quot.sound]

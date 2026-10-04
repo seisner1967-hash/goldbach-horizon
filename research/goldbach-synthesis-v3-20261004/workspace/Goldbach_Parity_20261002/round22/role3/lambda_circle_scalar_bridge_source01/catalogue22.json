@@ -1,0 +1,29 @@
+{
+  "schema": "ROUND22_LAMBDA_CIRCLE_SCALAR_BRIDGE_MANUAL_CATALOGUE",
+  "status": "PENDING_DEPENDENCIES_NOT_ELABORATED",
+  "module": "LambdaCircleScalarRadiusBridge22",
+  "namespace": "GoldbachLambdaScalarBridge22",
+  "manual_inventory": true,
+  "source_parser_used": false,
+  "counts": {"modules": 1, "declarations": 8, "theorems": 8, "definitions": 0, "qualified_axiom_prints": 8, "observed_axiom_prints": 0},
+  "declarations": [
+    {"name": "GoldbachLambdaScalarBridge22.projectionAmplitude_eq_radiusAmplitude", "kind": "theorem", "print_axioms_expected": true},
+    {"name": "GoldbachLambdaScalarBridge22.circleDecayFloor_eq_radiusDecay", "kind": "theorem", "print_axioms_expected": true},
+    {"name": "GoldbachLambdaScalarBridge22.lambdaCircleEpsilon_eq_radiusEpsilon", "kind": "theorem", "print_axioms_expected": true},
+    {"name": "GoldbachLambdaScalarBridge22.lambdaCircleCoefficientError_eq_radiusError", "kind": "theorem", "print_axioms_expected": true},
+    {"name": "GoldbachLambdaScalarBridge22.lambdaCircleCenteredCoefficient_error_le_radius", "kind": "theorem", "print_axioms_expected": true},
+    {"name": "GoldbachLambdaScalarBridge22.lambdaCircleAdditiveCoefficient_error_le_radius", "kind": "theorem", "print_axioms_expected": true},
+    {"name": "GoldbachLambdaScalarBridge22.lambdaCircleCenteredCoefficient_point_error_lt_tau", "kind": "theorem", "print_axioms_expected": true},
+    {"name": "GoldbachLambdaScalarBridge22.lambdaCircleAdditiveCoefficient_point_error_lt_tau", "kind": "theorem", "print_axioms_expected": true}
+  ],
+  "imports": [
+    {"module": "LambdaCircleTruncationEnvelope22", "state_at_freeze": "PROSPECTIVE_NOT_CREDITED"},
+    {"module": "ScalarRadiusRealConnectors22", "state_at_freeze": "PROSPECTIVE_NOT_CREDITED"}
+  ],
+  "domains": {"four_exact_equalities": "a,H:anyReal;N:Nat", "two_general_analytic_bounds": "a>0,H>=0;N:Nat", "two_point_bounds": "N=100000000,a=1/100000000,H=100000000000,tau=1/1000000;no_hypotheses"},
+  "execution": {"compiler": 0, "PREP": 0, "probe": 0, "candidate_parser": 0, "candidate_import": 0, "numeric": 0},
+  "C_N_evaluated": false,
+  "quadrature_error_paid": false,
+  "D_N": false,
+  "WIN": false
+}

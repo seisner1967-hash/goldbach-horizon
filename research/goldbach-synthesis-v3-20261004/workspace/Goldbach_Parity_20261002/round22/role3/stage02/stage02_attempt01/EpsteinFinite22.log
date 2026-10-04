@@ -1,0 +1,39 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\EpsteinFinite22.lean:41:8: error: invalid field 'const_mul', the environment does not contain 'Continuous.const_mul'
+  Continuous.comp (continuous_kernel (mul_pos (abs_cast_pos hm) hy))
+    (Continuous.add (Continuous.mul continuous_const continuous_id) continuous_const)
+has type
+  Continuous (kernel (|↑m| * y) ∘ fun x => ?m.17934 * id x + ?m.18772)
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\EpsteinFinite22.lean:52:41: error: unsolved goals
+y : ℝ
+hy : 0 < y
+m : ℤ
+hm : m ≠ 0
+n : ℤ
+hmR : ↑m ≠ 0
+ha : 0 < |↑m| * y
+⊢ True ∨ weight y = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\EpsteinFinite22.lean:161:4: error: type mismatch, term
+  finiteShiftIntegral_neg y (↑(n + 1)) Q
+after simplification has type
+  finiteShiftIntegral y (-1 + -↑n) Q = finiteShiftIntegral y (↑n + 1) Q : Prop
+but is expected to have type
+  finiteShiftIntegral y (Int.negSucc n) Q = finiteShiftIntegral y (↑n + 1) Q : Prop
+'Epstein22.shiftKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.shiftWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.endpointSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.abs_cast_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.shiftKernel_eq_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.continuous_shiftKernel' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.intervalIntegrable_shiftKernel' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.affineCellIntegral' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.shiftKernel_neg_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteWindow_neg_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.sum_int_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.range_shift_telescope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.sum_Icc_shift_telescope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_pos_formula' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_natAbs' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_formula' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

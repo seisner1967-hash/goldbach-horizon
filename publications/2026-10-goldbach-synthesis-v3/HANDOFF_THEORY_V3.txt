@@ -1,0 +1,123 @@
+GOLDBACH — SYNTHÈSE V3 : CONTRAT AUTONOME DE REMISE
+Durand Serge — 4 octobre 2026 — clôture d'étape, recherche gelée
+
+1. Statut officiel conservé
+L'observation indépendante du lot 35 fixe 88 modules et 1488 déclarations
+auxiliaires, DÉFINITIONS INCLUSES. Main Mellin Λ35 est PASS : 30 déclarations,
+24 théorèmes et 6 définitions, axiomes standards seulement, sans sorryAx.
+Le lot 36 est FAILED0 : erreur technique de réflexion 118:6, aucun olean et
+aucun crédit. Geometry25 n'a pas été invoquée. La réparation EΛ02 reste SOURCE.
+La synthèse ne constitue ni preuve de Goldbach, ni victoire sur D_N/parité.
+
+2. Cadre et notations
+N est pair, u=log N, L=1+u, ell=log u ; logarithmes naturels. Le cadre
+analytique fixé impose u≥10^24. Le point N=10^8 est une boussole hors onset,
+sans couverture de ce régime ni de l'ensemble fini en dessous de son seuil.
+α=ceil(N^(1/4)), Q=floor((N−1)/α), a_cut=ceil(N^(7/16)),
+M_cut=ceil(N^(3/4)). Le paramètre thermique a>0 est distinct de a_cut.
+Cible ouverte : D_N≤N/(256 u ell). Acquis de référence et conditions du
+ledger antérieur conservés ; aucune réinterprétation de leurs supports.
+
+3. Objets vrais et identités compilées
+Λ(0)=Λ(1)=0 ; Λ(p^k)=log p pour p premier,k≥1 ; Λ=0 sinon. Toutes les
+puissances premières sont retenues, sans suppression des degrés k≥2.
+T_a(θ)=Σ_n≥0 Λ(n)exp(−an)exp(inθ), a>0.
+C_N=Σ_n=0..N Λ(n)Λ(N−n).
+Module Envelope du lot 11 (42 déclarations, row PASS, lot global FAILED) :
+sommabilité, continuité et majorants construits
+U(a)=r/(1−r)^2, r=exp(−a), B(a,M)=r^(M+1)((M+1)/(1−r)+U(a)).
+Lot 13 (20) : C_N=exp(aN)/(2π)∫_0^(2π) T_a(θ)^2 exp(−iNθ)dθ.
+La conjugaison correcte est conj(T_a(−θ))=T_a(θ). |T_a(θ)|² changerait le
+coefficient en une sélection de différences de fréquences.
+Lot 15 (29) : pour M≥N,K>max(N,2M−N), la somme sur θ_j=2πj/K fournit
+exactement C_N depuis le polynôme fini T_a,M. a=0 est admis seulement ici.
+Lot 19 (24) : orthogonalité et projection de corps fini depuis une racine
+primitive d'ordre exact K, sans orthogonalité finale offerte en prémisse.
+Lot 22 (28) : les cinq primalités/racines et leur projection A32 sont PASS.
+
+4. Paramètres finis et enveloppe canonique réelle compilée (lot 17 : 52)
+N=M=100000000 ; K=2^27=134217728 ; S=2^58=288230376151711744.
+Log32 construit les boîtes rationnelles de log p via
+L32(z)=2Σ_j<32 z^(2j+1)/(2j+1), z=(p−2^k)/(p+2^k),k=floor(log2 p).
+La largeur est (k+1)9/(4·65·3^65)<2^−96. Le point entier A_p est l'arrondi
+du milieu multiplié par S, égalités vers l'entier pair, puis clamp[0,32S].
+A_n=A_minFac(n) si n est une vraie puissance première, zéro sinon.
+q_n=A_n/S ; sur 0≤n≤N, |Λ(n)−q_n|≤1/S et 0≤Λ(n),q_n≤32 sont prouvés.
+I_N=Σ_n=0..N A_n A_(N−n). E_log=(N+1)(64/S+1/S²), continue en S>0.
+La garde 2(N+1)(64S+1)10^6≤S² est compilée : 2E_log≤10^−6.
+Donc |C_N−I_N/S²|≤E_log, mais I_N/C_N n'ont pas été calculés.
+
+5. Projection modulaire concrète et dette native
+(p,g) : (2013265921,31), (2281701377,3), (3221225473,5),
+(3489660929,3), (3892314113,3).
+ω_i=g_i^((p_i−1)/K) dans F_p_i a l'ordre K (Lean22 PASS).
+F_i(j)=Σ_n≤N A_n ω_i^(jn) ; r_i=K^−1Σ_j<K F_i(j)^2 ω_i^(−Nj)
+=I_N mod p_i (Lean22 PASS). Π=produit des cinq p_i.
+Borne du contrat PAPER : 0≤I_N≤(N+1)(32S)^2<2^153<Π ; reconstruction
+CRT unique dans [0,Π). Les butterflies, mots machine/GMP, catalogue complet,
+égalité des records natifs à A32, et code CRT ne sont pas raffinés en Lean.
+B40 est un contrôle auxiliaire distinct : ni ses records ni son raffinement
+analytique ne remplacent le constructeur primaire A32.
+
+6. Mellin exacte compilée et rayon complet encore SOURCE
+Re(w)>0, Log principal ; D(t)=Σ_n≥2 Λ(n)n^(−2−it), P(w)=Σ Λ(n)exp(−nw).
+K(w,t)=Γ(2+it)w^(−2−it). Main35 prouve D continue, |D|≤6, intégrabilités
+réelles construites et P(w)=(1/(2π))∫_R D(t)K(w,t)dt. Pas de prémisse finale
+d'identité/L1 libre. Identifier toute la chaîne à ζ'/ζ, aux zéros et à une
+formule explicite signée demeure distinct de cette représentation directe.
+Le module Local26 est row PASS22 dans un lot global FAILED ; Holo27 est
+PASS15 distinct. Tail30 et bridge32 non pondérés sont compilés ; EΛ pondérée
+échoue au36.
+EΛ02 réparée SOURCE vise P−P_H=(T−+T+)/(2π) et
+|P−P_H|≤6C(w)exp(−δ(w)H)/(πδ(w)), H≥0,
+C=|w|^−2 sec²((π/2+|Arg w|)/2), δ=(π/2−|Arg w|)/2>0.
+Geometry25 SOURCE vise C(a−iθ)=2/a²(1+|θ|/sqrt(a²+θ²))≤4/a²,
+δ≥d(a)=atan(a/π)/2>0 pour |θ|≤π.
+Coefficient34 SOURCE vise eps=24exp(−dH)/(πa²d),
+E_N=exp(aN)(2U eps+eps²), |C_N−C_N,H|≤E_N, avec rayon continu a>0.
+Scalar26 et bridge8 coefficient/scalar sont SOURCE NON COMPILÉS.
+
+7. Deux observations numériques de portée différente
+Point rationnel : N=10^8,a=10^−8,H=10^11,Taylor150.
+S150(125)=Σ_k≤150125^k/k!,q=1/S150,
+B=3(128N^5q+4096N^6q²)<10^−6 : PASS exact, un enfant, zéro réessai.
+Ce test ne calcule pas D,P_H,C_N,H,C_N ni le rayon réel E_N ; le raccord
+analytique complet au coefficient reste non compilé. Pas de crédit Lean.
+BUILD04 : deux images natives construites, deux exit0. Aucune preuve de
+raffinement de programme n'en découle.
+NUMERIC05 checker-only : un checker, zéro producteur/compilateur/réessai.
+Child exit238 HARD_WALL_NO_VERDICT ; parent exit1, environ3312 secondes
+(55minutes) ; coefficient absent. STOP sans verdict, pas mathématiquement faux.
+Conservation ROOT05 :6576inputs/109capturepairs/3payloadpairs/3089archives.
+POST05 et quiescence réels conservés ; aucun reçu04 inventé. Confiance
+Windows/GCC/natif explicite, loader universel non vérifié ; RSS monitor distinct
+de limite OS Job commit2Gio. Aucun nouveau banc n'est autorisé par la remise.
+
+8. Dette signée D_N et reprise
+P_pr(n)=log n si n premier,0 sinon ; V_pp=Λ−P_pr ; R_sf=ΣP_pr(n)P_pr(N−n).
+Q_N=C_N−R_sf≥0 retient toutes les puissances propres. Sous les mêmes
+conditions/supports du pont conservé,
+D_N=R_ref−C_N+Q_N+2max(e,0)−eps_tr, R_ref=Sing(N)(N−F_N).
+Une enclosure de C_N ne paie pas le défaut signé R_ref−C_N, l'excès e,
+les fronts/coins/supports ni leurs raccords. D_N et WIN restent OPEN.
+Le terme de bord J_a,N est réellement compilé au lot25 ; il ne s'annule
+pas automatiquement. Les propositions signées Weil/orbites et les modèles
+Fejér conservent leurs statuts PAPER et leurs dettes de transport/signes.
+Piste Fejér continue PAPER : c_n=Λ(n)/n²,n≥2,c_0=c_1=0 ;
+A_T(m)=(1/T)∫_[−T,T](1−|t|/T)D(t)exp(it log m)dt
+=Σ_n≥2 c_n sinc²((T/2)log(m/n)), T>0,m≥1.
+0≤A_T(m)−c_m≤24/(T²log²(1+1/m)). La borne reconstruit les amplitudes,
+sans masse commune garantie dans les blocs n,N−n. Le secteur des puissances
+de2 satisfait cette positivité, mais son coefficient à14 est nul ; ce
+contre-modèle exclut seulement l'inférence de signe depuis cette positivité.
+Ce mécanisme, son évaluation et ses intervalles restent PAPER/OPEN.
+La note de coût Mellin décrit des budgets suffisants énormes, sans prétendre
+minorer l'erreur réelle ni garantir une exécution pratique. Recherche gelée.
+
+Pièces : goldbach_synthesis_v3.tex (manuscrit autonome) ; evidence_v3.json
+(chemins/SHA complets/claims/scopes de lecture) ; reçus originaux immuables.
+Une nouvelle conversation reprend d'abord la recherche théorique sur D_N
+depuis les acquis compilés et le ledger canonique. Une éventuelle reprise
+d'ingénierie demanderait un contrat adapté et la vérification des sources
+exactes ; ce document ne déclenche aucune exécution. Aucune
+découverte imminente, aucun coefficient final ni franchissement de parité annoncé.

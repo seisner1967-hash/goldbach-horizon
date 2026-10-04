@@ -1,0 +1,71 @@
+{
+  "schema": "ROUND22_ROLE3_MAIN_LAMBDA_REVISION02_SOURCE_REVIEW_HANDOFF",
+  "status": "SOURCE_THREE_PROOF_REPAIRS_COHERENT_NOT_ELABORATED",
+  "reviewer": "ROLE3",
+  "author": "ROLE4",
+  "author_source_sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+  "author_handoff_sha256": "323c3d3194474951ca554895221fac0d5c1464a6cb1249bb639f518dfa829b53",
+  "report": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/main_lambda_revision02_source_review01/review22.txt",
+    "bytes": 6648,
+    "sha256": "771490d1bc3e8d08a1dbe4e9d7cc066b2fa44412ca1ad9b1b8ab5d0ad1961c68",
+    "scope": "FULL",
+    "tool_chunk": "5a1ce9"
+  },
+  "reads": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/main_lambda_revision02_source_review01/read_receipts22.json",
+    "bytes": 21100,
+    "sha256": "ea773c03451028ea574c26a6edb0c685696d6521c1fe1a0f2edeeeb3719a5f2b",
+    "scope": "FULL",
+    "tool_chunk": "5a1ce9"
+  },
+  "conservation": {
+    "scope": "PHYSICAL_BYTE_SHA_REVIEW_METADATA_ONLY",
+    "bindings": 45,
+    "post_all_match": true,
+    "post_author_handoff_match": true,
+    "post_chunk": "5a1ce9",
+    "scientific_mutations": 0,
+    "no_archives_or_import_closure_claim": true
+  },
+  "text_comparison": {
+    "tool_chunk": "546d81",
+    "scope": "RAW_LITERAL_TEXT_NOT_CANDIDATE_PARSER",
+    "only_three_selected_proof_blocks_changed": true,
+    "all_headers_domains_definitions_imports_prints_preserved": true
+  },
+  "catalogue": {
+    "declarations": 30,
+    "theorems": 24,
+    "definitions": 6,
+    "qualified_print_axioms": 30
+  },
+  "precise_objections": [],
+  "residual_elaboration": [
+    "conditional zero_rpow in norm_num reduction",
+    "simpa transport of typed real-to-complex constant"
+  ],
+  "prior_actual31": {
+    "status": "INDEPENDENT_BATCH31_FAILED",
+    "credit": 0,
+    "log_sha256": "baf6fe9d6f7ba57c9259eaec5481de08f993228748891793a9234626737bc367",
+    "receipt_sha256": "470f798110abde794b6742605c5dc66e4c7aabe7bc6a9e81e502e3c41aab9d1c",
+    "sorryAx_recovery_preserved": true
+  },
+  "guards": {
+    "compiler": 0,
+    "probe": 0,
+    "candidate_parser_or_import": 0,
+    "numeric": 0,
+    "PREP": false,
+    "gate": false,
+    "credit": 0,
+    "D_N": false,
+    "WIN": false
+  },
+  "root_baseline_communicated": {
+    "modules": 86,
+    "declarations": 1456
+  },
+  "human07": "DRAFT_WAIT_ROOT_FINAL_STATES"
+}

@@ -1,0 +1,147 @@
+{
+  "schema": "ROUND22_DISCRETE_CIRCLE_SOURCE_READS22",
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "author": "ROLE3",
+  "time_utc": "2026-10-03T15:50:29.7067422Z",
+  "source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\DiscreteThermalProjection22.lean",
+  "source_sha256": "2a964deed343671d87b518b4da956cd36ad33fd6965f1feb69e5d3739ef0e696",
+  "source_FULL_chunk": "79ede1",
+  "explicit_declarations": 29,
+  "theorems": 20,
+  "definitions": 9,
+  "qualified_axiom_prints": 29,
+  "contract_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\source_contract22.md",
+  "contract_sha256": "f930ed4353729c73047a36d2ec68bab7387ee4ce2cdb2f4cf8ba1b13a941c49c",
+  "API_references": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\RootsOfUnity\\Complex.lean",
+      "sha256": "a8ba6b91bc5790a40af746e9f0bfca4be8b244871fcc8972ec9f293f037838fd",
+      "scope": "TARGETED1-55",
+      "chunks": [
+        "063fce"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\RootsOfUnity\\PrimitiveRoots.lean",
+      "sha256": "0309d8afe8ecafb3c492dfd79ef67b23dc3c08b4a444cb4e2dc37a3c3af03725",
+      "scope": "TARGETED27-49,302-321,395-411",
+      "chunks": [
+        "063fce",
+        "d42c11"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Exponential.lean",
+      "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+      "scope": "TARGETED199-230; rg exp_nat_mul Real709",
+      "chunks": [
+        "063fce",
+        "68423a"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\VonMangoldt.lean",
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "scope": "TARGETED1-90 definition and prime powers",
+      "chunks": [
+        "063fce"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GeomSum.lean",
+      "sha256": "a500713128596beebe9883f2372878c0ca928fc7c54b9b9b2dfa2072615a1e2d",
+      "scope": "TARGETED218-249",
+      "chunks": [
+        "7df686"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Basic.lean",
+      "sha256": "21b7cf8215c2960bca0d19a9c82e146e2b8ab12ae3a03d5298c136d2323a5ddd",
+      "scope": "TARGETED464-495",
+      "chunks": [
+        "3fb4d8"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset.lean",
+      "sha256": "a67817959f6217811364eed2700027060dc7cd62188a94a583453ec41c5c6630",
+      "scope": "TARGETED789-854",
+      "chunks": [
+        "942dcc",
+        "68423a"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\NatAntidiagonal.lean",
+      "sha256": "071e37e774ffb429c5e2d749b585226ed06d94b115e88d50d81bcb35d97291ad",
+      "scope": "TARGETED1-92",
+      "chunks": [
+        "942dcc"
+      ],
+      "full_claim": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Antidiag\\Prod.lean",
+      "sha256": "93c61d6ba0e52467be3e0f7129b437a37c88792c6e072e54cf88c0dcee8d4a40",
+      "scope": "rg mem_antidiagonal/antidiagonal export only",
+      "chunks": [
+        "942dcc",
+        "68423a"
+      ],
+      "full_claim": false
+    }
+  ],
+  "prior_SOURCE_identity": {
+    "path": "round22/judge5/batch10/sources/ThermalProjectionIdentity22.lean",
+    "sha256": "5b6da908dce97e0ad1ba08a893bd545a4a4c908f969d958102cf9e3509c5e99c",
+    "scope": "FULL",
+    "chunk": "4f250c",
+    "not_imported": true,
+    "no_PASS_presumed": true
+  },
+  "final_circle_paper": {
+    "path": "round22/role3/coefficient_projection_contract_source22/coefficient_circle_contract22_revision02.md",
+    "sha256": "9e6d349ff283b1914750c05473d50982795a641cf6b429369504fc7b9ef73ddf",
+    "historical_FULL_chunk": "d623c5"
+  },
+  "read_errors": [
+    {
+      "chunk": "89fc8f",
+      "classification": "READ_SEARCH_NO_MATCH",
+      "scope": "rg search only"
+    },
+    {
+      "chunk": "d544ce",
+      "classification": "READ_PATH_ERROR",
+      "paths": "Analysis/Complex/RootsOfUnity.lean, Analysis/Complex/Exponential.lean, NumberTheory/ArithmeticFunction/VonMangoldt.lean",
+      "corrected_by": "54341b/063fce"
+    },
+    {
+      "chunk": "7df686",
+      "classification": "READ_PATH_ERROR",
+      "path": "Algebra/BigOperators/Group/Finset/Basic.lean",
+      "corrected_by": "2197af/942dcc"
+    },
+    {
+      "chunk": "d42c11",
+      "classification": "READ_SEARCH_NO_MATCH",
+      "path": "Algebra/GroupPower",
+      "corrected_by": "2197af/3fb4d8"
+    }
+  ],
+  "metadata_not_builder": true,
+  "no_new_Lean_Python_math_import_parser_probe_FFT": true,
+  "active_numeric_controller_is_separate": "session57318",
+  "numeric_PREPARED": false,
+  "new_gate": false,
+  "D_N": "UNPAID",
+  "WIN": false
+}

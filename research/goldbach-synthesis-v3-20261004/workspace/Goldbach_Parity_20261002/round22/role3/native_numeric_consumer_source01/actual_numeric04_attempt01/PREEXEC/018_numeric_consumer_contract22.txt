@@ -1,0 +1,107 @@
+CONSUMER NUMÉRIQUE DISTINCT — SOURCE SEULEMENT — ROLE3/ROLE6
+
+Ce paquet n'a été ni importé, ni parsé par Python, ni lancé. Aucun fichier
+numeric_preparation, numeric_manifest, gate ROOT numérique, revue numérique ou
+actual_numeric04_attempt01 n'est créé ici. Il ne contient aucun compilateur.
+Il prépare la lecture des deux images réellement compilées BUILD04, sans toucher
+CPP02, aux algorithmes catalogue/log32/log40/DIT/DIF/CRT ni aux anciens consumers.
+
+PROVENANCE RÉELLE
+BUILD04 parent unique : exit0, deux drivers créés et terminés, deux images, zéro
+invocation de ces images. Reçu04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8,
+plan effectif538cc14faf3466bb8a0505e8f6aae3007fc84b2b6246afb2da55d37be5718156,
+producteur44d2d571a0190f7dbbb975225559d16a012693bda4197738e6311c14892cadb0,
+checker2e7e095c2972fea09ee26500df9dae207ff52497d0f61f2052d76d464ebe6990.
+La compilation ne donne aucune autorisation d'exécution numérique. Le vieux
+plan native02 reste lié comme provenance ; les destinations réelles sont
+build-final04 et le plan BUILD04. Aucun rebuild est prévu par le consumer.
+
+PARAMÈTRES ET TEST FUTUR
+N=M=100000000, K=134217728=2^27, S=288230376151711744=2^58, a=0 uniquement
+pour le projecteur fini. Tous n de0 àN et toutes les puissances premières sont
+pris en compte. Le vecteur primaire est A_n=S*qLambda(n), depuis le constructeur
+canonique log32/nearest-even/clamp, et0 hors PP. Table fixe (p,g,c) :
+2013265921,31,15 ; 2281701377,3,17 ; 3221225473,5,24 ;
+3489660929,3,26 ; 3892314113,3,29. omega=g^c modp.
+Producteur DIT puis checker DIF, catalogue Lucas, reconstruction indépendante
+d'A32 par fractions réduites, endpoints log40, CRT et fold direct intégral.
+Le checker source impose les cinq résidus, c_A=CRT=fold(A), puis fold(B40),
+|c_A-c_B|<=2(N+1)(64S+1) et2(N+1)(64S+1)*10^6<=S². Rien n'a été évalué àN
+par ce nouveau paquet. Les cinq samples du guard antérieur restent auxiliaires.
+
+INTERPRÉTATION DU RAYON
+La construction A32, sa précision1/S et E=(N+1)(64S+1)/S² sont des acquis Lean
+indépendants du lot17. Leur raccord aux words natifs et au catalogue complet
+n'est pas une preuve Lean de machine. Après succès futur du checker et de POST,
+le parent vérifiera uniquement les quatre entiers canoniques publiés, les cinq
+résidus et la garde entière. Il exposera l'intervalle primaire
+[(c_A-(N+1)(64S+1))/S²,(c_A+(N+1)(64S+1))/S²], au niveau PAPER sous les raccords
+natifs audités. Le rayon joint publié reste2E. Le même intervalle centré surc_B
+est une référence PAPER ; construction/raffinement log40 restent nonLean.
+Le libellé FORMAL_PRIMITIVES false du checker inchangé est conservé exactement.
+Succès proposé : PAPER_AUDITED_EXACT_INTEGER_PROJECTION_AUX_CHECKED_PENDING_NATIVE_REFINEMENT.
+Ni ce statut ni l'intervalle n'est une preuve D_N, H1 spectral ou WIN.
+
+CONTRÔLES DU NOUVEAU PARENT
+Un seul dossier d'essai exclusif ; au plus deux enfants directs séquentiels,
+producteur puis checker, STOPFIRSTFAIL, aucun retry, aucun oracle ancien.
+Backend BUILD04 readonly88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3,
+appelé avec une liste d'un argument (path payload). L'ancienne API backend
+one-process/HARDWS est préservée mais ne sera jamais chargée par ce consumer.
+Flag Job8968=0x2308 : kill-on-close, active-process, process/job-memory.
+Commit2147483648B demandé au noyau et relu avant ResumeThread ; active16 parJob,
+total32 surveillé, comme le backend BUILD04 inchangé. Les deux enfants directs
+ne signifient pas hard active2 ou active1. Aucune modification silencieuse du
+contrat native02 ancien : ces contrôles sont une proposition distincte à revoir.
+RSS par processus2147483648B et somme RSS live4294967296B surveillés seulement.
+Pas de bit WORKINGSET, Set/GetProcessWorkingSetSizeEx ni hardRSS. Les pics de
+processus trop courts peuvent échapper à l'énumération ; le commit Job OS reste
+distinct. Les garanties exercées lors du build ne mesurent pas celles du futur
+programme natif. Aucun probe/API/quota n'est appelé au stade SOURCE.
+Le deadline partagé3600s part de l'entrée du parent et comprend préflight,
+hashes/copies, production, checker, lecture des résultats et POST. Timer parent
+et deadline backend demandent fermeture ; un timeout n'est pas une fausseté
+mathématique et POST_UNVERIFIED ne peut pas être promu conservation.
+
+OUTPUTS ET CONSERVATION
+stdout+stderr combinés1MiB, métadonnées16MiB, captures32MiB, tentative2GiB.
+payload autorisé : factors.bin<=400000020B ; records.bin<=800000040B ;
+producer.txt<=4096B. Le parent surveille les tailles/reparse et les paths,
+sans revendiquer une quota NTFS contre un programme hostile. Les trois hashes
+du producteur doivent être identiques après le checker, qui reste lecteur.
+Le manifeste futur doit être l'union exacte reconstruite, pas un count libre :
+6375bindings BUILD04, toutes les sorties/2images de sa clôture, les47originaux
+et copies PREEXEC, les sources de ce handoff, ce handoff et les deux nouvelles
+revues. Manifeste/prep/gate numériques sont contrôles originaux et copies dans
+PRE puis POST ;3089archives vérifiées avant/après. Les anciennes données03,
+les vieux consumers et CPP02 sont inclus via les contrôles BUILD04 conservés.
+Le nombre de paths de l'union reste à calculer lors d'une metadatafuture
+autorisée ; aucun nombre PREPARED n'est inventé ici.
+
+CONFIANCE ET REVUES OUVERTES
+Revue numérique SOURCE et revue des deux images/trust distinctes requises,
+scopées avec leurs SHA et la politique numeric_trust_policy22.json,
+par ROLE4 choisi par ROOT, qui n'a pas écrit ce parent ROLE3. Les revues antérieures
+indépendantes CPP/backend sont réutilisées ; aucun nouvel audit complet des
+anciens CPP écrits par ROLE4 n'est revendiqué par ce choix de reviewer. Hypothèses
+opérationnelles proposées : Windows, runtime Python canonique, deux images
+BUILD04 et code GMP/GCC issu de CPP02 sont fiables pour cet exercice.
+Cette confiance exige un acquiescement explicite d'une nouvelle gate ROOT.
+Les revues BUILD_ONLY ne remplacent pas les revues numériques. Aucun booléen
+de fermeture universelle du loader, effective_loads ou imports nonOS n'est
+mis àtrue. PATH/CWD/TMP réels du backend sont explicités dans le nouveau plan.
+Les champs de verdict/review sont un contrat futur, aucun reçu de reviewer n'est
+fabriqué. L'exécution n'est pas possible avec les seules pièces BUILD04.
+
+COÛTS ET LIMITES
+Les deux programmes allouent le buffer théorique1736870924B puis leurs objets
+runtime. Ce n'est pas un pic RSS mesuré ; la réserve134217728B est un contrôle
+source, pas une garantie d'achèvement sous commit2GiB. Catalogue trial-division,
+témoins Lucas, séries288P termes, dix transformées et40265318400products
+modulaires restent les coûts source antérieurs ; pré/posthashes s'y ajoutent.
+Aucune durée native ou gain n'est observé.3600s peut couper avant le coefficient.
+Zéro mutant sera exécuté dans ces deux enfants : le native02 ne les implémente
+pas et aucun changement algorithmique n'est autorisé ici. Les gardes/folds
+déterministes ne seront pas présentés comme des mutants effectivement testés.
+NTT butterflies/carries/GMP/CRT/catalogue machine-refinement, coefficient réel
+àN=1e8, B40Lean, annulation spectrale/modulaire, frontière PP, D_N etWIN ouverts.

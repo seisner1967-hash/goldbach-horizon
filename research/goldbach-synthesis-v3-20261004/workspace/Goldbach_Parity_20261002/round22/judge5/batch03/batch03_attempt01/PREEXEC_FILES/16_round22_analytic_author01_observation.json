@@ -1,0 +1,32 @@
+{
+  "schema": "ROUND22_ANALYTIC_AUTHOR01_OBSERVATION",
+  "observed_utc": "2026-10-03T10:48:25.031051+00:00",
+  "receipt_sha256": "939122be1e498225f47b15d79bb3357a68573bf306dffad37e31ba54a01ba613",
+  "root_FULL_reads": {
+    "receipt": "7dc465",
+    "box_log_and_POST": "c20b7a"
+  },
+  "author_PASS_modules": [
+    "GammaDerivative22"
+  ],
+  "author_PASS_declarations_pending_Judge": 8,
+  "author_FAIL_modules": [
+    "GammaBoxBounds22"
+  ],
+  "not_invoked": [
+    "GammaContourComponent22",
+    "MellinThermal22",
+    "MellinThermalInversion22"
+  ],
+  "failure_classification": "Lean API neighborhood mismatch, not an arithmetic counterexample or parity deduction failure",
+  "verified_inputs": 6517,
+  "verified_captures": 19,
+  "verified_archives": 3089,
+  "root_compiler_invocations": 0,
+  "root_math_invocations": 0,
+  "official_modules": 62,
+  "official_declarations": 1049,
+  "global_H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

@@ -1,0 +1,230 @@
+import RankCalibrationUnitLoss
+
+/-!
+Weighted inclusion--exclusion on the actual prime measure, with all divisors
+(including zero Mobius values) retained. Nonunits to N vanish by an arithmetic
+argument on N-d*b. The quantities called remainders are explicitly defined
+ordinary progression sums minus their local Euler main terms; they are never
+assumed small. No BV estimate, analytic onset, or K18 is asserted here.
+-/
+namespace GoldbachRound19.RankCalibration
+
+open scoped BigOperators
+open Finset
+open GoldbachRound18.SeparatedTypeII
+noncomputable section
+attribute [local instance] Classical.propDecidable
+set_option maxHeartbeats 4000000
+
+def divisorPrimeSum (F : Parameters) (I : Finset ℕ) (k : ℕ) : ℝ :=
+  ∑ b ∈ I.filter (fun b => k ∣ b), theta F.N (candidate F b)
+
+def effectiveDivisors (K N : ℕ) : Finset ℕ := K.divisors.filter fun k => Nat.Coprime k N
+
+def eulerCoefficient (F : Parameters) (K : ℕ) : ℝ :=
+  ∑ k ∈ effectiveDivisors K F.N,
+    (ArithmeticFunction.moebius k : ℝ) / Nat.totient (conductor F * k)
+
+def divisorPrimeRemainder (F : Parameters) (I : Finset ℕ) (X : ℝ) (k : ℕ) : ℝ :=
+  divisorPrimeSum F I k - X / Nat.totient (conductor F * k)
+
+def eulerRemainder (F : Parameters) (I : Finset ℕ) (K : ℕ) (X : ℝ) : ℝ :=
+  ∑ k ∈ effectiveDivisors K F.N,
+    (ArithmeticFunction.moebius k : ℝ) * divisorPrimeRemainder F I X k
+
+theorem weighted_unit_inclusion (I : Finset ℕ) {K : ℕ} (hK : K ≠ 0)
+    (f : ℕ → ℝ) :
+    (∑ b ∈ units I K, f b) =
+      ∑ k ∈ K.divisors, (ArithmeticFunction.moebius k : ℝ) *
+        ∑ b ∈ I.filter (fun b => k ∣ b), f b := by
+  unfold units
+  rw [sum_filter]
+  have hi : ∀ b, (if Nat.Coprime b K then (1 : ℝ) else 0) =
+      ∑ k ∈ K.divisors, if k ∣ b then (ArithmeticFunction.moebius k : ℝ) else 0 := by
+    intro b
+    exact_mod_cast unit_indicator_moebius b K hK
+  have hs : ∀ b, (if Nat.Coprime b K then f b else 0) =
+      ∑ k ∈ K.divisors, (ArithmeticFunction.moebius k : ℝ) *
+        if k ∣ b then f b else 0 := by
+    intro b
+    calc
+      _ = (if Nat.Coprime b K then (1 : ℝ) else 0) * f b := by split_ifs <;> simp
+      _ = _ := by
+        rw [hi b, sum_mul]
+        apply sum_congr rfl
+        intro k hk
+        split_ifs <;> simp
+  simp_rw [hs]
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro k hk
+  rw [← mul_sum, ← sum_filter]
+
+theorem candidate_unit_implies_quotient_unit (F : Parameters) {b : ℕ}
+    (hfront : conductor F * b ≤ F.N) (hu : Nat.Coprime (candidate F b) F.N) :
+    Nat.Coprime b F.N := by
+  have hm : Nat.Coprime (conductor F * b) F.N := by
+    change Nat.gcd (candidate F b) F.N = 1 at hu
+    unfold candidate at hu
+    rw [Nat.gcd_self_sub_left hfront] at hu
+    exact hu
+  exact hm.coprime_dvd_left (dvd_mul_left b (conductor F))
+
+theorem theta_nonunit_quotient_zero (F : Parameters) {b : ℕ}
+    (hfront : conductor F * b ≤ F.N) (hn : ¬ Nat.Coprime b F.N) :
+    theta F.N (candidate F b) = 0 := by
+  have hj : ¬ ((candidate F b).Prime ∧ Nat.Coprime (candidate F b) F.N) :=
+    fun h => hn (candidate_unit_implies_quotient_unit F hfront h.2)
+  simp [theta, hj]
+
+theorem theta_unit_N_redundant (F : Parameters) (I : Finset ℕ) (K : ℕ)
+    (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) :
+    (∑ b ∈ units I (F.N * K), theta F.N (candidate F b)) =
+      ∑ b ∈ units I K, theta F.N (candidate F b) := by
+  unfold units
+  rw [sum_filter, sum_filter]
+  apply sum_congr rfl
+  intro b hb
+  by_cases hN : Nat.Coprime b F.N
+  · simp only [Nat.coprime_mul_iff_right, hN, true_and]
+  · rw [theta_nonunit_quotient_zero F (hfront b hb) hN]
+    split_ifs <;> rfl
+
+theorem divisor_prime_sum_nonunit_zero (F : Parameters) (I : Finset ℕ) {k : ℕ}
+    (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) (hk : ¬ Nat.Coprime k F.N) :
+    divisorPrimeSum F I k = 0 := by
+  unfold divisorPrimeSum
+  apply sum_eq_zero
+  intro b hb
+  obtain ⟨hbI, hkb⟩ := mem_filter.mp hb
+  apply theta_nonunit_quotient_zero F (hfront b hbI)
+  intro hbN
+  exact hk (hbN.coprime_dvd_left hkb)
+
+theorem effective_theta_unit_inclusion (F : Parameters) (I : Finset ℕ) {K : ℕ}
+    (hK : K ≠ 0) (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) :
+    (∑ b ∈ units I (F.N * K), theta F.N (candidate F b)) =
+      ∑ k ∈ effectiveDivisors K F.N,
+        (ArithmeticFunction.moebius k : ℝ) * divisorPrimeSum F I k := by
+  rw [theta_unit_N_redundant F I K hfront,
+    weighted_unit_inclusion I hK (fun b => theta F.N (candidate F b))]
+  unfold effectiveDivisors
+  rw [sum_filter]
+  apply sum_congr rfl
+  intro k hk
+  change (ArithmeticFunction.moebius k : ℝ) * divisorPrimeSum F I k =
+    if Nat.Coprime k F.N then
+      (ArithmeticFunction.moebius k : ℝ) * divisorPrimeSum F I k else 0
+  by_cases hu : Nat.Coprime k F.N
+  · rw [if_pos hu]
+  · rw [if_neg hu, divisor_prime_sum_nonunit_zero F I hfront hu, mul_zero]
+
+theorem actual_theta_euler_decomposition (F : Parameters) (I : Finset ℕ) {K : ℕ}
+    (hK : K ≠ 0) (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) (X : ℝ) :
+    (∑ b ∈ units I (F.N * K), theta F.N (candidate F b)) =
+      X * eulerCoefficient F K + eulerRemainder F I K X := by
+  rw [effective_theta_unit_inclusion F I hK hfront]
+  unfold eulerCoefficient eulerRemainder divisorPrimeRemainder
+  rw [mul_sum, ← sum_add_distrib]
+  apply sum_congr rfl
+  intro k hk
+  ring
+
+theorem euler_remainder_abs_bound (F : Parameters) (I : Finset ℕ) (K : ℕ) (X : ℝ) :
+    |eulerRemainder F I K X| ≤
+      ∑ k ∈ effectiveDivisors K F.N,
+        |(ArithmeticFunction.moebius k : ℝ)| * |divisorPrimeRemainder F I X k| := by
+  unfold eulerRemainder
+  calc
+    _ ≤ ∑ k ∈ effectiveDivisors K F.N,
+        |(ArithmeticFunction.moebius k : ℝ) * divisorPrimeRemainder F I X k| := abs_sum_le_sum_abs _ _
+    _ = _ := by simp_rw [abs_mul]
+
+theorem face_divisor_product_iff {k t b : ℕ} (hkt : Nat.Coprime k t) :
+    (k ∣ b ∧ t ∣ b) ↔ k * t ∣ b := by
+  constructor
+  · intro h; exact hkt.mul_dvd_of_dvd_of_dvd h.1 h.2
+  · intro h
+    exact ⟨dvd_trans (dvd_mul_right k t) h, dvd_trans (dvd_mul_left t k) h⟩
+
+theorem rank_face_weighted_inclusion (F : Parameters) (I : Finset ℕ) {K t : ℕ}
+    (hK : K ≠ 0) (hKt : Nat.Coprime K t)
+    (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) :
+    (∑ b ∈ (units I (F.N * K)).filter (fun b => t ∣ b), theta F.N (candidate F b)) =
+      ∑ k ∈ effectiveDivisors K F.N,
+        (ArithmeticFunction.moebius k : ℝ) * divisorPrimeSum F I (k * t) := by
+  have hI : (units I (F.N * K)).filter (fun b => t ∣ b) =
+      units (I.filter fun b => t ∣ b) (F.N * K) := by
+    ext b; simp [units]; tauto
+  rw [hI, effective_theta_unit_inclusion F (I.filter fun b => t ∣ b) hK
+      (fun b hb => hfront b (mem_filter.mp hb).1)]
+  apply sum_congr rfl
+  intro k hk
+  have hkd := Nat.dvd_of_mem_divisors (mem_filter.mp hk).1
+  have hkt : Nat.Coprime k t := hKt.coprime_dvd_left hkd
+  have hEq : (I.filter fun b => t ∣ b).filter (fun b => k ∣ b) =
+      I.filter fun b => k * t ∣ b := by
+    ext b
+    simp only [mem_filter]
+    constructor
+    · rintro ⟨⟨hb, ht⟩, hk⟩; exact ⟨hb, (face_divisor_product_iff hkt).mp ⟨hk, ht⟩⟩
+    · rintro ⟨hb, h⟩
+      have hh := (face_divisor_product_iff hkt).mpr h
+      exact ⟨⟨hb, hh.2⟩, hh.1⟩
+  unfold divisorPrimeSum
+  rw [hEq]
+
+theorem face_euler_coefficient_factor (F : Parameters) (K t : ℕ)
+    (hdt : Nat.Coprime (conductor F) t) (hKt : Nat.Coprime K t) :
+    (∑ k ∈ effectiveDivisors K F.N,
+      (ArithmeticFunction.moebius k : ℝ) / Nat.totient (conductor F * (k * t))) =
+      eulerCoefficient F K / Nat.totient t := by
+  unfold eulerCoefficient
+  rw [sum_div]
+  apply sum_congr rfl
+  intro k hk
+  have hkt : Nat.Coprime k t :=
+    hKt.coprime_dvd_left (Nat.dvd_of_mem_divisors (mem_filter.mp hk).1)
+  rw [← Nat.mul_assoc, Nat.totient_mul ((hdt.symm.mul_right hkt.symm).symm), Nat.cast_mul]
+  simp only [div_mul_eq_div_div]
+
+theorem actual_rank_face_euler_decomposition (F : Parameters) (I : Finset ℕ) {K t : ℕ}
+    (hK : K ≠ 0) (hKt : Nat.Coprime K t) (hdt : Nat.Coprime (conductor F) t)
+    (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) (X : ℝ) :
+    (∑ b ∈ (units I (F.N * K)).filter (fun b => t ∣ b), theta F.N (candidate F b)) =
+      X * eulerCoefficient F K / Nat.totient t +
+      ∑ k ∈ effectiveDivisors K F.N,
+        (ArithmeticFunction.moebius k : ℝ) * divisorPrimeRemainder F I X (k * t) := by
+  rw [rank_face_weighted_inclusion F I hK hKt hfront]
+  rw [show X * eulerCoefficient F K / Nat.totient t =
+      X * (∑ k ∈ effectiveDivisors K F.N,
+        (ArithmeticFunction.moebius k : ℝ) /
+          Nat.totient (conductor F * (k * t))) from
+    by rw [face_euler_coefficient_factor F K t hdt hKt]; ring]
+  unfold divisorPrimeRemainder
+  rw [mul_sum, ← sum_add_distrib]
+  apply sum_congr rfl
+  intro k hk
+  ring
+
+end
+end GoldbachRound19.RankCalibration
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound19.RankCalibration.divisorPrimeSum
+#print axioms GoldbachRound19.RankCalibration.effectiveDivisors
+#print axioms GoldbachRound19.RankCalibration.eulerCoefficient
+#print axioms GoldbachRound19.RankCalibration.divisorPrimeRemainder
+#print axioms GoldbachRound19.RankCalibration.eulerRemainder
+#print axioms GoldbachRound19.RankCalibration.weighted_unit_inclusion
+#print axioms GoldbachRound19.RankCalibration.candidate_unit_implies_quotient_unit
+#print axioms GoldbachRound19.RankCalibration.theta_nonunit_quotient_zero
+#print axioms GoldbachRound19.RankCalibration.theta_unit_N_redundant
+#print axioms GoldbachRound19.RankCalibration.divisor_prime_sum_nonunit_zero
+#print axioms GoldbachRound19.RankCalibration.effective_theta_unit_inclusion
+#print axioms GoldbachRound19.RankCalibration.actual_theta_euler_decomposition
+#print axioms GoldbachRound19.RankCalibration.euler_remainder_abs_bound
+#print axioms GoldbachRound19.RankCalibration.face_divisor_product_iff
+#print axioms GoldbachRound19.RankCalibration.rank_face_weighted_inclusion
+#print axioms GoldbachRound19.RankCalibration.face_euler_coefficient_factor
+#print axioms GoldbachRound19.RankCalibration.actual_rank_face_euler_decomposition

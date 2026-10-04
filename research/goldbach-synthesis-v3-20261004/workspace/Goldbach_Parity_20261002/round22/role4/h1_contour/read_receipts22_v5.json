@@ -1,0 +1,74 @@
+{
+  "pole_api_scopes": [
+    "RemovableSingularity FULL5e1fd8",
+    "ImproperIntegrals TARGETED0e5062",
+    "IntegralProd TARGETED0e5062",
+    "SpecialIntegrals TARGETED80a3b6",
+    "SetIntegral TARGETED80a3b6",
+    "MellinTransform TARGETEDb97789",
+    "GammaBasic signature80a3b6"
+  ],
+  "created_utc": "2026-10-03T10:25:35.3282614Z",
+  "new_prints": 31,
+  "previous": {
+    "scope": "UNCHANGED_METADATA_BINDING",
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\read_receipts22_v4.json",
+    "sha256": "93debc7bfebedd52e56e526f05197e43131d4dd152f4b5fd683867f16916e777"
+  },
+  "schema": "ROLE4_H1_POLE_SOURCE_READ_RECEIPTS_V5",
+  "new_declarations": 31,
+  "new_sources": [
+    {
+      "capture": "97fe59",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaPoleRemoval22.lean",
+      "prints": 13,
+      "declarations": 13,
+      "scope": "FULL_SOURCE",
+      "sha256": "79b9e9c880adb1f20f1b6ad087703282bc8f6cc4439a887e959e55fee1d71a80",
+      "compiled": false
+    },
+    {
+      "capture": "31e025",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ThermalPoleMellin22.lean",
+      "prints": 11,
+      "declarations": 11,
+      "scope": "FULL_SOURCE",
+      "sha256": "160955e9780baf78461482cef57b1c478f01a12f4bd56d0a0e1dad0640567dce",
+      "compiled": false
+    },
+    {
+      "capture": "8fc202",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ThermalPoleDifference22.lean",
+      "prints": 7,
+      "declarations": 7,
+      "scope": "FULL_SOURCE",
+      "sha256": "ed725cffcb4ceaf8c127c5a11a99eec02c7ed8a4b6802f197c83e1c7c318d179",
+      "compiled": false
+    }
+  ],
+  "D_N_paid": false,
+  "psi_review": {
+    "api_scope": "TARGETED_60792f_81a454_c40ad1",
+    "declarations": 54,
+    "no_math_gap_identified": true,
+    "source_scope": "FULL_a84072_41e749",
+    "compiler_validation": false
+  },
+  "actual_lean_invocations_role4_previously": 3,
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "technical_metadata_errors": [
+    "60792f cache paths corrected 81a454/c40ad1",
+    "57db21 absent JSON field projection; source/receipt FULL output unaffected",
+    "b26830 lexical import cycle in doc-comment; no Lean/math/manifest"
+  ],
+  "h1_certified": false,
+  "new_lean_invocations": 0,
+  "note": {
+    "scope": "FULL_a76e24_PLUS_EXPLICIT_ROOT_GATE_PARAGRAPH_PATCH",
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\pole_notation_addendum22_v5.md",
+    "sha256": "49738bcc72de9c4433230903446e8e65da299fdb3c4caf6065e86466ebe6b45f"
+  },
+  "total_h1_source_declarations": 114,
+  "new_math_invocations": 0,
+  "win": false
+}

@@ -1,0 +1,13 @@
+# Boucle 9 : retour final pour la boucle suivante
+
+Rejeu indépendant PASS_EXACT_REPLAY : tous les champs et octets du nouveau JSON, page source 27 et reçu de rendu identiques. 307 artefacts antérieurs intacts, dont 54 fichiers de round8. Les originaux et les neuf modules Lean antérieurs restent inchangés. Aucun nouveau Lean : victoire fausse, score 0, 116 conclusions auxiliaires antérieures.
+
+Le bilan retenu est une seule route : D_N = B_prime^{a9} + B_pp^{a9} + P_band^{>=2} + Z_face^{>=2} + I_alpha + 2 max(e,0), avec a9 = ceil(N^(7/16)), Q source inchangé et les deux fronts de B^{a9} égaux à a9. Le paiement properpower W11/W12 s'applique directement par majorants positifs uniformes à ce bilan. Ne pas ajouter une deuxième route B_H, ni supposer l'égalité de leurs morceaux signés.
+
+Deux paiements écrits indépendants : J3 pour le changement de modèle harmonique, inférieur à 1e-12 N/(u ell) dès le seuil source u >= 10^24 ; W12 pour le premier axe n = p^j, j >= 2, inférieur à N/(1024 u ell), effectif dès u >= 65536. Ils ne sont pas des certificats Lean. Le paiement physique J4 demeure qualitatif et son seuil BV supplémentaire n'est pas évalué.
+
+La page source 27 porte -sqrt(u/60). Le majorant J3 emploie le plus faible -sqrt(u)/60, explicitement distingué. Les pages 32/33/36 fixent u >= 10^24 ; ne pas réintroduire 1024 comme seuil adaptatif. Le test N = 10^8 ne vérifie ni ces bornes asymptotiques ni D_N complet.
+
+Deux réfutations spécifiques sont acquises : retirer l'unité de k dans P_band ajoute abusivement le témoin n = 2, m = 99999998 ; m = 311 a un premier axe composite, Lambda_N(n) = 0. Les puissances propres du premier axe restent conservées dans le bilan original. Le facteur mu(m)^2 de la véritable énergie pondérée apparaît seulement après construction du bilan entier ; il ne permet pas un nouveau masque mu(n)^2 ni un masque sur un facteur court.
+
+La prochaine recherche doit porter sur une majoration unilatérale du moment signé premier réel B_prime^{a9}, ou sur une nouvelle information arithmétique qui contrôle conjointement ses fibres et le modèle. Garder les contributions favorables ; ne pas imposer inutilement une petite valeur absolue. La phase native chi(n) conj(chi(N)) vaut 1 sur le diviseur physique q | k. Une borne BV ordinaire ou une norme de Gauss générique ne devient pas une borne pour mu(m) Lambda(n). Une nouvelle coupure seule, une identité d'énergie seule ou un paiement properpower déjà acquis ne constitue pas le contournement demandé. Le terme couvert 2 max(e,0) reste à payer dans cette route.

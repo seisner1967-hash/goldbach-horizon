@@ -1,0 +1,331 @@
+{
+  "status": "PASS_IDENTITY_ONLY",
+  "N": 100000000,
+  "alpha": 100,
+  "Q": 999999,
+  "exact_convolution": "mu(m)*log(m)=-(mu*Lambda)(m), m>1",
+  "exact_reduced_prime_identity": "After cancellation: S_X=-sum_(p*ell<=X,p not dividing ell) mu(ell)*log(p)/log(p*ell)*F_N(p*ell)",
+  "coefficient_domain": [
+    2,
+    20000
+  ],
+  "coefficient_cases": 19999,
+  "prime_power_terms": 65533,
+  "profile_prefix_receipts": [
+    {
+      "X": 303,
+      "m_domain": [
+        2,
+        303
+      ],
+      "prime_power_terms": 802,
+      "proper_power_terms": 218,
+      "p_divides_ell_terms": 218,
+      "active_first_axis_nonsquarefree": 0,
+      "identity": "S_X=-sum_(p^j*ell<=X) mu(ell)*log(p)/log(p^j*ell)*F_N(p^j*ell)",
+      "denominator_verification": "Each fixed-m numerator is compared coefficientwise after multiplication by log(m)>0",
+      "symbolic_terms": 3,
+      "sum_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-21253412012343203333289727/500000000000000000000000",
+        "upper": "-17002724695914081069696933/400000000000000000000000"
+      },
+      "sum_sha256": "27507e25060aba298e832c5d77b7a93f4dada2e1a8086a7c1e31bdf21a16ebec",
+      "outside_prefix_argument_count": 99999696,
+      "exterior": "Uncomputed, retained; no global D_N bound"
+    },
+    {
+      "X": 1024,
+      "m_domain": [
+        2,
+        1024
+      ],
+      "prime_power_terms": 2952,
+      "proper_power_terms": 771,
+      "p_divides_ell_terms": 771,
+      "active_first_axis_nonsquarefree": 25,
+      "identity": "S_X=-sum_(p^j*ell<=X) mu(ell)*log(p)/log(p^j*ell)*F_N(p^j*ell)",
+      "denominator_verification": "Each fixed-m numerator is compared coefficientwise after multiplication by log(m)>0",
+      "symbolic_terms": 757,
+      "sum_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-14328903383917206112674463537/6000000000000000000000000",
+        "upper": "-4776295787537178777442439717/2000000000000000000000000"
+      },
+      "sum_sha256": "21de762b87eae6d34c26557214e63a7694de7c7032bd2d643c75fcb5ccc00b62",
+      "outside_prefix_argument_count": 99998975,
+      "exterior": "Uncomputed, retained; no global D_N bound"
+    }
+  ],
+  "diagnostics": [
+    {
+      "m": 303,
+      "n": 99999697,
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          101,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          7,
+          1
+        ],
+        [
+          41,
+          1
+        ],
+        [
+          348431,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "prime_power_terms": [
+        {
+          "p": 3,
+          "j": 1,
+          "d": 3,
+          "ell": 101,
+          "mu_ell": -1,
+          "p_divides_ell": false
+        },
+        {
+          "p": 101,
+          "j": 1,
+          "d": 101,
+          "ell": 3,
+          "mu_ell": -1,
+          "p_divides_ell": false
+        }
+      ],
+      "convolution_log_coefficients": {
+        "3": "-1",
+        "101": "-1"
+      },
+      "raw_profile_symbolic_terms": 3,
+      "raw_profile_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-21253412012343203333289727/500000000000000000000000",
+        "upper": "-17002724695914081069696933/400000000000000000000000"
+      }
+    },
+    {
+      "m": 311,
+      "n": 99999689,
+      "factor_m": [
+        [
+          311,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          113,
+          1
+        ],
+        [
+          199,
+          1
+        ],
+        [
+          4447,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "prime_power_terms": [
+        {
+          "p": 311,
+          "j": 1,
+          "d": 311,
+          "ell": 1,
+          "mu_ell": 1,
+          "p_divides_ell": false
+        }
+      ],
+      "convolution_log_coefficients": {
+        "311": "1"
+      },
+      "raw_profile_symbolic_terms": 6,
+      "raw_profile_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "85493660906624094057557397/2000000000000000000000000",
+        "upper": "10686712191525579572692041/250000000000000000000000"
+      },
+      "fixed_denominator_rational_weights": [
+        {
+          "d": 311,
+          "ell": 1,
+          "before_global_minus": "1"
+        }
+      ],
+      "l_one_contribution": "-F_N(311) < 0, retained"
+    },
+    {
+      "m": 841,
+      "n": 99999159,
+      "factor_m": [
+        [
+          29,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          59,
+          1
+        ],
+        [
+          3343,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "prime_power_terms": [
+        {
+          "p": 29,
+          "j": 1,
+          "d": 29,
+          "ell": 29,
+          "mu_ell": -1,
+          "p_divides_ell": true
+        },
+        {
+          "p": 29,
+          "j": 2,
+          "d": 841,
+          "ell": 1,
+          "mu_ell": 1,
+          "p_divides_ell": false
+        }
+      ],
+      "convolution_log_coefficients": {},
+      "raw_profile_symbolic_terms": 8,
+      "raw_profile_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "14701783302970632480962397/1000000000000000000000000",
+        "upper": "2205268561805601690264601/150000000000000000000000"
+      },
+      "fixed_denominator_rational_weights": [
+        {
+          "d": 29,
+          "ell": 29,
+          "before_global_minus": "-1/2"
+        },
+        {
+          "d": 841,
+          "ell": 1,
+          "before_global_minus": "1/2"
+        }
+      ],
+      "cancellation": "(-1/2 + 1/2)*F_N(m)=0 before the common global minus",
+      "dropping_proper_powers": "Leaves a nonzero spurious contribution because F_N(m) is nonzero",
+      "prime_only_without_p_divides_ell_exclusion": "False: the j=1 shared-prime term survives spuriously"
+    },
+    {
+      "m": 10201,
+      "n": 99989799,
+      "factor_m": [
+        [
+          101,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          37,
+          1
+        ],
+        [
+          521,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "prime_power_terms": [
+        {
+          "p": 101,
+          "j": 1,
+          "d": 101,
+          "ell": 101,
+          "mu_ell": -1,
+          "p_divides_ell": true
+        },
+        {
+          "p": 101,
+          "j": 2,
+          "d": 10201,
+          "ell": 1,
+          "mu_ell": 1,
+          "p_divides_ell": false
+        }
+      ],
+      "convolution_log_coefficients": {},
+      "raw_profile_symbolic_terms": 114,
+      "raw_profile_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-258195774152451506010489299257136713/8212304100000000000000000000000000",
+        "upper": "-344260934016645883905139922667439133/10949738800000000000000000000000000"
+      },
+      "fixed_denominator_rational_weights": [
+        {
+          "d": 101,
+          "ell": 101,
+          "before_global_minus": "-1/2"
+        },
+        {
+          "d": 10201,
+          "ell": 1,
+          "before_global_minus": "1/2"
+        }
+      ],
+      "cancellation": "(-1/2 + 1/2)*F_N(m)=0 before the common global minus",
+      "dropping_proper_powers": "Leaves a nonzero spurious contribution because F_N(m) is nonzero",
+      "prime_only_without_p_divides_ell_exclusion": "False: the j=1 shared-prime term survives spuriously"
+    }
+  ],
+  "raw_first_axis_mask": "rho1 only; no added mu(N-m)^2",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 190,
+    "baseline_sha256": "900367574d957bfe8e48341ca532022fc0e742d5a001099e3d402863e467de61"
+  },
+  "script_sha256": "eb122b2c44e52a053c38d09ad6e3b7c3abe2167bed2c6c23fbc78b62baba789a",
+  "limitations": "Standard exact identity; no gain, no suppression of prime powers/shared prime factors/l=1, no global profile computed"
+}

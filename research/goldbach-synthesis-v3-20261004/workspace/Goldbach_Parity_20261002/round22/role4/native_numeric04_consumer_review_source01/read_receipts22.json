@@ -1,0 +1,256 @@
+{
+  "schema": "ROUND22_ROLE4_NATIVE_NUMERIC04_INDEPENDENT_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_REVIEW_CLOSED_NO_EXECUTION",
+  "utc": "2026-10-03T21:03:38.6163906Z",
+  "reviewer": "ROLE4",
+  "author": "ROLE3",
+  "binding_count": 32,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\run_native_once22.py",
+      "bytes": 16441,
+      "sha256": "1cb5585e6e940afa3d4d7b3b1fb40259ed39a6bd8ca13a07877cb5651ac65908",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\windows_job22.py",
+      "bytes": 13397,
+      "sha256": "78db7ebf8292142a1c51b2d9f27a9c64b53768d0ee7e213e5e2ac8b2ded44a31",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\native_controls_contract22.md",
+      "bytes": 7429,
+      "sha256": "a29d3fe1473ffbb38cc0df7ae8ea3a0f8851173f3d7d7781765533daaceedea1",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\source_handoff22.json",
+      "bytes": 5776,
+      "sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\producer_dit22.cpp",
+      "bytes": 11771,
+      "sha256": "bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74",
+      "review_read_scope": "TARGETED_OUTPUT_INTERFACE_LINES_ONLY_NOT_NEW_FULL",
+      "review_tool_receipt": "48871f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\checker_dif22.cpp",
+      "bytes": 18764,
+      "sha256": "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb",
+      "review_read_scope": "TARGETED_OUTPUT_INTERFACE_LINES_ONLY_NOT_NEW_FULL",
+      "review_tool_receipt": "48871f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\native_spec22_final.md",
+      "bytes": 4046,
+      "sha256": "6bc24ecfe96437e5c437fe003788194548b379c0c7bbf0dfed81f118c0eb322b",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source04\\windows_build_job22.py",
+      "bytes": 16510,
+      "sha256": "88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "c10531"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build_receipt04.json",
+      "bytes": 5117,
+      "sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source04\\actual_build04_attempt01\\receipt.json",
+      "bytes": 5117,
+      "sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "c1a754"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source04\\build_execution_plan22.json",
+      "bytes": 3381,
+      "sha256": "538cc14faf3466bb8a0505e8f6aae3007fc84b2b6246afb2da55d37be5718156",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "c1a754"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source04\\compiler_trust_policy22.json",
+      "bytes": 1779,
+      "sha256": "72fd49d993e3291a174d4ba5a139a649ab916e9e757274c0e89f0a6092b4f6a6",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_build_metadata04\\build_execution_closure22_revision02.json",
+      "bytes": 8970,
+      "sha256": "dd506cebebcdbf7c75fd138d26cfb744552bdd6912e3cc37fbaa3a58fd8c0c15",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "c1a754"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_native_build04_closed_observation.json",
+      "bytes": 1390,
+      "sha256": "f4ceb714c272e3fe5b665101492b3465eea52316501ade6a916ea0c33a8a902a",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "c1a754"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\run_native04_once22.py",
+      "bytes": 27241,
+      "sha256": "97473b226ce5206e021e444720651e00ca1fdb4c1c1052e20db60d4effec3f55",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "e03eda"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\numeric_execution_plan22.json",
+      "bytes": 5222,
+      "sha256": "c66808e4cd7312d76002559afccf909fdb5b6aa1e706301fc88813dcb519aaeb",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "2495fe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\numeric_trust_policy22.json",
+      "bytes": 2647,
+      "sha256": "c6c97d0ef8846bbabb6db2ae7544de4aec631403c6f60ca460983c334059ebce",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "2495fe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\numeric_consumer_contract22.txt",
+      "bytes": 7367,
+      "sha256": "8be046b99950043cd684a1cee51d4b0d0ef933b791d357946ca0ce7689a2aac6",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "2495fe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\preparation_requirements22.txt",
+      "bytes": 4659,
+      "sha256": "a6c36825ffb4e32838852852dbfe445ba9bcb9dab17bcf8482897d9d4e736c8c",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "2495fe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_build_metadata04\\build_manifest22.json",
+      "bytes": 1462487,
+      "sha256": "24ea81c9ae7134f71837baed91dabc9c64f45a2438ca6223e1aedc2154a85c2f",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source04\\actual_build04_attempt01\\PRE.json",
+      "bytes": 22022,
+      "sha256": "e751361aa2e9b20b7fae95b8c0fdda731338a0b7fb88c1f3aed4fb72d7ecc676",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build-final04\\producer_dit22.exe",
+      "bytes": 3649966,
+      "sha256": "44d2d571a0190f7dbbb975225559d16a012693bda4197738e6311c14892cadb0",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build-final04\\checker_dif22.exe",
+      "bytes": 3669445,
+      "sha256": "2e7e095c2972fea09ee26500df9dae207ff52497d0f61f2052d76d464ebe6990",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\read_receipts22.json",
+      "bytes": 8981,
+      "sha256": "81fe165be597f5dd8830cb3ab7fe65392133e7d5a1718a5939ab72e44d6fa067",
+      "review_read_scope": "BYTE_SHA_AND_SIZE_ONLY",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\read_receipts22_revision02.json",
+      "bytes": 10004,
+      "sha256": "31b7bab5b1b0eab1c2d9f0152dbb87c245fbf81e7fe2d3053500e4d1a4252690",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "c0fc26"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\source_handoff22.json",
+      "bytes": 12690,
+      "sha256": "0c839fc7c602c52c6c3f0d47d6f643342c8641a0cc8527b656a4e7cf70e74616",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "eac609"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric04_consumer_review_source01\\source_review22.json",
+      "bytes": 6952,
+      "sha256": "f1afc6db690b7ee706f66d2ea9d14878eb36b3374eceffbadc6157e9c2cf9012",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "194ed3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric04_consumer_review_source01\\trust_review22.json",
+      "bytes": 3197,
+      "sha256": "5fdf1c49cef3b85d1b617d79b31cca39573c5bc964f23df1535f933406b5c2c7",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "194ed3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\circle_native_build_controls_source_review04.md",
+      "bytes": 6439,
+      "sha256": "e72b4d3b61086f9cd2293de005af4e7c21457b8fcb357cf3201c5fd717fce1ef",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "5727a2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\circle_native_build_trust_review04.json",
+      "bytes": 3453,
+      "sha256": "b4574128d6cc24bd15c547f3222c8456e1880cf993a036e237af9c568f13b899",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "5727a2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\circle_native_controls_source_review02.md",
+      "bytes": 7406,
+      "sha256": "205bf40885e9458d8e72684903cb2b67d586b05fd632ab0a786b90c6825cd81e",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "5727a2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\circle_native_source_review01.md",
+      "bytes": 8759,
+      "sha256": "6d6899b9c2fea5ca7fa000c85876c0a29f5dfdc0e1e412feb41c2b42541dfe1c",
+      "review_read_scope": "FULL",
+      "review_tool_receipt": "5727a2"
+    }
+  ],
+  "author_handoff_bindings_verified": 25,
+  "metadata_scope": "CONTROL_JSON_PS_PARSE_AND_FILE_BYTE_HASH_ONLY_NO_PYTHON_CANDIDATE_PARSER_IMPORT_OR_MATH",
+  "globally_truncated_combined_read_excluded": "13a26f",
+  "fixed_full_replacement": [
+    "e03eda",
+    "2495fe"
+  ],
+  "missing_inferred_filename_excluded": "source_read_receipts22_revision02.json; actual read_receipts22_revision02.json read FULLc0fc26",
+  "new_complete_CPP_backend_math_review_claimed": false,
+  "all_6332_snapshot_inputs_rehashed": false,
+  "all_3089_archives_rehashed": false,
+  "candidate_imports": 0,
+  "Python_source_parser_invocations": 0,
+  "native_invocations": 0,
+  "compiler_invocations": 0,
+  "Windows_API_probes": 0,
+  "Lean_invocations": 0,
+  "numeric_preparation_created": false,
+  "numeric_gate_created": false,
+  "numeric_actual_created": false,
+  "D_N": false,
+  "WIN": false
+}

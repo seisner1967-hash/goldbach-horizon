@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "lambda_modN": 73626461,
+  "G": [
+    [
+      9260,
+      -67
+    ],
+    [
+      -12577,
+      91
+    ]
+  ],
+  "counts": {
+    "positive_integer_shears": 204,
+    "accepted_original_masks": 43,
+    "positive_expanded_sign": 24,
+    "negative_expanded_sign": 19
+  },
+  "base_expanded_sign": 1,
+  "switched_expanded_sign": -1,
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 120,
+    "baseline_sha256": "b2a48fef1f5eccbc30ed516a0f5e20bd20042cb559aa997ac2d38602ddc32558"
+  },
+  "script_sha256": "ba92c852c542adab1acbcd82d8021091099de99062ba5166ad49fe5f8f463fa5"
+}

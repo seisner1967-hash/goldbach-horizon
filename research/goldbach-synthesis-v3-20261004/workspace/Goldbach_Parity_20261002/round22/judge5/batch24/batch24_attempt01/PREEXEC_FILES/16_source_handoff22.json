@@ -1,0 +1,61 @@
+{
+  "schema": "ROUND22_ANGULAR_MELLIN_BORDER_SOURCE_HANDOFF_03",
+  "status": "FROZEN_SOURCE_ONLY_REPAIR_OF_REAL_FAIL23_AWAITING_REVIEW",
+  "author_role": "ROLE4",
+  "package": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03",
+  "module_order": [
+    "AngularMellinBorder22"
+  ],
+  "declarations": 30,
+  "theorems": 22,
+  "definitions": 8,
+  "qualified_print_axioms": 30,
+  "local_dependencies": [],
+  "domain": "Same: a>0; arbitrary complex q; natural N; N>0 only for divided recurrence and nonzero q1 border.",
+  "source_full_read": "dd8616",
+  "old_log_FIN_full_read": "9aa9b9",
+  "old_receipt_full_read": "6d905e",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\AngularMellinBorder22.lean",
+      "sha256": "1fa9de9a41a432b3745d1dce719018452e6f8f9b183bb9635d07191f1dcf91da",
+      "size": 13342
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_contract22.md",
+      "sha256": "b3dd4b1809bcb599562ede96504887b58a0d3c818bc7f8562a50e9875c830760",
+      "size": 4068
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_catalog22.json",
+      "sha256": "379c32c142a3e3c157952d9f789b8618b7ffa4574b23e19d7a0db5188d50bee8",
+      "size": 1729
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_read_receipts22.json",
+      "sha256": "9149bccf45d1c8ffc188bfc58770fa3cf100b7ccf58193bbe696e57500acd2c5",
+      "size": 7116
+    }
+  ],
+  "changes": [
+    "Explicit lambda/derivative change then multiplication AC normalization at the character derivative",
+    "Inverse of (-1)^N via inverse-power and norm_num",
+    "Expose both I*(...) products in congrArg equality before rewrite"
+  ],
+  "old_source_sha256": "3719a79cfd8aa0915cb15aa57111ac0529a3fa245387ceff19540395aa5756ea",
+  "old_fail_log_sha256": "a9c287bf1dff63999fa115dd1e71e9b83d142883c62b89254b522e51002fc0a9",
+  "old_batch_credit": 0,
+  "author_olean": false,
+  "new_compile_authorized": false,
+  "actual24_created": false,
+  "new_api_probe_invocations": 0,
+  "numeric_evaluations": 0,
+  "candidate_parser_invocations": 0,
+  "transitive_import_closure_prepared": false,
+  "independent_pass": false,
+  "global_trace_proved": false,
+  "D_N_target_proved": false,
+  "WIN": false,
+  "Mellin_draft_status": "SOURCE_SUSPENDED_e54cac5b_NOT_SUBMITTED",
+  "preservation": "Source02/batch23 and all old packages readonly; new revision03 is exclusive. No source-level sorry/axiom/admit/native_decide introduced."
+}

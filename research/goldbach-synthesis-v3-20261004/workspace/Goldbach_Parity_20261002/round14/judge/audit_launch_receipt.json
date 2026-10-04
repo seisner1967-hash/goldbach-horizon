@@ -1,0 +1,27 @@
+{
+  "status": "RECORDED_ACTUAL_COMPLETED_AUDIT_NO_RERUN",
+  "command_powershell": "& 'D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\judge\\audit-judge.ps1'",
+  "mode": "READ_ONLY_EXISTING_FROZEN_RECEIPTS_AND_VECTORS",
+  "exec_session_id": 68148,
+  "initial_exec_chunk_id": "dc7150",
+  "completion_chunk_id": "79f17c",
+  "exit_code": 0,
+  "stdout_sha256": "b5e685ac3adee7085e2cc8e3381d0cd73694fe82c3cf58179bf3bb560a962756",
+  "stderr": "",
+  "audit_reexecuted_for_recording": false,
+  "bindings_sha256": {
+    "audit-judge.ps1": "6498fae53a421e7e7cd4caf1cd526be6beba33daf0aefca782141583ea9ce73e",
+    "run-audit.py": "44a7a7ae067fc66660f8f80d8dcf8db7cd105874664d829e2436d14854107399",
+    "judge_receipt.json": "fc75a3707c78bb2487a4abe52423aea6bb8e011ec453baffe0020ed3df4cd33c",
+    "input_sha256.json": "6a2fb1cc21c1783140d0b42a8c625c82513d6aafecd312c9f43b9c42da725c30"
+  },
+  "lean_invoked": false,
+  "numerical_producer_invoked": false,
+  "victory": false,
+  "score": 0,
+  "command_argv": [
+    "powershell",
+    "-Command",
+    "& 'D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\judge\\audit-judge.ps1'"
+  ]
+}

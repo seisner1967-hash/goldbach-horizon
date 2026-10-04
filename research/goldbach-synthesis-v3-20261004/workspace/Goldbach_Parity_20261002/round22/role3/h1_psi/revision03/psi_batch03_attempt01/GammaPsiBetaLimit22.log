@@ -1,0 +1,54 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision03\source_final\GammaPsiBetaLimit22.lean:66:31: error: unknown constant 'Complex.ofNat_re'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision03\source_final\GammaPsiBetaLimit22.lean:102:47: error: failed to prove positivity/nonnegativity/nonzeroness
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision03\source_final\GammaPsiBetaLimit22.lean:165:2: error: type mismatch, term
+  IntervalIntegrable.sub hi h1
+after simplification has type
+  IntervalIntegrable (fun x => ↑x ^ (z - 1) * (1 - ↑x) ^ (↑w - 1) - (1 - ↑x) ^ (↑w - 1)) volume 0 1 : Prop
+but is expected to have type
+  IntervalIntegrable (betaDifferenceIntegrand z w) volume 0 1 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision03\source_final\GammaPsiBetaLimit22.lean:239:2: error: type mismatch, term
+  Integrable.neg (integrableOn_betaDifference_limit hz)
+after simplification has type
+  Integrable (-betaDifferenceIntegrand z 0) (volume.restrict (Ioc 0 1)) : Prop
+but is expected to have type
+  IntegrableOn (psiBetaIntegrand z) (Ioc 0 1) volume : Prop
+'GoldbachContinuous22.betaEndpointConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.betaDifferenceMajorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.psiBetaIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.betaEndpointConstant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.betaDifferenceMajorant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.rpow_le_half_endpoint_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_ofReal_cpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.hasDerivAt_ofReal_cpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_cpow_sub_one_le_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_betaFactor_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_betaDifference_le_left' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_betaDifference_le_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_betaDifference_le_majorant' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.intervalIntegrable_betaDifferenceMajorant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.intervalIntegrable_betaDifference' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.betaDifference_pointwise_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.betaDifference_limit_aestronglyMeasurable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.integrableOn_betaDifference_limit' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.betaDifference_dominated_limit' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.betaDifference_zero_integral' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.betaDifference_zero_eq_neg_psiBeta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.integrableOn_psiBetaIntegrand' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaPsi_eq_beta_integral' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

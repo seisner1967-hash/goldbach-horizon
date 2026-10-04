@@ -1,0 +1,252 @@
+{
+  "C3_paid": false,
+  "C5_paid": false,
+  "C6_paid": false,
+  "D_N_paid": false,
+  "H1_paid": false,
+  "actual_child_invocations": 2,
+  "all_inputs_unchanged": true,
+  "attempt": "batch09_attempt01",
+  "author_olean_used": false,
+  "capture_count": 75,
+  "closed_judge_file_count": 604,
+  "declarations_passed": 10,
+  "global_trace_certified": false,
+  "hidden_retries": false,
+  "input_count": 7348,
+  "module_count_passed": 1,
+  "numeric_PASS_used_as_proof": false,
+  "numeric_bank_replayed": false,
+  "old_batches_recompiled": false,
+  "protected_archive_count": 3089,
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "GammaDerivative22",
+    "GammaBoxBounds22",
+    "GammaContourComponent22",
+    "GammaPsiCore22",
+    "GammaPsiBetaLimit22",
+    "GammaPsiIntegral22",
+    "ZetaEulerDirect22",
+    "ZetaReflection22",
+    "GammaPsiDuplication22",
+    "GammaPsiReflection22"
+  ],
+  "rows": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi_eq_sine"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.deriv_contourChi_sine"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi_logDeriv_direct"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.complex_log_two_pi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi_logDeriv_symmetric"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourPsiPairIntegrand"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourPsiPair_eq_negPsi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integrableOn_contourPsiPair"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourPsiPair_integral"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi_logDeriv_eq_pair_integral"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch09\\batch09_attempt01\\ContourChiPsi22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch09\\sources\\ContourChiPsi22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T14:40:34.210541+00:00",
+      "launch_error": null,
+      "log_sha256": "73bb6cf28df0c5501efbbd6234cc65488a69e0fe8eff627d16cdb00a570f64cb",
+      "module": "ContourChiPsi22",
+      "olean_sha256": "30a0d524d489b9df42ca061c1b7435947695417f7275a87e57e8deadb1d95a76",
+      "source_prior_status": "SOURCE_NOT_COMPILED_REVISION_DISTINCT_FROM_PRELIMINARY_COPY",
+      "source_sha256": "30c44bb1e376c32c28201e79adaad55043143081d56d4429c6d0b30e8f217540",
+      "started_at": "2026-10-03T14:40:08.263205+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    },
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourPsiScaledKernel"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.leftChiPoint"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.scaleTwo_image_Ioi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.scaleTwo_injOn_Ioi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourPsiPair_scaleTwo"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integrableOn_contourPsiScaledKernel"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourPsiPair_integral_eq_scaled"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi_logDeriv_eq_scaled_integral"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.leftChiPoint_re"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourPsiScaledKernel_left_line"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch09\\batch09_attempt01\\ContourChiScaled22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch09\\sources\\ContourChiScaled22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": false,
+      "exit_code": 1,
+      "finished_at": "2026-10-03T14:40:51.607615+00:00",
+      "launch_error": null,
+      "log_sha256": "6fbd12cf496dbb66a5d25e69eb0668e6f5cafda352e29dc1e4f44c460a99d189",
+      "module": "ContourChiScaled22",
+      "olean_sha256": null,
+      "source_prior_status": "SOURCE_NOT_COMPILED",
+      "source_sha256": "d0aa03290fe806f9c84c0311a7e07a2fe0737148c9c1de7c80876118fb7a64d7",
+      "started_at": "2026-10-03T14:40:34.210541+00:00",
+      "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+      "timed_out": false
+    }
+  ],
+  "status": "INDEPENDENT_BATCH09_FAILED",
+  "time_utc": "2026-10-03T14:41:00.659981+00:00",
+  "victory": false
+}

@@ -1,0 +1,8 @@
+{
+  "node_id": "5.1",
+  "hypothesis": "Mechanism: Projection jointe des fréquences duales et des moments multiplicatifs de HH.\nHypothesis: Sommer h et l avant une norme peut restaurer l'échelle N sans perdre les vrais coefficients signés.\nObservable: Identité de décomplétion avec reste nonunitaire exact, filtre rationnel/cyclotomique, audit des énergies et du gain logarithmique restant.\nConflicts: La dépendance h en s*t et les phases de caractères induits interdisent les annulations naïves ; revenir à l'échelle N ne prouve pas un gain.",
+  "score": 0.0,
+  "insight": "J9/J10 prouvées sur ZMod q composite avec vraie somme des fréquences nonunitaires. Le défaut peut porter toute la masse quand tau=0 ; sommation jointe restaure une identité physique mais pas un gain signé.",
+  "result": "12 nouveaux théorèmes compilés et rejoués indépendamment, sources Mathlib seules, axiomes standards. Filtre cyclotomique et replay PASS. PARTIAL, victoire false.",
+  "branch": "round4/lean/CompositeCompletion.lean"
+}

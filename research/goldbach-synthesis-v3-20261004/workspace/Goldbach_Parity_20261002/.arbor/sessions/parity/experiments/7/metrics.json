@@ -1,0 +1,8 @@
+{
+  "node_id": "7",
+  "hypothesis": "Mechanism: Determinant representation of the fixed additive HH level with actual signed factor weights.\nHypothesis: A Hecke or lattice decomposition may expose an arithmetic signed cancellation unavailable to a universal affine chart.\nObservable: Exact bijection preserving all selectors and coefficients, numerical falsifier at N=100000000, and an independent quantitative cost audit before formalization.\nConflicts: Replacing actual Mobius weights by arbitrary coefficients restores the known operator barrier; fixed determinant geometry alone does not imply a saving.",
+  "score": 0.0,
+  "insight": "Exact integer HNF coordinates, inverse and canonical lambda existence from gcd(N,B)=1 are certified. A right shear preserves the displayed H_lambda but changes the developed four-Mobius coefficient; no finite weighted reindexing or signed Hecke estimate is certified.",
+  "result": "15 new theorems freshly recompiled independently, source hash matched, standard axioms only. Numeric gate and replay PASS; all 120 tracked prior artifacts unchanged. Partial standard geometry, no D_N saving.",
+  "branch": "round5/lean/DeterminantCoordinates.lean"
+}

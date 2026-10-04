@@ -1,0 +1,391 @@
+{
+  "status": "PASS",
+  "phase_reduction": {
+    "N": 100000000,
+    "divisor_strata": 81,
+    "exact_total_stratum_cardinality": 100000000,
+    "phase_checks": 89988,
+    "sampled_distinct_frequencies": 7499,
+    "a_domain": "Every unit a<min(q,258), plus a=q-1; q=1 uses a=0",
+    "x_values": [
+      -99999999,
+      -11,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      5,
+      7,
+      11,
+      73,
+      99999999
+    ],
+    "identity": "h=(N/q)a gives exactly hx/N=ax/q as rational numbers",
+    "scope": "Every divisor q of N is used; a frequencies beyond the stated sample are covered algebraically, not enumerated"
+  },
+  "large_N_gauss": {
+    "N": 100000000,
+    "primitive_conductor": 5,
+    "unit_count": 40000000,
+    "unit_classes_mod10": [
+      1,
+      3,
+      7,
+      9
+    ],
+    "orbit_identity": "x=r+10j, j=0..N/10-1; the geometric orbit vanishes unless N/10 divides h",
+    "active_frequency_count": 8,
+    "active": [
+      {
+        "h": 10000000,
+        "q": 10,
+        "a": 1,
+        "Gauss_coefficient_times_tau5": 10000000,
+        "normSq": 500000000000000
+      },
+      {
+        "h": 20000000,
+        "q": 5,
+        "a": 1,
+        "Gauss_coefficient_times_tau5": 10000000,
+        "normSq": 500000000000000
+      },
+      {
+        "h": 30000000,
+        "q": 10,
+        "a": 3,
+        "Gauss_coefficient_times_tau5": -10000000,
+        "normSq": 500000000000000
+      },
+      {
+        "h": 40000000,
+        "q": 5,
+        "a": 2,
+        "Gauss_coefficient_times_tau5": -10000000,
+        "normSq": 500000000000000
+      },
+      {
+        "h": 60000000,
+        "q": 5,
+        "a": 3,
+        "Gauss_coefficient_times_tau5": -10000000,
+        "normSq": 500000000000000
+      },
+      {
+        "h": 70000000,
+        "q": 10,
+        "a": 7,
+        "Gauss_coefficient_times_tau5": -10000000,
+        "normSq": 500000000000000
+      },
+      {
+        "h": 80000000,
+        "q": 5,
+        "a": 4,
+        "Gauss_coefficient_times_tau5": 10000000,
+        "normSq": 500000000000000
+      },
+      {
+        "h": 90000000,
+        "q": 10,
+        "a": 9,
+        "Gauss_coefficient_times_tau5": 10000000,
+        "normSq": 500000000000000
+      }
+    ],
+    "F_delta1_stratum_contributions": {
+      "5": 50000000,
+      "10": 50000000
+    },
+    "total_nonunit_remainder": 100000000,
+    "unit_frequency_tau": 0,
+    "general_unit_support_F": {
+      "1": 2,
+      "3": -1,
+      "7": 3,
+      "9": 1,
+      "11": -2,
+      "99999999": 1
+    },
+    "general_Fchi": 0,
+    "general_stratum_coefficient_each": 50000000,
+    "distinction": "Conductor 5 is distinct from q. Only q=5,10 are active here because N has high powers of 2 and 5.",
+    "scope": "Five/ten-phase and geometric-orbit certificate; no enumeration of 100000000 frequencies or 40000000 units"
+  },
+  "direct_small_strata": [
+    {
+      "N": 15,
+      "conductor": 3,
+      "strata": [
+        {
+          "q": 1,
+          "active": false,
+          "frequency_count": 1,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 3,
+          "active": true,
+          "frequency_count": 2,
+          "F_delta1_contribution": 12
+        },
+        {
+          "q": 5,
+          "active": false,
+          "frequency_count": 4,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 15,
+          "active": true,
+          "frequency_count": 8,
+          "F_delta1_contribution": 3
+        }
+      ],
+      "kappa": 3,
+      "exact_nonunit_remainder_delta1": 12,
+      "scope": "All frequencies and all units enumerated only for this stated small modulus"
+    },
+    {
+      "N": 100,
+      "conductor": 5,
+      "strata": [
+        {
+          "q": 1,
+          "active": false,
+          "frequency_count": 1,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 2,
+          "active": false,
+          "frequency_count": 1,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 4,
+          "active": false,
+          "frequency_count": 2,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 5,
+          "active": true,
+          "frequency_count": 4,
+          "F_delta1_contribution": 50
+        },
+        {
+          "q": 10,
+          "active": true,
+          "frequency_count": 4,
+          "F_delta1_contribution": 50
+        },
+        {
+          "q": 20,
+          "active": false,
+          "frequency_count": 8,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 25,
+          "active": false,
+          "frequency_count": 20,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 50,
+          "active": false,
+          "frequency_count": 20,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 100,
+          "active": false,
+          "frequency_count": 40,
+          "F_delta1_contribution": 0
+        }
+      ],
+      "kappa": 0,
+      "exact_nonunit_remainder_delta1": 100,
+      "scope": "All frequencies and all units enumerated only for this stated small modulus"
+    },
+    {
+      "N": 385,
+      "conductor": 5,
+      "strata": [
+        {
+          "q": 1,
+          "active": false,
+          "frequency_count": 1,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 5,
+          "active": true,
+          "frequency_count": 4,
+          "F_delta1_contribution": 300
+        },
+        {
+          "q": 7,
+          "active": false,
+          "frequency_count": 6,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 11,
+          "active": false,
+          "frequency_count": 10,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 35,
+          "active": true,
+          "frequency_count": 24,
+          "F_delta1_contribution": 50
+        },
+        {
+          "q": 55,
+          "active": true,
+          "frequency_count": 40,
+          "F_delta1_contribution": 30
+        },
+        {
+          "q": 77,
+          "active": false,
+          "frequency_count": 60,
+          "F_delta1_contribution": 0
+        },
+        {
+          "q": 385,
+          "active": true,
+          "frequency_count": 240,
+          "F_delta1_contribution": 5
+        }
+      ],
+      "kappa": 5,
+      "exact_nonunit_remainder_delta1": 380,
+      "scope": "All frequencies and all units enumerated only for this stated small modulus"
+    }
+  ],
+  "order4_character_filter": [
+    {
+      "N": 5,
+      "conductor": 5,
+      "character": "Order 4 with chi(2)=i",
+      "phase_modulus": 20,
+      "tau_chi_reduced": [
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "tau_inverse_reduced": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        -1
+      ],
+      "kappa": 5,
+      "normSq_tau": 5,
+      "H_formula": "H=chi^{-1}(-1)*tau(chi)*FbarChi; the completion multiplier is tau(chi^{-1})",
+      "FbarChi_reduced": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "FbarChi_is_not_assumed_real_or_positive": true,
+      "scalar_double_unit_projection": "25/25",
+      "wrong_same_Gauss_counterexample": true,
+      "dropped_unit_support_counterexample": null
+    },
+    {
+      "N": 10,
+      "conductor": 5,
+      "character": "Order 4 with chi(2)=i",
+      "phase_modulus": 20,
+      "tau_chi_reduced": [
+        -1,
+        2,
+        2,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "tau_inverse_reduced": [
+        -1,
+        -2,
+        2,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "kappa": 5,
+      "normSq_tau": 5,
+      "H_formula": "H=chi^{-1}(-1)*tau(chi)*FbarChi; the completion multiplier is tau(chi^{-1})",
+      "FbarChi_reduced": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "FbarChi_is_not_assumed_real_or_positive": true,
+      "scalar_double_unit_projection": "25/100",
+      "wrong_same_Gauss_counterexample": true,
+      "dropped_unit_support_counterexample": {
+        "F": "delta2",
+        "gcd_2_modulus": 2,
+        "primal_character_pairing": 0,
+        "actual_H_reduced": [
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "verdict": "FALSE if the unit-support hypothesis is omitted"
+      }
+    }
+  ],
+  "large_reduced_module_counterexample": {
+    "N": 70630,
+    "conductor": 5,
+    "h": 2,
+    "q": 35315,
+    "nonunit_frequency": true,
+    "primitive_Gauss_factor": -1,
+    "Gauss_normSq": 5,
+    "F_delta1_stratum_contribution": 5,
+    "verdict": "Small conductor does not imply a small reduced module for a nonzero nonunit frequency",
+    "scope": "Separate arithmetic benchmark; Gauss nonvanishing uses the exact induced-character factor and primitive five-phase Gauss, not enumeration of q frequencies"
+  },
+  "central_convention": "tau(psi)=sum_units psi(x)e_N(x); tau(chi) and tau(chi^{-1}) remain distinct",
+  "central_identity": "H=chi^{-1}(-1)tau(chi)FbarChi; kappa=chi^{-1}(-1)tau(chi^{-1})tau(chi)=normSq(tau(chi)); E=(N-kappa)FbarChi on unit support",
+  "limitations": "Exact finite and orbit diagnostics only; no global D_N, no positivity asserted for complex FbarChi, no automatic small-reduced-module inference",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 120,
+    "baseline_sha256": "b2a48fef1f5eccbc30ed516a0f5e20bd20042cb559aa997ac2d38602ddc32558"
+  },
+  "script_sha256": "b841dab845ff60c94461345b34c66cec6983a8d25c205aec064d58d748c67601"
+}

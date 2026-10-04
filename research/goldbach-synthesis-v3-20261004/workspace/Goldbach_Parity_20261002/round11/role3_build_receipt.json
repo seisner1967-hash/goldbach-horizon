@@ -1,0 +1,81 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-02T13:44:18.938550+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\SquarefreeLcmCoefficient.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\SquarefreeLcmCoefficient.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean",
+      "source_sha256": "16d93e89e55730c21fcbf30a849b0057840116f03f9ad24710ab6eb946b26c08",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\attempt01_source.txt",
+      "exit_code": 1,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\attempt01.log",
+      "log_sha256": "6bf1d3a7f7d39a721e8aafeb1751bab1feca119f897d23456401503090b593cb",
+      "gate_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+      "gate_script_sha256": "b58ea3d4fc41ffb60c548a44e6f92bad2fc01d812bf3a4338d2b0d70d834f1c1",
+      "gate_status": "PASS_IDENTITY_ONLY",
+      "gate_N": 100000000
+    },
+    {
+      "attempt": 2,
+      "timestamp_utc": "2026-10-02T13:44:52.957223+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\SquarefreeLcmCoefficient.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\SquarefreeLcmCoefficient.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean",
+      "source_sha256": "3525db51503c763f195233e625c56039295645dafd1e172de9944764c24df26c",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\attempt02_source.txt",
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\attempt02.log",
+      "log_sha256": "6fe78585da6cfe8564351653b7603a1020c735b390739c2f578f1aed05c690fc",
+      "gate_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+      "gate_script_sha256": "b58ea3d4fc41ffb60c548a44e6f92bad2fc01d812bf3a4338d2b0d70d834f1c1",
+      "gate_status": "PASS_IDENTITY_ONLY",
+      "gate_N": 100000000
+    },
+    {
+      "attempt": 3,
+      "timestamp_utc": "2026-10-02T13:47:02.523141+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\SquarefreeLcmCoefficient.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\SquarefreeLcmCoefficient.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean",
+      "source_sha256": "f791b4be0f731244a44449f27bb236c7890a8265c0e7fa6d55150a1a230e1ba6",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\attempt03_source.txt",
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\attempt03.log",
+      "log_sha256": "6fe78585da6cfe8564351653b7603a1020c735b390739c2f578f1aed05c690fc",
+      "gate_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+      "gate_script_sha256": "b58ea3d4fc41ffb60c548a44e6f92bad2fc01d812bf3a4338d2b0d70d834f1c1",
+      "gate_status": "PASS_IDENTITY_ONLY",
+      "gate_N": 100000000
+    }
+  ],
+  "compiler": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+  "compiler_version": "Lean (version 4.15.0, x86_64-w64-windows-gnu, commit 11651562caae, Release)",
+  "lean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\SquarefreeLcmCoefficient.lean",
+  "source_sha256": "f791b4be0f731244a44449f27bb236c7890a8265c0e7fa6d55150a1a230e1ba6",
+  "status": "COMPILED_AUXILIARY_IDENTITY",
+  "only_new_module_compiled": true,
+  "old_bank_replayed": false,
+  "victory": false,
+  "unresolved": [
+    "B13 bilateral signed compensation",
+    "source physical-band BV onset",
+    "covered bridge e"
+  ],
+  "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\SquarefreeLcmCoefficient.olean",
+  "olean_sha256": "7ae468c5f94b93113c6cbbd90464509ba9bda67f286bd61df4d5134042bdc2af",
+  "axiom_output": "'GoldbachRound11.totient_square' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.totient_gcd_lcm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.gcd_square_of_squarefree' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.normalized_isMultiplicative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.normalized_eq_lcm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.normalized_prime' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.primeFactors_filter_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.squarefree_lcm_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound11.squarefree_lcm_coefficient_unit' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}

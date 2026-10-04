@@ -1,0 +1,31 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC05_INDEPENDENT_REVIEW_HANDOFF",
+  "status": "SOURCE_REVIEW_CLOSED_REPAIR_REQUIRED",
+  "reviewer": "ROLE4",
+  "author_of_reviewed_source": "ROLE3",
+  "source_handoff_sha256": "730e2782d4ae005d036caa2a59216813e5763985a9cc498207e92a09fead89e2",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric05_checker_only_consumer_review_source01\\source_review22.json",
+      "bytes": 4750,
+      "sha256": "cafe76455c0e2e41d7428246753d6a15c7c7c83ee84454baf30ab8819cd1c78d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric05_checker_only_consumer_review_source01\\trust_review22.json",
+      "bytes": 3178,
+      "sha256": "b75c49d37382bc3298e7a5b2bbd4b88adf9a3d14dd06108d905a8557092635da"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric05_checker_only_consumer_review_source01\\read_receipts22.json",
+      "bytes": 4787,
+      "sha256": "de3ad8a2c88e5a182c6b66eb5c04f392255e0f97db0d2816dfb82d25041bcd95"
+    }
+  ],
+  "observed_defects": 1,
+  "defect": "DEADLINE_NO_CREATION_CONTRACT_MISMATCH",
+  "ROOT_selection": "Separate parentrevision after post-hash deadline check, plus precise non-atomic deadline contract; existingbackend/CPP/image unchanged",
+  "PREP_or_gate_authorization": false,
+  "candidate_execution": 0,
+  "D_N": false,
+  "WIN": false
+}

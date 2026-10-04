@@ -1,0 +1,45 @@
+{
+  "round": 20,
+  "node": "14.5",
+  "at_utc": "2026-10-03T04:09:39.283390+00:00",
+  "actual_geometry_attempts": [
+    {
+      "attempt": 1,
+      "started_utc": "2026-10-03T03:59:30.148992+00:00",
+      "finished_utc": "2026-10-03T04:00:25.216355+00:00",
+      "exit_code": 1,
+      "credited_pass": false,
+      "source_sha256": "22bb640570931e2d7ad2575347d6b5099270dda4680e3d7472939d4f20449d13",
+      "log_sha256": "bf99572717dc777c978948d68cc0dbda4ad0da37fd71bb6e967bca7fe75bab07"
+    },
+    {
+      "attempt": 2,
+      "started_utc": "2026-10-03T04:02:08.949583+00:00",
+      "finished_utc": "2026-10-03T04:03:03.232369+00:00",
+      "exit_code": 0,
+      "credited_pass": true,
+      "source_sha256": "bc249b736e460716cccc7e8a9f9ccab9ac508133c8664bd6278795bd3dcb890a",
+      "log_sha256": "1a79f4d6f234151eb6ecbd86bce261a3d89ea50856647d686602af2500f2de4d"
+    }
+  ],
+  "ledger_sha256": "dee0fca8a69ce57490d70fd36f9bcab149caad91613655581b807d77cec424de",
+  "only_source_repair_exactly_verified": true,
+  "full_initial_source": [
+    "92f26e",
+    "50be8a",
+    "12db54"
+  ],
+  "full_repair_delta": "9c7671",
+  "FULL_actual_logs": [
+    "533706",
+    "e42edf"
+  ],
+  "FULL_geometry_FINAL_failures_receipt": "d67d43",
+  "final_receipt_sha256": "a82ae5719c1ce90a2969fa286ac32731893f9d606da342a839bec65d57a56c3d",
+  "all_actual_friable_author_attempts_including_geometry": 22,
+  "author_pass_count": 9,
+  "technical_fail_count": 13,
+  "root_lean_executions": 0,
+  "root_mathematical_executions": 0,
+  "victory": false
+}

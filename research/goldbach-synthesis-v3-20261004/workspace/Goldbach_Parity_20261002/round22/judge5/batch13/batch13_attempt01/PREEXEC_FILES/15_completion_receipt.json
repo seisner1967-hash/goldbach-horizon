@@ -1,0 +1,120 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH11_COMPLETION",
+  "time_utc": "2026-10-03T15:37:51.017862+00:00",
+  "status": "INDEPENDENT_BATCH11_FAILED",
+  "actual_attempt": "batch11_attempt01",
+  "actual_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\receipt.json",
+  "actual_receipt_sha256": "0b25b00e57663172cacc25945ad232d807ff58cd3c34bae6f2e64bf2e852f62b",
+  "actual_child_invocations": 2,
+  "modules_passed": 1,
+  "declarations_passed": 42,
+  "theorems_passed": 29,
+  "definitions_passed": 13,
+  "module_failures": 1,
+  "modules_not_invoked": [],
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "inputs_verified": 7903,
+  "old_judge_files_verified": 765,
+  "protected_archives_verified": 3089,
+  "captures_verified": 24,
+  "module_axiom_audits": [
+    {
+      "module": "ThermalProjectionEnvelope22",
+      "exact_prints": 42,
+      "standard_prints": 42,
+      "sorryAx_declarations": [],
+      "declarations_without_axioms": [],
+      "error_diagnostics": 0
+    },
+    {
+      "module": "ThermalProjectionIdentity22",
+      "exact_prints": 20,
+      "standard_prints": 10,
+      "sorryAx_declarations": [
+        "GoldbachContinuous22.integral_signedCircleCharacter",
+        "GoldbachContinuous22.star_projectionHeatTerm_neg",
+        "GoldbachContinuous22.projection_pair_character",
+        "GoldbachContinuous22.projection_pair_integral",
+        "GoldbachContinuous22.normalized_projection_pair_integral",
+        "GoldbachContinuous22.projectionPartialCorrelation_expansion",
+        "GoldbachContinuous22.thermalPartialProjection_eq_finite_coefficient",
+        "GoldbachContinuous22.thermalPartialProjection_eq_coefficient",
+        "GoldbachContinuous22.thermalContinuousProjection_eq_coefficient",
+        "GoldbachContinuous22.thermalContinuousProjection_eq_vonMangoldt_sum"
+      ],
+      "declarations_without_axioms": [],
+      "error_diagnostics": 5
+    }
+  ],
+  "error_classification": "TECHNICAL_API_QUALIFIER_CONJUGATION_SUM_ORDER_BETA_NORMALIZATION",
+  "error_sites": [
+    {
+      "line": 51,
+      "column": 8,
+      "diagnostics": 2,
+      "issue": "integral_exp_mul_complex is global, not intervalIntegral namespace"
+    },
+    {
+      "line": 58,
+      "column": 63,
+      "diagnostics": 1,
+      "issue": "conjugate of negative cast theta not normalized before ring"
+    },
+    {
+      "line": 152,
+      "column": 41,
+      "diagnostics": 1,
+      "issue": "two finite sums need permutation"
+    },
+    {
+      "line": 261,
+      "column": 10,
+      "diagnostics": 1,
+      "issue": "function applications need beta reduction before rewrite"
+    }
+  ],
+  "olean_files_produced": 1,
+  "proof_files_sha256": {
+    "START.json": "4d212c72adf37cbcf06f21559f83659629be463e0a17b0c87a751997ef618a78",
+    "FIN.json": "30b90cbdd96d62dcafa7e1e6078104dc347585879290a21f4ab195135fb50d36",
+    "PREEXEC.json": "b12775886b6d3c15d19c471c229e7e59c51cba761b25d7843dc02ad2148033f6",
+    "POSTEXEC.json": "6c72d1a00ff8e6519f7acf7d6ca8a816dcf7eb60d176f60137d86ca4d86f1e51",
+    "receipt.json": "0b25b00e57663172cacc25945ad232d807ff58cd3c34bae6f2e64bf2e852f62b",
+    "ThermalProjectionEnvelope22_START.json": "1e22b435fec7391df27d4f7cbb85fee3cd12e66f1b9bccdeb0aceb557e886170",
+    "ThermalProjectionEnvelope22_FIN.json": "2ba6f8e9b9d6eef9160d71cb7c564a8e2c3c907fdc02d665a06408ca1327b9e1",
+    "ThermalProjectionEnvelope22.log": "b1fc3a5052a0a2ffeada493666e4ead92690c8134e6f5afb573832bcf6e6811a",
+    "ThermalProjectionIdentity22_START.json": "c08944b53d78f6d14832aba71ca3c5a897250fe9c1cc12e731d4e0ef760016af",
+    "ThermalProjectionIdentity22_FIN.json": "f0619df8769c20496bf86af6ff8d8da6a862ba922ea37ce995314dbacd03b65d",
+    "ThermalProjectionIdentity22.log": "2305f7f0c755f283ec5d1098abea15ab0e347d460b25d7aa51150cf8587fed5c",
+    "ThermalProjectionEnvelope22.olean": "9c2bb947ccd03436c8cb3c9e3e9f5ce95508ee719e506d9ca90c49623f6dac67"
+  },
+  "source_hashes": {
+    "ThermalProjectionEnvelope22": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+    "ThermalProjectionIdentity22": "5b6da908dce97e0ad1ba08a893bd545a4a4c908f969d958102cf9e3509c5e99c"
+  },
+  "gate_sha256": "f938aa3a13a47a42383be56d5ed93c96bc1d2bcec9eaa9167be52a361ab32ca8",
+  "logs_read_scope": "FULLd0eeab",
+  "actual_receipt_read_scope": "FULL17cd61",
+  "global_START_read_scope": "FULL55d525",
+  "global_FIN_and_API_read_scope": "FULL_FIN_TARGETED_PRIMARY_API_df96f5",
+  "PREPOST_scope": "All parsed entries and every currently bound byte hash verified; raw FULL multi-megabyte inventory not claimed",
+  "prior_official_modules": 73,
+  "prior_official_declarations": 1161,
+  "hypothetical_after_ROOT_observation_modules": 74,
+  "hypothetical_after_ROOT_observation_declarations": 1203,
+  "official_count_requires_ROOT_observation": true,
+  "ROOT_credit_requested_modules": 1,
+  "ROOT_credit_requested_declarations": 42,
+  "author_olean_used": false,
+  "old_batches_recompiled": false,
+  "numeric_bank_replayed": false,
+  "retries": 0,
+  "continuous_projection_error_envelope_aux_paid": true,
+  "exact_projection_identity_paid": false,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "adjudication_sha256": "dd25619f5d0e8ab7f35b45a72527e55837da1743e240fc9170f46aeafa793018"
+}

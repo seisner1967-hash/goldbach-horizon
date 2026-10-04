@@ -1,0 +1,92 @@
+{
+  "schema": "ROUND22_PARAMETER_GUARD01_REVISION02_ROLE6_CLOSURE",
+  "actor": "ROLE6",
+  "status": "PARAMETER_GUARDS_AND_FIVE_LOG_SAMPLES_AUX_PASS",
+  "scope": "PARAMETER_GUARD01_ONLY",
+  "actual_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01",
+  "parent_tool_chunk": "cf3e25",
+  "parent_session": 93619,
+  "parent_completion_chunk": "c7f267",
+  "parent_exit_code": 0,
+  "actual_child_count": 1,
+  "actual_retries": 0,
+  "actual_PID": 33664,
+  "token": "52062c7b-bd72-41cf-b8e4-83ac639fbc43",
+  "START": "2026-10-03T17:29:47.040182+00:00",
+  "FIN": "2026-10-03T17:29:47.213230+00:00",
+  "read_scopes": {
+    "gate": "FULLed14ef",
+    "all_inputs_captures_archives": "PARSED_METADATA_ALL_SHA_fc1ee8",
+    "stdout_stderr_POST_receipt": "FULL6af61d",
+    "PRE_START_SPAWN_FIN": "FULL4e9bb0"
+  },
+  "gate_sha256": "f2f00ac117694c747fca86e523741a85870e994627a40f8a6791653ba27d3cc8",
+  "preparation_sha256": "f10fc82a11d5120bbdb218d1c23eb8b5d96f95ae330506155246452078e6e506",
+  "review_sha256": "50240b80c6daad2af675ebaf87bef546c59190bc2b57e94e048576818cb1d269",
+  "model_sha256": "80718ee9c1306a974554a70322ad36648897216890f6747ed2ddede840421d98",
+  "input_count": 1005,
+  "capture_original_count": 10,
+  "capture_copy_count": 10,
+  "archives": 3089,
+  "all_inputs_originals_copies_archives_intact": true,
+  "output_bytes": 322309,
+  "cap_bytes": 1048576,
+  "sample_count": 5,
+  "mutations_rejected": 4,
+  "observed_level": "AUX_NUMERICAL_PARAMETER_AND_SAMPLE_GUARDS_UNDER_SOURCE_PAPER_PRIMITIVES",
+  "log32_log40_implementation_independent": false,
+  "NTT": false,
+  "complete_catalogue": false,
+  "coefficient_N": false,
+  "formal_primitives": false,
+  "Lean_credit_added": 0,
+  "H1": false,
+  "D_N": false,
+  "WIN": false,
+  "post_conservation_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\parameter_guard01_revision02_execution\\post_conservation22.json",
+  "post_conservation_sha256": "0166dafcde79f4da3e1e7def5955b23e74d86e7f3cb8ae0e3371336c2451d107",
+  "closure_report_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\parameter_guard01_revision02_execution\\closure22.md",
+  "closure_report_sha256": "7fca0cca942827073df2c4fa6215375eac70c696335034824e5d9743e302d034",
+  "outputs": [
+    {
+      "bytes": 271,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\FIN.json",
+      "sha256": "6b20575aefeb3366cd0efffce0c76cb8c6a9da64a044b83cf14669f7583c8b02"
+    },
+    {
+      "bytes": 311,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\POSTEXEC.json",
+      "sha256": "29b18951e99dba5a9a3f24e9081ac0839bf0d4fec0d371916d2a23dbc9d76133"
+    },
+    {
+      "bytes": 5101,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\PREEXEC.json",
+      "sha256": "d57381c5f66a71986f1630d3aa989c3ca3e0ab2fab61dc7c55d046bffee9507e"
+    },
+    {
+      "bytes": 805,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\receipt.json",
+      "sha256": "ace13827d4e7f7d8d022c7be894d397c2ac855f7fd7f14d0eee197b41e126459"
+    },
+    {
+      "bytes": 127,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\SPAWN.json",
+      "sha256": "09856380a1aa94ce6b3a40742689335a2c65d269e31372a5e72406dfa2e32e98"
+    },
+    {
+      "bytes": 751,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\START.json",
+      "sha256": "b701b6d836022f58a91d8e57c5dee0d56947f7e4271b44ba66f5b6dd189bcdce"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 3502,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\actual_attempt01\\stdout.log",
+      "sha256": "18702584d0be11ca444e085290033a7bcc076f1ff0a0179e33cb1731e3ea344c"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\lean\QuarticMobius.lean:86:2: error: type mismatch, term
+  h
+after simplification has type
+  μ n =
+    (4 * shortMoebius alpha) n - (6 * shortDouble alpha) n + (4 * shortCubic alpha) n - (shortQuartic alpha) n +
+      (longQuartic alpha) n : Prop
+but is expected to have type
+  μ n =
+    4 * (shortMoebius alpha) n - 6 * (shortDouble alpha) n + 4 * (shortCubic alpha) n - (shortQuartic alpha) n +
+      (longQuartic alpha) n : Prop
+'GoldbachResearch.QuarticMobius.algebraic_quartic_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuarticMobius.moebius_quartic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuarticMobius.long_four_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuarticMobius.long_quartic_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuarticMobius.nat_coefficient_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuarticMobius.moebius_quartic_apply' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuarticMobius.finite_quartic_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuarticMobius.finite_quartic_identity_of_N' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuarticMobius.long_region_quartic_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuarticMobius.weighted_boundary_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

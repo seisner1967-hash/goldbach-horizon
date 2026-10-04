@@ -1,0 +1,20 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\PowersetMoment.lean:47:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ↑(∏ i ∈ ?s, ?f i)
+s : Finset ℕ
+hp : ∀ p ∈ s, 0 < p
+⊢ Real.log (∏ p ∈ s, ↑p) = subsetLog s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\PowersetMoment.lean:74:34: error: application type mismatch
+  Real.log_le_log hz (LT.lt.le hlt)
+argument
+  LT.lt.le hlt
+has type
+  ↑z ≤ ↑(∏ p ∈ s, p) : Prop
+but is expected to have type
+  ↑z ≤ ∏ p ∈ s, ↑p : Prop
+'GoldbachRound17.PowersetMoment.subsetWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.PowersetMoment.subsetLog' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.PowersetMoment.total_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.PowersetMoment.weighted_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.PowersetMoment.subsetLog_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.PowersetMoment.log_primeProduct' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.PowersetMoment.cutoff_markov' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

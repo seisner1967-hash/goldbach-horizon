@@ -1,0 +1,101 @@
+{
+  "actual_author_totals": {
+    "actual_FAIL": 22,
+    "actual_PASS": 16,
+    "actual_invocations": 38
+  },
+  "actual_judge_FAIL": 0,
+  "actual_new_Lean_invocations": 16,
+  "actual_unique_judge_launcher_invocations": 1,
+  "audit_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+  "author20_oleans_imported": false,
+  "cumulative_counts": {
+    "modules": 57,
+    "theorems": 942
+  },
+  "frozen_inputs_unchanged": true,
+  "full_fixed_D_N_ledger_paid": false,
+  "launch_receipt_sha256": "797f8191fef52bb2749a2764d6445c883726d62ba8256df2071bb1a042eaae92",
+  "new_counts": {
+    "axiom_prints": 334,
+    "defs": 83,
+    "modules": 16,
+    "structures": 1,
+    "theorems": 250
+  },
+  "numeric_math_replays": 0,
+  "parity_bypass_proved": false,
+  "report": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent5_judge.md",
+  "report_sha256": "fb4abdd6cb56bcbf6d8fb85abb9f4990119f3ca495faeefd6cc077c0df95e672",
+  "role": 5,
+  "round": 20,
+  "score": 0,
+  "semantic_obligations": [
+    "B6 variation/endpoints and source AP window bijection unproved",
+    "SD and effective BV/source constants unproved",
+    "principal source comparison and weighted aggregation unproved",
+    "M0 in reference_price is arbitrary, not a proved source reference bridge",
+    "F0 minus F1 nonfriable reciprocal unpaid",
+    "H19 to whole source support bridge unproved",
+    "full ledger, singletons/e1/p0/faces/nonbulk/medium/long/Gamma/TA/capacities unpaid",
+    "no parity bypass and no global D_N target theorem"
+  ],
+  "source_friable_cost_bound_proved": true,
+  "status": "PASS_INDEPENDENT_ROUND20_AUXILIARY_ONLY",
+  "victory": false,
+  "warnings": [
+    {
+      "module": "LeastFactorComposite",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\LeastFactorComposite.lean:33:43: warning: unused variable `hj`"
+    },
+    {
+      "module": "LeastFactorComposite",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\LeastFactorComposite.lean:80:4: warning: try 'simp at hmem' instead of 'simpa using hmem'"
+    },
+    {
+      "module": "LeastFactorComposite",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\LeastFactorComposite.lean:96:2: warning: try 'simp at hm' instead of 'simpa using hm'"
+    },
+    {
+      "module": "SwitchedSelbergWeight",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\SwitchedSelbergWeight.lean:83:52: warning: unused variable `heven`"
+    },
+    {
+      "module": "SwitchedIncidenceEstimator",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\SwitchedIncidenceEstimator.lean:273:50: warning: this tactic is never executed"
+    },
+    {
+      "module": "SwitchedIncidenceEstimator",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\SwitchedIncidenceEstimator.lean:273:50: warning: 'ring' tactic does nothing"
+    },
+    {
+      "module": "FriableEulerRankin",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriableEulerRankin.lean:126:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    },
+    {
+      "module": "FriablePrimeHarmonic",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriablePrimeHarmonic.lean:35:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    },
+    {
+      "module": "FriablePrimeHarmonic",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriablePrimeHarmonic.lean:38:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    },
+    {
+      "module": "FriablePrimeHarmonic",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriablePrimeHarmonic.lean:38:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    },
+    {
+      "module": "FriablePrimeHarmonic",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriablePrimeHarmonic.lean:116:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    },
+    {
+      "module": "FriablePhysicalPayment",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriablePhysicalPayment.lean:13:5: warning: unused variable `hd`"
+    },
+    {
+      "module": "FriableSourceBudget",
+      "warning": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriableSourceBudget.lean:40:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    }
+  ],
+  "whole_D_N_target_proved": false
+}

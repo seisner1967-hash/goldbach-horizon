@@ -1,0 +1,42 @@
+{
+  "schema": "ROUND22_JUDGE5_PREPARED_RECEIPT_BATCH01",
+  "time_utc": "2026-10-03T08:03:22.1705171Z",
+  "status": "PREPARED_SOURCE_ONLY_GATE_CLOSED",
+  "metadata_invocation_chunk": "2d6df4",
+  "metadata_completion_chunk": "087cb5",
+  "metadata_exit_code": 0,
+  "compiler_invocations": 0,
+  "mathematical_numeric_invocations": 0,
+  "modules": [
+    "EpsteinKernel22",
+    "EpsteinFinite22"
+  ],
+  "declaration_count": 51,
+  "import_module_count": 3541,
+  "immutable_input_count": 7112,
+  "unresolved_module_count": 0,
+  "source_catalog_sha256": "f162256f9a181d2d30eb8d813ce58e283c6c942fa05b369cbf0f25b53827632d",
+  "manifest_sha256": "ef7f18133f8e78887088b8dc5cc3da5d3830a5574424ca6f5a2d087cd55b3c82",
+  "launcher_sha256": "1b00387f58d4c2daf8e1a832494014ea44b8f7b2bb39802578b44ca94e2ea7cc",
+  "preparation_script_sha256": "2c40c10800c06429d2baaf9e1f3959751413d1b716dfdcda1980150133825e7b",
+  "source_audit_sha256": "1f39bc6ea40c10d2e236c19fe9f1db0843c2b35c168ffafb6f8da3847f77fbcc",
+  "reads": {
+    "builder": "FULL96994c",
+    "manifest": "HEADER_PROJECTION_ONLYde2e2d",
+    "weil_interface": "FULL091f71; prior9f1dba truncated",
+    "launcher": "FULL1ce43b",
+    "dependency_sources": "HASH_AND_IMPORT_METADATA_ONLY",
+    "author_finite_log": "FULL48120e",
+    "author_kernel_log": "FULL7e6d3a",
+    "source_audit": "FULL16dc58",
+    "catalog": "FULL7fff30",
+    "read_receipts": "FULLe3b279"
+  },
+  "author_olean_used": false,
+  "independent_audit_started": false,
+  "official_baseline_modules": 57,
+  "official_baseline_auxiliaries": 942,
+  "global_contract_certified": false,
+  "D_N_paid": false,
+  "win": false
+}

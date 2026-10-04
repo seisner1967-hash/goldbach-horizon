@@ -1,0 +1,73 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH30_SOURCE_TOOL_READS",
+  "status": "SOURCE_TOOL_FROZEN_NOT_PREPARED_NOT_EXECUTED",
+  "time_utc": "2026-10-04T00:45:36.2976069Z",
+  "reviewer": "ROLE5",
+  "full_entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch30\\prepare_metadata.py",
+      "sha256": "429a28fb96fecabb729a9a5fbebbbdc4f23ae2af6abd4c72c366181f872e96c9",
+      "bytes": 25247,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "508d31"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch30\\run_once.py",
+      "sha256": "0105f899386b3c1f10aa5a6afe95186fa0e3ba2145a6bed72cd170a479134845",
+      "bytes": 13235,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "cd6fbf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch30\\preparation.md",
+      "sha256": "fa8378fbb4f1273cb59f658cb55b7a3cb042013ad4481786370d2cb50e516ab2",
+      "bytes": 4826,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "76fb2a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch30\\sources\\ComplexGammaMellinTail22.lean",
+      "sha256": "e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0",
+      "bytes": 13443,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "37bfd0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch30\\source_catalog_author22.json",
+      "sha256": "0404499a116b53a18e77d060248c8ca2a9c9e918fcd08fe80b1752d98896c3e2",
+      "bytes": 1811,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "1165d5"
+    }
+  ],
+  "author_source_full": "c406e7",
+  "author_docs_full": "100d58",
+  "author_handoff_reads_full": "446624",
+  "independent_review_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\complex_gamma_mellin_tail_source_review03.md",
+  "independent_review_sha256": "37c8bfe364a1c7430b51e7d90ec4fae88bb9232d796f1f5af742e9b63d3d0722",
+  "independent_review_full": "621544",
+  "baseline_observation_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge_batch29_closed_observation.json",
+  "baseline_observation_full": "505a30",
+  "baseline_observation_sha256": "8facc84e07c86ca8be0480792649fd6fd11859027d7c31450291aeda654789ff",
+  "targeted_API_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Basic.lean",
+  "targeted_API_sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+  "targeted_API_ranges": [
+    "1358-1367",
+    "1438-1452"
+  ],
+  "targeted_API_read": "e42293",
+  "author_read_schema": "new_API singular object",
+  "author_binding_count": 38,
+  "author_BINDING_metadata_check": "44cd75",
+  "template_builder_full": "88c486",
+  "template_launcher_full": "e099c7",
+  "superseded_draft_reads_excluded": [
+    "Builder draft3cb7be superseded before freeze by corrected final508d31; only final429a28fb is bound."
+  ],
+  "candidate_parser_invocations": 0,
+  "metadata_PREP_invocations": 0,
+  "compiler_invocations": 0,
+  "candidate_imports": 0,
+  "numeric_invocations": 0,
+  "raw_FULL_import_closure_claim": false
+}

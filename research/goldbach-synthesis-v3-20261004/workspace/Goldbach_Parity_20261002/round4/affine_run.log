@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "independent_cross_pairs_exhaustive": 12400,
+  "degenerate_counterexample": {
+    "left": [
+      [
+        13,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "right": [
+      [
+        100000000,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "rank": 2,
+    "HH_sum": 100000000,
+    "failed_hypothesis": "The first branch contains an identically zero affine factor"
+  },
+  "zero_N_counterexample": {
+    "left": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "right": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "rank": 2,
+    "nonzero_branch_values_at_1_1": [
+      1,
+      -1
+    ],
+    "failed_hypothesis": "N nonzero"
+  },
+  "script_sha256": "c9eecbd240600743b463e2eebba83988a5a0e5c5a40ee8051f368cd1c132725e"
+}
+{
+  "positive_chart_points": 303,
+  "actual_unit_squarefree_HH_faces": 25
+}

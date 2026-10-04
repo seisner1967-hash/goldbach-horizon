@@ -1,0 +1,639 @@
+{
+  "launcher_cp1252_incident_distinct_from_Lean": true,
+  "records": [
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\OddBonferroniArithmetic.lean:145:65: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\OddBonferroniArithmetic.lean:170:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 1,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt01_OddBonferroniArithmetic.log",
+      "log_sha256": "2b1ac0c51ed7a2df2b3b7d7821100cc54e7af1f7a659d0b95ceb5a2baae0f1a9",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt01_OddBonferroniArithmetic_source.lean.txt",
+      "source_sha256": "d73a95a78912678878e379b73c60553946b705a1d74c5b37b7ba86d2678c1921"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 2,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt02_OddBonferroniArithmetic.log",
+      "log_sha256": "93d2c6cba4d72139719db1abc74e724e2950e2b851245e353f72d82d75d66b24",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt02_OddBonferroniArithmetic_source.lean.txt",
+      "source_sha256": "e5348cf2301c5529156d86508ca7aa10b0b7ae328da936aaea4f288f3352df3a"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:24:26: error: omega could not prove the goal:",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:25:30: error: omega could not prove the goal:",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:65:25: error: application type mismatch"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:32:43: warning: unused variable `hj`",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:79:4: warning: try 'simp at hmem' instead of 'simpa using hmem'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:95:2: warning: try 'simp at hm' instead of 'simpa using hm'"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 3,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt03_LeastFactorComposite.log",
+      "log_sha256": "b82b0212ac0b952ef3412694b2248172fdbb6189b6540ef7f0eb58bc2e285d33",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt03_LeastFactorComposite_source.lean.txt",
+      "source_sha256": "a5a64f2b934dab494d8b535fdbd648c9db929dfb9fbe1570c4fb205b9b66332a"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:33:43: warning: unused variable `hj`",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:80:4: warning: try 'simp at hmem' instead of 'simpa using hmem'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\LeastFactorComposite.lean:96:2: warning: try 'simp at hm' instead of 'simpa using hm'"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 4,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt04_LeastFactorComposite.log",
+      "log_sha256": "225a272f5fc0964d6774abc44e585b58dba98794347ab2fcd886acf63e78df82",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt04_LeastFactorComposite_source.lean.txt",
+      "source_sha256": "4c114ae1b7300a046164eedaa0823aa2051f39ae33043c5876369a13b863962a"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedSelbergWeight.lean:88:76: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedSelbergWeight.lean:96:2: error: unsolved goals"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 5,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt05_SwitchedSelbergWeight.log",
+      "log_sha256": "0ac7712392d662584ae47d70e9bbe4552b66a6fa4df91d388fe721cac2b4876c",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt05_SwitchedSelbergWeight_source.lean.txt",
+      "source_sha256": "8d99ee865c4d94e12583be1ceba43b13b9693ea35240e6d4c28195e2fc28fc21"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedSelbergWeight.lean:83:52: warning: unused variable `heven`"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 6,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt06_SwitchedSelbergWeight.log",
+      "log_sha256": "5e93476c93717f5e607c95edf920c2604731476c084a53602be2c7de866c0739",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt06_SwitchedSelbergWeight_source.lean.txt",
+      "source_sha256": "c0a640773636acdbdbc5c0fb6e70cb41e90db41cc9d50d6e53b90aeb99bd53ae"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\PhysicalCompositeSubtraction.lean:48:79: error: unknown identifier 'q'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\PhysicalCompositeSubtraction.lean:123:42: error: omega could not prove the goal:",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\PhysicalCompositeSubtraction.lean:124:4: error: type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\PhysicalCompositeSubtraction.lean:129:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 7,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt07_PhysicalCompositeSubtraction.log",
+      "log_sha256": "a373116badc9ca7f9662bb8e762eb404859bdd331df4b136add3f6ba140859f7",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt07_PhysicalCompositeSubtraction_source.lean.txt",
+      "source_sha256": "195d5bae746da74f157e03ffbac109f818f21963776fc50a2776040f05381370"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\PhysicalCompositeSubtraction.lean:124:4: error: no goals to be solved"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 8,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt08_PhysicalCompositeSubtraction.log",
+      "log_sha256": "74283eb482da052a7e6f601fb2e9a0214008501521ab5ee86852bc94dc8015af",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt08_PhysicalCompositeSubtraction_source.lean.txt",
+      "source_sha256": "18f3abf95d07024a35a59cc02f28817a526c5bec74b0a541f0bc63b32c75154c"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 9,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt09_PhysicalCompositeSubtraction.log",
+      "log_sha256": "0b44e32e570e3f56deba4686c2aaec3e9b9a6894a30d382b864f665f791bfad0",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt09_PhysicalCompositeSubtraction_source.lean.txt",
+      "source_sha256": "3d6ef57fd5fc23aa0dfa44b6aa7b40cde178c93745011c2166731ff889af871c"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\CompositeAPConductor.lean:69:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\CompositeAPConductor.lean:108:4: error: type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\CompositeAPConductor.lean:111:4: error: type mismatch"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 10,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt10_CompositeAPConductor.log",
+      "log_sha256": "5e396d5e56dbc061d045ad5cac3d0f63ee8ea7de60b9b1334edcdbae7eedddac",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt10_CompositeAPConductor_source.lean.txt",
+      "source_sha256": "aad40a8bef72bcd6eac733302f643634f337cc2aa7cc6824548ed544bdda2c48"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 11,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt11_CompositeAPConductor.log",
+      "log_sha256": "8710fbed46ab7ada06798d4fa736b5a91baf5385382eb2ad9400b0cc1273ada5",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt11_CompositeAPConductor_source.lean.txt",
+      "source_sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:72:8: error: tactic 'apply' failed, failed to unify",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:251:24: error: invalid constructor ⟨...⟩, expected type must be an inductive type ",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:251:6: error: simp made no progress",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:272:6: error: simp made no progress",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:281:4: error: simp made no progress"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 12,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt12_SwitchedIncidenceEstimator.log",
+      "log_sha256": "ee67c088bdc477dd710256183dfab5b36da457a7ffbcc75e8f11af24e23a112c",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt12_SwitchedIncidenceEstimator_source.lean.txt",
+      "source_sha256": "7ae215c13c6f8ae5feb3a4b6628025070afe94c9b717d2de779c39d083538c7b"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:268:10: error: tactic 'rewrite' failed, motive is not type correct:"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 13,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt13_SwitchedIncidenceEstimator.log",
+      "log_sha256": "3f43e7007880ba31f3ba3816a741a67c9f05e9e1651181ebd56713426c006405",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt13_SwitchedIncidenceEstimator_source.lean.txt",
+      "source_sha256": "22a091d9b60608ff62d03bc2b5fb978d9c9132a6f8b8ae3421ba1833971861fe"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:273:50: warning: this tactic is never executed",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\SwitchedIncidenceEstimator.lean:273:50: warning: 'ring' tactic does nothing"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 14,
+      "ledger": "round20/role3/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt14_SwitchedIncidenceEstimator.log",
+      "log_sha256": "d25be59a37d02cde06a1e1abbcd8eee8d749646ff45e6f7ae3a145bca47eeb04",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\attempt14_SwitchedIncidenceEstimator_source.lean.txt",
+      "source_sha256": "7ea6cc8506983c09c0700dec5ff6507aebfb2d79d581a602d07889048a7c7413"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean:40:2: error: omega could not prove the goal:",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean:46:2: error: omega could not prove the goal:"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 1,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt01.log",
+      "log_sha256": "e32add28221a9cf95c0854239b1d03cce79124c21f44968d10ac6489e95d7941",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt01_source_PREEXEC.lean.txt",
+      "source_sha256": "f13c30bd13f314bd1921054619a7ec7101c8496d228157da49348f4bfa7fa36f"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean:41:38: error: omega could not prove the goal:",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean:49:42: error: omega could not prove the goal:"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 2,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt02.log",
+      "log_sha256": "632c0adc8e36937220a69424c2590e9da0475b168c8f5b20ed3dd09e36ef5d33",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt02_source_PREEXEC.lean.txt",
+      "source_sha256": "90902af848bda0d0d24c56f5385062823ec76c04baa8c6c7fa541bb61bde9cc8"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 3,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt03.log",
+      "log_sha256": "bafaf51e0386368180900620d9ce31c980b00cb01b5b5169c77677a3ab03f67e",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt03_source_PREEXEC.lean.txt",
+      "source_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean:15:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean:125:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 4,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt04.log",
+      "log_sha256": "a9afe0af9956c7ac04e72f28d2eff2b802fb7fbfe71216b168da3929d92344db",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt04_source_PREEXEC.lean.txt",
+      "source_sha256": "1514baf7a4874b8f8c2919ca0c54c9b8a4d805fd41370b5b77aa5838e7a877d4"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean:126:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 5,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt05.log",
+      "log_sha256": "983469c3ea1f7421c263c87c85abc3b21cdc3b39acf57845dbcf97ef2162fb22",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt05_source_PREEXEC.lean.txt",
+      "source_sha256": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean:47:32: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean:68:4: error: omega could not prove the goal:"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 6,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt06.log",
+      "log_sha256": "30ca2b190e6996bccf526a2229e60bbfca19a6e47fe2f6a4af1145e1dd675fb7",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt06_source_PREEXEC.lean.txt",
+      "source_sha256": "e85ae3005131de9c5689dc5da087846565c1d618009cdc5754fed94a3c36748d"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 7,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt07.log",
+      "log_sha256": "ba1900b1d98fa278b9f402f50118328812f34649342d50a81f50a148a7b11fa4",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt07_source_PREEXEC.lean.txt",
+      "source_sha256": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:15:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:35:10: error: invalid field notation, type is not of the form (C ...) where C is a constant",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:35:10: error: tactic 'rewrite' failed, equality or iff proof expected",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:55:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:171:4: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:173:11: error: unknown identifier 'inv_le_iff₀'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:173:32: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:206:11: error: unknown identifier 'inv_le_iff₀'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:207:4: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:296:39: error: no goals to be solved"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:114:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 8,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt08.log",
+      "log_sha256": "8c5544fbd9801e9e991e1da7addd5f7c3349a11a61f78646b718c46b4b60016d",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt08_source_PREEXEC.lean.txt",
+      "source_sha256": "afcda87bb299e254f5680e5f95297144c61a8218b92f34309f6f390ddfdea224"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:37:10: error: invalid field notation, type is not of the form (C ...) where C is a constant",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:37:10: error: tactic 'rewrite' failed, equality or iff proof expected"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:117:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 9,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt09.log",
+      "log_sha256": "92618ef68daae81ed61df8b4a24c6f0eaf7d6fd34538a464abda2dae7a135484",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt09_source_PREEXEC.lean.txt",
+      "source_sha256": "8e17e843475a75fd1667cb2aba8feafe6b0fbff4c126620f66c214bb2b555815"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:38:6: error: unsolved goals"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:117:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 10,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt10.log",
+      "log_sha256": "61778e8bd0a5bd4130645d392694469633983a66cb39f097157bc1adb686a006",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt10_source_PREEXEC.lean.txt",
+      "source_sha256": "7bc01aca55b63a4aa18f3c18d4d6e05fc9daf170cb951911f3e76c7933933b18"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:35:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:38:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:38:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean:116:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 11,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt11.log",
+      "log_sha256": "7e115ec91abe28ed51dffa89035c23f6db1c197b5264635a412addad5bef32ab",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt11_source_PREEXEC.lean.txt",
+      "source_sha256": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:16:75: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:22:91: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:32:61: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:39:42: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:51:2: error: no goals to be solved",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:74:51: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:140:53: error: failed to prove positivity/nonnegativity/nonzeroness",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:142:64: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:175:46: error: failed to prove positivity/nonnegativity/nonzeroness",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:178:8: error: type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:193:22: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:278:17: error: don't know how to synthesize implicit argument 'X'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean:278:11: error: failed to infer 'have' declaration type"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 12,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt12.log",
+      "log_sha256": "5faaa43118ae85cc0ca80b0a04ff7be65f9bc18d6c1ad7c59850137d91188340",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt12_source_PREEXEC.lean.txt",
+      "source_sha256": "4ed2263d8836eb05824df6a857801404d3f6ee7a1efd9b3cf57b087e837b01b0"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 13,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt13.log",
+      "log_sha256": "969e5bfe5fbfd40320c9d1727557b522bbf73a9d5badf60e40eec8c6b7d1856d",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt13_source_PREEXEC.lean.txt",
+      "source_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:28:28: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:103:55: error: omega could not prove the goal:",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:160:13: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:296:10: error: invalid field notation, type is not of the form (C ...) where C is a constant",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:314:2: error: mod_cast has type",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:320:13: error: don't know how to synthesize implicit argument 'alpha'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:320:7: error: failed to infer 'have' declaration type",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:319:72: error: unsolved goals"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 14,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt14.log",
+      "log_sha256": "f029fab5ec57a8291707153bfd0f1cf5f42df045a41ba6de20ed6e1c4bd01e51",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt14_source_PREEXEC.lean.txt",
+      "source_sha256": "8b5884ad66ef853a072058c1058fe5ff96caf654a3337917b4378b82aeb26e1f"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:162:13: error: unsolved goals"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:13:5: warning: unused variable `hd`"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 15,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt15.log",
+      "log_sha256": "7ba1d6f083614dd330d249b42fa21aeee54014e8a1e9ac58755b059073993122",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt15_source_PREEXEC.lean.txt",
+      "source_sha256": "435eaed7c7f1c2d431f6eb6a1d878db7307f1dded5b2dbfc7d0ecd4b8015929b"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean:13:5: warning: unused variable `hd`"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 16,
+      "ledger": "round20/role4/build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt16.log",
+      "log_sha256": "4abaf3c7ba7e635094d98415872475789972df96ed1a56652fca072ede5c825c",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\attempt16_source_PREEXEC.lean.txt",
+      "source_sha256": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean:47:6: error: type mismatch, term",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean:66:45: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean:80:45: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean:102:98: error: typeclass instance problem is stuck, it is often due to metavariables"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 1,
+      "ledger": "round20/role4/extension_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\extension_attempt01.log",
+      "log_sha256": "33842b836aa85166893550791ff4e364826838abf40fcea88bb94c5db7185bc1",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\extension_attempt01_source_PREEXEC.lean.txt",
+      "source_sha256": "cf22fbe2d47460b4adb2dec1c7697421eafe85837de4a650b6715956c4676cb1"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 2,
+      "ledger": "round20/role4/extension_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\extension_attempt02.log",
+      "log_sha256": "44495dd387d0964e20ffd713ad80c5a529a2d69df3240e808063cd3507d19a03",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\extension_attempt02_source_PREEXEC.lean.txt",
+      "source_sha256": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:27:23: error: application type mismatch",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:36:24: error: unknown identifier 'friableRank_snd_injective'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:85:73: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:134:13: error: don't know how to synthesize implicit argument 'Z'",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:134:7: error: failed to infer 'have' declaration type",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:125:48: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:154:14: error: unknown constant 'friableRank_snd_injective'"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 1,
+      "ledger": "round20/role4/aggregation_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt01.log",
+      "log_sha256": "3733ae6d35f0caf129546cbf665726d9f35cb66fdbee8177bd0ddfd2097950e8",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt01_source_PREEXEC.lean.txt",
+      "source_sha256": "04e45879ffefb5cdcb7f1fc9f1f4e781a4a884d523e8d89669bda29ae86ce56c"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 2,
+      "ledger": "round20/role4/aggregation_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02.log",
+      "log_sha256": "5d06968471b53e0f6fe16ffcccfbd80427995c7cfa30a576dee8ffc3c39377a6",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02_source_PREEXEC.lean.txt",
+      "source_sha256": "b564591ccb21b15817ed6edad0fff78ddbd10d50a509b2f4b3732d6b8ac58aa2"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableSourceBudget.lean:137:55: error: failed to prove positivity/nonnegativity/nonzeroness"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableSourceBudget.lean:40:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 1,
+      "ledger": "round20/role4/source_budget_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\source_budget_attempt01.log",
+      "log_sha256": "4ff43dde972e8514fa302a0fffeb66d8bf18f5b4d175eee0d6f96dd0b316950a",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\source_budget_attempt01_source_PREEXEC.lean.txt",
+      "source_sha256": "ab22cac8d3a55eb26322d714579a56e104e6ba4d96770f59b521c4300aa41817"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableSourceBudget.lean:40:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 2,
+      "ledger": "round20/role4/source_budget_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\source_budget_attempt02.log",
+      "log_sha256": "fb2157a4aa521413bf6ae8334630ae2a2542e3800afe2cf7427a247cb03fc4d7",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\source_budget_attempt02_source_PREEXEC.lean.txt",
+      "source_sha256": "9dd811fe823f50d8af08e4afa04f977011df4e01cf976df1fc663f9c85fceba4"
+    },
+    {
+      "actual_error_lines": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4_geometry\\FriableSourceGeometry.lean:147:4: error: type mismatch, term"
+      ],
+      "actual_exit_code": 1,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 1,
+      "ledger": "round20/role4_geometry/geometry_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4_geometry\\attempt01.log",
+      "log_sha256": "bf99572717dc777c978948d68cc0dbda4ad0da37fd71bb6e967bca7fe75bab07",
+      "sorryAx_on_FAILED_uncredited_declarations": true,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4_geometry\\attempt01_source_PREEXEC.lean.txt",
+      "source_sha256": "22bb640570931e2d7ad2575347d6b5099270dda4680e3d7472939d4f20449d13"
+    },
+    {
+      "actual_error_lines": [],
+      "actual_exit_code": 0,
+      "actual_warning_lines": [],
+      "analytic_parity_failure_inferred": false,
+      "attempt": 2,
+      "ledger": "round20/role4_geometry/geometry_build_receipt.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4_geometry\\attempt02.log",
+      "log_sha256": "1a79f4d6f234151eb6ecbd86bce261a3d89ea50856647d686602af2500f2de4d",
+      "sorryAx_on_FAILED_uncredited_declarations": false,
+      "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4_geometry\\attempt02_source_PREEXEC.lean.txt",
+      "source_sha256": "bc249b736e460716cccc7e8a9f9ccab9ac508133c8664bd6278795bd3dcb890a"
+    }
+  ],
+  "static_unexecuted_revisions_counted_as_FAIL": false,
+  "totals": {
+    "actual_FAIL": 22,
+    "actual_PASS": 16,
+    "actual_invocations": 38
+  }
+}

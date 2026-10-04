@@ -1,0 +1,129 @@
+{
+  "round": 19,
+  "role": 6,
+  "node": "14.4",
+  "status": "FINAL_FROZEN_NEW_FINITE_IDENTITIES_PASS_NO_WIN",
+  "frozen_at_utc": "2026-10-03T00:20:32.4235171+00:00",
+  "bindings": {
+    "agent6_nonss.md": {
+      "sha256": "56449b03605b28a7696aeb2944d56ed27576c77560975a2871b903d6e91421fa",
+      "bytes": 8272
+    },
+    "nonss_checks.py": {
+      "sha256": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+      "bytes": 3438
+    },
+    "nonss.json": {
+      "sha256": "fa5d00bdc408e74d940c2583f4d015a4efd863dc2e15f3d13e77c4fa2f0c6cfe",
+      "bytes": 43040760
+    },
+    "role6_nonss/arithmetic.py": {
+      "sha256": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+      "bytes": 10400
+    },
+    "role6_nonss/bank.py": {
+      "sha256": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+      "bytes": 28047
+    },
+    "role6_nonss/canonical_attempt01/inputs/arithmetic.py": {
+      "sha256": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+      "bytes": 10400
+    },
+    "role6_nonss/canonical_attempt01/inputs/bank.py": {
+      "sha256": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+      "bytes": 28047
+    },
+    "role6_nonss/canonical_attempt01/inputs/contract.json": {
+      "sha256": "29c4474d148a6e8cbe3a431130cc9143af2efc277682f4c38b5e5be99bb06037",
+      "bytes": 3813
+    },
+    "role6_nonss/canonical_attempt01/inputs/executor_prompt.md": {
+      "sha256": "794c2f289241cb550f83fa0928d0b9627ee878e85064e0196ee18822b4d20bbe",
+      "bytes": 16506
+    },
+    "role6_nonss/canonical_attempt01/inputs/FINAL2.md": {
+      "sha256": "20ca15ceba20b72459102b2da8429b7e6d72a7c4bd52dca7de7bc3a58a61cbc2",
+      "bytes": 29162
+    },
+    "role6_nonss/canonical_attempt01/inputs/input_manifest.json": {
+      "sha256": "c425dfb0001dad406aa243dd88224ce2a30281ea33916b8cd50e452e3c92664e",
+      "bytes": 5535
+    },
+    "role6_nonss/canonical_attempt01/inputs/launcher.py.txt": {
+      "sha256": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+      "bytes": 7963
+    },
+    "role6_nonss/canonical_attempt01/inputs/preflight19_final_receipt.json": {
+      "sha256": "e647e21e5512c48d34c818c9942bb312d172524682b361552c52422fd3c15c53",
+      "bytes": 3590
+    },
+    "role6_nonss/canonical_attempt01/inputs/preparation.json": {
+      "sha256": "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3",
+      "bytes": 4951
+    },
+    "role6_nonss/canonical_attempt01/inputs/probe.md": {
+      "sha256": "5f9e429bc264002044da60139f3942e7c3de909116d41e6cc52f70afb9a5a12d",
+      "bytes": 7143
+    },
+    "role6_nonss/canonical_attempt01/inputs/producer.py": {
+      "sha256": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+      "bytes": 3438
+    },
+    "role6_nonss/canonical_attempt01/inputs/registry1361.json": {
+      "sha256": "8c0abf930ee8c47b64d335ed286af4566fc674b573216f82f12b05c4ec877150",
+      "bytes": 154061
+    },
+    "role6_nonss/canonical_attempt01/inputs/role2_manifest.json": {
+      "sha256": "66a5e12172d93ccbc4460bf5733a81c284aeb101976f9319c7fc1909ad449252",
+      "bytes": 2767
+    },
+    "role6_nonss/canonical_attempt01/inputs/role2_receipt.json": {
+      "sha256": "6081619ec9d4c942b24cb5fbd72b9ee316712d99b61a5503a98c83790f2df1d0",
+      "bytes": 759
+    },
+    "role6_nonss/canonical_attempt01/producer.log": {
+      "sha256": "a0c045706277063213587b6656a44ecc867856118aeac89928419c022befe663",
+      "bytes": 1661
+    },
+    "role6_nonss/canonical_attempt01/receipt.json": {
+      "sha256": "317c9788eefa91ada5af1d8fc32f022530869fbdee7b394d1fb364aefd9b80f5",
+      "bytes": 8303
+    },
+    "role6_nonss/canonical_attempt01/reserved.json": {
+      "sha256": "71420df46ceef5bfb6cf7787cc80fde87e87f2b6a92a361b9d68462aa922f3ce",
+      "bytes": 228
+    },
+    "role6_nonss/canonical_attempt01/started.json": {
+      "sha256": "a5704847edb1d2e1b0d9a88e9441814a6634cc95d5d2a0bea8e1a77c9e94c34b",
+      "bytes": 7704
+    },
+    "role6_nonss/preparation.json": {
+      "sha256": "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3",
+      "bytes": 4951
+    },
+    "role6_nonss/run_nonss_once.py": {
+      "sha256": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+      "bytes": 7963
+    }
+  },
+  "bound_files": 25,
+  "mathematical_producer_invocations": 1,
+  "canonical_attempts": 1,
+  "mathematical_failures": 0,
+  "replays": 0,
+  "Lean_invocations": 0,
+  "old_producer_kernel_log_sign_preflight_Lean_PDF_executions": 0,
+  "actual_start_utc": "2026-10-03T00:15:27.314820+00:00",
+  "actual_finish_utc": "2026-10-03T00:15:46.878506+00:00",
+  "actual_exit_code": 0,
+  "PREEXEC_captures": 13,
+  "prepared_original_bindings": 12,
+  "input_manifest_sha256": "c425dfb0001dad406aa243dd88224ce2a30281ea33916b8cd50e452e3c92664e",
+  "root_authorization": "ROOT19_NONSS_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+  "score": 0,
+  "victory": false,
+  "source_onset_logN_10power24_applied": false,
+  "rank3_onset_logN_10power40_applied": false,
+  "global_DN_or_capacity_bound": false,
+  "official_Judge_counts_modified": false
+}

@@ -1,0 +1,8 @@
+{"phase": "AUDIT_STARTED", "utc": "2026-10-02T20:40:07.626737+00:00"}
+{"phase": "FROZEN_INPUTS_AND_799_PRESERVED"}
+{"phase": "INITIAL33_AND_C4_15_BINDINGS_AND_454_STRICT_POSITIONS_VERIFIED", "initial": 390, "distinct_C4": 64}
+Traceback (most recent call last):
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\judge\run-audit.py", line 169, in <module>
+    assert row['unit'] and row['bulk'] and row['n_above_original_Q'] and row['small_factor_exclusion_verified']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

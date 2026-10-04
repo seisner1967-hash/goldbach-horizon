@@ -1,0 +1,23 @@
+FINITE FIELD PROJECTION — SOURCE ONLY, premier gel, boucle 22.
+
+Module : FiniteFieldProjection22.lean, 24 déclarations explicites (4 définitions, 20 théorèmes) et 24 futurs #print axioms qualifiés. Le texte a été lu FULL ; aucune compilation, import, évaluation de tactique, API probe, parseur Lean ou builder n'a été lancé. Aucun nouveau PASS n'est crédité.
+
+Objet réel et obligations écrites
+Pour un corps F, ω d'ordre exact K, χ(k,j)=(ω^k)^j avec k entier, la source démontre la somme géométrique : Σ(j<K)χ(k,j) vaut K si K divise k, zéro sinon. Cette orthogonalité n'est pas une hypothèse. Le lemme signed_divides_iff_zero paie le passage aux fréquences strictement entre −K et K. La garde générale max(N,2M−N)<K paie ce domaine pour chaque m,n≤M.
+
+La source définit effectivement P_j=Σ(n≤M)x_nχ(n,j) et sa projection (K:F)^−1Σ(j<K)P_j²χ(−N,j). Elle développe la somme finie, échange ses indices, applique les caractères puis filtre la vraie antidiagonale. Sous N≤M, la conclusion est exactement Σ(n≤N)x_nx_(N−n). La version standardDFT_projection_eq_sum remplace χ(n,j) par ω^(nj) et χ(−N,j) par ω^(−Nj), sans fourni final F_j ni égalité cible en prémisse.
+
+Domaines honnêtes
+IsPrimitiveRoot ω K est le domaine algébrique intermédiaire, pas un certificat offert pour les cinq candidats. (K:F)≠0 est indispensable à la normalisation dans un corps de caractéristique positive. Pour ZMod p, la source le dérive de 0<K<p via natCast_zmod_eq_zero_iff_dvd et Nat.le_of_dvd ; [Fact p.Prime] fournit le vrai corps. Elle ne présume aucune primalité effective, racine particulière, ordre ou refinement de tests natifs.
+
+Raccord concret au constructeur acquis
+zmod_integer_projection prouve le transport du fold entier via les casts de sommes et de produits. zmod_canonical_A32_projection instancie directement GoldbachQuantizedCoefficient22.integerLambda et integerCoefficient, déjà validés indépendamment au lot17 : IsPrimePow et minFac, avec toutes les puissances premières, constructeur canonique A32 réel. fixed_A32_projection fixe N=M=100000000 et K=2^27, en gardant les hypothèses explicites prime p, IsPrimitiveRoot ω K et K<p. La garde N<K possède un script norm_num source, non exécuté ici.
+
+Imports/dépendances
+Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots ; Mathlib.Algebra.GeomSum ; Mathlib.Algebra.BigOperators.Ring ; Mathlib.Data.Finset.NatAntidiagonal ; Mathlib.Data.ZMod.Basic ; Mathlib.Tactic : lectures API ciblées dans le cache mathlib 4.15 uniquement. Le septième import est QuantizedLambdaEnvelope22, source et olean indépendants du Juge17 readonly, avec RationalLogQuantization22 transitif. Le futur lanceur doit résoudre ces noms depuis cette provenance exacte ; aucun ancien module SOURCE non compilé n'est une dépendance.
+La preuve de DiscreteThermalProjection22 validée au lot15 a été lue FULL et fournit le schéma de somme géométrique, garde signée, sum_mul_sum et antidiagonale. Elle n'est pas importée, réélaborée ou recompilée. Les scripts correspondants sont réellement écrits dans ce module sur le corps générique.
+
+OPEN explicites
+Validation Lean indépendante des 24 déclarations et audit de leurs axiomes ; preuves des cinq (p_i,g_i) et du lien ω_i=g_i^((p_i−1)/K) ; raffinements de primalité/ordre/certificats natifs ; butterflies DIT/DIF, mots/GMP, catalogue complet, reconstruction CRT ; exécution coefficient N à 10^8. Les PASS AUX de paramètres et l'enveloppe E du lot17 ne paient pas ces charges. La projection de corps fini n'affirme aucune annulation analytique globale, traitement de frontière/PP, borne D_N ou WIN. Base officielle inchangée : 78 modules / 1 304 déclarations.
+
+Ce dossier est le premier gel SOURCE pour revue, pas une préparation runtime. Le préflight BUILD03 distinct attend encore le handoff de ROLE4 ; aucune préparation/gate/build n'est dérivée du présent module ou de l'observation PE statique.

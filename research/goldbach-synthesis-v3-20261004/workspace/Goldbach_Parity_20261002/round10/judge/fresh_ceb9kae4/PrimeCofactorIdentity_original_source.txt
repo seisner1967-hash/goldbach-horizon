@@ -1,0 +1,140 @@
+import Mathlib.NumberTheory.VonMangoldt
+import Mathlib.Data.Nat.Totient
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Ring
+
+/-!
+Exact extraction on the actual capped physical kernel and its arithmetic model.
+This module is an auxiliary identity certificate, not a bound on Goldbach's deficit.
+-/
+
+namespace GoldbachRound10
+
+open Finset
+
+noncomputable def muR (n : ℕ) : ℝ := ArithmeticFunction.moebius n
+
+noncomputable def activeDivisors (a Q m : ℕ) : Finset ℕ :=
+  (Finset.Icc 1 Q).filter (fun k => k ∣ m ∧ a * k < m)
+
+noncomputable def physical (a Q m : ℕ) : ℝ :=
+  muR m * ∑ k ∈ activeDivisors a Q m, muR k * Real.log ((m : ℝ) / (k : ℝ))
+
+/-- The original model retains its totient, unit condition, cap and strict front. -/
+noncomputable def W_positive (a Q N n m : ℕ) : ℝ :=
+  ∑ k ∈ (Finset.Icc 1 Q).filter (fun k => a * k < m ∧ Nat.gcd k (n * N) = 1),
+    muR k * Real.log ((m : ℝ) / (k : ℝ)) / (Nat.totient k : ℝ)
+
+noncomputable def primeBracket (a Q N n m : ℕ) : ℝ :=
+  Real.log (n : ℝ) * (physical a Q m - muR m * W_positive a Q N n m)
+
+/-- No squarefreeness hypothesis occurs in this exact support statement. -/
+theorem activeDivisors_prime_cofactor {a Q p c : ℕ}
+    (hp : Nat.Prime p) (hc : 1 ≤ c) (hca : c ≤ a) (hap : a < p) (hcQ : c ≤ Q) :
+    activeDivisors a Q (p * c) = c.divisors := by
+  classical
+  have hcpos : 0 < c := lt_of_lt_of_le Nat.zero_lt_one hc
+  ext k
+  constructor
+  · intro hk
+    obtain ⟨hkI, hkm, hfront⟩ := Finset.mem_filter.mp hk
+    obtain ⟨hkpos, hkQ⟩ := Finset.mem_Icc.mp hkI
+    have hpk : ¬ p ∣ k := by
+      intro h
+      have hple : p ≤ k := Nat.le_of_dvd (lt_of_lt_of_le Nat.zero_lt_one hkpos) h
+      have hbound : p * c ≤ a * k := by nlinarith
+      exact (not_lt_of_ge hbound) hfront
+    have hcop : Nat.Coprime k p := (hp.coprime_iff_not_dvd.mpr hpk).symm
+    exact Nat.mem_divisors.mpr ⟨hcop.dvd_of_dvd_mul_left hkm, Nat.ne_of_gt hcpos⟩
+  · intro hk
+    have hkc : k ∣ c := Nat.dvd_of_mem_divisors hk
+    have hkpos : 1 ≤ k := Nat.pos_of_mem_divisors hk
+    have hkle : k ≤ c := Nat.divisor_le hk
+    have hfront : a * k < p * c := by nlinarith
+    exact Finset.mem_filter.mpr ⟨Finset.mem_Icc.mpr ⟨hkpos, le_trans hkle hcQ⟩,
+      dvd_mul_of_dvd_right hkc p, hfront⟩
+
+theorem sum_muR_divisors (c : ℕ) :
+    (∑ d ∈ c.divisors, muR d) = if c = 1 then (1 : ℝ) else 0 := by
+  have h := congrArg (fun f : ArithmeticFunction ℝ => f c)
+    (ArithmeticFunction.coe_moebius_mul_coe_zeta (R := ℝ))
+  dsimp only at h
+  rw [ArithmeticFunction.coe_mul_zeta_apply, ArithmeticFunction.one_apply] at h
+  simpa [muR] using h
+
+theorem sum_muR_log_divisors (c : ℕ) :
+    (∑ d ∈ c.divisors, muR d * Real.log (d : ℝ)) = -ArithmeticFunction.vonMangoldt c := by
+  simpa [muR, ArithmeticFunction.log_apply] using
+    (ArithmeticFunction.sum_moebius_mul_log_eq (n := c))
+
+theorem muR_prime_cofactor {p c : ℕ} (hp : Nat.Prime p) (hc : 1 ≤ c) (hcp : c < p) :
+    muR (p * c) = -muR c := by
+  have hcop := Nat.coprime_of_lt_prime (lt_of_lt_of_le Nat.zero_lt_one hc) hcp hp
+  unfold muR
+  rw [ArithmeticFunction.isMultiplicative_moebius.map_mul_of_coprime hcop,
+    ArithmeticFunction.moebius_apply_prime hp]
+  simp
+
+theorem complete_cofactor_log_sum {p c : ℕ} (hp : Nat.Prime p) (hc : 1 ≤ c) :
+    (∑ d ∈ c.divisors, muR d * Real.log (((p * c : ℕ) : ℝ) / (d : ℝ))) =
+      ArithmeticFunction.vonMangoldt c + if c = 1 then Real.log (p : ℝ) else 0 := by
+  have hp0 : (p : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr hp.ne_zero
+  have hc0 : (c : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr (Nat.ne_of_gt (lt_of_lt_of_le Nat.zero_lt_one hc))
+  have hlog : ∀ d ∈ c.divisors,
+      Real.log (((p * c : ℕ) : ℝ) / (d : ℝ)) =
+        Real.log (p : ℝ) + Real.log (c : ℝ) - Real.log (d : ℝ) := by
+    intro d hd
+    have hd0 : (d : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr (Nat.ne_of_gt (Nat.pos_of_mem_divisors hd))
+    rw [Nat.cast_mul, Real.log_div (mul_ne_zero hp0 hc0) hd0, Real.log_mul hp0 hc0]
+  calc
+    _ = ∑ d ∈ c.divisors,
+        ((Real.log (p : ℝ) + Real.log (c : ℝ)) * muR d -
+          muR d * Real.log (d : ℝ)) := by
+      apply Finset.sum_congr rfl
+      intro d hd
+      rw [hlog d hd]
+      ring
+    _ = (Real.log (p : ℝ) + Real.log (c : ℝ)) * (∑ d ∈ c.divisors, muR d) -
+        (∑ d ∈ c.divisors, muR d * Real.log (d : ℝ)) := by
+      rw [Finset.sum_sub_distrib, Finset.mul_sum]
+    _ = _ := by
+      rw [sum_muR_divisors, sum_muR_log_divisors]
+      by_cases h : c = 1
+      · simp [h]
+      · simp [h]
+
+/-- E3 physical identity, including every non-squarefree cofactor. -/
+theorem physical_prime_cofactor {a Q p c : ℕ}
+    (hp : Nat.Prime p) (hc : 1 ≤ c) (hca : c ≤ a) (hap : a < p) (hcQ : c ≤ Q) :
+    physical a Q (p * c) = -muR c *
+      (ArithmeticFunction.vonMangoldt c + if c = 1 then Real.log (p : ℝ) else 0) := by
+  unfold physical
+  rw [activeDivisors_prime_cofactor hp hc hca hap hcQ,
+    complete_cofactor_log_sum hp hc, muR_prime_cofactor hp hc (lt_of_le_of_lt hca hap)]
+
+/-- E3 for the actual arithmetic model, without a free surrogate coefficient. -/
+theorem actual_prime_bracket_cofactor {a Q N n p c : ℕ}
+    (hp : Nat.Prime p) (hc : 1 ≤ c) (hca : c ≤ a) (hap : a < p) (hcQ : c ≤ Q) :
+    primeBracket a Q N n (p * c) = muR c * Real.log (n : ℝ) *
+      (W_positive a Q N n (p * c) - ArithmeticFunction.vonMangoldt c -
+        if c = 1 then Real.log (p : ℝ) else 0) := by
+  unfold primeBracket
+  rw [physical_prime_cofactor hp hc hca hap hcQ,
+    muR_prime_cofactor hp hc (lt_of_le_of_lt hca hap)]
+  ring
+
+/-- The source cap remains the original alpha-cap when the common front is a. -/
+theorem source_prime_bracket_cofactor {a alpha N n p c : ℕ}
+    (hp : Nat.Prime p) (hc : 1 ≤ c) (hca : c ≤ a) (hap : a < p)
+    (hcQ : c ≤ (N - 1) / alpha) (hn : Nat.Prime n) (hunit : Nat.gcd n N = 1)
+    (hpoint : n + p * c = N) (hpc : p * c < N - 1) :
+    primeBracket a ((N - 1) / alpha) N n (p * c) = muR c * Real.log (n : ℝ) *
+      (W_positive a ((N - 1) / alpha) N n (p * c) - ArithmeticFunction.vonMangoldt c -
+        if c = 1 then Real.log (p : ℝ) else 0) := by
+  exact actual_prime_bracket_cofactor hp hc hca hap hcQ
+
+end GoldbachRound10
+
+#print axioms GoldbachRound10.physical_prime_cofactor
+#print axioms GoldbachRound10.actual_prime_bracket_cofactor
+#print axioms GoldbachRound10.source_prime_bracket_cofactor

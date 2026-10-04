@@ -1,0 +1,56 @@
+{
+  "schema": "ROUND22_CONTOUR_SCALED10_SOURCE_READS",
+  "status": "SOURCE_CORRECTED_NOT_COMPILED",
+  "time_utc": "2026-10-03T14:46:52.5206174Z",
+  "source_sha256": "0c790e629dc12d0dba16f6a5c443b6671c5cc5d33fef9eeb0e27a6f343c77105",
+  "source_FULL_read": "fa609b",
+  "old_source_sha256": "d0aa03290fe806f9c84c0311a7e07a2fe0737148c9c1de7c80876118fb7a64d7",
+  "old_source_FULL_read": "31521c",
+  "old_source_rehash": "fa609b unchanged",
+  "actual_error_log_sha256": "6fbd12cf496dbb66a5d25e69eb0668e6f5cafda352e29dc1e4f44c460a99d189",
+  "actual_error_log_FULL_read": "66bf7f",
+  "dependencies": [
+    {
+      "path": "role3/revision_contour_chi09/ContourChiPsi22.lean",
+      "sha256": "30c44bb1e376c32c28201e79adaad55043143081d56d4429c6d0b30e8f217540",
+      "scope": "TARGETED1-33,86-129",
+      "chunks": [
+        "405b0b",
+        "1e1e89"
+      ]
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+      "sha256": "0fda4e28d0030c4a72842ba6ece3b23ff0e3b60ab8ffa875bd1a699fc2f632f9",
+      "scope": "TARGETED1193-1238",
+      "chunk": "405b0b"
+    },
+    {
+      "path": "Mathlib/Algebra/GroupWithZero/Units/Basic.lean",
+      "sha256": "7beae059e4e36da8a597ff9bfd8faf12cc4f4a20f523ce2a3a7b6cf740ff7fb0",
+      "scope": "TARGETED416-438",
+      "chunk": "bb4e9b"
+    }
+  ],
+  "source_searches": [
+    "3455e8 paths",
+    "77cac2 algebra signatures"
+  ],
+  "rg_no_match": {
+    "chunk": "bb4e9b",
+    "scope": "Algebra/GroupWithZero/Defs.lean mul_div_assoc text search",
+    "classification": "NO_MATCH_EXIT1_AFTER_SUCCESSFUL_TARGETED_UNITS_READ",
+    "math_or_Lean_invoked": false
+  },
+  "declarations": 10,
+  "axiom_prints": 10,
+  "statements_changed": false,
+  "domain_changed": false,
+  "added_target_axioms": 0,
+  "compiler_invocations": 0,
+  "Python_math": 0,
+  "probes": 0,
+  "C5": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_LAMBDA_TAIL_SOURCE_CATALOG",
+  "status": "SOURCE_ONLY_FROZEN_FOR_REVIEW_PENDING_DEPENDENCIES_NOT_COMPILED",
+  "namespace": "GoldbachComplexGammaMellin22",
+  "module": "ComplexGammaMellinLambdaTail22",
+  "source_sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+  "source_bytes": 11335,
+  "modules": 1,
+  "declarations": 16,
+  "theorems": 12,
+  "definitions": 4,
+  "qualified_print_axioms": 16,
+  "count_scope": "MANUAL_FULL_SOURCE_INSPECTION",
+  "definition_names": [
+    "signedLambdaMellinTail",
+    "lambdaMellinTail",
+    "lambdaMellinTailRadius",
+    "lambdaMellinTruncated"
+  ],
+  "theorem_names": [
+    "lambdaMellinProduct_bound",
+    "signedLambdaMellinTail_integrable",
+    "signedLambdaMellinTail_norm_le",
+    "lambdaMellinTail_norm_le",
+    "signedLambdaMellinTail_true_eq_Iio",
+    "lambdaMellinThermal_sub_truncated_eq_tail",
+    "lambdaMellinThermal_truncation_error_le",
+    "lambdaMellinTailRadius_eq_closed",
+    "lambdaMellinTailRadius_continuousAt",
+    "lambdaMellinTailRadius_pos",
+    "lambdaMellinTailRadius_antitone",
+    "exists_local_uniform_Lambda_tail"
+  ],
+  "local_imports": [
+    "ComplexGammaMellinLambda22",
+    "ComplexGammaMellinTail22"
+  ],
+  "pending_dependencies": [
+    "Independent compiler verdict Lambda30",
+    "True independent compiler verdict Tail03; actual Tail29 FAILED and no PASS presumed"
+  ],
+  "error_domain": "Re(w)>0,H>=0",
+  "radius_continuity_domain": "Re(w)>0,H real",
+  "closed_compact_phase_geometry": "PAPER_NOT_SOURCE",
+  "free_L1_or_final_error_premise_added": false,
+  "compiler_invocations": 0,
+  "PREP_created": false,
+  "source_credit": 0,
+  "D_N": false,
+  "WIN": false
+}

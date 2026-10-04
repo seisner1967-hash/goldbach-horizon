@@ -1,0 +1,102 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:44:68: error: unsolved goals
+a u : ℝ
+⊢ -u / √(u ^ 2 + a ^ 2) = -(u / √(u ^ 2 + a ^ 2))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:47:71: error: unsolved goals
+a u : ℝ
+⊢ -boundary a u / a ^ 2 = -(boundary a u / a ^ 2)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:69:2: error: tactic 'rfl' failed, the left-hand side
+  1 / radicand a u ^ (3 / 2)
+is not definitionally equal to the right-hand side
+  (radicand a u ^ (3 / 2))⁻¹
+a : ℝ
+ha : 0 < a
+u : ℝ
+hp : 0 < radicand a u
+hpow : radicand a u ^ (3 / 2) = radicand a u * √(radicand a u)
+⊢ 1 / radicand a u ^ (3 / 2) = (radicand a u ^ (3 / 2))⁻¹
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:91:4: error: tactic 'rfl' failed, the left-hand side
+  u / √(radicand a u)
+is not definitionally equal to the right-hand side
+  ↑2 * id u ^ (2 - 1) * 1 / (2 * √(id u ^ 2 + a ^ 2))
+case h.e'_9
+a : ℝ
+ha : 0 < a
+u : ℝ
+hp : 0 < radicand a u
+⊢ u / √(radicand a u) = ↑2 * id u ^ (2 - 1) * 1 / (2 * √(id u ^ 2 + a ^ 2))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:92:2: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:101:4: error: tactic 'rfl' failed, the left-hand side
+  a ^ 2 * kernel a u
+is not definitionally equal to the right-hand side
+  (1 * √(radicand a u) - id u * (u / √(radicand a u))) / √(radicand a u) ^ 2
+case h.e'_9
+a : ℝ
+ha : 0 < a
+u : ℝ
+hs : 0 < √(radicand a u)
+hp : 0 < radicand a u
+hsq : √(radicand a u) ^ 2 = radicand a u
+⊢ a ^ 2 * kernel a u = (1 * √(radicand a u) - id u * (u / √(radicand a u))) / √(radicand a u) ^ 2
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:102:2: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:110:4: error: tactic 'rfl' failed, the left-hand side
+  kernel a u
+is not definitionally equal to the right-hand side
+  a ^ 2 * kernel a u / a ^ 2
+case h.e'_9
+a : ℝ
+ha : 0 < a
+u : ℝ
+⊢ kernel a u = a ^ 2 * kernel a u / a ^ 2
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:111:2: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:129:8: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:158:2: error: type mismatch, term
+  h
+after simplification has type
+  Tendsto (fun x => primitive a x) atBot (𝓝 (-(a ^ 2)⁻¹)) : Prop
+but is expected to have type
+  Tendsto (primitive a) atBot (𝓝 (-1 / a ^ 2)) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:182:48: warning: unused variable `hu`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\EpsteinKernel22.lean:197:2: error: linarith failed to find a contradiction
+case h1.h
+a u : ℝ
+ha : 0 < a
+hu : 0 < u
+hs : 0 < √(radicand a u)
+ht : √(radicand a u) + u ≠ 0
+hsq : √(u ^ 2 + a ^ 2) ^ 2 = u ^ 2 + a ^ 2
+a✝ : (√(u ^ 2 + a ^ 2) - u) * (√(u ^ 2 + a ^ 2) * (√(u ^ 2 + a ^ 2) + u)) < a ^ 2 * √(u ^ 2 + a ^ 2)
+⊢ False failed
+'Epstein22.radicand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.radicand_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.root_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.root_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.boundary_odd' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.primitive_odd' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.weight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.weight_eq_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.kernel_eq_rpow' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.continuous_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.continuous_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.continuous_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.hasDerivAt_root' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.hasDerivAt_boundary' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.hasDerivAt_primitive' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.intervalIntegrable_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.integral_kernel_interval' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.boundary_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.tendsto_boundary_atTop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.tendsto_primitive_atTop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.tendsto_primitive_atBot' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.integrable_kernel' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.integral_kernel' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.boundary_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.boundary_deficit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.boundary_deficit_bounds' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

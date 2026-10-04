@@ -1,0 +1,62 @@
+{
+  "status": "PASS_READ_ONLY_FROZEN_REPLAY_AUDIT",
+  "banks": {
+    "exchange.json": {
+      "status": "PASS_NEW_CROSS_KERNEL_EXCHANGE_IDENTITY_ONLY",
+      "script_sha256": "cdb1721ce1da9e92485c337f94fe5ce9410856b34b73ac2898cd4a8155c22264",
+      "receipt_sha256": "d120360aeebf570b9cf75ca0922070bd40e750607e77d8362a8fff636eb6352d",
+      "bytes": 1399652,
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "producer_executed_by_judge": false
+    },
+    "operator.json": {
+      "status": "PASS_NEW_ACTUAL_OPERATOR_IDENTITIES_ONLY",
+      "script_sha256": "64fcc468c5df6672ac123ee6103cef9ce0739052c3367be7593bac3aea78c9f2",
+      "receipt_sha256": "d2c1cd93571533777de9c09bcc94c575098500ae59929fb3774ad1f940c9be8e",
+      "bytes": 85959,
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "producer_executed_by_judge": false
+    }
+  },
+  "numerical_manifest_sha256": "c8468f94a118555c842a47879772620bf9dca9d520a6b89cec54f2895a38f932",
+  "original_replay_receipt_sha256": "73b8b29449601032016218afa9a49873925426b9d32efe33393fe312a3163b3c",
+  "producer_repeated_by_judge": false,
+  "falsifiers": {
+    "exchange.json.literal_W_difference.false_tail_omitted": "ERROR_FALSIFIER",
+    "exchange.json.false_direction_ignored": "ERROR_FALSIFIER",
+    "exchange.json.false_parent_coverage": "ERROR_FALSIFIER",
+    "exchange.json.false_bare_downward_pair_nonpositive": "ERROR_FALSIFIER",
+    "operator.json.false_small_commutator_promotion": "ERROR_FALSIFIER",
+    "operator.json.false_oriented_mass_equals_symmetrization": "ERROR_FALSIFIER",
+    "operator.json.false_full_H_positive_semidefinite": "ERROR_FALSIFIER",
+    "operator.json.false_theta_substituted_for_raw_on_long_edge": "ERROR_FALSIFIER"
+  },
+  "falsifier_count": 8,
+  "rational_signs": {
+    "exchange.json.exchanges.minus_two_joint.whole_sign": "POSITIVE",
+    "exchange.json.exchanges.minus_two_joint.principal_constant_sign": "NEGATIVE",
+    "exchange.json.exchanges.minus_two_joint.principal_S_sign": "NEGATIVE",
+    "exchange.json.exchanges.plus_two_joint.whole_sign": "POSITIVE",
+    "exchange.json.exchanges.plus_two_joint.principal_constant_sign": "POSITIVE",
+    "exchange.json.exchanges.plus_two_joint.principal_S_sign": "POSITIVE",
+    "exchange.json.exchanges.minus_two_unmatched_parent.whole_sign": "POSITIVE",
+    "exchange.json.exchanges.minus_two_unmatched_parent.principal_constant_sign": "POSITIVE",
+    "exchange.json.exchanges.minus_two_unmatched_parent.principal_S_sign": "POSITIVE",
+    "exchange.json.literal_W_difference.false_tail_omitted.sign": "NEGATIVE",
+    "exchange.json.false_direction_ignored.principal_S_sign": "POSITIVE",
+    "exchange.json.false_parent_coverage.actual_incidence": "POSITIVE",
+    "exchange.json.false_bare_downward_pair_nonpositive.actual_sign": "POSITIVE",
+    "operator.json.false_small_commutator_promotion.sign": "POSITIVE",
+    "operator.json.false_oriented_mass_equals_symmetrization.oriented_sign": "POSITIVE",
+    "operator.json.false_full_H_positive_semidefinite.sign": "NEGATIVE",
+    "operator.json.false_theta_substituted_for_raw_on_long_edge.sign": "POSITIVE"
+  },
+  "rational_sign_count": 17,
+  "strict_signs": true,
+  "floating_values": 0,
+  "asymptotic_tested": false,
+  "analytic_payment_tested": false,
+  "source_onset_tested": false
+}

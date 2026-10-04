@@ -1,0 +1,298 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH22",
+  "time_utc": "2026-10-03T21:02:20.677956+00:00",
+  "status": "INDEPENDENT_BATCH22_AUX_PASS",
+  "actual_status": "INDEPENDENT_BATCH22_AUX_PASS",
+  "attempt": "batch22_attempt01",
+  "actual_child_invocations": 2,
+  "modules_passed": 2,
+  "module_count_passed": 2,
+  "declarations_passed": 28,
+  "theorems_passed": 22,
+  "definitions_passed": 6,
+  "all_current_bytes_preserved": true,
+  "input_count": 8441,
+  "closed_judge_file_count": 1330,
+  "protected_archive_count": 3089,
+  "capture_count": 95,
+  "axiom_counts": {
+    "standard_triplet": 27,
+    "propext_Quot_sound": 1,
+    "empty": 0,
+    "recovery": 0
+  },
+  "axiom_rows": [
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.bankRoot",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.primitive_of_whole_and_half",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.prime_divisor_two_power_mul_prime",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.prime_2013265921",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.prime_2281701377",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.prime_3221225473",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.prime_3489660929",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.prime_3892314113",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.primitive_2013265921",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.primitive_2281701377",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.primitive_3221225473",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.primitive_3489660929",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.primitive_3892314113",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.size_2013265921",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.size_2281701377",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.size_3221225473",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.size_3489660929",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTRoots22.size_3892314113",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact2013265921",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact2281701377",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact3221225473",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact3489660929",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact3892314113",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_2013265921",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_2281701377",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_3221225473",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_3489660929",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_3892314113",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "module_evidence": [
+    {
+      "module": "ConcreteNTTRoots22",
+      "started_at": "2026-10-03T20:58:22.924740+00:00",
+      "finished_at": "2026-10-03T20:58:31.824611+00:00",
+      "exit_code": 0,
+      "declarations_passed": 18,
+      "source_sha256": "16c414a5d2f05c4ad273dde2245282aad452880b4d51df0aaed78f08d944b3bc",
+      "log_sha256": "099927e964c51da63195a91dba5e62810b485127142ed4725ca5893fea001f05",
+      "olean_sha256": "0c280bdd4f300e7c0b0dd201471c2b147b26d33eba5438d15282ed76483848aa"
+    },
+    {
+      "module": "ConcreteNTTA32Projection22",
+      "started_at": "2026-10-03T20:58:31.824611+00:00",
+      "finished_at": "2026-10-03T20:58:42.549461+00:00",
+      "exit_code": 0,
+      "declarations_passed": 10,
+      "source_sha256": "cefc07197945f1e9710895d4a01455861ae6db21365cc44dec206178e76af4c3",
+      "log_sha256": "e3d4cc4d9b9ac0ddef4fd2cef00f9ea18966af64592e74e9b431d079111d970e",
+      "olean_sha256": "588115c73b63fce9c946a15bd3bf7694907766d716a58ef2c5cce81f7b1ba689"
+    }
+  ],
+  "actual_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch22\\batch22_attempt01\\receipt.json",
+  "actual_receipt_sha256": "4b589cbef28c140100562714d445e4ad9f6474f68d81b528d0fa2153d2f0e57f",
+  "adjudication_sha256": "6972ea6238f127dd5f3b7ec82c7ab3fd1fbd1815ce1e9fb31b0820b6a724be23",
+  "PREEXEC_sha256": "b5bca14c23fedd73eb7794ca4b2c4e919da0aadecedd9af9c6f956685ff522dd",
+  "POSTEXEC_sha256": "29ccd206d9599d322328ff4b1c20f0908b211e35fa4780eaeb72a36ecf216ec2",
+  "START_sha256": "24b7087bb321749165f13c6a25a22494520249b7465871c42c57abdf510926bb",
+  "FIN_sha256": "f4c98b2d8de2de1c794be67fc864b21bbdc447aa8dd107b3c9bb91d7c7c155c8",
+  "gate_sha256": "ceb0edb6fe964e10f25d7bf09c2bfbfc553c1f609db7d79ae70d0f928818baec",
+  "metadata_helper_sha256": "c680c089338b14593639274697c4c75fef4ad6cacea31022a2ad1b0929d7c542",
+  "logs_read_scope": "FULL afad3b",
+  "actual_receipt_read_scope": "FULL 711f9d",
+  "large_PRE_POST_read_scope": "CONTROL_HEADER_PLUS_ALL_JSON_ROWS_AND_CURRENT_BYTE_HASH_NOT_RAW_FULL",
+  "compiler_invocations_in_closure": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "official_modules_before_ROOT_observation": 80,
+  "official_declarations_before_ROOT_observation": 1339,
+  "hypothetical_after_ROOT_modules": 82,
+  "hypothetical_after_ROOT_declarations": 1367,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "native_refinement_paid": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false
+}

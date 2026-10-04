@@ -1,0 +1,145 @@
+{
+  "status": "PROSPECTIVE20_PARTIAL_PAYMENT_WRITTEN_NOT_SELECTED_NOT_LEAN",
+  "logical_role": 2,
+  "agent": "/root/round20_ideation_capacity",
+  "observed_utc": "2026-10-03T01:43:38.0147925Z",
+  "fresh_constraints": {
+    "tool": "arbor_state.py view --format constraints",
+    "chunk": "f81833",
+    "exit_code": 0,
+    "validated_findings": 33,
+    "pruned": 5,
+    "max_depth": 2,
+    "round19_nodes_at_read": "running"
+  },
+  "inputs": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent2_nonss.md",
+      "bytes": 29162,
+      "sha256": "20ca15ceba20b72459102b2da8429b7e6d72a7c4bd52dca7de7bc3a58a61cbc2",
+      "read_mode": "FULL",
+      "read_chunks": [
+        "78dcba"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent4_formalisation.md",
+      "bytes": 9221,
+      "sha256": "442a58cdec079b611a1be704f77dc729343e4a4a24cc526f601a280a7a5c068b",
+      "read_mode": "FULL",
+      "read_chunks": [
+        "1447af"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent1_gap_review.md",
+      "bytes": 10384,
+      "sha256": "fa023d133e631516f29ab3680e0ec8c029c4eb85ad1e89ea30ce618dfb06b9d3",
+      "read_mode": "FULL",
+      "read_chunks": [
+        "add20a"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\BalancedResourceSwitch.lean",
+      "bytes": 15096,
+      "sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+      "read_mode": "FULL",
+      "read_chunks": [
+        "4cac81"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\NonSSBracketSwitch.lean",
+      "bytes": 15550,
+      "sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+      "read_mode": "FULL",
+      "read_chunks": [
+        "69252b"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\RankTwoHarmonic.lean",
+      "bytes": 10995,
+      "sha256": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b",
+      "read_mode": "FULL",
+      "read_chunks": [
+        "db85bc"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\agent2_capacity_incidence.md",
+      "bytes": 22647,
+      "sha256": "48dbcc5875c140d6d4991fa7d6cd58749048e3cf151e35f476893c27f81ae595",
+      "read_mode": "EXCERPT_D9_AND_SOURCE_DOMAIN",
+      "read_chunks": [
+        "8f9db3"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\agent3_formalisation.md",
+      "bytes": 14780,
+      "sha256": "f3bbd0ab002fa7f1a5b1accab55605ee767cec9e5b87c3d8021921ad9d6f0895",
+      "read_mode": "FULL",
+      "read_chunks": [
+        "43dea4"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\agent1_coverage.md",
+      "bytes": 21969,
+      "sha256": "4224fdd0f202da0a1dae1787965cb24aaeb7cf88fbcba8e92f607aff98716aec",
+      "read_mode": "EXCERPT_TOTIENT_REFERENCE",
+      "read_chunks": [
+        "90bdad"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\agent5.md",
+      "bytes": 13025,
+      "sha256": "a9e37653003cc6fe5d5174fe44e96657914214b1d94d894496eb23f31cdb5fe6",
+      "read_mode": "EXCERPT_TOTIENT_REFERENCE",
+      "read_chunks": [
+        "90bdad"
+      ]
+    }
+  ],
+  "report": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role2_prospective.md",
+    "bytes": 19554,
+    "sha256": "d26b6f010f57aa754d2b0429239ecc07ed9c1a629cacecac8d760360e33492ed"
+  },
+  "execution": {
+    "lean": 0,
+    "numeric_producers": 0,
+    "judge": 0,
+    "math_python": 0,
+    "tree_add": 0,
+    "selection": 0,
+    "historical_replay": 0
+  },
+  "claims": {
+    "source_onset": "u>=10^24",
+    "new_domain": "StructuralSupport19 intersect F0 union F1",
+    "reciprocal_domain": "F1 only, one physical m1 per q",
+    "raw_no_mu_squared_first_axis": true,
+    "front_plus_ones_paid": true,
+    "entire_nonss_paid": false,
+    "full_ledger_paid": false,
+    "victory": false,
+    "score": 0
+  },
+  "external_primary": {
+    "wright_url": "https://arxiv.org/pdf/2508.17217",
+    "read": "Theorem 1.1 and surrounding hypotheses, retrieved via web",
+    "used_in_bound": false,
+    "shiu_original_pdf_access": "unavailable; identified publisher record only",
+    "rosser_schoenfeld_url": "https://denisevellachemla.eu/Rosser-Schoenfeld-1962.pdf",
+    "used": "D9_18 already derived on paper, read locally"
+  },
+  "honest_incidents": [
+    "Initial grouped report output truncated; required full inputs reread separately",
+    "Two literal wildcard searches returned path syntax errors before exact paths were found",
+    "Historical round10 listing had one inaccessible irrelevant judge subdirectory; requested agent3 file was read normally"
+  ]
+}

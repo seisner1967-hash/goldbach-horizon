@@ -1,0 +1,28 @@
+Préflight ROLE6 — lecture de métadonnées seulement, boucle 22.
+
+Statut : METADATA_CONDITIONAL / PENDING_BUILD_SOURCE_REVIEW_LOADER_SCOPE.
+Ce dossier est un constat préparatoire distinct. Il ne contient aucune gate, aucune préparation BUILD_ONLY_METADATA_PREPARED et aucun résultat de compilation ou de calcul candidat.
+
+Périmètre effectivement conservé
+Le contrôle a reconstruit l’union exacte du snapshot natif02 (6 332 chemins), du handoff natif02 (12 bindings) et du handoff build01 (5 bindings). Une occurrence commune donne 6 348 chemins distincts, sans conflit. Tous les octets et SHA attendus sont inchangés. Les 972 fichiers du runtime Python liés et les 3 089 archives protégées ont également été vérifiés. Les 17 exigences de capture de cette union sont recensées ; aucune capture d’un futur lancement n’a été fabriquée.
+Runtime canonique : python.exe SHA4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c. Aucun Python n’a été lancé pour ce contrôle.
+
+Lecture PE statique observée
+Le helper PowerShell lu intégralement ne fait que ReadAllBytes, extractions d’entiers, noms ASCII, métadonnées et SHA. Il ne fait ni Add-Type, ni LoadLibrary, ni dumpbin/objdump, ni appel d’un fichier PE. Les en-têtes MZ/PE, tables de sections, descripteurs d’import normal et d’import retardé ont été examinés sur 11 outils/helpers/plugins et les 55 DLL locales de l’inventaire : 66 images, 825 arêtes déclarées, aucune erreur de parsing observée, aucun import retardé relevé.
+Les 119 arêtes locales déclarées aboutissent à des candidats locaux déjà liés et hachés dans le snapshot ; leur fermeture récursive déclarée est observée. Les 706 arêtes Windows ou API-set sont laissées à la base de confiance Windows. La présence d’un nom dans System32 ou d’un contrat API-set n’est pas une vérification de ses transitifs ni du fichier chargé.
+
+Dette exacte du prérequis du parent
+Le parent build01 exige un reçu portant status=COMPILER_LOADER_CLOSURE_REVIEWED_WITH_WINDOWS_TRUST_BASE et all_non_OS_imports_bound=true. La présente lecture établit seulement all_observed_declared_non_OS_import_candidates_bound. Elle ne constate pas la résolution effective du chargeur Windows, les forwarders, les modules obtenus via LoadLibrary, les plugins choisis dynamiquement, ni la sélection effective des helpers/specs GCC. Aucun reçu présentant ces obligations globales comme acquittées n’a été écrit. Les transitifs système complets restent également ouverts. Il faudra soit une définition indépendante et explicite du périmètre statique accepté par le contrat suivant, soit un autre paiement réel de ces obligations sous une autorisation distincte ; un booléen ne remplace pas ce paiement.
+
+Dette SOURCE distincte en cours
+Le contrôle indépendant a signalé que build_plan22.json de natif02 annonce working_directory_future=native02, alors que build01 passe ACTUAL au backend. ROLE4 prépare un sibling SOURCE02 avec plan, CWD et TMP cohérents. Build01 et son snapshot sont préservés ; cette observation ne sélectionne ni ne valide par anticipation le sibling. La revue indépendante finale et le handoff SOURCE02 ne sont pas encore reçus ici. Le chemin de préparation codé dans le parent devra être rempli par ROOT après revue, à partir d’un paquet exact distinct ; aucun fichier ROLE4 n’a été créé ou remplacé par ROLE6.
+
+Conditions du futur BUILD_ONLY connues, non activées
+Deux drivers au maximum, sans retry ; mur partagé 300 s, maximum 16 membres actifs du job, 32 processus au total, commit du job 2 GiB. Le reste du littéral FIXED du parent reste à lier exactement au futur paquet sélectionné. Zéro invocation des binaires produits. Aucun état de quota/ABI/loader n’a été exercé. Aucune gate BUILD_ONLY ou NUMERIC n’existe dans ce dossier.
+
+Pièces et scopes de lecture
+pe_static_import_observation22.json : SHA36032c45c476e72c97393f60d02fbf5ff2e2679e82d2c3dd5eaea558cfdcadbc ; 307 212 octets ; tous nœuds et arêtes parsés comme métadonnées, headers/projection lus, aucune lecture brute FULL du catalogue revendiquée.
+frozen6348_conservation22.json : SHAa1fe2a248fd1f5d6292732b6a524ab8cdc6b248a519b26dbeab6bbe7de6bcfc5 ; 2 209 863 octets ; tous bindings et archives parsés/hachés, projection de compteurs lue, aucune lecture brute FULL revendiquée.
+Helpers inspect_pe_bytes22.ps1 et verify_frozen_metadata22.ps1 : lectures FULL respectivement f69c76 et fc3bf4, exécutions de métadonnées c46b9d et 522613/06dbc1 uniquement. Parent/backend et petits contrats build01/natif02 ont leurs lectures FULL historiques 98dbbd, bcb37e, 36fe75.
+
+Verdict : zéro compilateur, zéro import/parse de source mathématique candidate, zéro programme candidat, zéro banc, zéro crédit Lean ajouté. Le préflight demeure conditionnel pour une raison de périmètre du chargeur et de SOURCE à réparer, sans échec mathématique ou de parité. Les acquis 78 modules / 1 304 déclarations restent inchangés ; coefficient N complet, native/NTT/CRT runtime, D_N et WIN restent ouverts.

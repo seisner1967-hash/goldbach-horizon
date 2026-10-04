@@ -1,0 +1,334 @@
+import ShortDivisorComplement
+import Mathlib.Data.Nat.Totient
+
+namespace GoldbachRound11
+
+open Finset GoldbachRound10.ShortDivisorComplement
+
+noncomputable def harmonicKernel (Q a N n m : ℕ) : ℝ :=
+  ∑ k ∈ Finset.Icc 1 Q, if a * k < m ∧ k.Coprime (n * N) then
+    mu k * Real.log ((k : ℝ) / (m : ℝ)) / (Nat.totient k : ℝ) else 0
+
+noncomputable def primeIncidence (N n : ℕ) : ℝ :=
+  if n.Prime ∧ n.Coprime N then 1 else 0
+
+noncomputable def theta (N n : ℕ) : ℝ := primeIncidence N n * Real.log (n : ℝ)
+
+noncomputable def sourceBracket (alpha a N n m : ℕ) : ℝ :=
+  theta N n * (-mu m *
+    (physicalDivisorKernel ((N - 1) / alpha) a m n N -
+     harmonicKernel ((N - 1) / alpha) a N n m))
+
+theorem short_filter_prime_pair {a c p q : ℕ} (hc : 0 < c) (hca : c ≤ a)
+    (hp : p.Prime) (hq : q.Prime) (hap : a < p) (hpq : p < q) :
+    ((c * p * q).divisors.filter (fun r => r ≤ a)) = c.divisors := by
+  classical
+  have hm0 : c * p * q ≠ 0 := mul_ne_zero (mul_ne_zero (Nat.ne_of_gt hc) hp.ne_zero) hq.ne_zero
+  ext r
+  constructor
+  · intro hr
+    obtain ⟨hrm, hra⟩ := Finset.mem_filter.mp hr
+    have hrpos := Nat.pos_of_mem_divisors hrm
+    have hrcp : r.Coprime p :=
+      (hp.coprime_iff_not_dvd.mpr (Nat.not_dvd_of_pos_of_lt hrpos (lt_of_le_of_lt hra hap))).symm
+    have hrcq : r.Coprime q :=
+      (hq.coprime_iff_not_dvd.mpr (Nat.not_dvd_of_pos_of_lt hrpos
+        (lt_of_le_of_lt hra (lt_trans hap hpq)))).symm
+    have hdiv := (Nat.mem_divisors.mp hrm).1
+    have hrc : r ∣ c := hrcp.dvd_mul_right.mp (hrcq.dvd_mul_right.mp hdiv)
+    exact Nat.mem_divisors.mpr ⟨hrc, Nat.ne_of_gt hc⟩
+  · intro hr
+    have hdiv := (Nat.mem_divisors.mp hr).1
+    exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+      ⟨dvd_mul_of_dvd_left (dvd_mul_of_dvd_left hdiv p) q, hm0⟩,
+      le_trans (Nat.divisor_le hr) hca⟩
+
+theorem complete_short_prime_pair {a c p q : ℕ} (hc : 0 < c) (hca : c ≤ a)
+    (hp : p.Prime) (hq : q.Prime) (hap : a < p) (hpq : p < q) :
+    shortDivisorSum a (c * p * q) = -ArithmeticFunction.vonMangoldt c := by
+  unfold shortDivisorSum
+  rw [← Finset.sum_filter, short_filter_prime_pair hc hca hp hq hap hpq]
+  simpa [mu] using (ArithmeticFunction.sum_moebius_mul_log_eq (n := c))
+
+theorem prime_pair_arithmetic {a c p q : ℕ} (hc : 0 < c) (hca : c ≤ a)
+    (hcs : Squarefree c) (hp : p.Prime) (hq : q.Prime) (hap : a < p) (hpq : p < q) :
+    Squarefree (c * p * q) ∧ mu (c * p * q) = mu c ∧
+      ArithmeticFunction.vonMangoldt (c * p * q) = 0 := by
+  have hcp : c.Coprime p := Nat.coprime_of_lt_prime hc (lt_of_le_of_lt hca hap) hp
+  have hcq : c.Coprime q := Nat.coprime_of_lt_prime hc (lt_of_le_of_lt hca (lt_trans hap hpq)) hq
+  have hpqcop : p.Coprime q := Nat.coprime_of_lt_prime hp.pos hpq hq
+  have hcpq : (c * p).Coprime q := hcq.mul_left hpqcop
+  have hsfcp : Squarefree (c * p) := (Nat.squarefree_mul hcp).mpr ⟨hcs, hp.squarefree⟩
+  have hsfm : Squarefree (c * p * q) := (Nat.squarefree_mul hcpq).mpr ⟨hsfcp, hq.squarefree⟩
+  have hmu : mu (c * p * q) = mu c := by
+    rw [mu_mul_of_coprime hcpq, mu_mul_of_coprime hcp]
+    simp [mu, ArithmeticFunction.moebius_apply_prime hp, ArithmeticFunction.moebius_apply_prime hq]
+  have hcpne : c * p ≠ 1 := by nlinarith [hp.two_le]
+  have hnotprime : ¬ (c * p * q).Prime := by simp [Nat.prime_mul_iff, hq.ne_one, hcpne]
+  have hLambda : ArithmeticFunction.vonMangoldt (c * p * q) = 0 := by
+    apply ArithmeticFunction.vonMangoldt_eq_zero_iff.mpr
+    intro hpow
+    exact hnotprime (Nat.squarefree_and_prime_pow_iff_prime.mp ⟨hsfm, hpow⟩)
+  exact ⟨hsfm, hmu, hLambda⟩
+
+/-- U2 is now connected to the actual physical source bracket, with its real
+    harmonic sum over all unit k and its original cap. -/
+theorem actual_source_bracket_j2 {alpha a N n c p q : ℕ}
+    (halpha : 0 < alpha) (ha : alpha ≤ a) (hc : 0 < c) (hca : c ≤ a)
+    (hcs : Squarefree c) (hp : p.Prime) (hq : q.Prime) (hap : a < p) (hpq : p < q)
+    (hn : 0 < n) (hpoint : c * (p * q) + n = N) :
+    sourceBracket alpha a N n (c * (p * q)) =
+      theta N n * (ArithmeticFunction.vonMangoldt c + mu c *
+        harmonicKernel ((N - 1) / alpha) a N n (c * (p * q))) := by
+  by_cases hinc : n.Prime ∧ n.Coprime N
+  · have hsfm := (prime_pair_arithmetic hc hca hcs hp hq hap hpq).1
+    have hmu := (prime_pair_arithmetic hc hca hcs hp hq hap hpq).2.1
+    have hLambda := (prime_pair_arithmetic hc hca hcs hp hq hap hpq).2.2
+    have hm0 : c * (p * q) ≠ 0 := mul_ne_zero (Nat.ne_of_gt hc) (mul_ne_zero hp.ne_zero hq.ne_zero)
+    have hphys := physical_short_divisor_complement_source hm0 hpoint hn hinc.2 halpha ha
+    have hsq : mu (c * (p * q)) ^ 2 = 1 := mu_square_of_squarefree (by simpa [Nat.mul_assoc] using hsfm)
+    have hshort := complete_short_prime_pair hc hca hp hq hap hpq
+    simp only [Nat.mul_assoc] at hmu hLambda hshort
+    unfold sourceBracket
+    rw [mul_sub, hphys, hsq, one_mul, hLambda, hshort, hmu]
+    ring
+  · simp [sourceBracket, theta, primeIncidence, hinc]
+
+theorem mu_three_mul {d : ℕ} (hd : ¬ 3 ∣ d) : mu (3 * d) = -mu d := by
+  have hcop : Nat.Coprime 3 d := Nat.prime_three.coprime_iff_not_dvd.mpr hd
+  rw [mu_mul_of_coprime hcop]
+  simp [mu, ArithmeticFunction.moebius_apply_prime Nat.prime_three]
+
+/-- P1 with two literal incidences and two different source W kernels. -/
+theorem actual_three_adic_pair {alpha a N n n3 d p q : ℕ}
+    (halpha : 0 < alpha) (ha : alpha ≤ a) (hd : 0 < d) (hda : 3 * d ≤ a)
+    (hds : Squarefree d) (hd3 : ¬ 3 ∣ d) (hp : p.Prime) (hq : q.Prime)
+    (hap : a < p) (hpq : p < q) (hn : 0 < n) (hn3 : 0 < n3)
+    (hpoint : d * (p * q) + n = N) (hpoint3 : (3 * d) * (p * q) + n3 = N) :
+    sourceBracket alpha a N n (d * (p * q)) +
+      sourceBracket alpha a N n3 ((3 * d) * (p * q)) =
+    ArithmeticFunction.vonMangoldt d * primeIncidence N n * Real.log (n : ℝ) +
+      ArithmeticFunction.vonMangoldt (3 * d) * primeIncidence N n3 * Real.log (n3 : ℝ) +
+      mu d * (primeIncidence N n * Real.log (n : ℝ) *
+          harmonicKernel ((N - 1) / alpha) a N n (d * (p * q)) -
+        primeIncidence N n3 * Real.log (n3 : ℝ) *
+          harmonicKernel ((N - 1) / alpha) a N n3 ((3 * d) * (p * q))) := by
+  have hdsmall : d ≤ a := by omega
+  have hsf3d : Squarefree (3 * d) :=
+    (Nat.squarefree_mul (Nat.prime_three.coprime_iff_not_dvd.mpr hd3)).mpr
+      ⟨Nat.prime_three.squarefree, hds⟩
+  rw [actual_source_bracket_j2 halpha ha hd hdsmall hds hp hq hap hpq hn hpoint,
+    actual_source_bracket_j2 halpha ha (by omega) hda hsf3d hp hq hap hpq hn3 hpoint3,
+    mu_three_mul hd3]
+  unfold theta
+  ring
+
+noncomputable def coreGrid (K C : ℕ) : Finset ℕ :=
+  (Finset.Icc 1 C).filter (fun c => Squarefree c ∧ c.Coprime K)
+
+noncomputable def pairedBases (K C : ℕ) : Finset ℕ :=
+  (coreGrid K C).filter (fun d => ¬ 3 ∣ d ∧ 3 * d ≤ C)
+
+noncomputable def geometricFaces (K C : ℕ) : Finset ℕ :=
+  (coreGrid K C).filter (fun d => ¬ 3 ∣ d ∧ C < 3 * d)
+
+theorem three_mul_mem_grid {K C d : ℕ} (h3K : Nat.Coprime 3 K)
+    (hd : d ∈ pairedBases K C) : 3 * d ∈ coreGrid K C := by
+  obtain ⟨hdX, hd3, hdC⟩ := Finset.mem_filter.mp hd
+  obtain ⟨hdI, hds, hdK⟩ := Finset.mem_filter.mp hdX
+  obtain ⟨hdpos, _⟩ := Finset.mem_Icc.mp hdI
+  apply Finset.mem_filter.mpr
+  exact ⟨Finset.mem_Icc.mpr ⟨by omega, hdC⟩,
+    (Nat.squarefree_mul (Nat.prime_three.coprime_iff_not_dvd.mpr hd3)).mpr
+      ⟨Nat.prime_three.squarefree, hds⟩, h3K.mul_left hdK⟩
+
+theorem core_grid_partition {K C : ℕ} (h3K : Nat.Coprime 3 K) :
+    coreGrid K C = pairedBases K C ∪ (pairedBases K C).image (fun d => 3 * d) ∪
+      geometricFaces K C := by
+  classical
+  ext c
+  constructor
+  · intro hc
+    obtain ⟨hcI, hcs, hcK⟩ := Finset.mem_filter.mp hc
+    obtain ⟨hcpos, hcC⟩ := Finset.mem_Icc.mp hcI
+    by_cases hc3 : 3 ∣ c
+    · obtain ⟨d, rfl⟩ := hc3
+      have hd3 : ¬ 3 ∣ d := Nat.prime_three.coprime_iff_not_dvd.mp (Nat.coprime_of_squarefree_mul hcs)
+      have hdX : d ∈ coreGrid K C := Finset.mem_filter.mpr
+        ⟨Finset.mem_Icc.mpr ⟨by omega, by omega⟩, hcs.of_mul_right,
+          hcK.of_dvd_left (dvd_mul_left d 3)⟩
+      have hdD : d ∈ pairedBases K C := Finset.mem_filter.mpr ⟨hdX, hd3, hcC⟩
+      exact Finset.mem_union_left _ (Finset.mem_union_right _ (Finset.mem_image.mpr ⟨d, hdD, rfl⟩))
+    · by_cases hcD : 3 * c ≤ C
+      · exact Finset.mem_union_left _ (Finset.mem_union_left _ (Finset.mem_filter.mpr ⟨hc, hc3, hcD⟩))
+      · exact Finset.mem_union_right _ (Finset.mem_filter.mpr ⟨hc, hc3, by omega⟩)
+  · intro hc
+    rcases Finset.mem_union.mp hc with (hinner | hface)
+    · rcases Finset.mem_union.mp hinner with (hbase | himage)
+      · exact (Finset.mem_filter.mp hbase).1
+      · obtain ⟨d, hd, rfl⟩ := Finset.mem_image.mp himage
+        exact three_mul_mem_grid h3K hd
+    · exact (Finset.mem_filter.mp hface).1
+
+theorem paired_disjoint_image (K C : ℕ) :
+    Disjoint (pairedBases K C) ((pairedBases K C).image (fun d => 3 * d)) := by
+  classical
+  apply Finset.disjoint_left.mpr
+  intro c hc hi
+  obtain ⟨d, _, rfl⟩ := Finset.mem_image.mp hi
+  exact (Finset.mem_filter.mp hc).2.1 (dvd_mul_right 3 d)
+
+theorem paired_union_disjoint_face (K C : ℕ) :
+    Disjoint (pairedBases K C ∪ (pairedBases K C).image (fun d => 3 * d))
+      (geometricFaces K C) := by
+  classical
+  apply Finset.disjoint_left.mpr
+  intro c hc hf
+  obtain ⟨_, hc3, hcC⟩ := Finset.mem_filter.mp hf
+  rcases Finset.mem_union.mp hc with (hb | hi)
+  · have hbC := (Finset.mem_filter.mp hb).2.2
+    omega
+  · obtain ⟨d, _, rfl⟩ := Finset.mem_image.mp hi
+    exact hc3 (dvd_mul_right 3 d)
+
+theorem sum_core_grid {K C : ℕ} (h3K : Nat.Coprime 3 K) (f : ℕ → ℝ) :
+    ∑ c ∈ coreGrid K C, f c =
+      (∑ d ∈ pairedBases K C, (f d + f (3 * d))) +
+      ∑ d ∈ geometricFaces K C, f d := by
+  classical
+  rw [core_grid_partition h3K, Finset.sum_union (paired_union_disjoint_face K C),
+    Finset.sum_union (paired_disjoint_image K C), Finset.sum_image]
+  · rw [Finset.sum_add_distrib]
+  · intro x _ y _ hxy
+    omega
+
+noncomputable def bulkCap (Q N p q : ℕ) : ℕ := (N - Q - 1) / (p * q)
+
+theorem three_coprime_mask {N a p q : ℕ} (h3N : Nat.Coprime 3 N)
+    (ha3 : 3 < a) (hp : p.Prime) (hq : q.Prime) (hap : a < p) (hpq : p < q) :
+    Nat.Coprime 3 (N * (p * q)) := by
+  have hp3 := Nat.coprime_of_lt_prime (by norm_num : 0 < (3 : ℕ)) (lt_trans ha3 hap) hp
+  have hq3 := Nat.coprime_of_lt_prime (by norm_num : 0 < (3 : ℕ)) (lt_trans (lt_trans ha3 hap) hpq) hq
+  exact h3N.mul_right (hp3.mul_right hq3)
+
+theorem literal_bulk_front {N Q c p q : ℕ} (hNQ : Q + 1 < N)
+    (hp : p.Prime) (hq : q.Prime) (hc : c ≤ bulkCap Q N p q) :
+    Q < N - c * (p * q) := by
+  have htpos : 0 < p * q := Nat.mul_pos hp.pos hq.pos
+  have hmul := Nat.mul_le_mul_right (p * q) hc
+  have hfloor := Nat.div_mul_le_self (N - Q - 1) (p * q)
+  unfold bulkCap at hmul
+  omega
+
+/-- Finite P1 partition of the actual brackets: geometric faces are retained. -/
+theorem actual_bracket_partition {alpha a N p q : ℕ}
+    (h3N : Nat.Coprime 3 N) (ha3 : 3 < a) (hp : p.Prime) (hq : q.Prime)
+    (hap : a < p) (hpq : p < q) :
+    (∑ c ∈ coreGrid (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+      sourceBracket alpha a N (N - c * (p * q)) (c * (p * q))) =
+    (∑ d ∈ pairedBases (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+      (sourceBracket alpha a N (N - d * (p * q)) (d * (p * q)) +
+       sourceBracket alpha a N (N - (3 * d) * (p * q)) ((3 * d) * (p * q)))) +
+    ∑ d ∈ geometricFaces (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+      sourceBracket alpha a N (N - d * (p * q)) (d * (p * q)) :=
+  sum_core_grid (three_coprime_mask h3N ha3 hp hq hap hpq) _
+
+noncomputable def twinConstant : ℝ :=
+  ∏' p : ℕ, if p.Prime ∧ p ≠ 2 then (1 - 1 / ((p : ℝ) - 1) ^ 2) else 1
+
+noncomputable def singularSeries (N : ℕ) : ℝ :=
+  2 * twinConstant * ∏ p ∈ N.primeFactors.erase 2, ((p : ℝ) - 1) / ((p : ℝ) - 2)
+
+noncomputable def principalTerm (N p q c : ℕ) : ℝ :=
+  (ArithmeticFunction.vonMangoldt c - singularSeries N * mu c) *
+    theta N (N - c * (p * q))
+
+noncomputable def entropyTerm (N p q c : ℕ) : ℝ :=
+  ArithmeticFunction.vonMangoldt c * theta N (N - c * (p * q))
+
+noncomputable def commonTerm (N p q d : ℕ) : ℝ :=
+  mu d * primeIncidence N (N - d * (p * q)) *
+    primeIncidence N (N - (3 * d) * (p * q)) *
+    Real.log (((N - (3 * d) * (p * q) : ℕ) : ℝ) /
+      ((N - d * (p * q) : ℕ) : ℝ))
+
+noncomputable def singletonTerm (N p q d : ℕ) : ℝ :=
+  mu d * ((1 - primeIncidence N (N - d * (p * q))) *
+    primeIncidence N (N - (3 * d) * (p * q)) * Real.log ((N - (3 * d) * (p * q) : ℕ) : ℝ) -
+    primeIncidence N (N - d * (p * q)) *
+    (1 - primeIncidence N (N - (3 * d) * (p * q))) * Real.log ((N - d * (p * q) : ℕ) : ℝ))
+
+theorem principal_pair_split {N p q d : ℕ} (hd3 : ¬ 3 ∣ d)
+    (hn : 0 < N - d * (p * q)) (hn3 : 0 < N - (3 * d) * (p * q)) :
+    principalTerm N p q d + principalTerm N p q (3 * d) =
+      entropyTerm N p q d + entropyTerm N p q (3 * d) +
+      singularSeries N * (commonTerm N p q d + singletonTerm N p q d) := by
+  unfold principalTerm entropyTerm theta commonTerm singletonTerm
+  rw [mu_three_mul hd3, Real.log_div (Nat.cast_ne_zero.mpr (Nat.ne_of_gt hn3))
+    (Nat.cast_ne_zero.mpr (Nat.ne_of_gt hn))]
+  ring
+
+theorem principal_face_split (N p q d : ℕ) :
+    principalTerm N p q d = entropyTerm N p q d -
+      singularSeries N * mu d * theta N (N - d * (p * q)) := by
+  unfold principalTerm entropyTerm
+  ring
+
+/-- P2 for the actual singular series, incidences, entropy and geometric faces.
+    No estimate on the singleton or face sums is assumed. -/
+theorem actual_principal_partition {alpha a N p q : ℕ}
+    (h3N : Nat.Coprime 3 N) (ha3 : 3 < a) (hp : p.Prime) (hq : q.Prime)
+    (hap : a < p) (hpq : p < q) (hNQ : (N - 1) / alpha + 1 < N) :
+    (∑ c ∈ coreGrid (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q), principalTerm N p q c) =
+    (∑ c ∈ coreGrid (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q), entropyTerm N p q c) +
+    singularSeries N *
+      ((∑ d ∈ pairedBases (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q), commonTerm N p q d) +
+       (∑ d ∈ pairedBases (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q), singletonTerm N p q d) -
+       ∑ d ∈ geometricFaces (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+         mu d * theta N (N - d * (p * q))) := by
+  classical
+  have hmask := three_coprime_mask h3N ha3 hp hq hap hpq
+  rw [sum_core_grid hmask (principalTerm N p q), sum_core_grid hmask (entropyTerm N p q)]
+  have hpairs :
+      (∑ d ∈ pairedBases (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+        (principalTerm N p q d + principalTerm N p q (3 * d))) =
+      ∑ d ∈ pairedBases (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+        (entropyTerm N p q d + entropyTerm N p q (3 * d) +
+         singularSeries N * (commonTerm N p q d + singletonTerm N p q d)) := by
+    apply Finset.sum_congr rfl
+    intro d hd
+    obtain ⟨hdX, hd3, hdC⟩ := Finset.mem_filter.mp hd
+    have hdsmall := (Finset.mem_Icc.mp (Finset.mem_filter.mp hdX).1).2
+    have hn := literal_bulk_front hNQ hp hq hdsmall
+    have hn3 := literal_bulk_front hNQ hp hq hdC
+    exact principal_pair_split hd3 (by omega) (by omega)
+  have hfaces :
+      (∑ d ∈ geometricFaces (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q), principalTerm N p q d) =
+      ∑ d ∈ geometricFaces (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+        (entropyTerm N p q d - singularSeries N * mu d * theta N (N - d * (p * q))) := by
+    apply Finset.sum_congr rfl
+    intro d _
+    exact principal_face_split N p q d
+  rw [hpairs, hfaces]
+  simp only [Finset.sum_add_distrib, Finset.sum_sub_distrib, Finset.mul_sum]
+  ring
+
+end GoldbachRound11
+
+#print axioms GoldbachRound11.short_filter_prime_pair
+#print axioms GoldbachRound11.complete_short_prime_pair
+#print axioms GoldbachRound11.prime_pair_arithmetic
+#print axioms GoldbachRound11.actual_source_bracket_j2
+#print axioms GoldbachRound11.mu_three_mul
+#print axioms GoldbachRound11.actual_three_adic_pair
+#print axioms GoldbachRound11.three_mul_mem_grid
+#print axioms GoldbachRound11.core_grid_partition
+#print axioms GoldbachRound11.paired_disjoint_image
+#print axioms GoldbachRound11.paired_union_disjoint_face
+#print axioms GoldbachRound11.sum_core_grid
+#print axioms GoldbachRound11.three_coprime_mask
+#print axioms GoldbachRound11.literal_bulk_front
+#print axioms GoldbachRound11.actual_bracket_partition
+#print axioms GoldbachRound11.principal_pair_split
+#print axioms GoldbachRound11.principal_face_split
+#print axioms GoldbachRound11.actual_principal_partition

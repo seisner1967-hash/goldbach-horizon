@@ -1,0 +1,29 @@
+{
+  "schema": "ROUND22_JUDGE_BATCH03_PASS_ROOT_OBSERVATION",
+  "time_utc": "2026-10-03T11:22:44.850961+00:00",
+  "status": "INDEPENDENT_BATCH03_AUX_PASS",
+  "receipt_sha256": "74959436b372e6dc180b1f5b79e51e17bded56361ba70774695a906dc3f3d4ee",
+  "adjudication_sha256": "118b44ffe66198ccfeaa477f9c57e7d06fb681dbc83a06207cceae79a680df50",
+  "root_FULL_reads": {
+    "receipt_and_log": "90c4ea",
+    "adjudication_completion": "0c028c"
+  },
+  "PRE_POST_scope": "Complete JSON parsed/equality and allbytes checked; no FULL raw display",
+  "new_modules": 1,
+  "new_declarations": 8,
+  "official_modules": 63,
+  "official_declarations": 1057,
+  "includes_definitions": true,
+  "Judge22_PASS_modules": 6,
+  "Judge22_FAIL_modules": 0,
+  "input_count": 6597,
+  "captures": 21,
+  "oldJudge_files": 90,
+  "archives": 3089,
+  "paid_statement": "1 <= Re(s) <= 2 implies norm(deriv Complex.Gamma s) <= 19*exp(-(pi/4)*abs(Im(s)))",
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

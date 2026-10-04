@@ -1,0 +1,58 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH02_AUTHORIZATION",
+  "created_utc": "2026-10-03T09:10:45.845475+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch02_attempt01",
+  "modules": [
+    "EpsteinUnfold22",
+    "EpsteinTail22",
+    "GammaPrerequisites22"
+  ],
+  "compiler_invocations_maximum": 3,
+  "source_manifest_sha256": "c0a2ef8b8ce38fc2781924d6cdc776177a3b3b4dac121bb1d13a1f01158d04dd",
+  "launcher_sha256": "12d14af404639024c0bcc62e6bde114710885997c51511f1694e7579c8beb513",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "numeric_banks": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\actual_epstein22\\epstein_result22.json",
+      "sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+      "status": "EPSTEIN_UNFOLDING_AUX_PASS",
+      "case_count": 24,
+      "read_scope": "PARSED_STATUS_PROJECTION_NOT_FULL_RAW_DISPLAY",
+      "projection_chunk": "be2975"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\actual_gamma22\\gamma_result22.json",
+      "sha256": "595b15340efe03bd215eebe7f6d526cd1f2f5d07865f074a3b7927687beb967a",
+      "status": "GAMMA_ROTATED_LAPLACE_AUX_PASS",
+      "case_count": 21,
+      "read_scope": "PARSED_STATUS_PROJECTION_NOT_FULL_RAW_DISPLAY",
+      "projection_chunk": "8e1a7a"
+    }
+  ],
+  "numeric_banks_verified": true,
+  "readonly_batch01_dependency_directory": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch01_attempt01",
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "inputs_verified": 7214,
+  "protected_archive_paths_verified": 3089,
+  "readonly_batch01_files_verified": 35,
+  "root_FULL_reads": {
+    "launcher": "5a3bb5",
+    "builder": "2d66a4",
+    "catalog": "810621",
+    "reads_and_batch01_bindings": "773c55",
+    "prepared_receipt_and_preparation": "bffa60",
+    "author_Unfold": "976498 actual log and receipt; source prior 8fdf92",
+    "author_Tail": "b2b8ef source; 71ee95 actual receipt and log",
+    "author_Gamma": "aa39bb source; 3bfaf7 actual receipt and log"
+  },
+  "manifest_scope": "Complete JSON parsed and all 7214 input hashes checked; header projection only, no FULL raw display claim.",
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

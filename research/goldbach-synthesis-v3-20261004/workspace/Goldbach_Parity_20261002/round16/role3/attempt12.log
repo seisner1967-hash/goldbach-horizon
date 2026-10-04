@@ -1,0 +1,36 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:407:2: error: 'change' tactic failed, pattern
+  Nat.Prime (Nat.find ⋯) ∧ Nat.find ⋯ ≠ 2 ∧ ¬Nat.find ⋯ ∣ N ∧ ∀ (l : ℕ), Nat.Prime l → l < Nat.find ⋯ → l ∣ N
+is not definitionally equal to target
+  Nat.Prime (leastMissingOddPrime N) ∧
+    leastMissingOddPrime N ≠ 2 ∧
+      ¬leastMissingOddPrime N ∣ N ∧ ∀ (l : ℕ), Nat.Prime l → l < leastMissingOddPrime N → l ∣ N
+'GoldbachRound16.Anchor.real_prod_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.real_multipliable_of_unit_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.harmonic_le_eulerPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.real_prod_reverse_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_factor_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tail_finite_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tailFactor_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tail_infinite_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.localMultiplier_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.prefixFactor_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.cancellation_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twin_prefix_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.eulerPrefix_eq_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.localFactor_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_forced_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_euler_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_harmonic_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.small_prime_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.least_missing_prime_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.exists_missing_odd_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.leastMissingOddPrime_spec' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.canonical_least_missing_prime_margin' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

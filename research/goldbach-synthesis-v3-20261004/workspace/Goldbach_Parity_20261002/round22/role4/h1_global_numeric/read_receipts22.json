@@ -1,0 +1,138 @@
+{
+  "schema": "ROLE4_GLOBAL_H1_TEXT_READ_RECEIPTS_22",
+  "manifest_sha256": "e1caa3d115dd492cfa6d91478240b0e8418614b6faf8798f48e15312dfe11a51",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\transport_catalogue_source22.py",
+      "module_alias": "transport_catalogue_source22",
+      "role": "new_runtime_source",
+      "sha256": "2fd2937811e5627746bb9e4a6bdcf9564073ef8ce4abf8b846e7a2aa1ee46bc8",
+      "bytes": 4946,
+      "read_scope": "FULL 7b2a74"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\envelopes_source22.py",
+      "module_alias": "envelopes_source22",
+      "role": "new_runtime_source",
+      "sha256": "f988d3edbcd28ce40698515f2e608d67a2615ab6bf777e4daf42f0820e8d5e67",
+      "bytes": 1558,
+      "read_scope": "FULL 7b2a74"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\arithmetic_catalogue_source22.py",
+      "module_alias": "arithmetic_catalogue_source22",
+      "role": "new_runtime_source",
+      "sha256": "ce60c65700fe4a3aa476a056769afd735b9296f8bc13df3223a89ff1c82874b7",
+      "bytes": 7493,
+      "read_scope": "FULL 7b2a74"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\producer_source22.py",
+      "module_alias": "producer_source22",
+      "role": "new_runtime_source",
+      "sha256": "e47dfc7c5ca55c23c47dfd373a32b04603dac85017ec97fe5b8421463b8a2407",
+      "bytes": 12072,
+      "read_scope": "FULL 103732"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\structural_checker_source22.py",
+      "module_alias": "structural_checker_source22",
+      "role": "new_runtime_source",
+      "sha256": "b2e9e36927b850b1f861e59cacb580bc06643a0247320f600c372e4d9aee7f7e",
+      "bytes": 14587,
+      "read_scope": "FULL 78867c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\global_h1_source22\\unit_transport_source22.py",
+      "module_alias": "unit_transport_source22",
+      "role": "readonly_runtime_source_primal_only",
+      "sha256": "c44fc225a52ef58424b73685853054fe65ee57f81d0c58ad5b1b8618e6a0b2d8",
+      "bytes": 5692,
+      "read_scope": "FULL a3a587"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\dyadic_r01.py",
+      "module_alias": "dyadic_r01",
+      "role": "readonly_runtime_source",
+      "sha256": "290d0e708bf30f7cd418a1dc006adcc8c89e9dd1893687ba5d832180f27c6a17",
+      "bytes": 14675,
+      "read_scope": "FULL b33e6b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\analytic_r01.py",
+      "module_alias": "analytic_r01",
+      "role": "readonly_runtime_source",
+      "sha256": "a00fc6f520a82e8c86d6fbe7964c5e47cf62fe2f863543947071b870781f3f77",
+      "bytes": 8644,
+      "read_scope": "FULL b33e6b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\kernel_r01.py",
+      "module_alias": "kernel_r01",
+      "role": "readonly_runtime_source",
+      "sha256": "03a55736742d73df0c7e048ed1311184513749899978163243504a03dc4c8bb5",
+      "bytes": 7055,
+      "read_scope": "FULL 1075a3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\global_h1_source22\\arithmetic_source22.py",
+      "module_alias": null,
+      "role": "readonly_provenance_old_source",
+      "sha256": "4677ff39c979386d4e595175dcfa72cd1bdf93a9e5307af3261322a4fa9c6a68",
+      "bytes": 7040,
+      "read_scope": "FULL a3a587"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\numeric_precontract22.md",
+      "module_alias": null,
+      "role": "fixed_paper_contract",
+      "sha256": "02cba2d0b3478b5fe3bddb46c1df0862a7c6287452f19892b7cec8ba100db05b",
+      "bytes": 9467,
+      "read_scope": "FULL numeric text27a4bf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\contour_precritique22\\precritique_report22.md",
+      "module_alias": null,
+      "role": "readonly_paper_review",
+      "sha256": "00c2484f8479fef2ca3104ba61fce542697b1596639805ffe7677a796d711048",
+      "bytes": 16828,
+      "read_scope": "FULL 8d46f8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\contour_precritique22\\evaluator_requirements22.md",
+      "module_alias": null,
+      "role": "readonly_paper_requirements",
+      "sha256": "57f5cbe28c5e26ba115070c94c0ea9dafd67eb3cf8e491ef861e279634c12f23",
+      "bytes": 14378,
+      "read_scope": "FULL 01a14e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\source_contract22.md",
+      "module_alias": null,
+      "role": "new_scope_contract",
+      "sha256": "cea359055df1966ece11887305856bed46c24bb6de62f1a052d2e54c0e7d6cec",
+      "bytes": 8509,
+      "read_scope": "FULL 0adda9"
+    }
+  ],
+  "scope": "FULL text reads of listed14 inputs; source byte hashes and sizes only, no activation or numeric evaluation",
+  "limitations": [
+    "Aggregate27a4bf precritique was truncated; replaced by FULL8d46f8. Numeric precontract text in27a4bf was complete.",
+    "First component analytic read b3f6aa used a nonexistent filename; no FULL credit. Corrected by b33e6b.",
+    "No Python AST/parse/import/compile, no Lean, no bank invocation.",
+    "No runtime import closure verification by Python or byte-bound launcher exists yet.",
+    "No old output/result value was read as oracle."
+  ],
+  "independent_subreview": {
+    "scope": "old two source modules and paper only",
+    "status": "CLOSED_SOURCE_ONLY",
+    "findings": "EM mismatch; primal correct; independent stream checker integration and width/tails missing; degree8 and combined4 documented",
+    "agent": "/root/round22_formal4_trace/global_numeric_audit"
+  },
+  "old_new": {
+    "new_EM_transport_sha256": "2fd2937811e5627746bb9e4a6bdcf9564073ef8ce4abf8b846e7a2aa1ee46bc8",
+    "new_arithmetic_sha256": "ce60c65700fe4a3aa476a056769afd735b9296f8bc13df3223a89ff1c82874b7",
+    "old_arithmetic_sha256": "4677ff39c979386d4e595175dcfa72cd1bdf93a9e5307af3261322a4fa9c6a68",
+    "old_transport_sha256": "c44fc225a52ef58424b73685853054fe65ee57f81d0c58ad5b1b8618e6a0b2d8"
+  }
+}

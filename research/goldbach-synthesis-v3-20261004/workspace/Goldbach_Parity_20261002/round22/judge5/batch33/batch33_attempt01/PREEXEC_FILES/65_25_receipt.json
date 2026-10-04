@@ -1,0 +1,243 @@
+{
+  "C3_paid": false,
+  "C5_paid": false,
+  "C6_paid": false,
+  "D_N_paid": false,
+  "H1_paid": false,
+  "actual_child_invocations": 1,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "attempt": "batch19_attempt01",
+  "author_olean_used": false,
+  "capture_count": 29,
+  "closed_judge_file_count": 1159,
+  "declarations_passed": 24,
+  "global_trace_certified": false,
+  "hidden_retries": false,
+  "input_count": 8262,
+  "modules_passed": 1,
+  "numeric_PASS_used_as_proof": false,
+  "numeric_bank_replayed": false,
+  "old_batches_recompiled": false,
+  "protected_archive_count": 3089,
+  "readonly_local_dependencies": [
+    "QuantizedLambdaEnvelope22",
+    "RationalLogQuantization22"
+  ],
+  "rows": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldCharacter"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.sum_fieldCharacter"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.signed_divides_iff_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.sum_fieldCharacter_no_alias"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.rectangle_frequency_bounds"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.sum_rectangle_character"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldCharacter_pair"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldTerm"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldPolynomial"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldProjection"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldTerm_pair"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.normalized_field_pair"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldPolynomial_square_expansion"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldProjection_eq_rectangle"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.rectangle_filter_antidiagonal"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldProjection_eq_antidiagonal"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldProjection_eq_sum"
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldCharacter_nat"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fieldPolynomial_eq_standardDFT"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.standardDFT_projection_eq_sum"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.zmod_size_ne_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.zmod_integer_projection"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.zmod_canonical_A32_projection"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachFiniteFieldProjection22.fixed_A32_projection"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\batch19_attempt01\\FiniteFieldProjection22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\sources\\FiniteFieldProjection22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T19:48:17.695790+00:00",
+      "launch_error": null,
+      "log_sha256": "90fabd8096c829079701138eb43c2acfecf37cea2a30d09a57acf2e5217e078e",
+      "module": "FiniteFieldProjection22",
+      "olean_sha256": "0304400125a93cfddace45bcc4428d835c8ee204817f88f156e9fd44ee856f4f",
+      "source_prior_status": "SOURCE_ONLY_NOT_COMPILED",
+      "source_sha256": "2b1cc267ce780a6a45c039f4b4b82d5a4ad4541fa224d76413dec5432658a48a",
+      "started_at": "2026-10-03T19:48:01.750371+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    }
+  ],
+  "status": "INDEPENDENT_BATCH19_AUX_PASS",
+  "time_utc": "2026-10-03T19:48:28.179482+00:00",
+  "victory": false
+}

@@ -1,0 +1,29 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:116:52: error: type mismatch
+  le_sup hi
+has type
+  ?m.110166 i ≤ s.sup ?m.110166 : Prop
+but is expected to have type
+  i ≤ s.sup id : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:119:66: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:119:16: error: unsolved goals
+k : ℕ
+hk : 2 ≤ k
+s : Finset ℕ
+hs : ∀ i ∈ s, k ≤ i
+T : ℕ := k ⊔ s.sup id + 1
+hkT : k ≤ T
+hsub : s ⊆ Ico k T
+i : ℕ
+x✝ : i ∈ Ico k T
+h : 0 ≤ 1 / ↑i ^ 2
+⊢ (fun i => 1 - 1 / ↑i ^ 2) i ≤ 1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:177:4: error: type mismatch, term
+  htel
+after simplification has type
+  (↑p - 1 - 1) / (↑p - 1) ≤ ∏ l ∈ s, twinFactor l : Prop
+but is expected to have type
+  (↑p - 2) / (↑p - 1) ≤ ∏ l ∈ s, twinFactor l : Prop
+'GoldbachRound16.Anchor.harmonic_le_eulerPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tail_finite_lower' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

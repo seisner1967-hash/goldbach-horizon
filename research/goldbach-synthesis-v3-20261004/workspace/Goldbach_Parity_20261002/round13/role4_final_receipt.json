@@ -1,0 +1,567 @@
+{
+  "status": "COMPILED_ACTUAL_KERNEL_FINITE_VARIATION_WITH_WRITTEN_POWER_PAYMENT",
+  "compiler": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+  "compiler_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "compiler_version": "Lean (version 4.15.0, x86_64-w64-windows-gnu, commit 11651562caae, Release)",
+  "lean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean",
+  "source_sha256": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+  "module_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\HarmonicKernelVariation.olean",
+  "module_olean_sha256": "1e5b7ec6ec7e3d4dbcc43baf083dfe8bff74eaff0ed90fd151597f1e343ebc3b",
+  "sha256": {
+    "lean\\HarmonicKernelVariation.lean": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+    "role4\\build.py": "1d0244754c50b81148b90654017354181cff2c15ec80c1ed8ec821a3db44cbb6",
+    "role4\\finalize.py": "ee77317949265af74ca7f57d96c19f2fe57287fbbaa003fba29452b676b84647",
+    "role4\\attempts.json": "646a82c392a9e877a9ef69f8b41f6aa28c5f075ea332fdd53c646046cc653798",
+    "role4\\HarmonicKernelVariation.olean": "1e5b7ec6ec7e3d4dbcc43baf083dfe8bff74eaff0ed90fd151597f1e343ebc3b",
+    "role4\\dependencies\\DependencyAudit.lean": "97f4d5704fa0987088402db5f1e5ebc54cf7a492f0edeb012219cf6c59c8a52a",
+    "role4\\dependencies\\DependencyAudit.olean": "6df329f5fcc69e84bbc6b0c464a33bf8b46c34c33a135c4ee7cd37d7297712e0",
+    "role4\\dependency_axioms.log": "2fd3e8ec10d9e5de6be94c1ccc5a9042bbde7e074ae1373441ca79032e2bf723",
+    "role4\\dependencies\\ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "role4\\dependencies\\ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+    "role4\\ShortDivisorComplement_fresh.log": "88f1a49cd9ed0ee0159a87b3d7e8e3d024a8ccb4c95dfb2e5b552d541f227bf3",
+    "role4\\dependencies\\ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+    "role4\\dependencies\\ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+    "role4\\ThreeAdicPrimePairing_fresh.log": "fb630c246c30538e6375b952f4d3ff0da0caa4af47b1cd5df6a6ae96f9cce6e5",
+    "role4\\attempt01_source.lean": "521e1f03ca3ad5d1079cfdcc6614768b2d2710248c6dd01b7a2870c7d38ae804",
+    "role4\\attempt01.log": "74fcf3102b4c556614daa4e53563e3944b1afafe6123e25155365efa6f887080",
+    "role4\\attempt02_source.lean": "73683da9ca93d58c6842a2b3a433edda73c075ff53a43352d4fb7a34d3a882b7",
+    "role4\\attempt02.log": "21d8b004b7101a934afe3f2e94c0d0169dc59093ed5d02d0094eedf14b2f6028",
+    "role4\\attempt03_source.lean": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+    "role4\\attempt03.log": "5229efccdd84fc28d2dca52d9224ddbd5f191f42b26fb868f2c797d7f7aa5b3c"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-02T15:55:54.723497+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\HarmonicKernelVariation.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean"
+      ],
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean",
+      "source_sha256": "521e1f03ca3ad5d1079cfdcc6614768b2d2710248c6dd01b7a2870c7d38ae804",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt01_source.lean",
+      "snapshot_sha256": "521e1f03ca3ad5d1079cfdcc6614768b2d2710248c6dd01b7a2870c7d38ae804",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt01.log",
+      "log_sha256": "74fcf3102b4c556614daa4e53563e3944b1afafe6123e25155365efa6f887080",
+      "exit_code": 1
+    },
+    {
+      "attempt": 2,
+      "timestamp_utc": "2026-10-02T15:57:16.372550+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\HarmonicKernelVariation.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean"
+      ],
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean",
+      "source_sha256": "73683da9ca93d58c6842a2b3a433edda73c075ff53a43352d4fb7a34d3a882b7",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt02_source.lean",
+      "snapshot_sha256": "73683da9ca93d58c6842a2b3a433edda73c075ff53a43352d4fb7a34d3a882b7",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt02.log",
+      "log_sha256": "21d8b004b7101a934afe3f2e94c0d0169dc59093ed5d02d0094eedf14b2f6028",
+      "exit_code": 0
+    },
+    {
+      "attempt": 3,
+      "timestamp_utc": "2026-10-02T15:58:33.356247+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\HarmonicKernelVariation.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean"
+      ],
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean",
+      "source_sha256": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt03_source.lean",
+      "snapshot_sha256": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt03.log",
+      "log_sha256": "5229efccdd84fc28d2dca52d9224ddbd5f191f42b26fb868f2c797d7f7aa5b3c",
+      "exit_code": 0
+    }
+  ],
+  "dependencies": [
+    {
+      "origin": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\ShortDivisorComplement.lean",
+      "origin_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.lean",
+      "copy_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.olean",
+      "olean_sha256": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\ShortDivisorComplement_fresh.log",
+      "log_sha256": "88f1a49cd9ed0ee0159a87b3d7e8e3d024a8ccb4c95dfb2e5b552d541f227bf3",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.lean"
+      ],
+      "exit_code": 0,
+      "fresh_from_source": true,
+      "old_olean_used": false
+    },
+    {
+      "origin": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\ThreeAdicPrimePairing.lean",
+      "origin_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+      "copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.lean",
+      "copy_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.olean",
+      "olean_sha256": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\ThreeAdicPrimePairing_fresh.log",
+      "log_sha256": "fb630c246c30538e6375b952f4d3ff0da0caa4af47b1cd5df6a6ae96f9cce6e5",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.lean"
+      ],
+      "exit_code": 0,
+      "fresh_from_source": true,
+      "old_olean_used": false
+    }
+  ],
+  "actual_failed_attempts": [
+    {
+      "attempt": 1,
+      "timestamp_utc": "2026-10-02T15:55:54.723497+00:00",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\HarmonicKernelVariation.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean"
+      ],
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\lean\\HarmonicKernelVariation.lean",
+      "source_sha256": "521e1f03ca3ad5d1079cfdcc6614768b2d2710248c6dd01b7a2870c7d38ae804",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt01_source.lean",
+      "snapshot_sha256": "521e1f03ca3ad5d1079cfdcc6614768b2d2710248c6dd01b7a2870c7d38ae804",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\attempt01.log",
+      "log_sha256": "74fcf3102b4c556614daa4e53563e3944b1afafe6123e25155365efa6f887080",
+      "exit_code": 1
+    }
+  ],
+  "new_theorem_count": 16,
+  "new_definition_count": 5,
+  "new_axioms": {
+    "GoldbachRound13.HarmonicKernelVariation.unitCoefficient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.unitPrefix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.unitLogPrefix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.unitLogTail": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.sourceFront": [],
+    "GoldbachRound13.HarmonicKernelVariation.prime_above_cap_units": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.strict_front_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.front_filter_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.actual_kernel_eq_prefix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.source_front_mono": [
+      "propext"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.source_cap_inactive": [
+      "propext"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.interval_split": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.interval_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.prefix_split": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.logarithm_change": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.prefix_log_change": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.actual_kernel_variation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.coefficient_abs_le_reciprocal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.prefix_abs_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.tail_abs_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound13.HarmonicKernelVariation.actual_kernel_abs_variation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "old_dependency_counts": {
+    "ShortDivisorComplement.lean": {
+      "theorems": 17,
+      "definitions": 5,
+      "recounted_as_new": false
+    },
+    "ThreeAdicPrimePairing.lean": {
+      "theorems": 19,
+      "definitions": 15,
+      "recounted_as_new": false
+    }
+  },
+  "old_dependency_axioms": {
+    "GoldbachRound10.ShortDivisorComplement.mu": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.cappedDivisorKernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.shortDivisorSum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.longDivisorSum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.mu_mul_of_coprime": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.mu_square_of_squarefree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.mu_zero_of_not_squarefree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.quotient_coprime": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.complementary_moebius": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.logarithm_complement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.strict_front_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.active_divisor_below_cap": [
+      "propext",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.whole_coefficient_eq_long_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.short_plus_long": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.short_divisor_complement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.source_cap": [
+      "propext",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.short_divisor_complement_source": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.physical_divisor_units": [
+      "propext"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.physical_kernel_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.physical_short_divisor_complement_source": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound10.ShortDivisorComplement.at_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.harmonicKernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.primeIncidence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.theta": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.sourceBracket": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.short_filter_prime_pair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.complete_short_prime_pair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.prime_pair_arithmetic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.actual_source_bracket_j2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.mu_three_mul": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.actual_three_adic_pair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.coreGrid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.pairedBases": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.geometricFaces": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.three_mul_mem_grid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.core_grid_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.paired_disjoint_image": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.paired_union_disjoint_face": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.sum_core_grid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.bulkCap": [],
+    "GoldbachRound11.three_coprime_mask": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.literal_bulk_front": [
+      "propext",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.bulk_cap_le_front": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.actual_bracket_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.pairedSourceExpression": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.actual_p1_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.twinConstant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.singularSeries": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.principalTerm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.entropyTerm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.commonTerm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.singletonTerm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.principal_pair_split": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.principal_face_split": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound11.actual_principal_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "dependency_audit_command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\DependencyAudit.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\DependencyAudit.lean"
+  ],
+  "dependency_audit_exit_code": 0,
+  "quantitative_finite_variation_compiled": true,
+  "phi_square_half_written_only": true,
+  "power_decay_21_written_only": true,
+  "total_switch_cost_written_only": true,
+  "source_onset_written_only": "log N >= 10^24",
+  "global_compensation_proved": false,
+  "conservation": {
+    "status": "PRESERVED",
+    "previous_files": 514,
+    "registry_sha256": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "numeric_manifest_sha256": "c8468f94a118555c842a47879772620bf9dca9d520a6b89cec54f2895a38f932",
+    "all_11_numeric_bindings_unchanged": true,
+    "agent1_sha256": "2b64a5434c1dfde766436d5abd44b62a2714615992193a3f0e21bf90554d8c54",
+    "agent2_sha256": "91946283d4ca1f5021de670b16167e0a0714d0945104d30c4070ca9a26bc9c46",
+    "original_pdf_zip_preserved": true
+  },
+  "old_olean_used": false,
+  "old_PASS_replayed": false,
+  "Lean_called": true,
+  "score": 0,
+  "victory": false,
+  "unresolved": [
+    "Global capacity/coverage of matched parents",
+    "J0 and J1 remainder",
+    "unmatched J2, singles/faces/H2",
+    "bilateral c1/reference/long complement",
+    "effective BV physical-band onset",
+    "covered e"
+  ]
+}

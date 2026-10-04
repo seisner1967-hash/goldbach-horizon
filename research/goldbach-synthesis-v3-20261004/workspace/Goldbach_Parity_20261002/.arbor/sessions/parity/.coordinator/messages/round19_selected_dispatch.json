@@ -1,0 +1,35 @@
+{
+  "status": "ROUND19_TWO_SELECTED_ACTUAL_DISPATCHES",
+  "observed_utc": "2026-10-02T23:51:46.097557+00:00",
+  "current_nodes": [
+    "13.11",
+    "14.4"
+  ],
+  "roles": [
+    {
+      "role": 3,
+      "agent": "/root/round19_formal3_rank",
+      "status": "actual_fresh_spawn_confirmed_writing_only_waits_numeric_gate"
+    },
+    {
+      "role": 4,
+      "agent": "/root/round19_formal4_nonss",
+      "status": "actual_fresh_spawn_writing_only_waits_numeric_gate"
+    },
+    {
+      "role": 6,
+      "agent": "/root/round18_content_review",
+      "status": "actual_followup_confirmed_two_new_sources_preparation_only"
+    }
+  ],
+  "concurrency_limit": 4,
+  "six_logical_roles_in_waves": true,
+  "independent_judge_not_dispatched": true,
+  "new_numerical_producers_launched": 0,
+  "Lean_invocations": 0,
+  "victory": false,
+  "completed_ideation_handles": [
+    "/root/round19_weighted_aggregate_ideation",
+    "/root/round19_nonss_ideation"
+  ]
+}

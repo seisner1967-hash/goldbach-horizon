@@ -1,0 +1,33 @@
+{
+  "status": "ROOT_INSPECTED_AUTHOR_PRICE18_PASS05_JUDGE_PENDING",
+  "actual_attempts": [
+    {
+      "attempt": 4,
+      "exit_code": 1,
+      "source_snapshot_sha256": "836153be4a34a0d48c1971981e45eebe0a4b692d5d4a687fdebffd67d88333cd",
+      "log_sha256": "6d6537ecd4a62d531f3dc1936c794f1dfcaa6254b77ae72f257f07dff138f9a3",
+      "errors": 1,
+      "warnings": 1,
+      "failed_log_generated_sorryAx": true
+    },
+    {
+      "attempt": 5,
+      "exit_code": 0,
+      "source_snapshot_sha256": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+      "log_sha256": "20397c8768d81ceb564affcf0dd19438013f421c7e37459ce2b8e171d5d57bdd",
+      "errors": 0,
+      "warnings": 0,
+      "failed_log_generated_sorryAx": false
+    }
+  ],
+  "declarations": {
+    "theorem": 11,
+    "def": 3
+  },
+  "standard_axiom_prints": 14,
+  "mathematical_content": "real weighted product sums and inverse reindexing; full II calibration price, distinct raw/theta difference, actual factorized-product theta zero under independent candidate front",
+  "Gamma_or_global_D_N_estimated": false,
+  "independent_judge_completed": false,
+  "root_reran_Lean_or_producer_or_audit": false,
+  "victory": false
+}

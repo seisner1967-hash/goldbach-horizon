@@ -1,0 +1,63 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.Gamma_shift_arguments_re_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.sin_half_pi_ne_zero_on_left_strip"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.Gamma_shift_reflection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.deriv_Gamma_shift_reflection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaPsi_shift_reflection"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\batch08_attempt01\\GammaPsiReflection22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\sources\\GammaPsiReflection22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-03T14:09:30.414829+00:00",
+  "launch_error": null,
+  "log_sha256": "bff00f7ca0a076411d2c1dc7e5a919d65a51421ba2435988581b90a7b4c1a740",
+  "module": "GammaPsiReflection22",
+  "olean_sha256": "3e4608ac5ff8728fb438e536175ae0b6167f6c2cbcb449dbde9ef7dac2499e8b",
+  "source_prior_status": "SOURCE_NOT_COMPILED_REVISION_DISTINCT_FROM_BATCH07_FAIL",
+  "source_sha256": "a931bbceb530fbbf179d2223972f46405a80f74c2a139d84a671ce741f3f1ff2",
+  "started_at": "2026-10-03T14:09:10.314096+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

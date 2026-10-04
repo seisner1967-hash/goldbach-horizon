@@ -1,0 +1,105 @@
+{
+  "schema": "ROUND22_PARAMETER_GUARD01_REVISION02_ROLE6_READ_RECEIPTS",
+  "actor": "ROLE6",
+  "source_author": "ROLE4",
+  "independent_reviewer": "ROLE5",
+  "status": "READ_ONLY_PREFLIGHT_COMPLETE_WAITING_ROOT_GATE",
+  "reads": [
+    {
+      "sha256": "3cf9b27e50aa196aacd9e78f6093c2f6741f75af21414206b9b0bdf1c5684396",
+      "scope": "FULL",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\parameter_guard22.py",
+      "tool_receipts": [
+        "ef2333"
+      ]
+    },
+    {
+      "sha256": "006eef92385fde900c14338a5f40de147697f811e47b204262dc28ac8eb39524",
+      "scope": "FULL",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\run_parameter_guard_once22.py",
+      "tool_receipts": [
+        "ef2333"
+      ]
+    },
+    {
+      "sha256": "a9366f53f0939a0d3e6bae1b54766027cddb01a17e8b268494f5452c08dc50ff",
+      "scope": "FULL",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\contract22.md",
+      "tool_receipts": [
+        "ef2333"
+      ]
+    },
+    {
+      "sha256": "f10fc82a11d5120bbdb218d1c23eb8b5d96f95ae330506155246452078e6e506",
+      "scope": "FULL",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\preparation22.json",
+      "tool_receipts": [
+        "7a84a9"
+      ]
+    },
+    {
+      "sha256": "387dac89477c15d0585eeb4623c266a5084f1a13e3017852da7f05019b8f20e5",
+      "scope": "FULL",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\read_receipts22.json",
+      "tool_receipts": [
+        "7a84a9"
+      ]
+    },
+    {
+      "sha256": "142d23320cd8e9507afd30d42415a86611b098d84d08c1b2267d6829e9892326",
+      "scope": "FULL",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\repair_note22.md",
+      "tool_receipts": [
+        "bd7384"
+      ]
+    },
+    {
+      "sha256": "a849df7b32dfe05a495a32bd989a200fac4d93b2703e57231bda381a4a6ba33a",
+      "scope": "HEADER_PROJECTION_AND_PARSED_METADATA_ALL_BYTE_HASH",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01_revision02\\prepared_manifest22.json",
+      "tool_receipts": [
+        "7a84a9",
+        "bd7384",
+        "0baeb4"
+      ]
+    },
+    {
+      "sha256": "50240b80c6daad2af675ebaf87bef546c59190bc2b57e94e048576818cb1d269",
+      "scope": "FULL",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\parameter_guard_source_review_revision02.md",
+      "tool_receipts": [
+        "7a84a9"
+      ]
+    },
+    {
+      "sha256": "80718ee9c1306a974554a70322ad36648897216890f6747ed2ddede840421d98",
+      "scope": "PRIOR_FULL_DD3D34_CURRENT_HASH_VERIFIED_NO_RELOAD",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\fixed_parameter_log_model22.py",
+      "tool_receipts": [
+        "dd3d34",
+        "0baeb4"
+      ]
+    }
+  ],
+  "preflight_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\parameter_guard01_revision02_execution\\preflight_metadata22.json",
+  "preflight_sha256": "fc90efb0f18f9373853f928d97e0880a320f1b1b34c18f0bf1965132190d639c",
+  "binding_count": 1005,
+  "runtime_count": 972,
+  "archive_count": 3089,
+  "old998_preserved": true,
+  "old_role6_preflight_preserved": true,
+  "manifest_raw_full_read": false,
+  "post_original_gap_closed_source_review": true,
+  "preparation_created_by_role6": false,
+  "gate_created_by_role6": false,
+  "model_loaded_by_role6": false,
+  "math_parser_runs": 0,
+  "new_children": 0,
+  "Lean_invocations": 0,
+  "native_builds": 0,
+  "runtime_authorization": false,
+  "NTT": false,
+  "coefficient_N": false,
+  "D_N": false,
+  "WIN": false
+}

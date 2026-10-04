@@ -1,0 +1,65 @@
+pole of ζimply
+∫ ∞
+1 AK(t)dt/t =HK(0). For even K, this value is S(K); for odd K it is zero.
+The integral giving ( 52) is veriﬁed by Q4 −Q′
+4 =zP3. The real phase is
+∑
+r≤R
+aK(r) log(r/m ) = WK(R) + log(R/m )AK(R). (53)
+Thus the endpoint term must be retained. An empty R = 0 preﬁx is zero and has no limiting
+main term.
+UsingP3(z) ≤ 16z3,Q4(z) ≤ 155z4,c< 34,w< 6, ( 50) implies the useful explicit envelope
+u{|WK(R) +HK(0)| +u|AK(R)|} ≤ 4 · 108u5e−
+√
+u/ 60 + 160u2e−u/ 40 (54)
+when K ≤N 3, R ≥N 1/ 5 and u ≥ 106. Indeed, the head has z ≥
+√
+u/ 60 and the half-moment
+tail has exponent 12√u −u/ 20 ≤ −u/ 40. These statements use the actual quotient arguments
+and do not invoke an asymptotic notation with an unevaluated constant.
+12.3 The ﬁnite model and the signed conductor projection
+WriteT =X −V and
+CB = −
+∑
+q
+wB(q)
+φ(q) , R main = S(N )N −TCB.
+Forp ∤N put ap = 1/ [p(p − 1)]. Completing the b sum ﬁrst, at each ﬁxed square-free d, gives
+a Dirichlet series
+F1(s) =
+∏
+p∤N
+(1 −ap −p−1−s) = H1(s)
+ζ(1 +s), ℜs> 0.
+For an odd square-free conductor r coprime to N , forcing r | [b2,d ] changes the local factor at
+p |r to −ap −p−1−s. Hence
+Fr(s) =
+∏
+p∤Nr
+(1 −ap −p−1−s)
+∏
+p|r
+(−ap −p−1−s) = Hr(s)
+ζ(1 +s).
+The quotient of the changed and unchanged factors at s = 0 is −1/ (p − 2). Consequently
+Hr(0) = S(N )κ(r), κ (r) = µ(r)∏
+p|r(p − 2). (55)
+Thisκis signed. It diﬀers from the positive coeﬃcient g in the Type-I divisor expansion below.
+The coeﬃcients of Hr have local factors
+p |N : (1 −z/p )−1,
+p ∤Nr : 1 −ap −ap
+∑
+j≥1zj/p j,
+p |r : −ap − (1 +ap) ∑
+j≥1zj/p j,
+z =p−s.
+Their coeﬃcient at 1 is not generally 1. The unmasked absolute zeroth-moment factors are at
+most 1, and the forced factor is p/ (p − 1)2 ≤ 1 forp ≥ 3. Their half-moment factors are at most
+1 forp ≥ 5, since p(1 −ap)2 ≥ 5(19/ 20)2> 4; the factor at 3 is less than 2. Thus, uniformly in
+r, ∑
+|hr(d)| ≤ 1 + 2u,
+∑ √
+d|hr(d)| ≤ 2e12√u.
+This gives a conductor-uniform harmonic transport; it does not assert that the singular projec-
+tion itself is zero.
+27

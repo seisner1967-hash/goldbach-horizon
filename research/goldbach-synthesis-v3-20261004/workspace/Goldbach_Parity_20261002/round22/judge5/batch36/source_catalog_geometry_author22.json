@@ -1,0 +1,143 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_CIRCLE_GEOMETRY_SOURCE_CATALOG",
+  "status": "SOURCE_ONLY_FROZEN_FOR_REVIEW_NOT_ELABORATED_NOT_PREPARED",
+  "module": "ComplexGammaCircleGeometry22",
+  "source": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_circle_geometry_source01/ComplexGammaCircleGeometry22.lean",
+  "source_sha256": "2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5",
+  "counts": {
+    "modules": 1,
+    "declarations": 25,
+    "theorems": 22,
+    "definitions": 3,
+    "qualified_print_axioms": 25,
+    "scope": "MANUAL_FULL_SOURCE_INSPECTION_NO_CANDIDATE_PARSER"
+  },
+  "declarations": [
+    {
+      "kind": "definition",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint"
+    },
+    {
+      "kind": "definition",
+      "name": "GoldbachComplexGammaMellin22.circleMellinRadius"
+    },
+    {
+      "kind": "definition",
+      "name": "GoldbachComplexGammaMellin22.circleDecayFloor"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_re"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_im"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_ne_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_mem_slitPlane"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_norm_eq_radius"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_norm_sq"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_norm_pos"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_abs_theta_le_norm"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinRadius_pos"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_arg"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_abs_arg"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_sin_abs_arg"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinPoint_rotation_cos_sq"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.kernelCoefficient_circle_eq_norm"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.kernelCoefficient_circle_eq_radius"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.kernelCoefficient_circle_le_four"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleDecayFloor_pos"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.decayGap_circle_eq"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.decayGap_circle_ge_floor"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleMellinRadius_continuous"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleDecayFloor_continuous"
+    },
+    {
+      "kind": "theorem",
+      "name": "GoldbachComplexGammaMellin22.circleCoefficientClosed_continuousAt"
+    }
+  ],
+  "only_local_import": "ComplexGammaMellinLocal22",
+  "local_prior_status": "Actual independent Local26 rowPASS22 ROOT observed despite globalFAILED26;readonly Γ/Thermal transitives",
+  "excluded_local_modules": [
+    "ComplexGammaMellinLambda22",
+    "ComplexGammaMellinTail22",
+    "ComplexGammaMellinLambdaTail22",
+    "ComplexGammaMellinHolomorphy22"
+  ],
+  "domains": {
+    "branch_and_C": "a>0,theta arbitrary real",
+    "decay_floor": "a>0,abs theta<=pi",
+    "radius_continuity": "all R^2",
+    "floor_continuity": "all R",
+    "closed_coefficient_continuity": "first coordinate positive"
+  },
+  "guards": {
+    "compiler_invocations": 0,
+    "probe_invocations": 0,
+    "candidate_parser_invocations": 0,
+    "math_evaluation_invocations": 0,
+    "PREP": false,
+    "gate": false,
+    "actual": false,
+    "D_N": false,
+    "WIN": false
+  }
+}

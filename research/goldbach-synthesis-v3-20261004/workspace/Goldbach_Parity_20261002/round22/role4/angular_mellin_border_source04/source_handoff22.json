@@ -1,0 +1,61 @@
+{
+  "schema": "ROUND22_ANGULAR_MELLIN_BORDER_SOURCE_HANDOFF_04",
+  "status": "FROZEN_SOURCE_ONLY_REPAIR_OF_REAL_FAIL24_AWAITING_REVIEW",
+  "author_role": "ROLE4",
+  "package": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source04",
+  "module_order": [
+    "AngularMellinBorder22"
+  ],
+  "declarations": 30,
+  "theorems": 22,
+  "definitions": 8,
+  "qualified_print_axioms": 30,
+  "local_dependencies": [],
+  "domain": "Unchanged: real a>0, arbitrary complex q, natural N; N>0 for division and nonzero q1 border",
+  "source_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source04\\AngularMellinBorder22.lean",
+      "sha256": "601a3360ff92f9bb1f7ecc64bc0754f2bb2a703cf143ff00f16d3b5bec6be2c4",
+      "size": 13323,
+      "read_scope": "FULL",
+      "read_observation": "833f81"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source04\\source_contract22.md",
+      "sha256": "0c9c52a847a51bd6585cc48811a14ea01895a2e8771ed129b125b271d794d3af",
+      "size": 3607,
+      "read_scope": "FULL",
+      "read_observation": "833f81"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source04\\source_catalog22.json",
+      "sha256": "6fba207298fd4caf7466358febad9364daf7f69110be9b48862b5481cd2a2a21",
+      "size": 1729,
+      "read_scope": "FULL",
+      "read_observation": "833f81"
+    }
+  ],
+  "source_read_receipts_sha256": "85fdba1a02cb01b7b899477e5d0cc7054620388e369eeefa00cb20b959c81935",
+  "change": "Delete only rw [inverse inv_pow] at the actual goal already (-1)^-1 raised to N; keep preexisting norm_num",
+  "old_source_sha256": "1fa9de9a41a432b3745d1dce719018452e6f8f9b183bb9635d07191f1dcf91da",
+  "old_actual_log_sha256": "45c7c8475eed1e407b3405259227b0937a9beb8bfe7e6f3ddcc843179171c46b",
+  "old_actual24_credit": 0,
+  "source_contract_and_catalog_FULL": "833f81",
+  "old_actual24_log_FIN_receipt_FULL": "7e7c8a",
+  "author_olean": false,
+  "new_compile_authorized": false,
+  "runtime_PREP": false,
+  "runtime_gate": false,
+  "new_actual_created": false,
+  "new_candidate_parser_import_invocations": 0,
+  "new_API_probe_invocations": 0,
+  "numeric_evaluations": 0,
+  "transitive_import_closure_prepared": false,
+  "independent_pass": false,
+  "old_inputs_modified": 0,
+  "Mellin37_handOff_sha256": "2c10db3fae90cf309f03c28018e2e52b3acefdf624501cd453bdd7560f8b6634",
+  "Mellin37_status": "SOURCE_SUSPENDED_NONDEPENDENCY",
+  "global_trace_proved": false,
+  "D_N_target_proved": false,
+  "WIN": false
+}

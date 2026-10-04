@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "all_SF_unit_core_axes": 22022,
+    "all_original_theta_A": 56,
+    "all_original_theta_S": 127,
+    "all_original_theta_SS": 3,
+    "all_original_theta_nonSS": 124,
+    "all_q_SS": 22,
+    "all_q_resource_category_A": 115,
+    "all_q_resource_category_R": 16,
+    "all_q_resource_category_S": 870,
+    "all_target_properpowers_before_masks": 0,
+    "inverse_families": 5120,
+    "literal_zero_m1_mu0_vertices": 8,
+    "new_physical_kernels": 164,
+    "physical_union_vertices": 220,
+    "q_positions": 1001,
+    "q_prime": 69,
+    "q_unit": 400,
+    "q_unit_structural_nonSS": 256,
+    "raw_nonSS_axes": 124,
+    "selected_properpowers": 0,
+    "structural_D_LONG": 3840,
+    "structural_D_MEDIUM": 540,
+    "structural_P_LONG": 740,
+    "structural_labels_before_q_target_masks": 5120,
+    "theta_nonSS_demands": 124,
+    "unique_m1_vertices": 48,
+    "zero_m0_vertices": 48
+  },
+  "falsifier_statuses": {
+    "balanced_conductor_le_sqrtN_actual_theta_demand": "COUNTEREXAMPLE",
+    "each_e_tag_supplies_a_fresh_m1_actual_theta_labels": "COUNTEREXAMPLE",
+    "four_divided_forms_prime_in_P_actual_theta_demand": "COUNTEREXAMPLE",
+    "repeated_prime_reciprocal_nonzero_capacity": "COUNTEREXAMPLE",
+    "triprime_reciprocal_necessarily_favourable_negative_bracket": "COUNTEREXAMPLE",
+    "universal_gcd_h_r_equals_1": "COUNTEREXAMPLE"
+  },
+  "kernel_sign_positions_counts": {
+    "NEGATIVE": 264,
+    "POSITIVE": 164,
+    "ZERO": 64
+  },
+  "result_sha256": "fa5d00bdc408e74d940c2583f4d015a4efd863dc2e15f3d13e77c4fa2f0c6cfe",
+  "status": "PASS_NEW_FINITE_IDENTITIES_ONLY",
+  "victory": false
+}

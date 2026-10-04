@@ -1,0 +1,129 @@
+{
+  "schema": "ROUND22_IDENTITY_REVISION03_SOURCE_HANDOFF",
+  "status": "SOURCE_REVISION_NOT_COMPILED",
+  "scope": "Unchanged Identity20; sole proof change normalizes hperiod casts after actual batch12",
+  "module": "ThermalProjectionIdentity22",
+  "declarations": 20,
+  "definitions": 2,
+  "theorems": 18,
+  "qualified_prints_written": 20,
+  "qualified_prints_executed": 0,
+  "headers_identical": true,
+  "binding_count": 14,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\ThermalProjectionIdentity22.lean",
+      "bytes": 15587,
+      "sha256": "8bb1eb5ec6ab4bf5e0c8cc053dcbe743049641dab5a3a3858205ad8ee2e2e9aa"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\repair_diagnostic22.md",
+      "bytes": 2675,
+      "sha256": "a7ac080bdf03db01ef38904519ba615e647d45a241983c1ad2fe27f6876b43d2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\read_sources22.json",
+      "bytes": 1892,
+      "sha256": "70789a0896dbb07f738d61fab96fc9d91c50187296a1a975017947ce0f0be9a8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision02\\ThermalProjectionIdentity22.lean",
+      "bytes": 15478,
+      "sha256": "533f81f523f465240ebf7f129d32c9d6c0119e0e0d7936a42bc65e75823880d0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_source01\\ThermalProjectionIdentity22.lean",
+      "bytes": 15152,
+      "sha256": "5b6da908dce97e0ad1ba08a893bd545a4a4c908f969d958102cf9e3509c5e99c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision02\\source_handoff22.json",
+      "bytes": 5868,
+      "sha256": "820143dd819a18fba371233cb90ad52ec9393563b7383b230798ee848062ffda"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision02\\read_sources22.json",
+      "bytes": 3477,
+      "sha256": "7c2a31d71c99e55425d73e592c2294c296c7dc771705194da760b9376eb13d5f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\receipt.json",
+      "bytes": 6483,
+      "sha256": "de20c1356084c9b048f258a7ddbbc14a08ca7a9037121c14bc42daef2d4385e3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22.log",
+      "bytes": 3640,
+      "sha256": "f4cdc3f9f0ed4922a320a43230c5299e9c6319f065aff55ea5881d994eb01501"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22_FIN.json",
+      "bytes": 4912,
+      "sha256": "8528baebc2a7eb1cd3e93391edd9f384aba38d4044c6c17b3ca1e784b2acf63f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\sources\\ThermalProjectionEnvelope22.lean",
+      "bytes": 17761,
+      "sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\ThermalProjectionEnvelope22.olean",
+      "bytes": 412360,
+      "sha256": "9c2bb947ccd03436c8cb3c9e3e9f5ce95508ee719e506d9ca90c49623f6dac67"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\ThermalProjectionEnvelope22_FIN.json",
+      "bytes": 8667,
+      "sha256": "2ba6f8e9b9d6eef9160d71cb7c564a8e2c3c907fdc02d665a06408ca1327b9e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Basic.lean",
+      "bytes": 31542,
+      "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b"
+    }
+  ],
+  "prior_real_failure": {
+    "batch": "batch12",
+    "actual_children": 1,
+    "exit_code": 1,
+    "started_at": "2026-10-03T15:58:01.295660+00:00",
+    "finished_at": "2026-10-03T15:58:25.178768+00:00",
+    "errors": 1,
+    "site": 43,
+    "standard_prints": 13,
+    "recovery_sorryAx_prints": 7,
+    "olean": null,
+    "module_credit": 0,
+    "log_full_output": "3b3a0c",
+    "receipt_and_FIN_full_output": "311c5f"
+  },
+  "readonly_dependency": {
+    "module": "ThermalProjectionEnvelope22",
+    "status": "INDEPENDENT_LEAN_AUX_PASS",
+    "declarations": 42,
+    "source_sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+    "olean_sha256": "9c2bb947ccd03436c8cb3c9e3e9f5ce95508ee719e506d9ca90c49623f6dac67",
+    "recompile_allowed": false,
+    "author_imported": false
+  },
+  "domains": [
+    "finite projection: all real a, M >= N",
+    "infinite actual trace: a > 0"
+  ],
+  "prime_powers_retained": true,
+  "final_equality_assumed": false,
+  "final_integrability_assumed": false,
+  "future_candidate_modules": [
+    "ThermalProjectionIdentity22"
+  ],
+  "new_lean_invocations": 0,
+  "new_numeric_runs": 0,
+  "new_candidate_imports": 0,
+  "new_probes": 0,
+  "new_prepare_builder_runs": 0,
+  "gate_created": false,
+  "PREPARED": false,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

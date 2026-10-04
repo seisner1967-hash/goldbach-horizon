@@ -1,0 +1,11 @@
+# Mellin–Gamma complexe : point SOURCE conservé
+
+Suspendu pour donner priorité à la correction du vrai FAIL BORD23. Aucun compiler, probe, calcul, import de candidat, préparation ou gate. Source distincte `ComplexGammaMellinLocal22.lean`, SHA e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08, lue FULL6f3a36. Inventaire manuel22 déclarations=16thm6defs ; pas de catalogue/runtime/PASS gelé.
+
+Elle écrit pour la vraie Gamma à Re(s)=2, Re(w)>0 et cpow principal : η=(π/2+|Arg w|)/2, δ=η−|Arg w|>0, C=‖w‖^−2 sec²η ; `‖Gamma(2+it)w^(−2−it)‖≤C exp(−δ|t|)`. La rotation réelle indépendante est appliquée à ±η, Gamma(2)=1 ; norme exacte du cpow, continuité en t et L1 des deux demi-droites sont construites. La dérivée en w est écrite et l'accord sur w réel positif réutilise le vrai PASS20. Aucun majorant ou L1 final n'est offert comme prémisse.
+
+La continuation holomorphe de l'intégrale n'est pas encore écrite. Pour un centre w₀ de partie réelle positive, il faut construire un voisinage de rayon positif, à normes inférieures contrôlées et |Arg w|≤r<η₀<π/2, puis le majorant effectif de la dérivée : C₀(2+|t|) exp(−(η₀−r)|t|). Les signatures `hasDerivAt_integral_of_dominated_loc_of_deriv_le` (ParametricIntegral284–300) et `AnalyticOnNhd.eqOn_of_preconnected_of_mem_closure` (IsolatedZeros268–272) sont lues TARGETED0e8427. L'accord réel PASS20 donnera ensuite des points x_n=1+1/(n+1) accumulant en1 ; cela ne dispense pas de la preuve d'holomorphie locale.
+
+Entrées lues : PASS20 source/reçu/adjudication FULL203f4a, source Gamma readonly capturée FULLde3672 et reçuΓ capturé FULL874102 ; cache uniquement TARGETED. Une recherche de dossier `judge5/batch02` a échoué (le dossier réel est batch02_sources), un glob rgWindows a été corrigé par recherche du dossier ; ces sorties ne sont pas des lectures d'API réussies. L'affichage tabulaire des hashes874102 a tronqué les colonnes : pas de prétention à une nouvelle vérification complète des oleans avant reçu metadata approprié. Aucun ancien module n'est recompilé.
+
+Dette finale conservée : formule complexe scalaire sur Re(w)>0, puis échange véritableΛ/phase et chaîne spectrale, PP/front/ledger/D_N. Ce point auxiliaire ne paie aucune de ces conclusions et n'est pas soumis au Juge tant que suspendu.

@@ -1,0 +1,66 @@
+{
+  "schema": "ROUND22_ANGULAR_MELLIN_BORDER_SOURCE_HANDOFF_02",
+  "status": "FROZEN_SOURCE_ONLY_AWAITING_INDEPENDENT_REVIEW",
+  "author_role": "ROLE4",
+  "package": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02",
+  "module_order": [
+    "AngularMellinBorder22"
+  ],
+  "declarations": 30,
+  "theorems": 22,
+  "definitions": 8,
+  "qualified_print_axioms": 30,
+  "domain": "a>0; arbitrary q complex; N natural and N>0 only for divided recurrence/nonzero q=1 border; principal cpow on the right half-plane.",
+  "constructed_charges": [
+    "affine slitPlane/nonzero",
+    "cpow derivative restricted to real",
+    "complex character derivative",
+    "product derivative",
+    "continuity and intervalIntegrable volume",
+    "both endpoint characters",
+    "FTC exact border and normalized recurrence",
+    "q0 zero and q1 explicitly nonzero border"
+  ],
+  "source_read_observations": [
+    "76df21",
+    "b3cf00"
+  ],
+  "cache_read_scopes": "TARGETED only as documented in source_read_receipts22.json",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\AngularMellinBorder22.lean",
+      "sha256": "3719a79cfd8aa0915cb15aa57111ac0529a3fa245387ceff19540395aa5756ea",
+      "size": 12897
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\source_contract22.md",
+      "sha256": "09c769cf29d86a7015d182e18a375bc582557b21c10cd32d9c6d5003f2d61aa2",
+      "size": 4638
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\source_catalog22.json",
+      "sha256": "d90871d6c6c966df582e75879c2028baf143dc521e19903ea5825f18850853cf",
+      "size": 1729
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\source_read_receipts22.json",
+      "sha256": "d50489697e4f05f4012b2964c26772801721016d3baed154f83fb9be60a41f53",
+      "size": 9162
+    }
+  ],
+  "compile_authorized": false,
+  "author_olean": false,
+  "author_pass": false,
+  "independent_pass": false,
+  "runtime_packet_prepared": false,
+  "global_trace_proved": false,
+  "D_N_target_proved": false,
+  "WIN": false,
+  "open_obligations": [
+    "Lean elaboration and axioms remain unobserved",
+    "global Mellin/phase representation and spectral cancellation",
+    "PP/front/units and canonical ledger transport",
+    "D_N target and WIN"
+  ],
+  "preservation": "Older angular_source01/PAPER/native/Lean packages untouched. This is a distinct SOURCE handoff, no runtime builder or gate."
+}

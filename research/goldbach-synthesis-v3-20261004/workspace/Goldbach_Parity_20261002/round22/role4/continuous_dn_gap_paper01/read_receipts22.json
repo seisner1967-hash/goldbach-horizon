@@ -1,0 +1,89 @@
+{
+  "schema": "ROUND22_CONTINUOUS_DN_GAP_READ_RECEIPTS_01",
+  "actor": "ROLE4 temporarily ROLE1/2",
+  "kind": "SOURCE_PAPER_NO_CANDIDATE_EXECUTION",
+  "read_sources": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\USER_DIRECTIVE.md",
+      "bytes": 1919,
+      "sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+      "scope": "FULL",
+      "read_receipt": "9d0828"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\monographie.txt",
+      "bytes": 132972,
+      "sha256": "ded7e6252ed3b620537fc471d11778fe16abd1305ec4c6959fa185546a5be687",
+      "scope": "TARGETED lines150-230,660-850,2260-2287,2280-2385 and search",
+      "read_receipt": "994f7a;12eab0;f1b312"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\constraints_pre_ideate.txt",
+      "bytes": 28276,
+      "sha256": "327dd4e1609cd0d22289a80a3267faf80f72a02c9a2f7f921609a7c59afde75b",
+      "scope": "TARGETED lines10-16, ledger line13 only used",
+      "read_receipt": "a0b136; earlier truncated search not FULL"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\continuous_contract_delivery22_revision04.txt",
+      "bytes": 8020,
+      "sha256": "f6cdd64d1f1d7853ed91ebdd004a46b97fbf49bd1b7964b52e140974f3af8e32",
+      "scope": "FULL",
+      "read_receipt": "b352dd; hash53ede9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\c5_mellin_source01\\continuous_correlation_obligation22.md",
+      "bytes": 4424,
+      "sha256": "783215437541c0b69c298547228678bb28907be14ba2766aef8deff905e9056e",
+      "scope": "FULL",
+      "read_receipt": "38bfe1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\spectral_uniform_phase_source22\\uniform_phase_contract22.md",
+      "bytes": 11228,
+      "sha256": "7fedc4de0d175fcfdbfdb0d36667e7bf5393c788fa88e3f28bd89c9ef0320306",
+      "scope": "FULL",
+      "read_receipt": "fea947"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch13\\sources\\ThermalProjectionIdentity22.lean",
+      "bytes": 15587,
+      "sha256": "8bb1eb5ec6ab4bf5e0c8cc053dcbe743049641dab5a3a3858205ad8ee2e2e9aa",
+      "scope": "TARGETED lines260-278",
+      "read_receipt": "cb8a54"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\QuantizedLambdaEnvelope22.lean",
+      "bytes": 7365,
+      "sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "scope": "TARGETED lines101-147",
+      "read_receipt": "5e5343"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\RationalLogQuantization22.lean",
+      "bytes": 16997,
+      "sha256": "dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7",
+      "scope": "BYTE_HASH_ONLY current turn, precision stated from v04",
+      "read_receipt": "5e5343"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\previous_artifacts_sha256.json",
+      "bytes": 382692,
+      "sha256": "875cebdd8e510fe3341b05009a76991801777b2a060a07229c5323033226ba99",
+      "scope": "BYTE_HASH_ONLY registry; no 3089 archive rehash in this bounded task",
+      "read_receipt": "metadata closure only"
+    }
+  ],
+  "own_paper_full_receipt": "294cf1",
+  "truncated_outputs_excluded_from_FULL": [
+    "8a6e2d",
+    "690958",
+    "c910fa",
+    "ff2ec4"
+  ],
+  "new_compiler_invocations": 0,
+  "new_math_runtime_invocations": 0,
+  "new_candidate_imports": 0,
+  "build03_modified": false,
+  "goldbach_or_DN_proved": false
+}

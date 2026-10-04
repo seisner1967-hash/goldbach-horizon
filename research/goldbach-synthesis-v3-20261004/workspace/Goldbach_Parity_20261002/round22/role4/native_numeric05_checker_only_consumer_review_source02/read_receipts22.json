@@ -1,0 +1,111 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC05_REVISION02_INDEPENDENT_REVIEW_READ_RECEIPT",
+  "status": "SOURCE_REVIEW_CLOSED_WITH_NATIVE_REFINEMENT_OPEN_NO_EXECUTION",
+  "reviewer": "ROLE4",
+  "author_of_reviewed_parent": "ROLE3",
+  "FULL_readings": [
+    {
+      "file": "role3/native_numeric_checker_only_consumer_source05_revision02/run_native05_checker_only_once22.py",
+      "sha256": "c1e116f0467aa0d9a5e54c80f8db560887379ce82bf4dee825ec63531421d7b1",
+      "scope": "FULL_SEGMENTED1-627",
+      "chunks": [
+        "ba5d82",
+        "bf610b"
+      ]
+    },
+    {
+      "file": "role3/native_numeric_checker_only_consumer_source05_revision02/prepare_native05_checker_only_metadata22.ps1",
+      "sha256": "0dedf40be1d10b39f8e7d44b7826d55de4bf634d0872a187f6524a4dfb33e57f",
+      "scope": "FULL_SOURCE_NOT_INVOCATION",
+      "chunks": [
+        "2e615f"
+      ]
+    },
+    {
+      "file": "role3/native_numeric_checker_only_consumer_source05_revision02/numeric_checker_only_execution_plan22.json",
+      "sha256": "e39443a771e40829aee31dab2662d26026fe0d59e85ac8b4c42197b118fcc844",
+      "chunks": [
+        "2e615f"
+      ]
+    },
+    {
+      "file": "role3/native_numeric_checker_only_consumer_source05_revision02/numeric_checker_only_trust_policy22.json",
+      "sha256": "2da30d086338b3801f4ecc234eedf99b7afa563d94357c07a461740ea52ace9b",
+      "chunks": [
+        "2e615f"
+      ]
+    },
+    {
+      "file": "role3/native_numeric_checker_only_consumer_source05_revision02/source_contract22.txt",
+      "sha256": "b992f9aab48c3741445266828a3ea461dd5976c86f3ae3cd9051ea05105071bb",
+      "chunks": [
+        "2e615f"
+      ]
+    },
+    {
+      "file": "role3/native_numeric_checker_only_consumer_source05_revision02/source_handoff22.json",
+      "sha256": "9b721db7eff5bd27936be11937350f9811f8c7c2f0126eab066e57b6647478cf",
+      "chunks": [
+        "2c7c83"
+      ]
+    },
+    {
+      "file": "role3/native_numeric_checker_only_consumer_source05_revision02/read_receipts22.json",
+      "sha256": "65e84cea034fb9e3815711ba16eb4d178568bac755aa234703094ce89bfccc54",
+      "chunks": [
+        "2c7c83"
+      ]
+    },
+    {
+      "file": "role4/native_numeric05_checker_only_contract_source02/checker_only_contract22.md",
+      "sha256": "ea1273af14d4c020aae5f2bb5462b89924e3ba3f0419460a50a2962288c270fb",
+      "chunks": [
+        "423c8f"
+      ]
+    },
+    {
+      "file": "role4/native_numeric05_checker_only_consumer_review_source02/source_review22.json",
+      "sha256": "b1ae8a929b7be824cbf7770184c40e69faf20e54ff3336cf1cd0b4900cf5a2ae",
+      "chunks": [
+        "6d5365"
+      ]
+    },
+    {
+      "file": "role4/native_numeric05_checker_only_consumer_review_source02/trust_review22.json",
+      "sha256": "cdf1d7641b2317621e085a703e59bbf699aabc980b5d5ab2c5fdbacbe6a2eabd",
+      "chunks": [
+        "6d5365"
+      ]
+    }
+  ],
+  "byte_hash_metadata": {
+    "chunk": "641e28",
+    "scope": "PowerShell control metadata only,57files SHA/length, not Pythoncandidate parsing or evaluation",
+    "bindings": 57,
+    "distinct_paths": 57,
+    "mismatches": 0,
+    "PREP_present": false,
+    "ACTUAL_present": false
+  },
+  "reused_previous_read_scopes": [
+    "SOURCE01 reviewerreceiptde3ad8… FULL1cd097 binds old04 provenance/actualBUILD04FULL02905d and targetbackend150-330a98aa1",
+    "HistoricalROLE5 CPP/build/trust reviews reused readonly; no newindependent audit of ownCPP",
+    "Original producer04 grosspayloads not parsed or freshly bytehashed in SOURCE review; futureauthorizedmetadata/parent must hash andcopy",
+    "Inherited6456/66/3089/5/83 conservation remains actualhistoricalROOTobservation, not newly re-evaluated here"
+  ],
+  "resolved_source_defect": "DEADLINE_NO_CREATION_CONTRACT_MISMATCH",
+  "last_guard_source_line": 523,
+  "backend_call_source_line": 524,
+  "atomic_OS_CreateProcess_deadline_guarantee": false,
+  "unresolved_source_execution_blockers": [],
+  "compiler_invocations": 0,
+  "candidate_parser_probes": 0,
+  "candidate_imports": 0,
+  "native_invocations": 0,
+  "metadata_helper_invocations": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "ACTUAL_created": false,
+  "D_N": false,
+  "WIN": false
+}

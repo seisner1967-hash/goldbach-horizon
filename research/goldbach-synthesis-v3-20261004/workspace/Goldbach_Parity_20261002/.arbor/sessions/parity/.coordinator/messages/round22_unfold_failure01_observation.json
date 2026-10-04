@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-03T07:54:25.450986+00:00",
+  "status": "AUTHOR_STAGE_FAILED",
+  "started": "2026-10-03T07:50:58.873351+00:00",
+  "finished": "2026-10-03T07:51:23.792288+00:00",
+  "exit_code": 1,
+  "source_sha256": "10323e3bd95202e9a00b222f5d2fcc4df9f15d769cb00cfc1e64344ce74a5875",
+  "log_sha256": "f187b9a31dbfe4c85cb51c6bbfef4ea6a069babd296f582737b66ce50ee50b54",
+  "receipt_sha256": "f21ef6a44d1d8af7fec04d795946734d531c1a1d4c4e77714af1586851554abe",
+  "copies_verified": 25,
+  "inputs_verified": 25,
+  "root_FULL_reads": {
+    "log": "7905ed",
+    "receipt": "b887af",
+    "START": "c5d400"
+  },
+  "error_lines": [
+    83,
+    153,
+    182
+  ],
+  "error_count": 3,
+  "classes": [
+    "redundant rpow_natCast rewrite",
+    "missing square absolute-value normalization",
+    "negSucc cast not definitionally equal"
+  ],
+  "sorryAx_recovery_zero_formal_credit": true,
+  "infinite_G0_complete": false,
+  "analytic_or_parity_refutation_claim": false,
+  "revision_policy": "Distinct SOURCE ONLY input and root gate required.",
+  "WIN": false,
+  "root_compiler_invocations": 0
+}

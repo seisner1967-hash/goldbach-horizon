@@ -1,0 +1,128 @@
+{
+  "schema": "ROUND22_NUMERIC05_REVIEW_SOURCE_READ_RECEIPT",
+  "reviewer": "ROLE4",
+  "status": "SOURCE_REVIEW_CLOSED_WITH_ONE_REPAIR_REQUIRED_NO_RUNTIME",
+  "FULL": [
+    {
+      "path": "role3/native_numeric_checker_only_consumer_source05/source_handoff22.json",
+      "sha256": "730e2782d4ae005d036caa2a59216813e5763985a9cc498207e92a09fead89e2",
+      "read_chunks": [
+        "f32f3d"
+      ]
+    },
+    {
+      "path": "role3/native_numeric_checker_only_consumer_source05/run_native05_checker_only_once22.py",
+      "sha256": "2b073990ccb6b66248d6fb68df6b21141e04324f311e40ec0fae41c12a703001",
+      "read_chunks": [
+        "8c2700",
+        "a361c7",
+        "3d7d5a"
+      ],
+      "lines": "1-616 segmented"
+    },
+    {
+      "path": "role3/native_numeric_checker_only_consumer_source05/prepare_native05_checker_only_metadata22.ps1",
+      "sha256": "2ff936cac29de289d22986ba6cb3ba834eaa37ec251b330f445b50a8151b4cc7",
+      "read_chunks": [
+        "870afc"
+      ]
+    },
+    {
+      "path": "role3/native_numeric_checker_only_consumer_source05/numeric_checker_only_execution_plan22.json",
+      "sha256": "cf508080acd96b0fa75c20fe9a5b45c3abf3aea1ff55dd6eb2a3fb7e4e541f4b",
+      "read_chunks": [
+        "ab9a09"
+      ]
+    },
+    {
+      "path": "role3/native_numeric_checker_only_consumer_source05/numeric_checker_only_trust_policy22.json",
+      "sha256": "642b5ca51c3eaa7e687293dc4e8eaaed6bdd733fd7b7fa80b79b4b21d3d09af1",
+      "read_chunks": [
+        "ab9a09"
+      ]
+    },
+    {
+      "path": "role3/native_numeric_checker_only_consumer_source05/source_contract22.txt",
+      "sha256": "00854925f4d2ce99218a0127565002316893ee2f730486a632d9e08fb9d3d035",
+      "read_chunks": [
+        "ab9a09"
+      ]
+    },
+    {
+      "path": "role3/native_numeric_checker_only_consumer_source05/read_receipts22.json",
+      "sha256": "65f9476376d819521455e3cfbe16d0ef01c29c5d7c0c7c0a1194faae796d8dcf",
+      "read_chunks": [
+        "ab9a09"
+      ]
+    },
+    {
+      "path": "role4/circle_native_revision02/build_receipt04.json",
+      "sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8",
+      "read_chunks": [
+        "02905d"
+      ]
+    },
+    {
+      "path": "role4/circle_native_build_source04/build_execution_plan22.json",
+      "sha256": "538cc14faf3466bb8a0505e8f6aae3007fc84b2b6246afb2da55d37be5718156",
+      "read_chunks": [
+        "02905d"
+      ]
+    },
+    {
+      "path": "role4/native_numeric05_checker_only_consumer_review_source01/source_review22.json",
+      "sha256": "cafe76455c0e2e41d7428246753d6a15c7c7c83ee84454baf30ab8819cd1c78d",
+      "read_chunks": [
+        "c803f1"
+      ]
+    },
+    {
+      "path": "role4/native_numeric05_checker_only_consumer_review_source01/trust_review22.json",
+      "sha256": "b75c49d37382bc3298e7a5b2bbd4b88adf9a3d14dd06108d905a8557092635da",
+      "read_chunks": [
+        "c803f1"
+      ]
+    }
+  ],
+  "TARGETED": [
+    {
+      "path": "role4/circle_native_build_source04/windows_build_job22.py",
+      "sha256": "88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3",
+      "read_chunk": "a98aa1",
+      "lines": "150-330",
+      "prior_FULL_reused": "c10531"
+    },
+    {
+      "path": "role4/native_numeric05_checker_only_contract_source01/checker_only_contract22.md",
+      "sha256": "8fd1e59d4c751d38a1320aadeed9686dd788eed8c1fb473151924afc7827ad30",
+      "read_chunk": "e0e03a",
+      "scope": "deadline/copied-payload requirements",
+      "prior_FULL_reused": "aeed38"
+    }
+  ],
+  "metadata": {
+    "read_chunk": "00f7c7",
+    "scope": "Handoff control metadata parsed by PowerShell and45 files physically bytehashed; no Python/candidate parsing, no runtime or mathematical validation",
+    "all45_bindings_intact": true,
+    "distinct_paths": 45,
+    "candidate_actual_present": false,
+    "preparation_present": false,
+    "gate_present": false
+  },
+  "prior_acquisitions_reused": [
+    "Old04 actual closureFULL005ca2 and quiescenceFULLc95c56; old controlsFULL11ada6",
+    "Prior independentROLE5 CPP/build/trust reviewFULL5727a2; no new independent audit of historicalROLE4 CPP",
+    "Old6456/66/3089/5/83 conservation remains externally observedhistorical metadata, not a newfullclosure run in this SOURCE review"
+  ],
+  "big_payloads": "Original files not parsed or freshly rehashed here; frozen SHA provenance only. Future authorized metadata and parent must physically verify/copy them.",
+  "candidate_imports": 0,
+  "candidate_parser_probes": 0,
+  "native_calls": 0,
+  "compiler_calls": 0,
+  "metadata_helper_calls": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "actual05_created": false,
+  "D_N": false,
+  "WIN": false
+}

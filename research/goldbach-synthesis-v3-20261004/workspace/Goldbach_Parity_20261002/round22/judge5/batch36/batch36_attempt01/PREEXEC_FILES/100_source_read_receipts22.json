@@ -1,0 +1,184 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_CIRCLE_GEOMETRY_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_NOT_ELABORATED_NO_PREP_NO_PROBES",
+  "author": "ROLE4",
+  "source_FULL": "18e2ac",
+  "contract_catalog_FULL": "ff9a65",
+  "read_scopes": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/sources/ComplexGammaMellinLocal22.lean",
+      "bytes": 10837,
+      "sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+      "scope": "FULL",
+      "chunk": "741aa0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/batch26_attempt01/ComplexGammaMellinLocal22.olean",
+      "bytes": 414008,
+      "sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+      "scope": "ACTUAL_OLEAN_BYTE_HASH",
+      "chunk": "9872c0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/batch26_attempt01/receipt.json",
+      "bytes": 11262,
+      "sha256": "53201e46ee6a6418915358d37a61655a286bd2d814930d0fe68520fec4c92cdb",
+      "scope": "FULL_PREVIOUS_TASK_GLOBAL_FAILED_LOCAL_ROW_PASS_ONLY",
+      "chunk": "ac4cfa;current_byte_hash9872c0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch26_closed_observation.json",
+      "bytes": 1423,
+      "sha256": "9b7697d2d35d12903e436403e77fb44e8ea76c6f586940e28d168ab851340e9b",
+      "scope": "FULL_PREVIOUS_ROOT_OBSERVATION",
+      "chunk": "ac4cfa;current_byte_hash9872c0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/readonly_oleans/GammaPrerequisites22.olean",
+      "bytes": 605536,
+      "sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "scope": "ACTUAL_READONLY_OLEAN_BYTE_HASH",
+      "chunk": "9872c0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/readonly_oleans/ThermalGammaMellinInverse22.olean",
+      "bytes": 242264,
+      "sha256": "e9442776bb512a4f83391b63402a1dc86bce61070dfc386bc8b6873af521ce24",
+      "scope": "ACTUAL_READONLY_OLEAN_BYTE_HASH",
+      "chunk": "9872c0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+      "bytes": 12480,
+      "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+      "scope": "READONLY_PAPER_FULL_PREVIOUS_TASK",
+      "chunk": "bccd29;current_byte_hash9872c0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/source_handoff22.json",
+      "bytes": 6647,
+      "sha256": "b66b922fd8bb1cdad7005596c873c09bf9ca017fed5c804829c73da53a807a3e",
+      "scope": "READONLY_PAPER_HANDOFF_FULL_PREVIOUS_TASK",
+      "chunk": "48a038;current_byte_hash9872c0"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Complex/Arg.lean",
+      "bytes": 29377,
+      "sha256": "2617fea0f21bd7d4b718fe6fc24565a99dfc9b9ac7ee76e23fee00a1052bf89d",
+      "scope": "TARGETED_API",
+      "chunk": "40a4fb;df4e98;61a232"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/Arctan.lean",
+      "bytes": 13357,
+      "sha256": "f6492b6eb7dad4aafe80d1fdcdaafceb28667f9f2acb0d73147c08b71f61e14c",
+      "scope": "TARGETED_API",
+      "chunk": "40a4fb;61a232;8b7768;f36f76"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/Basic.lean",
+      "bytes": 46759,
+      "sha256": "42e804660dd9e27b2014b017ab0b9f203222dcee1f4595f11126651e114d2ed6",
+      "scope": "TARGETED_API",
+      "chunk": "3bac1f;df4e98"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/Exponential.lean",
+      "bytes": 59817,
+      "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+      "scope": "TARGETED_API_VARIABLES_AND_REAL_SIGNATURE",
+      "chunk": "069e06;3bac1f;8b7768"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/Abs.lean",
+      "bytes": 11951,
+      "sha256": "83d68d95f3665f1f356fb52e9da7593441e3da7f69a0ed9bffe340c9e79485cb",
+      "scope": "TARGETED_API",
+      "chunk": "069e06;61a232"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Complex/Basic.lean",
+      "bytes": 27388,
+      "sha256": "88b9514033ef73a5c20979290e447a09b3a96ae7de91a401ab9f4e00bb71067e",
+      "scope": "TARGETED_API_AND_IMPORT_HEADER",
+      "chunk": "069e06;12c4e9"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+      "bytes": 49324,
+      "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+      "scope": "TARGETED_API",
+      "chunk": "3bac1f;6af351"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/Order/GroupWithZero/Unbundled.lean",
+      "bytes": 87329,
+      "sha256": "88097fc3af252bef1867c8ff416aa643e82f9208bfdef41c55606628b70fab02",
+      "scope": "TARGETED_API",
+      "chunk": "8b7768;f36f76"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/Group/Basic.lean",
+      "bytes": 38344,
+      "sha256": "21b7cf8215c2960bca0d19a9c82e146e2b8ab12ae3a03d5298c136d2323a5ddd",
+      "scope": "TARGETED_API_DECLARATION",
+      "chunk": "f36f76"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Basic.lean",
+      "bytes": 67947,
+      "sha256": "565eaf5e8b86cf25e60d4f1836e53275b4a20005d99b645428587a405e7d8112",
+      "scope": "TARGETED_API_GENERATED_ADDITIVE_NAME",
+      "chunk": "12c4e9"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_circle_geometry_source01/ComplexGammaCircleGeometry22.lean",
+      "bytes": 12002,
+      "sha256": "2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5",
+      "scope": "NEW_SOURCE_FULL",
+      "chunk": "18e2ac"
+    }
+  ],
+  "cache_scope": "TARGETED_REAL_DECLARATIONS_ONLY;BYTE_HASH_NOT_FULL_TEXT",
+  "unused_path_search": "Initial search1a4cef included Analysis/Complex/Arg.lean, a different file. The actual imported SpecialFunctions/Complex/Arg.lean was then read TARGETED40a4fb/df4e98/61a232. No FULL/API claim is based on the unrelated file.",
+  "API_payments": [
+    "Principal arg interval and inverse tangent branch",
+    "Signed sine and exact complex norm square",
+    "Real double angle and cos-add-pi/2 with explicit argument",
+    "Negative rpow/natural square conversion",
+    "Order-preserving real division with positive denominator",
+    "Reciprocal arctan for positive pi/a",
+    "Generated additive norm_pos_iff checked at its to_additive source",
+    "Actual continuous_arctan and radius denominators"
+  ],
+  "proof_scope": "Manual SOURCE construction; no tactic evaluation and no claim that syntax/elaboration succeeded",
+  "readonly_provenance": "Actual independent Local26 rowPASS22 with ROOT observation; global receipt FAILED preserved;3 readonly oleans no recompile",
+  "risks": [
+    "Elaboration of implicit args and reducible local definitions",
+    "Rational polynomial normalization after field_simp",
+    "Continuity synthesis for the two closed denominators"
+  ],
+  "metadata": "9872c0 exit0 filesystem byte hashes only; no candidate parser/import",
+  "counts": {
+    "declarations": 25,
+    "theorems": 22,
+    "definitions": 3,
+    "qualified_print_axioms": 25,
+    "scope": "MANUAL_FULL_READ"
+  },
+  "guards": {
+    "author_Lean": 0,
+    "API_probe": 0,
+    "candidate_parser": 0,
+    "candidate_import": 0,
+    "Python_math": 0,
+    "native_execution": 0,
+    "PREP": false,
+    "gate": false,
+    "actual": false,
+    "old_frozen_mutated": false,
+    "all_cache_FULL_claim": false,
+    "D_N": false,
+    "WIN": false
+  }
+}

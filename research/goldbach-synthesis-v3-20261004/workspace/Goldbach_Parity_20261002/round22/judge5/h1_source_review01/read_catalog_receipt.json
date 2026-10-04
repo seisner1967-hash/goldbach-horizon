@@ -1,0 +1,819 @@
+{
+  "schema": "ROUND22_JUDGE5_H1_SOURCE_REVIEW01",
+  "time_utc": "2026-10-03T09:28:03.007560+00:00",
+  "status": "SOURCE_REVIEW_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "sources": [
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinThermal22.lean",
+      "source_sha256": "1396cb0a0045c621ea3e8f0f8b905c1c2a0af3ec33a351e4e7150542f38352fe",
+      "bytes": 5638,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\MellinThermal22.lean",
+      "review_copy_sha256": "1396cb0a0045c621ea3e8f0f8b905c1c2a0af3ec33a351e4e7150542f38352fe",
+      "source_scope": "FULL",
+      "source_chunk": "5b86af",
+      "role": "MAIN_H1_SOURCE",
+      "imports": [
+        "GammaPrerequisites22",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Deriv",
+        "Mathlib.Analysis.MellinInversion"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.thermalUnitTest"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.thermalTest"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.thermalDualTest"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalTest_eq_real"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalTest_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalUnitTest_mellin_convergent"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.mellin_thermalUnitTest"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalTest_mellin_convergent"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.mellin_thermalTest"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasMellin_thermalTest"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalDualTest_mellin_convergent"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.mellin_thermalDualTest"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.thermalUnitTest",
+        "GoldbachContinuous22.thermalTest",
+        "GoldbachContinuous22.thermalDualTest",
+        "GoldbachContinuous22.thermalTest_eq_real",
+        "GoldbachContinuous22.thermalTest_continuous",
+        "GoldbachContinuous22.thermalUnitTest_mellin_convergent",
+        "GoldbachContinuous22.mellin_thermalUnitTest",
+        "GoldbachContinuous22.thermalTest_mellin_convergent",
+        "GoldbachContinuous22.mellin_thermalTest",
+        "GoldbachContinuous22.hasMellin_thermalTest",
+        "GoldbachContinuous22.thermalDualTest_mellin_convergent",
+        "GoldbachContinuous22.mellin_thermalDualTest"
+      ],
+      "theorem_count": 9,
+      "definition_count": 3,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinThermalInversion22.lean",
+      "source_sha256": "ad42b7bf8cd9b94e4f2c04125201b6a82b62821b1cb38652aa4e2f6c41a1df66",
+      "bytes": 4373,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\MellinThermalInversion22.lean",
+      "review_copy_sha256": "ad42b7bf8cd9b94e4f2c04125201b6a82b62821b1cb38652aa4e2f6c41a1df66",
+      "source_scope": "FULL",
+      "source_chunk": "9815ef",
+      "role": "MAIN_H1_SOURCE",
+      "imports": [
+        "MellinThermal22",
+        "GammaContourComponent22"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourFactor_vertical_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalTest_mellin_vertical_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalTest_mellin_inversion"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalTest_gamma_inversion"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.gammaContourFactor_vertical_integrable",
+        "GoldbachContinuous22.thermalTest_mellin_vertical_integrable",
+        "GoldbachContinuous22.thermalTest_mellin_inversion",
+        "GoldbachContinuous22.thermalTest_gamma_inversion"
+      ],
+      "theorem_count": 4,
+      "definition_count": 0,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaEulerDirect22.lean",
+      "source_sha256": "0d790ed67706e2f3c3556d2c5e7fefd50664177f5fb54584beee1d137e430a71",
+      "bytes": 2529,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\ZetaEulerDirect22.lean",
+      "review_copy_sha256": "0d790ed67706e2f3c3556d2c5e7fefd50664177f5fb54584beee1d137e430a71",
+      "source_scope": "FULL",
+      "source_chunk": "4ab649",
+      "role": "MAIN_H1_SOURCE",
+      "imports": [
+        "Mathlib.NumberTheory.EulerProduct.ExpLog",
+        "Mathlib.NumberTheory.LSeries.RiemannZeta"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.contourZetaSummandHom"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZetaSummand_norm_summable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZetaSummand_tsum"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZeta_euler_exp_log"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZeta_ne_zero_on_right"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.contourZetaSummandHom",
+        "GoldbachContinuous22.contourZetaSummand_norm_summable",
+        "GoldbachContinuous22.contourZetaSummand_tsum",
+        "GoldbachContinuous22.contourZeta_euler_exp_log",
+        "GoldbachContinuous22.contourZeta_ne_zero_on_right"
+      ],
+      "theorem_count": 4,
+      "definition_count": 1,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaReflection22.lean",
+      "source_sha256": "54e32a95a62929c7251bf130156adbc7da7d66ceb1cb77609382e33c025f4a42",
+      "bytes": 5989,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\ZetaReflection22.lean",
+      "review_copy_sha256": "54e32a95a62929c7251bf130156adbc7da7d66ceb1cb77609382e33c025f4a42",
+      "source_scope": "FULL",
+      "source_chunk": "4797e1",
+      "role": "MAIN_H1_SOURCE",
+      "imports": [
+        "ZetaEulerDirect22",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Deriv",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.contourChi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZeta_reflection"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contour_cos_ne_zero_in_left_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourChi_ne_zero_in_left_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZeta_ne_zero_in_left_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourChi_differentiableAt"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZeta_logDeriv_reflection"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.contourChi",
+        "GoldbachContinuous22.contourZeta_reflection",
+        "GoldbachContinuous22.contour_cos_ne_zero_in_left_strip",
+        "GoldbachContinuous22.contourChi_ne_zero_in_left_strip",
+        "GoldbachContinuous22.contourZeta_ne_zero_in_left_strip",
+        "GoldbachContinuous22.contourChi_differentiableAt",
+        "GoldbachContinuous22.contourZeta_logDeriv_reflection"
+      ],
+      "theorem_count": 6,
+      "definition_count": 1,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaEulerDerivative22.lean",
+      "source_sha256": "fe51d8956fecabaa09063ce31543b91946cc3fae1fd2e3ffadd4fc639be39520",
+      "bytes": 9007,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\ZetaEulerDerivative22.lean",
+      "review_copy_sha256": "fe51d8956fecabaa09063ce31543b91946cc3fae1fd2e3ffadd4fc639be39520",
+      "source_scope": "FULL",
+      "source_chunk": "f04645",
+      "role": "MAIN_H1_SOURCE",
+      "imports": [
+        "ZetaEulerDirect22",
+        "Mathlib.Analysis.Calculus.SmoothSeries",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.contourPrimeLog"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.contourPrimeLogDerivative"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.contourEulerLog"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPrime_cpow_norm"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPrime_cpow_norm_le_half"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPrime_factor_mem_slitPlane"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_contourPrimeLog"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPrimeLog_summable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contour_log_le_rpow_div"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPrimeLogDerivative_local_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPrimeLogDerivative_pseries_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPrimeLogDerivative_majorant_summable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_contourEulerLog"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourZeta_logDeriv_prime_quotient"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.contourPrimeLog",
+        "GoldbachContinuous22.contourPrimeLogDerivative",
+        "GoldbachContinuous22.contourEulerLog",
+        "GoldbachContinuous22.contourPrime_cpow_norm",
+        "GoldbachContinuous22.contourPrime_cpow_norm_le_half",
+        "GoldbachContinuous22.contourPrime_factor_mem_slitPlane",
+        "GoldbachContinuous22.hasDerivAt_contourPrimeLog",
+        "GoldbachContinuous22.contourPrimeLog_summable",
+        "GoldbachContinuous22.contour_log_le_rpow_div",
+        "GoldbachContinuous22.contourPrimeLogDerivative_local_bound",
+        "GoldbachContinuous22.contourPrimeLogDerivative_pseries_bound",
+        "GoldbachContinuous22.contourPrimeLogDerivative_majorant_summable",
+        "GoldbachContinuous22.hasDerivAt_contourEulerLog",
+        "GoldbachContinuous22.contourZeta_logDeriv_prime_quotient"
+      ],
+      "theorem_count": 11,
+      "definition_count": 3,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\GammaDerivative22.lean",
+      "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "bytes": 9978,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\GammaDerivative22.lean",
+      "review_copy_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "source_scope": "FULL",
+      "source_chunk": "ff5858",
+      "role": "PENDING_GAMMA_DEPENDENCY_SOURCE",
+      "imports": [
+        "GammaPrerequisites22",
+        "Mathlib.Analysis.Complex.Liouville",
+        "Mathlib.Data.Real.Pi.Bounds",
+        "Mathlib.Data.Complex.ExponentialBounds"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.realGamma_le_nine_fifths_on_extended_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.quarter_angle_coefficient_le_three_extended"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_extended_strip_exponential_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.exp_eighth_pi_le_seven_quarters"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_differentiableOn_rightHalfPlane"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_half_disc_domain"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_circle_dominating_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_derivative_strip_exponential_bound"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.realGamma_le_nine_fifths_on_extended_strip",
+        "GoldbachContinuous22.quarter_angle_coefficient_le_three_extended",
+        "GoldbachContinuous22.Gamma_extended_strip_exponential_bound",
+        "GoldbachContinuous22.exp_eighth_pi_le_seven_quarters",
+        "GoldbachContinuous22.Gamma_differentiableOn_rightHalfPlane",
+        "GoldbachContinuous22.Gamma_half_disc_domain",
+        "GoldbachContinuous22.Gamma_circle_dominating_bound",
+        "GoldbachContinuous22.Gamma_derivative_strip_exponential_bound"
+      ],
+      "theorem_count": 8,
+      "definition_count": 0,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\GammaBoxBounds22.lean",
+      "source_sha256": "82dd6682d0912decfa22adbcf022dbed6343c8d7cb71bca748a3f064b8443ea0",
+      "bytes": 9368,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\GammaBoxBounds22.lean",
+      "review_copy_sha256": "82dd6682d0912decfa22adbcf022dbed6343c8d7cb71bca748a3f064b8443ea0",
+      "source_scope": "FULL",
+      "source_chunk": "23572f",
+      "role": "PENDING_GAMMA_DEPENDENCY_SOURCE",
+      "imports": [
+        "GammaDerivative22",
+        "Mathlib.Analysis.Calculus.MeanValue"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.spectralBoxDomain"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaBoxRadius"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm_eq_cpow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.spectralBoxDomain_convex"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_weightedGamma_exponential_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_weightedGammaTerm"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_deriv_weightedGammaTerm_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm_lipschitz_on_boxDomain"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.weightedGammaTerm_box_error_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaBoxRadius_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaBoxRadius_continuousAt"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.weightedGammaTerm",
+        "GoldbachContinuous22.spectralBoxDomain",
+        "GoldbachContinuous22.gammaBoxRadius",
+        "GoldbachContinuous22.weightedGammaTerm_eq_cpow",
+        "GoldbachContinuous22.spectralBoxDomain_convex",
+        "GoldbachContinuous22.norm_weightedGamma_exponential_le",
+        "GoldbachContinuous22.hasDerivAt_weightedGammaTerm",
+        "GoldbachContinuous22.norm_deriv_weightedGammaTerm_le",
+        "GoldbachContinuous22.weightedGammaTerm_lipschitz_on_boxDomain",
+        "GoldbachContinuous22.weightedGammaTerm_box_error_le",
+        "GoldbachContinuous22.gammaBoxRadius_nonneg",
+        "GoldbachContinuous22.gammaBoxRadius_continuousAt"
+      ],
+      "theorem_count": 9,
+      "definition_count": 3,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\GammaContourComponent22.lean",
+      "source_sha256": "084a19087d9d9adabe7921d509cd8b8fce2d721be445bcb779a3555f264e5bf8",
+      "bytes": 7531,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\GammaContourComponent22.lean",
+      "review_copy_sha256": "084a19087d9d9adabe7921d509cd8b8fce2d721be445bcb779a3555f264e5bf8",
+      "source_scope": "FULL",
+      "source_chunk": "eb1c5c",
+      "role": "PENDING_GAMMA_DEPENDENCY_SOURCE",
+      "imports": [
+        "GammaBoxBounds22",
+        "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaContourPoint"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaContourFactor"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.gammaContourEnvelope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourFactor_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_gammaContourFactor_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.real_exponential_tail_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integral_real_exponential_tail"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourEnvelope_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourEnvelope_continuous"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.gammaContourPoint",
+        "GoldbachContinuous22.gammaContourFactor",
+        "GoldbachContinuous22.gammaContourEnvelope",
+        "GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip",
+        "GoldbachContinuous22.gammaContourFactor_continuous",
+        "GoldbachContinuous22.norm_gammaContourFactor_le",
+        "GoldbachContinuous22.real_exponential_tail_integrable",
+        "GoldbachContinuous22.integral_real_exponential_tail",
+        "GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound",
+        "GoldbachContinuous22.gammaContourEnvelope_nonneg",
+        "GoldbachContinuous22.gammaContourEnvelope_continuous"
+      ],
+      "theorem_count": 8,
+      "definition_count": 3,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    },
+    {
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\GammaPrerequisites22.lean",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "bytes": 18040,
+      "review_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\source_copies\\GammaPrerequisites22.lean",
+      "review_copy_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "source_scope": "FULL",
+      "source_chunk": "21d3da",
+      "role": "ALREADY_INDEPENDENT_BATCH02_PASS_DEPENDENCY",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup",
+        "Mathlib.Analysis.SpecialFunctions.Exp",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.MeasureTheory.Integral.IntegralEqImproper",
+        "Mathlib.Analysis.Calculus.ParametricIntegral",
+        "Mathlib.Analysis.Complex.CauchyIntegral",
+        "Mathlib.Analysis.Analytic.IsolatedZeros",
+        "Mathlib.Analysis.SpecificLimits.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.realGamma_le_one_on_unit_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.real_laplace_integrable"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.laplaceIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_laplaceIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplaceIntegrand_aestronglyMeasurable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.complex_laplace_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.real_rate_laplace_identity"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.laplaceTransform"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.rightHalfPlane"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_laplaceIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplace_derivative_local_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_laplaceTransform"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.rightHalfPlane_isOpen"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.rightHalfPlane_isPreconnected"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplaceTransform_analytic"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplace_rhs_analytic"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.laplaceTransform_real_rate"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.complex_rate_laplace_identity"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_laplaceTransform_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_rotation_power"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_rotation_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.quarter_angle_coefficient_le_two"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_strip_exponential_bound"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.realGamma_le_one_on_unit_strip",
+        "GoldbachContinuous22.real_laplace_integrable",
+        "GoldbachContinuous22.laplaceIntegrand",
+        "GoldbachContinuous22.norm_laplaceIntegrand",
+        "GoldbachContinuous22.laplaceIntegrand_aestronglyMeasurable",
+        "GoldbachContinuous22.complex_laplace_integrable",
+        "GoldbachContinuous22.real_rate_laplace_identity",
+        "GoldbachContinuous22.laplaceTransform",
+        "GoldbachContinuous22.rightHalfPlane",
+        "GoldbachContinuous22.hasDerivAt_laplaceIntegrand",
+        "GoldbachContinuous22.laplace_derivative_local_bound",
+        "GoldbachContinuous22.hasDerivAt_laplaceTransform",
+        "GoldbachContinuous22.rightHalfPlane_isOpen",
+        "GoldbachContinuous22.rightHalfPlane_isPreconnected",
+        "GoldbachContinuous22.laplaceTransform_analytic",
+        "GoldbachContinuous22.laplace_rhs_analytic",
+        "GoldbachContinuous22.laplaceTransform_real_rate",
+        "GoldbachContinuous22.complex_rate_laplace_identity",
+        "GoldbachContinuous22.norm_laplaceTransform_le",
+        "GoldbachContinuous22.norm_rotation_power",
+        "GoldbachContinuous22.Gamma_rotation_bound",
+        "GoldbachContinuous22.quarter_angle_coefficient_le_two",
+        "GoldbachContinuous22.Gamma_strip_exponential_bound"
+      ],
+      "theorem_count": 20,
+      "definition_count": 3,
+      "forbidden_tokens": [],
+      "actual_print_axioms_output_exists_for_this_review": false
+    }
+  ],
+  "documents": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\api_plan22.md",
+      "sha256": "326938bb8b641e324d4d2fa5788c2afa8a5d34e6519e3ce97c350b03a4945e26",
+      "scope": "FULL",
+      "chunk": "c50c3e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\read_receipts22_v3.json",
+      "sha256": "ba90cab917a204b08a841442ca4b7737245ee320d6c6126745f91562cc118c19",
+      "scope": "FULL",
+      "chunk": "53188b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\psi_c5_subcontract22.md",
+      "sha256": "2c0382c7069d7480fdb31d0c63baa56136e2ab4e0ac563de0f582899c2500c79",
+      "scope": "FULL",
+      "chunk": "e54f65"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\contour_formula22.md",
+      "sha256": "42faea33cdcd56c08f6fb593dbd42c5c293b8e72beb9c823db68e9576ac1edb7",
+      "scope": "FULL",
+      "chunk": "cbb518"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\lean_obligations22.md",
+      "sha256": "e1db30108c3ed9a65490a12f7f9a8394407db31c868085e1ee0522baa5da33f0",
+      "scope": "FULL",
+      "chunk": "60a438"
+    }
+  ],
+  "independent_API_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\EulerProduct\\ExpLog.lean",
+      "sha256": "d925a62a9b7c963cc89529d13e4b5d92a62959ce3db1bb8e3a523e3f67522862",
+      "scope": "FULL",
+      "chunk": "bc9f8c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LSeries\\RiemannZeta.lean",
+      "sha256": "440f090659cdc41b5aca482e21dff0df1f7944313c94003f5a0307c6c42fde57",
+      "scope": "FULL",
+      "chunk": "f21b90"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\MellinInversion.lean",
+      "sha256": "38cdb4e7f404dab6199f50b5a29a045ac2f9bbcc19d37a0430626f0914e5b49e",
+      "scope": "FULL",
+      "chunk": "1b3e5b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\MellinTransform.lean",
+      "sha256": "183def9afc4b9fa55965cd93d9d0d7d84fd5ec6be3f16812cf8f71f3b939a9a3",
+      "scope": "TARGETED_LINES_1_185",
+      "chunk": "1b710c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\SmoothSeries.lean",
+      "sha256": "6d9d59c22daaa9800d21525cc8ca11364983a7b5eabbe903ac6ecf91feb2a864",
+      "scope": "TARGETED_LINES_70_95",
+      "chunk": "fe3bc8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\EulerProduct\\Basic.lean",
+      "sha256": "715da6e30d79dbfbbbce8172fe07ff48cba911470e289d28f40851626da4e165",
+      "scope": "DECLARATION_SEARCH_AND_CONTEXT_ONLY_NOT_FULL",
+      "chunk": "3b5a98/ba3a5e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Abs.lean",
+      "sha256": "83d68d95f3665f1f356fb52e9da7593441e3da7f69a0ed9bffe340c9e79485cb",
+      "scope": "TARGETED_LINES_293_302",
+      "chunk": "9320dc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Trigonometric\\Complex.lean",
+      "sha256": "4de4540a46eb14763383c831038604a544b3bdc2c535b4932af59c3b6d7c5e6f",
+      "scope": "TARGETED_LINES_1_51",
+      "chunk": "6495d7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Basic.lean",
+      "sha256": "9576d3ea4e2988124154e7ddf538e48b2d6b6d5eca409cbbe31128759374f1d6",
+      "scope": "TARGETED_LINES_559_569",
+      "chunk": "4c4ece"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ExpDeriv.lean",
+      "sha256": "da437100f0386396288328305d2a42342af1563b48bbe0b81fb5cc5446faf838",
+      "scope": "DECLARATION_SEARCH_LINES_115_123_NOT_FULL",
+      "chunk": "9de4ed"
+    }
+  ],
+  "author_API_read_receipts_reused_as_independent_reads": false,
+  "author_v3_receipt_sha256": "ba90cab917a204b08a841442ca4b7737245ee320d6c6126745f91562cc118c19",
+  "main_module_count": 5,
+  "main_declaration_count": 42,
+  "main_theorem_count": 34,
+  "main_definition_count": 8,
+  "pending_gamma_dependency_module_count": 3,
+  "pending_gamma_dependency_declaration_count": 31,
+  "already_PASS_dependency": "GammaPrerequisites22, independent closed batch02, 23 declarations; no new credit",
+  "source_lexical_scope": "Nested comments and ordinary strings excluded; exact future #print coverage for inspected sources. This is metadata parsing, not elaboration or generated axiom output.",
+  "source_copies_scope": "Review evidence copies only; not compilation staging, not PREPARED, no complete transitive source/olean binding",
+  "metadata_read_incidents": [
+    "fa21b2 declaration-search packet was truncated and named absent guessed Log/Summable.lean; not FULL and not a compiler failure. Corrected actual ExpLog FULLbc9f8c, RiemannZeta FULLf21b90, MellinInversion FULL1b3e5b and targeted SmoothSeries fe3bc8."
+  ],
+  "transitive_import_graph_closed": false,
+  "compiler_invocations": 0,
+  "mathematical_numeric_invocations": 0,
+  "numeric_bank_created_or_replayed": false,
+  "gate_created": false,
+  "compiler_PASS_awarded": false,
+  "official_counter_changed": false,
+  "H1_C3_certified": false,
+  "global_trace_certified": false,
+  "D_N_paid": false,
+  "victory": false
+}

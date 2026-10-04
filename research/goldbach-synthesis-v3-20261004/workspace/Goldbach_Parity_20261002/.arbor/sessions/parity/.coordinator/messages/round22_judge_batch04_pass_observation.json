@@ -1,0 +1,36 @@
+{
+  "schema": "ROUND22_JUDGE_BATCH04_PASS_ROOT_OBSERVATION",
+  "time_utc": "2026-10-03T11:54:54.825452+00:00",
+  "status": "INDEPENDENT_BATCH04_AUX_PASS",
+  "receipt_sha256": "228b0958ecac8037e1776cf5cc32db340a8f52944c1e9cd398415dd9f0415c5d",
+  "adjudication_sha256": "d227ca049382b1cb0948736c58fc75f65c1557a94e9f554c025167253bf64a7d",
+  "root_FULL_reads": {
+    "receipt": "54cf58",
+    "logs": "a55b41",
+    "adjudication_parts": [
+      "59f128",
+      "00a3ed"
+    ],
+    "completion": "8d442d"
+  },
+  "PRE_POST_scope": "Complete JSON parsed/equality and all bytes checked; no FULL raw display",
+  "new_modules": 3,
+  "new_declarations": 52,
+  "official_modules": 66,
+  "official_declarations": 1109,
+  "includes_definitions": true,
+  "Judge22_PASS_modules": 9,
+  "Judge22_FAIL_modules": 0,
+  "input_count": 6648,
+  "captures": 26,
+  "oldJudge_files": 134,
+  "archives": 3089,
+  "paid_statement": "For Re(z)>0: deriv(Gamma,z)/Gamma(z) = -EulerGamma + integral(u>0,(exp(-u)-exp(-z*u))/(1-exp(-u))) and integrability of that actual integrand",
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

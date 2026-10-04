@@ -1,0 +1,40 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC04_CLOSURE_HELPER_SOURCE_HANDOFF",
+  "status": "SOURCE_ONLY_FROZEN_NOT_INVOKED_NO_QUIESCENCE_EVIDENCE_YET",
+  "utc": "2026-10-03T21:25:01.5707528Z",
+  "binding_count": 3,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\close_numeric04_metadata22.ps1",
+      "bytes": 12291,
+      "sha256": "81c3e40726052f95df83576071ffe062b6182ead44fc9c4edc7333dc9d515ab7",
+      "capture": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\closure_source_contract22.txt",
+      "bytes": 3333,
+      "sha256": "3eb0fa4495657f95f6ff740ed828ee4de111c0ebb1f3de2e9b3125a6d887d1bd",
+      "capture": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\read_receipts22.json",
+      "bytes": 2091,
+      "sha256": "13bc65c864da728812cbaed327670053cb34ec8e649f9d2e1ff40a0aba62921a",
+      "capture": false
+    }
+  ],
+  "active_numeric_session_id": 17351,
+  "gate_sha256": "b5dc57f1afa98304645f9e62505026c805c7a536946a15eedec399922aeba932",
+  "required_before_any_invocation": [
+    "ROOT_FULL_SOURCE_READING",
+    "REAL_PARENT_SESSION_COMPLETION",
+    "EXTERNAL_KNOWN_CREATED_PID_ABSENCE_RECEIPT",
+    "ROOT_UNIQUE_METADATA_AUTHORIZATION"
+  ],
+  "runtime_manifest_unchanged": true,
+  "helper_invocations": 0,
+  "compiler_invocations": 0,
+  "native_invocations_here": 0,
+  "D_N": false,
+  "WIN": false
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "ROUND22_ROLE4_PROJECTION_IDENTITY_SOURCE_HANDOFF_01",
+  "status": "SOURCE_HANDED_OFF_NOT_PREPARED",
+  "created_utc": "2026-10-03T14:18:57.9771783Z",
+  "actor": "ROLE4",
+  "source": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_source01\\ThermalProjectionIdentity22.lean",
+    "bytes": 15152,
+    "sha256": "5b6da908dce97e0ad1ba08a893bd545a4a4c908f969d958102cf9e3509c5e99c",
+    "read_scope": "FULL",
+    "receipt": "15cae4"
+  },
+  "report": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_source01\\source_contract22.md",
+    "bytes": 2520,
+    "sha256": "2c02229bce2b2e063479692b0488883791cbeaf52b69190733fb519d3a83d117",
+    "read_scope": "FULL",
+    "receipt": "c6887a"
+  },
+  "dependency_source": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_envelope_source01\\ThermalProjectionEnvelope22.lean",
+    "bytes": 17454,
+    "sha256": "3a348820aa1d2bd05eb5ceedc1f3c3d412ac6a0e3e4c9bf45c9e287f4d488aaa",
+    "read_scope": "FULL",
+    "receipt": "f8148e; source-only dependency, not compiled"
+  },
+  "dependency_receipt": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_envelope_source01\\source_handoff_receipt22.json",
+    "bytes": 10190,
+    "sha256": "5efb0d8c953480a3ac6d6d938183717919e86838700a5eb0526ed28365c71f82",
+    "read_scope": "FULL",
+    "receipt": "8da76b"
+  },
+  "api_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals.lean",
+      "bytes": 36535,
+      "sha256": "bac1446917ac212aaea7b11701f00a8acf6b698cba75251eb8fc572b02e2699f",
+      "read_scope": "TARGETED",
+      "receipt": "425-457; header1-65;82d9dc/b43cf0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Trigonometric\\Basic.lean",
+      "bytes": 46759,
+      "sha256": "42e804660dd9e27b2014b017ab0b9f203222dcee1f4595f11126651e114d2ed6",
+      "read_scope": "TARGETED",
+      "receipt": "1180-1204;82d9dc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecificLimits\\Normed.lean",
+      "bytes": 42993,
+      "sha256": "71cb31a2d09f8868ff64867a5bfd42e42eea6bf7ec8fd61f5dbda4f5fabec855",
+      "read_scope": "TARGETED",
+      "receipt": "155-200;82d9dc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\IntervalIntegral.lean",
+      "bytes": 54351,
+      "sha256": "a642c4dbf6c6a924b1b4f4ac94150d4ead8c06a9aa8b6e32192d26eb3be1fb2c",
+      "read_scope": "TARGETED",
+      "receipt": "518-567;82d9dc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\NatAntidiagonal.lean",
+      "bytes": 6936,
+      "sha256": "071e37e774ffb429c5e2d749b585226ed06d94b115e88d50d81bcb35d97291ad",
+      "read_scope": "TARGETED",
+      "receipt": "1-75;b43cf0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Star\\BigOperators.lean",
+      "bytes": 838,
+      "sha256": "09936151b26719cf4cbf7c1a80bc2f2acd476a327fc31843757a77bd731a5a57",
+      "read_scope": "TARGETED",
+      "receipt": "7-29;2f4aa5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset.lean",
+      "bytes": 105225,
+      "sha256": "a67817959f6217811364eed2700027060dc7cd62188a94a583453ec41c5c6630",
+      "read_scope": "TARGETED",
+      "receipt": "780-812/858-875/78-125;2f4aa5/404d07/15e94c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Exponential.lean",
+      "bytes": 59817,
+      "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+      "read_scope": "TARGETED",
+      "receipt": "204-245/700-715;404d07"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Basic.lean",
+      "bytes": 31542,
+      "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b",
+      "read_scope": "TARGETED",
+      "receipt": "452-489/1-55 and signatures ofReal_one,I_ne_zero;b79def/55ebb1/c6887a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\BigOperators.lean",
+      "bytes": 2355,
+      "sha256": "d987e7c184ddafec125e93d8b48ff338176e14f2affb98e19136425e7641c5f9",
+      "read_scope": "TARGETED",
+      "receipt": "1-30;b79def"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Order\\Filter\\AtTopBot.lean",
+      "bytes": 67177,
+      "sha256": "73a37f2ed5d13b532b6221c9b83cfa61c4deffb78eea14b6b75957eb85c546d6",
+      "read_scope": "TARGETED",
+      "receipt": "1141-1152/254-266;404d07/b79def"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Order\\Filter\\Tendsto.lean",
+      "bytes": 14572,
+      "sha256": "73f3f67256f72ae30e6cb57b8efaadd71a259602314ed0921885e43178f10c3a",
+      "read_scope": "TARGETED",
+      "receipt": "86-108;4ad41c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Group\\Basic.lean",
+      "bytes": 67947,
+      "sha256": "565eaf5e8b86cf25e60d4f1836e53275b4a20005d99b645428587a405e7d8112",
+      "read_scope": "TARGETED",
+      "receipt": "821-848;2f4aa5/2da35b; generated squeeze_zero_norm"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Separation\\Basic.lean",
+      "bytes": 55795,
+      "sha256": "a9fed5baa30efb9bfd3ebf2f229ec11c82d88c54ee3fdc8a9022892913083ed7",
+      "read_scope": "TARGETED",
+      "receipt": "700-712;b43cf0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Order\\Basic.lean",
+      "bytes": 40793,
+      "sha256": "1db9ae62aa710188b401d3145d4a111a8909ff71746fae615fa6582cb1d60e1d",
+      "read_scope": "TARGETED",
+      "receipt": "100-107;15cae4"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Monoid.lean",
+      "bytes": 46626,
+      "sha256": "55cb934305a20f923aedb41c0c6d440657b9e3a26915737781d9808b9d3a72e8",
+      "read_scope": "TARGETED",
+      "receipt": "109-128;be862e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\GroupWithZero.lean",
+      "bytes": 15489,
+      "sha256": "b8d84dbceb0469915408ef7005b0c7518b2291d558ede31248faa5447ee0be10",
+      "read_scope": "TARGETED",
+      "receipt": "43-58;be862e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Antidiag\\Prod.lean",
+      "bytes": 8468,
+      "sha256": "93c61d6ba0e52467be3e0f7129b437a37c88792c6e072e54cf88c0dcee8d4a40",
+      "read_scope": "TARGETED",
+      "receipt": "49-64;404d07"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Star\\Basic.lean",
+      "bytes": 20508,
+      "sha256": "b79bd19089b883d3e7ba9a5cbf6e3a33ea567f55921450a208e3d0a02c5fc80c",
+      "read_scope": "TARGETED",
+      "receipt": "316-327;15e94c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Prod.lean",
+      "bytes": 14272,
+      "sha256": "b3e6db6aad17ff0b0c64c06b6448671931a5cf57b8ef5b4d581b098bec6d4871",
+      "read_scope": "TARGETED",
+      "receipt": "35-55;c6887a"
+    }
+  ],
+  "catalog_method": "TEXTUAL_NAMES_ONLY_NOT_LEAN_PARSE",
+  "declaration_count": 20,
+  "print_count": 20,
+  "declarations": [
+    "signedCircleCharacter",
+    "projectionAdditiveCoefficient",
+    "signedCircleCharacter_continuous",
+    "integral_signedCircleCharacter",
+    "star_projectionHeatTerm_neg",
+    "projection_pair_character",
+    "projection_pair_integral",
+    "projection_normalizer_cancel",
+    "normalized_projection_pair_integral",
+    "projectionPartialCorrelation_expansion",
+    "projection_rectangle_filter_eq_antidiagonal",
+    "thermalPartialProjection_eq_finite_coefficient",
+    "thermalPartialProjection_eq_coefficient",
+    "projectionAdditiveCoefficient_eq_sum",
+    "projectionTailEnvelope_tendsto_zero",
+    "projectionHeatPartial_converges_uniformly",
+    "projectionErrorEnvelope_tendsto_zero",
+    "thermalProjection_difference_tendsto_zero",
+    "thermalContinuousProjection_eq_coefficient",
+    "thermalContinuousProjection_eq_vonMangoldt_sum"
+  ],
+  "forbidden_proof_token_count": 0,
+  "lean_invocations": 0,
+  "math_runs": 0,
+  "transitive_closure_computed": false,
+  "elaboration_checked": false,
+  "formal_identity_pass": false,
+  "domains": {
+    "finite": "a arbitrary real, N M natural, stabilization M>=N",
+    "infinite": "a>0, N natural fixed, theta arbitrary real",
+    "uniform": "forall epsilon>0, exists M0, forall M>=M0 and theta real: true norm tail<epsilon"
+  },
+  "conclusion": "exp(aN)/(2pi)*integral_0^(2pi) T_a(theta)*conjugate(T_a(-theta))*exp(-iNtheta)=sum_m=0^N Lambda(m)Lambda(N-m)",
+  "interchange": "Continuous finite summands; actual envelope B->0 and E=2exp(aN)AB->0; no free final integrability or Fourier equality",
+  "uniform_zeta_spectral_evaluator_supplied": false,
+  "prime_power_removal": false,
+  "D_N_pass": false,
+  "limitations": [
+    "Source and its envelope dependency uncompiled; exact transitive import closure and future gate required.",
+    "No source claim of uniform zeta computation or absorption of parity obstruction.",
+    "Actual Lambda includes all prime powers; canonical PP/frontier/D_N remain open.",
+    "The phase-zero global thermal numerical run does not validate this projection."
+  ],
+  "metadata_incidents": [
+    "2f4aa5 guessed AtTopBot/Nat.lean absent; actual AtTopBot.lean signatures read404d07/b79def.",
+    "55ebb1 one-item PowerShell source-read array flattened and guessed paths O/86/108 absent; exact Tendsto86-108 subsequently read4ad41c.",
+    "be862e guessed Group/Finset/Defs.lean absent; actual notation/header location read15e94c.",
+    "15e94c guessed Mathport/Notation.lean absent; no proof depends on that file. None of these were Lean or mathematical invocations."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_TAIL_SOURCE_READ_RECEIPT",
+  "status": "SOURCE_ONLY_FROZEN_FOR_REVIEW_NOT_COMPILED",
+  "author": "ROLE4",
+  "source": {
+    "file": "ComplexGammaMellinTail22.lean",
+    "sha256": "7dcce5beacdadc61dd067f9a6e176d70d5ff3c44cb6720b6f1d650068b67dcd5",
+    "scope": "FULL",
+    "read_chunks": [
+      "03ee27",
+      "63a64a"
+    ]
+  },
+  "local_dependency": {
+    "file": "judge5/batch26/sources/ComplexGammaMellinLocal22.lean",
+    "sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+    "prior_FULL_equivalent_exact_source": "b0a230",
+    "current_TARGETED": "7150c8 lines1-80",
+    "current_physical_SHA": "59d0e9",
+    "olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+    "actual26_receipt_sha256": "53201e46ee6a6418915358d37a61655a286bd2d814930d0fe68520fec4c92cdb",
+    "actual26_global_status": "INDEPENDENT_BATCH26_FAILED",
+    "actual_Local_row_status": "PASS22",
+    "actual_receipt_prior_FULL": "5cf486",
+    "ROOT_observation_sha256": "9b7697d2d35d12903e436403e77fb44e8ea76c6f586940e28d168ab851340e9b",
+    "ROOT_observation_prior_FULL": "80c0d2",
+    "imported_failed_Holomorphy": false
+  },
+  "mathlib_root": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib",
+  "API_scopes": "All cache API inspections TARGETED, not FULL cache files; no compiler/API/tactic probes",
+  "cache_API_reads": [
+    {
+      "file": "Analysis/SpecialFunctions/ImproperIntegrals.lean",
+      "bytes": 9580,
+      "sha256": "4356decb7750e59fc41f86931c9b13c95f66cb9c2e53c72b639a8e4f4fcfcd23",
+      "scope": "TARGETED1-68",
+      "read_chunks": [
+        "8e69d6"
+      ]
+    },
+    {
+      "file": "MeasureTheory/Integral/IntegralEqImproper.lean",
+      "bytes": 72376,
+      "sha256": "b7566d4908de6f28c73b0490a6bd79c3990bde03007f1b5b291d1b11a8ef1533",
+      "scope": "TARGETED1081-1108",
+      "read_chunks": [
+        "5991fe"
+      ]
+    },
+    {
+      "file": "MeasureTheory/Measure/Lebesgue/Integral.lean",
+      "bytes": 6147,
+      "sha256": "132142d926ca7394613ad983efdac6b88e1870076cc8a2ce298a7c70163b9423",
+      "scope": "TARGETED75-120",
+      "read_chunks": [
+        "8e69d6"
+      ]
+    },
+    {
+      "file": "MeasureTheory/Integral/SetIntegral.lean",
+      "bytes": 83514,
+      "sha256": "2fc90a7ecb3b4d9e47299a2b3b8eebf97a4e2a177d28daf3c48a4c0e059c4c86",
+      "scope": "TARGETED97-181;719-747",
+      "read_chunks": [
+        "8e69d6",
+        "4245b3"
+      ]
+    },
+    {
+      "file": "MeasureTheory/Integral/Bochner.lean",
+      "bytes": 99539,
+      "sha256": "b58d6339786ee0602d5d1577042e7d407112682b670150d909a853115b9b339b",
+      "scope": "TARGETED817-828;1328-1339; normintegral signature",
+      "read_chunks": [
+        "4245b3",
+        "8312a9"
+      ]
+    },
+    {
+      "file": "Analysis/SpecialFunctions/Pow/Continuity.lean",
+      "bytes": 21819,
+      "sha256": "47b6018f8597ae353961ae3835d8b96915803978d12d0c9c3dd555fb0118b8c1",
+      "scope": "TARGETED263-274",
+      "read_chunks": [
+        "4245b3"
+      ]
+    },
+    {
+      "file": "Analysis/SpecialFunctions/Trigonometric/Basic.lean",
+      "bytes": 46759,
+      "sha256": "42e804660dd9e27b2014b017ab0b9f203222dcee1f4595f11126651e114d2ed6",
+      "scope": "TARGETED439-440 cos-positive signature",
+      "read_chunks": [
+        "5991fe"
+      ]
+    },
+    {
+      "file": "Topology/Constructions.lean",
+      "bytes": 86894,
+      "sha256": "a2761653618b7e79b33969e83107d346e377233fd92a06601e315aa460cb1d1b",
+      "scope": "TARGETED581-583 ContinuousAt.prod",
+      "read_chunks": [
+        "6cfc3b"
+      ]
+    },
+    {
+      "file": "Order/Interval/Set/Basic.lean",
+      "bytes": 59907,
+      "sha256": "36e786359ad9fdd7ef3958e385adc6140972a578a656246574e6f3b5bfb618cd",
+      "scope": "TARGETED384 Ioi_subset",
+      "read_chunks": [
+        "4245b3"
+      ]
+    },
+    {
+      "file": "Algebra/Order/Field/Basic.lean",
+      "bytes": 40002,
+      "sha256": "d03d5df4940327ebe5e3d30b064a34b8cc593301ef2b376c0a7f40e5cb8bcabe",
+      "scope": "TARGETED169-176 and div order usage",
+      "read_chunks": [
+        "4245b3"
+      ]
+    },
+    {
+      "file": "Topology/MetricSpace/Pseudo/Defs.lean",
+      "bytes": 56512,
+      "sha256": "5f5b4453900a47279c02b3319b600714c87afeb44ece5a6a36d9599b7832d2bf",
+      "scope": "TARGETED698-713 eventually_nhds_iff_ball",
+      "read_chunks": [
+        "59d0e9"
+      ]
+    }
+  ],
+  "prior_cache_SHA_record": "03ee27",
+  "wrong_or_unavailable_search_paths_not_claimed_FULL": [
+    "Topology/ContinuousFunction/Basic.lean"
+  ],
+  "proof_scope": [
+    "Derived halflineL1 and integrated trueGamma bound",
+    "Actual volume reflection and complement decomposition",
+    "Joint continuity of closed radius, positivity and cutoff monotonicity",
+    "Existential local ball from continuity; no final epsilon/radius hypothesis"
+  ],
+  "remaining_not_claimed": [
+    "Compiler validation of this22source module",
+    "Formal H-to-infinity convergence and joint continuity of complex tail itself",
+    "Quadrature/primitive errors and zeta product/arithmetic exchange",
+    "Global H1/PP/front/canonicalphase/D_N/WIN"
+  ],
+  "candidate_parser_invocations": 0,
+  "candidate_imports": 0,
+  "Lean_invocations": 0,
+  "API_or_tactic_probes": 0,
+  "Python_math_invocations": 0,
+  "native_invocations": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "D_N": false,
+  "WIN": false
+}

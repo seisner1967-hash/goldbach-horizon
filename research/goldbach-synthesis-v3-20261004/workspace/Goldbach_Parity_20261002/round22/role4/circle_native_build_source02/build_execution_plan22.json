@@ -1,0 +1,64 @@
+{
+  "schema": "ROUND22_BUILD_ONLY02_EXECUTION_PLAN_SOURCE_ONLY",
+  "status": "SOURCE_ONLY_NOT_AUTHORIZED_NOT_BUILT",
+  "scope": "NATIVE_BUILD_ONLY_TWO_FIXED_TARGETS",
+  "native_source_plan_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build_plan22.json",
+  "native_source_plan_sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92",
+  "native_source_working_directory_superseded": true,
+  "compiler": "C:/msys64/ucrt64/bin/g++.exe",
+  "source_sha256": [
+    "bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74",
+    "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb"
+  ],
+  "commands": [
+    [
+      "-std=c++17",
+      "-O2",
+      "-static",
+      "-static-libgcc",
+      "-static-libstdc++",
+      "-Wl,--no-insert-timestamp",
+      "-I",
+      "C:/msys64/ucrt64/include",
+      "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/producer_dit22.cpp",
+      "-L",
+      "C:/msys64/ucrt64/lib",
+      "-lgmp",
+      "-o",
+      "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/build-final/producer_dit22.exe"
+    ],
+    [
+      "-std=c++17",
+      "-O2",
+      "-static",
+      "-static-libgcc",
+      "-static-libstdc++",
+      "-Wl,--no-insert-timestamp",
+      "-I",
+      "C:/msys64/ucrt64/include",
+      "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/checker_dif22.cpp",
+      "-L",
+      "C:/msys64/ucrt64/lib",
+      "-lgmp",
+      "-o",
+      "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/build-final/checker_dif22.exe"
+    ]
+  ],
+  "working_directory_future": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\actual_build02_attempt01",
+  "temporary_directory_future": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\actual_build02_attempt01\\tmp",
+  "environment_future": {
+    "SystemRoot": "C:\\Windows",
+    "WINDIR": "C:\\Windows",
+    "PATH": "C:\\msys64\\ucrt64\\bin;C:\\Windows\\System32",
+    "TEMP": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\actual_build02_attempt01\\tmp",
+    "TMP": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\actual_build02_attempt01\\tmp",
+    "TZ": "UTC"
+  },
+  "inherited_environment": false,
+  "backend_sha256": "a4dcc246f5e491e63f6d9cff849ef2ae774dbf8b9a99a565bc251e94fd12dbed",
+  "quotas_changed": false,
+  "compiler_invocations": 0,
+  "produced_binary_invocations": 0,
+  "D_N": false,
+  "WIN": false
+}

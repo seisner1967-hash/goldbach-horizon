@@ -1,0 +1,33 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\h1_contour\analytic_batch02\source-final\GammaContourComponent22.lean:61:26: error: application type mismatch
+  ContinuousAt.comp (DifferentiableAt.continuousAt hg)
+    (ContinuousAt.add (Continuous.continuousAt hp) continuousAt_const)
+argument
+  ContinuousAt.add (Continuous.continuousAt hp) continuousAt_const
+has type
+  ContinuousAt (fun x => gammaContourPoint c epsilon x + ?m.11060) ?m.11059 : Prop
+but is expected to have type
+  ContinuousAt (HAdd.hAdd (gammaContourPoint c epsilon t)) 1 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\h1_contour\analytic_batch02\source-final\GammaContourComponent22.lean:87:6: error: unknown constant 'Real.integral_exp_neg_Ioi'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\h1_contour\analytic_batch02\source-final\GammaContourComponent22.lean:87:6: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.16135
+a T : ℝ
+ha : 0 < a
+h : ∫ (x : ℝ) in Ioi T, (fun t => Real.exp (-t)) (a * x) = a⁻¹ • ∫ (x : ℝ) in Ioi (a * T), (fun t => Real.exp (-t)) x
+⊢ ∫ (t : ℝ) in Ioi T, Real.exp (-(a * t)) = Real.exp (-(a * T)) / a
+'GoldbachContinuous22.gammaContourPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaContourFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaContourEnvelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaContourFactor_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_gammaContourFactor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.real_exponential_tail_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.integral_real_exponential_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.gammaContourEnvelope_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaContourEnvelope_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]

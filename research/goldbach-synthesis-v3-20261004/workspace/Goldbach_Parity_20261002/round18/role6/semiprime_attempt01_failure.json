@@ -1,0 +1,25 @@
+{
+  "bank": "semiprime",
+  "attempt": 1,
+  "exit_code": 1,
+  "classification": "TECHNICAL_OUTPUT_ENCODING_INTERFACE",
+  "identity_false": false,
+  "parity_obstacle_deduction_failure": false,
+  "source_sha256": "09144e7fcb040e34c4a61f3d6e5153559648e08fa30f602297ed2c765e9b33b8",
+  "helper_SS_sha256": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+  "log_sha256": "e51d6cf583a5dd8139e9f5fb5bd5e09680f7f582655072454faa5dba06aeed84",
+  "error_type": "TypeError",
+  "precise_error": "object of type 'generator' has no len()",
+  "location": "semiprime_checks.py:q_prime_mask_hex calling frozen strict.bithex",
+  "minimal_repair": "Materialize the same 5001 boolean values as a list before bithex; no arithmetic guard, sign, support or helper change.",
+  "finished_math_substages_before_encoding_failure": {
+    "all_window_integers": 5001,
+    "prime_unit_q": 333,
+    "all_cores": 22,
+    "switch_triplets": 286,
+    "selected_new_kernel_profiles": 54
+  },
+  "canonical_PASS_output_created": false,
+  "old_PASS_or_old_kernel_replayed": false,
+  "next_invocation_is_repair_of_unfinished_new_stage": true
+}

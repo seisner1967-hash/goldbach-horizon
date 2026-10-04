@@ -1,0 +1,3 @@
+# Erratum documentaire distinct — statut du banc02
+
+Les sources/remises gelées antérieures restent inchangées. Dans projection_identity_source01/source_contract22.md (SHA2c02229bce2b2e063479692b0488883791cbeaf52b69190733fb519d3a83d117), la phrase « banc thermique actuellement en cours » est devenue obsolète. ROOT a confirmé la clôture du banc02 pour MAXWALL à14:03 le2026-10-03 ; cette note consigne son message sans prétendre une nouvelle lecture runtime indépendante. Cette clôture ne constitue ni PASS numérique global, ni réfutation d'identité, ni invocation nouvelle. Ce banc à phase0 ne valide aucun producteur uniforme en theta ou coefficient additifN.

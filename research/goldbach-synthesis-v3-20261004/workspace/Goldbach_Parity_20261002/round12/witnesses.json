@@ -1,0 +1,306 @@
+{
+  "status": "VERIFIED_NEW_ARITHMETIC_WITNESSES_ONLY",
+  "N": 100000000,
+  "alpha": 100,
+  "a": 3163,
+  "Q": 999999,
+  "witnesses": {
+    "new_negative_reference": {
+      "m": 561,
+      "n": 99999439,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99999439,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "mu_n": -1,
+      "n_prime": true,
+      "unit_N": true,
+      "first_Lambda": {
+        "99999439": "1"
+      },
+      "theta": {
+        "99999439": "1"
+      },
+      "p": 17
+    },
+    "new_nonsquarefree_prime_axis": {
+      "m": 1251,
+      "n": 99998749,
+      "m_factors": [
+        [
+          3,
+          2
+        ],
+        [
+          139,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99998749,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "mu_n": -1,
+      "n_prime": true,
+      "unit_N": true,
+      "first_Lambda": {
+        "99998749": "1"
+      },
+      "theta": {
+        "99998749": "1"
+      },
+      "repeated_prime": 3,
+      "p": 139
+    },
+    "new_prime_pair": {
+      "m": 29,
+      "n": 99999971,
+      "m_factors": [
+        [
+          29,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99999971,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "mu_n": -1,
+      "n_prime": true,
+      "unit_N": true,
+      "first_Lambda": {
+        "99999971": "1"
+      },
+      "theta": {
+        "99999971": "1"
+      },
+      "p": 29
+    },
+    "J1_two_small": {
+      "m": 10526181,
+      "n": 89473819,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          1061,
+          1
+        ],
+        [
+          3307,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          89473819,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "mu_n": -1,
+      "n_prime": true,
+      "unit_N": true,
+      "first_Lambda": {
+        "89473819": "1"
+      },
+      "theta": {
+        "89473819": "1"
+      },
+      "c": 3183,
+      "p": 3307,
+      "U_a": {
+        "3": "-1",
+        "1061": "-1"
+      },
+      "U_alpha": {
+        "3": "-1"
+      },
+      "c_short_fiber_complete": false
+    },
+    "J1_three_small": {
+      "m": 10663289,
+      "n": 89336711,
+      "m_factors": [
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          37,
+          1
+        ],
+        [
+          3167,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          89336711,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "mu_n": -1,
+      "n_prime": true,
+      "unit_N": true,
+      "first_Lambda": {
+        "89336711": "1"
+      },
+      "theta": {
+        "89336711": "1"
+      },
+      "c": 3367,
+      "p": 3167,
+      "U_a": {
+        "7": "1",
+        "13": "1",
+        "37": "1"
+      },
+      "U_alpha": {
+        "37": "-1"
+      },
+      "c_short_fiber_complete": false
+    },
+    "new_properpower_axis": {
+      "m": 35727711,
+      "n": 64272289,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          43,
+          1
+        ],
+        [
+          419,
+          1
+        ],
+        [
+          661,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          8017,
+          2
+        ]
+      ],
+      "mu_m": 1,
+      "mu_n": 0,
+      "n_prime": false,
+      "unit_N": true,
+      "first_Lambda": {
+        "8017": "1"
+      },
+      "theta": {},
+      "p": 8017,
+      "raw_fII_multiplier": {
+        "8017": "-1"
+      },
+      "mu_n_squared_Lambda": {},
+      "whole_raw_not_computed": true
+    }
+  },
+  "search_counts": {
+    "new_negative_reference": 1,
+    "new_nonsquarefree_prime_axis": 7,
+    "new_prime_pair": 4,
+    "J1_two_small": 18,
+    "J1_three_small": 1,
+    "new_properpower_axis": 3
+  },
+  "imports": {
+    "round12/conservation.py": "374c141b465df16cf531e2ea077adfc3fe4e7271144ab3037db32a320b2d7576",
+    "numerical/parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical/round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "round3/multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "round6/exact_tools.py": "f48bb0b2b608aa734944cbfe978c19ad55f5aa249068dcc313a1de6da5a393cc",
+    "round4/inverse_checks.py": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c",
+    "round11/shared.py": "1959d27b60cfe7dc8e6211c36a0bc6b710c0fd13c80b95be55ad045092b3d4ee",
+    "round11/exact11.py": "a41e33ae49a98f0b15e0de990337ddabcc47dc92a84894cce1141559eb1571f8"
+  },
+  "script_sha256": "fe3221a86eeb1624b4de14545823424d2542582ae35798253bf79ce1c3d34b3e",
+  "shared_sha256": "f1214938e49610a62323f3166a321e520fc6c0a5e3cc9061d832c51db377e5d9",
+  "conservation_before": {
+    "status": "PRESERVED",
+    "files": 487,
+    "round11_files": 82,
+    "previous_protected_files": 405,
+    "round11_controller_sha256": "3860be999898b537fda692534cbf1943225a7aa65e3bb182b48476a5933dd000",
+    "baseline_sha256": "9a0a1010cdc4ad16eeb28b15f960f1d7dd3621bc91cc4d241a8781ccc2e543b1",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round12\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "conservation_after": {
+    "status": "PRESERVED",
+    "files": 487,
+    "round11_files": 82,
+    "previous_protected_files": 405,
+    "round11_controller_sha256": "3860be999898b537fda692534cbf1943225a7aa65e3bb182b48476a5933dd000",
+    "baseline_sha256": "9a0a1010cdc4ad16eeb28b15f960f1d7dd3621bc91cc4d241a8781ccc2e543b1",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round12\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "candidate_gate": false,
+  "global_D_N": false,
+  "asymptotic": false,
+  "payments": false,
+  "Lean_called": false,
+  "victory": false
+}

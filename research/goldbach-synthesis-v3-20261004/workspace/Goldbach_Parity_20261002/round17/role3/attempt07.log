@@ -1,0 +1,11 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:414:4: error: unsolved goals
+case pos
+P : Finset ℕ
+z : ℕ
+g : ℕ → ℝ
+d r : Finset ℕ
+hdr : d ⊆ r
+hr : r ∈ support P z
+⊢ sign d * (hprod g r / G P z g) = (sign d * if r ∈ support P z ∧ d ⊆ r then hprod g r else 0) / G P z g
+'GoldbachRound17.Selberg.finite_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]

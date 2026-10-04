@@ -1,0 +1,56 @@
+{
+  "active_worker_roles": [
+    {
+      "actual_dispatch": "spawn_preparatory_then_send_selected13.12_after_e00804",
+      "agent": "/root/round20_formal3_prepare",
+      "node": "13.12",
+      "ownership": [
+        "round20/role3/**",
+        "round20/agent3_formalisation.md"
+      ],
+      "role": 3,
+      "status": "NEW_LEAN_SOURCEWRITING_COMPILER_GATE_CLOSED"
+    },
+    {
+      "actual_dispatch": "fresh_spawn_after97a00e",
+      "agent": "/root/round20_formal4_friable",
+      "node": "14.5",
+      "ownership": [
+        "round20/role4/**",
+        "round20/agent4_formalisation.md"
+      ],
+      "role": 4,
+      "status": "INDEPENDENT_PAPER_REVIEW_NEW_SOURCEWRITING_COMPILER_GATE_CLOSED"
+    },
+    {
+      "actual_dispatch": "followup_selected13.12_then_send_selected14.5",
+      "agent": "/root/round20_numeric_preflight",
+      "nodes": [
+        "13.12",
+        "14.5"
+      ],
+      "ownership": [
+        "round20/role6_composite/**",
+        "round20/role6_friable/**",
+        "round20/composite.json",
+        "round20/friable.json"
+      ],
+      "role": 6,
+      "status": "BOTH_NEW_NUMERICAL_SOURCE_PREPARATION_EXECUTION_GATES_CLOSED"
+    }
+  ],
+  "ideation_roles": {
+    "1": "FROZEN_FINAL1",
+    "2": "FROZEN_FINAL2"
+  },
+  "new_Lean_execution_authorized_yet": false,
+  "new_mathematical_execution_authorized_yet": false,
+  "official_retained_auxiliary_theorems": 692,
+  "official_retained_modules": 41,
+  "protected_artifacts": 1808,
+  "recorded_at_utc": "2026-10-03T02:19:06.737214+00:00",
+  "role5_independent_judge": "NOT_DISPATCHED_UNTIL_ALL_FINAL_FROZEN",
+  "status": "ROUND20_ACTUAL_SELECTED_DISPATCH_SIX_LOGICAL_ROLES_IN_WAVES",
+  "victory": false,
+  "whole_ledger_paid": false
+}

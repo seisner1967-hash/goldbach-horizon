@@ -1,0 +1,32 @@
+{
+  "schema": "ROUND22_BUILD_ONLY03_EXPLICIT_COMPILER_TRUST_POLICY",
+  "status": "SOURCE_POLICY_ONLY_NOT_A_LOADER_CLOSURE_REVIEW",
+  "scope": "NATIVE_BUILD_ONLY_TWO_FIXED_TARGETS",
+  "compiler_path": "C:/msys64/ucrt64/bin/g++.exe",
+  "compiler_sha256": "5fa84c1460fd741371f730788ba3f994cf1d682be866fe7d3ed799e81844670a",
+  "snapshot_sha256": "12bd8ab8c067e4881b837689ce705e7f029826b20482b85fbc6a6d18e3717e06",
+  "declared_import_metadata_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_build_metadata01\\pe_static_import_observation22.json",
+  "declared_import_metadata_sha256": "36032c45c476e72c97393f60d02fbf5ff2e2679e82d2c3dd5eaea558cfdcadbc",
+  "declared_import_scope": "Frozen PE normal/delay descriptor names and selected bytebound candidate paths only",
+  "installed_GCC_toolchain_trust_root": "C:/msys64/ucrt64",
+  "Windows_trust_root": "C:/Windows",
+  "trust_assumptions": [
+    "The installed GCC driver and its helpers/specs/plugins are trusted for this standard build",
+    "Windows loader/API-set/OS services are trusted for this build",
+    "Effective runtime helper selection and DLL resolution are not observed or universally certified"
+  ],
+  "required_declared_image_count": 66,
+  "required_declared_edge_count": 825,
+  "required_local_candidate_edges": 119,
+  "required_Windows_or_API_set_edges": 706,
+  "declared_candidates_must_match_snapshot_bytes": true,
+  "ROOT_gate_acknowledgment_required": true,
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "GCC_specs_or_actual_subprocess_selection_verified": false,
+  "produced_binary_invocations": 0,
+  "numeric_authorization": false,
+  "compiler_invocations": 0,
+  "D_N": false,
+  "WIN": false
+}

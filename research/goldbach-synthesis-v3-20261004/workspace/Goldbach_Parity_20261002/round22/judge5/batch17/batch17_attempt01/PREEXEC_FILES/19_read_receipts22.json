@@ -1,0 +1,108 @@
+{
+  "schema": "ROUND22_ROLE3_LOG_QUANTIZATION_REVISION03_READS",
+  "status": "SOURCE_ONLY_FINAL_NOT_COMPILED",
+  "reader": "ROLE3",
+  "previous_actual_scope": "INDEPENDENT_BATCH16_FAIL_CORE_ONLY_ENVELOPE_NOT_INVOKED",
+  "entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\RationalLogQuantization22.log",
+      "bytes": 6189,
+      "sha256": "45311354041cb407df0372b3f764bdb2bf90ea66b0a3100b1b072945510ef5c6",
+      "scope": "FULL",
+      "read_tool_chunk": "3a0a2a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\RationalLogQuantization22_FIN.json",
+      "bytes": 7519,
+      "sha256": "24e26d1aa7817f2a0a44bee85670634ab671937578c2a82edc8025e9d95563a7",
+      "scope": "FULL",
+      "read_tool_chunk": "482e1b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision02\\RationalLogQuantization22.lean",
+      "bytes": 16162,
+      "sha256": "9e59eb6b8aa4efcb5cc6cdc27d7d7a7d24517986fcd1ad2b4413b97c0efc1fb0",
+      "scope": "FULL",
+      "read_tool_chunk": "3a0a2a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision02\\QuantizedLambdaEnvelope22.lean",
+      "bytes": 7365,
+      "sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "scope": "FULL",
+      "read_tool_chunk": "567363"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\RationalLogQuantization22.lean",
+      "bytes": 16997,
+      "sha256": "dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7",
+      "scope": "FULL",
+      "read_tool_chunk": "f4d314"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\QuantizedLambdaEnvelope22.lean",
+      "bytes": 7365,
+      "sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "scope": "FULL",
+      "read_tool_chunk": "425463"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\dependency_contract22.md",
+      "bytes": 4213,
+      "sha256": "1f7540a4f3f6ab246ecbb5440fb3bce4010e53e51947652a19e5bc28f9301f91",
+      "scope": "FULL",
+      "read_tool_chunk": "425463"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Deriv.lean",
+      "bytes": 13974,
+      "sha256": "b21ae1d96f59f3c8edd6fce834940b4e070a91e8d38477e8ad2f07b3407a41af",
+      "scope": "TARGETED",
+      "lines": "275-290",
+      "read_tool_chunk": "07da1f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Rat\\Cast\\Order.lean",
+      "bytes": 10369,
+      "sha256": "8f51737992f8a14af735b2121f7f7e252580b6a5ffd68a89742e71a325787629",
+      "scope": "TARGETED",
+      "lines": "10-102;1-10",
+      "read_tool_chunk": "07da1f;567363"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Rat\\Cast\\Defs.lean",
+      "bytes": 12438,
+      "sha256": "52ba1467dfda79f729b3c11805b326c95189c1c2cf02663773e156528e39d971",
+      "scope": "TARGETED",
+      "lines": "65-160",
+      "read_tool_chunk": "07da1f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Rat\\Cast\\CharZero.lean",
+      "bytes": 4713,
+      "sha256": "0231a497ef276320bfc8cb7217ddc87f6c46a64dfbbf9b83b516486bccd58aca",
+      "scope": "TARGETED",
+      "lines": "25-110",
+      "read_tool_chunk": "844e7d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Basic.lean",
+      "bytes": 28159,
+      "sha256": "01bf68b0473786a1cc29f8a769829632d8e8a5c7b307e7a0b5493221f09f3b47",
+      "scope": "TARGETED",
+      "lines": "52-75",
+      "read_tool_chunk": "07da1f"
+    }
+  ],
+  "static_text_comparison_chunk": "d62ff6",
+  "header_count": 52,
+  "definition_count": 20,
+  "print_count": 52,
+  "headers_definitions_prints_equal_previous": true,
+  "Lean_invocations": 0,
+  "math_imports": 0,
+  "numeric_evaluations": 0,
+  "builders": 0,
+  "axiom_closure": "UNKNOWN_BEFORE_NEW_GATE_COMPILATION",
+  "WIN": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "FINAL_CONCEPTUAL_NO_WIN",
+  "frozen_at_utc": "2026-10-02T23:42:25.6394247+00:00",
+  "report_sha256": "d1cd64e27c46ad5aacfe2ee33c1b13681b77ae84e6d78c8585a3ef47acaf42bb",
+  "manifest_sha256": "77a7b1c481b146f3c2787e27effc9b6e68b99c1beb4d8b6866ae613311fb3104",
+  "finalizer_sha256": "9da57e28ed56ef95d87b662343faf6f4903946a84ae9f8c932a3b4c8964f0e08",
+  "bound_files": 12,
+  "mechanism": "rank_three_face_calibration_and_factor_split_AP_price",
+  "victory": false,
+  "source_bound_written_only": true,
+  "gamma_rank_unestimated": true,
+  "BV_onset_uncomputed": true,
+  "protected_archives_written": false,
+  "outputs_immutable_after_final": true,
+  "constraints_read": {
+    "findings": 33,
+    "pruned": 5,
+    "max_depth": 2,
+    "stdout_encoding_failure_chunk": "8e99df",
+    "successful_utf8_full_read_chunk": "02761a",
+    "failure_kind": "reader_encoding_only_not_mathematical"
+  },
+  "primary_source": "https://arxiv.org/pdf/math/0506067"
+}

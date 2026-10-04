@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-03T06:54:19.715272+00:00",
+  "scope": "ARCHIVED_OUTPUT_AND_BYTE_METADATA_OBSERVATION_NOT_EVALUATION",
+  "actual_actor": "ROLE6",
+  "actual_attempts": 1,
+  "actual_START": "2026-10-03T06:49:45.399357+00:00",
+  "actual_FINISH": "2026-10-03T06:49:54.814953+00:00",
+  "actual_exit_code": 0,
+  "status": "EPSTEIN_UNFOLDING_AUX_PASS",
+  "root_FULL_result": [
+    "115c5c lines1..750",
+    "d0c146 lines751..1244"
+  ],
+  "root_FULL_START_PREEXEC": "d2f1e2",
+  "root_FULL_POSTEXEC_LOG": "ab9df4",
+  "root_FULL_receipt": "1fe4f7",
+  "case_count": 24,
+  "finite_routes_agree": 18,
+  "mutant_q_detected": 16,
+  "mutant_q_not_applicable": 8,
+  "square_certificates_declared": 295198,
+  "square_certificates_file_bytes": 101630615,
+  "square_certificates_scope": "SHA256 bound, not FULL101MB individual verification by coordinator",
+  "captures_verified": 23,
+  "bindings_verified": 21,
+  "hashes": {
+    "result": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+    "receipt": "054707ed73a7db70bd6bb026a1974663dd5362b6318ee109b22315c21c2e66da",
+    "log": "dd449fa87ee1f21be5c9deed2b5192f576ed16ed9778dbda0297a1d662b9d9fd",
+    "sqrt_certificates": "605f8dcdb49407dccffdfc3a33142bf1cc27d66e6ba0e015c762ea4007a6b129",
+    "PREEXEC": "39acf5ae04d65b333d726fe38fd3102cec28b9034404902f2008ece6753ce8df",
+    "POSTEXEC": "53feffa5544477bf36727f12e22bd271aaff2aace4163e7180554f9e4a04de76"
+  },
+  "root_math_invocations": 0,
+  "Lean22_invocations": 0,
+  "official_modules": 57,
+  "official_auxiliary_theorems": 942,
+  "win": false,
+  "remaining": "G0 Lean sources/compiler/Judge not yet certified; Gamma/Weil/HEAT/coefficientN/D_N separate OPEN obligations."
+}

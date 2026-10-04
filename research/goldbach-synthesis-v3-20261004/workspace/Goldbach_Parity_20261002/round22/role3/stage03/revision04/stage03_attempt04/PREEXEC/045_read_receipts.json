@@ -1,0 +1,18 @@
+{
+  "schema": "round22.role3.unfold_revision03.read_receipts.v1",
+  "time": "2026-10-03T08:01:47.5207479+00:00",
+  "inherited_read_receipts": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision02\\read_receipts.json",
+  "failure_log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision02\\stage03_attempt02\\EpsteinUnfold22.log",
+  "failure_log_sha256": "cada439643be37f61f15393e9c0bb88e1cfd1dc8784a267921f8d62e95ec4ab7",
+  "failure_log_scope": "FULL",
+  "failure_log_chunk": "fece7f",
+  "additional_API_read": {
+    "path": "Mathlib/MeasureTheory/Integral/IntervalIntegral.lean",
+    "scope": "TARGETED",
+    "lines": "552-572",
+    "reason": "integral_const_mul is unconditional"
+  },
+  "new_compiler_calls": 0,
+  "Python_math_calls": 0,
+  "old_PASS_replays": 0
+}

@@ -1,0 +1,199 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.signedGammaTail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaTail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaTailRadius"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaTruncated"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.exponential_Ioi_integral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.exponential_Ioi_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.kernelCoefficient_nonneg"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.rotationAngle_cos_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.kernelCoefficient_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.signedGammaTail_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.signedGammaTail_norm_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaTail_norm_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.signedGammaTail_true_eq_Iio"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_sub_truncated_eq_tail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_truncation_error_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.rotationAngle_continuousAt"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.decayGap_continuousAt"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.kernelCoefficient_continuousAt"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaTailRadius_continuousAt"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaTailRadius_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaTailRadius_antitone"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.exists_local_uniform_Gamma_tail"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch30\\batch30_attempt01\\ComplexGammaMellinTail22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch30\\sources\\ComplexGammaMellinTail22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-04T01:00:57.144831+00:00",
+  "launch_error": null,
+  "log_sha256": "5b90e823e54e99781fc4432ab67ea7076427f9e6a4d3c822d6a7513910353374",
+  "module": "ComplexGammaMellinTail22",
+  "olean_sha256": "168112f8064e3355b387c53dc50b82fac024309acdbd68bbbd0d1ed4060d2ad5",
+  "source_prior_status": "SOURCE_ONLY_NOT_ELABORATED",
+  "source_sha256": "e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0",
+  "started_at": "2026-10-04T01:00:22.490850+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

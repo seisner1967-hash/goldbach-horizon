@@ -1,0 +1,323 @@
+{
+  "round": 14,
+  "status": "PARTIAL_EXACT_CAPACITY_DEFECT_WITH_UNESTIMATED_INTERIOR",
+  "recorded_at_utc": "2026-10-02T16:49:41.936764+00:00",
+  "input_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\judge\\input_sha256.json",
+  "input_manifest_sha256": "6a2fb1cc21c1783140d0b42a8c625c82513d6aafecd312c9f43b9c42da725c30",
+  "input_sha256": {
+    "agent1_coverage.md": "4224fdd0f202da0a1dae1787965cb24aaeb7cf88fbcba8e92f607aff98716aec",
+    "agent2_complement.md": "b512cffb393253b004660442dd5cdde7af228d1550dbdc8c926d8e899c186d67",
+    "agent6.md": "6a5020f476b597fc5b4b4482d71acb2612bca242384de905886d058680539b31",
+    "candidate_proposal.json": "c02b075e2dc48565030669a0d3b9428965cb36e204a9b0768b8d17cb508ff578",
+    "complement.json": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+    "complement_checks.py": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2",
+    "conservation.json": "3993f31853350c7c4fa1edfa0cb82ac155c3c1055926b8ba462d356fd6289fcd",
+    "conservation.py": "e44a5f0ed1e2b389c0e9026f595629e02a38ac40c6c5d485ef79db6808be9f99",
+    "coverage.json": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+    "coverage_checks.py": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce",
+    "coverage_pair_supplement.json": "f3403e4095edc96ee9bab254dd1aaeb52ec02e3b6b1154029ed9ebdc3baa8950",
+    "coverage_pair_supplement.py": "0d7bf62c065bbd5188a3505cfedc08ba5d171c14c6bc9a790f99801cc0df7038",
+    "isolated_complement/complement.json": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+    "isolated_coverage/coverage.json": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+    "numeric_manifest.json": "fe73d3c34e07ce7ee1e38f436f23d4015f9c6485e3e852adbfb323e8baa87bcd",
+    "numerical_replay.json": "8b6efe9c987e1be8926a3763339325479adf07972da3ce8e1b2f66b0b43a623d",
+    "prepare_candidates.py": "1ce00521ea73d647ae19635290addd60cfaa3bcbe175b4b9d6a28b9525ef7f90",
+    "previous_artifacts_sha256.json": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "PROBE_BLOCK.md": "83f94b2bdee78681857c1b38dae3d99469de1766f0bbe3362dd7d933a0e7f39d",
+    "replay_checks.py": "e11d1ba26969ed6123fdf60e5f6108e58a59fdc6f1db8968f173d76f1ec174dd",
+    "role6/complement_attempt01.log": "2532d9fbf84927d05b102c750a1231be5855febb275d27c52e40e02613847a56",
+    "role6/complement_attempt01_failure.json": "63d63ef08f9161568f5b674597f81a778fcb5c425a0a1a5a6c9c7658712450c8",
+    "role6/complement_attempt01_source.txt": "d6da4a23ef0d85981db2e31e414d4dad68687907943040d48a34a9fe6c064a6a",
+    "role6/complement_attempt02.log": "1ffa6701e43b78ee71ddf89744644d0fefb56869a37f577fdab5191dac91ee56",
+    "role6/complement_attempt02_source.txt": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2",
+    "role6/complement_canonical_success.json": "b6f0c43a3ca679dc1167d46becffdee1da038a3140b62928fedef750e9169cc2",
+    "role6/complement_isolated_replay.log": "1ffa6701e43b78ee71ddf89744644d0fefb56869a37f577fdab5191dac91ee56",
+    "role6/coverage_attempt01.log": "29cc26d7104e9292f5929c5749ac2486520b5f8dca160a3c860103d5d27fd19d",
+    "role6/coverage_attempt01_source.txt": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce",
+    "role6/coverage_canonical_success.json": "e8212a85b1285ebcae9a656aeccf45a085b56ce96701fb223c8a76c72a61fc27",
+    "role6/coverage_isolated_replay.log": "29cc26d7104e9292f5929c5749ac2486520b5f8dca160a3c860103d5d27fd19d",
+    "role6/finalize.py": "8cd8ade5330bff0bb82ba5ba0c9eae3e3624b1bb3c87bfcf324d421ec2f813f8",
+    "role6/read_only_audit.json": "9a550cb73d6e65abfc7812acd971a1e7dd88f013b5b1b2e29ed2cee66de9aa9d",
+    "role6/read_only_audit.py": "6720c338ab5c359772238b2beba6a12ba1f78042377cb020b66c7dd1df1fa58f",
+    "role6_final_receipt.json": "0cb35796d1b790b46a27a193b2f79280015b1c1f59b0150801447c4240834b3d",
+    "run_new.py": "5dcbe7130995406623c2acd8a850774eb3f0d12da7a0bf7f031ecc3cd54fbc68",
+    "shared.py": "0e84b6ba37cd74a5a52b667c2f28c777b42d5fab774af014a72583c2cdfa4b3b"
+  },
+  "external_sha256": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+  },
+  "final_role_signals": {
+    "role1": {
+      "terminated": true,
+      "report": "agent1_coverage.md",
+      "report_sha256": "4224fdd0f202da0a1dae1787965cb24aaeb7cf88fbcba8e92f607aff98716aec"
+    },
+    "role2": {
+      "terminated": true,
+      "report": "agent2_complement.md",
+      "report_sha256": "b512cffb393253b004660442dd5cdde7af228d1550dbdc8c926d8e899c186d67"
+    },
+    "role6": {
+      "terminated": true,
+      "report": "agent6.md",
+      "report_sha256": "6a5020f476b597fc5b4b4482d71acb2612bca242384de905886d058680539b31"
+    }
+  },
+  "numeric_manifest_sha256": "fe73d3c34e07ce7ee1e38f436f23d4015f9c6485e3e852adbfb323e8baa87bcd",
+  "numeric_bindings": 32,
+  "numerical_audit_mode": "READ_ONLY_ALL_FIELDS_AND_BYTES_OF_TWO_EXISTING_ISOLATED_REPLAYS_AND_STORED_SUPPLEMENT",
+  "bank_audits": {
+    "coverage": {
+      "status": "PASS_NEW_SHORT_SHIFT_AND_COMPLETE_FIBRE_IDENTITIES_ONLY",
+      "source_sha256": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce",
+      "receipt_sha256": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+      "isolated_receipt_sha256": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+      "bytes": 13317273,
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "canonical_marker_sha256": "e8212a85b1285ebcae9a656aeccf45a085b56ce96701fb223c8a76c72a61fc27",
+      "producer_invoked_by_judge": false
+    },
+    "complement": {
+      "status": "PASS_NEW_COMPLETE_CRT_CUTS_AND_ACTUAL_NEIGHBOR_CAPACITIES_ONLY",
+      "source_sha256": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2",
+      "receipt_sha256": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+      "isolated_receipt_sha256": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+      "bytes": 42180366,
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "canonical_marker_sha256": "b6f0c43a3ca679dc1167d46becffdee1da038a3140b62928fedef750e9169cc2",
+      "producer_invoked_by_judge": false
+    },
+    "supplement": {
+      "status": "PASS_NEW_STORED_ACTUAL_PAIR_AND_SYMBOLIC_PRINCIPAL_SUPPLEMENT_ONLY",
+      "source_sha256": "0d7bf62c065bbd5188a3505cfedc08ba5d171c14c6bc9a790f99801cc0df7038",
+      "receipt_sha256": "f3403e4095edc96ee9bab254dd1aaeb52ec02e3b6b1154029ed9ebdc3baa8950",
+      "mode": "STORED_FROZEN_VECTORS_ONLY",
+      "producer_invoked_by_judge": false,
+      "supplement_repeated_by_judge": false
+    },
+    "stored_vector_audit": {
+      "status": "PASS_NEW_STORED_VECTOR_CONSISTENCY_ONLY",
+      "source_sha256": "6720c338ab5c359772238b2beba6a12ba1f78042377cb020b66c7dd1df1fa58f",
+      "receipt_sha256": "9a550cb73d6e65abfc7812acd971a1e7dd88f013b5b1b2e29ed2cee66de9aa9d",
+      "mode": "STORED_FROZEN_VECTORS_ONLY",
+      "producer_invoked_by_judge": false,
+      "supplement_repeated_by_judge": false
+    }
+  },
+  "distinct_contract_statuses": {
+    "coverage": "PASS_NEW_SHORT_SHIFT_AND_COMPLETE_FIBRE_IDENTITIES_ONLY",
+    "complement": "PASS_NEW_COMPLETE_CRT_CUTS_AND_ACTUAL_NEIGHBOR_CAPACITIES_ONLY",
+    "supplement": "PASS_NEW_STORED_ACTUAL_PAIR_AND_SYMBOLIC_PRINCIPAL_SUPPLEMENT_ONLY",
+    "stored_vector_audit": "PASS_NEW_STORED_VECTOR_CONSISTENCY_ONLY"
+  },
+  "falsifiers": {
+    "coverage.ERROR_FALSIFIER.0": {
+      "claim": "every admissible parent has a neighbor in H=2",
+      "status": "REFUTED_NEW_ZERO_FULL_H_FAMILY"
+    },
+    "coverage.ERROR_FALSIFIER.1": {
+      "claim": "the complete expanded fibre P_all has universal coverage",
+      "status": "REFUTED_NEW_ZERO_FRONT_PREFIX"
+    },
+    "complement.ERROR_FALSIFIER.0": {
+      "claim": "p-only shifts2,4,6 cover the complete CRT105 cut",
+      "status": "REFUTED_NEW_COMPLETE_C1_ZERO_CAPACITY"
+    },
+    "complement.ERROR_FALSIFIER.1": {
+      "claim": "H2 shifts on both large axes cover the complete mod35 cut",
+      "status": "REFUTED_NEW_COMPLETE_C2_ZERO_CAPACITY"
+    }
+  },
+  "falsifier_count": 4,
+  "rational_signs": {
+    "complement.C1.capacity_sign_certificate": "POSITIVE",
+    "complement.C1.defect_sign_certificate": "NEGATIVE",
+    "complement.C1.strict_positive_debt_certificate": "POSITIVE",
+    "complement.C2.capacity_sign_certificate": "POSITIVE",
+    "complement.C2.defect_sign_certificate": "NEGATIVE",
+    "complement.C2.strict_positive_debt_certificate": "POSITIVE",
+    "supplement.checks.0.actual_pair_sign_certificate": "POSITIVE",
+    "supplement.checks.0.principal_S_symbolic.S_coefficient_sign_certificate": "NEGATIVE",
+    "supplement.checks.0.principal_S_symbolic.constant_sign_certificate": "NEGATIVE",
+    "supplement.checks.1.actual_pair_sign_certificate": "POSITIVE",
+    "supplement.checks.1.principal_S_symbolic.S_coefficient_sign_certificate": "NEGATIVE",
+    "supplement.checks.1.principal_S_symbolic.constant_sign_certificate": "NEGATIVE",
+    "supplement.checks.2.actual_pair_sign_certificate": "POSITIVE",
+    "supplement.checks.2.principal_S_symbolic.S_coefficient_sign_certificate": "NEGATIVE",
+    "supplement.checks.2.principal_S_symbolic.constant_sign_certificate": "NEGATIVE",
+    "supplement.checks.3.actual_pair_sign_certificate": "NEGATIVE",
+    "supplement.checks.3.principal_S_symbolic.S_coefficient_sign_certificate": "NEGATIVE",
+    "supplement.checks.3.principal_S_symbolic.constant_sign_certificate": "NEGATIVE",
+    "supplement.checks.4.actual_pair_sign_certificate": "POSITIVE",
+    "supplement.checks.4.principal_S_symbolic.S_coefficient_sign_certificate": "NEGATIVE",
+    "supplement.checks.4.principal_S_symbolic.constant_sign_certificate": "NEGATIVE",
+    "supplement.checks.5.actual_pair_sign_certificate": "POSITIVE",
+    "supplement.checks.5.principal_S_symbolic.S_coefficient_sign_certificate": "NEGATIVE",
+    "supplement.checks.5.principal_S_symbolic.constant_sign_certificate": "NEGATIVE",
+    "supplement.checks.6.actual_pair_sign_certificate": "POSITIVE",
+    "supplement.checks.6.principal_S_symbolic.S_coefficient_sign_certificate": "NEGATIVE",
+    "supplement.checks.6.principal_S_symbolic.constant_sign_certificate": "NEGATIVE"
+  },
+  "rational_sign_count": 27,
+  "strict_signs": true,
+  "unresolved_signs": 0,
+  "floating_values": 0,
+  "graphs": {
+    "graph_all": {
+      "parents": 12,
+      "images": 11,
+      "edges": 37,
+      "matching": 7,
+      "prefix_deficit": 5,
+      "unmatched_parents": [
+        3167,
+        3169,
+        3203,
+        3229,
+        3259
+      ],
+      "unmatched_images": [
+        3437,
+        3487,
+        3521,
+        3563
+      ]
+    },
+    "graph_interior": {
+      "parents": 11,
+      "images": 11,
+      "edges": 37,
+      "matching": 7,
+      "prefix_deficit": 4,
+      "unmatched_parents": [
+        3169,
+        3203,
+        3229,
+        3259
+      ],
+      "unmatched_images": [
+        3437,
+        3487,
+        3521,
+        3563
+      ]
+    }
+  },
+  "cuts": {
+    "C1": {
+      "parents": 10,
+      "images": 21,
+      "edges": 21,
+      "both_axes": false,
+      "finite_degrees_zero": true,
+      "debt": "POSITIVE",
+      "capacity": "POSITIVE",
+      "expanded_defect": "NEGATIVE"
+    },
+    "C2": {
+      "parents": 1,
+      "images": 23,
+      "edges": 23,
+      "both_axes": true,
+      "finite_degrees_zero": true,
+      "debt": "POSITIVE",
+      "capacity": "POSITIVE",
+      "expanded_defect": "NEGATIVE"
+    }
+  },
+  "supplemental_unique_pairs": 7,
+  "supplemental_actual_sign_counts": {
+    "POSITIVE": 6,
+    "NEGATIVE": 1,
+    "ZERO": 0
+  },
+  "distinct_actual_vertices_checked": 78,
+  "complement_all_descent_C4_edges_checked": 44,
+  "real_failed_numerical_selection": {
+    "exit_code": 1,
+    "attempt": 1,
+    "source_sha256": "d6da4a23ef0d85981db2e31e414d4dad68687907943040d48a34a9fe6c064a6a",
+    "log_sha256": "2532d9fbf84927d05b102c750a1231be5855febb275d27c52e40e02613847a56",
+    "classification": "Composite proposed complement, not failed arithmetic identity and not Lean"
+  },
+  "preservation_before": {
+    "status": "PRESERVED",
+    "files": 603,
+    "previous_protected_files": 514,
+    "round13_files": 89,
+    "controller13_sha256": "64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d",
+    "controller_bindings": 88,
+    "registry_sha256": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "exact_inventory_additions_and_removals_checked": true,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+      }
+    }
+  },
+  "preservation_after": {
+    "status": "PRESERVED",
+    "files": 603,
+    "previous_protected_files": 514,
+    "round13_files": 89,
+    "controller13_sha256": "64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d",
+    "controller_bindings": 88,
+    "registry_sha256": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "exact_inventory_additions_and_removals_checked": true,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+      }
+    }
+  },
+  "lean_invoked": false,
+  "compiler_failure_fabricated": false,
+  "new_lean_modules": 0,
+  "new_lean_conclusions": 0,
+  "cumulative_auxiliary_modules": 15,
+  "cumulative_auxiliary_conclusions": 208,
+  "old_banks_rerun": false,
+  "new_producers_repeated_by_judge": false,
+  "supplement_repeated_by_judge": false,
+  "old_lean_rerun": false,
+  "old_pdf_rerendered": false,
+  "finite_N": 100000000,
+  "source_adaptive_u_min": "10^24",
+  "finite_witness_is_source_onset_test": false,
+  "global_no_go": false,
+  "victory": false,
+  "score": 0,
+  "written_partial_costs": {
+    "window_variation": "42*N^(63/64)*u^2",
+    "whole_front": "28*N^(37/64)*u^3*(1+u)",
+    "written_not_Lean_certified": true,
+    "interior_capacity_not_paid": true,
+    "alternative_U4_not_double_counted": true
+  },
+  "semantic_open_obligations": [
+    "C17 actual coupled prime-incidence prefix defect or matching-independent C16 weighted comparison",
+    "Remaining J0/J1/J2, c=1, -S(N)N, long cofactors and matching S(cN)",
+    "Full K2/P5, singletons/faces and rough credit retained before exact withdrawals",
+    "Physical-band additional effective BV onset and 2 max(e,0)"
+  ],
+  "judge_scripts_sha256": {
+    "audit-judge.ps1": "6498fae53a421e7e7cd4caf1cd526be6beba33daf0aefca782141583ea9ce73e",
+    "verify-frozen.ps1": "442cda23f738f7295616560a4735e62dce6205c85534705f62add6d7518f9e19",
+    "freeze-inputs.py": "a9155e9898e0ac5b3f06440a350b16a7582a76fcb9547dd82741c0be92678198",
+    "verify-frozen.py": "696100de83ea69c19c85bfc916c370d3f55672f8494d01f18d4ad982fc40dd05",
+    "run-audit.py": "44a7a7ae067fc66660f8f80d8dcf8db7cd105874664d829e2436d14854107399"
+  }
+}

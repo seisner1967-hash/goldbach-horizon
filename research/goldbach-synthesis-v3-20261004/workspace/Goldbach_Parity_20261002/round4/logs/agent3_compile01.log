@@ -1,0 +1,69 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round4\lean\AffineHHObstruction.lean:36:13: error: don't know how to synthesize implicit argument 'f'
+  @common_zero_of_nonzero_determinant K inst✝ a b ?m.16877 d e ?m.16880 hdet
+context:
+K : Type u_1
+inst✝ : Field K
+a b c d e f N : K
+R S : K → K → K
+hN : N ≠ 0
+hidentity : ∀ (X Y : K), affine a b c X Y * R X Y + affine d e f X Y * S X Y = N
+hdet : ¬a * e - b * d = 0
+X : K := (b * f - c * e) / (a * e - b * d)
+Y : K := (c * d - a * f) / (a * e - b * d)
+⊢ K
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round4\lean\AffineHHObstruction.lean:36:13: error: don't know how to synthesize implicit argument 'c'
+  @common_zero_of_nonzero_determinant K inst✝ a b ?m.16877 d e ?m.16880 hdet
+context:
+K : Type u_1
+inst✝ : Field K
+a b c d e f N : K
+R S : K → K → K
+hN : N ≠ 0
+hidentity : ∀ (X Y : K), affine a b c X Y * R X Y + affine d e f X Y * S X Y = N
+hdet : ¬a * e - b * d = 0
+X : K := (b * f - c * e) / (a * e - b * d)
+Y : K := (c * d - a * f) / (a * e - b * d)
+⊢ K
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round4\lean\AffineHHObstruction.lean:36:7: error: failed to infer 'have' declaration type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round4\lean\AffineHHObstruction.lean:32:25: error: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b c d e f N : K
+R S : K → K → K
+hN : N ≠ 0
+hidentity : ∀ (X Y : K), affine a b c X Y * R X Y + affine d e f X Y * S X Y = N
+hdet : ¬a * e - b * d = 0
+X : K := (b * f - c * e) / (a * e - b * d)
+Y : K := (c * d - a * f) / (a * e - b * d)
+⊢ False
+'GoldbachResearch.AffineHHObstruction.common_zero_of_nonzero_determinant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.cross_branch_determinant_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.rational_affine_obstruction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.real_affine_obstruction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.independent_cross_forms_cannot_have_constant_nonzero_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.zero_factor_allows_two_same_branch_directions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.exact_mixed_product_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.concrete_positive_tuple' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.AffineHHObstruction.concrete_mixed_level_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

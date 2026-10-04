@@ -1,0 +1,8 @@
+{
+  "node_id": "1.1",
+  "hypothesis": "Mechanism: Poids quadratique du nombre réel de facteurs premiers avec multiplicité.\nHypothesis: Le support complètement rugueux sous la coupure quartique borne le nombre de facteurs et permet d'éliminer semiprimes et triprimes par interpolation exacte.\nObservable: Détecteur premier Lean prouvé à partir de la rugosité et non d'une hypothèse de primalité ; cas de puissances premières testés à N=100000000.\nConflicts: Le projecteur impair du noeud 1 confond premiers et triprimes ; ce poids les sépare mais doit encore être estimé sur le support complet.",
+  "score": 0.0,
+  "insight": "Poids quadratique exact, Omega multiplicité, rugosité complète impose Omega≤3 et détecte un premier. La frontière r>alpha seule ne fournit ni ces hypothèses ni la primalité de m=kr.",
+  "result": "8 conclusions Lean compilées et revue indépendante ; filtre24121PASS et replay numérique indépendant24371PASS. Aucun contrôle du moment additif de D_N.",
+  "branch": "null"
+}

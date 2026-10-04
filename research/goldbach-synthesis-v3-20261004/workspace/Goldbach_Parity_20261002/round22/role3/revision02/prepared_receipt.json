@@ -1,0 +1,25 @@
+{
+  "schema": "round22.role3.kernel_revision02.prepared_receipt.v1",
+  "time": "2026-10-03T07:12:08.7102398+00:00",
+  "status": "PREPARED_SOURCE_ONLY_REQUEST_ROOT_FULL_SHA_REVIEW",
+  "source_manifest_sha256": "8c16d9b471809ebfd093305d7f6e9e90284579cce3dcb95fc0dd9d3d5dd22265",
+  "launcher_sha256": "ec1dc5ec8d9d80802d5a87b5573bd4f99ab0c91e3ad5a55236934d18e92fe51f",
+  "input_count": 30,
+  "module_rows": [
+    {
+      "module": "EpsteinKernel22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\EpsteinKernel22.lean",
+      "sha256": "b465bf53b124fa158eed1b5f01171d18ce7f8d7252bf27cf30db1ed7575a773c",
+      "theorem_count": 28,
+      "definition_count": 5,
+      "axiom_print_count": 33,
+      "status": "SOURCE_ONLY_UNCOMPILED_REVISION02"
+    }
+  ],
+  "Lean_gate": "CLOSED",
+  "new_compiler_calls": 0,
+  "Python_math_calls": 0,
+  "no_win": true,
+  "metadata_command": "native PowerShell execution of owned write_metadata.ps1 text",
+  "metadata_exit_credit": "actual tool return required separately"
+}

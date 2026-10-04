@@ -1,0 +1,108 @@
+{
+  "schema": "ROUND22_ROLE3_CONTINUOUS_DELIVERY_REVISION03_READS",
+  "status": "DOCUMENTARY_DELIVERY_AFTER_INDEPENDENT_BATCH17_AUX_PASS",
+  "reader": "ROLE3",
+  "current_delivery": "continuous_contract_delivery22_revision03.txt",
+  "FULL_entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\adjudication.md",
+      "bytes": 3611,
+      "sha256": "ffab547e870266510c64ebe011b89998fe1d218ec27f347f8ca8a3ce38a331e3",
+      "scope": "FULL",
+      "read_tool_chunk": "3c12d9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\completion_receipt.json",
+      "bytes": 14597,
+      "sha256": "150b360cfb3fabbcc3a1a42456c2a1ebd338683af9863c68134310c06775cdaa",
+      "scope": "FULL",
+      "read_tool_chunk": "3c12d9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge_batch17_closed_observation.json",
+      "bytes": 1365,
+      "sha256": "6cd462563ba875dd618749da2ba986345baa1bbe1f65bd4497bf1cb5e8e6bbfe",
+      "scope": "FULL",
+      "read_tool_chunk": "3c12d9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\RationalLogQuantization22.lean",
+      "bytes": 16997,
+      "sha256": "dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7",
+      "scope": "FULL",
+      "read_tool_chunk": "4f3420"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\QuantizedLambdaEnvelope22.lean",
+      "bytes": 7365,
+      "sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "scope": "FULL",
+      "read_tool_chunk": "4f3420"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\continuous_contract_delivery22_revision03.txt",
+      "bytes": 6629,
+      "sha256": "af466104a72bb89b5e0a5e7ecf117c06c610d23d14a82139cfda7cb96c6fcb82",
+      "scope": "FULL_FINAL",
+      "read_tool_chunk": "0fc466"
+    }
+  ],
+  "preserved_previous_inputs": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\continuous_contract_delivery22.txt",
+      "sha256": "37f7ce4bc30f1cb6a7ed6d94a84c23ff2719a7a8e689bf959d9047f913408899",
+      "scope": "CURRENT_METADATA_SHA_ONLY_PREVIOUS_FULL_IN_INHERITED_RECEIPT",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\continuous_contract_delivery22_revision02.txt",
+      "sha256": "5a20aeadcd9a484e9c7c15998865456dab2e5688cd490682fc4e365da8d85a4a",
+      "scope": "CURRENT_METADATA_SHA_ONLY_PREVIOUS_FULL_IN_INHERITED_RECEIPT",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\continuous_contract_delivery22_read_receipts.json",
+      "sha256": "ac3d22b76ac36f911bebab66a4a0475f2a0a74fe38858a7df9930c56b7cfe65d",
+      "scope": "CURRENT_METADATA_SHA_ONLY_PREVIOUS_FULL_IN_INHERITED_RECEIPT",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\RationalLogQuantization22.log",
+      "sha256": "45311354041cb407df0372b3f764bdb2bf90ea66b0a3100b1b072945510ef5c6",
+      "scope": "CURRENT_METADATA_SHA_ONLY_PREVIOUS_FULL_IN_INHERITED_RECEIPT",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\parameter_guard01_revision02_execution\\closure22.md",
+      "sha256": "7fca0cca942827073df2c4fa6215375eac70c696335034824e5d9743e302d034",
+      "scope": "CURRENT_METADATA_SHA_ONLY_PREVIOUS_FULL_IN_INHERITED_RECEIPT",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_source01\\source_handoff22.json",
+      "sha256": "7c5eb71cc23ac7f4235bd566e8aa5e07653a756fab6c58ad4a61aa183e11f834",
+      "scope": "CURRENT_METADATA_SHA_ONLY_PREVIOUS_FULL_IN_INHERITED_RECEIPT",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_source01\\native_contract22.md",
+      "sha256": "4f01d07973c22ad1e75019068dc65fdc0e01fe1812629239d8af2557dc983870",
+      "scope": "CURRENT_METADATA_SHA_ONLY_PREVIOUS_FULL_IN_INHERITED_RECEIPT",
+      "unchanged": true
+    }
+  ],
+  "inherited_full_source_reads": "continuous_contract_delivery22_read_receipts.json#ac3d22b76ac36f911bebab66a4a0475f2a0a74fe38858a7df9930c56b7cfe65d",
+  "source_comments_status": "Historical SOURCE-only comments remain frozen; actual status is independent17 plus ROOT observation, not inferred from comments",
+  "official_modules": 78,
+  "official_declarations": 1304,
+  "new_credit_from_this_report": 0,
+  "new_Lean_invocations": 0,
+  "new_numeric_evaluations": 0,
+  "new_native_builds": 0,
+  "new_probes": 0,
+  "global_coefficient_computed": false,
+  "native_runtime_PREPARED": false,
+  "resource_SOURCE_preparation": "ROOT reports work in progress; no new build/runtime handoff used",
+  "D_N_paid": false,
+  "WIN": false
+}

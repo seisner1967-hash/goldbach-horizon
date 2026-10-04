@@ -1,0 +1,90 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH29_SOURCE_TOOLS_HANDOFF",
+  "status": "SOURCE_TOOL_FROZEN_NOT_PREPARED_NOT_EXECUTED",
+  "time_utc": "2026-10-04T00:13:10.8850622Z",
+  "role": "ROLE5",
+  "baseline_modules": 85,
+  "baseline_declarations": 1434,
+  "module": "ComplexGammaMellinTail22",
+  "modules": 1,
+  "declarations": 22,
+  "theorems": 18,
+  "definitions": 4,
+  "qualified_prints": 22,
+  "scope": "SCALAR_COMPLEX_GAMMA_MELLIN_TAIL_AUX_ONLY",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch29\\prepare_metadata.py",
+      "sha256": "dc19ecde6f4dc5ca8498f0d4e9470674a59bd2a2636a5b3345561c1e2ca424bd",
+      "bytes": 24202,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "4b057e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch29\\run_once.py",
+      "sha256": "11ad1742edc00b2d6168b84ec8655c378f1d0c9412d3c272b123f95fc53ed6ae",
+      "bytes": 13235,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "4d3890"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch29\\preparation.md",
+      "sha256": "8a9706b238c7bccdb7f475a89b0f7217043f58a50d7cac9eeba9a46e54e3bf21",
+      "bytes": 4831,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "776233"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch29\\sources\\ComplexGammaMellinTail22.lean",
+      "sha256": "3002a4d39dfd6bd072f1a8f778de3752cf91bf60f831dd3345f5dd9631723852",
+      "bytes": 13314,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "776233"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch29\\source_catalog_author22.json",
+      "sha256": "0e259314344d92066fd25f4ada0737fa8cb184d0af844ee764e3c7e16fa986da",
+      "bytes": 1811,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "776233"
+    }
+  ],
+  "source_tool_read_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch29\\source_tool_reads29.json",
+  "source_tool_read_sha256": "4e2fdac70a22596d1ad55fbabebcee015a2cf2419f85b4b9a1dee0be58cc0ce4",
+  "local_direct_import": "ComplexGammaMellinLocal22",
+  "readonly_dependencies": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22",
+    "ComplexGammaMellinLocal22"
+  ],
+  "Local26_global_receipt_status": "INDEPENDENT_BATCH26_FAILED",
+  "Local26_module_row_status": "INDEPENDENT_LEAN_AUX_PASS",
+  "Local26_row_PASS_declarations": 22,
+  "Local26_ROOT_partial_sha256": "9b7697d2d35d12903e436403e77fb44e8ea76c6f586940e28d168ab851340e9b",
+  "Holomorphy27_imported": false,
+  "author_olean_allowed": false,
+  "child_wall_seconds": 300,
+  "max_heartbeats": 1000000,
+  "compiler_invocations_maximum_future": 1,
+  "retry_count_maximum": 0,
+  "expected_attempt": "batch29_attempt01",
+  "canonical_future_gate": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge5_batch29_authorization.json",
+  "ROOT_FULL_and_distinct_PREP_authorization_required": true,
+  "PREP_invocations": 0,
+  "compiler_invocations": 0,
+  "candidate_imports": 0,
+  "candidate_parser_invocations": 0,
+  "numeric_invocations": 0,
+  "future_import_input_counts_not_observed": true,
+  "future_hypothetical_modules_after_observation": 86,
+  "future_hypothetical_declarations_after_observation": 1456,
+  "tail_complex_joint_continuity_paid": false,
+  "formal_H_infinity_convergence_paid": false,
+  "exp_bridge_paid_by_this_module": false,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "old28_real_failure_preserved": true,
+  "old28_receipt_sha256": "3d724ee2096e676738e55c33c65a36909418930b4a0e40c0a0d7086ad38c06da",
+  "baseline_observation_sha256": "3517f0c6a5aff76e5980c8c2213fd746153dd45dfe18706b7c4a85d87804295c"
+}

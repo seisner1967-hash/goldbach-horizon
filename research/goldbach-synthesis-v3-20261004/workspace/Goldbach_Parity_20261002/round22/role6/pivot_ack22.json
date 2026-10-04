@@ -1,0 +1,81 @@
+{
+  "status": "ROLE6_ACK_DEFINITIVE_USER_PIVOT22_PRECONTRACT_ONLY",
+  "created_utc": "2026-10-03T06:01:38.0136807Z",
+  "directive_sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+  "probe_sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+  "directive_FULL_read_chunk": "392b8e",
+  "probe_FULL_read_chunk": "a1d7f3",
+  "round21_controller_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\controller_interrupted_manifest.json",
+  "round21_controller_sha256": "72669c69efa86282a3bd89cf5d371690c4464a88b51e3f2bdbea221b195ea256",
+  "actual_round21_math_invocations_by_role6": 0,
+  "actual_round21_Lean_invocations_by_role6": 0,
+  "actual_round21_new_compiled_modules_by_role6": 0,
+  "actual_round21_AP_producer_invocations": 0,
+  "actual_round21_reciprocal_producer_invocations": 0,
+  "abandoned_AP21_source_count": 7,
+  "abandoned_AP21_sources_readonly_sha256": {
+    "round21/role6_ap/arithmetic21.py": "a1b0e27c4ca50b3adf208cfa68edd3079d2686ac3de176024b9edb2d5231ddb3",
+    "round21/role6_ap/bank21.py": "9653ccb412f1fd854404fc85014657df8bcc024de35b429e3691d90ab9a9d675",
+    "round21/role6_ap/envelope21.py": "47bcd555639bc3bb43420b4c5ddd3c2ae586f020cd3adcf76bc71ba40efda775",
+    "round21/role6_ap/frames21.py": "dd506bb2bf4b7ae6336374abff2d5673ca8464412adf0c7009e8b9f6e2a0aed5",
+    "round21/role6_ap/integral21.py": "270effc24e53875b3617229f962c8823907209aa873b791b772136918d617185",
+    "round21/role6_ap/storage21.py": "44a027fe9df6bf53fae091b183df719832f7ef20eb834156f78c5e100a3653ef",
+    "round21/role6_ap/weights21.py": "6b6e531a183930ede3eba243a63704ef72387b9abecf66489e6c935c3626896a"
+  },
+  "abandoned_AP21_sources_not_modified_during_pivot": true,
+  "AP21_result_exists": false,
+  "reciprocal21_result_exists": false,
+  "old_AP21_methods_not_continued": true,
+  "actual_conservation21_metadata_only": {
+    "result_sha256": "51211ade1ad6cc490e724637c1e0d4602a3f184e46dd971eb6c282892e63208f",
+    "exit_code": 0,
+    "actual_invocations": 1,
+    "counted_as_new_math": false,
+    "credited_pass": true,
+    "mathematical_execution": false,
+    "protected_count": 3028,
+    "original_documents_sha_only": true,
+    "replayed": false,
+    "tool_chunk": "1cb839",
+    "actual_started_utc": "2026-10-03T05:18:32.248223+00:00",
+    "actual_finished_utc": "2026-10-03T05:18:40.795646+00:00",
+    "final_receipt_sha256": "9ca593f3111d88524e61668b96e9a1753dce10d2d84fa9c1896096753ac723ea"
+  },
+  "preparation_metadata_incident": {
+    "mathematical_execution": false,
+    "exit_code": 1,
+    "preflight_execution": false,
+    "original_ACK_not_written": true,
+    "kind": "MISSING_ASSUMED_CONTROLLER_FILENAME_BEFORE_ACK_WRITE",
+    "actual_tool_chunk": "30723f",
+    "correction": "rg22ee78 observed controller_interrupted_manifest.json",
+    "incorrect_readonly_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\controller_manifest.json"
+  },
+  "forbidden_future_methods": [
+    "arithmetic bilinear forms",
+    "combinatorial sieve",
+    "Mobius inversion",
+    "Vaughan decompositions",
+    "scalar AP remainder estimates"
+  ],
+  "authorized_precontract_methods": [
+    "exact continuous spectral correlations",
+    "Riemann/Weil explicit formula",
+    "modular geometry",
+    "global operators and Fredholm/scattering traces"
+  ],
+  "spectral_correlations_distinct_from_forbidden_arithmetic_bilinear_forms": true,
+  "new_pivot22_math_execution_authorized": false,
+  "new_pivot22_math_invocations": 0,
+  "new_pivot22_Lean_invocations": 0,
+  "new_conservation22_preflight_invocations": 0,
+  "exact_source_onset_logN_ge": "10^24",
+  "diagnostic_N": 100000000,
+  "source_onset_diagnostic_not_promoted": true,
+  "ownership": [
+    "round22/role6/**",
+    "round22/agent6_precontract.md"
+  ],
+  "no_root_C_or_REPORT_or_old3028_or_round21_writes": true,
+  "victory": false
+}

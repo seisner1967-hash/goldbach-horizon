@@ -1,0 +1,114 @@
+import FourFormTruncation
+
+/-! Local collision loss for the actual four-form Euler product. No analytic
+totient or Mertens estimate is assumed or asserted here. -/
+namespace GoldbachRound17.FourFormCollisionLoss
+open Finset
+open scoped BigOperators
+open GoldbachRound17
+noncomputable section
+
+def primeBase (p : ℕ) : ℝ := 1 - 1 / (p : ℝ)
+def mertensEuler (y : ℕ) : ℝ := ∏ p ∈ Selberg.primeSupport y, 1 / primeBase p
+def collisionLoss (N e p0 y : ℕ) : ℝ :=
+  ∏ p ∈ Selberg.primeSupport y,
+    if p ∣ FourFormRoots.natDelta N e p0 then (primeBase p)^3 else 1
+
+theorem primeBase_positive {p : ℕ} (hp : p.Prime) : 0 < primeBase p := by
+  have hp1 : 1 < (p : ℝ) := by exact_mod_cast hp.one_lt
+  exact sub_pos.mpr ((div_lt_one (by linarith : 0 < (p : ℝ))).mpr hp1)
+
+theorem actualEuler_factor {N e p0 y p : ℕ}
+    (hns : ∀ p ∈ Selberg.primeSupport y, FourFormRoots.actualRho p N e p0 < p)
+    (hp : p ∈ Selberg.primeSupport y) :
+    1 + FourFormTruncation.actualH N e p0 p = 1 / (1 - Selberg.actualDensity N e p0 p) := by
+  obtain ⟨_, hg1⟩ := Selberg.actual_density_properties hns p hp
+  have hn : 1 - Selberg.actualDensity N e p0 p ≠ 0 := (sub_pos.mpr hg1).ne'
+  unfold FourFormTruncation.actualH
+  field_simp
+
+theorem collision_factor_le {N e p0 y p : ℕ}
+    (h1 : 1 ≤ p0) (hpe : p0 ≤ e)
+    (hns : ∀ p ∈ Selberg.primeSupport y, FourFormRoots.actualRho p N e p0 < p)
+    (hp : p ∈ Selberg.primeSupport y) :
+    (1 / primeBase p)^4 *
+      (if p ∣ FourFormRoots.natDelta N e p0 then (primeBase p)^3 else 1) ≤
+        1 + FourFormTruncation.actualH N e p0 p := by
+  have hpprime := (Selberg.mem_primeSupport.mp hp).1
+  haveI : Fact p.Prime := ⟨hpprime⟩
+  have hp0 : 0 < (p : ℝ) := by exact_mod_cast hpprime.pos
+  have hb : 0 < primeBase p := primeBase_positive hpprime
+  have hbne := hb.ne'
+  obtain ⟨_, hg1⟩ := Selberg.actual_density_properties hns p hp
+  rw [actualEuler_factor hns hp]
+  by_cases hd : p ∣ FourFormRoots.natDelta N e p0
+  · rw [if_pos hd]
+    have hr : (1 : ℝ) ≤ FourFormRoots.actualRho p N e p0 := by
+      exact_mod_cast (FourFormRoots.rho_lower (l := p) (N := N) (e := e) (p0 := p0))
+    have hg : 1 / (p : ℝ) ≤ Selberg.actualDensity N e p0 p :=
+      div_le_div_of_nonneg_right hr hp0.le
+    have heq : (1 / primeBase p)^4 * (primeBase p)^3 = 1 / primeBase p := by
+      field_simp
+      ring
+    rw [heq]
+    exact one_div_le_one_div_of_le (sub_pos.mpr hg1) (by dsimp [primeBase]; linarith)
+  · rw [if_neg hd, mul_one]
+    have hr4 := FourFormRoots.rho_eq_four_of_not_dvd_delta (l := p) h1 hpe hd
+    have hg4 : Selberg.actualDensity N e p0 p = 4 / (p : ℝ) := by
+      simp [Selberg.actualDensity, FourFormRoots.localDensity, hr4]
+    have ht : -(2 : ℝ) ≤ -(1 / (p : ℝ)) := by
+      have hl : 1 / (p : ℝ) < 1 := by
+        apply (div_lt_one hp0).mpr
+        exact_mod_cast hpprime.one_lt
+      linarith
+    have hbern := one_add_mul_le_pow ht 4
+    have hbd : 1 - Selberg.actualDensity N e p0 p ≤ (primeBase p)^4 := by
+      rw [hg4]
+      dsimp [primeBase]
+      convert hbern using 1; ring
+    have hi := one_div_le_one_div_of_le (sub_pos.mpr hg1) hbd
+    simpa only [one_div_pow] using hi
+
+theorem actualEuler_collision_loss {N e p0 y : ℕ}
+    (h1 : 1 ≤ p0) (hpe : p0 ≤ e)
+    (hns : ∀ p ∈ Selberg.primeSupport y, FourFormRoots.actualRho p N e p0 < p) :
+    (mertensEuler y)^4 * collisionLoss N e p0 y ≤ FourFormTruncation.actualEuler N e p0 y := by
+  classical
+  unfold mertensEuler collisionLoss FourFormTruncation.actualEuler
+  rw [← Finset.prod_pow, ← Finset.prod_mul_distrib]
+  apply Finset.prod_le_prod
+  · intro p hp
+    apply mul_nonneg (pow_nonneg (one_div_nonneg.mpr
+      (primeBase_positive (Selberg.mem_primeSupport.mp hp).1).le) 4)
+    split_ifs
+    · exact pow_nonneg (primeBase_positive (Selberg.mem_primeSupport.mp hp).1).le 3
+    · norm_num
+  · intro p hp
+    exact collision_factor_le h1 hpe hns hp
+
+theorem actualG_collision_loss_half {N e p0 y z : ℕ}
+    (hyz : y ≤ z) (hz : 0 < (z : ℝ)) (h1 : 1 ≤ p0) (hpe : p0 ≤ e)
+    (heN : e.Coprime N) (hpN : p0.Coprime N)
+    (hns : ∀ p ∈ Selberg.primeSupport z, FourFormRoots.actualRho p N e p0 < p)
+    (hlogz : 32 ≤ Real.log z) (hlogy : 32 * Real.log y ≤ Real.log z)
+    (hprime : (∑ p ∈ Selberg.primeSupport y, Real.log p / p) ≤ 2 + 2 * Real.log y) :
+    (mertensEuler y)^4 * collisionLoss N e p0 y / 2 ≤ Selberg.actualG N e p0 z := by
+  have hsub := FourFormTruncation.primeSupport_mono hyz
+  have hny : ∀ p ∈ Selberg.primeSupport y, FourFormRoots.actualRho p N e p0 < p :=
+    fun p hp => hns p (hsub hp)
+  have heuler := actualEuler_collision_loss h1 hpe hny
+  have hG := FourFormTruncation.actual_G_half_euler_of_prime_log_sum hyz hz heN hpN
+    hns hlogz hlogy hprime
+  linarith
+
+#print axioms primeBase
+#print axioms mertensEuler
+#print axioms collisionLoss
+#print axioms primeBase_positive
+#print axioms actualEuler_factor
+#print axioms collision_factor_le
+#print axioms actualEuler_collision_loss
+#print axioms actualG_collision_loss_half
+
+end
+end GoldbachRound17.FourFormCollisionLoss

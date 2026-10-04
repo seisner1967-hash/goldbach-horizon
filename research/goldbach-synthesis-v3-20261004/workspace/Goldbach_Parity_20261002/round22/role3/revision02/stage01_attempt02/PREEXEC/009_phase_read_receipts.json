@@ -1,0 +1,64 @@
+{
+  "schema": "round22.role3.selected_read_receipts.v1",
+  "time": "2026-10-03T06:58:11.0734226+00:00",
+  "selection": "16.1_ACTUAL_ROOT_f89dcf_EXIT0",
+  "entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\experiments\\16.1\\executor_prompt.md",
+      "expected": "ef1a3b96ec5c14d305b24f5405146c7997513b6f2fff27e89d9967e062c0faf2",
+      "read": "FULL",
+      "chunk": "94a2d4",
+      "sha256": "ef1a3b96ec5c14d305b24f5405146c7997513b6f2fff27e89d9967e062c0faf2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\agent2_operator.md",
+      "expected": "be2a121cd14fe3513c9ee8ae28458a8a03f38957599d4a9bbba4e2174dbdcafe",
+      "read": "FULL",
+      "chunk": "ed84da",
+      "sha256": "be2a121cd14fe3513c9ee8ae28458a8a03f38957599d4a9bbba4e2174dbdcafe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\uniform_formula.md",
+      "expected": "720b8b2363c222321e7f50752591a8a5d0e992c119bfc3b4f445b9c80b7b7825",
+      "read": "FULL",
+      "chunk": "ec5e8a",
+      "sha256": "720b8b2363c222321e7f50752591a8a5d0e992c119bfc3b4f445b9c80b7b7825"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\lean_contract.md",
+      "expected": "9648829a0eb94f57f2a2e0e056836fac03e611d5a1d2fb21e4f453a04e953dbc",
+      "read": "FULL",
+      "chunk": "850f26",
+      "sha256": "9648829a0eb94f57f2a2e0e056836fac03e611d5a1d2fb21e4f453a04e953dbc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\numeric_contract.md",
+      "expected": "943470e906efd8a77b2fbdbe50f001978e9bbaa9c20101f6ad379bcca9e03ebf",
+      "read": "FULL",
+      "chunk": "1f7117",
+      "sha256": "943470e906efd8a77b2fbdbe50f001978e9bbaa9c20101f6ad379bcca9e03ebf"
+    }
+  ],
+  "actual_FULL": 5,
+  "preparation_reads_manifest_sha256": "1ccf7fb13d2f33080f4b23201d9c2480f0e7349d0cd7f66ea307ac9e3c2efd05",
+  "additional_targeted_sources": [
+    {
+      "path": "Mathlib/Data/Int/Interval.lean",
+      "range": "71-89",
+      "chunk": "435706"
+    },
+    {
+      "path": "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
+      "range": "108-137",
+      "chunk": "53c4b2"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Measure/Haar/NormedSpace.lean",
+      "range": "159-189",
+      "chunk": "022b89"
+    }
+  ],
+  "compiler_calls": 0,
+  "Python_math_calls": 0,
+  "old_PASS_replays": 0
+}

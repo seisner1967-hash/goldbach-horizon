@@ -1,0 +1,192 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_LAMBDA_SOURCE03_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_NOT_ELABORATED",
+  "author": "ROLE4",
+  "module": "ComplexGammaMellinLambda22",
+  "scope": "Single observed zero-coefficient continuity proof repair; no candidate parser, compiler, tactic/API probe or runtime.",
+  "source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source03/ComplexGammaMellinLambda22.lean",
+    "bytes": 16780,
+    "sha256": "4a94415678e4c3295b989dccbcda9e049483e131c17efce68099d05686e1c72d",
+    "scope": "FULL_FINAL_SOURCE",
+    "chunk": "330873"
+  },
+  "contract": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source03/source_contract22.md",
+    "bytes": 4702,
+    "sha256": "6d1b373ba553049f7419137afa245d5f498d4d941fd10a5f6da8896255b86e82",
+    "scope": "FULL",
+    "chunk": "88b2dc"
+  },
+  "catalog": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source03/source_catalog22.json",
+    "bytes": 3173,
+    "sha256": "46c97a2e44c1bd9649220c215033648ef3ba5823f0cf04b4950c48128e6fef0b",
+    "scope": "FULL_MANUAL_CATALOG",
+    "chunk": "88b2dc"
+  },
+  "previous_source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/ComplexGammaMellinLambda22.lean",
+    "bytes": 16648,
+    "sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+    "scope": "FULL_FROZEN_SOURCE_CURRENT_READ",
+    "chunk": "f4a865"
+  },
+  "previous_handoff": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_handoff22.json",
+    "bytes": 27461,
+    "sha256": "323c3d3194474951ca554895221fac0d5c1464a6cb1249bb639f518dfa829b53",
+    "scope": "CONTROL_JSON_CURRENT_METADATA_READ; FULL_HISTORICAL_READING",
+    "historical_full_chunk": "0b83b1",
+    "current_control_metadata_chunk": "773f06"
+  },
+  "actual_failure_evidence": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch33/batch33_attempt01/ComplexGammaMellinLambda22.log",
+      "bytes": 4213,
+      "sha256": "9193c890ddf67dee7b41ba985ce996582b7d6dc0ac4c3d8d6b55c73fed763bbd",
+      "scope": "FULL_REAL_INDEPENDENT_FAIL33_LOG",
+      "chunk": "8f1ceb"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch33/batch33_attempt01/receipt.json",
+      "bytes": 8810,
+      "sha256": "5fa2895cce5867ae417f3bec34f1858176c1c10c3b3770005acfa4ae3e2026ef",
+      "scope": "FULL_REAL_INDEPENDENT_FAIL33_RECEIPT",
+      "chunk": "8f1ceb"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch33/batch33_attempt01/ComplexGammaMellinLambda22_FIN.json",
+      "bytes": 6798,
+      "sha256": "fc3c5b0fb831847ecfbe5c26cdbeb4c79c3504f36a6be1b6bbd53255841bd369",
+      "scope": "FULL_REAL_INDEPENDENT_FAIL33_FIN",
+      "chunk": "88b2dc"
+    }
+  ],
+  "API_targeted": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction.lean",
+      "bytes": 54060,
+      "sha256": "48c9529038f4e11220c2b09d28468f6c0d1107f328b5a15cc5587efa11223631",
+      "scope": "TARGETED_REAL_CACHE_SIGNATURES_ONLY",
+      "chunk": "d2d7f9",
+      "lines": [
+        85,
+        111
+      ],
+      "purpose": "ArithmeticFunction.map_zero for actual vonMangoldt zero argument"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/VonMangoldt.lean",
+      "bytes": 6152,
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "scope": "TARGETED_REAL_CACHE_SIGNATURES_ONLY",
+      "chunk": "d2d7f9",
+      "lines": [
+        55,
+        77
+      ],
+      "purpose": "Actual ArithmeticFunction vonMangoldt definition, all prime powers retained"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Basic.lean",
+      "bytes": 80226,
+      "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+      "scope": "TARGETED_REAL_CACHE_SIGNATURES_ONLY",
+      "chunk": "d2d7f9",
+      "lines": [
+        1472,
+        1486
+      ],
+      "purpose": "continuous_const exact function continuity"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/Basic.lean",
+      "bytes": 31542,
+      "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b",
+      "scope": "TARGETED_REAL_CACHE_SIGNATURES_ONLY",
+      "chunk": "d2d7f9",
+      "lines": [
+        131,
+        143
+      ],
+      "purpose": "Complex.ofReal_zero for zero real coefficient coercion"
+    }
+  ],
+  "unchanged_text_verification": {
+    "scope": "LITERAL_READALLTEXT_AND_EXACT_SINGLE_BLOCK_REPLACEMENT_ONLY_NOT_LEAN_SOURCE_PARSER",
+    "chunk": "830e2b",
+    "old_block_occurrences": 1,
+    "entire_source_matches_exact_one_block_replace": true,
+    "new_source_sha256": "4a94415678e4c3295b989dccbcda9e049483e131c17efce68099d05686e1c72d",
+    "old_source_sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+    "manual_catalog_inherited_identical_30": true
+  },
+  "preservation": {
+    "scope": "BYTE_HASH_ONLY_PREVIOUS_CONTROL_BINDINGS_NOT_FULL_TEXT_READING_OR_IMPORT_CLOSURE",
+    "chunk": "773f06",
+    "previous_bindings_count": 45,
+    "mismatches": 0,
+    "all_old_bindings_preserved": true,
+    "new_API_byte_hash_chunk": "9bf052",
+    "previous_read_evidence_preserved_in_source02_handoff": true
+  },
+  "prior_attempt": {
+    "name": "INDEPENDENT_BATCH33_FAILED",
+    "source_sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+    "module_started_UTC": "2026-10-04T02:32:38.082310+00:00",
+    "module_finished_UTC": "2026-10-04T02:33:26.832197+00:00",
+    "module_exit": 1,
+    "diagnostic_count": 1,
+    "diagnostic_line": 149,
+    "standard_axioms_prints": 25,
+    "recovery_sorryAx_prints": 5,
+    "olean_created": false,
+    "module_credit": 0,
+    "mathematical_counterexample": false
+  },
+  "correction": "Explicit equality lambdaMellinCoefficient 0 = (fun _ : Real => (0 : Complex)) by funext and map_zero/ofReal_zero/zero_mul; rw that equality, then continuous_const. All unrelated definitions, headers, imports and proof text unchanged.",
+  "exclusions": {
+    "truncated_chunks_not_claimed_FULL": [
+      "081c66"
+    ],
+    "api_files_not_claimed_FULL": true,
+    "old_bindings_not_claimed_FULL_current_text": true,
+    "no_fresh_complete_3089_archive_sweep": true
+  },
+  "guards": {
+    "author_Lean_compiler_calls": 0,
+    "API_probes": 0,
+    "candidate_parser_or_imports": 0,
+    "Python_math": 0,
+    "native_calls": 0,
+    "PREP_created": false,
+    "gate_created": false,
+    "actual_attempt_created": false,
+    "independent_review_required": true,
+    "future_compiler_requires_distinct_ROOT_gate": true,
+    "execution_requested": false,
+    "source03_PREP_created": false,
+    "source03_actual_created": false,
+    "author_olean_created": false,
+    "author_candidate_runtime_calls": 0,
+    "protected_archives_mutated": false
+  },
+  "counts": {
+    "modules": 1,
+    "declarations": 30,
+    "theorems": 24,
+    "definitions": 6,
+    "qualified_print_axioms": 30,
+    "scope": "MANUAL_INHERITED_IDENTICAL_NOT_SOURCE_PARSER"
+  },
+  "mathematical_scope": {
+    "domain": "Re(w)>0",
+    "actual_vonMangoldt_all_prime_powers": true,
+    "final_L1_inversion_target_not_assumed": true,
+    "unchanged_main_contract": true,
+    "new_SOURCE_credit": 0,
+    "D_N_paid": false,
+    "WIN": false
+  }
+}

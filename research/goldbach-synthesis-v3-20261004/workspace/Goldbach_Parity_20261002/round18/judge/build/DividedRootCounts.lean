@@ -1,0 +1,532 @@
+import DividedFourForms
+
+namespace GoldbachRound18.DoubleExtraction
+
+noncomputable section
+open Finset
+
+structure TargetGuards (N e q : ℕ) : Prop where
+  e_unit : e.Coprime N
+  anchor_lt_e : anchor N < e
+  witness1_exclusion : (e : ZMod (witness1 N q)) ≠ 1
+  witness0_exclusion : (e : ZMod (witness0 N q)) ≠ (anchor N : ZMod (witness0 N q))
+
+def modularAffine (l N e q : ℕ) (i : Fin 4) (x : ZMod l) : ZMod l :=
+  (slope N e q i : ZMod l) * x + (constant N e q i : ZMod l)
+def modularForm (l N e q : ℕ) (x : ZMod l) : ZMod l :=
+  modularAffine l N e q 0 x * modularAffine l N e q 1 x *
+    modularAffine l N e q 2 x * modularAffine l N e q 3 x
+def dividedRoots (l N e q : ℕ) : Finset (ZMod l) :=
+  (GoldbachRound17.FourFormRoots.residueUniverse l).filter
+    fun x => modularForm l N e q x = 0
+def dividedRho (l N e q : ℕ) : ℕ := (dividedRoots l N e q).card
+def dividedDensity (l N e q : ℕ) : ℝ := (dividedRho l N e q : ℝ) / l
+def dividedRoughCell (J P : Finset ℕ) (N e q : ℕ) : Finset ℕ :=
+  J.filter fun x => ∀ l ∈ P, ¬ (l : ℤ) ∣ dividedForm N e q x
+def dividedCandidates (l N e q : ℕ) [Fact l.Prime] : Finset (ZMod l) :=
+  Finset.univ.image fun i : Fin 4 => -(constant N e q i : ZMod l) / (slope N e q i : ZMod l)
+
+variable {l N e q : ℕ} [Fact l.Prime]
+
+theorem modularAffine_cast (i : Fin 4) (x : ℤ) :
+    (affine N e q i x : ZMod l) = modularAffine l N e q i (x : ZMod l) := by
+  simp only [affine, modularAffine, Int.cast_add, Int.cast_mul]
+
+theorem modularForm_cast (x : ℤ) :
+    (dividedForm N e q x : ZMod l) = modularForm l N e q (x : ZMod l) := by
+  simp only [dividedForm, modularForm, Int.cast_mul, modularAffine_cast]
+
+theorem dividedForm_dvd_iff (x : ℤ) :
+    (l : ℤ) ∣ dividedForm N e q x ↔ modularForm l N e q (x : ZMod l) = 0 := by
+  rw [← modularForm_cast, ZMod.intCast_zmod_eq_zero_iff_dvd]
+
+theorem mem_dividedRoots (x : ZMod l) :
+    x ∈ dividedRoots l N e q ↔ modularForm l N e q x = 0 := by
+  simp [dividedRoots, GoldbachRound17.FourFormRoots.residueUniverse_eq_univ]
+
+theorem rho_le_modulus : dividedRho l N e q ≤ l := by
+  have ht := Finset.card_le_card (Finset.subset_univ (dividedRoots l N e q))
+  simpa [dividedRho, ZMod.card] using ht
+
+theorem modular_constant_identities (h : Cell N q) :
+    (witness1 N q : ZMod l) * (constant1 N q : ZMod l) =
+        (N : ZMod l) - representative N q ∧
+    (witness0 N q : ZMod l) * (constant0 N q : ZMod l) =
+        (N : ZMod l) - (anchor N : ZMod l) * representative N q := by
+  constructor
+  · have ht := congrArg (fun v : ℤ => (v : ZMod l)) (constant1_identity h)
+    simpa only [Int.cast_mul, Int.cast_sub, Int.cast_natCast] using ht
+  · have ht := congrArg (fun v : ℤ => (v : ZMod l)) (constant0_identity h)
+    simpa only [Int.cast_mul, Int.cast_sub, Int.cast_natCast] using ht
+
+theorem modularForm_actual_relation (h : Cell N q) (x : ZMod l) :
+    GoldbachRound17.FourFormRoots.actualForm l N e (anchor N)
+      (modularAffine l N e q 0 x) = (modulus N q : ZMod l) * modularForm l N e q x := by
+  have hcs := modular_constant_identities (l := l) h
+  have h1 : (N : ZMod l) - (e : ZMod l) * modularAffine l N e q 0 x =
+      modularAffine l N e q 1 x := by
+    simp [modularAffine, slope, constant]
+    ring
+  have h2 : (N : ZMod l) - modularAffine l N e q 0 x =
+      (witness1 N q : ZMod l) * modularAffine l N e q 2 x := by
+    simp [modularAffine, slope, constant, modulus]
+    linear_combination -hcs.1
+  have h3 : (N : ZMod l) - (anchor N : ZMod l) * modularAffine l N e q 0 x =
+      (witness0 N q : ZMod l) * modularAffine l N e q 3 x := by
+    simp [modularAffine, slope, constant, modulus]
+    linear_combination -hcs.2
+  simp only [GoldbachRound17.FourFormRoots.actualForm, h1, h2, h3, modularForm,
+    modulus, Nat.cast_mul]
+  ring
+
+theorem unit_cast_ne_zero {p n : ℕ} [Fact p.Prime] (h : p.Coprime n) :
+    (n : ZMod p) ≠ 0 := by
+  intro hz
+  exact ((Fact.out : p.Prime).coprime_iff_not_dvd.mp h)
+    ((ZMod.natCast_zmod_eq_zero_iff_dvd n p).mp hz)
+
+theorem witness1_q_cast_ne_zero (h : Cell N q) :
+    (q : ZMod (witness1 N q)) ≠ 0 := by
+  letI : Fact (witness1 N q).Prime := ⟨witness1_prime h⟩
+  intro hz
+  have hdq := (ZMod.natCast_zmod_eq_zero_iff_dvd q (witness1 N q)).mp hz
+  have hn := dvd_add (witness1_dvd (N := N) (q := q)) hdq
+  have hn' : witness1 N q ∣ N := by
+    simpa only [resource1, Nat.sub_add_cancel (q_lt_N h).le] using hn
+  exact ((witness1_prime h).coprime_iff_not_dvd.mp (witness1_unit h)) hn'
+
+theorem witness0_q_cast_ne_zero (h : Cell N q) :
+    (q : ZMod (witness0 N q)) ≠ 0 := by
+  letI : Fact (witness0 N q).Prime := ⟨witness0_prime h⟩
+  intro hz
+  have hdq := (ZMod.natCast_zmod_eq_zero_iff_dvd q (witness0 N q)).mp hz
+  have hdpq := dvd_mul_of_dvd_right hdq (anchor N)
+  have hn := dvd_add (witness0_dvd (N := N) (q := q)) hdpq
+  have hn' : witness0 N q ∣ N := by
+    simpa only [resource0, Nat.sub_add_cancel h.anchor_mul_q_lt.le] using hn
+  exact ((witness0_prime h).coprime_iff_not_dvd.mp (witness0_unit h)) hn'
+
+theorem target_constant_nonzero_witness1 (h : Cell N q) (hg : TargetGuards N e q) :
+    (constant N e q 1 : ZMod (witness1 N q)) ≠ 0 := by
+  letI : Fact (witness1 N q).Prime := ⟨witness1_prime h⟩
+  have hN := unit_cast_ne_zero (witness1_unit h)
+  have hc := (modular_constant_identities (l := witness1 N q) h).1
+  have hA : (representative N q : ZMod (witness1 N q)) = N := by
+    have ht := hc.symm
+    simp only [ZMod.natCast_self, zero_mul] at ht
+    exact (sub_eq_zero.mp ht).symm
+  intro hz
+  have hn : (N : ZMod (witness1 N q)) = (e : ZMod (witness1 N q)) * N := by
+    simpa [constant, hA, sub_eq_zero] using hz
+  apply hg.witness1_exclusion
+  apply (mul_right_cancel₀ hN)
+  simpa using hn.symm
+
+theorem target_constant_nonzero_witness0 (h : Cell N q) (hg : TargetGuards N e q) :
+    (constant N e q 1 : ZMod (witness0 N q)) ≠ 0 := by
+  letI : Fact (witness0 N q).Prime := ⟨witness0_prime h⟩
+  have hN := unit_cast_ne_zero (witness0_unit h)
+  have hc := (modular_constant_identities (l := witness0 N q) h).2
+  have hA : (anchor N : ZMod (witness0 N q)) * representative N q = N := by
+    have ht := hc.symm
+    simp only [ZMod.natCast_self, zero_mul] at ht
+    exact (sub_eq_zero.mp ht).symm
+  have hAn : (representative N q : ZMod (witness0 N q)) ≠ 0 := by
+    intro hz
+    exact hN (by simpa only [hz, mul_zero] using hA.symm)
+  intro hz
+  have ht : (N : ZMod (witness0 N q)) =
+      (e : ZMod (witness0 N q)) * representative N q := by
+    simpa [constant, sub_eq_zero] using hz
+  apply hg.witness0_exclusion
+  apply (mul_right_cancel₀ hAn)
+  exact ht.symm.trans hA.symm
+
+theorem affine_at_index_cast (h : Cell N q) (i : Fin 4) :
+    modularAffine l N e q i (progressionIndex N q) =
+      (![(q : ℤ), (N : ℤ) - (e : ℤ) * q, (quotient1 N q : ℤ), (quotient0 N q : ℤ)] i : ZMod l) := by
+  fin_cases i
+  · simpa [modularAffine_cast] using congrArg (fun v : ℤ => (v : ZMod l))
+      (affine_q_at_index (N := N) (e := e) (q := q))
+  · simpa [modularAffine_cast] using congrArg (fun v : ℤ => (v : ZMod l))
+      (affine_target_at_index (N := N) (e := e) (q := q))
+  · simpa [modularAffine_cast] using congrArg (fun v : ℤ => (v : ZMod l))
+      (affine_resource1_at_index (e := e) h)
+  · simpa [modularAffine_cast] using congrArg (fun v : ℤ => (v : ZMod l))
+      (affine_resource0_at_index (e := e) h)
+
+theorem actual_primitivity (h : Cell N q) (hg : TargetGuards N e q) (i : Fin 4) :
+    ¬ ((slope N e q i : ZMod l) = 0 ∧ (constant N e q i : ZMod l) = 0) := by
+  rintro ⟨ha, hb⟩
+  have hi : modularAffine l N e q i (progressionIndex N q) = 0 := by
+    simp only [modularAffine, ha, hb, zero_mul, zero_add]
+  have hlp : l.Prime := Fact.out
+  fin_cases i
+  · have hL : l ∣ witness1 N q * witness0 N q := by
+      apply (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp
+      simpa [slope, modulus] using ha
+    rcases hlp.dvd_mul.mp hL with h1 | h0
+    · have heq := (Nat.prime_dvd_prime_iff_eq hlp (witness1_prime h)).mp h1
+      subst l
+      exact witness1_q_cast_ne_zero h (by simpa [affine_at_index_cast h] using hi)
+    · have heq := (Nat.prime_dvd_prime_iff_eq hlp (witness0_prime h)).mp h0
+      subst l
+      exact witness0_q_cast_ne_zero h (by simpa [affine_at_index_cast h] using hi)
+  · have heL : l ∣ e * (witness1 N q * witness0 N q) := by
+      apply (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp
+      have ht : -((e : ZMod l) * (modulus N q : ZMod l)) = 0 := by simpa [slope] using ha
+      simpa [modulus, Nat.cast_mul] using neg_eq_zero.mp ht
+    rcases hlp.dvd_mul.mp heL with he | hL
+    · have hez : (e : ZMod l) = 0 := (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mpr he
+      have hn : (N : ZMod l) = 0 := by simpa [constant, hez] using hb
+      have hNd := (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp hn
+      exact (Nat.not_coprime_of_dvd_of_dvd hlp.one_lt he hNd) hg.e_unit
+    · rcases hlp.dvd_mul.mp hL with h1 | h0
+      · have heq := (Nat.prime_dvd_prime_iff_eq hlp (witness1_prime h)).mp h1
+        subst l
+        exact target_constant_nonzero_witness1 h hg hb
+      · have heq := (Nat.prime_dvd_prime_iff_eq hlp (witness0_prime h)).mp h0
+        subst l
+        exact target_constant_nonzero_witness0 h hg hb
+  · have hd : l ∣ witness0 N q := by
+      apply (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp
+      have ht : -(witness0 N q : ZMod l) = 0 := by simpa [slope] using ha
+      exact neg_eq_zero.mp ht
+    have hr : l ∣ quotient1 N q := by
+      apply (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp
+      simpa [affine_at_index_cast h] using hi
+    have hr1 : l ∣ resource1 N q := by
+      rw [← resource1_factorization]
+      exact dvd_mul_of_dvd_right hr _
+    have hr0 := hd.trans (witness0_dvd (N := N) (q := q))
+    exact (Nat.not_coprime_of_dvd_of_dvd hlp.one_lt hr1 hr0) (resources_coprime h)
+  · have hd : l ∣ anchor N * witness1 N q := by
+      apply (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp
+      have ht : -((anchor N : ZMod l) * (witness1 N q : ZMod l)) = 0 := by simpa [slope] using ha
+      simpa only [Nat.cast_mul] using neg_eq_zero.mp ht
+    have hr : l ∣ quotient0 N q := by
+      apply (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp
+      simpa [affine_at_index_cast h] using hi
+    have hr0 : l ∣ resource0 N q := by
+      rw [← resource0_factorization]
+      exact dvd_mul_of_dvd_right hr _
+    rcases hlp.dvd_mul.mp hd with hp | h1
+    · exact (Nat.not_coprime_of_dvd_of_dvd hlp.one_lt hp hr0)
+        (anchor_resource0_coprime h)
+    · have hr1 := h1.trans (witness1_dvd (N := N) (q := q))
+      exact (Nat.not_coprime_of_dvd_of_dvd hlp.one_lt hr1 hr0) (resources_coprime h)
+
+theorem modularAffine_root_candidate {i : Fin 4} {x : ZMod l}
+    (hp : ¬ ((slope N e q i : ZMod l) = 0 ∧ (constant N e q i : ZMod l) = 0))
+    (hx : modularAffine l N e q i x = 0) :
+    x = -(constant N e q i : ZMod l) / (slope N e q i : ZMod l) := by
+  have ha : (slope N e q i : ZMod l) ≠ 0 := by
+    intro hz
+    exact hp ⟨hz, by simpa [modularAffine, hz] using hx⟩
+  apply (eq_div_iff ha).mpr
+  have ht : (slope N e q i : ZMod l) * x = -(constant N e q i : ZMod l) := by
+    exact eq_neg_iff_add_eq_zero.mpr hx
+  simpa [mul_comm] using ht
+
+theorem roots_subset_candidates (h : Cell N q) (hg : TargetGuards N e q) :
+    dividedRoots l N e q ⊆ dividedCandidates l N e q := by
+  intro x hx
+  have hf := (mem_dividedRoots x).mp hx
+  simp only [modularForm, mul_eq_zero] at hf
+  rcases hf with ((h0 | h1) | h2) | h3
+  all_goals
+    apply Finset.mem_image.mpr
+  · exact ⟨0, Finset.mem_univ _, (modularAffine_root_candidate (actual_primitivity h hg 0) h0).symm⟩
+  · exact ⟨1, Finset.mem_univ _, (modularAffine_root_candidate (actual_primitivity h hg 1) h1).symm⟩
+  · exact ⟨2, Finset.mem_univ _, (modularAffine_root_candidate (actual_primitivity h hg 2) h2).symm⟩
+  · exact ⟨3, Finset.mem_univ _, (modularAffine_root_candidate (actual_primitivity h hg 3) h3).symm⟩
+
+theorem rho_le_four (h : Cell N q) (hg : TargetGuards N e q) :
+    dividedRho l N e q ≤ 4 := by
+  have ht := Finset.card_le_card (roots_subset_candidates (l := l) h hg)
+  have hc : (dividedCandidates l N e q).card ≤ 4 := by
+    exact (Finset.card_image_le).trans (by simp)
+  exact ht.trans hc
+
+theorem root_of_nonzero_slope (i : Fin 4) (ha : (slope N e q i : ZMod l) ≠ 0) :
+    -(constant N e q i : ZMod l) / (slope N e q i : ZMod l) ∈ dividedRoots l N e q := by
+  apply (mem_dividedRoots _).mpr
+  have hi : modularAffine l N e q i
+      (-(constant N e q i : ZMod l) / (slope N e q i : ZMod l)) = 0 := by
+    dsimp [modularAffine]
+    field_simp
+    ring
+  have hp : modularForm l N e q (-(constant N e q i : ZMod l) / (slope N e q i : ZMod l)) =
+      ∏ j : Fin 4, modularAffine l N e q j (-(constant N e q i : ZMod l) / (slope N e q i : ZMod l)) := by
+    have h3 : (2 : Fin 3).succ = (3 : Fin 4) := by decide
+    simp [modularForm, Fin.prod_univ_succ, h3, mul_assoc]
+  rw [hp]
+  exact Finset.prod_eq_zero_iff.mpr ⟨i, Finset.mem_univ _, hi⟩
+
+theorem exists_nonzero_slope (h : Cell N q) :
+    ∃ i : Fin 4, (slope N e q i : ZMod l) ≠ 0 := by
+  by_cases hb : (witness0 N q : ZMod l) ≠ 0
+  · exact ⟨2, by simpa [slope] using neg_ne_zero.mpr hb⟩
+  · have hd := (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp (not_ne_iff.mp hb)
+    have heq := (Nat.prime_dvd_prime_iff_eq (Fact.out : l.Prime) (witness0_prime h)).mp hd
+    have ha : (anchor N : ZMod l) ≠ 0 := by
+      subst l
+      exact unit_cast_ne_zero (anchor_witness0_coprime h).symm
+    have h1 : (witness1 N q : ZMod l) ≠ 0 := by
+      subst l
+      exact unit_cast_ne_zero (witnesses_coprime h).symm
+    exact ⟨3, by simpa [slope] using neg_ne_zero.mpr (mul_ne_zero ha h1)⟩
+
+theorem rho_lower (h : Cell N q) : 1 ≤ dividedRho l N e q := by
+  obtain ⟨i, hi⟩ := exists_nonzero_slope (l := l) h
+  exact Finset.one_le_card.mpr ⟨_, root_of_nonzero_slope i hi⟩
+
+theorem rho_bounds (h : Cell N q) (hg : TargetGuards N e q) :
+    1 ≤ dividedRho l N e q ∧ dividedRho l N e q ≤ min 4 l :=
+  ⟨rho_lower h, le_min (rho_le_four h hg) rho_le_modulus⟩
+
+theorem form_zero_iff_exists_affine (x : ZMod l) :
+    modularForm l N e q x = 0 ↔ ∃ i : Fin 4, modularAffine l N e q i x = 0 := by
+  have hp : modularForm l N e q x = ∏ i : Fin 4, modularAffine l N e q i x := by
+    have h3 : (2 : Fin 3).succ = (3 : Fin 4) := by decide
+    simp [modularForm, Fin.prod_univ_succ, h3, mul_assoc]
+  rw [hp, Finset.prod_eq_zero_iff]
+  simp only [Finset.mem_univ, true_and]
+
+theorem rho_eq_one_single_live (h : Cell N q) (hg : TargetGuards N e q)
+    (i : Fin 4) (hi : (slope N e q i : ZMod l) ≠ 0)
+    (hother : ∀ j : Fin 4, j ≠ i → (slope N e q j : ZMod l) = 0) :
+    dividedRho l N e q = 1 := by
+  have hsub : dividedRoots l N e q ⊆
+      {-(constant N e q i : ZMod l) / (slope N e q i : ZMod l)} := by
+    intro x hx
+    obtain ⟨j, hj⟩ := (form_zero_iff_exists_affine x).mp ((mem_dividedRoots x).mp hx)
+    have hji : j = i := by
+      by_contra hne
+      have hzero := hother j hne
+      have hb : (constant N e q j : ZMod l) = 0 := by
+        simpa only [modularAffine, hzero, zero_mul, zero_add] using hj
+      exact actual_primitivity h hg j ⟨hzero, hb⟩
+    subst j
+    exact Finset.mem_singleton.mpr (modularAffine_root_candidate (actual_primitivity h hg i) hj)
+  have hc : dividedRho l N e q ≤ 1 := by
+    have ht := Finset.card_le_card hsub
+    simpa only [dividedRho, Finset.card_singleton] using ht
+  exact le_antisymm hc (Finset.one_le_card.mpr ⟨_, root_of_nonzero_slope i hi⟩)
+
+theorem rho_at_witness1 (h : Cell N q) (hg : TargetGuards N e q) :
+    dividedRho (witness1 N q) N e q = 1 := by
+  letI : Fact (witness1 N q).Prime := ⟨witness1_prime h⟩
+  have hb : (witness0 N q : ZMod (witness1 N q)) ≠ 0 :=
+    unit_cast_ne_zero (witnesses_coprime h)
+  apply rho_eq_one_single_live h hg 2
+  · simpa [slope] using neg_ne_zero.mpr hb
+  · intro j hj
+    fin_cases j <;> simp_all [slope, modulus, Nat.cast_mul]
+
+theorem rho_at_witness0 (h : Cell N q) (hg : TargetGuards N e q) :
+    dividedRho (witness0 N q) N e q = 1 := by
+  letI : Fact (witness0 N q).Prime := ⟨witness0_prime h⟩
+  have ha : (anchor N : ZMod (witness0 N q)) ≠ 0 :=
+    unit_cast_ne_zero (anchor_witness0_coprime h).symm
+  have h1 : (witness1 N q : ZMod (witness0 N q)) ≠ 0 :=
+    unit_cast_ne_zero (witnesses_coprime h).symm
+  apply rho_eq_one_single_live h hg 3
+  · simpa [slope] using neg_ne_zero.mpr (mul_ne_zero ha h1)
+  · intro j hj
+    fin_cases j <;> simp_all [slope, modulus, Nat.cast_mul]
+
+theorem rho_eq_four_of_actual_separation (h : Cell N q) (hg : TargetGuards N e q)
+    (ha : ∀ i : Fin 4, (slope N e q i : ZMod l) ≠ 0)
+    (hd : ∀ i j : Fin 4, i ≠ j → (determinant N e q i j : ZMod l) ≠ 0) :
+    dividedRho l N e q = 4 := by
+  have hinj : Function.Injective
+      (fun i : Fin 4 => -(constant N e q i : ZMod l) / (slope N e q i : ZMod l)) := by
+    intro i j heq
+    by_contra hij
+    have hc := (div_eq_div_iff (ha i) (ha j)).mp heq
+    apply hd i j hij
+    simp only [determinant, Int.cast_sub, Int.cast_mul]
+    linear_combination hc
+  have heq : dividedRoots l N e q = dividedCandidates l N e q := by
+    apply Finset.Subset.antisymm (roots_subset_candidates h hg)
+    intro x hx
+    obtain ⟨i, _, rfl⟩ := Finset.mem_image.mp hx
+    exact root_of_nonzero_slope i (ha i)
+  unfold dividedRho
+  rw [heq, dividedCandidates, Finset.card_image_of_injective _ hinj]
+  simp
+
+theorem signedDelta_cast_nonzero (hn : ¬ l ∣ actualDelta N e q) :
+    (signedDelta N e q : ZMod l) ≠ 0 := by
+  intro hz
+  have hd := (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp hz
+  apply hn
+  simpa only [actualDelta, Int.natAbs_ofNat] using
+    (Int.natAbs_dvd_natAbs.mpr hd)
+
+theorem separated_of_not_dvd_actualDelta (hn : ¬ l ∣ actualDelta N e q) :
+    (∀ i : Fin 4, (slope N e q i : ZMod l) ≠ 0) ∧
+    (∀ i j : Fin 4, i ≠ j → (determinant N e q i j : ZMod l) ≠ 0) := by
+  have hs := signedDelta_cast_nonzero hn
+  have ha : (slopeProduct N e q : ZMod l) ≠ 0 := by
+    intro hz
+    exact hs (by simp only [signedDelta, Int.cast_mul, hz, zero_mul])
+  have hd : (determinantProduct N e q : ZMod l) ≠ 0 := by
+    intro hz
+    exact hs (by simp only [signedDelta, Int.cast_mul, hz, mul_zero])
+  constructor
+  · intro i
+    rw [slopeProduct, Int.cast_prod] at ha
+    exact (Finset.prod_ne_zero_iff.mp ha) i (Finset.mem_univ i)
+  · simp only [determinantProduct, Int.cast_mul, mul_ne_zero_iff] at hd
+    rcases hd with ⟨⟨⟨⟨⟨h01, h02⟩, h03⟩, h12⟩, h13⟩, h23⟩
+    intro i j hij
+    simp only [determinant, Int.cast_sub, Int.cast_mul, sub_ne_zero] at *
+    fin_cases i <;> fin_cases j <;> try simp_all [ne_comm]
+    all_goals
+      intro hrev
+      exact h01 hrev.symm
+
+theorem rho_eq_four_of_not_dvd_actualDelta (h : Cell N q) (hg : TargetGuards N e q)
+    (hn : ¬ l ∣ actualDelta N e q) : dividedRho l N e q = 4 := by
+  obtain ⟨ha, hd⟩ := separated_of_not_dvd_actualDelta hn
+  exact rho_eq_four_of_actual_separation h hg ha hd
+
+theorem rho_transport_off_modulus (h : Cell N q) (hL : (modulus N q : ZMod l) ≠ 0) :
+    dividedRho l N e q = GoldbachRound17.FourFormRoots.actualRho l N e (anchor N) := by
+  have hinj : Function.Injective (modularAffine l N e q 0) := by
+    intro x y hxy
+    have hm : (modulus N q : ZMod l) * x = (modulus N q : ZMod l) * y := by
+      simpa [modularAffine, slope, constant] using hxy
+    exact mul_left_cancel₀ hL hm
+  have heq : (dividedRoots l N e q).image (modularAffine l N e q 0) =
+      GoldbachRound17.FourFormRoots.actualRoots l N e (anchor N) := by
+    ext y
+    constructor
+    · intro hy
+      obtain ⟨x, hx, rfl⟩ := Finset.mem_image.mp hy
+      apply (GoldbachRound17.FourFormRoots.mem_actualRoots _).mpr
+      rw [modularForm_actual_relation h]
+      simp only [(mem_dividedRoots x).mp hx, mul_zero]
+    · intro hy
+      let x : ZMod l := (y - (representative N q : ZMod l)) / (modulus N q : ZMod l)
+      have hxy : modularAffine l N e q 0 x = y := by
+        dsimp [x, modularAffine, slope, constant]
+        field_simp [hL]
+      have hactual := (GoldbachRound17.FourFormRoots.mem_actualRoots y).mp hy
+      have hrel := modularForm_actual_relation (e := e) h x
+      rw [hxy] at hrel
+      have hroot : modularForm l N e q x = 0 :=
+        (mul_eq_zero.mp (hrel.symm.trans hactual)).resolve_left hL
+      exact Finset.mem_image.mpr ⟨x, (mem_dividedRoots x).mpr hroot, hxy⟩
+  have hc := Finset.card_image_of_injective (dividedRoots l N e q) hinj
+  rw [heq] at hc
+  exact hc.symm
+
+theorem rho_mod_three_saturation (h : Cell N q)
+    (hL : ¬ 3 ∣ modulus N q) (hN : (N : ZMod 3) = 1)
+    (he : (e : ZMod 3) = 2) (ha : anchor N = 3) : dividedRho 3 N e q = 3 := by
+  letI : Fact (Nat.Prime 3) := ⟨by norm_num⟩
+  have hLz : (modulus N q : ZMod 3) ≠ 0 :=
+    fun hz => hL ((ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp hz)
+  rw [rho_transport_off_modulus h hLz, ha]
+  exact GoldbachRound17.FourFormRoots.rho_mod_three_e_two hN he
+
+theorem rho_eq_modulus_of_form_zero (hzero : ∀ x : ZMod l, modularForm l N e q x = 0) :
+    dividedRho l N e q = l := by
+  have heq : dividedRoots l N e q = Finset.univ := by
+    ext x
+    simp only [mem_dividedRoots, Finset.mem_univ, iff_true]
+    exact hzero x
+  simp only [dividedRho, heq, Finset.card_univ, ZMod.card]
+
+theorem target_excluded_witness1_saturation (h : Cell N q)
+    (he : (e : ZMod (witness1 N q)) = 1) : dividedRho (witness1 N q) N e q = witness1 N q := by
+  letI : Fact (witness1 N q).Prime := ⟨witness1_prime h⟩
+  apply rho_eq_modulus_of_form_zero
+  intro x
+  have hc := (modular_constant_identities (l := witness1 N q) h).1
+  have hN : (N : ZMod (witness1 N q)) - representative N q = 0 := by
+    simpa only [ZMod.natCast_self, zero_mul] using hc.symm
+  have ht : modularAffine (witness1 N q) N e q 1 x = 0 := by
+    simpa [modularAffine, slope, constant, modulus, he] using hN
+  simp [modularForm, ht]
+
+theorem target_excluded_witness0_saturation (h : Cell N q)
+    (he : (e : ZMod (witness0 N q)) = (anchor N : ZMod (witness0 N q))) :
+    dividedRho (witness0 N q) N e q = witness0 N q := by
+  letI : Fact (witness0 N q).Prime := ⟨witness0_prime h⟩
+  apply rho_eq_modulus_of_form_zero
+  intro x
+  have hc := (modular_constant_identities (l := witness0 N q) h).2
+  have hN : (N : ZMod (witness0 N q)) -
+      (anchor N : ZMod (witness0 N q)) * representative N q = 0 := by
+    simpa only [ZMod.natCast_self, zero_mul] using hc.symm
+  have ht : modularAffine (witness0 N q) N e q 1 x = 0 := by
+    simpa [modularAffine, slope, constant, modulus, he] using hN
+  simp [modularForm, ht]
+
+theorem saturation_forces_modularForm_zero (hs : dividedRho l N e q = l) (x : ZMod l) :
+    modularForm l N e q x = 0 := by
+  have hr : dividedRoots l N e q = Finset.univ := by
+    apply Finset.eq_of_subset_of_card_le (Finset.subset_univ _)
+    simpa [dividedRho, ZMod.card] using hs.ge
+  exact (mem_dividedRoots x).mp (by simp only [hr, Finset.mem_univ])
+
+theorem saturation_roughCell_empty (J P : Finset ℕ) (hl : l ∈ P)
+    (hs : dividedRho l N e q = l) : dividedRoughCell J P N e q = ∅ := by
+  apply Finset.eq_empty_iff_forall_not_mem.mpr
+  intro x hx
+  have hav := (Finset.mem_filter.mp hx).2
+  apply hav l hl
+  apply (dividedForm_dvd_iff (x : ℤ)).mpr
+  simpa only [Int.cast_natCast] using saturation_forces_modularForm_zero hs (x : ZMod l)
+
+#print axioms TargetGuards
+#print axioms modularAffine
+#print axioms modularForm
+#print axioms dividedRoots
+#print axioms dividedRho
+#print axioms dividedDensity
+#print axioms dividedRoughCell
+#print axioms dividedCandidates
+#print axioms modularAffine_cast
+#print axioms modularForm_cast
+#print axioms dividedForm_dvd_iff
+#print axioms modularForm_actual_relation
+#print axioms mem_dividedRoots
+#print axioms rho_le_modulus
+#print axioms modular_constant_identities
+#print axioms unit_cast_ne_zero
+#print axioms witness1_q_cast_ne_zero
+#print axioms witness0_q_cast_ne_zero
+#print axioms target_constant_nonzero_witness1
+#print axioms target_constant_nonzero_witness0
+#print axioms affine_at_index_cast
+#print axioms actual_primitivity
+#print axioms modularAffine_root_candidate
+#print axioms roots_subset_candidates
+#print axioms rho_le_four
+#print axioms root_of_nonzero_slope
+#print axioms exists_nonzero_slope
+#print axioms rho_lower
+#print axioms rho_bounds
+#print axioms form_zero_iff_exists_affine
+#print axioms rho_eq_one_single_live
+#print axioms rho_at_witness1
+#print axioms rho_at_witness0
+#print axioms rho_eq_four_of_actual_separation
+#print axioms signedDelta_cast_nonzero
+#print axioms separated_of_not_dvd_actualDelta
+#print axioms rho_eq_four_of_not_dvd_actualDelta
+#print axioms rho_transport_off_modulus
+#print axioms rho_mod_three_saturation
+#print axioms rho_eq_modulus_of_form_zero
+#print axioms target_excluded_witness1_saturation
+#print axioms target_excluded_witness0_saturation
+#print axioms saturation_forces_modularForm_zero
+#print axioms saturation_roughCell_empty
+
+end
+end GoldbachRound18.DoubleExtraction

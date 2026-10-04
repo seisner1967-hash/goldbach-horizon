@@ -1,0 +1,26 @@
+{
+  "status": "ROOT_INSPECTED_FROZEN_FINAL6_18",
+  "checked_final_artifacts_sha256": {
+    "agent6.md": "95f54c20ebde7682b3ac1e4a78695ccf5ab79148322479379de8b27b44d80075",
+    "numeric_manifest.json": "3b97b7a1e18175ed6ced2750ad86284be14fc0969b272618ccd9846372a35aa1",
+    "role6_final_receipt.json": "29f5bb311bbeec25ced7b01e5d1c59f73696e603d45488802bb1e77a8f7bc5fa",
+    "role6/closure_receipt.json": "bbbf84046cc71b379013a3789c9b4f4b9866d2160be40c04634420a1c945691f",
+    "role6/finalize_attempt01.log": "b3f96a979af612d23e15cfa27c48ccf8223bc3a634b8d6148d7fe5d7536ee002",
+    "role6/finalize_attempt01_receipt.json": "5abdf69cc2688e0c317e82e1ca2b355a6bc313e88279f2a420cab75f31434803"
+  },
+  "numeric_manifest_bindings": 67,
+  "final_receipt_bindings": 68,
+  "actual_metadata_finalizer_exit_code": 0,
+  "canonical_bank_invocations": 3,
+  "actual_technical_numeric_failures": 1,
+  "unique_isolated_replays": 2,
+  "stored_strict_sign_positions": 320,
+  "stored_sign_distribution": {
+    "NEGATIVE": 83,
+    "POSITIVE": 191,
+    "ZERO": 46
+  },
+  "independent_judge18": "actual startup; preparation only; no audit/Lean authorization yet",
+  "root_reran_producer_kernel_Lean_sign_expression_or_audit": false,
+  "victory": false
+}

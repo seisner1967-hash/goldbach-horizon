@@ -1,0 +1,188 @@
+{
+  "schema": "ROUND22_FINITE_FIELD_PROJECTION_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_FROZEN_UNCOMPILED_FOR_INDEPENDENT_REVIEW",
+  "utc": "2026-10-03T19:21:38.6615390Z",
+  "actor": "ROLE3",
+  "read_count": 16,
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\finite_field_projection_source22\\FiniteFieldProjection22.lean",
+      "bytes": 13279,
+      "sha256": "2b1cc267ce780a6a45c039f4b4b82d5a4ad4541fa224d76413dec5432658a48a",
+      "scope": "FULL_NEW_SOURCE_UNCOMPILED",
+      "read_chunk": "cae7bf",
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\finite_field_projection_source22\\source_contract22.txt",
+      "bytes": 3990,
+      "sha256": "8e9797c1628762c82de4e333c326034f893d839e320f779b4576e7910ea4ca0d",
+      "scope": "FULL_NEW_SOURCE_CONTRACT",
+      "read_chunk": "74e95c",
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch15\\sources\\DiscreteThermalProjection22.lean",
+      "bytes": 13937,
+      "sha256": "f24c702b0a6cd71e88ae1279061a45e02fa04f12f8e8641444d3b5e1803e8f02",
+      "scope": "FULL_READONLY_PAID_SOURCE_NOT_IMPORTED",
+      "read_chunk": "0e751b",
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\QuantizedLambdaEnvelope22.lean",
+      "bytes": 7365,
+      "sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "scope": "FULL_READONLY_INDEPENDENT_PASS_DEPENDENCY_SOURCE",
+      "read_chunk": "36815d",
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\RationalLogQuantization22.lean",
+      "bytes": 16997,
+      "sha256": "dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7",
+      "scope": "SHA_ONLY_CURRENT_HISTORICAL_FULL_READ",
+      "read_chunk": "4f3420",
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\QuantizedLambdaEnvelope22.olean",
+      "bytes": 266384,
+      "sha256": "e821070b97b3fa4b71a3e279ecb9bc6c0de6cafdfe9dc8712b5d5a22858a6485",
+      "scope": "READONLY_SHA_NO_COMPILER_REPLAY",
+      "read_chunk": null,
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\RationalLogQuantization22.olean",
+      "bytes": 1120744,
+      "sha256": "20db07cdfb5717d7f9ab0b3e75d3c15b9e16c6820ad5285bd7debb62b0a31434",
+      "scope": "READONLY_SHA_NO_COMPILER_REPLAY",
+      "read_chunk": null,
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\RootsOfUnity\\PrimitiveRoots.lean",
+      "bytes": 35474,
+      "sha256": "0309d8afe8ecafb3c492dfd79ef67b23dc3c08b4a444cb4e2dc37a3c3af03725",
+      "scope": "TARGETED_API_SOURCE",
+      "read_chunk": "f7febe/f26f9c",
+      "lines": "1..43;45..79;278..329;386..439"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GroupWithZero\\Basic.lean",
+      "bytes": 15932,
+      "sha256": "83fcbe0145022bd491c291eed61dee0371aa753b5c9592518e986b10d21d8173",
+      "scope": "TARGETED_API_SOURCE",
+      "read_chunk": "36815d",
+      "lines": "399..438"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Ring.lean",
+      "bytes": 16682,
+      "sha256": "0e11d9b338fa211ed86b6692fa08b4c6cf47033aaf8bc14a055d6e8976dc5d10",
+      "scope": "TARGETED_API_SOURCE",
+      "read_chunk": "f7febe/36815d",
+      "lines": "1..64;360..386"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\NatAntidiagonal.lean",
+      "bytes": 6936,
+      "sha256": "071e37e774ffb429c5e2d749b585226ed06d94b115e88d50d81bcb35d97291ad",
+      "scope": "TARGETED_API_SOURCE",
+      "read_chunk": "f7febe",
+      "lines": "1..55"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\ZMod\\Basic.lean",
+      "bytes": 59123,
+      "sha256": "c8f9e34ae594e563e42c4111b6e858e374596fa25ab66ea0b80d097b2121e3d5",
+      "scope": "TARGETED_API_SOURCE",
+      "read_chunk": "f7febe/6817ab/cae7bf",
+      "lines": "451..480;564..587;1315..1345"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GeomSum.lean",
+      "bytes": 28155,
+      "sha256": "a500713128596beebe9883f2372878c0ca928fc7c54b9b9b2dfa2072615a1e2d",
+      "scope": "TARGETED_API_SOURCE",
+      "read_chunk": "74e95c",
+      "lines": "225..246"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Tactic.lean",
+      "bytes": 9959,
+      "sha256": "5a8a488140e9f87a5d07f004c761de7e5753d7d8b3c11c9ef755dc3bf9ff771c",
+      "scope": "READONLY_SHA_ONLY_IMPORT_TARGET_NOT_FULL",
+      "read_chunk": null,
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\projection_contract22_final.md",
+      "bytes": 18055,
+      "sha256": "dd86c92c15e05febad687c240eb58d9dae2f930b646356f1dfe99e3bb35a680f",
+      "scope": "HISTORICAL_FULL_SOURCE_PAPER_SHA_CURRENT",
+      "read_chunk": "37d749",
+      "lines": null
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\native_spec22_final.md",
+      "bytes": 4046,
+      "sha256": "6bc24ecfe96437e5c437fe003788194548b379c0c7bbf0dfed81f118c0eb322b",
+      "scope": "HISTORICAL_FULL_SOURCE_PAPER_SHA_CURRENT",
+      "read_chunk": "3d36ee",
+      "lines": null
+    }
+  ],
+  "declaration_count": 24,
+  "theorem_count": 20,
+  "definition_count": 4,
+  "qualified_print_count": 24,
+  "qualified_declarations": [
+    "GoldbachFiniteFieldProjection22.fieldCharacter",
+    "GoldbachFiniteFieldProjection22.sum_fieldCharacter",
+    "GoldbachFiniteFieldProjection22.signed_divides_iff_zero",
+    "GoldbachFiniteFieldProjection22.sum_fieldCharacter_no_alias",
+    "GoldbachFiniteFieldProjection22.rectangle_frequency_bounds",
+    "GoldbachFiniteFieldProjection22.sum_rectangle_character",
+    "GoldbachFiniteFieldProjection22.fieldCharacter_pair",
+    "GoldbachFiniteFieldProjection22.fieldTerm",
+    "GoldbachFiniteFieldProjection22.fieldPolynomial",
+    "GoldbachFiniteFieldProjection22.fieldProjection",
+    "GoldbachFiniteFieldProjection22.fieldTerm_pair",
+    "GoldbachFiniteFieldProjection22.normalized_field_pair",
+    "GoldbachFiniteFieldProjection22.fieldPolynomial_square_expansion",
+    "GoldbachFiniteFieldProjection22.fieldProjection_eq_rectangle",
+    "GoldbachFiniteFieldProjection22.rectangle_filter_antidiagonal",
+    "GoldbachFiniteFieldProjection22.fieldProjection_eq_antidiagonal",
+    "GoldbachFiniteFieldProjection22.fieldProjection_eq_sum",
+    "GoldbachFiniteFieldProjection22.fieldCharacter_nat",
+    "GoldbachFiniteFieldProjection22.fieldPolynomial_eq_standardDFT",
+    "GoldbachFiniteFieldProjection22.standardDFT_projection_eq_sum",
+    "GoldbachFiniteFieldProjection22.zmod_size_ne_zero",
+    "GoldbachFiniteFieldProjection22.zmod_integer_projection",
+    "GoldbachFiniteFieldProjection22.zmod_canonical_A32_projection",
+    "GoldbachFiniteFieldProjection22.fixed_A32_projection"
+  ],
+  "catalogue_method": "TEXTUAL_DECLARATION_AND_PRINT_LINE_SCAN_NOT_LEAN_PARSER",
+  "compile_calls": 0,
+  "Lean_API_probes": 0,
+  "candidate_imports": 0,
+  "math_runtime_calls": 0,
+  "runtime_preparation_created": false,
+  "concrete_five_prime_root_certificates_paid": false,
+  "butterfly_GMP_CRT_refinement_paid": false,
+  "read_incidents": [
+    {
+      "scope": "DISCRETE_SOURCE_FULL_SUCCEEDED_IMPORT_JSON_PROJECTION_FAILED",
+      "chunk": "0e751b",
+      "reason": "Separate import manifest uses entries not bindings; corrected metadata projection0a4250, no compiler"
+    }
+  ],
+  "build03_handoff_status": "RECEIVED_UNREAD_AT_THIS_SOURCE_FREEZE",
+  "source_contract_BUILD03_waiting_statement_scope": "Historical status at drafting before ROLE4 handoff message; no BUILD preparation claimed",
+  "official_modules": 78,
+  "official_declarations": 1304,
+  "D_N": false,
+  "WIN": false
+}

@@ -1,0 +1,44 @@
+{
+  "status": "ROOT_OBSERVED_NEW_CAPACITY_BANK_AND_FROZEN_HARMONIC_MODULE_NO_REEXECUTION",
+  "bindings_sha256": {
+    "round16/capacity_checks.py": "abedd2b6494ebb684fcaeef2ca0d869003f2ee17271dbde1cd70f52820367128",
+    "round16/capacity.json": "7da550e67c38774e580dd6300b1c78a9d19cb4f49e3063483a6727d7ecd2a166",
+    "round16/isolated_capacity/capacity.json": "7da550e67c38774e580dd6300b1c78a9d19cb4f49e3063483a6727d7ecd2a166",
+    "round16/agent4_formalisation.md": "b12adfa9f03ed0af0735278946ebbf09f9bf41e3a6c4d42cc8912ddedb0097b7",
+    "round16/role4/final_receipt.json": "7272776cc0725acd02438bcf99d04746762c5e9164c56117f430a5f5c7d5caa0",
+    "round16/role4/LeastMissingPrimeMargin.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+    "round16/role4/LeastMissingPrimeMargin.olean": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+    "round16/role4/compile_new.ps1": "a565f42b2b7d4b9b048dfb19e09feb80861d7e629729128ab7d29c5caa388389",
+    "round16/role4/attempt1.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+    "round16/role4/attempt1.log": "91504945ea420cb4a870d7c98ae5d2d0ae9f3d80937a6a848ed8ceababc02199",
+    "round16/role4/attempt1_receipt.json": "21e73415ac9f0ef23bdda5ba1c29d37088c2fe436f0965d434207398562956f3",
+    "round16/role6/capacity_replay_receipt.json": "f9ab59636b1824d585d1607033d8582d7f8385f577446a796ce5c6e6633ea5d5",
+    "round16/role6/capacity_attempt01.log": "137101262208b1297713f9c401ec7395796d54da6907ae734c32eccbc84c38f1",
+    "round16/role6/capacity_isolated_replay.log": "137101262208b1297713f9c401ec7395796d54da6907ae734c32eccbc84c38f1"
+  },
+  "capacity_log_summary": {
+    "status": "PASS_NEW_COMPLETE_CAP98_PHYSICAL_ONCE_CAPACITY_AND_DEMAND_ONLY",
+    "q_count": 18,
+    "core_count": 34,
+    "candidate_vertices": 612,
+    "computed_profiles": 128,
+    "principal_deficit_signs": {
+      "lower": "POSITIVE",
+      "upper": "POSITIVE"
+    },
+    "actual_deficit_R13_sign": "POSITIVE",
+    "actual_entire_sign": "POSITIVE",
+    "proper_powers": 0,
+    "victory": false
+  },
+  "new_harmonic_theorems_producer": 9,
+  "new_harmonic_source_read_in_full": true,
+  "new_capacity_source_read_in_full": true,
+  "capacity_large_gate_not_dumped_or_reexecuted": true,
+  "producer_invoked_by_root": false,
+  "Lean_invoked_by_root": false,
+  "Judge16_audit_pending": true,
+  "full_anchor_A7_Lean_pending": true,
+  "coordination_incident": "Old Judge followup and fresh Judge spawn returned agent thread limit while a completed ideator appears pending_init. Judge dispatch awaits release of another slot; no audit or proof was started by those failed calls.",
+  "victory": false
+}

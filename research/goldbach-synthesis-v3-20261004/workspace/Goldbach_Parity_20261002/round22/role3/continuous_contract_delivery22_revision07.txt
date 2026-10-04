@@ -1,0 +1,102 @@
+CONTRAT CONTINU GOLDBACH — BOUCLE 22 — RÉVISION 07 PROVISOIRE
+DRAFT DOCUMENTAIRE : non gelé ; attend le statut réel31, le handoff géométrique SOURCE et le dernier message ROOT avant livraison finale. État au 4 octobre 2026. La révision06, le précédent DRAFT07 et tous les journaux antérieurs sont conservés. Ce texte n'autorise ni compilation, ni calcul, ni reprise d'un banc.
+
+Base des pièces : D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002.
+Le registre actuellement observé par ROOT est de 86 modules Lean et 1456 déclarations auxiliaires, définitions incluses. Tail03 a reçu un vrai PASS indépendant au lot30, observé par ROOT à01:07:15.363523UTC. Les identités continues et finies acquises restent fixées. Leurs preuves n'apportent pas encore l'annulation signée de la frontière ni la cible D_N. Aucun WIN n'est déclaré.
+
+1. IDENTITÉ CONTINUE EXACTE ET PROJECTEUR FINI ACQUIS
+La vraie fonction de von Mangoldt est Λ(n)=log p pour n=p^k, p premier, k≥1 ; elle vaut zéro sinon, notamment pour n=0,1. Toutes les puissances de premiers sont incluses. Posons C_N=Σ_{n=0}^N Λ(n)Λ(N−n). Pour a>0,
+  T_a(θ)=Σ_{n≥0} Λ(n) exp(−an) exp(inθ),
+  C_N=exp(aN)/(2π) ∫_0^{2π} T_a(θ) conj(T_a(−θ)) exp(−iNθ) dθ.
+Les coefficients réels donnent conj(T_a(−θ))=T_a(θ). Envelope42 et Identity20 ont été indépendamment compilés dans les lots11/13 ; les convergences et échanges nécessaires y sont construits. Aucune trace infinie T_0 n'est postulée.
+Avec r=exp(−a), U=r/(1−r)^2 et B_M=r^(M+1)((M+1)/(1−r)+U), le polynôme P_{a,M}(θ)=Σ_{n=0}^M Λ(n)exp(−an)exp(inθ) satisfait |T_a−P_{a,M}|≤B_M et une erreur de projection au plus 2exp(aN)UB_M. Cette enveloppe est continue pour a>0.
+Discrete29, compilé indépendamment au lot15, donne pour N≤M et K>max(N,2M−N)
+  C_N=exp(aN)/K Σ_{j=0}^{K−1} P_{a,M}(2πj/K)^2 exp(−2πiNj/K).
+Ici a≥0 est permis puisque le polynôme est fini. Le contrat fixe N=M=100000000, K=2^27=134217728, S=2^58=288230376151711744 et a=0 dans cette seule variante finie. K>N élimine les alias du coefficient N dans le carré de degré2N.
+
+2. CONSTRUCTEUR A32, ENVELOPPE ET CINQ CORPS FINIS
+Pour 2≤p≤N, k=floor(log_2 p), z=(p−2^k)/(p+2^k), 0≤z≤1/3 et k≤26. Définissons
+  L_32(z)=2Σ_{j<32} z^(2j+1)/(2j+1), R_32=9/(4·65·3^65).
+Le vrai log p appartient à l'intervalle construit [kL_32(1/3)+L_32(z), kL_32(1/3)+L_32(z)+(k+1)R_32]. A_32(p) arrondit S fois son milieu au plus proche, les égalités étant départagées vers l'entier pair, puis borne cet entier dans [0,32S]. Le lot17 a compilé la construction canonique et sa précision |A_32(p)/S−log p|≤1/S, sans hypothèse libre de précision.
+A_n=A_32(minFac n) pour une vraie puissance de premier, zéro sinon. Pour I_A=Σ_{n=0}^N A_n A_{N−n},
+  |C_N−I_A/S²|≤E, E=(N+1)(64/S+1/S²)=(N+1)(64S+1)/S².
+E(N,s) est continue pour s>0. La garde entière 2(N+1)(64S+1)·10^6≤S² est compilée : 2E≤10^−6. Sources indépendantes : round22/judge5/batch17/sources/RationalLogQuantization22.lean et QuantizedLambdaEnvelope22.lean, 52 déclarations acquises. B40 est un contrôle auxiliaire dont la précision réelle et le raffinement GMP ne sont pas prouvés par ce lot.
+
+Les cinq paramètres p_i=c_iK+1 sont :
+  p_i          g_i   c_i
+  2013265921   31    15
+  2281701377    3    17
+  3221225473    5    24
+  3489660929    3    26
+  3892314113    3    29
+Dans F_{p_i}, ω_i=g_i^((p_i−1)/K) a l'ordre exact K. Avec A_n=0 pour N<n<K,
+  F_i(j)=Σ_{n<K} A_n ω_i^(jn),
+  r_i=K^−1Σ_{j<K}F_i(j)^2ω_i^(−Nj)=I_A mod p_i.
+Le lot19 a payé l'orthogonalité générique ; le lot22 a compilé les cinq primalités, les racines et les spécialisations A32, 28 déclarations. Le contrat SOURCE/PAPER prévoit la CRT unique dans [0,Π), Π=∏p_i, sous 0≤I_A≤(N+1)(32S)²<2^153<Π. Le catalogue natif, les opérations DIT/DIF, les mots machine, GMP et la CRT exécutable restent à relier aux objets Lean. Les théorèmes des corps finis ne certifient pas les instructions des exécutables.
+
+3. NOUVEL ACQUIS COMPLEXE27 ET RACCORD Λ EN SOURCE
+Le vrai lot27, observé par ROOT, a compilé ComplexGammaMellinHolomorphy22 : 15 déclarations, toutes avec axiomes standards, sans sorryAx. Sur Re(w)>0, avec le logarithme principal et K(w,t)=Γ(2+it)w^(−2−it), il construit un voisinage, des majorants intégrables du noyau et de sa dérivée, l'holomorphie et
+  exp(−w)=(1/(2π))∫_ℝ K(w,t)dt.
+Les dépendances réelles sont Gamma02, inversion réelle20 et Local22 du lot26 ; le reçu global FAILED26 demeure intact. Le taux local est (π/2−|Arg w|)/4. Aucune uniformité jusqu'au bord Re(w)=0 n'est acquise.
+
+Le module Λ main30 reste SOURCE non élaborée, malgré sa revue indépendante cohérente : 24 théorèmes et six définitions. Il utilise directement la vraie définition prime-power, toutes les PP, et propose
+  D(t)=Σ_{n≥0}Λ(n)n^(−2−it), P(w)=Σ_{n≥0}Λ(n)exp(−nw),
+  P(w)=(1/(2π))∫_ℝ D(t)K(w,t)dt, Re(w)>0.
+La SOURCE construit Λ(n)≤log n≤2√n, le test intégral de Σn^(−3/2), Q=ΣΛ(n)n^(−2)≤6, la continuité de D et |D(t)|≤6. Elle écrit L1 de chaque terme, la sommabilité des intégrales de normes et l'échange intégrale/série avant l'inversion terme à terme. Pour n>0, le raccord log(nw)=log n+log w paie la branche principale ; n=0 est traité par Λ(0)=0. Ces preuves écrites ne sont pas encore des verdicts du compilateur.
+Le majorant local construit sur une boule intérieure a la forme 6(|w|/2)^(−2)sec²η_w exp(−d_local|t|), η_w=(π/2+|Arg w|)/2 et d_local=(π/2−|Arg w|)/4. L'identification D(t)=−ζ′(2+it)/ζ(2+it), la formule de trace en zéros et le signe canonique ne sont pas des conclusions de main30.
+
+4. QUEUES : ÉCHECS CONSERVÉS28/29, TAIL30 ACQUIS ET EΛ16 SOURCE
+Les lots28 puis29 ont réellement échoué sur ComplexGammaMellinTail22, sans olean ni crédit. Le lot28 présente trois raccords d'API : mono_set, typage de integral_add_compl et composition de continuité ; le lot29 ne conserve que l'inférence de ContinuousAt.comp. Les sorryAx imprimés sont des récupérations de l'élaboration échouée, pas des preuves. Ces diagnostics ne démontrent ni fausseté analytique ni obstruction de parité. Les sources, logs et clôtures restent conservés ; les observations ROOT vérifient respectivement 9260/9389 entrées, 96/100 captures et 3089 archives.
+Tail03, révision distincte de 22 déclarations, a réellement compilé au lot30 : exit0, 22 impressions exactes avec axiomes standards, aucune récupération sorryAx. Les mêmes sources e5ba996… et les anciennes tentatives restent gelées. Il paie désormais l'erreur de l'inverse Gamma non pondéré, sur Re(w)>0 et H≥0,
+  R(w,H)=C(w)exp(−δ(w)H)/(πδ(w)),
+  C(w)=|w|^(−2)sec²η_w, δ(w)=(π/2−|Arg w|)/2>0.
+La continuité jointe acquise concerne R pour Re(w)>0 et H réel ; elle ne prouve pas la continuité de l'intégrale mobile. Ce module paie aussi la positivité du rayon, sa décroissance en H et une domination locale issue de continuité. Il ne paie pas une queue pondérée par D.
+La SOURCE EΛ16, distincte, écrit pour P_H(w)=(1/(2π))∫_{−H}^H D(t)K(w,t)dt,
+  T_−=∫_H^∞D(−t)K(w,−t)dt, T_+=∫_H^∞D(t)K(w,t)dt,
+  P−P_H=(T_−+T_+)/(2π), |P−P_H|≤EΛ(w,H)=6R(w,H).
+Elle construit les intégrabilités des vrais produits et intègre leur majorant6Cexp(−δ|t|), puis écrit un rayon conjoint continu pour Re(w)>0,H réel. La revue SOURCE indépendante ne trouve aucune objection précise sur les deux signes, le facteur6, le complément ou les domaines. EΛ16 et le module principal Λ30 restent cependant non compilés ; le vrai PASS Tail ne remplace pas leurs verdicts. Aucun signe ni égalité D(−t)=D(t) n'est supposé, et une norme d'intégrale Gamma non pondérée n'est jamais substituée à la norme du produit.
+
+4bis. GÉOMÉTRIE ET COÛT : PAPER, ÉVALUATEUR GLOBAL NON PRÊT
+La nouvelle note PAPER conserve le lien entre norme et argument. Pour w=a−iθ,a>0,u=|θ|,r=√(a²+u²), elle dérive
+  C(a−iθ)=(2/a²)(1+u/r)<4/a².
+Sur |θ|≤π, poser Cbar=(2/a²)(1+π/√(a²+π²)) et d(a)=atan(a/π)/2>0. Le rayon uniforme proposé devient ε=6Cbar exp(−dH)/(πd),H≥0. Il améliore la précédente borne compacte d'ordre a^(−4) en gardant la relation entre norme et angle ; le raccord principal Arg/atan, les demi-angles et la domination compacte restent PAPER, avec un module géométrique SOURCE en rédaction, sans verdict acquis.
+Pour U=exp(−a)/(1−exp(−a))², la différence de carrés donne l'enveloppe de coefficient
+  |C_N−C_{N,H}(a)|≤exp(aN)(2Uε+ε²),
+  C_{N,H}(a)=exp(aN)/(2π)∫_{−π}^{π}P_H(a−iθ)²exp(−iNθ)dθ.
+Le terme ε² est nécessaire. La translation vers l'intervalle centré utilise la périodicité de la vraie trace, et reste un bridge formel à écrire ; P_H et cpow ne sont pas supposés périodiques.
+À N=10^8,a=1/N,τ=10^(−6), les inégalités fermées de la note donnent pour le seuil H_* DE CE MAJORANT : 5·10^10<H_*<10^11. Elles ne minorent pas l'erreur réelle et ne prouvent pas la nécessité d'une telle hauteur pour toute méthode. L'intérieur a longueur2H. Des choix suffisants théoriques M=10^52 pour D_M et J=10^67 pour une quadrature extérieure Lipschitz illustrent des coûts astronomiques ; aucun catalogue, temps/mémoire mesuré ou programme réalisant ces choix n'est fourni. La revue PAPER indépendante juge les constantes cohérentes, sans crédit Lean.
+Restent les enclosures dirigées de Γ/cpow/D, le reste de quadrature intérieure du vrai produit, la dérivée sous intégrale finie, les positions/segments, poids, normaliseur et accumulation. Les erreurs doivent être dérivées du futur programme ; elles ne sont pas des précisions libres. L'évaluateur global Mellin–Λ est OPEN / NOT_PREPARED. La banque native05 n'évalue pas ces intégrales et aucun de ses payloads ne sert d'oracle.
+
+5. CONTRAT NUMÉRIQUE FALSIFIABLE ET STOP05 EFFECTIF
+Le producteur doit fournir le catalogue complet0..N, les coefficients exactement égaux à A32, les cinq résidus et C_A. Le vérificateur distinct doit redériver A32, contrôler facteurs/puissances, encadrements logarithmiques, extraction et CRT, puis vérifier |C_A−C_B|≤2(N+1)(64S+1), la garde entière ci-dessus et les liaisons au coefficient. Après succès et raccords, le rayon primaire serait E autour de C_A/S². Les tests ponctuels antérieurs ne sont pas un oracle global ; aucun coefficient ni rayon final n'est fourni comme prémisse.
+BUILD04 a produit deux images avec exit0 ; la confiance Windows/GCC/natif est explicitement opérationnelle. Aucun raffinement Lean de GMP, fermeture universelle du chargeur ou résultat numérique n'en découle.
+Le banc04 a été interrompu par son watchdog partagé3600s après producteur exit0 ; son contrôleur n'a laissé ni FIN, ni reçu parent, ni POST, ni coefficient. Sa conservation externe demeure distincte de ce POST absent.
+Le nouveau banc05 checker-only a repris trois payloads04 byte-identiques, encore non validés comme vérité. Il a invoqué exactement un contrôleur, zéro producteur, zéro compilateur et zéro retry :
+  parent session81191 ; contrôleur PID23088 START03/10/2026 23:34:41.256382UTC ;
+  deadline enfant3300s depuis l'entrée parent, réserve300s pour FIN/POST ;
+  checker FIN04/10/2026 00:29:21.853449UTC, exit238, HARD_WALL_NO_VERDICT ;
+  parent FIN00:29:33.933556UTC, exit1, durée observée3312.188s ; retour outil1be8f6.
+Le Job est déclaré vide et le wait confirmé. Le PID Job13504, distinct du callback23088, a aussi été observé puis constaté absent ; aucune fermeture universelle de graphe n'est prétendue. Les journaux sont vides. Un vrai reçu STOP et un vrai POST sont présents, avec conservation déclarée ; coefficient_result.json est absent. Aucune comparaison effective, garde de résultat, valeur de coefficient ou mutant n'a été observé.
+La clôture externe unique, puis l'observateur indépendant ROOT498b76/session25584→37a97a exit0 à00:35:10.215862UTC, ont rehashé 6576 entrées, 109 paires original/copie, trois paires payloads, cinq contrôles, 3089 archives et123 sorties05 ; les83 sorties04 sont préservées. Statut CLOSED_STOP_NO_MATHEMATICAL_VERDICT. Ce calcul est incomplet pour durée, sans contre-exemple mathématique établi. Aucun résultat numérique n'est utilisé comme preuve Lean.
+
+6. BORD, TRACE SIGNÉE ET DETTE D_N
+BORD25 reste compilé : pour a>0, N>0 et q complexe,
+  J(a,N,q)=(1/(2π))∫_{−π}^{π}(a−iθ)^(−q)exp(−iNθ)dθ,
+  B(a,N,q)=i(−1)^N[(a−iπ)^(−q)−(a+iπ)^(−q)]/(2πN),
+  J(a,N,q)=B(a,N,q)+(q/N)J(a,N,q+1).
+Le bord est nul à q=0 mais non nul à q=1. Il doit être conservé ; la puissance principale n'est pas supposée périodique. Les revues Weil signé et orbites restent cohérentes sur papier sous leurs dettes de formule de trace, tests mixtes, convergence, catalogue complet et multiplicités. La réalité des blocs ne fournit pas leur positivité : les phases peuvent changer de signe.
+L'extraction exacte de C_N inclut les PP et isole la contribution globale ; elle n'impose pas de signe aux corrélations spectrales. Restent l'évaluation uniforme effective, ses restes, un mécanisme nouveau d'annulation prouvé indépendamment de la cible, puis les raccords PP et frontière r>α de la monographie. Le régime canonique fixé log N≥10^24 reste distinct du test fini N=10^8. La cible D_N≤N/(256log N log log N) n'est ni une hypothèse ni une conclusion de ces identités. D_N et WIN demeurent OPEN.
+
+Pièces de statut exactes, relatives à la base déclarée :
+  .arbor/sessions/parity/.coordinator/messages/round22_judge_batch27_closed_observation.json : PASS27, historique85/1434 ;
+  .arbor/sessions/parity/.coordinator/messages/round22_judge_batch30_closed_observation.json : PASS Tail22, officiel86/1456, SHA7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292 ;
+  round22/judge5/complex_gamma_mellin_lambda_source_review01/review22.md : SOURCE main30, SHA525e2577b47e49a3673056df681647778b2dd02ec01aca24172a31d01a81d887 ;
+  round22/judge5/batch30/sources/ComplexGammaMellinTail22.lean : Tail03 acquise, SHAe5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0 ;
+  round22/judge5/batch30/batch30_attempt01/ComplexGammaMellinTail22.olean : SHA168112f8064e3355b387c53dc50b82fac024309acdbd68bbbd0d1ed4060d2ad5 ;
+  round22/role3/elambda16_source_review01/review22.txt : revue EΛ SOURCE, SHA0497ba1f300dd5916fbac27835a04c1968822ef707182dc6e94c10d1bce8d252 ;
+  round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md : coût PAPER, SHAdd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb ;
+  round22/role3/mellin_lambda_feasibility_paper_review01/review22.txt : revue PAPER indépendante, SHAaf5d3d7969831bf5be4658bd2001e88bd6045e0bd18f60cba6c98ab6a36c59e0 ;
+  .arbor/sessions/parity/.coordinator/messages/round22_judge_batch28_closed_observation.json et round22_judge_batch29_closed_observation.json : FAIL techniques conservés, zéro crédit ;
+  round22/role3/native_numeric_checker_only_closure_source05/numeric_execution_closure22.json : SHA23dd1f72589d6994ed27004f2b15c01f9534c2e0ea33834fc59f6f8e7a7514c1 ;
+  .arbor/sessions/parity/.coordinator/messages/round22_native_numeric05_closed_observation.json : STOP sans coefficient, conservation indépendante.
+Ce DRAFT attend le statut réel31, le handoff géométrique SOURCE et la confirmation ROOT finale avant gel. Aucun PASS postérieur à ces pièces n'est anticipé.

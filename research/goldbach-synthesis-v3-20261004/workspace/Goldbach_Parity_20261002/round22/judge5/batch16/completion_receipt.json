@@ -1,0 +1,92 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH16",
+  "time_utc": "2026-10-03T17:45:21.483214+00:00",
+  "status": "INDEPENDENT_BATCH16_FAILED",
+  "role": "ROLE5",
+  "actual_child_invocations": 1,
+  "modules_passed": 0,
+  "declarations_passed": 0,
+  "module_count_passed": 0,
+  "declaration_count_passed": 0,
+  "theorems_passed": 0,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "input_count": 8112,
+  "closed_judge_file_count": 1006,
+  "protected_archive_count": 3089,
+  "capture_count": 23,
+  "print_count": 38,
+  "standard_print_count": 29,
+  "recovery_sorryAx_print_count": 9,
+  "declarations_without_axioms": [
+    "GoldbachLogQuantization22.clampInteger"
+  ],
+  "warnings": 4,
+  "errors": 4,
+  "passed_modules": [],
+  "failed_modules": [
+    "RationalLogQuantization22"
+  ],
+  "not_invoked_modules": [
+    "QuantizedLambdaEnvelope22"
+  ],
+  "source_sha256": "9e59eb6b8aa4efcb5cc6cdc27d7d7a7d24517986fcd1ad2b4413b97c0efc1fb0",
+  "actual_links": {
+    "START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\START.json",
+      "sha256": "ad6def428d2349f47981ae78f7f161499842b404934849cf65f2a8f071fdbca2"
+    },
+    "FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\FIN.json",
+      "sha256": "09a5bbdd1a274b37a2be4dde65b972d7e141a4bd2d408943090c74d9a30d54cd"
+    },
+    "receipt.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\receipt.json",
+      "sha256": "1632ce21dee28fd87c4d08958797787d551f2c5937b540c469a5e7600ef3d09c"
+    },
+    "PREEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\PREEXEC.json",
+      "sha256": "e18bb78ad2cdc1e686849abf959792e3770a307024c53988b450de7dcde2b4e3"
+    },
+    "POSTEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\POSTEXEC.json",
+      "sha256": "5ad1d5331c2ac7aa925d17f6ac10def6d9670843c58f0004e10556c691f6e5a1"
+    },
+    "RationalLogQuantization22_START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\RationalLogQuantization22_START.json",
+      "sha256": "d83fed8e5b343e068413fcab24fb0cacb708c4c71e3815e230c2a5229d4a30c0"
+    },
+    "RationalLogQuantization22_FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\RationalLogQuantization22_FIN.json",
+      "sha256": "24e26d1aa7817f2a0a44bee85670634ab671937578c2a82edc8025e9d95563a7"
+    },
+    "RationalLogQuantization22.log": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\RationalLogQuantization22.log",
+      "sha256": "45311354041cb407df0372b3f764bdb2bf90ea66b0a3100b1b072945510ef5c6"
+    }
+  },
+  "adjudication_sha256": "9276ac7bfa386ec38c2ebde884a575137b3bea723e64124a46962455f6c79c69",
+  "metadata_close_source_sha256": "900216030d25631925a71a3bb860c21136320c0c58e9d1bc79e09c43fdc57da1",
+  "readonly_local_dependencies": [],
+  "recompiled_dependencies": [],
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "retry_count": 0,
+  "numeric_bank_replayed": false,
+  "numeric_PASS_used_as_proof": false,
+  "previous_official_modules": 76,
+  "previous_official_declarations": 1252,
+  "proposed_new_official_modules": 76,
+  "proposed_new_official_declarations": 1252,
+  "official_count_requires_ROOT_observation": true,
+  "H1_paid": false,
+  "C5_paid": false,
+  "global_trace_certified": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "full_log_read": "9acef7",
+  "full_actual_receipt_read": "3f0ffa",
+  "full_START_read": "3f0ffa"
+}

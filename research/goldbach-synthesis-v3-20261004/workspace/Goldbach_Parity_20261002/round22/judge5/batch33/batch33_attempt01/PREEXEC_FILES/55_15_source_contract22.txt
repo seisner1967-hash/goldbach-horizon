@@ -1,0 +1,86 @@
+CONCRETE NTT ROOTS / A32 PROJECTION — SOURCE ONLY
+Scope: exact algebraic parameter certificates for the continuous Fourier contract.
+Official baseline communicated by ROOT after observed lot19: 79 modules / 1328 auxiliary declarations.
+No author compiler invocation, API/tactic probe, numerical evaluation or generated candidate.
+No AUTHOR PASS claim. No parity improvement or D_N/Goldbach/WIN claim.
+
+1. Frozen source modules, in future independent compilation order
+
+ConcreteNTTRoots22.lean: 18 declarations = 17 theorems + 1 definition.
+ConcreteNTTA32Projection22.lean: 10 declarations = 5 theorems + 5 definitions.
+Combined: 28 declarations = 22 theorems + 6 definitions; 28 #print axioms commands.
+The bridge's five Fact definitions contain the Lucas proofs; they are not hypotheses.
+No custom axioms, omitted proof terms, unsafe declaration or native_decide.
+
+2. Five exact domains
+
+K = 2^27. bankRoot p g = (g : ZMod p)^((p-1)/K).
+(p,g,c) = (2013265921,31,15), (2281701377,3,17),
+(3221225473,5,24), (3489660929,3,26), (3892314113,3,29).
+For every p the source proves p.Prime, K<p, IsPrimitiveRoot (bankRoot p g) K.
+The quotient c is proved exactly inside each root theorem by norm_num.
+
+The complete factorizations of p-1 used in Lucas are respectively:
+2^27*3*5, 2^27*17, 2^30*3, 2^28*13, 2^27*29.
+Thus Lucas requires respectively 3,2,2,2,2 nontrivial quotient powers plus
+the five full powers g^(p-1)=1. All are SOURCE proofs using reduce_mod_char.
+Proof scripts for the small factors 2,3,5,13,17,29 use Nat.prime_two or
+norm_num; their proposed certification awaits the future independent Juge.
+No primality enumeration of the large p is used.
+
+The root theorem is independent of primality: in a commutative monoid,
+ω^(2^27)=1 and ω^(2^26)≠1 imply orderOf ω=2^27 by orderOf_eq_prime_pow,
+then IsPrimitiveRoot.orderOf yields the required primitive-root predicate.
+Each concrete theorem proves its two power statements directly. No given
+primitive-root, nonvanishing Fourier coefficient, or final projection premise.
+
+3. Read-only independently compiled dependencies of the A32 bridge
+
+FiniteFieldProjection22, batch19 sources:
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch19\sources\FiniteFieldProjection22.lean
+source SHA256 2b1cc267ce780a6a45c039f4b4b82d5a4ad4541fa224d76413dec5432658a48a
+olean: same batch19 / batch19_attempt01 / FiniteFieldProjection22.olean
+olean SHA256 0304400125a93cfddace45bcc4428d835c8ee204817f88f156e9fd44ee856f4f
+actual receipt SHA256 1a645174f44f5545e6069139cd3d452f9eb6100f7946152c5cf50c56c8252d57
+The author read the source FULL and batch19 adjudication/catalog FULL, checked
+these physical hashes, and relies on ROOT's observed closure, not on an author recompile.
+
+Transitive independently compiled dependencies, batch17, no recompilation:
+QuantizedLambdaEnvelope22 source SHA256
+526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331;
+olean SHA256 e821070b97b3fa4b71a3e279ecb9bc6c0de6cafdfe9dc8712b5d5a22858a6485.
+RationalLogQuantization22 source SHA256
+dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7;
+olean SHA256 20db07cdfb5717d7f9ab0b3e75d3c15b9e16c6820ad5285bd7debb62b0a31434.
+Shared actual17 receipt SHA256
+9449666ee8bdbbae74ea849e5a9ce2eb5c0c5bd7dd24c14a2d28065068178298.
+Bindings copied from the physically hashed and FULL-read batch19 catalog;
+this author does not claim a new independent raw FULL read of all lot17 dependencies.
+
+4. Exact claim of each bridge theorem
+
+At N=M=100000000 and K=2^27, each of the five concrete ZMod p domains
+has fieldProjection(bankRoot p g, canonical integerLambda, N,N,K)
+= (canonical integerCoefficient N : ZMod p), with no theorem hypotheses.
+The coefficient remains the A32 constructor for every genuine prime power,
+as defined and independently compiled in QuantizedLambdaEnvelope22.
+No coefficient value is evaluated by these theorems. The exact finite DFT
+is not a machine radix-2 implementation proof or an estimate of D_N.
+
+5. Judge contract and remaining debt
+
+Future Juge must audit SOURCE, bind all imports plus Init/Prelude and exactly
+three preserved local dependency oleans, then compile the two new modules
+in the stated order in one new source root. ConcreteNTTRoots22 from the same
+future attempt may feed the bridge only after its independent exit0/axiom audit.
+Existing batch17/batch19 modules may not be recompiled. No SOURCE author olean.
+No compiler run is authorized merely by this source document; ROOT gives the
+specific future attempt gate after independent source review and metadata closure.
+Each module is credited only on actual success and all expected axiom prints.
+If a tactic/API fails, record the exact Lean diagnostic; do not call that
+configuration or elaboration failure a parity-obstacle proof.
+
+Still open: evaluation of the coefficient at N=10^8, full prime-power catalogue,
+GMP/machine arithmetic, radix-2 butterflies, final CRT reconstruction, uniform
+continuous phase cancellation, prime-power correction, frontier terms, D_N and WIN.
+These files provide no bilinear arithmetic, sieve, Möbius, Vaughan or AP remainder route.

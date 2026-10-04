@@ -1,0 +1,47 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch09\sources\ContourChiScaled22.lean:27:31: error: unsolved goals
+u : ℝ
+hu : u ∈ Ioi 0
+⊢ 0 < ?m.2092
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch09\sources\ContourChiScaled22.lean:32:2: error: linarith failed to find a contradiction
+case h1.h
+v : ℝ
+hv : v ∈ Ioi 0
+w : ℝ
+hw : w ∈ Ioi 0
+h : (fun v => 2 * v) v = (fun v => 2 * v) w
+a✝ : v < w
+⊢ False failed
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch09\sources\ContourChiScaled22.lean:47:2: error: unsolved goals
+case neg
+s : ℂ
+v : ℝ
+hA : -((1 - s) / 2) * ↑(2 * v) = -(1 - s) * ↑v
+hB : -(1 + s / 2) * ↑(2 * v) = -(2 + s) * ↑v
+hE : -↑(2 * v) = -2 * ↑v
+hd : ¬1 - Complex.exp (-2 * ↑v) = 0
+⊢ Complex.exp (s * ↑v - ↑v) * (2 - Complex.exp (-(↑v * 2)) * 2)⁻¹ * 2 +
+      (Complex.exp (-(s * ↑v) - ↑v * 2) * (2 - Complex.exp (-(↑v * 2)) * 2)⁻¹ * 2 -
+        Complex.exp (-(↑v * 2)) * (2 - Complex.exp (-(↑v * 2)) * 2)⁻¹ * 4) =
+    Complex.exp (s * ↑v - ↑v) * (1 - Complex.exp (-(↑v * 2)))⁻¹ +
+      (Complex.exp (-(s * ↑v) - ↑v * 2) * (1 - Complex.exp (-(↑v * 2)))⁻¹ -
+        Complex.exp (-(↑v * 2)) * (1 - Complex.exp (-(↑v * 2)))⁻¹ * 2)
+'GoldbachContinuous22.contourPsiScaledKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.leftChiPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.scaleTwo_image_Ioi' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.scaleTwo_injOn_Ioi' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contourPsiPair_scaleTwo' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.integrableOn_contourPsiScaledKernel' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.contourPsiPair_integral_eq_scaled' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.contourChi_logDeriv_eq_scaled_integral' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.leftChiPoint_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contourPsiScaledKernel_left_line' depends on axioms: [propext, Classical.choice, Quot.sound]

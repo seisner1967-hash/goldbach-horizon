@@ -1,0 +1,171 @@
+import LeastFactorComposite
+import SwitchedSelbergWeight
+import SeparatedTypeII
+
+/-! Round20 / 13.12. The prime q domain comes from actual acquired physical
+witnesses. Candidate primality is never used in constructing that domain.
+All composite mass, including proper powers, is removed only from theta.
+The raw measure is the acquired von Mangoldt measure with its actual mask. -/
+namespace GoldbachRound20.SwitchedComposite
+
+open scoped BigOperators
+open Finset
+open GoldbachRound18.SeparatedTypeII
+noncomputable section
+attribute [local instance] Classical.propDecidable
+set_option maxHeartbeats 4000000
+
+def switchedConductor (F : Parameters) (s : ℕ) : ℕ := conductor F * s
+
+def switchedCandidate (F : Parameters) (s q : ℕ) : ℕ :=
+  F.N - switchedConductor F s * q
+
+/-- Specified s and q, retaining every guard in the acquired witness. -/
+def fixedPhysicalAxes (F : Parameters) (s q : ℕ) : Prop :=
+  ∃ w : PhysicalWitness F (s * q), w.s = s ∧ w.q = q
+
+def physicalQDomain (F : Parameters) (s z : ℕ) (J : Finset ℕ) : Finset ℕ :=
+  J.filter fun q => fixedPhysicalAxes F s q ∧
+    2 ≤ switchedCandidate F s q ∧ z < switchedCandidate F s q
+
+def physicalPrimeMass (F : Parameters) (s z : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J, theta F.N (switchedCandidate F s q)
+
+def physicalRawMass (F : Parameters) (s z : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J, rawLambda F.N (switchedCandidate F s q)
+
+def physicalSelbergMass (F : Parameters) (s z : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J,
+    switchedWeight F.N (switchedConductor F s) z (switchedCandidate F s q)
+
+def physicalCompositeMass (F : Parameters) (s z : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J,
+    if ¬ (switchedCandidate F s q).Prime then
+      switchedWeight F.N (switchedConductor F s) z (switchedCandidate F s q) else 0
+
+def physicalProperPowerDifference (F : Parameters) (s z : ℕ) (J : Finset ℕ) : ℝ :=
+  ∑ q ∈ physicalQDomain F s z J,
+    (rawLambda F.N (switchedCandidate F s q) - theta F.N (switchedCandidate F s q))
+
+theorem mem_physicalQDomain {F : Parameters} {s z q : ℕ} {J : Finset ℕ} :
+    q ∈ physicalQDomain F s z J ↔ q ∈ J ∧ fixedPhysicalAxes F s q ∧
+      2 ≤ switchedCandidate F s q ∧ z < switchedCandidate F s q := by
+  simp [physicalQDomain, and_assoc]
+
+theorem physicalQDomain_prime {F : Parameters} {s z q : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J) : q.Prime := by
+  obtain ⟨_, ⟨w, _, hwq⟩, _, _⟩ := mem_physicalQDomain.mp hq
+  exact hwq ▸ w.q_prime
+
+theorem physicalQDomain_mask {F : Parameters} {s z q : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J) : physicalMask F (s * q) := by
+  obtain ⟨_, ⟨w, _, _⟩, _, _⟩ := mem_physicalQDomain.mp hq
+  exact ⟨w⟩
+
+theorem physicalQDomain_front {F : Parameters} {s z q : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J) :
+    switchedConductor F s * q + F.Q < F.N := by
+  obtain ⟨_, ⟨w, _, _⟩, _, _⟩ := mem_physicalQDomain.mp hq
+  simpa [switchedConductor, Nat.mul_assoc] using w.original_front
+
+theorem physicalQDomain_unit {F : Parameters} {s z q : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J) :
+    Nat.Coprime (switchedConductor F s * q) F.N := by
+  obtain ⟨_, ⟨w, _, _⟩, _, _⟩ := mem_physicalQDomain.mp hq
+  simpa [switchedConductor, Nat.mul_assoc] using w.unit_m
+
+theorem physicalCandidate_unit_N {F : Parameters} {s z q : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J) :
+    Nat.Coprime (switchedCandidate F s q) F.N := by
+  have hf : switchedConductor F s * q ≤ F.N := by
+    have := physicalQDomain_front hq; omega
+  exact (Nat.coprime_self_sub_left hf).mpr (physicalQDomain_unit hq)
+
+theorem physicalCandidate_unit_tN {F : Parameters} {s z q : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J) :
+    Nat.Coprime (switchedCandidate F s q) (switchedConductor F s * F.N) := by
+  have hf : switchedConductor F s * q ≤ F.N := by
+    have := physicalQDomain_front hq; omega
+  have ht : Nat.Coprime (switchedConductor F s) F.N :=
+    (physicalQDomain_unit hq).coprime_dvd_left (dvd_mul_right _ _)
+  have huj : Nat.Coprime (switchedCandidate F s q) (switchedConductor F s) := by
+    apply Nat.coprime_of_dvd
+    intro l hl hlj hlt
+    have hprod : l ∣ switchedConductor F s * q := dvd_mul_of_dvd_left hlt q
+    have hdN : l ∣ F.N := by
+      have hadd := Nat.dvd_add hlj hprod
+      simpa [switchedCandidate, Nat.sub_add_cancel hf] using hadd
+    exact (hl.coprime_iff_not_dvd.mp (ht.coprime_dvd_left hlt)) hdN
+  exact huj.mul_right (physicalCandidate_unit_N hq)
+
+theorem physicalCompositeSubtraction (F : Parameters) (s z : ℕ) (J : Finset ℕ)
+    (heven : Even F.N) (hz : 1 ≤ z) :
+    physicalPrimeMass F s z J = physicalSelbergMass F s z J - physicalCompositeMass F s z J := by
+  unfold physicalPrimeMass physicalSelbergMass physicalCompositeMass
+  rw [← sum_sub_distrib]
+  apply sum_congr rfl
+  intro q hq
+  obtain ⟨_, _, _, hzj⟩ := mem_physicalQDomain.mp hq
+  have hu := physicalCandidate_unit_N hq
+  by_cases hj : (switchedCandidate F s q).Prime
+  · rw [if_neg (not_not.mpr hj), sub_zero,
+      switchedWeight_prime heven hz hj hzj]
+    simp [theta, hj, hu]
+  · simp [theta, hj]
+
+theorem physicalCompositeMass_nonneg (F : Parameters) (s z : ℕ) (J : Finset ℕ) :
+    0 ≤ physicalCompositeMass F s z J := by
+  unfold physicalCompositeMass
+  apply sum_nonneg
+  intro q hq
+  have hj := (mem_physicalQDomain.mp hq).2.2.1
+  by_cases hp : (switchedCandidate F s q).Prime
+  · rw [if_neg (not_not.mpr hp)]
+    exact le_rfl
+  · rw [if_pos hp]
+    exact switchedWeight_nonneg F.N (switchedConductor F s) z
+      (j := switchedCandidate F s q) (by omega)
+
+theorem physicalRaw_theta_difference (F : Parameters) (s z : ℕ) (J : Finset ℕ) :
+    physicalRawMass F s z J = physicalPrimeMass F s z J + physicalProperPowerDifference F s z J := by
+  unfold physicalRawMass physicalPrimeMass physicalProperPowerDifference
+  rw [← sum_add_distrib]
+  apply sum_congr rfl
+  intro q hq
+  ring
+
+theorem physicalCompositeMass_leastFactor (F : Parameters) (s z : ℕ) (J : Finset ℕ) :
+    physicalCompositeMass F s z J =
+      ∑ q ∈ physicalQDomain F s z J,
+        if compositeLeastFactor (switchedCandidate F s q) then
+          switchedWeight F.N (switchedConductor F s) z (switchedCandidate F s q) else 0 := by
+  unfold physicalCompositeMass
+  apply sum_congr rfl
+  intro q hq
+  have h2 := (mem_physicalQDomain.mp hq).2.2.1
+  simp [compositeLeastFactor, h2]
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound20.SwitchedComposite.switchedConductor
+#print axioms GoldbachRound20.SwitchedComposite.switchedCandidate
+#print axioms GoldbachRound20.SwitchedComposite.fixedPhysicalAxes
+#print axioms GoldbachRound20.SwitchedComposite.physicalQDomain
+#print axioms GoldbachRound20.SwitchedComposite.physicalPrimeMass
+#print axioms GoldbachRound20.SwitchedComposite.physicalRawMass
+#print axioms GoldbachRound20.SwitchedComposite.physicalSelbergMass
+#print axioms GoldbachRound20.SwitchedComposite.physicalCompositeMass
+#print axioms GoldbachRound20.SwitchedComposite.physicalProperPowerDifference
+#print axioms GoldbachRound20.SwitchedComposite.mem_physicalQDomain
+#print axioms GoldbachRound20.SwitchedComposite.physicalQDomain_prime
+#print axioms GoldbachRound20.SwitchedComposite.physicalQDomain_mask
+#print axioms GoldbachRound20.SwitchedComposite.physicalQDomain_front
+#print axioms GoldbachRound20.SwitchedComposite.physicalQDomain_unit
+#print axioms GoldbachRound20.SwitchedComposite.physicalCandidate_unit_N
+#print axioms GoldbachRound20.SwitchedComposite.physicalCandidate_unit_tN
+#print axioms GoldbachRound20.SwitchedComposite.physicalCompositeSubtraction
+#print axioms GoldbachRound20.SwitchedComposite.physicalCompositeMass_nonneg
+#print axioms GoldbachRound20.SwitchedComposite.physicalRaw_theta_difference
+#print axioms GoldbachRound20.SwitchedComposite.physicalCompositeMass_leastFactor
+
+end
+end GoldbachRound20.SwitchedComposite

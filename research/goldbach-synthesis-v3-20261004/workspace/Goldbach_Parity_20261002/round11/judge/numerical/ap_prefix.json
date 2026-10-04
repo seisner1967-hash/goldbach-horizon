@@ -1,0 +1,588 @@
+{
+  "status": "PASS_NEW_FINITE_CONTRACTS_ONLY",
+  "N": 100000000,
+  "alpha": 100,
+  "a": 3163,
+  "Q": 999999,
+  "finite_coefficients": {
+    "status": "PASS_FINITE_LOCAL_IDENTITY_ONLY",
+    "prime_set": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "V_P": "692695/864864",
+    "B6_guarded_finite_product": {
+      "status": "PASS_IDENTITY_ONLY",
+      "P": 3003,
+      "prime_set": [
+        3,
+        7,
+        11,
+        13
+      ],
+      "unit_N": true,
+      "squarefree": true,
+      "all_divisors": [
+        {
+          "r": 1,
+          "actual": "692695/864864",
+          "expected": "692695/864864"
+        },
+        {
+          "r": 3,
+          "actual": "138539/432432",
+          "expected": "138539/432432"
+        },
+        {
+          "r": 7,
+          "actual": "16895/144144",
+          "expected": "16895/144144"
+        },
+        {
+          "r": 11,
+          "actual": "31775/432432",
+          "expected": "31775/432432"
+        },
+        {
+          "r": 13,
+          "actual": "4469/72072",
+          "expected": "4469/72072"
+        },
+        {
+          "r": 21,
+          "actual": "3379/72072",
+          "expected": "3379/72072"
+        },
+        {
+          "r": 33,
+          "actual": "6355/216216",
+          "expected": "6355/216216"
+        },
+        {
+          "r": 39,
+          "actual": "4469/180180",
+          "expected": "4469/180180"
+        },
+        {
+          "r": 77,
+          "actual": "775/72072",
+          "expected": "775/72072"
+        },
+        {
+          "r": 91,
+          "actual": "109/12012",
+          "expected": "109/12012"
+        },
+        {
+          "r": 143,
+          "actual": "205/36036",
+          "expected": "205/36036"
+        },
+        {
+          "r": 231,
+          "actual": "155/36036",
+          "expected": "155/36036"
+        },
+        {
+          "r": 273,
+          "actual": "109/30030",
+          "expected": "109/30030"
+        },
+        {
+          "r": 429,
+          "actual": "41/18018",
+          "expected": "41/18018"
+        },
+        {
+          "r": 1001,
+          "actual": "5/6006",
+          "expected": "5/6006"
+        },
+        {
+          "r": 3003,
+          "actual": "1/3003",
+          "expected": "1/3003"
+        }
+      ],
+      "d_support": "d divides P, distinct from d <= D AP head"
+    },
+    "ratios": {
+      "3": "2/5",
+      "7": "6/41",
+      "21": "12/205"
+    },
+    "infinite_tail_evaluated": false,
+    "local_exponent_one": "1/3",
+    "local_exponent_two": "0",
+    "nonunit_r5": {
+      "status": "ERROR_FALSIFIER",
+      "actual": "0",
+      "without_mask": "692695/3459456"
+    },
+    "nonsquarefree_r9": {
+      "status": "ERROR_FALSIFIER",
+      "actual": "0",
+      "incorrect_sf_ratio": "2/5"
+    },
+    "intersection": {
+      "status": "ERROR_FALSIFIER",
+      "r": 3,
+      "d": 3,
+      "lcm": 9,
+      "wrong_product": 27,
+      "correct_local": "1/3",
+      "wrong_local": "4/9",
+      "incorrect_coprime_restriction_ratio": "3/5",
+      "correct_ratio": "2/5"
+    }
+  },
+  "prefix_expansion": {
+    "status": "PASS_IDENTITY_ONLY_WITH_RESTRICTED_E",
+    "prime_E": [
+      68952733,
+      99999073,
+      99999517,
+      99999589,
+      99999989
+    ],
+    "global_Psi_prime_not_enumerated": true,
+    "records": [
+      {
+        "cut": 100,
+        "D": 1,
+        "active_d": [
+          1
+        ],
+        "nonzero_AP_cells": 7,
+        "physical": {
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "3,99999073": "-1",
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1",
+          "3,99999073": "1"
+        }
+      },
+      {
+        "cut": 100,
+        "D": 2,
+        "active_d": [
+          1
+        ],
+        "nonzero_AP_cells": 7,
+        "physical": {
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "3,99999073": "-1",
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1",
+          "3,99999073": "1"
+        }
+      },
+      {
+        "cut": 100,
+        "D": 3,
+        "active_d": [
+          1,
+          3
+        ],
+        "nonzero_AP_cells": 9,
+        "physical": {
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 100,
+        "D": 16,
+        "active_d": [
+          1,
+          3
+        ],
+        "nonzero_AP_cells": 9,
+        "physical": {
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 100,
+        "D": 3216,
+        "active_d": [
+          1,
+          3
+        ],
+        "nonzero_AP_cells": 9,
+        "physical": {
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 100,
+        "D": 3217,
+        "active_d": [
+          1,
+          3,
+          3217
+        ],
+        "nonzero_AP_cells": 11,
+        "physical": {
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,99999517": "1",
+          "3,99999589": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {}
+      },
+      {
+        "cut": 3163,
+        "D": 1,
+        "active_d": [
+          1
+        ],
+        "nonzero_AP_cells": 13,
+        "physical": {
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 3163,
+        "D": 2,
+        "active_d": [
+          1
+        ],
+        "nonzero_AP_cells": 13,
+        "physical": {
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 3163,
+        "D": 3,
+        "active_d": [
+          1,
+          3
+        ],
+        "nonzero_AP_cells": 17,
+        "physical": {
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 3163,
+        "D": 16,
+        "active_d": [
+          1,
+          3
+        ],
+        "nonzero_AP_cells": 17,
+        "physical": {
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 3163,
+        "D": 3216,
+        "active_d": [
+          1,
+          3
+        ],
+        "nonzero_AP_cells": 17,
+        "physical": {
+          "11,99999989": "-1"
+        },
+        "head": {
+          "3,68952733": "-1",
+          "11,99999989": "-1"
+        },
+        "tail": {
+          "3,68952733": "1"
+        }
+      },
+      {
+        "cut": 3163,
+        "D": 3217,
+        "active_d": [
+          1,
+          3,
+          3217
+        ],
+        "nonzero_AP_cells": 19,
+        "physical": {
+          "11,99999989": "-1"
+        },
+        "head": {
+          "11,99999989": "-1"
+        },
+        "tail": {}
+      }
+    ],
+    "omitted_tail": {
+      "status": "ERROR_FALSIFIER",
+      "m": 31047267,
+      "n": 68952733,
+      "D": 16,
+      "head": {
+        "3,68952733": "-1"
+      },
+      "required_tail": {
+        "3,68952733": "1"
+      },
+      "whole": {}
+    },
+    "actual_intersection": {
+      "status": "ERROR_FALSIFIER",
+      "m": 927,
+      "n": 99999073,
+      "r": 3,
+      "d": 3,
+      "correct_Psi": {
+        "99999073": "1"
+      },
+      "wrong_product_Psi": {}
+    }
+  },
+  "scope_and_reference": {
+    "status": "DISTINCT_LOW_PREFIX_AND_BAND_VERIFIED",
+    "rows": {
+      "low_prefix": {
+        "m": 11,
+        "n": 99999989,
+        "low": {
+          "11": "-1"
+        },
+        "band": {},
+        "whole": {
+          "11": "-1"
+        },
+        "physical_reference_preserved": {},
+        "wrong_drop_low": {
+          "11": "-1"
+        },
+        "status": "ERROR_FALSIFIER"
+      },
+      "low_plus_band": {
+        "m": 411,
+        "n": 99999589,
+        "low": {
+          "3": "-1"
+        },
+        "band": {
+          "3": "1"
+        },
+        "whole": {},
+        "physical_reference_preserved": {},
+        "wrong_drop_low": {
+          "3": "-1"
+        },
+        "status": "ERROR_FALSIFIER"
+      },
+      "negative_reference": {
+        "m": 483,
+        "n": 99999517,
+        "low": {
+          "3": "1"
+        },
+        "band": {
+          "3": "-1"
+        },
+        "whole": {},
+        "physical_reference_preserved": {},
+        "wrong_drop_low": {
+          "3": "1"
+        },
+        "status": "ERROR_FALSIFIER"
+      }
+    },
+    "false_pointwise_G_nonnegative": {
+      "status": "ERROR_FALSIFIER",
+      "m": 483,
+      "n": 99999517,
+      "Lambda_m": {},
+      "mu_m": -1,
+      "G_over_S_N": "-1",
+      "S_N_infinite_product_not_evaluated": true,
+      "global_no_go": false
+    }
+  },
+  "imports": {
+    "numerical/parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical/round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "round3/multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "round6/exact_tools.py": "f48bb0b2b608aa734944cbfe978c19ad55f5aa249068dcc313a1de6da5a393cc",
+    "round4/inverse_checks.py": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c",
+    "round11/conservation.py": "df7f76db124733dd15b63239ccc419c2bdd1a1557d16d9a2fa566479a8d5b135"
+  },
+  "properpower_first_axis": {
+    "status": "ERROR_FALSIFIER",
+    "n": 9,
+    "m": 99999991,
+    "n_factors": [
+      [
+        3,
+        2
+      ]
+    ],
+    "m_factors": [
+      [
+        7,
+        1
+      ],
+      [
+        13,
+        1
+      ],
+      [
+        769,
+        1
+      ],
+      [
+        1429,
+        1
+      ]
+    ],
+    "prime_Psi_weight": {},
+    "Lambda_N": {
+      "3": "1"
+    },
+    "incorrect_mu_n_squared_Lambda_N": {},
+    "raw_fII_multiplier": {
+      "3": "-1"
+    },
+    "full_raw_sum_not_enumerated": true,
+    "meaning": "Proper prime power excluded from prime-only Psi, retained by Lambda_N and raw fII"
+  },
+  "script_sha256": "b58ea3d4fc41ffb60c548a44e6f92bad2fc01d812bf3a4338d2b0d70d834f1c1",
+  "exact_helper_sha256": "a41e33ae49a98f0b15e0de990337ddabcc47dc92a84894cce1141559eb1571f8",
+  "shared_sha256": "1959d27b60cfe7dc8e6211c36a0bc6b710c0fd13c80b95be55ad045092b3d4ee",
+  "witness_script_sha256": "1aacaf000d49772126a3a9824d9a9a4a9650eb99450b48df9f98a353da6e9c68",
+  "conservation_before": {
+    "status": "PRESERVED",
+    "files": 405,
+    "round10_files": 64,
+    "round10_controller_sha256": "c48e0480b9f227c9e404c1322dacb239d81720d9242ecb45e05037df8f177b2f",
+    "baseline_sha256": "f86a31f72d624124338afad6932cd859dceae164a6f3422f9b8998164fcf9e05",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "conservation_after": {
+    "status": "PRESERVED",
+    "files": 405,
+    "round10_files": 64,
+    "round10_controller_sha256": "c48e0480b9f227c9e404c1322dacb239d81720d9242ecb45e05037df8f177b2f",
+    "baseline_sha256": "f86a31f72d624124338afad6932cd859dceae164a6f3422f9b8998164fcf9e05",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "global_D_N": false,
+  "asymptotic": false,
+  "payments": false,
+  "Lean_called": false,
+  "victory": false,
+  "properpowers_removed_from_raw": false,
+  "mu_n_squared_added": false
+}

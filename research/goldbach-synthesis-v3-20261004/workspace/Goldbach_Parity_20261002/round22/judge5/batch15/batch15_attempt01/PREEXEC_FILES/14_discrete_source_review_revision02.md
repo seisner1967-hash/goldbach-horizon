@@ -1,0 +1,24 @@
+# Revue indépendante SOURCE du discret29, révision02
+
+Statut : SOURCE_REVIEW_ONLY, aucun builder, compilation, probe, modèle numérique ou nouveau banc. Baseline officielle observée ROOT13 : 75 modules / 1223 déclarations auxiliaires, 18 PASS et 7 FAIL techniques/configuration. Cette revue n'ajoute aucun crédit.
+
+Les fichiers suivants ont été réellement lus FULL puis leurs octets hachés par metadata4a651e ; racine B = D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002.
+
+| Fichier sous B | SHA256 | Lecture indépendante |
+| --- | --- | --- |
+| round22/role3/discrete_circle_source22/revision02/DiscreteThermalProjection22.lean | 7ee2abb27d959f1511abb59e8425578b420d3e972a8d03eaff26635ac8fd581c | FULL391197 |
+| round22/role3/discrete_circle_source22/revision02/source_review22.md | ff8764229a61cb1cf4b9cf2f7d66a50dcacbf95e0e5bd2d88250419ac8190bd9 | FULLf2bb01 |
+| round22/role3/discrete_circle_source22/revision02/read_receipts22.json | 3fabab0aa54ea54ec3b875ef78710b277bd3f7dcde229c9c58257bf92f5843a4 | FULLd2a0ba |
+| round22/role3/discrete_circle_source22/source_contract22.md | f930ed4353729c73047a36d2ec68bab7387ee4ce2cdb2f4cf8ba1b13a941c49c | FULL09932d |
+
+L'inventaire concret est 29 déclarations explicites : 20 théorèmes et 9 définitions, accompagnés de 29 prints qualifiés dans GoldbachDiscreteCircle22. Aucun module local auteur ou ancien module de projection n'est importé. Les poids sont la vraie ArithmeticFunction.vonMangoldt, incluant les puissances premières. Le caractère est exp(2πikj/K), le terme thermique est raccordé à exp(−an), et la trace est finie. Aucun crible, inversion de Möbius, décomposition de Vaughan ou reste scalaire AP n'est employé.
+
+La chaîne mathématique est cohérente. Pour K>0, la racine concrète est primitive par Complex.isPrimitiveRoot_exp. La divisibilité signée vient de zpow_eq_one_iff_dvd ; la branche non divisible annule la géométrique finie avec un facteur non nul. La garde A0 = max N (2*M−N) < K, avec soustraction naturelle, implique K>0 et −K<m+n−N<K pour tous m,n≤M. Même lorsque 2M<N, la fréquence supérieure est négative et la garde N<K suffit ; aucune substitution abusive d'une soustraction entière par une soustraction naturelle n'est requise. Un multiple de K dans cet intervalle est nul. M≥N permet ensuite le rectangle filtré = antidiagonale entière de N.
+
+La normalisation exp(aN)/K annule exactement r^N K, r=exp(−a), avec exp(aN)≠0 et K≠0 effectivement déduits. La conclusion est exp(aN)/K Σ_j T_{a,M}(2πj/K)^2 exp(−2πiNj/K) = Σ_{n=0}^N Λ(n)Λ(N−n). Le carré est celui de la trace complexe, sans conjugaison erronée. L'identité finie autorise tout a réel et n'invoque aucune convergence infinie ou intégrabilité gratuite. Ni l'orthogonalité, ni l'égalité finale, ni un majorant ou une précision numérique ne sont des prémisses.
+
+La réparation technique du corps discretePartial_square_expansion est cohérente avec les signatures réelles : pow_two, sum_mul_sum puis sum_product fixent le même ordre m puis n ; sum_mul distribue le caractère restant sans transpose des indices. Ring.lean9–74 a été lu TARGETEDf4eb08, SHA0e11d9b338fa211ed86b6692fa08b4c6cf47033aaf8bc14a055d6e8976dc5d10. sum_product dérivé par to_additive est visible dans Group/Finset.lean794–808, TARGETED1dae51. Exponential.lean199–230 et702–712, TARGETED7d0bb6, confirme les véritables exp_nat_mul et exp_int_mul ; GeomSum.lean218–249, TARGETED1dae51, confirme mul_geom_sum. PrimitiveRoots.lean280–340, TARGETEDe30279, vérifie les signatures signées ; RootsOfUnity/Complex.lean50–52 a été lu TARGETED85133f. Le premier chemin Analysis/Complex/Exponential.lean de cette recherche était absent : erreur de lecture seulement, corrigée par rg --files745178 puis le fichier Data/Complex/Exponential.lean réellement lu. Les six API sont hachées par4a651e ; aucune prétention de lecture rawFULL de ces grands fichiers.
+
+Je ne relève pas de nouveau déficit mathématique ni de signature manifestement absente dans la révision02. Les coercions, réécritures et tactiques restent non vérifiées par Lean. Le risque d'ordre des sommes précédemment signalé était SOURCE, jamais un FAIL Lean de ce module ; il a reçu une réparation distincte conservant les autres domaines et énoncés. Les axiomes effectifs sont inconnus tant que le futur module n'a pas été compilé. La fermeture complète des imports/cache, le catalogue indépendant et la gate appartiennent à une éventuelle sélection ROOT ultérieure : aucun paquet PREPARED14 n'existe à ce stade.
+
+Même un futur PASS29 ne certifierait que l'orthogonalité et l'identité finie CIRCLE sous les gardes. Il ne construirait pas le producteur à N=10^8, ses rayons, son checker indépendant ou une durée praticable. Il conserverait les puissances premières et n'acquitterait ni H1, ni une minoration des premiers, ni D_N/Goldbach/WIN. Le contrat numérique, notamment M=N et K=N+1 dans la variante cercle directe, demeure distinct du théorème fini paramétré.

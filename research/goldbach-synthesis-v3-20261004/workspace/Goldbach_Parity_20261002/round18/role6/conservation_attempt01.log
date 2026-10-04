@@ -1,0 +1,43 @@
+{
+  "status": "PRESERVED",
+  "scope": "READ_ONLY_CONSERVATION_VERIFICATION",
+  "round": 18,
+  "files": 997,
+  "previous_protected_files": 799,
+  "round17_files_including_controller": 198,
+  "controller197_bindings_verified": true,
+  "exact_union_799_plus_198_verified": true,
+  "exact_inventory_additions_and_removals_checked": true,
+  "changed": {},
+  "added": [],
+  "removed": [],
+  "baseline_sha256": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc",
+  "previous_baseline_sha256": "1c21af8d00924e126bf541c03f13277fa699c6f8e9d3a9edbbda337b9cead420",
+  "controller17_sha256": "5d20d749aa30bcf939e33cd0f1d1efc1049c85634f6054ae79c81890e6d628a4",
+  "probe_sha256": "83046b133bceda4f73e9e31ec08fd61f80c4b72c95d88e054bc223f32f2e8d24",
+  "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\previous_artifacts_sha256.json",
+  "original_sources": {
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+      "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+      "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+      "status": "PRESERVED"
+    },
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+      "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+      "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+      "status": "PRESERVED"
+    }
+  },
+  "old_producer_executed_by_this_verification": false,
+  "old_PASS_replayed": false,
+  "old_Lean_recompiled": false,
+  "old_dependency_recompiled": false,
+  "old_PDF_rerendered": false,
+  "old_W_or_D_recomputed": false,
+  "old_sign_recomputed": false,
+  "numeric_contract_launched_by_this_verification": false,
+  "mathematical_identity_certified_by_conservation": false,
+  "flags_describe_this_readonly_verification_not_global_execution": true,
+  "source_onset": "log N >= 10^24",
+  "finite_N_source_onset_claim": false
+}

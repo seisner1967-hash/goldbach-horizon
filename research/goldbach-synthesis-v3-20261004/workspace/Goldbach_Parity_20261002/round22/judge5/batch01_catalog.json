@@ -1,0 +1,301 @@
+{
+  "schema": "ROUND22_JUDGE5_MODULE_CATALOG_BATCH01",
+  "time_utc": "2026-10-03T08:01:26.854820+00:00",
+  "module_count": 2,
+  "modules": [
+    {
+      "module": "EpsteinKernel22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch01_sources\\EpsteinKernel22.lean",
+      "source_sha256": "b465bf53b124fa158eed1b5f01171d18ce7f8d7252bf27cf30db1ed7575a773c",
+      "author_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\EpsteinKernel22.lean",
+      "author_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\stage01_attempt02\\receipt.json",
+      "author_status": "AUTHOR_STAGE_AUX_PASS",
+      "dependencies": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.radicand"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.kernel"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.boundary"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.primitive"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.weight"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.radicand_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.root_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.root_sq"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.kernel_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.kernel_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.kernel_even"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.boundary_odd"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.primitive_odd"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.weight_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.weight_eq_rpow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.kernel_eq_rpow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuous_kernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuous_boundary"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuous_primitive"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.hasDerivAt_root"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.hasDerivAt_boundary"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.hasDerivAt_primitive"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.intervalIntegrable_kernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.integral_kernel_interval"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.boundary_normalized"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.tendsto_boundary_atTop"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.tendsto_primitive_atTop"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.tendsto_primitive_atBot"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.integrable_kernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.integral_kernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.boundary_le_one"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.boundary_deficit"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.boundary_deficit_bounds"
+        }
+      ],
+      "qualified_prints": [
+        "Epstein22.radicand",
+        "Epstein22.kernel",
+        "Epstein22.boundary",
+        "Epstein22.primitive",
+        "Epstein22.weight",
+        "Epstein22.radicand_pos",
+        "Epstein22.root_pos",
+        "Epstein22.root_sq",
+        "Epstein22.kernel_pos",
+        "Epstein22.kernel_nonneg",
+        "Epstein22.kernel_even",
+        "Epstein22.boundary_odd",
+        "Epstein22.primitive_odd",
+        "Epstein22.weight_pos",
+        "Epstein22.weight_eq_rpow",
+        "Epstein22.kernel_eq_rpow",
+        "Epstein22.continuous_kernel",
+        "Epstein22.continuous_boundary",
+        "Epstein22.continuous_primitive",
+        "Epstein22.hasDerivAt_root",
+        "Epstein22.hasDerivAt_boundary",
+        "Epstein22.hasDerivAt_primitive",
+        "Epstein22.intervalIntegrable_kernel",
+        "Epstein22.integral_kernel_interval",
+        "Epstein22.boundary_normalized",
+        "Epstein22.tendsto_boundary_atTop",
+        "Epstein22.tendsto_primitive_atTop",
+        "Epstein22.tendsto_primitive_atBot",
+        "Epstein22.integrable_kernel",
+        "Epstein22.integral_kernel",
+        "Epstein22.boundary_le_one",
+        "Epstein22.boundary_deficit",
+        "Epstein22.boundary_deficit_bounds"
+      ],
+      "theorem_count": 28,
+      "definition_count": 5,
+      "source_forbidden_tokens": [],
+      "proof_scope": "AUXILIARY_GEOMETRIC_KERNEL_AND_FINITE_UNFOLDING_ONLY"
+    },
+    {
+      "module": "EpsteinFinite22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch01_sources\\EpsteinFinite22.lean",
+      "source_sha256": "fb6205d1d88bbe864fd6c45f6ae60c5296812c966d9b2ce8bd2cccfc2128cc2d",
+      "author_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\EpsteinFinite22.lean",
+      "author_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\stage02_attempt03\\receipt.json",
+      "author_status": "AUTHOR_STAGE_AUX_PASS",
+      "dependencies": [
+        "EpsteinKernel22"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.shiftKernel"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.shiftWindow"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.finiteShiftIntegral"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "Epstein22.endpointSum"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.abs_cast_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.shiftKernel_eq_rpow"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.continuous_shiftKernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.intervalIntegrable_shiftKernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.affineCellIntegral"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.shiftKernel_neg_isometry"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.finiteWindow_neg_isometry"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.finiteShiftIntegral_neg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.sum_int_Icc"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.range_shift_telescope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.sum_Icc_shift_telescope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.finiteShiftIntegral_pos_formula"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.finiteShiftIntegral_natAbs"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "Epstein22.finiteShiftIntegral_formula"
+        }
+      ],
+      "qualified_prints": [
+        "Epstein22.shiftKernel",
+        "Epstein22.shiftWindow",
+        "Epstein22.finiteShiftIntegral",
+        "Epstein22.endpointSum",
+        "Epstein22.abs_cast_pos",
+        "Epstein22.shiftKernel_eq_rpow",
+        "Epstein22.continuous_shiftKernel",
+        "Epstein22.intervalIntegrable_shiftKernel",
+        "Epstein22.affineCellIntegral",
+        "Epstein22.shiftKernel_neg_isometry",
+        "Epstein22.finiteWindow_neg_isometry",
+        "Epstein22.finiteShiftIntegral_neg",
+        "Epstein22.sum_int_Icc",
+        "Epstein22.range_shift_telescope",
+        "Epstein22.sum_Icc_shift_telescope",
+        "Epstein22.finiteShiftIntegral_pos_formula",
+        "Epstein22.finiteShiftIntegral_natAbs",
+        "Epstein22.finiteShiftIntegral_formula"
+      ],
+      "theorem_count": 14,
+      "definition_count": 4,
+      "source_forbidden_tokens": [],
+      "proof_scope": "AUXILIARY_GEOMETRIC_KERNEL_AND_FINITE_UNFOLDING_ONLY"
+    }
+  ],
+  "total_declarations": 51,
+  "compiler_invocations": 0,
+  "win": false
+}

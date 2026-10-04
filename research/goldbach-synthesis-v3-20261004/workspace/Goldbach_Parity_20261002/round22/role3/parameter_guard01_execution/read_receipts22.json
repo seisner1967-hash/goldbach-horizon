@@ -1,0 +1,84 @@
+{
+  "schema": "ROUND22_PARAMETER_GUARD01_ROLE6_READ_RECEIPTS",
+  "actor": "ROLE6",
+  "source_author": "ROLE4",
+  "status": "READ_ONLY_PREFLIGHT_COMPLETE_NO_RUNTIME_AUTHORIZATION",
+  "reads": [
+    {
+      "scope": "FULL",
+      "sha256": "3cf9b27e50aa196aacd9e78f6093c2f6741f75af21414206b9b0bdf1c5684396",
+      "tool_receipts": [
+        "866e52"
+      ],
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01\\parameter_guard22.py"
+    },
+    {
+      "scope": "FULL",
+      "sha256": "c093bd5b4b5652d3ebde82820a8da45a084ae54583dbbc9531b2b6d257c846ac",
+      "tool_receipts": [
+        "866e52"
+      ],
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01\\run_parameter_guard_once22.py"
+    },
+    {
+      "scope": "FULL",
+      "sha256": "a9366f53f0939a0d3e6bae1b54766027cddb01a17e8b268494f5452c08dc50ff",
+      "tool_receipts": [
+        "874f6f"
+      ],
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01\\contract22.md"
+    },
+    {
+      "scope": "FULL",
+      "sha256": "418654b335c4e26043b1262eb371a2517e3bcde39db470190f5a25320a88a3bc",
+      "tool_receipts": [
+        "874f6f"
+      ],
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01\\preparation22.json"
+    },
+    {
+      "scope": "FULL",
+      "sha256": "4120755a50dc1ee63e0736d58a64a7ad0910ba4d8b66b342a29a17534fb523c8",
+      "tool_receipts": [
+        "874f6f"
+      ],
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01\\read_receipts22.json"
+    },
+    {
+      "scope": "HEADER_PROJECTION_AND_PARSED_METADATA_BYTE_HASH",
+      "sha256": "6e9db8525d2467c941fdc0dad85ccd5bcec7556fa49cf0368ef4052e223018d2",
+      "tool_receipts": [
+        "874f6f",
+        "dd3d34",
+        "d7c977"
+      ],
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\parameter_guard01\\prepared_manifest22.json"
+    },
+    {
+      "scope": "FULL",
+      "sha256": "80718ee9c1306a974554a70322ad36648897216890f6747ed2ddede840421d98",
+      "tool_receipts": [
+        "dd3d34"
+      ],
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\fixed_parameter_log_model22.py"
+    }
+  ],
+  "preflight_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\parameter_guard01_execution\\preflight_metadata22.json",
+  "preflight_sha256": "af7d88ab9fd3f2f0c3f8bef53d53f726a99ec4d96757263de419121b3dc6f048",
+  "preflight_scope": "998 input hashes and paths,972runtime,3089archived entries checked; no math evaluation",
+  "manifest_full_text_read": false,
+  "new_freeze": false,
+  "builder_runs": 0,
+  "Python_imports": 0,
+  "Python_math_parser_runs": 0,
+  "model_functions_executed": 0,
+  "children_started": 0,
+  "Lean_invocations": 0,
+  "native_builds": 0,
+  "root_gate_observed_absent": true,
+  "independent_source_review_required": true,
+  "global_NTT": false,
+  "coefficient_N": false,
+  "D_N": false,
+  "WIN": false
+}

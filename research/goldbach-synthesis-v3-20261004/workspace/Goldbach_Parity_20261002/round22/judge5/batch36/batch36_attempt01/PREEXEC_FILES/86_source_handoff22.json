@@ -1,0 +1,145 @@
+{
+  "schema": "ROUND22_MELLIN_LAMBDA_FEASIBILITY_PAPER_HANDOFF",
+  "status": "PAPER_ONLY_FROZEN_NO_EVALUATOR_AVAILABLE_NOT_PREPARED_NO_EXECUTION_REQUEST",
+  "author": "ROLE4",
+  "paper": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+  "paper_sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+  "read_receipts": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/read_receipts22.json",
+  "read_receipts_sha256": "501daee56da0be0cd01d4bde54ba2cc7ce48fc6299f9c626c73ef2c9fbd687f3",
+  "exact_scope": {
+    "circle": "True Lambda coefficient; all prime powers retained; independent11/13 acquired",
+    "Gamma_tail": "Tail30 actual independent PASS22 ROOT observed86/1456; excludes weighted Lambda identity",
+    "Lambda_main": "SOURCE_PENDING_COMPILER",
+    "ELambda16": "SOURCE_PENDING_COMPILER",
+    "new_geometry_coefficient_and_quadrature": "PAPER_NOT_FORMALLY_VALIDATED"
+  },
+  "paper_conclusions": {
+    "C_sharpened": "C(a-i theta)=2/a^2*(1+|theta|/sqrt(a^2+theta^2))<4/a^2",
+    "minimum_decay": "d(a)=atan(a/pi)/2>0",
+    "uniform_trace_radius": "epsilon(a,H)=6*Cbar(a)*exp(-d(a)*H)/(pi*d(a))",
+    "closed_coefficient_error": "e^(aN)*(2U(a)*epsilon+epsilon^2), continuous for a>0,H>=0",
+    "fixed_parameters": {
+      "N": "100000000",
+      "a": "1/N",
+      "tau": "1/1000000"
+    },
+    "height_envelope_threshold": "5*10^10 < H_* < 10^11, from closed inequalities; bound threshold only, no lower bound for actual error",
+    "inner_length": "2H; exceeds10^11 at threshold of this envelope",
+    "D_truncation": "b_M=(log M+1)/M,M>=2; trace radius<=b_M*Cbar*(1-exp(-dH))/(pi*d)",
+    "literal_D_example": "M=10^52 suffices for the stated tiny trace radius by these coarse bounds; no catalogue/evaluator available",
+    "outer_midpoint_error": "e^(aN)*pi*(2A_H*V_H+N*A_H^2)/(2J), pending actual differentiation-under-integral lemma",
+    "literal_outer_example": "J=10^67 suffices for stated tau/4 coarse midpoint bound at fixedN,H; no necessity for better quadratures asserted",
+    "unpaid_error_components": [
+      "Inner t-quadrature of actual D*K",
+      "Primitive enclosures Gamma/cpow/D",
+      "Node positions with segment domain guard",
+      "Weights",
+      "Normalizer",
+      "Directed accumulation"
+    ]
+  },
+  "missing_lemmas": [
+    "Principal Arg(a-i theta)=-atan(theta/a)",
+    "Positive reciprocal-angle and half-angle identities",
+    "Linked norm/argument monotonicity and continuity",
+    "Centered interval transfer for the actual periodic trace, no periodicity of P_H",
+    "Actual derivative-under-finite-integral domination",
+    "Closed inner quadrature error rather than L1 alone"
+  ],
+  "resources": {
+    "finite_formal_cost_examples": true,
+    "measured_duration": false,
+    "measured_memory": false,
+    "practical_literal_plan": false,
+    "better_certified_method_impossibility_claim": false,
+    "evaluator": "OPEN_NOT_PREPARED"
+  },
+  "guards": {
+    "author_compiler": 0,
+    "Lean_probe": 0,
+    "candidate_import": 0,
+    "candidate_parser": 0,
+    "Python_math": 0,
+    "native_execution": 0,
+    "installation": 0,
+    "PREP": false,
+    "gate": false,
+    "actual": false,
+    "old_frozen_mutated": false,
+    "new_algorithm_implemented": false,
+    "D_N": false,
+    "WIN": false
+  },
+  "bindings_count": 9,
+  "bindings_scope": "DIRECT_READONLY_SOURCE_AND_REAL_STATUS_PROVENANCE_PLUS_PAPER; NOT_TRANSITIVE_BUILD_CLOSURE",
+  "bindings": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_contract22.md",
+      "bytes": 6921,
+      "sha256": "17e038d03f977e026853905eb3b7cb88f2d7fd574b71cbc73e9de774392c90bc",
+      "scope": "FULL",
+      "chunk": "a67512"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_handoff22.json",
+      "bytes": 17262,
+      "sha256": "31bbd5ddef991c58a9c58bdb0f1aca2d90f3a71a0dcffdbb751871c7434c4298",
+      "scope": "FULL_PREVIOUS_BOUNDED_TASK",
+      "chunk": "3524c5"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch13/sources/ThermalProjectionIdentity22.lean",
+      "bytes": 15587,
+      "sha256": "8bb1eb5ec6ab4bf5e0c8cc053dcbe743049641dab5a3a3858205ad8ee2e2e9aa",
+      "scope": "FULL",
+      "chunk": "8b83db"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/projection_envelope_revision02/ThermalProjectionEnvelope22.lean",
+      "bytes": 17761,
+      "sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+      "scope": "TARGETED_DEFINITIONS_AND_TRACE_BOUND",
+      "chunk": "950c2e;c4f7ee"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/receipt.json",
+      "bytes": 6886,
+      "sha256": "aabb463dcbbb3736ecd0396454dc31f3dd69c08031a6a996ee3e1477b9a2cd50",
+      "scope": "FULL",
+      "chunk": "41141a"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/ComplexGammaMellinTail22.log",
+      "bytes": 2861,
+      "sha256": "5b90e823e54e99781fc4432ab67ea7076427f9e6a4d3c822d6a7513910353374",
+      "scope": "FULL",
+      "chunk": "da7748"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch30_closed_observation.json",
+      "bytes": 1426,
+      "sha256": "7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292",
+      "scope": "FULL",
+      "chunk": "555c11"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+      "bytes": 12480,
+      "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+      "scope": "NEW_PAPER_FULL",
+      "chunk": "bccd29"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/read_receipts22.json",
+      "bytes": 3940,
+      "sha256": "501daee56da0be0cd01d4bde54ba2cc7ce48fc6299f9c626c73ef2c9fbd687f3",
+      "scope": "NEW_READ_RECEIPTS_FULL",
+      "chunk": "d65a08"
+    }
+  ],
+  "read_evidence": {
+    "paper_FULL": "bccd29",
+    "receipts_FULL": "d65a08",
+    "sources_and_status": "Per read_receipts, honest FULL/TARGETED separation"
+  }
+}

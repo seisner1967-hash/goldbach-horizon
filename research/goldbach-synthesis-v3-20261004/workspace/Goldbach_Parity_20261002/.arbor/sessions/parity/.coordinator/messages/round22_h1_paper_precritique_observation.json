@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-03T09:29:18.369793+00:00",
+  "node": "15.3",
+  "status": "PAPER_COHERENT_SOURCE_COMPONENTS_TO_PREPARE",
+  "paper_manifest_sha256": "fe767a6228af36575130dfb4f618352aa50732827d87862eca1316cefd709611",
+  "paper_artifact_and_input_bindings_verified": 7,
+  "original_role1_bindings_verified": 14,
+  "root_reads": {
+    "report": "FULL50b1ac before freeze; actor reports unchanged final bytes; current SHA verified",
+    "requirements": "FULL40ec6a final frozen bytes, earlier e267c3 superseded",
+    "reads_manifest": "FULLd2f02a"
+  },
+  "actor_paper_verdict": "C3-C6 and finite C7-C9 coherent on paper, mathematical certifications and numerics not completed",
+  "selected_source_plan": "NEW_DFT_UNIT_MODULUS_RECURRENCES_DYADIC_CENTRE_RADIUS_512BITS",
+  "required_corrections": [
+    "vertical i^k integration factors",
+    "separate function/position/weight/accumulation budgets",
+    "Gamma exponential reduction with certified domains",
+    "fresh unit-modulus recurrence radii",
+    "grouped psi/Mellin integrands and paid exchanges"
+  ],
+  "infinite_zero_trace_scope": "Finite contour residues and J_infty are distinct; infinite zero contour passage remains open",
+  "numeric_H1_certified": false,
+  "formal_H1_certified": false,
+  "cost_measured": false,
+  "next_step": "New component sources and frozen falsifiable thermal H1 execution contract; no mathematical invocation before its distinct gate",
+  "official_modules": 62,
+  "official_auxiliary_declarations": 1049,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

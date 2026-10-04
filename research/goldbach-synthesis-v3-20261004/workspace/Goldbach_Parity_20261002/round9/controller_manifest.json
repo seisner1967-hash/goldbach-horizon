@@ -1,0 +1,31 @@
+{
+  "round": 9,
+  "status": "RESEARCH_GOAL_ACTIVE",
+  "victory": false,
+  "new_lean_certification": false,
+  "source_hashes_match_judge": true,
+  "preserved_previous_artifacts": 307,
+  "live_report_and_arbor_excluded": true,
+  "source_adaptive_onset": "u >= 10^24",
+  "source54_literal_exponent": "-sqrt(u/60)",
+  "round9_weaker_exponent": "-sqrt(u)/60",
+  "written_partial_payments": [
+    "Harmonic face effective at source onset, allowance 1e-12 N/(u ell)",
+    "Proper powers on first axis, direct uniform positive majorant effective at u >= 65536, counted once in chosen ledger"
+  ],
+  "physical_band": "Qualitative bound written; additional BV threshold unevaluated",
+  "remaining_obligation": "Paired raised-face prime-axis signed bracket plus physical-band calibration and covered bridge 2max(e,0)",
+  "bindings_sha256": {
+    "agent5.md": "3d2b1293e0196fb7e1d9fc128fc6e769ab5d1bee28a617513292c1a6569b0374",
+    "judge\\judge_receipt.json": "070409728fe2055ff199f4cf0b1803cd95e80dd3a8d7d685d0bc449e0d7a7440",
+    "judge\\input_sha256.json": "8719737073aa1e7616d330da245f1d92aa9c1e22974ec5de42f2e90a77521e74",
+    "judge\\audit-judge.ps1": "a561e69959e27f8654a1b2ba50ec65d51bab6c8229f4e7209a699363284cdbf4",
+    "judge\\verify-frozen.ps1": "fbe49e9eced34d6b6e95d45a2c7382bcb13e59b2778d0bd4e1f7b4447e1e5a7f",
+    "judge\\numerical\\replay.py": "dd38e15ea7de53b4906a78136000dd16fd8fac6dc00b1284ce9da5008070a80b",
+    "judge\\numerical\\replay_receipt.json": "e9441caf9270cc96ad95a803c2bddd1f5f5ed8fe53d02a7f65709cc7469323b0",
+    "judge\\numerical_replay.log": "be3d0d7f0e5956c5217e3d6a0a16fdc00c92ef08bd0bd7ca7614a9aa1e5b73ae",
+    "SOURCE54_CLARIFICATION.md": "9bba7b734df126e95cff51d582fccf04a3c1ba82bc56f18d3416db944f6bfc23",
+    "source54_render_receipt.json": "7401abfbb91eed0c9eca503ade085656efb308ac75e0a5c52a674c3d88a850a8",
+    "render_source54.py": "0cb8d5cc3ccf4af18bc321dab86b4043b365c484d13fb6f7f24b390ab6c8e673"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH18_AUTHORIZATION",
+  "time_utc": "2026-10-03T19:25:55.647880+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch18_attempt01",
+  "modules": [
+    "ThermalGammaMellinInverse22"
+  ],
+  "compiler_invocations_maximum": 1,
+  "source_manifest_sha256": "758445b0061481f59906c901108fda960f0b5428fcf5c964d9533bfd6ffcb6a8",
+  "launcher_sha256": "fb4205f8487815c8aee00484fbe5205ef8fbb83976a52b3cb03a7e3e7879edc0",
+  "preparation_receipt_sha256": "a9dd3f94078304138708b4dc3fe30c4808b359f3b781d73704c10e6f9fe95b5e",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "ROOT_FULL_read_receipts": "source290f81;review-contract2e2144;launcher517679;builder5b419e;audit3f5787;catalog-prepared-readscc4828;gate-helper3c7673;truncated6db693-excluded",
+  "source_math_review_owner": "ROLE5",
+  "large_JSON_scope": "All entries parsed and bound bytes hashed; raw FULL import source text not claimed",
+  "inputs_verified": 8351,
+  "old_judge_files_verified": 1109,
+  "archives_verified": 3089,
+  "prior_modules": 78,
+  "prior_declarations": 1304,
+  "stop_first_failure": true,
+  "retries": 0,
+  "ROOT_compiler_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

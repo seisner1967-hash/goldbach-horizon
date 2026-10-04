@@ -1,0 +1,259 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH24",
+  "time_utc": "2026-10-03T21:56:20.045947+00:00",
+  "modules": [
+    {
+      "module": "AngularMellinBorder22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch24\\sources\\AngularMellinBorder22.lean",
+      "source_sha256": "1fa9de9a41a432b3745d1dce719018452e6f8f9b183bb9635d07191f1dcf91da",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\AngularMellinBorder22.lean",
+      "source_status": "SOURCE_ONLY_NOT_ELABORATED",
+      "theorem_count": 22,
+      "definition_count": 8,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBase"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularPower"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularCharacter"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularIntegrand"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularDerivative"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularNormalizer"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularJ"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBorder"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBase_re"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBase_mem_slitPlane"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBase_ne_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularPower_hasDerivAt"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularCharacter_hasDerivAt"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularIntegrand_hasDerivAt"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularPower_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularCharacter_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularIntegrand_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularDerivative_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularIntegrand_intervalIntegrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularDerivative_intervalIntegrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularCharacter_pi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularCharacter_neg_pi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularIntegral_derivative_eq"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularJ_balance"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularJ_recurrence"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBorder_explicit"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBorder_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularQuadratic_ne_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBorder_one"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachAngularMellinBorder22.angularBorder_one_ne_zero"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachAngularMellinBorder22.angularBase",
+        "GoldbachAngularMellinBorder22.angularPower",
+        "GoldbachAngularMellinBorder22.angularCharacter",
+        "GoldbachAngularMellinBorder22.angularIntegrand",
+        "GoldbachAngularMellinBorder22.angularDerivative",
+        "GoldbachAngularMellinBorder22.angularNormalizer",
+        "GoldbachAngularMellinBorder22.angularJ",
+        "GoldbachAngularMellinBorder22.angularBorder",
+        "GoldbachAngularMellinBorder22.angularBase_re",
+        "GoldbachAngularMellinBorder22.angularBase_mem_slitPlane",
+        "GoldbachAngularMellinBorder22.angularBase_ne_zero",
+        "GoldbachAngularMellinBorder22.angularPower_hasDerivAt",
+        "GoldbachAngularMellinBorder22.angularCharacter_hasDerivAt",
+        "GoldbachAngularMellinBorder22.angularIntegrand_hasDerivAt",
+        "GoldbachAngularMellinBorder22.angularPower_continuous",
+        "GoldbachAngularMellinBorder22.angularCharacter_continuous",
+        "GoldbachAngularMellinBorder22.angularIntegrand_continuous",
+        "GoldbachAngularMellinBorder22.angularDerivative_continuous",
+        "GoldbachAngularMellinBorder22.angularIntegrand_intervalIntegrable",
+        "GoldbachAngularMellinBorder22.angularDerivative_intervalIntegrable",
+        "GoldbachAngularMellinBorder22.angularCharacter_pi",
+        "GoldbachAngularMellinBorder22.angularCharacter_neg_pi",
+        "GoldbachAngularMellinBorder22.angularIntegral_derivative_eq",
+        "GoldbachAngularMellinBorder22.angularJ_balance",
+        "GoldbachAngularMellinBorder22.angularJ_recurrence",
+        "GoldbachAngularMellinBorder22.angularBorder_explicit",
+        "GoldbachAngularMellinBorder22.angularBorder_zero",
+        "GoldbachAngularMellinBorder22.angularQuadratic_ne_zero",
+        "GoldbachAngularMellinBorder22.angularBorder_one",
+        "GoldbachAngularMellinBorder22.angularBorder_one_ne_zero"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "FINITE_ANGULAR_MELLIN_FTC_BORDER_AUX_ONLY",
+      "author_olean_allowed": false
+    }
+  ],
+  "module_count": 1,
+  "total_declarations": 30,
+  "theorem_count": 22,
+  "definition_count": 8,
+  "common_source_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch24\\sources",
+  "readonly_local_dependencies": [],
+  "dependency_bindings": [],
+  "support_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_contract22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_catalog22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_handoff22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\angular_mellin_border_source_review24.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\batch23_attempt01\\receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge_batch23_closed_observation.json"
+  ],
+  "author_provenance_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\ConcreteNTTRoots22.log",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\ConcreteNTTRoots22_FIN.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\ConcreteNTTRoots22_START.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\FIN.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\POSTEXEC.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\00_ConcreteNTTRoots22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\01_ConcreteNTTA32Projection22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\02_prepare_metadata.py",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\03_run_once.py",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\04_preparation.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\05_catalog.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\06_read_receipts.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\07_prepared_manifest.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\08_prepared_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\09_import_bindings.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\10_closed_judge_bindings.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\11_round22_judge5_batch21_authorization.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\12_previous_artifacts_sha256.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\13_ConcreteNTTRoots22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\14_ConcreteNTTA32Projection22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\15_source_contract22.txt",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\16_source_read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\17_source_handoff22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\18_review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\19_review_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\20_completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\21_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\22_round22_judge_batch20_closed_observation.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\23_FiniteFieldProjection22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\24_FiniteFieldProjection22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\25_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\26_FiniteFieldProjection22_FIN.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\27_QuantizedLambdaEnvelope22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\28_QuantizedLambdaEnvelope22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\29_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\30_QuantizedLambdaEnvelope22_FIN.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\31_RationalLogQuantization22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\32_RationalLogQuantization22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\33_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\PREEXEC_FILES\\34_RationalLogQuantization22_FIN.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\batch21_attempt01\\START.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\catalog.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\closed_judge_bindings.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\import_bindings.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\preparation.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\prepare_metadata.py",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\prepared_manifest.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\prepared_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\read_receipts.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\readonly_oleans\\FiniteFieldProjection22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\readonly_oleans\\QuantizedLambdaEnvelope22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\readonly_oleans\\RationalLogQuantization22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\run_once.py",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\sources\\ConcreteNTTA32Projection22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\sources\\ConcreteNTTRoots22.lean"
+  ],
+  "modules_author_PASS_claimed": false,
+  "child_wall_seconds": 300,
+  "max_heartbeats": 1000000,
+  "compiler_invocations": 0,
+  "numeric_invocations": 0,
+  "win": false
+}

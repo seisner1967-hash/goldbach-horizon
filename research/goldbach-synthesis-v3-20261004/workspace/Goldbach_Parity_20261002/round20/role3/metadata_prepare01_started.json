@@ -1,0 +1,22 @@
+{
+  "operation": "metadata_preparation_only",
+  "started_utc": "2026-10-03T02:53:51.731120+00:00",
+  "actual_command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\prepare_metadata.py",
+    "--normalize-prints"
+  ],
+  "metadata_script_sha256": "5f14073a7e7a9e632b0703a05c8a90dcf425a4d3c196e78fc15006e3f811e961",
+  "launcher_sha256": "323fbb9474088a8b09d909815653cfc3137b8c5623c2f5fb94556cbb0433c7d3",
+  "source_sha256_before_normalization": {
+    "OddBonferroniArithmetic.lean": "67b9241962befbd6513248351b30fc9ca59f032fa5fa9a0ee11d7ea4f02c3310",
+    "LeastFactorComposite.lean": "f926f8f467295c808feeaef238a6654acd16d516e36c87150557e5326651a12d",
+    "SwitchedSelbergWeight.lean": "b18cb7c98040b2e6c7607e0aa97cf79806450201f852ae3eb4c153531eeb8ae0",
+    "PhysicalCompositeSubtraction.lean": "c1f96aedc246055a1d5176708762537074a55189b74475445914889e58b0c60d",
+    "CompositeAPConductor.lean": "68e39bb80f0e1f9e9b9a913bc045e4588d8d0e32982ba7a8bc9e3d2264cb539d",
+    "SwitchedIncidenceEstimator.lean": "ab1de7a846cab542b94b891f68671760492bd44ae19366f09862f72013f65301"
+  },
+  "lean_invocations": 0,
+  "numeric_invocations": 0
+}

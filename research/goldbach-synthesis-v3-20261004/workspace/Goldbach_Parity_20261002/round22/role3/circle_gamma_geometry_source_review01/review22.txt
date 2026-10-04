@@ -1,0 +1,54 @@
+REVUE INDÉPENDANTE SOURCE — GÉOMÉTRIE GAMMA SUR LE CERCLE, BOUCLE22
+ROLE3, 2026-10-04 01:40 UTC. Statut : SOURCE_GEOMETRY_CHAIN_COHERENT_NOT_ELABORATED.
+Aucune objection mathématique précise trouvée dans le périmètre lu ; aucune compilation ou évaluation n'a été effectuée par cette revue. Aucun crédit auxiliaire nouveau, aucune PREP ou gate.
+
+Paquet examiné et conservé
+Répertoire : D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_circle_geometry_source01
+Source ComplexGammaCircleGeometry22.lean : 12002 octets, SHA256 2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5.
+Contrat 002993384eb6d114ea33b429a9c410729588efc700e881b970ed215e15f80e1a ; catalogue 6f85beb2fd6eaf111a2ef453614938081385456a7d567bfb3e0f39b61e371312.
+Reçus auteur 4a0c0e52c40fbe6243389da59d25e6feab8e939fbb9eff485750851b43ff4822 ; handoff a9e2f04e5a2244b1f017aeb2b998ea569f964464bc7a99db4297cfa4f0d8bfd6.
+Les cinq pièces ont réellement été lues FULL. Les 22 bindings déclarés ont été vérifiés physiquement SHA256/octets, tous conformes ; le handoff est lié séparément. Les anciens documents et binaires readonly n'ont pas été modifiés. Aucune fermeture d'archives, de runtime ou d'import complet n'est revendiquée par cette revue de source.
+
+Catalogue et dépendances
+La lecture manuelle de la source et du catalogue concorde : 25 déclarations explicites, 22 théorèmes et trois définitions, avec 25 #print axioms qualifiés. Ces lignes ne sont pas des sorties du compilateur.
+L'unique import local est ComplexGammaMellinLocal22, dont la ligne Local26 est un vrai PASS22 observé par ROOT ; le reçu global26 reste FAILED. Ses définitions rotationAngle, decayGap, kernelCoefficient et ses lemmes de demi-plan/rotation ont été relus TARGETED dans le source indépendant e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08, lignes15–102.
+Aucun import local Λ, Tail, Holo, ζ, coefficient ou EΛ n'est nécessaire à ce module. Ni la nouvelle compilation main31 FAILED0 ni les sources de réparation ne sont promues en dépendances acquises. La baseline ROOT communiquée demeure86/1456.
+
+Branche et signes, lignes20–110
+Le point construit est le vrai w=a−iθ ; Re(w)=a, Im(w)=−θ. Pour a>0, les lemmes readonly donnent w≠0 et w∈slitPlane. Le rayon r=√(a²+θ²) est réellement identifié à ‖w‖ et le carré r²=a²+θ² est établi par normSq.
+L'API Complex.abs_arg_lt_pi_div_two_iff met Arg(w) dans (−π/2,π/2) grâce à Re(w)>0. L'inversion Real.arctan_tan, puis Complex.tan_arg et l'imparité d'arctan, paient Arg(w)=−atan(θ/a) ; aucun représentant arbitraire modulo2π n'est substitué.
+La preuve de |Arg(w)|=atan(|θ|/a) sépare θ≥0 et θ<0 et compare atan(θ/a) à atan0 par monotonie. La relation sin|Arg(w)|=|θ|/r traite aussi les deux signes : sin(−Arg)=−sinArg quand θ≥0 ; Arg≥0 via Im(w)>0 quand θ<0. Le cas θ=0 est inclus dans la première branche. Les signatures réelles sin_arg, arg_nonneg_iff, tan_arg, arctan_tan/neg/monotonie ont été lues dans le cache, et non testées par probe.
+
+Identité liée et borne, lignes112–170
+Avec η=(π/2+|Arg(w)|)/2, l'identité cos(2η)=2cos²η−1 et cos(|Arg|+π/2)=−sin|Arg| donnent
+cos²η=(r−|θ|)/(2r).
+L'utilisation d'eq_div_iff est justifiée par r>0. La source construit ensuite c²(2r)=r−|θ|, multiplie par r+|θ|, et utilise r²=a²+θ² et |θ|²=θ² pour obtenir
+2r c²(r+|θ|)=a², où c=cosη.
+Elle écrit également cette égalité multipliée par r avant la normalisation de la fraction.
+Les dénominateurs sont justifiés : ha donne a≠0, r>0 donne r≠0, et η∈(0,π/2) donne c>0. Le type exact de la première puissance est r^(-2:ℝ), tandis que le facteur (1/c)^2 est une puissance naturelle. Real.rpow_neg puis Real.rpow_two transforment le premier facteur en inverse du carré. Cette route ne mélange pas les deux sortes de puissance.
+La chaîne paie donc effectivement en SOURCE
+C(a−iθ)=2/a²(1+|θ|/r)=2/a²(1+|θ|/√(a²+θ²)).
+La majoration |θ|≤r vient d'abs_im_le_abs. Avec r>0 et 2/a²≥0, elle donne C≤4/a² pour tout θ réel et a>0. Le module prouve ≤ ; aucun théorème de stricte inégalité ou de maximum exact à |θ|=π n'y est compté. Ceux-ci restent les raccords PAPER déclarés.
+
+Plancher de décroissance, lignes172–196
+La définition d(a)=atan(a/π)/2 est positive pour a>0 par stricte monotonie de l'arctangente et π>0. L'identité δ(a−iθ)=(π/2−atan(|θ|/a))/2 provient des vraies définitions et de la branche ci-dessus.
+Sous |θ|≤π, la division par a>0 puis la monotonie donnent atan(|θ|/a)≤atan(π/a). Real.arctan_inv_of_pos est appliqué à π/a>0, et inv_div normalise son inverse en a/π. Il en résulte d(a)≤δ(a−iθ).
+La source ne fournit ni l'identité C, ni la borne4/a², ni ce plancher positif en prémisse. Les seules contraintes géométriques sont a>0 et, pour le plancher uniforme, |θ|≤π. La comparaison inclut les extrémités±π.
+
+Continuité, lignes198–213
+Le rayon est continu sur toutℝ², y compris l'origine : les fonctions polynomiales et Real.sqrt sont continues sans prémisse de positivité. L'API Continuous.sqrt/fun_prop est réellement présente.
+Le plancher d est continu sur toutℝ par Continuous.div_const, continuous_arctan et division constante par2. Sa positivité demande a>0, mais sa continuité globale ne la demande pas.
+La dernière déclaration écrit ContinuousAt de l'expression fermée de C au point p avec p.1>0. La positivité de p.1 et celle du rayon y paient les deux dénominateurs ; les règles ContinuousAt.div₀ ont été relues avec leur prémisse de non-annulation.
+Elle ne prouve pas encore une continuité de tout coefficient intégré ou une domination de quadrature. Le transport vers la vraie composition C(w(a,θ)) pourra utiliser l'égalité locale, mais aucune telle nouvelle déclaration n'est ajoutée au catalogue ici.
+
+Portée du verdict et vérification restante
+Aucun nom d'API absent, signe oublié, division non gardée ou prémisse équivalente à la conclusion n'a été trouvé aux sites relus. Les obligations résiduelles sont l'élaboration effective, les instances et coercions, la réduction des let r/c, la normalisation field_simp/nlinarith et la décharge fun_prop. Cette revue n'affirme pas que ces tactiques compilent et ne simule aucun FAIL.
+La source ne paie pas le maximum précis Cbar de la note PAPER, l'assemblage de l'enveloppe EΛ16, la formule globale mainΛ, l'erreur du coefficient, une quadrature, les primitives dirigées du futur évaluateur, les phases uniformes de ζ, les corrections PP/front, D_N ou WIN.
+L'identité liée resserre le majorant gamma ; elle n'établit aucune annulation de parité ou positivité arithmétique. Aucune estimation scalaire AP, route bilinéaire arithmétique, crible, Möbius ou Vaughan n'est utilisée.
+Le statut reste SOURCE indépendant, non élaboré. Seuls une sélection, un lot distinct autorisé et un vrai jugement futur pourraient accorder un PASS auxiliaire.
+
+Lectures honnêtes
+FULL : source/catalogue/contrat3f261f ; reçus et handoff8afbbe ; relecture source95ae76 et contrat/catalogue3d863f.
+TARGETED API :381846,28bbf8,8796e4,3d863f ; recherche local391f48/71ebd8.
+Métadonnées :957615 vérifie les22 bindings. La recherche6a0726 a échoué sur une regex ; elle n'a fourni aucune vérification et n'a invoqué aucun candidat. Le premier agrégat2a6534 tronqué n'est pas déclaré FULL ; les relectures fractionnées le remplacent. Le fragment624–637 d'Algebra/Group/Basic dans8796e4 ne contenait pas inv_div ; le site382–404 a été effectivement relu dans3d863f.
+Zéro invocation de Lean, parser/import candidat, programme numérique, builder ou gate. La livraison humaine07 demeure DRAFT dans l'attente des statuts réels coordonnés par ROOT.

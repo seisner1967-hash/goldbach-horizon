@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "outputs_isolated": true,
+  "preserved_previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 160,
+    "baseline_sha256": "bff50b025ed0ca2f072739edcfc04e91c94acd8f7d9cff24b27c53a2f5928684"
+  },
+  "checks": [
+    {
+      "file": "katai.json",
+      "status": "PASS",
+      "all_fields_equal": true,
+      "original_sha256": "43d7f7a33d3b412ed8eaabd995902c1eeb71555aba9b8951226966631d1b6b96",
+      "replay_sha256": "43d7f7a33d3b412ed8eaabd995902c1eeb71555aba9b8951226966631d1b6b96",
+      "original_script_sha256": "baa5f38424d501a5114409257488ac05a6c10a5a3cba7b35b89ddd63accfebb0"
+    },
+    {
+      "file": "squarefree.json",
+      "status": "PASS_CORRECTED_CONTRACT",
+      "all_fields_equal": true,
+      "original_sha256": "053a237abec6a36d4f5ec28bd2dcb652f63f09a9c789986522cb77d528a71a7b",
+      "replay_sha256": "053a237abec6a36d4f5ec28bd2dcb652f63f09a9c789986522cb77d528a71a7b",
+      "original_script_sha256": "150a78a5477168314f946de6dab26e3129552546c544bad07326f3763471d7e5"
+    }
+  ],
+  "lean_invoked": false
+}

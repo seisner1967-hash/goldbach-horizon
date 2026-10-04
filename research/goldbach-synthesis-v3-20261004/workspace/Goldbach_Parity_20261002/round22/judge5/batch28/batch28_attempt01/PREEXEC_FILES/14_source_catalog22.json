@@ -1,0 +1,53 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_TAIL_SOURCE_CATALOG",
+  "status": "SOURCE_ONLY_FROZEN_FOR_REVIEW_NOT_COMPILED",
+  "namespace": "GoldbachComplexGammaMellin22",
+  "module": "ComplexGammaMellinTail22",
+  "source_sha256": "7dcce5beacdadc61dd067f9a6e176d70d5ff3c44cb6720b6f1d650068b67dcd5",
+  "source_bytes": 13010,
+  "modules": 1,
+  "declarations": 22,
+  "theorems": 18,
+  "definitions": 4,
+  "qualified_print_axioms": 22,
+  "counts_scope": "MANUAL_FULL_SOURCE_INSPECTION_NOT_LEAN_OR_CANDIDATE_PARSER",
+  "definition_names": [
+    "signedGammaTail",
+    "complexGammaTail",
+    "complexGammaTailRadius",
+    "complexGammaTruncated"
+  ],
+  "theorem_names": [
+    "exponential_Ioi_integral",
+    "exponential_Ioi_integrable",
+    "kernelCoefficient_nonneg",
+    "rotationAngle_cos_pos",
+    "kernelCoefficient_pos",
+    "signedGammaTail_integrable",
+    "signedGammaTail_norm_le",
+    "complexGammaTail_norm_le",
+    "signedGammaTail_true_eq_Iio",
+    "complexGammaInverse_sub_truncated_eq_tail",
+    "complexGammaInverse_truncation_error_le",
+    "rotationAngle_continuousAt",
+    "decayGap_continuousAt",
+    "kernelCoefficient_continuousAt",
+    "complexGammaTailRadius_continuousAt",
+    "complexGammaTailRadius_pos",
+    "complexGammaTailRadius_antitone",
+    "exists_local_uniform_Gamma_tail"
+  ],
+  "local_imports": [
+    "ComplexGammaMellinLocal22"
+  ],
+  "mathlib_imports": [
+    "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+    "Mathlib.MeasureTheory.Integral.SetIntegral"
+  ],
+  "error_domain": "Re(w)>0,H>=0",
+  "closed_radius_continuity_domain": "Re(w)>0,H real",
+  "auxiliary_only": true,
+  "formal_validation": false,
+  "D_N": false,
+  "WIN": false
+}

@@ -1,0 +1,30 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:671:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  |?a * ?b|
+case bc.h.h.ha
+P J : Finset ℕ
+z : ℕ
+F : ℕ → ℤ
+g : ℕ → ℝ
+hz : 1 ≤ z
+hP : ∀ p ∈ P, 1 ≤ p
+hg : ∀ p ∈ P, 0 < g p ∧ g p < 1
+hrestrict :
+  ∑ d ∈ P.powerset, ∑ t ∈ P.powerset, |weight P z g d * weight P z g t * remainder J F g (d ∪ t)| =
+    ∑ d ∈ support P z, ∑ t ∈ support P z, |weight P z g d * weight P z g t * remainder J F g (d ∪ t)|
+d : Finset ℕ
+hd : d ∈ support P z
+t : Finset ℕ
+ht : t ∈ support P z
+⊢ 0 ≤ weight P z g d * weight P z g t * remainder J F g (d ∪ t)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:645:6: error: application type mismatch
+  weight_zero_outside hP hdn
+argument has type
+  d ∉ support P z
+but function has type
+  d ∉ support P x_0 → weight P x_0 x_1 d = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:679:14: error: unknown constant 'finite_support_upper_bound'
+'GoldbachRound17.Selberg.weight_abs_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.canonical_weight_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.product_exceeds_weight_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.finite_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]

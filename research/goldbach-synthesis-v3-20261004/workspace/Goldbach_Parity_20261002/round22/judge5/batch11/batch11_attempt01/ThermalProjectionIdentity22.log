@@ -1,0 +1,91 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:51:8: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  intervalIntegral
+has type
+  (ℝ → ?m.5272) → ℝ → ℝ → Measure ℝ → ?m.5272
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:51:8: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.5410
+case neg
+k : ℤ
+hk : ¬k = 0
+hkC : ↑k ≠ 0
+hc : ↑k * Complex.I ≠ 0
+hperiod : Complex.exp (↑k * Complex.I * ↑(2 * Real.pi)) = 1
+⊢ ∫ (theta : ℝ) in 0 ..2 * Real.pi, Complex.exp (↑k * Complex.I * ↑theta) = if k = 0 then ↑(2 * Real.pi) else 0
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:58:63: error: unsolved goals
+case e_z
+a theta : ℝ
+n : ℕ
+⊢ -(↑↑n * (starRingEnd ℂ) (-↑theta) * Complex.I) = ↑↑n * ↑theta * Complex.I
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:125:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:152:41: error: unsolved goals
+a theta : ℝ
+N M : ℕ
+⊢ ∑ x ∈ Finset.range (M + 1),
+      ∑ x_1 ∈ Finset.range (M + 1),
+        projectionHeatTerm a theta x_1 * (star (projectionHeatTerm a (-theta) x) * projectionCharacter N theta) =
+    ∑ x ∈ Finset.range (M + 1),
+      ∑ x_1 ∈ Finset.range (M + 1),
+        projectionHeatTerm a theta x * (star (projectionHeatTerm a (-theta) x_1) * projectionCharacter N theta)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:198:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:206:54: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch11\sources\ThermalProjectionIdentity22.lean:261:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  thermalPartialProjection a N M
+a : ℝ
+ha : 0 < a
+N : ℕ
+h : Tendsto (fun M => thermalContinuousProjection a N - thermalPartialProjection a N M) atTop (𝓝 0)
+M : ℕ
+hM : M ≥ N
+⊢ (fun M => thermalContinuousProjection a N - thermalPartialProjection a N M) M =
+    (fun x => thermalContinuousProjection a N - ↑(projectionAdditiveCoefficient N)) M
+'GoldbachContinuous22.signedCircleCharacter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.projectionAdditiveCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.signedCircleCharacter_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.integral_signedCircleCharacter' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.star_projectionHeatTerm_neg' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.projection_pair_character' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.projection_pair_integral' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.projection_normalizer_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.normalized_projection_pair_integral' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.projectionPartialCorrelation_expansion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.projection_rectangle_filter_eq_antidiagonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.thermalPartialProjection_eq_finite_coefficient' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.thermalPartialProjection_eq_coefficient' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.projectionAdditiveCoefficient_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.projectionTailEnvelope_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.projectionHeatPartial_converges_uniformly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.projectionErrorEnvelope_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.thermalProjection_difference_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.thermalContinuousProjection_eq_coefficient' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachContinuous22.thermalContinuousProjection_eq_vonMangoldt_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

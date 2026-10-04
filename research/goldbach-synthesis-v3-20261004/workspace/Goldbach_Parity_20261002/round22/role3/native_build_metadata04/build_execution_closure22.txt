@@ -1,0 +1,36 @@
+BUILD_ONLY04 clos — deux constructions exit0, aucune évaluation numérique
+
+Parent unique82897e/session16239 ->898cae exit0, gate exacte9000d3014dc0e5030aac6bcffdff54629af76861cc74630dee586265256ce643
+lue FULL624e53. Deux drivers réels, zéro retry ; aucun programme produit exécuté.
+ProducerSTART20:19:23.537111Z ->FIN20:19:25.124835Z,pid35796,exit0.
+CheckerSTART20:19:25.157598Z ->FIN20:19:26.808461Z,pid22028,exit0.
+ParentFIN20:19:36.432312Z. Aucun défaut API/pipe, deux Job vides confirmés.
+Flags8968/commit2GiB/active16 relus avant reprise. RSS monitor seulement.
+Six processus Job observés pour chaque construction. Peaks commitJob
+128471040/134066176B, processRSS133828608/139980800B, liveJobRSS153059328/157900800B.
+
+Receipt/build_receipt04 identiques5117B,
+SHA04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8.
+POST165f1f9921570dc9075ab9abb6b300eb527891bb66aa4d9655efde32325cceab.
+PREe751361aa2e9b20b7fae95b8c0fdda731338a0b7fb88c1f3aed4fb72d7ecc676,
+47captures FULL2549cd ; autres traces, quatre logs vides et reçus FULL04e900.
+Rehash documentairePOST73ab39 :6375inputs,47originaux/copies,3089archives intacts.
+
+Images uniquement lues par taille/SHA, sans execution ni parseur PE :
+producer_dit22.exe3649966B,44d2d571a0190f7dbbb975225559d16a012693bda4197738e6311c14892cadb0.
+checker_dif22.exe3669445B,2e7e095c2972fea09ee26500df9dae207ff52497d0f61f2052d76d464ebe6990.
+Chemins natifs exclusifs build-final04 et build_receipt04 ; anciens03 conservés.
+
+La clôture finale documentaire est build_execution_closure22_revision02.json,
+SHAdd506cebebcdbf7c75fd138d26cfb744552bdd6912e3cc37fbaa3a58fd8c0c15,FULL565487.
+Version01SHA875fa04d325a3028935c1f2d8c23a26669b49820d31162b9dded66052dba1efb
+préservée : le parseur JSON PowerShell avait réémis parent_FIN en timezone+02:00.
+La révision02 normalise seulement ce champ au texteUTC du vrai receipt.
+Les sources, captures, receipt/FIN réels et images restent inchangés.
+
+Ce statut valide la construction de deux images sous confiance Windows/GCC
+explicite et les contrôles observés. Les chargements effectifs/fermeture
+universelle restent non observés. numeric_authorization=false ; aucune
+preuve de raffinement GMP/NTT, coefficientN1e8, H1,D_N ou WIN n'est ajoutée.
+Tout consumer numérique adapté aux images04 exige ses nouvelles sources,
+une revue indépendante, une préparation et une gate ROOT numérique distinctes.

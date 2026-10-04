@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-10-03T08:01:33.604944+00:00",
+  "status": "AUTHOR_STAGE_FAILED",
+  "started": "2026-10-03T07:57:27.929092+00:00",
+  "finished": "2026-10-03T07:57:53.302255+00:00",
+  "exit_code": 1,
+  "source_sha256": "eadf5f67ca294583194968f1acc1a95fc17dde5dc4dede9c479f2ff44e84cdfd",
+  "log_sha256": "cada439643be37f61f15393e9c0bb88e1cfd1dc8784a267921f8d62e95ec4ab7",
+  "receipt_sha256": "0792e8df8ef112a522ed4d0e4e2d9af8173457333da4bedd2aea82926e5ffaee",
+  "copies_verified": 36,
+  "inputs_verified": 36,
+  "root_FULL_reads": {
+    "log": "f698a6",
+    "receipt": "94bbe8"
+  },
+  "error_lines": [
+    60,
+    173
+  ],
+  "error_count": 2,
+  "classes": [
+    "real rpow versus natural pow coercion remains",
+    "simp made no progress in square normalization"
+  ],
+  "sorryAx_recovery_zero_formal_credit": true,
+  "infinite_G0_complete": false,
+  "analytic_or_parity_refutation_claim": false,
+  "revision_policy": "Distinct SOURCE ONLY input and root gate required.",
+  "WIN": false,
+  "root_compiler_invocations": 0,
+  "stage": "G0_UNFOLD_REVISION02",
+  "cumulative_author_PASS": 2,
+  "cumulative_author_FAIL": 6,
+  "negSucc_cast_resolved": true
+}

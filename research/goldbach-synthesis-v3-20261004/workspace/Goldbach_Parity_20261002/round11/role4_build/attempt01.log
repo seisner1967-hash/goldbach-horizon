@@ -1,0 +1,140 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:57:52: error: application type mismatch
+  Nat.coprime_of_lt_prime hc
+argument
+  hc
+has type
+  0 < c : Prop
+but is expected to have type
+  0 < p : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:57:75: error: application type mismatch
+  lt_of_le_of_lt ?m.18802 hap
+argument
+  hap
+has type
+  a < p : Prop
+but is expected to have type
+  ?m.18726 < c : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:143:41: error: invalid field 'mul_left', the environment does not contain 'Nat.Coprime.mul_left'
+  h3K
+has type
+  Nat.Coprime 3 K
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:143:41: error: invalid field 'mul_left', the environment does not contain 'Eq.mul_left'
+  h3K
+has type
+  Nat.gcd 3 K = 1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:212:37: error: application type mismatch
+  Nat.Coprime.mul_right hp3 hq3
+argument
+  hq3
+has type
+  q.Coprime 3 : Prop
+but is expected to have type
+  p.Coprime ?m.56639 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:304:39: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  k ≥ 0
+  j ≥ 0
+  j - k ≤ 0
+  i ≥ 0
+  g ≥ 0
+  1 ≤ g - 3*h ≤ 2
+  g - i ≤ 0
+  3*g - i ≤ 0
+  f ≤ -1
+  f - k ≤ -2
+  f + j - k ≤ -1
+  e ≥ 0
+  c ≥ 0
+  c - e ≤ -1
+  b ≥ 4
+  b - c ≤ -1
+where
+ b := ↑a
+ c := ↑p
+ e := ↑q
+ f := ↑(N - 1) / ↑alpha
+ g := ↑d
+ h := ↑d / 3
+ i := ↑(bulkCap ((N - 1) / alpha) N p q)
+ j := ↑(3 * d) * ↑(p * q)
+ k := ↑d * ↑(p * q)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:304:50: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  k ≥ 0
+  j ≥ 0
+  j - k ≥ 0
+  i ≥ 0
+  g ≥ 0
+  1 ≤ g - 3*h ≤ 2
+  g - i ≤ 0
+  3*g - i ≤ 0
+  f ≤ -1
+  f - j ≤ -2
+  f - j + k ≤ -1
+  e ≥ 0
+  c ≥ 0
+  c - e ≤ -1
+  b ≥ 4
+  b - c ≤ -1
+where
+ b := ↑a
+ c := ↑p
+ e := ↑q
+ f := ↑(N - 1) / ↑alpha
+ g := ↑d
+ h := ↑d / 3
+ i := ↑(bulkCap ((N - 1) / alpha) N p q)
+ j := ↑(3 * d) * ↑(p * q)
+ k := ↑d * ↑(p * q)
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:288:46: error: unsolved goals
+alpha a N p q : ℕ
+h3N : Nat.Coprime 3 N
+ha3 : 3 < a
+hp : Nat.Prime p
+hq : Nat.Prime q
+hap : a < p
+hpq : p < q
+hNQ : (N - 1) / alpha + 1 < N
+hmask : Nat.Coprime 3 (N * (p * q))
+hpairs :
+  ∑ d ∈ pairedBases (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+      (principalTerm N p q d + principalTerm N p q (3 * d)) =
+    ∑ d ∈ pairedBases (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+      (entropyTerm N p q d + entropyTerm N p q (3 * d) +
+        singularSeries N * (commonTerm N p q d + singletonTerm N p q d))
+hfaces :
+  ∑ d ∈ geometricFaces (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q), principalTerm N p q d =
+    ∑ d ∈ geometricFaces (N * (p * q)) (bulkCap ((N - 1) / alpha) N p q),
+      (entropyTerm N p q d - singularSeries N * mu d * theta N (N - d * (p * q)))
+⊢ ∑ x ∈ pairedBases (N * p * q) (bulkCap ((N - 1) / alpha) N p q), entropyTerm N p q x +
+          ∑ x ∈ pairedBases (N * p * q) (bulkCap ((N - 1) / alpha) N p q), entropyTerm N p q (3 * x) +
+        ∑ x ∈ pairedBases (N * p * q) (bulkCap ((N - 1) / alpha) N p q),
+          singularSeries N * (commonTerm N p q x + singletonTerm N p q x) +
+      (∑ x ∈ geometricFaces (N * p * q) (bulkCap ((N - 1) / alpha) N p q), entropyTerm N p q x -
+        ∑ x ∈ geometricFaces (N * p * q) (bulkCap ((N - 1) / alpha) N p q),
+          singularSeries N * mu x * theta N (N - x * (p * q))) =
+    ∑ x ∈ pairedBases (N * p * q) (bulkCap ((N - 1) / alpha) N p q), entropyTerm N p q x +
+          ∑ x ∈ pairedBases (N * p * q) (bulkCap ((N - 1) / alpha) N p q), entropyTerm N p q (3 * x) +
+        ∑ x ∈ geometricFaces (N * p * q) (bulkCap ((N - 1) / alpha) N p q), entropyTerm N p q x +
+      singularSeries N *
+        (∑ x ∈ pairedBases (N * p * q) (bulkCap ((N - 1) / alpha) N p q), commonTerm N p q x +
+            ∑ x ∈ pairedBases (N * p * q) (bulkCap ((N - 1) / alpha) N p q), singletonTerm N p q x -
+          ∑ x ∈ geometricFaces (N * p * q) (bulkCap ((N - 1) / alpha) N p q), mu x * theta N (N - x * (p * q)))
+'GoldbachRound11.short_filter_prime_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.complete_short_prime_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.prime_pair_arithmetic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_source_bracket_j2' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.mu_three_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_three_adic_pair' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.three_mul_mem_grid' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.core_grid_partition' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.paired_disjoint_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.paired_union_disjoint_face' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.sum_core_grid' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.three_coprime_mask' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.literal_bulk_front' depends on axioms: [propext, Quot.sound]
+'GoldbachRound11.actual_bracket_partition' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.principal_pair_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.principal_face_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_principal_partition' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

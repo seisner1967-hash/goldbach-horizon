@@ -1,0 +1,1064 @@
+{
+  "status": "PASS_ALGEBRA_ONLY",
+  "N": 100000000,
+  "prime_Grams": [
+    {
+      "q": 3,
+      "nonprincipal_characters": 1,
+      "Gram_entries_tested": 9,
+      "full_Gram": "q*Id-chi(a)*conjchi(c), with chi(0)=0",
+      "unit_Gram": "q*Id-1*1star-v*vstar, v_a=chi(a)",
+      "order4_wrong_conjugation_falsifiers": 0,
+      "energy_certificates": [
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            7
+          ],
+          "cyclotomic_modulus": 4
+        }
+      ],
+      "exact_full_operator_norm": "sqrt(q): upper bound from the Gram; equality on beta=e0 since column 0 is all ones",
+      "coupled_weight_counterexample": {
+        "W": "G_quadratic(a,b), bounded by 1",
+        "alpha": "ones",
+        "beta": "ones",
+        "value": 7,
+        "claimed_bare_bound_squared": 27,
+        "actual_squared": 49,
+        "verdict": "False transfer to arbitrary bounded coupled weights; not a counterexample to the actual HH estimate"
+      }
+    },
+    {
+      "q": 7,
+      "nonprincipal_characters": 5,
+      "Gram_entries_tested": 245,
+      "full_Gram": "q*Id-chi(a)*conjchi(c), with chi(0)=0",
+      "unit_Gram": "q*Id-1*1star-v*vstar, v_a=chi(a)",
+      "order4_wrong_conjugation_falsifiers": 0,
+      "energy_certificates": [
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            51,
+            4,
+            0,
+            -2
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            47
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            51
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            47
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            51,
+            -4,
+            0,
+            2
+          ],
+          "cyclotomic_modulus": 12
+        }
+      ],
+      "exact_full_operator_norm": "sqrt(q): upper bound from the Gram; equality on beta=e0 since column 0 is all ones",
+      "coupled_weight_counterexample": {
+        "W": "G_quadratic(a,b), bounded by 1",
+        "alpha": "ones",
+        "beta": "ones",
+        "value": 43,
+        "claimed_bare_bound_squared": 343,
+        "actual_squared": 1849,
+        "verdict": "False transfer to arbitrary bounded coupled weights; not a counterexample to the actual HH estimate"
+      }
+    },
+    {
+      "q": 11,
+      "nonprincipal_characters": 9,
+      "Gram_entries_tested": 1089,
+      "full_Gram": "q*Id-chi(a)*conjchi(c), with chi(0)=0",
+      "unit_Gram": "q*Id-1*1star-v*vstar, v_a=chi(a)",
+      "order4_wrong_conjugation_falsifiers": 0,
+      "energy_certificates": [
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            112,
+            8,
+            0,
+            -4,
+            -4,
+            4,
+            4,
+            -4
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            132
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            116,
+            0,
+            0,
+            -4,
+            4,
+            0,
+            -4,
+            4
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            132
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            119
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            132
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            116,
+            0,
+            0,
+            4,
+            4,
+            0,
+            -4,
+            -4
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            132
+          ],
+          "cyclotomic_modulus": 20
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            112,
+            -8,
+            0,
+            4,
+            -4,
+            -4,
+            4,
+            4
+          ],
+          "cyclotomic_modulus": 20
+        }
+      ],
+      "exact_full_operator_norm": "sqrt(q): upper bound from the Gram; equality on beta=e0 since column 0 is all ones",
+      "coupled_weight_counterexample": {
+        "W": "G_quadratic(a,b), bounded by 1",
+        "alpha": "ones",
+        "beta": "ones",
+        "value": 111,
+        "claimed_bare_bound_squared": 1331,
+        "actual_squared": 12321,
+        "verdict": "False transfer to arbitrary bounded coupled weights; not a counterexample to the actual HH estimate"
+      }
+    },
+    {
+      "q": 13,
+      "nonprincipal_characters": 11,
+      "Gram_entries_tested": 1859,
+      "full_Gram": "q*Id-chi(a)*conjchi(c), with chi(0)=0",
+      "unit_Gram": "q*Id-1*1star-v*vstar, v_a=chi(a)",
+      "order4_wrong_conjugation_falsifiers": 72,
+      "energy_certificates": [
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            178,
+            -8,
+            0,
+            4
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            186
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            191
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            186
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            178,
+            8,
+            0,
+            -4
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            159
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            194
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            186
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            175
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            186
+          ],
+          "cyclotomic_modulus": 12
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            194
+          ],
+          "cyclotomic_modulus": 12
+        }
+      ],
+      "exact_full_operator_norm": "sqrt(q): upper bound from the Gram; equality on beta=e0 since column 0 is all ones",
+      "coupled_weight_counterexample": {
+        "W": "G_quadratic(a,b), bounded by 1",
+        "alpha": "ones",
+        "beta": "ones",
+        "value": 157,
+        "claimed_bare_bound_squared": 2197,
+        "actual_squared": 24649,
+        "verdict": "False transfer to arbitrary bounded coupled weights; not a counterexample to the actual HH estimate"
+      }
+    },
+    {
+      "q": 19,
+      "nonprincipal_characters": 17,
+      "Gram_entries_tested": 6137,
+      "full_Gram": "q*Id-chi(a)*conjchi(c), with chi(0)=0",
+      "unit_Gram": "q*Id-1*1star-v*vstar, v_a=chi(a)",
+      "order4_wrong_conjugation_falsifiers": 0,
+      "energy_certificates": [
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            404,
+            0,
+            -5,
+            8,
+            -5,
+            0,
+            0,
+            2,
+            6,
+            -4,
+            -1,
+            -2
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            400,
+            0,
+            9,
+            0,
+            9,
+            0,
+            0,
+            0,
+            -9
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            399,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -2
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            400,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            -9
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            404,
+            2,
+            6,
+            -8,
+            6,
+            2,
+            0,
+            0,
+            -1,
+            4,
+            -5,
+            -2
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            391
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            404,
+            2,
+            -1,
+            8,
+            -1,
+            2,
+            0,
+            -2,
+            -5,
+            -4,
+            6
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            400,
+            0,
+            -9,
+            0,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            405
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            400,
+            0,
+            -9,
+            0,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            404,
+            -2,
+            -1,
+            -8,
+            -1,
+            -2,
+            0,
+            2,
+            -5,
+            4,
+            6
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            391
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            404,
+            -2,
+            6,
+            8,
+            6,
+            -2,
+            0,
+            0,
+            -1,
+            -4,
+            -5,
+            2
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            400,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            -9
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            399,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            400,
+            0,
+            9,
+            0,
+            9,
+            0,
+            0,
+            0,
+            -9
+          ],
+          "cyclotomic_modulus": 36
+        },
+        {
+          "beta": "(b%3-1)+i*(b%2)",
+          "identity": "||G beta||\u00b2=q||beta||\u00b2-|sum_b chi(b)*beta_b|\u00b2",
+          "exact_reduced_value": [
+            404,
+            0,
+            -5,
+            -8,
+            -5,
+            0,
+            0,
+            -2,
+            6,
+            4,
+            -1,
+            2
+          ],
+          "cyclotomic_modulus": 36
+        }
+      ],
+      "exact_full_operator_norm": "sqrt(q): upper bound from the Gram; equality on beta=e0 since column 0 is all ones",
+      "coupled_weight_counterexample": {
+        "W": "G_quadratic(a,b), bounded by 1",
+        "alpha": "ones",
+        "beta": "ones",
+        "value": 343,
+        "claimed_bare_bound_squared": 6859,
+        "actual_squared": 117649,
+        "verdict": "False transfer to arbitrary bounded coupled weights; not a counterexample to the actual HH estimate"
+      }
+    }
+  ],
+  "Gram_entries": 9339,
+  "principal_spectral": [
+    {
+      "p": 3,
+      "characteristic_polynomial_ascending": [
+        -1,
+        -3,
+        -1,
+        1
+      ],
+      "invariant_2_by_2_matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "rho_polynomial": [
+        -1,
+        -2,
+        1
+      ],
+      "exact_norm": "rho_p=((p-1)+sqrt((p-1)^2+4))/2",
+      "certificate": "Real symmetric matrix; two roots of x\u00b2-(p-1)x-1 on span(e0,unit-ones), remaining eigenvalues \u00b11",
+      "unit_operator_norm": 1,
+      "unit_certificate": "J-P permutation; constant eigenvector has p-2, zero-sum singular values 1"
+    },
+    {
+      "p": 7,
+      "characteristic_polynomial_ascending": [
+        -1,
+        -7,
+        -3,
+        15,
+        9,
+        -9,
+        -5,
+        1
+      ],
+      "invariant_2_by_2_matrix": [
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "rho_polynomial": [
+        -1,
+        -6,
+        1
+      ],
+      "exact_norm": "rho_p=((p-1)+sqrt((p-1)^2+4))/2",
+      "certificate": "Real symmetric matrix; two roots of x\u00b2-(p-1)x-1 on span(e0,unit-ones), remaining eigenvalues \u00b11",
+      "unit_operator_norm": 5,
+      "unit_certificate": "J-P permutation; constant eigenvector has p-2, zero-sum singular values 1"
+    },
+    {
+      "p": 11,
+      "characteristic_polynomial_ascending": [
+        -1,
+        -11,
+        -5,
+        45,
+        30,
+        -70,
+        -50,
+        50,
+        35,
+        -15,
+        -9,
+        1
+      ],
+      "invariant_2_by_2_matrix": [
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "rho_polynomial": [
+        -1,
+        -10,
+        1
+      ],
+      "exact_norm": "rho_p=((p-1)+sqrt((p-1)^2+4))/2",
+      "certificate": "Real symmetric matrix; two roots of x\u00b2-(p-1)x-1 on span(e0,unit-ones), remaining eigenvalues \u00b11",
+      "unit_operator_norm": 9,
+      "unit_certificate": "J-P permutation; constant eigenvector has p-2, zero-sum singular values 1"
+    },
+    {
+      "p": 13,
+      "characteristic_polynomial_ascending": [
+        1,
+        13,
+        6,
+        -66,
+        -45,
+        135,
+        100,
+        -140,
+        -105,
+        75,
+        54,
+        -18,
+        -11,
+        1
+      ],
+      "invariant_2_by_2_matrix": [
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "rho_polynomial": [
+        -1,
+        -12,
+        1
+      ],
+      "exact_norm": "rho_p=((p-1)+sqrt((p-1)^2+4))/2",
+      "certificate": "Real symmetric matrix; two roots of x\u00b2-(p-1)x-1 on span(e0,unit-ones), remaining eigenvalues \u00b11",
+      "unit_operator_norm": 11,
+      "unit_certificate": "J-P permutation; constant eigenvector has p-2, zero-sum singular values 1"
+    },
+    {
+      "p": 19,
+      "characteristic_polynomial_ascending": [
+        -1,
+        -19,
+        -9,
+        153,
+        108,
+        -540,
+        -420,
+        1092,
+        882,
+        -1386,
+        -1134,
+        1134,
+        924,
+        -588,
+        -468,
+        180,
+        135,
+        -27,
+        -17,
+        1
+      ],
+      "invariant_2_by_2_matrix": [
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "rho_polynomial": [
+        -1,
+        -18,
+        1
+      ],
+      "exact_norm": "rho_p=((p-1)+sqrt((p-1)^2+4))/2",
+      "certificate": "Real symmetric matrix; two roots of x\u00b2-(p-1)x-1 on span(e0,unit-ones), remaining eigenvalues \u00b11",
+      "unit_operator_norm": 17,
+      "unit_certificate": "J-P permutation; constant eigenvector has p-2, zero-sum singular values 1"
+    }
+  ],
+  "composite_CRT": [
+    {
+      "q": 21,
+      "local_primes": [
+        3,
+        7
+      ],
+      "character_indices": [
+        0,
+        3
+      ],
+      "Gram_entries": 441,
+      "exact_tensor": true,
+      "local_principal": [
+        true,
+        false
+      ],
+      "norm_factors": [
+        "rho_3",
+        "sqrt(7)"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    },
+    {
+      "q": 21,
+      "local_primes": [
+        3,
+        7
+      ],
+      "character_indices": [
+        1,
+        0
+      ],
+      "Gram_entries": 441,
+      "exact_tensor": true,
+      "local_principal": [
+        false,
+        true
+      ],
+      "norm_factors": [
+        "sqrt(3)",
+        "rho_7"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    },
+    {
+      "q": 21,
+      "local_primes": [
+        3,
+        7
+      ],
+      "character_indices": [
+        1,
+        3
+      ],
+      "Gram_entries": 441,
+      "exact_tensor": true,
+      "local_principal": [
+        false,
+        false
+      ],
+      "norm_factors": [
+        "sqrt(3)",
+        "sqrt(7)"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    },
+    {
+      "q": 21,
+      "local_primes": [
+        3,
+        7
+      ],
+      "character_indices": [
+        0,
+        0
+      ],
+      "Gram_entries": 441,
+      "exact_tensor": true,
+      "local_principal": [
+        true,
+        true
+      ],
+      "norm_factors": [
+        "rho_3",
+        "rho_7"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    },
+    {
+      "q": 33,
+      "local_primes": [
+        3,
+        11
+      ],
+      "character_indices": [
+        0,
+        5
+      ],
+      "Gram_entries": 1089,
+      "exact_tensor": true,
+      "local_principal": [
+        true,
+        false
+      ],
+      "norm_factors": [
+        "rho_3",
+        "sqrt(11)"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    },
+    {
+      "q": 33,
+      "local_primes": [
+        3,
+        11
+      ],
+      "character_indices": [
+        1,
+        0
+      ],
+      "Gram_entries": 1089,
+      "exact_tensor": true,
+      "local_principal": [
+        false,
+        true
+      ],
+      "norm_factors": [
+        "sqrt(3)",
+        "rho_11"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    },
+    {
+      "q": 33,
+      "local_primes": [
+        3,
+        11
+      ],
+      "character_indices": [
+        1,
+        5
+      ],
+      "Gram_entries": 1089,
+      "exact_tensor": true,
+      "local_principal": [
+        false,
+        false
+      ],
+      "norm_factors": [
+        "sqrt(3)",
+        "sqrt(11)"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    },
+    {
+      "q": 33,
+      "local_primes": [
+        3,
+        11
+      ],
+      "character_indices": [
+        0,
+        0
+      ],
+      "Gram_entries": 1089,
+      "exact_tensor": true,
+      "local_principal": [
+        true,
+        true
+      ],
+      "norm_factors": [
+        "rho_3",
+        "rho_11"
+      ],
+      "verdict": "All CRT character components retained, including local principal ones"
+    }
+  ],
+  "composite_Gram_entries": 6120,
+  "native_k7": {
+    "n": 47864203,
+    "m": 52135797,
+    "k": 7,
+    "C_mod_7": 0,
+    "G_C_zeta": "1 for all zeta",
+    "native_centered_row": "5/6",
+    "new_bipolar_twists": "0; their nonunit remainder must remain"
+  },
+  "actual_raw_coupling": {
+    "h": [
+      1,
+      3
+    ],
+    "ell": [
+      101,
+      311
+    ],
+    "actual_arguments": [
+      [
+        101,
+        311
+      ],
+      [
+        303,
+        933
+      ]
+    ],
+    "determinant_certificate": {
+      "sign": "POSITIVE",
+      "terms": 6,
+      "lower": "36340627004911117625006064525863175178032882245001/20000000000000000000000000000000000000000000000",
+      "upper": "363406580483292016071181334008878444962852651602629/200000000000000000000000000000000000000000000000"
+    },
+    "verdict": "Generic raw F_N(h*ell) is not rank one on this 2x2 domain; no separability substitution used",
+    "scope": "h=1 is outside the reduced L2 prime coverage; this is not a nonseparability certificate for its full log(h)/log(h*ell) coefficient"
+  },
+  "actual_L2_coupling": {
+    "h": [
+      3,
+      13
+    ],
+    "ell": [
+      101,
+      311
+    ],
+    "actual_arguments": [
+      [
+        303,
+        933
+      ],
+      [
+        1313,
+        4043
+      ]
+    ],
+    "raw_minor_certificate": {
+      "sign": "POSITIVE",
+      "terms": 6,
+      "lower": "782840941118692794224863629141259863451333872704121/5000000000000000000000000000000000000000000000000",
+      "upper": "626281107613242744357705936101533197531220942497133/4000000000000000000000000000000000000000000000000"
+    },
+    "exact_L2_coefficient": "mu(ell)*log(h)/log(h*ell)*F_N(h*ell)",
+    "coefficient_minor_sign": "POSITIVE: zero first product; the positive log factors and denominators preserve the second-product sign",
+    "first_axis_1313_nonsquarefree": true,
+    "scope": "Rank-one separation on these admissible L2 indices is false; richer decompositions and weighted HH estimates remain open"
+  },
+  "arithmetic": "Integer phase polynomials reduced by exact cyclotomic polynomials; integer characteristic polynomials",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 227,
+    "baseline_sha256": "b973b6ea8ce1fdef2a704e1e0bcc977ee7ac5b140e71d17cc3d90c165317243a",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\previous_artifacts_sha256.json"
+  },
+  "script_sha256": "27ef19aa273a40569ffba4fa00cd6f9aec5d9a911e126f1efc450656e7b3d5a6",
+  "limitations": "Finite identities and transfer falsifiers only; no HH gain, no coefficient separation, no whole D_N calculation"
+}

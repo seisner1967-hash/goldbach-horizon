@@ -1,0 +1,29 @@
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:234:2: error: unsolved goals
+case pos
+p : ℕ
+hp : 3 ≤ p
+l : ℕ
+hl : l ∈ forcedPrefix p
+hler : l ≠ 2 ∧ l ∈ p.primesBelow
+hprime : Nat.Prime l
+hlt : l < p
+hl3 : 3 ≤ l
+hlR : 3 ≤ ↑l
+⊢ (if l = 2 then -(↑l * (-2 + ↑l)⁻¹ * 2) + ↑l ^ 2 * (-2 + ↑l)⁻¹ + (-2 + ↑l)⁻¹
+    else
+      -(↑l * (-2 + (↑l * 5 - ↑l ^ 2 * 4) + ↑l ^ 3)⁻¹ * 2) +
+          (↑l ^ 2 * (-2 + (↑l * 5 - ↑l ^ 2 * 4) + ↑l ^ 3)⁻¹ * 5 -
+            ↑l ^ 3 * (-2 + (↑l * 5 - ↑l ^ 2 * 4) + ↑l ^ 3)⁻¹ * 4) +
+        ↑l ^ 4 * (-2 + (↑l * 5 - ↑l ^ 2 * 4) + ↑l ^ 3)⁻¹) =
+    ↑l
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:296:35: error: unknown constant 'Finset.one_le_prod'
+'GoldbachRound16.Anchor.harmonic_le_eulerPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tail_infinite_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twin_prefix_tail' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_harmonic_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

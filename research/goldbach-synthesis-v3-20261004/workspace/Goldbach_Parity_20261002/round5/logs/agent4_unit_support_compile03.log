@@ -1,0 +1,38 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round5\lean\UnitSupportedCompletion.lean:91:11: error: tactic 'simp' failed, nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+'GoldbachResearch.UnitSupportedCompletion.physicalMoment_eq_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_phase_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_supported_frequencyMoment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.gauss_conjugation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.character_neg_one_cancellation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.character_neg_one_square' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.inverse_gauss_conjugation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.kappa_eq_normSq' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_supported_gauss_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_supported_nonunitDefect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.double_unit_supported_completion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

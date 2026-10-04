@@ -1,0 +1,8 @@
+{
+  "node_id": "3",
+  "hypothesis": "Mechanism: Inversion finie de convolution éliminant le Möbius long sur toute la frontière quart.\nHypothesis: Un reste supporté à partir de (alpha+1)^4 permet une expansion exacte à facteurs courts pour r<N sans imposer la rugosité de m.\nObservable: Identité quartique et support du reste compilés après filtre exact N=100000000 ; contrôle ultérieur de combinaison additive nécessaire.\nConflicts: La piste 1 impose m rugueux, la piste 2 ne contrôle pas les bords ; ici le support complet est conservé mais aucune annulation analytique n'est présumée.",
+  "score": 0.0,
+  "insight": "Le coefficient Möbius long est éliminé par inversion quartique exacte sur r<N≤alpha^4 ; le coefficient réel arbitraire conserve le tuple entier. La combinaison -6,+4,-1 reste à estimer.",
+  "result": "11 conclusions compilées, rejouées indépendamment par juge, axes classiques seulement. Support du reste prouvé, tests exacts N=100000000 PASS ; pas de compensation quantitative prouvée.",
+  "branch": "null"
+}

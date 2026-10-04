@@ -1,0 +1,70 @@
+{
+  "schema": "ROUND22_ROLE6_BUILD_ONLY03_METADATA_CONSERVATION",
+  "status": "EXACT_METADATA_ONLY_NO_BUILD",
+  "utc": "2026-10-03T19:35:08.4331948Z",
+  "frozen_control_counts": [
+    6332,
+    12,
+    12
+  ],
+  "frozen_union_count": 6355,
+  "duplicate_occurrences_in_union_and_controls": 3,
+  "exact_parent_set_count": 6358,
+  "fixed_controls": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\closure_snapshot22.json",
+      "sha256": "12bd8ab8c067e4881b837689ce705e7f029826b20482b85fbc6a6d18e3717e06",
+      "count": 6332
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\source_handoff22.json",
+      "sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88",
+      "count": 12
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\source_handoff22.json",
+      "sha256": "426074681af64190ea25ed1cb03229af34f8d26f490ebdc9b23e3dc240a8f07a",
+      "count": 12
+    }
+  ],
+  "manifest_sha256": "fdbdbb9f0fee7becc32f320b259ef0b2072dc18f257d8790c6ae9d4ba9607d50",
+  "preparation_sha256": "094a8459aba59ac402085988639ac7b7a4901d879e01646a27d67b0e57c3b4fc",
+  "all_exact_parent_binding_bytes_rehashed_intact": true,
+  "python_runtime_files": 972,
+  "protected_archive_count": 3089,
+  "all_archives_rehashed_intact": true,
+  "old_build01_build02_binding_counts": [
+    5,
+    8
+  ],
+  "old_build01_build02_bindings_intact": true,
+  "declared_images": 66,
+  "declared_edges": 825,
+  "declared_local_candidate_edges": 119,
+  "Windows_API_set_trust_edges": 706,
+  "descriptor_edge_multiset_equal": true,
+  "preserved_independent_draft_metadata_error": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\circle_native_build_trust_review03_draft_metadata_error.json",
+    "bytes": 6,
+    "sha256": "abdfbffecbe18ed94df9829819e596ee285b52a94aa108514452a9121721c789",
+    "included_in_exact_parent_manifest": false
+  },
+  "future_controls_and_attempts_absent": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build-final",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build_receipt22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\build_preparation22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_native_build03_authorization.json"
+  ],
+  "compiler_invocations": 0,
+  "candidate_imports_or_parses": 0,
+  "PE_parser_reexecutions": 0,
+  "installed_Windows_GCC_trust_assumed_not_observed": true,
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "all_non_OS_imports_bound": false,
+  "numeric_authorization": false,
+  "ROOT_gate_created": false,
+  "D_N": false,
+  "WIN": false
+}

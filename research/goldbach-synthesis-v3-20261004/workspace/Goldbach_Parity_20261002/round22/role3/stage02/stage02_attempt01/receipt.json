@@ -1,0 +1,30 @@
+{
+  "D_N_bound": false,
+  "actual_child_invocations": 1,
+  "all_source_inputs_unchanged": true,
+  "attempt": "stage02_attempt01",
+  "infinite_unfolding_complete": false,
+  "rows": [
+    {
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\stage02_attempt01\\EpsteinFinite22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\EpsteinFinite22.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02",
+      "exit_code": 1,
+      "finished_at": "2026-10-03T07:22:16.079502+00:00",
+      "log_sha256": "28397f513fdeac16b40385e057add160964585fde61e54ee22f31424425de9df",
+      "module": "EpsteinFinite22",
+      "olean_sha256": null,
+      "source_sha256": "ed4d3bcf1c9427c157045356115445944f94224369458ba4bcceb91b17414434",
+      "started_at": "2026-10-03T07:21:53.361741+00:00",
+      "status": "LEAN_FAIL"
+    }
+  ],
+  "stage": "G0_FINITE_STAGE02",
+  "status": "AUTHOR_STAGE_FAILED",
+  "time": "2026-10-03T07:22:16.094057+00:00",
+  "victory": false
+}

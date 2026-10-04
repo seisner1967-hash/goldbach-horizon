@@ -1,0 +1,177 @@
+{
+  "schema": "ROUND22_CONTINUOUS_CONTRACT_DELIVERY07_DRAFT_READ_RECEIPT",
+  "draft_revision": 3,
+  "status": "DRAFT_NOT_FROZEN_AWAITING_ROOT_FINAL_31_AND_GEOMETRY_SOURCE_HANDOFF",
+  "time_utc": "2026-10-04T01:20:18.1624065Z",
+  "author": "/root/round22_formal3_prepare",
+  "draft": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/continuous_contract_delivery22_revision07.txt",
+    "bytes": 15602,
+    "sha256": "ec438d4aa46d2372575af39d0bab2b16a9601dbe3fa5a51c33a885437aafe100",
+    "scope": "FULL",
+    "evidence_tool_chunks": [
+      "ee1d46"
+    ]
+  },
+  "previous_draft_snapshot": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/continuous_contract_delivery22_revision07_draft02_snapshot.txt",
+    "bytes": 12322,
+    "sha256": "e1950f1d23ceb4c5ac04f25429baeb509c17116c5396005d21b24757eb60df99"
+  },
+  "previous_draft_snapshot_scope": "BYTE_IDENTICAL_SNAPSHOT_962b0c_AND_HASH_PRESERVED_ee1d46",
+  "revision06": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/continuous_contract_delivery22_revision06.txt",
+    "bytes": 10824,
+    "sha256": "13ef5696833c70422a7378239548916b503bf52d7e743fd0f3959fee7c101c8f"
+  },
+  "revision06_unchanged": true,
+  "previous_draft_receipts_preserved": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/continuous_contract_delivery22_revision07_draft01_read_receipts.json",
+      "bytes": 6232,
+      "sha256": "12dcb7b4b33febe6db1400ce1af5f61f3c49889907dce64dbc8ed4a5ad11e166"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/continuous_contract_delivery22_revision07_draft02_read_receipts.json",
+      "bytes": 7010,
+      "sha256": "fa14d2c5bb034663fe68269723c523de1ef4c2cd077a6d28d6c922d7d8f6c6dd"
+    }
+  ],
+  "new_full_reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch30_closed_observation.json",
+      "bytes": 1426,
+      "sha256": "7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "fbc37e"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/receipt.json",
+      "bytes": 6886,
+      "sha256": "aabb463dcbbb3736ecd0396454dc31f3dd69c08031a6a996ee3e1477b9a2cd50",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "980c21"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/elambda16_source_review01/review22.txt",
+      "bytes": 8622,
+      "sha256": "0497ba1f300dd5916fbac27835a04c1968822ef707182dc6e94c10d1bce8d252",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "fb52be"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/elambda16_source_review01/source_handoff22_revision02.json",
+      "bytes": 2576,
+      "sha256": "f2b93e0fa76f3b82a4a389355a70736847d5064fc9c59c1940b6ed2a343b62a6",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "aff2e8"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/elambda16_source_review01/read_receipts22_revision02.json",
+      "bytes": 21491,
+      "sha256": "b0ef828f7df8e5eef01c93515f016b47ea80bb433f21f137d3ebc8728f0b395f",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "aff2e8"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+      "bytes": 12480,
+      "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "fbc37e"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/read_receipts22.json",
+      "bytes": 3940,
+      "sha256": "501daee56da0be0cd01d4bde54ba2cc7ce48fc6299f9c626c73ef2c9fbd687f3",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "4ae2fe"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/source_handoff22.json",
+      "bytes": 6647,
+      "sha256": "b66b922fd8bb1cdad7005596c873c09bf9ca017fed5c804829c73da53a807a3e",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "fbc37e"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/mellin_lambda_feasibility_paper_review01/review22.txt",
+      "bytes": 7131,
+      "sha256": "af5d3d7969831bf5be4658bd2001e88bd6045e0bd18f60cba6c98ab6a36c59e0",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "de7735"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/mellin_lambda_feasibility_paper_review01/read_receipts22.json",
+      "bytes": 7970,
+      "sha256": "8b7b4465189605788047c49678155bb39bc4ac6088d4b6967127f1d71e6c9fcf",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "de7735"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/mellin_lambda_feasibility_paper_review01/source_handoff22.json",
+      "bytes": 1905,
+      "sha256": "c01862ddeb2f3101a6693ab5a8dc8fa02d297da3a510bc86c41cceaf6e404e66",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "de7735"
+      ]
+    }
+  ],
+  "existing_numeric_provenance_read_previous_task": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_native_numeric05_closed_observation.json",
+    "bytes": 1649,
+    "sha256": "4498eff7cbf14bbecd4994f7dbc2f597869d5c25454119581817400252dbd047",
+    "scope": "FULL",
+    "evidence_tool_chunks": [
+      "1e4a79"
+    ]
+  },
+  "official_snapshot": {
+    "modules": 86,
+    "declarations": 1456,
+    "includes_definitions": true,
+    "paid_new_tail_declarations": 22
+  },
+  "pending": {
+    "mainLambda30": "SOURCE_NOT_COMPILED_AT_THIS_SNAPSHOT_31_NOT_CREDITED",
+    "ELambda16": "SOURCE_REVIEW_CLOSED_NOT_COMPILED",
+    "geometry": "PAPER_ONLY_SOURCE_HANDOFF_PENDING_NO_CREDIT",
+    "Mellin_global_evaluator": "OPEN_NOT_PREPARED",
+    "native05": "CLOSED_STOP_NO_MATHEMATICAL_VERDICT_NO_COEFFICIENT",
+    "human07": "DRAFT_NOT_FROZEN",
+    "D_N": "OPEN",
+    "WIN": "OPEN"
+  },
+  "actions": {
+    "scientific_source_modifications": 0,
+    "candidate_imports": 0,
+    "candidate_parsers": 0,
+    "numeric_invocations": 0,
+    "compiler_invocations": 0,
+    "PREP": false,
+    "gate": false,
+    "frozen_human07": false
+  },
+  "read_scope_limit": "Own reports and small controls FULL; cached APIs/source excerpts TARGETED in separate review receipts; no new exhaustive archive or transitive import claim"
+}

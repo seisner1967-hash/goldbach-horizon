@@ -1,0 +1,46 @@
+{
+  "schema": "ROUND22_IDEATION_PAPER_READ_RECEIPTS_01",
+  "actor": "/root/round22_ideation_signed_trace",
+  "scope": "PAPER_ONLY_NO_COMPILATION_NO_EVALUATION",
+  "local_full_reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md",
+      "sha256": "51aea90f4290f160cbeb602f235148813c51b6c55121ab1ddd19e7d8d7879b72",
+      "full_read_output": "d0ec0c",
+      "hash_output": "bd3604",
+      "truncated": false
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role1/signed_trace_ideation_source01/signed_weil_localization22.txt",
+      "sha256": "ab424c4bce032eedd9bf3ae4c478eb177f317975900d9cb7859e5e0476747648",
+      "full_read_output": "625995",
+      "hash_output": "ce21a8",
+      "truncated": false
+    }
+  ],
+  "primary_web_source_excerpts": [
+    {
+      "url": "https://alainconnes.org/wp-content/uploads/Selecta.pdf",
+      "authors": "Alain Connes and Caterina Consani",
+      "scope_read": "Appendix B equations 148-151, PDF page 46 and opening conventions",
+      "whole_document_full_read": false,
+      "purpose": "Weil formula normalization; reciprocal and archimedean terms retained"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.15470v1",
+      "authors": "Chiara Bellotti and Peng-Jie Wong",
+      "scope_read": "Theorem 1.1, definition of N(T), and statement of threshold T>=e",
+      "whole_document_full_read": false,
+      "purpose": "Published zero-count input for a coarser PAPER bound; not a Lean axiom"
+    }
+  ],
+  "lean_invocations": 0,
+  "tactic_probes": 0,
+  "numeric_evaluations": 0,
+  "native_invocations": 0,
+  "new_lean_modules": 0,
+  "compiled_declaration_credit": 0,
+  "new_batch_proposed": false,
+  "D_N_target_proved": false,
+  "WIN": false
+}

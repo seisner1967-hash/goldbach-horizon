@@ -1,0 +1,10 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:43:14: error: unknown constant 'Finset.prod_const_zero'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:43:62: error: application type mismatch
+  card_ne_zero.mpr hs
+argument
+  hs
+has type
+  ¬s = ∅ : Prop
+but is expected to have type
+  Finset.Nonempty ?m.5233 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:103:11: error: simp made no progress

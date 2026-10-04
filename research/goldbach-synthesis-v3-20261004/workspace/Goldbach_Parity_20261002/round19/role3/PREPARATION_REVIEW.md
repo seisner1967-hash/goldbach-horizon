@@ -1,0 +1,19 @@
+# Formalisation19 / rôle3 / node13.11 — sources prêtes, compilation fermée
+
+Six nouveaux modules sont écrits. Aucun Lean, aucune sonde Lean, aucun producteur numérique et aucun audit du Juge n'a été exécuté par ce rôle. Les 85 énoncés et23 définitions sont des quantités de source, pas des résultats du compilateur. Les imports18 sont les sources/oleans du Juge en lecture seule. Les acquis et les archives≤18 restent inchangés.
+
+`RankCalibrationFace` traite la nouveauté arithmétique K1 sur le vrai `PhysicalWitness18`. Un premier de carré≤a divisant crsq appartient au conducteur, et trois premiers distincts sont impossibles dans ce conducteur à deux premiers. Le quotient réel P/gcd(P,d), ses divisibilités, sa coprimalité et sa positivité>1 sont dérivés, y compris les cas de partage. Le support physique hors face donne A≤J' et J'=0⇒A=0.
+
+`RankCalibrationPrice` définit les nouvelles références sur leurs vrais ensembles finis. Le raccord à l'ancienne référence est explicite. Les prix unitaires et de rang sont conservés avec les poids logc+S(N), les theta/raw effectifs et le prix exact des properpowers. La variation normalisée K6 conserve A·#lost/#U ; aucune petite covariance ou petite erreur n'est une prémisse. Le signe nonpositif de la face est celui du vrai masque physique pour theta et raw.
+
+`RankCalibrationArithmetic` traite les sélecteurs de facteurs réellement petits. Leur module est≤max(aR,R^4). La factorisation de d*k reconstruit d et k lorsque d est squarefree et k|d : chaque exposant1/2 garde les repeats attendus. L'injection par le facteur fixe f|39P donne≤32 représentations dans ce développement unique, sans imposer f coprime d. Les sept valeurs de chi(P_d) utilisent la vraie totient et leur minimum exact451/2336400.
+
+`RankCalibrationUnitLoss` traite les grandes exclusions sans distribution des premiers : le support perdu est contenu dans les multiples des seuls c/r>R, les comptes d'intervalle gardent le front+1, et la perte est≤2(L/R+1). La majoration theta du prix K8 utilise la masse réelle A≤J' dérivée du support physique. Elle ne traite pas R_test17 comme R_source2.
+
+`RankCalibrationEuler` étend l'IE pondérée à la vraie theta. Les k non unitaires à N ont somme theta nulle, prouvée via N−db et la garde db≤N. Les listes originales contiennent tous les diviseurs, y compris µ=0 ; seuls les termes arithmétiquement nuls par les unités sont retirés dans l'ensemble effectif. Les coefficients Σµ/φ(dk) et les restes sont définis par les vraies sommes. La face donne le facteur1/φ(P_d) sous les coprimalités dérivables séparément.
+
+`RankCalibrationEstimator` donne une identité du prix de rang autour de −Mchi avec les vrais restes et les erreurs de normalisation, puis sa borne triangulaire. Il ne suppose pas une borne de prix déjà équivalente à K18. Les restes sont des sommes de progression theta_N à unités ; leur conversion en erreurs AP ordinaires non masquées, les exceptions N et leur uniformité ne sont pas présentées comme acquises.
+
+K14 complet, le raccord des sommes aux AP ordinaires/endpoints, K18-source et ses constantes/onset ne sont pas démontrés dans cette portée. Gamma_rank peut compenser le principal négatif. Les comparaisons parents, les autres familles, l'union physique des capacités et le ledger entier restent ouverts. Un éventuel PASS des six modules serait auxiliaire, score0, sans victoire.
+
+Le lanceur `build_once.py` reçoit le fichier d'autorisation root en argument. Il refuse tout lancement avant `ROOT19_FORMAL3_COMPILE`, PASS numérique réellement inspecté et hashes correspondants. Chaque réelle tentative conserve avant subprocess le source, le lanceur, l'autorisation et la commande/environnement ; ensuite le log, l'exit et le reçu. Un PASS inchangé ne peut être rejoué. Les réparations après un vrai échec garderont leur capture initiale et ne seront pas décrites comme des échecs de parité.

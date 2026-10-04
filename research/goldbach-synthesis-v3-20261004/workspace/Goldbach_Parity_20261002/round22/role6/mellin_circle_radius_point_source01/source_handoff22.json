@@ -1,0 +1,126 @@
+{
+  "schema": "ROUND22_MELLIN_CIRCLE_RADIUS_POINT_SOURCE_HANDOFF",
+  "status": "SOURCE_ONLY_FROZEN_NOT_EXECUTED_NOT_PREPARED",
+  "author": "ROLE6",
+  "scope_marker": "NUMERIC_RADIUS_BOUND_ONLY_NOT_IDENTITY_OR_LEAN_PROOF",
+  "directory": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01",
+  "source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/radius_point22.py",
+    "bytes": 6987,
+    "sha256": "a612d5863785a1aa2c29da8333a448087a38afccc5567ef95a7584807dfa7078"
+  },
+  "contract": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/source_contract22.md",
+    "bytes": 4431,
+    "sha256": "d62fe8d04d8ec4685caca029305c3be80817f180e868570e174dc18096559c41"
+  },
+  "read_receipts": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/source_read_receipts22.json",
+    "bytes": 5041,
+    "sha256": "3ac881f7d042bf7ff7c6f6cc36f204934c2788f175bc92282e9fdbd03ea2d851"
+  },
+  "parameters": {
+    "N": "100000000",
+    "a": "1/100000000",
+    "H": "100000000000",
+    "tau": "1/1000000",
+    "H_over_8N": "125",
+    "fixed_positive_Taylor_degree": 150
+  },
+  "source_mathematical_plan": {
+    "closed_radius": "E_N=exp(aN)*(2U*epsilon+epsilon^2)",
+    "real_inputs_scope": "PAPER_ONLY_REPRODUCED_WITH_REAL_CONNECTORS_NOT_MACHINE_VERIFIED",
+    "real_bounds": ["U<=N^2", "d>=1/(8N)", "pi>3", "exp(1)<3"],
+    "d_connector": "PAPER atan(x)>=x/(1+x), pi<7/2 and pi+a<4 give d>a/8",
+    "epsilon_bound": "epsilon<=64N^3*exp(-125)",
+    "taylor_lower": "S=sum k=0..150 of125^k/k!;exp(125)>=S>0",
+    "degree_rationale": "S6(5)>100 and S6(5)^25<=S150(125) by positivity/multinomial coefficients; exact checks are in the unexecuted source",
+    "directed_replacements": "q=1/S>=exp(-125);q^2>=exp(-250)",
+    "rational_upper": "B=3(128N^5q+4096N^6q^2)",
+    "future_check": "B<tau by exact Fraction and exposed integer cross products; comparison result presently absent",
+    "rational_output_encoding": "Exact decimal integer numerator/denominator strings; no approximate decimal results"
+  },
+  "upstream": {
+    "module": "LambdaCircleTruncationEnvelope22",
+    "namespace": "GoldbachLambdaCircle22",
+    "status_attributed_from_handoff": "SOURCE34DECL_NO_NEW_PASS_PENDING_DEPENDENCIES",
+    "declarations_attributed": 34,
+    "source_sha256": "bf9b8257760a20d33dd21714221401cd8fd327596f72e56c4d024200b2cb6c4c",
+    "bindings": [
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean",
+        "bytes": 20097,
+        "sha256": "bf9b8257760a20d33dd21714221401cd8fd327596f72e56c4d024200b2cb6c4c",
+        "read_scope": "FULL"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_contract22.md",
+        "bytes": 6806,
+        "sha256": "b690408851652f6031f226d3f01c13105c68c8a3be7338593654dce8002cdbcf",
+        "read_scope": "FULL"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_catalog22.json",
+        "bytes": 6962,
+        "sha256": "c9f14b5e8fe96c02a746810500ab18de75739ea3bed42440a00bd98a4e0a13ab",
+        "read_scope": "FULL"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_handoff22.json",
+        "bytes": 21709,
+        "sha256": "e55aa804e43110b4a1f46c6cd1733bd22eddfe45019c8824726af344d3939920",
+        "read_scope": "FULL_WITH_REFERENCED_ARTIFACTS_UNREAD_UNREVALIDATED"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+        "bytes": 12480,
+        "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+        "read_scope": "FULL_PAPER_ONLY"
+      }
+    ],
+    "binding_scope": "SELECTED_DIRECT_BYTE_BINDINGS_ONLY_NOT_TRANSITIVE_IMPORT_CLOSURE"
+  },
+  "read_evidence": {
+    "code_FULL": "89130a",
+    "contract_FULL": "713ae7",
+    "new_code_contract_SHA": "1ea1da",
+    "inputs_SHA": "89d569",
+    "read_receipts_FULL": "b920c3",
+    "read_receipts_SHA": "0757f5"
+  },
+  "proof_boundary": {
+    "only_scalar_cutoff_radius_bound": true,
+    "all_prime_powers_retained_in_reference_objects": true,
+    "COEFF_identity_tested": false,
+    "C_N_evaluated": false,
+    "D_N_evaluated": false,
+    "closed_radius_itself_evaluated": false,
+    "D_or_kernel_or_quadrature_paid": false,
+    "Lean_source_or_imports_validated": false,
+    "new_PASS": false,
+    "WIN": false
+  },
+  "execution": {
+    "python_invocations_including_metadata": 0,
+    "mathematical_invocations": 0,
+    "candidate_imports": 0,
+    "candidate_parsers": 0,
+    "lean_invocations": 0,
+    "probes": 0,
+    "PREP_created": 0,
+    "ROOT_gate_created": 0,
+    "actual_output_created": 0,
+    "actual_result": null
+  },
+  "prohibited_methods_not_introduced": [
+    "quadrature/D/kernel evaluator", "native/NTT/400MB route", "sieve",
+    "Mobius/Vaughan", "arithmetic progressions", "bilinear forms"
+  ],
+  "conservation_scope": "All authoring writes targeted this newly absent directory only; old sources, judge5 and archives were not written. No claim of a full-tree rehash.",
+  "future_preconditions": [
+    "Independent SOURCE review of the entire Python source and real PAPER connectors",
+    "ROOT gate before any mathematical invocation; this handoff grants no execution authorization",
+    "Any actual comparison remains numerical scalar-bound evidence and never an identity or Lean proof"
+  ],
+  "self_hash_boundary": "This handoff is not self-hashed; its final byte hash is returned separately after FULL reread."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "ROOT_READ_ACTUAL_PYTHON_PARSE_FAILURE_BEFORE_ANY_COMPILER",
+  "observed_utc": "2026-10-03T00:31:57.442015+00:00",
+  "actual_incident": {
+    "phase": "POSTEXEC_OBSERVATION",
+    "actual_launcher_invocations": 1,
+    "actual_Lean_invocations": 0,
+    "tool_chunk": "58aab7",
+    "exit_code": 1,
+    "observed_utc": "2026-10-03T00:28:46.2023961Z",
+    "source_snapshot": "launcher_failed01_source_POSTEXEC.py.txt",
+    "source_sha256": "52f87be8c6dcd09f80051547971a51d2b9ffccefad4b83d7a51a46728e55be62",
+    "actual_output": "  File \"D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role4\\build.py\", line 90\r\n    'started_receipt': str(started), 'started_receipt_sha256': sha(started),\r\n                     ^\r\nSyntaxError: positional argument follows keyword argument\r\n",
+    "analysis": "Python parse failure before the first statement; no compiler, PREEXEC, mathematical producer or old artifact execution.",
+    "capture_timing": "Honest POSTEXEC copy of unchanged launcher bytes before repair, not PREEXEC",
+    "mathematical_parity_failure": false,
+    "log_sha256": "52b04639918d45c3bccffba2ec575c0249c95f8ba4022ca8028f15393f612826"
+  },
+  "corrected_builder_full_read_sha256": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+  "mathematical_failure": false,
+  "victory": false
+}

@@ -1,0 +1,210 @@
+{
+  "N": 100000000,
+  "PDF_rerenders": 0,
+  "bindings": {
+    "fusion": {
+      "bytes_and_fields_identical": true,
+      "canonical_attempts": 1,
+      "canonical_success_receipt_sha256": "551622e93b09d887685fa4672c4fdf379dc1855614dc0f9e2328ab00b2e0730f",
+      "gate_sha256": "00886e77d4ca6f25236e30e95f0a955ad80e74e0b3eabab64c05cf17a251b85e",
+      "isolated_replays": 1,
+      "producer_sha256": "5cee100cad1f5bb3d725687e073f5d165f389c3a99643b51c30f81a912a063ce",
+      "real_failed_attempts": 0,
+      "replay_receipt_sha256": "b43b4eade440e30d02f33456d98024b8f0d82597fa0141f7bd807615207019f3"
+    },
+    "incidence": {
+      "bytes_and_fields_identical": true,
+      "canonical_attempts": 1,
+      "canonical_success_receipt_sha256": "a2fad1421cb3bb345eec7419928cbc19d1750f22e6b0e8190c64cbad466521ca",
+      "gate_sha256": "8c3506c4f51cca70d03b16ed5c82a13d40a01966e36770e24a51aea94e96aead",
+      "isolated_replays": 1,
+      "producer_sha256": "edb58961dca27429b934f74899928fc38aabdb45f16ebe679fea5c19e3e880f4",
+      "real_failed_attempts": 0,
+      "replay_receipt_sha256": "cada25d973e7ce1ccb2801d20467e8a7375211598f1942ae5d5324c6825baa64"
+    },
+    "incidence_moment": {
+      "bytes_and_fields_identical": true,
+      "canonical_attempts": 1,
+      "canonical_success_receipt_sha256": "132774ede057587713d8efe23dcd5ba4e7fe722e87edfff70f8dd2d9418fd1c6",
+      "gate_sha256": "e5101cd3838ef1db6f7e7d1ae56c686f29016be2c3e97274837b593c7f0bd4a8",
+      "isolated_replays": 1,
+      "producer_sha256": "d9f0043c13a303d06224fb9c41c98110ed4d83d001a588514fb4067ca9d59d48",
+      "real_failed_attempts": 0,
+      "replay_receipt_sha256": "3c77b69833d69c3c74193765fdc6314e3e69c654938433a0bbf04f8153224a97"
+    }
+  },
+  "complete_beta_prime_list_bounds": {
+    "PRIMES_count": 1229,
+    "PRIMES_largest": 9973,
+    "all_raw_prime_power_bases_also_in_the_prime_list": true,
+    "all_s_and_q_possible_are_in_the_verified_prime_list": true,
+    "historical_sieve_source_sha256": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "incidence_producer_not_rerun_for_this_audit": true,
+    "intermediate_composites": {
+      "68": [
+        [
+          2,
+          2
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "69": [
+        [
+          3,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "70": [
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    "q_upper": 9889,
+    "s_integer_minimum_from_47s_above_a": 68,
+    "s_upper": 1054,
+    "sieving_prime_limit": 10000,
+    "smallest_possible_prime_s": 71,
+    "source_definition": "PRIMES = prime_list(isqrt(N)); integer Eratosthenes sieve"
+  },
+  "conservation_after": {
+    "baseline_sha256": "d43941b27a4325a841282d389476c9c6fa9af920138b9b0deebe1c484a4ff7f4",
+    "controller_47_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "files": 651,
+    "old_Lean_recompiled": false,
+    "old_PASS_replayed": false,
+    "old_PDF_rerendered": false,
+    "old_dependency_recompiled": false,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "previous_protected_files": 603,
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round15\\previous_artifacts_sha256.json",
+    "round14_controller_sha256": "6795b8ed10872337ac8d0f7caf7ef428b8611b6f35376e575c22661ff68e30bf",
+    "round14_files": 48,
+    "status": "PRESERVED"
+  },
+  "conservation_before": {
+    "baseline_sha256": "d43941b27a4325a841282d389476c9c6fa9af920138b9b0deebe1c484a4ff7f4",
+    "controller_47_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "files": 651,
+    "old_Lean_recompiled": false,
+    "old_PASS_replayed": false,
+    "old_PDF_rerendered": false,
+    "old_dependency_recompiled": false,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "previous_protected_files": 603,
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round15\\previous_artifacts_sha256.json",
+    "round14_controller_sha256": "6795b8ed10872337ac8d0f7caf7ef428b8611b6f35376e575c22661ff68e30bf",
+    "round14_files": 48,
+    "status": "PRESERVED"
+  },
+  "historical_auxiliaries_not_recounted": 208,
+  "isolated_replays_total": 3,
+  "necessary_read_only_supplements": 1,
+  "new_Lean_definitions": 0,
+  "new_Lean_modules": 0,
+  "new_Lean_theorems": 0,
+  "new_canonical_attempts": 3,
+  "new_canonical_candidate_banks": 2,
+  "noGlobal": true,
+  "noLean": true,
+  "numeric_manifest_relative": "numeric_manifest.json",
+  "old_Lean_recompiles": 0,
+  "old_PASS_replays": 0,
+  "old_dependency_recompiles": 0,
+  "own_asset_count_before_receipt": 34,
+  "own_assets_sha256": {
+    "agent6.md": "3fd535fbbac417887f78f853cde9633adfeeb4e0a8c8fa72899ab1a75002257e",
+    "conservation.json": "42c0ffc68299c84e556fac0fabbc3cbd239e01670544e46f05cf27d2c233c5bd",
+    "conservation.py": "f0cbdbc338662d7ba1dac719ae364d65d7124e1ba10fff0afb5541f9be310e58",
+    "finalize_numeric.py": "ca4c54fac93bc7f89046374d822cd64e721ff3af50a7fa16aa88993f7a8eb242",
+    "fusion.json": "00886e77d4ca6f25236e30e95f0a955ad80e74e0b3eabab64c05cf17a251b85e",
+    "fusion_checks.py": "5cee100cad1f5bb3d725687e073f5d165f389c3a99643b51c30f81a912a063ce",
+    "incidence.json": "8c3506c4f51cca70d03b16ed5c82a13d40a01966e36770e24a51aea94e96aead",
+    "incidence_checks.py": "edb58961dca27429b934f74899928fc38aabdb45f16ebe679fea5c19e3e880f4",
+    "incidence_moment.json": "e5101cd3838ef1db6f7e7d1ae56c686f29016be2c3e97274837b593c7f0bd4a8",
+    "incidence_moment_checks.py": "d9f0043c13a303d06224fb9c41c98110ed4d83d001a588514fb4067ca9d59d48",
+    "isolated_fusion/fusion.json": "00886e77d4ca6f25236e30e95f0a955ad80e74e0b3eabab64c05cf17a251b85e",
+    "isolated_incidence/incidence.json": "8c3506c4f51cca70d03b16ed5c82a13d40a01966e36770e24a51aea94e96aead",
+    "isolated_incidence_moment/incidence_moment.json": "e5101cd3838ef1db6f7e7d1ae56c686f29016be2c3e97274837b593c7f0bd4a8",
+    "previous_artifacts_sha256.json": "d43941b27a4325a841282d389476c9c6fa9af920138b9b0deebe1c484a4ff7f4",
+    "replay_new.py": "b6810bb70ed6b7cb7d7189be8befa05b8fc22f5e1e7061f9cc02923d814039ab",
+    "role6/closure_receipt.json": "ca2a4a9ffb2d3e610df2e0c73b04f0fe01656befd22d7bd90e9a6e47df0ea348",
+    "role6/conservation_after.json": "9178a4627422262a9cf15f7612868524ee2eec067ec0d3dc5f713f71d1401a56",
+    "role6/fusion_attempt01.log": "0b9aa7be8e1cf33099700c58771b76fb777d32c38f96f91fd65aadb4ed807c14",
+    "role6/fusion_attempt01_source.txt": "5cee100cad1f5bb3d725687e073f5d165f389c3a99643b51c30f81a912a063ce",
+    "role6/fusion_canonical_success.json": "551622e93b09d887685fa4672c4fdf379dc1855614dc0f9e2328ab00b2e0730f",
+    "role6/fusion_isolated_replay.log": "0b9aa7be8e1cf33099700c58771b76fb777d32c38f96f91fd65aadb4ed807c14",
+    "role6/fusion_replay_receipt.json": "b43b4eade440e30d02f33456d98024b8f0d82597fa0141f7bd807615207019f3",
+    "role6/incidence_attempt01.log": "52e8118e99a9312897333a7927d0a13f1c2e5f6ba1338cf49386470723274fe5",
+    "role6/incidence_attempt01_source.txt": "edb58961dca27429b934f74899928fc38aabdb45f16ebe679fea5c19e3e880f4",
+    "role6/incidence_canonical_success.json": "a2fad1421cb3bb345eec7419928cbc19d1750f22e6b0e8190c64cbad466521ca",
+    "role6/incidence_isolated_replay.log": "52e8118e99a9312897333a7927d0a13f1c2e5f6ba1338cf49386470723274fe5",
+    "role6/incidence_moment_attempt01.log": "35963f53a2bb2e56da77ff33ea39588f948b59e12e014e0a4da038334b1527d0",
+    "role6/incidence_moment_attempt01_source.txt": "d9f0043c13a303d06224fb9c41c98110ed4d83d001a588514fb4067ca9d59d48",
+    "role6/incidence_moment_canonical_success.json": "132774ede057587713d8efe23dcd5ba4e7fe722e87edfff70f8dd2d9418fd1c6",
+    "role6/incidence_moment_isolated_replay.log": "35963f53a2bb2e56da77ff33ea39588f948b59e12e014e0a4da038334b1527d0",
+    "role6/incidence_moment_replay_receipt.json": "3c77b69833d69c3c74193765fdc6314e3e69c654938433a0bbf04f8153224a97",
+    "role6/incidence_replay_receipt.json": "cada25d973e7ce1ccb2801d20467e8a7375211598f1942ae5d5324c6825baa64",
+    "run_new.py": "8e97d5cbaafbf06834f6f7f9723b1d8db08cf7446ee835d5a5fadf828369fbbf",
+    "shared.py": "e3e429c4d1c18c361138c6d184b4e3c0aa92e41eb138058499d47fa95fb4323b"
+  },
+  "post_replay_reruns": 0,
+  "real_failed_attempts": 0,
+  "reports_FINAL_sha256": {
+    "agent1_weighted_incidence.md": "8fa44b44dbb2c14fd4a5319840e26a4dc8d113d2db3c6b57dec5569e790bbf5d",
+    "agent2_signed_cofactors.md": "afe8511ce670dce4580837f444041159055addde605675cde328ba49a15f1fe7"
+  },
+  "scope": "two new concrete banks, one necessary read-only L4/AP supplement, exact conservation651",
+  "score": 0,
+  "source_u_minimum": "10^24",
+  "status": "FINAL_NEW_ROUND15_NUMERICAL_ONLY_PARTIAL",
+  "unpaid_obligations": [
+    "weighted aggregate covariance Gamma",
+    "source OR incidence F6",
+    "global union parent reuse",
+    "unsampled incidence W errors",
+    "all complementary ledger terms",
+    "effective BV onset and whole D_N target"
+  ],
+  "victory": false
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC05_ACTUAL_CLOSURE_READ_RECEIPTS",
+  "utc": "2026-10-04T00:35:12.9018337Z",
+  "actor": "ROLE6_ROLE3",
+  "scope": "DOCUMENTATION_METADATA_ONLY_NO_CANDIDATE_OR_ARITHMETIC",
+  "actual_session": 81191,
+  "actual_return_chunk": "1be8f6",
+  "actual_parent_exit_code": 1,
+  "actual_checker_exit_code": 238,
+  "actual_checker_termination_reason": "HARD_WALL_NO_VERDICT",
+  "actual_status": "NATIVE_NUMERIC05_CHECKER_ONLY_STOP_NO_MATHEMATICAL_VERDICT",
+  "quiescence_evidence_sha256": "c1ba69807df6ac59cdc0671c2c8518eaeb7b1d298ddbbb30d1171c9c2623238f",
+  "full_actual_control_reads": {
+    "tool_chunk": "68d240",
+    "names": [
+      "checker_FIN.json",
+      "parent_FIN.json",
+      "POST.json",
+      "receipt.json",
+      "checker.stdout.log",
+      "checker.stderr.log"
+    ]
+  },
+  "external_PID_scope": {
+    "full_evidence_tool": "6f551b",
+    "known_direct_callback_pid": 23088,
+    "additional_backend_observed_job_pid": 13504,
+    "both_observed_absent": true,
+    "universal_graph_claimed": false
+  },
+  "metadata_helper_invocation": {
+    "initial_chunk": "70819b",
+    "session": 70260,
+    "final_chunk": "ddb3d7",
+    "exit_code": 0,
+    "utc_START": "2026-10-04T00:32:27.1165097Z",
+    "utc_FIN": "2026-10-04T00:32:40.3118374Z",
+    "invocations": 1,
+    "retry_count": 0,
+    "native_invocations": 0
+  },
+  "read_scopes": {
+    "small_START_FIN": "FULL_0c33a2",
+    "closure_raw": "TARGETED_LINES_1_165_aebe57_AND_LAST_32_LINES_9cf7c0",
+    "closure_all_decision_fields_and_123_output_rows": "PARSED_METADATA_9cf7c0_NOT_RAW_FULL",
+    "evidence_all_109_captures_3_payload_pairs_5_controls_123_output_bindings": "PARSED_METADATA_aebe57_NOT_RAW_FULL",
+    "initial_final_inventory": "PARSED_METADATA_COUNTS_68d240_FIRST_RAW_25e3b4_TRUNCATED_NO_FULL_CLAIM"
+  },
+  "closure_sha256": "23dd1f72589d6994ed27004f2b15c01f9534c2e0ea33834fc59f6f8e7a7514c1",
+  "closure_evidence_bindings_sha256": "12d8da9a4325a9fbc35c119745f45d47adb4df0b5f551704a23505745808e4ef",
+  "physical_rehash_counts": {
+    "inputs": 6576,
+    "capture_original_copy_pairs": 109,
+    "payload_original_copy_pairs": 3,
+    "metadata_controls": 5,
+    "protected_archives": 3089,
+    "old04_outputs": 83,
+    "actual05_outputs": 123
+  },
+  "parent_POST_present": true,
+  "parent_POST_conservation_true": true,
+  "external_conservation_distinct": true,
+  "coefficient_result_present": false,
+  "mutant_runs": 0,
+  "arithmetic_recomputed_here": false,
+  "native_Lean_refinement": false,
+  "mathematical_falsity_established": false,
+  "D_N": false,
+  "WIN": false
+}

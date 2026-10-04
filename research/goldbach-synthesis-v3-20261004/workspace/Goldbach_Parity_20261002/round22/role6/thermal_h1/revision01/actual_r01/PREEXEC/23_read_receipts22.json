@@ -1,0 +1,52 @@
+{
+  "schema": "ROUND22_ROLE6_CONTOUR_PRECRITIQUE_READ_RECEIPTS_V1",
+  "phase": "SOURCE_PAPER_ONLY_NO_EXECUTION",
+  "role1_manifest_path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role1_bridge/paper_manifest22.json",
+  "role1_manifest_sha256": "812bad4eb69d612208eae8380d8bdc1dd8ab4fb2605d39eaa790f0479f2b37e3",
+  "manifest_FULL_capture": "70a1d7",
+  "role1_FULL_reads": [
+    {"name": "contour_formula22.md", "capture": "60ef46", "sha256": "42faea33cdcd56c08f6fb593dbd42c5c293b8e72beb9c823db68e9576ac1edb7"},
+    {"name": "numeric_precontract22.md", "capture": "a8e086", "sha256": "02cba2d0b3478b5fe3bddb46c1df0862a7c6287452f19892b7cec8ba100db05b"},
+    {"name": "ideation_probe22.md", "capture": "2f581d", "sha256": "86563133930358a0acbb2098d97a8d8ddb761c476a227adf13eba139ee53293d"},
+    {"name": "lean_obligations22.md", "capture": "2f581d", "sha256": "e1db30108c3ed9a65490a12f7f9a8394407db31c868085e1ee0522baa5da33f0"},
+    {"name": "bridge_report22.md", "capture": "2f581d", "sha256": "adebad1a88716c9e736633e584ca82c97e3a6912158e8672c847c5bbbd471cae"},
+    {"name": "read_receipts22.json", "capture": "2f581d", "sha256": "c580eb276f1061b627d3ff450948b79bef2ba93cdf4fc7df53c9875daee51f3b"}
+  ],
+  "all14bindings_hash_read_capture": "7de010",
+  "all14_sha_equal": true,
+  "six_artifact_expected_bytes_equal": true,
+  "eight_input_expected_bytes_available": false,
+  "eight_input_actual_bytes_read": true,
+  "failed_metadata_attempt": {"capture": "6e4d78", "exit": 1, "cause": "PowerShell ParserError empty pipe", "credited": false, "math_executed": false},
+  "directive_and_probe_FULL_capture": "5181aa",
+  "other_historical_inputs_scope_in_this_audit": "SHA_METADATA_ONLY_NOT_FRESH_FULL_READ",
+  "selection_prompt": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/experiments/15.3/executor_prompt.md",
+    "sha256": "0ac337ada01aed929b00f2ff94a7f740409df18350d62433a58edd74fe371958",
+    "capture": "39326e",
+    "scope": "FULL",
+    "generic_evaluation_instructions_are_not_a_gate": true
+  },
+  "primary_web_reads": [
+    {"url": "https://arxiv.org/pdf/2109.08392", "scope": "TARGETED_STIRLING_EQ21_23_PAGE11_TEXT_NOT_FULL51P", "captures": ["turn165view0", "turn167view0"], "screenshot_request": "turn168view1", "screenshot_pixels_inspected": false},
+    {"url": "https://dlmf.nist.gov/25.2", "scope": "TARGETED_EM25_2_8_9_AND_EULER_PRODUCT", "captures": ["turn166view0", "turn167view1", "turn168view0"]},
+    {"url": "https://dlmf.nist.gov/25.2.E9", "first_open_result": "INTERNAL_ERROR_turn165view1_NOT_CREDITED", "recovered_content": "turn168view0"},
+    {"url": "https://dlmf.nist.gov/24.8.E1", "scope": "TARGETED_BERNOULLI_FOURIER", "captures": ["turn165view2", "turn167view2"]},
+    {"url": "https://dlmf.nist.gov/5.9.E16", "scope": "TARGETED_PSI_INTEGRAL", "captures": ["turn165view3", "turn166view4"]},
+    {"url": "https://dlmf.nist.gov/5.7.E6", "scope": "TARGETED_PSI_SERIES", "captures": ["turn166view1", "turn167view3"]},
+    {"url": "https://dlmf.nist.gov/25.4.E2", "scope": "TARGETED_ZETA_FUNCTIONAL_EQUATION", "captures": ["turn165view4", "turn166view5"]}
+  ],
+  "new_math_invocations": 0,
+  "new_Lean_invocations": 0,
+  "new_runtime_probes": 0,
+  "new_installations": 0,
+  "old_bank_replays": 0,
+  "role1_source_mutations": 0,
+  "G0_or_Gamma_frozen_mutations": 0,
+  "metadata_hashing_only": true,
+  "producer_PREPARED": false,
+  "numeric_H1_PASS": false,
+  "formal_H1_PASS": false,
+  "D_N_bound": false,
+  "WIN": false
+}

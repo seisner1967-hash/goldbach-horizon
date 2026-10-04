@@ -1,0 +1,76 @@
+{
+  "state": "FINAL",
+  "finished_at_utc": "2026-10-02T22:19:39.712237+00:00",
+  "round": 18,
+  "role": 3,
+  "node": "13.10",
+  "all_four_modules_exit0": true,
+  "report": "round18\\agent3_formalisation.md",
+  "report_sha256": "b0d82b52621c6f57a1a34f24d3a422437847a685678e1b905aea2058062bcb62",
+  "manifest": "round18\\role3\\manifest.json",
+  "manifest_sha256": "957acece4f93ac74438e41130d9e65429cd237e983d5cad4d882ed74ad9de93b",
+  "source_sha256": {
+    "SeparatedTypeII.lean": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+    "SeparatedTypeIIPrice.lean": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+    "SeparatedTypeIICount.lean": "55ac598030d5bd67202553a5a8ffffc6fcc2ba3aa796428808aecb9586d5d5d1",
+    "SeparatedTypeIILower.lean": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e"
+  },
+  "log_sha256": {
+    "round18\\role3\\attempt03.log": "aab20695b18c648e5f1c560d8f68fdd0ff58f15ca1358ca97e07ace277ede6b3",
+    "round18\\role3\\attempt05.log": "20397c8768d81ceb564affcf0dd19438013f421c7e37459ce2b8e171d5d57bdd",
+    "round18\\role3\\crt_attempt05.log": "e1155b18c26d704dbf3b564c17f580bef4aec6c3c52d4920275bf6d33529397e",
+    "round18\\role3\\lower_attempt03.log": "693ccff368b960578b96f30dca6dc204b00c1c0159b5e3ddbd2675941a9b4a4f"
+  },
+  "olean_sha256": {
+    "SeparatedTypeII.olean": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+    "SeparatedTypeIIPrice.olean": "4d93de985a4e7dc95fbc49bd045315c8be18c5e2dee1b2e8afafacb394c41ac2",
+    "SeparatedTypeIICount.olean": "5ee894fa6a17f05bca328f743783ede1c27b40bd2e465efb22364b106f45a2fc",
+    "SeparatedTypeIILower.olean": "e4921faffa9a4861ac99c581d3492fe2add9e326c4838325504eef4b8dc34d23"
+  },
+  "counts": {
+    "modules": 4,
+    "theorems": 60,
+    "definitions": 34,
+    "structures": 2,
+    "explicit_instances": 0,
+    "axiom_prints": 96,
+    "actual_compiler_attempts": 13,
+    "actual_failures": 9
+  },
+  "actual_attempt_exit_sequences": [
+    [
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "all_final_axiom_prints_standard_only": true,
+  "all_real_failures_preserved": true,
+  "numeric_compile_guard_inspected_before_first_compile": true,
+  "protected_997_all_equal": true,
+  "originals_all_equal": true,
+  "writes_within_role3_and_report_only": true,
+  "old_Lean_rebuilds": 0,
+  "old_producers_replayed": 0,
+  "old_oleans_copied": 0,
+  "numeric_checks_or_signs_recomputed": 0,
+  "score": 0,
+  "victory": false,
+  "global_D_N_controlled": false,
+  "R6_assumed_or_proved": false,
+  "official_cumulative_count_unchanged_pending_judge": "22/337"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "ROUND22_ELAMBDA02_EXACT_PROOF_BLOCK_BYTE_COMPARISON",
+  "status": "METADATA_ONLY_SOURCE_DIFF",
+  "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_lambda_tail_source01\\ComplexGammaMellinLambdaTail22.lean",
+  "original_sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+  "new_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_lambda_tail_source02\\ComplexGammaMellinLambdaTail22.lean",
+  "new_sha256": "0da22247d6f1085d0ca481f7f943c026570b1b7d6497fa420eabbffcd1c3cd37",
+  "old_block_unique": true,
+  "replacement_utf8_bytes": 203,
+  "equal_outside_one_proof_block": true,
+  "all_imports_defs_statements_prints_other_proofs_unchanged": true,
+  "scope": "Raw UTF8 bytes/string replacement only; no Lean syntax parser or tactics",
+  "old_block": "  change (∫ t : ℝ in Ioi H,\n    lambdaMellinDirichlet (-t) * complexGammaKernel w (-t)) = _\n  rw [integral_comp_neg_Ioi, integral_Iic_eq_integral_Iio]",
+  "new_block": "  change (∫ t : ℝ in Ioi H,\n    (fun x : ℝ => lambdaMellinDirichlet x * complexGammaKernel w x) (-t)) = _\n  calc\n    _ = ∫ t : ℝ in Iic (-H),\n        lambdaMellinDirichlet t * complexGammaKernel w t :=\n      integral_comp_neg_Ioi H\n        (fun x : ℝ => lambdaMellinDirichlet x * complexGammaKernel w x)\n    _ = _ := integral_Iic_eq_integral_Iio"
+}

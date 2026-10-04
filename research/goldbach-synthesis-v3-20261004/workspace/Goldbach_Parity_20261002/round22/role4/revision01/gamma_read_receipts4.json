@@ -1,0 +1,65 @@
+{
+  "schema": "ROUND22_ROLE4_GAMMA_READ_RECEIPTS_4",
+  "time_utc": "2026-10-03T08:08:25.053729+00:00",
+  "local_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\GammaPrerequisites22.lean",
+      "sha256": "c66707c8bf24428e80ccc9000a769790d19d734d00cff0efe1e807364acb10fc",
+      "scope": "FULL revised Gamma source",
+      "output_chunk": "7827f0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\run_gamma_once22_v4.py",
+      "sha256": "eb0c2268fe1f5f9c51ae2b03bd4a9e8a1419f003a2613a0282c33f2b0634e711",
+      "scope": "FULL new launcher, not executed",
+      "output_chunk": "aafbfe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\gamma_preparation4.md",
+      "sha256": "05aa19d883bd6bd5f87d088c7c6bed2d9ba44d16feb65aa3d8db27f48a585544",
+      "scope": "FULL new preparation",
+      "output_chunk": "aafbfe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\prepare_gamma_metadata4.py",
+      "sha256": "892f990b3886e6b4af36c91547702084ac6e36528717d4060d345951c188a23c",
+      "scope": "FULL helper, then read-identifiers and 23-audit check patch",
+      "output_chunk": "cf18ac"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1_failure.md",
+      "sha256": "be63d690ae061e34a9fa9471612d172a417ff44fe747007a41de2e864b10dc83",
+      "scope": "FULL new failure diagnosis",
+      "output_chunk": "aafbfe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\stdout.log",
+      "sha256": "3735c5ebe7fbfe53920bc03d47a5d1894422e4aab4557a61576490649911cf0f",
+      "scope": "FULL actual FAIL1 raw output",
+      "output_chunk": "6c9b22, dd4411, ROOT b1f5c1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_attempt1\\receipt.json",
+      "sha256": "85f95efc916eb5de022ac8a4ca79f82d5d2df1c717cc1bf216fd2a927c80db45",
+      "scope": "FULL actual FAIL1 receipt",
+      "output_chunk": "68e321, dd4411, ROOT 5ad642"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_prepared_manifest3.json",
+      "sha256": "764c2bd544170e8f232000d690894c79719a8cff27723aa2f9552308daa7f01c",
+      "scope": "METADATA projection; all6392 input SHA checked, not FULL text",
+      "output_chunk": "preparation4 actual"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Continuity.lean",
+      "sha256": "47b6018f8597ae353961ae3835d8b96915803978d12d0c9c3dd555fb0118b8c1",
+      "scope": "TARGETED header and lines1–90: global continuousAt_cpow_const",
+      "output_chunk": "e4b8ee, cb72c1, 5fb6df"
+    }
+  ],
+  "previous_read_receipts_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\gamma_read_receipts3.json",
+  "previous_read_receipts_sha256": "82bc397d675f4aa2ebe2c2850071074fddd9da0359daef31ed69e8f4c2b674bc",
+  "compiler_invocations_this_helper": 0,
+  "compiler_invocations_role4_previously": 1,
+  "mathematical_numeric_invocations": 0
+}

@@ -1,0 +1,27 @@
+{
+  "status": "ROOT_VERIFIED_ACTUAL_UNIQUE_NEW_NONSS19_START",
+  "observed_utc": "2026-10-03T00:17:45.561063+00:00",
+  "started_at_utc": "2026-10-03T00:15:27.314820+00:00",
+  "started_receipt_sha256": "a5704847edb1d2e1b0d9a88e9441814a6634cc95d5d2a0bea8e1a77c9e94c34b",
+  "actual_command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_nonss\\canonical_attempt01\\inputs\\producer.py",
+    "--root-authorization",
+    "ROOT19_NONSS_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+    "--captured-manifest",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_nonss\\canonical_attempt01\\inputs\\input_manifest.json",
+    "--output",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\nonss.json"
+  ],
+  "input_manifest_sha256": "c425dfb0001dad406aa243dd88224ce2a30281ea33916b8cd50e452e3c92664e",
+  "PREEXEC_capture_bindings": 13,
+  "actual_canonical_starts_observed": 1,
+  "producer_executions_by_root": 0,
+  "Lean_invocations": 0,
+  "completion_result_not_inspected": true,
+  "no_old_math_or_Lean_execution": true,
+  "victory": false
+}

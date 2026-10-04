@@ -1,0 +1,23 @@
+{
+  "node": "13.10",
+  "report": "round18/agent1_calibrated_typeii.md",
+  "report_sha256": "228766a630e37e4cee7f92bc46cb862582da59379b15653f4c00abcbc37313f0",
+  "contract": "FINAL1 section8 all six checks",
+  "numerical_contract_authorized": true,
+  "numerical_result_presumed": false,
+  "protected_artifacts": 997,
+  "finite_N": 100000000,
+  "finite_d": 91,
+  "finite_b_interval": [
+    879121,
+    989010
+  ],
+  "finite_candidate_x": 20000000,
+  "source_candidate_x": "N/4 for explicit growing-d illustration",
+  "source_u_minimum": "10^24",
+  "omitted_prime_for_incompatibility": 11,
+  "structural_A_positive_guard": true,
+  "formal_sources_authorized": true,
+  "compiler_waits_for_canonical_numeric_PASS": true,
+  "victory": false
+}

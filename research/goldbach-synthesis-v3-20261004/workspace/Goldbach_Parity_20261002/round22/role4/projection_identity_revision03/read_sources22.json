@@ -1,0 +1,49 @@
+{
+  "schema": "ROUND22_IDENTITY_REVISION03_SOURCE_READS",
+  "status": "SOURCE_ONLY_NOT_PREPARED",
+  "full_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\ThermalProjectionIdentity22.lean",
+      "output": "c0c3cf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision02\\ThermalProjectionIdentity22.lean",
+      "output": "fa946e",
+      "when": "earlier_same_turn"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22.log",
+      "output": "3b3a0c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\receipt.json",
+      "output": "311c5f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22_FIN.json",
+      "output": "311c5f"
+    }
+  ],
+  "api_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Basic.lean",
+      "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b",
+      "scope": "TARGETED",
+      "lines": "217-223,423-429",
+      "read_output": "363147"
+    }
+  ],
+  "headers_identical": true,
+  "declarations": 20,
+  "definitions": 2,
+  "theorems": 18,
+  "qualified_prints_written": 20,
+  "qualified_prints_executed": 0,
+  "forbidden_proof_tokens": 0,
+  "lean_invocations": 0,
+  "numeric_runs": 0,
+  "candidate_imports": 0,
+  "probes": 0,
+  "prepare_builder_runs": 0,
+  "closed_import_graph_claimed": false
+}

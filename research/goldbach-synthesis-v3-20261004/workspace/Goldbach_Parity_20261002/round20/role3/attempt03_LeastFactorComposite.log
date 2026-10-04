@@ -1,0 +1,51 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role3\LeastFactorComposite.lean:24:26: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role3\LeastFactorComposite.lean:25:30: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role3\LeastFactorComposite.lean:32:43: warning: unused variable `hj`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role3\LeastFactorComposite.lean:65:25: error: application type mismatch
+  (Nat.Prime.dvd_mul hl).mp hld
+argument
+  hld
+has type
+  (p * (j / p)).minFac ∣ p * (j / p) : Prop
+but is expected to have type
+  j.minFac ∣ ?m.4573 * ?m.4574 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role3\LeastFactorComposite.lean:79:4: warning: try 'simp at hmem' instead of 'simpa using hmem'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role3\LeastFactorComposite.lean:95:2: warning: try 'simp at hm' instead of 'simpa using hm'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'GoldbachRound20.SwitchedComposite.leastPrimeQuotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.compositeLeastFactor' depends on axioms: [propext]
+'GoldbachRound20.SwitchedComposite.leastPrimeQuotient_reconstruct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.leastPrimeCompositeWitness' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.prime_divisor_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.minFac_rough_quotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.minFac_roughIndicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.minFac_oddBonferroni' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.nonminimal_prime_met' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.nonminimal_prime_roughIndicator_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.nonminimal_prime_oddBonferroni_nonpos' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.rough_prime_divisor_is_minFac' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.SwitchedComposite.square_is_composite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.square_minFac' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.square_quotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.SwitchedComposite.square_oddBonferroni' depends on axioms: [propext, Classical.choice, Quot.sound]

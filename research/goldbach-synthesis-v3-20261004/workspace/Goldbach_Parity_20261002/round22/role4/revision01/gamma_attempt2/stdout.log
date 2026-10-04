@@ -1,0 +1,38 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\revision01\GammaPrerequisites22.lean:109:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\revision01\GammaPrerequisites22.lean:109:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\revision01\GammaPrerequisites22.lean:113:5: warning: unused variable `hz`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role4\revision01\GammaPrerequisites22.lean:202:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ↑(?r * ?s)
+s : ℂ
+r : ℝ
+hs : 0 < s.re
+hr : 0 < r
+t : ℝ
+a✝ : t ∈ Ioi 0
+⊢ Complex.exp (-↑r * ↑t) * ↑t ^ (s - 1) = ↑t ^ (s - 1) * Complex.exp (-(↑r * ↑t))
+'GoldbachContinuous22.realGamma_le_one_on_unit_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.real_laplace_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.laplaceIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_laplaceIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.laplaceIntegrand_aestronglyMeasurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.complex_laplace_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.real_rate_laplace_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.laplaceTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.rightHalfPlane' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.hasDerivAt_laplaceIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.laplace_derivative_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.hasDerivAt_laplaceTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.rightHalfPlane_isOpen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.rightHalfPlane_isPreconnected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.laplaceTransform_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.laplace_rhs_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.laplaceTransform_real_rate' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.complex_rate_laplace_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_laplaceTransform_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.norm_rotation_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.Gamma_rotation_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.quarter_angle_coefficient_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.Gamma_strip_exponential_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

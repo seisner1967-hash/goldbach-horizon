@@ -1,0 +1,220 @@
+import PhysicalCompositeSubtraction
+import RankCalibrationFace
+
+/-! Round20 / 13.12. Shared-factor conductors are computed by actual gcd/lcm.
+The candidate, AP and integer front are exactly equivalent on physical axes.
+The arithmetic phi kernel specializes the acquired Selberg principal. -/
+namespace GoldbachRound20.SwitchedComposite
+
+open scoped BigOperators
+open Finset
+open GoldbachRound18.SeparatedTypeII
+noncomputable section
+attribute [local instance] Classical.propDecidable
+set_option maxHeartbeats 4000000
+
+def compositeAPConductor (k l h p : ℕ) : ℕ :=
+  p * Nat.lcm h (Nat.lcm k l / Nat.gcd (Nat.lcm k l) p)
+
+def physicalCompositeWindow (F : Parameters) (s z p : ℕ) (J : Finset ℕ) : Finset ℕ :=
+  (physicalQDomain F s z J).filter fun q => p ^ 2 ≤ switchedCandidate F s q
+
+theorem prime_coprime_primeProduct {p : ℕ} {s : Finset ℕ} (hp : p.Prime)
+    (hps : ∀ l ∈ s, l.Prime) (hn : p ∉ s) : Nat.Coprime p (primeProduct s) := by
+  apply Nat.coprime_prod_right_iff.mpr
+  intro l hl
+  apply hp.coprime_iff_not_dvd.mpr
+  intro hd
+  have he := (Nat.prime_dvd_prime_iff_eq hp (hps l hl)).mp hd
+  exact hn (he.symm ▸ hl)
+
+theorem primeProduct_squarefree {s : Finset ℕ} (hs : ∀ p ∈ s, p.Prime) :
+    Squarefree (primeProduct s) := by
+  induction s using Finset.induction_on with
+  | empty => simp [primeProduct]
+  | @insert p s hp ih =>
+    have hpp := hs p (mem_insert_self _ _)
+    have hsp : ∀ l ∈ s, l.Prime := fun l hl => hs l (mem_insert_of_mem hl)
+    rw [primeProduct, prod_insert hp]
+    exact (Nat.squarefree_mul (prime_coprime_primeProduct hpp hsp hp)).mpr
+      ⟨hpp.squarefree, ih hsp⟩
+
+theorem primeProduct_lcm {s u : Finset ℕ}
+    (hs : ∀ p ∈ s, p.Prime) (hu : ∀ p ∈ u, p.Prime) :
+    primeProduct (s ∪ u) = Nat.lcm (primeProduct s) (primeProduct u) := by
+  have hsu : ∀ p ∈ s ∪ u, p.Prime := by
+    intro p hp
+    rcases mem_union.mp hp with h | h
+    · exact hs p h
+    · exact hu p h
+  apply dvd_antisymm
+  · apply (product_dvd_iff hsu).mpr
+    intro p hp
+    rcases mem_union.mp hp with h | h
+    · exact dvd_trans (dvd_prod_of_mem (fun l : ℕ => l) h) (Nat.dvd_lcm_left _ _)
+    · exact dvd_trans (dvd_prod_of_mem (fun l : ℕ => l) h) (Nat.dvd_lcm_right _ _)
+  · apply Nat.lcm_dvd_iff.mpr
+    constructor
+    · exact (product_dvd_iff hs).mpr fun p hp => dvd_prod_of_mem (fun l : ℕ => l) (mem_union_left _ hp)
+    · exact (product_dvd_iff hu).mpr fun p hp => dvd_prod_of_mem (fun l : ℕ => l) (mem_union_right _ hp)
+
+theorem totient_primeProduct {s : Finset ℕ} (hs : ∀ p ∈ s, p.Prime) :
+    Nat.totient (primeProduct s) = ∏ p ∈ s, Nat.totient p := by
+  induction s using Finset.induction_on with
+  | empty => simp [primeProduct]
+  | @insert p s hp ih =>
+    have hpp := hs p (mem_insert_self _ _)
+    have hsp : ∀ l ∈ s, l.Prime := fun l hl => hs l (mem_insert_of_mem hl)
+    rw [primeProduct, prod_insert hp,
+      Nat.totient_mul (prime_coprime_primeProduct hpp hsp hp), prod_insert hp]
+    exact congrArg (fun x => Nat.totient p * x) (ih hsp)
+
+theorem totient_product_kernel {s : Finset ℕ} (hs : ∀ p ∈ s, p.Prime) :
+    GoldbachRound17.Selberg.gprod totientDensity s =
+      1 / (Nat.totient (primeProduct s) : ℝ) := by
+  unfold GoldbachRound17.Selberg.gprod totientDensity
+  rw [totient_primeProduct hs, Nat.cast_prod]
+  simp [one_div, prod_inv_distrib]
+
+theorem switchedPrincipal_totient_lcm (N t z : ℕ) :
+    switchedPrincipal N t z =
+      ∑ s ∈ (switchedPrimeSupport N t z).powerset,
+        ∑ u ∈ (switchedPrimeSupport N t z).powerset,
+          switchedLambda N t z s * switchedLambda N t z u /
+            (Nat.totient (Nat.lcm (primeProduct s) (primeProduct u)) : ℝ) := by
+  unfold switchedPrincipal GoldbachRound17.Selberg.principal
+  apply sum_congr rfl
+  intro s hs
+  apply sum_congr rfl
+  intro u hu
+  have hsp : ∀ p ∈ s, p.Prime := fun p hp => switchedSupport_prime ((mem_powerset.mp hs) hp)
+  have hup : ∀ p ∈ u, p.Prime := fun p hp => switchedSupport_prime ((mem_powerset.mp hu) hp)
+  have hsu : ∀ p ∈ s ∪ u, p.Prime := by
+    intro p hp
+    rcases mem_union.mp hp with h | h
+    · exact hsp p h
+    · exact hup p h
+  rw [totient_product_kernel hsu, primeProduct_lcm hsp hup]
+  ring
+
+theorem composite_conductor_dvd_iff {k l h p j : ℕ} (hp : p.Prime)
+    (hSF : Squarefree (Nat.lcm k l)) (hpj : p ∣ j) :
+    compositeAPConductor k l h p ∣ j ↔ k ∣ j ∧ l ∣ j ∧ h ∣ j / p := by
+  have hrec : p * (j / p) = j := by
+    simpa [Nat.mul_comm] using Nat.div_mul_cancel hpj
+  have hquot : Nat.lcm k l ∣ j ↔
+      Nat.lcm k l / Nat.gcd (Nat.lcm k l) p ∣ j / p := by
+    rw [← hrec]
+    exact GoldbachRound19.RankCalibration.remaining_face_modulus_iff hSF hp.ne_zero
+  have hcancel {H : ℕ} : p * H ∣ j ↔ H ∣ j / p := by
+    rw [← hrec]
+    exact Nat.mul_dvd_mul_iff_left hp.pos
+  rw [compositeAPConductor, hcancel, Nat.lcm_dvd_iff]
+  rw [← hquot, Nat.lcm_dvd_iff]
+  tauto
+
+theorem arithmetic_subset_conductor_dvd_iff {s u : Finset ℕ} {h p j : ℕ}
+    (hs : ∀ l ∈ s, l.Prime) (hu : ∀ l ∈ u, l.Prime)
+    (hp : p.Prime) (hpj : p ∣ j) :
+    compositeAPConductor (primeProduct s) (primeProduct u) h p ∣ j ↔
+      primeProduct s ∣ j ∧ primeProduct u ∣ j ∧ h ∣ j / p := by
+  apply composite_conductor_dvd_iff hp _ hpj
+  rw [← primeProduct_lcm hs hu]
+  apply primeProduct_squarefree
+  intro l hl
+  rcases mem_union.mp hl with he | he
+  · exact hs l he
+  · exact hu l he
+
+theorem arithmetic_subset_conductor_full_iff {s u : Finset ℕ} {h p j : ℕ}
+    (hs : ∀ l ∈ s, l.Prime) (hu : ∀ l ∈ u, l.Prime) (hp : p.Prime) :
+    compositeAPConductor (primeProduct s) (primeProduct u) h p ∣ j ↔
+      p ∣ j ∧ primeProduct s ∣ j ∧ primeProduct u ∣ j ∧ h ∣ j / p := by
+  constructor
+  · intro hd
+    have hpj : p ∣ j := dvd_trans (dvd_mul_right p _) hd
+    exact ⟨hpj, (arithmetic_subset_conductor_dvd_iff hs hu hp hpj).mp hd⟩
+  · rintro ⟨hpj, hd⟩
+    exact (arithmetic_subset_conductor_dvd_iff hs hu hp hpj).mpr hd
+
+theorem physical_candidate_AP_iff {F : Parameters} {s z q nu : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J) :
+    nu ∣ switchedCandidate F s q ↔ Nat.ModEq nu (switchedConductor F s * q) F.N := by
+  have hfront : switchedConductor F s * q ≤ F.N := by
+    have := physicalQDomain_front hq; omega
+  exact (Nat.modEq_iff_dvd' hfront).symm
+
+theorem physical_nonunit_conductor_zero {F : Parameters} {s z q nu : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J)
+    (hn : ¬ Nat.Coprime nu (switchedConductor F s * F.N)) :
+    ¬ nu ∣ switchedCandidate F s q := by
+  intro hd
+  exact hn ((physicalCandidate_unit_tN hq).coprime_dvd_left hd)
+
+theorem physical_nonunit_AP_impossible {F : Parameters} {s z q nu : ℕ} {J : Finset ℕ}
+    (hq : q ∈ physicalQDomain F s z J)
+    (hn : ¬ Nat.Coprime nu (switchedConductor F s * F.N)) :
+    ¬ Nat.ModEq nu (switchedConductor F s * q) F.N := by
+  exact fun h => physical_nonunit_conductor_zero hq hn ((physical_candidate_AP_iff hq).mpr h)
+
+theorem physicalCompositeWindow_cap {F : Parameters} {s z p q : ℕ} {J : Finset ℕ}
+    (ht : 0 < switchedConductor F s) (hq : q ∈ physicalQDomain F s z J) :
+    q ∈ physicalCompositeWindow F s z p J ↔
+      p ^ 2 ≤ F.N ∧ q ≤ (F.N - p ^ 2) / switchedConductor F s := by
+  have hfront : switchedConductor F s * q ≤ F.N := by
+    have := physicalQDomain_front hq; omega
+  rw [physicalCompositeWindow, mem_filter, and_iff_right hq]
+  rw [Nat.le_div_iff_mul_le ht]
+  unfold switchedCandidate
+  have hcomm : q * switchedConductor F s = switchedConductor F s * q := Nat.mul_comm _ _
+  omega
+
+theorem canonical_p0_totient_factor {N t z : ℕ} {s u : Finset ℕ}
+    (hN : N ≠ 0) (heven : Even N)
+    (hs : s ⊆ switchedPrimeSupport N t z) (hu : u ⊆ switchedPrimeSupport N t z) :
+    Nat.totient (GoldbachRound16.Anchor.leastMissingOddPrime N *
+      Nat.lcm (primeProduct s) (primeProduct u)) =
+      (GoldbachRound16.Anchor.leastMissingOddPrime N - 1) *
+        Nat.totient (Nat.lcm (primeProduct s) (primeProduct u)) := by
+  obtain ⟨hp, _, _, _⟩ := GoldbachRound16.Anchor.leastMissingOddPrime_spec hN heven
+  have hcop (r : Finset ℕ) (hr : r ⊆ switchedPrimeSupport N t z) :
+      Nat.Coprime (GoldbachRound16.Anchor.leastMissingOddPrime N) (primeProduct r) := by
+    apply Nat.coprime_prod_right_iff.mpr
+    intro l hl
+    have hunit := (mem_switchedPrimeSupport.mp (hr hl)).2.2
+    exact (hunit.coprime_dvd_right (dvd_mul_left _ _)).symm
+  have hcp : Nat.Coprime (GoldbachRound16.Anchor.leastMissingOddPrime N)
+      (Nat.lcm (primeProduct s) (primeProduct u)) :=
+    ((hcop s hs).mul_right (hcop u hu)).coprime_dvd_right (Nat.lcm_dvd_mul _ _)
+  rw [Nat.totient_mul hcp, Nat.totient_prime hp]
+
+theorem canonical_p0_dividing_t_empty {F : Parameters} {s z q : ℕ} {J : Finset ℕ}
+    (hN : F.N ≠ 0) (heven : Even F.N) (hq : q ∈ physicalQDomain F s z J)
+    (hpt : GoldbachRound16.Anchor.leastMissingOddPrime F.N ∣ switchedConductor F s) :
+    ¬ GoldbachRound16.Anchor.leastMissingOddPrime F.N ∣ switchedCandidate F s q := by
+  obtain ⟨hp, _, _, _⟩ := GoldbachRound16.Anchor.leastMissingOddPrime_spec hN heven
+  intro hd
+  have hunit := (physicalCandidate_unit_tN hq).coprime_dvd_left hd
+  exact (hp.coprime_iff_not_dvd.mp hunit) (dvd_mul_of_dvd_left hpt F.N)
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound20.SwitchedComposite.compositeAPConductor
+#print axioms GoldbachRound20.SwitchedComposite.physicalCompositeWindow
+#print axioms GoldbachRound20.SwitchedComposite.prime_coprime_primeProduct
+#print axioms GoldbachRound20.SwitchedComposite.primeProduct_squarefree
+#print axioms GoldbachRound20.SwitchedComposite.primeProduct_lcm
+#print axioms GoldbachRound20.SwitchedComposite.totient_primeProduct
+#print axioms GoldbachRound20.SwitchedComposite.totient_product_kernel
+#print axioms GoldbachRound20.SwitchedComposite.switchedPrincipal_totient_lcm
+#print axioms GoldbachRound20.SwitchedComposite.composite_conductor_dvd_iff
+#print axioms GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_dvd_iff
+#print axioms GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_full_iff
+#print axioms GoldbachRound20.SwitchedComposite.physical_candidate_AP_iff
+#print axioms GoldbachRound20.SwitchedComposite.physical_nonunit_conductor_zero
+#print axioms GoldbachRound20.SwitchedComposite.physical_nonunit_AP_impossible
+#print axioms GoldbachRound20.SwitchedComposite.physicalCompositeWindow_cap
+#print axioms GoldbachRound20.SwitchedComposite.canonical_p0_totient_factor
+#print axioms GoldbachRound20.SwitchedComposite.canonical_p0_dividing_t_empty
+
+end
+end GoldbachRound20.SwitchedComposite

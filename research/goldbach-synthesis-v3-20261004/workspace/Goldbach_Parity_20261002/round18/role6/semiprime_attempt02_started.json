@@ -1,0 +1,27 @@
+{
+  "state": "PRE_EXECUTION",
+  "attempt": 2,
+  "started_at_utc": "2026-10-02T21:50:54.267813+00:00",
+  "command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\semiprime_checks.py",
+    "--output-dir",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18"
+  ],
+  "sources_sha256": {
+    "semiprime_checks.py": "3c196ecbfe8d66a864bc421e0bf76bdfd95e9d7a2849a4c6c743133b5a04e23c",
+    "role6/semiprime_helpers.py": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a"
+  },
+  "launcher_sha256": "c774bdf29c6fd33697326b2363b3c4612b0aa025a974f68a906fc53125810ac7",
+  "protected_registry_sha256": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc",
+  "snapshots_sha256": {
+    "role6/semiprime_attempt02_semiprime_checks.py.txt": "3c196ecbfe8d66a864bc421e0bf76bdfd95e9d7a2849a4c6c743133b5a04e23c",
+    "role6/semiprime_attempt02_semiprime_helpers.py.txt": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/semiprime_attempt02_strict.py.txt": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a"
+  },
+  "snapshot_completed_at_utc": "2026-10-02T21:50:54.282537+00:00"
+}

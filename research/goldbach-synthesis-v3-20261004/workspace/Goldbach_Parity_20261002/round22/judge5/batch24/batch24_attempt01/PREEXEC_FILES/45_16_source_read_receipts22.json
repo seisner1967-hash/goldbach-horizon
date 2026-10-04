@@ -1,0 +1,182 @@
+{
+  "schema": "ROUND22_CONCRETE_NTT_ROOTS_SOURCE_READ_RECEIPTS",
+  "time_utc": "2026-10-03T19:59:40.3464791Z",
+  "actor": "/root/round22_concrete_roots_source",
+  "compiler_invocations": 0,
+  "tactic_probes": 0,
+  "numeric_evaluations": 0,
+  "metadata_hashing_only": true,
+  "new_sources_status": "SOURCE_ONLY_NOT_ELABORATED",
+  "old_modules_recompiled": 0,
+  "official_baseline": {
+    "declarations": 1328,
+    "modules": 79
+  },
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\ConcreteNTTRoots22.lean",
+      "sha256": "433903d458f6ccd43f366e92265d0778250484f4721fcd885ca0a01a771e8e6a",
+      "bytes": 8542,
+      "read_mode": "FULL",
+      "receipt": "51ac79",
+      "scope": "Entire new standalone source, no elaboration"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\ConcreteNTTA32Projection22.lean",
+      "sha256": "cefc07197945f1e9710895d4a01455861ae6db21365cc44dec206178e76af4c3",
+      "bytes": 3783,
+      "read_mode": "FULL",
+      "receipt": "e57952",
+      "scope": "Entire new bridge source, no elaboration"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\source_contract22.txt",
+      "sha256": "01ff6b0e86bd86882708ef9230e741abbb854ac837851139db312cbde00c07f5",
+      "bytes": 5125,
+      "read_mode": "FULL_CURRENT_CALL",
+      "receipt": "current metadata-only call",
+      "scope": "Entire final source contract below"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LucasPrimality.lean",
+      "sha256": "bdf50c285e9bc729fd422c13b263d111e681dfc2a3efbb01bf1fa3d0bade4e98",
+      "bytes": 3634,
+      "read_mode": "FULL",
+      "receipt": "022366",
+      "scope": "Lucas theorem signature and proof, no execution"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\NormNum\\Prime.lean",
+      "sha256": "c57dc4ef0e443253c67c3313a9a73097494ee692950875a9bd146d7c6d5626fd",
+      "bytes": 10812,
+      "read_mode": "FULL",
+      "receipt": "ef0c28",
+      "scope": "Primality tactic implementation and >25bit warning"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\NormNum\\PowMod.lean",
+      "sha256": "33a6baa78ef5b401f71720e95c2b40a06f87648aec301ef3b65056f2a415d505",
+      "bytes": 5166,
+      "read_mode": "FULL",
+      "receipt": "ca6f40",
+      "scope": "Proof producing fast modular exponentiation"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\ReduceModChar.lean",
+      "sha256": "94bca289f2358a49b87f3f13abd3f25f9b2ac03863998be5e379f750d108e86e",
+      "bytes": 15527,
+      "read_mode": "FULL",
+      "receipt": "9ee800",
+      "scope": "Tactic traversal and proof construction; no tactic invocation"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Tactic\\NormNum.lean",
+      "sha256": "fcebbd844471e1fc3acd5f85449dfabaa423d480d8f0c6a6db6db90266fdc082",
+      "bytes": 295,
+      "read_mode": "FULL",
+      "receipt": "27ce3e",
+      "scope": "Imports; explicit Prime import is required"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\OrderOfElement.lean",
+      "sha256": "8c867205fd4acb3993102279142f01248288b8498737c386e1d40ee3e3defa28",
+      "bytes": 52920,
+      "read_mode": "TARGETED",
+      "receipt": "19b89c;c0a171;27ce3e",
+      "scope": "Monoid scope, orderOf_eq_prime_pow and orderOf_eq_of_pow_and_pow_div_prime; broad truncated search is excluded"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\RootsOfUnity\\PrimitiveRoots.lean",
+      "sha256": "0309d8afe8ecafb3c492dfd79ef67b23dc3c08b4a444cb4e2dc37a3c3af03725",
+      "bytes": 35474,
+      "read_mode": "TARGETED",
+      "receipt": "19b89c;27ce3e",
+      "scope": "CommMonoid predicate and IsPrimitiveRoot.orderOf; broad truncated search is excluded"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Prime\\Basic.lean",
+      "sha256": "d5a97e943b0d5c1317e4ab5850797c221ef2469d881dcef646b24c22b34f736b",
+      "bytes": 11101,
+      "read_mode": "TARGETED",
+      "receipt": "19b89c",
+      "scope": "prime_eq_prime_of_dvd_pow"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Prime\\Defs.lean",
+      "sha256": "1306f8b5c6a28d80dc922565a2b13fbb6c5252b4485fe8fe0545ae0b887dacb2",
+      "bytes": 16135,
+      "read_mode": "TARGETED",
+      "receipt": "3e4ec2;c0a171",
+      "scope": "prime_dvd_prime_iff_eq and Prime.dvd_mul"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\ZMod\\Basic.lean",
+      "sha256": "c8f9e34ae594e563e42c4111b6e858e374596fa25ab66ea0b80d097b2121e3d5",
+      "bytes": 59123,
+      "read_mode": "TARGETED",
+      "receipt": "ce2dee;7fdd60",
+      "scope": "val_natCast, val_one_eq_one_mod, cast equality signatures"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\MathlibTest\\reduce_mod_char.lean",
+      "sha256": "8ea4ba6d4527b924832db6ad0ddf6b606d05ee042463c0d1b42f6e76141cf470",
+      "bytes": 4658,
+      "read_mode": "TARGETED",
+      "receipt": "624cd5",
+      "scope": "Existing examples of modular powers, not executed"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\finite_field_projection_source22\\FiniteFieldProjection22.lean",
+      "sha256": "2b1cc267ce780a6a45c039f4b4b82d5a4ad4541fa224d76413dec5432658a48a",
+      "bytes": 13279,
+      "read_mode": "FULL",
+      "receipt": "bf9a39",
+      "scope": "Entire unchanged source; independently compiled as batch19"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\adjudication.md",
+      "sha256": "af4bb865b233d921d895ca44b4dbfe265b3d6eac918ae311830c833ad860c5a1",
+      "bytes": 2996,
+      "read_mode": "FULL",
+      "receipt": "77e995",
+      "scope": "Independent PASS19 report; ROOT closure separately communicated"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\catalog.json",
+      "sha256": "c94a9c32c0281565cc26420be0b53cd7ef3b203a80bb5d0ed9e508e4a2af1b68",
+      "bytes": 9458,
+      "read_mode": "FULL",
+      "receipt": "77e995",
+      "scope": "Exact independent local dependency bindings"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\sources\\FiniteFieldProjection22.lean",
+      "sha256": "2b1cc267ce780a6a45c039f4b4b82d5a4ad4541fa224d76413dec5432658a48a",
+      "bytes": 13279,
+      "read_mode": "HASH_ONLY",
+      "receipt": "77e995",
+      "scope": "Byte equality with FULL-read original source"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\batch19_attempt01\\FiniteFieldProjection22.olean",
+      "sha256": "0304400125a93cfddace45bcc4428d835c8ee204817f88f156e9fd44ee856f4f",
+      "bytes": 603408,
+      "read_mode": "HASH_ONLY_BINARY",
+      "receipt": "77e995",
+      "scope": "Read-only independent olean; never recompiled"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\batch19_attempt01\\receipt.json",
+      "sha256": "1a645174f44f5545e6069139cd3d452f9eb6100f7946152c5cf50c56c8252d57",
+      "bytes": 7126,
+      "read_mode": "HASH_ONLY",
+      "receipt": "77e995",
+      "scope": "Actual independent receipt binding; no raw FULL receipt claim"
+    }
+  ],
+  "excluded_full_claims": [
+    "Truncated initial workspace search",
+    "Truncated broad primitive-root/order search",
+    "No raw FULL read of all lot17 dependencies or batch19 receipt"
+  ]
+}

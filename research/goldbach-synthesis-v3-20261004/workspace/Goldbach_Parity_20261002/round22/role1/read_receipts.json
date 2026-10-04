@@ -1,0 +1,92 @@
+{
+  "kind": "ROLE1_ROUND22_READ_RESEARCH_ONLY",
+  "created_utc": "2026-10-03T06:21:34.4706131Z",
+  "local_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\USER_DIRECTIVE.md",
+      "sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+      "bytes": 1919,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "1f8aef,4f2166"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\PROBE_BLOCK.md",
+      "sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+      "bytes": 2405,
+      "read_mode": "FULL",
+      "scope": "Entire file",
+      "actual_output_chunks": "1f8aef,05e2be"
+    },
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-ideate\\SKILL.md",
+      "sha256": "1b55bc6f7fc81c91a9a0627d897cb8bf9b19c580d5b1867650222db672503683",
+      "bytes": 5323,
+      "read_mode": "FULL",
+      "scope": "Entire file after own view",
+      "actual_output_chunks": "2a443a,764cd1,5634bb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\constraints_pre_ideate.txt",
+      "sha256": "327dd4e1609cd0d22289a80a3267faf80f72a02c9a2f7f921609a7c59afde75b",
+      "bytes": 28276,
+      "read_mode": "FULL",
+      "scope": "Own actual view saved, full separate read2c308c; later combined read268ed2 truncated and not FULL",
+      "actual_output_chunks": "2c308c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\constraints_repair_ideate.txt",
+      "sha256": "3cd93e7a92059725d5fc1be64ad9a5b7040c62cb5e44f5c67b20228005d56825",
+      "bytes": 15770,
+      "read_mode": "FULL",
+      "scope": "Own fresh actual view e85b2d; separate full read c9984f",
+      "actual_output_chunks": "e85b2d,c9984f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\JacobiTheta\\OneVariable.lean",
+      "sha256": "d5d864ed9ca3bc73d9a703666d62230817952bc356ae062f35af0d7f2d0879ff",
+      "bytes": 6916,
+      "read_mode": "FULL",
+      "scope": "Entire cache source",
+      "actual_output_chunks": "62741b,bd5024"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LSeries\\Dirichlet.lean",
+      "sha256": "a5d58ca2daca9cbe650318e25cc2b5b16307e5a4abf85df665450d8df48e4df0",
+      "bytes": 20336,
+      "read_mode": "TARGETED",
+      "scope": "Lines400-422, real vonMangoldt log derivative theorem; preceding broadsearch11924d truncated not FULL",
+      "actual_output_chunks": "822bd1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role3\\preparation_readonly.md",
+      "sha256": "f51ef4a25fbf420fb6897bf29364acb1e0edd6b5bed14362ca777abbb2b5359c",
+      "bytes": 8916,
+      "read_mode": "FULL",
+      "scope": "Historical own inventory read only to locate cache",
+      "actual_output_chunks": "28ec22"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role3\\preparation_read_manifest.json",
+      "sha256": "897384a68506df9c6dce40c1af55c3e12a5ca8bc1edd02c21e247019240062e3",
+      "bytes": 11034,
+      "read_mode": "FULL",
+      "scope": "Historical inventory metadata cache paths only, no API reimplementation",
+      "actual_output_chunks": "7337d7"
+    }
+  ],
+  "web_read_notes": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\preaudit_read_notes.md",
+  "web_content_sha_available": false,
+  "zero_Lean_invocations": true,
+  "zero_APIprobes": true,
+  "zero_math_experiments": true,
+  "zero_old_replays": true,
+  "search_no_hits": [
+    "40efa9 exit1 rg read search",
+    "d90807 exit1 rg read search"
+  ],
+  "search_truncation": "11924d broad LSeries rg was truncated, no FULL claim",
+  "new_math_gate_open": false,
+  "source_u_onset": "logN>=10^24 preserved",
+  "victory": false
+}

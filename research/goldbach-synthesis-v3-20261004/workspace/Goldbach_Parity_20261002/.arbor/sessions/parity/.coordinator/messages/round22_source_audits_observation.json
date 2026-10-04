@@ -1,0 +1,40 @@
+{
+  "schema": "ROUND22_DELEGATED_SOURCE_AUDITS_ROOT_OBSERVATION",
+  "time_utc": "2026-10-03T12:19:28.606041+00:00",
+  "status": "DELEGATED_SOURCE_PAPER_AUDITS_CLOSED_NO_NEW_PASS",
+  "bindings": {
+    "round22/judge5/C5_source_review22.md": "b2458e4edfd3a8b21de91a09d2d3ea4a0134ae764dc64d7c1d617cdd3b0a66e8",
+    "round22/judge5/error_contract_source_review22.md": "6ac1af9df6b555aa34dcb9714c6c43f8dd6345d804577409688ca7ef3557cccc",
+    "round22/role3/h1_psi/C5_checkpoint_after_psi05.md": "9119650574a298e229f620623d50c14d7e749d915305ffe0fa459a9dc6c889f7",
+    "round22/role3/h1_psi/GammaPsiReflection22.lean": "8e070c18a483ac71703f66b80dbcf4129f0f16ada8f2a933497655b3a7cdaa30",
+    "round22/role3/h1_psi/ContourChiPsi22.lean": "a90d536187fe342d01cf913a56c80a34e6846eb273a533bcdd843289f7d83248",
+    "round22/role3/h1_psi/ContourChiScaled22.lean": "d0aa03290fe806f9c84c0311a7e07a2fe0737148c9c1de7c80876118fb7a64d7",
+    "round22/role3/h1_psi/PsiKernelEnvelope22.lean": "949c6fc0d895003b522518e18ae89bdf6b5062448d5273f146685645afb72ef8",
+    "round22/role3/h1_psi/PsiKernelDomination22.lean": "80b85c14c7db79121f7c9cb003edf97a7d5e947f785ce8402f910ea93aad48bc",
+    "round22/role3/h1_psi/PsiMixedFubini22.lean": "d143b0fbdf795a1b400f737274a5eae5c8c5bba0c2e4ecaf145d86932df0b250",
+    "round22/role1_bridge/contour_formula22.md": "42faea33cdcd56c08f6fb593dbd42c5c293b8e72beb9c823db68e9576ac1edb7",
+    "round22/role1_bridge/numeric_precontract22.md": "02cba2d0b3478b5fe3bddb46c1df0862a7c6287452f19892b7cec8ba100db05b",
+    "round22/role4/h1_global_numeric/source_contract22.md": "cea359055df1966ece11887305856bed46c24bb6de62f1a052d2e54c0e7d6cec",
+    "round22/role4/h1_global_numeric/envelopes_source22.py": "f988d3edbcd28ce40698515f2e608d67a2615ab6bf777e4daf42f0820e8d5e67"
+  },
+  "root_FULL_reads": {
+    "C5_review": "317174",
+    "error_review": "fab0f9"
+  },
+  "C5_delegate_scope": "74 SOURCE declarations coherent on inspection; dependencies and Mellin/Arch/full quantitative contract still open",
+  "error_delegate_scope": "Fixed-parameter constants coherent on paper; domain restrictions and actual interval-output requirements recorded",
+  "domains_not_promoted": "Continuity Y>0 does not imply uniform W bound; W/C8 use Y>=1, primal tail monotonicity guard, Q integer>=2, R>=2",
+  "micro_contour_source": "Separate correction891454 under ROLE3; new Judge batch05 preparation only, no gate or compile yet",
+  "numeric_global_run": false,
+  "numeric_global_PASS": false,
+  "official_modules": 66,
+  "official_declarations": 1109,
+  "root_mathematical_judge_invocations": 0,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

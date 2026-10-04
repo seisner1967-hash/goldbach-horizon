@@ -1,0 +1,10 @@
+{
+  "authorization": "ROOT19_FORMAL4_COMPILE",
+  "root_authorized": true,
+  "canonical_new_numeric_pass_inspected": true,
+  "round": 19,
+  "node": "14.4",
+  "numeric_bindings": {"round19/<new result/receipt/metadata path>": "<actual SHA256>"},
+  "numeric_receipt_relative_path": "round19/<actual new canonical subprocess receipt with exit_code=0>",
+  "description": "Schema only. This file is not an authorization gate and must never be supplied to build.py. Root writes a concrete gate after reading the unique new canonical PASS."
+}

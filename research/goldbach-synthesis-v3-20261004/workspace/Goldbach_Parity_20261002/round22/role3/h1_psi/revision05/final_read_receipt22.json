@@ -1,0 +1,64 @@
+{
+  "schema": "round22.psi.final_read_receipt.v1",
+  "time": "2026-10-03T11:31:37.0272908Z",
+  "stage": "H1_PSI_BATCH05",
+  "role": "ROLE3",
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\source_final\\GammaPsiDuplication22.lean",
+      "read_scope": "FULL1f2e3a_BYTE_IDENTICAL_FROZEN_COPY",
+      "sha256": "0491177c6cfc1ef35b28796be404a3ca7975bac357cc6551b80d12333726812e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\run_psi_batch_once22.py",
+      "read_scope": "FULL342418",
+      "sha256": "78d41b24c5d680c3442bf9682bd49e1e822b734f1e7941d06c0c35da95c5d02c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\prepare_psi_metadata22.ps1",
+      "read_scope": "FULL357e27",
+      "sha256": "9f740c22a922d2524b2749515296e93a1f7a5cff6a220ac906798b9b81a055ed"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\preparation22.md",
+      "read_scope": "FULLcb4be8",
+      "sha256": "15e785f5349c765fc479735fe82a2581b75adc97bfb2c0f076168297be823da3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\read_scope22.md",
+      "read_scope": "FULLcb4be8",
+      "sha256": "86289f027d390079087721515c6722bd447d339babcf639a29c8e33ae5ffedc9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\failure04_diagnosis22.md",
+      "read_scope": "FULLcb4be8",
+      "sha256": "cd7801784ae1e408031e02babe48bdae070645f092f12545ada04b5cfd49db0f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\psi_source_manifest22.json",
+      "read_scope": "FULLafe494",
+      "sha256": "6f47f2e2c6e8af0d2b0bf3decf0f8b04eee057cd9988f633fccf7682f2d1bb40"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\psi_prepared_receipt22.json",
+      "read_scope": "FULLafe494",
+      "sha256": "e5cdcc415bf4d8cdc8e0af76e30b459bc73bd8b5b7760099d07d5f0b34e46273"
+    }
+  ],
+  "input_count": 84,
+  "all_prepared_inputs_unchanged": true,
+  "metadata_builder_start": "279b4b",
+  "metadata_builder_completion": "b5d5b3",
+  "metadata_builder_exit_code": 0,
+  "cache_scope": "3238_IMPORT_HEADERS_6476_BYTE_HASH_ONLY_NOT_FULL_MATH_READ",
+  "Core_Beta_Integral_actual_PASS_readonly": true,
+  "compiler_invocations": 0,
+  "Python_math_invocations": 0,
+  "API_probe_invocations": 0,
+  "gate_required": true,
+  "Duplication_paid": false,
+  "C5_paid": false,
+  "global_H1_paid": false,
+  "D_N_paid": false,
+  "victory": false
+}

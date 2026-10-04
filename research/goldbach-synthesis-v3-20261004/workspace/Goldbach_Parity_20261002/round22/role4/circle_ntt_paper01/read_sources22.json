@@ -1,0 +1,99 @@
+{
+  "schema": "ROUND22_CIRCLE_NTT_PAPER_SOURCE_READS",
+  "status": "PAPER_NOT_PREPARED",
+  "full_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\coefficient_projection_contract_source22\\coefficient_circle_contract22_revision02.md",
+      "output": "fdddd9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\coefficient_circle_paper_review22.md",
+      "output": "ee35d8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\exact_projection_contract22.md",
+      "output": "01fee3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\native_algorithm_spec22.md",
+      "output": "e5be13"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\projection_contract22_final.md",
+      "output": "34678a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\native_spec22_final.md",
+      "output": "0856b8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\fixed_parameter_log_model22.py",
+      "output": "84469a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\next_theorem_obligations22.md",
+      "output": "84469a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch13\\batch13_attempt01\\ThermalProjectionIdentity22.log",
+      "output": "3957bd"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch13\\batch13_attempt01\\receipt.json",
+      "output": "3957bd"
+    }
+  ],
+  "api_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\VonMangoldt.lean",
+      "scope": "TARGETED",
+      "lines": "61-83",
+      "output": "8d582d",
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Prime\\Defs.lean",
+      "scope": "TARGETED",
+      "lines": "271-285",
+      "output": "443f25",
+      "sha256": "1306f8b5c6a28d80dc922565a2b13fbb6c5252b4485fe8fe0545ae0b887dacb2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Basic.lean",
+      "scope": "TARGETED",
+      "lines": "120-127,256-261,274-280",
+      "output": "443f25",
+      "sha256": "4766375ac5a937f01afffced804fb17498f39e0dfbf0f6efe5f3023072d20ded"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Deriv.lean",
+      "scope": "TARGETED",
+      "lines": "256-304",
+      "output": "612085",
+      "sha256": "b21ae1d96f59f3c8edd6fce834940b4e070a91e8d38477e8ad2f07b3407a41af"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LucasPrimality.lean",
+      "scope": "TARGETED",
+      "lines": "1-135",
+      "output": "f1d2a8",
+      "sha256": "bdf50c285e9bc729fd422c13b263d111e681dfc2a3efbb01bf1fa3d0bade4e98"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.lean",
+      "scope": "TARGETED",
+      "lines": "215-230",
+      "output": "f1d2a8",
+      "sha256": "ddee3a9d818bbf22936e546887aa4facf02aa7f68924550e55d6f3ba42cac139"
+    }
+  ],
+  "API_FULL_import_graph_claimed": false,
+  "native_toolchain_inspected": false,
+  "model_imports": 0,
+  "model_function_calls": 0,
+  "Python_parser_runs": 0,
+  "numeric_runs": 0,
+  "Lean_invocations": 0,
+  "prepare_builder_runs": 0,
+  "independent_review_claimed": false
+}

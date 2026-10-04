@@ -1,0 +1,199 @@
+{
+  "LEAN_PATH": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "actual_exit_code": 0,
+  "audit_sha256": "6ecf1f28163623c7a691341aeb724eba8e3e4265e6555bf359346e84344f8726",
+  "authorization_sha256": "a321f065d36d8d18529d12356d2502e12a75e78fd87a59effeb6db562fba7c03",
+  "axiom_prints": 17,
+  "axioms": {
+    "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_dvd_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_full_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.canonical_p0_dividing_t_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.canonical_p0_totient_factor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.compositeAPConductor": [
+      "propext"
+    ],
+    "GoldbachRound20.SwitchedComposite.composite_conductor_dvd_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.physicalCompositeWindow": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.physicalCompositeWindow_cap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.physical_candidate_AP_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.physical_nonunit_AP_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.physical_nonunit_conductor_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.primeProduct_lcm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.primeProduct_squarefree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.prime_coprime_primeProduct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.switchedPrincipal_totient_lcm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.totient_primeProduct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.SwitchedComposite.totient_product_kernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "before_integrity": {
+    "all_frozen_bindings_unchanged": true,
+    "author_sources_or_oleans_reexecuted": false,
+    "binding_count": 3588
+  },
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\CompositeAPConductor.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\CompositeAPConductor.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit",
+  "declaration_specification": {
+    "declaration_counts": {
+      "def": 2,
+      "theorem": 15
+    },
+    "explicit_declarations": [
+      "GoldbachRound20.SwitchedComposite.compositeAPConductor",
+      "GoldbachRound20.SwitchedComposite.physicalCompositeWindow",
+      "GoldbachRound20.SwitchedComposite.prime_coprime_primeProduct",
+      "GoldbachRound20.SwitchedComposite.primeProduct_squarefree",
+      "GoldbachRound20.SwitchedComposite.primeProduct_lcm",
+      "GoldbachRound20.SwitchedComposite.totient_primeProduct",
+      "GoldbachRound20.SwitchedComposite.totient_product_kernel",
+      "GoldbachRound20.SwitchedComposite.switchedPrincipal_totient_lcm",
+      "GoldbachRound20.SwitchedComposite.composite_conductor_dvd_iff",
+      "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_dvd_iff",
+      "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_full_iff",
+      "GoldbachRound20.SwitchedComposite.physical_candidate_AP_iff",
+      "GoldbachRound20.SwitchedComposite.physical_nonunit_conductor_zero",
+      "GoldbachRound20.SwitchedComposite.physical_nonunit_AP_impossible",
+      "GoldbachRound20.SwitchedComposite.physicalCompositeWindow_cap",
+      "GoldbachRound20.SwitchedComposite.canonical_p0_totient_factor",
+      "GoldbachRound20.SwitchedComposite.canonical_p0_dividing_t_empty"
+    ],
+    "imports": [
+      "PhysicalCompositeSubtraction",
+      "RankCalibrationFace"
+    ],
+    "namespace": "GoldbachRound20.SwitchedComposite",
+    "requested_axiom_prints": [
+      "GoldbachRound20.SwitchedComposite.compositeAPConductor",
+      "GoldbachRound20.SwitchedComposite.physicalCompositeWindow",
+      "GoldbachRound20.SwitchedComposite.prime_coprime_primeProduct",
+      "GoldbachRound20.SwitchedComposite.primeProduct_squarefree",
+      "GoldbachRound20.SwitchedComposite.primeProduct_lcm",
+      "GoldbachRound20.SwitchedComposite.totient_primeProduct",
+      "GoldbachRound20.SwitchedComposite.totient_product_kernel",
+      "GoldbachRound20.SwitchedComposite.switchedPrincipal_totient_lcm",
+      "GoldbachRound20.SwitchedComposite.composite_conductor_dvd_iff",
+      "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_dvd_iff",
+      "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_full_iff",
+      "GoldbachRound20.SwitchedComposite.physical_candidate_AP_iff",
+      "GoldbachRound20.SwitchedComposite.physical_nonunit_conductor_zero",
+      "GoldbachRound20.SwitchedComposite.physical_nonunit_AP_impossible",
+      "GoldbachRound20.SwitchedComposite.physicalCompositeWindow_cap",
+      "GoldbachRound20.SwitchedComposite.canonical_p0_totient_factor",
+      "GoldbachRound20.SwitchedComposite.canonical_p0_dividing_t_empty"
+    ],
+    "source_sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c"
+  },
+  "finished_utc": "2026-10-03T04:44:27.315486+00:00",
+  "fresh_imports_sha256": {
+    "LeastFactorComposite": "99ac76f4392a5fb979d847e5f32859cafa41a5504c0908d6a5dd8971c5b31831",
+    "OddBonferroniArithmetic": "560f459dbe58119a29d850d62377ea97f084d546d48c60022de563b7a9d5e3a6",
+    "PhysicalCompositeSubtraction": "46a056e1a288f0b1863fabb4f14c882af9f69049f3c5af7076866508c91b8881",
+    "SwitchedSelbergWeight": "50ede2395b77d60045db5b56a1433f5abd3270628dcb7a1c00d8a245a3553576"
+  },
+  "input_manifest_sha256": "c37af3ac54572855e80a124f1f4f733997fbd61a6d7152be3205522e7b2c4305",
+  "launch_error": null,
+  "launcher_sha256": "858c657259a4dc844736ffe33e6fd4934168323d1ce64ca8ba08cdd170308299",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "module": "CompositeAPConductor",
+  "olean_sha256": "c085762bfeab487c98eccd4c7cc227a0d4eedbc8f403fc75dbb3018d49a1d072",
+  "output_olean_exists": true,
+  "outputs": {
+    "log": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\CompositeAPConductor.log",
+      "sha256": "8710fbed46ab7ada06798d4fa736b5a91baf5385382eb2ad9400b0cc1273ada5"
+    },
+    "stderr": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\CompositeAPConductor.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\CompositeAPConductor.stdout.bin",
+      "sha256": "8710fbed46ab7ada06798d4fa736b5a91baf5385382eb2ad9400b0cc1273ada5"
+    }
+  },
+  "phase": "FINISHED_AUDITED",
+  "post_integrity": {
+    "all_frozen_bindings_unchanged": true,
+    "author_sources_or_oleans_reexecuted": false,
+    "binding_count": 3588
+  },
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "role": 5,
+  "round": 20,
+  "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\CompositeAPConductor.lean",
+  "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\preexec\\round20__role3__CompositeAPConductor.lean.txt",
+  "source_capture_sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c",
+  "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role3\\CompositeAPConductor.lean",
+  "source_sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c",
+  "started_utc": "2026-10-03T04:44:10.965391+00:00",
+  "status": "PASS_FRESH_INDEPENDENT_LEAN",
+  "warning_lines": []
+}

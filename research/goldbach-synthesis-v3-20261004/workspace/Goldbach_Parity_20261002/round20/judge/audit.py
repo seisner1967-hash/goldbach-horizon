@@ -1,0 +1,360 @@
+"""Judge20: frozen metadata and sixteen fresh Lean modules, never producers.
+
+Only run_once.py under the explicit reviewed ROOT20_JUDGE_AUTHORIZED gate may
+invoke this file. The presence of this source does not authorize execution.
+No old Lean, sieve, arithmetic kernel, logarithm or numerical sign is replayed.
+"""
+import sys
+sys.dont_write_bytecode = True
+sys.set_int_max_str_digits(0)
+import hashlib
+import json
+import os
+import re
+import subprocess
+import traceback
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROUND = HERE.parent
+BASE = ROUND.parent
+TOKEN = "ROOT20_JUDGE_AUTHORIZED"
+ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
+ACTIVE_STAGE = "not_started"
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open("rb") as f:
+        for block in iter(lambda: f.read(1 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def load(path):
+    def invalid(value):
+        raise ValueError("Nonfinite JSON number: " + value)
+    return json.loads(Path(path).read_text(encoding="utf-8-sig"), parse_constant=invalid)
+
+
+def exclusive(path, value):
+    with Path(path).open("x", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2) + "\n")
+
+
+def emit(stage, **value):
+    print(json.dumps({"stage": stage, **value}, ensure_ascii=False), flush=True)
+
+
+def bound(relative):
+    p = (BASE / relative).resolve()
+    assert p.is_relative_to(BASE.resolve()) and p.is_file(), ("unsafe_or_missing", relative)
+    return p
+
+
+def verify(bindings):
+    for name, digest in bindings.items():
+        p = Path(name) if Path(name).is_absolute() else bound(name)
+        assert p.is_file() and sha(p) == digest, ("frozen_input_changed", name)
+
+
+def strip_comments(text):
+    """Preserve line structure and support nested Lean block comments."""
+    out, index, depth, string = [], 0, 0, False
+    while index < len(text):
+        ch, pair = text[index], text[index:index + 2]
+        if depth:
+            if pair == "/-":
+                depth += 1
+                out.extend("  ")
+                index += 2
+            elif pair == "-/":
+                depth -= 1
+                out.extend("  ")
+                index += 2
+            else:
+                out.append("\n" if ch == "\n" else " ")
+                index += 1
+        elif string:
+            out.append(ch)
+            index += 1
+            if ch == "\\" and index < len(text):
+                out.append(text[index])
+                index += 1
+            elif ch == '"':
+                string = False
+        elif pair == "/-":
+            depth = 1
+            out.extend("  ")
+            index += 2
+        elif pair == "--":
+            end = text.find("\n", index)
+            if end < 0:
+                end = len(text)
+            out.extend(" " * (end - index))
+            index = end
+        else:
+            out.append(ch)
+            string = ch == '"'
+            index += 1
+    assert depth == 0 and not string, "Unterminated comment or string"
+    return "".join(out)
+
+
+def declarations(source):
+    text = strip_comments(Path(source).read_text(encoding="utf-8-sig"))
+    assert not re.search(r"\b(?:sorry|admit|axiom|native_decide|sorryAx|trustMe|unsafe)\b", text)
+    assert not re.search(r"^\s*#(?:eval|reduce|run)\b", text, re.M)
+    namespaces = re.findall(r"^\s*namespace\s+(\S+)", text, re.M)
+    assert len(namespaces) == 1 and namespaces[0].startswith("GoldbachRound20.")
+    namespace = namespaces[0]
+    clean = re.sub(r"^\s*@\[[^\]]*\]\s*", "", text, flags=re.M)
+    ds = re.findall(r"^\s*(?:(?:private|protected|noncomputable)\s+)*"
+                    r"(theorem|lemma|def|structure|instance|abbrev|opaque|inductive|class)"
+                    r"\s+([A-Za-z_][\w\u0080-\uffff']*)", clean, re.M)
+    assert ds and all(kind in {"theorem", "lemma", "def", "structure"} for kind, _ in ds)
+    names = [namespace + "." + name for _, name in ds]
+    prints = re.findall(r"^\s*#print\s+axioms\s+(\S+)", clean, re.M)
+    qualified = [name if name.startswith("GoldbachRound20.") else namespace + "." + name for name in prints]
+    assert Counter(names) == Counter(qualified) and len(qualified) == len(set(qualified)), (
+        "explicit_declaration_axiom_coverage_mismatch", source)
+    imports = re.findall(r"^\s*import\s+(\S+)", clean, re.M)
+    assert imports
+    counts = Counter("theorem" if kind == "lemma" else kind for kind, _ in ds)
+    return {"namespace": namespace, "explicit_declarations": names,
+            "requested_axiom_prints": qualified, "imports": imports,
+            "declaration_counts": dict(counts), "source_sha256": sha(source)}
+
+
+def integrity(inputs):
+    groups = ("final_input_sha256", "historical_dependencies_sha256",
+              "new_module_sources_sha256", "numeric_frozen_sha256", "previous_artifacts_sha256",
+              "original_documents_sha256", "runtime_bindings_sha256")
+    for group in groups:
+        verify(inputs[group])
+    for name, digest in inputs["judge_code_sha256"].items():
+        assert sha(HERE / name) == digest, ("judge_code_changed", name)
+    assert sha(HERE / "preparation.json") == inputs["preparation_sha256"]
+    assert sha(HERE / "authorization.json") == inputs["authorization_sha256"]
+    for name, capture in inputs["PREEXEC_captures"].items():
+        assert sha(capture["original"]) == sha(capture["snapshot"]) == capture["sha256"], (
+            "preexec_capture_changed", name)
+    return {"all_frozen_bindings_unchanged": True,
+            "binding_count": sum(len(inputs[key]) for key in groups),
+            "author_sources_or_oleans_reexecuted": False}
+
+
+def author_attempts(inputs):
+    rows, totals = [], Counter()
+    for relative in inputs["author_build_ledgers"]:
+        ledger = load(bound(relative))
+        for item in ledger["attempts"]:
+            role3 = "actual_exit_code" in item
+            code = item["actual_exit_code"] if role3 else item["exit_code"]
+            log_name = item["log_path"] if role3 else item["log"]
+            p = Path(log_name) if Path(log_name).is_absolute() else bound(log_name)
+            assert sha(p) == item["log_sha256"]
+            capture_name = item.get("source_capture", item.get("source_snapshot", item.get("snapshot")))
+            capture_sha = item.get("source_capture_sha256", item.get("source_snapshot_sha256", item.get("snapshot_sha256")))
+            capture = Path(capture_name) if Path(capture_name).is_absolute() else bound(capture_name)
+            assert sha(capture) == capture_sha == item["source_sha256"]
+            text = p.read_text(encoding="utf-8", errors="replace")
+            errors = [line for line in text.splitlines() if "error:" in line]
+            warnings = [line for line in text.splitlines() if "warning:" in line]
+            assert isinstance(code, int)
+            if code == 0:
+                assert not errors and "sorryAx" not in text
+            rows.append({"ledger": relative, "attempt": item["attempt"], "actual_exit_code": code,
+                         "source_sha256": item["source_sha256"], "source_capture": str(capture),
+                         "log": str(p), "log_sha256": sha(p), "actual_error_lines": errors,
+                         "actual_warning_lines": warnings,
+                         "sorryAx_on_FAILED_uncredited_declarations": code != 0 and "sorryAx" in text,
+                         "analytic_parity_failure_inferred": False})
+            totals["actual_invocations"] += 1
+            totals["actual_PASS"] += code == 0
+            totals["actual_FAIL"] += code != 0
+    return {"records": rows, "totals": dict(totals),
+            "launcher_cp1252_incident_distinct_from_Lean": True,
+            "static_unexecuted_revisions_counted_as_FAIL": False}
+
+
+def stored_numeric(inputs):
+    """Read stored labels and actual receipts; never recompute an expression."""
+    result = {}
+    global_final = load(bound("round20/role6/final_receipt.json"))
+    assert global_final["global_final"] is True
+    assert global_final["both_actual_exit_codes"] == [0, 0]
+    assert global_final["routine_replays"] == 0 and global_final["victory"] is False
+    for bank, spec in inputs["numeric_banks"].items():
+        data = load(bound(spec["result"]))
+        assert data["status"] == spec["status"]
+        parameters = data["parameters_and_source_guards"] if bank == "friable" else data["parameters"]
+        assert parameters["N"] == 100000000
+        receipt = load(bound(spec["canonical_receipt"]))
+        assert receipt[spec["exit_field"]] == 0
+        assert sha(bound(spec["result"])) == receipt[spec["result_hash_field"]]
+        guards = parameters["source_guards"] if bank == "friable" else data["source_guards"]
+        result[bank] = {"status": data["status"], "N": parameters["N"],
+                        "result_sha256": sha(bound(spec["result"])),
+                        "actual_canonical_exit_code": 0,
+                        "stored_counts": data.get("counts", {}),
+                        "stored_source_guards": guards,
+                        "stored_logarithmic_signs_recomputed": False,
+                        "factorization_primality_sieve_D_W_or_Python_math_called": False,
+                        "stored_result_only_no_new_experiment": True}
+    return {"banks": result, "final_manifest_binding_count": len(inputs["numeric_frozen_sha256"]),
+            "numeric_producers_imported_or_executed": False, "source_onset_certified_by_finite_N": False}
+
+
+def parse_axioms(text, expected):
+    parsed = {}
+    for match in re.finditer(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", text, re.S):
+        assert match.group(1) not in parsed
+        parsed[match.group(1)] = [part.strip() for part in match.group(2).split(",") if part.strip()]
+    for match in re.finditer(r"'([^']+)' does not depend on any axioms", text):
+        assert match.group(1) not in parsed
+        parsed[match.group(1)] = []
+    assert set(parsed) == set(expected), "Incomplete or extra compiler axiom output"
+    assert all(set(values) <= ALLOWED_AXIOMS for values in parsed.values()), "Nonstandard axiom"
+    return parsed
+
+
+def compile_new(inputs):
+    build = HERE / "audit"
+    build.mkdir(exist_ok=False)
+    env = dict(os.environ)
+    folders = [str(build), *inputs["historical_library_dirs"], *inputs["cache_library_dirs"]]
+    excluded = {(ROUND / name).resolve() for name in ("role3", "role4", "role4_geometry")}
+    assert all(not any(Path(folder).resolve().is_relative_to(p) for p in excluded) for folder in folders)
+    env["LEAN_PATH"] = os.pathsep.join(folders)
+    env["PYTHONDONTWRITEBYTECODE"] = "1"
+    modules = {Path(relative).stem for relative in inputs["new_module_source_order"]}
+    completed, totals = [], Counter()
+    for relative in inputs["new_module_source_order"]:
+        original = bound(relative)
+        name = original.stem
+        source, out = build / original.name, build / (name + ".olean")
+        capture = Path(inputs["PREEXEC_captures"][relative]["snapshot"])
+        with source.open("xb") as f:
+            f.write(capture.read_bytes())
+        spec = declarations(source)
+        assert spec == inputs["module_specifications"][relative]
+        for dependency in spec["imports"]:
+            if dependency == "Mathlib" or dependency.startswith("Mathlib."):
+                continue
+            if dependency in modules:
+                previous = next((row for row in completed if row["module"] == dependency), None)
+                assert previous and sha(build / (dependency + ".olean")) == previous["olean_sha256"]
+            else:
+                historical = inputs["historical_module_sources"].get(dependency)
+                assert historical and sha(bound(historical["olean"])) == historical["olean_sha256"]
+        before = integrity(inputs)
+        command = [inputs["lean_executable"], "-o", str(out), str(source)]
+        started = {"round": 20, "role": 5, "phase": "PREEXEC", "module": name,
+                   "started_utc": now(), "command": command, "cwd": str(build),
+                   "LEAN_PATH": env["LEAN_PATH"], "source_original": str(original),
+                   "source": str(source), "source_sha256": sha(source), "source_capture": str(capture),
+                   "source_capture_sha256": sha(capture), "declaration_specification": spec,
+                   "before_integrity": before, "python_sha256": inputs["python_sha256"],
+                   "lean_sha256": inputs["lean_sha256"],
+                   "input_manifest_sha256": sha(HERE / "input_manifest.json"),
+                   "authorization_sha256": sha(HERE / "authorization.json"),
+                   "launcher_sha256": sha(HERE / "run_once.py"), "audit_sha256": sha(Path(__file__)),
+                   "fresh_imports_sha256": {row["module"]: row["olean_sha256"] for row in completed}}
+        exclusive(HERE / (name + "_started.json"), started)
+        emit("ACTUAL_FRESH_LEAN_STARTED", module=name, axiom_prints=len(spec["requested_axiom_prints"]))
+        launch_error = None
+        try:
+            run = subprocess.run(command, cwd=build, env=env, capture_output=True)
+            stdout, stderr, code = run.stdout, run.stderr, run.returncode
+        except BaseException as exc:
+            launch_error = repr(exc)
+            stdout, stderr, code = b"", (launch_error + "\n").encode("utf-8"), None
+        paths = {"stdout": HERE / (name + ".stdout.bin"), "stderr": HERE / (name + ".stderr.bin"),
+                 "log": HERE / (name + ".log")}
+        for key, data in (("stdout", stdout), ("stderr", stderr), ("log", stdout + stderr)):
+            with paths[key].open("xb") as f:
+                f.write(data)
+        row = dict(started, phase="FINISHED_RAW", finished_utc=now(), actual_exit_code=code,
+                   launch_error=launch_error, output_olean_exists=out.is_file(),
+                   outputs={key: {"path": str(path), "sha256": sha(path)} for key, path in paths.items()})
+        if out.is_file():
+            row["olean_sha256"] = sha(out)
+        exclusive(HERE / (name + "_actual_invocation.json"), row)
+        after = integrity(inputs)
+        assert original.read_bytes() == source.read_bytes() == capture.read_bytes()
+        for previous in completed:
+            assert sha(build / (previous["module"] + ".olean")) == previous["olean_sha256"]
+        exclusive(HERE / (name + "_post_integrity.json"), dict(after, module=name, source_copy_unchanged=True,
+                                                            all_prior_fresh_oleans_unchanged=True))
+        text = paths["log"].read_text(encoding="utf-8", errors="replace")
+        assert code == 0 and out.is_file() and "error:" not in text and "sorryAx" not in text, (
+            "actual_Lean_or_launch_failure", name, code, launch_error)
+        axioms = parse_axioms(text, spec["requested_axiom_prints"])
+        row.update(status="PASS_FRESH_INDEPENDENT_LEAN", phase="FINISHED_AUDITED", axioms=axioms,
+                   axiom_prints=len(axioms), post_integrity=after,
+                   warning_lines=[line for line in text.splitlines() if "warning:" in line])
+        exclusive(HERE / (name + "_receipt.json"), row)
+        completed.append(row)
+        totals.update(spec["declaration_counts"])
+        emit("FRESH_INDEPENDENT_LEAN_PASS", module=name, olean_sha256=row["olean_sha256"])
+    return {"modules": completed, "totals": {"modules": len(completed), "theorems": totals["theorem"],
+            "defs": totals["def"], "structures": totals["structure"],
+            "axiom_prints": sum(row["axiom_prints"] for row in completed)},
+            "author20_oleans_imported": False, "historical_module_recompiles": 0,
+            "compiler_version_probe_invocations": 0}
+
+
+def stage(name, function):
+    global ACTIVE_STAGE
+    ACTIVE_STAGE = name
+    emit("STAGE_STARTED", name=name)
+    value = function()
+    exclusive(HERE / (name + "_PASS.json"), value)
+    emit("STAGE_PASS", name=name, receipt_sha256=sha(HERE / (name + "_PASS.json")))
+    return value
+
+
+def main():
+    inputs = load(HERE / "input_manifest.json")
+    assert inputs["authorization"] == TOKEN and inputs["status"] == "FROZEN_PREEXEC_AFTER_ROOT_GATE"
+    before = stage("01_frozen_integrity", lambda: integrity(inputs))
+    numeric = stage("02_stored_numeric_only", lambda: stored_numeric(inputs))
+    authors = stage("03_actual_author_attempts", lambda: author_attempts(inputs))
+    lean = stage("04_fresh_independent_Lean", lambda: compile_new(inputs))
+    after = stage("05_final_frozen_integrity", lambda: integrity(inputs))
+    result = {"status": "PASS_INDEPENDENT_ROUND20_AUXILIARY_ONLY", "round": 20, "role": 5,
+              "finished_utc": now(), "input_manifest_sha256": sha(HERE / "input_manifest.json"),
+              "preservation_before": before, "preservation_after": after, "stored_numeric": numeric,
+              "author_attempts": authors, "independent_Lean": lean, "new_counts": lean["totals"],
+              "previous_counts": {"modules": 41, "theorems": 692},
+              "cumulative_counts": {"modules": 41 + lean["totals"]["modules"],
+                                    "theorems": 692 + lean["totals"]["theorems"]},
+              "semantic_obligations": inputs["semantic_obligations"], "source_onset_logN": "10^24",
+              "source_friable_exceptional_cost_bound": "N/(8192*logN*loglogN)",
+              "source_guard_applied_to_finite_bank": False, "score": 0, "victory": False,
+              "parity_obstacle_bypass_proved": False, "whole_D_N_target_proved": False,
+              "F0_minus_F1_nonfriable_reciprocal_paid": False,
+              "full_fixed_D_N_ledger_paid": False, "old_producer_Lean_PDF_or_math_replayed": False}
+    exclusive(HERE / "audit_receipt.json", result)
+    emit("ACTUAL_JUDGE20_FINISHED", status=result["status"], new_counts=result["new_counts"], victory=False)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except BaseException as exc:
+        failure = {"status": "FAILED_ACTUAL_JUDGE20_AUDIT", "failed_stage": ACTIVE_STAGE,
+                   "finished_utc": now(), "error": repr(exc), "traceback": traceback.format_exc(),
+                   "automatic_retry": False, "source_and_logs_preserved": True,
+                   "analytic_parity_failure_inferred": False, "victory": False}
+        if not (HERE / "audit_receipt.json").exists():
+            exclusive(HERE / "audit_receipt.json", failure)
+        traceback.print_exc()
+        sys.exit(1)

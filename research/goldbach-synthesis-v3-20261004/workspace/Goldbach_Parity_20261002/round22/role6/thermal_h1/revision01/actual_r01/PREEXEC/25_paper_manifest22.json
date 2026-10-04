@@ -1,0 +1,104 @@
+{
+  "schema": "ROUND22_ROLE1_BRIDGE_PAPER_FROZEN",
+  "created_utc": "2026-10-03T08:44:37.6032458Z",
+  "status": "SOURCE_PAPER_ONLY_INDEPENDENT_NUMERIC_PRECRITIQUE_REQUIRED",
+  "artifacts": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\contour_formula22.md",
+      "sha256": "42faea33cdcd56c08f6fb593dbd42c5c293b8e72beb9c823db68e9576ac1edb7",
+      "bytes": 9429
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\numeric_precontract22.md",
+      "sha256": "02cba2d0b3478b5fe3bddb46c1df0862a7c6287452f19892b7cec8ba100db05b",
+      "bytes": 9467
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\ideation_probe22.md",
+      "sha256": "86563133930358a0acbb2098d97a8d8ddb761c476a227adf13eba139ee53293d",
+      "bytes": 5506
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\lean_obligations22.md",
+      "sha256": "e1db30108c3ed9a65490a12f7f9a8394407db31c868085e1ee0522baa5da33f0",
+      "bytes": 3779
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\bridge_report22.md",
+      "sha256": "adebad1a88716c9e736633e584ca82c97e3a6912158e8672c847c5bbbd471cae",
+      "bytes": 2591
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\read_receipts22.json",
+      "sha256": "c580eb276f1061b627d3ff450948b79bef2ba93cdf4fc7df53c9875daee51f3b",
+      "bytes": 3507
+    }
+  ],
+  "inputs": [
+    {
+      "path": "../USER_DIRECTIVE.md",
+      "sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+      "scope": "FULL",
+      "capture": "ca31b4"
+    },
+    {
+      "path": "../PROBE_BLOCK.md",
+      "sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+      "scope": "FULL",
+      "capture": "ca31b4"
+    },
+    {
+      "path": "../agent1_continuous.md",
+      "sha256": "a2cbd2cc8664e6387c3117f9fdb7aaba4d0638a65ce5de0df60587863d19a2d4",
+      "scope": "FULL",
+      "capture": "3dd265"
+    },
+    {
+      "path": "../role1/real_trace_annex.md",
+      "sha256": "4736c056f047c84f4ebe38ed4f60b1a9c473481006dcee8341c168afdd9ea2b5",
+      "scope": "FULL",
+      "capture": "397c18"
+    },
+    {
+      "path": "../agent2_operator.md",
+      "sha256": "be2a121cd14fe3513c9ee8ae28458a8a03f38957599d4a9bbba4e2174dbdcafe",
+      "scope": "FULL",
+      "capture": "a15044"
+    },
+    {
+      "path": "../role2/uniform_formula.md",
+      "sha256": "720b8b2363c222321e7f50752591a8a5d0e992c119bfc3b4f445b9c80b7b7825",
+      "scope": "FULL",
+      "capture": "1c2f76"
+    },
+    {
+      "path": "../role6/weil_gamma_interface22.md",
+      "sha256": "6c001e61c6f7a3e544982aec4ca40162aa6669b47335495f22127cef9db8a860",
+      "scope": "FULL",
+      "capture": "ca31b4"
+    },
+    {
+      "path": "../judge5/batch01_adjudication.json",
+      "sha256": "43a3d84f51763ffd30c5a51ccf4bfb3c4307f3068d1b95aaa7afa1c9d2affba5",
+      "scope": "FULL_CORRECTED",
+      "capture": "c33c04",
+      "first_truncated_capture": "ec8f02"
+    }
+  ],
+  "final_FULL_read_captures": [
+    "3828dd",
+    "d8cd23",
+    "5e6ea8",
+    "2e5d18",
+    "41bf24",
+    "bc34f2"
+  ],
+  "mathematical_numeric_invocations": 0,
+  "lean_invocations": 0,
+  "tree_mutations": 0,
+  "historical_archive_mutations": 0,
+  "gate_created": false,
+  "actual_H1_certified": false,
+  "D_N_bound": false,
+  "victory": false
+}

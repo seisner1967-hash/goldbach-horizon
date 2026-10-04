@@ -1,0 +1,75 @@
+{
+  "status": "ROOT_READ_ACTUAL_ROLE3_FACE_PASS_AFTER_TWO_FAILS_PRICE_FIRST_FAIL",
+  "observed_utc": "2026-10-03T01:03:43.386880+00:00",
+  "actual_records": [
+    {
+      "attempt": 1,
+      "module": "RankCalibrationFace",
+      "exit_code": 1,
+      "source_sha256": "a6ee60bcc04b0e4c12f2e7a50624b9687daecb0185e9fcaca4656600466efa6c",
+      "log_sha256": "9554e10bee9ba615aec909a114ad73839f28278ce646d8ff3dc1423b99b34e45",
+      "started_at_utc": "2026-10-03T00:59:17.137329+00:00",
+      "finished_at_utc": "2026-10-03T00:59:32.888011+00:00",
+      "actual_error_headers": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationFace.lean:99:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationFace.lean:179:60: error: tactic 'decide' failed for proposition"
+      ],
+      "actual_warning_headers": [],
+      "failed_internal_sorryAx_in_log": true
+    },
+    {
+      "attempt": 2,
+      "module": "RankCalibrationFace",
+      "exit_code": 1,
+      "source_sha256": "8b4d7eb4eb20ef81af04d733c076dcb0708ff22dae6ec5ea1e170d14ae84e193",
+      "log_sha256": "5a2b0e0e4c548b7c7a58ccf17564813b4662077db70049d1d520e4cc172e1519",
+      "started_at_utc": "2026-10-03T01:00:18.982611+00:00",
+      "finished_at_utc": "2026-10-03T01:00:35.220488+00:00",
+      "actual_error_headers": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationFace.lean:104:64: error: unsolved goals"
+      ],
+      "actual_warning_headers": [],
+      "failed_internal_sorryAx_in_log": true
+    },
+    {
+      "attempt": 3,
+      "module": "RankCalibrationFace",
+      "exit_code": 0,
+      "source_sha256": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+      "log_sha256": "0685518b5848b29042201c5da404f019255e208b44f7cb1fb6c3abc4c0108379",
+      "started_at_utc": "2026-10-03T01:00:49.019498+00:00",
+      "finished_at_utc": "2026-10-03T01:01:05.154440+00:00",
+      "actual_error_headers": [],
+      "actual_warning_headers": [],
+      "failed_internal_sorryAx_in_log": false
+    },
+    {
+      "attempt": 4,
+      "module": "RankCalibrationPrice",
+      "exit_code": 1,
+      "source_sha256": "098c90767627763481266d5cbe31e532aebeab86a138b04f46522cbf939292e8",
+      "log_sha256": "7c6b4d90fa668ee466f79c4ac7774f54e2dbd7f6bb01584eb3360c84c7e054a3",
+      "started_at_utc": "2026-10-03T01:01:16.887872+00:00",
+      "finished_at_utc": "2026-10-03T01:01:52.603875+00:00",
+      "actual_error_headers": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationPrice.lean:213:2: error: unsolved goals",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationPrice.lean:226:30: error: mod_cast has type"
+      ],
+      "actual_warning_headers": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationPrice.lean:151:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationPrice.lean:154:45: warning: unused variable `hu`",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationPrice.lean:188:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role3\\RankCalibrationPrice.lean:243:25: warning: try 'simp' instead of 'simpa'"
+      ],
+      "failed_internal_sorryAx_in_log": true
+    }
+  ],
+  "face_FINAL_source_FULL_root_read": true,
+  "author_PASS_observed": 1,
+  "author_FAIL_observed": 3,
+  "all_actual_logs_FULL_root_read": true,
+  "no_analytic_parity_failure_inferred": true,
+  "root_compiler_or_math_producer_invocations": 0,
+  "official_Judge_counts_modified": false,
+  "victory": false
+}

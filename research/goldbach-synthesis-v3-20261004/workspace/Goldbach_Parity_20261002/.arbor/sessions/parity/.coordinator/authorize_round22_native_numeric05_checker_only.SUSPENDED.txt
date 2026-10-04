@@ -1,0 +1,16 @@
+SOURCE helper authorize_round22_native_numeric05_checker_only.py was drafted only.
+It has NEVER been invoked and no numeric05 authorization file was created.
+Do not execute this helper for the old SOURCE05 consumer.
+
+Independent ROLE4 review found a SOURCE contract mismatch: the parent checks
+the child deadline before hashes/logs/START_REQUEST; the fixed backend checks
+only before Resume after possible suspended creation. The old promise of no
+child creation after the deadline therefore is not supported as written.
+
+ROOT selected a distinct revised SOURCE parent with an immediate final check
+before backend entry and a contract scoped to that check plus pre-Resume
+enforcement, without an atomic OS-creation-time promise. Old SOURCE05 and the
+old engineering contract remain immutable. No PREP05, gate or native05 exists.
+A fresh SOURCE review, metadata preparation and matching ROOT gate are still
+required. BUILD04 images and backend88d857ce remain unchanged.
+This is an operational SOURCE correction, not a mathematical counterexample.

@@ -1,0 +1,46 @@
+{
+  "schema": "ROUND22_BUILD_ONLY04_SOURCE_READ_RECEIPTS",
+  "kind": "SOURCE_ONLY_NOT_IMPORTED_PARSED_BUILT",
+  "old_backend_FULL": "6658b4",
+  "old_parent_FULL": "2d9b6f",
+  "real_START_FIN_receipt_FULL": "b682de",
+  "old_plan_contract_policy_FULL": "34260d",
+  "old_source_handoff_FULL": "e2e6dc",
+  "new_backend_FULL": "0946a5",
+  "new_parent_FULL_before_one_extra_output_guard": "bfa694",
+  "new_parent_final_FULL": "8e212d",
+  "new_parent_final_read_pending": false,
+  "revision_conservation_FULL": "1467de",
+  "revision_metadata_control_and_source_rehash": "8e212d",
+  "new_plan_contract_FULL": "a81ca6",
+  "policy": "BYTE_IDENTICAL_TO_03_FULL34260d",
+  "excluded_FULL": [
+    "ceb086 aggregated truncated",
+    "ea5dff truncated plan/contract"
+  ],
+  "primary_API_sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--1300-1699-",
+      "scope": "TARGETED error1314, not rawFULL1428lines"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_limit_information",
+      "scope": "TARGETED flags and memory/working-set distinction"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-setprocessworkingsetsizeex",
+      "scope": "TARGETED privilege and hardworking-set docs"
+    }
+  ],
+  "no_token_or_flag_isolation_experiment": true,
+  "exact_1314_Job_privilege_name_not_observed": true,
+  "backend04_working_set_APIs_removed": true,
+  "source_scope_only": true,
+  "candidate_source_parser_executions": 0,
+  "control_JSON_metadata_only": true,
+  "new_compiler_invocations": 0,
+  "new_API_invocations": 0,
+  "build03_attempt_changed": false,
+  "BORD_point": "role4/angular_mellin_border_source01/BORD_workpoint22.md DRAFT suspended,0Leanwritten",
+  "DN_WIN": false
+}

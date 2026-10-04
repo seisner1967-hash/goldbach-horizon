@@ -1,0 +1,37 @@
+{
+  "status": "READY_FOR_ROOT_SOURCE_REVIEW_NO_LEAN_EXECUTION",
+  "node_id": "13.11",
+  "observed_utc": "2026-10-03 00:18:04 UTC",
+  "actual_lean_invocations": 0,
+  "actual_numeric_producer_invocations": 0,
+  "old_lean_rebuilds": 0,
+  "victory": false,
+  "written_modules": [
+    {"module": "RankCalibrationFace", "sha256": "a6ee60bcc04b0e4c12f2e7a50624b9687daecb0185e9fcaca4656600466efa6c", "bytes": 11031, "theorems": 19, "definitions": 3, "axiom_prints": 22},
+    {"module": "RankCalibrationPrice", "sha256": "098c90767627763481266d5cbe31e532aebeab86a138b04f46522cbf939292e8", "bytes": 14598, "theorems": 24, "definitions": 7, "axiom_prints": 31},
+    {"module": "RankCalibrationArithmetic", "sha256": "722ea590992c9b5a3664ec81218ec891195830eee9d7dc452db122eed772a983", "bytes": 10421, "theorems": 16, "definitions": 3, "axiom_prints": 19},
+    {"module": "RankCalibrationUnitLoss", "sha256": "f18416c39b4ec0ef3e4ef159baefe61056d160ea3f0b9f19d04ef9e3b74ec5ef", "bytes": 9018, "theorems": 8, "definitions": 1, "axiom_prints": 9},
+    {"module": "RankCalibrationEuler", "sha256": "6f00691c13c21fd77fe5caf4c11709d960922f9448e23385a75367bfdb23c6eb", "bytes": 9997, "theorems": 12, "definitions": 5, "axiom_prints": 17},
+    {"module": "RankCalibrationEstimator", "sha256": "446ab2130a8741b28eaea860c13aaf1465887e627bfeacb0245833aeba179e2d", "bytes": 8663, "theorems": 6, "definitions": 4, "axiom_prints": 10}
+  ],
+  "written_totals_not_compiler_results": {"modules": 6, "theorems": 85, "definitions": 23, "axiom_prints": 108},
+  "launcher_sha256": "f7391bae3c2baad30f21bcc1798bf5417af2c7637644d1da5ada3336632ab588",
+  "authorization_schema": {
+    "compile_authorization_token": "ROOT19_FORMAL3_COMPILE",
+    "formal3_candidate_compilation_authorized": true,
+    "canonical_numeric_pass": true,
+    "actual_identity_false": false,
+    "actual_numeric_exit_code": 0,
+    "authorized_new_modules": "List of the six module names above, without .lean",
+    "checked_inputs_sha256": "Nonempty map of project-relative numeric receipt/output paths to root-verified SHA256"
+  },
+  "next_action": "Wait for root numeric PASS review and explicit compile gate; no producer/probe/Lean authorized by this preparation file",
+  "open": [
+    "K14 actual full local unit-density/coefficient ratio",
+    "Bijection of divisor theta sums to ordinary AP endpoint sums with exceptions p dividing N",
+    "Actual source bound K18, all floors and uniform weighted aggregation",
+    "Bombieri-Vinogradov constants and additional onset at source u>=10^24",
+    "Gamma_rank and its DD/DM/MD/MM terms",
+    "All parent comparisons, noncanonical families, capacities and full fixed ledger"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "round": 20,
+  "actual_time_utc": "2026-10-03T02:42:17.302637+00:00",
+  "status": "PRELIMINARY_READ_ONLY_NOT_EXECUTION_AUTHORIZATION",
+  "observations": [
+    {
+      "path": "round20/role6_composite/outward.py",
+      "full_root_read_chunk": "dc8689",
+      "bytes_observed": 6527,
+      "sha256_observed_now": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+      "earlier_postread_sha256": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+      "same_as_earlier_postread_hash": true,
+      "source_mutable_before_first_execution": true
+    },
+    {
+      "path": "round20/role6_friable/core.py",
+      "full_root_read_chunk": "fd3028",
+      "bytes_observed": 11951,
+      "sha256_observed_now": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+      "earlier_postread_sha256": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+      "same_as_earlier_postread_hash": true,
+      "source_mutable_before_first_execution": true
+    },
+    {
+      "path": "round20/role6_friable/annexes.py",
+      "full_root_read_chunk": "24e1dc",
+      "bytes_observed": 8427,
+      "sha256_observed_now": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+      "earlier_postread_sha256": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+      "same_as_earlier_postread_hash": true,
+      "source_mutable_before_first_execution": true
+    },
+    {
+      "path": "round20/role3/SwitchedIncidenceEstimator.lean",
+      "full_root_read_chunk": "79016e",
+      "bytes_observed": 20061,
+      "sha256_observed_now": "ab1de7a846cab542b94b891f68671760492bd44ae19366f09862f72013f65301",
+      "earlier_postread_sha256": "ab1de7a846cab542b94b891f68671760492bd44ae19366f09862f72013f65301",
+      "same_as_earlier_postread_hash": true,
+      "source_mutable_before_first_execution": true
+    },
+    {
+      "path": "round20/role4/FriablePrimeHarmonic.lean",
+      "full_root_read_chunk": "332e29",
+      "bytes_observed": 12735,
+      "sha256_observed_now": "6b2920aba4d5f43a5990e415c7fd59e9407c1ef7ec29b49c5b2678377217caaf",
+      "earlier_postread_sha256": "6b2920aba4d5f43a5990e415c7fd59e9407c1ef7ec29b49c5b2678377217caaf",
+      "same_as_earlier_postread_hash": true,
+      "source_mutable_before_first_execution": true
+    },
+    {
+      "path": "round20/role3/PhysicalCompositeSubtraction.lean",
+      "full_root_read_chunk": "f4060c",
+      "bytes_observed": 7221,
+      "sha256_observed_now": "c1f96aedc246055a1d5176708762537074a55189b74475445914889e58b0c60d",
+      "earlier_postread_sha256": null,
+      "same_as_earlier_postread_hash": null,
+      "source_mutable_before_first_execution": true
+    },
+    {
+      "path": "round20/role4/FriablePhysicalPrefix.lean",
+      "full_root_read_chunk": "5de128",
+      "bytes_observed": 6644,
+      "sha256_observed_now": "f13c30bd13f314bd1921054619a7ec7101c8496d228157da49348f4bfa7fa36f",
+      "earlier_postread_sha256": null,
+      "same_as_earlier_postread_hash": null,
+      "source_mutable_before_first_execution": true
+    }
+  ],
+  "root_mathematical_execution": false,
+  "root_lean_execution": false,
+  "root_numeric_execution": false,
+  "compiler_gates": "CLOSED",
+  "numeric_gates": "CLOSED",
+  "victory": false
+}

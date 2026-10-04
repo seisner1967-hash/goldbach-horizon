@@ -1,0 +1,100 @@
+{
+  "schema": "ROUND22_ROLE6_BUILD_ONLY03_ACTUAL_CONTROL_FAILURE_CLOSURE",
+  "status": "WIN32_CONTROL_FAILED_BEFORE_COMPILER_CREATION",
+  "actor": "ROLE6",
+  "parent_invocations": 1,
+  "parent_chunk": "794fb1",
+  "parent_session": 7946,
+  "parent_completion_chunk": "a6c2aa",
+  "parent_exit_code": 1,
+  "effective_command": "& 'C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -I -S -B -X utf8 'D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\run_build_only_once22.py'",
+  "workdir": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03",
+  "gate_sha256": "3403cfe06753bf25c90aeec3863ed58a99d8234582c75f993967594e65ecd081",
+  "gate_read_scope": "FULLd71329",
+  "START_REQUEST_UTC": "2026-10-03T19:39:17.228505+00:00",
+  "control_FIN_UTC": "2026-10-03T19:39:17.247815+00:00",
+  "parent_FIN_UTC": "2026-10-03T19:39:26.850630+00:00",
+  "observed_error": "OSError:[Errno 1314] SetInformationJobObject",
+  "pid": 0,
+  "created_suspended": false,
+  "resumed": false,
+  "compiler_exit_code": null,
+  "compiler_processes_created": 0,
+  "observed_job_process_count": 0,
+  "job_empty_confirmed": true,
+  "producer_start_requests": 1,
+  "checker_start_requests": 0,
+  "checker_not_invoked": true,
+  "retries": 0,
+  "produced_binary_files": 0,
+  "produced_binary_invocations": 0,
+  "build_receipt_exists": false,
+  "source_and_control_logs_read": "FULL8c7e9f;FULL07b457",
+  "output_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\POST.json",
+      "bytes": 124,
+      "sha256": "75835f8730d0b4e9846e25b50f5f23c04e53d9cab74bf5156489ecc766b3e691",
+      "read_scope": "FULL8c7e9f_OR_FULL07b457"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\PRE.json",
+      "bytes": 14264,
+      "sha256": "7524a877a7986a62d561b20e797b1399163fdcbf9fe15a8af95225208cf88203",
+      "read_scope": "FULL8c7e9f_OR_FULL07b457"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\producer_build_FIN.json",
+      "bytes": 772,
+      "sha256": "c79a47ce71663e1049efddb6325c6261f2c238ee3a7a6a678991dedfdad04172",
+      "read_scope": "FULL8c7e9f_OR_FULL07b457"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\producer_build_START_REQUEST.json",
+      "bytes": 1230,
+      "sha256": "2974059c348230ed97490c9936b9b546c58ff9e88bc47fd9469801e27130342e",
+      "read_scope": "FULL8c7e9f_OR_FULL07b457"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\producer_build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "read_scope": "FULL8c7e9f_OR_FULL07b457"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\producer_build.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "read_scope": "FULL8c7e9f_OR_FULL07b457"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\receipt.json",
+      "bytes": 2862,
+      "sha256": "15e8e900446329515c1e30cd00ee03f73bd52715b28a3338dcfcb5741fd4f2c9",
+      "read_scope": "FULL8c7e9f_OR_FULL07b457"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_build_metadata03\\build_parent_console22.log",
+      "bytes": 31,
+      "sha256": "97ef3c7dae1fde915d884953fe1f66e653ab92d87148495fa8e7005fe293acb9",
+      "read_scope": "FULL8c7e9f"
+    }
+  ],
+  "physical_POST": {
+    "manifest_bindings": 6358,
+    "captures": 30,
+    "originals_and_copies_SHA_verified": true,
+    "archives": 3089,
+    "all_input_sizes_SHA_verified": true,
+    "all_archives_SHA_verified": true,
+    "metadata_only_no_candidate_reevaluation": true
+  },
+  "technical_failure_not_math_refutation": true,
+  "auto_approval_rejection": false,
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "numeric_authorization": false,
+  "coefficient_N_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

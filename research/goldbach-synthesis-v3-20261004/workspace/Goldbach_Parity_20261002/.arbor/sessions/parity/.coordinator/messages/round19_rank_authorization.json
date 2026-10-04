@@ -1,0 +1,102 @@
+{
+  "status": "ROOT19_RANK_DISTINCT_UNIQUE_CANONICAL_AUTHORIZATION_AFTER_FULL_READ",
+  "authorized_at_utc": "2026-10-03T00:40:15.407815+00:00",
+  "round": 19,
+  "node": "13.11",
+  "authorization": "ROOT19_RANK_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+  "exact_authorized_command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_rank\\run_rank_once.py",
+    "--root-authorization",
+    "ROOT19_RANK_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+    "--source-sha256",
+    "0cbaa0391cd2b9e82cae99b5f6a88c755bde2da946bcebb988874dfd9acd33d9",
+    "--launcher-sha256",
+    "503b22b09069147c9127ca574b6d75bfdb4dfe83698f4722aaa391daa1dc4254",
+    "--preparation-sha256",
+    "082322fab71923e1ed036c1d480f1700106a62ca7eb2783c41abd7d024be27a0"
+  ],
+  "fully_read_current_owned_sources_sha256": {
+    "allrang_checks.py": "0cbaa0391cd2b9e82cae99b5f6a88c755bde2da946bcebb988874dfd9acd33d9",
+    "role6_rank/strict_rank.py": "c651e6e20e7df683d95ef81158cb46f6a0ee2f55da21d9d342d6c6cfe9b35122",
+    "role6_rank/rank_bank.py": "85bbfa160594678ae4f21f66dd910d2062a589bdf35c4e14b623963fc0ae5008",
+    "role6_rank/run_rank_once.py": "503b22b09069147c9127ca574b6d75bfdb4dfe83698f4722aaa391daa1dc4254",
+    "role6_rank/test_contract.json": "d86271c581567bf603ea76b6a24e0b74b1b753096c72e42b07d4f8f3d9aca1b1",
+    "role6_rank/preparation.json": "082322fab71923e1ed036c1d480f1700106a62ca7eb2783c41abd7d024be27a0"
+  },
+  "prepared_bindings": {
+    "producer": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\allrang_checks.py",
+      "sha256": "0cbaa0391cd2b9e82cae99b5f6a88c755bde2da946bcebb988874dfd9acd33d9",
+      "bytes": 3398
+    },
+    "strict_rank": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_rank\\strict_rank.py",
+      "sha256": "c651e6e20e7df683d95ef81158cb46f6a0ee2f55da21d9d342d6c6cfe9b35122",
+      "bytes": 6817
+    },
+    "rank_bank": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_rank\\rank_bank.py",
+      "sha256": "85bbfa160594678ae4f21f66dd910d2062a589bdf35c4e14b623963fc0ae5008",
+      "bytes": 27708
+    },
+    "launcher": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_rank\\run_rank_once.py",
+      "sha256": "503b22b09069147c9127ca574b6d75bfdb4dfe83698f4722aaa391daa1dc4254",
+      "bytes": 7677
+    },
+    "contract": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_rank\\test_contract.json",
+      "sha256": "d86271c581567bf603ea76b6a24e0b74b1b753096c72e42b07d4f8f3d9aca1b1",
+      "bytes": 2402
+    },
+    "FINAL1": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent1_weighted_aggregate.md",
+      "sha256": "d1cd64e27c46ad5aacfe2ee33c1b13681b77ae84e6d78c8585a3ef47acaf42bb",
+      "bytes": 28136
+    },
+    "probe": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\PROBE_BLOCK.md",
+      "sha256": "5f9e429bc264002044da60139f3942e7c3de909116d41e6cc52f70afb9a5a12d",
+      "bytes": 7143
+    },
+    "prompt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\experiments\\13.11\\executor_prompt.md",
+      "sha256": "f9035242932054481a9b87b5893964f21cd53ab369693fb406bb9482836e030e",
+      "bytes": 16399
+    },
+    "role1_manifest": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role1\\manifest.json",
+      "sha256": "77a7b1c481b146f3c2787e27effc9b6e68b99c1beb4d8b6866ae613311fb3104",
+      "bytes": 2687
+    },
+    "role1_receipt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role1\\final_receipt.json",
+      "sha256": "99a76bc309945c02a051d6943b9e82f098fdd24da3043dfdeedf310026ad0eb6",
+      "bytes": 983
+    },
+    "registry1361": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\previous_artifacts_sha256.json",
+      "sha256": "8c0abf930ee8c47b64d335ed286af4566fc674b573216f82f12b05c4ec877150",
+      "bytes": 154061
+    },
+    "preflight19_receipt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6\\conservation_final_receipt.json",
+      "sha256": "e647e21e5512c48d34c818c9942bb312d172524682b361552c52422fd3c15c53",
+      "bytes": 3590
+    }
+  },
+  "syntax_only_AST_parse_without_execution": true,
+  "numeric_or_Lean_execution_by_root": 0,
+  "actual_start_not_yet_observed": true,
+  "scope": "Unique first NEW canonical01 only; capture12inputs+preparation before subprocess. Preserve all failed artifacts/logs/receipts; no automatic replay. No old bank/kernel/W/D/preflight/PDF/Lean invocation. Lean3 gate waits actual PASS root review.",
+  "complete_domain": "all12000000 j positions and ALL eligible c<r unitN cr<=3163, A0 retained",
+  "prices_and_PP_and_fronts_retained": true,
+  "source_onset_or_BV_applied": false,
+  "metadata_reader_transient_incident": "One exec process creation rejected deny-read ACL setup in batch before launcher read; independent readonly retryf75a20 succeeded. No producer executed and no unresolved blocker.",
+  "official_Judge_counts_modified": false,
+  "victory": false
+}

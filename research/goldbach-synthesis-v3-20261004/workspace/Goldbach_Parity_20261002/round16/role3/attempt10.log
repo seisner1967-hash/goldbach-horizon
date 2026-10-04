@@ -1,0 +1,98 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:283:5: warning: unused variable `hp`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:355:4: error: linarith failed to find a contradiction
+case inl.a
+N : ℕ
+hN : N ≠ 0
+heven : Even N
+hC2 : 2541 / 4096 ≤ GoldbachRound11.twinConstant
+hp : 3 ≤ 3
+hpp : Nat.Prime 3
+hsmall : 3 < 13
+hforced : ∀ (l : ℕ), Nat.Prime l → l < 3 → l ∣ N
+hb :
+  2 * GoldbachRound11.twinConstant *
+      ((∏ x ∈ (filter (fun p => Nat.Prime p) (range 3)).erase 2, (↑x - 1)) /
+        ∏ x ∈ (filter (fun p => Nat.Prime p) (range 3)).erase 2, (↑x - 2)) ≤
+    GoldbachRound11.singularSeries N
+hlog : Real.log 3 < 9 / 8
+a✝ : 1 / 144 > GoldbachRound11.singularSeries N - Real.log ↑3
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:359:4: error: linarith failed to find a contradiction
+case inr.inl.a
+N : ℕ
+hN : N ≠ 0
+heven : Even N
+hC2 : 2541 / 4096 ≤ GoldbachRound11.twinConstant
+hp : 3 ≤ 5
+hpp : Nat.Prime 5
+hsmall : 5 < 13
+hforced : ∀ (l : ℕ), Nat.Prime l → l < 5 → l ∣ N
+hb :
+  2 * GoldbachRound11.twinConstant *
+      ((∏ x ∈ (filter (fun p => Nat.Prime p) (range 5)).erase 2, (↑x - 1)) /
+        ∏ x ∈ (filter (fun p => Nat.Prime p) (range 5)).erase 2, (↑x - 2)) ≤
+    GoldbachRound11.singularSeries N
+hlog : Real.log 5 < 2
+a✝ : 1 / 144 > GoldbachRound11.singularSeries N - Real.log ↑5
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:363:4: error: linarith failed to find a contradiction
+case inr.inr.inl.a
+N : ℕ
+hN : N ≠ 0
+heven : Even N
+hC2 : 2541 / 4096 ≤ GoldbachRound11.twinConstant
+hp : 3 ≤ 7
+hpp : Nat.Prime 7
+hsmall : 7 < 13
+hforced : ∀ (l : ℕ), Nat.Prime l → l < 7 → l ∣ N
+hb :
+  2 * GoldbachRound11.twinConstant *
+      ((∏ x ∈ (filter (fun p => Nat.Prime p) (range 7)).erase 2, (↑x - 1)) /
+        ∏ x ∈ (filter (fun p => Nat.Prime p) (range 7)).erase 2, (↑x - 2)) ≤
+    GoldbachRound11.singularSeries N
+hlog : Real.log 7 < 2
+a✝ : 1 / 144 > GoldbachRound11.singularSeries N - Real.log ↑7
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:367:4: error: linarith failed to find a contradiction
+case inr.inr.inr.a
+N : ℕ
+hN : N ≠ 0
+heven : Even N
+hC2 : 2541 / 4096 ≤ GoldbachRound11.twinConstant
+hp : 3 ≤ 11
+hpp : Nat.Prime 11
+hsmall : 11 < 13
+hforced : ∀ (l : ℕ), Nat.Prime l → l < 11 → l ∣ N
+hb :
+  2 * GoldbachRound11.twinConstant *
+      ((∏ x ∈ (filter (fun p => Nat.Prime p) (range 11)).erase 2, (↑x - 1)) /
+        ∏ x ∈ (filter (fun p => Nat.Prime p) (range 11)).erase 2, (↑x - 2)) ≤
+    GoldbachRound11.singularSeries N
+hlog : Real.log 11 < 5 / 2
+a✝ : 1 / 144 > GoldbachRound11.singularSeries N - Real.log ↑11
+⊢ False failed
+'GoldbachRound16.Anchor.real_prod_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.real_multipliable_of_unit_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.harmonic_le_eulerPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.real_prod_reverse_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_factor_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tail_finite_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tailFactor_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tail_infinite_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.localMultiplier_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.prefixFactor_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.cancellation_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twin_prefix_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.eulerPrefix_eq_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.localFactor_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_forced_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_euler_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_harmonic_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.small_prime_margin' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.least_missing_prime_margin' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

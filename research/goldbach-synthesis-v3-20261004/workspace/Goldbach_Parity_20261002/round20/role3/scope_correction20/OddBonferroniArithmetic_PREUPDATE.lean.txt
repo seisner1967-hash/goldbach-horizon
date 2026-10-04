@@ -1,0 +1,280 @@
+import Mathlib
+
+/-! Round20 / 13.12. Actual arithmetic Bonferroni weight. Execution is gated.
+The finite prime catalogue and its actual divisor incidences are constructed.
+This auxiliary lower weight gives no estimate of its signed AP remainder. -/
+namespace GoldbachRound20.SwitchedComposite
+
+open scoped BigOperators
+open Finset
+noncomputable section
+attribute [local instance] Classical.propDecidable
+set_option maxHeartbeats 4000000
+
+def smallSievePrimes (N t p : ℕ) : Finset ℕ :=
+  (range p).filter fun l => l.Prime ∧ ¬ l ∣ t * N
+
+def primeProduct (s : Finset ℕ) : ℕ := ∏ l ∈ s, l
+
+def sievePrimorial (N t p : ℕ) : ℕ := primeProduct (smallSievePrimes N t p)
+
+def metSievePrimes (N t p v : ℕ) : Finset ℕ :=
+  (smallSievePrimes N t p).filter fun l => l ∣ v
+
+def roughIndicator (N t p v : ℕ) : ℤ :=
+  if metSievePrimes N t p v = ∅ then 1 else 0
+
+/-- Each subset gives its actual squarefree divisor, not a free cardinal. -/
+def oddBonferroniWeight (N t p K v : ℕ) : ℤ :=
+  ∑ s ∈ (smallSievePrimes N t p).powerset,
+    if primeProduct s ∣ v ∧ s.card ≤ 2 * K + 1
+    then ArithmeticFunction.moebius (primeProduct s) else 0
+
+def sieveDivisorCatalogue (N t p : ℕ) : Finset ℕ :=
+  (smallSievePrimes N t p).powerset.image primeProduct
+
+def arithmeticBonferroniXi (N t p K h : ℕ) : ℤ :=
+  if h ∈ (sievePrimorial N t p).divisors ∧ h.primeFactors.card ≤ 2 * K + 1
+  then ArithmeticFunction.moebius h else 0
+
+theorem mem_smallSievePrimes {N t p l : ℕ} :
+    l ∈ smallSievePrimes N t p ↔ l < p ∧ l.Prime ∧ ¬ l ∣ t * N := by
+  simp [smallSievePrimes]
+
+theorem mem_metSievePrimes {N t p v l : ℕ} :
+    l ∈ metSievePrimes N t p v ↔
+      l < p ∧ l.Prime ∧ ¬ l ∣ t * N ∧ l ∣ v := by
+  simp [metSievePrimes, mem_smallSievePrimes, and_assoc]
+
+theorem metSievePrimes_subset (N t p v : ℕ) :
+    metSievePrimes N t p v ⊆ smallSievePrimes N t p := filter_subset _ _
+
+theorem product_dvd_iff {s : Finset ℕ} {v : ℕ}
+    (hs : ∀ l ∈ s, l.Prime) :
+    primeProduct s ∣ v ↔ ∀ l ∈ s, l ∣ v := by
+  constructor
+  · intro h l hl
+    exact dvd_trans (dvd_prod_of_mem (fun k : ℕ => k) hl) h
+  · intro hv
+    induction s using Finset.induction_on with
+    | empty => simp [primeProduct]
+    | @insert a s ha ih =>
+      have hpa : a.Prime := hs a (mem_insert_self _ _)
+      have hps : ∀ l ∈ s, l.Prime := fun l hl => hs l (mem_insert_of_mem hl)
+      have hcop : Nat.Coprime a (primeProduct s) := by
+        apply Nat.coprime_prod_right_iff.mpr
+        intro l hl
+        apply hpa.coprime_iff_not_dvd.mpr
+        intro hd
+        have he := (Nat.prime_dvd_prime_iff_eq hpa (hps l hl)).mp hd
+        exact ha (he.symm ▸ hl)
+      rw [primeProduct, prod_insert ha]
+      exact hcop.mul_dvd_of_dvd_of_dvd (hv a (mem_insert_self _ _))
+        (ih hps (fun l hl => hv l (mem_insert_of_mem hl)))
+
+theorem moebius_primeProduct {s : Finset ℕ} (hs : ∀ l ∈ s, l.Prime) :
+    ArithmeticFunction.moebius (primeProduct s) = (-1 : ℤ) ^ s.card := by
+  rw [primeProduct, ArithmeticFunction.isMultiplicative_moebius.map_prod_of_prime s hs]
+  calc
+    (∏ l ∈ s, ArithmeticFunction.moebius l) = ∏ _l ∈ s, (-1 : ℤ) := by
+      apply prod_congr rfl
+      intro l hl
+      exact ArithmeticFunction.moebius_apply_prime (hs l hl)
+    _ = _ := by simp
+
+theorem primeProduct_injective {P : Finset ℕ}
+    (hP : ∀ l ∈ P, l.Prime) :
+    Set.InjOn primeProduct (↑P.powerset : Set (Finset ℕ)) := by
+  intro s hs u hu he
+  have hsp : ∀ l ∈ s, l.Prime := fun l hl => hP l ((mem_powerset.mp hs) hl)
+  have hup : ∀ l ∈ u, l.Prime := fun l hl => hP l ((mem_powerset.mp hu) hl)
+  have hsF : (primeProduct s).primeFactors = s := Nat.primeFactors_prod hsp
+  have huF : (primeProduct u).primeFactors = u := Nat.primeFactors_prod hup
+  rw [← hsF, ← huF, he]
+
+theorem primeProduct_squarefree_arithmetic {s : Finset ℕ} (hs : ∀ l ∈ s, l.Prime) :
+    Squarefree (primeProduct s) := by
+  apply ArithmeticFunction.moebius_ne_zero_iff_squarefree.mp
+  rw [moebius_primeProduct hs]
+  exact pow_ne_zero _ (by norm_num)
+
+theorem sievePrimorial_squarefree (N t p : ℕ) : Squarefree (sievePrimorial N t p) := by
+  apply primeProduct_squarefree_arithmetic
+  exact fun l hl => (mem_smallSievePrimes.mp hl).2.1
+
+theorem sieveDivisorCatalogue_eq_divisors (N t p : ℕ) :
+    sieveDivisorCatalogue N t p = (sievePrimorial N t p).divisors := by
+  have hP : ∀ l ∈ smallSievePrimes N t p, l.Prime :=
+    fun l hl => (mem_smallSievePrimes.mp hl).2.1
+  have hSF := sievePrimorial_squarefree N t p
+  have hPF : (sievePrimorial N t p).primeFactors = smallSievePrimes N t p := Nat.primeFactors_prod hP
+  ext h
+  constructor
+  · intro hh
+    obtain ⟨s, hs, rfl⟩ := mem_image.mp hh
+    exact Nat.mem_divisors.mpr
+      ⟨prod_dvd_prod_of_subset s (smallSievePrimes N t p) (fun l : ℕ => l) (mem_powerset.mp hs), hSF.ne_zero⟩
+  · intro hh
+    have hd := (Nat.mem_divisors.mp hh).1
+    have hsq : Squarefree h := hSF.squarefree_of_dvd hd
+    have hsub : h.primeFactors ⊆ smallSievePrimes N t p := by
+      rw [← hPF]
+      exact Nat.primeFactors_mono hd hSF.ne_zero
+    exact mem_image.mpr
+      ⟨h.primeFactors, mem_powerset.mpr hsub, Nat.prod_primeFactors_of_squarefree hsq⟩
+
+theorem oddBonferroni_divisor_formula (N t p K v : ℕ) :
+    oddBonferroniWeight N t p K v =
+      ∑ h ∈ (sievePrimorial N t p).divisors,
+        if h ∣ v ∧ h.primeFactors.card ≤ 2 * K + 1
+        then ArithmeticFunction.moebius h else 0 := by
+  rw [← sieveDivisorCatalogue_eq_divisors]
+  unfold sieveDivisorCatalogue
+  rw [sum_image]
+  · unfold oddBonferroniWeight
+    apply sum_congr rfl
+    intro s hs
+    have hp : ∀ l ∈ s, l.Prime := fun l hl =>
+      (mem_smallSievePrimes.mp ((mem_powerset.mp hs) hl)).2.1
+    rw [show (primeProduct s).primeFactors = s from Nat.primeFactors_prod hp]
+  · exact primeProduct_injective (fun l hl => (mem_smallSievePrimes.mp hl).2.1)
+
+theorem oddBonferroni_actualXi_formula (N t p K v : ℕ) :
+    oddBonferroniWeight N t p K v =
+      ∑ h ∈ (sievePrimorial N t p).divisors,
+        if h ∣ v then arithmeticBonferroniXi N t p K h else 0 := by
+  rw [oddBonferroni_divisor_formula]
+  apply sum_congr rfl
+  intro h hh
+  simp [arithmeticBonferroniXi, hh]
+
+theorem truncated_alternating_choose (n k : ℕ) :
+    (∑ i ∈ range (k + 1), (-1 : ℤ) ^ i * ((n + 1).choose i : ℤ)) =
+      (-1 : ℤ) ^ k * (n.choose k : ℤ) := by
+  induction k with
+  | zero => simp
+  | succ k ih =>
+    rw [sum_range_succ, ih, Nat.choose_succ_succ']
+    simp only [Nat.cast_add, pow_succ]
+    ring
+
+theorem truncated_choose_zero (k : ℕ) :
+    (∑ i ∈ range (k + 1), (-1 : ℤ) ^ i * ((0 : ℕ).choose i : ℤ)) = 1 := by
+  induction k with
+  | zero => simp
+  | succ k ih => rw [sum_range_succ, ih]; simp
+
+theorem card_filtered_powerset_sum (s : Finset ℕ) (m : ℕ) :
+    (∑ u ∈ s.powerset, if u.card ≤ m then (-1 : ℤ) ^ u.card else 0) =
+      ∑ i ∈ range (m + 1), (-1 : ℤ) ^ i * (s.card.choose i : ℤ) := by
+  rw [sum_powerset_apply_card]
+  simp only [nsmul_eq_mul]
+  by_cases hmr : m ≤ s.card
+  · have hsub : range (m + 1) ⊆ range (s.card + 1) := range_mono (by omega)
+    rw [← sum_subset hsub]
+    · apply sum_congr rfl
+      intro i hi
+      have him : i ≤ m := by have := mem_range.mp hi; omega
+      simp [him, mul_comm]
+    · intro i hi hnot
+      have him : ¬ i ≤ m := by intro hh; exact hnot (mem_range.mpr (by omega))
+      simp [him]
+  · have hrm : s.card ≤ m := by omega
+    have hsub : range (s.card + 1) ⊆ range (m + 1) := range_mono (by omega)
+    rw [sum_subset hsub]
+    · apply sum_congr rfl
+      intro i hi
+      have him : i ≤ m := by have := mem_range.mp hi; omega
+      simp [him, mul_comm]
+    · intro i hi hnot
+      have hri : s.card < i := by
+        by_contra hh
+        exact hnot (mem_range.mpr (by omega))
+      simp [Nat.choose_eq_zero_of_lt hri]
+
+theorem oddBonferroni_eq_met_powerset (N t p K v : ℕ) :
+    oddBonferroniWeight N t p K v =
+      ∑ s ∈ (metSievePrimes N t p v).powerset,
+        if s.card ≤ 2 * K + 1 then (-1 : ℤ) ^ s.card else 0 := by
+  unfold oddBonferroniWeight
+  have hsub : (metSievePrimes N t p v).powerset ⊆
+      (smallSievePrimes N t p).powerset := powerset_mono.mpr (metSievePrimes_subset _ _ _ _)
+  rw [← sum_subset hsub]
+  · apply sum_congr rfl
+    intro s hs
+    have hsM := mem_powerset.mp hs
+    have hps : ∀ l ∈ s, l.Prime := fun l hl =>
+      (mem_metSievePrimes.mp (hsM hl)).2.1
+    have hd : primeProduct s ∣ v := (product_dvd_iff hps).mpr fun l hl =>
+      (mem_metSievePrimes.mp (hsM hl)).2.2.2
+    rw [moebius_primeProduct hps]
+    simp [hd]
+  · intro s hs hnot
+    have hsP := mem_powerset.mp hs
+    have hps : ∀ l ∈ s, l.Prime := fun l hl =>
+      (mem_smallSievePrimes.mp (hsP hl)).2.1
+    have hd : ¬ primeProduct s ∣ v := by
+      intro hd
+      apply hnot
+      apply mem_powerset.mpr
+      intro l hl
+      exact mem_filter.mpr ⟨hsP hl, (product_dvd_iff hps).mp hd l hl⟩
+    simp [hd]
+
+theorem oddBonferroni_eq_binomial (N t p K v : ℕ) :
+    oddBonferroniWeight N t p K v =
+      if (metSievePrimes N t p v).card = 0 then 1
+      else - (((metSievePrimes N t p v).card - 1).choose (2 * K + 1) : ℤ) := by
+  rw [oddBonferroni_eq_met_powerset, card_filtered_powerset_sum]
+  generalize (metSievePrimes N t p v).card = r
+  cases r with
+  | zero => simp [truncated_choose_zero]
+  | succ r =>
+    rw [truncated_alternating_choose]
+    simp [pow_add, pow_mul]
+
+theorem oddBonferroni_le_roughIndicator (N t p K v : ℕ) :
+    oddBonferroniWeight N t p K v ≤ roughIndicator N t p v := by
+  rw [oddBonferroni_eq_binomial]
+  unfold roughIndicator
+  by_cases hm : metSievePrimes N t p v = ∅
+  · simp [hm]
+  · have hc : (metSievePrimes N t p v).card ≠ 0 := by
+      intro hc
+      exact hm (card_eq_zero.mp hc)
+    simp only [if_neg hm, if_neg hc]
+    exact neg_nonpos.mpr (Int.natCast_nonneg _)
+
+theorem oddBonferroni_slack_nonneg (N t p K v : ℕ) :
+    0 ≤ roughIndicator N t p v - oddBonferroniWeight N t p K v :=
+  sub_nonneg.mpr (oddBonferroni_le_roughIndicator _ _ _ _ _)
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound20.SwitchedComposite.smallSievePrimes
+#print axioms GoldbachRound20.SwitchedComposite.primeProduct
+#print axioms GoldbachRound20.SwitchedComposite.sievePrimorial
+#print axioms GoldbachRound20.SwitchedComposite.metSievePrimes
+#print axioms GoldbachRound20.SwitchedComposite.roughIndicator
+#print axioms GoldbachRound20.SwitchedComposite.oddBonferroniWeight
+#print axioms GoldbachRound20.SwitchedComposite.sieveDivisorCatalogue
+#print axioms GoldbachRound20.SwitchedComposite.arithmeticBonferroniXi
+#print axioms GoldbachRound20.SwitchedComposite.mem_smallSievePrimes
+#print axioms GoldbachRound20.SwitchedComposite.mem_metSievePrimes
+#print axioms GoldbachRound20.SwitchedComposite.metSievePrimes_subset
+#print axioms GoldbachRound20.SwitchedComposite.product_dvd_iff
+#print axioms GoldbachRound20.SwitchedComposite.moebius_primeProduct
+#print axioms GoldbachRound20.SwitchedComposite.primeProduct_injective
+#print axioms GoldbachRound20.SwitchedComposite.primeProduct_squarefree_arithmetic
+#print axioms GoldbachRound20.SwitchedComposite.sievePrimorial_squarefree
+#print axioms GoldbachRound20.SwitchedComposite.sieveDivisorCatalogue_eq_divisors
+#print axioms GoldbachRound20.SwitchedComposite.oddBonferroni_divisor_formula
+#print axioms GoldbachRound20.SwitchedComposite.oddBonferroni_actualXi_formula
+#print axioms GoldbachRound20.SwitchedComposite.truncated_alternating_choose
+#print axioms GoldbachRound20.SwitchedComposite.truncated_choose_zero
+#print axioms GoldbachRound20.SwitchedComposite.card_filtered_powerset_sum
+#print axioms GoldbachRound20.SwitchedComposite.oddBonferroni_eq_met_powerset
+#print axioms GoldbachRound20.SwitchedComposite.oddBonferroni_eq_binomial
+#print axioms GoldbachRound20.SwitchedComposite.oddBonferroni_le_roughIndicator
+#print axioms GoldbachRound20.SwitchedComposite.oddBonferroni_slack_nonneg
+
+end GoldbachRound20.SwitchedComposite

@@ -1,0 +1,35 @@
+Finset.prod_sdiff.{u_3, u_4} {α : Type u_3} {β : Type u_4} {s₁ s₂ : Finset α} {f : α → β} [CommMonoid β] [DecidableEq α]
+  (h : s₁ ⊆ s₂) : (∏ x ∈ s₂ \ s₁, f x) * ∏ x ∈ s₁, f x = ∏ x ∈ s₂, f x
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\ApiProbe.lean:7:7: error: unknown constant 'Finset.prod_sdiff_of_subset'
+Finset.prod_le_one.{u_1, u_2} {ι : Type u_1} {R : Type u_2} [CommMonoidWithZero R] [PartialOrder R] [ZeroLEOneClass R]
+  [PosMulMono R] {f : ι → R} {s : Finset ι} (h0 : ∀ i ∈ s, 0 ≤ f i) (h1 : ∀ i ∈ s, f i ≤ 1) : ∏ i ∈ s, f i ≤ 1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\ApiProbe.lean:9:7: error: unknown constant 'Finset.sum_le_tsum'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\ApiProbe.lean:10:7: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  HasSum
+has type
+  (?m.10 → ?m.9) → ?m.9 → Prop
+Finset.sum_image.{u_3, u_4, u_5} {α : Type u_3} {β : Type u_4} {γ : Type u_5} {f : α → β} [AddCommMonoid β]
+  [DecidableEq α] {s : Finset γ} {g : γ → α} :
+  (∀ x ∈ s, ∀ y ∈ s, g x = g y → x = y) → ∑ x ∈ Finset.image g s, f x = ∑ x ∈ s, f (g x)
+Finset.sum_attach.{u_3, u_4} {α : Type u_3} {β : Type u_4} [AddCommMonoid β] (s : Finset α) (f : α → β) :
+  ∑ x ∈ s.attach, f ↑x = ∑ x ∈ s, f x
+Finset.sum_subtype.{u_3, u_4} {α : Type u_3} {β : Type u_4} [AddCommMonoid β] {p : α → Prop} {F : Fintype (Subtype p)}
+  (s : Finset α) (h : ∀ (x : α), x ∈ s ↔ p x) (f : α → β) : ∑ a ∈ s, f a = ∑ a : Subtype p, f ↑a
+Nat.mem_smoothNumbers_of_lt {m n : ℕ} (hm : 0 < m) (hmn : m < n) : m ∈ n.smoothNumbers
+tendsto_atTop_ciInf.{u_1, u_3} {α : Type u_1} {ι : Type u_3} [Preorder ι] [TopologicalSpace α]
+  [ConditionallyCompleteLattice α] [InfConvergenceClass α] {f : ι → α} (h_anti : Antitone f)
+  (hbdd : BddBelow (Set.range f)) : Filter.Tendsto f Filter.atTop (nhds (⨅ i, f i))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\ApiProbe.lean:16:7: error: unknown constant 'Real.log_natCast_pos'
+HasProd.mul.{u_1, u_2} {α : Type u_1} {β : Type u_2} [CommMonoid α] [TopologicalSpace α] {f g : β → α} {a b : α}
+  [ContinuousMul α] (hf : HasProd f a) (hg : HasProd g b) : HasProd (fun b => f b * g b) (a * b)
+hasProd_prod_of_ne_finset_one.{u_1, u_2} {α : Type u_1} {β : Type u_2} [CommMonoid α] [TopologicalSpace α] {f : β → α}
+  {s : Finset β} (hf : ∀ b ∉ s, f b = 1) : HasProd f (∏ b ∈ s, f b)
+Nat.mem_primeFactors {n p : ℕ} : p ∈ n.primeFactors ↔ Nat.Prime p ∧ p ∣ n ∧ n ≠ 0
+Finset.prod_le_prod.{u_1, u_2} {ι : Type u_1} {R : Type u_2} [CommMonoidWithZero R] [PartialOrder R] [ZeroLEOneClass R]
+  [PosMulMono R] {f g : ι → R} {s : Finset ι} (h0 : ∀ i ∈ s, 0 ≤ f i) (h1 : ∀ i ∈ s, f i ≤ g i) :
+  ∏ i ∈ s, f i ≤ ∏ i ∈ s, g i
+Finset.prod_filter.{u_3, u_4} {α : Type u_3} {β : Type u_4} {s : Finset α} [CommMonoid β] (p : α → Prop)
+  [DecidablePred p] (f : α → β) : ∏ a ∈ Finset.filter (fun a => p a) s, f a = ∏ a ∈ s, if p a then f a else 1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\ApiProbe.lean:22:7: error: unknown constant 'Finset.prod_mono_set_of_le_one'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\ApiProbe.lean:23:7: error: unknown constant 'Nat.castMonoidHom'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\ApiProbe.lean:24:7: error: unknown constant 'MonoidHom.inv'

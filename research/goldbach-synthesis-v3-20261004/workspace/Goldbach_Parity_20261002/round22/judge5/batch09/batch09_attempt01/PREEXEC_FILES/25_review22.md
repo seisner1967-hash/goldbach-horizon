@@ -1,0 +1,17 @@
+# Réparation Gamma/Psi réflexion08 — SOURCE ONLY
+
+La nouvelle copie `GammaPsiReflection22.lean` a le SHA a931bbceb530fbbf179d2223972f46405a80f74c2a139d84a671ce741f3f1ff2. Les cinq théorèmes, leurs domaines et les cinq commandes qualifiées `#print axioms` sont identiques au lot07. Cette copie n'a pas été compilée.
+
+La source initiale 8e070c18a483ac71703f66b80dbcf4129f0f16ada8f2a933497655b3a7cdaa30 a été lue FULL a4d755 ; le log réel de57424af08c1724a9e872ae267e0fe9394a3d23d58ab4f4191841ddab04bdd5 a été lu FULL 9b2b77. Les trois erreurs sont des problèmes de normalisation algébrique. Elles ne réfutent pas la réflexion Gamma, le passage à la dérivée logarithmique ou une affirmation de parité. Les cinq modules aval n'ont pas été invoqués par le lot07.
+
+L'égalité obtenue par unicité des dérivées conservait Gamma∘(1±id/2), sin∘(πid/2) et id s. Ces expressions étaient traitées comme des atomes distincts par la combinaison linéaire. `Function.comp_apply` et `id_eq` les déroulent avant les règles existantes `mul_one`, `zero_add` et `linear_combination`. Les véritables dérivées de Gamma et sin, l'égalité dans un voisinage ouvert et leurs domaines sont conservés.
+
+Les deux échecs de simplification des quotients sont traités par des identités locales sur des variables de corps, avant instanciation des arguments analytiques opaques. hquotient démontre pour a,b non nuls la réunion des deux quotients da/a et db/b. Le théorème applique ensuite cette identité aux deux valeurs réelles Gamma et à leurs vraies dérivées, avec les preuves de non-annulation déjà payées. htrig démontre la simplification du quotient de la dérivée de π(s/2)/sin(πs/2) pour p,v,u non nuls ; il est ensuite instancié avec π,s,sin(πs/2) et la valeur cos correspondante. Les trois non-annulations effectives sont également conservées. Aucune prémisse de réflexion ou de trace n'est ajoutée ; ces identités locales sont de l'algèbre valable pour tous les éléments du corps dans leur domaine.
+
+Cette séparation empêche une normalisation des arguments Gamma ou sin pendant `ring` de rendre les preuves de non-annulation méconnaissables. Les preuves locales utilisent `field_simp [...] <;> ring`, qui applique ring seulement aux buts restant ouverts. Aucun axiome, trou de preuve ou méthode non certifiée n'est introduit.
+
+APIs SOURCE vérifiées TARGETED ad1757 : Mathlib/Analysis/Calculus/Deriv/Basic.lean 356–370 et552–570, SHA9576d3ea4e2988124154e7ddf538e48b2d6b6d5eca409cbbe31128759374f1d6, pour HasDerivAt.unique et congr_of_eventuallyEq. Le point de dérivation reste s. Nouveau fichier et scan lexical lus FULL ce2f00 ; la lecture et le scan ne sont pas une validation Lean.
+
+Le nouveau lot devra utiliser GammaPsiDuplication22.olean du Juge07, SHA535c3f53fe81ff03d6c05540a67bd82335b6379d98f81a97ccd7784744f67bcf, en lecture seule, sans recompiler la dépendance déjà PASS. ZetaReflection22 indépendant est également disponible, SHAolean288614def47a85100c41a064597bf6003b39ab2dcaf7b694683583e940892a43. Ces sorties ont été transmises par le Juge ; aucune compilation n'a été effectuée par cette réparation SOURCE.
+
+Le lot07, ses logs/captures, les six sources C5 antérieures et le banc numérique actuel restent immuables. Le controller numérique unique garde 3600 s / 2147483648 octets et n'est pas relancé ou reparamétré. Toute compilation de réflexion08 exige une nouvelle préparation et gate ROOT distincte. Aucun PASS, preuve H1/C5 globale, coefficient additif N, paiement de D_N ou victoire ne découle de cette rédaction.

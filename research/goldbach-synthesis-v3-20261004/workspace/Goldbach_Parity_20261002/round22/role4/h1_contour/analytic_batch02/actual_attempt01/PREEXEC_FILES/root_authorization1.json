@@ -1,0 +1,37 @@
+{
+  "schema": "ROUND22_ROLE4_ANALYTIC_BATCH02_AUTHORIZATION_1",
+  "authorized": true,
+  "role": "ROLE4",
+  "node_id": "15.3",
+  "created_utc": "2026-10-03T11:25:17.620019+00:00",
+  "compiler_invocations_max": 4,
+  "stop_first_failure": true,
+  "no_retry": true,
+  "prepared_manifest_sha256": "5656d1e9ba961207c15a0c9f5bbac13b572d73e337cf1e3524d8e89989ba3e9e",
+  "launcher_sha256": "d9658ba41563e135bd85decb95ceb6aeae90a22cb7eef8444fac77c6aadf4b10",
+  "modules": [
+    "GammaBoxBounds22",
+    "GammaContourComponent22",
+    "MellinThermal22",
+    "MellinThermalInversion22"
+  ],
+  "ROOT_FULL_reads": {
+    "launcher": "b79ce6",
+    "builder": "973a5c",
+    "preparation": "f4fcbc",
+    "read_receipts": "1359d9",
+    "Box_Contour_corrected": "629aa7",
+    "Mellin_identical_prior": "3eb9a0",
+    "Inversion_identical_prior": "15e2fa"
+  },
+  "metadata_scope": "Complete JSON parsed,6524boundbytes/3250importheaders/3089archives verified; no FULL raw manifest/allcachemath claim",
+  "inputs_verified": 6524,
+  "archives_verified": 3089,
+  "new_numeric_invocations": 0,
+  "root_compiler_invocations": 0,
+  "numeric_PASS_required": false,
+  "readonly_judged_dependencies_recompile": false,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

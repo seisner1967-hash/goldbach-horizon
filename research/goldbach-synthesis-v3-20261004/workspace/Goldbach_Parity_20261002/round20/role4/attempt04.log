@@ -1,0 +1,35 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableEulerRankin.lean:15:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ↑(?m * ?n)
+s : ℝ
+m n : ℕ
+⊢ { toFun := fun n => ↑n ^ s, map_one' := ⋯ }.toFun (m * n) =
+    { toFun := fun n => ↑n ^ s, map_one' := ⋯ }.toFun m * { toFun := fun n => ↑n ^ s, map_one' := ⋯ }.toFun n
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriableEulerRankin.lean:125:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'GoldbachRound20.Friable.rpowNatHom' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.eulerProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.tau' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.tau_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.tau_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.tau_prime_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.nat_pow_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.prime_rpow_norm_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_smooth_rpow_hasSum' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_smooth_rpow_summable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.local_tau_geometric_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_smooth_tau_rpow_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.finite_smooth_rpow_sum_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.finite_smooth_tau_rpow_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.rankin_inverse_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_divisor_inverse_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_divisor_band_card_le_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.smoothInterval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_tau_rankin_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_smooth_tau_tail' depends on axioms: [propext, Classical.choice, Quot.sound]

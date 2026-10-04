@@ -1,0 +1,85 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH12",
+  "time_utc": "2026-10-03T16:03:14.627988+00:00",
+  "status": "INDEPENDENT_BATCH12_FAILED",
+  "role": "ROLE5",
+  "actual_child_invocations": 1,
+  "modules_passed": 0,
+  "declarations_passed": 0,
+  "module_count_passed": 0,
+  "declaration_count_passed": 0,
+  "theorems_passed": 0,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "input_count": 7951,
+  "closed_judge_file_count": 815,
+  "protected_archive_count": 3089,
+  "capture_count": 23,
+  "print_count": 20,
+  "standard_print_count_in_failed_module": 13,
+  "recovery_sorryAx_print_count": 7,
+  "declarations_without_axioms": [],
+  "partial_credit_in_failed_module": 0,
+  "source_sha256": "533f81f523f465240ebf7f129d32c9d6c0119e0e0d7936a42bc65e75823880d0",
+  "actual_links": {
+    "START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\START.json",
+      "sha256": "920325faee94c7033022106b2b271081ad1d707f300cb6f5edf715648e6dc0a6"
+    },
+    "FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\FIN.json",
+      "sha256": "6b429f9ad88e2a719344c4bd3c603c82340431229b7cf0230863e768e22c843e"
+    },
+    "receipt.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\receipt.json",
+      "sha256": "de20c1356084c9b048f258a7ddbbc14a08ca7a9037121c14bc42daef2d4385e3"
+    },
+    "PREEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\PREEXEC.json",
+      "sha256": "b7e1db96f8382c4a5cd940ee69375f54090f72d1b9102bdfa1d8fc9e73297029"
+    },
+    "POSTEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\POSTEXEC.json",
+      "sha256": "f3adf33fddb2864092b3850923155a1d86a0e10cb1296be0399ffc70746926a8"
+    },
+    "ThermalProjectionIdentity22_START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22_START.json",
+      "sha256": "5f45558d5942e95e08ca95d79e1cf2e82b346f0457c2fd2743537c8b4e2f6306"
+    },
+    "ThermalProjectionIdentity22_FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22_FIN.json",
+      "sha256": "8528baebc2a7eb1cd3e93391edd9f384aba38d4044c6c17b3ca1e784b2acf63f"
+    },
+    "ThermalProjectionIdentity22.log": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22.log",
+      "sha256": "f4cdc3f9f0ed4922a320a43230c5299e9c6319f065aff55ea5881d994eb01501"
+    }
+  },
+  "adjudication_sha256": "10577435fd3695e63cface9e3ba1533395e9593c7957e7869278294f44861f2f",
+  "metadata_close_source_sha256": "d60a7e103534f3202a4cf5cab5ef40054d18661c1c7d6541d8647e6ef59117bc",
+  "readonly_local_dependencies": [
+    "ThermalProjectionEnvelope22"
+  ],
+  "recompiled_dependencies": [],
+  "failure_class": "TECHNICAL_CAST_NORMALIZATION_ONE_GOAL",
+  "analytic_counterexample_observed": false,
+  "parity_obstruction_observed": false,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "retry_count": 0,
+  "numeric_bank_replayed": false,
+  "numeric_PASS_used_as_proof": false,
+  "previous_official_modules": 74,
+  "previous_official_declarations": 1203,
+  "proposed_new_official_modules": 74,
+  "proposed_new_official_declarations": 1203,
+  "official_count_requires_ROOT_observation": true,
+  "H1_paid": false,
+  "C5_paid": false,
+  "global_trace_certified": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "full_log_read": "376893",
+  "full_actual_receipt_read": "538a73"
+}

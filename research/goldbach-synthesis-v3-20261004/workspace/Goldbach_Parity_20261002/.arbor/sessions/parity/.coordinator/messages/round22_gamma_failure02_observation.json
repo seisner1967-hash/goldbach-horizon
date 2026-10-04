@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-03T08:30:06.100047+00:00",
+  "status": "AUTHOR_GAMMA_H2_COMPILE_FAIL",
+  "actual_compiler_invocations": 1,
+  "started": "2026-10-03T08:13:37.219471+00:00",
+  "finished": "2026-10-03T08:15:13.970859+00:00",
+  "exit_code": 1,
+  "source_sha256": "c66707c8bf24428e80ccc9000a769790d19d734d00cff0efe1e807364acb10fc",
+  "stdout_sha256": "4c2790f81b08e622cb8b970fab77edce0214f12a228e0ddd60f98d21c5cd614f",
+  "receipt_sha256": "5ebfd56de12c3b3e01342a3dbf73690a5a24c66a9d1eb11aa1e449b6c8e8070f",
+  "copies_verified": 13,
+  "inputs_verified": 6415,
+  "archives_verified": 3089,
+  "root_FULL_reads": {
+    "stdout": "61c915",
+    "receipt": "d5da3f+6b655b"
+  },
+  "error_lines": [
+    202
+  ],
+  "error_count": 1,
+  "actor_diagnosis": "Complex.ofReal_mul rewrite pattern already eliminated by preceding change; five other technical corrections accepted.",
+  "generated_sorryAx_formal_credit": false,
+  "analytic_or_parity_refutation_claim": false,
+  "Gamma_formal_credit": false,
+  "author_PASS": 2,
+  "author_FAIL": 8,
+  "official_modules": 59,
+  "official_auxiliary_declarations": 993,
+  "WIN": false,
+  "root_compiler_invocations": 0
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "ROUND22_ROLE3_GAMMA_EXP_TAIL_BRIDGE_INDEPENDENT_SOURCE_HANDOFF",
+  "status": "SOURCE_BRIDGE_COHERENT_WITH_ACTUAL_PAID_DEPENDENCIES_NOT_COMPILED",
+  "source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinExpTailBridge22.lean",
+    "bytes": 1193,
+    "sha256": "4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c"
+  },
+  "catalog": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/pending_bridge_catalog22.json",
+    "bytes": 826,
+    "sha256": "86164d7575b79c3ace42ebb1f56d2b88be0078873f76c0998175c1c0ae6604cb"
+  },
+  "review_report": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/gamma_exp_tail_bridge_source_review01/review22.txt",
+    "bytes": 3097,
+    "sha256": "8d7eaef4972475be3c4edc884d03613e9c6480cae807218d101dae3369d5c0fb"
+  },
+  "read_receipts": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/gamma_exp_tail_bridge_source_review01/read_receipts22.json",
+    "bytes": 3870,
+    "sha256": "597ed1b2f81124d3b01fef0901d3b975761c2553c38d52b2c2fa27d3140553e1"
+  },
+  "precise_mathematical_objections": [],
+  "documentary_observation": "Frozen comment/catalogue still cite historical Tail28/SOURCE02 pending; actual independently paid dependency is Tail03 in batch30. Future preparation must bind real Holo27/Tail30, without changing this scientific source silently.",
+  "direct_imports": [
+    "ComplexGammaMellinHolomorphy22",
+    "ComplexGammaMellinTail22"
+  ],
+  "new_theorems_paid": false,
+  "mainLambda_paid_assumed": false,
+  "compiler_calls": 0,
+  "numeric_calls": 0,
+  "PREP": false,
+  "gate": false,
+  "human07": "DRAFT",
+  "D_N": "OPEN",
+  "WIN": "OPEN"
+}

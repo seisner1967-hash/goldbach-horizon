@@ -1,0 +1,109 @@
+{
+  "round": 8,
+  "status": "PARTIAL_HEAD_GAIN_WITH_OPEN_SIGNED_REMAINDER",
+  "victory": false,
+  "score": 0,
+  "native_gram_candidate": "REJECTED_BEFORE_COMPILATION_MISSING_WEIGHTED_ARITHMETIC_ESTIMATE",
+  "lean_invoked": false,
+  "compiler_exit_code": null,
+  "new_lean_modules": 0,
+  "new_lean_conclusions": 0,
+  "previous_auxiliary_modules": 9,
+  "previous_auxiliary_conclusions": 116,
+  "recorded_at_utc": "2026-10-02T11:07:40.5529261Z",
+  "input_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\judge\\input_sha256.json",
+  "input_manifest_sha256": "aa1c9542c4b3ec357fc585200b88df874d6fdbc64be2316c924618b6434af6f5",
+  "source_sha256": {
+    "agent1_signed_compensation.md": "caf6519306cc308d6e6401b3774efcf0286cc43fcc875164aa73c79613bfb2fb",
+    "agent2_native_bilinear.md": "4dd5772d974809e19157627b3a3b3b2d00fa9661d935dac6ad03984c8efc7b05",
+    "agent3_contract_audit.md": "ba35b03bfad822561168b5a1f80fd629035958f703ef232a4d2df06a07afe49c",
+    "agent4_contract_audit.md": "1618bae3db66d4d3b62c7b7a5994bf6d97f1a25dcf0c965e89575b77060b55a0",
+    "agent6.md": "c8c9ff3b38f88d671e55a8e59948213eb7eb23bc536f4dc5e573c9b2182d2eb3",
+    "compensation_checks.py": "b6dc5fbb7e35b5bad93c54513970845c5bf721573a7e2513742d20ebc4a62262",
+    "native_gram_checks.py": "27ef19aa273a40569ffba4fa00cd6f9aec5d9a911e126f1efc450656e7b3d5a6",
+    "head_regrouping_checks.py": "4e2b87f912177f05871bdefd6d532db99ca02ec1ac888cda5bfb9032ad3eb65e",
+    "compensation.json": "44fb25267eb3088037ef6d16bb3998a42a94952576662f279c35527aa702364c",
+    "native_gram.json": "ac4a14ae8a58a1579c16d84dd70aeac97e610b62b61514ff176e8bd0b8676ed0",
+    "head_regrouping.json": "f85071f0d1f6f1ecfd1d9612caf8d874bd9669933fd47fc00ae9ffffbc3cd7eb",
+    "shared.py": "d7d38a641a49827c0be3f0b1dc1d07b8c18b514b7d2721515191b44720b934cb",
+    "conservation.py": "9c515fed1caa327154879d6754cd962948dae8f0be89ded3e3cbee018a7b62b8",
+    "conservation.json": "d0bfedb1e437be1df646a09c1e8a8369e1c56ad96e0e3803377d0bdc0a6280c4",
+    "previous_artifacts_sha256.json": "b973b6ea8ce1fdef2a704e1e0bcc977ee7ac5b140e71d17cc3d90c165317243a",
+    "SOURCE_ONSET_CLARIFICATION.md": "d69e316349b2ce814d723b7f8823704949509ceadd5cf3b3647b54efc4c5083d",
+    "source_onset_render_receipt.json": "8b2997f16b1e705e619b664061abe4335fa820c43fb49a0e298895cc4e653662",
+    "render_source_onset.py": "d816ad1ce55bd2eccdffe45ef3999b2864855d8a0ebcc38610e9f1147dcdc318",
+    "source_onset_page32.png": "d29d2bbb738ce436a6e4ea23e68ec8e0a4c6f1b567e47f2b0bc65cbf660f1f82",
+    "source_onset_page32.txt": "82e8b630d9e089d2e7707916a82fa072f513bcdaae45bff42e1f920867b12b69",
+    "source_onset_page33.png": "cb98977a897e78265260f5741414dfdb86ade20b91a6eefbdbcea3441ce9f286",
+    "source_onset_page33.txt": "3827ea1763079d2844a36f1ed4184c56a52da5049e99f4479b4d91abba9fe51a",
+    "source_onset_page36.png": "6e4ca54e3dbbc0cae8a9326324d07568e7fbc0db29cdaf173d0126568c0aafe1",
+    "source_onset_page36.txt": "b15209af6f922ef0a4e2577b5951142f90dbc848b3d53c2925980794bc321d6d"
+  },
+  "external_source_sha256": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24"
+  },
+  "numerical_gates": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\compensation.json",
+      "status": "PASS_EXACT_IDENTITIES_ONLY",
+      "N": 100000000,
+      "sha256": "44fb25267eb3088037ef6d16bb3998a42a94952576662f279c35527aa702364c",
+      "script_sha256": "b6dc5fbb7e35b5bad93c54513970845c5bf721573a7e2513742d20ebc4a62262"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\native_gram.json",
+      "status": "PASS_ALGEBRA_ONLY",
+      "N": 100000000,
+      "sha256": "ac4a14ae8a58a1579c16d84dd70aeac97e610b62b61514ff176e8bd0b8676ed0",
+      "script_sha256": "27ef19aa273a40569ffba4fa00cd6f9aec5d9a911e126f1efc450656e7b3d5a6"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\head_regrouping.json",
+      "status": "PASS_HEAD_IDENTITY_ONLY",
+      "N": 100000000,
+      "sha256": "f85071f0d1f6f1ecfd1d9612caf8d874bd9669933fd47fc00ae9ffffbc3cd7eb",
+      "script_sha256": "4e2b87f912177f05871bdefd6d532db99ca02ec1ac888cda5bfb9032ad3eb65e"
+    }
+  ],
+  "judge_scripts_sha256": {
+    "audit-judge.ps1": "920a918138176639bf3fff5aae076ebb1e6e324fbb2cbd24187001b36e5c1488",
+    "verify-frozen.ps1": "dc9de4b28f78fb9a33e8bac337f89593eafc7b6da165a33c797ed592a1fe0b89",
+    "replay.py": "6cf72aac545beda19c36b52574b3792eb279e5b12c13b76026d1e3ba952987fd"
+  },
+  "numerical_replay": {
+    "status": "PASS_EXACT_REPLAY",
+    "exit_code": 0,
+    "receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\judge\\numerical\\replay_receipt.json",
+    "receipt_sha256": "779006ca86c82e375f6d8e278f8412b9e1f8440c0d5fab8f31b531787ec61b1d",
+    "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\judge\\numerical_replay.log",
+    "log_sha256": "78019c3e9bac57ffe76cfdb7e0f65a7c15360ec601f52c4fd3c31ba2072e2931"
+  },
+  "source_onset": {
+    "original_pdf_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "physical_pages": [
+      32,
+      33,
+      36
+    ],
+    "all_pixels_text_and_receipt_hashes_equal": true,
+    "reproduced_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\judge\\source_pages\\source_onset_render_receipt.json",
+    "receipt_sha256": "8b2997f16b1e705e619b664061abe4335fa820c43fb49a0e298895cc4e653662",
+    "onset": "u >= 10^24, visually inspected source; budget constants 1024 remain distinct"
+  },
+  "preserved_previous_artifacts_before": {
+    "status": "PRESERVED",
+    "files": 227,
+    "manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\previous_artifacts_sha256.json",
+    "baseline_sha256": "b973b6ea8ce1fdef2a704e1e0bcc977ee7ac5b140e71d17cc3d90c165317243a"
+  },
+  "preserved_previous_artifacts_after": {
+    "status": "PRESERVED",
+    "files": 227,
+    "manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\previous_artifacts_sha256.json",
+    "baseline_sha256": "b973b6ea8ce1fdef2a704e1e0bcc977ee7ac5b140e71d17cc3d90c165317243a"
+  },
+  "analytical_head": "Written qualitative independent bound; new BV calibration and common threshold not evaluated; no Lean certificate",
+  "analytical_source_domain": "Acquired adaptive inputs u >= 10^24 with original premises; N=1e8 finite diagnostics only",
+  "unresolved_obligation": "R16: long physical minus complete matching model, plus 2 max(e,0); effective head fees calibration still required",
+  "scope": "Exact identities retained; specific separability/tail/support shortcuts falsified; no general impossibility inferred"
+}

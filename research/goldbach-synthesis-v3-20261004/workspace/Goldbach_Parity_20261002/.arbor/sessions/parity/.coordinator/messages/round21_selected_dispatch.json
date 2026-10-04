@@ -1,0 +1,76 @@
+{
+  "round": 21,
+  "status": "ACTUAL_SELECTED_WAVE3_4_6_PERSISTED_ALL_EXECUTION_GATES_CLOSED",
+  "recorded_utc": "2026-10-03T05:39:02.642229+00:00",
+  "actual_dispatches": [
+    {
+      "role": 3,
+      "agent": "/root/round21_formal3_prepare",
+      "node": "13.13",
+      "ownership": [
+        "round21/role3/**",
+        "round21/agent3_formalisation.md"
+      ],
+      "actual_dispatch": "followup_after_actual6dcc08_selection",
+      "status": "SOURCEWRITING_NEW_LEAN_ONLY_NO_COMPILER_GATE"
+    },
+    {
+      "role": 4,
+      "agent": "/root/round21_ideation1_signed",
+      "node": "14.6",
+      "ownership": [
+        "round21/role4/**",
+        "round21/agent4_formalisation.md"
+      ],
+      "actual_dispatch": "reuse_completed_listed_ROLE1_via_followup_after_actuala9950b_selection",
+      "status": "SOURCEWRITING_NEW_LEAN_ONLY_NO_COMPILER_GATE"
+    },
+    {
+      "role": 6,
+      "agent": "/root/round21_numeric_conservation",
+      "nodes": [
+        "13.13",
+        "14.6"
+      ],
+      "ownership": [
+        "round21/role6_ap/**",
+        "round21/ap.json",
+        "round21/role6_reciprocal/**",
+        "round21/reciprocal.json"
+      ],
+      "actual_dispatch": "followup_selected13.13_then_send_selected14.6",
+      "status": "TWO_NEW_BANK_SOURCES_PREPARATION_ONLY_MATH_GATES_CLOSED"
+    }
+  ],
+  "current_nodes": [
+    "13.13",
+    "14.6"
+  ],
+  "ideation1_2_final_frozen": true,
+  "four_concurrency_slots_six_logical_roles_in_waves": true,
+  "independent_Judge5_later": true,
+  "coordination_incidents": [
+    {
+      "action": "spawn new round21_formal4_reciprocal",
+      "result": "agent thread limit reached",
+      "new_agent_created": false
+    },
+    {
+      "action": "followup old completed round20_formal4_friable",
+      "result": "agent thread limit reached",
+      "turn_started": false
+    },
+    {
+      "action": "followup currently listed completed round21_ideation1_signed for ROLE4 on ROLE2 branch",
+      "result": "success",
+      "turn_started": true
+    }
+  ],
+  "resolved_without_user_input": true,
+  "external_blocker": null,
+  "Lean_or_numeric_execution_authorized": false,
+  "preparatory3_full_report_chunk": "953048",
+  "preparatory3_full_receipt_chunk": "cf1c17",
+  "preparatory3_all26inputsha_verified": true,
+  "victory": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "ROUND22_ROOT_DOCUMENTARY_DELIVERY03_OBSERVATION",
+  "time_utc": "2026-10-03T18:23:19.705191+00:00",
+  "status": "CONTRACT_DELIVERED_WITH_COMPILED_ERROR_ENVELOPE_GLOBAL_COEFFICIENT_OPEN",
+  "entries": [
+    {
+      "path": "round22/role3/continuous_contract_delivery22_revision03.txt",
+      "sha256": "af466104a72bb89b5e0a5e7ecf117c06c610d23d14a82139cfda7cb96c6fcb82",
+      "bytes": 6629
+    },
+    {
+      "path": "round22/role3/continuous_contract_delivery22_revision03_read_receipts.json",
+      "sha256": "4a160309fde4a80bc3e7d8171bc6e6c8439299043dcea4be91cd5913b42366cc",
+      "bytes": 5489
+    }
+  ],
+  "ROOT_FULL_reads": [
+    "7695a7",
+    "c5accc"
+  ],
+  "independent_math_owner": "ROLE3_AND_ROLE5",
+  "new_Lean_invocations": 0,
+  "new_numeric_evaluations": 0,
+  "new_credit": 0,
+  "official_modules": 78,
+  "official_declarations": 1304,
+  "previous_delivery_bytes_preserved": true,
+  "full_global_numeric_coefficient_computed": false,
+  "D_N_paid": false,
+  "WIN": false
+}

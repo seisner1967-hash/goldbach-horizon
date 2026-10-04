@@ -1,0 +1,161 @@
+{
+  "schema": "ROUND22_NATIVE_BUILD_ONLY01_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_READ_ONLY_NOT_IMPORTED_NOT_PREPARED",
+  "utc": "2026-10-03T18:25:44.0167370Z",
+  "author": "ROLE4",
+  "full_source_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\run_build_only_once22.py",
+      "sha256": "d19714a2000c1167875789e144ac729b7f29e140a884286a2c4ffe9d995173b6",
+      "bytes": 14282,
+      "scope": "FULL",
+      "tool_chunk": "711712",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\windows_build_job22.py",
+      "sha256": "a4dcc246f5e491e63f6d9cff849ef2ae774dbf8b9a99a565bc251e94fd12dbed",
+      "bytes": 16756,
+      "scope": "FULL",
+      "tool_chunk": "09da54",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\build_controls_contract22.md",
+      "sha256": "675d4b49438e50c415b12bd4a46fc6ce49949f315e114b020c5181ffbae5c707",
+      "bytes": 5804,
+      "scope": "FULL",
+      "tool_chunk": "a1dc18",
+      "import_or_execution": false
+    }
+  ],
+  "targeted_API_reads": [
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\winnt.h",
+      "sha256": "b1cadbd1a361cf4f8bb9315c648a4c667a129eb07561fef32b8e1ef5b1663715",
+      "bytes": 403745,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\winbase.h",
+      "sha256": "20e60d35e414f149ee5790af23d8a5551a2bb692025dd1d42071610dde5a2841",
+      "bytes": 176130,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\processthreadsapi.h",
+      "sha256": "fa2a3887fbae6c61ee3c20027101dbe71492c1c2d63ab178746b16777cff052b",
+      "bytes": 16830,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\psapi.h",
+      "sha256": "248f067fe8fdad9c66947d99a49cea439b89d31df9951681d231ee4668577267",
+      "bytes": 9313,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\jobapi.h",
+      "sha256": "6afc405b2c6363ef100a3636bb71800f92ba31d26a29a06c13e09f1a0f72b743",
+      "bytes": 513,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\memoryapi.h",
+      "sha256": "f2f0fbb3f1620104d786ad02a9237200f4adb2fdeca8fc3837dfb8bd620f5f29",
+      "bytes": 12143,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    }
+  ],
+  "native_shared_source_receipts": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\read_receipts22.json",
+    "bytes": 7795,
+    "sha256": "ca54f39379fa8bee83ac7c7c30ac6902ffae0b5681afcfa1781987a0a5717d9a",
+    "kind": "READONLY_NATIVE_SOURCE_RECEIPTS",
+    "capture": true
+  },
+  "snapshot_scope": "BYTE_HASH_AND_METADATA_PROJECTION_ONLY_NOT_FULL_HEADER_OR_DLL_TEXT",
+  "parent_preflight_fragments": {
+    "scope": "TARGETED",
+    "tool_chunks": [
+      "6cadbb",
+      "37b2b3"
+    ],
+    "topics": "exact handoff/binding-set union and frozen hashes/capture requirements"
+  },
+  "separate_scope": {
+    "build_active_processes": 16,
+    "numeric_active_processes": 1,
+    "compiler_invocations": 0,
+    "produced_binary_invocations": 0,
+    "Python_candidate_imports": 0,
+    "candidate_parser_calls": 0,
+    "preprocessor_calls": 0,
+    "version_or_help_calls": 0,
+    "ABI_probe_calls": 0
+  },
+  "quotas_exercised": false,
+  "effective_compiler_loader_closed": false,
+  "D_N": false,
+  "WIN": false
+}

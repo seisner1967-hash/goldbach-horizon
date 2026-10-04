@@ -1,0 +1,81 @@
+{
+  "schema": "ROUND22_NATIVE_BUILD_ONLY01_SOURCE_HANDOFF",
+  "status": "SOURCE_ONLY_FROZEN_NOT_PREPARED_NOT_COMPILED",
+  "utc": "2026-10-03T18:25:44.0487704Z",
+  "author": "ROLE4",
+  "binding_count": 5,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\run_build_only_once22.py",
+      "bytes": 14282,
+      "sha256": "d19714a2000c1167875789e144ac729b7f29e140a884286a2c4ffe9d995173b6",
+      "kind": "FROZEN_BUILD_ONLY01_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\windows_build_job22.py",
+      "bytes": 16756,
+      "sha256": "a4dcc246f5e491e63f6d9cff849ef2ae774dbf8b9a99a565bc251e94fd12dbed",
+      "kind": "FROZEN_BUILD_ONLY01_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\build_controls_contract22.md",
+      "bytes": 5804,
+      "sha256": "675d4b49438e50c415b12bd4a46fc6ce49949f315e114b020c5181ffbae5c707",
+      "kind": "FROZEN_BUILD_ONLY01_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\read_receipts22.json",
+      "bytes": 5808,
+      "sha256": "27c8e82f0d8f983487eb51f7cfdcd1c63e3b2b537bcab7f39207f24c3385aa3e",
+      "kind": "FROZEN_BUILD_ONLY01_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\source_handoff22.json",
+      "bytes": 5776,
+      "sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88",
+      "kind": "READONLY_NATIVE02_HANDOFF",
+      "capture": true
+    }
+  ],
+  "native_source_handoff_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\source_handoff22.json",
+  "native_source_handoff_sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88",
+  "build_scope": "NATIVE_BUILD_ONLY_TWO_FIXED_TARGETS",
+  "compiler_path": "C:/msys64/ucrt64/bin/g++.exe",
+  "produced_binary_invocations": 0,
+  "future_fixed_build_limits": {
+    "max_driver_invocations": 2,
+    "max_retries": 0,
+    "wall_seconds": 300,
+    "max_active_job_processes": 16,
+    "max_total_job_processes": 32,
+    "commit_job_bytes": 2147483648,
+    "rss_per_process_bytes": 2147483648,
+    "sampled_job_rss_bytes": 4294967296,
+    "log_bytes": 1048576,
+    "capture_bytes": 33554432,
+    "metadata_bytes": 16777216,
+    "binary_bytes_each": 67108864,
+    "temporary_bytes": 67108864,
+    "output_bytes": 268435456,
+    "produced_binary_invocations": 0
+  },
+  "quotas_scope": "Driver and all non-breakaway descendants; aggregate RSS/output filesystem are monitored, not aggregate OS RSS or NTFS quotas.",
+  "actual_status_at_handoff": "No build-preparation, gate, actual, build-final, receipt or binaries exists.",
+  "successful_future_receipt": "NATIVE_BUILD_EXIT0 only, not coefficient/math/WIN",
+  "OPEN": [
+    "Independent SOURCE audit of build-only parent/backend",
+    "Compiler-loader trust-base and actual import review",
+    "Actual compiler/link success, ABI and quotas/resources exercised",
+    "Post-link native imports/loader review before separate numeric gate"
+  ],
+  "automatic_runtime_preparation": false,
+  "compiler_invocations": 0,
+  "Python_candidate_imports": 0,
+  "coefficient_N": false,
+  "D_N": false,
+  "WIN": false
+}

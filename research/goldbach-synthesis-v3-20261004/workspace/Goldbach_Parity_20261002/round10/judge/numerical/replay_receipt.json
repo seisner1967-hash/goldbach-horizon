@@ -1,0 +1,89 @@
+{
+  "status": "PASS_EXACT_REPLAY",
+  "jsons": {
+    "witnesses.json": {
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "production_sha256": "527df6b3bc8a71cdbf6e76b428b048d13c8cf6af764f94d0fb7b94a5f008d598",
+      "replay_sha256": "527df6b3bc8a71cdbf6e76b428b048d13c8cf6af764f94d0fb7b94a5f008d598",
+      "status": "VERIFIED_FINITE_WITNESSES_ONLY"
+    },
+    "paired_cofactors.json": {
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "production_sha256": "909df1b5cd38a4ed42cad65ca8930c47930d7ba8afd356148d87f4c7edcf34b2",
+      "replay_sha256": "909df1b5cd38a4ed42cad65ca8930c47930d7ba8afd356148d87f4c7edcf34b2",
+      "status": "PASS_FINITE_IDENTITIES_ONLY"
+    }
+  },
+  "contract_statuses": {
+    "dual_and_matched": "PASS_IDENTITY_ONLY",
+    "small_cofactor": "PASS_IDENTITY_ONLY",
+    "singular": "PASS_IDENTITY_ONLY"
+  },
+  "falsifiers": {
+    "false_all_J2_favorable": "ERROR_FALSIFIER",
+    "small_cofactor.false_c_large": "ERROR_FALSIFIER",
+    "small_cofactor.false_p_small": "ERROR_FALSIFIER",
+    "small_cofactor.false_drop_mu_squared": "ERROR_FALSIFIER",
+    "small_cofactor.false_complete_small_fibre": "ERROR_FALSIFIER",
+    "singular.nonunit_extension": "ERROR_FALSIFIER",
+    "singular.properpower_extension": "ERROR_FALSIFIER",
+    "singular.multiplicity": "ERROR_FALSIFIER"
+  },
+  "strict_rational_signs_checked": true,
+  "observed_signs": {
+    "rough_prime_bulk": {
+      "W_kernel": "NEGATIVE",
+      "C": "NEGATIVE"
+    },
+    "rough_semiprime_bulk": {
+      "W_kernel": "NEGATIVE",
+      "C": "NEGATIVE"
+    },
+    "small3_two_large_bulk": {
+      "W_kernel": "NEGATIVE",
+      "C": "POSITIVE"
+    },
+    "one_large_small_prime": {
+      "W_kernel": "NEGATIVE",
+      "C": "NEGATIVE"
+    },
+    "one_large_small_squarefree_plus": {
+      "W_kernel": "NEGATIVE",
+      "C": "POSITIVE"
+    },
+    "one_large_small_squarefree_minus": {
+      "W_kernel": "NEGATIVE",
+      "C": "NEGATIVE"
+    },
+    "one_large_small_nonsquarefree": {
+      "W_kernel": "NEGATIVE",
+      "C": "ZERO"
+    },
+    "nonsquarefree_bulk": {
+      "W_kernel": "NEGATIVE",
+      "C": "ZERO"
+    },
+    "one_large_incomplete_small_fibre": {
+      "W_kernel": "NEGATIVE",
+      "C": "POSITIVE"
+    },
+    "all_small_bulk": {
+      "W_kernel": "NEGATIVE",
+      "C": "POSITIVE"
+    },
+    "small_p_extrapolation": {
+      "W_kernel": "ZERO",
+      "C": "ZERO"
+    }
+  },
+  "finite_domain_N": 100000000,
+  "matched_cases": 11,
+  "source_sha256": "bdee7952e47419fef2a0512d8e74a7234bf3da6800e2dc9561b94f9bd34d5ef2",
+  "witness_source_sha256": "3ac3774c25997c8a59c13862ada7b843bb19f7dd178bba0b45d0d5be5ddd28bb",
+  "old_banks_replayed": false,
+  "analytical_payments_tested": false,
+  "global_D_N_estimated": false,
+  "victory": false
+}

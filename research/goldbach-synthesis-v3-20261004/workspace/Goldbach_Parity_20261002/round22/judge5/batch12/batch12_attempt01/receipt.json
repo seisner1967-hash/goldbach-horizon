@@ -1,0 +1,221 @@
+{
+  "C3_paid": false,
+  "C5_paid": false,
+  "C6_paid": false,
+  "D_N_paid": false,
+  "H1_paid": false,
+  "actual_child_invocations": 1,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "attempt": "batch12_attempt01",
+  "author_olean_used": false,
+  "capture_count": 23,
+  "closed_judge_file_count": 815,
+  "declarations_passed": 0,
+  "global_trace_certified": false,
+  "hidden_retries": false,
+  "input_count": 7951,
+  "modules_passed": 0,
+  "numeric_PASS_used_as_proof": false,
+  "numeric_bank_replayed": false,
+  "old_batches_recompiled": false,
+  "protected_archive_count": 3089,
+  "readonly_local_dependencies": [
+    "ThermalProjectionEnvelope22"
+  ],
+  "rows": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.signedCircleCharacter"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projectionAdditiveCoefficient"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.signedCircleCharacter_continuous"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.integral_signedCircleCharacter"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.star_projectionHeatTerm_neg"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projection_pair_character"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projection_pair_integral"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projection_normalizer_cancel"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.normalized_projection_pair_integral"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projectionPartialCorrelation_expansion"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projection_rectangle_filter_eq_antidiagonal"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.thermalPartialProjection_eq_finite_coefficient"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.thermalPartialProjection_eq_coefficient"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projectionAdditiveCoefficient_eq_sum"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projectionTailEnvelope_tendsto_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projectionHeatPartial_converges_uniformly"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.projectionErrorEnvelope_tendsto_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.thermalProjection_difference_tendsto_zero"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.thermalContinuousProjection_eq_coefficient"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.thermalContinuousProjection_eq_vonMangoldt_sum"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\batch12_attempt01\\ThermalProjectionIdentity22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\sources\\ThermalProjectionIdentity22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": false,
+      "exit_code": 1,
+      "finished_at": "2026-10-03T15:58:25.178768+00:00",
+      "launch_error": null,
+      "log_sha256": "f4cdc3f9f0ed4922a320a43230c5299e9c6319f065aff55ea5881d994eb01501",
+      "module": "ThermalProjectionIdentity22",
+      "olean_sha256": null,
+      "source_prior_status": "SOURCE_REVISION_NOT_COMPILED",
+      "source_sha256": "533f81f523f465240ebf7f129d32c9d6c0119e0e0d7936a42bc65e75823880d0",
+      "started_at": "2026-10-03T15:58:01.295660+00:00",
+      "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+      "timed_out": false
+    }
+  ],
+  "status": "INDEPENDENT_BATCH12_FAILED",
+  "time_utc": "2026-10-03T15:58:35.194488+00:00",
+  "victory": false
+}

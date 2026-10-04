@@ -1,0 +1,24 @@
+{
+  "status": "PASS_IDENTITY_ONLY",
+  "N": 100000000,
+  "coefficient_cases": 19999,
+  "prime_power_terms": 65533,
+  "prefixes": [
+    {
+      "X": 303,
+      "terms": 802,
+      "proper_powers": 218
+    },
+    {
+      "X": 1024,
+      "terms": 2952,
+      "proper_powers": 771
+    }
+  ],
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 190,
+    "baseline_sha256": "900367574d957bfe8e48341ca532022fc0e742d5a001099e3d402863e467de61"
+  },
+  "script_sha256": "eb122b2c44e52a053c38d09ad6e3b7c3abe2167bed2c6c23fbc78b62baba789a"
+}

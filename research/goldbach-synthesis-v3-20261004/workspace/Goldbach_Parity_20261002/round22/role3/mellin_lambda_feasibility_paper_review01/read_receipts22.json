@@ -1,0 +1,190 @@
+{
+  "schema": "ROUND22_ROLE3_MELLIN_LAMBDA_FEASIBILITY_INDEPENDENT_PAPER_READS",
+  "time_utc": "2026-10-04T01:16:58.0395094Z",
+  "reviewer": "/root/round22_formal3_prepare",
+  "author_reviewed": "/root/round22_formal4_trace",
+  "review_report": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/mellin_lambda_feasibility_paper_review01/review22.txt",
+    "bytes": 7131,
+    "sha256": "af5d3d7969831bf5be4658bd2001e88bd6045e0bd18f60cba6c98ab6a36c59e0"
+  },
+  "reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+      "bytes": 12480,
+      "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "fbc37e"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/source_handoff22.json",
+      "bytes": 6647,
+      "sha256": "b66b922fd8bb1cdad7005596c873c09bf9ca017fed5c804829c73da53a807a3e",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "fbc37e"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/read_receipts22.json",
+      "bytes": 3940,
+      "sha256": "501daee56da0be0cd01d4bde54ba2cc7ce48fc6299f9c626c73ef2c9fbd687f3",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "4ae2fe"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch30_closed_observation.json",
+      "bytes": 1426,
+      "sha256": "7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292",
+      "scope": "FULL",
+      "evidence_tool_chunks": [
+        "fbc37e"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/projection_envelope_revision02/ThermalProjectionEnvelope22.lean",
+      "bytes": 17761,
+      "sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+      "scope": "TARGETED",
+      "evidence_tool_chunks": [
+        "d445c5"
+      ],
+      "line_ranges": [
+        "20-45",
+        "90-105",
+        "138-143"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch13/sources/ThermalProjectionIdentity22.lean",
+      "bytes": 15587,
+      "sha256": "8bb1eb5ec6ab4bf5e0c8cc053dcbe743049641dab5a3a3858205ad8ee2e2e9aa",
+      "scope": "TARGETED",
+      "evidence_tool_chunks": [
+        "47acd4"
+      ],
+      "line_ranges": [
+        "28-36",
+        "59-70",
+        "259-277"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/elambda16_source_review01/review22.txt",
+      "bytes": 8622,
+      "sha256": "0497ba1f300dd5916fbac27835a04c1968822ef707182dc6e94c10d1bce8d252",
+      "scope": "FULL_PREVIOUS_REVIEW_TASK",
+      "evidence_tool_chunks": [
+        "fb52be"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_contract22.md",
+      "bytes": 6921,
+      "sha256": "17e038d03f977e026853905eb3b7cb88f2d7fd574b71cbc73e9de774392c90bc",
+      "scope": "FULL_PREVIOUS_REVIEW_TASK",
+      "evidence_tool_chunks": [
+        "920716",
+        "eae201"
+      ]
+    }
+  ],
+  "paper_handoff_binding_verification": {
+    "count": 9,
+    "all_match": true,
+    "scope": "PHYSICAL_SHA_BYTES_NO_TRANSITIVE_BUILD_CLOSURE",
+    "evidence_tool_chunk": "4ae2fe",
+    "rows": [
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_contract22.md",
+        "bytes": 6921,
+        "sha256": "17e038d03f977e026853905eb3b7cb88f2d7fd574b71cbc73e9de774392c90bc",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_handoff22.json",
+        "bytes": 17262,
+        "sha256": "31bbd5ddef991c58a9c58bdb0f1aca2d90f3a71a0dcffdbb751871c7434c4298",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch13/sources/ThermalProjectionIdentity22.lean",
+        "bytes": 15587,
+        "sha256": "8bb1eb5ec6ab4bf5e0c8cc053dcbe743049641dab5a3a3858205ad8ee2e2e9aa",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/projection_envelope_revision02/ThermalProjectionEnvelope22.lean",
+        "bytes": 17761,
+        "sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/receipt.json",
+        "bytes": 6886,
+        "sha256": "aabb463dcbbb3736ecd0396454dc31f3dd69c08031a6a996ee3e1477b9a2cd50",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/ComplexGammaMellinTail22.log",
+        "bytes": 2861,
+        "sha256": "5b90e823e54e99781fc4432ab67ea7076427f9e6a4d3c822d6a7513910353374",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch30_closed_observation.json",
+        "bytes": 1426,
+        "sha256": "7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+        "bytes": 12480,
+        "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_lambda_feasibility_paper01/read_receipts22.json",
+        "bytes": 3940,
+        "sha256": "501daee56da0be0cd01d4bde54ba2cc7ce48fc6299f9c626c73ef2c9fbd687f3",
+        "scope": "PARSED_METADATA_SHA_BYTES",
+        "matches_declared": true
+      }
+    ]
+  },
+  "review_method": "MANUAL_PAPER_ALGEBRA_TRIGONOMETRY_AND_CLOSED_INEQUALITIES_NO_NUMERICAL_PROGRAM",
+  "scientific_source_modifications": 0,
+  "compiler_invocations": 0,
+  "candidate_parser_invocations": 0,
+  "candidate_imports": 0,
+  "numeric_invocations": 0,
+  "PREP": false,
+  "gate": false,
+  "measured_duration_claim": false,
+  "measured_memory_claim": false,
+  "actual_error_lower_bound_claim": false,
+  "any_better_method_impossibility_claim": false,
+  "official_snapshot": {
+    "modules": 86,
+    "declarations": 1456,
+    "root_observation30_sha256": "7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292"
+  },
+  "main_Lambda_30_declarations": "SOURCE_NOT_COMPILED_PENDING31",
+  "ELambda16": "SOURCE_NOT_COMPILED",
+  "geometry": "PAPER_NO_LEAN_CREDIT",
+  "human07": "DRAFT_NOT_FROZEN",
+  "D_N_paid": false,
+  "victory": false
+}

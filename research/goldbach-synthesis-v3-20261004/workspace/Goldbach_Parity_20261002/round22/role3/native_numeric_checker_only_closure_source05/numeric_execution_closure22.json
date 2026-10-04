@@ -1,0 +1,666 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC05_CHECKER_ONLY_EXTERNAL_METADATA_CLOSURE",
+  "status": "CLOSED_STOP_NO_MATHEMATICAL_VERDICT",
+  "utc": "2026-10-04T00:32:40.3051733Z",
+  "gate_sha256": "e417407398e27d22a19a932bed6da09f09b0866bce8abbb2c08cfaaee28551cc",
+  "session_id": 81191,
+  "session_closed_tool_chunk": "1be8f6",
+  "actual_parent_receipt_sha256": "a4fd71445174b04f0bd70dc66bf086727f8b08d5624e550a46647583f785641d",
+  "actual_parent_receipt_present": true,
+  "parent_exit_code": 1,
+  "parent_invocations": 1,
+  "retry_count": 0,
+  "produced_binary_processes_created": 1,
+  "actual_processes_quiescent": true,
+  "quiescence_scope": "EXTERNAL_SESSION_CLOSED_AND_CALLBACK_PIDS_ABSENT;NOT_UNIVERSAL_PROCESS_GRAPH_PROOF",
+  "quiescence_evidence_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_closure_source05\\quiescence_evidence22.json",
+  "quiescence_evidence_sha256": "c1ba69807df6ac59cdc0671c2c8518eaeb7b1d298ddbbb30d1171c9c2623238f",
+  "all_current_bytes_preserved": true,
+  "inputs_verified": 6576,
+  "capture_original_copy_pairs_verified": 109,
+  "payload_original_copy_pairs_verified": 3,
+  "producer_invocations": 0,
+  "compiler_processes_created": 0,
+  "old04_outputs_preserved": 83,
+  "old04_missing_receipt_POST_checkerFIN_coefficient_still_absent": true,
+  "protected_archives_verified": 3089,
+  "metadata_controls_verified": 5,
+  "output_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\checker_CREATED_SUSPENDED.json",
+      "bytes": 117,
+      "sha256": "25553e859a005471ae190c8ce9b22b2b104b4b7643e64532beea2dc505b3fd95"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\checker_FIN.json",
+      "bytes": 1017,
+      "sha256": "a4936fe92ab2442b3be2834e0b0f0b66c2ebefd698e79c010aaa227ff42672c6"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\checker_START_REQUEST.json",
+      "bytes": 1989,
+      "sha256": "7162bb3f8f75e2366181cfa2e5a086cc5016b2d5f1b07665b35a194f99748324"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\checker_START.json",
+      "bytes": 307,
+      "sha256": "ebb34226ac252b18ca5917305134f9ae83297378a30a6dd285232dbc5c0c7281"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\checker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\checker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\parent_FIN.json",
+      "bytes": 292,
+      "sha256": "d9cae8bf128a9e3d7fb17aca20062a5aae6a5da04f08c26bef21c5067eb89cb8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\parent_START.json",
+      "bytes": 313,
+      "sha256": "96c19a65ce3b69e094eb6fc4ba4d92aa1ff0b1e3a7b2023b07ecc0e4ace47161"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\POST.json",
+      "bytes": 237,
+      "sha256": "7b717a6c395edda34e6cb9f0a5665ea75561defe7cbb2266b350a9d7d1aa128c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PRE.json",
+      "bytes": 57929,
+      "sha256": "48eb512cf9725773ce510d0163d23f54b6ba97f0c899f9fa00fc9a7d8e61575a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\receipt.json",
+      "bytes": 3712,
+      "sha256": "a4fd71445174b04f0bd70dc66bf086727f8b08d5624e550a46647583f785641d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\payload\\factors.bin",
+      "bytes": 400000020,
+      "sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\payload\\producer.txt",
+      "bytes": 194,
+      "sha256": "aeee44e0e6cdc503504d9ea3329ab6b83b3a665462472318265932200ab04383"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\payload\\records.bin",
+      "bytes": 92183304,
+      "sha256": "bf6bfeb2d8431326cf677df7605bac3d12caa189f22a87e7e4267aff6a093b6d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\000_numeric_checker_only_preparation22.json",
+      "bytes": 3458,
+      "sha256": "006a9177e9edeb07eb636ab11196b3cc17decbbdca008de066dc1ad85aadfb25"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\001_round22_native_numeric05_checker_only_authorization.json",
+      "bytes": 5162,
+      "sha256": "e417407398e27d22a19a932bed6da09f09b0866bce8abbb2c08cfaaee28551cc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\002_numeric_checker_only_manifest22.json",
+      "bytes": 1529836,
+      "sha256": "a22738cdeabf910caa822ead788774cd4b574d54d4bb7a0aedaa242236d7e0d7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\003_source_review22.json",
+      "bytes": 4650,
+      "sha256": "b1ae8a929b7be824cbf7770184c40e69faf20e54ff3336cf1cd0b4900cf5a2ae"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\004_trust_review22.json",
+      "bytes": 3592,
+      "sha256": "cdf1d7641b2317621e085a703e59bbf699aabc980b5d5ab2c5fdbacbe6a2eabd"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\005_metadata_execution_receipt22.json",
+      "bytes": 1145,
+      "sha256": "4659c24dc93fe188de93df6cb50a6177672425364e589fd7a99055e7934f2050"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\006_prepare_native05_checker_only_metadata22.ps1",
+      "bytes": 17742,
+      "sha256": "0dedf40be1d10b39f8e7d44b7826d55de4bf634d0872a187f6524a4dfb33e57f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\007_metadata_read_receipts22.json",
+      "bytes": 755,
+      "sha256": "b272f0b8b38e0c4164e7dbe2c96351119593b96813c336a1796d08e977a886db"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\008_round22_judge_batch26_closed_observation.json",
+      "bytes": 1423,
+      "sha256": "9b7697d2d35d12903e436403e77fb44e8ea76c6f586940e28d168ab851340e9b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\009_round22_native_build04_authorization.json",
+      "bytes": 2320,
+      "sha256": "9000d3014dc0e5030aac6bcffdff54629af76861cc74630dee586265256ce643"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\010_round22_native_build04_closed_observation.json",
+      "bytes": 1390,
+      "sha256": "f4ceb714c272e3fe5b665101492b3465eea52316501ade6a916ea0c33a8a902a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\011_round22_native_numeric04_authorization.json",
+      "bytes": 4352,
+      "sha256": "b5dc57f1afa98304645f9e62505026c805c7a536946a15eedec399922aeba932"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\012_round22_native_numeric04_closed_observation.json",
+      "bytes": 2096,
+      "sha256": "9097721eee09dea1c30c73a2285713b5a72f98c754781b40d8ab8c977d2f75a3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\013_circle_native_build_controls_source_review02.md",
+      "bytes": 4823,
+      "sha256": "1fee0de6627591ae3fb91e26c72649f66d026039230b2b6b6f6d11f10dbe6720"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\014_circle_native_build_controls_source_review03.md",
+      "bytes": 6311,
+      "sha256": "514419b15d0e17300e852f4baec4bb3046f4f65c5f1da470f8faab125637cad2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\015_circle_native_build_controls_source_review04.md",
+      "bytes": 6439,
+      "sha256": "e72b4d3b61086f9cd2293de005af4e7c21457b8fcb357cf3201c5fd717fce1ef"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\016_circle_native_build_trust_review03.json",
+      "bytes": 2874,
+      "sha256": "3d47ef4040924caec5c863b7009b389830bc4f1a2e97a46cd675e4a679fd14bd"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\017_circle_native_build_trust_review04.json",
+      "bytes": 3453,
+      "sha256": "b4574128d6cc24bd15c547f3222c8456e1880cf993a036e237af9c568f13b899"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\018_circle_native_source_review01.md",
+      "bytes": 8759,
+      "sha256": "6d6899b9c2fea5ca7fa000c85876c0a29f5dfdc0e1e412feb41c2b42541dfe1c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\019_inspect_pe_bytes22.ps1",
+      "bytes": 10635,
+      "sha256": "43a1c704bd2b0a24bb580d1430ec7a93cdaa1e2d14139a433424755fff3ac767"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\020_pe_static_import_observation22.json",
+      "bytes": 307212,
+      "sha256": "36032c45c476e72c97393f60d02fbf5ff2e2679e82d2c3dd5eaea558cfdcadbc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\021_build_execution_closure22.json",
+      "bytes": 4889,
+      "sha256": "94cdc97045004ddfca7556bac5a14339c247b7ead776373ec49d093edc25361e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\022_build_execution_closure22_revision02.json",
+      "bytes": 8970,
+      "sha256": "dd506cebebcdbf7c75fd138d26cfb744552bdd6912e3cc37fbaa3a58fd8c0c15"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\023_build_manifest22.json",
+      "bytes": 1462487,
+      "sha256": "24ea81c9ae7134f71837baed91dabc9c64f45a2438ca6223e1aedc2154a85c2f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\024_numeric_checker_only_execution_plan22.json",
+      "bytes": 6124,
+      "sha256": "e39443a771e40829aee31dab2662d26026fe0d59e85ac8b4c42197b118fcc844"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\025_numeric_checker_only_trust_policy22.json",
+      "bytes": 3199,
+      "sha256": "2da30d086338b3801f4ecc234eedf99b7afa563d94357c07a461740ea52ace9b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\026_read_receipts22.json",
+      "bytes": 4753,
+      "sha256": "65e84cea034fb9e3815711ba16eb4d178568bac755aa234703094ce89bfccc54"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\027_run_native05_checker_only_once22.py",
+      "bytes": 37560,
+      "sha256": "c1e116f0467aa0d9a5e54c80f8db560887379ce82bf4dee825ec63531421d7b1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\028_source_contract22.txt",
+      "bytes": 6352,
+      "sha256": "b992f9aab48c3741445266828a3ea461dd5976c86f3ae3cd9051ea05105071bb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\029_source_handoff22.json",
+      "bytes": 21191,
+      "sha256": "9b721db7eff5bd27936be11937350f9811f8c7c2f0126eab066e57b6647478cf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\030_numeric_checker_only_execution_plan22.json",
+      "bytes": 5404,
+      "sha256": "cf508080acd96b0fa75c20fe9a5b45c3abf3aea1ff55dd6eb2a3fb7e4e541f4b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\031_numeric_checker_only_trust_policy22.json",
+      "bytes": 2777,
+      "sha256": "642b5ca51c3eaa7e687293dc4e8eaaed6bdd733fd7b7fa80b79b4b21d3d09af1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\032_prepare_native05_checker_only_metadata22.ps1",
+      "bytes": 17353,
+      "sha256": "2ff936cac29de289d22986ba6cb3ba834eaa37ec251b330f445b50a8151b4cc7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\033_read_receipts22.json",
+      "bytes": 5223,
+      "sha256": "65f9476376d819521455e3cfbe16d0ef01c29c5d7c0c7c0a1194faae796d8dcf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\034_run_native05_checker_only_once22.py",
+      "bytes": 36695,
+      "sha256": "2b073990ccb6b66248d6fb68df6b21141e04324f311e40ec0fae41c12a703001"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\035_source_contract22.txt",
+      "bytes": 5039,
+      "sha256": "00854925f4d2ce99218a0127565002316893ee2f730486a632d9e08fb9d3d035"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\036_source_handoff22.json",
+      "bytes": 16264,
+      "sha256": "730e2782d4ae005d036caa2a59216813e5763985a9cc498207e92a09fead89e2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\037_close_numeric04_metadata22.ps1",
+      "bytes": 12291,
+      "sha256": "81c3e40726052f95df83576071ffe062b6182ead44fc9c4edc7333dc9d515ab7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\038_closure_evidence_bindings22.json",
+      "bytes": 72941,
+      "sha256": "ad229461cba2a9b411801c024e443148b9ba2673508107e868a173b42c0ea184"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\039_closure_source_contract22.txt",
+      "bytes": 3333,
+      "sha256": "3eb0fa4495657f95f6ff740ed828ee4de111c0ebb1f3de2e9b3125a6d887d1bd"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\040_numeric_execution_closure22.json",
+      "bytes": 28419,
+      "sha256": "a99a5e58768d09a16c7a1ae248448be41016cac228fc57c69372d6abb2774df3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\041_quiescence_evidence22.json",
+      "bytes": 1010,
+      "sha256": "2763645031ab61fdbeae88a8cd5d699d4a11b60381f132dd8e5c5da2ba94402a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\042_read_receipts22.json",
+      "bytes": 2091,
+      "sha256": "13bc65c864da728812cbaed327670053cb34ec8e649f9d2e1ff40a0aba62921a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\043_source_handoff22.json",
+      "bytes": 1656,
+      "sha256": "93484586cc583ed64a51c39eaf2e968b9ff6a10cfc00f4096309c15005204cbc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\044_PRE.json",
+      "bytes": 31003,
+      "sha256": "2263e2fa6b54445a31ac910e213a417b07cee7468c103726f12f8736e46d1d6d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\045_producer_FIN.json",
+      "bytes": 997,
+      "sha256": "fdbb8187fb1ab37ac19d301d0b475da3ee9e48df004732bd60d930905280a520"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\046_producer_payload_hashes.json",
+      "bytes": 384,
+      "sha256": "470441f9e6af30a1be7c4c27999c6498ef6b66509521abdb4ac5cb1a2229d50e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\047_WATCHDOG_TERMINATION_REQUEST.json",
+      "bytes": 208,
+      "sha256": "cd559e4e5a3355639dfe3d46d358537ee3ee9984d29206efa1781fc7f7e1f706"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\048_numeric_consumer_contract22.txt",
+      "bytes": 7367,
+      "sha256": "8be046b99950043cd684a1cee51d4b0d0ef933b791d357946ca0ce7689a2aac6"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\049_numeric_execution_plan22.json",
+      "bytes": 5222,
+      "sha256": "c66808e4cd7312d76002559afccf909fdb5b6aa1e706301fc88813dcb519aaeb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\050_numeric_manifest22.json",
+      "bytes": 1489382,
+      "sha256": "43d746dee55a02c6fc49032be240badf315e9525d67e12fe05a0d6c52cb5bcad"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\051_numeric_preparation22.json",
+      "bytes": 4679,
+      "sha256": "97a05adf8c9acd4165b9210ae9a9dce6bf55a6ef4a2f038e6dd1d1aa0ae8f5c6"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\052_numeric_trust_policy22.json",
+      "bytes": 2647,
+      "sha256": "c6c97d0ef8846bbabb6db2ae7544de4aec631403c6f60ca460983c334059ebce"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\053_preparation_requirements22.txt",
+      "bytes": 4659,
+      "sha256": "a6c36825ffb4e32838852852dbfe445ba9bcb9dab17bcf8482897d9d4e736c8c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\054_read_receipts22_revision02.json",
+      "bytes": 10004,
+      "sha256": "31b7bab5b1b0eab1c2d9f0152dbb87c245fbf81e7fe2d3053500e4d1a4252690"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\055_read_receipts22.json",
+      "bytes": 8981,
+      "sha256": "81fe165be597f5dd8830cb3ab7fe65392133e7d5a1718a5939ab72e44d6fa067"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\056_run_native04_once22.py",
+      "bytes": 27241,
+      "sha256": "97473b226ce5206e021e444720651e00ca1fdb4c1c1052e20db60d4effec3f55"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\057_source_handoff22.json",
+      "bytes": 12690,
+      "sha256": "0c839fc7c602c52c6c3f0d47d6f643342c8641a0cc8527b656a4e7cf70e74616"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\058_metadata_execution_receipt22.json",
+      "bytes": 1011,
+      "sha256": "0ccc01049b44bb05af8aacb2518347c65436cef55fec5b507efce2ae1d8bb06d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\059_metadata_read_receipts22.json",
+      "bytes": 3759,
+      "sha256": "34aeaa0407475289e38e1a61dd8c087012e6d9c5ff9609310225f56b8bc3d08e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\060_prepare_numeric04_metadata22.ps1",
+      "bytes": 24607,
+      "sha256": "6944ecda1f24f20dca6350ed5b1198bc3fe9e48ec06dedabaf536c1c7f67c172"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\061_source_handoff22.json",
+      "bytes": 4583,
+      "sha256": "13ee77e4b0dd922596c390e64f399b8ea423d075bb9eb5f25fa29785d94c3027"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\062_POST.json",
+      "bytes": 124,
+      "sha256": "75835f8730d0b4e9846e25b50f5f23c04e53d9cab74bf5156489ecc766b3e691"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\063_producer_build_FIN.json",
+      "bytes": 772,
+      "sha256": "c79a47ce71663e1049efddb6325c6261f2c238ee3a7a6a678991dedfdad04172"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\064_producer_build_START_REQUEST.json",
+      "bytes": 1230,
+      "sha256": "2974059c348230ed97490c9936b9b546c58ff9e88bc47fd9469801e27130342e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\065_producer_build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\066_producer_build.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\067_receipt.json",
+      "bytes": 2862,
+      "sha256": "15e8e900446329515c1e30cd00ee03f73bd52715b28a3338dcfcb5741fd4f2c9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\068_build_controls_contract22.md",
+      "bytes": 4332,
+      "sha256": "0a0c9ae1f99ae84215f593a9114f83d7c9a8b28a7989ada5035381a8f05d688b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\069_build_execution_plan22.json",
+      "bytes": 2908,
+      "sha256": "fc77f58cc215b1851e5a87b164407aadcc5cd8f2c7621dcccc6e0c3c38f13f61"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\070_compiler_trust_policy22.json",
+      "bytes": 1779,
+      "sha256": "72fd49d993e3291a174d4ba5a139a649ab916e9e757274c0e89f0a6092b4f6a6"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\071_read_receipts22.json",
+      "bytes": 3432,
+      "sha256": "3e6dd930118aea3419a96c7263050a65b5419844f5950fad2197501a60dc7572"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\072_revision_conservation22.json",
+      "bytes": 2284,
+      "sha256": "a4e6ee747741660391ecec475f133879204c64cac5ed70400c5ff94bf66b4e12"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\073_run_build_only_once22.py",
+      "bytes": 22138,
+      "sha256": "618f0a34a81ed70429d3bce526c70a53ac987fab256c20126e633e514152faa7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\074_source_handoff22.json",
+      "bytes": 6306,
+      "sha256": "426074681af64190ea25ed1cb03229af34f8d26f490ebdc9b23e3dc240a8f07a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\075_windows_build_job22.py",
+      "bytes": 16756,
+      "sha256": "a4dcc246f5e491e63f6d9cff849ef2ae774dbf8b9a99a565bc251e94fd12dbed"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\076_PRE.json",
+      "bytes": 22022,
+      "sha256": "e751361aa2e9b20b7fae95b8c0fdda731338a0b7fb88c1f3aed4fb72d7ecc676"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\077_receipt.json",
+      "bytes": 5117,
+      "sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\078_build_controls_contract22.md",
+      "bytes": 5559,
+      "sha256": "574aef1f43b9ca328a62bc73a7b65466ff82e61c6a9bf822bdc5f5936ad154a5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\079_build_execution_plan22.json",
+      "bytes": 3381,
+      "sha256": "538cc14faf3466bb8a0505e8f6aae3007fc84b2b6246afb2da55d37be5718156"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\080_build_preparation22.json",
+      "bytes": 3550,
+      "sha256": "4b2339ee900e2b3535ff038008936b209d6cfc10354a7f86d976516440b699ec"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\081_compiler_trust_policy22.json",
+      "bytes": 1779,
+      "sha256": "72fd49d993e3291a174d4ba5a139a649ab916e9e757274c0e89f0a6092b4f6a6"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\082_read_receipts22.json",
+      "bytes": 1868,
+      "sha256": "af53dbffbf677021249e0b628191aa5dda98264c798f3e76c38adbe830aacbeb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\083_revision_conservation22.json",
+      "bytes": 4693,
+      "sha256": "5ee37df533fd2ae53d5cf38503d8cc519e830ac27b12111afa62ad4019f9dc76"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\084_run_build_only_once22.py",
+      "bytes": 23690,
+      "sha256": "d7d28b2eb0da5e712a242cb8f6428e7a35b53832753200a3da4c9c0ff7a89cc7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\085_source_handoff22.json",
+      "bytes": 15040,
+      "sha256": "277af8bac79d344907222f1b3c481d97e551afb2d8b1cf5a2aca299dac7508b6"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\086_windows_build_job22.py",
+      "bytes": 16510,
+      "sha256": "88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\087_build_plan22.json",
+      "bytes": 1854,
+      "sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\088_build_receipt04.json",
+      "bytes": 5117,
+      "sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\089_checker_dif22.cpp",
+      "bytes": 18764,
+      "sha256": "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\090_closure_snapshot22.json",
+      "bytes": 1830681,
+      "sha256": "12bd8ab8c067e4881b837689ce705e7f029826b20482b85fbc6a6d18e3717e06"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\091_metadata_conservation22.json",
+      "bytes": 2369,
+      "sha256": "543bcacce66349667e99aa1581c34d20354e7c080acaee1c584b4d5d919f83ff"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\092_native_controls_contract22.md",
+      "bytes": 7429,
+      "sha256": "a29d3fe1473ffbb38cc0df7ae8ea3a0f8851173f3d7d7781765533daaceedea1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\093_producer_dit22.cpp",
+      "bytes": 11771,
+      "sha256": "bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\094_read_receipts22.json",
+      "bytes": 7795,
+      "sha256": "ca54f39379fa8bee83ac7c7c30ac6902ffae0b5681afcfa1781987a0a5717d9a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\095_resource_observation22.json",
+      "bytes": 1126,
+      "sha256": "d6cd25735dc5c92ac05b3b04d4243535f60bd0b2ca4542aa36ed56476aadd9e7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\096_run_native_once22.py",
+      "bytes": 16441,
+      "sha256": "1cb5585e6e940afa3d4d7b3b1fb40259ed39a6bd8ca13a07877cb5651ac65908"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\097_source_handoff22.json",
+      "bytes": 5776,
+      "sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\098_windows_job22.py",
+      "bytes": 13397,
+      "sha256": "78db7ebf8292142a1c51b2d9f27a9c64b53768d0ee7e213e5e2ac8b2ded44a31"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\099_source_handoff22.json",
+      "bytes": 17052,
+      "sha256": "7c5eb71cc23ac7f4235bd566e8aa5e07653a756fab6c58ad4a61aa183e11f834"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\100_native_spec22_final.md",
+      "bytes": 4046,
+      "sha256": "6bc24ecfe96437e5c437fe003788194548b379c0c7bbf0dfed81f118c0eb322b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\101_source_review22.json",
+      "bytes": 6952,
+      "sha256": "f1afc6db690b7ee706f66d2ea9d14878eb36b3374eceffbadc6157e9c2cf9012"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\102_trust_review22.json",
+      "bytes": 3197,
+      "sha256": "5fdf1c49cef3b85d1b617d79b31cca39573c5bc964f23df1535f933406b5c2c7"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\103_read_receipts22.json",
+      "bytes": 4787,
+      "sha256": "de3ad8a2c88e5a182c6b66eb5c04f392255e0f97db0d2816dfb82d25041bcd95"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\104_source_handoff22.json",
+      "bytes": 1545,
+      "sha256": "42c0e7b4700752f2d0575d5e1d3912db83fa475ddde9d4b2a5e7b4384dae447f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\105_source_review22.json",
+      "bytes": 4750,
+      "sha256": "cafe76455c0e2e41d7428246753d6a15c7c7c83ee84454baf30ab8819cd1c78d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\106_trust_review22.json",
+      "bytes": 3178,
+      "sha256": "b75c49d37382bc3298e7a5b2bbd4b88adf9a3d14dd06108d905a8557092635da"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\107_checker_only_contract22.md",
+      "bytes": 9475,
+      "sha256": "8fd1e59d4c751d38a1320aadeed9686dd788eed8c1fb473151924afc7827ad30"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_checker_only_consumer_source05_revision02\\actual_numeric05_checker_only_attempt01\\PREEXEC\\108_checker_only_contract22.md",
+      "bytes": 11066,
+      "sha256": "ea1273af14d4c020aae5f2bb5462b89924e3ba3f0419460a50a2962288c270fb"
+    }
+  ],
+  "external_physical_preservation_distinct_from_parent_POST": true,
+  "parent_POST_verified": true,
+  "parent_POST_present": true,
+  "parent_FIN_present": true,
+  "watchdog_present": false,
+  "coefficient_report_present": false,
+  "parent_result_status": "NATIVE_NUMERIC05_CHECKER_ONLY_STOP_NO_MATHEMATICAL_VERDICT",
+  "parent_failure": "RuntimeError:STOP_FIRST_FAIL:checker",
+  "coefficient_or_interval_arithmetic_recomputed_here": false,
+  "synthetic_parent_receipt_created": false,
+  "mathematical_falsity_established": false,
+  "mutant_runs": 0,
+  "compiler_invocations": 0,
+  "native_invocations_here": 0,
+  "native_Lean_refinement": false,
+  "B40_real_log_refinement_Lean": false,
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "spectral_H1": false,
+  "D_N": false,
+  "WIN": false
+}

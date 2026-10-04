@@ -1,0 +1,90 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:80:2: error: type mismatch, term
+  HasDerivAt.comp_ofReal (HasDerivAt.cexp hb)
+after simplification has type
+  HasDerivAt (fun y => Complex.exp (↑y * (Complex.I * -↑N)))
+    (Complex.I * -↑N * Complex.exp (↑theta * (Complex.I * -↑N))) theta : Prop
+but is expected to have type
+  HasDerivAt (angularCharacter N) (Complex.I * -↑N * Complex.exp (↑theta * (Complex.I * -↑N))) theta : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:87:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:88:53: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:116:83: error: unsolved goals
+N : ℕ
+he : -↑N * Complex.I * ↑Real.pi = ↑N * -(↑Real.pi * Complex.I)
+⊢ ((-1) ^ N)⁻¹ = (-1) ^ N
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:176:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  Complex.I * (Complex.I * q * angularJ a N (q + 1) - Complex.I * ↑N * angularJ a N q)
+a : ℝ
+ha : 0 < a
+N : ℕ
+hN : 0 < N
+q : ℂ
+hN0 : ↑N ≠ 0
+h :
+  (fun z => Complex.I * z) (Complex.I * q * angularJ a N (q + 1) - Complex.I * ↑N * angularJ a N q) =
+    (fun z => Complex.I * z) (angularNormalizer * (-1) ^ N * (angularPower a q Real.pi - angularPower a q (-Real.pi)))
+he :
+  Complex.I * (Complex.I * q * angularJ a N (q + 1) - Complex.I * ↑N * angularJ a N q) =
+    ↑N * angularJ a N q - q * angularJ a N (q + 1)
+⊢ angularJ a N q = angularBorder a N q + q / ↑N * angularJ a N (q + 1)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:217:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:218:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch23\sources\AngularMellinBorder22.lean:218:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'GoldbachAngularMellinBorder22.angularBase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularPower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularCharacter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularNormalizer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularJ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBorder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBase_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBase_mem_slitPlane' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBase_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularPower_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularCharacter_hasDerivAt' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularIntegrand_hasDerivAt' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularPower_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularCharacter_continuous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularIntegrand_continuous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularDerivative_continuous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularIntegrand_intervalIntegrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularDerivative_intervalIntegrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularCharacter_pi' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularCharacter_neg_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularIntegral_derivative_eq' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachAngularMellinBorder22.angularJ_balance' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularJ_recurrence' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBorder_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBorder_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularQuadratic_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBorder_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachAngularMellinBorder22.angularBorder_one_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

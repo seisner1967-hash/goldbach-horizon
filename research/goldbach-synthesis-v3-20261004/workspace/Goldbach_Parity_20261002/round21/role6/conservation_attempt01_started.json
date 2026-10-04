@@ -1,0 +1,110 @@
+{
+  "attempt": 1,
+  "authorization": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round21_conservation_authorization.json",
+  "authorization_sha256": "0ea14a4f47058f38817fd975a2e5b2d7a1b95d2e0940b66ae57c90e63c6189f7",
+  "authorization_token": "ROOT21_CONSERVATION_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+  "captures_preexec": {
+    "authorization": {
+      "bytes": 1411,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round21_conservation_authorization.json",
+      "sha256": "0ea14a4f47058f38817fd975a2e5b2d7a1b95d2e0940b66ae57c90e63c6189f7",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_authorization_PREEXEC.json"
+    },
+    "controller20": {
+      "bytes": 171288,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\controller_manifest.json",
+      "sha256": "815d2ce77851a01d9addfa4202a17edb787a42f7f080d4e41cab18aa7b002b04",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_controller20_PREEXEC.json"
+    },
+    "launcher": {
+      "bytes": 11886,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\run_conservation_once.py",
+      "sha256": "5cba3b716cf510490243722f60de50e87899d1014cef70d5af1eade4849c45a4",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_launcher_PREEXEC.py.txt"
+    },
+    "original_hash_map": {
+      "bytes": 297,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\INPUT_HASHES.json",
+      "sha256": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_input_hashes_PREEXEC.json"
+    },
+    "preparation": {
+      "bytes": 9832,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\preparation.json",
+      "sha256": "f7419bbfbe7c902ac87ddaa8065d2f4f351fd89fdd94196c99acb6c8f1175a73",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_preparation_PREEXEC.json"
+    },
+    "probe": {
+      "bytes": 7915,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\PROBE_BLOCK.md",
+      "sha256": "015cccf57d59c53abd34f4b6623b891199fdb61a9f8acafcd4f352df0b8fd7de",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_probe_PREEXEC.md"
+    },
+    "registry": {
+      "bytes": 375661,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\previous_artifacts_sha256.json",
+      "sha256": "5c1c372a2a723a1a06224c6531c2e0775978bbe902f02cf910450a583772896c",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_registry_PREEXEC.json"
+    },
+    "source": {
+      "bytes": 8072,
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\conservation.py",
+      "sha256": "ab4495d95052c8e64253a1c4e93726799c36f7c0418217dd9c599d24d72d54c2",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_source_PREEXEC.py.txt"
+    }
+  },
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21",
+  "environment_changes": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUTF8": "1"
+  },
+  "launcher_command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\run_conservation_once.py",
+    "--root-authorization",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round21_conservation_authorization.json"
+  ],
+  "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01.log",
+  "mathematical_execution": false,
+  "old_producer_or_Lean_or_PDF_execution": false,
+  "operation": "NEW_ROUND21_EXACT_METADATA_BYTE_CONSERVATION_BEFORE_AND_AFTER",
+  "originals": {
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+      "bytes": 11353,
+      "content_parsed": false,
+      "copied": false,
+      "sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+    },
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+      "bytes": 337645,
+      "content_parsed": false,
+      "copied": false,
+      "sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24"
+    }
+  },
+  "originals_preexec_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_originals_PREEXEC.json",
+  "originals_preexec_receipt_sha256": "fa7e42ff060f7e955346c499bbae58c17303a50bb5599677a7e3e6afd162188e",
+  "result": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\conservation.json",
+  "role": 6,
+  "round": 21,
+  "runtime": {
+    "binary_copied": false,
+    "bytes": 107312,
+    "executed_version_probe": false,
+    "path": "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c"
+  },
+  "runtime_preexec_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_runtime_PREEXEC.json",
+  "runtime_preexec_receipt_sha256": "d0740d843fb25bc192d569b7297b22bde198d29b172404dbc8df73dfdb0eb12e",
+  "started_at_utc": "2026-10-03T05:18:32.248223+00:00",
+  "subprocess_command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\role6\\conservation_attempt01_source_PREEXEC.py.txt"
+  ]
+}

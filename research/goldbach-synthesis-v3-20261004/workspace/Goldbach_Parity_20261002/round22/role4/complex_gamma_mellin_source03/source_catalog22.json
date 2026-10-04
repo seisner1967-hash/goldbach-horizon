@@ -1,0 +1,28 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_HOLO_SOURCE03_CATALOG",
+  "status": "SOURCE_ONLY_NOT_COMPILED_NOT_PREPARED",
+  "modules": [
+    {
+      "module": "ComplexGammaMellinHolomorphy22",
+      "source_sha256": "b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2",
+      "namespace": "GoldbachComplexGammaMellin22",
+      "declarations": 15,
+      "theorems": 11,
+      "definitions": 4,
+      "qualified_prints": 15,
+      "definitions_names": ["localArgRadius", "localDecayGap", "localDerivativeCoefficient", "localDerivativeEnvelope"],
+      "theorem_names": ["local_parameters", "exists_local_kernel_ball", "verticalS_norm_le", "complexGammaKernel_local_bound", "complexGammaDerivative_local_bound", "weightedExponential_integrable", "localDerivativeEnvelope_integrable", "complexGammaInverse_hasDerivAt", "complexGammaInverse_analytic", "complexGammaInverse_eq_exp", "complex_exp_eq_Gamma_integral"],
+      "readonly_import": "ComplexGammaMellinLocal22",
+      "readonly_import_source_sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+      "readonly_import_olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+      "no_readonly_recompile": true
+    }
+  ],
+  "header_definition_domain_print_preservation": "SOURCE_MANUAL_REVIEW_NO_CANDIDATE_PARSER",
+  "author_compiler_invocations": 0,
+  "author_tactic_or_API_probes": 0,
+  "numeric_invocations": 0,
+  "H1": false,
+  "D_N": false,
+  "WIN": false
+}

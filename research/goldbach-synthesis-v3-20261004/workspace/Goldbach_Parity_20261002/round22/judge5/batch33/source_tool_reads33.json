@@ -1,0 +1,128 @@
+{
+  "schema": "ROUND22_ROLE3_SOURCE_TOOL_READS_BATCH33",
+  "time_utc": "2026-10-04T02:12:28.9301727Z",
+  "status": "SOURCE_FROZEN_NOT_PREPARED_NOT_EXECUTED",
+  "reader": "ROLE3_SOURCE_TOOL_AUTHOR",
+  "future_independent_reviewer_executor": "ROLE5",
+  "entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch33\\prepare_metadata.py",
+      "sha256": "d3f89a5661c23a0bf2036298183b37663ed69146e5b6cab0f48ac0f82ce70ba3",
+      "bytes": 34158,
+      "scope": "FULL_SOURCE_ONLY",
+      "chunk": "6c7ebe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch33\\run_once.py",
+      "sha256": "192bc1deb5d5d5d6d7a074d69acc1eab9dd5d98bf41eb96f2a986778c5a88ba4",
+      "bytes": 14260,
+      "scope": "FULL_SOURCE_ONLY",
+      "chunk": "ae8254"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch33\\preparation.md",
+      "sha256": "6808dbfdf03b2542a47192b7c73f606c3e0d977795eda84ebdb23c395d90a47b",
+      "bytes": 7326,
+      "scope": "FULL_SOURCE_ONLY",
+      "chunk": "2aca5d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch33\\sources\\ComplexGammaMellinLambda22.lean",
+      "sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+      "bytes": 16648,
+      "scope": "FULL_EXACT_SOURCE_COPY",
+      "chunk": "2aca5d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch33\\source_catalog_author22.json",
+      "sha256": "6a00ebf0f9ad320c602bef18fdb949775468462babd645f1c7b2b66b96cce907",
+      "bytes": 2806,
+      "scope": "FULL_EXACT_AUTHOR_CATALOG_COPY",
+      "chunk": "2aca5d"
+    }
+  ],
+  "templates": {
+    "builder31_FULL": "f8ba88",
+    "launcher31_and_doc31_FULL": "58143b",
+    "controls31_and_ROOT_observation31_FULL": "76c7b1"
+  },
+  "source_original_FULL": "68a0e1",
+  "author_contract_and_selection_FULL": "44299d",
+  "author_catalog_and_reads_FULL": "718e0f",
+  "author_handoff_historical_FULL": "a3b6fb",
+  "author_handoff_current_TARGETED": [
+    "790578",
+    "a9429a",
+    "8f8e01"
+  ],
+  "independent_review_and_reads_historical_FULL": "5a1ce9",
+  "independent_review_handoff_FULL": "718e0f",
+  "manual_catalogue": {
+    "namespace": "GoldbachComplexGammaMellin22",
+    "declarations": 30,
+    "theorems": 24,
+    "definitions": 6,
+    "qualified_prints": [
+      "GoldbachComplexGammaMellin22.lambdaMellinSize",
+      "GoldbachComplexGammaMellin22.lambdaMellinMass",
+      "GoldbachComplexGammaMellin22.lambdaMellinCoefficient",
+      "GoldbachComplexGammaMellin22.lambdaMellinDirichlet",
+      "GoldbachComplexGammaMellin22.lambdaMellinIntegrand",
+      "GoldbachComplexGammaMellin22.lambdaMellinThermal",
+      "GoldbachComplexGammaMellin22.lambda_direct_le_log",
+      "GoldbachComplexGammaMellin22.lambdaMellinSize_nonneg",
+      "GoldbachComplexGammaMellin22.lambdaMellinSize_pseries_bound",
+      "GoldbachComplexGammaMellin22.lambdaMellinSize_summable",
+      "GoldbachComplexGammaMellin22.mellin_pseries_shift_two_sum_le",
+      "GoldbachComplexGammaMellin22.mellin_pseries_tsum_le_three",
+      "GoldbachComplexGammaMellin22.lambdaMellinMass_le_six",
+      "GoldbachComplexGammaMellin22.lambdaMellinMass_nonneg",
+      "GoldbachComplexGammaMellin22.norm_lambdaMellinCoefficient",
+      "GoldbachComplexGammaMellin22.lambdaMellinCoefficient_norm_summable",
+      "GoldbachComplexGammaMellin22.lambdaMellinCoefficient_continuous",
+      "GoldbachComplexGammaMellin22.lambdaMellinDirichlet_continuous",
+      "GoldbachComplexGammaMellin22.norm_lambdaMellinDirichlet_le",
+      "GoldbachComplexGammaMellin22.norm_lambdaMellinIntegrand",
+      "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_integrable",
+      "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_integral_norm_summable",
+      "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_tsum_eq",
+      "GoldbachComplexGammaMellin22.lambdaMellinProduct_integrable",
+      "GoldbachComplexGammaMellin22.lambdaMellinProduct_local_uniform_bound",
+      "GoldbachComplexGammaMellin22.lambdaMellinProduct_local_envelope_integrable",
+      "GoldbachComplexGammaMellin22.principal_cpow_positive_mul",
+      "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_single_inversion",
+      "GoldbachComplexGammaMellin22.lambdaMellinThermal_norm_summable",
+      "GoldbachComplexGammaMellin22.lambdaMellinThermal_eq_integral"
+    ],
+    "scope": "MANUAL_FULL_SOURCE_AND_AUTHOR_CONTROL_JSON_NOT_CANDIDATE_PARSER"
+  },
+  "physical_source_metadata": {
+    "author_binding_count": 45,
+    "all_45_author_bytes_match": true,
+    "science_original_copy_sha_equal": true,
+    "catalog_original_copy_sha_equal": true,
+    "scope": "PHYSICAL_SOURCE_PROVENANCE_BYTE_HASH_ONLY_NOT_TRANSITIVE_IMPORT_OR_ARCHIVE_SWEEP"
+  },
+  "future_baseline": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge_batch32_closed_observation.json",
+    "scope": "FUTURE_NON_READ_NOT_HASHED_NO_VERDICT",
+    "requires_real_sha_and_official_counts_arguments": true,
+    "gate_prior_keys_match_manifest": true,
+    "baseline_bound_by_manifest_sha_and_immutable_inputs": true
+  },
+  "old32_before_creation": {
+    "batch33_absent_chunk": "f8ba88",
+    "ROOT_PREP32_FIN": "2026-10-04T02:03:44.2394627Z",
+    "creation_after_ROOT_release_chunk": "3c9901",
+    "source33_not_captured_by_prior_PREP32": true
+  },
+  "compiler_invocations": 0,
+  "metadata_PREP_invocations": 0,
+  "candidate_parser_import_invocations": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "scientific_mutations": 0,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

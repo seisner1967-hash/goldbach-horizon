@@ -1,0 +1,50 @@
+{
+  "status": "PASS_EXACT_REPLAY",
+  "N": 100000000,
+  "outputs_isolated": true,
+  "preserved_previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 227,
+    "baseline_sha256": "b973b6ea8ce1fdef2a704e1e0bcc977ee7ac5b140e71d17cc3d90c165317243a",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\previous_artifacts_sha256.json"
+  },
+  "checks": [
+    {
+      "file": "compensation.json",
+      "status": "PASS_EXACT_IDENTITIES_ONLY",
+      "all_fields_equal": true,
+      "original_sha256": "44fb25267eb3088037ef6d16bb3998a42a94952576662f279c35527aa702364c",
+      "replay_sha256": "44fb25267eb3088037ef6d16bb3998a42a94952576662f279c35527aa702364c",
+      "original_script_sha256": "b6dc5fbb7e35b5bad93c54513970845c5bf721573a7e2513742d20ebc4a62262"
+    },
+    {
+      "file": "native_gram.json",
+      "status": "PASS_ALGEBRA_ONLY",
+      "all_fields_equal": true,
+      "original_sha256": "ac4a14ae8a58a1579c16d84dd70aeac97e610b62b61514ff176e8bd0b8676ed0",
+      "replay_sha256": "ac4a14ae8a58a1579c16d84dd70aeac97e610b62b61514ff176e8bd0b8676ed0",
+      "original_script_sha256": "27ef19aa273a40569ffba4fa00cd6f9aec5d9a911e126f1efc450656e7b3d5a6"
+    },
+    {
+      "file": "head_regrouping.json",
+      "status": "PASS_HEAD_IDENTITY_ONLY",
+      "all_fields_equal": true,
+      "original_sha256": "f85071f0d1f6f1ecfd1d9612caf8d874bd9669933fd47fc00ae9ffffbc3cd7eb",
+      "replay_sha256": "f85071f0d1f6f1ecfd1d9612caf8d874bd9669933fd47fc00ae9ffffbc3cd7eb",
+      "original_script_sha256": "4e2b87f912177f05871bdefd6d532db99ca02ec1ac888cda5bfb9032ad3eb65e"
+    }
+  ],
+  "source_onset": {
+    "original_pdf_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "physical_pages": [
+      32,
+      33,
+      36
+    ],
+    "all_pixels_text_and_receipt_hashes_equal": true,
+    "reproduced_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\judge\\source_pages\\source_onset_render_receipt.json",
+    "receipt_sha256": "8b2997f16b1e705e619b664061abe4335fa820c43fb49a0e298895cc4e653662",
+    "onset": "u >= 10^24, visually inspected source; budget constants 1024 remain distinct"
+  },
+  "lean_invoked": false
+}

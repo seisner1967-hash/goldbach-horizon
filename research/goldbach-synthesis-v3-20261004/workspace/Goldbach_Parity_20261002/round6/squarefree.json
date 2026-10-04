@@ -1,0 +1,557 @@
+{
+  "status": "PASS_CORRECTED_CONTRACT",
+  "N": 100000000,
+  "central_identity": "Two-square expansion S2 and compatible CRT; full product chi(n)*conj(chi(m))=chi(-1)",
+  "correction": "Initial S3 does not imply invertibility; test gcd(C*f*d\u00b2,M)|N before inverse, or retain gcd(d,ell)=1 in the invertible contract",
+  "CRT": {
+    "incomplete_S3_counterexamples": [
+      {
+        "A": 273,
+        "C": 187,
+        "d": 19,
+        "e": 1,
+        "f": 1,
+        "ell": 19,
+        "M": 5187,
+        "coefficient": 67507,
+        "gcd": 19,
+        "N_mod_gcd": 17,
+        "S3_written": true,
+        "cell": "EMPTY",
+        "inverse": "NOT_ATTEMPTED"
+      },
+      {
+        "A": 273,
+        "C": 10403,
+        "d": 11,
+        "e": 1,
+        "f": 1,
+        "ell": 11,
+        "M": 3003,
+        "coefficient": 1258763,
+        "gcd": 11,
+        "N_mod_gcd": 1,
+        "S3_written": true,
+        "cell": "EMPTY",
+        "inverse": "NOT_ATTEMPTED"
+      }
+    ],
+    "e_shares_A": {
+      "A": 273,
+      "C": 10403,
+      "e": 3,
+      "J": [
+        1,
+        9612
+      ],
+      "correct_M": 819,
+      "points": [
+        107,
+        926,
+        1745,
+        2564,
+        3383,
+        4202,
+        5021,
+        5840,
+        6659,
+        7478,
+        8297,
+        9116
+      ],
+      "erroneous_product_modulus": 2457,
+      "erroneous_count": 4,
+      "interpretation": "These are signed square-divisor expansion cells; not squarefree HH points"
+    },
+    "illegal_d_e_share_N": {
+      "d": 2,
+      "e": 2,
+      "compatible_cell": {
+        "B": 4,
+        "M": 1092,
+        "g": 4,
+        "v0": 95,
+        "residue": 380,
+        "period": 1092,
+        "reduced_modulus": 273
+      },
+      "point_count": 9,
+      "physical_mask": "ZERO on every point; retained before regrouping"
+    },
+    "general_overlap_d_f": {
+      "A": 101,
+      "C": 309,
+      "d": 3,
+      "f": 3,
+      "L": 9,
+      "incorrect_f_d_squared": 27,
+      "J": [
+        1,
+        4000
+      ],
+      "points": [
+        522,
+        1431,
+        2340,
+        3249
+      ],
+      "interpretation": "General S2 cell outside restricted S3; use lcm(d\u00b2,f), not f*d\u00b2"
+    },
+    "isolated_periods": [
+      {
+        "e": 1,
+        "M": 273,
+        "order": 2,
+        "primitive_period": 5,
+        "unit_N_mask_period": 10,
+        "primitive_sum": [
+          0,
+          0
+        ],
+        "unit_masked_sum": [
+          0,
+          0
+        ]
+      },
+      {
+        "e": 1,
+        "M": 273,
+        "order": 4,
+        "primitive_period": 5,
+        "unit_N_mask_period": 10,
+        "primitive_sum": [
+          0,
+          0
+        ],
+        "unit_masked_sum": [
+          0,
+          0
+        ]
+      },
+      {
+        "e": 3,
+        "M": 819,
+        "order": 2,
+        "primitive_period": 5,
+        "unit_N_mask_period": 10,
+        "primitive_sum": [
+          0,
+          0
+        ],
+        "unit_masked_sum": [
+          0,
+          0
+        ]
+      },
+      {
+        "e": 3,
+        "M": 819,
+        "order": 4,
+        "primitive_period": 5,
+        "unit_N_mask_period": 10,
+        "primitive_sum": [
+          0,
+          0
+        ],
+        "unit_masked_sum": [
+          0,
+          0
+        ]
+      }
+    ],
+    "nonunit_affine_slope_counterexample": {
+      "M": 5,
+      "v0": 1,
+      "order": 4,
+      "period_sum": [
+        5,
+        0
+      ]
+    }
+  },
+  "pointwise_expansion": {
+    "cases": 1066,
+    "active": 5,
+    "compatible_CRT_cells": 558,
+    "raw_signed_cells": 23544,
+    "domains": [
+      "A=273,C=10403,zeta=1..512,W in {2,19}",
+      "A=273,C=187,zeta=40000..45000 with A|(N-C*zeta),W in {2,19}",
+      "A=273,C=99999727,zeta=1,W in {2,19}",
+      "A=1113121,C=213,zeta=244769,W in {2,19}"
+    ]
+  },
+  "physical_long_window": {
+    "J": [
+      40000,
+      45000
+    ],
+    "A": 273,
+    "C": 187,
+    "true_congruence_points": 19,
+    "accepted_original_masks": 2,
+    "points": [
+      {
+        "b": 13,
+        "u": 3,
+        "v": 7,
+        "k": 1,
+        "s": 11,
+        "t": 17,
+        "zeta": 43063,
+        "x": 336803,
+        "A": 273,
+        "C": 187,
+        "n": 91947219,
+        "m": 8052781,
+        "factor_n": [
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            336803,
+            1
+          ]
+        ],
+        "factor_m": [
+          [
+            11,
+            1
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            43063,
+            1
+          ]
+        ],
+        "W": 2,
+        "y": 2,
+        "four_Mobius_signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "four_Mobius_product": 1,
+        "twists": {
+          "2": {
+            "full_product": [
+              1,
+              0
+            ],
+            "missing_C_product": [
+              -1,
+              0
+            ],
+            "isolated_zeta": [
+              -1,
+              0
+            ]
+          },
+          "4": {
+            "full_product": [
+              -1,
+              0
+            ],
+            "missing_C_product": [
+              0,
+              -1
+            ],
+            "isolated_zeta": [
+              0,
+              -1
+            ]
+          }
+        }
+      },
+      {
+        "b": 13,
+        "u": 3,
+        "v": 7,
+        "k": 1,
+        "s": 11,
+        "t": 17,
+        "zeta": 44701,
+        "x": 335681,
+        "A": 273,
+        "C": 187,
+        "n": 91640913,
+        "m": 8359087,
+        "factor_n": [
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            335681,
+            1
+          ]
+        ],
+        "factor_m": [
+          [
+            11,
+            1
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            44701,
+            1
+          ]
+        ],
+        "W": 2,
+        "y": 2,
+        "four_Mobius_signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "four_Mobius_product": 1,
+        "twists": {
+          "2": {
+            "full_product": [
+              1,
+              0
+            ],
+            "missing_C_product": [
+              -1,
+              0
+            ],
+            "isolated_zeta": [
+              1,
+              0
+            ]
+          },
+          "4": {
+            "full_product": [
+              -1,
+              0
+            ],
+            "missing_C_product": [
+              0,
+              -1
+            ],
+            "isolated_zeta": [
+              1,
+              0
+            ]
+          }
+        }
+      }
+    ],
+    "twist_verdict": "Isolated zeta character varies; complete two-axis product is constant: +1 quadratic, -1 order4"
+  },
+  "zeta_one": {
+    "b": 13,
+    "u": 3,
+    "v": 7,
+    "k": 1,
+    "s": 7951,
+    "t": 12577,
+    "zeta": 1,
+    "x": 1,
+    "A": 273,
+    "C": 99999727,
+    "n": 273,
+    "m": 99999727,
+    "factor_n": [
+      [
+        3,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        13,
+        1
+      ]
+    ],
+    "factor_m": [
+      [
+        7951,
+        1
+      ],
+      [
+        12577,
+        1
+      ]
+    ],
+    "W": 2,
+    "y": 2,
+    "four_Mobius_signs": [
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "four_Mobius_product": 1,
+    "twists": {
+      "2": {
+        "full_product": [
+          1,
+          0
+        ],
+        "missing_C_product": [
+          -1,
+          0
+        ],
+        "isolated_zeta": [
+          1,
+          0
+        ]
+      },
+      "4": {
+        "full_product": [
+          -1,
+          0
+        ],
+        "missing_C_product": [
+          0,
+          -1
+        ],
+        "isolated_zeta": [
+          1,
+          0
+        ]
+      }
+    }
+  },
+  "thin_true_fibre": {
+    "point": {
+      "b": 101,
+      "u": 103,
+      "v": 107,
+      "k": 1,
+      "s": 3,
+      "t": 71,
+      "zeta": 244769,
+      "x": 43,
+      "A": 1113121,
+      "C": 213,
+      "n": 47864203,
+      "m": 52135797,
+      "factor_n": [
+        [
+          43,
+          1
+        ],
+        [
+          101,
+          1
+        ],
+        [
+          103,
+          1
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          71,
+          1
+        ],
+        [
+          73,
+          1
+        ],
+        [
+          479,
+          1
+        ]
+      ],
+      "W": 2,
+      "y": 2,
+      "four_Mobius_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "four_Mobius_product": 1,
+      "twists": {
+        "2": {
+          "full_product": [
+            1,
+            0
+          ],
+          "missing_C_product": [
+            -1,
+            0
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        },
+        "4": {
+          "full_product": [
+            -1,
+            0
+          ],
+          "missing_C_product": [
+            0,
+            1
+          ],
+          "isolated_zeta": [
+            -1,
+            0
+          ]
+        }
+      }
+    },
+    "raw_zeta_interval": [
+      1,
+      464257
+    ],
+    "congruence_period": 1113121,
+    "all_congruence_points": [
+      244769
+    ],
+    "N_over_AC": "100000000/237094773",
+    "verdict": "Raw interval exceeds sqrt(N), but has one actual point although N/(A*C)<1; the counting +1 is indispensable"
+  },
+  "arithmetic": "Integer/Fraction and Gaussian integer character values; no floating identity oracle",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 160,
+    "baseline_sha256": "bff50b025ed0ca2f072739edcfc04e91c94acd8f7d9cff24b27c53a2f5928684"
+  },
+  "script_sha256": "150a78a5477168314f946de6dab26e3129552546c544bad07326f3763471d7e5",
+  "limitations": "Finite domains explicitly listed; no asymptotic gain, no small correlation, no global HH or D_N calculation"
+}

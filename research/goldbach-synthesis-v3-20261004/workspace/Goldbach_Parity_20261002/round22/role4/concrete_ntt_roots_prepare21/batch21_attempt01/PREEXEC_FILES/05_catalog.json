@@ -1,0 +1,246 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH21",
+  "time_utc": "2026-10-03T20:18:41.720470+00:00",
+  "modules": [
+    {
+      "module": "ConcreteNTTRoots22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\sources\\ConcreteNTTRoots22.lean",
+      "source_sha256": "433903d458f6ccd43f366e92265d0778250484f4721fcd885ca0a01a771e8e6a",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\ConcreteNTTRoots22.lean",
+      "source_status": "SOURCE_ONLY_NOT_ELABORATED",
+      "theorem_count": 17,
+      "definition_count": 1,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachConcreteNTTRoots22.bankRoot"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.primitive_of_whole_and_half"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.prime_divisor_two_power_mul_prime"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.prime_2013265921"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.prime_2281701377"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.prime_3221225473"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.prime_3489660929"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.prime_3892314113"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.primitive_2013265921"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.primitive_2281701377"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.primitive_3221225473"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.primitive_3489660929"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.primitive_3892314113"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.size_2013265921"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.size_2281701377"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.size_3221225473"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.size_3489660929"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTRoots22.size_3892314113"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachConcreteNTTRoots22.bankRoot",
+        "GoldbachConcreteNTTRoots22.primitive_of_whole_and_half",
+        "GoldbachConcreteNTTRoots22.prime_divisor_two_power_mul_prime",
+        "GoldbachConcreteNTTRoots22.prime_2013265921",
+        "GoldbachConcreteNTTRoots22.prime_2281701377",
+        "GoldbachConcreteNTTRoots22.prime_3221225473",
+        "GoldbachConcreteNTTRoots22.prime_3489660929",
+        "GoldbachConcreteNTTRoots22.prime_3892314113",
+        "GoldbachConcreteNTTRoots22.primitive_2013265921",
+        "GoldbachConcreteNTTRoots22.primitive_2281701377",
+        "GoldbachConcreteNTTRoots22.primitive_3221225473",
+        "GoldbachConcreteNTTRoots22.primitive_3489660929",
+        "GoldbachConcreteNTTRoots22.primitive_3892314113",
+        "GoldbachConcreteNTTRoots22.size_2013265921",
+        "GoldbachConcreteNTTRoots22.size_2281701377",
+        "GoldbachConcreteNTTRoots22.size_3221225473",
+        "GoldbachConcreteNTTRoots22.size_3489660929",
+        "GoldbachConcreteNTTRoots22.size_3892314113"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "CONCRETE_LUCAS_DYADIC_ROOT_AND_CANONICAL_A32_FINITE_PROJECTION_AUX_ONLY",
+      "author_olean_allowed": false
+    },
+    {
+      "module": "ConcreteNTTA32Projection22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\sources\\ConcreteNTTA32Projection22.lean",
+      "source_sha256": "cefc07197945f1e9710895d4a01455861ae6db21365cc44dec206178e76af4c3",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\ConcreteNTTA32Projection22.lean",
+      "source_status": "SOURCE_ONLY_NOT_ELABORATED",
+      "theorem_count": 5,
+      "definition_count": 5,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.primeFact2013265921"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.primeFact2281701377"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.primeFact3221225473"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.primeFact3489660929"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.primeFact3892314113"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.projection_2013265921"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.projection_2281701377"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.projection_3221225473"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.projection_3489660929"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachConcreteNTTA32Projection22.projection_3892314113"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachConcreteNTTA32Projection22.primeFact2013265921",
+        "GoldbachConcreteNTTA32Projection22.primeFact2281701377",
+        "GoldbachConcreteNTTA32Projection22.primeFact3221225473",
+        "GoldbachConcreteNTTA32Projection22.primeFact3489660929",
+        "GoldbachConcreteNTTA32Projection22.primeFact3892314113",
+        "GoldbachConcreteNTTA32Projection22.projection_2013265921",
+        "GoldbachConcreteNTTA32Projection22.projection_2281701377",
+        "GoldbachConcreteNTTA32Projection22.projection_3221225473",
+        "GoldbachConcreteNTTA32Projection22.projection_3489660929",
+        "GoldbachConcreteNTTA32Projection22.projection_3892314113"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "CONCRETE_LUCAS_DYADIC_ROOT_AND_CANONICAL_A32_FINITE_PROJECTION_AUX_ONLY",
+      "author_olean_allowed": false
+    }
+  ],
+  "module_count": 2,
+  "total_declarations": 28,
+  "theorem_count": 22,
+  "definition_count": 6,
+  "common_source_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\sources",
+  "readonly_local_dependencies": [
+    "FiniteFieldProjection22",
+    "QuantizedLambdaEnvelope22",
+    "RationalLogQuantization22"
+  ],
+  "dependency_bindings": [
+    {
+      "module": "FiniteFieldProjection22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\sources\\FiniteFieldProjection22.lean",
+      "source_sha256": "2b1cc267ce780a6a45c039f4b4b82d5a4ad4541fa224d76413dec5432658a48a",
+      "olean_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\batch19_attempt01\\FiniteFieldProjection22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\readonly_oleans\\FiniteFieldProjection22.olean",
+      "olean_sha256": "0304400125a93cfddace45bcc4428d835c8ee204817f88f156e9fd44ee856f4f",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\batch19_attempt01\\receipt.json",
+      "independent_receipt_sha256": "1a645174f44f5545e6069139cd3d452f9eb6100f7946152c5cf50c56c8252d57",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "recompile_authorized": false
+    },
+    {
+      "module": "QuantizedLambdaEnvelope22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\QuantizedLambdaEnvelope22.lean",
+      "source_sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "olean_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\QuantizedLambdaEnvelope22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\readonly_oleans\\QuantizedLambdaEnvelope22.olean",
+      "olean_sha256": "e821070b97b3fa4b71a3e279ecb9bc6c0de6cafdfe9dc8712b5d5a22858a6485",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\receipt.json",
+      "independent_receipt_sha256": "9449666ee8bdbbae74ea849e5a9ce2eb5c0c5bd7dd24c14a2d28065068178298",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "recompile_authorized": false
+    },
+    {
+      "module": "RationalLogQuantization22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\RationalLogQuantization22.lean",
+      "source_sha256": "dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7",
+      "olean_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\RationalLogQuantization22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_prepare21\\readonly_oleans\\RationalLogQuantization22.olean",
+      "olean_sha256": "20db07cdfb5717d7f9ab0b3e75d3c15b9e16c6820ad5285bd7debb62b0a31434",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\receipt.json",
+      "independent_receipt_sha256": "9449666ee8bdbbae74ea849e5a9ce2eb5c0c5bd7dd24c14a2d28065068178298",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "recompile_authorized": false
+    }
+  ],
+  "support_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\source_contract22.txt",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\source_read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\concrete_ntt_roots_source22\\source_handoff22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_review_source01\\review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\concrete_ntt_roots_review_source01\\review_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch20\\completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch20\\batch20_attempt01\\receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge_batch20_closed_observation.json"
+  ],
+  "author_provenance_capture_paths": [],
+  "modules_author_PASS_claimed": false,
+  "child_wall_seconds": 300,
+  "max_heartbeats": 1000000,
+  "compiler_invocations": 0,
+  "win": false
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "ROUND22_ROLE3_ELAMBDA16_INDEPENDENT_SOURCE_REVIEW_HANDOFF",
+  "status": "SOURCE_ANALYTIC_CHAIN_COHERENT_PENDING_DEPENDENCIES_AND_ELABORATION",
+  "reviewer": "/root/round22_formal3_prepare",
+  "source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/ComplexGammaMellinLambdaTail22.lean",
+    "bytes": 11335,
+    "sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e"
+  },
+  "source_handoff": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_handoff22.json",
+    "bytes": 17262,
+    "sha256": "31bbd5ddef991c58a9c58bdb0f1aca2d90f3a71a0dcffdbb751871c7434c4298"
+  },
+  "review_report": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/elambda16_source_review01/review22.txt",
+    "bytes": 8622,
+    "sha256": "0497ba1f300dd5916fbac27835a04c1968822ef707182dc6e94c10d1bce8d252"
+  },
+  "read_receipts": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/elambda16_source_review01/read_receipts22_revision02.json",
+    "bytes": 21491,
+    "sha256": "b0ef828f7df8e5eef01c93515f016b47ea80bb433f21f137d3ebc8728f0b395f"
+  },
+  "written_source_declarations": 16,
+  "written_source_theorems": 12,
+  "written_source_definitions": 4,
+  "written_axiom_prints": 16,
+  "observed_ELambda16_axiom_prints": 0,
+  "precise_mathematical_objections": [],
+  "remaining": {
+    "main_Lambda": "SOURCE_NOT_COMPILED",
+    "ELambda16": "SOURCE_NOT_COMPILED",
+    "tail_judge_PASS22": "ACTUAL_RECEIPT_READ_ROOT_OBSERVATION_PENDING_AT_SNAPSHOT",
+    "numeric_evaluator": "NOT_PROVIDED_OR_EVALUATED",
+    "compact_Arg_atan_uniform_bridge": "PAPER_NOT_FORMALISED",
+    "D_N": "OPEN",
+    "WIN": "OPEN"
+  },
+  "compiler_invocations": 0,
+  "numeric_invocations": 0,
+  "prepared": false,
+  "gate_created": false,
+  "human07_frozen": false,
+  "scientific_source_unchanged": true,
+  "handoff_binding_count_verified": 32,
+  "scope": "SOURCE_READ_ONLY_REVIEW_NEW_ROLE3_DOCUMENTS_ONLY",
+  "previous_pre_freeze_handoff": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/elambda16_source_review01/source_handoff22.json",
+    "bytes": 2170,
+    "sha256": "abfabc3ab2b954650006592551f0fb20542e4ebd719c172e1fb52d2e34907281"
+  },
+  "correction_scope": "Only honest TARGETED line-range metadata; science, report and all32 bindings unchanged"
+}

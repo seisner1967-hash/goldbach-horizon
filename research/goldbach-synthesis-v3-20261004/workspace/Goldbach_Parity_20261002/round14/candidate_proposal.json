@@ -1,0 +1,147 @@
+{
+  "status": "CANDIDATES_ONLY_NOT_GATE",
+  "N": 100000000,
+  "q1_shared_for_3323_3167": 3581,
+  "parents1": {
+    "3323": {
+      "c": 3,
+      "p": 3323,
+      "q": 3581,
+      "p_factorization": [
+        [
+          3323,
+          1
+        ]
+      ],
+      "q_factorization": [
+        [
+          3581,
+          1
+        ]
+      ],
+      "m": 35698989,
+      "n": 64301011,
+      "n_factorization": [
+        [
+          64301011,
+          1
+        ]
+      ]
+    },
+    "3167": {
+      "c": 3,
+      "p": 3167,
+      "q": 3581,
+      "p_factorization": [
+        [
+          3167,
+          1
+        ]
+      ],
+      "q_factorization": [
+        [
+          3581,
+          1
+        ]
+      ],
+      "m": 34023081,
+      "n": 65976919,
+      "n_factorization": [
+        [
+          65976919,
+          1
+        ]
+      ]
+    }
+  },
+  "q2_for_3359": 3517,
+  "parent2": {
+    "c": 7,
+    "p": 3359,
+    "q": 3517,
+    "p_factorization": [
+      [
+        3359,
+        1
+      ]
+    ],
+    "q_factorization": [
+      [
+        3517,
+        1
+      ]
+    ],
+    "m": 82695221,
+    "n": 17304779,
+    "n_factorization": [
+      [
+        17304779,
+        1
+      ]
+    ]
+  },
+  "imports_sha256": {
+    "round13/shared.py": "2eba4c18b1013677a168e99a7e896146a63bdcff4dee1180c1c4ba2e4323b43d",
+    "round13/conservation.py": "e64bd0ac1a8217d0026fe3c60c2ffcd880c9d06e51696f1c6ad4ad550d48bf89",
+    "numerical/parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical/round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "round3/multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "round6/exact_tools.py": "f48bb0b2b608aa734944cbfe978c19ad55f5aa249068dcc313a1de6da5a393cc",
+    "round4/inverse_checks.py": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c",
+    "round11/shared.py": "1959d27b60cfe7dc8e6211c36a0bc6b710c0fd13c80b95be55ad045092b3d4ee",
+    "round11/exact11.py": "a41e33ae49a98f0b15e0de990337ddabcc47dc92a84894cce1141559eb1571f8"
+  },
+  "before": {
+    "status": "PRESERVED",
+    "files": 603,
+    "round13_files": 89,
+    "previous_protected_files": 514,
+    "round13_controller_sha256": "64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d",
+    "controller_88_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "baseline_sha256": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "old_PASS_replayed": false,
+    "old_Lean_recompiled": false,
+    "old_PDF_rerendered": false
+  },
+  "after": {
+    "status": "PRESERVED",
+    "files": 603,
+    "round13_files": 89,
+    "previous_protected_files": 514,
+    "round13_controller_sha256": "64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d",
+    "controller_88_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "baseline_sha256": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "old_PASS_replayed": false,
+    "old_Lean_recompiled": false,
+    "old_PDF_rerendered": false
+  },
+  "victory": false
+}

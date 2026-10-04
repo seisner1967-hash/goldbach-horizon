@@ -1,0 +1,156 @@
+{
+  "schema": "ROUND22_SCALAR_REAL_CONNECTORS_MANUAL_CATALOGUE",
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "module": "ScalarRadiusRealConnectors22",
+  "namespace": "GoldbachScalarRadius22",
+  "manual_inventory": true,
+  "source_parser_used": false,
+  "counts": {
+    "modules": 1,
+    "declarations": 26,
+    "theorems": 19,
+    "definitions": 7,
+    "axiom_print_requests": 26
+  },
+  "declarations": [
+    {
+      "name": "GoldbachScalarRadius22.pointA",
+      "kind": "definition",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.pointHeight",
+      "kind": "definition",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.pointTau",
+      "kind": "definition",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.radiusAmplitude",
+      "kind": "definition",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.radiusDecay",
+      "kind": "definition",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.radiusEpsilon",
+      "kind": "definition",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.radiusError",
+      "kind": "definition",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.atanGap_hasDerivAt",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.atan_lower_nonneg",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.amplitude_eq_sinh",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.amplitude_le_inv_square",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.pointA_pos",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.pointHeight_nonneg",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.decay_point_gt",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.decay_point_pos",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.finite_exp_five",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.exp125_gt",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.exp_neg125_lt",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.exp_neg250_eq_square",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.exp_one_lt3",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.amplitude_point_le",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.epsilon_point_pos",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.epsilon_point_lt",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.error_point_le576",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.tau_gt576",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    },
+    {
+      "name": "GoldbachScalarRadius22.error_point_lt_tau",
+      "kind": "theorem",
+      "axiom_print_requested": true
+    }
+  ],
+  "local_dependencies": [],
+  "imports": [
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.ArctanDeriv",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv",
+    "Mathlib.Analysis.Calculus.MeanValue",
+    "Mathlib.Data.Real.Pi.Bounds",
+    "Mathlib.Data.Complex.ExponentialBounds",
+    "Mathlib.Tactic"
+  ]
+}

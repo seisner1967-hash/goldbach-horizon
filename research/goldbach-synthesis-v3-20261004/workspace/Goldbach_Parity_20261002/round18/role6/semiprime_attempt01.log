@@ -1,0 +1,24 @@
+{"stage": "complete_new_window_and_divided_forms", "all_q_integers": 5001, "prime_unit_q": 333, "cores": 22, "partition_counts": {"A": 258, "R": 32, "S": 674, "SS": 40, "S_minus_SS": 634}, "SS_resource_q": 14, "switch_triplets": 286, "new_active_physical_vertices": 54, "literal_zero_physical_vertices": 14, "short_table_cap": 31172}
+{"stage": "new_selected_kernels", "done": 1, "total": 54, "m": 9820601}
+{"stage": "new_selected_kernels", "done": 6, "total": 54, "m": 18244889}
+{"stage": "new_selected_kernels", "done": 11, "total": 54, "m": 29485239}
+{"stage": "new_selected_kernels", "done": 16, "total": 54, "m": 51889577}
+{"stage": "new_selected_kernels", "done": 21, "total": 54, "m": 60419171}
+{"stage": "new_selected_kernels", "done": 26, "total": 54, "m": 79861731}
+{"stage": "new_selected_kernels", "done": 31, "total": 54, "m": 85608437}
+{"stage": "new_selected_kernels", "done": 36, "total": 54, "m": 94112957}
+{"stage": "new_selected_kernels", "done": 41, "total": 54, "m": 98594903}
+{"stage": "new_selected_kernels", "done": 46, "total": 54, "m": 98596253}
+{"stage": "new_selected_kernels", "done": 51, "total": 54, "m": 98597057}
+{"stage": "new_selected_kernels", "done": 54, "total": 54, "m": 98599373}
+Traceback (most recent call last):
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\semiprime_checks.py", line 388, in <module>
+    data = run()
+           ^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\semiprime_checks.py", line 328, in run
+    'q_prime_mask_hex': s.bithex(s.prime(q) for q in range(QLOW, QHIGH + 1)),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role6\strict.py", line 76, in bithex
+    output = bytearray((len(values) + 7) // 8)
+                        ^^^^^^^^^^^
+TypeError: object of type 'generator' has no len()

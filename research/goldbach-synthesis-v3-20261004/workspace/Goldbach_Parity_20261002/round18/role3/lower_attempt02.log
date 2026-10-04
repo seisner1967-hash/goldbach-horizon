@@ -1,0 +1,18 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIILower.lean:161:4: error: mod_cast has type
+  arithmeticDensity (P.N * conductor P * h * ell) / ↑(16 * ell) ≤
+    ↑(omittedCount P (Ioc A B) (P.N * conductor P * h) ell (rows P V h ell)) /
+      ↑(unitCount (Ioc A B) (P.N * conductor P * h)) : Prop
+but is expected to have type
+  ↑(arithmeticDensity (P.N * conductor P * h * ell) / ↑(16 * ell)) ≤
+    ↑(omittedCount P (Ioc A B) (P.N * conductor P * h) ell (rows P V h ell)) /
+      ↑(unitCount (Ioc A B) (P.N * conductor P * h)) : Prop
+'GoldbachRound18.SeparatedTypeII.admissible_rows_front' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.admissible_rows_at_most_width' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omitted_count_lower_R5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omitted_ratio_lower_R5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.normalized_adversarial_lower_R5' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

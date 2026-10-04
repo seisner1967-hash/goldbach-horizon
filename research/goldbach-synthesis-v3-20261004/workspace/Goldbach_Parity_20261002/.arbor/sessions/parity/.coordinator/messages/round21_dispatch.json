@@ -1,0 +1,41 @@
+{
+  "round": 21,
+  "recorded_utc": "2026-10-03T05:10:42.288720+00:00",
+  "actual_dispatches": [
+    {
+      "role": 1,
+      "agent": "/root/round21_ideation1_signed",
+      "ownership": [
+        "round21/role1/**",
+        "round21/agent1_signed.md"
+      ],
+      "status": "ACTUALLY_SPAWNED_IDEATE_AFTER_OWN_FRESH_CONSTRAINTS_NO_MATH"
+    },
+    {
+      "role": 2,
+      "agent": "/root/round21_ideation2_complement",
+      "ownership": [
+        "round21/role2/**",
+        "round21/agent2_nonfriable.md"
+      ],
+      "status": "ACTUALLY_SPAWNED_IDEATE_AFTER_OWN_FRESH_CONSTRAINTS_NO_MATH"
+    },
+    {
+      "role": 6,
+      "agent": "/root/round21_numeric_conservation",
+      "ownership": [
+        "round21/role6/**",
+        "round21/conservation.py",
+        "round21/conservation.json"
+      ],
+      "status": "ACTUALLY_SPAWNED_METADATA_PREPARATION_ONLY_GATE_CLOSED"
+    }
+  ],
+  "six_logical_roles": true,
+  "four_concurrency_slots": true,
+  "role3_4_5_later_waves": true,
+  "new_nodes_selected": false,
+  "new_math_or_Lean_authorized": false,
+  "new_conservation_authorized": false,
+  "victory": false
+}

@@ -1,0 +1,13 @@
+{
+  "attempt": "batch02_attempt01",
+  "child_invocations_maximum": 3,
+  "gate_sha256": "6c6aaf32ebc56e6f445073b874db729c1ff728d9e3533cae0390f510fd47d51d",
+  "hidden_retries": false,
+  "modules": [
+    "EpsteinUnfold22",
+    "EpsteinTail22",
+    "GammaPrerequisites22"
+  ],
+  "scope": "INDEPENDENT_BATCH02_AUXILIARY_AUDIT_ONLY",
+  "time_utc": "2026-10-03T09:11:27.628422+00:00"
+}

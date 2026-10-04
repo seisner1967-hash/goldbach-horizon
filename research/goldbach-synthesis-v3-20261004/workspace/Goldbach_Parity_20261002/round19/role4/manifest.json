@@ -1,0 +1,1449 @@
+{
+  "status": "FINAL",
+  "round": 19,
+  "role": 4,
+  "node_id": "14.4",
+  "finished_utc": "2026-10-03T00:49:21.939335+00:00",
+  "producer_module_PASS_count": 5,
+  "producer_Lean_executions": 12,
+  "producer_Lean_FAIL_technical_count": 7,
+  "prior_Python_parse_failure_count": 1,
+  "historical_recompiles": 0,
+  "PASS_reruns": 0,
+  "definitions": 55,
+  "explicit_theorems": 100,
+  "structures": 3,
+  "generated_ext_lemmas_printed": 2,
+  "axiom_print_count": 160,
+  "scope": "Producer auxiliary formalization only; independent Judge pending",
+  "score": 0,
+  "victory": false,
+  "modules": [
+    {
+      "module": "TerminalPrimeExtraction.lean",
+      "namespace": "GoldbachRound19.Terminal",
+      "producer_first_PASS_attempt": 2,
+      "source_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+      "olean_sha256": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+      "log_sha256": "06b0372ab9acb80e069da826f170ca9624d9843e19892c3f5341496845aee0ca",
+      "theorems_explicit": 18,
+      "definitions": 4,
+      "structures": 0,
+      "axiom_prints": [
+        {
+          "name": "GoldbachRound19.Terminal.omega",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.terminalPrime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.largestPrime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.cofactor",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.terminalPrime_mem",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.terminalPrime_prime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.terminalPrime_dvd",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.primeFactor_le_terminal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.largestPrime_eq_terminal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.largestPrime_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.terminal_factorization",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.cofactor_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.cofactor_dvd",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.cofactor_prime_order",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.omega_terminal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.terminalPrime_of_prime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.cofactor_of_prime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.composite_iff_cofactor_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.largestPrimeExtraction_unique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.terminalPrime_prime_power",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.omega_prime_power",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Terminal.repeated_terminal_example",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "BalancedResourceSwitch.lean",
+      "namespace": "GoldbachRound19.Switch",
+      "producer_first_PASS_attempt": 5,
+      "source_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+      "olean_sha256": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+      "log_sha256": "cc5d4ebe76ad3c7285db3197c1e4df15a12be9adb4cf621f440b3313f2ec0d8b",
+      "theorems_explicit": 25,
+      "definitions": 13,
+      "structures": 2,
+      "axiom_prints": [
+        {
+          "name": "GoldbachRound19.Switch.anchor",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.resource1",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.Switch.resource0",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.h1",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.h0",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.r1",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.r0",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.ResourceCell",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.anchor_spec",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.anchor_three",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.anchor_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.q_lt_N",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.resource1_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.resource0_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.resource_common_divisor_dvd_anchor_sub_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.canonical_resources_coprime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.anchor_resource0_coprime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.terminal_factorizations",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.terminal_primes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.cofactors_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.FactorTuple",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.Switch.FactorTuple.ext",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.Switch.directCondition",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.encode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.decode",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.Switch.conductor",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.Switch.ChannelGuard",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.ValidTuple",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.encode_products",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.decode_encode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.encode_channel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.encode_valid",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.encode_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.encode_decode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.conductor_eq_min",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.conductor_square_le_resources",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.conductor_lt_N",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.balanced_integer_equation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.conductor_coefficients_coprime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.channel_equality_goes_D",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Switch.three_strata",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "SignedHyperbolicCRT.lean",
+      "namespace": "GoldbachRound19.SignedCRT",
+      "producer_first_PASS_attempt": 7,
+      "source_sha256": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+      "olean_sha256": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+      "log_sha256": "62be910ba1152ed41b4a00ce547b3cd544e2e257ddc138e19d01c6452229370c",
+      "theorems_explicit": 19,
+      "definitions": 13,
+      "structures": 1,
+      "axiom_prints": [
+        {
+          "name": "GoldbachRound19.SignedCRT.baseX",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.baseY",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.index",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.inverse_congruence",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.baseX_congruence",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.baseX_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.cancel_coefficient",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.baseY_equation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.signed_linear_solution",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.signed_parameter_unique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.actualConstant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.actualBaseX",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.actualBaseY",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.actualIndex",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.tuple_b_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.actual_signed_coordinates",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.actual_signed_q_formula",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.SignedCoordinates",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.SignedCoordinates.ext",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.encodeSigned",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.reconstructQ",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.signed_reconstruction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.signed_encoding_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.reconstructX",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.reconstructY",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.unpack",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.SignedGuard",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.reconstructX_encode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.reconstructY_encode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.unpack_encode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.signedGuard_encode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.index_unpack",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.encodeSigned_unpack",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.SignedCRT.signed_q_equals_decoded",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "NonSSBracketSwitch.lean",
+      "namespace": "GoldbachRound19.NonSS",
+      "producer_first_PASS_attempt": 9,
+      "source_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+      "olean_sha256": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+      "log_sha256": "e27c64b90dcec99f5d514ce82c98729cdcd57eb3bee697477ddf36172e5af9e6",
+      "theorems_explicit": 21,
+      "definitions": 18,
+      "structures": 0,
+      "axiom_prints": [
+        {
+          "name": "GoldbachRound19.NonSS.smallSemiprime",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.nonSSSelector",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.StructuralSupport",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.physicalDomain",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.encodeLabel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.decodeLabel",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.NonSS.factorDomain",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.physicalDomain_support",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.decode_encode_label",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.encodeLabel_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.mem_factorDomain_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.balancedResourceEquiv",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.physicalCoefficient",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.thetaBracket",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.rawLambda",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.rawBracket",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.thetaBracket_actual",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.raw_prime_equals_theta",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.literal_selected_properpower_price",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.thetaCoordinateWeight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.rawCoordinateWeight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.theta_coordinate_reindex",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.raw_coordinate_reindex",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.nonSS_actual_bracket_switch",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.nonSS_actual_raw_switch",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.actual_conductor_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.actual_three_stratum_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.encodeSignedLabel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.signedDomain",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.decodeSignedLabel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.decode_encode_signed_label",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.signedLabel_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.mem_signedDomain_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.balancedSignedResourceEquiv",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.physical_product_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.nonSquarefree_reciprocal_bracket_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.reciprocal0_raw_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.reciprocal0_theta_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.NonSS.nonSS_actual_signed_CRT_switch",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RankTwoHarmonic.lean",
+      "namespace": "GoldbachRound19.Harmonic",
+      "producer_first_PASS_attempt": 12,
+      "source_sha256": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b",
+      "olean_sha256": "24f5fc8f86ef7484def0ec4cbe722b4c6f71a297514e9f54a756ee51f33594c6",
+      "log_sha256": "b5df8f3524be0c8704774ad7a4cae226db55e55570ebf3eed289b499b6f82b5e",
+      "theorems_explicit": 17,
+      "definitions": 7,
+      "structures": 0,
+      "axiom_prints": [
+        {
+          "name": "GoldbachRound19.Harmonic.primesThrough",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.orderedPrimePairs",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.pairValue",
+          "axioms": []
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.rankTwoCofactors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.harmonic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.firstMoment",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.secondMoment",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.mem_primesThrough",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.mem_orderedPrimePairs",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.ordered_prime_product_unique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.pairValue_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.prime_not_prime_product",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.cofactor_union_disjoint",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.omega_prime_product",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.rankTwoCofactors_rank",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.diagonal_prime_square_kept",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.rankTwoCofactors_of_actual_multiset",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.rankTwoCofactors_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.cut_cofactors_eq_actual_omega",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.actual_terminal_cofactor_mem_cut",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.unordered_pair_moment",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.actual_ordered_products_harmonic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.rankTwoCofactorHarmonicIdentity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "GoldbachRound19.Harmonic.cut_harmonic_le_uncut",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    }
+  ],
+  "bindings": {
+    "round19/role4/agent4_DRAFT_PRE_FINAL.md.txt": "e76fa1a8159ad11f2ebe201677fac072b796a66dc4fae35963e8add7ab7b4cbd",
+    "round19/role4/attempt01.log": "ab7a7d1dd17daedda6d122b8aba515067d96b650a9ad895e73939d80878c8b42",
+    "round19/role4/attempt01_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt01_source.lean.txt": "36307959fc9e0d968be0e39fca9899036351158ad4c048de71cc5f6dcd321966",
+    "round19/role4/attempt01_started.json": "840175e3d1cf0cabac62ea4ddd97a6ca3ec8299f0002543ae820a3b38d21b399",
+    "round19/role4/attempt02.log": "06b0372ab9acb80e069da826f170ca9624d9843e19892c3f5341496845aee0ca",
+    "round19/role4/attempt02.olean": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+    "round19/role4/attempt02_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt02_source.lean.txt": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+    "round19/role4/attempt02_started.json": "f31f5627b09357b7e78ff4bcec4cac055ee08e14f9c36baaa1067821469bf378",
+    "round19/role4/attempt03.log": "a51fa4ff3709c1298b0a61d962e10ddc5d788774ea6444f092373cf8f34fcfbe",
+    "round19/role4/attempt03_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt03_source.lean.txt": "2d2153a5f0460e74a744e4625f80eca568b1bc8b6efe18a7f5c3a42a6692aa2f",
+    "round19/role4/attempt03_started.json": "5c003666a60d71e3d44ce88fe9777ad44319e8758da97d6ede7898e7325556d2",
+    "round19/role4/attempt04.log": "3661596e844def8c7a72eaf3df889c401503d28376a056d76496938bad54949f",
+    "round19/role4/attempt04_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt04_source.lean.txt": "e55fd348fdb74c4b8c77e8e5717594ce9439a1d8123c7ca8b0e4e46ecd2ba894",
+    "round19/role4/attempt04_started.json": "78a87d8776e4da1135d26e7b4be31f78ee5ad18b74a0aaa9e0e39e9746c55a9f",
+    "round19/role4/attempt05.log": "cc5d4ebe76ad3c7285db3197c1e4df15a12be9adb4cf621f440b3313f2ec0d8b",
+    "round19/role4/attempt05.olean": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+    "round19/role4/attempt05_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt05_source.lean.txt": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+    "round19/role4/attempt05_started.json": "4cebbc74810ac5940264a7cd7bbbdace154a4b1232618bab9d70a5f86fedede8",
+    "round19/role4/attempt06.log": "8093ac5437153375a9cf33eef17ab6d6afd3c56c93bcd86cc93d9183e185bfa9",
+    "round19/role4/attempt06_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt06_source.lean.txt": "12126717d5fee5f7d3d92617da21b37edd31a9c0861ef40e17151b8b3b359446",
+    "round19/role4/attempt06_started.json": "ebe8f2c8006a5bcfc85795bf983e5cff513cc4a458094eff2ded2c5f23f4c9c7",
+    "round19/role4/attempt07.log": "62be910ba1152ed41b4a00ce547b3cd544e2e257ddc138e19d01c6452229370c",
+    "round19/role4/attempt07.olean": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+    "round19/role4/attempt07_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt07_source.lean.txt": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+    "round19/role4/attempt07_started.json": "c28037cb401481ded003348234353b6e845a0d6735a75a2ecc034423c048e6eb",
+    "round19/role4/attempt08.log": "5269bdb8ec8a6f04d4c7ce60167e279307aae26316b93da0961bf2425b85185f",
+    "round19/role4/attempt08_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt08_source.lean.txt": "b436ced29ff618df48ccbf0cef49fadb099721f5007b85cdaa4496a121d1e21e",
+    "round19/role4/attempt08_started.json": "1cbed1cac2c38cf5640a6f6cd30353c324b055bcc85de50e067c94ebbf2bf925",
+    "round19/role4/attempt09.log": "e27c64b90dcec99f5d514ce82c98729cdcd57eb3bee697477ddf36172e5af9e6",
+    "round19/role4/attempt09.olean": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+    "round19/role4/attempt09_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt09_source.lean.txt": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+    "round19/role4/attempt09_started.json": "30a9b6b958cb2e144dc322efb30fefe1aa51d3fd0d666b92ec99c74aa41c8e31",
+    "round19/role4/attempt10.log": "6f1673886d6c572df47667f9814e18c2c8efc881505726cf4c83ed3d13359b75",
+    "round19/role4/attempt10_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt10_source.lean.txt": "1dec1108ad6c699da9fbc38132150cb7ff3d8b3ffcefb22a15506a88c609bae2",
+    "round19/role4/attempt10_started.json": "3ff8bfac22c5128549ea73b3e83bede0afddec064d8f52cfbfc0869e8df8c140",
+    "round19/role4/attempt11.log": "acb8b8bdd6ad488182c39387184d2e051d3007abdac2d9f0b6f2ece4425698c2",
+    "round19/role4/attempt11_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt11_source.lean.txt": "2de6ace9f786ab2d38d59994424d5267e7d0cc19ed3077b8ee06921e45f37131",
+    "round19/role4/attempt11_started.json": "069e03650e288cfd61329ea22eb39708352bdc9ed959e3aeea9decb3443f3106",
+    "round19/role4/attempt12.log": "b5df8f3524be0c8704774ad7a4cae226db55e55570ebf3eed289b499b6f82b5e",
+    "round19/role4/attempt12.olean": "24f5fc8f86ef7484def0ec4cbe722b4c6f71a297514e9f54a756ee51f33594c6",
+    "round19/role4/attempt12_builder.py.txt": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/attempt12_source.lean.txt": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b",
+    "round19/role4/attempt12_started.json": "1dd4e480513b5688fb875ab5a110d1461be56f09dbea119746ee26a7e6d5c470",
+    "round19/role4/BalancedResourceSwitch.lean": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+    "round19/role4/BalancedResourceSwitch.olean": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+    "round19/role4/build.py": "fd59294942a1bab559b929f2678a51808fb19c33717a0ee3775821bd8ef08641",
+    "round19/role4/build_receipt.json": "297ec6c8efb69415240eef9fb91a557863dd22370063a23ec7332ab5ee6a1d2b",
+    "round19/role4/compile_gate_schema.json": "707901be36d4ad4e178f14ba960e8c23dc17ed7abe34b5326ca9498eae7878bd",
+    "round19/role4/dependencies_readonly.json": "3a42896112b13cb680eb6a10c608ae4cd78f0c544a8e76cbdeed1b21252b2a33",
+    "round19/role4/finalize.log": "0eacc8c3931df8df690fd9012c06e24a85059055563ff1fab713cc883bbef749",
+    "round19/role4/finalize.py": "f91b9c3ea5b08505b6341cfa44768de2ad7760b500499677fa3f242592ec1d0e",
+    "round19/role4/finalize_source_PREEXEC.py.txt": "f91b9c3ea5b08505b6341cfa44768de2ad7760b500499677fa3f242592ec1d0e",
+    "round19/role4/finalize_started.json": "81ff6009c4527521ffc33998266bfd4dff7f46aaeb4fce71688bdc0042e65856",
+    "round19/role4/launcher_failed01.json": "c0a7bc0ce033cafe24295abff90275442b7171edb19d6205ef6a563716f90dfb",
+    "round19/role4/launcher_failed01.log": "52b04639918d45c3bccffba2ec575c0249c95f8ba4022ca8028f15393f612826",
+    "round19/role4/launcher_failed01_source_POSTEXEC.py.txt": "52f87be8c6dcd09f80051547971a51d2b9ffccefad4b83d7a51a46728e55be62",
+    "round19/role4/NonSSBracketSwitch.lean": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+    "round19/role4/NonSSBracketSwitch.olean": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+    "round19/role4/preparation.json": "268bc383fd408c24b4e8568ec88f3f73cbf258f4082a40ac7f29449e883cc4b5",
+    "round19/role4/RankTwoHarmonic.lean": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b",
+    "round19/role4/RankTwoHarmonic.olean": "24f5fc8f86ef7484def0ec4cbe722b4c6f71a297514e9f54a756ee51f33594c6",
+    "round19/role4/report_FINAL_ready.md.txt": "442a58cdec079b611a1be704f77dc729343e4a4a24cc526f601a280a7a5c068b",
+    "round19/role4/root_compile_authorization.json": "6ccdfc20f4a95fc84733532b83cb3d0f773378ec11504b40a48c83d026026a5d",
+    "round19/role4/SignedHyperbolicCRT.lean": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+    "round19/role4/SignedHyperbolicCRT.olean": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+    "round19/role4/TerminalPrimeExtraction.lean": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+    "round19/role4/TerminalPrimeExtraction.olean": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+    "round19/agent4_formalisation.md": "442a58cdec079b611a1be704f77dc729343e4a4a24cc526f601a280a7a5c068b"
+  },
+  "readonly_dependency_bindings": {
+    "round18/judge/build/DoubleExtractionArithmetic.lean": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+    "round18/judge/build/DoubleExtractionArithmetic.olean": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+    "round16/judge/build/EulerAnchor.lean": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+    "round16/judge/build/EulerAnchor.olean": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+    "round16/judge/build/LeastMissingPrimeMargin.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+    "round16/judge/build/LeastMissingPrimeMargin.olean": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+    "round13/role4/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "round13/role4/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b"
+  },
+  "numeric_gate_bindings": {
+    "round19/agent6_nonss.md": "56449b03605b28a7696aeb2944d56ed27576c77560975a2871b903d6e91421fa",
+    "round19/nonss_checks.py": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+    "round19/nonss.json": "fa5d00bdc408e74d940c2583f4d015a4efd863dc2e15f3d13e77c4fa2f0c6cfe",
+    "round19/role6_nonss/arithmetic.py": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+    "round19/role6_nonss/bank.py": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+    "round19/role6_nonss/canonical_attempt01/inputs/arithmetic.py": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+    "round19/role6_nonss/canonical_attempt01/inputs/bank.py": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+    "round19/role6_nonss/canonical_attempt01/inputs/contract.json": "29c4474d148a6e8cbe3a431130cc9143af2efc277682f4c38b5e5be99bb06037",
+    "round19/role6_nonss/canonical_attempt01/inputs/executor_prompt.md": "794c2f289241cb550f83fa0928d0b9627ee878e85064e0196ee18822b4d20bbe",
+    "round19/role6_nonss/canonical_attempt01/inputs/FINAL2.md": "20ca15ceba20b72459102b2da8429b7e6d72a7c4bd52dca7de7bc3a58a61cbc2",
+    "round19/role6_nonss/canonical_attempt01/inputs/input_manifest.json": "c425dfb0001dad406aa243dd88224ce2a30281ea33916b8cd50e452e3c92664e",
+    "round19/role6_nonss/canonical_attempt01/inputs/launcher.py.txt": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+    "round19/role6_nonss/canonical_attempt01/inputs/preflight19_final_receipt.json": "e647e21e5512c48d34c818c9942bb312d172524682b361552c52422fd3c15c53",
+    "round19/role6_nonss/canonical_attempt01/inputs/preparation.json": "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3",
+    "round19/role6_nonss/canonical_attempt01/inputs/probe.md": "5f9e429bc264002044da60139f3942e7c3de909116d41e6cc52f70afb9a5a12d",
+    "round19/role6_nonss/canonical_attempt01/inputs/producer.py": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+    "round19/role6_nonss/canonical_attempt01/inputs/registry1361.json": "8c0abf930ee8c47b64d335ed286af4566fc674b573216f82f12b05c4ec877150",
+    "round19/role6_nonss/canonical_attempt01/inputs/role2_manifest.json": "66a5e12172d93ccbc4460bf5733a81c284aeb101976f9319c7fc1909ad449252",
+    "round19/role6_nonss/canonical_attempt01/inputs/role2_receipt.json": "6081619ec9d4c942b24cb5fbd72b9ee316712d99b61a5503a98c83790f2df1d0",
+    "round19/role6_nonss/canonical_attempt01/producer.log": "a0c045706277063213587b6656a44ecc867856118aeac89928419c022befe663",
+    "round19/role6_nonss/canonical_attempt01/receipt.json": "317c9788eefa91ada5af1d8fc32f022530869fbdee7b394d1fb364aefd9b80f5",
+    "round19/role6_nonss/canonical_attempt01/reserved.json": "71420df46ceef5bfb6cf7787cc80fde87e87f2b6a92a361b9d68462aa922f3ce",
+    "round19/role6_nonss/canonical_attempt01/started.json": "a5704847edb1d2e1b0d9a88e9441814a6634cc95d5d2a0bea8e1a77c9e94c34b",
+    "round19/role6_nonss/preparation.json": "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3",
+    "round19/role6_nonss/run_nonss_once.py": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+    "round19/role6_nonss/final_receipt.json": "1090604087418b7b940147f3504b519364d095bff453461969bf7d02b5ddee2b"
+  },
+  "unpaid": [
+    "H7 analytic",
+    "H9 rank3short at u>=10^40",
+    "source onset u>=10^24 unchanged",
+    "rank>=4",
+    "medium and long conductors",
+    "Gamma",
+    "capacity",
+    "T_A",
+    "full ledger",
+    "D_N target"
+  ]
+}

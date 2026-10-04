@@ -1,0 +1,43 @@
+{
+  "schema": "round22.role3.unfold_stage03.read_receipts.v1",
+  "time": "2026-10-03T07:37:54.3601790+00:00",
+  "inherited_FINAL2_FULL_receipts": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\phase_read_receipts.json",
+  "independent_SOURCE_review": "ROLE4 FULL fdffac before constructive natAbs-only clarification; no mathematical missing charge reported",
+  "root_stage03_SOURCE_read": "FULL 0eca6f",
+  "kernel_PASS_log_FULL": "41e1f7",
+  "API_reads": [
+    {
+      "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+      "scope": "TARGETED",
+      "lines": "152-155",
+      "source_read": "actual static source"
+    },
+    {
+      "path": "Mathlib/Analysis/NormedSpace/FunctionSeries.lean",
+      "scope": "TARGETED",
+      "lines": "101-115",
+      "chunk": "fa5e96"
+    },
+    {
+      "path": "Mathlib/Analysis/PSeries.lean",
+      "scope": "TARGETED",
+      "lines": "321-330",
+      "chunk": "fa5e96"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Group/InfiniteSum.lean",
+      "scope": "TARGETED",
+      "lines": "100-107",
+      "chunk": "6fd814"
+    },
+    {
+      "path": "Mathlib/Topology/Algebra/InfiniteSum/Defs.lean",
+      "scope": "TARGETED",
+      "lines": "148-157",
+      "chunk": "6fd814"
+    }
+  ],
+  "new_compiler_calls": 0,
+  "Python_math_calls": 0,
+  "old_PASS_replays": 0
+}

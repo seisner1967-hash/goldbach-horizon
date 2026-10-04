@@ -1,0 +1,44 @@
+{
+  "status": "FROZEN_NUMERICAL_INPUTS_TERMINATED",
+  "file_count": 11,
+  "sha256": {
+    "conservation.py": "e64bd0ac1a8217d0026fe3c60c2ffcd880c9d06e51696f1c6ad4ad550d48bf89",
+    "shared.py": "2eba4c18b1013677a168e99a7e896146a63bdcff4dee1180c1c4ba2e4323b43d",
+    "exchange_checks.py": "cdb1721ce1da9e92485c337f94fe5ce9410856b34b73ac2898cd4a8155c22264",
+    "operator_checks.py": "64fcc468c5df6672ac123ee6103cef9ce0739052c3367be7593bac3aea78c9f2",
+    "replay_checks.py": "44efe63a9216dd1755826e9a4df605b61a5de8281183287d2ba60a7612be0822",
+    "previous_artifacts_sha256.json": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "conservation.json": "91971be723dcce9eae59295bef2d93b4f95e811b53d6dd2c2ef15240b952169f",
+    "exchange.json": "d120360aeebf570b9cf75ca0922070bd40e750607e77d8362a8fff636eb6352d",
+    "operator.json": "d2c1cd93571533777de9c09bcc94c575098500ae59929fb3774ad1f940c9be8e",
+    "numerical_replay.json": "73b8b29449601032016218afa9a49873925426b9d32efe33393fe312a3163b3c",
+    "agent6.md": "00e234c7543fbb77d41f3f7d297c15b6bb649b6d940179509f7d916e68bb6bc0"
+  },
+  "conservation": {
+    "status": "PRESERVED",
+    "files": 514,
+    "round12_files": 27,
+    "previous_protected_files": 487,
+    "round12_controller_sha256": "d84cca25948c6794764f3afbc7b6fa23d46faa4152fdad17f2f87da69929a400",
+    "baseline_sha256": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "all_JSON_fields_and_bytes_replayed": true,
+  "global_D_N": false,
+  "asymptotic": false,
+  "payments": false,
+  "Lean_called": false,
+  "victory": false
+}

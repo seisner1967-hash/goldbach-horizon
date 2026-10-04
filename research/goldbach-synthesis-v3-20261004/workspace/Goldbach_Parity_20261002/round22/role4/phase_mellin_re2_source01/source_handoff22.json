@@ -1,0 +1,157 @@
+{
+  "schema": "ROUND22_ROLE4_RE_TWO_SOURCE_HANDOFF_01",
+  "created_utc": "2026-10-03T15:25:45.0286809Z",
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_mellin_re2_source01\\PhaseGammaReTwo22.lean",
+      "sha256": "25481da60d40eecf845b85a686f9c3bdd0631272bf8629d326c75f469e6f9c1d",
+      "bytes": 7064,
+      "status": "SOURCE_UNCOMPILED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_mellin_re2_source01\\PhaseZetaReTwo22.lean",
+      "sha256": "1ec90d6671e642ba24d15b73fd684c183c6768e0bf5c3161ccdb72f19af06756",
+      "bytes": 5421,
+      "status": "SOURCE_UNCOMPILED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_mellin_re2_source01\\PhaseReTwoTails22.lean",
+      "sha256": "d8930f861d4413726733ab4b015610e065e907f38adc22ebc6452e814725338d",
+      "bytes": 13116,
+      "status": "SOURCE_UNCOMPILED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_mellin_re2_source01\\source_contract22.md",
+      "sha256": "11bf1c0bcf25b274296844e77474a85944710f1e7e85e12b125fd066e34fb156",
+      "bytes": 5553,
+      "status": "SOURCE_PAPER"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_mellin_re2_source01\\read_sources22.json",
+      "sha256": "28fb9cf840a2df5a79865cb3cc7e0820ff330dc72884de5923c6ef9c9270837f",
+      "bytes": 17131,
+      "status": "SOURCE_READ_RECEIPT"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean",
+      "sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "bytes": 18040,
+      "status": "READONLY_INDEPENDENT_PASS_DEPENDENCY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_adjudication.json",
+      "sha256": "6488a47dfb747394fbb16df8df7282ea660e7016c24e06753a7dad3f50519f02",
+      "bytes": 26491,
+      "status": "READONLY_TARGETED_INDEPENDENT_GAMMA_ROW"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22.olean",
+      "sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "bytes": 605536,
+      "status": "READONLY_BYTE_HASH_ONLY_NO_IMPORT"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaEulerDirect22.lean",
+      "sha256": "0d790ed67706e2f3c3556d2c5e7fefd50664177f5fb54584beee1d137e430a71",
+      "bytes": 2529,
+      "status": "READONLY_SAME_BYTES_REPORTED_INDEPENDENT_PASS"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaEulerDerivative22.lean",
+      "sha256": "fe51d8956fecabaa09063ce31543b91946cc3fae1fd2e3ffadd4fc639be39520",
+      "bytes": 9007,
+      "status": "READONLY_SOURCE_NOT_COMPILED_BY_THIS_PACKET"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaEulerLambda22.lean",
+      "sha256": "1a08c2258a3e544b7e9e643de2be9f03bddcff90822592dbbca08c53871d5266",
+      "bytes": 8965,
+      "status": "READONLY_SOURCE_NOT_COMPILED_BY_THIS_PACKET"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\spectral_uniform_phase_source22\\uniform_phase_contract22.md",
+      "sha256": "7fedc4de0d175fcfdbfdb0d36667e7bf5393c788fa88e3f28bd89c9ef0320306",
+      "bytes": 11228,
+      "status": "READONLY_SOURCE_PAPER"
+    }
+  ],
+  "binding_count": 12,
+  "modules": [
+    {
+      "file": "PhaseGammaReTwo22.lean",
+      "defs": 4,
+      "theorems": 17,
+      "declarations": 21,
+      "qualified_prints": 21,
+      "forbidden_proof_tokens": 0
+    },
+    {
+      "file": "PhaseZetaReTwo22.lean",
+      "defs": 1,
+      "theorems": 6,
+      "declarations": 7,
+      "qualified_prints": 7,
+      "forbidden_proof_tokens": 0
+    },
+    {
+      "file": "PhaseReTwoTails22.lean",
+      "defs": 5,
+      "theorems": 16,
+      "declarations": 21,
+      "qualified_prints": 21,
+      "forbidden_proof_tokens": 0
+    }
+  ],
+  "new_declarations": 49,
+  "new_definitions": 10,
+  "new_theorems": 39,
+  "qualified_prints": 49,
+  "dependency_status": "Gamma rotation uses independently PASS readonly9f5e source. EulerDirect readonly0d790 matches previously reported independent PASS. EulerDerivativefe51/EulerLambda1a08 remain SOURCE, never assumed PASS; the new L bound is derived from their concrete statements, not supplied in any premise.",
+  "domains": {
+    "G2_and_L_bound": "all real t, actual s=2+i*t",
+    "branch_DOM": "a>0, all real theta and t, principal w=a-i*theta",
+    "real_kernel_FTC": "delta>0, H real",
+    "actual_signed_product_tails": "a>0, theta real, H>=0, either Bool sign",
+    "closed_envelope_joint_continuity": "(a,theta,H) with a>0 and H any real"
+  },
+  "derived_scope": [
+    "variable-angle domain and true Gamma real factor",
+    "atan derivative bound and pi/2 edge defect at most2",
+    "G2 for genuine Complex.Gamma",
+    "L norm<=4 via direct Lambda SOURCE Euler series and finite sum/integral comparison",
+    "actual zeta logarithmic derivative continuity and nonvanishing",
+    "principal-power norm keeps the argument factor; explicit positive continuous delta",
+    "actual Gamma*L*w^(-s) pointwise DOM",
+    "explicit primitives, limits, integrable real kernels and exact tail integrals",
+    "actual complex signed product-tail integrability and norm bounds",
+    "two signed tails with genuine1/(2pi) normalization",
+    "closed envelope jointly continuous also in H"
+  ],
+  "no_free_final_premises": true,
+  "representation_M_proved": false,
+  "whole_integral_minus_truncated_tail_identity_proved": false,
+  "uniform_d_atan_bound_proved": false,
+  "quadrature_envelope_or_producer_proved": false,
+  "transitive_import_closure_prepared": false,
+  "envelope": "exp(2)*norm(w)^(-2)/pi * exp(-delta*H) * ((H^2+4)/delta+2H/delta^2+2/delta^3), delta=pi/2-abs(arg(w))",
+  "cost": "norm(w)^(-2), delta^(-1), delta^(-2), delta^(-3) exposed. No free target error, selected height, numeric feasibility, runtime or accuracy claim.",
+  "open": [
+    "M: actual Fourier/Mellin inversion, actual sum/integral interchange and actual holomorphic continuation",
+    "whole integral minus truncated integral equals these signed tails",
+    "uniform circle bound d(a)=atan(a/pi)",
+    "quantitative quadrature and independent directed primitive producer",
+    "canonical PP corrections/frontier/D_N/WIN"
+  ],
+  "preservation": "All existing frozen handoffs/sources/attempts remain unmodified; no old bank replay, import or recompilation.",
+  "execution": {
+    "new_compiler_invocations": 0,
+    "new_axiom_audits": 0,
+    "new_probes": 0,
+    "new_numerical_invocations": 0,
+    "new_python_imports": 0,
+    "new_builder_or_gate_invocations": 0,
+    "metadata_only": true
+  },
+  "official_credit_added": 0
+}

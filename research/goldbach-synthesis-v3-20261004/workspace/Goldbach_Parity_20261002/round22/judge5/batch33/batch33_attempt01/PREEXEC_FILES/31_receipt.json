@@ -1,0 +1,75 @@
+{
+  "C3_paid": false,
+  "C5_paid": false,
+  "C6_paid": false,
+  "D_N_paid": false,
+  "H1_paid": false,
+  "actual_child_invocations": 1,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "attempt": "batch32_attempt01",
+  "author_olean_used": false,
+  "capture_count": 109,
+  "closed_judge_file_count": 2532,
+  "declarations_passed": 2,
+  "global_trace_certified": false,
+  "hidden_retries": false,
+  "input_count": 9787,
+  "modules_passed": 1,
+  "numeric_PASS_used_as_proof": false,
+  "numeric_bank_replayed": false,
+  "numeric_invocations": 0,
+  "old_batches_recompiled": false,
+  "protected_archive_count": 3089,
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22",
+    "ComplexGammaMellinLocal22",
+    "ComplexGammaMellinHolomorphy22",
+    "ComplexGammaMellinTail22"
+  ],
+  "rows": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachComplexGammaMellin22.complex_exp_sub_truncated_eq_tail"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachComplexGammaMellin22.complex_exp_truncation_error_le"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch32\\batch32_attempt01\\ComplexGammaMellinExpTailBridge22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch32\\sources\\ComplexGammaMellinExpTailBridge22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-04T02:07:24.952591+00:00",
+      "launch_error": null,
+      "log_sha256": "12e79a8d0935c1cbb36d7c280bae6e1d1686c083fbd7e6cd4c8e369adb4e69cb",
+      "module": "ComplexGammaMellinExpTailBridge22",
+      "olean_sha256": "54edc77d7f7848b55a0a1a36ebec0460e82afd1204b7c5127e80c8a0b344448d",
+      "source_prior_status": "SOURCE_ONLY_NOT_ELABORATED",
+      "source_sha256": "4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c",
+      "started_at": "2026-10-04T02:07:12.252554+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false
+    }
+  ],
+  "status": "INDEPENDENT_BATCH32_AUX_PASS",
+  "time_utc": "2026-10-04T02:07:36.552645+00:00",
+  "victory": false
+}

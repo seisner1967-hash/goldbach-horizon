@@ -1,0 +1,40 @@
+{
+  "schema": "ROUND22_ANGULAR_MELLIN_BORDER_SOURCE_CATALOG_02",
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "catalog_construction": "MANUAL_DECLARATION_INVENTORY_NO_LEAN_PARSER",
+  "module": "AngularMellinBorder22",
+  "namespace": "GoldbachAngularMellinBorder22",
+  "declarations": 30,
+  "theorems": 22,
+  "definitions": 8,
+  "qualified_print_axioms": 30,
+  "definitions_names": [
+    "angularBase", "angularPower", "angularCharacter", "angularIntegrand",
+    "angularDerivative", "angularNormalizer", "angularJ", "angularBorder"
+  ],
+  "theorem_names": [
+    "angularBase_re", "angularBase_mem_slitPlane", "angularBase_ne_zero",
+    "angularPower_hasDerivAt", "angularCharacter_hasDerivAt", "angularIntegrand_hasDerivAt",
+    "angularPower_continuous", "angularCharacter_continuous", "angularIntegrand_continuous",
+    "angularDerivative_continuous", "angularIntegrand_intervalIntegrable",
+    "angularDerivative_intervalIntegrable", "angularCharacter_pi", "angularCharacter_neg_pi",
+    "angularIntegral_derivative_eq", "angularJ_balance", "angularJ_recurrence",
+    "angularBorder_explicit", "angularBorder_zero", "angularQuadratic_ne_zero",
+    "angularBorder_one", "angularBorder_one_ne_zero"
+  ],
+  "domain": {
+    "a": "real strictly positive for analytic identities",
+    "q": "arbitrary complex number, principal cpow",
+    "N": "natural; strictly positive for the divided recurrence and nonzero q=1 border",
+    "theta": "real, integrated on [-pi,pi] with volume"
+  },
+  "compile_invocations": 0,
+  "api_probe_invocations": 0,
+  "numeric_invocations": 0,
+  "parser_invocations": 0,
+  "olean_created": false,
+  "lean_axioms_verified": false,
+  "global_trace_proved": false,
+  "D_N_target_proved": false,
+  "WIN": false
+}

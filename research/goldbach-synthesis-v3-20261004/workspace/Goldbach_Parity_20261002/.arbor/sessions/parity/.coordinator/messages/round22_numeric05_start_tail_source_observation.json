@@ -1,0 +1,28 @@
+{
+  "schema": "ROUND22_ROOT_NUMERIC05_START_AND_TAIL_SOURCE_CHECKPOINT",
+  "time_utc": "2026-10-03T23:36:57.359916+00:00",
+  "actual_parent_tool": "9e84a6/session81191",
+  "actual_closed": false,
+  "pid": 23088,
+  "start_utc": "2026-10-03T23:34:41.256382+00:00",
+  "parent_start_utc": "2026-10-03T23:34:40.344229+00:00",
+  "gate_sha256": "e417407398e27d22a19a932bed6da09f09b0866bce8abbb2c08cfaaee28551cc",
+  "parent_START_sha256": "96c19a65ce3b69e094eb6fc4ba4d92aa1ff0b1e3a7b2023b07ecc0e4ace47161",
+  "checker_START_sha256": "ebb34226ac252b18ca5917305134f9ae83297378a30a6dd285232dbc5c0c7281",
+  "source_review_repair": "DEADLINE_NO_CREATION_CONTRACT_MISMATCH resolved by distinct SOURCE revision02",
+  "ROOT_draft_helpers_never_invoked": [
+    "authorize_round22_native_numeric05_checker_only.py",
+    "authorize_round22_native_numeric05_checker_only_v2.py"
+  ],
+  "selected_gate_helper": "authorize_round22_native_numeric05_checker_only_v3.py",
+  "draft_v2_metadata_field_correction": "SOURCE review uses candidate_runtime_calls; TRUST review uses produced_binary_invocations",
+  "tail_source_handoff_sha256": "b80e83e1029995309836b313b5897a54ec5c27c07cb6e2a48371705c4cf41587",
+  "tail_source_review_pending": true,
+  "tail_compiled": false,
+  "numeric_verdict": false,
+  "ROOT_compiler_calls": 0,
+  "ROOT_numeric_calls": 0,
+  "native_refinement": false,
+  "D_N": false,
+  "WIN": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "round22.gamma_h2_aux.prepared_receipt.v1",
+  "status": "PREPARED_SOURCE_ONLY_NOT_EXECUTED",
+  "time_utc": "2026-10-03T07:25:30.6771447Z",
+  "preparation": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\gamma_preparation22.json",
+    "sha256": "c9596f415b725d5db92dbdcd3a5de0bd7b972c35113e2dd16cd7aa87d6b25588",
+    "bytes": 6020,
+    "kind": "PREPARATION"
+  },
+  "manifest": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\gamma_prepared_manifest22.json",
+    "sha256": "4727f3969da2fef60070f1f29bcdbc61c62496db6db7f536c628285e312bcd99",
+    "bytes": 4494,
+    "kind": "MANIFEST"
+  },
+  "bindings_verified_count": 15,
+  "runtime_actual_byte_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "preparation_is_only_metadata": true,
+  "Gamma_math_executions": 0,
+  "Gamma_Lean_executions": 0,
+  "actual_directory_exists": false,
+  "gate_is_not_created_by_ROLE6": true,
+  "G0_is_historical_and_not_replayed": true
+}

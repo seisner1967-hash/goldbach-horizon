@@ -1,0 +1,47 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC04_CLOSURE_HELPER_SOURCE_READS",
+  "status": "SOURCE_ONLY_NOT_INVOKED_WHILE_NUMERIC_SESSION_ACTIVE",
+  "utc": "2026-10-03T21:25:01.5342033Z",
+  "rows": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\close_numeric04_metadata22.ps1",
+      "bytes": 12291,
+      "sha256": "81c3e40726052f95df83576071ffe062b6182ead44fc9c4edc7333dc9d515ab7",
+      "scope": "FULL",
+      "tool_chunk": "48eaa2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_closure_source01\\closure_source_contract22.txt",
+      "bytes": 3333,
+      "sha256": "3eb0fa4495657f95f6ff740ed828ee4de111c0ebb1f3de2e9b3125a6d887d1bd",
+      "scope": "FULL",
+      "tool_chunk": "48eaa2"
+    }
+  ],
+  "parent_source_targeted": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\run_native04_once22.py",
+    "sha256": "97473b226ce5206e021e444720651e00ca1fdb4c1c1052e20db60d4effec3f55",
+    "scope": "TARGETED_MAIN_POST_RECEIPT_WATCHDOG_SCHEMA",
+    "tool_chunk": "b24cdf",
+    "not_parsed_or_imported": true
+  },
+  "PRE": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01\\PRE.json",
+    "sha256": "2263e2fa6b54445a31ac910e213a417b07cee7468c103726f12f8736e46d1d6d",
+    "scope": "PARSED_METADATA_HEADERS_AND_ALL_CAPTURE_KEYS",
+    "capture_count": 66,
+    "tool_chunk": "b24cdf",
+    "raw_FULL_claimed": false
+  },
+  "metadata_controls_gate_FULL": "2f2da5",
+  "native_active_session_id": 17351,
+  "helper_invocations": 0,
+  "quiescence_evidence_created": false,
+  "future_actual_outputs_not_assumed_frozen": true,
+  "no_parent_receipt_synthesized": true,
+  "coefficient_arithmetic_recomputed": false,
+  "compiler_invocations": 0,
+  "native_invocations_here": 0,
+  "D_N": false,
+  "WIN": false
+}

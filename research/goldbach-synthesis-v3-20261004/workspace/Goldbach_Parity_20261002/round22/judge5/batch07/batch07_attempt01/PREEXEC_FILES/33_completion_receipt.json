@@ -1,0 +1,233 @@
+{
+  "schema": "ROUND22_JUDGE5_DOCUMENTARY_COMPLETION_BATCH06",
+  "time_utc": "2026-10-03T13:16:39.186294+00:00",
+  "status": "INDEPENDENT_BATCH06_FAILED",
+  "adjudication_sha256": "eb74f0bf154d86e0967c5b383a02f2fdbbbce999614f861fbbb9270fc075810a",
+  "helper_sha256": "f090cd674befbbbe90e8aa252f8d675dd0f87859f10b34d456e6dd529f87728b",
+  "actual_receipt_sha256": "0f1494d07997e45540f0abcb3e553a985ef9b5a8435ae5b267beb990a4b7da2d",
+  "PREEXEC_sha256": "cfd1131ac990f86ce77ce2ed9add1a7d5ecd59b9d9d932b3938628077a1ebcc5",
+  "POSTEXEC_sha256": "dae3e6893de2087971f5610bf4222497c41ee49367761bda9345a7ea5895d520",
+  "compiler_invocations_in_this_adjudication": 0,
+  "numeric_invocations": 0,
+  "actual_fresh_compiler_invocations_in_batch": 2,
+  "modules_passed": 1,
+  "declarations_passed": 5,
+  "theorems_passed": 4,
+  "definitions_passed": 1,
+  "modules_failed": 1,
+  "modules_not_invoked": 7,
+  "failed_module_declarations_credited": 0,
+  "all_five_PASS_axiom_prints_exact_standard_only": true,
+  "Reflection_diagnostic_prints": 7,
+  "Reflection_recovery_prints": 2,
+  "Reflection_errors": 10,
+  "Reflection_olean_exists": false,
+  "inputs_verified": 7019,
+  "closed_judge_verified": 270,
+  "archives_verified": 3089,
+  "captures_verified": 64,
+  "all_current_bytes_preserved": true,
+  "large_PRE_POST_raw_FULL_claimed": false,
+  "combined_logs_FULL": "83947d",
+  "actual_receipt_and_START_FIN_FULL": "5dfb6c",
+  "previous_official_modules": 68,
+  "previous_official_declarations": 1132,
+  "possible_modules_after_ROOT_observation": 69,
+  "possible_declarations_after_ROOT_observation": 1137,
+  "official_count_requires_ROOT_observation": true,
+  "module_facts": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZetaSummandHom"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZetaSummand_norm_summable"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZetaSummand_tsum"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZeta_euler_exp_log"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZeta_ne_zero_on_right"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\batch06_attempt01\\ZetaEulerDirect22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\sources\\ZetaEulerDirect22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T13:06:34.403027+00:00",
+      "launch_error": null,
+      "log_sha256": "e8baadfec45f2aa93a5019a703488a9b85f3c1e66a03461a6daa9289fd308eaa",
+      "module": "ZetaEulerDirect22",
+      "olean_sha256": "555b108cb867d2f87686539b647cda24600e4b747ebc25aa253b0c71a327c454",
+      "source_prior_status": "SOURCE_NOT_COMPILED",
+      "source_sha256": "0d790ed67706e2f3c3556d2c5e7fefd50664177f5fb54584beee1d137e430a71",
+      "started_at": "2026-10-03T13:06:18.421201+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "timed_out": false,
+      "independent_declarations_credited": 5
+    },
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZeta_reflection"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contour_cos_ne_zero_in_left_strip"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi_ne_zero_in_left_strip"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZeta_ne_zero_in_left_strip"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourChi_differentiableAt"
+        },
+        {
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.contourZeta_logDeriv_reflection"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\batch06_attempt01\\ZetaReflection22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\sources\\ZetaReflection22.lean"
+      ],
+      "exact_axiom_coverage_standard_only": false,
+      "exit_code": 1,
+      "finished_at": "2026-10-03T13:06:57.853735+00:00",
+      "launch_error": null,
+      "log_sha256": "f6c0a712edb08aa949ae0f86fa768cbc0c46ec7fba1f37765c5545daacfffbb2",
+      "module": "ZetaReflection22",
+      "olean_sha256": null,
+      "source_prior_status": "SOURCE_NOT_COMPILED",
+      "source_sha256": "54e32a95a62929c7251bf130156adbc7da7d66ceb1cb77609382e33c025f4a42",
+      "started_at": "2026-10-03T13:06:34.403027+00:00",
+      "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+      "timed_out": false,
+      "independent_declarations_credited": 0
+    },
+    {
+      "module": "GammaPsiDuplication22",
+      "status": "NOT_INVOKED",
+      "independent_declarations_credited": 0,
+      "source_sha256": "0491177c6cfc1ef35b28796be404a3ca7975bac357cc6551b80d12333726812e"
+    },
+    {
+      "module": "GammaPsiReflection22",
+      "status": "NOT_INVOKED",
+      "independent_declarations_credited": 0,
+      "source_sha256": "8e070c18a483ac71703f66b80dbcf4129f0f16ada8f2a933497655b3a7cdaa30"
+    },
+    {
+      "module": "ContourChiPsi22",
+      "status": "NOT_INVOKED",
+      "independent_declarations_credited": 0,
+      "source_sha256": "a90d536187fe342d01cf913a56c80a34e6846eb273a533bcdd843289f7d83248"
+    },
+    {
+      "module": "ContourChiScaled22",
+      "status": "NOT_INVOKED",
+      "independent_declarations_credited": 0,
+      "source_sha256": "d0aa03290fe806f9c84c0311a7e07a2fe0737148c9c1de7c80876118fb7a64d7"
+    },
+    {
+      "module": "PsiKernelEnvelope22",
+      "status": "NOT_INVOKED",
+      "independent_declarations_credited": 0,
+      "source_sha256": "949c6fc0d895003b522518e18ae89bdf6b5062448d5273f146685645afb72ef8"
+    },
+    {
+      "module": "PsiKernelDomination22",
+      "status": "NOT_INVOKED",
+      "independent_declarations_credited": 0,
+      "source_sha256": "80b85c14c7db79121f7c9cb003edf97a7d5e947f785ce8402f910ea93aad48bc"
+    },
+    {
+      "module": "PsiMixedFubini22",
+      "status": "NOT_INVOKED",
+      "independent_declarations_credited": 0,
+      "source_sha256": "d143b0fbdf795a1b400f737274a5eae5c8c5bba0c2e4ecaf145d86932df0b250"
+    }
+  ],
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "global_trace_certified": false,
+  "WIN": false
+}

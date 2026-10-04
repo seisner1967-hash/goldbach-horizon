@@ -1,0 +1,49 @@
+{
+  "schema": "ROUND22_ROLE4_ANALYTIC_REVISION02_SOURCE_READ_RECEIPT",
+  "time_utc": "2026-10-03T10:53:56.9392407Z",
+  "status": "SOURCE_ONLY_NO_COMPILER_AUTHORIZATION",
+  "original_source_sha256": "82dd6682d0912decfa22adbcf022dbed6343c8d7cb71bca748a3f064b8443ea0",
+  "revised_source_sha256": "4874192b1c2ca9edc7262d8a46f9d4a1e339c565e5bb48fefbf4d6d100071edf",
+  "statement_headers_compared": 12,
+  "statements_unchanged": true,
+  "qualified_prints_compared": 12,
+  "qualified_prints_unchanged": true,
+  "source_reads": [
+    {
+      "file": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\sources\\GammaBoxBounds22.lean",
+      "chunk": "d2bbc7",
+      "scope": "FULL"
+    },
+    {
+      "file": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_revision02\\GammaBoxBounds22.lean",
+      "chunk": "5f3d29",
+      "scope": "FULL"
+    }
+  ],
+  "api_reads": [
+    {
+      "file": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+      "chunk": "9c4e9d",
+      "sha256": "b9492e840d6952cbac27ee1e3eeb193f73908032465a78a2d3c8f988ff07c93c",
+      "lines": "517-519",
+      "scope": "TARGETED"
+    },
+    {
+      "file": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Basic.lean",
+      "chunk": "0bbf2f",
+      "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+      "lines": "759-760",
+      "scope": "TARGETED"
+    }
+  ],
+  "actual_batch_receipt_sha256": "939122be1e498225f47b15d79bb3357a68573bf306dffad37e31ba54a01ba613",
+  "actual_logs_full": "db3f16",
+  "actual_receipt_pre_post_start_full": "9c4e9d",
+  "actual_fin_full": "0bbf2f",
+  "new_lean_invocations": 0,
+  "new_math_invocations": 0,
+  "role4_actual_lean_invocations_total": 5,
+  "global_h1_certified": false,
+  "D_N_paid": false,
+  "win": false
+}

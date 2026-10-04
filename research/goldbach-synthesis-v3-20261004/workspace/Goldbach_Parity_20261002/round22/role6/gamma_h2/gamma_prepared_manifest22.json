@@ -1,0 +1,97 @@
+{
+  "schema": "round22.gamma_h2_aux.prepared_manifest.v1",
+  "status": "PREPARED_SOURCE_ONLY_NOT_EXECUTED",
+  "time_utc": "2026-10-03T07:25:30.6440552Z",
+  "bank_id": "GAMMA_ROTATED_LAPLACE_AUX22",
+  "scope": "GAMMA_H2_AUX_ONLY",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\dyadic_gamma22.py",
+      "sha256": "01c1eb04ad4f0559b181b91c5fb300654d99ee8c16ed0b1d901e05a7604c64b6",
+      "bytes": 7955,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\gamma_bank22.py",
+      "sha256": "08b047b6d50f39494ad1c1fd22aac44a3331d8d4b18f9226f3411d15eb83550c",
+      "bytes": 14201,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\gamma_contract22.json",
+      "sha256": "4391a762f85299bba43176fb95a3f18779fc9777c344dba5662e6527f6308f7d",
+      "bytes": 1960,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\gamma_paper22.md",
+      "sha256": "0d2e6ed6881475b3ca8dd4e63cf65abb7998f09389c75e08e2e01c33ef4678d7",
+      "bytes": 9410,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\run_gamma_numeric_once22.py",
+      "sha256": "b8076bf2b63a1ef24b3497d910b193c3b508d6c352372aa85b10c38aebbba802",
+      "bytes": 6969,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\gamma_read_scope22.json",
+      "sha256": "ebe5fb6d656a43163c715b225f5168fd9f44eebbcbe145aa014cef788712ba51",
+      "bytes": 1699,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\gamma_preparation_notes22.md",
+      "sha256": "823adc5a263e69e84eb3f1a71e295311619e71f93f90eb729c601a75a0be1334",
+      "bytes": 2318,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\prepare_gamma_metadata22.ps1",
+      "sha256": "9d53c359c6bd61067405ef13a1a227869f66c245a7de1ac402e54d0edaf14edf",
+      "bytes": 6225,
+      "kind": "NEW_GAMMA_SOURCE_OR_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\interval22.py",
+      "sha256": "6e29ec2c7fb5d8e1eba796f3d863fb4c95db5b2bb5cf9671a9fb80d6469df588",
+      "bytes": 3768,
+      "kind": "READONLY_ARITHMETIC_SOURCE_PROVENANCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\GammaPrerequisites22.lean",
+      "sha256": "8bcfef577be2dbf3412646bd7938fe3d929dc0efdd4d1d7c29149ff6102ed7a0",
+      "bytes": 17800,
+      "kind": "READONLY_GENUINE_GAMMA_ANALYTIC_SOURCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\real_trace_annex.md",
+      "sha256": "4736c056f047c84f4ebe38ed4f60b1a9c473481006dcee8341c168afdd9ea2b5",
+      "bytes": 7104,
+      "kind": "READONLY_FUTURE_TRACE_CONTEXT"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\USER_DIRECTIVE.md",
+      "sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+      "bytes": 1919,
+      "kind": "READONLY_USER_DIRECTIVE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\PROBE_BLOCK.md",
+      "sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+      "bytes": 2405,
+      "kind": "READONLY_PROBE"
+    },
+    {
+      "path": "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+      "bytes": 107312,
+      "kind": "READONLY_RUNTIME_BYTES"
+    }
+  ],
+  "binding_count": 14,
+  "no_math_import_or_execution": true,
+  "no_Lean_invocation": true,
+  "no_G0_replay": true
+}

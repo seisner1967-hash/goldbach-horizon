@@ -1,0 +1,158 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH13",
+  "time_utc": "2026-10-03T16:12:37.543001+00:00",
+  "modules": [
+    {
+      "module": "ThermalProjectionIdentity22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch13\\sources\\ThermalProjectionIdentity22.lean",
+      "source_sha256": "8bb1eb5ec6ab4bf5e0c8cc053dcbe743049641dab5a3a3858205ad8ee2e2e9aa",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\ThermalProjectionIdentity22.lean",
+      "source_status": "SOURCE_REVISION_NOT_COMPILED",
+      "theorem_count": 18,
+      "definition_count": 2,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.signedCircleCharacter"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.projectionAdditiveCoefficient"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.signedCircleCharacter_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integral_signedCircleCharacter"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.star_projectionHeatTerm_neg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projection_pair_character"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projection_pair_integral"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projection_normalizer_cancel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.normalized_projection_pair_integral"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projectionPartialCorrelation_expansion"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projection_rectangle_filter_eq_antidiagonal"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalPartialProjection_eq_finite_coefficient"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalPartialProjection_eq_coefficient"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projectionAdditiveCoefficient_eq_sum"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projectionTailEnvelope_tendsto_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projectionHeatPartial_converges_uniformly"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.projectionErrorEnvelope_tendsto_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalProjection_difference_tendsto_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalContinuousProjection_eq_coefficient"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.thermalContinuousProjection_eq_vonMangoldt_sum"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.signedCircleCharacter",
+        "GoldbachContinuous22.projectionAdditiveCoefficient",
+        "GoldbachContinuous22.signedCircleCharacter_continuous",
+        "GoldbachContinuous22.integral_signedCircleCharacter",
+        "GoldbachContinuous22.star_projectionHeatTerm_neg",
+        "GoldbachContinuous22.projection_pair_character",
+        "GoldbachContinuous22.projection_pair_integral",
+        "GoldbachContinuous22.projection_normalizer_cancel",
+        "GoldbachContinuous22.normalized_projection_pair_integral",
+        "GoldbachContinuous22.projectionPartialCorrelation_expansion",
+        "GoldbachContinuous22.projection_rectangle_filter_eq_antidiagonal",
+        "GoldbachContinuous22.thermalPartialProjection_eq_finite_coefficient",
+        "GoldbachContinuous22.thermalPartialProjection_eq_coefficient",
+        "GoldbachContinuous22.projectionAdditiveCoefficient_eq_sum",
+        "GoldbachContinuous22.projectionTailEnvelope_tendsto_zero",
+        "GoldbachContinuous22.projectionHeatPartial_converges_uniformly",
+        "GoldbachContinuous22.projectionErrorEnvelope_tendsto_zero",
+        "GoldbachContinuous22.thermalProjection_difference_tendsto_zero",
+        "GoldbachContinuous22.thermalContinuousProjection_eq_coefficient",
+        "GoldbachContinuous22.thermalContinuousProjection_eq_vonMangoldt_sum"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "TRUE_LAMBDA_GEOMETRIC_ENVELOPE_AND_EXACT_CONTINUOUS_PROJECTION_AUX_ONLY",
+      "author_olean_allowed": false
+    }
+  ],
+  "module_count": 1,
+  "total_declarations": 20,
+  "theorem_count": 18,
+  "definition_count": 2,
+  "common_source_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch13\\sources",
+  "readonly_local_dependencies": [
+    "ThermalProjectionEnvelope22"
+  ],
+  "dependency_bindings": [
+    {
+      "module": "ThermalProjectionEnvelope22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\sources\\ThermalProjectionEnvelope22.lean",
+      "source_sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\ThermalProjectionEnvelope22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch13\\readonly_oleans\\ThermalProjectionEnvelope22.olean",
+      "olean_sha256": "9c2bb947ccd03436c8cb3c9e3e9f5ce95508ee719e506d9ca90c49623f6dac67",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\receipt.json",
+      "recompiled": false
+    }
+  ],
+  "support_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\projection_source_review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\repair_diagnostic22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\source_handoff22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision03\\read_sources22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch12\\completion_receipt.json"
+  ],
+  "author_provenance_capture_paths": [],
+  "modules_author_PASS_claimed": false,
+  "compiler_invocations": 0,
+  "win": false
+}

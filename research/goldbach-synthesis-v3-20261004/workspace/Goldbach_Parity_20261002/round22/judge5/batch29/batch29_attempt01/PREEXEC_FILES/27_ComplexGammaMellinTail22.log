@@ -1,0 +1,122 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:48:8: error: invalid field 'mono_set', the environment does not contain 'MeasureTheory.Integrable.mono_set'
+  Integrable.const_mul h0 C
+has type
+  Integrable (fun x => C * Real.exp (-d * x)) (volume.restrict (Ioi 0))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:48:8: error: invalid field 'mono_set', the environment does not contain 'And.mono_set'
+  Integrable.const_mul h0 C
+has type
+  AEStronglyMeasurable (fun x => C * Real.exp (-d * x)) (volume.restrict (Ioi 0)) ∧
+    HasFiniteIntegral (fun x => C * Real.exp (-d * x)) (volume.restrict (Ioi 0))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:115:58: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:154:17: error: don't know how to synthesize implicit argument 's'
+  @integral_add_compl ℝ ℂ MeasureSpace.toMeasurableSpace Complex.instNormedAddCommGroup InnerProductSpace.toNormedSpace
+    (complexGammaKernel w) (Icc ?m.40724 ?m.40725) volume measurableSet_Icc hi
+context:
+w : ℂ
+hw : 0 < w.re
+H : ℝ
+hH : 0 ≤ H
+hi : Integrable (complexGammaKernel w) volume
+hset : (Icc (-H) H)ᶜ = Iio (-H) ∪ Ioi H
+hdis : Disjoint (Iio (-H)) (Ioi H)
+htail : ∫ (t : ℝ) in (Icc (-H) H)ᶜ, complexGammaKernel w t = signedGammaTail w H true + signedGammaTail w H false
+⊢ Set ℝ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:155:32: error: don't know how to synthesize implicit argument 'b'
+  @measurableSet_Icc ℝ UniformSpace.toTopologicalSpace MeasureSpace.toMeasurableSpace BorelSpace.opensMeasurable
+    Real.instPreorder NormedLatticeAddCommGroup.orderClosedTopology ?m.40724 ?m.40725
+context:
+w : ℂ
+hw : 0 < w.re
+H : ℝ
+hH : 0 ≤ H
+hi : Integrable (complexGammaKernel w) volume
+hset : (Icc (-H) H)ᶜ = Iio (-H) ∪ Ioi H
+hdis : Disjoint (Iio (-H)) (Ioi H)
+htail : ∫ (t : ℝ) in (Icc (-H) H)ᶜ, complexGammaKernel w t = signedGammaTail w H true + signedGammaTail w H false
+⊢ ℝ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:155:32: error: don't know how to synthesize implicit argument 'a'
+  @measurableSet_Icc ℝ UniformSpace.toTopologicalSpace MeasureSpace.toMeasurableSpace BorelSpace.opensMeasurable
+    Real.instPreorder NormedLatticeAddCommGroup.orderClosedTopology ?m.40724 ?m.40725
+context:
+w : ℂ
+hw : 0 < w.re
+H : ℝ
+hH : 0 ≤ H
+hi : Integrable (complexGammaKernel w) volume
+hset : (Icc (-H) H)ᶜ = Iio (-H) ∪ Ioi H
+hdis : Disjoint (Iio (-H)) (Ioi H)
+htail : ∫ (t : ℝ) in (Icc (-H) H)ᶜ, complexGammaKernel w t = signedGammaTail w H true + signedGammaTail w H false
+⊢ ℝ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:154:7: error: failed to infer 'have' declaration type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:126:80: error: unsolved goals
+w : ℂ
+hw : 0 < w.re
+H : ℝ
+hH : 0 ≤ H
+hi : Integrable (complexGammaKernel w) volume
+hset : (Icc (-H) H)ᶜ = Iio (-H) ∪ Ioi H
+hdis : Disjoint (Iio (-H)) (Ioi H)
+htail : ∫ (t : ℝ) in (Icc (-H) H)ᶜ, complexGammaKernel w t = signedGammaTail w H true + signedGammaTail w H false
+⊢ complexGammaInverse w - complexGammaTruncated w H = complexGammaTail w H
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:212:4: error: type mismatch
+  ContinuousAt.comp (complexGammaTailRadius_continuousAt hw) ?m.54842
+has type
+  ContinuousAt ((fun q => complexGammaTailRadius q.1 q.2) ∘ Prod.mk w) H : Prop
+but is expected to have type
+  ContinuousAt (fun z => complexGammaTailRadius z H) w : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch28\sources\ComplexGammaMellinTail22.lean:213:6: error: application type mismatch
+  ContinuousAt.comp (complexGammaTailRadius_continuousAt hw) (ContinuousAt.prod continuousAt_id continuousAt_const)
+argument
+  ContinuousAt.prod continuousAt_id continuousAt_const
+has type
+  ContinuousAt (fun x => (id x, ?m.53935)) ?m.53934 : Prop
+but is expected to have type
+  ContinuousAt (Prod.mk w) H : Prop
+'GoldbachComplexGammaMellin22.signedGammaTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTruncated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.exponential_Ioi_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.exponential_Ioi_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.kernelCoefficient_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.rotationAngle_cos_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.kernelCoefficient_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.signedGammaTail_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.signedGammaTail_norm_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTail_norm_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.signedGammaTail_true_eq_Iio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaInverse_sub_truncated_eq_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaInverse_truncation_error_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.rotationAngle_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.decayGap_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.kernelCoefficient_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius_continuousAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.exists_local_uniform_Gamma_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

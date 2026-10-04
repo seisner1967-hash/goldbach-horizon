@@ -1,0 +1,156 @@
+{
+  "schema": "ROUND22_JUDGE5_MODULE_CATALOG_BATCH03",
+  "time_utc": "2026-10-03T11:04:20.471960+00:00",
+  "modules": [
+    {
+      "module": "GammaDerivative22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\sources\\GammaDerivative22.lean",
+      "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "author_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\sources\\GammaDerivative22.lean",
+      "author_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\actual_attempt01\\receipt.json",
+      "author_row": {
+        "module": "GammaDerivative22",
+        "start_utc": "2026-10-03T10:40:22.681492+00:00",
+        "finish_utc": "2026-10-03T10:40:59.963181+00:00",
+        "exit_code": 0,
+        "stdout_sha256": "1458fd3ab5cbcdeea6b19166c1f21e254d336e1eb2d1a0e7bf8d11b1abbad352",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+        "olean_sha256": "0618f801c5feec7b760ba18ab3dddc960519b398dd1d1b719acc809132518125",
+        "qualified_axiom_rows": [
+          {
+            "declaration": "GoldbachContinuous22.realGamma_le_nine_fifths_on_extended_strip",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "GoldbachContinuous22.quarter_angle_coefficient_le_three_extended",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "GoldbachContinuous22.Gamma_extended_strip_exponential_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "GoldbachContinuous22.exp_eighth_pi_le_seven_quarters",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "GoldbachContinuous22.Gamma_differentiableOn_rightHalfPlane",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "GoldbachContinuous22.Gamma_half_disc_domain",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "GoldbachContinuous22.Gamma_circle_dominating_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "GoldbachContinuous22.Gamma_derivative_strip_exponential_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          }
+        ],
+        "exact_standard_axiom_coverage": true,
+        "status": "AUTHOR_ANALYTIC_AUX_PASS_PENDING_JUDGE"
+      },
+      "author_batch_status": "AUTHOR_ANALYTIC_BATCH_FAIL",
+      "author_log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\actual_attempt01\\GammaDerivative22.stdout.log",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.realGamma_le_nine_fifths_on_extended_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.quarter_angle_coefficient_le_three_extended"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_extended_strip_exponential_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.exp_eighth_pi_le_seven_quarters"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_differentiableOn_rightHalfPlane"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_half_disc_domain"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_circle_dominating_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_derivative_strip_exponential_bound"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.realGamma_le_nine_fifths_on_extended_strip",
+        "GoldbachContinuous22.quarter_angle_coefficient_le_three_extended",
+        "GoldbachContinuous22.Gamma_extended_strip_exponential_bound",
+        "GoldbachContinuous22.exp_eighth_pi_le_seven_quarters",
+        "GoldbachContinuous22.Gamma_differentiableOn_rightHalfPlane",
+        "GoldbachContinuous22.Gamma_half_disc_domain",
+        "GoldbachContinuous22.Gamma_circle_dominating_bound",
+        "GoldbachContinuous22.Gamma_derivative_strip_exponential_bound"
+      ],
+      "theorem_count": 8,
+      "definition_count": 0,
+      "source_forbidden_tokens": [],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "dependencies": [
+        "GammaPrerequisites22"
+      ],
+      "scope": "AUXILIARY_CONTINUOUS_GAMMA_DERIVATIVE_ONLY"
+    }
+  ],
+  "module_count": 1,
+  "total_declarations": 8,
+  "theorem_count": 8,
+  "definition_count": 0,
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22"
+  ],
+  "compiler_invocations": 0,
+  "win": false
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS_EXACT_REPLAY",
+  "all_json_fields_equal": true,
+  "all_json_bytes_equal": true,
+  "contract_statuses": {
+    "face": "PASS_IDENTITY_ONLY_CORRECTED_V2",
+    "weighted": "PASS_IDENTITY_ONLY_WEIGHTED_ENERGY",
+    "V1": "ERROR_FALSIFIER",
+    "m311": "ERROR_FALSIFIER"
+  },
+  "properpower_analytic_payment_tested": false,
+  "preserved_previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 307,
+    "round8_files": 54,
+    "baseline_sha256": "4a637dc44cd1fe2d7ae5850b4999ab052c069084143d69aa52484f66e250fe0f",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\previous_artifacts_sha256.json"
+  },
+  "source54": {
+    "physical_page": 27,
+    "original_pdf_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "pixels_text_and_receipt_bytes_equal": true,
+    "receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\judge\\source_pages\\source54_render_receipt.json",
+    "receipt_sha256": "7401abfbb91eed0c9eca503ade085656efb308ac75e0a5c52a674c3d88a850a8",
+    "literal_exponent": "-sqrt(u/60)",
+    "weaker_round9_majorant": "-sqrt(u)/60"
+  },
+  "lean_invoked": false
+}

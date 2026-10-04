@@ -1,0 +1,30 @@
+{
+  "schema": "ROUND22_NATIVE_STATIC_BUILD_PLAN_SOURCE_ONLY",
+  "status": "SOURCE_NOT_AUTHORIZED_NOT_BUILT",
+  "compiler": "C:/msys64/ucrt64/bin/g++.exe",
+  "commands": [
+    ["-std=c++17", "-O2", "-static", "-static-libgcc", "-static-libstdc++", "-Wl,--no-insert-timestamp", "-I", "C:/msys64/ucrt64/include", "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/producer_dit22.cpp", "-L", "C:/msys64/ucrt64/lib", "-lgmp", "-o", "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/build-final/producer_dit22.exe"],
+    ["-std=c++17", "-O2", "-static", "-static-libgcc", "-static-libstdc++", "-Wl,--no-insert-timestamp", "-I", "C:/msys64/ucrt64/include", "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/checker_dif22.cpp", "-L", "C:/msys64/ucrt64/lib", "-lgmp", "-o", "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02/build-final/checker_dif22.exe"]
+  ],
+  "environment_future": {
+    "PATH": "C:/msys64/ucrt64/bin;C:/Windows/System32",
+    "SystemRoot": "C:/Windows",
+    "GCC_EXEC_PREFIX": null,
+    "COMPILER_PATH": null,
+    "LIBRARY_PATH": null,
+    "CPATH": null,
+    "CPLUS_INCLUDE_PATH": null,
+    "C_INCLUDE_PATH": null
+  },
+  "working_directory_future": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/circle_native_revision02",
+  "source_sha256": ["bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74", "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb"],
+  "default_specs_presumed_verified": false,
+  "selected_imports_known": false,
+  "transitive_dynamic_loader_closed": false,
+  "build_invocations": 0,
+  "native_math_runs": 0,
+  "gate_created": false,
+  "D_N": false,
+  "WIN": false
+}
+

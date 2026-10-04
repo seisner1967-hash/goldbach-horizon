@@ -1,0 +1,149 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.localArgRadius"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.localDecayGap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.localDerivativeCoefficient"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.localDerivativeEnvelope"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.local_parameters"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.exists_local_kernel_ball"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.verticalS_norm_le"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaKernel_local_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaDerivative_local_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.weightedExponential_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.localDerivativeEnvelope_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_hasDerivAt"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_analytic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complexGammaInverse_eq_exp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachComplexGammaMellin22.complex_exp_eq_Gamma_integral"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch26\\batch26_attempt01\\ComplexGammaMellinHolomorphy22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch26\\sources\\ComplexGammaMellinHolomorphy22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": false,
+  "exit_code": 1,
+  "finished_at": "2026-10-03T22:45:40.915145+00:00",
+  "launch_error": null,
+  "log_sha256": "edb1dec599f5671b8acd6517efd2551a23aba33717d6b69f3924adadd3928cfb",
+  "module": "ComplexGammaMellinHolomorphy22",
+  "olean_sha256": null,
+  "source_prior_status": "SOURCE_ONLY_NOT_ELABORATED",
+  "source_sha256": "9d3d050fab541086f1bf9932aa51d240dd3a72fcb194412f38e997ebeedd9d4a",
+  "started_at": "2026-10-03T22:45:06.480563+00:00",
+  "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+  "timed_out": false
+}

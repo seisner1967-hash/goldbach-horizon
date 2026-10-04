@@ -1,0 +1,125 @@
+REVUE PAPER INDÉPENDANTE — FAISABILITÉ MELLIN–Λ
+
+Verdict : PAPER_DERIVATIONS_COHERENT_NO_PRACTICAL_EVALUATOR_ESTABLISHED.
+Note relue FULL : role4/mellin_lambda_feasibility_paper01/feasibility22.md,
+12480 octets, SHA dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb.
+Handoff b66b922… et reçus501daee… lus FULL ; neuf bindings physiques inchangés.
+Cette revue est manuelle sur papier : zéro candidat, parseur scientifique,
+import, calcul numérique, compilation, PREP ou gate. Les nouvelles déductions
+géométriques et quantitatives n'obtiennent aucun statut Lean par cette revue.
+
+1. Géométrie liée norme/argument
+
+Pour a>0, u=|θ|, r=√(a²+u²), β=atan(u/a), la branche principale du demi-plan
+droit donne |Arg(a-iθ)|=β. C'est une identité PAPER dont le bridge Lean reste
+à payer. Avec η=(π/2+β)/2,
+  cos²η=(1−sinβ)/2=(1−u/r)/2,
+  C=r^(-2)/cos²η=2/[r(r−u)]=2(r+u)/(ra²)
+    =(2/a²)(1+u/r)<4/a².
+Le dernier signe est strict car r>u. Le cas u=0 donne C=2/a², sans division
+par u. L'identité conserve bien la relation entre la norme et l'argument ;
+elle n'emploie pas séparément |w|≥a et l'angle maximal.
+
+Pour u>0, δ=(π/2−atan(u/a))/2=atan(a/u)/2 ; à u=0, δ=π/4.
+C augmente avec u et δ diminue. Sur |θ|≤π, leur extrémum donne
+  Cbar=(2/a²)(1+π/√(a²+π²)), d=atan(a/π)/2>0.
+Pour H≥0, exp(−δH)/δ diminue lorsque δ augmente. Le rayon uniforme de
+troncature proposé est donc ε=6Cbar exp(−dH)/(πd). Il est continu pour
+a>0,H≥0. Ces assertions de continuité et de monotonie sont PAPER ; aucun
+verdict futur du nouveau module géométrique n'est anticipé.
+
+2. Transport de la trace au coefficient
+
+Envelope11 donne réellement |P(a-iθ)|≤U, U=exp(−a)/(1−exp(−a))². Ses
+définitions et son théorème de norme ont été relus TARGETED, SHA77cdab8….
+Identity13 extrait réellement la somme des vraies Λ, toutes PP conservées ;
+ses énoncés et le signe/conjugué ont été relus TARGETED, SHA8bb1eb5….
+Le déplacement de l'intervalle payé [0,2π] vers [-π,π] est justifié PAPER par
+la périodicité de la vraie série absolument convergente et du caractère entier.
+Le bridge formel de cette translation reste à écrire. Il ne rend pas P_H ou
+la puissance principale périodiques.
+
+Sous la borne EΛ de la SOURCE pondérée, |P−P_H|≤ε donne |P_H|≤U+ε,
+puis |P²−P_H²|≤ε(2U+ε). Le caractère a norme1, la longueur est2π et
+le normaliseur exp(aN)/(2π). Ainsi
+  |C_N−C_{N,H}(a)|≤E_N(a,H)=exp(aN)(2Uε+ε²).
+Le terme ε² est conservé. Le rayon ne provient pas d'une précision libre.
+La continuité pour a>0,H≥0 et N fixé suit des expressions explicites PAPER.
+La vraie identité Mellin–Λ et EΛ16 restent des dépendances non compilées au
+snapshot de cette revue : l'exactitude analytique écrite n'est pas une preuve
+formelle acquise par les transformations de la présente note.
+
+3. Seuil de CETTE enveloppe, N=10^8,a=1/N,τ=10^(-6)
+
+Résoudre ε²+2Uε≤τ exp(−aN) donne exactement
+  ε*=τ exp(−aN)/(√(U²+τ exp(−aN))+U),
+  H*=max(0, d^(-1)log[6Cbar/(πdε*)]).
+Tous les dénominateurs sont positifs. E_N≤τ équivaut à H≥H* pour cette
+enveloppe, pas pour l'erreur réelle inconnue.
+
+Les gardes .5N²<U≤N², 1/(8N)<d<1/(6N) et
+24N³<6Cbar/(πd)<64N³ sont cohérentes. Pour U, utiliser
+U=1/[4sinh²(a/2)], sinh(a/2)≥a/2, exp(−a)≥1−a et
+1−exp(−a)≤a. Pour d, atan(x)≥x/(1+x) et atan(x)<x,
+avec x=a/π,3<π<7/2 et π+a<4, suffisent. La différence de dérivées pour
+la première inégalité est bien 2x/[(1+x²)(1+x)²]≥0. Cbar>2N² donne
+la garde inférieure ; Cbar<4N² et les mêmes bornes donnent la supérieure.
+
+À H=10^11, dH>125 et exp(125)>10^50 puisque e>8/3 et (8/3)^5>100.
+Il vient ε<64·10^(-26). Comme ε≤N² et e<3,
+E_N≤9N²ε<576·10^(-10)<τ. La marge est positive, mais ne couvre pas
+automatiquement les erreurs de primitives, de D ou de quadrature.
+
+Si H≤5·10^10, dH<90 et exp(90)<3^90<10^45, car 3^10=59049<10^5.
+La partie linéaire, U>.5N², e>2 et l'amplitude>24N³ donnent
+E_N>48N^5 exp(−dH)>48·10^(-5)>τ. Donc 5·10^10<H*<10^11.
+Ce calcul d'inégalités sur papier est correct. E_N>τ signifie seulement que
+ce majorant ne certifie pas la tolérance ; il n'implique pas que l'erreur
+réelle dépasse τ, ni que toute méthode doit utiliser une hauteur comparable.
+L'équivalent asymptotique annoncé conserve le facteur96, mais ne remplace
+aucune garde fermée.
+
+4. Coûts théoriques et dettes numériques
+
+La queue absolue de D_M, M≥2, est majorée par (log M+1)/M via la fonction
+décroissante log(x)/x². Intégrer le noyau sur la fenêtre donne
+  |P_H−P_{H,M}|≤b_M Cbar(1−exp(−dH))/(πd).
+Le facteur2 des signes s'annule avec2π. Pour les paramètres fixés,
+Cbar/(πd)<(32/3)N³ ; log(10^52)<156 donne bien l'exemple
+(5024/3)·10^(-28) de rayon de trace. M=10^52 est un choix suffisant
+théorique de somme littérale, aucun catalogue ou programme disponible.
+
+La dérivée en θ du noyau est i(2+it)K/w. Sur le demi-plan droit et la fenêtre
+finie, son majorant concret fournit PAPER
+V_H=6Cbar(2m0+m1)/(πa), m0=(1−exp(−dH))/d,
+m1=[1−exp(−dH)(1+dH)]/d². L'échange de dérivée et intégrale reste à
+formaliser. Avec A_H=U+ε, L_H=2A_HV_H+N A_H²,
+la somme des intégrales de distance aux milieux de J cellules donne
+E_circle≤exp(aN)πL_H/(2J). La normalisation2π est correcte.
+
+Les bornes V_H≤128N^4+512N^5 et L_H≤2564N^7 sont cohérentes pour N≥1
+et les paramètres de l'exemple. Utiliser eπ/2<6 justifie
+J=10^67 ⇒ E_circle<15384·10^(-11)<τ/4. Cela décrit le coût astronomique
+de cette garde Lipschitz particulière. Cela ne minore pas le nombre de nœuds
+d'une meilleure quadrature et ne constitue pas un plan d'exécution pratique.
+
+La note conserve explicitement les obligations : quadrature intérieure du
+vrai D·K, primitives Γ/cpow/D dirigées sur |t|≤H, positions avec gardes de
+segments, poids, normaliseur et accumulation. L1 seule n'est pas un reste de
+quadrature. Les variables s,χ,ρ sont des erreurs à dériver des enclosures du
+futur programme, pas des rayons offerts gratuitement. Il n'existe aucun
+évaluateur global PREPARED ni test de ces gardes dans le paquet examiné.
+La note ne prétend ni temps/mémoire mesurés, ni impossibilité d'une meilleure
+méthode certifiée. Aucune sortie de la banque native05 n'est utilisée comme
+oracle pour ces intégrales. Aucun coefficient numérique ni D_N n'en découle.
+
+5. Scope de clôture
+
+Aucune objection PAPER précise trouvée dans les identités et constantes
+examinées. Les preuves Lean du nouveau raccord géométrique, de ECOEF, de ED
+et de EQ restent à construire ou à valider séparément. Tail30 est réellement
+PASS22 observé par ROOT, officiel86/1456 ; ce fait ne valide pas Λ30/EΛ16.
+La revue n'a modifié aucun fichier scientifique ROLE4, aucun ancien lot ni
+archive. Les lectures FULL/TARGETED et SHA sont consignés séparément.
+Le contrat humain07 peut relayer ces conclusions comme PAPER et leur coût
+symbolique ; il reste DRAFT jusqu'au message final ROOT et au statut réel31.

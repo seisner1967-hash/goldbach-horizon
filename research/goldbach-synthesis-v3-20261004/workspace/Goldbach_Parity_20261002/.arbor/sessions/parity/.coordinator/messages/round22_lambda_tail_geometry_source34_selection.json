@@ -1,0 +1,52 @@
+{
+  "schema": "ROUND22_ROOT_SOURCE34_SELECTION",
+  "status": "SOURCE_TOOLS_SELECTED_FUTURE_BASELINE33_REQUIRED",
+  "role": "ROOT_COORDINATOR_METADATA_ONLY",
+  "batch": "batch34",
+  "author": "ROLE4",
+  "tool_author": "ROLE3",
+  "independent_executor": "ROLE5",
+  "module_order": ["ComplexGammaMellinLambdaTail22", "ComplexGammaCircleGeometry22"],
+  "counts": {"modules": 2, "declarations": 41, "theorems": 34, "definitions": 7},
+  "selected_sources": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/ComplexGammaMellinLambdaTail22.lean",
+      "sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+      "declarations": 16,
+      "theorems": 12,
+      "definitions": 4,
+      "independent_review_sha256": "0497ba1f300dd5916fbac27835a04c1968822ef707182dc6e94c10d1bce8d252",
+      "independent_handoff_revision02_sha256": "f2b93e0fa76f3b82a4a389355a70736847d5064fc9c59c1940b6ed2a343b62a6",
+      "ROOT_contract_catalog_reads_handoff_FULL": "4c1baf/fccfbe/98b775/f7a9ee",
+      "ROOT_independent_review_reads_handoff_FULL": "ba7491/5bcb3f/a12889"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_circle_geometry_source01/ComplexGammaCircleGeometry22.lean",
+      "sha256": "2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5",
+      "declarations": 25,
+      "theorems": 22,
+      "definitions": 3,
+      "independent_review_sha256": "992e109a51a906a6b2e3d9010addcd967f6ac918bb94c91a69207d378cd2c85b",
+      "independent_handoff_sha256": "16fe9a2936376c19e36a5561c1e129e00f680515441178cea2399aeb03617708",
+      "ROOT_contract_catalog_reads_handoff_FULL": "fcea61/6a47b8/1fb7b3/d572b1",
+      "ROOT_independent_review_reads_handoff_FULL": "08699d/563771/b70276"
+    }
+  ],
+  "creation_barrier": "Do not create batch34 until actual metadata PREP33 FIN is observed; batch34 must be absent from the frozen batch33 closed_judge_bindings.",
+  "future_baseline": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch33_closed_observation.json",
+    "status": "FUTURE_NOT_READ_NOT_HASHED_NO_VERDICT",
+    "required_before_PREP34": "Real ROOT-observed whole-module PASS33, exact actual receipt/completion and source/olean SHA; mandatory physical baseline SHA and official counts arguments",
+    "historical_current_official_modules": 87,
+    "historical_current_official_declarations": 1458,
+    "historical_observation32_sha256": "8bf50e5d8c9b162a9bb17e087ead4800e7026143ea3ac1ddc5fd28d1824baa92"
+  },
+  "readonly_local_dependencies_required": ["GammaPrerequisites22", "ThermalGammaMellinInverse22", "ComplexGammaMellinLocal22", "ComplexGammaMellinHolomorphy22", "ComplexGammaMellinTail22", "ComplexGammaMellinLambda22"],
+  "main_lambda_binding_requirement": "Only genuinely PASS repaired source02 dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b. No old failed source01/31 olean or author olean.",
+  "historical_documents": "Preserve historical pending/source01 states byte for byte; document future repaired dependency explicitly without retrospective mutation.",
+  "execution_policy": {"source_tools_only": true, "PREP_authorized": false, "compiler_authorized": false, "numeric_authorized": false, "child_wall_seconds": 300, "max_heartbeats": 1000000, "retry_count_maximum": 0},
+  "excluded_modules": ["ComplexGammaMellinExpTailBridge22", "LambdaCircleTruncationEnvelope22"],
+  "official_credit": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

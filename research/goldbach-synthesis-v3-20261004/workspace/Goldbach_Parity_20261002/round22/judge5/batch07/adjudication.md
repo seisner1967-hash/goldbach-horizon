@@ -1,0 +1,25 @@
+# Adjudication batch07 — auxiliaires — échec partiel
+
+Verdict réel `INDEPENDENT_BATCH07_FAILED` : trois enfants, exactement deux PASS indépendants (Reflection7 + Duplication2 = huit théorèmes/une définition/neuf audits), puis ΓReflection FAIL0 ; cinq modules NOT_INVOKED. Aucun retry/probe/replay/calcul numérique. Gate `D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\.arbor\sessions\parity\.coordinator\messages\round22_judge5_batch07_authorization.json`, SHA `5120936130d2129ce6cf05442b21d9d67009beddedf7a57a66b84bddb9d3d5dd`, lecture FULL6928e5. Unique lanceur dd98c3/session24210 →941895 exit1. START global `2026-10-03T13:30:02.202677+00:00`, FIN `2026-10-03T13:31:15.369205+00:00`.
+
+| Module | START UTC | FIN UTC | Exit | Crédit |
+|---|---|---|---|---|
+| ZetaReflection22 | 13:30:02.218934 | 13:30:25.935890 | 0 | 6 thm +1 def |
+| GammaPsiDuplication22 | 13:30:25.952408 | 13:30:39.959350 | 0 | 2 thm |
+| GammaPsiReflection22 | 13:30:39.965351 | 13:31:06.269310 | 1 | 0 |
+
+Les neuf audits PASS sont exactement ceux du catalogue et ne dépendent que de `propext`, `Classical.choice`, `Quot.sound`. Aucun `sorry`, `admit`, déclaration `axiom`, `native_decide`, `unsafe` dans les sources PASS ; aucun recovery dans leurs logs. Duplication émet un avertissement de style, sans erreur. Oleans frais : Reflection `288614def47a85100c41a064597bf6003b39ab2dcaf7b694683583e940892a43`, Duplication `535c3f53fe81ff03d6c05540a67bd82335b6379d98f81a97ccd7784744f67bcf`. Les commands/logs/FIN/reçu lient les sources exactes cc39bd… et 049117… aux nouveaux outputs, sans olean auteur dans LEAN_PATH. Euler n'a pas été recompilé.
+
+Le FAIL ΓReflection est sa première compilation, source8e070c… intacte, log `de57424af08c1724a9e872ae267e0fe9394a3d23d58ab4f4191841ddab04bdd5`. Aucun olean. Ses cinq prints sont diagnostics : trois standards, deux derniers `deriv_Gamma_shift_reflection` et `gammaPsi_shift_reflection` avec `sorryAx` de récupération, zéro crédit pour tout le module. Le warning hs0 inutilisé n'est pas une erreur.
+
+Les trois erreurs réelles sont des normalisations non abouties : ligne79, l'égalité h garde les compositions Gamma/sin et `id s` au moment de `linear_combination`, puis ring traite ces applications comme des atomes distincts ; ligne95, `field_simp`/ring laisse Gamma·Gamma⁻¹ malgré les non-annulations établies, avec arguments normalisés s·(±1/2) ; ligne98, le quotient trigonométrique conserve les inverses après normalisation de l'argument du sinus. Les non-annulations de Gamma, sinus, π et s sont présentes dans le contexte. Une éventuelle nouvelle source devra normaliser les applications et quotients avant les tactiques de corps. Le log ne réfute ni l'identité analytique ni un résultat de parité. Aucune modification/reprise du gel actuel.
+
+ChiPsi, Scaled, Envelope, Domination, MixedFubini n'ont aucun START/FIN/log/olean et sont NOT_INVOKED. Leur audit SOURCE antérieur reste distinct d'une preuve compilée. L'ancien Reflection54e32… FAIL batch06 reste archivé : le nouveau PASS cc39bd… ne réécrit pas son journal.
+
+Portée mathématique PASS : Reflection démontre l'équation fonctionnelle de la vraie ζ, la non-annulation de χ et ζ dans −1<Re(s)<0 et le quotient dérivé, en dérivant l'égalité dans un voisinage ouvert et en établissant les dénominateurs. Duplication dérive Legendre pour Re(z)>0 et en déduit ψ(z)+ψ(z+1/2)=2ψ(2z)−2log2 ; tous ses dénominateurs sont prouvés non nuls. Ni trace, intégrabilité finale, non-annulation ζ ou cible D_N ne sont admises comme prémisses libres. Ces conclusions sont auxiliaires. L'identité χ/P1, le noyau, sa domination et le Fubini concret demeurent non compilés ; Mellin, Arch global, orientations, compte complet des zéros, certificats de primitives et coefficient additif N restent ouverts.
+
+Conservation re-vérifiée sur tous les bytes : 7124 inputs, 374 anciens fichiers Juge, 3089 archives, 70 captures exactes source/copie, gate inchangée. PRE/POST bindings identiques. Huit dépendances indépendantes readonly, huit cache libraries ; ni recompilation d'Euler/anciennes dépendances, ni olean auteur. Lean4.15/mathlib9837ca9d fixés. PREEXEC SHA `5dc36daaeaef7a96ba041de7db4c1f199ed4c45e8cd70164e862c78b0918f023`, POSTEXEC SHA `04be1beaff6d47a49c97aa1338a59b28078b535b3b5174cf731470a905924c53`, reçu SHA `b57ebc96f0118b0b8c35a8d78c9b096b5bb99a9e51c2044ff1e803c9cf87d111`.
+
+Lectures FULL des logs 39d33f/4beb49/c328c7, reçu7c3b20, START globaux et modules/FIN13dd89. Sources propres ddb5ee/a31e1c/f3e263/dbab7a/90624d/efbf10/c95d0e/63855c ; audit SOURCE407592, catalogue75fc63, reads588ddd. Les gros PRE/POST sont parsés et vérifiés intégralement en metadata avec hashes de tous bytes, sans prétention raw FULL du texte ni des sources mathlib.
+
+Officiel ROOT avant observation : 69 modules/1137 déclarations incluant defs. Ajout potentiel seul : deux modules/neuf déclarations, 71/1146 après ROOT ; les trois prints standards du module FAIL ne sont pas acquis. H1, C5 global, Arch global, D_N et WIN restent ouverts. Créé à 2026-10-03T13:35:58.002737+00:00, aucune preuve ni ancienne archive modifiée.

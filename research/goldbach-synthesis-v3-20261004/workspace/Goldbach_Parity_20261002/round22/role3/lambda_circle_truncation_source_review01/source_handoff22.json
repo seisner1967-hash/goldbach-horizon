@@ -1,0 +1,121 @@
+{
+  "schema": "ROUND22_LAMBDA_CIRCLE_TRUNCATION_INDEPENDENT_SOURCE_REVIEW_HANDOFF",
+  "status": "SOURCE_CIRCLE_COEFFICIENT_AND_RADIUS_COHERENT_NOT_ELABORATED",
+  "reviewer": "ROLE3",
+  "scientific_author": "ROLE4",
+  "time_utc": "2026-10-04T02:26:30.7784874Z",
+  "module": "LambdaCircleTruncationEnvelope22",
+  "counts": {
+    "declarations": 34,
+    "theorems": 28,
+    "definitions": 6,
+    "qualified_prints": 34,
+    "new_credits": 0
+  },
+  "review_report": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/lambda_circle_truncation_source_review01/review22.txt",
+    "bytes": 10315,
+    "sha256": "59b31960568f330a5c273f4e93cf1ad5b6eb9117a592183ec68dafb0cb0dabbe"
+  },
+  "read_receipts": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/lambda_circle_truncation_source_review01/read_receipts22.json",
+    "bytes": 18769,
+    "sha256": "25898ed939ce6dbf7a4c219dae2ab3aef10c49cf83019b64ed367a6a54d737dc"
+  },
+  "read_evidence": {
+    "review_full": "3a15e7",
+    "read_receipts_full": "863ba8",
+    "science_full": [
+      "a7c123",
+      "bb5afe"
+    ],
+    "paid_source_full": "210c04",
+    "author_read_receipts_full": "b984fa",
+    "author_handoff_full": "8a8782",
+    "api_targeted": [
+      "959439",
+      "3b1f20",
+      "b7f9a2",
+      "ce9a9c"
+    ],
+    "physical_author_bindings": "36 verified 8bd4ce and3457e0",
+    "claims_scope": "SOURCE/PAPER_NOT_COMPILER"
+  },
+  "conservation": {
+    "author_bindings": 36,
+    "all_author_bindings_preserved": true,
+    "exact_bindings_and_additional_API": "read_receipts22.json",
+    "prior_frozen_tools33_mutated": false,
+    "human07_draft_mutated": false,
+    "archives_reswept": false,
+    "all_import_closure_performed": false
+  },
+  "objections_precise": [],
+  "pending_dependencies": [
+    "ComplexGammaMellinLambda22 SOURCE02",
+    "ComplexGammaMellinLambdaTail22 SOURCE16",
+    "ComplexGammaCircleGeometry22 SOURCE25"
+  ],
+  "paid_dependencies": [
+    "ThermalProjectionIdentity22 batch13 module row actual PASS",
+    "ThermalProjectionEnvelope22 batch11 module row actual PASS inside globally FAILED batch11 receipt"
+  ],
+  "baseline_from_root": {
+    "modules": 87,
+    "declarations": 1458,
+    "observation32_full_read_here": false
+  },
+  "bindings_count": 7,
+  "bindings": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/lambda_circle_truncation_source_review01/review22.txt",
+      "bytes": 10315,
+      "sha256": "59b31960568f330a5c273f4e93cf1ad5b6eb9117a592183ec68dafb0cb0dabbe"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/lambda_circle_truncation_source_review01/read_receipts22.json",
+      "bytes": 18769,
+      "sha256": "25898ed939ce6dbf7a4c219dae2ab3aef10c49cf83019b64ed367a6a54d737dc"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean",
+      "bytes": 20097,
+      "sha256": "bf9b8257760a20d33dd21714221401cd8fd327596f72e56c4d024200b2cb6c4c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_contract22.md",
+      "bytes": 6806,
+      "sha256": "b690408851652f6031f226d3f01c13105c68c8a3be7338593654dce8002cdbcf"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_catalog22.json",
+      "bytes": 6962,
+      "sha256": "c9f14b5e8fe96c02a746810500ab18de75739ea3bed42440a00bd98a4e0a13ab"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_read_receipts22.json",
+      "bytes": 15112,
+      "sha256": "8ca68bc0ae4dd2791644e2c6b17c7e17f169942556d6b2a9941f3ad665cc86cb"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/lambda_circle_truncation_source01/source_handoff22.json",
+      "bytes": 21709,
+      "sha256": "e55aa804e43110b4a1f46c6cd1733bd22eddfe45019c8824726af344d3939920"
+    }
+  ],
+  "claims": {
+    "candidate_runtime_calls": 0,
+    "compiler_invocations": 0,
+    "lean_invocations": 0,
+    "api_probes": 0,
+    "python_math": 0,
+    "candidate_parsers": 0,
+    "PREP_or_builder_invocations": 0,
+    "native_refinement_paid": false,
+    "coefficient_numeric_pass": false,
+    "D_N_paid": false,
+    "victory": false
+  },
+  "next_step": "ROOT selection and independent compiler gate required; no autonomous preparation or invocation",
+  "human07_status": "DRAFT_WAIT_ROOT_FINAL_STATE"
+}

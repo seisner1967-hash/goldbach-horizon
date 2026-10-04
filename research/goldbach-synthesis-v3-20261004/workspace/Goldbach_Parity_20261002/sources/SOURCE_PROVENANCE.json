@@ -1,0 +1,20 @@
+{
+  "source_archive": "goldbach_sprint15_checked.zip",
+  "source_sha256": "40f87e2bc183adfcc7a834b0f702f596fef33da55afa1aef64bf447efb996674",
+  "source_archive_unchanged": true,
+  "prior_payload_hashes_checked": 194,
+  "consulted_source_hashes": {
+    "CHECKPOINT15.txt": "842fde97557d04f665b6a2ede01db05a3377f53edc08cfb006bc86770ad87f14",
+    "agents/one_sided_root_discrepancy_and_fixed_modulus_contract.txt": "a4c55497c7219544d4d6b11070c69ed1149212d685c10fa44cebfecdc2dc312c",
+    "agents/one_sided_actual_scalar_round3.txt": "fe63aa2872b17b83dee4ebd46020da5cacaabd31255f542f25881e1a6849957a",
+    "agents/rough_direction_combinatorial_amplitude.txt": "158e18f423551420dcb3ee5678da84cb8197b0e946055dd89be1ef0a81f7a66c",
+    "agents/rosser_almost_power_rough_reduction.txt": "49b81a0fb36bdd0016e1847b71a9db2f58d6c2bae468885d881eb8660a2e006e",
+    "agents/weighted_hh_root_main_raw_prefixes.txt": "6d4c9b19e595905e4752ead5528a0629c9dc083dab7cb8d925220d076b78d35b",
+    "agents/hh_four_signs_and_fibre_pressure_test.txt": "23ce9efd84d29fbd9f1148ac6e780dd6b5f03e2714010f2612c94f92c6bcd79e",
+    "agents/hh_partition_orientation_sign_audit.txt": "988858959dd8889d71c39e100ba12aea254849fff5f1b5960998c522d81e1e9a"
+  },
+  "written_input": "Corrected positive Rosser progression bound; Motohashi Lemma 8 and Theorem 7, plus the explicit hypotheses in the note",
+  "new_lean_compilation": false,
+  "independent_second_review": false,
+  "scope": "Written sector amplitude deduction and finite arithmetic diagnostics. Signed global estimate and Goldbach remain open."
+}

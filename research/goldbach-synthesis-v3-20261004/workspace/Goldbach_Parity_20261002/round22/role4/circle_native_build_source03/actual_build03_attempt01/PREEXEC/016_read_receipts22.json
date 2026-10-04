@@ -1,0 +1,79 @@
+{
+  "schema": "ROUND22_BUILD_ONLY03_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_NOT_IMPORTED_NOT_PREPARED",
+  "utc": "2026-10-03T19:19:22.7878046Z",
+  "author": "ROLE4",
+  "source_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\run_build_only_once22.py",
+      "sha256": "618f0a34a81ed70429d3bce526c70a53ac987fab256c20126e633e514152faa7",
+      "bytes": 22138,
+      "scope": "FULL_SOURCE_ONLY",
+      "tool_chunk": "78fd1d",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\build_execution_plan22.json",
+      "sha256": "fc77f58cc215b1851e5a87b164407aadcc5cd8f2c7621dcccc6e0c3c38f13f61",
+      "bytes": 2908,
+      "scope": "FULL_SOURCE_ONLY",
+      "tool_chunk": "78fd1d",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\compiler_trust_policy22.json",
+      "sha256": "72fd49d993e3291a174d4ba5a139a649ab916e9e757274c0e89f0a6092b4f6a6",
+      "bytes": 1779,
+      "scope": "FULL_SOURCE_ONLY",
+      "tool_chunk": "78fd1d",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\build_controls_contract22.md",
+      "sha256": "0a0c9ae1f99ae84215f593a9114f83d7c9a8b28a7989ada5035381a8f05d688b",
+      "bytes": 4332,
+      "scope": "FULL_SOURCE_ONLY",
+      "tool_chunk": "78fd1d",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\windows_build_job22.py",
+      "sha256": "a4dcc246f5e491e63f6d9cff849ef2ae774dbf8b9a99a565bc251e94fd12dbed",
+      "bytes": 16756,
+      "scope": "BYTEIDENTICAL_TO_PRIOR_FULL_SOURCE09da54",
+      "new_API_probe": false
+    }
+  ],
+  "static_PE_metadata": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_build_metadata01\\pe_static_import_observation22.json",
+    "sha256": "36032c45c476e72c97393f60d02fbf5ff2e2679e82d2c3dd5eaea558cfdcadbc",
+    "scope": "HEADER_AND_TARGETED_NODE_EDGE_METADATA_PROJECTION_NOT_RAW_FULL",
+    "tool_chunks": [
+      "0a06ac",
+      "ce30ca"
+    ],
+    "initial_truncated_projection_excluded_from_FULL": "5d5003",
+    "compiler_or_PE_runtime_invocation": false
+  },
+  "prior_API_receipts": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\read_receipts22.json",
+    "bytes": 3937,
+    "sha256": "35c08c138f6635da2a225dc5845cbc10ef5d08fa2bf9742c8058e5366b4617a1",
+    "kind": "IMMUTABLE_PRIOR_SOURCE_RECEIPTS",
+    "capture": true
+  },
+  "metadata_tool_error": {
+    "tool_chunk": "4a5037",
+    "action": "Draft contract shell source",
+    "error": "PowerShell empty pipe parse error before execution",
+    "candidate_invocation": false,
+    "corrected_by": "apply_patch then FULL78fd1d"
+  },
+  "compiler_calls": 0,
+  "candidate_imports": 0,
+  "Python_candidate_parser_calls": 0,
+  "PE_parser_calls": 0,
+  "native_program_calls": 0,
+  "D_N": false,
+  "WIN": false
+}

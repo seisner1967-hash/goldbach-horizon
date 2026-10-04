@@ -1,0 +1,177 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:78:2: error: mod_cast has type
+  representative N q + modulus N q * progressionIndex N q = q : Prop
+but is expected to have type
+  modulus N q * progressionIndex N q + representative N q = q : Prop
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:81:29: error: unsolved goals
+N e q : ℕ
+hz : ↑q = ↑(representative N q) + ↑(modulus N q) * ↑(progressionIndex N q)
+⊢ Matrix.vecHead ![-(↑e * ↑(modulus N q)), -↑(witness0 N q), -(↑(anchor N) * ↑(witness1 N q))] *
+        ↑(progressionIndex N q) +
+      Matrix.vecHead ![-(↑e * ↑(representative N q)) + ↑N, constant1 N q, constant0 N q] =
+    -(↑e * ↑(modulus N q) * ↑(progressionIndex N q)) - ↑e * ↑(representative N q) + ↑N
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:101:2: error: linarith failed to find a contradiction
+case h1.h
+N e q : ℕ
+h : Cell N q
+h1 : ↑(witness1 N q) * constant1 N q = ↑N - ↑(representative N q)
+hf : ↑(witness1 N q) * ↑(quotient1 N q) = ↑N - ↑q
+hp : ↑(witness1 N q) ≠ 0
+hq : ↑q = ↑(representative N q) + ↑(witness1 N q) * ↑(witness0 N q) * ↑(progressionIndex N q)
+a✝ :
+  ↑(witness1 N q) *
+      (![↑(modulus N q), -↑e * ↑(modulus N q), -↑(witness0 N q), -↑(anchor N) * ↑(witness1 N q)] 2 *
+          ↑(progressionIndex N q) +
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 2) <
+    ↑(witness1 N q) * ↑(quotient1 N q)
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:115:2: error: linarith failed to find a contradiction
+case h1.h
+N e q : ℕ
+h : Cell N q
+h0 : ↑(witness0 N q) * constant0 N q = ↑N - ↑(anchor N) * ↑(representative N q)
+hf : ↑(witness0 N q) * ↑(quotient0 N q) = ↑N - ↑(anchor N) * ↑q
+hp : ↑(witness0 N q) ≠ 0
+hq : ↑q = ↑(representative N q) + ↑(witness1 N q) * ↑(witness0 N q) * ↑(progressionIndex N q)
+a✝ :
+  ↑(witness0 N q) *
+      (![↑(modulus N q), -↑e * ↑(modulus N q), -↑(witness0 N q), -↑(anchor N) * ↑(witness1 N q)] 3 *
+          ↑(progressionIndex N q) +
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 3) <
+    ↑(witness0 N q) * ↑(quotient0 N q)
+⊢ False failed
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:123:73: error: unsolved goals
+N e q : ℕ
+⊢ ↑(modulus N q) * Matrix.vecHead ![↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] -
+      ↑(representative N q) *
+        Matrix.vecHead ![-(↑(modulus N q) * ↑e), -↑(witness0 N q), -(↑(anchor N) * ↑(witness1 N q))] =
+    ↑(modulus N q) * ↑N
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:132:2: error: linarith failed to find a contradiction
+case h1.h
+N e q : ℕ
+h : Cell N q
+h1 : ↑(witness1 N q) * constant1 N q = ↑N - ↑(representative N q)
+a✝ :
+  ↑(witness1 N q) * ↑(witness0 N q) *
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 2 -
+      ![↑(witness1 N q) * ↑(witness0 N q), -↑e * (↑(witness1 N q) * ↑(witness0 N q)), -↑(witness0 N q),
+            -↑(anchor N) * ↑(witness1 N q)]
+          2 *
+        ↑(representative N q) <
+    ↑N * ↑(witness0 N q)
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:139:2: error: linarith failed to find a contradiction
+case h1.h
+N e q : ℕ
+h : Cell N q
+h0 : ↑(witness0 N q) * constant0 N q = ↑N - ↑(anchor N) * ↑(representative N q)
+a✝ :
+  ↑(witness1 N q) * ↑(witness0 N q) *
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 3 -
+      ![↑(witness1 N q) * ↑(witness0 N q), -↑e * (↑(witness1 N q) * ↑(witness0 N q)), -↑(witness0 N q),
+            -↑(anchor N) * ↑(witness1 N q)]
+          3 *
+        ↑(representative N q) <
+    ↑N * ↑(witness1 N q)
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:146:2: error: linarith failed to find a contradiction
+case h1.h
+N e q : ℕ
+h : Cell N q
+h1 : ↑(witness1 N q) * constant1 N q = ↑N - ↑(representative N q)
+a✝ :
+  Matrix.vecHead ![-↑e * (↑(witness1 N q) * ↑(witness0 N q)), -↑(witness0 N q), -↑(anchor N) * ↑(witness1 N q)] *
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 2 -
+      ![↑(witness1 N q) * ↑(witness0 N q), -↑e * (↑(witness1 N q) * ↑(witness0 N q)), -↑(witness0 N q),
+            -↑(anchor N) * ↑(witness1 N q)]
+          2 *
+        Matrix.vecHead ![↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] <
+    ↑N * ↑(witness0 N q) * (1 - ↑e)
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:153:2: error: linarith failed to find a contradiction
+case h1.h
+N e q : ℕ
+h : Cell N q
+h0 : ↑(witness0 N q) * constant0 N q = ↑N - ↑(anchor N) * ↑(representative N q)
+a✝ :
+  Matrix.vecHead ![-↑e * (↑(witness1 N q) * ↑(witness0 N q)), -↑(witness0 N q), -↑(anchor N) * ↑(witness1 N q)] *
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 3 -
+      ![↑(witness1 N q) * ↑(witness0 N q), -↑e * (↑(witness1 N q) * ↑(witness0 N q)), -↑(witness0 N q),
+            -↑(anchor N) * ↑(witness1 N q)]
+          3 *
+        Matrix.vecHead ![↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] <
+    ↑N * ↑(witness1 N q) * (↑(anchor N) - ↑e)
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:161:2: error: linarith failed to find a contradiction
+case h1.h
+N e q : ℕ
+h : Cell N q
+h1 : ↑(witness1 N q) * constant1 N q = ↑N - ↑(representative N q)
+h0 : ↑(witness0 N q) * constant0 N q = ↑N - ↑(anchor N) * ↑(representative N q)
+a✝ :
+  ![↑(modulus N q), -↑e * ↑(modulus N q), -↑(witness0 N q), -↑(anchor N) * ↑(witness1 N q)] 2 *
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 3 -
+      ![↑(modulus N q), -↑e * ↑(modulus N q), -↑(witness0 N q), -↑(anchor N) * ↑(witness1 N q)] 3 *
+        ![↑(representative N q), ↑N - ↑e * ↑(representative N q), constant1 N q, constant0 N q] 2 <
+    ↑N * (↑(anchor N) - 1)
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:186:46: error: unknown constant 'Int.natAbs_natCast'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role4\DividedFourForms.lean:177:88: error: unsolved goals
+N e q : ℕ
+h : Cell N q
+he : anchor N < e
+hp1 : 1 ≤ anchor N
+he1 : 1 ≤ e
+hs : signedDelta N e q = -↑(N ^ 6 * e * anchor N * modulus N q ^ 6 * (e - 1) * (e - anchor N) * (anchor N - 1))
+⊢ (↑(N ^ 6 * e * anchor N * modulus N q ^ 6 * (e - 1) * (e - anchor N) * (anchor N - 1))).natAbs =
+    N ^ 6 * e * anchor N * modulus N q ^ 6 * (e - 1) * (e - anchor N) * (anchor N - 1)
+'GoldbachRound18.DoubleExtraction.constant1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.constant0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.slope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.slopeProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinantProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.signedDelta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.actualDelta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative_le_N' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_representative_le_N' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.constant1_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.constant0_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.affine_q_at_index' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.affine_target_at_index' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.affine_resource1_at_index' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.affine_resource0_at_index' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.dividedForm_at_index' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinant01' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinant02' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinant03' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinant12' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinant13' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.determinant23' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.slopeProduct_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.signedDelta_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.actualDelta_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.actualDelta_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.prime_divisors_actualDelta' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,124 @@
+{
+  "schema": "ROUND22_INDEPENDENT_SCALAR_RADIUS_POINT01_EXECUTION_READS",
+  "status": "NUMERIC_RADIUS_BOUND_ONLY_PASS_NOT_IDENTITY_OR_LEAN_PROOF",
+  "executor": "ROLE4_INDEPENDENT_OF_ROLE6_SOURCE_AUTHOR",
+  "actual_directory": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01",
+  "gate": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_scalar_radius_point01_authorization.json",
+    "bytes": 8554,
+    "sha256": "e9149ac83f476cfdf1b14098dbd03e167c80e79716e02b1c7bf00c0405ee7e48",
+    "read_scope": "FULL",
+    "chunk": "832141"
+  },
+  "metadata_parent": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_circle_radius_point_execution_control01/run_scalar_radius_point_once22.ps1",
+    "bytes": 14481,
+    "sha256": "1e06f758b9dd4a6311281314feea64565b3c3063d6cefe5db0071a947cea69f4",
+    "read_scope": "FULL_BEFORE_EXECUTION",
+    "chunk": "32c92e"
+  },
+  "actual_invocation": {
+    "tool_chunk": "8a17c6",
+    "tool_exit": 0,
+    "tool_wall_seconds": 0.7266162,
+    "child_invocations": 1,
+    "retry": 0,
+    "START_trace_UTC": "2026-10-04T03:09:34.7717716Z",
+    "START_is_pre_call_bookkeeping_not_atomic_OS_time": true,
+    "FIN_UTC": "2026-10-04T03:09:34.9095311Z",
+    "PID": 24564,
+    "child_exit": 0,
+    "child_closed": true,
+    "parent_elapsed_last_trace_seconds": 0.2893382,
+    "parent_elapsed_at_receipt_seconds": 0.2850096
+  },
+  "actual_outputs": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/PRE.json",
+      "bytes": 13743,
+      "sha256": "9ac152d445e9557e1e158e204b5673403a043e19f3d249438d04dc597902592e",
+      "read_scope": "FULL",
+      "chunk": "24e4f2"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/START.json",
+      "bytes": 1284,
+      "sha256": "0cc869d167df2fd2b38688b5e2d841c438441d01db6329a548b9f7eaf1fa3cd5",
+      "read_scope": "FULL",
+      "chunk": "54207c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/FIN.json",
+      "bytes": 973,
+      "sha256": "c85fb57b36a6cc672de28d008b18bfd617579dce78fd55a900e83a619f7ef966",
+      "read_scope": "FULL",
+      "chunk": "055891"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/POST.json",
+      "bytes": 338,
+      "sha256": "1b3621dd0d17a55c8a684aeff88785fa2c869d2d7ad54ec99bf422cdcd7bc3d1",
+      "read_scope": "FULL",
+      "chunk": "6c13eb"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/stdout.log",
+      "bytes": 7567,
+      "sha256": "1dbae84ffd2d128af212f52db0ba5e9f81d1f4c383d577110a4787e6d7f97104",
+      "read_scope": "FULL",
+      "chunk": "41d544"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "read_scope": "FULL",
+      "chunk": "f9de19"
+    }
+  ],
+  "actual_receipt": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/receipt.json",
+    "bytes": 13070,
+    "sha256": "d46e3ffeb6d03447963451fdd13f7399cd62f92e4a5a5d21ccfd1e393fdb4edb",
+    "read_scope": "FULL",
+    "chunk": "a86bf3"
+  },
+  "conservation": {
+    "UTC": "2026-10-04T03:11:04.9100662Z",
+    "file_rechecks": 39,
+    "distinct_paths": 39,
+    "mismatches": [],
+    "parent_and_gate_original_copy_pairs": 2,
+    "gate_bindings_original_copy_pairs": 14,
+    "actual_outputs_and_receipt": 7,
+    "child_invocations_as_receipted": 1,
+    "additional_scientific_invocations": 0,
+    "scope": "POST_ONLY_FILE_HASH_METADATA_NO_REPLAY",
+    "chunk": "951e3a",
+    "input_copies": 9,
+    "all_gate_bindings_original_copies": 14,
+    "extra_gate_parent_copies": 2,
+    "runtime_included": true,
+    "no_full_archive_sweep_claimed": true
+  },
+  "output_verdict": {
+    "schema": "ROUND22_EXACT_SCALAR_RADIUS_BOUND_OUTPUT",
+    "scope": "NUMERIC_RADIUS_BOUND_ONLY_NOT_IDENTITY_OR_LEAN_PROOF",
+    "comparison_status": "RATIONAL_UPPER_BOUND_LT_TAU",
+    "exact_integer_witness_true": true,
+    "finite_Taylor_witnesses_true": true,
+    "no_second_scientific_verification": true,
+    "all_proof_limits_remain_false": true
+  },
+  "scientific_invocations_total": 1,
+  "additional_candidate_calls": 0,
+  "Lean_calls": 0,
+  "native_calls": 0,
+  "NTT_calls": 0,
+  "probes": 0,
+  "PREP_other_than_authorized_actual": 0,
+  "official_credit": 0,
+  "WIN": false,
+  "boundary": "Conditional PAPER connectors unchanged; no E_N itself, D/P/C_N/D_N, identity, error of evaluator, upstream Lean elaboration, PP removal or canonical sign paid.",
+  "new_files_written": "New metadata execution-control parent/report/reads and the exclusive authorized ACTUAL only; all author/review/upstream scientific sources remain frozen."
+}

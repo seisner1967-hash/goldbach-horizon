@@ -1,0 +1,31 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\lean\ChenWeight.lean:43:4: error: tactic 'apply' failed, failed to unify
+  ?b ^ List.length ?l ≤ List.prod ?l
+with
+  (alpha + 1) ^ n.primeFactorsList.prod.primeFactorsList.length ≤ n.primeFactorsList.prod
+alpha n : ℕ
+hn : n ≠ 0
+hbound : n < (alpha + 1) ^ 4
+hrough : ∀ (p : ℕ), Nat.Prime p → p ∣ n → alpha < p
+⊢ (alpha + 1) ^ n.primeFactorsList.prod.primeFactorsList.length ≤ n.primeFactorsList.prod
+'GoldbachResearch.ChenWeight.weight_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ChenWeight.lower_bound_list_product' depends on axioms: [propext]
+'GoldbachResearch.ChenWeight.factorCount_le_three_of_rough' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.ChenWeight.factorCount_positive_of_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ChenWeight.weight_prime_indicator_of_factorCount' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.ChenWeight.weight_prime_indicator_of_rough' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.ChenWeight.weight_prime_indicator_of_N' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.ChenWeight.weighted_prime_identity_real' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

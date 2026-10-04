@@ -1,0 +1,70 @@
+{
+  "schema": "ROUND22_ROOT_GLOBAL03_CLOSED_METADATA_OBSERVATION",
+  "time_utc": "2026-10-03T16:29:30.840134+00:00",
+  "status": "THERMAL_TRACE_NUMERICAL_AUX_PASS_SOURCE_AUDITED",
+  "receipt_sha256": "e9b676e9ee2b922d64f93c2c5e2df2d41871efc58e64a348663f3a974cbfd0c5",
+  "actual_START": "2026-10-03T14:48:16.467623+00:00",
+  "actual_FINISH": "2026-10-03T16:03:41.019653+00:00",
+  "child_process_FINISH": "2026-10-03T16:03:31.717554+00:00",
+  "inputs_verified": 1016,
+  "captures_verified": 1018,
+  "archives_verified": 3089,
+  "closed_bank02_inputs_verified": 1003,
+  "closed_bank02_captures_verified": 1005,
+  "closed_bank02_outputs_verified": 3,
+  "bound_output_count": 7,
+  "outputs": [
+    {
+      "bytes": 569088,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\global_thermal_result.json",
+      "sha256": "95ed53517770a7390df16fa78b32317bb15cd146da3ec0e9ef876a86bd7a09e0"
+    },
+    {
+      "bytes": 381,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\structural_checker_result.json",
+      "sha256": "10f4d49fde68193885fe79cab5aada62fa719e88de17e8d5c9ffc23f6afa561e"
+    },
+    {
+      "bytes": 495574057,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\new_nodes.ndjson",
+      "sha256": "3fe08917bfe62e5e6fd682ba6c405c7d2a9a0b440d746ba2518244bd6161aeb8"
+    },
+    {
+      "bytes": 120583189,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\new_arithmetic.ndjson",
+      "sha256": "9ef22d7f5b1fe6f466ce8dd2045a94348df8d9bdac5f60be3097d4ad80e4ef45"
+    },
+    {
+      "bytes": 106026,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child.stdout.log",
+      "sha256": "e3a65552d0b85a46eae6a18d76a70aa0d0b9e74e216ca553b2e27490699ad9c9"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1411,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child_FIN.json",
+      "sha256": "c620aa37845fa9434ed8b5cecf92227d9d9798d1f97d20fed0c31a4d9014ad41"
+    }
+  ],
+  "evaluation_level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER",
+  "analytic_level": "PAPER_DERIVATIONS_WITH_EXACT_DOMAINS_NOT_LEAN_CERTIFICATION",
+  "numeric_guard_decision_owner": "Actual ROLE6 child and source-reviewed structural checker; ROOT does not recompute numerical values",
+  "mathematical_error_and_mutant_audit_owner": "ROLE6 with independent SOURCE/PAPER review; no ROOT mathematical audit",
+  "ROOT_full_read_receipts": "Parent/child/structural FULL961dfd; result metadata TARGETED32192b; stdout endpoint/keys TARGETEDcea402; metadata receipt hash305658; startup/preflight ef9d2e and numerical SOURCE reviews73eb82/57c8ad/ea7da0; helper FULL154615",
+  "large_inventory_scope": "All entries parsed and all bytes hash-verified; raw FULL node catalogs and global result text not claimed",
+  "official_modules": 74,
+  "official_declarations": 1203,
+  "official_credit_added": 0,
+  "ROOT_numerical_invocations": 0,
+  "ROOT_Lean_invocations": 0,
+  "old_bank_replays": 0,
+  "retries": 0,
+  "H1_paid": false,
+  "coefficient_N_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

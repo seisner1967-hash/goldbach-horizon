@@ -1,0 +1,46 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\lean\ParityWeights.lean:114:63: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a - b ≤ -1
+where
+ a := ↑(p * q) * ↑r
+ b := ↑p * ↑q
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\lean\ParityWeights.lean:115:37: error: application type mismatch
+  lt_of_lt_of_le hpq hmult
+argument
+  hmult
+has type
+  p * q * 1 ≤ p * q * r : Prop
+but is expected to have type
+  p * q ≤ p * q * r : Prop
+'GoldbachResearch.ParityWeights.weights_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.weights_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.muReal_mul_of_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.odd_bilinear_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.even_bilinear_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.muReal_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.prime_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.semiprime_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.triprime_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.oddWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.evenWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.oddWeight_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.weights_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.triprime_nonprime' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachResearch.ParityWeights.parity_detector_retains_composite' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.ParityWeights.vonMangoldt_zero_of_moebius_nezero_nonprime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.ParityWeights.triprime_vonMangoldt_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.ParityWeights.prime_divisor_bound_triprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.concrete_prime_triprime_same_parity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

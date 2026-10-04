@@ -1,0 +1,180 @@
+{
+  "schema": "ROUND22_GLOBAL_THERMAL_SOURCE_REVIEW_22",
+  "status": "SOURCE_REVIEW_NUMERICAL_ENCLOSURES_CLOSED",
+  "created_utc": "2026-10-03T12:31:02.0673895Z",
+  "reviewer": "ROLE3_INDEPENDENT_ROLE6_REVIEW",
+  "reviewer_distinct_from_ROLE4": true,
+  "source_manifest_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\source_manifest22.json",
+  "source_manifest_sha256": "e1caa3d115dd492cfa6d91478240b0e8418614b6faf8798f48e15312dfe11a51",
+  "review_report_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\global_h1_review_source22\\review22.md",
+  "review_report_sha256": "55679d2dc4ee4251d2f7357d290073d10500f0ada59384101499807f02e6c28c",
+  "review_report_FULL_receipt": "150ba2",
+  "domain_addendum_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\global_h1_review_source22\\domain_addendum22.md",
+  "domain_addendum_sha256": "a26a64dea1e392d62dfbad3a0751cc5e3414dd3be0e52603f7b05884f9b0a1c2",
+  "domain_addendum_FULL_receipt": "b0a70f",
+  "primitive_enclosures_source_audited": true,
+  "analytic_remainders_source_audited": true,
+  "analytic_certification_level": "PAPER_DERIVATIONS_WITH_EXACT_DOMAINS_NOT_LEAN_CERTIFICATION",
+  "future_evaluation_level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER",
+  "structural_checker_is_interval_certificate": false,
+  "structural_PASS_is_enclosure_PASS": false,
+  "unresolved_blockers": [],
+  "formal_obligations_open": [
+    "primitive identities and directed-rounding semantics",
+    "paired Euler-Maclaurin exact remainder and Cauchy derivative",
+    "holomorphic logGamma periodic remainder and branch",
+    "W outer-disc and Arch removable-extension bounds",
+    "continuous tail envelopes on guarded domains",
+    "global C3/C5 and contour residues"
+  ],
+  "all_14_bindings_unchanged": true,
+  "all_9_runtime_sources_read_FULL": true,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\transport_catalogue_source22.py",
+      "sha256": "2fd2937811e5627746bb9e4a6bdcf9564073ef8ce4abf8b846e7a2aa1ee46bc8",
+      "bytes": 4946,
+      "module_alias": "transport_catalogue_source22",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "0b349d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\envelopes_source22.py",
+      "sha256": "f988d3edbcd28ce40698515f2e608d67a2615ab6bf777e4daf42f0820e8d5e67",
+      "bytes": 1558,
+      "module_alias": "envelopes_source22",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "117862"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\arithmetic_catalogue_source22.py",
+      "sha256": "ce60c65700fe4a3aa476a056769afd735b9296f8bc13df3223a89ff1c82874b7",
+      "bytes": 7493,
+      "module_alias": "arithmetic_catalogue_source22",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "d0dc11"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\producer_source22.py",
+      "sha256": "e47dfc7c5ca55c23c47dfd373a32b04603dac85017ec97fe5b8421463b8a2407",
+      "bytes": 12072,
+      "module_alias": "producer_source22",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "d95321"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\structural_checker_source22.py",
+      "sha256": "b2e9e36927b850b1f861e59cacb580bc06643a0247320f600c372e4d9aee7f7e",
+      "bytes": 14587,
+      "module_alias": "structural_checker_source22",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "3e2d8d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\global_h1_source22\\unit_transport_source22.py",
+      "sha256": "c44fc225a52ef58424b73685853054fe65ee57f81d0c58ad5b1b8618e6a0b2d8",
+      "bytes": 5692,
+      "module_alias": "unit_transport_source22",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "7f025a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\dyadic_r01.py",
+      "sha256": "290d0e708bf30f7cd418a1dc006adcc8c89e9dd1893687ba5d832180f27c6a17",
+      "bytes": 14675,
+      "module_alias": "dyadic_r01",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "bbd377"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\analytic_r01.py",
+      "sha256": "a00fc6f520a82e8c86d6fbe7964c5e47cf62fe2f863543947071b870781f3f77",
+      "bytes": 8644,
+      "module_alias": "analytic_r01",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "c90264"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\kernel_r01.py",
+      "sha256": "03a55736742d73df0c7e048ed1311184513749899978163243504a03dc4c8bb5",
+      "bytes": 7055,
+      "module_alias": "kernel_r01",
+      "runtime_source": true,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "dff316"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\global_h1_source22\\arithmetic_source22.py",
+      "sha256": "4677ff39c979386d4e595175dcfa72cd1bdf93a9e5307af3261322a4fa9c6a68",
+      "bytes": 7040,
+      "module_alias": null,
+      "runtime_source": false,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "See review22.md and earlier FULL source receipts"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\numeric_precontract22.md",
+      "sha256": "02cba2d0b3478b5fe3bddb46c1df0862a7c6287452f19892b7cec8ba100db05b",
+      "bytes": 9467,
+      "module_alias": null,
+      "runtime_source": false,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "See review22.md and earlier FULL source receipts"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\contour_precritique22\\precritique_report22.md",
+      "sha256": "00c2484f8479fef2ca3104ba61fce542697b1596639805ffe7677a796d711048",
+      "bytes": 16828,
+      "module_alias": null,
+      "runtime_source": false,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "See review22.md and earlier FULL source receipts"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\contour_precritique22\\evaluator_requirements22.md",
+      "sha256": "57f5cbe28c5e26ba115070c94c0ea9dafd67eb3cf8e491ef861e279634c12f23",
+      "bytes": 14378,
+      "module_alias": null,
+      "runtime_source": false,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "See review22.md and earlier FULL source receipts"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\source_contract22.md",
+      "sha256": "cea359055df1966ece11887305856bed46c24bb6de62f1a052d2e54c0e7d6cec",
+      "bytes": 8509,
+      "module_alias": null,
+      "runtime_source": false,
+      "reviewer_read_scope": "FULL_SOURCE_TEXT",
+      "reviewer_read_receipt": "See review22.md and earlier FULL source receipts"
+    }
+  ],
+  "actual_node_radius_guards_passed": false,
+  "actual_total_error_guard_passed": false,
+  "thermal_Y_seed_guard_status": "PAPER_BOUND_RADIUS_LESS_THAN_2^-270_NO_PRIMITIVE_EXECUTION",
+  "global_h1_formal_proof": false,
+  "CONTOUR_BOUNDARY": "UNIMPLEMENTED",
+  "FINITE_ZERO_TRACE": "OPEN",
+  "COEFFICIENT_N": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false,
+  "Python_imports": 0,
+  "Python_parser_invocations": 0,
+  "Python_math_invocations": 0,
+  "Lean_invocations": 0,
+  "runtime_probes": 0,
+  "old_bank_replays": 0,
+  "runtime_cost_measured": false,
+  "numeric_result_exists": false,
+  "numeric_PASS": false,
+  "compiler_gate_granted": false,
+  "numeric_gate_granted": false
+}

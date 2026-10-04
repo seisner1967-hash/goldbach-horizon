@@ -1,0 +1,5 @@
+# Correction metadata avant gel FINAL1
+
+Le premier texte préparatoire `agent1_signed.md` SHA beada179fd18610a5298519946d4f7050a555961fcb987d88d7086865e884e0d contenait une mention de chunk `20c232` qui n’avait pas été exposée par le résultat de l’outil. Cette mention a été supprimée avant le gel ; le hash final est 0e6bac077503477d03f78c3c121b40134a67e1504b733bfb26175efeca884d70. La vue réellement appelée, lue FULL et sauvegardée est liée à son propre hash 8fa53bf40b5848895b11c9f600704ceadeeb97ee7de2b51a4efba64efffa306e. Aucun contenu mathématique n’a changé. Un message préparatoire avait aussi cité `69f593` sans observation exposée de ce chunk ; cette mention n’est pas une preuve de provenance et n’est pas reprise au reçu. La commande/helper, sa sortie sauvegardée, l’exit0 observé et les bytes sont la provenance revendiquée.
+
+Aucun fichier gelé antérieur n’a été modifié. Cette correction statique n’est aucun FAIL Lean, test mathématique ou invocation du Juge. Aucun test n’a été exécuté par ROLE1.

@@ -1,0 +1,32 @@
+{
+  "status": "FINAL2_IDEATION21_SOURCE_PARTIAL_PAYMENT_PROPOSED_NO_WIN",
+  "created_utc": "2026-10-03T05:26:55.5891923Z",
+  "ownership": "round21/role2/** and round21/agent2_nonfriable.md",
+  "actual_math_invocations": 0,
+  "actual_Lean_invocations": 0,
+  "actual_Judge_invocations": 0,
+  "readonly_helper_exit_code": 0,
+  "fresh_constraints_observation": "e6bb4f",
+  "source_onset": "log N >= 10^24",
+  "proposed_new_cost": "uniqueF0notF1Cost <= 35*N*u^(-14)",
+  "proposed_extended_budget": "sourceExtendedFriableCost <= N/(8192*u*ell)",
+  "proof_compiled": false,
+  "numerical_test_executed": false,
+  "score": 0,
+  "victory": false,
+  "report_sha256": "35ef3537ff78fc1215d6481129d71e6df62b88cea2e5e80fdd6c7c41b7e76ac4",
+  "lean_contract_sha256": "ac1e6b2a5fd2bf5ce5cd083e1bc23b891d070cab1347f7137cde70eb8576d33e",
+  "numeric_contract_sha256": "8c9122a3854025edaf542a33d1eb55504f609640be3b5cdcd918089187d39a61",
+  "read_receipt_sha256": "7f51427e6c5f23b4b694b291bebfa495c585127f871aba1855ed873e4e4cedd3",
+  "input_manifest_sha256": "f5afdad1c757e4edb10406c0e223b0f3ac140db522ee573fe6f91b811190b847",
+  "final_manifest_sha256": "f8ad7effc48387e5ac0d017725cb81a78c14fa817ef9b7798a03b85020825368",
+  "all_read_inputs_unchanged_during_closure": true,
+  "output_files_frozen": true,
+  "unresolved": [
+    "both-nonfriable complement",
+    "H19 whole-source bridge",
+    "full parents/capacity/Gamma/T_A union",
+    "six-post D_N ledger"
+  ],
+  "no_old_artifact_written": true
+}

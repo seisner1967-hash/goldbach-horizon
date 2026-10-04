@@ -1,0 +1,205 @@
+{
+  "schema": "ROLE4_H1_EULER_MELLIN_SOURCE_ADDENDUM_READ_RECEIPTS_ONLY",
+  "created_utc": "2026-10-03T09:48:01.6199688Z",
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "previous_receipt": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\read_receipts22_v3.json",
+    "sha256": "ba90cab917a204b08a841442ca4b7737245ee320d6c6126745f91562cc118c19",
+    "scope": "UNCHANGED_PREVIOUS_28_SOURCE_BINDINGS_NOT_REASSERTED_AS_FULL_NEW_READ"
+  },
+  "new_source_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaEulerDerivative22.lean",
+      "sha256": "fe51d8956fecabaa09063ce31543b91946cc3fae1fd2e3ffadd4fc639be39520",
+      "bytes": 9007,
+      "scope": "FULL_SOURCE",
+      "capture": "324a0e",
+      "declarations": 14,
+      "qualified_prints": 14,
+      "forbidden_tokens": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\ZetaEulerLambda22.lean",
+      "sha256": "1a08c2258a3e544b7e9e643de2be9f03bddcff90822592dbbca08c53871d5266",
+      "bytes": 8965,
+      "scope": "FULL_SOURCE",
+      "capture": "ece6be",
+      "declarations": 14,
+      "qualified_prints": 14,
+      "forbidden_tokens": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinLambdaInterchange22.lean",
+      "sha256": "95eb68ee1ae56d8cede154a04587535021e916ea73b4bed12ef6883cc0a12803",
+      "bytes": 9873,
+      "scope": "FULL_SOURCE",
+      "capture": "38d5b2",
+      "declarations": 13,
+      "qualified_prints": 13,
+      "forbidden_tokens": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinDualLambdaInterchange22.lean",
+      "sha256": "5f63a74bfcca27c588f2ed53f22130b3a617c1cca778cd161bc6cb96e9ff3182",
+      "bytes": 10308,
+      "scope": "FULL_SOURCE",
+      "capture": "045bbd",
+      "declarations": 14,
+      "qualified_prints": 14,
+      "forbidden_tokens": false
+    }
+  ],
+  "api_read_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Factorization\\PrimePow.lean",
+      "sha256": "7dc019765efff57710a7fee1307d5a08b47cd62a4ee9398cce43aeeb1833e24a",
+      "scope": "FULL",
+      "capture": "ca8a5e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Constructions.lean",
+      "sha256": "6b4b8bdf5d2ffc436ac5c2bf4768b8c2bad60e34ad5c6509efbf470f9a819b18",
+      "scope": "TARGETED_LINES_1_224",
+      "capture": "2cec11"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecificLimits\\Normed.lean",
+      "sha256": "71cb31a2d09f8868ff64867a5bfd42e42eea6bf7ec8fd61f5dbda4f5fabec855",
+      "scope": "TARGETED_LINES_246_326",
+      "capture": "7b2c50"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Complex.lean",
+      "sha256": "2472ae69befd020eb8beaaa4994d206fb8e6bf8f9c96ec92f10755e5fc775644",
+      "scope": "TARGETED_LINES_86_93_196_204_207_224",
+      "capture": "001354,df8d46,2f3b4e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Basic.lean",
+      "sha256": "01bf68b0473786a1cc29f8a769829632d8e8a5c7b307e7a0b5493221f09f3b47",
+      "scope": "TARGETED_LINES_145_161_444_478",
+      "capture": "efbac0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Ring.lean",
+      "sha256": "08b6e8ea95141786af7425526114f5e9e7cd98f743b7360d39a1f4819063dda0",
+      "scope": "TARGETED_LINES_19_58_80_100",
+      "capture": "f957ac,e94049"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Group\\InfiniteSum.lean",
+      "sha256": "829003497ddf909ad4ba01fdbd4a9b2546432389b2cd4b38044b13a1ca858c25",
+      "scope": "TARGETED_LINES_94_107_AND_NORM_TSUM_SIGNATURE",
+      "capture": "efbac0,ad135c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\DominatedConvergence.lean",
+      "sha256": "dcd3681d95530d0a475a260324501f3928ad03ea92cf7adca07fa1f2c0e472f3",
+      "scope": "TARGETED_LINES_66_154",
+      "capture": "2ee5a8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\L1Space.lean",
+      "sha256": "7d041392ff5a34fb256b5ce97cc04b8c681919350c849647d4309bdc29af4a2a",
+      "scope": "TARGETED_LINES_424_440_1165_1185",
+      "capture": "f90440"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Continuity.lean",
+      "sha256": "47b6018f8597ae353961ae3835d8b96915803978d12d0c9c3dd555fb0118b8c1",
+      "scope": "TARGETED_LINES_121_138",
+      "capture": "f90440"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\Bochner.lean",
+      "sha256": "b58d6339786ee0602d5d1577042e7d407112682b670150d909a853115b9b339b",
+      "scope": "TARGETED_LINES_813_829",
+      "capture": "774fb1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\StronglyMeasurable\\Basic.lean",
+      "sha256": "2eb21a168f6c61713867610e61bd14ebb2acb1e668218e3b82f4642ac22b84bf",
+      "scope": "TARGETED_LINES_718_723",
+      "capture": "6867c0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Monoid.lean",
+      "sha256": "55cb934305a20f923aedb41c0c6d440657b9e3a26915737781d9808b9d3a72e8",
+      "scope": "TARGETED_LINES_886_898",
+      "capture": "1c4f55"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Module.lean",
+      "sha256": "0acb4a6f0077030b01e54aa77e2756c06a32e91b0b98b7ad542aeeada9ccfa07",
+      "scope": "TARGETED_LINES_36_77",
+      "capture": "774fb1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Complex\\Log.lean",
+      "sha256": "09da69b28b9bce06f75edd53489d43e2bd770c04e729c0b8b3f9672d9fcef25a",
+      "scope": "TARGETED_SIGNATURES_OFREAL_LOG_NATCAST_LOG",
+      "capture": "ca05ce"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Basic.lean",
+      "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b",
+      "scope": "TARGETED_LINES_314_322_AND_OFREAL_NATCAST_SIGNATURE",
+      "capture": "4166f2,ca05ce"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Action\\Defs.lean",
+      "sha256": "7113819983d00e85e2706d5e1215ada314656950b691e7eb1f40f36534061851",
+      "scope": "TARGETED_LINES_267_279",
+      "capture": "4166f2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\Jacobian.lean",
+      "sha256": "0fda4e28d0030c4a72842ba6ece3b23ff0e3b60ab8ffa875bd1a699fc2f632f9",
+      "scope": "TARGETED_SIGNATURE_1205_1210_FOR_ROLE3",
+      "capture": "542211"
+    }
+  ],
+  "corrected_gamma_candidate": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\gamma_revision01\\GammaContourComponent22.lean",
+    "sha256": "9124b02b9d136b60b87cd6b2c01e6bac03e0fd8fef766cdfe97a79135a00aa44",
+    "scope": "FULL_SOURCE",
+    "capture": "602108",
+    "declarations": 11,
+    "qualified_prints": 11,
+    "staging_module": "GammaContourComponent22",
+    "old_source_preserved": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/GammaContourComponent22.lean",
+    "old_source_sha256": "084a19087d9d9adabe7921d509cd8b8fce2d721be445bcb779a3555f264e5bf8",
+    "compiled": false
+  },
+  "addendum": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\euler_mellin_addendum22.md",
+    "sha256": "3dd3ede7e7145eb751aa30728edaefc722209ee5e76981a8168a5f22853d3977",
+    "scope": "FULL",
+    "capture": "1c4f55"
+  },
+  "gamma_independent_dependency": {
+    "source": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/revision02/GammaPrerequisites22.lean",
+    "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+    "independent_receipt_sha256": "a159b22e7ac4e8718f0572fdbf3e6d424294571eab01d5ed1ff979a821af48f9",
+    "status": "AUTHOR_AND_INDEPENDENT_JUDGE_PASS",
+    "scope": "ROOT_MESSAGE_ACTUAL_JUDGE_PASS_NOT_REREAD_BY_ROLE4",
+    "replayed": false
+  },
+  "newly_written_declarations": 55,
+  "newly_written_qualified_prints": 55,
+  "total_h1_source_declarations": 83,
+  "transitive_import_closure_bound": false,
+  "prepared": false,
+  "numeric_h1_bank_executed": false,
+  "new_lean_invocations": 0,
+  "new_mathematical_python_invocations": 0,
+  "metadata_parser_error": {
+    "capture": "5bd546",
+    "exit": 1,
+    "description": "PowerShell empty pipe after foreach; parse failed before any command; corrected in045bbd",
+    "lean_or_math_executed": false
+  },
+  "h1_proved": false,
+  "d_n_target_proved": false,
+  "win": false
+}

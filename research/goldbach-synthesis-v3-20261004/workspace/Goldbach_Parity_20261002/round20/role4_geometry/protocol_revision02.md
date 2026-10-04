@@ -1,0 +1,11 @@
+# Géométrie20 — correction du protocole avant exécution
+
+La préparation v1 n’a jamais été exécutée. `preparation.json` demeure byte-identique (SHA `f022a625b1a0899fd13baa6088308fa3cbdac7ee0fbdc710d9302380dcb6b09e`) et est également conservée comme `preparation_v1_NOT_EXECUTED.json`. Le lanceur v1 est conservé comme `compile_once_v1_NOT_EXECUTED.py.txt` (SHA `0745f9c34c49e930422d4505aeac474e1812ceb6a9121aede2b2acea7681f0a1`). Le rapport de géométrie reste inchangé. La source initiale reste gelée à `22bb640570931e2d7ad2575347d6b5099270dda4680e3d7472939d4f20449d13`.
+
+`compile_once.py` v2 et `preparation_v2.json` remplacent le seul protocole de lancement proposé. Ces corrections de protocole ont été demandées par root après lecture FULL ; elles ne constituent aucun échec Lean.
+
+La première tentative future doit compiler exactement la source initiale relue. Toute suivante exige le receipt d’une vraie tentative précédente avec `exit_code!=0` et une source différente de son snapshot. Le rejeu du PASS et le rejeu d’un FAIL inchangé sont interdits. La gate doit autoriser explicitement ces seules réparations. Le lanceur, la préparation v2, le rapport, le présent document, le manifeste, les archives v1, les entrées gelées et la gate restent inchangés entre tentatives ; seule la source ayant effectivement échoué peut être réparée.
+
+Les liaisons numériques canoniques et leur receipt exit0 doivent être fournis dans la gate et sont contrôlés avant/après Lean. Les imports et leurs dépendances demeurent des objets en lecture seule. Les runtimes Lean et Python sont liés par SHA. Après le subprocess, le lanceur sauvegarde stdout/stderr/log, l’exit réel et un receipt `finished_raw` avant de décider l’intégrité. Il vérifie ensuite la source et les snapshots, receipts/logs/output, gate, lanceur, préparation, rapport, manifeste, runtimes, archives v1 et toutes les entrées. Aucun `assert` après Lean ne masque l’issue réelle. Le crédit PASS exige exactement `exit0`, toutes les liaisons inchangées, absence de `sorryAx` et olean présent. Tout autre résultat reste enregistré sans crédit.
+
+Aucune invocation Lean, du lanceur Python ou d’un calcul Python mathématique n’a été effectuée pour cette révision. Aucun PASS de géométrie, aucune victoire.

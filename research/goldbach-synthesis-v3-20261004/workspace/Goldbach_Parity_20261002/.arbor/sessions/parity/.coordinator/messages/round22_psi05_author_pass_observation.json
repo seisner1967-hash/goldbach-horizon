@@ -1,0 +1,54 @@
+{
+  "schema": "ROUND22_PSI05_AUTHOR_PASS_ROOT_OBSERVATION",
+  "time_utc": "2026-10-03T11:39:22.200391+00:00",
+  "status": "AUTHOR_PSI_BATCH_AUX_PASS",
+  "receipt_sha256": "74b5dfe2fd4f1b470714fd2d27aee62e678e77ab33f64b36e04eab92fc3ea531",
+  "ROOT_FULL_read": "9dae70",
+  "POST_scope": "Complete JSON parsed/all84inputs6476cachebytes hashed, no FULLraw claim",
+  "row": {
+    "axiom_rows": [
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "GoldbachContinuous22.deriv_Gamma_duplication"
+      },
+      {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "GoldbachContinuous22.gammaPsi_duplication"
+      }
+    ],
+    "command": [
+      "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+      "-DmaxHeartbeats=1000000",
+      "-o",
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\psi_batch05_attempt01\\GammaPsiDuplication22.olean",
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\source_final\\GammaPsiDuplication22.lean"
+    ],
+    "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision05\\source_final",
+    "exact_axiom_coverage_standard_only": true,
+    "exit_code": 0,
+    "finished_at": "2026-10-03T11:33:49.656313+00:00",
+    "log_sha256": "8b74b7dea63d734bc10d8d740aac461f1c838700132d207dc720b04c905a2400",
+    "module": "GammaPsiDuplication22",
+    "olean_sha256": "535c3f53fe81ff03d6c05540a67bd82335b6379d98f81a97ccd7784744f67bcf",
+    "source_sha256": "0491177c6cfc1ef35b28796be404a3ca7975bac357cc6551b80d12333726812e",
+    "started_at": "2026-10-03T11:33:35.465394+00:00",
+    "status": "AUTHOR_LEAN_AUX_PASS",
+    "timed_out": false
+  },
+  "author_PASS_declarations": 2,
+  "independent_judge_pending": true,
+  "official_count_delta": 0,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

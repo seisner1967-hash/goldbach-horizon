@@ -1,0 +1,190 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH18",
+  "time_utc": "2026-10-03T19:31:36.413544+00:00",
+  "status": "INDEPENDENT_BATCH18_FAILED",
+  "role": "ROLE5",
+  "actual_child_invocations": 1,
+  "modules_passed": 0,
+  "declarations_passed": 0,
+  "module_count_passed": 0,
+  "declaration_count_passed": 0,
+  "theorems_passed": 0,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "all_inputs_unchanged": true,
+  "input_count": 8351,
+  "closed_judge_file_count": 1109,
+  "protected_archive_count": 3089,
+  "capture_count": 23,
+  "print_count": 11,
+  "standard_print_count": 5,
+  "recovery_sorryAx_print_count": 6,
+  "declarations_without_axioms": [],
+  "declarations_with_propext_only": [],
+  "warnings": 0,
+  "errors": 7,
+  "passed_modules": [],
+  "failed_modules": [
+    "ThermalGammaMellinInverse22"
+  ],
+  "not_invoked_modules": [],
+  "exact_axiom_rows": [
+    {
+      "declaration": "GoldbachThermalMellin22.expKernel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.gammaLine",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.expKernel_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.gammaLine_continuous",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.gammaLine_half_integrable",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.gammaLine_integrable",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.expKernel_mellin_convergent_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.mellin_expKernel_eq_Gamma",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.expKernel_mellin_vertical_two",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.mellinInv_Gamma_two",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachThermalMellin22.real_exp_eq_Gamma_integral",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "actual_links": {
+    "START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\START.json",
+      "sha256": "66d91e80105ef19d2b5ca5e5007867eae2e02a5e3df01435feb4e64fac6fe73a"
+    },
+    "FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\FIN.json",
+      "sha256": "4f6d3fbd44a3d9355503ae083e77e01a904d7a9397c577ddc0a39fb2224229b9"
+    },
+    "receipt.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\receipt.json",
+      "sha256": "5cafbee7186adfbc6a9459b26dfc077999a68bd5eef3758a391f805a49f4c84f"
+    },
+    "PREEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\PREEXEC.json",
+      "sha256": "b10d8331163e425843c13a4ed8d3e8d351262188218e401ac23eb0d03f1a8a22"
+    },
+    "POSTEXEC.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\POSTEXEC.json",
+      "sha256": "197a54a5a81c21cd3c63ab0bceac4ac8bfa3ea8725ee6d03b3cb5813385edff2"
+    },
+    "ThermalGammaMellinInverse22_START.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\ThermalGammaMellinInverse22_START.json",
+      "sha256": "1c05f9ff79cf593affe05d3cddb0bf667c5422d2783fef8df4b6f515ecc08374"
+    },
+    "ThermalGammaMellinInverse22_FIN.json": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\ThermalGammaMellinInverse22_FIN.json",
+      "sha256": "dd6810462d81275338e9e99cc846642bf1131725e2a74f296497493df9c66415"
+    },
+    "ThermalGammaMellinInverse22.log": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\ThermalGammaMellinInverse22.log",
+      "sha256": "ad9e08512e1a5af905830b98d083925ec8ea4f36c5d01773864c0ca885d2395e"
+    }
+  },
+  "adjudication_sha256": "e00bfdcb0b871103c295b73104a4e0feef770cedbb4e6d64758ff97f7417339a",
+  "metadata_close_source_sha256": "e64f972e9096be529cf9cf20ea52bebd654c4982c8a50b8368d2472826209ff3",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22"
+  ],
+  "recompiled_dependencies": [],
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "retry_count": 0,
+  "numeric_bank_replayed": false,
+  "numeric_PASS_used_as_proof": false,
+  "previous_official_modules": 78,
+  "previous_official_declarations": 1304,
+  "proposed_new_official_modules": 78,
+  "proposed_new_official_declarations": 1304,
+  "official_count_requires_ROOT_observation": true,
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "global_trace_certified": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "failure_classification": "TECHNICAL_COMPOSITION_MEMBERSHIP_SIMPLIFICATION_RECOVERY",
+  "full_log_reads": [
+    "3ee55e"
+  ],
+  "full_actual_receipt_read": "d5301a",
+  "full_START_read": "9a9fe0"
+}

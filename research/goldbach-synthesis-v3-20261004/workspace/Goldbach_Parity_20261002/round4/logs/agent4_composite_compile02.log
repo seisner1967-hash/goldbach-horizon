@@ -1,0 +1,27 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round4\lean\CompositeCompletion.lean:142:13: error: unsolved goals
+q : ℕ
+inst✝ : NeZero q
+χ : DirichletCharacter ℂ q
+F : ZMod q → ℂ
+hq : ↑q ≠ 0
+⊢ ↑q * physicalMoment χ F = physicalMoment χ F * ↑q
+'GoldbachResearch.CompositeCompletion.fourierWeight_eq_dft' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.inverse_fourier_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.all_frequency_completion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.sum_units_eq_filter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.characterPhase_eq_gaussShift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.characterPhase_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.nonunit_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.composite_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.composite_completion_ratio' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.double_composite_completion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

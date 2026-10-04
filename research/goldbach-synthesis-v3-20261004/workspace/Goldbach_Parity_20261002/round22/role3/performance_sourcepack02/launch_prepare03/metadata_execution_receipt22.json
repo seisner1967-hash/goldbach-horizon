@@ -1,0 +1,88 @@
+{
+  "schema": "ROUND22_LAUNCH03_ACTUAL_METADATA_AND_PRELAUNCH_READS22",
+  "status": "PREPARED_METADATA_ONLY_NOT_EXECUTED",
+  "time_utc": "2026-10-03T14:42:16.0775034Z",
+  "actor": "ROLE6",
+  "source_author": "ROLE3",
+  "independent_reviewer": "ROLE5",
+  "root_authorization": "Root message: one metadata-only builder after exact independent review closure",
+  "actual_builder_invocation": {
+    "tool_result": "e4476d",
+    "exit_code": 0,
+    "invocations": 1,
+    "command": [
+      "PowerShell",
+      "&",
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\prepare_metadata_source22.ps1",
+      "-IndependentReviewReceipt",
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\performance_source_review02\\review_receipt22.json",
+      "-IndependentReviewReceiptSha256",
+      "638b1aaba849473a1806fe3b4bb967265b35f2ecb901b4003c0b661b114a1ddf"
+    ],
+    "builder_source_sha256": "f3cc88bcf976753ad768048ba6db41020edb9b2d0c77c8df3d00ed476d73d921",
+    "metadata_only": true,
+    "all_path_sets_verified": true,
+    "new_math_invocations": 0,
+    "new_Lean_invocations": 0,
+    "gate_created": false,
+    "actual_created": false
+  },
+  "read_scopes": {
+    "independent_receipt": "FULL751f11",
+    "independent_report": "FULLbf4abc",
+    "independent_domain": "FULLbf4abc",
+    "five_tool_source_reads": "FULL19cd00/f13f3d/2e31c0/6b34ce, existing frozen tool_read_receipts22.json",
+    "source_and_tools_linkage": "SHA/size b3e51a five tools + source manifest, metadata only",
+    "prepared_manifest": "complete JSON parsed; PROJECTIONff7164/19fff7 headers, binding counts, aliases, guards; not FULL raw inventory display",
+    "preparation": "complete JSON parsed; PROJECTIONff7164/19fff7 headers, binding counts, aliases, guards; not FULL raw inventory display"
+  },
+  "bindings": {
+    "prepared_manifest_sha256": "8ac1baa20b6418a8278ff74f4e9ae89c1b2a198d8e67ab841cb243192e35933d",
+    "prepared_manifest_bindings": 1015,
+    "preparation_sha256": "8d08bc4db8f702a53ae3340a2ba9102969caf7ea7995aa282638cd0e84919433",
+    "preparation_bindings": 1016,
+    "source_manifest_sha256": "914c210931fb8029f59727a58b473402f8ec28c8e3e86328144e350d0fec362f",
+    "source_paths": 21,
+    "runtime_aliases": 9,
+    "runtime_files": 972,
+    "protected_archives": 3089,
+    "closed_original_inputs": 1003,
+    "closed_captures": 1005,
+    "closed_outputs": 3,
+    "closed_attempt_integrity_verified": true
+  },
+  "independent_review": {
+    "receipt_sha256": "638b1aaba849473a1806fe3b4bb967265b35f2ecb901b4003c0b661b114a1ddf",
+    "report_sha256": "dfdc7d3a573c9d31364e198b8db749216316bec2162b19f4533babc1d2005286",
+    "domain_sha256": "821d67b2f8448533d707e9e23a5c33c44c4b316b297bb7f8129ac8f7d89cb4b7",
+    "resource_addendum_sha256": "2d43730db7a5c28d2e35aae1600953cf6df8a191545d83160f63ec819631e2ef",
+    "status": "SOURCE_REVIEW_NUMERICAL_ENCLOSURES_CLOSED",
+    "future_evaluation_level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER",
+    "analytic_certification_level": "PAPER_DERIVATIONS_WITH_EXACT_DOMAINS_NOT_LEAN_CERTIFICATION"
+  },
+  "runtime_flags": [
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "utf8"
+  ],
+  "runtime_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "limits": {
+    "max_children": 1,
+    "retry_count": 0,
+    "max_wall_seconds": 10800,
+    "max_artifact_bytes": 2147483648
+  },
+  "controller_authorized": false,
+  "mathematical_children_started": 0,
+  "Python_imports": 0,
+  "Python_parsers": 0,
+  "new_numeric_PASS": false,
+  "structural_checker_is_interval_certificate": false,
+  "structural_PASS_is_enclosure_PASS": false,
+  "H1_FORMAL": "OPEN",
+  "COEFFICIENT_N": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false
+}

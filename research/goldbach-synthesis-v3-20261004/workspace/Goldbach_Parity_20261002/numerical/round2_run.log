@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "alpha": 100,
+  "Q": 999999,
+  "checks": {
+    "rough_prime_detection_multiplicity_weight": 24371,
+    "Omega_1": 893,
+    "Omega_2": 1678,
+    "nonsquarefree_weight_cases": 22978,
+    "Omega_3": 21800,
+    "all_rough_prime_squares_below_N": 1204,
+    "all_rough_prime_cubes_below_N": 65,
+    "all_rough_mixed_p_squared_q_below_N": 21648,
+    "symbolic_local_switch_counterexample": 1,
+    "rough_r_only_weight_counterexample": 1
+  },
+  "total_cases": 94639,
+  "local_switch_counterexample": {
+    "n": 99999697,
+    "m": 303,
+    "factor_n": [
+      [
+        7,
+        1
+      ],
+      [
+        41,
+        1
+      ],
+      [
+        348431,
+        1
+      ]
+    ],
+    "factor_m": [
+      [
+        3,
+        1
+      ],
+      [
+        101,
+        1
+      ]
+    ],
+    "mu_m": 1,
+    "alpha": 100,
+    "Q": 999999,
+    "prefix": 3,
+    "admitted_divisors": [
+      1,
+      3
+    ],
+    "admitted_harmonic_k": [
+      1,
+      3
+    ],
+    "unit_excluded_k": [
+      2
+    ],
+    "D": {
+      "3": "-1/1"
+    },
+    "W": {
+      "3": "-1/1",
+      "101": "-1/2"
+    },
+    "D_minus_W": {
+      "101": "1/2"
+    },
+    "literal_kernel": {
+      "101": "1/2"
+    },
+    "fII": {
+      "7": "-1/1",
+      "41": "-1/1",
+      "348431": "-1/1"
+    },
+    "Sfull_log_product_coefficients": {
+      "7,101": "-1/2",
+      "41,101": "-1/2",
+      "101,348431": "-1/2"
+    }
+  },
+  "switched_prime_partner": {
+    "n": 99999899,
+    "m": 101,
+    "factor_n": [
+      [
+        17,
+        1
+      ],
+      [
+        5882347,
+        1
+      ]
+    ],
+    "factor_m": [
+      [
+        101,
+        1
+      ]
+    ],
+    "mu_m": -1,
+    "alpha": 100,
+    "Q": 999999,
+    "prefix": 1,
+    "admitted_divisors": [
+      1
+    ],
+    "admitted_harmonic_k": [
+      1
+    ],
+    "unit_excluded_k": [],
+    "D": {
+      "101": "-1/1"
+    },
+    "W": {
+      "101": "-1/1"
+    },
+    "D_minus_W": {},
+    "literal_kernel": {},
+    "fII": {
+      "17": "-1/1",
+      "5882347": "-1/1"
+    },
+    "Sfull_log_product_coefficients": {}
+  },
+  "previous_artifacts_preserved": true,
+  "script_sha256": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+  "elapsed_seconds": 0.412
+}

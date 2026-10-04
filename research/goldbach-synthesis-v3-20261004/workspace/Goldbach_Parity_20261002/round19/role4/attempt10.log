@@ -1,0 +1,94 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\RankTwoHarmonic.lean:31:2: error: tauto failed to solve some goals.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\RankTwoHarmonic.lean:31:2: error: unsolved goals
+case mp.intro.left
+B : ℕ
+z : ℕ × ℕ
+left✝ : z ∈ (primesThrough B).product (primesThrough B)
+right✝ : z.1 ≤ z.2
+⊢ Nat.Prime z.1
+
+case mp.intro.right.left
+B : ℕ
+z : ℕ × ℕ
+left✝ : z ∈ (primesThrough B).product (primesThrough B)
+right✝ : z.1 ≤ z.2
+⊢ z.1 ≤ B
+
+case mp.intro.right.right.left
+B : ℕ
+z : ℕ × ℕ
+left✝ : z ∈ (primesThrough B).product (primesThrough B)
+right✝ : z.1 ≤ z.2
+⊢ Nat.Prime z.2
+
+case mp.intro.right.right.right.left
+B : ℕ
+z : ℕ × ℕ
+left✝ : z ∈ (primesThrough B).product (primesThrough B)
+right✝ : z.1 ≤ z.2
+⊢ z.2 ≤ B
+
+case mpr.intro.intro.intro.intro.left
+B : ℕ
+z : ℕ × ℕ
+left✝³ : Nat.Prime z.1
+left✝² : z.1 ≤ B
+left✝¹ : Nat.Prime z.2
+left✝ : z.2 ≤ B
+right✝ : z.1 ≤ z.2
+⊢ z ∈ (primesThrough B).product (primesThrough B)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\RankTwoHarmonic.lean:34:20: warning: unused variable `hq`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\RankTwoHarmonic.lean:88:2: error: unsolved goals
+case h.refine_1
+B p : ℕ
+hp : p ∈ primesThrough B
+⊢ (p, p) ∈ (primesThrough B).product (primesThrough B)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\RankTwoHarmonic.lean:175:31: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\RankTwoHarmonic.lean:200:25: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∑ x ∈ ?s ×ˢ ?t, ?f x
+B : ℕ
+⊢ (∑ a ∈ (primesThrough B).product (primesThrough B), if a.1 ≤ a.2 then 1 / ↑(pairValue a) else 0) =
+    (firstMoment B ^ 2 + secondMoment B) / 2
+'GoldbachRound19.Harmonic.primesThrough' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.orderedPrimePairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.pairValue' does not depend on any axioms
+'GoldbachRound19.Harmonic.rankTwoCofactors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.firstMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.secondMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.mem_primesThrough' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.mem_orderedPrimePairs' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.ordered_prime_product_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.pairValue_injective' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.prime_not_prime_product' depends on axioms: [propext]
+'GoldbachRound19.Harmonic.cofactor_union_disjoint' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.omega_prime_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.rankTwoCofactors_rank' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.diagonal_prime_square_kept' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.Harmonic.rankTwoCofactors_of_actual_multiset' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.Harmonic.rankTwoCofactors_two' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.cut_cofactors_eq_actual_omega' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.Harmonic.actual_terminal_cofactor_mem_cut' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.Harmonic.unordered_pair_moment' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.Harmonic.actual_ordered_products_harmonic' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.Harmonic.rankTwoCofactorHarmonicIdentity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.Harmonic.cut_harmonic_le_uncut' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

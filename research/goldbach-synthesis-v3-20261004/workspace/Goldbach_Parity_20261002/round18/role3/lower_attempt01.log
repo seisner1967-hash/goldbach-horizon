@@ -1,0 +1,68 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIILower.lean:17:2: error: type mismatch, term
+  hf
+after simplification has type
+  |↑(#(units (Ioc V (V + V)) (H * ell))) -
+        (↑(V + V) * arithmeticDensity (H * ell) - ↑V * arithmeticDensity (H * ell))| ≤
+    arithmeticFront (H * ell) : Prop
+but is expected to have type
+  |↑(#(units (Ioc V (V + V)) (H * ell))) - ↑V * arithmeticDensity (H * ell)| ≤ arithmeticFront (H * ell) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIILower.lean:96:2: error: linarith failed to find a contradiction
+case a
+P : Parameters
+A B H ell V : ℕ
+hAB : A ≤ B
+hH : 0 < H
+hell : 0 < ell
+hV : 0 < V
+hHd : conductor P ∣ H
+hlH : ell.Coprime H
+hcap : ∀ b ∈ Ioc A B, conductor P * b ≤ P.N
+R4a : 2 * arithmeticFront (H * ell) ≤ ↑V * arithmeticDensity (H * ell)
+E : Finset ℕ := units (Ioc V (2 * V)) (H * ell)
+F : ℚ := (↑B - ↑A) * arithmeticDensity H
+hF : 0 ≤ F
+hVl : ↑V ≠ 0
+hellq : ↑ell ≠ 0
+hD : 0 < 2 * ↑ell * ↑V
+hcoef : 0 ≤ F / (2 * ↑ell * ↑V)
+hEta : 0 ≤ arithmeticFront H
+hEfront : |↑(#(units (Ioc V (2 * V)) (H * ell))) - ↑V * arithmeticDensity (H * ell)| ≤ arithmeticFront (H * ell)
+hEhalf : ↑V * arithmeticDensity (H * ell) / 2 ≤ ↑(#E)
+hEcap : ↑(#E) ≤ ↑V
+hentry : ∀ v ∈ E, F / (2 * ↑ell * ↑V) - arithmeticFront H ≤ ↑(rowCount P (Ioc A B) H ell v)
+hsum : ↑(omittedCount P (Ioc A B) H ell E) = ∑ v ∈ E, ↑(rowCount P (Ioc A B) H ell v)
+hbase : ↑(#E) * F / (2 * ↑ell * ↑V) - ↑(#E) * arithmeticFront H ≤ ↑(omittedCount P (Ioc A B) H ell E)
+hm : 2 * (F * arithmeticDensity (H * ell) / (8 * ↑ell)) ≤ ↑(#E) * (F / (2 * ↑ell * ↑V))
+hn : ↑(#E) * arithmeticFront H ≤ ↑V * arithmeticFront H
+heq : ↑V * arithmeticDensity (H * ell) / 2 * (F / (2 * ↑ell * ↑V)) = F * arithmeticDensity (H * ell) / (4 * ↑ell)
+R4c : ↑V * arithmeticFront H ≤ F * arithmeticDensity (H * ell) / (8 * ↑ell)
+he2 : F * arithmeticDensity (H * ell) / (4 * ↑ell) = 2 * (F * arithmeticDensity (H * ell) / (8 * ↑ell))
+a✝ : F * arithmeticDensity (H * ell) / (8 * ↑ell) > ↑(omittedCount P (Ioc A B) H ell (units (Ioc V (2 * V)) (H * ell)))
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIILower.lean:154:4: error: mod_cast has type
+  arithmeticDensity (P.N * conductor P * h * ell) / ↑(16 * ell) ≤
+    ↑(omittedCount P (Ioc A B) (P.N * conductor P * h) ell (units (Ioc V (2 * V)) (P.N * conductor P * h * ell))) /
+      ↑(unitCount (Ioc A B) (P.N * conductor P * h)) : Prop
+but is expected to have type
+  ↑(arithmeticDensity (P.N * conductor P * h * ell) / ↑(16 * ell)) ≤
+    ↑(omittedCount P (Ioc A B) (P.N * conductor P * h) ell (rows P V h ell)) /
+      ↑(unitCount (Ioc A B) (P.N * conductor P * h)) : Prop
+'GoldbachRound18.SeparatedTypeII.admissible_rows_front' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.admissible_rows_at_most_width' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omitted_count_lower_R5' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omitted_ratio_lower_R5' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.normalized_adversarial_lower_R5' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

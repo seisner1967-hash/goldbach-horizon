@@ -1,0 +1,13 @@
+# Préparation du lot24 — outils SOURCE seulement
+
+Baseline ROOT82modules/1367déclarations après FAIL23 clos. Nouveau module unique AngularMellinBorder22 révision03, exact SOURCE1fa9de9a41a432b3745d1dce719018452e6f8f9b183bb9635d07191f1dcf91da ;30déclarations22thm8defs et30prints attendus. Cette source n'a pas été élaborée ; le FAIL23 de sa version antérieure est préservé sans reprise.
+
+Revue indépendante angular_mellin_border_source_review24.md8732eabebbb56529c622b3ab740659cfc54405a6f480d5626e84036740a4874e FULL6cf53e : trois raccords normalisés, mêmes domaines/énoncés/définitions, aucun déficit SOURCE précis ni PASS présumé. Dérivées, continuité, intégrabilités volume et FTC à deux bords sont construits ; a>0, qcomplexe quelconque et N>0 pour division. Le bord q0 est nul, q1 est explicitement non nul.
+
+Les neuf imports sont seulement Mathlib, zéro dépendance locale. Aucun olean auteur/ancien sur LEAN_PATH. Init/Prelude et la fermeture exhaustive des sources/oleans du cache Lean4.15/mathlib9837ca9d, huit packages, seront liés par l'unique metadata builder futur. Les grands manifestes sont all-entry metadata/hash, sans prétendre un FULL mathématique des imports.
+
+prepare_metadata.py/run_once.py sont de nouvelles copies adaptées des outils23 readonly, jamais invoquées. Le helper doit être lu FULL et autorisé par ROOT avant metadata PREP ; son travail est lexical/JSON/hash/copie uniquement, aucun parseur Lean/elaborateur/subprocess/candidat/calcul numérique. Il relie tous anciens fichiers Juge, toute arborescence21 ROLE4 close, observation23 et3089archives. Le reçu auteur03 utilise read_observation singulier, explicitement traité ; seules ses lectures sont attribuées à l'auteur.
+
+Une gate Lean24 distincte ferme le futur launcher jusqu'à autorisation exacte : B/.arbor/sessions/parity/.coordinator/messages/round22_judge5_batch24_authorization.json. Le launcher vérifie les SHA et common source root unique, dossier local vide/cache pinned, puis capture PREEXEC/START et appelle une seule fois Lean4.15,300s/maxHeartbeats1000000. Il écrit log/moduleFIN/globalFIN/PREPOST/receipt. Exact30axiomprints requis ; listes standard ou vides acceptables seulement d'après les sorties réelles, sorryAx/custom/native refusés. Zéro retry, probe, ancien compile/banc/exécutable natif.
+
+Tentative future batch24_attempt01 exclusive : si START/attempt existe, ne jamais relancer. Tous captures original/copie et inputs PRE/POST doivent rester intacts. Clôture standard status réel/modules_passed/declarations_passed/all_current_bytes_preserved ; métadonnées de fermeture ne lancent aucun compilateur. Un PASS1/30 donnerait83/1397 seulement après observation ROOT. Mellin global, corrélation signée, coefficientN1e8, D_N et WIN restent ouverts.

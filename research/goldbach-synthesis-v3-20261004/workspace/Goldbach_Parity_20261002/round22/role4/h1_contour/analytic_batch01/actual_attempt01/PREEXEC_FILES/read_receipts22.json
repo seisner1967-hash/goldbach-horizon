@@ -1,0 +1,122 @@
+{
+  "sources": [
+    {
+      "read_capture": "57db21",
+      "declarations": [
+        "realGamma_le_nine_fifths_on_extended_strip",
+        "quarter_angle_coefficient_le_three_extended",
+        "Gamma_extended_strip_exponential_bound",
+        "exp_eighth_pi_le_seven_quarters",
+        "Gamma_differentiableOn_rightHalfPlane",
+        "Gamma_half_disc_domain",
+        "Gamma_circle_dominating_bound",
+        "Gamma_derivative_strip_exponential_bound"
+      ],
+      "module": "GammaDerivative22",
+      "qualified_print_count": 8,
+      "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "compiled": false,
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\sources\\GammaDerivative22.lean",
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\GammaDerivative22.lean",
+      "read_scope": "FULL"
+    },
+    {
+      "read_capture": "57db21",
+      "declarations": [
+        "weightedGammaTerm",
+        "spectralBoxDomain",
+        "gammaBoxRadius",
+        "weightedGammaTerm_eq_cpow",
+        "spectralBoxDomain_convex",
+        "norm_weightedGamma_exponential_le",
+        "hasDerivAt_weightedGammaTerm",
+        "norm_deriv_weightedGammaTerm_le",
+        "weightedGammaTerm_lipschitz_on_boxDomain",
+        "weightedGammaTerm_box_error_le",
+        "gammaBoxRadius_nonneg",
+        "gammaBoxRadius_continuousAt"
+      ],
+      "module": "GammaBoxBounds22",
+      "qualified_print_count": 12,
+      "source_sha256": "82dd6682d0912decfa22adbcf022dbed6343c8d7cb71bca748a3f064b8443ea0",
+      "compiled": false,
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\sources\\GammaBoxBounds22.lean",
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\GammaBoxBounds22.lean",
+      "read_scope": "FULL"
+    },
+    {
+      "read_capture": "aac0f5",
+      "declarations": [
+        "gammaContourPoint",
+        "gammaContourFactor",
+        "gammaContourEnvelope",
+        "norm_weightedGammaTerm_on_outer_strip",
+        "gammaContourFactor_continuous",
+        "norm_gammaContourFactor_le",
+        "real_exponential_tail_integrable",
+        "integral_real_exponential_tail",
+        "gammaContourFactor_tail_integrable_and_bound",
+        "gammaContourEnvelope_nonneg",
+        "gammaContourEnvelope_continuous"
+      ],
+      "module": "GammaContourComponent22",
+      "qualified_print_count": 11,
+      "source_sha256": "9124b02b9d136b60b87cd6b2c01e6bac03e0fd8fef766cdfe97a79135a00aa44",
+      "compiled": false,
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\sources\\GammaContourComponent22.lean",
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\gamma_revision01\\GammaContourComponent22.lean",
+      "read_scope": "FULL"
+    },
+    {
+      "read_capture": "80a3b6",
+      "declarations": [
+        "thermalUnitTest",
+        "thermalTest",
+        "thermalDualTest",
+        "thermalTest_eq_real",
+        "thermalTest_continuous",
+        "thermalUnitTest_mellin_convergent",
+        "mellin_thermalUnitTest",
+        "thermalTest_mellin_convergent",
+        "mellin_thermalTest",
+        "hasMellin_thermalTest",
+        "thermalDualTest_mellin_convergent",
+        "mellin_thermalDualTest"
+      ],
+      "module": "MellinThermal22",
+      "qualified_print_count": 12,
+      "source_sha256": "1396cb0a0045c621ea3e8f0f8b905c1c2a0af3ec33a351e4e7150542f38352fe",
+      "compiled": false,
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\sources\\MellinThermal22.lean",
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinThermal22.lean",
+      "read_scope": "FULL"
+    },
+    {
+      "read_capture": "af5253",
+      "declarations": [
+        "gammaContourFactor_vertical_integrable",
+        "thermalTest_mellin_vertical_integrable",
+        "thermalTest_mellin_inversion",
+        "thermalTest_gamma_inversion"
+      ],
+      "module": "MellinThermalInversion22",
+      "qualified_print_count": 4,
+      "source_sha256": "ad42b7bf8cd9b94e4f2c04125201b6a82b62821b1cb38652aa4e2f6c41a1df66",
+      "compiled": false,
+      "staged_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\analytic_batch01\\sources\\MellinThermalInversion22.lean",
+      "original_source_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\MellinThermalInversion22.lean",
+      "read_scope": "FULL"
+    }
+  ],
+  "mathematical_python_invocations": 0,
+  "preparation_read": "FULL_9ef6a6",
+  "gamma_fin_read": "FULL_af5253",
+  "previous_metadata_failure": "b26830: doc-comment line import cycle falsely parsed; no manifest/Lean/math; lexical header parsing repaired, source bytes unchanged",
+  "schema": "ROUND22_ROLE4_ANALYTIC_BATCH01_READS",
+  "cache_scope": "IMPORT_HEADERS_ONLY_AND_BYTE_HASHES_NOT_FULL_API",
+  "time_utc": "2026-10-03T10:24:56.5643039Z",
+  "launcher_read": "FULL_1122f9",
+  "gamma_judge_receipt_read": "FULL_57db21",
+  "lean_invocations": 0,
+  "helper_read": "FULL_bce491"
+}

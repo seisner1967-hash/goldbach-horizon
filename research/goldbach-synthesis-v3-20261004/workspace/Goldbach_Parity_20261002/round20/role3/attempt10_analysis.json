@@ -1,0 +1,16 @@
+{
+  "attempt": 10,
+  "module": "CompositeAPConductor",
+  "actual_lean_exit_code": 1,
+  "classification": "TECHNICAL_REWRITE_SCOPE_AND_DEFINITION_MATCHING_FAILURE",
+  "actual_log": "round20/role3/attempt10_CompositeAPConductor.log",
+  "actual_receipt": "round20/role3/attempt10_CompositeAPConductor_receipt.json",
+  "errors": [
+    {"line": 69, "obligation": "totient of the actual product of distinct primes", "repair": "Use a typed product-insertion identity before totient multiplicativity"},
+    {"lines": [108, 111], "obligation": "actual quotient-divisibility conductor equivalences", "repair": "Rewrite the reconstruction only on the left; expose remainingModulus19 and retain the original j/p on the right"}
+  ],
+  "computed_lcm_gcd_conductor_changed": false,
+  "mathematical_identity_changed": false,
+  "parity_obstacle_inferred_from_this_failure": false,
+  "victory": false
+}

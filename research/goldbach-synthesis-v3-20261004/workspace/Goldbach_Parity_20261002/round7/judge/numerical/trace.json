@@ -1,0 +1,221 @@
+{
+  "status": "PASS_EXACT_CONNECTION_ONLY",
+  "N": 100000000,
+  "native_rows": [
+    {
+      "p": 3,
+      "cases": 2,
+      "identity": "1_(p|m)-1/(p-1)=sum_(chi nonprincipal) chi(n)*conjchi(N)/(p-1)",
+      "hypotheses": "p prime,p not dividing N or n",
+      "native_factor": "conjchi(N)",
+      "new_factor": "conjchi(m)",
+      "new_twist_zero_on_p_divides_m": true
+    },
+    {
+      "p": 7,
+      "cases": 6,
+      "identity": "1_(p|m)-1/(p-1)=sum_(chi nonprincipal) chi(n)*conjchi(N)/(p-1)",
+      "hypotheses": "p prime,p not dividing N or n",
+      "native_factor": "conjchi(N)",
+      "new_factor": "conjchi(m)",
+      "new_twist_zero_on_p_divides_m": true
+    },
+    {
+      "p": 11,
+      "cases": 10,
+      "identity": "1_(p|m)-1/(p-1)=sum_(chi nonprincipal) chi(n)*conjchi(N)/(p-1)",
+      "hypotheses": "p prime,p not dividing N or n",
+      "native_factor": "conjchi(N)",
+      "new_factor": "conjchi(m)",
+      "new_twist_zero_on_p_divides_m": true
+    },
+    {
+      "p": 13,
+      "cases": 12,
+      "identity": "1_(p|m)-1/(p-1)=sum_(chi nonprincipal) chi(n)*conjchi(N)/(p-1)",
+      "hypotheses": "p prime,p not dividing N or n",
+      "native_factor": "conjchi(N)",
+      "new_factor": "conjchi(m)",
+      "new_twist_zero_on_p_divides_m": true
+    },
+    {
+      "p": 17,
+      "cases": 16,
+      "identity": "1_(p|m)-1/(p-1)=sum_(chi nonprincipal) chi(n)*conjchi(N)/(p-1)",
+      "hypotheses": "p prime,p not dividing N or n",
+      "native_factor": "conjchi(N)",
+      "new_factor": "conjchi(m)",
+      "new_twist_zero_on_p_divides_m": true
+    },
+    {
+      "p": 19,
+      "cases": 18,
+      "identity": "1_(p|m)-1/(p-1)=sum_(chi nonprincipal) chi(n)*conjchi(N)/(p-1)",
+      "hypotheses": "p prime,p not dividing N or n",
+      "native_factor": "conjchi(N)",
+      "new_factor": "conjchi(m)",
+      "new_twist_zero_on_p_divides_m": true
+    }
+  ],
+  "branch_nonunit_diagnostics": [
+    {
+      "q": 3,
+      "divides": "a",
+      "n": 273,
+      "m": 99999727,
+      "all_nonprincipal_twists": "ZERO by character extension at a nonunit",
+      "enumeration": "Structural factor certificate; no enumeration of all characters at large q"
+    },
+    {
+      "q": 7,
+      "divides": "a",
+      "n": 273,
+      "m": 99999727,
+      "all_nonprincipal_twists": "ZERO by character extension at a nonunit",
+      "enumeration": "Structural factor certificate; no enumeration of all characters at large q"
+    },
+    {
+      "q": 7951,
+      "divides": "r",
+      "n": 273,
+      "m": 99999727,
+      "all_nonprincipal_twists": "ZERO by character extension at a nonunit",
+      "enumeration": "Structural factor certificate; no enumeration of all characters at large q"
+    },
+    {
+      "q": 12577,
+      "divides": "r",
+      "n": 273,
+      "m": 99999727,
+      "all_nonprincipal_twists": "ZERO by character extension at a nonunit",
+      "enumeration": "Structural factor certificate; no enumeration of all characters at large q"
+    }
+  ],
+  "p_divides_k": {
+    "point": {
+      "b": 101,
+      "u": 103,
+      "v": 107,
+      "k": 7,
+      "s": 3,
+      "t": 71,
+      "zeta": 34967,
+      "x": 43,
+      "A": 1113121,
+      "C": 1491,
+      "n": 47864203,
+      "m": 52135797,
+      "factor_n": [
+        [
+          43,
+          1
+        ],
+        [
+          101,
+          1
+        ],
+        [
+          103,
+          1
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          71,
+          1
+        ],
+        [
+          73,
+          1
+        ],
+        [
+          479,
+          1
+        ]
+      ],
+      "W": 2,
+      "y": 2,
+      "four_Mobius_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "four_Mobius_product": 1,
+      "twists": {
+        "2": {
+          "full_product": [
+            1,
+            0
+          ],
+          "missing_C_product": [
+            1,
+            0
+          ],
+          "isolated_zeta": [
+            -1,
+            0
+          ]
+        },
+        "4": {
+          "full_product": [
+            -1,
+            0
+          ],
+          "missing_C_product": [
+            -1,
+            0
+          ],
+          "isolated_zeta": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "p": 7,
+    "new_twists": "ALL ZERO",
+    "R_p": "Entire selected fibre weight",
+    "native_centered_row": "5/6",
+    "verdict": "The new two-axis twist does not replace the native centered row"
+  },
+  "old_trace": {
+    "cases": 7394,
+    "q_values": [
+      1,
+      3,
+      7,
+      11,
+      21,
+      33,
+      77,
+      101,
+      143
+    ],
+    "m_domain": [
+      1,
+      1024
+    ],
+    "identity": "mu(q)*P_q(m)/phi(q)=1/phi(q) for squarefree q and gcd(q,m)=1",
+    "nonsquarefree_counterexample": "q=9,m=1: mu(q)*P/phi=0 differs from 1/phi=1/6"
+  },
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 190,
+    "baseline_sha256": "900367574d957bfe8e48341ca532022fc0e742d5a001099e3d402863e467de61"
+  },
+  "script_sha256": "a45cce7c07868c8d994bc76d82fad9666b08bd6635b2c99312f77ae4d40a36c0",
+  "limitations": "Native finite identity and structural nonunit diagnostics; no new trace theorem or signed/global D_N estimate"
+}

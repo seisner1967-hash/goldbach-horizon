@@ -1,0 +1,51 @@
+CONTRAT AUTONOME — PIVOT CONTINU, BOUCLE 22, RÉVISION 04
+État officiel : 78 modules Lean / 1 304 déclarations auxiliaires, définitions comprises. Envelope42 (lot11), Identity20 (lot13), Discrete29 (lot15), puis Rational38 et QuantizedEnvelope14 (lot17) ont passé le contrôle indépendant sans erreur ni sorryAx. Cette révision distincte conserve tous les textes et échecs techniques antérieurs. Aucun nouveau calcul, compilateur, build ou probe n'est lancé pour ce contrat.
+
+OBJET EXACT. Λ(n)=log p si n=p^k, p premier, k≥1 ; zéro sinon, y compris n=0,1. C'est la vraie vonMangoldt Lean, via IsPrimePow et log(minFac n), avec TOUTES les puissances premières propres. Poser C_N=Σ(n=0..N)Λ(n)Λ(N−n). Pour a>0,
+T_a(θ)=Σ(n≥0)Λ(n)exp(−an)exp(inθ),
+C_N=exp(aN)/(2π) ∫(θ=0..2π)T_a(θ)conj(T_a(−θ))exp(−iNθ)dθ.
+La convergence absolue, la continuité, l'intégrabilité et cette projection continue sont prouvées. Les poids réels donnent conj(T_a(−θ))=T_a(θ).
+
+ENVELOPPE CONTINUE PROUVÉE. r=exp(−a), A=r/(1−r)^2 et B_M=r^(M+1)((M+1)/(1−r)+A) donnent |T_a−T_(a,M)|≤B_M, puis un écart de projection ≤2exp(aN)AB_M. Cette enveloppe fermée est continue sur a>0 et tend vers zéro avec M. Aucune trace infinie T_0 n'est invoquée.
+
+PROJECTION FINIE PROUVÉE. Pour tout a réel, P_(a,M)(θ)=Σ(n=0..M)Λ(n)exp(−an)exp(inθ). Sous N≤M et K>max(N,2M−N),
+C_N=exp(aN)/K Σ(j=0..K−1)P_(a,M)(2πj/K)^2 exp(−2πiNj/K).
+Les caractères concrets et leur orthogonalité discrète sont prouvés, sans alias. Fixer N=M=100000000, K=2^27=134217728, S=2^58=288230376151711744 ; a=0 seulement pour ce polynôme fini. K>N satisfait la garde.
+
+COEFFICIENTS CANONIQUES ET RAYON LEAN EFFECTIFS. Pour 2≤p≤N, k=Nat.log2 p≤26, z=(p−2^k)/(p+2^k)∈[0,1/3]. L32(z)=2Σ(j<32)z^(2j+1)/(2j+1), R32=9/(4·65·3^65). La vraie série logarithmique prouve
+log p∈[kL32(1/3)+L32(z), kL32(1/3)+L32(z)+(k+1)R32].
+A32(p) arrondit S fois le milieu rationnel au plus proche, vers l'entier pair en cas de demi, puis clamp dans [0,32S]. Le lot17 prouve effectivement |log p−A32(p)/S|≤1/S, sans précision fournie en prémisse. Définir A_n=A32(minFac n) si IsPrimePow n, zéro sinon ; I_A=Σ(n=0..N)A_nA_(N−n). Les bornes vraies 0≤Λ(n)≤32, la précision, le raccord entier et
+|C_N−I_A/S²|≤E, E=(N+1)(64/S+1/S²)
+sont compilés. E(N,s) est continue sur s>0 ; la précision construite porte sur S fixé. La garde entière 2(N+1)(64S+1)·10^6≤S², compilée au N fixé, paie 2E≤10^−6. Le résultat primaire attendu est donc [I_A/S²−E, I_A/S²+E], dès que le calcul natif a été réellement relié à ces mêmes A et à ce fold exact.
+
+TABLE MODULAIRE FIXE (p_i, g_i, c_i), p_i=c_iK+1 :
+2013265921 ; 31 ; 15
+2281701377 ;  3 ; 17
+3221225473 ;  5 ; 24
+3489660929 ;  3 ; 26
+3892314113 ;  3 ; 29
+ω_i=g_i^((p_i−1)/K) mod p_i. Chaque ligne exige primalité, distinction, ω_i^K=1 et ω_i^(K/2)≠1 ; K puissance de deux donne alors l'ordre exact K. Vérifier aussi les inverses de K et ω_i. Ces cinq paramètres et leurs gardes ont passé le seul contrôle numérique AUX de paramètres ; cela ne prouve aucune réalisation NTT sous Lean ni aucun tableau transformé complet.
+
+CONTRAT ENTIER NTT/CRT — SOURCE/PAPER, À EXÉCUTER ET RAFFINER. Compléter A_n par zéro pour N<n<K. Pour chaque vrai corps F_(p_i),
+F_(i,j)=Σ(n=0..K−1)A_nω_i^(jn) mod p_i,
+r_i=K^−1 Σ(j=0..K−1)F_(i,j)^2ω_i^(−Nj) mod p_i.
+L'orthogonalité de corps finis et le degré≤2N, avec K>N, isolent le coefficient N. Cette implication et les invariants des butterflies DIT/DIF, mots machine et GMP restent des charges SOURCE/PAPER, pas des théorèmes NTT Lean déjà acquis. Π=∏(i=1..5)p_i ; la borne fixée est
+0≤I_A≤(N+1)(32S)^2<2^153<Π.
+Les bornes et le choix CRT appartiennent au contrat PAPER ; le contrôle AUX a vérifié la couverture modulaire, pas le transfert complet. Reconstruire l'unique c∈[0,Π) ayant c mod p_i=r_i, imposer c<2^153, vérifier ses cinq résidus, puis imposer c=I_A par un fold direct indépendant des MÊMES points A. Aucune ambiguïté de signe, approximation complexe ou tolérance ne remplace cette égalité exacte.
+
+CONTRAT RÔLE6 FALSIFIABLE. Couvrir chaque n=0..N, certifier facteurs/primalités et classification PP ; vérifier chaque record natif égal au constructeur canonique A32. Payer le transport des mots/GMP vers les entiers et rationnels Lean. Producteur DIT et checker DIF doivent refaire les cinq transformées complètes et vérifier l'égalité CRT/fold A, tous les inverses et les bornes sans overflow. Les budgets sont : logarithmes E primaire certifié ; alias 0 sous la garde ; NTT/CRT 0 et accumulation 0 uniquement après leurs invariants effectivement payés. Le catalogue entier, les transformées et le coefficient N à 10^8 n'ont pas été évalués complètement.
+
+RÉFÉRENCE AUX B40. Le checker reconstruit séparément des boîtes log40 et leurs restes rationnels, puis ses points B_n et le fold I_B. Imposer |I_A−I_B|≤2(N+1)(64S+1) après précision des deux constructeurs réellement contrôlée. La construction B40 native, son raffinement et sa précision ne sont PAS les preuves A32 du lot17 et restent non Lean. Son intervalle avec rayon E ne sera crédité qu'après paiement de ces obligations. B40 est un contrôle auxiliaire ; le résultat primaire repose sur A32 Lean et le fold A exact, sans prendre B40 comme oracle ni supposer son rayon.
+
+Le seul parameter_guard01 révision02 a testé cinq paramètres modulaires et cinq arguments log {2,3,4,99999989,100000000}, plus la garde tau ; quatre mutants rejetés : modulus composite, racine d'ordre1, point32S pour log2, échelle1. Il ne couvre pas le catalogue ou deux réalisations indépendantes des logs ; Λ(4)=log2. Les futurs mutants PP/records/folds/alias doivent posséder des témoins effectifs ; retirer Λ4 seul ne garantit aucune séparation numérique. Une mauvaise conjugaison est un défaut structurel, sans séparation numérique présumée. Écart CRT/fold exact : réalisation invalide. Rayon insuffisant : INCONCLUSIVE. Ressources dépassées : NO_VERDICT, jamais réfutation de Goldbach.
+
+STATUT DU PROGRAMME. Native02 et BUILD_ONLY02 sont SOURCE, sans compilation ni programme prêt. La revue indépendante SHA1fee0de6627591ae3fb91e26c72649f66d026039230b2b6b6f6d11f10dbe6720 juge le CWD/TMP cohérent au niveau SOURCE. Le préflight conditionnel ROLE6 a conservé les fichiers et analysé des imports PE déclarés ; résolution effective du chargeur, modules dynamiques et sélection GCC restent OPEN. Le prérequis global loader n'est pas payé : aucune préparation de build complète, gate, exécution native ou banque coefficient N n'en résulte. Temps, mémoire disponible et fin du catalogue ne sont pas présumés.
+
+RÉFÉRENCES DES PREUVES DE PRÉCISION INDÉPENDANTES :
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch17\sources\RationalLogQuantization22.lean
+SHA dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch17\sources\QuantizedLambdaEnvelope22.lean
+SHA 526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331.
+Spécification PAPER fixe : projection_contract22_final.md SHA dd86c92c15e05febad687c240eb58d9dae2f930b646356f1dfe99e3bb35a680f ; native_spec22_final.md SHA 6bc24ecfe96437e5c437fe003788194548b379c0c7bbf0dfed81f118c0eb322b, dans round22/role4/circle_ntt_paper01. Leurs statuts historiques sont conservés ; les crédits actuels viennent des lots réels cités ici.
+
+PORTÉE. L'identité extrait un coefficient avec toutes les PP ; elle ne fournit pas d'annulation analytique globale uniforme, de suppression des PP, de positivité universelle ou de contrôle de frontière. Le raccord à D_N≤N/(256 log N log log N) reste OPEN. Le cadre et les acquis sont conservés ; ni annulation modulaire/spectrale nouvelle, ni preuve Goldbach, ni WIN ne sont déclarés.

@@ -1,0 +1,51 @@
+{
+  "schema": "round22.root.role3.compiler_authorization.finite.v2",
+  "role": "ROLE3",
+  "actor_task": "/root/round22_formal3_prepare",
+  "node_id": "16.1",
+  "attempt": "stage02_attempt02",
+  "stage": "G0_FINITE_REVISION02",
+  "authorized": true,
+  "created_utc": "2026-10-03T07:29:27.953066+00:00",
+  "numeric_verdict": "EPSTEIN_UNFOLDING_AUX_PASS",
+  "numeric_receipt_sha256": "054707ed73a7db70bd6bb026a1974663dd5362b6318ee109b22315c21c2e66da",
+  "numeric_result_sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+  "source_manifest_sha256": "01d4513ac7fa8452c82ea1528ec04e0848487e8f7918749cfedd1b8fab4b988f",
+  "launcher_sha256": "8a8020d5baae410b847cf09a10c2e200e66d17902bf0dab93165a14c5427ecb8",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "modules": [
+    "EpsteinFinite22"
+  ],
+  "no_win": true,
+  "child_invocations_maximum": 1,
+  "hidden_retries_allowed": false,
+  "unchanged_PASS_replay_allowed": false,
+  "root_FULL_reads": {
+    "source": "e4d64c",
+    "launcher": "fb48cd",
+    "preparation": "b2c552",
+    "metadata_builder": "7bf4f1",
+    "manifest": "15df81",
+    "read_receipts": "c38aa0",
+    "prepared_receipt": "516c0c",
+    "previous_actual_fail": "2d46e7+1b4568+9cf591"
+  },
+  "formal_scope": "Derived finite affine geometric window, signed substitution, negation isometry and endpoint telescope only; genuine infinite integral and continuous tail remain outside this child.",
+  "forbidden_credits": [
+    "full_G0_unfolding",
+    "Weil",
+    "heat",
+    "operator_scattering",
+    "coefficient_N",
+    "D_N_bound",
+    "WIN"
+  ],
+  "independent_judge_pending": true,
+  "source_sha256": "3510835ffa17206cdbb0bc9da76d1a13bfd304d8229164a658677831ef1c6076",
+  "dependency_olean_sha256": "9bf2da2b6cb3a5780868c51916afdf173e79a971d56fdf7a52c6b2abfa9def8d",
+  "Kernel_recompile": false,
+  "previous_failure_observation_sha256": "ebc41ade914df2bf46964c5f47aa228d5ca40ff526938ff6ed196be430b636e9",
+  "previous_actual_attempt": "stage02_attempt01",
+  "previous_actual_exit": 1
+}

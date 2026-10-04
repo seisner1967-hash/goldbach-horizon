@@ -1,0 +1,91 @@
+{
+  "schema": "ROUND22_JUDGE5_READ_RECEIPTS_BATCH01",
+  "time_utc": "2026-10-03T08:01:26.854820+00:00",
+  "entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\USER_DIRECTIVE.md",
+      "sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+      "scope": "FULL",
+      "output_chunk": "0cc8d5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\PROBE_BLOCK.md",
+      "sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+      "scope": "FULL",
+      "output_chunk": "0cc8d5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\EpsteinKernel22.lean",
+      "sha256": "b465bf53b124fa158eed1b5f01171d18ce7f8d7252bf27cf30db1ed7575a773c",
+      "scope": "FULL",
+      "output_chunk": "c705ad"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\EpsteinFinite22.lean",
+      "sha256": "fb6205d1d88bbe864fd6c45f6ae60c5296812c966d9b2ce8bd2cccfc2128cc2d",
+      "scope": "FULL",
+      "output_chunk": "62d976"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\stage01_attempt02\\receipt.json",
+      "sha256": "45110d30929b8813db95a17c8a931ad459e24b99d59ed76c89a1fea55b1c5cb4",
+      "scope": "FULL",
+      "output_chunk": "fa2ea5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\stage02_attempt03\\receipt.json",
+      "sha256": "a3681f6de47fad0670d8457c36bda0b1eed308ee90f4b137664957b6aeb4a3df",
+      "scope": "FULL",
+      "output_chunk": "bd3df5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\EpsteinUnfold22.lean",
+      "sha256": "10323e3bd95202e9a00b222f5d2fcc4df9f15d769cb00cfc1e64344ce74a5875",
+      "scope": "FULL SOURCE ONLY NOT PASS",
+      "output_chunk": "b3bea2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\stage03_attempt01\\receipt.json",
+      "sha256": "f21ef6a44d1d8af7fec04d795946734d531c1a1d4c4e77714af1586851554abe",
+      "scope": "FULL FAIL RECEIPT",
+      "output_chunk": "f3fd38"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\EpsteinTail22.lean",
+      "sha256": "cab09eaf61d5038f411a02150df1e6bd889f2e7a1fa4b596b709c7f33f7e51c0",
+      "scope": "FULL SOURCE ONLY NOT PASS",
+      "output_chunk": "9a0a7f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\prepare_gamma_metadata2.py",
+      "sha256": "caaedbe02f6a62404bbc81819b47fffe6a5bc9a2407b626f257ae79b41ba9da9",
+      "scope": "FULL METADATA SCANNER REFERENCE",
+      "output_chunk": "c83654"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\weil_gamma_interface22.md",
+      "sha256": "6c001e61c6f7a3e544982aec4ca40162aa6669b47335495f22127cef9db8a860",
+      "scope": "FULL SOURCE ONLY INTERFACE",
+      "output_chunk": "091f71; prior9f1dba truncated not FULL"
+    },
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-executor\\SKILL.md",
+      "sha256": "54f445fb2591b649420013c872e70dc009af42de38162b63e0e76239b8880337",
+      "scope": "FULL",
+      "output_chunk": "89d58e"
+    },
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-merge-eval\\SKILL.md",
+      "sha256": "d0ba4902fd6f101bd79f9918796900c5fad6b05f94379770df48202244c0ecfc",
+      "scope": "FULL",
+      "output_chunk": "147a36"
+    }
+  ],
+  "io_incidents_only": [
+    "Initially looked for author actual_receipt.json; actual names receipt.json",
+    "judge5 absent before creation; no existing judge artifact overwritten",
+    "Broad initial rg encountered three inaccessible old fresh directories; no replay"
+  ],
+  "compiler_invocations": 0,
+  "mathematical_numeric_invocations": 0
+}

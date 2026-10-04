@@ -1,0 +1,50 @@
+REVUE SOURCE INDÉPENDANTE — BRIDGE EXP/QUEUE GAMMA, DEUX THÉORÈMES
+
+Verdict : SOURCE_BRIDGE_COHERENT_WITH_ACTUAL_PAID_DEPENDENCIES_NOT_COMPILED.
+Source relue FULL : ComplexGammaMellinExpTailBridge22.lean,1193B,
+SHA4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c.
+Catalogue pending_bridge_catalog22.json,826B,
+SHA86164d7575b79c3ace42ebb1f56d2b88be0078873f76c0998175c1c0ae6604cb,
+relu FULL. Le catalogue correspond aux deux théorèmes, zéro définition,
+deux imports et deux commandes #print axioms qualifiées réellement écrites.
+Aucune sortie de ces commandes n'est observée pour le bridge.
+
+Les signatures payées ont été relues TARGETED dans les SOURCES indépendantes :
+Holo27 SHA b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2,
+ligne226, donne complexGammaInverse w=Complex.exp(-w) pour Re(w)>0.
+Tail30 SHA e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0,
+lignes125–127 et162–164, donne la décomposition et la borne correspondantes
+pour Re(w)>0,H≥0. Les PASS27 et30 sont réellement observés par ROOT ;
+la baseline actuelle est86 modules/1456 déclarations auxiliaires.
+
+Chaque preuve du bridge remplace exp(-w) par l'inverse réellement identifié
+via rw [← complexGammaInverse_eq_exp hw], puis applique le théorème Tail
+aux mêmes w,H,hw,hH. Le sens de la réécriture et les types ℂ/ℝ coïncident.
+Ainsi les conclusions écrites sont exactement
+  exp(-w)-G_H(w)=TΓ(w,H),
+  ‖exp(-w)-G_H(w)‖≤R(w,H),
+où G_H=(1/(2π))∫_{[-H,H]}Γ(2+it)w^(-2-it)dt,
+TΓ=(1/(2π))(∫_H^∞K(w,-t)dt+∫_H^∞K(w,t)dt),
+R=C(w)exp(-δ(w)H)/(πδ(w)). La normalisation et les deux signes sont
+ceux du vrai Tail30, pas un nouvel objet supposé égal. H=0 est admis.
+Il n'y a ni identité finale, ni intégrabilité, ni majorant libre en prémisse.
+
+Le bridge importe seulement Holo et Tail ; aucune conclusion mainΛ30,
+pondération D, annulation signée, géométrie compacte ou coefficient numérique
+n'est supposée acquise. Il ne démontre pas EΛ=6R et ne prend aucun verdict
+numérique comme preuve. Ses nouveaux théorèmes restent SOURCE non compilés.
+
+Observation documentaire précise : le commentaire SOURCE et le champ
+pending_dependency du catalogue conservent leur état historique après FAIL28
+et citent Tail SOURCE02. Ces pièces gelées n'ont pas été modifiées. Depuis,
+la vraie réparation Tail03 a obtenu PASS22 au lot30. La future préparation
+doit donc relier explicitement les oleans indépendants Holo27/Tail30, sans
+confondre la métadonnée historique avec une dette scientifique encore impayée.
+Ce décalage documentaire n'est ni un FAIL Lean du bridge ni une objection
+mathématique à ses deux preuves. Il n'autorise pas leur compilation.
+
+Aucun défaut SOURCE précis trouvé au scope de cette revue. Les instances,
+imports et nouveaux prints restent à vérifier lors d'une invocation réellement
+sélectionnée et autorisée. Zéro compilation, probe, candidat, numérique,
+PREP ou gate ici ; aucun fichier ROLE4 ou ancien artefact modifié.
+Le contrat07 reste DRAFT, D_N et WIN ouverts.

@@ -1,0 +1,105 @@
+{
+  "module": "GammaContourComponent22",
+  "start_utc": "2026-10-03T11:27:05.666576+00:00",
+  "finish_utc": "2026-10-03T11:27:29.293956+00:00",
+  "exit_code": 1,
+  "stdout_sha256": "1e72a122b34680b073571e620e16125e55ce4a7b6c20ed43fdd62128bd588510",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_sha256": "244f20f0d0198101b6b2a27841b273b01f7c52f28a38b7b51b4db588446f4265",
+  "olean_sha256": null,
+  "qualified_axiom_rows": [
+    {
+      "declaration": "GoldbachContinuous22.gammaContourPoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.gammaContourFactor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.gammaContourEnvelope",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.norm_weightedGammaTerm_on_outer_strip",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.gammaContourFactor_continuous",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.norm_gammaContourFactor_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.real_exponential_tail_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.integral_real_exponential_tail",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.gammaContourFactor_tail_integrable_and_bound",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.gammaContourEnvelope_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.gammaContourEnvelope_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "exact_standard_axiom_coverage": false,
+  "status": "AUTHOR_ANALYTIC_FAIL"
+}

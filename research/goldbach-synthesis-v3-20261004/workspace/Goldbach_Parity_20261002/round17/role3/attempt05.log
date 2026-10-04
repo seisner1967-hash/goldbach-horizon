@@ -1,0 +1,74 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:282:20: error: failed to synthesize
+  Decidable (divides F d q)
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:284:4: error: failed to synthesize
+  DecidablePred fun q => divides F d q
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:292:15: error: failed to synthesize
+  Decidable (divides F d q)
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:293:7: error: failed to synthesize
+  Decidable (divides F t q)
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:294:20: error: failed to synthesize
+  DecidablePred fun q => divides F (d ∪ t) q
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:301:20: error: simp_all made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:297:65: error: unsolved goals
+unknown goal
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:297:65: error: unknown metavariable '?_uniq.99654'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:302:13: error: unsolved goals
+J : Finset ℕ
+F : ℕ → ℤ
+w : Finset ℕ → ℝ
+d t : Finset ℕ
+⊢ w d * w t * ↑(#(filter (fun a => divides F (d ∪ t) a) J)) = sorry * (w d * w t)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:324:49: error: unsolved goals
+P J : Finset ℕ
+F : ℕ → ℤ
+g : ℕ → ℝ
+w : Finset ℕ → ℝ
+d : Finset ℕ
+hd : d ∈ P.powerset
+t : Finset ℕ
+ht : t ∈ P.powerset
+⊢ sorry * (w d * w t) = w d * w t * ↑(#(filter (fun q => divides F (d ∪ t) q) J))
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:311:49: error: unsolved goals
+P J : Finset ℕ
+F : ℕ → ℤ
+g : ℕ → ℝ
+w : Finset ℕ → ℝ
+hsq :
+  ∑ q ∈ J, sieveValue P F w q ^ 2 =
+    ∑ d ∈ P.powerset, ∑ t ∈ P.powerset, w d * w t * ↑(#(filter (fun q => divides F (d ∪ t) q) J))
+⊢ ∑ x ∈ P.powerset, ∑ x_1 ∈ P.powerset, w x * w x_1 * ↑(#(filter (fun q => divides F (x ∪ x_1) q) J)) =
+    ∑ x ∈ P.powerset, ∑ x_1 ∈ P.powerset, w x * w x_1 * sorry +
+      (∑ x ∈ P.powerset, ∑ x_1 ∈ P.powerset, ↑(#J) * w x * w x_1 * gprod g (x ∪ x_1) -
+        ∑ x ∈ P.powerset, ∑ x_1 ∈ P.powerset, w x * w x_1 * ↑(#J) * gprod g (x ∪ x_1))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:344:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∑ x ∈ P.powerset, if divides F x q then w x else 0
+P : Finset ℕ
+F : ℕ → ℤ
+w : Finset ℕ → ℝ
+hw : w ∅ = 1
+q : ℕ
+hq : rough P F q
+hterm : ∀ d ∈ P.powerset, (if divides F d q then w d else 0) = if d = ∅ then 1 else 0
+⊢ ∑ d ∈ P.powerset, sorry = 1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:349:6: error: failed to synthesize
+  DecidablePred fun q => rough P F q
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:356:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ↑(#(filter (fun q => rough P F q) J))
+P J : Finset ℕ
+F : ℕ → ℤ
+w : Finset ℕ → ℝ
+hw : w ∅ = 1
+hc : ↑(#(filter (fun q => rough P F q) J)) = ∑ q ∈ J, if rough P F q then 1 else 0
+⊢ sorry ≤ ∑ q ∈ J, sieveValue P F w q ^ 2
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:365:6: error: failed to synthesize
+  DecidablePred fun q => rough P F q
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'GoldbachRound17.Selberg.finite_upper_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,438 @@
+{
+  "status": "SOURCE_AND_LAUNCHER_PREPARATION_ONLY_NO_LEAN_EXECUTION",
+  "node_id": "13.12",
+  "round": 20,
+  "role": 3,
+  "prepared_utc": "2026-10-03T02:56:58.385141+00:00",
+  "actual_lean_invocations": 0,
+  "actual_numeric_producer_invocations": 0,
+  "old_lean_rebuilds": 0,
+  "old_PASS_replays": 0,
+  "victory": false,
+  "written_modules": [
+    {
+      "module": "OddBonferroniArithmetic",
+      "path": "round20/role3/OddBonferroniArithmetic.lean",
+      "sha256": "d73a95a78912678878e379b73c60553946b705a1d74c5b37b7ba86d2678c1921",
+      "bytes": 12071,
+      "definitions": 8,
+      "theorems": 18,
+      "axiom_prints": 26,
+      "declarations": [
+        "GoldbachRound20.SwitchedComposite.smallSievePrimes",
+        "GoldbachRound20.SwitchedComposite.primeProduct",
+        "GoldbachRound20.SwitchedComposite.sievePrimorial",
+        "GoldbachRound20.SwitchedComposite.metSievePrimes",
+        "GoldbachRound20.SwitchedComposite.roughIndicator",
+        "GoldbachRound20.SwitchedComposite.oddBonferroniWeight",
+        "GoldbachRound20.SwitchedComposite.sieveDivisorCatalogue",
+        "GoldbachRound20.SwitchedComposite.arithmeticBonferroniXi",
+        "GoldbachRound20.SwitchedComposite.mem_smallSievePrimes",
+        "GoldbachRound20.SwitchedComposite.mem_metSievePrimes",
+        "GoldbachRound20.SwitchedComposite.metSievePrimes_subset",
+        "GoldbachRound20.SwitchedComposite.product_dvd_iff",
+        "GoldbachRound20.SwitchedComposite.moebius_primeProduct",
+        "GoldbachRound20.SwitchedComposite.primeProduct_injective",
+        "GoldbachRound20.SwitchedComposite.primeProduct_squarefree_arithmetic",
+        "GoldbachRound20.SwitchedComposite.sievePrimorial_squarefree",
+        "GoldbachRound20.SwitchedComposite.sieveDivisorCatalogue_eq_divisors",
+        "GoldbachRound20.SwitchedComposite.oddBonferroni_divisor_formula",
+        "GoldbachRound20.SwitchedComposite.oddBonferroni_actualXi_formula",
+        "GoldbachRound20.SwitchedComposite.truncated_alternating_choose",
+        "GoldbachRound20.SwitchedComposite.truncated_choose_zero",
+        "GoldbachRound20.SwitchedComposite.card_filtered_powerset_sum",
+        "GoldbachRound20.SwitchedComposite.oddBonferroni_eq_met_powerset",
+        "GoldbachRound20.SwitchedComposite.oddBonferroni_eq_binomial",
+        "GoldbachRound20.SwitchedComposite.oddBonferroni_le_roughIndicator",
+        "GoldbachRound20.SwitchedComposite.oddBonferroni_slack_nonneg"
+      ],
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "LeastFactorComposite",
+      "path": "round20/role3/LeastFactorComposite.lean",
+      "sha256": "a5a64f2b934dab494d8b535fdbd648c9db929dfb9fbe1570c4fb205b9b66332a",
+      "bytes": 6041,
+      "definitions": 2,
+      "theorems": 14,
+      "axiom_prints": 16,
+      "declarations": [
+        "GoldbachRound20.SwitchedComposite.leastPrimeQuotient",
+        "GoldbachRound20.SwitchedComposite.compositeLeastFactor",
+        "GoldbachRound20.SwitchedComposite.leastPrimeQuotient_reconstruct",
+        "GoldbachRound20.SwitchedComposite.leastPrimeCompositeWitness",
+        "GoldbachRound20.SwitchedComposite.prime_divisor_unit",
+        "GoldbachRound20.SwitchedComposite.minFac_rough_quotient",
+        "GoldbachRound20.SwitchedComposite.minFac_roughIndicator",
+        "GoldbachRound20.SwitchedComposite.minFac_oddBonferroni",
+        "GoldbachRound20.SwitchedComposite.nonminimal_prime_met",
+        "GoldbachRound20.SwitchedComposite.nonminimal_prime_roughIndicator_zero",
+        "GoldbachRound20.SwitchedComposite.nonminimal_prime_oddBonferroni_nonpos",
+        "GoldbachRound20.SwitchedComposite.rough_prime_divisor_is_minFac",
+        "GoldbachRound20.SwitchedComposite.square_is_composite",
+        "GoldbachRound20.SwitchedComposite.square_minFac",
+        "GoldbachRound20.SwitchedComposite.square_quotient",
+        "GoldbachRound20.SwitchedComposite.square_oddBonferroni"
+      ],
+      "imports": [
+        "OddBonferroniArithmetic"
+      ]
+    },
+    {
+      "module": "SwitchedSelbergWeight",
+      "path": "round20/role3/SwitchedSelbergWeight.lean",
+      "sha256": "8d99ee865c4d94e12583be1ceba43b13b9693ea35240e6d4c28195e2fc28fc21",
+      "bytes": 8441,
+      "definitions": 7,
+      "theorems": 15,
+      "axiom_prints": 22,
+      "declarations": [
+        "GoldbachRound20.SwitchedComposite.switchedPrimeSupport",
+        "GoldbachRound20.SwitchedComposite.totientDensity",
+        "GoldbachRound20.SwitchedComposite.switchedG",
+        "GoldbachRound20.SwitchedComposite.switchedLambda",
+        "GoldbachRound20.SwitchedComposite.switchedDivisorSum",
+        "GoldbachRound20.SwitchedComposite.switchedWeight",
+        "GoldbachRound20.SwitchedComposite.switchedPrincipal",
+        "GoldbachRound20.SwitchedComposite.mem_switchedPrimeSupport",
+        "GoldbachRound20.SwitchedComposite.switchedSupport_prime",
+        "GoldbachRound20.SwitchedComposite.switchedSupport_three_le",
+        "GoldbachRound20.SwitchedComposite.totientDensity_properties",
+        "GoldbachRound20.SwitchedComposite.switchedG_pos",
+        "GoldbachRound20.SwitchedComposite.switchedLambda_empty",
+        "GoldbachRound20.SwitchedComposite.switchedPrincipal_optimum",
+        "GoldbachRound20.SwitchedComposite.switchedLambda_zero_large",
+        "GoldbachRound20.SwitchedComposite.switchedLambda_moebius_formula",
+        "GoldbachRound20.SwitchedComposite.switchedDivisorSum_prime",
+        "GoldbachRound20.SwitchedComposite.switchedWeight_prime",
+        "GoldbachRound20.SwitchedComposite.switchedWeight_nonneg",
+        "GoldbachRound20.SwitchedComposite.switchedWeight_doubleExpansion",
+        "GoldbachRound20.SwitchedComposite.canonical_p0_sieve_empty",
+        "GoldbachRound20.SwitchedComposite.canonical_p0_Bonferroni"
+      ],
+      "imports": [
+        "OddBonferroniArithmetic",
+        "SelbergFourForms",
+        "EulerAnchor"
+      ]
+    },
+    {
+      "module": "PhysicalCompositeSubtraction",
+      "path": "round20/role3/PhysicalCompositeSubtraction.lean",
+      "sha256": "195d5bae746da74f157e03ffbac109f818f21963776fc50a2776040f05381370",
+      "bytes": 7925,
+      "definitions": 9,
+      "theorems": 11,
+      "axiom_prints": 20,
+      "declarations": [
+        "GoldbachRound20.SwitchedComposite.switchedConductor",
+        "GoldbachRound20.SwitchedComposite.switchedCandidate",
+        "GoldbachRound20.SwitchedComposite.fixedPhysicalAxes",
+        "GoldbachRound20.SwitchedComposite.physicalQDomain",
+        "GoldbachRound20.SwitchedComposite.physicalPrimeMass",
+        "GoldbachRound20.SwitchedComposite.physicalRawMass",
+        "GoldbachRound20.SwitchedComposite.physicalSelbergMass",
+        "GoldbachRound20.SwitchedComposite.physicalCompositeMass",
+        "GoldbachRound20.SwitchedComposite.physicalProperPowerDifference",
+        "GoldbachRound20.SwitchedComposite.mem_physicalQDomain",
+        "GoldbachRound20.SwitchedComposite.physicalQDomain_prime",
+        "GoldbachRound20.SwitchedComposite.physicalQDomain_mask",
+        "GoldbachRound20.SwitchedComposite.physicalQDomain_front",
+        "GoldbachRound20.SwitchedComposite.physicalQDomain_unit",
+        "GoldbachRound20.SwitchedComposite.physicalCandidate_unit_N",
+        "GoldbachRound20.SwitchedComposite.physicalCandidate_unit_tN",
+        "GoldbachRound20.SwitchedComposite.physicalCompositeSubtraction",
+        "GoldbachRound20.SwitchedComposite.physicalCompositeMass_nonneg",
+        "GoldbachRound20.SwitchedComposite.physicalRaw_theta_difference",
+        "GoldbachRound20.SwitchedComposite.physicalCompositeMass_leastFactor"
+      ],
+      "imports": [
+        "LeastFactorComposite",
+        "SwitchedSelbergWeight",
+        "SeparatedTypeII"
+      ]
+    },
+    {
+      "module": "CompositeAPConductor",
+      "path": "round20/role3/CompositeAPConductor.lean",
+      "sha256": "aad40a8bef72bcd6eac733302f643634f337cc2aa7cc6824548ed544bdda2c48",
+      "bytes": 10714,
+      "definitions": 2,
+      "theorems": 15,
+      "axiom_prints": 17,
+      "declarations": [
+        "GoldbachRound20.SwitchedComposite.compositeAPConductor",
+        "GoldbachRound20.SwitchedComposite.physicalCompositeWindow",
+        "GoldbachRound20.SwitchedComposite.prime_coprime_primeProduct",
+        "GoldbachRound20.SwitchedComposite.primeProduct_squarefree",
+        "GoldbachRound20.SwitchedComposite.primeProduct_lcm",
+        "GoldbachRound20.SwitchedComposite.totient_primeProduct",
+        "GoldbachRound20.SwitchedComposite.totient_product_kernel",
+        "GoldbachRound20.SwitchedComposite.switchedPrincipal_totient_lcm",
+        "GoldbachRound20.SwitchedComposite.composite_conductor_dvd_iff",
+        "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_dvd_iff",
+        "GoldbachRound20.SwitchedComposite.arithmetic_subset_conductor_full_iff",
+        "GoldbachRound20.SwitchedComposite.physical_candidate_AP_iff",
+        "GoldbachRound20.SwitchedComposite.physical_nonunit_conductor_zero",
+        "GoldbachRound20.SwitchedComposite.physical_nonunit_AP_impossible",
+        "GoldbachRound20.SwitchedComposite.physicalCompositeWindow_cap",
+        "GoldbachRound20.SwitchedComposite.canonical_p0_totient_factor",
+        "GoldbachRound20.SwitchedComposite.canonical_p0_dividing_t_empty"
+      ],
+      "imports": [
+        "PhysicalCompositeSubtraction",
+        "RankCalibrationFace"
+      ]
+    },
+    {
+      "module": "SwitchedIncidenceEstimator",
+      "path": "round20/role3/SwitchedIncidenceEstimator.lean",
+      "sha256": "7ae215c13c6f8ae5feb3a4b6628025070afe94c9b717d2de779c39d083538c7b",
+      "bytes": 21445,
+      "definitions": 22,
+      "theorems": 18,
+      "axiom_prints": 40,
+      "declarations": [
+        "GoldbachRound20.SwitchedComposite.compositeCellPrimes",
+        "GoldbachRound20.SwitchedComposite.lowCompositeMask",
+        "GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient",
+        "GoldbachRound20.SwitchedComposite.roughCompositeCoefficient",
+        "GoldbachRound20.SwitchedComposite.physicalLowCompositeMass",
+        "GoldbachRound20.SwitchedComposite.physicalLargeCompositeMass",
+        "GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass",
+        "GoldbachRound20.SwitchedComposite.physicalBonferroniSlack",
+        "GoldbachRound20.SwitchedComposite.mem_compositeCellPrimes",
+        "GoldbachRound20.SwitchedComposite.roughCompositeCoefficient_exact",
+        "GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient_le_mask",
+        "GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass_le_low",
+        "GoldbachRound20.SwitchedComposite.physicalBonferroniSlack_nonneg",
+        "GoldbachRound20.SwitchedComposite.physicalCompositeMass_partition",
+        "GoldbachRound20.SwitchedComposite.physicalLargeCompositeMass_nonneg",
+        "GoldbachRound20.SwitchedComposite.bonferroniComposite_exact_with_slack",
+        "GoldbachRound20.SwitchedComposite.bonferroniCompositeUpper",
+        "GoldbachRound20.SwitchedComposite.actualPrimeAP",
+        "GoldbachRound20.SwitchedComposite.actualCompositeAP",
+        "GoldbachRound20.SwitchedComposite.physicalSelbergMass_AP_expansion",
+        "GoldbachRound20.SwitchedComposite.frameLower",
+        "GoldbachRound20.SwitchedComposite.frameUpper",
+        "GoldbachRound20.SwitchedComposite.frameInterval",
+        "GoldbachRound20.SwitchedComposite.logarithmicAPIntegral",
+        "GoldbachRound20.SwitchedComposite.compositeAPIntegral",
+        "GoldbachRound20.SwitchedComposite.compatibleAPMain",
+        "GoldbachRound20.SwitchedComposite.actualAPMain",
+        "GoldbachRound20.SwitchedComposite.compositePrimeCatalogue",
+        "GoldbachRound20.SwitchedComposite.compositeCells_catalogue_reindex",
+        "GoldbachRound20.SwitchedComposite.lowerCompositeCoefficient_catalogue",
+        "GoldbachRound20.SwitchedComposite.lowerCompositeWeight_literal_expansion",
+        "GoldbachRound20.SwitchedComposite.physicalLowerCompositeMass_AP_expansion",
+        "GoldbachRound20.SwitchedComposite.constructedSelbergMain",
+        "GoldbachRound20.SwitchedComposite.constructedCompositeMain",
+        "GoldbachRound20.SwitchedComposite.actualSelbergRemainder",
+        "GoldbachRound20.SwitchedComposite.actualCompositeRemainder",
+        "GoldbachRound20.SwitchedComposite.actualPrimeAP_nonunit_zero",
+        "GoldbachRound20.SwitchedComposite.constructed_main_actual_remainder",
+        "GoldbachRound20.SwitchedComposite.switchedIncidenceEstimator",
+        "GoldbachRound20.SwitchedComposite.switchedIncidence_reference_price"
+      ],
+      "imports": [
+        "CompositeAPConductor"
+      ]
+    }
+  ],
+  "new_module_order": [
+    "OddBonferroniArithmetic",
+    "LeastFactorComposite",
+    "SwitchedSelbergWeight",
+    "PhysicalCompositeSubtraction",
+    "CompositeAPConductor",
+    "SwitchedIncidenceEstimator"
+  ],
+  "module_namespace": "GoldbachRound20.SwitchedComposite",
+  "historical_module_closure": {
+    "SelbergFourForms": {
+      "source": "round17/judge/build/SelbergFourForms.lean",
+      "source_sha256": "b1b658aa92f8e02cef29667e9e60b763ca3ef57bb25dcbc8aa9c50ba33591ce1",
+      "olean": "round17/judge/build/SelbergFourForms.olean",
+      "olean_sha256": "9639c1f7ae9eb03d07c1de2fd79cdea4dd503d29716e5de3adb4085de21fc46c",
+      "imports": [
+        "Mathlib",
+        "FourFormRoots"
+      ]
+    },
+    "FourFormRoots": {
+      "source": "round17/judge/build/FourFormRoots.lean",
+      "source_sha256": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa",
+      "olean": "round17/judge/build/FourFormRoots.olean",
+      "olean_sha256": "4a13fc20feabfd5ff552f5dbd18c99c6b66bcfe1a65a3f44fff555417d7b4021",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    "EulerAnchor": {
+      "source": "round16/judge/build/EulerAnchor.lean",
+      "source_sha256": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+      "olean": "round16/judge/build/EulerAnchor.olean",
+      "olean_sha256": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+      "imports": [
+        "Mathlib.NumberTheory.EulerProduct.Basic",
+        "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+        "Mathlib.Topology.Algebra.InfiniteSum.Order",
+        "ThreeAdicPrimePairing",
+        "LeastMissingPrimeMargin"
+      ]
+    },
+    "ThreeAdicPrimePairing": {
+      "source": "round13/role4/dependencies/ThreeAdicPrimePairing.lean",
+      "source_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+      "olean": "round13/role4/dependencies/ThreeAdicPrimePairing.olean",
+      "olean_sha256": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+      "imports": [
+        "ShortDivisorComplement",
+        "Mathlib.Data.Nat.Totient"
+      ]
+    },
+    "ShortDivisorComplement": {
+      "source": "round13/role4/dependencies/ShortDivisorComplement.lean",
+      "source_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "olean": "round13/role4/dependencies/ShortDivisorComplement.olean",
+      "olean_sha256": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+      "imports": [
+        "Mathlib.NumberTheory.VonMangoldt",
+        "Mathlib.Tactic"
+      ]
+    },
+    "LeastMissingPrimeMargin": {
+      "source": "round16/judge/build/LeastMissingPrimeMargin.lean",
+      "source_sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+      "olean": "round16/judge/build/LeastMissingPrimeMargin.olean",
+      "olean_sha256": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+      "imports": [
+        "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+        "Mathlib.Tactic"
+      ]
+    },
+    "SeparatedTypeII": {
+      "source": "round18/judge/build/SeparatedTypeII.lean",
+      "source_sha256": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+      "olean": "round18/judge/build/SeparatedTypeII.olean",
+      "olean_sha256": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    "RankCalibrationFace": {
+      "source": "round19/judge/build/RankCalibrationFace.lean",
+      "source_sha256": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+      "olean": "round19/judge/build/RankCalibrationFace.olean",
+      "olean_sha256": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90",
+      "imports": [
+        "SeparatedTypeII"
+      ]
+    }
+  },
+  "historical_dependencies_sha256": {
+    "round17/judge/build/SelbergFourForms.lean": "b1b658aa92f8e02cef29667e9e60b763ca3ef57bb25dcbc8aa9c50ba33591ce1",
+    "round17/judge/build/SelbergFourForms.olean": "9639c1f7ae9eb03d07c1de2fd79cdea4dd503d29716e5de3adb4085de21fc46c",
+    "round17/judge/build/FourFormRoots.lean": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa",
+    "round17/judge/build/FourFormRoots.olean": "4a13fc20feabfd5ff552f5dbd18c99c6b66bcfe1a65a3f44fff555417d7b4021",
+    "round16/judge/build/EulerAnchor.lean": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+    "round16/judge/build/EulerAnchor.olean": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+    "round13/role4/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "round13/role4/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+    "round16/judge/build/LeastMissingPrimeMargin.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+    "round16/judge/build/LeastMissingPrimeMargin.olean": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+    "round18/judge/build/SeparatedTypeII.lean": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+    "round18/judge/build/SeparatedTypeII.olean": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+    "round19/judge/build/RankCalibrationFace.lean": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+    "round19/judge/build/RankCalibrationFace.olean": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90"
+  },
+  "historical_library_dirs": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\judge\\build",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies"
+  ],
+  "cache_library_dirs": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib"
+  ],
+  "lean_executable": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "python_executable": "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "mathlib_HEAD_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.git\\HEAD",
+  "mathlib_HEAD_sha256": "859f0bcf5badac4dda09c9a1c70f93f7cceca4948be85dba4f013b6ecef6d9d0",
+  "mathlib_root_source_sha256": "be5b3fcee793f7f03bce796ac4c20f6029cae0fc4fcc9475bfcd751bb20a51dc",
+  "mathlib_root_olean_sha256": "c9ebbe3498b1fef018c8b3af6ff158c75e9ee2ff757cdb06bc7746ce0193921d",
+  "launcher_sha256": "323fbb9474088a8b09d909815653cfc3137b8c5623c2f5fb94556cbb0433c7d3",
+  "metadata_freezer_sha256": "5f14073a7e7a9e632b0703a05c8a90dcf425a4d3c196e78fc15006e3f811e961",
+  "selection_sha256": "76ec5e44560ee8f6b72e57079f8a0209f99a377a5a70b2b8bc257a2ead0c63d9",
+  "executor_prompt_sha256": "2e1aa422888fd4986e062edf8b8b9535179d48f7eec929cc1d2d1baf94e5d6af",
+  "paper_inputs_sha256": {
+    "round20/PROBE_BLOCK.md": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+    "round20/agent1_switched_composite.md": "1c52ccfe6aaf393fe02b606ecbaeb56ae62810f0b93d6db604672ba560a241d9",
+    "round20/role3/mathematical_preparation.md": "7683b973d57f422bb7cd99beea7cc64422646e358df2c003b97618beeec12f13"
+  },
+  "original_documents_sha256": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+  },
+  "canonical_bank_and_root_compile_authorization_required": true,
+  "semantic_limits": [
+    "All source theorems remain uncompiled; declaration counts are not PASS counts.",
+    "Bonferroni uses actual primorial divisors and all signed p/h/d/e cells, with p=minFac and p^2 admissible.",
+    "Physical masks, theta/rawLambda difference, nonunits, floor caps, slack and composite tail remain literal.",
+    "Shared-factor AP conductors use actual lcm/gcd; arithmetic principal uses phi(lcm).",
+    "Actual remainder is physical AP mass minus its constructed main, without any assumed small Gamma.",
+    "Ordinary AP endpoint/source bridge, B6 bounds, BV constants, SD, total reference price and full ledger target remain open.",
+    "The canonical p0 branch has an explicit zero case and phi factor, but its net compensated gain is not credited.",
+    "Source onset remains log N >= 10^24; the finite bank does not establish this onset."
+  ],
+  "authorization_schema": {
+    "compile_authorization_token": "ROOT20_FORMAL3_COMPILE",
+    "node_id": "13.12",
+    "formal3_candidate_compilation_authorized": true,
+    "root_full_read_current_formal3_sources_and_launcher_confirmed": true,
+    "canonical_numeric_pass": true,
+    "actual_identity_false": false,
+    "actual_numeric_exit_code": 0,
+    "authorized_new_modules": [
+      "OddBonferroniArithmetic",
+      "LeastFactorComposite",
+      "SwitchedSelbergWeight",
+      "PhysicalCompositeSubtraction",
+      "CompositeAPConductor",
+      "SwitchedIncidenceEstimator"
+    ],
+    "checked_inputs_sha256": "Nonempty root-verified project-relative bank producer/result/receipt bindings",
+    "initial_sources_sha256": "Project-relative bindings for each of the six source modules",
+    "launcher_sha256": "Root-reviewed current build_once.py SHA256",
+    "preparation_sha256": "Root-reviewed current preparation.json SHA256",
+    "allow_source_changed_repairs_after_actual_failure": "Boolean; never permits unchanged FAIL or PASS replay"
+  },
+  "preexecution_static_scope_correction": {
+    "reason": "Close anonymous noncomputable section before closing named namespace",
+    "updater_sha256": "3f879b19759c229f6881519a51f95a169b29c3aa205949800c6b18d7fa923d0e",
+    "previous_preparation_sha256": "3032dcb0ea95bc004b79f1e2b90a332ca2e8e3eb6b195d340f98520d3a334ff6",
+    "source_snapshots": {
+      "round20/role3/scope_correction20/CompositeAPConductor_PREUPDATE.lean.txt": "89f961da081582bd4e64c631eb71fee1be6ef713d3b2069537622dcbfaa8cbe4",
+      "round20/role3/scope_correction20/LeastFactorComposite_PREUPDATE.lean.txt": "dac70051af75c4f67a9c0649d673f47d3b98e3da8810e39c20d2bc38e56778c6",
+      "round20/role3/scope_correction20/OddBonferroniArithmetic_PREUPDATE.lean.txt": "e96ed666a15bd65963fea54c90ed76ee806170db27ea0f923d09c5538b4b0b5d",
+      "round20/role3/scope_correction20/PhysicalCompositeSubtraction_PREUPDATE.lean.txt": "8cd5a8f33c614a264a9d50ca82f3a5304751fb765488a17bacb43a02d00812a4",
+      "round20/role3/scope_correction20/SwitchedIncidenceEstimator_PREUPDATE.lean.txt": "5ade9a1660eca3210126c67695767ce70547b8d84441c53411983b9bde736ec2",
+      "round20/role3/scope_correction20/SwitchedSelbergWeight_PREUPDATE.lean.txt": "d18ab011a83126d2b0f140964879b012e5e2d040b8e6bddc2463ac4e16859d84"
+    },
+    "actual_Lean_failures": 0
+  }
+}

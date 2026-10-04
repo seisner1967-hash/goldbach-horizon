@@ -1,0 +1,25 @@
+{
+  "status": "COMPILED_AUXILIARY_ACTUAL_LCM_IDENTITY",
+  "final": true,
+  "victory": false,
+  "score": 0,
+  "only_new_module_compiled": true,
+  "old_bank_replayed": false,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "conclusions": 9,
+  "files_sha256": {
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\SquarefreeLcmCoefficient.lean": "f791b4be0f731244a44449f27bb236c7890a8265c0e7fa6d55150a1a230e1ba6",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\agent3_formalisation.md": "a9b85fb0801736a7938575ef11719a1a9e4df5e0b67b0dcd706c725482f4127e",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build.py": "8641ef1026c82307b325d2a629d30323539b54b564365e5d663d8e168f719d9f",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build_receipt.json": "cc9510fbd512314e5bb79a5dd097341b826097a6c7f0bd9686c57e5e1b0b9123",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\SquarefreeLcmCoefficient.olean": "7ae468c5f94b93113c6cbbd90464509ba9bda67f286bd61df4d5134042bdc2af",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\role3_build\\attempt03.log": "6fe78585da6cfe8564351653b7603a1020c735b390739c2f578f1aed05c690fc"
+  },
+  "gate_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+  "gate_script_sha256": "b58ea3d4fc41ffb60c548a44e6f92bad2fc01d812bf3a4338d2b0d70d834f1c1",
+  "semantic_audit": "B2-B11 preserve distinct queues and acquired reference principal; B13, BV onset and covered e open"
+}

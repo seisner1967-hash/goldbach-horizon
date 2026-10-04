@@ -1,0 +1,95 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:12:2: error: failed to synthesize
+  Fintype (ZMod l)
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:19:20: error: failed to synthesize
+  HDiv (ZMod l) (ZMod l) ?m.5768
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:20:4: error: failed to synthesize
+  HDiv (ZMod l) (ZMod l) ?m.6192
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:32:2: warning: declaration uses 'sorry'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:31:60: error: unsolved goals
+l N e p0 : ℕ
+inst✝ : Fact (Nat.Prime l)
+x : ZMod l
+⊢ x ∈ sorry l N e p0 ↔ actualForm l N e p0 x = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:34:70: error: unsolved goals
+l N e p0 : ℕ
+inst✝ : Fact (Nat.Prime l)
+⊢ 0 ∈ sorry l N e p0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:72:4: warning: declaration uses 'sorry'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:73:2: error: unsolved goals
+case inl.inl.inr
+l N e p0 : ℕ
+inst✝ : Fact (Nat.Prime l)
+heN : e.Coprime N
+hpN : p0.Coprime N
+x : ZMod l
+hx : x ∈ actualRoots l N e p0
+hxe : ↑N - ↑e * x = 0
+⊢ (↑N = 0 ∨ ↑e = 0) ∨ ↑N / ↑e = ↑N ∨ ↑N / ↑e = sorry
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:75:2: error: unsolved goals
+case inr
+l N e p0 : ℕ
+inst✝ : Fact (Nat.Prime l)
+heN : e.Coprime N
+hpN : p0.Coprime N
+x : ZMod l
+hx : x ∈ actualRoots l N e p0
+hxp : ↑N - ↑p0 * x = 0
+⊢ (↑N = 0 ∨ ↑p0 = 0) ∨ ↑N / ↑p0 = ↑N ∨ ↑N / ↑p0 = sorry
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:77:8: warning: declaration uses 'sorry'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:112:4: error: unsolved goals
+case h.mpr.inr.inr.inl
+l N e p0 : ℕ
+inst✝ : Fact (Nat.Prime l)
+he : ↑e ≠ 0
+hp : ↑p0 ≠ 0
+x : ZMod l
+hxe : x = sorry
+hmul : ↑e * (↑N / ↑e) = ↑N
+⊢ ((sorry = 0 ∨ ↑N - ↑e * sorry = 0) ∨ ↑N - sorry = 0) ∨ ↑N - ↑p0 * sorry = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:116:4: error: unsolved goals
+case h.mpr.inr.inr.inr
+l N e p0 : ℕ
+inst✝ : Fact (Nat.Prime l)
+he : ↑e ≠ 0
+hp : ↑p0 ≠ 0
+x : ZMod l
+hxp : x = sorry
+hmul : ↑p0 * (↑N / ↑p0) = ↑N
+⊢ ((sorry = 0 ∨ ↑N - ↑e * sorry = 0) ∨ ↑N - sorry = 0) ∨ ↑N - ↑p0 * sorry = 0
+'GoldbachRound17.FourFormRoots.actualForm' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.FourFormRoots.actualRoots' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachRound17.FourFormRoots.actualRho' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachRound17.FourFormRoots.localDensity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.candidates' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachRound17.FourFormRoots.collisionProduct' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.FourFormRoots.natDelta' does not depend on any axioms
+'GoldbachRound17.FourFormRoots.mem_actualRoots' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachRound17.FourFormRoots.zero_mem_actualRoots' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_lower' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_le_modulus' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.coprime_cast_not_both_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.linear_root_eq_div_of_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.linear_root_eq_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.roots_subset_candidates' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormRoots.candidates_card_le_four' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_le_four' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_bounds' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.roots_eq_candidates_of_nonzero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormRoots.density_positive' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.density_lt_one_of_nonsaturated' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:154:0: error: invalid 'end', name mismatch (expected nothing)

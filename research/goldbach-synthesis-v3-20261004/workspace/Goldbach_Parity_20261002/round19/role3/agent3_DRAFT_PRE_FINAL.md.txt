@@ -1,0 +1,11 @@
+# DRAFT3 — formalisation du prix de rang, node13.11
+
+Le prédécesseur avait fourni les six sources et PREPARATION_REVIEW.md, sans invocation Lean. Le fichier agent3_formalisation.md était absent lors de la reprise ; ce DRAFT nouveau ne prétend pas remplacer un ancien rapport.
+
+La reprise a lu PROBE19, executor_prompt13.11 intégral, FINAL1, FINAL6rank, les préparations et les six sources. La gate concrète ROOT19_FORMAL3_COMPILE lie le PASS numérique unique neuf à N=10^8. Seuls ces six modules sont compilés, dans leur ordre de dépendance, avec les imports historiques18 en lecture seule et les captures PREEXEC du lanceur, source, gate, commande et environnement. Aucun ancien producteur, aucun ancien Lean ou PASS inchangé n'est rejoué.
+
+Face03 et Price05 ont actuellement un PASS auteur ; leurs prints utilisent exclusivement les axiomes standards ou aucun axiome. Arithmetic07 est lancé après son échec technique06. UnitLoss, Euler et Estimator ne sont pas encore compilés. Ce DRAFT ne fournit aucun résultat du Juge.
+
+Échecs réels conservés : Face01, quotient/gcd réécrit dans sa propre dépendance et decide sur Squarefree1771 non réductible ; Face02, même réécriture dépendante pour d ; Price04, positivité de la branche vide et cast2≤j vers1≤j ; Arithmetic06, projection non bêta réduite et déroulements de factorization/totient/divisors trop profonds. Les déclarations ratées ont produit sorryAx interne dans les logs ; aucun sorry, admit, axiome libre, native_decide ou trustMe n'est ajouté aux sources. Ces erreurs techniques ne sont pas des contre-exemples à l'identité arithmétique et ne mesurent pas le mur de la parité.
+
+La portée est arithmétique auxiliaire : exclusion physique d'une intersection de trois petits premiers, quotient P/gcd(P,d) réel, prix de calibration theta/raw et properpowers conservés, variation normalisée, pertes de grandes unités, IE effective et estimateur exact avec restes définis. La multiplicité32 ne concerne qu'une expansion ; le plafond combiné40/64 des trois développements n'est pas démontré par cette seule injection. K14 complet et la positivité du coefficient IE effectif, conversion aux AP ordinaires avec endpoints/exceptions, K18 source, onset BV, Gamma_rank, comparaisons parents, familles restantes et ledger entier demeurent ouverts. Score0, victory=false.

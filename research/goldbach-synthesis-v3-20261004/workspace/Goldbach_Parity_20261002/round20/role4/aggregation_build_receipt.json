@@ -1,0 +1,1200 @@
+{
+  "round": 20,
+  "role": 4,
+  "attempts": [
+    {
+      "attempt": 1,
+      "phase": "FINISHED",
+      "started_utc": "2026-10-03T03:50:56.566552+00:00",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean",
+      "source_sha256": "04e45879ffefb5cdcb7f1fc9f1f4e781a4a884d523e8d89669bda29ae86ce56c",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt01_source_PREEXEC.lean.txt",
+      "snapshot_sha256": "04e45879ffefb5cdcb7f1fc9f1f4e781a4a884d523e8d89669bda29ae86ce56c",
+      "builder_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt01_builder_PREEXEC.py.txt",
+      "builder_snapshot_sha256": "ec9a68b1c22997dd62520cde1a80c8af42f63e7a98716da8fc60361a62336c1e",
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt01.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4",
+      "LEAN_PATH": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+      "compile_gate": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase4.json",
+      "compile_gate_sha256": "adf069de88fee864939e6c16be819c5e91b0b6f8ef0f62aa3ec43bb971c002ff",
+      "numeric_bindings": {
+        "round20/friable.json": "053f4bc927baa4340cbec74ba71b7b78fb76cf55b036f9b204d04bb0a9fe4cd1",
+        "round20/role6_friable/canonical_attempt01/receipt.json": "545387c240e8d7c4d4f9c110b9ce3ef9dae0042e1452b7b51e5d1940b37045a1",
+        "round20/role6_friable/canonical_attempt01/started.json": "265b01e65f0655914d7244df09474985ba6d7fde7c027ea6b39ea5b25f67de8a",
+        "round20/role6_friable/canonical_attempt01/execution.log": "23d6f570732a3508ea1d73983df1ace5627cce249c195a7b8b9220f29d548279",
+        "round20/role6_friable/canonical_attempt01/input_manifest.json": "06002bceeef9b19e7bdc98ab0e17313e50dcf4ee2392766b64b791cd5cde8404",
+        "round20/role6_friable/preparation.json": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+        "round20/role6_friable/run_once.py": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+        "round20/role6_friable/canonical_attempt01/inputs/authorization.json": "a6cc4c7177ad84eacd566f7efecb859214f5a94919d3a7ed85a047f825a6e8a2",
+        "round20/role6_friable/canonical_attempt01/inputs/annexes.py": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+        "round20/role6_friable/canonical_attempt01/inputs/arithmetic.py": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+        "round20/role6_friable/canonical_attempt01/inputs/bank.py": "cd756e2d599b83cbed58a88c91955c0981bb06535fb924a819e1083bfea8c47c",
+        "round20/role6_friable/canonical_attempt01/inputs/core.py": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+        "round20/role6_friable/canonical_attempt01/inputs/friable_checks.py": "3118b99a95bb0e35bfcd8a2eff52c275587dfd10bca677e2ebf7be33835b88ef",
+        "round20/role6_friable/canonical_attempt01/inputs/outward.py": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+        "round20/role6_friable/canonical_attempt01/inputs/data_10_round20_conservation_root_observation.json": "ed8d2868607450b0fc30115aa711920d0d6f4294bae72860085b871120309032",
+        "round20/role6_friable/canonical_attempt01/inputs/data_06_round20_role2_selection.json": "3930ab3778ebf3e00bf80616b64d7d9ef63f6e80c2f74d63c8c5fbe7efe2944f",
+        "round20/role6_friable/canonical_attempt01/inputs/data_07_executor_prompt.md": "bd16a6e01bbb602c723bda6551e84d547067a1a205e873e7fed6380e406df436",
+        "round20/role6_friable/canonical_attempt01/inputs/data_11_INPUT_HASHES.json": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+        "round20/role6_friable/canonical_attempt01/inputs/data_16_ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+        "round20/role6_friable/canonical_attempt01/inputs/data_15_ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+        "round20/role6_friable/canonical_attempt01/inputs/data_17_controller_manifest.json": "299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08",
+        "round20/role6_friable/canonical_attempt01/inputs/data_13_BalancedResourceSwitch.lean": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+        "round20/role6_friable/canonical_attempt01/inputs/data_12_NonSSBracketSwitch.lean": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+        "round20/role6_friable/canonical_attempt01/inputs/data_14_TerminalPrimeExtraction.lean": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+        "round20/role6_friable/canonical_attempt01/inputs/data_00_PROBE_BLOCK.md": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+        "round20/role6_friable/canonical_attempt01/inputs/data_02_agent2_friable.md": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+        "round20/role6_friable/canonical_attempt01/inputs/data_01_previous_artifacts_sha256.json": "9f238497b57a2dc7e46e26a67cb5e6a468be8f4e6a73525449a87406304a36b5",
+        "round20/role6_friable/canonical_attempt01/inputs/data_04_final_receipt.json": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+        "round20/role6_friable/canonical_attempt01/inputs/data_03_numeric_contract.md": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+        "round20/role6_friable/canonical_attempt01/inputs/data_05_read_input_sha256.json": "f7dc265c2531d17e2c8dc2c69ce72b979114c70f4f330f3227741ab147d6b265",
+        "round20/role6_friable/canonical_attempt01/inputs/data_09_conservation_final.md": "5750066dab914a4f194d4822381a9d46f0103b5595c88f95ca8d2792afa20bfd",
+        "round20/role6_friable/canonical_attempt01/inputs/data_08_conservation_final_receipt.json": "1116d2b99b4c66d6d5f04ef8d46475462f7560b233a5797346c351a9329d7c34",
+        "round20/role6_friable/canonical_attempt01/inputs/launcher.py.txt": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+        "round20/role6_friable/canonical_attempt01/inputs/preparation.json": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+        "round20/role6_friable/canonical_attempt01/mu_signed_bytes.bin.gz": "c51f8cc161b1e46d582de3f814a91a9578ff34cc449c64ee704190e5c17ba5a3",
+        "round20/role6_friable/canonical_attempt01/phi_uint32.bin.gz": "b424ac51ae61cd705ac0215b075f9a320e314d8c525d792fcf25650ee01420bd",
+        "round20/role6_friable/canonical_attempt01/spf_uint32.bin.gz": "3b983ede0a38ea53614e3684f016d6f8524ca2febcb5a231c7fd0b93caaedede",
+        "round20/role6_friable/canonical_attempt01/primitive_log_enclosures.jsonl.gz": "a93d0dd4442ec9ec6960911549723cfc2a0c9cac4acf90024546dd1dc1a276ee"
+      },
+      "dependency_bindings": {
+        "round18/judge/build/DoubleExtractionArithmetic.lean": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+        "round18/judge/build/DoubleExtractionArithmetic.olean": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+        "round16/judge/build/EulerAnchor.lean": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+        "round16/judge/build/EulerAnchor.olean": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+        "round16/judge/build/LeastMissingPrimeMargin.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+        "round16/judge/build/LeastMissingPrimeMargin.olean": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+        "round13/role4/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+        "round13/role4/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+        "round13/role4/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+        "round13/role4/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+        "round19/judge/build/TerminalPrimeExtraction.lean": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+        "round19/judge/build/TerminalPrimeExtraction.olean": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+        "round19/judge/build/BalancedResourceSwitch.lean": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+        "round19/judge/build/BalancedResourceSwitch.olean": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+        "round19/judge/build/SignedHyperbolicCRT.lean": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+        "round19/judge/build/SignedHyperbolicCRT.olean": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+        "round19/judge/build/NonSSBracketSwitch.lean": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+        "round19/judge/build/NonSSBracketSwitch.olean": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888"
+      },
+      "base_frozen_import_bindings": {
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.olean": "7bc952b06114beeffde8c3d6d35246f4045249c78392b99a98815896b9d06407",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.olean": "ae2125579cfee86f6e0a8617d896e10d7242f95115f6f230ef56ba3f3162d811",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.olean": "53bfffe6f24a5f0848740005e387a7c7c2d4918e1e96c203492609e0386bd55b",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.olean": "dababb47d7453bcef79e4a71e6486f042fcab96cd272126c51cf1612c63ba36a",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.olean": "14fb7886799c11479ebd1b6271fa43be2ceab4a23cb289949d11991415994940",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.olean": "63a2875d65b7912134fcd39a2897841c1c214aeb84d9b437b7454addfbbfa194",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.olean": "616c5b142484bd419241abd0bb1f4d237cc1def3f59558f38478327dfe5f263e"
+      },
+      "base_build_receipt_sha256": "acfa7776f904f6718de85466f3ca33e4798af51aefb0cb0dd87f5568fe42a1ad",
+      "dependencies_manifest_sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+      "compiler_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+      "finished_utc": "2026-10-03T03:51:16.782439+00:00",
+      "exit_code": 1,
+      "started_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt01_started.json",
+      "started_receipt_sha256": "ada87cf267859201792abdb6b9de1d218b66b67120f08323a147559782e27e14",
+      "stdout": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:27:23: error: application type mismatch\n  Set.InjOn Prod.snd (filter (fun v => v.1 = e) (friableDemandDomain alpha N Z M Y))\nargument\n  filter (fun v => v.1 = e) (friableDemandDomain alpha N Z M Y)\nhas type\n  Finset (ℕ × ℕ) : Type\nbut is expected to have type\n  Set (?m.2683 × ?m.2684) : Type\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:36:24: error: unknown identifier 'friableRank_snd_injective'\nTry this: ring_nf\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:85:73: error: unsolved goals\nalpha a N Z M D Y : ℕ\nhM : 0 < M\nhD : 1 < D\nhDM : D ≤ M\nhY : 0 < Y\nhalpha : 0 < alpha\nhaa : alpha ≤ a\nhEa : N / M ≤ a\nhaM : a < M\nhu : 1 ≤ Real.log ↑N\nF : Finset (ℕ × ℕ) := friableDemandDomain alpha N Z M Y\nE : ℕ := N / M\nhmap : ∀ v ∈ F, v.1 ∈ Icc 1 E\nhsplit :\n  friableThetaDemand alpha a N Z M Y = ∑ e ∈ Icc 1 E, ∑ q ∈ friableRank alpha N Z M Y e, |thetaBracket alpha a N e q|\nhpoint :\n  ∀ e ∈ Icc 1 E,\n    ∑ q ∈ friableRank alpha N Z M Y e, |thetaBracket alpha a N e q| ≤\n      14 * Real.log ↑N ^ 3 * (↑N / ↑e * ∑ d ∈ divisorBand D Y, (↑d)⁻¹ + ↑(#(divisorBand D Y)))\ne : ℕ\nhe : e ∈ Icc 1 E\n⊢ ∑ x ∈ divisorBand D Y, ↑N * (↑e)⁻¹ * (↑x)⁻¹ = (↑e)⁻¹ * ∑ i ∈ divisorBand D Y, ↑N * (↑i)⁻¹\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:134:13: error: don't know how to synthesize implicit argument 'Z'\n  @actual_friable_demand_payment_mass alpha a N ?m.86538 M D Y hM hD hDM hYpos halpha haa hEa haM hu\ncontext:\nalpha a N Z M D Y : ℕ\nhM : 0 < M\nhD : 1 < D\nhDM : D ≤ M\nhYpos : 0 < Y\nhalpha : 0 < alpha\nhaa : alpha ≤ a\nhEa : N / M ≤ a\nhaM : a < M\nhu : 1 ≤ Real.log ↑N\nhY : 4 ≤ Real.log ↑Y\nhYu : 1 + Real.log ↑Y ≤ Real.log ↑N\nhDlog : Real.log ↑N / 2 ≤ Real.log ↑D\nhscale : 128 * Real.log (Real.log ↑N) * Real.log ↑Y ≤ Real.log ↑N\nhu0 : 0 < Real.log ↑N\nhmass : ∑ d ∈ divisorBand D Y, (↑d)⁻¹ ≤ Real.log ↑N ^ (-37)\nhtail : 0 ≤ ↑N * ↑(harmonic (N / M)) + ↑(N / M) * (↑D * ↑Y)\n⊢ ℕ\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:134:7: error: failed to infer 'have' declaration type\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:125:48: error: unsolved goals\nalpha a N Z M D Y : ℕ\nhM : 0 < M\nhD : 1 < D\nhDM : D ≤ M\nhYpos : 0 < Y\nhalpha : 0 < alpha\nhaa : alpha ≤ a\nhEa : N / M ≤ a\nhaM : a < M\nhu : 1 ≤ Real.log ↑N\nhY : 4 ≤ Real.log ↑Y\nhYu : 1 + Real.log ↑Y ≤ Real.log ↑N\nhDlog : Real.log ↑N / 2 ≤ Real.log ↑D\nhscale : 128 * Real.log (Real.log ↑N) * Real.log ↑Y ≤ Real.log ↑N\nhu0 : 0 < Real.log ↑N\nhmass : ∑ d ∈ divisorBand D Y, (↑d)⁻¹ ≤ Real.log ↑N ^ (-37)\nhtail : 0 ≤ ↑N * ↑(harmonic (N / M)) + ↑(N / M) * (↑D * ↑Y)\n⊢ friableThetaDemand alpha a N Z M Y ≤ 14 * Real.log ↑N ^ (-34) * (↑N * ↑(harmonic (N / M)) + ↑(N / M) * (↑D * ↑Y))\n'GoldbachRound20.Friable.friableDemandDomain' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.friableRank' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.friableRank_support' depends on axioms: [propext, Classical.choice, Quot.sound]\nD:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean:154:14: error: unknown constant 'friableRank_snd_injective'\n'GoldbachRound20.Friable.actual_friable_theta_fiber_sum' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n'GoldbachRound20.Friable.friableThetaDemand' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.actual_friable_demand_payment_mass' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n'GoldbachRound20.Friable.actual_friable_demand_payment_local' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": "",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt01.log",
+      "log_sha256": "3733ae6d35f0caf129546cbf665726d9f35cb66fdbee8177bd0ddfd2097950e8",
+      "olean": null,
+      "olean_sha256": null,
+      "post_integrity": {
+        "all_unchanged": true,
+        "failed_bindings": [],
+        "checks": {
+          "source": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean",
+            "expected_sha256": "04e45879ffefb5cdcb7f1fc9f1f4e781a4a884d523e8d89669bda29ae86ce56c",
+            "actual_sha256": "04e45879ffefb5cdcb7f1fc9f1f4e781a4a884d523e8d89669bda29ae86ce56c",
+            "unchanged": true
+          },
+          "gate": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase4.json",
+            "expected_sha256": "adf069de88fee864939e6c16be819c5e91b0b6f8ef0f62aa3ec43bb971c002ff",
+            "actual_sha256": "adf069de88fee864939e6c16be819c5e91b0b6f8ef0f62aa3ec43bb971c002ff",
+            "unchanged": true
+          },
+          "builder": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build_aggregation.py",
+            "expected_sha256": "ec9a68b1c22997dd62520cde1a80c8af42f63e7a98716da8fc60361a62336c1e",
+            "actual_sha256": "ec9a68b1c22997dd62520cde1a80c8af42f63e7a98716da8fc60361a62336c1e",
+            "unchanged": true
+          },
+          "original_builder": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build.py",
+            "expected_sha256": "89dea53493843f1196bdcdb2fd8ad376649870db665b1e8aef532e1bd6c8616a",
+            "actual_sha256": "89dea53493843f1196bdcdb2fd8ad376649870db665b1e8aef532e1bd6c8616a",
+            "unchanged": true
+          },
+          "base_ledger": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build_receipt.json",
+            "expected_sha256": "acfa7776f904f6718de85466f3ca33e4798af51aefb0cb0dd87f5568fe42a1ad",
+            "actual_sha256": "acfa7776f904f6718de85466f3ca33e4798af51aefb0cb0dd87f5568fe42a1ad",
+            "unchanged": true
+          },
+          "extension_ledger": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\extension_build_receipt.json",
+            "expected_sha256": "b38b81a05b20d19ca7a73279c8865a86a7fd25032773eaf40fdd7be020156906",
+            "actual_sha256": "b38b81a05b20d19ca7a73279c8865a86a7fd25032773eaf40fdd7be020156906",
+            "unchanged": true
+          },
+          "extension_builder": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build_extension.py",
+            "expected_sha256": "4bcaafaf97a8a9e2e107d7b333427fdd772f58b748416f777b820daf885bfefa",
+            "actual_sha256": "4bcaafaf97a8a9e2e107d7b333427fdd772f58b748416f777b820daf885bfefa",
+            "unchanged": true
+          },
+          "dependencies_manifest": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\dependencies_readonly.json",
+            "expected_sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+            "actual_sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+            "unchanged": true
+          },
+          "runtime": {
+            "path": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+            "expected_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+            "actual_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean",
+            "expected_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+            "actual_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.olean",
+            "expected_sha256": "7bc952b06114beeffde8c3d6d35246f4045249c78392b99a98815896b9d06407",
+            "actual_sha256": "7bc952b06114beeffde8c3d6d35246f4045249c78392b99a98815896b9d06407",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean",
+            "expected_sha256": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0",
+            "actual_sha256": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.olean",
+            "expected_sha256": "ae2125579cfee86f6e0a8617d896e10d7242f95115f6f230ef56ba3f3162d811",
+            "actual_sha256": "ae2125579cfee86f6e0a8617d896e10d7242f95115f6f230ef56ba3f3162d811",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean",
+            "expected_sha256": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8",
+            "actual_sha256": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.olean",
+            "expected_sha256": "53bfffe6f24a5f0848740005e387a7c7c2d4918e1e96c203492609e0386bd55b",
+            "actual_sha256": "53bfffe6f24a5f0848740005e387a7c7c2d4918e1e96c203492609e0386bd55b",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean",
+            "expected_sha256": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4",
+            "actual_sha256": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.olean",
+            "expected_sha256": "dababb47d7453bcef79e4a71e6486f042fcab96cd272126c51cf1612c63ba36a",
+            "actual_sha256": "dababb47d7453bcef79e4a71e6486f042fcab96cd272126c51cf1612c63ba36a",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean",
+            "expected_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+            "actual_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.olean",
+            "expected_sha256": "14fb7886799c11479ebd1b6271fa43be2ceab4a23cb289949d11991415994940",
+            "actual_sha256": "14fb7886799c11479ebd1b6271fa43be2ceab4a23cb289949d11991415994940",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean",
+            "expected_sha256": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21",
+            "actual_sha256": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.olean",
+            "expected_sha256": "63a2875d65b7912134fcd39a2897841c1c214aeb84d9b437b7454addfbbfa194",
+            "actual_sha256": "63a2875d65b7912134fcd39a2897841c1c214aeb84d9b437b7454addfbbfa194",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean",
+            "expected_sha256": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad",
+            "actual_sha256": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.olean",
+            "expected_sha256": "616c5b142484bd419241abd0bb1f4d237cc1def3f59558f38478327dfe5f263e",
+            "actual_sha256": "616c5b142484bd419241abd0bb1f4d237cc1def3f59558f38478327dfe5f263e",
+            "unchanged": true
+          },
+          "numeric:round20/friable.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\friable.json",
+            "expected_sha256": "053f4bc927baa4340cbec74ba71b7b78fb76cf55b036f9b204d04bb0a9fe4cd1",
+            "actual_sha256": "053f4bc927baa4340cbec74ba71b7b78fb76cf55b036f9b204d04bb0a9fe4cd1",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/receipt.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\receipt.json",
+            "expected_sha256": "545387c240e8d7c4d4f9c110b9ce3ef9dae0042e1452b7b51e5d1940b37045a1",
+            "actual_sha256": "545387c240e8d7c4d4f9c110b9ce3ef9dae0042e1452b7b51e5d1940b37045a1",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/started.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\started.json",
+            "expected_sha256": "265b01e65f0655914d7244df09474985ba6d7fde7c027ea6b39ea5b25f67de8a",
+            "actual_sha256": "265b01e65f0655914d7244df09474985ba6d7fde7c027ea6b39ea5b25f67de8a",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/execution.log": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\execution.log",
+            "expected_sha256": "23d6f570732a3508ea1d73983df1ace5627cce249c195a7b8b9220f29d548279",
+            "actual_sha256": "23d6f570732a3508ea1d73983df1ace5627cce249c195a7b8b9220f29d548279",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/input_manifest.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\input_manifest.json",
+            "expected_sha256": "06002bceeef9b19e7bdc98ab0e17313e50dcf4ee2392766b64b791cd5cde8404",
+            "actual_sha256": "06002bceeef9b19e7bdc98ab0e17313e50dcf4ee2392766b64b791cd5cde8404",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/preparation.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\preparation.json",
+            "expected_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "actual_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/run_once.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\run_once.py",
+            "expected_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "actual_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/authorization.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\authorization.json",
+            "expected_sha256": "a6cc4c7177ad84eacd566f7efecb859214f5a94919d3a7ed85a047f825a6e8a2",
+            "actual_sha256": "a6cc4c7177ad84eacd566f7efecb859214f5a94919d3a7ed85a047f825a6e8a2",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/annexes.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\annexes.py",
+            "expected_sha256": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+            "actual_sha256": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/arithmetic.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\arithmetic.py",
+            "expected_sha256": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+            "actual_sha256": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/bank.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\bank.py",
+            "expected_sha256": "cd756e2d599b83cbed58a88c91955c0981bb06535fb924a819e1083bfea8c47c",
+            "actual_sha256": "cd756e2d599b83cbed58a88c91955c0981bb06535fb924a819e1083bfea8c47c",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/core.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\core.py",
+            "expected_sha256": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+            "actual_sha256": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/friable_checks.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\friable_checks.py",
+            "expected_sha256": "3118b99a95bb0e35bfcd8a2eff52c275587dfd10bca677e2ebf7be33835b88ef",
+            "actual_sha256": "3118b99a95bb0e35bfcd8a2eff52c275587dfd10bca677e2ebf7be33835b88ef",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/outward.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\outward.py",
+            "expected_sha256": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+            "actual_sha256": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_10_round20_conservation_root_observation.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_10_round20_conservation_root_observation.json",
+            "expected_sha256": "ed8d2868607450b0fc30115aa711920d0d6f4294bae72860085b871120309032",
+            "actual_sha256": "ed8d2868607450b0fc30115aa711920d0d6f4294bae72860085b871120309032",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_06_round20_role2_selection.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_06_round20_role2_selection.json",
+            "expected_sha256": "3930ab3778ebf3e00bf80616b64d7d9ef63f6e80c2f74d63c8c5fbe7efe2944f",
+            "actual_sha256": "3930ab3778ebf3e00bf80616b64d7d9ef63f6e80c2f74d63c8c5fbe7efe2944f",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_07_executor_prompt.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_07_executor_prompt.md",
+            "expected_sha256": "bd16a6e01bbb602c723bda6551e84d547067a1a205e873e7fed6380e406df436",
+            "actual_sha256": "bd16a6e01bbb602c723bda6551e84d547067a1a205e873e7fed6380e406df436",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_11_INPUT_HASHES.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_11_INPUT_HASHES.json",
+            "expected_sha256": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+            "actual_sha256": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_16_ShortDivisorComplement.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_16_ShortDivisorComplement.lean",
+            "expected_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "actual_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_15_ThreeAdicPrimePairing.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_15_ThreeAdicPrimePairing.lean",
+            "expected_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "actual_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_17_controller_manifest.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_17_controller_manifest.json",
+            "expected_sha256": "299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08",
+            "actual_sha256": "299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_13_BalancedResourceSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_13_BalancedResourceSwitch.lean",
+            "expected_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "actual_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_12_NonSSBracketSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_12_NonSSBracketSwitch.lean",
+            "expected_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "actual_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_14_TerminalPrimeExtraction.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_14_TerminalPrimeExtraction.lean",
+            "expected_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "actual_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_00_PROBE_BLOCK.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_00_PROBE_BLOCK.md",
+            "expected_sha256": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+            "actual_sha256": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_02_agent2_friable.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_02_agent2_friable.md",
+            "expected_sha256": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+            "actual_sha256": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_01_previous_artifacts_sha256.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_01_previous_artifacts_sha256.json",
+            "expected_sha256": "9f238497b57a2dc7e46e26a67cb5e6a468be8f4e6a73525449a87406304a36b5",
+            "actual_sha256": "9f238497b57a2dc7e46e26a67cb5e6a468be8f4e6a73525449a87406304a36b5",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_04_final_receipt.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_04_final_receipt.json",
+            "expected_sha256": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+            "actual_sha256": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_03_numeric_contract.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_03_numeric_contract.md",
+            "expected_sha256": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+            "actual_sha256": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_05_read_input_sha256.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_05_read_input_sha256.json",
+            "expected_sha256": "f7dc265c2531d17e2c8dc2c69ce72b979114c70f4f330f3227741ab147d6b265",
+            "actual_sha256": "f7dc265c2531d17e2c8dc2c69ce72b979114c70f4f330f3227741ab147d6b265",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_09_conservation_final.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_09_conservation_final.md",
+            "expected_sha256": "5750066dab914a4f194d4822381a9d46f0103b5595c88f95ca8d2792afa20bfd",
+            "actual_sha256": "5750066dab914a4f194d4822381a9d46f0103b5595c88f95ca8d2792afa20bfd",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_08_conservation_final_receipt.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_08_conservation_final_receipt.json",
+            "expected_sha256": "1116d2b99b4c66d6d5f04ef8d46475462f7560b233a5797346c351a9329d7c34",
+            "actual_sha256": "1116d2b99b4c66d6d5f04ef8d46475462f7560b233a5797346c351a9329d7c34",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/launcher.py.txt": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\launcher.py.txt",
+            "expected_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "actual_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/preparation.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\preparation.json",
+            "expected_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "actual_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/mu_signed_bytes.bin.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\mu_signed_bytes.bin.gz",
+            "expected_sha256": "c51f8cc161b1e46d582de3f814a91a9578ff34cc449c64ee704190e5c17ba5a3",
+            "actual_sha256": "c51f8cc161b1e46d582de3f814a91a9578ff34cc449c64ee704190e5c17ba5a3",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/phi_uint32.bin.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\phi_uint32.bin.gz",
+            "expected_sha256": "b424ac51ae61cd705ac0215b075f9a320e314d8c525d792fcf25650ee01420bd",
+            "actual_sha256": "b424ac51ae61cd705ac0215b075f9a320e314d8c525d792fcf25650ee01420bd",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/spf_uint32.bin.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\spf_uint32.bin.gz",
+            "expected_sha256": "3b983ede0a38ea53614e3684f016d6f8524ca2febcb5a231c7fd0b93caaedede",
+            "actual_sha256": "3b983ede0a38ea53614e3684f016d6f8524ca2febcb5a231c7fd0b93caaedede",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/primitive_log_enclosures.jsonl.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\primitive_log_enclosures.jsonl.gz",
+            "expected_sha256": "a93d0dd4442ec9ec6960911549723cfc2a0c9cac4acf90024546dd1dc1a276ee",
+            "actual_sha256": "a93d0dd4442ec9ec6960911549723cfc2a0c9cac4acf90024546dd1dc1a276ee",
+            "unchanged": true
+          },
+          "historical:round18/judge/build/DoubleExtractionArithmetic.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build\\DoubleExtractionArithmetic.lean",
+            "expected_sha256": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+            "actual_sha256": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+            "unchanged": true
+          },
+          "historical:round18/judge/build/DoubleExtractionArithmetic.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build\\DoubleExtractionArithmetic.olean",
+            "expected_sha256": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+            "actual_sha256": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/EulerAnchor.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\EulerAnchor.lean",
+            "expected_sha256": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+            "actual_sha256": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/EulerAnchor.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\EulerAnchor.olean",
+            "expected_sha256": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+            "actual_sha256": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/LeastMissingPrimeMargin.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\LeastMissingPrimeMargin.lean",
+            "expected_sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+            "actual_sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/LeastMissingPrimeMargin.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\LeastMissingPrimeMargin.olean",
+            "expected_sha256": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+            "actual_sha256": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ThreeAdicPrimePairing.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.lean",
+            "expected_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "actual_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ThreeAdicPrimePairing.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.olean",
+            "expected_sha256": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+            "actual_sha256": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ShortDivisorComplement.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.lean",
+            "expected_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "actual_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ShortDivisorComplement.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.olean",
+            "expected_sha256": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+            "actual_sha256": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/TerminalPrimeExtraction.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\TerminalPrimeExtraction.lean",
+            "expected_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "actual_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/TerminalPrimeExtraction.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\TerminalPrimeExtraction.olean",
+            "expected_sha256": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+            "actual_sha256": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/BalancedResourceSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\BalancedResourceSwitch.lean",
+            "expected_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "actual_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/BalancedResourceSwitch.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\BalancedResourceSwitch.olean",
+            "expected_sha256": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+            "actual_sha256": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/SignedHyperbolicCRT.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\SignedHyperbolicCRT.lean",
+            "expected_sha256": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+            "actual_sha256": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/SignedHyperbolicCRT.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\SignedHyperbolicCRT.olean",
+            "expected_sha256": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+            "actual_sha256": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/NonSSBracketSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\NonSSBracketSwitch.lean",
+            "expected_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "actual_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/NonSSBracketSwitch.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\NonSSBracketSwitch.olean",
+            "expected_sha256": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+            "actual_sha256": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+            "unchanged": true
+          }
+        }
+      },
+      "credited_pass": false
+    },
+    {
+      "attempt": 2,
+      "phase": "FINISHED",
+      "started_utc": "2026-10-03T03:52:03.119492+00:00",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean",
+      "source_sha256": "b564591ccb21b15817ed6edad0fff78ddbd10d50a509b2f4b3732d6b8ac58aa2",
+      "snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02_source_PREEXEC.lean.txt",
+      "snapshot_sha256": "b564591ccb21b15817ed6edad0fff78ddbd10d50a509b2f4b3732d6b8ac58aa2",
+      "builder_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02_builder_PREEXEC.py.txt",
+      "builder_snapshot_sha256": "ec9a68b1c22997dd62520cde1a80c8af42f63e7a98716da8fc60361a62336c1e",
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4",
+      "LEAN_PATH": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+      "compile_gate": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase4.json",
+      "compile_gate_sha256": "adf069de88fee864939e6c16be819c5e91b0b6f8ef0f62aa3ec43bb971c002ff",
+      "numeric_bindings": {
+        "round20/friable.json": "053f4bc927baa4340cbec74ba71b7b78fb76cf55b036f9b204d04bb0a9fe4cd1",
+        "round20/role6_friable/canonical_attempt01/receipt.json": "545387c240e8d7c4d4f9c110b9ce3ef9dae0042e1452b7b51e5d1940b37045a1",
+        "round20/role6_friable/canonical_attempt01/started.json": "265b01e65f0655914d7244df09474985ba6d7fde7c027ea6b39ea5b25f67de8a",
+        "round20/role6_friable/canonical_attempt01/execution.log": "23d6f570732a3508ea1d73983df1ace5627cce249c195a7b8b9220f29d548279",
+        "round20/role6_friable/canonical_attempt01/input_manifest.json": "06002bceeef9b19e7bdc98ab0e17313e50dcf4ee2392766b64b791cd5cde8404",
+        "round20/role6_friable/preparation.json": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+        "round20/role6_friable/run_once.py": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+        "round20/role6_friable/canonical_attempt01/inputs/authorization.json": "a6cc4c7177ad84eacd566f7efecb859214f5a94919d3a7ed85a047f825a6e8a2",
+        "round20/role6_friable/canonical_attempt01/inputs/annexes.py": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+        "round20/role6_friable/canonical_attempt01/inputs/arithmetic.py": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+        "round20/role6_friable/canonical_attempt01/inputs/bank.py": "cd756e2d599b83cbed58a88c91955c0981bb06535fb924a819e1083bfea8c47c",
+        "round20/role6_friable/canonical_attempt01/inputs/core.py": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+        "round20/role6_friable/canonical_attempt01/inputs/friable_checks.py": "3118b99a95bb0e35bfcd8a2eff52c275587dfd10bca677e2ebf7be33835b88ef",
+        "round20/role6_friable/canonical_attempt01/inputs/outward.py": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+        "round20/role6_friable/canonical_attempt01/inputs/data_10_round20_conservation_root_observation.json": "ed8d2868607450b0fc30115aa711920d0d6f4294bae72860085b871120309032",
+        "round20/role6_friable/canonical_attempt01/inputs/data_06_round20_role2_selection.json": "3930ab3778ebf3e00bf80616b64d7d9ef63f6e80c2f74d63c8c5fbe7efe2944f",
+        "round20/role6_friable/canonical_attempt01/inputs/data_07_executor_prompt.md": "bd16a6e01bbb602c723bda6551e84d547067a1a205e873e7fed6380e406df436",
+        "round20/role6_friable/canonical_attempt01/inputs/data_11_INPUT_HASHES.json": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+        "round20/role6_friable/canonical_attempt01/inputs/data_16_ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+        "round20/role6_friable/canonical_attempt01/inputs/data_15_ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+        "round20/role6_friable/canonical_attempt01/inputs/data_17_controller_manifest.json": "299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08",
+        "round20/role6_friable/canonical_attempt01/inputs/data_13_BalancedResourceSwitch.lean": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+        "round20/role6_friable/canonical_attempt01/inputs/data_12_NonSSBracketSwitch.lean": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+        "round20/role6_friable/canonical_attempt01/inputs/data_14_TerminalPrimeExtraction.lean": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+        "round20/role6_friable/canonical_attempt01/inputs/data_00_PROBE_BLOCK.md": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+        "round20/role6_friable/canonical_attempt01/inputs/data_02_agent2_friable.md": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+        "round20/role6_friable/canonical_attempt01/inputs/data_01_previous_artifacts_sha256.json": "9f238497b57a2dc7e46e26a67cb5e6a468be8f4e6a73525449a87406304a36b5",
+        "round20/role6_friable/canonical_attempt01/inputs/data_04_final_receipt.json": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+        "round20/role6_friable/canonical_attempt01/inputs/data_03_numeric_contract.md": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+        "round20/role6_friable/canonical_attempt01/inputs/data_05_read_input_sha256.json": "f7dc265c2531d17e2c8dc2c69ce72b979114c70f4f330f3227741ab147d6b265",
+        "round20/role6_friable/canonical_attempt01/inputs/data_09_conservation_final.md": "5750066dab914a4f194d4822381a9d46f0103b5595c88f95ca8d2792afa20bfd",
+        "round20/role6_friable/canonical_attempt01/inputs/data_08_conservation_final_receipt.json": "1116d2b99b4c66d6d5f04ef8d46475462f7560b233a5797346c351a9329d7c34",
+        "round20/role6_friable/canonical_attempt01/inputs/launcher.py.txt": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+        "round20/role6_friable/canonical_attempt01/inputs/preparation.json": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+        "round20/role6_friable/canonical_attempt01/mu_signed_bytes.bin.gz": "c51f8cc161b1e46d582de3f814a91a9578ff34cc449c64ee704190e5c17ba5a3",
+        "round20/role6_friable/canonical_attempt01/phi_uint32.bin.gz": "b424ac51ae61cd705ac0215b075f9a320e314d8c525d792fcf25650ee01420bd",
+        "round20/role6_friable/canonical_attempt01/spf_uint32.bin.gz": "3b983ede0a38ea53614e3684f016d6f8524ca2febcb5a231c7fd0b93caaedede",
+        "round20/role6_friable/canonical_attempt01/primitive_log_enclosures.jsonl.gz": "a93d0dd4442ec9ec6960911549723cfc2a0c9cac4acf90024546dd1dc1a276ee"
+      },
+      "dependency_bindings": {
+        "round18/judge/build/DoubleExtractionArithmetic.lean": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+        "round18/judge/build/DoubleExtractionArithmetic.olean": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+        "round16/judge/build/EulerAnchor.lean": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+        "round16/judge/build/EulerAnchor.olean": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+        "round16/judge/build/LeastMissingPrimeMargin.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+        "round16/judge/build/LeastMissingPrimeMargin.olean": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+        "round13/role4/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+        "round13/role4/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+        "round13/role4/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+        "round13/role4/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+        "round19/judge/build/TerminalPrimeExtraction.lean": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+        "round19/judge/build/TerminalPrimeExtraction.olean": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+        "round19/judge/build/BalancedResourceSwitch.lean": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+        "round19/judge/build/BalancedResourceSwitch.olean": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+        "round19/judge/build/SignedHyperbolicCRT.lean": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+        "round19/judge/build/SignedHyperbolicCRT.olean": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+        "round19/judge/build/NonSSBracketSwitch.lean": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+        "round19/judge/build/NonSSBracketSwitch.olean": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888"
+      },
+      "base_frozen_import_bindings": {
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.olean": "7bc952b06114beeffde8c3d6d35246f4045249c78392b99a98815896b9d06407",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.olean": "ae2125579cfee86f6e0a8617d896e10d7242f95115f6f230ef56ba3f3162d811",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.olean": "53bfffe6f24a5f0848740005e387a7c7c2d4918e1e96c203492609e0386bd55b",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.olean": "dababb47d7453bcef79e4a71e6486f042fcab96cd272126c51cf1612c63ba36a",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.olean": "14fb7886799c11479ebd1b6271fa43be2ceab4a23cb289949d11991415994940",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.olean": "63a2875d65b7912134fcd39a2897841c1c214aeb84d9b437b7454addfbbfa194",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.olean": "616c5b142484bd419241abd0bb1f4d237cc1def3f59558f38478327dfe5f263e"
+      },
+      "base_build_receipt_sha256": "acfa7776f904f6718de85466f3ca33e4798af51aefb0cb0dd87f5568fe42a1ad",
+      "dependencies_manifest_sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+      "compiler_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+      "finished_utc": "2026-10-03T03:52:23.217314+00:00",
+      "exit_code": 0,
+      "started_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02_started.json",
+      "started_receipt_sha256": "d12113ad9eb1af726718ecf7cdca531bb02e324581192309455922501e96a8fc",
+      "stdout": "'GoldbachRound20.Friable.friableDemandDomain' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.friableRank' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.friableRank_support' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.friableRank_snd_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.actual_friable_theta_fiber_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.friableThetaDemand' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.actual_friable_demand_payment_mass' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GoldbachRound20.Friable.actual_friable_demand_payment_local' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02.log",
+      "log_sha256": "5d06968471b53e0f6fe16ffcccfbd80427995c7cfa30a576dee8ffc3c39377a6",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\aggregation_attempt02.olean",
+      "olean_sha256": "e6c9eed4bd15c53b131e49169f71fe6e9808ab53e9b7079b8d6d7ede934d6496",
+      "post_integrity": {
+        "all_unchanged": true,
+        "failed_bindings": [],
+        "checks": {
+          "source": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean",
+            "expected_sha256": "b564591ccb21b15817ed6edad0fff78ddbd10d50a509b2f4b3732d6b8ac58aa2",
+            "actual_sha256": "b564591ccb21b15817ed6edad0fff78ddbd10d50a509b2f4b3732d6b8ac58aa2",
+            "unchanged": true
+          },
+          "gate": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase4.json",
+            "expected_sha256": "adf069de88fee864939e6c16be819c5e91b0b6f8ef0f62aa3ec43bb971c002ff",
+            "actual_sha256": "adf069de88fee864939e6c16be819c5e91b0b6f8ef0f62aa3ec43bb971c002ff",
+            "unchanged": true
+          },
+          "builder": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build_aggregation.py",
+            "expected_sha256": "ec9a68b1c22997dd62520cde1a80c8af42f63e7a98716da8fc60361a62336c1e",
+            "actual_sha256": "ec9a68b1c22997dd62520cde1a80c8af42f63e7a98716da8fc60361a62336c1e",
+            "unchanged": true
+          },
+          "original_builder": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build.py",
+            "expected_sha256": "89dea53493843f1196bdcdb2fd8ad376649870db665b1e8aef532e1bd6c8616a",
+            "actual_sha256": "89dea53493843f1196bdcdb2fd8ad376649870db665b1e8aef532e1bd6c8616a",
+            "unchanged": true
+          },
+          "base_ledger": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build_receipt.json",
+            "expected_sha256": "acfa7776f904f6718de85466f3ca33e4798af51aefb0cb0dd87f5568fe42a1ad",
+            "actual_sha256": "acfa7776f904f6718de85466f3ca33e4798af51aefb0cb0dd87f5568fe42a1ad",
+            "unchanged": true
+          },
+          "extension_ledger": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\extension_build_receipt.json",
+            "expected_sha256": "b38b81a05b20d19ca7a73279c8865a86a7fd25032773eaf40fdd7be020156906",
+            "actual_sha256": "b38b81a05b20d19ca7a73279c8865a86a7fd25032773eaf40fdd7be020156906",
+            "unchanged": true
+          },
+          "extension_builder": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\build_extension.py",
+            "expected_sha256": "4bcaafaf97a8a9e2e107d7b333427fdd772f58b748416f777b820daf885bfefa",
+            "actual_sha256": "4bcaafaf97a8a9e2e107d7b333427fdd772f58b748416f777b820daf885bfefa",
+            "unchanged": true
+          },
+          "dependencies_manifest": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\dependencies_readonly.json",
+            "expected_sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+            "actual_sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+            "unchanged": true
+          },
+          "runtime": {
+            "path": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+            "expected_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+            "actual_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean",
+            "expected_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+            "actual_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.olean",
+            "expected_sha256": "7bc952b06114beeffde8c3d6d35246f4045249c78392b99a98815896b9d06407",
+            "actual_sha256": "7bc952b06114beeffde8c3d6d35246f4045249c78392b99a98815896b9d06407",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean",
+            "expected_sha256": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0",
+            "actual_sha256": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.olean",
+            "expected_sha256": "ae2125579cfee86f6e0a8617d896e10d7242f95115f6f230ef56ba3f3162d811",
+            "actual_sha256": "ae2125579cfee86f6e0a8617d896e10d7242f95115f6f230ef56ba3f3162d811",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean",
+            "expected_sha256": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8",
+            "actual_sha256": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.olean",
+            "expected_sha256": "53bfffe6f24a5f0848740005e387a7c7c2d4918e1e96c203492609e0386bd55b",
+            "actual_sha256": "53bfffe6f24a5f0848740005e387a7c7c2d4918e1e96c203492609e0386bd55b",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean",
+            "expected_sha256": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4",
+            "actual_sha256": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.olean",
+            "expected_sha256": "dababb47d7453bcef79e4a71e6486f042fcab96cd272126c51cf1612c63ba36a",
+            "actual_sha256": "dababb47d7453bcef79e4a71e6486f042fcab96cd272126c51cf1612c63ba36a",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean",
+            "expected_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+            "actual_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.olean",
+            "expected_sha256": "14fb7886799c11479ebd1b6271fa43be2ceab4a23cb289949d11991415994940",
+            "actual_sha256": "14fb7886799c11479ebd1b6271fa43be2ceab4a23cb289949d11991415994940",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean",
+            "expected_sha256": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21",
+            "actual_sha256": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.olean",
+            "expected_sha256": "63a2875d65b7912134fcd39a2897841c1c214aeb84d9b437b7454addfbbfa194",
+            "actual_sha256": "63a2875d65b7912134fcd39a2897841c1c214aeb84d9b437b7454addfbbfa194",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean",
+            "expected_sha256": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad",
+            "actual_sha256": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad",
+            "unchanged": true
+          },
+          "base_import:D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.olean",
+            "expected_sha256": "616c5b142484bd419241abd0bb1f4d237cc1def3f59558f38478327dfe5f263e",
+            "actual_sha256": "616c5b142484bd419241abd0bb1f4d237cc1def3f59558f38478327dfe5f263e",
+            "unchanged": true
+          },
+          "numeric:round20/friable.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\friable.json",
+            "expected_sha256": "053f4bc927baa4340cbec74ba71b7b78fb76cf55b036f9b204d04bb0a9fe4cd1",
+            "actual_sha256": "053f4bc927baa4340cbec74ba71b7b78fb76cf55b036f9b204d04bb0a9fe4cd1",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/receipt.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\receipt.json",
+            "expected_sha256": "545387c240e8d7c4d4f9c110b9ce3ef9dae0042e1452b7b51e5d1940b37045a1",
+            "actual_sha256": "545387c240e8d7c4d4f9c110b9ce3ef9dae0042e1452b7b51e5d1940b37045a1",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/started.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\started.json",
+            "expected_sha256": "265b01e65f0655914d7244df09474985ba6d7fde7c027ea6b39ea5b25f67de8a",
+            "actual_sha256": "265b01e65f0655914d7244df09474985ba6d7fde7c027ea6b39ea5b25f67de8a",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/execution.log": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\execution.log",
+            "expected_sha256": "23d6f570732a3508ea1d73983df1ace5627cce249c195a7b8b9220f29d548279",
+            "actual_sha256": "23d6f570732a3508ea1d73983df1ace5627cce249c195a7b8b9220f29d548279",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/input_manifest.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\input_manifest.json",
+            "expected_sha256": "06002bceeef9b19e7bdc98ab0e17313e50dcf4ee2392766b64b791cd5cde8404",
+            "actual_sha256": "06002bceeef9b19e7bdc98ab0e17313e50dcf4ee2392766b64b791cd5cde8404",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/preparation.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\preparation.json",
+            "expected_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "actual_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/run_once.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\run_once.py",
+            "expected_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "actual_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/authorization.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\authorization.json",
+            "expected_sha256": "a6cc4c7177ad84eacd566f7efecb859214f5a94919d3a7ed85a047f825a6e8a2",
+            "actual_sha256": "a6cc4c7177ad84eacd566f7efecb859214f5a94919d3a7ed85a047f825a6e8a2",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/annexes.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\annexes.py",
+            "expected_sha256": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+            "actual_sha256": "76c3f1339a4042301d198abf547b3958a274e6f90ed9e63ac01256ad78167868",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/arithmetic.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\arithmetic.py",
+            "expected_sha256": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+            "actual_sha256": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/bank.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\bank.py",
+            "expected_sha256": "cd756e2d599b83cbed58a88c91955c0981bb06535fb924a819e1083bfea8c47c",
+            "actual_sha256": "cd756e2d599b83cbed58a88c91955c0981bb06535fb924a819e1083bfea8c47c",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/core.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\core.py",
+            "expected_sha256": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+            "actual_sha256": "11f76ce3016df6afaa8fd802bd3e0ed4c57209b63febc7d0c6a9e0684ccd1cb3",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/friable_checks.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\friable_checks.py",
+            "expected_sha256": "3118b99a95bb0e35bfcd8a2eff52c275587dfd10bca677e2ebf7be33835b88ef",
+            "actual_sha256": "3118b99a95bb0e35bfcd8a2eff52c275587dfd10bca677e2ebf7be33835b88ef",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/outward.py": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\outward.py",
+            "expected_sha256": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+            "actual_sha256": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_10_round20_conservation_root_observation.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_10_round20_conservation_root_observation.json",
+            "expected_sha256": "ed8d2868607450b0fc30115aa711920d0d6f4294bae72860085b871120309032",
+            "actual_sha256": "ed8d2868607450b0fc30115aa711920d0d6f4294bae72860085b871120309032",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_06_round20_role2_selection.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_06_round20_role2_selection.json",
+            "expected_sha256": "3930ab3778ebf3e00bf80616b64d7d9ef63f6e80c2f74d63c8c5fbe7efe2944f",
+            "actual_sha256": "3930ab3778ebf3e00bf80616b64d7d9ef63f6e80c2f74d63c8c5fbe7efe2944f",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_07_executor_prompt.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_07_executor_prompt.md",
+            "expected_sha256": "bd16a6e01bbb602c723bda6551e84d547067a1a205e873e7fed6380e406df436",
+            "actual_sha256": "bd16a6e01bbb602c723bda6551e84d547067a1a205e873e7fed6380e406df436",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_11_INPUT_HASHES.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_11_INPUT_HASHES.json",
+            "expected_sha256": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+            "actual_sha256": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_16_ShortDivisorComplement.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_16_ShortDivisorComplement.lean",
+            "expected_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "actual_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_15_ThreeAdicPrimePairing.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_15_ThreeAdicPrimePairing.lean",
+            "expected_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "actual_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_17_controller_manifest.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_17_controller_manifest.json",
+            "expected_sha256": "299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08",
+            "actual_sha256": "299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_13_BalancedResourceSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_13_BalancedResourceSwitch.lean",
+            "expected_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "actual_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_12_NonSSBracketSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_12_NonSSBracketSwitch.lean",
+            "expected_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "actual_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_14_TerminalPrimeExtraction.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_14_TerminalPrimeExtraction.lean",
+            "expected_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "actual_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_00_PROBE_BLOCK.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_00_PROBE_BLOCK.md",
+            "expected_sha256": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+            "actual_sha256": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_02_agent2_friable.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_02_agent2_friable.md",
+            "expected_sha256": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+            "actual_sha256": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_01_previous_artifacts_sha256.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_01_previous_artifacts_sha256.json",
+            "expected_sha256": "9f238497b57a2dc7e46e26a67cb5e6a468be8f4e6a73525449a87406304a36b5",
+            "actual_sha256": "9f238497b57a2dc7e46e26a67cb5e6a468be8f4e6a73525449a87406304a36b5",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_04_final_receipt.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_04_final_receipt.json",
+            "expected_sha256": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+            "actual_sha256": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_03_numeric_contract.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_03_numeric_contract.md",
+            "expected_sha256": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+            "actual_sha256": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_05_read_input_sha256.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_05_read_input_sha256.json",
+            "expected_sha256": "f7dc265c2531d17e2c8dc2c69ce72b979114c70f4f330f3227741ab147d6b265",
+            "actual_sha256": "f7dc265c2531d17e2c8dc2c69ce72b979114c70f4f330f3227741ab147d6b265",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_09_conservation_final.md": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_09_conservation_final.md",
+            "expected_sha256": "5750066dab914a4f194d4822381a9d46f0103b5595c88f95ca8d2792afa20bfd",
+            "actual_sha256": "5750066dab914a4f194d4822381a9d46f0103b5595c88f95ca8d2792afa20bfd",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/data_08_conservation_final_receipt.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\data_08_conservation_final_receipt.json",
+            "expected_sha256": "1116d2b99b4c66d6d5f04ef8d46475462f7560b233a5797346c351a9329d7c34",
+            "actual_sha256": "1116d2b99b4c66d6d5f04ef8d46475462f7560b233a5797346c351a9329d7c34",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/launcher.py.txt": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\launcher.py.txt",
+            "expected_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "actual_sha256": "e6d1dbb55eed141df5132642bebddcbfa8c299f3f22600193c9e83f74110d0e7",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/inputs/preparation.json": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\inputs\\preparation.json",
+            "expected_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "actual_sha256": "d1f36f2dc00c2d5d26a44e226471fa1ed9bc221f71cdecf661aba0bd174b759a",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/mu_signed_bytes.bin.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\mu_signed_bytes.bin.gz",
+            "expected_sha256": "c51f8cc161b1e46d582de3f814a91a9578ff34cc449c64ee704190e5c17ba5a3",
+            "actual_sha256": "c51f8cc161b1e46d582de3f814a91a9578ff34cc449c64ee704190e5c17ba5a3",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/phi_uint32.bin.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\phi_uint32.bin.gz",
+            "expected_sha256": "b424ac51ae61cd705ac0215b075f9a320e314d8c525d792fcf25650ee01420bd",
+            "actual_sha256": "b424ac51ae61cd705ac0215b075f9a320e314d8c525d792fcf25650ee01420bd",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/spf_uint32.bin.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\spf_uint32.bin.gz",
+            "expected_sha256": "3b983ede0a38ea53614e3684f016d6f8524ca2febcb5a231c7fd0b93caaedede",
+            "actual_sha256": "3b983ede0a38ea53614e3684f016d6f8524ca2febcb5a231c7fd0b93caaedede",
+            "unchanged": true
+          },
+          "numeric:round20/role6_friable/canonical_attempt01/primitive_log_enclosures.jsonl.gz": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\primitive_log_enclosures.jsonl.gz",
+            "expected_sha256": "a93d0dd4442ec9ec6960911549723cfc2a0c9cac4acf90024546dd1dc1a276ee",
+            "actual_sha256": "a93d0dd4442ec9ec6960911549723cfc2a0c9cac4acf90024546dd1dc1a276ee",
+            "unchanged": true
+          },
+          "historical:round18/judge/build/DoubleExtractionArithmetic.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build\\DoubleExtractionArithmetic.lean",
+            "expected_sha256": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+            "actual_sha256": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+            "unchanged": true
+          },
+          "historical:round18/judge/build/DoubleExtractionArithmetic.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build\\DoubleExtractionArithmetic.olean",
+            "expected_sha256": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+            "actual_sha256": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/EulerAnchor.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\EulerAnchor.lean",
+            "expected_sha256": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+            "actual_sha256": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/EulerAnchor.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\EulerAnchor.olean",
+            "expected_sha256": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+            "actual_sha256": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/LeastMissingPrimeMargin.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\LeastMissingPrimeMargin.lean",
+            "expected_sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+            "actual_sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+            "unchanged": true
+          },
+          "historical:round16/judge/build/LeastMissingPrimeMargin.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build\\LeastMissingPrimeMargin.olean",
+            "expected_sha256": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+            "actual_sha256": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ThreeAdicPrimePairing.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.lean",
+            "expected_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "actual_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ThreeAdicPrimePairing.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.olean",
+            "expected_sha256": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+            "actual_sha256": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ShortDivisorComplement.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.lean",
+            "expected_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "actual_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+            "unchanged": true
+          },
+          "historical:round13/role4/dependencies/ShortDivisorComplement.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.olean",
+            "expected_sha256": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+            "actual_sha256": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/TerminalPrimeExtraction.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\TerminalPrimeExtraction.lean",
+            "expected_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "actual_sha256": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/TerminalPrimeExtraction.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\TerminalPrimeExtraction.olean",
+            "expected_sha256": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+            "actual_sha256": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/BalancedResourceSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\BalancedResourceSwitch.lean",
+            "expected_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "actual_sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/BalancedResourceSwitch.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\BalancedResourceSwitch.olean",
+            "expected_sha256": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+            "actual_sha256": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/SignedHyperbolicCRT.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\SignedHyperbolicCRT.lean",
+            "expected_sha256": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+            "actual_sha256": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/SignedHyperbolicCRT.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\SignedHyperbolicCRT.olean",
+            "expected_sha256": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+            "actual_sha256": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/NonSSBracketSwitch.lean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\NonSSBracketSwitch.lean",
+            "expected_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "actual_sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+            "unchanged": true
+          },
+          "historical:round19/judge/build/NonSSBracketSwitch.olean": {
+            "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\NonSSBracketSwitch.olean",
+            "expected_sha256": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+            "actual_sha256": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888",
+            "unchanged": true
+          }
+        }
+      },
+      "credited_pass": true
+    }
+  ],
+  "historical_source_compiles": 0,
+  "successful_modules": {
+    "FriableDemandAggregation.lean": {
+      "attempt": 2,
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean",
+      "source_sha256": "b564591ccb21b15817ed6edad0fff78ddbd10d50a509b2f4b3732d6b8ac58aa2",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.olean",
+      "olean_sha256": "e6c9eed4bd15c53b131e49169f71fe6e9808ab53e9b7079b8d6d7ede934d6496"
+    }
+  },
+  "score": 0,
+  "victory": false
+}

@@ -1,0 +1,85 @@
+HELPER SOURCE DE MÉTADONNÉES — NUMERIC04
+
+État de ce document : SOURCE uniquement. Le helper n'a été ni invoqué ni
+parsé comme programme. Il ne crée aucune gate ROOT et n'appelle aucun
+compiler, interpréteur candidat, programme natif, API Windows ou calcul.
+Le parent consumer SOURCE01 et ses 25 bindings restent byte-identiques.
+
+Dossier isolé :
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\native_numeric_metadata_source01
+Helper : prepare_numeric04_metadata22.ps1
+Contrôle SOURCE : metadata_source_handoff22.json
+Lectures SOURCE : read_receipts22.json
+
+Deux arguments SHA obligatoires de 64 chiffres hexadécimaux minuscules :
+-IndependentReviewSha256 et -TrustReviewSha256. Les revues réelles gelées
+résident sous role4/native_numeric04_consumer_review_source01 :
+source_review22.json f1afc6db690b7ee706f66d2ea9d14878eb36b3374eceffbadc6157e9c2cf9012
+trust_review22.json 5fdf1c49cef3b85d1b617d79b31cca39573c5bc964f23df1535f933406b5c2c7
+Les arguments ne donnent pas eux-mêmes permission d'exécuter le helper.
+ROOT doit d'abord lire son SOURCE gelé intégralement puis autoriser une
+unique invocation de métadonnées avec ces deux SHA exacts. Aucun retry.
+
+Union runtime exacte, conforme à expected_rows du parent gelé 97473b… :
+6375 bindings BUILD04 + 25 bindings SOURCE01, puis 17 outputs fermés et
+2 images BUILD04, 47 originaux et 47 copies PRE, puis les cinq contrôles
+BUILD04 manifest, closure04, SOURCE01 handoff et les deux revues.
+Ces familles se recouvrent : leur somme n'est PAS un nombre de paths.
+Le helper fusionne les paths absolus sans tenir compte de la casse,
+rejette toute contradiction SHA/taille, combine capture par OR et
+reconstruit séparément le jeu exact de paths attendu. Le nombre final
+sera observé pendant l'invocation metadata, jamais inventé ici.
+972 fichiers Python et 3089 archives sont attendus par les inventaires
+historiques ; chaque byte/SHA sera vérifié PRE et POST. Les anciens vrais
+consumer/backend native02 et CPP/handoff native01 sont contrôlés parmi
+les bindings existants, sans créer de dépendance runtime supplémentaire.
+
+Le contrôle SOURCE propre au helper lie helper/contrat/lectures. Il est
+vérifié séparément. Ajouter ses pièces à l'union runtime violerait le set
+exact du parent gelé ; la préparation et la future gate ROOT les lient
+comme contrôles metadata distincts. Le helper ne modifie aucun SOURCE
+consumer, ancien inventaire, ancien output, image, capture ou archive.
+
+Outputs futurs isolés, tous créés exclusivement sans écrasement :
+numeric_manifest22.json
+numeric_preparation22.json
+metadata_conservation22.json
+metadata_execution_receipt22.json
+metadata_read_receipts22.json
+actual_metadata01_attempt01/START.json et FIN.json
+Après succès metadata, copies exclusives byte-identiques du manifest et
+de la préparation sous role3/native_numeric_consumer_source01, aux noms
+numeric_manifest22.json et numeric_preparation22.json attendus par le parent.
+La présence préalable d'un output, d'ACTUAL numérique ou de la gate
+numérique interdit l'invocation. Une erreur conserve ses outputs partiels
+avec reçu METADATA_FAILURE_NO_CANDIDATE_NO_RETRY ; ils ne sont pas réutilisés.
+
+La préparation réussie indique NATIVE_NUMERIC04_METADATA_PREPARED, pas
+AUTHORIZED. Elle contient types/valeurs FIXED exacts, paths/SHA des revues,
+manifest, SOURCE01 handoff, plan numérique, policy, receipt/plan BUILD04,
+images et contrôle SOURCE du helper. Elle donne l'argv futur canonique
+Python -I -S -B -X utf8 et le CWD SOURCE01, sans lancer cet argv.
+La limite 3600s appartient au futur parent numérique ; ce helper ne se
+présente pas comme ce parent ni comme un résultat du banc N=10^8.
+
+Périmètre de confiance : hypothèse opérationnelle explicite Windows et
+runtime natif gelé, revues ROLE4 acquises. Charges effectives et fermeture
+universelle du loader restent non observées. Job commit OS 2GiB, active16
+et flags8968 sont les paramètres du futur backend readonly04 ; RSS est
+MONITOR_ONLY (2GiB processus, 4GiB somme échantillonnée), total32 monitor,
+outputs2GiB monitor, deux programmes directs séquentiels et zéro retry.
+Le helper ne transforme pas ces paramètres en enforcement observé.
+
+Le reçu de lectures réel du helper qualifiera les gros inventaires
+PARSED_METADATA_ALL_BINDINGS et les images BYTES_SHA_ONLY. Aucun FULL
+texte brut de milliers de lignes, audit primitif ou certificate Lean
+ne sera prétendu. La gate numérique demeure absent tant que ROOT ne
+l'a pas créée séparément après fermeture metadata/revue des pièces.
+Catalogue/GMP/carries/NTT/CRT, raffinement machine, B40 réel Lean,
+valeur coefficientN=10^8, H1 uniforme, D_N et WIN restent ouverts.
+
+Premier défaut SOURCE du helper provisoire corrigé avant gel : deux
+paths consumer supposés dans native_source01 n'existent pas. La lecture
+metadata84a7aa/04b862 a montré les vrais paths native02 et CPP/handoff
+native01 déjà protégés. Aucun échec d'exécution ou mathématique n'a eu
+lieu. La baseline officielle ROOT à ce gel est 82 modules/1367 auxiliaires.

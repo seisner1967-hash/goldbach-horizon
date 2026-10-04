@@ -1,0 +1,31 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:225:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:244:6: error: linarith failed to find a contradiction
+case pos.h1.h
+P : Finset ℕ
+z : ℕ
+g : ℕ → ℝ
+hz : 1 ≤ z
+hg : ∀ p ∈ P, 0 < g p ∧ g p < 1
+hG : G P z g ≠ 0
+r : Finset ℕ
+hr : r ∈ P.powerset
+hm : r ∈ support P z
+hh : hprod g r ≠ 0
+hs : sign r * sign r = 1
+a✝ : sign r * hprod g r * (sign r * hprod g r) * (G P z g * G P z g) < hprod g r * (G P z g * G P z g * hprod g r)
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:229:50: error: unsolved goals
+P : Finset ℕ
+z : ℕ
+g : ℕ → ℝ
+hz : 1 ≤ z
+hg : ∀ p ∈ P, 0 < g p ∧ g p < 1
+hG : G P z g ≠ 0
+hterm :
+  ∀ r ∈ P.powerset,
+    upperSum P (fun d => weight P z g d * gprod g d) r ^ 2 / hprod g r =
+      if r ∈ support P z then hprod g r / G P z g ^ 2 else 0
+hfilter : filter (fun a => a ∈ support P z) P.powerset = support P z
+⊢ G P z g * G P z g = G P z g ^ 2
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

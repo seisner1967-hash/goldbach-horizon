@@ -1,0 +1,180 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLEX_GAMMA_MELLIN_LAMBDA_MAIN30_SOURCE_REVIEW",
+  "status": "SOURCE_REVIEW_CLOSED_COHERENT_NOT_ELABORATED",
+  "reviewer": "ROLE5",
+  "source_author": "ROLE4",
+  "independent": true,
+  "review_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\complex_gamma_mellin_lambda_source_review01\\review22.md",
+  "review_sha256": "525e2577b47e49a3673056df681647778b2dd02ec01aca24172a31d01a81d887",
+  "inputs": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_lambda_source01\\source_handoff22.json",
+      "bytes": 17435,
+      "sha256": "7cbd95b3bb74cbfec4587aa5a40c4b0be420865b83e15794888a3f3bae56e1e3",
+      "scope": "FULL",
+      "read": "0f53c2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_lambda_source01\\ComplexGammaMellinLambda22.lean",
+      "bytes": 16534,
+      "sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+      "scope": "FULL",
+      "read": "aa0ebd"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_lambda_source01\\source_read_receipts22.json",
+      "bytes": 9163,
+      "sha256": "29a8be4f74bde8b1a98813062add1f881cc203db9efb3a7ebef27e6d190d0322",
+      "scope": "FULL",
+      "read": "8b6d80"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_lambda_source01\\source_catalog22.json",
+      "bytes": 2329,
+      "sha256": "c580f9713f97677d0b866db62102d1c8802be3980278c20ae313e6a6c3f60b4a",
+      "scope": "FULL",
+      "read": "ddf615"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_lambda_source01\\source_contract22.md",
+      "bytes": 9786,
+      "sha256": "f22355b45749755605a2e28245984760f72e1d49a45323a94a8d4a11c9e6a09a",
+      "scope": "FULL",
+      "read": "ddf615"
+    }
+  ],
+  "source_inspection": "MANUAL_FULL_SOURCE_READ;30 declarations=24 theorems+6 definitions;30 qualified prints;NOT_CANDIDATE_PARSER",
+  "API_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\VonMangoldt.lean",
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "30-95",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Prime\\Defs.lean",
+      "sha256": "1306f8b5c6a28d80dc922565a2b13fbb6c5252b4485fe8fe0545ae0b887dacb2",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "270-282",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SumIntegralComparisons.lean",
+      "sha256": "95c51ef1a6b6992513393f0e3105f4fa61c3b0a1b0854fb0c9450cff94cff7b9",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "71-110",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals.lean",
+      "sha256": "bac1446917ac212aaea7b11701f00a8acf6b698cba75251eb8fc572b02e2699f",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "307-356",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\NormedSpace\\FunctionSeries.lean",
+      "sha256": "6ec000e38e60a897f36b367b0edd5ec7cf209eb741c2c8073a2971809cc825b3",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "108-118",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\DominatedConvergence.lean",
+      "sha256": "dcd3681d95530d0a475a260324501f3928ad03ea92cf7adca07fa1f2c0e472f3",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "124-166",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Real.lean",
+      "sha256": "0a395ce7703a8592afb8ad2abc0062f26bcd4d8d37452359c1d0c35ff9188e22",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "82-98",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Group\\InfiniteSum.lean",
+      "sha256": "829003497ddf909ad4ba01fdbd4a9b2546432389b2cd4b38044b13a1ca858c25",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "94-110;149-167",
+      "read": "0259e1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Complex\\Log.lean",
+      "sha256": "09da69b28b9bce06f75edd53489d43e2bd770c04e729c0b8b3f9672d9fcef25a",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "54-93",
+      "read": "0cd312"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Complex.lean",
+      "sha256": "2472ae69befd020eb8beaaa4994d206fb8e6bf8f9c96ec92f10755e5fc775644",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "25-80;170-203",
+      "read": "0cd312"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\PSeries.lean",
+      "sha256": "d7c885113b040aa6d735a6f006dd448ddf198ad7f3880e53f2d59d28f99a88ab",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "280-303",
+      "read": "0cd312"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Real.lean",
+      "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "456-465;589-608;rg abs_cpow_eq_rpow_re_of_pos 311-320",
+      "read": "0cd312;b95add"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Ring.lean",
+      "sha256": "08b6e8ea95141786af7425526114f5e9e7cd98f743b7360d39a1f4819063dda0",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "86-108",
+      "read": "0cd312"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\NatInt.lean",
+      "sha256": "7e9a09e58953544be3b754011213624232d37d9dbfb76d2f143fb85235133eab",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "217-233",
+      "read": "0cd312"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Continuity.lean",
+      "sha256": "47b6018f8597ae353961ae3835d8b96915803978d12d0c9c3dd555fb0118b8c1",
+      "scope": "TARGETED_ONLY_NOT_FULL",
+      "lines": "rg Continuous.const_cpow 126-135",
+      "read": "b95add"
+    }
+  ],
+  "paid_provenance_scope": "TARGETED_JSON_ROWS_AND_BYTE_HASH; prior independent FULL source/log/observations retained; no new compiler or olean interpretation",
+  "Holo27_status": "INDEPENDENT_LEAN_AUX_PASS",
+  "Holo27_olean_sha256": "f831358e15e1a088988b8bc102a3f7ca23df4a32c3210cfb072273ae4abcccbf",
+  "Local26_global_status": "INDEPENDENT_BATCH26_FAILED",
+  "Local26_row_status": "INDEPENDENT_LEAN_AUX_PASS",
+  "Local26_olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+  "all32_author_bindings_byte_hash_verified": "b95add exit0,32/32 intact;this is not an import closure or FULL cache read",
+  "paid_source_statement_reads": "0cd312 TARGETED Holo27 local_parameters/exists_local_kernel_ball/complexGammaKernel_local_bound/weightedExponential_integrable/complexGammaInverse_eq_exp",
+  "excluded_aggregate_read": "Initial Promise.all output truncated; replaced aa0ebd/ddf615/8b6d80/0f53c2;no aggregate FULL claim",
+  "Tail_excluded_from_main": true,
+  "bridge2_not_reviewed": true,
+  "arithmetic_tail_6R": "PAPER_ONLY_TWO_WEIGHTED_TAILS_NOT_FORMALIZED_IN_MAIN30",
+  "compact_Arg_atan_uniformity": "PAPER_ONLY_NOT_FORMALIZED_IN_MAIN30",
+  "candidate_parser_invocations": 0,
+  "compiler_invocations": 0,
+  "probe_invocations": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "PREP_created": false,
+  "sources_modified": false,
+  "old_batches_replayed": false,
+  "official_modules": 85,
+  "official_declarations": 1434,
+  "new_credit": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

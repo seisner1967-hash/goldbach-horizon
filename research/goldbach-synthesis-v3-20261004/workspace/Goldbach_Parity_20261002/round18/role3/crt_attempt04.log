@@ -1,0 +1,40 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:210:7: error: type mismatch, term
+  sifted_count_inclusion (Ioc A B) H (fun b => ell ∣ b ∧ v ∣ candidate P b) (Nat.ne_of_gt hH)
+after simplification has type
+  ↑(#(@filter ℕ (fun b => b.Coprime H ∧ ell ∣ b ∧ v ∣ candidate P b)
+          (fun a =>
+            @instDecidableAnd (a.Coprime H) (ell ∣ a ∧ v ∣ candidate P a) (a.instDecidableCoprime H)
+              (Classical.propDecidable (ell ∣ a ∧ v ∣ candidate P a)))
+          (Ioc A B))) =
+    ∑ k ∈ H.divisors, ↑(μ k) * ↑(#(filter (fun b => k ∣ b ∧ ell ∣ b ∧ v ∣ candidate P b) (Ioc A B))) : Prop
+but is expected to have type
+  ↑(#(@filter ℕ (fun b => b.Coprime H ∧ ell ∣ b ∧ v ∣ candidate P b)
+          (fun a =>
+            @instDecidableAnd (a.Coprime H) (ell ∣ a ∧ v ∣ candidate P a) (a.instDecidableCoprime H) instDecidableAnd)
+          (Ioc A B))) =
+    ∑ k ∈ H.divisors, ↑(μ k) * ↑(#(filter (fun b => k ∣ b ∧ ell ∣ b ∧ v ∣ candidate P b) (Ioc A B))) : Prop
+'GoldbachRound18.SeparatedTypeII.arithmeticDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmeticFront' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.rowCount' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inverseResidue' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.crtResidue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inverse_residue_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.crt_residue_characterization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.residue_front' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.unit_indicator_moebius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.sifted_count_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.units_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmetic_density_totient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmetic_density_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmetic_front_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmetic_front_squarefree_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inclusion_front' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.unit_count_front' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.row_count_front' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omitted_count_rows' depends on axioms: [propext, Classical.choice, Quot.sound]

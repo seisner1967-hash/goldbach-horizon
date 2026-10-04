@@ -1,0 +1,118 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:44:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:92:28: error: tactic 'rewrite' failed, motive is not type correct:
+  fun _a => (if _a then ↑K else 0) = if k = 0 then ↑K else 0
+Error: application type mismatch
+  @ite ℂ _a ((↑K).decidableDvd k)
+argument
+  (↑K).decidableDvd k
+has type
+  Decidable ((fun x1 x2 => x1 ∣ x2) (↑K) k) : Type
+but is expected to have type
+  Decidable _a : Type
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+K : ℕ
+hK : 0 < K
+k : ℤ
+hlo : -↑K < k
+hhi : k < ↑K
+⊢ (if ↑K ∣ k then ↑K else 0) = if k = 0 then ↑K else 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:114:6: error: tactic 'rewrite' failed, motive is not type correct:
+  fun _a => (if _a then ↑K else 0) = if m + n = N then ↑K else 0
+Error: application type mismatch
+  @ite ℂ _a ((↑m + ↑n - ↑N).instDecidableEq 0)
+argument
+  (↑m + ↑n - ↑N).instDecidableEq 0
+has type
+  Decidable (↑m + ↑n - ↑N = 0) : Type
+but is expected to have type
+  Decidable _a : Type
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+case intro
+N M K m n : ℕ
+hA0 : N ⊔ (2 * M - N) < K
+hm : m ≤ M
+hn : n ≤ M
+hK : 0 < K
+hlo : -↑K < ↑m + ↑n - ↑N
+hhi : ↑m + ↑n - ↑N < ↑K
+hz : ↑m + ↑n - ↑N = 0 ↔ m + n = N
+⊢ (if ↑m + ↑n - ↑N = 0 then ↑K else 0) = if m + n = N then ↑K else 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:156:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:165:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:180:16: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:196:2: error: type mismatch
+  hc
+has type
+  Complex.exp (↑a * ↑N) / ↑K * ↑(heatRatio a) ^ N * ↑K = 1 : Prop
+but is expected to have type
+  ↑(Real.exp (a * ↑N) / ↑K) * ↑(heatRatio a) ^ N * ↑K = 1 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:264:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:270:54: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch14\sources\DiscreteThermalProjection22.lean:285:2: error: type mismatch
+  h
+has type
+  ↑(Real.exp (a * ↑N) / ↑K) *
+      ∑ x ∈ Finset.range K,
+        trueCircleHeatPartial a (gridAngle K x) M ^ 2 * Complex.exp (↑(-↑N) * Complex.I * ↑(gridAngle K x)) =
+    ↑(∑ n ∈ Finset.range (N + 1), ArithmeticFunction.vonMangoldt n * ArithmeticFunction.vonMangoldt (N - n)) : Prop
+but is expected to have type
+  ↑(Real.exp (a * ↑N) / ↑K) *
+      ∑ j ∈ Finset.range K,
+        trueCircleHeatPartial a (gridAngle K j) M ^ 2 * Complex.exp (-↑↑N * Complex.I * ↑(gridAngle K j)) =
+    ↑(∑ n ∈ Finset.range (N + 1), ArithmeticFunction.vonMangoldt n * ArithmeticFunction.vonMangoldt (N - n)) : Prop
+'GoldbachDiscreteCircle22.gridRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.gridCharacter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.gridAngle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.gridRoot_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.gridCharacter_eq_root_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.gridCharacter_eq_angle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.sum_gridCharacter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.grid_divides_iff_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.sum_gridCharacter_no_alias' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachDiscreteCircle22.rectangle_frequency_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.sum_rectangle_character' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.heatRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discreteHeatTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discreteHeatPartial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.trueCircleHeatPartial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.lambdaCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discreteThermalProjection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.heatRatio_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discreteHeatPartial_eq_trueCircle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.gridCharacter_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discreteHeat_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discrete_normalizer_cancel' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachDiscreteCircle22.normalized_discrete_pair' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discretePartial_square_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discreteProjection_eq_rectangle' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachDiscreteCircle22.rectangle_filter_antidiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.discreteThermalProjection_eq_coefficient' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachDiscreteCircle22.lambdaCoefficient_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachDiscreteCircle22.sampled_trueCircle_eq_coefficient' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

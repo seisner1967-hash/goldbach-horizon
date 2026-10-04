@@ -1,0 +1,787 @@
+{
+  "schema": "round22.role3.G0_final_catalog.v1",
+  "time": "2026-10-03T08:40:41.6617943+00:00",
+  "node_id": "16.1",
+  "status": "AUTHOR_ALL_FOUR_PASS_AUX_JUDGE_REQUIRED",
+  "rows": [
+    {
+      "module": "EpsteinKernel22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\EpsteinKernel22.lean",
+      "source_sha256": "b465bf53b124fa158eed1b5f01171d18ce7f8d7252bf27cf30db1ed7575a773c",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\stage01_attempt02\\EpsteinKernel22.olean",
+      "olean_sha256": "9bf2da2b6cb3a5780868c51916afdf173e79a971d56fdf7a52c6b2abfa9def8d",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\stage01_attempt02\\EpsteinKernel22.log",
+      "log_sha256": "70182795d884a636bf5c89904a21ee83f4ce9c83fea2c718093a60cb2a275886",
+      "actual_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\stage01_attempt02\\receipt.json",
+      "actual_receipt_sha256": "45110d30929b8813db95a17c8a931ad459e24b99d59ed76c89a1fea55b1c5cb4",
+      "source_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\source_manifest.json",
+      "source_manifest_sha256": "8c16d9b471809ebfd093305d7f6e9e90284579cce3dcb95fc0dd9d3d5dd22265",
+      "started_at": "2026-10-03T09:14:47.195648+02:00",
+      "finished_at": "2026-10-03T09:15:17.486606+02:00",
+      "exit_code": 0,
+      "theorem_count": 28,
+      "definition_count": 5,
+      "audits": [
+        {
+          "name": "Epstein22.radicand",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.boundary",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.primitive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.weight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.radicand_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.root_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.root_sq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel_even",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.boundary_odd",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.primitive_odd",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.weight_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.weight_eq_rpow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel_eq_rpow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuous_kernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuous_boundary",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuous_primitive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.hasDerivAt_root",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.hasDerivAt_boundary",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.hasDerivAt_primitive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.intervalIntegrable_kernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.integral_kernel_interval",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.boundary_normalized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.tendsto_boundary_atTop",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.tendsto_primitive_atTop",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.tendsto_primitive_atBot",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.integrable_kernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.integral_kernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.boundary_le_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.boundary_deficit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.boundary_deficit_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "FULL_log_receipt": "41e1f7",
+      "status": "AUTHOR_PASS_AUX_JUDGE_REQUIRED"
+    },
+    {
+      "module": "EpsteinFinite22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\EpsteinFinite22.lean",
+      "source_sha256": "fb6205d1d88bbe864fd6c45f6ae60c5296812c966d9b2ce8bd2cccfc2128cc2d",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\stage02_attempt03\\EpsteinFinite22.olean",
+      "olean_sha256": "679f572be0d81f8c86bfa418fb460d5168774fc56b2b2537a9469ff0aca7a544",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\stage02_attempt03\\EpsteinFinite22.log",
+      "log_sha256": "2fba74bbb307e13e60221866ac0648a97dcffca1003c73cf15e59a3b8c89acca",
+      "actual_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\stage02_attempt03\\receipt.json",
+      "actual_receipt_sha256": "a3681f6de47fad0670d8457c36bda0b1eed308ee90f4b137664957b6aeb4a3df",
+      "source_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage02\\revision03\\source_manifest.json",
+      "source_manifest_sha256": "1ee8a02a9d56e9c5d9dfc65819a987c58cf05a5aea1a9a20c1f06a0a7dd08b70",
+      "started_at": "2026-10-03T09:35:44.925627+02:00",
+      "finished_at": "2026-10-03T09:36:07.068572+02:00",
+      "exit_code": 0,
+      "theorem_count": 14,
+      "definition_count": 4,
+      "audits": [
+        {
+          "name": "Epstein22.shiftKernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.shiftWindow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.finiteShiftIntegral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.endpointSum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.abs_cast_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.shiftKernel_eq_rpow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuous_shiftKernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.intervalIntegrable_shiftKernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.affineCellIntegral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.shiftKernel_neg_isometry",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.finiteWindow_neg_isometry",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.finiteShiftIntegral_neg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.sum_int_Icc",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.range_shift_telescope",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.sum_Icc_shift_telescope",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.finiteShiftIntegral_pos_formula",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.finiteShiftIntegral_natAbs",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.finiteShiftIntegral_formula",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "FULL_log_receipt": "5e8492",
+      "status": "AUTHOR_PASS_AUX_JUDGE_REQUIRED"
+    },
+    {
+      "module": "EpsteinUnfold22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\EpsteinUnfold22.lean",
+      "source_sha256": "79384d3502ab8042b44104e0ba4e56087c47430c267c2b9f16f9c6f228426aea",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\EpsteinUnfold22.olean",
+      "olean_sha256": "b3e0d60e7633cc46e2084c0131e2fd42aef0f1fca60d4db7682d45ece1774bc0",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\EpsteinUnfold22.log",
+      "log_sha256": "12cc50cc686994a04af46290727ed38de7e11eaf09622c67d5fcfb1544c63060",
+      "actual_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\receipt.json",
+      "actual_receipt_sha256": "4a6677cebe40f404ebc366d35227e31584f6b0d53962b1d61d84d5c3703ffb08",
+      "source_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\source_manifest.json",
+      "source_manifest_sha256": "066c1d609d691a42de87f7f7da2d2cf0d95429fb99cf4b4197af92c17b38b7f8",
+      "started_at": "2026-10-03T10:29:04.71679+02:00",
+      "finished_at": "2026-10-03T10:29:29.900322+02:00",
+      "exit_code": 0,
+      "theorem_count": 16,
+      "definition_count": 3,
+      "audits": [
+        {
+          "name": "Epstein22.periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.translateBound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.infiniteShiftIntegral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel_upper_of_sq_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel_upper_a",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.summable_translateBound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.translateBound_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.kernel_translate_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuousOn_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuous_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.periodic_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.intervalIntegrable_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.summable_integral_norm_cells",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.integral_periodized_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.summable_kernel_translate",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.infiniteSum_shiftKernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.unfoldFullRealThreeHalves",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.abs_cast_eq_natAbs",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.unfoldFullRealThreeHalves_natAbs",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "FULL_log_receipt": "4ee808",
+      "status": "AUTHOR_PASS_AUX_JUDGE_REQUIRED"
+    },
+    {
+      "module": "EpsteinTail22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\EpsteinTail22.lean",
+      "source_sha256": "5f9d3f180df2e165d43aebfe2e72b963091bb2b90fdfa4e786a66cc82745af8e",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\EpsteinTail22.olean",
+      "olean_sha256": "d6ca888b83bbd4644152da951df39b7712a2735ae10e233b84ea1dcb9584b025",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\EpsteinTail22.log",
+      "log_sha256": "af4334b90177fa791f1ee4cd1befd21c2039c70db2a08dbbd32b02663cce535d",
+      "actual_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\receipt.json",
+      "actual_receipt_sha256": "d3c68016b792a02053e97901e7ab4759ff77652fa0835582124e86d9f7835c21",
+      "source_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\source_manifest.json",
+      "source_manifest_sha256": "ab0c0442f7c9bbe84e1880b242166e6d3dcfb4cea801c70139d9c262fa13d12b",
+      "started_at": "2026-10-03T10:35:09.799051+02:00",
+      "finished_at": "2026-10-03T10:35:31.051697+02:00",
+      "exit_code": 0,
+      "theorem_count": 11,
+      "definition_count": 3,
+      "audits": [
+        {
+          "name": "Epstein22.endpointDeficit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.truncationEnvelope",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.truncationEnvelopeReal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.endpointSum_range",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.endpointDeficit_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.boundary_deficit_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.endpointDeficit_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.complete_mass_prefactor",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.actual_error_eq_endpointDeficit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.actual_truncation_error_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.truncationEnvelope_eq_rpow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuous_truncationEnvelope",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.truncationEnvelope_eq_real",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Epstein22.continuousOn_truncationEnvelopeReal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "FULL_log_receipt": "4cc683",
+      "status": "AUTHOR_PASS_AUX_JUDGE_REQUIRED"
+    }
+  ],
+  "module_count": 4,
+  "theorem_count": null,
+  "definition_count": null,
+  "axiom_print_count": 84,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "raccord_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\G0_raccord_final.md",
+  "raccord_sha256": "76489eb4db4ac5a9be49b8ac19de41aeaacdfeff21b4ceb294bf3fa327b4d1c1",
+  "metadata_helper_sha256": "206205cdea9881c7c614c45764712e1927ff9401ca071407d04a11c2613d4fb9",
+  "author_recompile_required": false,
+  "new_Lean_invocations": 0,
+  "Python_math_calls": 0,
+  "old_PASS_replays": 0,
+  "new_D_N_bound": false,
+  "victory": false,
+  "official_credit": "ROOT_JUDGE_REQUIRED"
+}

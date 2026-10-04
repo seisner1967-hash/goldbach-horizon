@@ -1,0 +1,45 @@
+{
+  "schema": "ROUND22_GLOBAL_THERMAL_PREPARED_MANIFEST_22",
+  "created_utc": "2026-10-03T12:45:58.6284818Z",
+  "status": "PREPARED_METADATA_ONLY_NOT_EXECUTED",
+  "actor": "ROLE6",
+  "metadata_owner": "ROLE4",
+  "scope": "ROUND22_GLOBAL_THERMAL_H1_NUMERIC_ONLY",
+  "bank_id": "THERMAL_GLOBAL_H1_22_SOURCEPACK01",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\transport_catalogue_source22.py",
+      "sha256": "2fd2937811e5627746bb9e4a6bdcf9564073ef8ce4abf8b846e7a2aa1ee46bc8",
+      "bytes": 4946,
+      "kind": "SOURCE_PACKET_INPUT",
+      "module_alias": "transport_catalogue_source22"
+    }
+  ],
+  "binding_count": 1,
+  "source_manifest_sha256": "e1caa3d115dd492cfa6d91478240b0e8418614b6faf8798f48e15312dfe11a51",
+  "source_packet_bindings": 14,
+  "runtime_module_aliases": [
+    "dyadic_r01",
+    "analytic_r01",
+    "kernel_r01",
+    "unit_transport_source22",
+    "arithmetic_catalogue_source22",
+    "transport_catalogue_source22",
+    "envelopes_source22",
+    "producer_source22",
+    "structural_checker_source22"
+  ],
+  "independent_review_receipt_sha256": "973da581891aa1c1746999efd7684a88507feaae0e2b83b80197bb01a61217b6",
+  "independent_review_report_sha256": "55679d2dc4ee4251d2f7357d290073d10500f0ada59384101499807f02e6c28c",
+  "independent_domain_addendum_sha256": "a26a64dea1e392d62dfbad3a0751cc5e3414dd3be0e52603f7b05884f9b0a1c2",
+  "future_evaluation_level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER",
+  "analytic_certification_level": "PAPER_DERIVATIONS_WITH_EXACT_DOMAINS_NOT_LEAN_CERTIFICATION",
+  "structural_PASS_is_enclosure_PASS": false,
+  "protected_archive_count": 3089,
+  "protected_registry_sha256": "875cebdd8e510fe3341b05009a76991801777b2a060a07229c5323033226ba99",
+  "runtime_inventory_scope": "bundled stdlib/native bytes; site disabled; no OS system-library inventory",
+  "cost_measured": false,
+  "new_math_invocations": 0,
+  "new_Lean_invocations": 0,
+  "WIN": false
+}

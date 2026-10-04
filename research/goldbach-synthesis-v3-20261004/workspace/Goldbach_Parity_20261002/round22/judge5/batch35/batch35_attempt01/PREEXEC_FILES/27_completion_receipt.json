@@ -1,0 +1,328 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH33",
+  "time_utc": "2026-10-04T02:37:31.215712+00:00",
+  "status": "INDEPENDENT_BATCH33_FAILED",
+  "actual_status": "INDEPENDENT_BATCH33_FAILED",
+  "attempt": "batch33_attempt01",
+  "actual_child_invocations": 1,
+  "modules_passed": 0,
+  "module_count_passed": 0,
+  "declarations_passed": 0,
+  "theorems_passed": 0,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "input_count": 9945,
+  "closed_judge_file_count": 2673,
+  "protected_archive_count": 3089,
+  "capture_count": 108,
+  "axiom_counts": {
+    "standard_triplet": 25,
+    "empty": 0,
+    "recovery": 5
+  },
+  "axiom_rows": [
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinSize",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinMass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinCoefficient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinDirichlet",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinIntegrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinThermal",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambda_direct_le_log",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinSize_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinSize_pseries_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinSize_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.mellin_pseries_shift_two_sum_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.mellin_pseries_tsum_le_three",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinMass_le_six",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinMass_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.norm_lambdaMellinCoefficient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinCoefficient_norm_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinCoefficient_continuous",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinDirichlet_continuous",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.norm_lambdaMellinDirichlet_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.norm_lambdaMellinIntegrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_integrable",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_integral_norm_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_tsum_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinProduct_integrable",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinProduct_local_uniform_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinProduct_local_envelope_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.principal_cpow_positive_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinIntegrand_single_inversion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinThermal_norm_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinThermal_eq_integral",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "module_evidence": [
+    {
+      "module": "ComplexGammaMellinLambda22",
+      "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+      "started_at": "2026-10-04T02:32:38.082310+00:00",
+      "finished_at": "2026-10-04T02:33:26.832197+00:00",
+      "exit_code": 1,
+      "declarations_passed": 0,
+      "theorems_passed": 0,
+      "definitions_passed": 0,
+      "source_sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+      "log_sha256": "9193c890ddf67dee7b41ba985ce996582b7d6dc0ac4c3d8d6b55c73fed763bbd",
+      "olean_sha256": null,
+      "error_sites": [
+        [
+          "149",
+          "4",
+          "type mismatch, term"
+        ]
+      ],
+      "warning_count": 1,
+      "axiom_counts": {
+        "standard_triplet": 25,
+        "empty": 0,
+        "recovery": 5
+      },
+      "scope": "TRUE_LAMBDA_COMPLEX_GAMMA_MELLIN_AUX_ONLY"
+    }
+  ],
+  "actual_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch33\\batch33_attempt01\\receipt.json",
+  "actual_receipt_sha256": "5fa2895cce5867ae417f3bec34f1858176c1c10c3b3770005acfa4ae3e2026ef",
+  "adjudication_sha256": "a04a32ce5555f8ceb4f9a4e77d48f898eb15fa65dbf41c58e14824c1d73b71e7",
+  "PREEXEC_sha256": "44e2da0bffc3049978994a740df15fbc447ad50bd2c1db5768b7f783341329f1",
+  "POSTEXEC_sha256": "44b4898ea37d0a37fca179f1d668060196c95e4526252c272282bf4830e51ff1",
+  "START_sha256": "0e83a4bdb8d0bfd4bc5a3ab8f657d5f4349b899ffcf74a399f294d2de3ceaa29",
+  "FIN_sha256": "1517a2ba67c90e8256e9e089cd444fd49aa7aa7f2c5f9ab14cc82b3fa14de956",
+  "gate_sha256": "c2f4e13c4b2dbdd103c7f7f2fd40f3aaf100f33abcad24140df48263a350b1d0",
+  "metadata_helper_sha256": "21e52d7bfc3577df848ce99f3877cec0899b575c93d0ac2b8f935507811375d3",
+  "logs_read_scope": "FULL53146b",
+  "actual_receipt_read_scope": "FULLa6f02a",
+  "module_START_FIN_read_scope": "FULL589616 and exact equality to real receipt row",
+  "large_PRE_POST_read_scope": "HEADER_PROJECTION_PLUS_ALL_METADATA_ROWS_AND_CURRENT_BYTE_HASH_NOT_RAW_FULL",
+  "compiler_invocations_in_closure": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "official_modules_before_ROOT_observation": 87,
+  "official_declarations_before_ROOT_observation": 1458,
+  "hypothetical_after_ROOT_modules": 87,
+  "hypothetical_after_ROOT_declarations": 1458,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "Lambda_Mellin_paid_by_this_module": false,
+  "native_refinement_paid": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false
+}

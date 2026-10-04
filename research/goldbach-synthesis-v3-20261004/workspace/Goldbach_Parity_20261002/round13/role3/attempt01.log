@@ -1,0 +1,186 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:54:2: error: unsolved goals
+case h.mp.intro.inr.inr.inr.inr.inr.inr.inl
+a c r s q : ℕ
+hc : Nat.Prime c
+hr : Nat.Prime r
+hs : Nat.Prime s
+hq : Nat.Prime q
+hcr : c < r
+hrs : r < s
+hsa : s ≤ a
+haq : a < q
+hcra : c * r ≤ a
+hcsa : c * s ≤ a
+hars : a < r * s
+hacrs : a < c * r * s
+d : ℕ
+hd : d ∈ filter (fun d => d ≤ a) (c * r * s).divisors
+hdm : d ∈ (c * r * s).divisors
+hda : d ≤ a
+h : d = r * s
+⊢ r = 1 ∧ s = 1 ∨ r * s = c ∨ r * s = r ∨ r * s = s ∨ r * s = c * r ∨ r = c ∨ s = 0
+
+case h.mp.intro.inr.inr.inr.inr.inr.inr.inr
+a c r s q : ℕ
+hc : Nat.Prime c
+hr : Nat.Prime r
+hs : Nat.Prime s
+hq : Nat.Prime q
+hcr : c < r
+hrs : r < s
+hsa : s ≤ a
+haq : a < q
+hcra : c * r ≤ a
+hcsa : c * s ≤ a
+hars : a < r * s
+hacrs : a < c * r * s
+d : ℕ
+hd : d ∈ filter (fun d => d ≤ a) (c * r * s).divisors
+hdm : d ∈ (c * r * s).divisors
+hda : d ≤ a
+h : d = c * r * s
+⊢ (c = 1 ∧ r = 1) ∧ s = 1 ∨ c * r * s = c ∨ c * r * s = r ∨ c * r * s = s ∨ c * r * s = c * r ∨ c * r = c ∨ s = 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:67:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f - g ≤ -1
+  f - h ≥ 0
+  f - i ≥ 0
+  f - j ≤ -1
+  f - k ≤ -1
+  e ≥ 0
+  e - f ≤ 0
+  d ≥ 0
+  b ≥ 0
+  b - d ≥ 1
+  b - e ≤ -1
+where
+ b := ↑r
+ d := ↑c
+ e := ↑s
+ f := ↑a
+ g := ↑q
+ h := ↑c * ↑r
+ i := ↑c * ↑s
+ j := ↑r * ↑s
+ k := ↑(c * r) * ↑s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:67:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f - g ≤ -1
+  f - h ≥ 0
+  f - i ≥ 0
+  f - j ≤ -1
+  f - k ≤ -1
+  e ≥ 0
+  e - f ≤ 0
+  d ≥ 0
+  b ≥ 0
+  b - d ≥ 1
+  b - e ≤ -1
+where
+ b := ↑r
+ d := ↑c
+ e := ↑s
+ f := ↑a
+ g := ↑q
+ h := ↑c * ↑r
+ i := ↑c * ↑s
+ j := ↑r * ↑s
+ k := ↑(c * r) * ↑s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:91:33: error: linarith failed to find a contradiction
+case h
+c r s q : ℕ
+hc : Nat.Prime c
+hr : Nat.Prime r
+hs : Nat.Prime s
+hq : Nat.Prime q
+hcr : c < r
+hrs : r < s
+hsq : s < q
+hcopcr : c.Coprime r
+hcops : (c * r).Coprime s
+hcopq : (c * r * s).Coprime q
+hsfcr : Squarefree (c * r)
+hsfcrs : Squarefree (c * r * s)
+hsf : Squarefree (c * r * s * q)
+hm : mu (c * r * s * q) = 1
+a✝ : c * r * s = 1
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:122:6: warning: try 'simp at this' instead of 'simpa using this'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:123:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  g - h ≤ -1
+  f ≥ 0
+  e ≥ 0
+  e - f ≤ -1
+  e - g ≥ 0
+  e - h ≥ 0
+  e - i ≤ -1
+  e - j ≤ -1
+  d ≥ 0
+  d - e ≤ 0
+  d - g ≤ -1
+  d - h ≤ -1
+  b ≥ 0
+  b ≥ 2
+  b - d ≤ -1
+  b - g ≤ -1
+where
+ b := ↑r
+ d := ↑s
+ e := ↑a
+ f := ↑q
+ g := ↑c * ↑r
+ h := ↑c * ↑s
+ i := ↑r * ↑s
+ j := ↑(c * r) * ↑s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\PrimeSemiprimeSwitch.lean:126:2: error: simp made no progress
+'GoldbachRound13.PrimeSemiprimeSwitch.divisor_prime_extension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.divisor_three_primes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_filter_large_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_filter_image' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.mu_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.image_arithmetic' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_sum_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.short_sum_image' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.PrimeSemiprimeSwitch.actual_source_coefficients' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.mu' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.shortDivisorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound11.harmonicKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.sourceBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.theta' depends on axioms: [propext, Classical.choice, Quot.sound]

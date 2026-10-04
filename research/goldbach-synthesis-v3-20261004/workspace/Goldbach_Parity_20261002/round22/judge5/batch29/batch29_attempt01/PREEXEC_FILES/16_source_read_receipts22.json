@@ -1,0 +1,90 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_TAIL_REVISION02_SOURCE_READS",
+  "status": "SOURCE_READS_ONLY_NOT_PREPARED",
+  "new_source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/ComplexGammaMellinTail22.lean",
+    "sha256": "3002a4d39dfd6bd072f1a8f778de3752cf91bf60f831dd3345f5dd9631723852",
+    "scope": "FULL",
+    "chunk": "e36345"
+  },
+  "new_contract": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source02/source_contract22.md",
+    "scope": "FULL",
+    "chunk": "a7b5f1"
+  },
+  "old_source_and_all_other_API_reads_preserved_in": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_tail_source01/source_read_receipts22.json",
+    "sha256": "1586831e195de9100fd7a33bb76054eedab077bd233f835a04365120f431db13",
+    "scope": "HISTORICAL_RECEIPTS_INHERITED_SAME_AUTHOR_NOT_NEW_CACHE_FULL"
+  },
+  "old_handoff": {
+    "scope": "FULL",
+    "chunk": "a57f4a",
+    "sha256": "b80e83e1029995309836b313b5897a54ec5c27c07cb6e2a48371705c4cf41587"
+  },
+  "actual28": {
+    "log": {
+      "scope": "FULL",
+      "chunk": "3da102",
+      "sha256": "9f97625c6e08c35f5d06eef3c152b6588db84b315fb9616c67541fe3307cb7e0"
+    },
+    "receipt": {
+      "scope": "FULL",
+      "chunk": "fa31c2",
+      "sha256": "3d724ee2096e676738e55c33c65a36909418930b4a0e40c0a0d7086ad38c06da"
+    },
+    "module_FIN": {
+      "scope": "FULL",
+      "chunk": "fa31c2",
+      "sha256": "f426a2c77b5c2614751a554ba28de7022f376ed48626678e0c1cf004b367ec89"
+    }
+  },
+  "new_API_reads": [
+    {
+      "path": "Mathlib/MeasureTheory/Integral/IntegrableOn.lean",
+      "scope": "TARGETED100-110",
+      "chunk": "079a84",
+      "sha256": "377d50adedf2a1705a1e4acc6126076e7b40c8213f0600fec8898f7a019e7492"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/SetIntegral.lean",
+      "scope": "TARGETED172-180",
+      "chunk": "829e42",
+      "sha256": "2fc90a7ecb3b4d9e47299a2b3b8eebf97a4e2a177d28daf3c48a4c0e059c4c86"
+    },
+    {
+      "path": "Mathlib/Topology/Constructions.lean",
+      "scope": "TARGETED581-583",
+      "chunk": "079a84",
+      "sha256": "a2761653618b7e79b33969e83107d346e377233fd92a06601e315aa460cb1d1b"
+    }
+  ],
+  "readonly_Local26": {
+    "source_scope": "FULL",
+    "source_chunk": "91c20c",
+    "receipt_and_ROOT_scope": "FULL",
+    "receipt_and_ROOT_chunk": "ac4cfa",
+    "source_sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+    "olean_scope": "BYTE_HASH_NOT_TEXT",
+    "olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5"
+  },
+  "old_independent_SOURCE_review": {
+    "scope": "FULL",
+    "chunk": "4abc03",
+    "sha256": "024dd84e4ed371175b90eef1bf4ef747b9050817e4675492bb7ac1e59745454d"
+  },
+  "scope_exclusions": [
+    "No API invocation or theorem elaboration",
+    "No candidate parser, Lean, compiler, Python math, native runtime",
+    "No universal import closure",
+    "No archive contents FULL read claimed",
+    "No H1 or D_N"
+  ],
+  "candidate_parser_invocations": 0,
+  "compiler_invocations": 0,
+  "Python_math_invocations": 0,
+  "native_invocations": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "WIN": false
+}

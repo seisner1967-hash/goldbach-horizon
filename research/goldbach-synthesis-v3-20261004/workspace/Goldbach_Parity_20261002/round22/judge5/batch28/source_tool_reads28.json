@@ -1,0 +1,59 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH28_SOURCE_TOOL_READS",
+  "status": "SOURCE_TOOL_FROZEN_NOT_PREPARED_NOT_EXECUTED",
+  "time_utc": "2026-10-03T23:43:38.0516143Z",
+  "reviewer": "ROLE5",
+  "full_entries": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch28\\prepare_metadata.py",
+      "sha256": "4db218f273e6351a7a4c261139db0ba4aa45549cacd5d73c6285a3e227feb900",
+      "bytes": 23601,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "f73809"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch28\\run_once.py",
+      "sha256": "d7b848dd07d3bb2b50ca3e26a8c086a927733cc4cd121b5dd4105a0231766bef",
+      "bytes": 13235,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "4d37db"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch28\\preparation.md",
+      "sha256": "8efe6dfa266d0e5102f2724066e75e291b90b6c03de6600d20348237d20c0bbd",
+      "bytes": 4398,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "30d530"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch28\\sources\\ComplexGammaMellinTail22.lean",
+      "sha256": "7dcce5beacdadc61dd067f9a6e176d70d5ff3c44cb6720b6f1d650068b67dcd5",
+      "bytes": 13010,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "04fa05"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch28\\source_catalog_author22.json",
+      "sha256": "2292627179524c8743c52a6295dc8e5361e64999af5e0b90f0a72375b90d3fe5",
+      "bytes": 1735,
+      "scope": "FULL_SOURCE_ONLY_NOT_EXECUTED",
+      "read_chunk": "30d530"
+    }
+  ],
+  "author_source_full": "57724b",
+  "author_docs_full": "d79077",
+  "independent_review_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\complex_gamma_mellin_tail_source_review01.md",
+  "independent_review_sha256": "024dd84e4ed371175b90eef1bf4ef747b9050817e4675492bb7ac1e59745454d",
+  "independent_review_full": "b1b3d6",
+  "baseline_observation_full": "667ae8",
+  "baseline_observation_sha256": "7ae697adeb55bd7aa124c19ed69e7ef1d0b2cb05b10fc386f4cd55a312478f2f",
+  "truncated_reads_excluded": [
+    "1597cc aggregate template read truncated; replaced FULL8a4dd6"
+  ],
+  "candidate_parser_invocations": 0,
+  "metadata_PREP_invocations": 0,
+  "compiler_invocations": 0,
+  "candidate_imports": 0,
+  "numeric_invocations": 0,
+  "raw_FULL_import_closure_claim": false
+}

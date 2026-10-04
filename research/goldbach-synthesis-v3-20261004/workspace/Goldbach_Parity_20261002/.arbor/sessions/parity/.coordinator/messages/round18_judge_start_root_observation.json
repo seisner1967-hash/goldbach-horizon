@@ -1,0 +1,23 @@
+{
+  "round": 18,
+  "status": "ACTUAL_JUDGE_STARTUP_AND_FREEZE_VERIFIED",
+  "observed_at_utc": "2026-10-02T23:01:55.505480+00:00",
+  "started_at_utc": "2026-10-02T22:59:14.940258+00:00",
+  "input_manifest_sha256": "a1e5fa8eaa4d3e455c46f0e1bea20ce516bc0f0473195b6ef0a3e73e7ad2114e",
+  "authorization_sha256": "9eaf09385fa9d8d703850c0899561b3001d74857ca49b97e6fac94855d60fd57",
+  "round18_bindings": 267,
+  "historical_dependency_bindings": 22,
+  "PREEXEC_captures": 11,
+  "passed_pre_Lean_stages": [
+    "01_preservation_PASS.json",
+    "02_stored_numeric_PASS.json",
+    "03_typeii_integers_PASS.json",
+    "04_semiprime_integers_PASS.json",
+    "04b_distinct_CRT_integers_PASS.json",
+    "05_author_failures_PASS.json",
+    "05b_distinct_content_review_PASS.json"
+  ],
+  "audit_or_compiler_executed_by_root": false,
+  "old_producer_kernel_sign_PDF_or_Lean_replayed": false,
+  "victory": false
+}

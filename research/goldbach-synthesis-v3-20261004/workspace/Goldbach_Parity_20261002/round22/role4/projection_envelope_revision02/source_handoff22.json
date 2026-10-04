@@ -1,0 +1,103 @@
+{
+  "schema": "ROUND22_ROLE4_PROJECTION_ENVELOPE_REVISION02_SOURCE_HANDOFF",
+  "created_utc": "2026-10-03T15:11:02.9576485Z",
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_envelope_revision02\\ThermalProjectionEnvelope22.lean",
+      "sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+      "bytes": 17761,
+      "scope": "FULL",
+      "read_chunk": "38db8f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_envelope_revision02\\repair_diagnostic22.md",
+      "sha256": "3739a5d6655eb48d1224c3e1396f9cc89ee098f53a9b8c45aae05f013e5c9208",
+      "bytes": 2651,
+      "scope": "FULL",
+      "read_chunk": "1d76aa"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_envelope_source01\\ThermalProjectionEnvelope22.lean",
+      "sha256": "3a348820aa1d2bd05eb5ceedc1f3c3d412ac6a0e3e4c9bf45c9e287f4d488aaa",
+      "bytes": 17454,
+      "scope": "FULL",
+      "read_chunk": "8bfa7f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_source01\\ThermalProjectionIdentity22.lean",
+      "sha256": "5b6da908dce97e0ad1ba08a893bd545a4a4c908f969d958102cf9e3509c5e99c",
+      "bytes": 15152,
+      "scope": "BYTE_HASH_ONLY_THIS_REPAIR",
+      "read_chunk": "8b6288"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch10\\batch10_attempt01\\ThermalProjectionEnvelope22.log",
+      "sha256": "705f11228434bbe7c32b549173aaebc3ac8342408f16af0bf9d809ce88a2b052",
+      "bytes": 5147,
+      "scope": "FULL",
+      "read_chunk": "d8ec0b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch10\\batch10_attempt01\\receipt.json",
+      "sha256": "5e14328e4ca9b5c3197bf47bbabb1fb0d68d544a0bd19c706a12728291127ed8",
+      "bytes": 10832,
+      "scope": "FULL",
+      "read_chunk": "d8ec0b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\IntervalIntegral.lean",
+      "sha256": "a642c4dbf6c6a924b1b4f4ac94150d4ead8c06a9aa8b6e32192d26eb3be1fb2c",
+      "bytes": 54351,
+      "scope": "TARGETED_LINES_325_350",
+      "read_chunk": "8b6288"
+    }
+  ],
+  "binding_count": 7,
+  "declarations": 42,
+  "defs": 13,
+  "theorems": 29,
+  "qualified_prints": 42,
+  "same_headers_as_conserved_source": 42,
+  "only_source_changes": [
+    "Expected IntervalIntegrable type fixes volume for hi; same continuity proof",
+    "Expected IntervalIntegrable type fixes volume for hf; same continuity proof"
+  ],
+  "round_trip_source_equality_verified": true,
+  "source_change_metadata_chunk": "6ad50c",
+  "previous_real_failure": {
+    "batch": "judge5/batch10/batch10_attempt01",
+    "actual_child_invocations": 1,
+    "started_at": "2026-10-03T15:03:18.493890+00:00",
+    "finished_at": "2026-10-03T15:03:47.557043+00:00",
+    "exit_code": 1,
+    "error_count": 1,
+    "error": "256:13 IsLocallyFiniteMeasure ?m.40371 stuck",
+    "recovery_axiom_declarations": [
+      "GoldbachContinuous22.thermalContinuousProjection_error_le"
+    ],
+    "other_standard_axiom_prints": 41,
+    "module_credit": 0,
+    "olean_present": false,
+    "Identity20_invoked": false,
+    "independent_status": "INDEPENDENT_BATCH10_FAILED"
+  },
+  "mathematical_scope": "All prior definitions, conclusions and real domains unchanged. Integrability remains derived from actual continuity, with volume explicitly inferred; no added final Integrable hypothesis or target estimate.",
+  "preservation": "Old source, Identity20, failed attempt logs/receipts/gates/archives and all previous handoffs stay readonly.",
+  "preparation_scope": "No transitive dependency closure or launcher prepared here. A future Judge preparation and ROOT gate are separate.",
+  "execution": {
+    "new_lean_invocations": 0,
+    "new_probes": 0,
+    "new_numeric_invocations": 0,
+    "new_python_imports": 0,
+    "source_only": true,
+    "metadata_only": true
+  },
+  "open": [
+    "Identity20 elaboration still untested",
+    "actual uniform phase zeta/spectral evaluator",
+    "canonical prime-power corrections and frontier",
+    "D_N and WIN"
+  ],
+  "official_credit_added": 0
+}

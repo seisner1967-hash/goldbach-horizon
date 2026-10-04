@@ -1,0 +1,11 @@
+{
+  "status": "ACTUAL_ROOT_METADATA_READER_FAIL_PRESERVED",
+  "tool_chunk": "837b8b",
+  "exit_code": 1,
+  "error": "KeyError: authorization_path_sha256, line21; actual schema field is authorization_sha256",
+  "capture_phase": "POSTEXEC",
+  "failed_source_capture": "messages/round19_final3_observer_FAILED01_source_POSTEXEC.py.txt",
+  "no_compiler_or_numeric_invocations": true,
+  "no_observation_or_gate_was_created": true,
+  "repair": "Read the actual receipt authorization_sha256 field"
+}

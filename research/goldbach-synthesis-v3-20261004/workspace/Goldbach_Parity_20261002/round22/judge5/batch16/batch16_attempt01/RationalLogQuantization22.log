@@ -1,0 +1,64 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:70:2: error: type mismatch, term
+  Real.hasSum_log_sub_log_of_abs_lt_one hz
+after simplification has type
+  HasSum (fun k => 2 * (2 * ↑k + 1)⁻¹ * z ^ (2 * k + 1)) (Real.log (1 + z) - Real.log (1 - z)) : Prop
+but is expected to have type
+  HasSum (logTerm z) (Real.log (1 + z) - Real.log (1 - z)) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:93:15: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:111:44: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:117:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:151:49: error: mod_cast has type
+  reducedArg p ≤ 1 / 3 : Prop
+but is expected to have type
+  ↑(reducedArg p) ≤ 1 / 3 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:190:49: error: mod_cast has type
+  reducedArg p ≤ 1 / 3 : Prop
+but is expected to have type
+  ↑(reducedArg p) ≤ 1 / 3 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:236:2: error: mod_cast has type
+  |x - ↑(nearestEven x)| ≤ 1 / 2 : Prop
+but is expected to have type
+  ↑|x - ↑(nearestEven x)| ≤ 1 / 2 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch16\sources\RationalLogQuantization22.lean:312:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'GoldbachLogQuantization22.gridScale' depends on axioms: [propext]
+'GoldbachLogQuantization22.logTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logPartial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logTermQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logPartialQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.reductionExponent' depends on axioms: [propext]
+'GoldbachLogQuantization22.reducedArg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logLowerQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logWidthQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logMidpointQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.nearestEven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.clampInteger' does not depend on any axioms
+'GoldbachLogQuantization22.logPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.quantizedLog' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.gridScale_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logTerm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logSeries' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logTailSeries' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logTailTerm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logRemainder_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logPartial_encloses' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logPartialQ_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.reductionExponent_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.reducedArg_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.log_reduction_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logTwo_encloses' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logWidthQ_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.log32_enclosure' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.log32_width_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.log32_midpoint_error' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.nearestEven_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.nearestEven_error_real' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.clampInteger_bounds' depends on axioms: [propext]
+'GoldbachLogQuantization22.clampInteger_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.true_log_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.logPoint_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachLogQuantization22.quantizedLog_precision' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

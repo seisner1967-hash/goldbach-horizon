@@ -1,0 +1,8 @@
+{
+  "node_id": "6",
+  "hypothesis": "Mechanism: Uniformité de Möbius sur des formes affines conservant le niveau HH fixé.\nHypothesis: Un chart affine exact peut conserver les quatre signes et donner les gradients indépendants nécessaires aux théorèmes de complexité finie.\nObservable: Audit primaire, test rationnel des intersections et certificat Lean du déterminant croisé nul ; nouveaux transferts nécessaires si le chart échoue.\nConflicts: Positivité/non-dégénérescence obligatoire, niveau multiplicatif et coefficients croissants ; presque tous les intervalles ne couvre pas chaque N.",
+  "score": 0.0,
+  "insight": "An independent cross-branch affine pair has a common zero incompatible with a nonzero constant identity over the whole field. The universal domain is essential; no finite-box extension or full total-rank lemma is certified.",
+  "result": "9 new theorems independently recompiled with standard axioms only. Rational filter and isolated replay PASS. Only the universal independent affine transfer fails; nonlinear charts remain open.",
+  "branch": "round4/lean/AffineHHObstruction.lean"
+}

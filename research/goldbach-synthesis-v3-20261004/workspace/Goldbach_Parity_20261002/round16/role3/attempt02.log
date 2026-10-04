@@ -1,0 +1,25 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:14:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∏ x ∈ t, ?m.346 x
+ι : Type u_1
+f : ι → ℝ
+h0 : ∀ (i : ι), 0 ≤ f i
+h1 : ∀ (i : ι), f i ≤ 1
+s t : Finset ι
+hst : s ≤ t
+⊢ (fun s => ∏ i ∈ s, f i) t ≤ (fun s => ∏ i ∈ s, f i) s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:27:18: error: unsolved goals
+m n : ℕ
+⊢ (↑n)⁻¹ * (↑m)⁻¹ = (↑m)⁻¹ * (↑n)⁻¹
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:46:63: error: application type mismatch
+  congrArg Subtype.val h
+argument
+  h
+has type
+  emb a = emb b : Prop
+but is expected to have type
+  a = b : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:66:18: error: simp made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:66:2: error: alternative 'succ' has not been provided
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:67:2: error: unexpected token '|'; expected command
+'GoldbachRound16.Anchor.harmonic_le_eulerPrefix' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_product' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

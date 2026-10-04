@@ -1,0 +1,65 @@
+{
+  "schema": "ROUND22_NATIVE_SOURCE_READ_RECEIPTS",
+  "producer_final": {
+    "scope": "FULL",
+    "tool_chunk": "5c6702"
+  },
+  "checker_final": {
+    "scope": "FULL",
+    "tool_chunk": "7c68de"
+  },
+  "native_contract": {
+    "scope": "FULL",
+    "tool_chunk": "ed62a3"
+  },
+  "GMP_APIs": {
+    "scope": "TARGETED",
+    "tool_chunks": [
+      "7a6d10",
+      "62d06e"
+    ]
+  },
+  "runtime_headers_libs": {
+    "scope": "BYTE_METADATA_ONLY",
+    "tool_chunks": [
+      "47cbfb",
+      "62d06e",
+      "b8e305",
+      "77dcc4"
+    ]
+  },
+  "compiler_inventory": {
+    "scope": "GET_COMMAND_AND_FILE_METADATA",
+    "tool_chunk": "7ea5fa"
+  },
+  "RAM": {
+    "scope": "METADATA_QUERY_FAILED_ACCESS_DENIED",
+    "tool_chunk": "e9e3c5"
+  },
+  "NTT_independent_paper_review": {
+    "scope": "FULL",
+    "tool_chunk": "aac19e",
+    "sha256": "929979f85fcc98029394e38eeeb5b738d3e3321cdc5c610d50c64e2f64bbd002"
+  },
+  "ROLE3_log52_original": {
+    "scope": "FULL_ORIGINAL_SOURCE_ONLY",
+    "tool_chunks": [
+      "1dfa9c",
+      "c3a330"
+    ]
+  },
+  "ROLE3_revision02": {
+    "scope": "TARGETED_CHANGES_ONLY",
+    "tool_chunks": [
+      "e47199",
+      "5c864b"
+    ]
+  },
+  "new_Lean_invocations": 0,
+  "new_Python_imports": 0,
+  "Python_parser_runs": 0,
+  "native_parser_runs": 0,
+  "native_builds": 0,
+  "native_math_runs": 0,
+  "root_gate_created": false
+}

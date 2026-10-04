@@ -1,0 +1,36 @@
+{
+  "schema": "ROUND22_PARAMETER_GUARD01_READ_RECEIPTS",
+  "scope": "TEXT_AND_BYTES_ONLY_NO_PYTHON_PARSER_OR_IMPORT",
+  "controller_launcher_contract": {
+    "tool_chunk": "a21f5a",
+    "scope": "FULL"
+  },
+  "immutable_model": {
+    "tool_chunk": "96efb5",
+    "scope": "FULL"
+  },
+  "model_paper_manifest": {
+    "tool_chunk": "a13238",
+    "scope": "FULL"
+  },
+  "native_inventory": {
+    "tool_chunks": [
+      "7ea5fa",
+      "47cbfb",
+      "7a6d10",
+      "c65a3c"
+    ],
+    "scope": "GET_COMMAND_FILE_METADATA_ONLY"
+  },
+  "canonical_runtime": {
+    "tool_chunk": "f2ac80",
+    "scope": "FILE_METADATA_DIRECTORY_ENUMERATION_AND_BYTE_HASH_ONLY"
+  },
+  "model_functions_executed": 0,
+  "new_candidate_imports": 0,
+  "Python_parser_runs": 0,
+  "Lean_invocations": 0,
+  "native_builds": 0,
+  "native_probes": 0,
+  "gate_created": false
+}

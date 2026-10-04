@@ -1,0 +1,586 @@
+{
+  "status": "PASS_EXACT_IDENTITIES_ONLY",
+  "N": 100000000,
+  "alpha": 100,
+  "Q": 999999,
+  "acquired_I_payment": "Not numerically tested: applies only within its supplied analytical hypotheses/onset; N=1e8 does not validate that onset",
+  "bridge": "D_N=-S_Lambda+I+2max(e,0) after the supplied bridge; only finite algebra S_full=S_Lambda-I is checked here",
+  "finite_prefixes": [
+    {
+      "label": "prefix 1..303",
+      "arguments": 303,
+      "active_Lambda_arguments": 13,
+      "identity": "S_full(E)=S_Lambda(E)-I(E); the same selection indicator stays in P_k(E) and M_k(E)",
+      "shifted_identity": "S_Lambda(E)=-sum_k mu(k)^2 P_k(E)+sum_k mu(k)/phi(k) M_k(E)",
+      "k1_pointwise_cancellations": 82,
+      "k1_P_equals_M": true,
+      "harmonic_slots": 12,
+      "raw_terms": 3,
+      "S_Lambda_terms": 0,
+      "I_terms": 3,
+      "raw_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-21253412012343203333289727/500000000000000000000000",
+        "upper": "-17002724695914081069696933/400000000000000000000000"
+      },
+      "raw_sha256": "27507e25060aba298e832c5d77b7a93f4dada2e1a8086a7c1e31bdf21a16ebec",
+      "S_Lambda_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "I_sha256": "7a983b784090a8674bb05113d0a1eb4b9dc04f2760592021ecebd2cfc799a3d6",
+      "exterior": "Every omitted m is uncomputed; no full D_N estimate"
+    },
+    {
+      "label": "prefix 1..1024",
+      "arguments": 1024,
+      "active_Lambda_arguments": 53,
+      "identity": "S_full(E)=S_Lambda(E)-I(E); the same selection indicator stays in P_k(E) and M_k(E)",
+      "shifted_identity": "S_Lambda(E)=-sum_k mu(k)^2 P_k(E)+sum_k mu(k)/phi(k) M_k(E)",
+      "k1_pointwise_cancellations": 370,
+      "k1_P_equals_M": true,
+      "harmonic_slots": 250,
+      "raw_terms": 757,
+      "S_Lambda_terms": 89,
+      "I_terms": 846,
+      "raw_certificate": {
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "lower": "-14328903383917206112674463537/6000000000000000000000000",
+        "upper": "-4776295787537178777442439717/2000000000000000000000000"
+      },
+      "raw_sha256": "21de762b87eae6d34c26557214e63a7694de7c7032bd2d643c75fcb5ccc00b62",
+      "S_Lambda_sha256": "ca6634c38c44e26cd69cd4eb02ce9ec7904ab357f4296c93dcbcc29372c410ec",
+      "I_sha256": "b774638de065ffc830a721f3093b15d1cce14eebd900ac48353bc3799e8e70c7",
+      "exterior": "Every omitted m is uncomputed; no full D_N estimate"
+    }
+  ],
+  "isolated_selection": {
+    "label": "explicit isolated arguments 841,909,10201,30603,658911",
+    "arguments": 5,
+    "active_Lambda_arguments": 1,
+    "identity": "S_full(E)=S_Lambda(E)-I(E); the same selection indicator stays in P_k(E) and M_k(E)",
+    "shifted_identity": "S_Lambda(E)=-sum_k mu(k)^2 P_k(E)+sum_k mu(k)/phi(k) M_k(E)",
+    "k1_pointwise_cancellations": 5,
+    "k1_P_equals_M": true,
+    "harmonic_slots": 6589,
+    "raw_terms": 850,
+    "S_Lambda_terms": 850,
+    "I_terms": 850,
+    "raw_certificate": {
+      "sign": "POSITIVE",
+      "terms": 6,
+      "lower": "16703666392038347172914237068734060275535508263903365170605625632577350185920913038628916888409882636617817890111228631567000312896077475211170579593942457864581893435742271590067840366322562362921889364666217077453428986062084943858592763633454146959995322407466462161474131482435136686292813367541297753799152869843325074528057046586834976694966574761979279920378265931870061940185142654429928067134689488398707203822680053694836908744733711771239167955076313182913930530622994174190056723846787856434025877220613120601632438762038377160498812669467576783926453392135248551918174313/922171673029644587646989937478011871334322921790383265526492187962468686185366773513269048908510543300432563199118164743543533981293289516167180715853944645965454116079858426172855379475948435407062377057800600908974316850529450093494255546804137874287253967650371333589388676737712537143945611741924740263182982344589790687083693965836937165624440778875821069543859033317997097247533008111935549313698880219898851843396347194907664464092735570249527126297313036102623407472922570993225993983463880686412982376389335147369722803975599406347310874966474240000000000000000000000000000",
+      "upper": "1148101695099116682581379111584791530910989242221083737328424015800620263919980887230069799872769886933861054974701860548928554556614518984947852810749215614972875679372134777211432546236382791063474778403076055433251247734574561624165110193060694159279371582056750570467095087483487338668048145988213758734957183407973944689547891150901103751955608334223489945426296199624067539450319404190749674018703726299938656315229699040711484699722493489342017828986986546150783134310973781361100481116005248017759099880101627382357020490489793814076367430874631809830966317935561212336983439337/63384046004138677898361398441618275516657478618868052722979906985486519568303398949328387881871539934828077151798211944716610807159076081431998261298703757825908630246952180906303741716884536669679171581926879170197534340731887258172506818291458675105652046147821754658530941198345238007994982295298360226435064141262053058052842649037884039632101958020121002961975060872781671807320784386605481846302416967467349208228736797729397944810462271520588361726806675979619837920625087963249472685727385960929536441241863291351656811329874333460904964937263673360000000000000000000000000000"
+    },
+    "raw_sha256": "2254aaa776f11dde8a355ec7cd1ba61705a6d6481ef2f12c4e542d10fae83372",
+    "S_Lambda_sha256": "2023696196df261ccc48c344c2607a7c74ac4e747df1dc997ee41fd9ace6328f",
+    "I_sha256": "dffdabe5e4a0b050542d892c12896233aa26a04612209e1f0c0b89af7307620d",
+    "exterior": "Every omitted m is uncomputed; no full D_N estimate"
+  },
+  "isolated_diagnostics": [
+    {
+      "m": 841,
+      "n": 99999159,
+      "factor_m": [
+        [
+          29,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          59,
+          1
+        ],
+        [
+          3343,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "mu_n_squared": 0,
+      "raw_profile_active": true,
+      "Lambda_N": {},
+      "prefix": 8
+    },
+    {
+      "m": 909,
+      "n": 99999091,
+      "factor_m": [
+        [
+          3,
+          2
+        ],
+        [
+          101,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          359,
+          1
+        ],
+        [
+          278549,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "mu_n_squared": 1,
+      "raw_profile_active": true,
+      "Lambda_N": {},
+      "prefix": 9
+    },
+    {
+      "m": 10201,
+      "n": 99989799,
+      "factor_m": [
+        [
+          101,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          37,
+          1
+        ],
+        [
+          521,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "mu_n_squared": 1,
+      "raw_profile_active": true,
+      "Lambda_N": {},
+      "prefix": 102
+    },
+    {
+      "m": 30603,
+      "n": 99969397,
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          101,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          11,
+          1
+        ],
+        [
+          421,
+          1
+        ],
+        [
+          21587,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "mu_n_squared": 1,
+      "raw_profile_active": true,
+      "Lambda_N": {},
+      "prefix": 306
+    },
+    {
+      "m": 658911,
+      "n": 99341089,
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          41,
+          1
+        ],
+        [
+          487,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          9967,
+          2
+        ]
+      ],
+      "mu_m": 1,
+      "mu_n_squared": 0,
+      "raw_profile_active": true,
+      "Lambda_N": {
+        "9967": "1"
+      },
+      "prefix": 6589
+    }
+  ],
+  "Mobius_switch": {
+    "k_domain": [
+      1,
+      128
+    ],
+    "r_domain": [
+      1,
+      512
+    ],
+    "cases": 65536,
+    "diagnostics": [
+      {
+        "k": 1,
+        "r": 101,
+        "factor_k": [],
+        "factor_r": [
+          [
+            101,
+            1
+          ]
+        ],
+        "factor_product": [
+          [
+            101,
+            1
+          ]
+        ],
+        "gcd": 1,
+        "left": -1,
+        "right": -1
+      },
+      {
+        "k": 3,
+        "r": 101,
+        "factor_k": [
+          [
+            3,
+            1
+          ]
+        ],
+        "factor_r": [
+          [
+            101,
+            1
+          ]
+        ],
+        "factor_product": [
+          [
+            3,
+            1
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "gcd": 1,
+        "left": -1,
+        "right": -1
+      },
+      {
+        "k": 3,
+        "r": 303,
+        "factor_k": [
+          [
+            3,
+            1
+          ]
+        ],
+        "factor_r": [
+          [
+            3,
+            1
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "factor_product": [
+          [
+            3,
+            2
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "gcd": 3,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "k": 9,
+        "r": 101,
+        "factor_k": [
+          [
+            3,
+            2
+          ]
+        ],
+        "factor_r": [
+          [
+            101,
+            1
+          ]
+        ],
+        "factor_product": [
+          [
+            3,
+            2
+          ],
+          [
+            101,
+            1
+          ]
+        ],
+        "gcd": 1,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "k": 29,
+        "r": 29,
+        "factor_k": [
+          [
+            29,
+            1
+          ]
+        ],
+        "factor_r": [
+          [
+            29,
+            1
+          ]
+        ],
+        "factor_product": [
+          [
+            29,
+            2
+          ]
+        ],
+        "gcd": 29,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "k": 101,
+        "r": 101,
+        "factor_k": [
+          [
+            101,
+            1
+          ]
+        ],
+        "factor_r": [
+          [
+            101,
+            1
+          ]
+        ],
+        "factor_product": [
+          [
+            101,
+            2
+          ]
+        ],
+        "gcd": 101,
+        "left": 0,
+        "right": 0
+      },
+      {
+        "k": 3,
+        "r": 10201,
+        "factor_k": [
+          [
+            3,
+            1
+          ]
+        ],
+        "factor_r": [
+          [
+            101,
+            2
+          ]
+        ],
+        "factor_product": [
+          [
+            3,
+            1
+          ],
+          [
+            101,
+            2
+          ]
+        ],
+        "gcd": 1,
+        "left": 0,
+        "right": 0
+      }
+    ]
+  },
+  "squarefree_inner": [
+    {
+      "r": 101,
+      "K_tested": 128,
+      "K_physical": 990098,
+      "complete_k_domain": false,
+      "identity": "sum mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_d mu(d)sum_(t|rad(r))mu(t)sum_v Lambda_N(N-r*d\u00b2*t*v)",
+      "d_restriction": "gcd(d,r*N)=1",
+      "k1_removed_exactly": true,
+      "v_slots": 147,
+      "symbolic_terms": 3,
+      "untested_k_count": 989970,
+      "exterior": "Untested k>K retained when K is truncated; no head or tail estimate claimed"
+    },
+    {
+      "r": 103,
+      "K_tested": 256,
+      "K_physical": 970873,
+      "complete_k_domain": false,
+      "identity": "sum mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_d mu(d)sum_(t|rad(r))mu(t)sum_v Lambda_N(N-r*d\u00b2*t*v)",
+      "d_restriction": "gcd(d,r*N)=1",
+      "k1_removed_exactly": true,
+      "v_slots": 297,
+      "symbolic_terms": 6,
+      "untested_k_count": 970617,
+      "exterior": "Untested k>K retained when K is truncated; no head or tail estimate claimed"
+    },
+    {
+      "r": 213,
+      "K_tested": 256,
+      "K_physical": 469483,
+      "complete_k_domain": false,
+      "identity": "sum mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_d mu(d)sum_(t|rad(r))mu(t)sum_v Lambda_N(N-r*d\u00b2*t*v)",
+      "d_restriction": "gcd(d,r*N)=1",
+      "k1_removed_exactly": true,
+      "v_slots": 354,
+      "symbolic_terms": 10,
+      "untested_k_count": 469227,
+      "exterior": "Untested k>K retained when K is truncated; no head or tail estimate claimed"
+    },
+    {
+      "r": 311,
+      "K_tested": 511,
+      "K_physical": 321543,
+      "complete_k_domain": false,
+      "identity": "sum mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_d mu(d)sum_(t|rad(r))mu(t)sum_v Lambda_N(N-r*d\u00b2*t*v)",
+      "d_restriction": "gcd(d,r*N)=1",
+      "k1_removed_exactly": true,
+      "v_slots": 594,
+      "symbolic_terms": 22,
+      "untested_k_count": 321032,
+      "exterior": "Untested k>K retained when K is truncated; no head or tail estimate claimed"
+    },
+    {
+      "r": 707,
+      "K_tested": 128,
+      "K_physical": 141442,
+      "complete_k_domain": false,
+      "identity": "sum mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_d mu(d)sum_(t|rad(r))mu(t)sum_v Lambda_N(N-r*d\u00b2*t*v)",
+      "d_restriction": "gcd(d,r*N)=1",
+      "k1_removed_exactly": true,
+      "v_slots": 165,
+      "symbolic_terms": 4,
+      "untested_k_count": 141314,
+      "exterior": "Untested k>K retained when K is truncated; no head or tail estimate claimed"
+    },
+    {
+      "r": 12577,
+      "K_tested": 128,
+      "K_physical": 7951,
+      "complete_k_domain": false,
+      "identity": "sum mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_d mu(d)sum_(t|rad(r))mu(t)sum_v Lambda_N(N-r*d\u00b2*t*v)",
+      "d_restriction": "gcd(d,r*N)=1",
+      "k1_removed_exactly": true,
+      "v_slots": 146,
+      "symbolic_terms": 3,
+      "untested_k_count": 7823,
+      "exterior": "Untested k>K retained when K is truncated; no head or tail estimate claimed"
+    },
+    {
+      "r": 99999727,
+      "K_tested": 1,
+      "K_physical": 1,
+      "complete_k_domain": true,
+      "identity": "sum mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_d mu(d)sum_(t|rad(r))mu(t)sum_v Lambda_N(N-r*d\u00b2*t*v)",
+      "d_restriction": "gcd(d,r*N)=1",
+      "k1_removed_exactly": true,
+      "v_slots": 1,
+      "symbolic_terms": 0,
+      "untested_k_count": 0,
+      "exterior": "Untested k>K retained when K is truncated; no head or tail estimate claimed"
+    }
+  ],
+  "off_support_prime_powers": [
+    {
+      "n": 67108864,
+      "m": 32891136,
+      "factor_n": [
+        [
+          2,
+          26
+        ]
+      ],
+      "unit_mask": false,
+      "Lambda_N": "ZERO",
+      "raw": "ZERO"
+    },
+    {
+      "n": 48828125,
+      "m": 51171875,
+      "factor_n": [
+        [
+          5,
+          11
+        ]
+      ],
+      "unit_mask": false,
+      "Lambda_N": "ZERO",
+      "raw": "ZERO"
+    }
+  ],
+  "raw_first_axis_mask": "rho1 only; proper prime powers on units remain, no added mu(n)^2",
+  "arithmetic": "Integer Mobius/Lambda coefficients and rational symbolic prime logs; rational artanh sign enclosures",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 227,
+    "baseline_sha256": "b973b6ea8ce1fdef2a704e1e0bcc977ee7ac5b140e71d17cc3d90c165317243a",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\previous_artifacts_sha256.json"
+  },
+  "script_sha256": "b6dc5fbb7e35b5bad93c54513970845c5bf721573a7e2513742d20ebc4a62262",
+  "limitations": "Selected finite m/k domains, true fronts and units retained; no acquired analytical budget recomputed, no global signed bound"
+}

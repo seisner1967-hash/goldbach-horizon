@@ -1,0 +1,149 @@
+{
+  "schema": "ROUND22_ANGULAR_MELLIN_BORDER_SOURCE_READ_RECEIPTS_03",
+  "status": "SOURCE_ONLY_AFTER_REAL_FAIL23",
+  "author": "ROLE4",
+  "created_utc": "2026-10-03T21:44:47.7905067Z",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\AngularMellinBorder22.lean",
+      "sha256": "1fa9de9a41a432b3745d1dce719018452e6f8f9b183bb9635d07191f1dcf91da",
+      "size": 13342,
+      "read_scope": "FULL",
+      "read_observation": "dd8616"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_contract22.md",
+      "sha256": "b3dd4b1809bcb599562ede96504887b58a0d3c818bc7f8562a50e9875c830760",
+      "size": 4068,
+      "read_scope": "FULL",
+      "read_observation": "dd8616"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source03\\source_catalog22.json",
+      "sha256": "379c32c142a3e3c157952d9f789b8618b7ffa4574b23e19d7a0db5188d50bee8",
+      "size": 1729,
+      "read_scope": "FULL",
+      "read_observation": "dd8616"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\AngularMellinBorder22.lean",
+      "sha256": "3719a79cfd8aa0915cb15aa57111ac0529a3fa245387ceff19540395aa5756ea",
+      "size": 12897,
+      "read_scope": "PREVIOUS_FULL_UNCHANGED_BYTE_HASH",
+      "read_observation": "76df21"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\source_contract22.md",
+      "sha256": "09c769cf29d86a7015d182e18a375bc582557b21c10cd32d9c6d5003f2d61aa2",
+      "size": 4638,
+      "read_scope": "PREVIOUS_FULL_UNCHANGED_BYTE_HASH",
+      "read_observation": "b3cf00"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\source_read_receipts22.json",
+      "sha256": "d50489697e4f05f4012b2964c26772801721016d3baed154f83fb9be60a41f53",
+      "size": 9162,
+      "read_scope": "PREVIOUS_FULL_UNCHANGED_BYTE_HASH",
+      "read_observation": "0bacc5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\angular_mellin_border_source02\\source_handoff22.json",
+      "sha256": "fb2bdc86ec30ebc7a7bf838c6575901287b4657d50836606b6f4f743f42e42fe",
+      "size": 2838,
+      "read_scope": "PREVIOUS_FULL_UNCHANGED_BYTE_HASH",
+      "read_observation": "0bacc5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\sources\\AngularMellinBorder22.lean",
+      "sha256": "3719a79cfd8aa0915cb15aa57111ac0529a3fa245387ceff19540395aa5756ea",
+      "size": 12897,
+      "read_scope": "BYTE_HASH_ONLY_NOT_NEW_FULL",
+      "read_observation": "revision03_control"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\batch23_attempt01\\AngularMellinBorder22.log",
+      "sha256": "a9c287bf1dff63999fa115dd1e71e9b83d142883c62b89254b522e51002fc0a9",
+      "size": 6493,
+      "read_scope": "FULL_REAL_FAIL",
+      "read_observation": "9aa9b9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\batch23_attempt01\\AngularMellinBorder22_FIN.json",
+      "sha256": "141fc85ad5b46b85da7b5bc0e25e335d70dc11f99ae62555f89296bd3ac45f3d",
+      "size": 6707,
+      "read_scope": "FULL_REAL_FAIL",
+      "read_observation": "9aa9b9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\batch23_attempt01\\receipt.json",
+      "sha256": "38d1b67caed9630fa24cdb587e0e98c303ab0dc02217efb69881602561b55b6d",
+      "size": 8606,
+      "read_scope": "FULL_REAL_FAIL",
+      "read_observation": "6d905e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Basic.lean",
+      "sha256": "21b7cf8215c2960bca0d19a9c82e146e2b8ab12ae3a03d5298c136d2323a5ddd",
+      "size": 38344,
+      "read_scope": "TARGETED_409_426_inv_pow",
+      "read_observation": "22702a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ExpDeriv.lean",
+      "sha256": "da437100f0386396288328305d2a42342af1563b48bbe0b81fb5cc5446faf838",
+      "size": 13300,
+      "read_scope": "PREVIOUS_TARGETED_83_121",
+      "read_observation": "80424b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\RealDeriv.lean",
+      "sha256": "165a46a88000346b475c28da407ce0d0197b035fdc46e6a1af380d828815ec45",
+      "size": 6048,
+      "read_scope": "PREVIOUS_TARGETED_94_114",
+      "read_observation": "a6e2a1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_source01\\ComplexGammaMellinLocal22.lean",
+      "sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+      "size": 10837,
+      "read_scope": "FULL_SUSPENDED_DRAFT_NOT_SUBMITTED",
+      "read_observation": "6f3a36"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\complex_gamma_mellin_source01\\SUSPENDED_WORKPOINT22.md",
+      "sha256": "74dc175aabc3404f11cf13c649881a2d5d9d114231dafd71b3c24c1f11c5e2bb",
+      "size": 2379,
+      "read_scope": "FULL_SUSPENDED_WORKPOINT",
+      "read_observation": "6d905e"
+    }
+  ],
+  "binding_count": 16,
+  "previous_api_receipts_reused": "Source02 reads remain readonly. Only inv_pow signature is newly required, TARGETED cache reading; not FULL cache reading or transitive import closure.",
+  "declaration_schema": "Manual FULL source comparison: same30names/statements/domains/definition bodies/print order; only proofs at three actual sites altered.",
+  "prior_actual": {
+    "batch": 23,
+    "exit": 1,
+    "module_credit": 0,
+    "standard_prints": 19,
+    "recovery_prints": 11,
+    "olean": false,
+    "diagnostic_sites": [
+      80,
+      116,
+      176
+    ]
+  },
+  "author_compile_invocations": 0,
+  "author_api_probe_invocations": 0,
+  "candidate_parser_invocations": 0,
+  "numeric_invocations": 0,
+  "runtime_prepared": false,
+  "old_inputs_modified": 0,
+  "old_inputs_hash_guards_checked": true,
+  "archives_rehashed": false,
+  "archives_modified": 0,
+  "independent_verdict_new": "PENDING_SOURCE_REVIEW",
+  "D_N_target_proved": false,
+  "WIN": false,
+  "metadata_scope": "PowerShell Get-Item/Get-FileHash and exclusive JSON writes only; no candidate import/parser/evaluation."
+}

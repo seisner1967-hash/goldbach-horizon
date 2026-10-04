@@ -1,0 +1,31 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_HOLO_SOURCE03_READ_RECEIPTS",
+  "reader": "ROLE4",
+  "scope": "SOURCE_AND_METADATA_ONLY_NO_ELABORATION",
+  "full_reads": [
+    {"path": "../complex_gamma_mellin_source02/ComplexGammaMellinLocal22.lean", "sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08", "tool_chunk": "b0a230"},
+    {"path": "../complex_gamma_mellin_source02/ComplexGammaMellinHolomorphy22.lean", "sha256": "9d3d050fab541086f1bf9932aa51d240dd3a72fcb194412f38e997ebeedd9d4a", "tool_chunk": "31fb96"},
+    {"path": "../../judge5/batch26/batch26_attempt01/ComplexGammaMellinHolomorphy22.log", "sha256": "edb1dec599f5671b8acd6517efd2551a23aba33717d6b69f3924adadd3928cfb", "tool_chunk": "100dce"},
+    {"path": "../../judge5/batch26/batch26_attempt01/ComplexGammaMellinLocal22.log", "sha256": "de64611ca93c9f58c160f4f808a62328917df4b2b569ea3109f9d07fe64fd260", "tool_chunk": "5cf486"},
+    {"path": "../../judge5/batch26/batch26_attempt01/ComplexGammaMellinLocal22_FIN.json", "sha256": "c959e60eba0218065f5be20d66f2b03ef68eaf8fdae9de46fe22ae86dd96096e", "tool_chunk": "5cf486"},
+    {"path": "../../judge5/batch26/batch26_attempt01/receipt.json", "sha256": "53201e46ee6a6418915358d37a61655a286bd2d814930d0fe68520fec4c92cdb", "tool_chunk": "5cf486"},
+    {"path": "ComplexGammaMellinHolomorphy22.lean", "sha256": "b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2", "tool_chunk": "5cf486"}
+  ],
+  "targeted_API_reads": [
+    {"path": "../../judge5/batch20/batch20_attempt01/PREEXEC_FILES/23_GammaPrerequisites22.lean", "sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7", "lines": "13-21 and40-56", "tool_chunk": "730fa0", "supports": "Real_Laplace_integrand_and_open_Filter_in_independent_source"},
+    {"mathlib_path": "Order/Filter/Defs.lean", "sha256": "0fcc0299a149afebf3b5cb9d74bc2a71f1752ade70bc8bc32fca7e9022d8006e", "lines": "75-80 and284-290", "tool_chunk": "730fa0", "supports": "Filter_namespace_and_Tendsto_definition"},
+    {"mathlib_path": "MeasureTheory/Integral/IntegrableOn.lean", "sha256": "377d50adedf2a1705a1e4acc6126076e7b40c8213f0600fec8898f7a019e7492", "lines": "112-123 signature search", "tool_chunk": "730fa0", "supports": "AE_function_congruence_available;actual_h.congr_method_also_used_by_independent_Gamma_source"}
+  ],
+  "byte_only_reads": [
+    {"path": "../../judge5/batch26/batch26_attempt01/ComplexGammaMellinLocal22.olean", "bytes": 414008, "sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5", "tool_chunk": "842d3d", "text_FULL": false}
+  ],
+  "metadata_rehash_tool_chunk": "842d3d",
+  "excluded_FULL_claims": ["2bd27e:wrongGamma_path", "d884ce:missingPiDefs_path", "4f26b4:truncated_search", "730fa0:missingL1Space_path_is_not_a_read"],
+  "queue_workpoint": "Only_static_API_readings8312a9_and8e69d6;no_new_tail_source_or_result",
+  "old_source02_preserved": true,
+  "old_batch26_preserved": true,
+  "compiler_invocations": 0,
+  "tactic_or_API_probes": 0,
+  "candidate_parser_invocations": 0,
+  "numeric_invocations": 0
+}

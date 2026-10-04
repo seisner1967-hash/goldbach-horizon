@@ -1,0 +1,33 @@
+{
+  "pid": 32676,
+  "created_suspended": true,
+  "resumed": true,
+  "exit_code": 0,
+  "termination_reason": null,
+  "api_or_control_error": null,
+  "wait_signalled": true,
+  "job_empty_confirmed": true,
+  "FIN_kind": "CONFIRMED_DRIVER_AND_JOB_EXIT",
+  "peak_rss_bytes": 1743962112,
+  "observed_peak_private_bytes": 1743917056,
+  "pipe_faults": [],
+  "commit_quota_bytes": 2147483648,
+  "job_limit_flags_requested": 8968,
+  "working_set_limit_flag_requested": false,
+  "rss_os_enforced": false,
+  "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM",
+  "rss_per_process_monitor_bytes": 2147483648,
+  "job_committed_memory_OS_limit_requested": true,
+  "max_active_job_processes": 16,
+  "max_total_job_processes": 32,
+  "total_job_processes": 2,
+  "observed_job_pids": [
+    2100,
+    32676
+  ],
+  "peak_job_committed_bytes": 1750433792,
+  "observed_peak_live_job_rss": 1755439104,
+  "sampled_job_rss_cap_bytes": 4294967296,
+  "utc_FIN": "2026-10-03T21:35:22.455884+00:00",
+  "label": "producer"
+}

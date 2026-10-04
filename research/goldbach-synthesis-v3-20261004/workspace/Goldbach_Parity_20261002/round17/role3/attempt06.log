@@ -1,0 +1,23 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:304:10: error: tactic 'rewrite' failed, motive is not type correct:
+  fun _a => ((if divides F d q then w d else 0) * if divides F t q then w t else 0) = if _a then w d * w t else 0
+Error: application type mismatch
+  @ite ℝ _a (instDecidableDivides F (d ∪ t) q)
+argument
+  instDecidableDivides F (d ∪ t) q
+has type
+  Decidable (divides F (d ∪ t) q) : Type
+but is expected to have type
+  Decidable _a : Type
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+J : Finset ℕ
+F : ℕ → ℤ
+w : Finset ℕ → ℝ
+d t : Finset ℕ
+q : ℕ
+hq : q ∈ J
+⊢ ((if divides F d q then w d else 0) * if divides F t q then w t else 0) = if divides F (d ∪ t) q then w d * w t else 0
+'GoldbachRound17.Selberg.finite_upper_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]

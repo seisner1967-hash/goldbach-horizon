@@ -1,0 +1,11 @@
+Lot22 SOURCE/PREPARE exclusivement, baseline officielle80/1339 après FAIL21.
+
+Sources révision02 exactes de ROLE4 : Roots16c414… puis Bridgecefc071… ;2modules28=22thm6defs/28prints. Correction restreinte des16 sites val, SOURCE revue ROLE5 44be9f… ; aucun PASS auteur ni Lean/probe/math ici. Common root sources unique, copies exactes. L'olean Roots du futur essai peut alimenter Bridge uniquement après exit0 et audit axiomes exacts.
+
+Trois dépendances readonly indépendantes : FiniteFieldProjection19 (030440…), Envelope17(e821…), Rational17(20db…). Sources/oleans/receipts/FIN/logs liés, aucune recompilation et aucun olean auteur. Imports transitifs cache4.15/mathlib9837ca9d et8packages, Init implicite de chaque nonprelude + Init.Prelude ; tous bytes source/olean/runtime vérifiés. Scope HEADER/HASH, aucune prétention FULL des milliers de preuves.
+
+Tous fichiers Judge antérieurs sont inventoriés en excluant seulement ce lot22 neuf. Tous fichiers de la préparation/actual21 horsjudge5 sont ajoutés explicitement aux bindings clos et captures, avec son adjudication/completion/observation ROOT. Les19 bindings de l'auteur restent des scopes auteur recorded dans les receipts, pas des lectures FULL appropriées. 3089 archives sont physiquement rehashées. Grands JSON : projections des headers et traitement intégral des bytes/entrées, sans fauxRAWFULL.
+
+Builder metadata unique après lectureFULL outils/audit/copies ; aucun subprocess ni calcul modulaire. Schéma standard inclut numeric_invocations=0. Cette préparation ne lance pas Lean. Nouvelle gate ROOT batch22 exacte indispensable : canonicalPY -I -S -B -X utf8,2children max Roots→Bridge,300s chacun,heartbeats1m,0retry/probe ; stopFIRSTFAIL, aucune compilation d'ancien module ni bank/native replay. PRE/START/FIN/logs/olean/POST/receipt, original/copie/gate toujours vérifiés. Parse exact de tous prints, y compris emptyaxioms si réellement affichés, standards propext/choice/Quot.sound seulement ; sorryAx/native_decide/ofReduceBool rejetés.
+
+La compiler acceptance reste ouverte. Hypothétique82/1367 uniquement après2PASS entiers et observerROOT ; aucun coefficientN évalué, GMP/NTT/CRT, annulation globale, PP/frontière, D_N ou WIN payé. Aucun autre candidat n'entre dans22.

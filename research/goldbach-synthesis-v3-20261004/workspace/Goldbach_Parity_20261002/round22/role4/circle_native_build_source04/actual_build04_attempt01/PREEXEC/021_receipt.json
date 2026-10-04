@@ -1,0 +1,64 @@
+{
+  "status": "BUILD_STOP_NO_NUMERIC_VERDICT",
+  "utc_FIN": "2026-10-03T19:39:26.850630+00:00",
+  "scope": "NATIVE_BUILD_ONLY_TWO_FIXED_TARGETS",
+  "preparation_sha256": "094a8459aba59ac402085988639ac7b7a4901d879e01646a27d67b0e57c3b4fc",
+  "results": [
+    {
+      "pid": 0,
+      "created_suspended": false,
+      "resumed": false,
+      "exit_code": null,
+      "termination_reason": null,
+      "api_or_control_error": "OSError:[Errno 1314] SetInformationJobObject",
+      "wait_signalled": false,
+      "job_empty_confirmed": true,
+      "FIN_kind": "CONTROL_RETURN_EXIT_UNCONFIRMED",
+      "peak_rss_bytes": 0,
+      "observed_peak_private_bytes": 0,
+      "pipe_faults": [],
+      "commit_quota_bytes": 2147483648,
+      "hard_working_set_requested_bytes": 2147483648,
+      "max_active_job_processes": 16,
+      "max_total_job_processes": 32,
+      "total_job_processes": 0,
+      "observed_job_pids": [],
+      "peak_job_committed_bytes": 0,
+      "observed_peak_live_job_rss": 0,
+      "sampled_job_rss_cap_bytes": 4294967296,
+      "utc_FIN": "2026-10-03T19:39:17.247815+00:00",
+      "tag": "producer_build"
+    }
+  ],
+  "child_exit_codes": [
+    null
+  ],
+  "binary_sha256": [
+    null
+  ],
+  "source_sha256": [
+    "bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74",
+    "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb"
+  ],
+  "build_plan_sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92",
+  "native_source_plan_sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92",
+  "actual_build_plan_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\build_execution_plan22.json",
+  "actual_build_plan_sha256": "fc77f58cc215b1851e5a87b164407aadcc5cd8f2c7621dcccc6e0c3c38f13f61",
+  "compiler_trust_policy_sha256": "72fd49d993e3291a174d4ba5a139a649ab916e9e757274c0e89f0a6092b4f6a6",
+  "declared_import_metadata_sha256": "36032c45c476e72c97393f60d02fbf5ff2e2679e82d2c3dd5eaea558cfdcadbc",
+  "build_trust_scope": "EXPLICIT_INSTALLED_WINDOWS_AND_GCC_TRUST_WITH_FROZEN_DECLARED_IMPORTS",
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "GCC_specs_or_actual_subprocess_selection_verified": false,
+  "numeric_authorization": false,
+  "working_directory": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01",
+  "temporary_directory": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source03\\actual_build03_attempt01\\tmp",
+  "error": "RuntimeError:STOP_FIRST_BUILD_FAIL",
+  "post_error": null,
+  "produced_binary_invocations": 0,
+  "retry_count": 0,
+  "formal_primitives": false,
+  "coefficient_N": false,
+  "D_N": false,
+  "WIN": false
+}

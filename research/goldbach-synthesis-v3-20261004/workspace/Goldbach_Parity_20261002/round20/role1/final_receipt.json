@@ -1,0 +1,86 @@
+{
+  "status": "FINAL1_20_CONSTRUCTED_COMPOSITE_LOWER_WEIGHT_AND_INCIDENCE_ESTIMATOR_PAPER_ONLY_NO_WIN",
+  "round": 20,
+  "role": 1,
+  "canonical_agent": "/root/round20_ideation_gamma",
+  "frozen_at_utc": "2026-10-03T02:06:17.5302099Z",
+  "report": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent1_switched_composite.md",
+    "bytes": 37669,
+    "sha256": "1c52ccfe6aaf393fe02b606ecbaeb56ae62810f0b93d6db604672ba560a241d9"
+  },
+  "manifest": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role1\\input_manifest.json",
+    "bytes": 7054,
+    "sha256": "8cf3aaadd8984d8ce238cd994d2b7094c7ae121967f7e4785c7d850f04591a7f"
+  },
+  "actual_full_read_constraints_chunk": "82652e",
+  "actual_full_read_probe_chunk": "1d62fe",
+  "source_onset": "logN>=10^24",
+  "old_protected_artifacts": 1808,
+  "protection_scope": "PRESERVED_ROOT_CONSERVATION_PASS_NOT_REEXECUTED_BY_ROLE1",
+  "mathematical_python_invocations": 0,
+  "lean_invocations": 0,
+  "judge_invocations": 0,
+  "numerical_producer_invocations": 0,
+  "unchanged_PASS_replays": 0,
+  "new_tree_nodes": 0,
+  "new_node_selections": 0,
+  "edits_to_round19": 0,
+  "edits_to_frozen_prospective": 0,
+  "writes_after_round20_ownership": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent1_switched_composite.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role1\\input_manifest.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role1\\final_receipt.json"
+  ],
+  "exact_four_hypothesis_lines": [
+    24,
+    25,
+    26,
+    27
+  ],
+  "substantive_results": [
+    "EXPLICIT_ODD_BONFERRONI_DIVISOR_WEIGHT_AND_POINTWISE_BINOMIAL_DERIVATION",
+    "ACTUAL_MINFAC_COMPOSITE_SUBTRACTION_WITH_P_SQUARES_REPEATS_NONMINIMAL_NEGATIVE_CELLS",
+    "AP_LCM_GCD_COEFFICIENTS_AND_EXACT_Q_ENDPOINTS",
+    "EXPLICIT_VARIATION_REMAINDER_6_E_PLUS_N_PRIME_EXCEPTIONS",
+    "ACTUAL_P0_BRANCH_POSITIVE_MAIN_WITH_EULER_COMPENSATION_RETAINED",
+    "SLACK_AND_LARGE_P_TAIL_LITERAL",
+    "NEW_COMPLETE_NUMERICAL_CONTRACT_ONLY_NO_EXECUTION"
+  ],
+  "numeric_contract": {
+    "N": 100000000,
+    "candidate_lower_exclusive": 24000000,
+    "candidate_upper_inclusive": 48000000,
+    "all_integer_positions": 24000000,
+    "disjoint_rank19_window": true,
+    "test_window_source_x_guard": "FALSE_AND_EXPLICIT_NOT_USED_FOR_ANALYTIC_ONSET",
+    "source_z": "ceil(N^(1/64))",
+    "source_P": "floor(N^(1/64))",
+    "source_K": 1,
+    "at_N_finite_source_z": 2,
+    "at_N_finite_source_P": 1,
+    "test_z": [
+      11,
+      19
+    ],
+    "test_P": 17,
+    "test_K": [
+      0,
+      1
+    ],
+    "contract_location": "agent1_switched_composite.md_section12",
+    "no_launch_authorized": true
+  },
+  "open_obligations": [
+    "NO_PROOF_OF_SD_GROWING_SHIFT_SIGNED_AP_ERROR_BOUND",
+    "NO_PAID_SOURCE_AP_CONSTANTS_OR_ONSET",
+    "NO_DERIVED_FAVORABLE_COMPLETE_PRINCIPAL",
+    "NO_FREE_LOW_COMPOSITE_MASS_OR_SMALL_GAMMA_PREMISE",
+    "NO_HIDDEN_LARGE_P_TAIL_PAYMENT",
+    "NO_WHOLE_LEDGER_ASSEMBLY_OR_VICTORY"
+  ],
+  "last_report_delta_after_root_reads": "Line325_parentheses_only_bmin_and_bmax_ceil_no_mathematical_change_announced_to_root",
+  "score": 0,
+  "victory": false
+}

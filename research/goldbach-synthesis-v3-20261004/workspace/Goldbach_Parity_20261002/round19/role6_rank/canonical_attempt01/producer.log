@@ -1,0 +1,77 @@
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 50, "all_integer_b_axes_so_far": 3785289, "physical_beta_images_so_far": 26624}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 100, "all_integer_b_axes_so_far": 4313636, "physical_beta_images_so_far": 26624}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 150, "all_integer_b_axes_so_far": 4595610, "physical_beta_images_so_far": 26624}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 200, "all_integer_b_axes_so_far": 5848721, "physical_beta_images_so_far": 28136}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 250, "all_integer_b_axes_so_far": 6215442, "physical_beta_images_so_far": 28136}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 300, "all_integer_b_axes_so_far": 6997124, "physical_beta_images_so_far": 28136}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 350, "all_integer_b_axes_so_far": 7597329, "physical_beta_images_so_far": 28136}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 400, "all_integer_b_axes_so_far": 8112849, "physical_beta_images_so_far": 28136}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 450, "all_integer_b_axes_so_far": 8503368, "physical_beta_images_so_far": 28136}
+{"phase": "NEW_ALL_RANK_BANK_IN_PROGRESS", "completed_fibers": 500, "all_integer_b_axes_so_far": 8806723, "physical_beta_images_so_far": 28136}
+{
+  "counts": {
+    "P_d=11": 1,
+    "P_d=161": 56,
+    "P_d=1771": 345,
+    "P_d=23": 1,
+    "P_d=253": 82,
+    "P_d=7": 1,
+    "P_d=77": 28,
+    "all_candidate_integer_axes": 12000000,
+    "all_candidate_primes": 719062,
+    "all_candidate_properpowers": 188,
+    "all_integer_b_axes": 8868261,
+    "beta_prime_candidate_images": 6304,
+    "beta_properpower_candidate_images": 9,
+    "fibers": 514,
+    "fibers_A0": 485,
+    "physical_beta_images": 28136
+  },
+  "falsifier_statuses": {
+    "Pi_measured_zero_by_face_removal": "COUNTEREXAMPLE",
+    "Rtest_or_BV_onset_equals_source": "GUARD_FALSE_NOT_APPLIED",
+    "X_equals_dL_front_erased": "COUNTEREXAMPLE",
+    "d_and_ks_always_disjoint": "COUNTEREXAMPLE",
+    "omit_PP_price": "COUNTEREXAMPLE",
+    "replace_Pd_by_P_despite_shared_P": "COUNTEREXAMPLE"
+  },
+  "global_signs": {
+    "properpower": {
+      "E_unit": "POSITIVE",
+      "Gamma0": "POSITIVE",
+      "Gamma_rank": "POSITIVE",
+      "L_rank": "NEGATIVE",
+      "Pi": "NEGATIVE",
+      "Pi_small_R17": "NEGATIVE",
+      "Pi_small_R2": "NEGATIVE",
+      "large_unit_difference_R17": "NEGATIVE",
+      "large_unit_difference_R2": "POSITIVE"
+    },
+    "raw": {
+      "E_unit": "POSITIVE",
+      "Gamma0": "NEGATIVE",
+      "Gamma_rank": "NEGATIVE",
+      "L_rank": "NEGATIVE",
+      "Pi": "NEGATIVE",
+      "Pi_small_R17": "NEGATIVE",
+      "Pi_small_R2": "NEGATIVE",
+      "large_unit_difference_R17": "NEGATIVE",
+      "large_unit_difference_R2": "POSITIVE"
+    },
+    "theta": {
+      "E_unit": "POSITIVE",
+      "Gamma0": "NEGATIVE",
+      "Gamma_rank": "NEGATIVE",
+      "L_rank": "NEGATIVE",
+      "Pi": "NEGATIVE",
+      "Pi_principal": "NEGATIVE",
+      "Pi_small_R17": "NEGATIVE",
+      "Pi_small_R2": "NEGATIVE",
+      "large_unit_difference_R17": "NEGATIVE",
+      "large_unit_difference_R2": "POSITIVE"
+    }
+  },
+  "result_sha256": "29251df2d05db105d6339747fdda6af327279bc95478df7a9154414e156e8e2b",
+  "status": "PASS_NEW_ALL_RANK_FINITE_IDENTITIES_ONLY",
+  "victory": false
+}

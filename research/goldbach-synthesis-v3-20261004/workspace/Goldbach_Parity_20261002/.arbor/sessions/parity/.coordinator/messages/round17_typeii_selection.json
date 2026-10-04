@@ -1,0 +1,17 @@
+{
+  "node": "13.9",
+  "inputs_sha256": {
+    "round17/agent1_calibrated_typeii.md": "446c2d8fe21c86b05fbaf0e2864e7129da1b964287f31ff4287c0a19251103a9",
+    "round17/role1/unit_mask_addendum.md": "51735b4ecd379b8b58066d24b952ff779347af5ae8a32ecd4b4ac303b7636cac"
+  },
+  "contract": "FINAL1 section6 plus unit_mask_addendum section4",
+  "numerical_contract_authorized": true,
+  "numerical_result_presumed": false,
+  "old_artifacts": 799,
+  "finite_N": 100000000,
+  "source_u_minimum": "10^24",
+  "additional_BV_onset_unknown": true,
+  "one_mode_only": true,
+  "corrected_root_provenance": "round16/typei_checks.py line33 unit=gcd(b,N), not gcd(b,77N)",
+  "victory": false
+}

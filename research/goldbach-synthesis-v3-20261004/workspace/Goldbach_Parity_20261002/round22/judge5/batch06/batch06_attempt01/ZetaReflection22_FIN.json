@@ -1,0 +1,81 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourChi"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZeta_reflection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contour_cos_ne_zero_in_left_strip"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourChi_ne_zero_in_left_strip"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZeta_ne_zero_in_left_strip"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourChi_differentiableAt"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.contourZeta_logDeriv_reflection"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\batch06_attempt01\\ZetaReflection22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\sources\\ZetaReflection22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": false,
+  "exit_code": 1,
+  "finished_at": "2026-10-03T13:06:57.853735+00:00",
+  "launch_error": null,
+  "log_sha256": "f6c0a712edb08aa949ae0f86fa768cbc0c46ec7fba1f37765c5545daacfffbb2",
+  "module": "ZetaReflection22",
+  "olean_sha256": null,
+  "source_prior_status": "SOURCE_NOT_COMPILED",
+  "source_sha256": "54e32a95a62929c7251bf130156adbc7da7d66ceb1cb77609382e33c025f4a42",
+  "started_at": "2026-10-03T13:06:34.403027+00:00",
+  "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+  "timed_out": false
+}

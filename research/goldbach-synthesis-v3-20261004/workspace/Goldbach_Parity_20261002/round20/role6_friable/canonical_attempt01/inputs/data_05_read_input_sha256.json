@@ -1,0 +1,194 @@
+{
+  "role": "logicalROLE2",
+  "round": 20,
+  "status": "FINAL_IDEATION_PAPER_ONLY",
+  "timestamp_utc": "2026-10-03T02:11:27.1621068Z",
+  "constraints": {
+    "tool": "arbor_state.py view --format constraints",
+    "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002",
+    "run_name": "parity",
+    "full_read_chunk": "1f98ed",
+    "exit_code": 0,
+    "validated": 35,
+    "pruned": 5,
+    "max_depth": 2
+  },
+  "execution_counts": {
+    "lean": 0,
+    "mathematical_python": 0,
+    "numerical_producer": 0,
+    "judge": 0,
+    "eval": 0,
+    "TreeAddNode": 0,
+    "selection": 0
+  },
+  "metadata_incidents": [
+    "f84b3d exit1 helper cp1252 UnicodeEncodeError; corrected -X utf8",
+    "e4cafc exit0 grouped display truncated; later FULL1f98ed",
+    "rg attempted nonexistent ArithmeticFunction directory; corrected to actual ArithmeticFunction.lean",
+    "historical broad round10 rg access-denied one unused archive; exact intended source read",
+    "guessed J2Pairing and HarmonicKernelVariation paths absent; actual ThreeAdicPrimePairing read; no bypass"
+  ],
+  "source_onset": "u>=10^24",
+  "main_f1": "derived Eplus<=u^27, S_D<=u^-37",
+  "main_f4": "7N/u33+28N^(97/128)/u34+7N/u39<=9N/u33<=N/(8192*u*ell)",
+  "unpaid": [
+    "full source support bridge",
+    "F0 minus F1 nonfriable m1 reciprocal",
+    "both terminal resources >Y complement",
+    "e1/p0/singletons",
+    "medium long generic",
+    "wholeGamma/T_A/capacity/fullledger"
+  ],
+  "victory": false,
+  "source_budget_lean_proved": false,
+  "inputs": [
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-ideate\\SKILL.md",
+      "sha256": "1b55bc6f7fc81c91a9a0627d897cb8bf9b19c580d5b1867650222db672503683",
+      "read_scope": "FULL",
+      "tool_chunk": "skill read current",
+      "purpose": "IDEATE discipline"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\PROBE_BLOCK.md",
+      "sha256": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+      "read_scope": "FULL",
+      "tool_chunk": "current PROBE full",
+      "purpose": "round20 launch and scope"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\idea_tree.json",
+      "sha256": "eaa6b0d34ca55ba98fc80d9e5266164cf909cbb12184e0838cac8aadccd0bc7a",
+      "read_scope": "helper constraints FULL, not raw JSON FULL",
+      "tool_chunk": "1f98ed exit0",
+      "purpose": "fresh35validated5pruned/maxdepth2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round19_failure_feedback_in_progress.md",
+      "sha256": "d5d754aa9c4f78881a2b036b2bfa7cf14ec761fa83d5aeee6947b007d63e9286",
+      "read_scope": "FULL",
+      "tool_chunk": "3326c9",
+      "purpose": "actual failures vs analytic gaps"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role2_prospective.md",
+      "sha256": "d26b6f010f57aa754d2b0429239ecc07ed9c1a629cacecac8d760360e33492ed",
+      "read_scope": "FULL",
+      "tool_chunk": "aa1e54",
+      "purpose": "immutable original F1-F4"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role2_prospective_receipt.json",
+      "sha256": "08d7c73480bd2f653f4d33a014350842fb2397f404445c7a560542b919326468",
+      "read_scope": "metadata SHA only current; author receipt previously",
+      "tool_chunk": "metadata receipt",
+      "purpose": "immutable prospective receipt"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\NonSSBracketSwitch.lean",
+      "sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+      "read_scope": "EXCERPTS lines1-120,231-300 and theorem index",
+      "tool_chunk": "0be86a;679ea6;ead706",
+      "purpose": "actual H/brackets/unique and zero reciprocity"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\BalancedResourceSwitch.lean",
+      "sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+      "read_scope": "EXCERPT lines1-55",
+      "tool_chunk": "fce8ca",
+      "purpose": "actual resource guards/canonical anchor"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankTwoHarmonic.lean",
+      "sha256": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b",
+      "read_scope": "theorem-index search only current",
+      "tool_chunk": "ead706",
+      "purpose": "avoid duplicate H8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\ShortDivisorComplement.lean",
+      "sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "read_scope": "EXCERPTS lines1-27,96-185",
+      "tool_chunk": "af0302 and current",
+      "purpose": "source cap/physical U1 actual definitions"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean",
+      "sha256": "a31895518a60c169a81cdc43201742b4f91efce6d9b032a6a07cc1a8617a4819",
+      "read_scope": "EXCERPTS lines1-32,106-140",
+      "tool_chunk": "0f0ec0 and current",
+      "purpose": "sign check; not proposed new untracked import"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\ThreeAdicPrimePairing.lean",
+      "sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+      "read_scope": "EXCERPT lines1-105",
+      "tool_chunk": "current",
+      "purpose": "true theta/source/W units and fronts"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\SmoothNumbers.lean",
+      "sha256": "a3b6f51d2138a348342c31437f033fb6589360f37010398dd53c6b89e4aed473",
+      "read_scope": "FULL prior continuation read",
+      "tool_chunk": "8f96c4",
+      "purpose": "strict smooth definition and factorization products"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\EulerProduct\\Basic.lean",
+      "sha256": "715da6e30d79dbfbbbce8172fe07ff48cba911470e289d28f40851626da4e165",
+      "read_scope": "EXCERPTS65-148,274-333",
+      "tool_chunk": "1e11eb",
+      "purpose": "local Euler without false global summability"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Harmonic\\Bounds.lean",
+      "sha256": "dbcfa96f8493669004abc9f84201cad23cdbbfd1d6a17afe44780f194b8e94c3",
+      "read_scope": "FULL prior continuation read",
+      "tool_chunk": "e226df",
+      "purpose": "harmonic finite sum/integral pattern"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ArithmeticFunction.lean",
+      "sha256": "48c9529038f4e11220c2b09d28468f6c0d1107f328b5a15cc5587efa11223631",
+      "read_scope": "API searches selected sigma/multiplicativity/Mobius/SF Euler",
+      "tool_chunk": "8e62b8;d6f51f;ee3e1f",
+      "purpose": "actual tau and finite totient routes"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Totient.lean",
+      "sha256": "cea69134e95c917a0babbec5b668dc997246b33b8bd2b3e0f72cc5a5760d44cc",
+      "read_scope": "API searches selected totient Euler/primepower",
+      "tool_chunk": "d6f51f",
+      "purpose": "finite TK proof feasibility"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecificLimits\\Normed.lean",
+      "sha256": "71cb31a2d09f8868ff64867a5bfd42e42eea6bf7ec8fd61f5dbda4f5fabec855",
+      "read_scope": "EXCERPT376-421",
+      "tool_chunk": "df48a3",
+      "purpose": "weighted geometric k+1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\PSeries.lean",
+      "sha256": "d7c885113b040aa6d735a6f006dd448ddf198ad7f3880e53f2d59d28f99a88ab",
+      "read_scope": "API search selected summable_nat_rpow",
+      "tool_chunk": "ee3e1f",
+      "purpose": "positive sigma p-series summability"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals.lean",
+      "sha256": "bac1446917ac212aaea7b11701f00a8acf6b698cba75251eb8fc572b02e2699f",
+      "read_scope": "API search integral_rpow",
+      "tool_chunk": "4c6bcb",
+      "purpose": "p-series sum-integral constant"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\VonMangoldt.lean",
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "read_scope": "EXCERPT137-156 and bound index",
+      "tool_chunk": "dd3324;0a4cc7",
+      "purpose": "actual raw Lambda upper bound"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+import Mathlib.NumberTheory.VonMangoldt
+import Mathlib.Tactic
+
+/- Round 10, U1. The functions below are the actual arithmetic functions.
+   The cap is proved from the source quotient, and the front is strict.
+   This arithmetic identity does not estimate the signed prime-axis sum. -/
+namespace GoldbachRound10.ShortDivisorComplement
+
+open Finset
+
+noncomputable def mu (m : ℕ) : ℝ := (ArithmeticFunction.moebius m : ℝ)
+
+noncomputable def cappedDivisorKernel (Q a m : ℕ) : ℝ :=
+  ∑ k ∈ m.divisors, if k ≤ Q ∧ a * k < m then
+    mu k * Real.log ((k : ℝ) / (m : ℝ)) else 0
+
+noncomputable def physicalDivisorKernel (Q a m n N : ℕ) : ℝ :=
+  ∑ k ∈ m.divisors, if k ≤ Q ∧ a * k < m ∧ k.Coprime (n * N) then
+    mu k * Real.log ((k : ℝ) / (m : ℝ)) else 0
+
+noncomputable def shortDivisorSum (a m : ℕ) : ℝ :=
+  ∑ r ∈ m.divisors, if r ≤ a then mu r * Real.log (r : ℝ) else 0
+
+noncomputable def longDivisorSum (a m : ℕ) : ℝ :=
+  ∑ r ∈ m.divisors, if a < r then mu r * Real.log (r : ℝ) else 0
+
+theorem mu_mul_of_coprime {k r : ℕ} (h : k.Coprime r) :
+    mu (k * r) = mu k * mu r := by
+  unfold mu
+  exact_mod_cast ArithmeticFunction.isMultiplicative_moebius.map_mul_of_coprime h
+
+theorem mu_square_of_squarefree {m : ℕ} (h : Squarefree m) : mu m ^ 2 = 1 := by
+  unfold mu
+  exact_mod_cast ArithmeticFunction.moebius_sq_eq_one_of_squarefree h
+
+theorem mu_zero_of_not_squarefree {m : ℕ} (h : ¬ Squarefree m) : mu m = 0 := by
+  simp [mu, ArithmeticFunction.moebius_eq_zero_of_not_squarefree h]
+
+theorem quotient_coprime {m k : ℕ} (hm : Squarefree m) (hk : k ∣ m) :
+    k.Coprime (m / k) := by
+  apply Nat.coprime_of_squarefree_mul
+  simpa [Nat.mul_div_cancel' hk] using hm
+
+theorem complementary_moebius {m k : ℕ} (hm : Squarefree m) (hk : k ∣ m) :
+    mu m * mu k = mu (m / k) := by
+  have hprod : k * (m / k) = m := Nat.mul_div_cancel' hk
+  have hmul := mu_mul_of_coprime (quotient_coprime hm hk)
+  rw [hprod] at hmul
+  have hsq := mu_square_of_squarefree (hm.squarefree_of_dvd hk)
+  calc
+    mu m * mu k = (mu k * mu (m / k)) * mu k := by rw [hmul]
+    _ = mu k ^ 2 * mu (m / k) := by ring
+    _ = mu (m / k) := by rw [hsq, one_mul]
+
+theorem logarithm_complement {m k : ℕ} (hm : m ≠ 0) (hk : k ∈ m.divisors) :
+    Real.log ((k : ℝ) / (m : ℝ)) = -Real.log ((m / k : ℕ) : ℝ) := by
+  have hdiv : k ∣ m := (Nat.mem_divisors.mp hk).1
+  have hk0 : (k : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr (Nat.ne_of_gt (Nat.pos_of_mem_divisors hk))
+  have hm0 : (m : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr hm
+  rw [Nat.cast_div hdiv hk0, Real.log_div hm0 hk0, Real.log_div hk0 hm0]
+  ring
+
+theorem strict_front_iff {m k a : ℕ} (hk : k ∈ m.divisors) :
+    a * k < m ↔ a < m / k := by
+  have hkpos := Nat.pos_of_mem_divisors hk
+  have hprod : (m / k) * k = m := Nat.div_mul_cancel (Nat.mem_divisors.mp hk).1
+  calc
+    a * k < m ↔ a * k < (m / k) * k := by rw [hprod]
+    _ ↔ a < m / k := Nat.mul_lt_mul_right hkpos
+
+theorem active_divisor_below_cap {m k Q a : ℕ}
+    (hcap : m < a * (Q + 1)) (hfront : a * k < m) : k ≤ Q := by
+  by_contra h
+  have hge : Q + 1 ≤ k := by omega
+  have hmul := Nat.mul_le_mul_left a hge
+  omega
+
+theorem whole_coefficient_eq_long_sum {m Q a : ℕ} (hm : m ≠ 0)
+    (hsf : Squarefree m) (hcap : m < a * (Q + 1)) :
+    -mu m * cappedDivisorKernel Q a m = longDivisorSum a m := by
+  unfold cappedDivisorKernel longDivisorSum
+  rw [Finset.mul_sum]
+  calc
+    (∑ k ∈ m.divisors, -mu m *
+        (if k ≤ Q ∧ a * k < m then mu k * Real.log ((k : ℝ) / (m : ℝ)) else 0)) =
+      ∑ k ∈ m.divisors, if a < m / k then
+        mu (m / k) * Real.log ((m / k : ℕ) : ℝ) else 0 := by
+      apply Finset.sum_congr rfl
+      intro k hk
+      by_cases hf : a * k < m
+      · have hc := active_divisor_below_cap hcap hf
+        have hr := (strict_front_iff hk).mp hf
+        rw [if_pos ⟨hc, hf⟩, if_pos hr, logarithm_complement hm hk]
+        have hmu := complementary_moebius hsf (Nat.mem_divisors.mp hk).1
+        rw [← hmu]
+        ring
+      · have hr : ¬ a < m / k := by simpa [strict_front_iff hk] using hf
+        simp [hf, hr]
+    _ = ∑ r ∈ m.divisors, if a < r then mu r * Real.log (r : ℝ) else 0 :=
+      Nat.sum_div_divisors m (fun r => if a < r then mu r * Real.log (r : ℝ) else 0)
+
+theorem short_plus_long {a m : ℕ} :
+    shortDivisorSum a m + longDivisorSum a m =
+      -ArithmeticFunction.vonMangoldt m := by
+  unfold shortDivisorSum longDivisorSum
+  rw [← Finset.sum_add_distrib]
+  calc
+    (∑ r ∈ m.divisors,
+      ((if r ≤ a then mu r * Real.log (r : ℝ) else 0) +
+       (if a < r then mu r * Real.log (r : ℝ) else 0))) =
+      ∑ r ∈ m.divisors, mu r * Real.log (r : ℝ) := by
+      apply Finset.sum_congr rfl
+      intro r _
+      by_cases h : r ≤ a <;> simp [h, show (a < r) ↔ ¬ r ≤ a by omega]
+    _ = -ArithmeticFunction.vonMangoldt m := by
+      simpa [mu] using (ArithmeticFunction.sum_moebius_mul_log_eq (n := m))
+
+/-- U1 on every positive integer: the original whole coefficient is retained,
+    including its vanishing on non-squarefree integers. -/
+theorem short_divisor_complement {m Q a : ℕ} (hm : m ≠ 0)
+    (hcap : m < a * (Q + 1)) :
+    -mu m * cappedDivisorKernel Q a m =
+      mu m ^ 2 * (-ArithmeticFunction.vonMangoldt m - shortDivisorSum a m) := by
+  by_cases hsf : Squarefree m
+  · rw [whole_coefficient_eq_long_sum hm hsf hcap, mu_square_of_squarefree hsf, one_mul]
+    linarith [short_plus_long (a := a) (m := m)]
+  · rw [mu_zero_of_not_squarefree hsf]
+    simp
+
+/-- The source quotient supplies the cap. No numerical estimate is assumed. -/
+theorem source_cap {N m alpha a : ℕ} (halpha : 0 < alpha) (ha : alpha ≤ a)
+    (hmN : m < N) : m < a * ((N - 1) / alpha + 1) := by
+  have hmle : m ≤ N - 1 := by omega
+  have hf := Nat.lt_mul_div_succ (N - 1) halpha
+  have hmul := Nat.mul_le_mul_right ((N - 1) / alpha + 1) ha
+  omega
+
+/-- U1 with the exact source choice Q=floor((N-1)/alpha). -/
+theorem short_divisor_complement_source {N m alpha a : ℕ}
+    (hm : m ≠ 0) (halpha : 0 < alpha) (ha : alpha ≤ a) (hmN : m < N) :
+    -mu m * cappedDivisorKernel ((N - 1) / alpha) a m =
+      mu m ^ 2 * (-ArithmeticFunction.vonMangoldt m - shortDivisorSum a m) :=
+  short_divisor_complement hm (source_cap halpha ha hmN)
+
+theorem physical_divisor_units {N n m k : ℕ} (hsum : m + n = N)
+    (hunit : n.Coprime N) (hk : k ∣ m) : k.Coprime (n * N) := by
+  have hnm : n.Coprime m := Nat.coprime_add_self_right.mp (by simpa [hsum] using hunit)
+  have hmN : m.Coprime N := by
+    simpa [hsum] using (Nat.coprime_self_add_right.mpr hnm.symm)
+  have hkn : k.Coprime n := hnm.symm.of_dvd_left hk
+  have hkN : k.Coprime N := hmN.of_dvd_left hk
+  exact hkn.mul_right hkN
+
+theorem physical_kernel_eq {N n m Q a : ℕ} (hsum : m + n = N)
+    (hunit : n.Coprime N) :
+    physicalDivisorKernel Q a m n N = cappedDivisorKernel Q a m := by
+  unfold physicalDivisorKernel cappedDivisorKernel
+  apply Finset.sum_congr rfl
+  intro k hk
+  have hu : k.Coprime (n * N) := physical_divisor_units hsum hunit (Nat.mem_divisors.mp hk).1
+  by_cases hc : k ≤ Q <;> by_cases hf : a * k < m <;> simp [hc, hf, hu]
+
+/-- U1 on the real physical divisor fibre, with its original n*N units. -/
+theorem physical_short_divisor_complement_source {N m n alpha a : ℕ}
+    (hm : m ≠ 0) (hsum : m + n = N) (hn : 0 < n) (hunit : n.Coprime N)
+    (halpha : 0 < alpha) (ha : alpha ≤ a) :
+    -mu m * physicalDivisorKernel ((N - 1) / alpha) a m n N =
+      mu m ^ 2 * (-ArithmeticFunction.vonMangoldt m - shortDivisorSum a m) := by
+  rw [physical_kernel_eq hsum hunit]
+  apply short_divisor_complement_source hm halpha ha
+  omega
+
+theorem at_one (Q a : ℕ) :
+    -mu 1 * cappedDivisorKernel Q a 1 =
+      mu 1 ^ 2 * (-ArithmeticFunction.vonMangoldt 1 - shortDivisorSum a 1) := by
+  simp [cappedDivisorKernel, shortDivisorSum]
+
+end GoldbachRound10.ShortDivisorComplement
+
+#print axioms GoldbachRound10.ShortDivisorComplement.short_divisor_complement
+#print axioms GoldbachRound10.ShortDivisorComplement.short_divisor_complement_source
+#print axioms GoldbachRound10.ShortDivisorComplement.at_one
+#print axioms GoldbachRound10.ShortDivisorComplement.physical_short_divisor_complement_source
+
+
+#print axioms GoldbachRound10.ShortDivisorComplement.mu_mul_of_coprime
+#print axioms GoldbachRound10.ShortDivisorComplement.mu_square_of_squarefree
+#print axioms GoldbachRound10.ShortDivisorComplement.mu_zero_of_not_squarefree
+#print axioms GoldbachRound10.ShortDivisorComplement.quotient_coprime
+#print axioms GoldbachRound10.ShortDivisorComplement.complementary_moebius
+#print axioms GoldbachRound10.ShortDivisorComplement.logarithm_complement
+#print axioms GoldbachRound10.ShortDivisorComplement.strict_front_iff
+#print axioms GoldbachRound10.ShortDivisorComplement.active_divisor_below_cap
+#print axioms GoldbachRound10.ShortDivisorComplement.whole_coefficient_eq_long_sum
+#print axioms GoldbachRound10.ShortDivisorComplement.short_plus_long
+#print axioms GoldbachRound10.ShortDivisorComplement.short_divisor_complement
+#print axioms GoldbachRound10.ShortDivisorComplement.source_cap
+#print axioms GoldbachRound10.ShortDivisorComplement.short_divisor_complement_source
+#print axioms GoldbachRound10.ShortDivisorComplement.physical_divisor_units
+#print axioms GoldbachRound10.ShortDivisorComplement.physical_kernel_eq
+#print axioms GoldbachRound10.ShortDivisorComplement.physical_short_divisor_complement_source
+#print axioms GoldbachRound10.ShortDivisorComplement.at_one

@@ -1,0 +1,55 @@
+{
+  "round": 12,
+  "status": "FINAL_INPUTS_FROZEN",
+  "final_role_signals": {
+    "role1": {
+      "terminated": true,
+      "report_sha256": "896111f4bdc27e79ef352703be83f5b84e2bd26adb5c03644698fe06fcd5775c"
+    },
+    "role2": {
+      "terminated": true,
+      "report_sha256": "71e8b1fb2d7a4d20d146e4357ea0a6ab5f7c1fd0af77d1386db50dbaf5ecd91a"
+    },
+    "role6": {
+      "terminated": true,
+      "report_sha256": "ee2383547abc96817911f7120e09246a2d36e579e940004cd8d2062688198759"
+    }
+  },
+  "reports": [
+    "agent1_compensation.md",
+    "agent2_bilateral.md",
+    "agent6.md"
+  ],
+  "file_count": 20,
+  "sha256": {
+    "agent1_compensation.md": "896111f4bdc27e79ef352703be83f5b84e2bd26adb5c03644698fe06fcd5775c",
+    "agent2_bilateral.md": "71e8b1fb2d7a4d20d146e4357ea0a6ab5f7c1fd0af77d1386db50dbaf5ecd91a",
+    "agent6.md": "ee2383547abc96817911f7120e09246a2d36e579e940004cd8d2062688198759",
+    "conservation.json": "f788cfeb78fbd672b00c1661b63d94ee60d65efe0e1ab9ff5c72a360a0a4de3e",
+    "conservation.py": "374c141b465df16cf531e2ea077adfc3fe4e7271144ab3037db32a320b2d7576",
+    "deletion.json": "1b71dfdf22387479b468840ff38bb2546e3674182b5364d72f42305ea26086c3",
+    "deletion_checks.py": "ec4e465a866c94a9a8cc6f2ce11e571f9bf34b074150f03165e5f4e4de64044c",
+    "isolated_output_probe/deletion.json": "1b71dfdf22387479b468840ff38bb2546e3674182b5364d72f42305ea26086c3",
+    "isolated_output_probe/star_detector.json": "ea074f16953f96c038c3d124394b182ffb5549a3951052c5e883263e8c0b6545",
+    "isolated_output_probe/witnesses.json": "bd5a575a7dbf102447f4a414c7a98e4f6810bdcd976d8ae57a10e0f2343faf48",
+    "numeric_manifest.json": "e6c7321c0584827e72e1850f0053018b598e35229bc818affaf1b83462198592",
+    "numerical_replay.json": "653b4089491e6f18050394e226208dcdd287c1e16e97adf64fe0b9f0b082bcc0",
+    "previous_artifacts_sha256.json": "9a0a1010cdc4ad16eeb28b15f960f1d7dd3621bc91cc4d241a8781ccc2e543b1",
+    "PROBE_BLOCK.md": "5c872ffd98f1851893d293fc57554976ca175531f0b70d9e31ddcc7ff4c0b2fe",
+    "replay_checks.py": "6179bc583150479a9ddd6d50e51f394f15f116622c75685a4fc4c5d0d3ad9e83",
+    "shared.py": "f1214938e49610a62323f3166a321e520fc6c0a5e3cc9061d832c51db377e5d9",
+    "star_detector.json": "ea074f16953f96c038c3d124394b182ffb5549a3951052c5e883263e8c0b6545",
+    "star_detector_checks.py": "b758b026ba648b19067ff9341832a48fc44dbced5e1bb53ebf6f76e318147343",
+    "witness_search.py": "fe3221a86eeb1624b4de14545823424d2542582ae35798253bf79ce1c3d34b3e",
+    "witnesses.json": "bd5a575a7dbf102447f4a414c7a98e4f6810bdcd976d8ae57a10e0f2343faf48"
+  },
+  "external_sha256": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+  },
+  "numeric_manifest_sha256": "e6c7321c0584827e72e1850f0053018b598e35229bc818affaf1b83462198592",
+  "previous_registry_sha256": "9a0a1010cdc4ad16eeb28b15f960f1d7dd3621bc91cc4d241a8781ccc2e543b1",
+  "old_artifacts": 487,
+  "lean_invoked": false,
+  "new_lean_conclusions": 0
+}

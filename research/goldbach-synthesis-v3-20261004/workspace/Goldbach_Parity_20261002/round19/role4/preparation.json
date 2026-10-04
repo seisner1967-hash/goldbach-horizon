@@ -1,0 +1,64 @@
+{
+  "status": "READY_SOURCES_UNCOMPILED_PENDING_NEW_NUMERIC_PASS_AND_EXPLICIT_ROOT_GATE",
+  "round": 19,
+  "role": 4,
+  "node": "14.4",
+  "prepared_utc": "2026-10-03T00:15:25.7853566Z",
+  "sources": {
+    "TerminalPrimeExtraction.lean": {
+      "sha256": "36307959fc9e0d968be0e39fca9899036351158ad4c048de71cc5f6dcd321966",
+      "bytes": 5742,
+      "explicit_theorems": 18,
+      "explicit_defs": 4,
+      "explicit_structures": 0,
+      "axiom_prints": 22
+    },
+    "BalancedResourceSwitch.lean": {
+      "sha256": "6414b58ee89aa8cfe73d83587c1f9540ee6f516e60062e59ebcd2c1d01dd25ae",
+      "bytes": 14205,
+      "explicit_theorems": 25,
+      "explicit_defs": 13,
+      "explicit_structures": 2,
+      "axiom_prints": 41
+    },
+    "SignedHyperbolicCRT.lean": {
+      "sha256": "12126717d5fee5f7d3d92617da21b37edd31a9c0861ef40e17151b8b3b359446",
+      "bytes": 10723,
+      "explicit_theorems": 19,
+      "explicit_defs": 13,
+      "explicit_structures": 1,
+      "axiom_prints": 34
+    },
+    "NonSSBracketSwitch.lean": {
+      "sha256": "706a121175063d3937c3c3ceddc344ac0ab59ec658808ff1aa3c4fdda5bea1a8",
+      "bytes": 14979,
+      "explicit_theorems": 21,
+      "explicit_defs": 18,
+      "explicit_structures": 0,
+      "axiom_prints": 39
+    },
+    "RankTwoHarmonic.lean": {
+      "sha256": "20e2e4ed8ad4619b83b959a14e7d2247fce26df064e96517c6b5b7d17b421a8d",
+      "bytes": 10242,
+      "explicit_theorems": 16,
+      "explicit_defs": 7,
+      "explicit_structures": 0,
+      "axiom_prints": 23
+    }
+  },
+  "actual_Lean_invocations": 0,
+  "actual_math_producers": 0,
+  "historical_source_compiles": 0,
+  "score": 0,
+  "victory": false,
+  "generated_ext_prints": 2,
+  "source_compile_order": [
+    "TerminalPrimeExtraction.lean",
+    "BalancedResourceSwitch.lean",
+    "SignedHyperbolicCRT.lean",
+    "NonSSBracketSwitch.lean",
+    "RankTwoHarmonic.lean"
+  ],
+  "builder_sha256": "52f87be8c6dcd09f80051547971a51d2b9ffccefad4b83d7a51a46728e55be62",
+  "dependencies_manifest_sha256": "3a42896112b13cb680eb6a10c608ae4cd78f0c544a8e76cbdeed1b21252b2a33"
+}

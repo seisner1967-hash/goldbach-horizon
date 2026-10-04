@@ -1,0 +1,46 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round4\lean\CompositeCompletion.lean:89:22: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∑ u : (ZMod ?m.33230)ˣ, ?f ↑u
+q : ℕ
+inst✝ : NeZero q
+χ : DirichletCharacter ℂ q
+h : ZMod q
+⊢ ∑ x : (ZMod q)ˣ, χ⁻¹ ↑x * ZMod.stdAddChar (h * ↑x) = gaussSum χ⁻¹ (ZMod.stdAddChar.mulShift h)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round4\lean\CompositeCompletion.lean:137:2: error: ring failed, ring expressions not equal
+q : ℕ
+inst✝ : NeZero q
+χ : DirichletCharacter ℂ q
+F : ZMod q → ℂ
+h : gaussSum χ⁻¹ ZMod.stdAddChar * unitFrequencyMoment χ F = ↑q * physicalMoment χ F - nonunitDefect χ F
+hq : ↑q ≠ 0
+⊢ gaussSum (1 / χ) ZMod.stdAddChar * unitFrequencyMoment χ F - unitFrequencyMoment χ F * gaussSum χ⁻¹ ZMod.stdAddChar =
+    0
+'GoldbachResearch.CompositeCompletion.fourierWeight_eq_dft' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.inverse_fourier_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.all_frequency_completion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.sum_units_eq_filter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.CompositeCompletion.characterPhase_eq_gaussShift' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.characterPhase_unit' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.nonunit_partition' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.composite_completion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.composite_completion_ratio' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.CompositeCompletion.double_composite_completion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

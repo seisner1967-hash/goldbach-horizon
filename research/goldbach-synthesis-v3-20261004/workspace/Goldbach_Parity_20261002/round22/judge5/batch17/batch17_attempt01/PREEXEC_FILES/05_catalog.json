@@ -1,0 +1,324 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH17",
+  "time_utc": "2026-10-03T17:56:58.676355+00:00",
+  "modules": [
+    {
+      "module": "RationalLogQuantization22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\RationalLogQuantization22.lean",
+      "source_sha256": "dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\RationalLogQuantization22.lean",
+      "source_status": "SOURCE_ONLY_NOT_COMPILED",
+      "theorem_count": 23,
+      "definition_count": 15,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.gridScale"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logTerm"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logPartial"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logRemainder"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logTermQ"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logPartialQ"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.reductionExponent"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.reducedArg"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logLowerQ"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logWidthQ"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logMidpointQ"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.nearestEven"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.clampInteger"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.logPoint"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachLogQuantization22.quantizedLog"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.gridScale_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logTerm_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logSeries"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logTailSeries"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logTailTerm_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logRemainder_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logPartial_encloses"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logPartialQ_cast"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.reductionExponent_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.reducedArg_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.log_reduction_identity"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logTwo_encloses"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logWidthQ_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.log32_enclosure"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.log32_width_small"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.log32_midpoint_error"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.nearestEven_error"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.nearestEven_error_real"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.clampInteger_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.clampInteger_distance"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.true_log_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.logPoint_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachLogQuantization22.quantizedLog_precision"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachLogQuantization22.gridScale",
+        "GoldbachLogQuantization22.logTerm",
+        "GoldbachLogQuantization22.logPartial",
+        "GoldbachLogQuantization22.logRemainder",
+        "GoldbachLogQuantization22.logTermQ",
+        "GoldbachLogQuantization22.logPartialQ",
+        "GoldbachLogQuantization22.reductionExponent",
+        "GoldbachLogQuantization22.reducedArg",
+        "GoldbachLogQuantization22.logLowerQ",
+        "GoldbachLogQuantization22.logWidthQ",
+        "GoldbachLogQuantization22.logMidpointQ",
+        "GoldbachLogQuantization22.nearestEven",
+        "GoldbachLogQuantization22.clampInteger",
+        "GoldbachLogQuantization22.logPoint",
+        "GoldbachLogQuantization22.quantizedLog",
+        "GoldbachLogQuantization22.gridScale_pos",
+        "GoldbachLogQuantization22.logTerm_nonneg",
+        "GoldbachLogQuantization22.logSeries",
+        "GoldbachLogQuantization22.logTailSeries",
+        "GoldbachLogQuantization22.logTailTerm_bound",
+        "GoldbachLogQuantization22.logRemainder_nonneg",
+        "GoldbachLogQuantization22.logPartial_encloses",
+        "GoldbachLogQuantization22.logPartialQ_cast",
+        "GoldbachLogQuantization22.reductionExponent_bounds",
+        "GoldbachLogQuantization22.reducedArg_bounds",
+        "GoldbachLogQuantization22.log_reduction_identity",
+        "GoldbachLogQuantization22.logTwo_encloses",
+        "GoldbachLogQuantization22.logWidthQ_nonneg",
+        "GoldbachLogQuantization22.log32_enclosure",
+        "GoldbachLogQuantization22.log32_width_small",
+        "GoldbachLogQuantization22.log32_midpoint_error",
+        "GoldbachLogQuantization22.nearestEven_error",
+        "GoldbachLogQuantization22.nearestEven_error_real",
+        "GoldbachLogQuantization22.clampInteger_bounds",
+        "GoldbachLogQuantization22.clampInteger_distance",
+        "GoldbachLogQuantization22.true_log_bounds",
+        "GoldbachLogQuantization22.logPoint_bounds",
+        "GoldbachLogQuantization22.quantizedLog_precision"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "CANONICAL_LOG32_TRUE_PRECISION_LAMBDA_PP_CONTINUOUS_COEFFICIENT_ENVELOPE_AUX_ONLY",
+      "author_olean_allowed": false
+    },
+    {
+      "module": "QuantizedLambdaEnvelope22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources\\QuantizedLambdaEnvelope22.lean",
+      "source_sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\QuantizedLambdaEnvelope22.lean",
+      "source_status": "SOURCE_ONLY_NOT_COMPILED",
+      "theorem_count": 9,
+      "definition_count": 5,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachQuantizedCoefficient22.integerLambda"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachQuantizedCoefficient22.quantizedLambda"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachQuantizedCoefficient22.trueCoefficient"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachQuantizedCoefficient22.integerCoefficient"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachQuantizedCoefficient22.errorEnvelope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.integerLambda_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.quantizedLambda_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.trueLambda_bounds"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.quantizedLambda_precision"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.quantized_product_error"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.quantizedCoefficient_eq_integer"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.coefficient_error_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.errorEnvelope_continuousOn"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachQuantizedCoefficient22.fixed_integer_tau_guard"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachQuantizedCoefficient22.integerLambda",
+        "GoldbachQuantizedCoefficient22.quantizedLambda",
+        "GoldbachQuantizedCoefficient22.trueCoefficient",
+        "GoldbachQuantizedCoefficient22.integerCoefficient",
+        "GoldbachQuantizedCoefficient22.errorEnvelope",
+        "GoldbachQuantizedCoefficient22.integerLambda_bounds",
+        "GoldbachQuantizedCoefficient22.quantizedLambda_bounds",
+        "GoldbachQuantizedCoefficient22.trueLambda_bounds",
+        "GoldbachQuantizedCoefficient22.quantizedLambda_precision",
+        "GoldbachQuantizedCoefficient22.quantized_product_error",
+        "GoldbachQuantizedCoefficient22.quantizedCoefficient_eq_integer",
+        "GoldbachQuantizedCoefficient22.coefficient_error_bound",
+        "GoldbachQuantizedCoefficient22.errorEnvelope_continuousOn",
+        "GoldbachQuantizedCoefficient22.fixed_integer_tau_guard"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "CANONICAL_LOG32_TRUE_PRECISION_LAMBDA_PP_CONTINUOUS_COEFFICIENT_ENVELOPE_AUX_ONLY",
+      "author_olean_allowed": false
+    }
+  ],
+  "module_count": 2,
+  "total_declarations": 52,
+  "theorem_count": 32,
+  "definition_count": 20,
+  "common_source_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\sources",
+  "readonly_local_dependencies": [],
+  "dependency_bindings": [],
+  "support_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\log_quantization_source_review_revision03.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\log_quantization_source_review_revision02.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\dependency_contract22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\source_manifest22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision03\\read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch16\\batch16_attempt01\\RationalLogQuantization22.log"
+  ],
+  "author_provenance_capture_paths": [],
+  "modules_author_PASS_claimed": false,
+  "compiler_invocations": 0,
+  "win": false
+}

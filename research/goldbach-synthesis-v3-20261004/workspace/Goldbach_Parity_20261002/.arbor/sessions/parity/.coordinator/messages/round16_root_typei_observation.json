@@ -1,0 +1,37 @@
+{
+  "status": "ROOT_OBSERVED_NEW_TYPEI_CANONICAL_AND_ISOLATED_RESULTS_NO_REEXECUTION",
+  "files_sha256": {
+    "round16/agent1_bilinear_covariance.md": "f60827e9e72e73cde93512448bd6acc289807d43180b844040326456a5e2d754",
+    "round16/agent2_or_incidence.md": "f6f12c39afc445ce82482850c34482fa2450b9df1df7dbeef2089574b308128b",
+    "round16/typei_checks.py": "e59caddb2a123374a70e85686cdbe5d00677317b48d9f8c6fc2b7bbd934f9a6e",
+    "round16/typei.json": "a1443ee83b346fc6a3cf330a09bf07a05a4e4a5d00230ed418aebeb8a9b65b1c",
+    "round16/isolated_typei/typei.json": "a1443ee83b346fc6a3cf330a09bf07a05a4e4a5d00230ed418aebeb8a9b65b1c",
+    "round16/role6/typei_attempt01.log": "4b9eb9f6c550fbc09efe909c42ec56cae5f10a5cc1cb5c1235db3e14751a28b0",
+    "round16/role6/typei_isolated_replay.log": "4b9eb9f6c550fbc09efe909c42ec56cae5f10a5cc1cb5c1235db3e14751a28b0",
+    "round16/shared.py": "881aca82d06b45fa4fbbf756173656cf63b80470a9f0a45abb3259554a61f17c",
+    "round16/role6/typei_replay_receipt.json": "807e63f1f95241c5da64cfc3142778253e3c9d382a46427cf1162b92e577abc9",
+    "round16/role6/typei_canonical_success.json": "e5525e25c232b6eb1db6f5613cc0cecc675536889fcb81e9b549aa76578e4113",
+    ".arbor/sessions/parity/.coordinator/messages/round16_primary_source_context.md": "0a1472163b632b2338c4027a9f85ceea202ab20028cbdc06ccbf51c569f3daf5"
+  },
+  "full_sources_read_by_root": [
+    "round16/typei_checks.py",
+    "round16/shared.py",
+    "round16/agent1_bilinear_covariance.md",
+    "round16/agent2_or_incidence.md"
+  ],
+  "producer_invoked_by_root": false,
+  "Lean_invoked_by_root": false,
+  "canonical_attempt": 1,
+  "canonical_exit_code": 0,
+  "isolated_exit_code": 0,
+  "A": 216,
+  "uniform_drift": 38,
+  "corrected_drift": 2,
+  "proper_powers": 9,
+  "Gamma_Gamma_star_L3": "ALL_STRICTLY_NEGATIVE_FINITE_ONLY",
+  "conservation_flag_scope": "numeric_contract_round16_launched and mathematical_identity_round16_certified in conservation.verify are static preflight-scope flags, not global execution tracking. Actual new launches are bound by canonical/replay receipts.",
+  "independent_Judge16_pending": true,
+  "anchor_Lean_final_pending": true,
+  "global_D_N": false,
+  "victory": false
+}

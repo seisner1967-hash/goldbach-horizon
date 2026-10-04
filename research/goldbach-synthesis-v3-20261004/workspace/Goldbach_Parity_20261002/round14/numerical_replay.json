@@ -1,0 +1,103 @@
+{
+  "Lean_called": false,
+  "asymptotic": false,
+  "conservation_after": {
+    "baseline_sha256": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "controller_88_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "files": 603,
+    "old_Lean_recompiled": false,
+    "old_PASS_replayed": false,
+    "old_PDF_rerendered": false,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "previous_protected_files": 514,
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\previous_artifacts_sha256.json",
+    "round13_controller_sha256": "64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d",
+    "round13_files": 89,
+    "status": "PRESERVED"
+  },
+  "conservation_before": {
+    "baseline_sha256": "310e5f7df62b7f67fa29302f2eb634a740da6f979ce8c23f0a4415941b075407",
+    "controller_88_bindings_verified": true,
+    "exact_inventory_additions_and_removals_checked": true,
+    "files": 603,
+    "old_Lean_recompiled": false,
+    "old_PASS_replayed": false,
+    "old_PDF_rerendered": false,
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    },
+    "previous_protected_files": 514,
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\previous_artifacts_sha256.json",
+    "round13_controller_sha256": "64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d",
+    "round13_files": 89,
+    "status": "PRESERVED"
+  },
+  "global_D_N": false,
+  "old_Lean_recompiled": false,
+  "old_PASS_replayed": false,
+  "only_new_round14_producers_executed": true,
+  "payments": false,
+  "runs": [
+    {
+      "all_fields_identical": true,
+      "bank": "coverage",
+      "bytes_identical": true,
+      "canonical": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\coverage.json",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\coverage_checks.py",
+        "--output-dir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_coverage"
+      ],
+      "exit_code": 0,
+      "isolated": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_coverage\\coverage.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\role6\\coverage_isolated_replay.log",
+      "log_sha256": "29cc26d7104e9292f5929c5749ac2486520b5f8dca160a3c860103d5d27fd19d",
+      "output_sha256": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+      "source_sha256": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce"
+    },
+    {
+      "all_fields_identical": true,
+      "bank": "complement",
+      "bytes_identical": true,
+      "canonical": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\complement.json",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\complement_checks.py",
+        "--output-dir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_complement"
+      ],
+      "exit_code": 0,
+      "isolated": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_complement\\complement.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\role6\\complement_isolated_replay.log",
+      "log_sha256": "1ffa6701e43b78ee71ddf89744644d0fefb56869a37f577fdab5191dac91ee56",
+      "output_sha256": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+      "source_sha256": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2"
+    }
+  ],
+  "separate_isolated_directories": true,
+  "status": "PASS_NEW_ROUND14_TWO_SEPARATE_ISOLATED_BYTES_AND_FIELDS_REPLAY",
+  "strict_rational_only": true,
+  "victory": false
+}

@@ -1,0 +1,113 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4_geometry\FriableSourceGeometry.lean:147:4: error: type mismatch, term
+  Real.log_le_sub_one_of_pos
+    (of_eq_true
+      (eq_true
+        (Mathlib.Meta.NormNum.isNat_lt_true (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero)
+          (Mathlib.Meta.NormNum.isNat_ofNat ℝ (Eq.refl 2)) (Eq.refl false))))
+after simplification has type
+  Real.log 2 ≤ 2 - 1 : Prop
+but is expected to have type
+  Real.log 2 ≤ 1 : Prop
+'GoldbachRound20.Friable.SourceGeometry.sourceU' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceEll' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceY' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceSigma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceD' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceM' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceAlpha' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceEcap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.sourceEupper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.SourceOnset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.SourceGuards' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_u_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_u_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_u_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_N_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_N_real_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Q_le_N_sub_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Q_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Ecap_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_ell_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_ell_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_ell_le_two_sqrt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_T_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_T_le_u_div_128' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_expT_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Y_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_logY_le_T' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_logY_four' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_sigma_pos' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_sigma_le_quarter' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_one_add_logY_le_u' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Y_le_small_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Y_le_Z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_D_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_D_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_M_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_M_le_N' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Eupper_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_alpha_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_a_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_alpha_le_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_D_le_M' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_D_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_M_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_D_le_two_sqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_a_lt_M' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Ecap_le_Eupper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Eupper_le_quarter_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Eupper_le_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_Ecap_le_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_rank_harmonic_le_half_u' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.actual_source_cap_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.actual_source_cofactor_guards' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.source_geometry' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.actual_source_divisor_band_mass' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.actual_source_smooth_tau_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.SourceGeometry.actual_source_unique_F1_reciprocal' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

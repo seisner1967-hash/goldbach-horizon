@@ -1,0 +1,95 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch31\sources\ComplexGammaMellinLambda22.lean:84:12: error: failed to synthesize
+  Membership ℝ (List (List ℝ))
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch31\sources\ComplexGammaMellinLambda22.lean:85:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  uIcc ?m.13853 (?m.13853 + ?m.13854)
+K : ℕ
+hmono : AntitoneOn (fun x => x ^ (-(3 / 2))) (Icc 1 (1 + ↑K))
+hsum : ∑ i ∈ Finset.range K, (1 + ↑(i + 1)) ^ (-(3 / 2)) ≤ ∫ (x : ℝ) in 1 ..1 + ↑K, x ^ (-(3 / 2))
+⊢ ¬sorry
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch31\sources\ComplexGammaMellinLambda22.lean:85:43: error: application type mismatch
+  le_add_of_nonneg_right (Nat.cast_nonneg K)
+argument
+  Nat.cast_nonneg K
+has type
+  @OfNat.ofNat ?m.13999 0 (@Zero.toOfNat0 ?m.13999 MulZeroClass.toZero) ≤ ↑K : Prop
+but is expected to have type
+  @OfNat.ofNat ?m.13849 0 (@Zero.toOfNat0 ?m.13849 AddZeroClass.toZero) ≤ ?m.13854 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch31\sources\ComplexGammaMellinLambda22.lean:110:72: error: unsolved goals
+hs : Summable fun n => ↑n ^ (-(3 / 2))
+ht : ∑' (k : ℕ), ↑(k + 2) ^ (-(3 / 2)) ≤ 2
+he : ∑ i ∈ Finset.range 2, ↑i ^ (-(3 / 2)) + ∑' (i : ℕ), ↑(i + 2) ^ (-(3 / 2)) = ∑' (i : ℕ), ↑i ^ (-(3 / 2))
+⊢ ∑ x ∈ Finset.range 2, ↑x ^ (-(3 / 2)) = 1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch31\sources\ComplexGammaMellinLambda22.lean:146:4: error: simp made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch31\sources\ComplexGammaMellinLambda22.lean:178:62: warning: unused variable `hw`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'GoldbachComplexGammaMellin22.lambdaMellinSize' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinDirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinThermal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambda_direct_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinSize_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinSize_pseries_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinSize_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.mellin_pseries_shift_two_sum_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.mellin_pseries_tsum_le_three' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinMass_le_six' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinMass_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.norm_lambdaMellinCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinCoefficient_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinCoefficient_continuous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinDirichlet_continuous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.norm_lambdaMellinDirichlet_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.norm_lambdaMellinIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinIntegrand_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinIntegrand_integral_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinIntegrand_tsum_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinProduct_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinProduct_local_uniform_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinProduct_local_envelope_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.principal_cpow_positive_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinIntegrand_single_inversion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinThermal_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinThermal_eq_integral' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

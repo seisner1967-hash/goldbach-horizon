@@ -1,0 +1,1525 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "M": [
+    [
+      3,
+      7951
+    ],
+    [
+      -12577,
+      91
+    ]
+  ],
+  "H": [
+    [
+      100000000,
+      73626461
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "G": [
+    [
+      9260,
+      -67
+    ],
+    [
+      -12577,
+      91
+    ]
+  ],
+  "lambda_modN": 73626461,
+  "counts": {
+    "positive_integer_shears": 204,
+    "accepted_original_masks": 43,
+    "positive_expanded_sign": 24,
+    "negative_expanded_sign": 19
+  },
+  "exact_quotients": {
+    "A": 9260,
+    "C": -67,
+    "divisibility": true,
+    "AB_plus_CD": 1
+  },
+  "shear_domain": "ell=0..203, j=-13*ell; every shear retains the exact integer HH factorization and positive factors",
+  "samples": [
+    {
+      "ell": 0,
+      "shear_j": 0,
+      "b": 13,
+      "u": 3,
+      "v": 7,
+      "w": 1,
+      "k": 1,
+      "s": 7951,
+      "t": 12577,
+      "z": 1,
+      "n": 273,
+      "m": 99999727,
+      "a": 21,
+      "r": 99999727,
+      "CRT_modulus_a_times_r": 2099994267,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7951,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          7,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7951,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": 1,
+      "Mobius_n_times_m": -1,
+      "complete_H2_a": 2,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,7951": 1,
+        "13,12577": 1
+      }
+    },
+    {
+      "ell": 2,
+      "shear_j": -26,
+      "b": 13,
+      "u": 3,
+      "v": 25161,
+      "w": 1,
+      "k": 1,
+      "s": 7873,
+      "t": 12577,
+      "z": 1,
+      "n": 981279,
+      "m": 99018721,
+      "a": 75483,
+      "r": 99018721,
+      "CRT_modulus_a_times_r": 7474230117243,
+      "factor_n": [
+        [
+          3,
+          2
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          8387,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7873,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          3,
+          1
+        ],
+        [
+          8387,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7873,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": false,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": false,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 0,
+      "complete_H2_a": 1,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,7873": -1,
+        "13,12577": -1
+      }
+    },
+    {
+      "ell": 4,
+      "shear_j": -52,
+      "b": 13,
+      "u": 3,
+      "v": 50315,
+      "w": 1,
+      "k": 1,
+      "s": 7795,
+      "t": 12577,
+      "z": 1,
+      "n": 1962285,
+      "m": 98037715,
+      "a": 150945,
+      "r": 98037715,
+      "CRT_modulus_a_times_r": 14798302890675,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          347,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          5,
+          1
+        ],
+        [
+          1559,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          5,
+          1
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          347,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          5,
+          1
+        ],
+        [
+          1559,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": false,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": false,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 1,
+      "complete_H2_a": 2,
+      "complete_H2_r": 0,
+      "signed_log13_logr_coefficients": {
+        "5,13": -1,
+        "13,1559": -1,
+        "13,12577": -1
+      }
+    },
+    {
+      "ell": 6,
+      "shear_j": -78,
+      "b": 13,
+      "u": 3,
+      "v": 75469,
+      "w": 1,
+      "k": 1,
+      "s": 7717,
+      "t": 12577,
+      "z": 1,
+      "n": 2943291,
+      "m": 97056709,
+      "a": 226407,
+      "r": 97056709,
+      "CRT_modulus_a_times_r": 21974318314563,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          163,
+          1
+        ],
+        [
+          463,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7717,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          163,
+          1
+        ],
+        [
+          463,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7717,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,7717": -1,
+        "13,12577": -1
+      }
+    },
+    {
+      "ell": 10,
+      "shear_j": -130,
+      "b": 13,
+      "u": 3,
+      "v": 125777,
+      "w": 1,
+      "k": 1,
+      "s": 7561,
+      "t": 12577,
+      "z": 1,
+      "n": 4905303,
+      "m": 95094697,
+      "a": 377331,
+      "r": 95094697,
+      "CRT_modulus_a_times_r": 35882177113707,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          125777,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7561,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          125777,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7561,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": 1,
+      "Mobius_n_times_m": -1,
+      "complete_H2_a": 2,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,7561": 1,
+        "13,12577": 1
+      }
+    },
+    {
+      "ell": 12,
+      "shear_j": -156,
+      "b": 13,
+      "u": 3,
+      "v": 150931,
+      "w": 1,
+      "k": 1,
+      "s": 7483,
+      "t": 12577,
+      "z": 1,
+      "n": 5886309,
+      "m": 94113691,
+      "a": 452793,
+      "r": 94113691,
+      "CRT_modulus_a_times_r": 42614020488963,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          13721,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7,
+          1
+        ],
+        [
+          1069,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          11,
+          1
+        ],
+        [
+          13721,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7,
+          1
+        ],
+        [
+          1069,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "actual_HH_expanded_sign": 1,
+      "Mobius_n_times_m": -1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 0,
+      "signed_log13_logr_coefficients": {
+        "7,13": 1,
+        "13,1069": 1,
+        "13,12577": 1
+      }
+    },
+    {
+      "ell": 16,
+      "shear_j": -208,
+      "b": 13,
+      "u": 3,
+      "v": 201239,
+      "w": 1,
+      "k": 1,
+      "s": 7327,
+      "t": 12577,
+      "z": 1,
+      "n": 7848321,
+      "m": 92151679,
+      "a": 603717,
+      "r": 92151679,
+      "CRT_modulus_a_times_r": 55633535190843,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          61,
+          1
+        ],
+        [
+          3299,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          17,
+          1
+        ],
+        [
+          431,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          61,
+          1
+        ],
+        [
+          3299,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          17,
+          1
+        ],
+        [
+          431,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "actual_HH_expanded_sign": 1,
+      "Mobius_n_times_m": -1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 0,
+      "signed_log13_logr_coefficients": {
+        "13,17": 1,
+        "13,431": 1,
+        "13,12577": 1
+      }
+    },
+    {
+      "ell": 18,
+      "shear_j": -234,
+      "b": 13,
+      "u": 3,
+      "v": 226393,
+      "w": 1,
+      "k": 1,
+      "s": 7249,
+      "t": 12577,
+      "z": 1,
+      "n": 8829327,
+      "m": 91170673,
+      "a": 679179,
+      "r": 91170673,
+      "CRT_modulus_a_times_r": 61921206517467,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          31,
+          1
+        ],
+        [
+          67,
+          1
+        ],
+        [
+          109,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          11,
+          1
+        ],
+        [
+          659,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          31,
+          1
+        ],
+        [
+          67,
+          1
+        ],
+        [
+          109,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          11,
+          1
+        ],
+        [
+          659,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 1,
+      "complete_H2_a": 2,
+      "complete_H2_r": 0,
+      "signed_log13_logr_coefficients": {
+        "11,13": -1,
+        "13,659": -1,
+        "13,12577": -1
+      }
+    },
+    {
+      "ell": 22,
+      "shear_j": -286,
+      "b": 13,
+      "u": 3,
+      "v": 276701,
+      "w": 1,
+      "k": 1,
+      "s": 7093,
+      "t": 12577,
+      "z": 1,
+      "n": 10791339,
+      "m": 89208661,
+      "a": 830103,
+      "r": 89208661,
+      "CRT_modulus_a_times_r": 74052377122083,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          89,
+          1
+        ],
+        [
+          3109,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          41,
+          1
+        ],
+        [
+          173,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          89,
+          1
+        ],
+        [
+          3109,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          41,
+          1
+        ],
+        [
+          173,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "actual_HH_expanded_sign": 1,
+      "Mobius_n_times_m": -1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 0,
+      "signed_log13_logr_coefficients": {
+        "13,41": 1,
+        "13,173": 1,
+        "13,12577": 1
+      }
+    },
+    {
+      "ell": 30,
+      "shear_j": -390,
+      "b": 13,
+      "u": 3,
+      "v": 377317,
+      "w": 1,
+      "k": 1,
+      "s": 6781,
+      "t": 12577,
+      "z": 1,
+      "n": 14715363,
+      "m": 85284637,
+      "a": 1131951,
+      "r": 85284637,
+      "CRT_modulus_a_times_r": 96538030136787,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          127,
+          1
+        ],
+        [
+          2971,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          6781,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          127,
+          1
+        ],
+        [
+          2971,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          6781,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,6781": -1,
+        "13,12577": -1
+      }
+    },
+    {
+      "ell": 36,
+      "shear_j": -468,
+      "b": 13,
+      "u": 3,
+      "v": 452779,
+      "w": 1,
+      "k": 1,
+      "s": 6547,
+      "t": 12577,
+      "z": 1,
+      "n": 17658381,
+      "m": 82341619,
+      "a": 1358337,
+      "r": 82341619,
+      "CRT_modulus_a_times_r": 111847667727603,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          53,
+          1
+        ],
+        [
+          8543,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          6547,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          53,
+          1
+        ],
+        [
+          8543,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          6547,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,6547": -1,
+        "13,12577": -1
+      }
+    },
+    {
+      "ell": 42,
+      "shear_j": -546,
+      "b": 13,
+      "u": 3,
+      "v": 528241,
+      "w": 1,
+      "k": 1,
+      "s": 6313,
+      "t": 12577,
+      "z": 1,
+      "n": 20601399,
+      "m": 79398601,
+      "a": 1584723,
+      "r": 79398601,
+      "CRT_modulus_a_times_r": 125824789172523,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          193,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          59,
+          1
+        ],
+        [
+          107,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          193,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          59,
+          1
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "actual_HH_expanded_sign": 1,
+      "Mobius_n_times_m": -1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 0,
+      "signed_log13_logr_coefficients": {
+        "13,59": 1,
+        "13,107": 1,
+        "13,12577": 1
+      }
+    }
+  ],
+  "automatic_signed_descent_counterexample": {
+    "base": {
+      "ell": 0,
+      "shear_j": 0,
+      "b": 13,
+      "u": 3,
+      "v": 7,
+      "w": 1,
+      "k": 1,
+      "s": 7951,
+      "t": 12577,
+      "z": 1,
+      "n": 273,
+      "m": 99999727,
+      "a": 21,
+      "r": 99999727,
+      "CRT_modulus_a_times_r": 2099994267,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7951,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          7,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7951,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": 1,
+      "Mobius_n_times_m": -1,
+      "complete_H2_a": 2,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,7951": 1,
+        "13,12577": 1
+      }
+    },
+    "switched": {
+      "ell": 6,
+      "shear_j": -78,
+      "b": 13,
+      "u": 3,
+      "v": 75469,
+      "w": 1,
+      "k": 1,
+      "s": 7717,
+      "t": 12577,
+      "z": 1,
+      "n": 2943291,
+      "m": 97056709,
+      "a": 226407,
+      "r": 97056709,
+      "CRT_modulus_a_times_r": 21974318314563,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          163,
+          1
+        ],
+        [
+          463,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7717,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          163,
+          1
+        ],
+        [
+          463,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7717,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": true,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 1,
+      "complete_H2_a": 0,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,7717": -1,
+        "13,12577": -1
+      }
+    },
+    "verdict": "FALSE: actual expanded Mobius sign and signed log weight change in the same HNF class"
+  },
+  "selector_counterexamples": {
+    "shear_minus26": {
+      "ell": 2,
+      "shear_j": -26,
+      "b": 13,
+      "u": 3,
+      "v": 25161,
+      "w": 1,
+      "k": 1,
+      "s": 7873,
+      "t": 12577,
+      "z": 1,
+      "n": 981279,
+      "m": 99018721,
+      "a": 75483,
+      "r": 99018721,
+      "CRT_modulus_a_times_r": 7474230117243,
+      "factor_n": [
+        [
+          3,
+          2
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          8387,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7873,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          3,
+          1
+        ],
+        [
+          8387,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          7873,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": true,
+        "squarefree_first": false,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": false,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 0,
+      "complete_H2_a": 1,
+      "complete_H2_r": 2,
+      "signed_log13_logr_coefficients": {
+        "13,7873": -1,
+        "13,12577": -1
+      }
+    },
+    "shear_minus52": {
+      "ell": 4,
+      "shear_j": -52,
+      "b": 13,
+      "u": 3,
+      "v": 50315,
+      "w": 1,
+      "k": 1,
+      "s": 7795,
+      "t": 12577,
+      "z": 1,
+      "n": 1962285,
+      "m": 98037715,
+      "a": 150945,
+      "r": 98037715,
+      "CRT_modulus_a_times_r": 14798302890675,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          347,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          5,
+          1
+        ],
+        [
+          1559,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_v": [
+        [
+          5,
+          1
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          347,
+          1
+        ]
+      ],
+      "factor_s": [
+        [
+          5,
+          1
+        ],
+        [
+          1559,
+          1
+        ]
+      ],
+      "masks": {
+        "positive": true,
+        "unit_N": false,
+        "squarefree_first": true,
+        "squarefree_complement": true,
+        "first_axis_W2_rough": true,
+        "core_a_b_le_m": true,
+        "four_large_factors": true,
+        "complementary_r_gt_alpha": true,
+        "literal_k_cap_and_strict_face": true
+      },
+      "accepted": false,
+      "actual_Mobius_u_v_s_t": [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "actual_HH_expanded_sign": -1,
+      "Mobius_n_times_m": 1,
+      "complete_H2_a": 2,
+      "complete_H2_r": 0,
+      "signed_log13_logr_coefficients": {
+        "5,13": -1,
+        "13,1559": -1,
+        "13,12577": -1
+      }
+    }
+  },
+  "limitations": "Exact class constancy of the arithmetic weight is falsified; no claim against future weighted cancellation over a class and no D_N bound",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 120,
+    "baseline_sha256": "b2a48fef1f5eccbc30ed516a0f5e20bd20042cb559aa997ac2d38602ddc32558"
+  },
+  "script_sha256": "ba92c852c542adab1acbcd82d8021091099de99062ba5166ad49fe5f8f463fa5"
+}

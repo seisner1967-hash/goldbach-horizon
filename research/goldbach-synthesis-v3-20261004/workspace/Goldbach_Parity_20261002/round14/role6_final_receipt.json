@@ -1,0 +1,70 @@
+{
+  "Lean_called": false,
+  "allowed_write_scope": "round14/** numeric only; excludes reports1/2 and role1/role2 directories",
+  "final_conceptual_report_sha256": {
+    "agent1_coverage.md": "4224fdd0f202da0a1dae1787965cb24aaeb7cf88fbcba8e92f607aff98716aec",
+    "agent2_complement.md": "b512cffb393253b004660442dd5cdde7af228d1550dbdc8c926d8e899c186d67"
+  },
+  "global_D_N": false,
+  "manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\numeric_manifest.json",
+  "manifest_sha256": "fe73d3c34e07ce7ee1e38f436f23d4015f9c6485e3e852adbfb323e8baa87bcd",
+  "new_banks_output_sha256": {
+    "complement": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+    "coverage": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f"
+  },
+  "new_banks_source_sha256": {
+    "complement": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2",
+    "coverage": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce"
+  },
+  "numeric_files_bound": 32,
+  "old_Lean_recompiled": false,
+  "old_PASS_replayed": false,
+  "old_PDF_rerendered": false,
+  "payments": false,
+  "protected_603_exactly_preserved": true,
+  "report_sha256": "6a5020f476b597fc5b4b4482d71acb2612bca242384de905886d058680539b31",
+  "round": 14,
+  "score": 0,
+  "separate_isolated_runs": [
+    {
+      "all_fields_identical": true,
+      "bank": "coverage",
+      "bytes_identical": true,
+      "canonical": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\coverage.json",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\coverage_checks.py",
+        "--output-dir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_coverage"
+      ],
+      "exit_code": 0,
+      "isolated": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_coverage\\coverage.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\role6\\coverage_isolated_replay.log",
+      "log_sha256": "29cc26d7104e9292f5929c5749ac2486520b5f8dca160a3c860103d5d27fd19d",
+      "output_sha256": "d1d9c3a4c34d7fcb9971d3f7e23bf24eed7abd52369f04ff13990fd12cf0946f",
+      "source_sha256": "8ef2498da6403bd4c3a7502f6ea9889ecedc48cab311eb154e257264a37a31ce"
+    },
+    {
+      "all_fields_identical": true,
+      "bank": "complement",
+      "bytes_identical": true,
+      "canonical": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\complement.json",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\complement_checks.py",
+        "--output-dir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_complement"
+      ],
+      "exit_code": 0,
+      "isolated": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\isolated_complement\\complement.json",
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round14\\role6\\complement_isolated_replay.log",
+      "log_sha256": "1ffa6701e43b78ee71ddf89744644d0fefb56869a37f577fdab5191dac91ee56",
+      "output_sha256": "7937f858e6b0ad205e5613cb108c6a6e39ca7b5eb295427e8090e4c191d0a1f6",
+      "source_sha256": "88e6cd857e0a8ec1ad9a1d5ecacf311dcb475832774b8d582d0a16e0e932a0c2"
+    }
+  ],
+  "status": "FINAL_ROLE6_TERMINATED_READ_ONLY_FREEZE",
+  "stored_vector_audit_sha256": "9a550cb73d6e65abfc7812acd971a1e7dd88f013b5b1b2e29ed2cee66de9aa9d",
+  "supplement_sha256": "f3403e4095edc96ee9bab254dd1aaeb52ec02e3b6b1154029ed9ebdc3baa8950",
+  "victory": false
+}

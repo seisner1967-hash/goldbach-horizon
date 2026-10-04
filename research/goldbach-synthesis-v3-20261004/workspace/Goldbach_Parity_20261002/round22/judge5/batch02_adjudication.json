@@ -1,0 +1,701 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH02_ADJUDICATION",
+  "time_utc": "2026-10-03T09:17:26.860256+00:00",
+  "status": "INDEPENDENT_UNFOLD_TAIL_GAMMA_AUXILIARIES_CERTIFIED",
+  "actual_launcher_invocation": "cee27a/session37954; completion606534 exit0",
+  "actual_compiler_invocations": 3,
+  "hidden_retries": false,
+  "independent_source_copies": true,
+  "author_olean_used": false,
+  "readonly_previous_judge_dependencies_only": [
+    "EpsteinKernel22",
+    "EpsteinFinite22"
+  ],
+  "previous_batch_recompiled_or_replayed": false,
+  "new_olean_hashes_may_equal_author_deterministically": true,
+  "gate_sha256": "6c6aaf32ebc56e6f445073b874db729c1ff728d9e3533cae0390f510fd47d51d",
+  "manifest_sha256": "c0a2ef8b8ce38fc2781924d6cdc776177a3b3b4dac121bb1d13a1f01158d04dd",
+  "receipt_sha256": "a159b22e7ac4e8718f0572fdbf3e6d424294571eab01d5ed1ff979a821af48f9",
+  "PREEXEC_sha256": "0c553b9634a2bcb260af455cdf777f0f16e44b546fb6bee7723b7cc1c0be2ec0",
+  "POSTEXEC_sha256": "2d419ab806681df15e55bd9a876548a32c9308577fa0ecded961c3775c15153d",
+  "captures": [
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\00_EpsteinUnfold22.lean",
+      "sha256": "79384d3502ab8042b44104e0ba4e56087c47430c267c2b9f16f9c6f228426aea",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\EpsteinUnfold22.lean"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\01_EpsteinTail22.lean",
+      "sha256": "5f9d3f180df2e165d43aebfe2e72b963091bb2b90fdfa4e786a66cc82745af8e",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\EpsteinTail22.lean"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\02_GammaPrerequisites22.lean",
+      "sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\03_run_judge22_batch02_once.py",
+      "sha256": "12d14af404639024c0bcc62e6bde114710885997c51511f1694e7579c8beb513",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\run_judge22_batch02_once.py"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\04_prepare_judge22_batch02.py",
+      "sha256": "2c9a24fa0fe3cf1369e88b1781b5e24ecbca4029ee15615cdd1d571ce552deea",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\prepare_judge22_batch02.py"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\05_batch02_preparation.md",
+      "sha256": "3d307ff2419a0ff2404a80d636ff99cccde9d7ac8ec0fbd893163d167bab1e90",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_preparation.md"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\06_batch02_read_receipts.json",
+      "sha256": "7bb581644342e72584c3a75f03337a19650e8d18639774f15c61006132b6b084",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_read_receipts.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\07_batch02_catalog.json",
+      "sha256": "90addad838416c8f36782979e6d2ffac051494ed895b4141d4a2f666a9c13714",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_catalog.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\08_batch02_prepared_manifest.json",
+      "sha256": "c0a2ef8b8ce38fc2781924d6cdc776177a3b3b4dac121bb1d13a1f01158d04dd",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_prepared_manifest.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\09_batch02_import_bindings.json",
+      "sha256": "2517c929d8b9b15ecb74e58bcdb324ebe9104999e92671da17136063d0222e01",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_import_bindings.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\10_batch02_batch01_bindings.json",
+      "sha256": "cd49392e12ab9101fde2c3abf53b1acba221186fbbd6c02dd9eed9da72edd550",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_batch01_bindings.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\11_round22_judge5_batch02_authorization.json",
+      "sha256": "6c6aaf32ebc56e6f445073b874db729c1ff728d9e3533cae0390f510fd47d51d",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge5_batch02_authorization.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\12_epstein_result22.json",
+      "sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\actual_epstein22\\epstein_result22.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\13_gamma_result22.json",
+      "sha256": "595b15340efe03bd215eebe7f6d526cd1f2f5d07865f074a3b7927687beb967a",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\actual_gamma22\\gamma_result22.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\14_receipt.json",
+      "sha256": "4a6677cebe40f404ebc366d35227e31584f6b0d53962b1d61d84d5c3703ffb08",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\receipt.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\15_receipt.json",
+      "sha256": "d3c68016b792a02053e97901e7ab4759ff77652fa0835582124e86d9f7835c21",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\receipt.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\16_receipt.json",
+      "sha256": "87c51cd4e70d8e54d8d1764fb24696b74ccf070e541caa20b7040a3d80feded0",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\receipt.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\17_EpsteinUnfold22.log",
+      "sha256": "12cc50cc686994a04af46290727ed38de7e11eaf09622c67d5fcfb1544c63060",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\EpsteinUnfold22.log"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\18_EpsteinTail22.log",
+      "sha256": "af4334b90177fa791f1ee4cd1befd21c2039c70db2a08dbbd32b02663cce535d",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage04\\stage04_attempt01\\EpsteinTail22.log"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\19_stdout.log",
+      "sha256": "baea3821834d83192bd3925a2371b3563d6b02d63895cbc3d19622af18753664",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\stdout.log"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\20_write_batch02_metadata_sources.py",
+      "sha256": "4ff7f5f35a9f81338244c8fddb1ee70ec8357c69bf71ba4b661529a57e141abf",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\write_batch02_metadata_sources.py"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\21_G0_final_catalog_v2.json",
+      "sha256": "8d799d5742b7d674cd5a5e184126cba3fcfcc59808af8facb1b30b5ee18ba9c0",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\G0_final_catalog_v2.json"
+    },
+    {
+      "capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\PREEXEC_FILES\\22_G0_raccord_final.md",
+      "sha256": "76489eb4db4ac5a9be49b8ac19de41aeaacdfeff21b4ceb294bf3fa327b4d1c1",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\G0_raccord_final.md"
+    }
+  ],
+  "immutable_inputs_conserved": 7214,
+  "protected_archives_conserved": 3089,
+  "closed_batch01_files_conserved": 35,
+  "import_modules": 3568,
+  "rows": [
+    {
+      "module": "EpsteinUnfold22",
+      "source_sha256": "79384d3502ab8042b44104e0ba4e56087c47430c267c2b9f16f9c6f228426aea",
+      "log_sha256": "0551350479f3880b12cf3ae45b909107ce6444873087520b5d5b61f0364e8309",
+      "olean_sha256": "b3e0d60e7633cc46e2084c0131e2fd42aef0f1fca60d4db7682d45ece1774bc0",
+      "START_marker": "2026-10-03T09:11:27.628422+00:00",
+      "started_at": "2026-10-03T09:11:27.628422+00:00",
+      "finished_at": "2026-10-03T09:11:53.111182+00:00",
+      "exit_code": 0,
+      "theorems": 16,
+      "definitions": 3,
+      "printed_axioms": 19,
+      "standard_axioms_only": true,
+      "warning_count": 4,
+      "source_FULL_read": "b76d19",
+      "log_FULL_read": "4ab11b",
+      "START_FULL_read": "008794",
+      "FIN_FULL_read": "7ef064",
+      "exact_axiom_rows": [
+        {
+          "declaration": "Epstein22.periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.translateBound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.infiniteShiftIntegral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.kernel_upper_of_sq_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.kernel_upper_a",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.summable_translateBound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.translateBound_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.kernel_translate_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.continuousOn_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.continuous_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.periodic_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.intervalIntegrable_periodized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.summable_integral_norm_cells",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.integral_periodized_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.summable_kernel_translate",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.infiniteSum_shiftKernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.unfoldFullRealThreeHalves",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.abs_cast_eq_natAbs",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.unfoldFullRealThreeHalves_natAbs",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "EpsteinTail22",
+      "source_sha256": "5f9d3f180df2e165d43aebfe2e72b963091bb2b90fdfa4e786a66cc82745af8e",
+      "log_sha256": "b1fbedc95fac1bbb0e51ff7c1eb4745a2683aa5c7bfa29ec96c10bea531b4a06",
+      "olean_sha256": "d6ca888b83bbd4644152da951df39b7712a2735ae10e233b84ea1dcb9584b025",
+      "START_marker": "2026-10-03T09:11:53.128194+00:00",
+      "started_at": "2026-10-03T09:11:53.128194+00:00",
+      "finished_at": "2026-10-03T09:12:14.161288+00:00",
+      "exit_code": 0,
+      "theorems": 11,
+      "definitions": 3,
+      "printed_axioms": 14,
+      "standard_axioms_only": true,
+      "warning_count": 4,
+      "source_FULL_read": "529f97",
+      "log_FULL_read": "2e1ebb",
+      "START_FULL_read": "e69e17",
+      "FIN_FULL_read": "e1a7e4",
+      "exact_axiom_rows": [
+        {
+          "declaration": "Epstein22.endpointDeficit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.truncationEnvelope",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.truncationEnvelopeReal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.endpointSum_range",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.endpointDeficit_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.boundary_deficit_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.endpointDeficit_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.complete_mass_prefactor",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.actual_error_eq_endpointDeficit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.actual_truncation_error_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.truncationEnvelope_eq_rpow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.continuous_truncationEnvelope",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.truncationEnvelope_eq_real",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Epstein22.continuousOn_truncationEnvelopeReal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "GammaPrerequisites22",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "log_sha256": "c32bcee851c6f6c2a8ba9873fe09f2f821539dac0a4a13dccbe5ecba6885c28e",
+      "olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "START_marker": "2026-10-03T09:12:14.161288+00:00",
+      "started_at": "2026-10-03T09:12:14.176857+00:00",
+      "finished_at": "2026-10-03T09:13:53.627915+00:00",
+      "exit_code": 0,
+      "theorems": 20,
+      "definitions": 3,
+      "printed_axioms": 23,
+      "standard_axioms_only": true,
+      "warning_count": 3,
+      "source_FULL_read": "21d3da",
+      "log_FULL_read": "c19f9e",
+      "START_FULL_read": "72a6c4",
+      "FIN_FULL_read": "33bdbb",
+      "exact_axiom_rows": [
+        {
+          "declaration": "GoldbachContinuous22.realGamma_le_one_on_unit_strip",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.real_laplace_integrable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.laplaceIntegrand",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.norm_laplaceIntegrand",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.laplaceIntegrand_aestronglyMeasurable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.complex_laplace_integrable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.real_rate_laplace_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.laplaceTransform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.rightHalfPlane",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.hasDerivAt_laplaceIntegrand",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.laplace_derivative_local_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.hasDerivAt_laplaceTransform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.rightHalfPlane_isOpen",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.rightHalfPlane_isPreconnected",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.laplaceTransform_analytic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.laplace_rhs_analytic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.laplaceTransform_real_rate",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.complex_rate_laplace_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.norm_laplaceTransform_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.norm_rotation_power",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.Gamma_rotation_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.quarter_angle_coefficient_le_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "GoldbachContinuous22.Gamma_strip_exponential_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    }
+  ],
+  "additional_audited_modules": 3,
+  "additional_audited_declarations": 56,
+  "theorem_count": 47,
+  "definition_count": 9,
+  "standard_axiom_prints": 56,
+  "total_warning_count": 11,
+  "read_scopes": {
+    "gate": "FULL464a37",
+    "receipt": "FULLfeeb00",
+    "global_START": "FULL8536d0",
+    "module_logs": "FULL4ab11b/2e1ebb/c19f9e",
+    "module_START": "FULL008794/e69e17/72a6c4",
+    "module_FIN": "FULL7ef064/e1a7e4/33bdbb",
+    "PRE_POST_manifest": "Complete JSON parsed, compared and hashed; header projection ccbef7; no FULL raw display",
+    "captures": "All23 source/capture bytes freshly hashed; no claim of FULL rendered source display",
+    "closed_batch01_files": "All35 bytes freshly compared to frozen bindings; no execution",
+    "numeric_banks": "Closed existing result status/case projections only; no replay or new numeric certificate verification"
+  },
+  "certified_auxiliary_scope": [
+    "Actual summable periodization, signed integer m unfolding, and integral/series interchange",
+    "Actual infinite-minus-finite error with explicit bound and jointly continuous real envelope",
+    "Actual Complex.Gamma Laplace integrability, analytic identity, rotation and unit-strip exponential norm bound"
+  ],
+  "premises_audit": "Auxiliary hypotheses are positivity/domain/nonzero/truncation constraints. Summability, integrability, domination and analyticity used in these conclusions are derived. No free Weil, zero-count, scattering, coefficientN or D_N target premise supplies these conclusions.",
+  "still_open": [
+    "H1 Mellin/Euler/logarithmic derivative and infinite contour passage",
+    "Gamma logarithmic derivative and weighted archimedean trace terms",
+    "Weil trace identity with every arithmetic and archimedean term",
+    "Complete certified nontrivial-zero boxes and count",
+    "Scattering/operator identification and full global m sum",
+    "Global Goldbach coefficient and D_N ledger"
+  ],
+  "full_continuous_contract_certified": false,
+  "D_N_bound": false,
+  "victory": false,
+  "official_baseline_before_audit": {
+    "modules": 59,
+    "auxiliary_declarations": 993
+  },
+  "proposed_totals_after_root_observation": {
+    "modules": 62,
+    "auxiliary_declarations": 1049
+  },
+  "official_totals_updated_by_judge": false,
+  "post_audit_compiler_invocations": 0,
+  "post_audit_mathematical_numeric_invocations": 0
+}

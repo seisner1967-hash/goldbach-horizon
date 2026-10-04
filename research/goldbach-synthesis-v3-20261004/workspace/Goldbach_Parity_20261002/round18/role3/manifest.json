@@ -1,0 +1,585 @@
+{
+  "status": "FINAL_FROZEN",
+  "role": 3,
+  "round": 18,
+  "node": "13.10",
+  "bindings": {
+    "round18/role3/attempt01.log": "c8b1353eee5cc92cd269f798f8bede0a625af7a5b74e992751b7ebe2d990793b",
+    "round18/role3/attempt01_builder.py.txt": "fd8b0326456a742b77482432e559888d0ab64b9e14a598b6a46642455d36e433",
+    "round18/role3/attempt01_receipt.json": "5a286d7a43d3252cb5d37957761c213191476542ddd758256eff2791a690ac1f",
+    "round18/role3/attempt01_SeparatedTypeII_source.lean.txt": "4c146142daa3e265bf1013bb4d4e5ab1099b4b538de698f122f913f100ed6d48",
+    "round18/role3/attempt01_started.json": "00371151a46b0f1409dcfbc07b05281c71f032ca6f686d411659b9af5582ef8a",
+    "round18/role3/attempt02.log": "805a9c8e01236afad87b991a8eafe7942b732e32f4015ec25a06253b50ff8659",
+    "round18/role3/attempt02_builder.py.txt": "fd8b0326456a742b77482432e559888d0ab64b9e14a598b6a46642455d36e433",
+    "round18/role3/attempt02_receipt.json": "eec8811bb93b3fc75440e966292d01db989868a12d0606f8e3f65e146ae144e0",
+    "round18/role3/attempt02_SeparatedTypeII_source.lean.txt": "71bf05520fca0a811ae21fd8c1cced058f2b13fe6e2309bb4ea7aacf8421bc05",
+    "round18/role3/attempt02_started.json": "e8de90c1bfe8675a4b5aa293ac3f8575cb6cfc01ccf3abc6989999dc7f63a46c",
+    "round18/role3/attempt03.log": "aab20695b18c648e5f1c560d8f68fdd0ff58f15ca1358ca97e07ace277ede6b3",
+    "round18/role3/attempt03_builder.py.txt": "fd8b0326456a742b77482432e559888d0ab64b9e14a598b6a46642455d36e433",
+    "round18/role3/attempt03_fresh_pass.olean": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+    "round18/role3/attempt03_receipt.json": "4609b8371caab531425d2cec57429b8bafc71733facaec18329c076941f1d6c8",
+    "round18/role3/attempt03_SeparatedTypeII_source.lean.txt": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+    "round18/role3/attempt03_started.json": "cbebdc93c63820d9ba1a0841333e25e63f8ef24ab817156bac0cdb6ea4100002",
+    "round18/role3/attempt04.log": "6d6537ecd4a62d531f3dc1936c794f1dfcaa6254b77ae72f257f07dff138f9a3",
+    "round18/role3/attempt04_builder.py.txt": "fd8b0326456a742b77482432e559888d0ab64b9e14a598b6a46642455d36e433",
+    "round18/role3/attempt04_receipt.json": "1a1139a3acdff9917e2f6927b4f3a46e7787595d37752d9ba7ca8eddcbcbe7f4",
+    "round18/role3/attempt04_SeparatedTypeIIPrice_source.lean.txt": "836153be4a34a0d48c1971981e45eebe0a4b692d5d4a687fdebffd67d88333cd",
+    "round18/role3/attempt04_started.json": "6b7fe564014905fb25406930a1a4f59a968dc78d53235e0df5fd862acc810040",
+    "round18/role3/attempt05.log": "20397c8768d81ceb564affcf0dd19438013f421c7e37459ce2b8e171d5d57bdd",
+    "round18/role3/attempt05_builder.py.txt": "fd8b0326456a742b77482432e559888d0ab64b9e14a598b6a46642455d36e433",
+    "round18/role3/attempt05_fresh_pass.olean": "4d93de985a4e7dc95fbc49bd045315c8be18c5e2dee1b2e8afafacb394c41ac2",
+    "round18/role3/attempt05_receipt.json": "d6eaa198425b8bc9ae838102e7002338acd58cdcad906eade59b25f66105a5c4",
+    "round18/role3/attempt05_SeparatedTypeIIPrice_source.lean.txt": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+    "round18/role3/attempt05_started.json": "c1923d9f5b1b4bd700dcc4108bd35e2b47d4d1cea5a25d88e85adf8840b9cd8d",
+    "round18/role3/build.py": "fd8b0326456a742b77482432e559888d0ab64b9e14a598b6a46642455d36e433",
+    "round18/role3/build_crt.py": "9acf57b9651afbc826baa96a3149b6ee419f1b36e9cc37d63c2cf4ae37b44bea",
+    "round18/role3/build_lower.py": "69659f3d3579452f1cca5413f745d9b48c77354f0ea428e96e18e2de02744aa3",
+    "round18/role3/build_receipt.json": "88a3f2ce62fc184d67ea8af8af97fa0004c927782dfe6255408121ababcbf925",
+    "round18/role3/crt_attempt01.log": "39ca325eb4d0c36083effb867962c097d18e112d66f012491c5a8dad912192ab",
+    "round18/role3/crt_attempt01_builder.py.txt": "9acf57b9651afbc826baa96a3149b6ee419f1b36e9cc37d63c2cf4ae37b44bea",
+    "round18/role3/crt_attempt01_receipt.json": "b239e6bb298d9c01a80083f9732139c00bf364c270acf2ae48e051537fdcf37c",
+    "round18/role3/crt_attempt01_SeparatedTypeIICount_source.lean.txt": "14ad7e95bad0a1ab435855f6d59504d7cec8267a19fb0f32822059080baafb59",
+    "round18/role3/crt_attempt01_started.json": "4b47c8138874ff283e0500b4cbd947a3f229f8f8113b38bac7a3df6ef7293d7c",
+    "round18/role3/crt_attempt02.log": "4728dd78cc2df70604d06a086c4cf304ccd1e8162c440980c61a999e4c3599fc",
+    "round18/role3/crt_attempt02_builder.py.txt": "9acf57b9651afbc826baa96a3149b6ee419f1b36e9cc37d63c2cf4ae37b44bea",
+    "round18/role3/crt_attempt02_receipt.json": "f54c72318125976dbf3757b2f8f3dd3daeb91e5b8d86c3f6b4f22d53ac7e1e67",
+    "round18/role3/crt_attempt02_SeparatedTypeIICount_source.lean.txt": "ebcc60d1adea7ab3e2bbcd6cc0aed39233938a55f2b8bea2a6ae35dfb0bf0356",
+    "round18/role3/crt_attempt02_started.json": "78b72675fa432a8ca3833f0a3be9bad58cf2602a5fbcc165205db23d02cf9acb",
+    "round18/role3/crt_attempt03.log": "849d91288984981b19549abfbd22ee5deaca57e5e0e9fbe22c4ecd3a15e0d982",
+    "round18/role3/crt_attempt03_builder.py.txt": "9acf57b9651afbc826baa96a3149b6ee419f1b36e9cc37d63c2cf4ae37b44bea",
+    "round18/role3/crt_attempt03_receipt.json": "1ca08cc8f07d729d8210e6e2cb1ccdaf3dc69dcf6950e14349340f3654dcb6f9",
+    "round18/role3/crt_attempt03_SeparatedTypeIICount_source.lean.txt": "416aef9dc84a73520d71d2b4502c4cd6cfc6e114f3ed262a03bc831bc409e2d2",
+    "round18/role3/crt_attempt03_started.json": "4f8b8e3b802d1e25f003c2afebba377356a766ca825ba6a6ae56dab77d07c659",
+    "round18/role3/crt_attempt04.log": "536f2914b274a1ff296fff45cead65ecf9214c06e6cc28c1697b1f531f84cb91",
+    "round18/role3/crt_attempt04_builder.py.txt": "9acf57b9651afbc826baa96a3149b6ee419f1b36e9cc37d63c2cf4ae37b44bea",
+    "round18/role3/crt_attempt04_receipt.json": "927d28002e1d4356616dbcf242d080ca2c72ff27441c981f749d5b1189c78eea",
+    "round18/role3/crt_attempt04_SeparatedTypeIICount_source.lean.txt": "0d195578bfb69b1fbf141307118dc9414fb89f5649a1fa7e78653cf36bcce07e",
+    "round18/role3/crt_attempt04_started.json": "92efda3ed195a2b70dd66fc018f5133eda0a4f9bdbd2b8a2731ff8812917ec9f",
+    "round18/role3/crt_attempt05.log": "e1155b18c26d704dbf3b564c17f580bef4aec6c3c52d4920275bf6d33529397e",
+    "round18/role3/crt_attempt05_builder.py.txt": "9acf57b9651afbc826baa96a3149b6ee419f1b36e9cc37d63c2cf4ae37b44bea",
+    "round18/role3/crt_attempt05_fresh_pass.olean": "5ee894fa6a17f05bca328f743783ede1c27b40bd2e465efb22364b106f45a2fc",
+    "round18/role3/crt_attempt05_receipt.json": "9e67d0e4bd6d0288290da1235ad221a065a8afe1ece9fa08be5c596201c2f467",
+    "round18/role3/crt_attempt05_SeparatedTypeIICount_source.lean.txt": "55ac598030d5bd67202553a5a8ffffc6fcc2ba3aa796428808aecb9586d5d5d1",
+    "round18/role3/crt_attempt05_started.json": "7747d0a222955120f40bd1b92ce0f51d24e29863dc87a7e7cc6d614e3279e01b",
+    "round18/role3/crt_build_receipt.json": "a230c2a644b7a729bc77776d15f73f4611be91542207887da75b9178684d4026",
+    "round18/role3/finalize.py": "1dcf258ab1fbfe71f73e3f80c46067479e6e3defe2f9b737b855c5cb72fe4afe",
+    "round18/role3/finalize_attempt02_preexec_source.py.txt": "1dcf258ab1fbfe71f73e3f80c46067479e6e3defe2f9b737b855c5cb72fe4afe",
+    "round18/role3/finalize_failed01.json": "cddf728ab78f3a0db9d167df49b45646b30b286a83765d8c99a6173f2453f1ff",
+    "round18/role3/finalize_failed01.log": "0f81f8975b23294f0bce7009a8724bd854e437e57093e1cbc342a938dacc17d1",
+    "round18/role3/finalize_failed01_source_afterexec.py.txt": "f6853bea85a6d350672c4e5cdf5d3b97ad38d960221318863e01b471d9a3cafd",
+    "round18/role3/lower_attempt01.log": "2d67277958531b8e0d4ec3a1fd0d53ac6182c97c17acbf5f5e305d2dac2aaddb",
+    "round18/role3/lower_attempt01_builder.py.txt": "69659f3d3579452f1cca5413f745d9b48c77354f0ea428e96e18e2de02744aa3",
+    "round18/role3/lower_attempt01_receipt.json": "cb7e5ecf35d2d800ea13bccbd2f04e211eb2af0edd7eb0e80e6c69e40e291193",
+    "round18/role3/lower_attempt01_SeparatedTypeIILower_source.lean.txt": "6ba2114992218637ab14ae2dedb7d7d74896b52d7ff68ab70d5a1ad125e98fc4",
+    "round18/role3/lower_attempt01_started.json": "cfd63337977f8b365f15ee3a1c65997934786107c84dada03eae86abf64f7f1d",
+    "round18/role3/lower_attempt02.log": "2150f6fce688f02ccf940ea38a61f305b6add05d16fad88fd39a12d4d23626d1",
+    "round18/role3/lower_attempt02_builder.py.txt": "69659f3d3579452f1cca5413f745d9b48c77354f0ea428e96e18e2de02744aa3",
+    "round18/role3/lower_attempt02_receipt.json": "e6cd1d48427416beff0680d5a485626320cdd4960794c331cce1ab74dc35d2ba",
+    "round18/role3/lower_attempt02_SeparatedTypeIILower_source.lean.txt": "0a95af432ce892ed3263b084c1a0d3bb741c1969bc056d407fe614dcc34fc92d",
+    "round18/role3/lower_attempt02_started.json": "71d4dfc3e59773a2384231e75286284cedf314b4d1a0b13b8fc1f8e2ad94b5ca",
+    "round18/role3/lower_attempt03.log": "693ccff368b960578b96f30dca6dc204b00c1c0159b5e3ddbd2675941a9b4a4f",
+    "round18/role3/lower_attempt03_builder.py.txt": "69659f3d3579452f1cca5413f745d9b48c77354f0ea428e96e18e2de02744aa3",
+    "round18/role3/lower_attempt03_fresh_pass.olean": "e4921faffa9a4861ac99c581d3492fe2add9e326c4838325504eef4b8dc34d23",
+    "round18/role3/lower_attempt03_receipt.json": "406f9abcff0fad8ede54c93e1dc188a904b404a45b720c799a254a8a2c7410e1",
+    "round18/role3/lower_attempt03_SeparatedTypeIILower_source.lean.txt": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+    "round18/role3/lower_attempt03_started.json": "4a311bb02aa30448ac11b55bdb7d413fe28f7da1a750616bceb89b87779cec5e",
+    "round18/role3/lower_build_receipt.json": "bdb22fc41dd96bc69ccf83e04d7691fee41082f2dbb6325f594ef220e4883fab",
+    "round18/role3/SeparatedTypeII.lean": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+    "round18/role3/SeparatedTypeII.olean": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+    "round18/role3/SeparatedTypeIICount.lean": "55ac598030d5bd67202553a5a8ffffc6fcc2ba3aa796428808aecb9586d5d5d1",
+    "round18/role3/SeparatedTypeIICount.olean": "5ee894fa6a17f05bca328f743783ede1c27b40bd2e465efb22364b106f45a2fc",
+    "round18/role3/SeparatedTypeIILower.lean": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+    "round18/role3/SeparatedTypeIILower.olean": "e4921faffa9a4861ac99c581d3492fe2add9e326c4838325504eef4b8dc34d23",
+    "round18/role3/SeparatedTypeIIPrice.lean": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+    "round18/role3/SeparatedTypeIIPrice.olean": "4d93de985a4e7dc95fbc49bd045315c8be18c5e2dee1b2e8afafacb394c41ac2",
+    "round18/agent3_formalisation.md": "b0d82b52621c6f57a1a34f24d3a422437847a685678e1b905aea2058062bcb62"
+  },
+  "binding_count": 89,
+  "immutable_inputs": {
+    "round18/agent1_calibrated_typeii.md": "228766a630e37e4cee7f92bc46cb862582da59379b15653f4c00abcbc37313f0",
+    "round18/previous_artifacts_sha256.json": "05212665afffecade91134e1533f93d11eba8058179198e4420eef1fe252f2bc",
+    ".arbor/sessions/parity/.coordinator/messages/round18_typeii_root_observation.json": "32de18a97b6e7989f6841007b7c24b4b4fcf93d6354b835600d49ceef6188b86",
+    "round18/role6/typeii_canonical_receipt.json": "623a5c64d7f60f4b8e390aa6b51ebeedb49a775bbaebc7c08b194fbfe9f4db22",
+    "round18/typeii.json": "31e873ab0170b1d479c95fdbbe38d989e260cbdd30b5fbba5974f9fc51c63687",
+    "round18/PROBE_BLOCK.md": "83046b133bceda4f73e9e31ec08fd61f80c4b72c95d88e054bc223f32f2e8d24",
+    ".arbor/sessions/parity/.coordinator/messages/round18_formalization_guard.md": "41a61f33a02b6a94c79aeb14198e965dbe164de06a1f95796752eaeeed07fd0f"
+  },
+  "modules": [
+    {
+      "module": "SeparatedTypeII",
+      "source_sha256": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+      "olean_sha256": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+      "success_attempt": 3,
+      "log": "round18\\role3\\attempt03.log",
+      "log_sha256": "aab20695b18c648e5f1c560d8f68fdd0ff58f15ca1358ca97e07ace277ede6b3",
+      "theorems": 30,
+      "definitions": 26,
+      "structures": 2,
+      "axiom_prints": 58,
+      "warnings": [],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Parameters"
+        },
+        {
+          "kind": "def",
+          "name": "conductor"
+        },
+        {
+          "kind": "structure",
+          "name": "PhysicalWitness"
+        },
+        {
+          "kind": "def",
+          "name": "physicalMask"
+        },
+        {
+          "kind": "def",
+          "name": "beta"
+        },
+        {
+          "kind": "def",
+          "name": "units"
+        },
+        {
+          "kind": "def",
+          "name": "structureCount"
+        },
+        {
+          "kind": "def",
+          "name": "unitCount"
+        },
+        {
+          "kind": "def",
+          "name": "density"
+        },
+        {
+          "kind": "def",
+          "name": "reference"
+        },
+        {
+          "kind": "def",
+          "name": "centered"
+        },
+        {
+          "kind": "def",
+          "name": "rows"
+        },
+        {
+          "kind": "def",
+          "name": "xi"
+        },
+        {
+          "kind": "def",
+          "name": "kappa"
+        },
+        {
+          "kind": "def",
+          "name": "candidate"
+        },
+        {
+          "kind": "def",
+          "name": "onProgression"
+        },
+        {
+          "kind": "def",
+          "name": "profile"
+        },
+        {
+          "kind": "def",
+          "name": "adversarialSum"
+        },
+        {
+          "kind": "def",
+          "name": "productPairs"
+        },
+        {
+          "kind": "def",
+          "name": "divisorPairs"
+        },
+        {
+          "kind": "def",
+          "name": "omittedPairs"
+        },
+        {
+          "kind": "def",
+          "name": "omittedCount"
+        },
+        {
+          "kind": "def",
+          "name": "toDivisor"
+        },
+        {
+          "kind": "def",
+          "name": "toProduct"
+        },
+        {
+          "kind": "theorem",
+          "name": "beta_bounds"
+        },
+        {
+          "kind": "theorem",
+          "name": "mask_large_factors"
+        },
+        {
+          "kind": "theorem",
+          "name": "omitted_mask_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "mask_unit_short_conductor"
+        },
+        {
+          "kind": "theorem",
+          "name": "mask_unit_reference"
+        },
+        {
+          "kind": "theorem",
+          "name": "structure_le_units"
+        },
+        {
+          "kind": "theorem",
+          "name": "density_zero_structure"
+        },
+        {
+          "kind": "theorem",
+          "name": "empty_units_empty_structure"
+        },
+        {
+          "kind": "theorem",
+          "name": "xi_bound"
+        },
+        {
+          "kind": "theorem",
+          "name": "kappa_bound"
+        },
+        {
+          "kind": "theorem",
+          "name": "kappa_periodic"
+        },
+        {
+          "kind": "theorem",
+          "name": "separate_columns"
+        },
+        {
+          "kind": "theorem",
+          "name": "equation_modeq"
+        },
+        {
+          "kind": "theorem",
+          "name": "periodic_class_iff_omitted"
+        },
+        {
+          "kind": "theorem",
+          "name": "rows_positive"
+        },
+        {
+          "kind": "theorem",
+          "name": "product_equation"
+        },
+        {
+          "kind": "theorem",
+          "name": "forward_mem"
+        },
+        {
+          "kind": "theorem",
+          "name": "divisor_equation"
+        },
+        {
+          "kind": "theorem",
+          "name": "backward_mem"
+        },
+        {
+          "kind": "theorem",
+          "name": "inverse_product"
+        },
+        {
+          "kind": "theorem",
+          "name": "inverse_divisor"
+        },
+        {
+          "kind": "theorem",
+          "name": "adversarial_reindex"
+        },
+        {
+          "kind": "theorem",
+          "name": "adversarial_entry"
+        },
+        {
+          "kind": "theorem",
+          "name": "adversarial_sum_identity"
+        },
+        {
+          "kind": "theorem",
+          "name": "adversarial_sum_zero_structure"
+        },
+        {
+          "kind": "theorem",
+          "name": "normalized_adversarial_sum"
+        },
+        {
+          "kind": "def",
+          "name": "theta"
+        },
+        {
+          "kind": "def",
+          "name": "rawLambda"
+        },
+        {
+          "kind": "def",
+          "name": "weightedProfile"
+        },
+        {
+          "kind": "def",
+          "name": "calibrationPrice"
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_calibration"
+        },
+        {
+          "kind": "theorem",
+          "name": "theta_calibration"
+        },
+        {
+          "kind": "theorem",
+          "name": "raw_calibration"
+        },
+        {
+          "kind": "theorem",
+          "name": "raw_theta_price_difference"
+        }
+      ]
+    },
+    {
+      "module": "SeparatedTypeIIPrice",
+      "source_sha256": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+      "olean_sha256": "4d93de985a4e7dc95fbc49bd045315c8be18c5e2dee1b2e8afafacb394c41ac2",
+      "success_attempt": 5,
+      "log": "round18\\role3\\attempt05.log",
+      "log_sha256": "20397c8768d81ceb564affcf0dd19438013f421c7e37459ce2b8e171d5d57bdd",
+      "theorems": 11,
+      "definitions": 3,
+      "structures": 0,
+      "axiom_prints": 14,
+      "warnings": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "productReference"
+        },
+        {
+          "kind": "def",
+          "name": "weightedBilinear"
+        },
+        {
+          "kind": "def",
+          "name": "bilinearPrice"
+        },
+        {
+          "kind": "theorem",
+          "name": "profile_calibration"
+        },
+        {
+          "kind": "theorem",
+          "name": "bilinear_calibration"
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_one_is_adversarial"
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_bilinear_reindex"
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_adversarial_identity"
+        },
+        {
+          "kind": "theorem",
+          "name": "calibrated_adversarial_entry_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "calibrated_adversarial_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "calibrated_price_is_entire_old_sum"
+        },
+        {
+          "kind": "theorem",
+          "name": "raw_theta_bilinear_price_difference"
+        },
+        {
+          "kind": "theorem",
+          "name": "prime_weight_on_divisor_pair_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "prime_weight_bilinear_zero"
+        }
+      ]
+    },
+    {
+      "module": "SeparatedTypeIICount",
+      "source_sha256": "55ac598030d5bd67202553a5a8ffffc6fcc2ba3aa796428808aecb9586d5d5d1",
+      "olean_sha256": "5ee894fa6a17f05bca328f743783ede1c27b40bd2e465efb22364b106f45a2fc",
+      "success_attempt": 5,
+      "log": "round18\\role3\\crt_attempt05.log",
+      "log_sha256": "e1155b18c26d704dbf3b564c17f580bef4aec6c3c52d4920275bf6d33529397e",
+      "theorems": 14,
+      "definitions": 5,
+      "structures": 0,
+      "axiom_prints": 19,
+      "warnings": [
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\SeparatedTypeIICount.lean:238:4: warning: 'push_cast' tactic does nothing"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "arithmeticDensity"
+        },
+        {
+          "kind": "def",
+          "name": "arithmeticFront"
+        },
+        {
+          "kind": "def",
+          "name": "rowCount"
+        },
+        {
+          "kind": "def",
+          "name": "inverseResidue"
+        },
+        {
+          "kind": "def",
+          "name": "crtResidue"
+        },
+        {
+          "kind": "theorem",
+          "name": "inverse_residue_equation"
+        },
+        {
+          "kind": "theorem",
+          "name": "crt_residue_characterization"
+        },
+        {
+          "kind": "theorem",
+          "name": "residue_front"
+        },
+        {
+          "kind": "theorem",
+          "name": "unit_indicator_moebius"
+        },
+        {
+          "kind": "theorem",
+          "name": "sifted_count_inclusion"
+        },
+        {
+          "kind": "theorem",
+          "name": "units_inclusion"
+        },
+        {
+          "kind": "theorem",
+          "name": "arithmetic_density_totient"
+        },
+        {
+          "kind": "theorem",
+          "name": "arithmetic_density_positive"
+        },
+        {
+          "kind": "theorem",
+          "name": "arithmetic_front_nonnegative"
+        },
+        {
+          "kind": "theorem",
+          "name": "arithmetic_front_squarefree_count"
+        },
+        {
+          "kind": "theorem",
+          "name": "inclusion_front"
+        },
+        {
+          "kind": "theorem",
+          "name": "unit_count_front"
+        },
+        {
+          "kind": "theorem",
+          "name": "row_count_front"
+        },
+        {
+          "kind": "theorem",
+          "name": "omitted_count_rows"
+        }
+      ]
+    },
+    {
+      "module": "SeparatedTypeIILower",
+      "source_sha256": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+      "olean_sha256": "e4921faffa9a4861ac99c581d3492fe2add9e326c4838325504eef4b8dc34d23",
+      "success_attempt": 3,
+      "log": "round18\\role3\\lower_attempt03.log",
+      "log_sha256": "693ccff368b960578b96f30dca6dc204b00c1c0159b5e3ddbd2675941a9b4a4f",
+      "theorems": 5,
+      "definitions": 0,
+      "structures": 0,
+      "axiom_prints": 5,
+      "warnings": [],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "admissible_rows_front"
+        },
+        {
+          "kind": "theorem",
+          "name": "admissible_rows_at_most_width"
+        },
+        {
+          "kind": "theorem",
+          "name": "omitted_count_lower_R5"
+        },
+        {
+          "kind": "theorem",
+          "name": "omitted_ratio_lower_R5"
+        },
+        {
+          "kind": "theorem",
+          "name": "normalized_adversarial_lower_R5"
+        }
+      ]
+    }
+  ],
+  "new_counts": {
+    "modules": 4,
+    "theorems": 60,
+    "definitions": 34,
+    "structures": 2,
+    "explicit_instances": 0,
+    "axiom_prints": 96,
+    "actual_compiler_attempts": 13,
+    "actual_failures": 9
+  },
+  "protected_997_all_equal": true,
+  "originals_all_equal": true,
+  "originals": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+  },
+  "old_producers_executed": 0,
+  "old_Lean_rebuilt": 0,
+  "old_oleans_copied": 0,
+  "numeric_checks_or_signs_recomputed_by_this_role": 0,
+  "score": 0,
+  "victory": false,
+  "global_D_N_controlled": false,
+  "R6_assumed_or_proved": false,
+  "source_onset_R4_proved": false,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "ROUND22_GLOBAL_RESOURCE_CLOSURE_ROOT_METADATA_OBSERVATION",
+  "time_utc": "2026-10-03T14:04:17.122597+00:00",
+  "status": "RESOURCE_LIMIT_CLOSED_INCOMPLETE_NOT_IDENTITY_FALSIFICATION",
+  "receipt_sha256": "2827054b4690eee57de7c36095c8babf6f235b8174470462ccfbcb7f90dd3e93",
+  "actual_START": "2026-10-03T13:03:11.820346+00:00",
+  "child_process_FINISH": "2026-10-03T14:03:12.036502+00:00",
+  "actual_FINISH": "2026-10-03T14:03:19.496679+00:00",
+  "token": "c310745d96b943c99d7c9b85e1fb8d23",
+  "mathematical_children_started": 1,
+  "resource_failure": "MAX_WALL_SECONDS",
+  "inputs_verified": 1003,
+  "captures_verified": 1005,
+  "archives_verified": 3089,
+  "all_bytes_preserved": true,
+  "outputs": [
+    {
+      "bytes": 199924454,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare02\\actual_attempt01\\numeric_data\\new_nodes.ndjson",
+      "sha256": "71de0fa2625010240a9bbe249474ca58ba5d0c4a961ed3786026160b087d3c3b"
+    },
+    {
+      "bytes": 24146,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare02\\actual_attempt01\\child.stdout.log",
+      "sha256": "552ac9962f9e7fac774b5f3108fc459f0872c9b6ae1cc4353a8c16c0317021e8"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare02\\actual_attempt01\\child.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "absent_final_outputs": [
+    "child_FIN.json",
+    "numeric_data/global_thermal_result.json",
+    "numeric_data/structural_checker_result.json",
+    "numeric_data/new_arithmetic.ndjson"
+  ],
+  "last_emitted_progress": {
+    "artifact_bytes": 247690608,
+    "elapsed_ms": 3594844,
+    "progress": {
+      "catalogue_fraction": [
+        86400,
+        204800
+      ],
+      "circle": 107,
+      "nodes": 86400,
+      "side": "right",
+      "volet": "vertical"
+    },
+    "time_utc": "2026-10-03T14:03:06.936754+00:00"
+  },
+  "ROOT_FULL_read_receipts": "165ecd actualReceipt+stderr FULL;57612c stdout FULL;START+childSTART d67e62 FULL;observer a7f08c FULL;PREPOST all inventories parsed/hash originals/captures/outputs/archives;raw ndjson and972runtime sources FULL not claimed",
+  "inventory_read_scope": "All JSON entries parsed and bytes hashed; raw FULL inventories and node catalogue text not claimed",
+  "identity_agreement": "NOT_REACHED",
+  "effective_total_error": "NOT_OBSERVED",
+  "mutant_comparison": "NOT_REACHED",
+  "official_modules": 71,
+  "official_declarations": 1146,
+  "root_numeric_invocations": 0,
+  "root_Lean_invocations": 0,
+  "old_bank_replays": 0,
+  "retries": 0,
+  "H1_paid": false,
+  "coefficient_N_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

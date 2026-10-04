@@ -1,0 +1,25 @@
+{
+  "status": "ROOT_FULL_READ_SIX_ROLE3_SOURCES_AND_BUILD_SCHEMA_ONLY_NO_COMPILE_GATE",
+  "observed_utc": "2026-10-03T00:31:57.425326+00:00",
+  "sources": {
+    "RankCalibrationFace": "a6ee60bcc04b0e4c12f2e7a50624b9687daecb0185e9fcaca4656600466efa6c",
+    "RankCalibrationPrice": "098c90767627763481266d5cbe31e532aebeab86a138b04f46522cbf939292e8",
+    "RankCalibrationArithmetic": "722ea590992c9b5a3664ec81218ec891195830eee9d7dc452db122eed772a983",
+    "RankCalibrationUnitLoss": "f18416c39b4ec0ef3e4ef159baefe61056d160ea3f0b9f19d04ef9e3b74ec5ef",
+    "RankCalibrationEuler": "6f00691c13c21fd77fe5caf4c11709d960922f9448e23385a75367bfdb23c6eb",
+    "RankCalibrationEstimator": "446ab2130a8741b28eaea860c13aaf1465887e627bfeacb0245833aeba179e2d"
+  },
+  "builder_sha256": "f7391bae3c2baad30f21bcc1798bf5417af2c7637644d1da5ada3336632ab588",
+  "preparation_sha256": "1b50f681813c9d5be2cbb848c8e697a456f2a58a9c35e0cc7081d03c38a820a0",
+  "source_only_counts": {
+    "modules": 6,
+    "theorems": 85,
+    "definitions": 23,
+    "axiom_prints": 108
+  },
+  "compiler_results": null,
+  "numeric_rank_PASS_inspected": false,
+  "open_effective_coefficient_positivity_K14_K18_GammaRank_ledger": true,
+  "former_role3_handle_finished_and_reaped": true,
+  "victory": false
+}

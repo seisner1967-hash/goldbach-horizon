@@ -1,0 +1,43 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH29_AUTHORIZATION",
+  "time_utc": "2026-10-04T00:17:55.452518+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch29_attempt01",
+  "modules": [
+    "ComplexGammaMellinTail22"
+  ],
+  "compiler_invocations_maximum": 1,
+  "source_manifest_sha256": "1e3a6bc50f87da4222aafa252d2d89f8d560a0ab5d93c9bb40d862750c192f7d",
+  "launcher_sha256": "11ad1742edc00b2d6168b84ec8655c378f1d0c9412d3c272b123f95fc53ed6ae",
+  "preparation_receipt_sha256": "1294f9529e614b40dc7035840e91f9596a17cae47ce6d42d861dbeda00fb9d2c",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22",
+    "ComplexGammaMellinLocal22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "ROOT_FULL_read_receipts": "0ca39e builder FULL; 5db000 launcher FULL; 7fcc51 doc FULL; c8d655 handoff FULL; a44eee tools reads FULL; 002869 independent review FULL; 579b77 source contract FULL; 3ac2d7 author catalog FULL; 12d6bc author handoff FULL; 0d1aa9 author reads FULL; 51e09e catalog FULL; 423344 preparation receipt FULL; b4233d reads FULL; a89169 gate helper FULL; large manifests all rows metadata and physical hash only",
+  "source_math_review_owner": "ROLE5",
+  "large_JSON_scope": "All entries parsed and bound bytes hashed; raw FULL import source text not claimed",
+  "inputs_verified": 9389,
+  "old_judge_files_verified": 2134,
+  "archives_verified": 3089,
+  "prior_modules": 85,
+  "prior_declarations": 1434,
+  "stop_first_failure": true,
+  "retries": 0,
+  "ROOT_compiler_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "child_wall_seconds": 300,
+  "max_heartbeats": 1000000,
+  "retry_count_maximum": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

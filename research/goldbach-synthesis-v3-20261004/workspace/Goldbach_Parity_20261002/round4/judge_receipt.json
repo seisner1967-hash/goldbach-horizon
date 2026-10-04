@@ -1,0 +1,250 @@
+{
+  "status": "COMPILED_AND_AXIOMS_AUDITED",
+  "round": 4,
+  "victory": false,
+  "victory_note": "A compiler audit establishes these finite identities; analytic parity control is a separate semantic obligation.",
+  "recorded_at_utc": "2026-10-02T07:52:56.7265932Z",
+  "compiler": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+  "compiler_version": "Lean (version 4.15.0, x86_64-w64-windows-gnu, commit 11651562caae, Release)",
+  "compiler_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "lean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\judge\\dependencies;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\judge\\output;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "package_cache_reused": [
+    "aesop",
+    "batteries",
+    "importGraph",
+    "LeanSearchClient",
+    "mathlib",
+    "plausible",
+    "proofwidgets",
+    "Qq"
+  ],
+  "new_or_goldbach_dependency_olean_reused": false,
+  "numerical_gate": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\affine.json",
+    "status": "PASS",
+    "N": 100000000,
+    "sha256": "dcffa8ad5dd69e980fbc93e1adb474c0eb7aec8ddf558840e39f6c6394ec2feb"
+  },
+  "supplemental_numerical_gates": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\inverse.json",
+      "status": "PASS",
+      "N": 100000000,
+      "sha256": "5730cccbd23e5f8326a1f8258281ca1d74c6123624e8bacc03e3a26bf4c37783",
+      "scope": "Exact finite identity / obstruction diagnostics, no global D_N estimate"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\judge\\numerical\\replay_receipt.json",
+      "status": "PASS",
+      "N": 100000000,
+      "sha256": "e643122f7d216e01419e8cb2b05a4f9848da7ea08223ff50fb1d09c01f27770d",
+      "scope": "Exact finite identity / obstruction diagnostics, no global D_N estimate"
+    }
+  ],
+  "approved_standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "modules": [
+    {
+      "module": "AffineHHObstruction",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\lean\\AffineHHObstruction.lean",
+      "source_sha256": "9e3274b7f220bd59b49a31abff47301451f907eb6af8ebcb38a653f07d1e9baa",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\judge\\output\\AffineHHObstruction.olean",
+      "exit_code": 0,
+      "elapsed_seconds": 11.0558233,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\judge\\logs\\AffineHHObstruction.log",
+      "log_sha256": "984a014a1bbb206c5d288cbf796b4172f408760ec4a8a7ee0a4c380b95d66715",
+      "forbidden_source_tokens": 0,
+      "theorem_axioms": [
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.common_zero_of_nonzero_determinant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.cross_branch_determinant_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.rational_affine_obstruction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.real_affine_obstruction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.independent_cross_forms_cannot_have_constant_nonzero_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.zero_factor_allows_two_same_branch_directions",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.exact_mixed_product_difference",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.concrete_positive_tuple",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.AffineHHObstruction.concrete_mixed_level_displacement",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "source_recompiled": true,
+      "olean_sha256": "b433b032b6dfcddfc92d8fb9a09acfb8f8f092f938261d4608cb536c7ee50952"
+    },
+    {
+      "module": "CompositeCompletion",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\lean\\CompositeCompletion.lean",
+      "source_sha256": "af643e3021ee08569154c2a74f12f554fdf09534b4b4ad31601bfddafc8557c7",
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\judge\\output\\CompositeCompletion.olean",
+      "exit_code": 0,
+      "elapsed_seconds": 15.3573345,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round4\\judge\\logs\\CompositeCompletion.log",
+      "log_sha256": "01c806b98d1c32d7ac9f954ca16409b9cb3dcebdf0c05b3192ba6c72bd02d369",
+      "forbidden_source_tokens": 0,
+      "theorem_axioms": [
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.fourierWeight_eq_dft",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.inverse_fourier_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.all_frequency_completion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.sum_units_eq_filter",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.characterPhase_eq_gaussShift",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.characterPhase_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.nonunit_partition",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.composite_completion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.composite_completion_ratio",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.double_composite_completion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.zero_gauss_retains_defect",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "theorem": "GoldbachResearch.CompositeCompletion.zero_frequency_is_nonunit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "source_recompiled": true,
+      "olean_sha256": "b3aac2748c2d5f787c53caa64257f2face3dc7c4a06130bed454eba4f2a8d802"
+    }
+  ],
+  "axiom_audit_failures": []
+}

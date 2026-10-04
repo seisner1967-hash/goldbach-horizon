@@ -1,0 +1,16 @@
+{"phase": "LIMITED_CONTINUATION_STARTED", "first_exit1_technical": true, "prior_PASS_stages_reexecuted": false}
+{"phase": "ROUGH_STORED_SUPPORT_ROOTS_WEIGHTS_CRT_AND_PARTITIONS_VERIFIED", "CRT_rows": 17488, "saturated": 10, "unsaturated": 16}
+{"phase": "TYPEII_STORED_FULL_COLUMNS_SIX_MASKS_CAPS_REAL_PRODUCTS_AND_PRICES_VERIFIED", "integers": 162338, "beta": 181}
+{"phase": "DISTINCT_C4_STORED_MOMENT_TAIL_AND_FALSE_CONDITIONS_VERIFIED", "TRUE": 6, "FALSE": 10}
+{"phase": "AUTHOR_30_INVOCATIONS_23_REAL_FAILURES_AND_PASS15_WARNING_ARCHIVED"}
+{"phase": "FRESH_LEAN_STARTED", "module": "FourFormRoots", "source_sha256": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa", "imports": ["Mathlib"]}
+{"phase": "FRESH_LEAN_PASS", "module": "FourFormRoots", "axioms": 44, "exit_code": 0, "olean_sha256": "4a13fc20feabfd5ff552f5dbd18c99c6b66bcfe1a65a3f44fff555417d7b4021"}
+{"phase": "FRESH_LEAN_STARTED", "module": "PowersetMoment", "source_sha256": "971f351decef7e78112ec940c5ee553806abecccaf19440a4d661881c4ae188d", "imports": ["Mathlib"]}
+{"phase": "FRESH_LEAN_PASS", "module": "PowersetMoment", "axioms": 7, "exit_code": 0, "olean_sha256": "f1b9c19267d9c6df430156f3731613bd1fbcf58bf50e626417a74dc8449f1905"}
+{"phase": "FRESH_LEAN_STARTED", "module": "SelbergFourForms", "source_sha256": "b1b658aa92f8e02cef29667e9e60b763ca3ef57bb25dcbc8aa9c50ba33591ce1", "imports": ["Mathlib", "FourFormRoots"]}
+{"phase": "FRESH_LEAN_PASS", "module": "SelbergFourForms", "axioms": 65, "exit_code": 0, "olean_sha256": "9639c1f7ae9eb03d07c1de2fd79cdea4dd503d29716e5de3adb4085de21fc46c"}
+{"phase": "FRESH_LEAN_STARTED", "module": "FourFormTruncation", "source_sha256": "577ff585207e72bf5d31121743fc218effc91eb8a460cef9fa9ee2e05a3996e0", "imports": ["PowersetMoment", "SelbergFourForms"]}
+{"phase": "FRESH_LEAN_PASS", "module": "FourFormTruncation", "axioms": 10, "exit_code": 0, "olean_sha256": "340667c515537e2d5501e19329c4becb39cef6989699439107f85a4ec520dbc1"}
+{"phase": "FRESH_LEAN_STARTED", "module": "FourFormCollisionLoss", "source_sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5", "imports": ["FourFormTruncation"]}
+{"phase": "FRESH_LEAN_PASS", "module": "FourFormCollisionLoss", "axioms": 8, "exit_code": 0, "olean_sha256": "e8f5c07ef6225671165e1fb942d4f0c39e3540ee8d1a3ee1e21d0205e10a3091"}
+{"phase": "AUDIT_COMPLETE_PARTIAL_ONLY", "new_modules": 5, "new_theorems": 93, "new_defs": 40, "axioms134": true, "score": 0, "victory": false, "receipt_sha256": "f44584f6a6a39679ad61108fe2d660d05f64769301a9f7c8f71b0227f008117e"}

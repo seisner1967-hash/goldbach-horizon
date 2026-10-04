@@ -1,0 +1,9 @@
+# Source primaire identifiée en boucle 15
+
+Lecture root limitée à la notice et au résumé officiel de [Kevin Ford et James Maynard, On the theory of prime producing sieves, arXiv:2407.14368](https://arxiv.org/abs/2407.14368), version du 19 juillet 2024, 107 pages. Le résumé présente un cadre de bornes sur les sommes d'une suite positive restreintes aux premiers, sous estimations Type I et Type II. Il annonce aussi des constructions de suites montrant des limitations selon les plages disponibles.
+
+Aucun théorème du corps du texte n'est importé par cette lecture, aucune hypothèse Type II du profil Goldbach n'est déclarée acquise. Le rôle1 doit lire et raccorder les hypothèses précises avant toute utilisation. Sa réindexation candidate d=cr<=a réduit un conducteur d'image ; elle conserve un masque semipremier et une covariance non estimée. Cette réduction ne suffit pas à appliquer BV non masqué ni le cadre de cet article. Aucun certificat Lean, paiement ou victoire ne découle de cette notice.
+
+Lecture ultérieure root : premières pages du [PDF primaire Ford–Maynard](https://www.ford126.web.illinois.edu/wwwpapers/prime-producing-sieves.pdf), conditions (I), (II), (w) et théorèmes2.1–2.2. Les variables de produit TypeII factorisent le candidat premier lui-même. Le profil Goldbach n'est pas montré admissible ; aucune limitation générale de cet article n'est promue en no-go pour notre famille.
+
+Le root a aussi lu les équations1.5–1.7 et la remarque associée du [PDF primaire Goldston–Graham–Pintz–Yıldırım](https://arxiv.org/pdf/math/0506067). La formulation citée de BV porte sur des intervalles dyadiques. FINAL1_15 conserve donc explicitement la reconstruction cumulative K_N, le terme initial 1/φ(d) et l'onset supplémentaire inconnu. Ni la covariance masquée ni une corrélation binaire n'est estimée par cette lecture.

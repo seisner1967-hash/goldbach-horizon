@@ -1,0 +1,331 @@
+{
+  "status": "ROOT_VERIFIED_ACTUAL_UNIQUE_NEW_NONSS19_FINISH_PASS_AUXILIARY_ONLY",
+  "observed_utc": "2026-10-03T00:26:37.976102+00:00",
+  "round": 19,
+  "node": "14.4",
+  "actual_start": "2026-10-03T00:15:27.314820+00:00",
+  "actual_finish": "2026-10-03T00:15:46.878506+00:00",
+  "actual_exit_code": 0,
+  "canonical_invocations": 1,
+  "replays": 0,
+  "verified_final_bindings": 25,
+  "verified_PREEXEC_captures": 13,
+  "numeric_bindings": {
+    "round19/agent6_nonss.md": "56449b03605b28a7696aeb2944d56ed27576c77560975a2871b903d6e91421fa",
+    "round19/nonss_checks.py": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+    "round19/nonss.json": "fa5d00bdc408e74d940c2583f4d015a4efd863dc2e15f3d13e77c4fa2f0c6cfe",
+    "round19/role6_nonss/arithmetic.py": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+    "round19/role6_nonss/bank.py": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+    "round19/role6_nonss/canonical_attempt01/inputs/arithmetic.py": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+    "round19/role6_nonss/canonical_attempt01/inputs/bank.py": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+    "round19/role6_nonss/canonical_attempt01/inputs/contract.json": "29c4474d148a6e8cbe3a431130cc9143af2efc277682f4c38b5e5be99bb06037",
+    "round19/role6_nonss/canonical_attempt01/inputs/executor_prompt.md": "794c2f289241cb550f83fa0928d0b9627ee878e85064e0196ee18822b4d20bbe",
+    "round19/role6_nonss/canonical_attempt01/inputs/FINAL2.md": "20ca15ceba20b72459102b2da8429b7e6d72a7c4bd52dca7de7bc3a58a61cbc2",
+    "round19/role6_nonss/canonical_attempt01/inputs/input_manifest.json": "c425dfb0001dad406aa243dd88224ce2a30281ea33916b8cd50e452e3c92664e",
+    "round19/role6_nonss/canonical_attempt01/inputs/launcher.py.txt": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+    "round19/role6_nonss/canonical_attempt01/inputs/preflight19_final_receipt.json": "e647e21e5512c48d34c818c9942bb312d172524682b361552c52422fd3c15c53",
+    "round19/role6_nonss/canonical_attempt01/inputs/preparation.json": "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3",
+    "round19/role6_nonss/canonical_attempt01/inputs/probe.md": "5f9e429bc264002044da60139f3942e7c3de909116d41e6cc52f70afb9a5a12d",
+    "round19/role6_nonss/canonical_attempt01/inputs/producer.py": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+    "round19/role6_nonss/canonical_attempt01/inputs/registry1361.json": "8c0abf930ee8c47b64d335ed286af4566fc674b573216f82f12b05c4ec877150",
+    "round19/role6_nonss/canonical_attempt01/inputs/role2_manifest.json": "66a5e12172d93ccbc4460bf5733a81c284aeb101976f9319c7fc1909ad449252",
+    "round19/role6_nonss/canonical_attempt01/inputs/role2_receipt.json": "6081619ec9d4c942b24cb5fbd72b9ee316712d99b61a5503a98c83790f2df1d0",
+    "round19/role6_nonss/canonical_attempt01/producer.log": "a0c045706277063213587b6656a44ecc867856118aeac89928419c022befe663",
+    "round19/role6_nonss/canonical_attempt01/receipt.json": "317c9788eefa91ada5af1d8fc32f022530869fbdee7b394d1fb364aefd9b80f5",
+    "round19/role6_nonss/canonical_attempt01/reserved.json": "71420df46ceef5bfb6cf7787cc80fde87e87f2b6a92a361b9d68462aa922f3ce",
+    "round19/role6_nonss/canonical_attempt01/started.json": "a5704847edb1d2e1b0d9a88e9441814a6634cc95d5d2a0bea8e1a77c9e94c34b",
+    "round19/role6_nonss/preparation.json": "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3",
+    "round19/role6_nonss/run_nonss_once.py": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+    "round19/role6_nonss/final_receipt.json": "1090604087418b7b940147f3504b519364d095bff453461969bf7d02b5ddee2b"
+  },
+  "stored_counts": {
+    "all_SF_unit_core_axes": 22022,
+    "all_original_theta_A": 56,
+    "all_original_theta_S": 127,
+    "all_original_theta_SS": 3,
+    "all_original_theta_nonSS": 124,
+    "all_q_SS": 22,
+    "all_q_resource_category_A": 115,
+    "all_q_resource_category_R": 16,
+    "all_q_resource_category_S": 870,
+    "all_target_properpowers_before_masks": 0,
+    "inverse_families": 5120,
+    "literal_zero_m1_mu0_vertices": 8,
+    "new_physical_kernels": 164,
+    "physical_union_vertices": 220,
+    "q_positions": 1001,
+    "q_prime": 69,
+    "q_unit": 400,
+    "q_unit_structural_nonSS": 256,
+    "raw_nonSS_axes": 124,
+    "selected_properpowers": 0,
+    "structural_D_LONG": 3840,
+    "structural_D_MEDIUM": 540,
+    "structural_P_LONG": 740,
+    "structural_labels_before_q_target_masks": 5120,
+    "theta_nonSS_demands": 124,
+    "unique_m1_vertices": 48,
+    "zero_m0_vertices": 48
+  },
+  "stored_certificate_encoding_summary_not_recomputed_signs": {
+    "stored_positions": 973,
+    "stored_sign_labels": {
+      "POSITIVE": 532,
+      "ZERO": 166,
+      "NEGATIVE": 275
+    }
+  },
+  "stored_H8_metadata": {
+    "B_test": 2048,
+    "H8_S1_plus_half_S1_squared_plus_S2_exact": true,
+    "S1": {
+      "type": "stored_string",
+      "characters": 1727,
+      "sha256_utf8": "32df6835024608533a27c6f87c45eb57e74a5b781e17bc9833384cd65bb4dc3b"
+    },
+    "S2": {
+      "type": "stored_string",
+      "characters": 3451,
+      "sha256_utf8": "52621b9e5459852b8cc751d3bf16fccb57c1381796fce81ff43bc703ab903644"
+    },
+    "all_cut_h_2_through_Btest_Omega1or2": {
+      "type": "list",
+      "length": 898
+    },
+    "all_primes_through_Btest_including_2_5": {
+      "type": "list",
+      "length": 309
+    },
+    "cut_harmonic": {
+      "type": "stored_string",
+      "characters": 1760,
+      "sha256_utf8": "04a84423a6c973c879f049a314fcfc49da83c36a7ff18f95e01b4628fe411ea6"
+    },
+    "cut_harmonic_le_uncut_H2": true,
+    "direct_pair_sum": {
+      "type": "stored_string",
+      "characters": 3452,
+      "sha256_utf8": "a777b400f750716879ed5446b137ef967ca668961eb2feb59022a63bf6c14b9d"
+    },
+    "no_squarefree_filter_in_H8_and_no_analytic_payment": true,
+    "separate_unit_cut_h": {
+      "type": "list",
+      "length": 645
+    },
+    "separate_unit_cut_harmonic": {
+      "type": "stored_string",
+      "characters": 1747,
+      "sha256_utf8": "7c6511f4057611f0e48cc4a89f965061e8dae0a44ad883b3e3f7b2dbdcd0b9cb"
+    },
+    "uncut_H2": {
+      "type": "stored_string",
+      "characters": 3452,
+      "sha256_utf8": "dff583772a228c680df412d600780ec450e62067abec49dd09d684ed1aad7c80"
+    },
+    "uncut_all_diagonal_p_squared": {
+      "type": "list",
+      "length": 309
+    },
+    "uncut_pair_catalog_sha256_ascii_p_q_pq_lines": "440da49d5a8f83e46a25bd001936457efa0887ae7d93d52c2ee1accb1b9c1f49",
+    "uncut_pair_count": 47895,
+    "uncut_products_upper_triangle_by_prime_index": {
+      "type": "list",
+      "length": 309
+    }
+  },
+  "stored_falsifiers": {
+    "balanced_conductor_le_sqrtN_actual_theta_demand": {
+      "finite_only": true,
+      "first_example": {
+        "C_bal": 68419,
+        "C_bal_squared": 4681159561,
+        "e": 31,
+        "q": 1600121,
+        "tag": "D"
+      },
+      "status": "COUNTEREXAMPLE"
+    },
+    "each_e_tag_supplies_a_fresh_m1_actual_theta_labels": {
+      "finite_only": true,
+      "first_example": {
+        "m1": 98399879,
+        "q": 1600121,
+        "two_actual_theta_e_labels": [
+          31,
+          37
+        ],
+        "unique_physical_count": 1
+      },
+      "status": "COUNTEREXAMPLE"
+    },
+    "four_divided_forms_prime_in_P_actual_theta_demand": {
+      "finite_only": true,
+      "first_example": {
+        "a1": 571,
+        "b0": 5981,
+        "e": 33,
+        "four_values_q_ne_x_y": [
+          1600141,
+          47195347,
+          172329,
+          15917
+        ],
+        "q": 1600141,
+        "x_prime": false,
+        "y_prime": false
+      },
+      "status": "COUNTEREXAMPLE"
+    },
+    "repeated_prime_reciprocal_nonzero_capacity": {
+      "finite_only": true,
+      "first_example": {
+        "Omega_m1": 4,
+        "factor_multiset_m1": [
+          3,
+          3,
+          3,
+          3644437
+        ],
+        "first_axis_n": 1600201,
+        "kernel_ref": null,
+        "kernel_status": "LITERAL_ZERO_BY_MU_M1_NO_FAKE_W",
+        "literal_C": "0",
+        "m1": 98399799,
+        "mu_m1": 0,
+        "physically_counted_once": true,
+        "q": 1600201,
+        "shared_structural_e_labels": [
+          7,
+          11,
+          13,
+          17,
+          19,
+          21,
+          23,
+          29,
+          31,
+          33,
+          37,
+          39,
+          41,
+          43,
+          47,
+          51,
+          53,
+          57,
+          59,
+          61
+        ],
+        "sourceBracket_certificate": {
+          "dyadic_bits": 128,
+          "exact_zero": true,
+          "lower_scaled": "0",
+          "sign": "ZERO",
+          "upper_scaled": "0"
+        }
+      },
+      "status": "COUNTEREXAMPLE"
+    },
+    "triprime_reciprocal_necessarily_favourable_negative_bracket": {
+      "finite_only": true,
+      "first_example": {
+        "C_equals_Lambda_h1_minus_mu_h1_W_only_under_guard": true,
+        "Omega_m1": 3,
+        "factor_multiset_m1": [
+          3,
+          71,
+          461971
+        ],
+        "first_axis_n": 1600177,
+        "head_factorization_guard_h1_le_a_lt_r1": true,
+        "kernel_ref": "98399823",
+        "kernel_status": "NEW_UNIQUE_ACTIVE_M1_KERNEL",
+        "m1": 98399823,
+        "mu_m1": -1,
+        "physically_counted_once": true,
+        "q": 1600177,
+        "shared_structural_e_labels": [
+          7,
+          11,
+          13,
+          17,
+          19,
+          21,
+          23,
+          29,
+          31,
+          33,
+          37,
+          39,
+          41,
+          43,
+          47,
+          51,
+          53,
+          57,
+          59,
+          61
+        ],
+        "sourceBracket_certificate": {
+          "dyadic_bits": 128,
+          "exact_zero": false,
+          "lower_scaled": "8587167307069583688991084853387123321851",
+          "sign": "POSITIVE",
+          "upper_scaled": "8587167307069583688991084853387123369696"
+        }
+      },
+      "status": "COUNTEREXAMPLE"
+    },
+    "universal_gcd_h_r_equals_1": {
+      "finite_only": true,
+      "first_example": {
+        "axis": 3,
+        "gcd_h_r": 887,
+        "h": 107327,
+        "multiset": [
+          11,
+          11,
+          887,
+          887
+        ],
+        "n": 95199049,
+        "q": 1600317,
+        "r": 887
+      },
+      "status": "COUNTEREXAMPLE"
+    }
+  },
+  "formal4_full_root_read_current_source_hashes": {
+    "TerminalPrimeExtraction.lean": "36307959fc9e0d968be0e39fca9899036351158ad4c048de71cc5f6dcd321966",
+    "BalancedResourceSwitch.lean": "2d2153a5f0460e74a744e4625f80eca568b1bc8b6efe18a7f5c3a42a6692aa2f",
+    "SignedHyperbolicCRT.lean": "12126717d5fee5f7d3d92617da21b37edd31a9c0861ef40e17151b8b3b359446",
+    "NonSSBracketSwitch.lean": "b436ced29ff618df48ccbf0cef49fadb099721f5007b85cdaa4496a121d1e21e",
+    "RankTwoHarmonic.lean": "1dec1108ad6c699da9fbc38132150cb7ff3d8b3ffcefb22a15506a88c609bae2"
+  },
+  "formal4_readonly_dependency_bindings": {
+    "round18/judge/build/DoubleExtractionArithmetic.lean": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+    "round18/judge/build/DoubleExtractionArithmetic.olean": "f3f4da31557b221b2b8600a53d8c7cf80e9875549ef91dac5fb2338832d3b724",
+    "round16/judge/build/EulerAnchor.lean": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+    "round16/judge/build/EulerAnchor.olean": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+    "round16/judge/build/LeastMissingPrimeMargin.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+    "round16/judge/build/LeastMissingPrimeMargin.olean": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+    "round13/role4/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "round13/role4/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b"
+  },
+  "formal4_sources_only_not_compiler_counts": {
+    "theorems": 100,
+    "definitions": 55,
+    "structures": 3,
+    "axiom_prints": 160
+  },
+  "metadata_reader_truncated_outputs": [
+    "f4479f dictionary inventory",
+    "2c6c7f uncompressed H8"
+  ],
+  "truncation_resolved_by_compact_stored_metadata_read": true,
+  "root_math_producer_Lean_or_sign_recomputations": 0,
+  "victory": false,
+  "official_Judge_counts_modified": false
+}

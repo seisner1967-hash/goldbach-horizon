@@ -1,0 +1,11 @@
+# Adjudication indépendante batch21 — FAIL technique, zéro crédit
+
+Unique parent canonical Python -I -S -B -X utf8 ; exécution daff30/session35009 puis FIN46921e exit1. Gate et launcher lus FULL93cb32, bindings/absence initiale c94f5b ; aucune reprise. START global20:26:43.455989UTC ; Roots 2026-10-03T20:26:43.459989+00:00→2026-10-03T20:26:52.151451+00:00 exit1 ; FIN global20:27:02.635378UTC. Commande : Lean4.15 -DmaxHeartbeats=1000000 -o [olean exclusif] [source433903d4…] ; common cwd sources, trois oleans indépendants19/17 readonly seulement.
+
+Roots échoue sur16 buts False après normalisation partielle de val : lignes47/51/55,70/74,87/91,104/108,121/125,137/149/161/173/185. Le log laisse hv : ZMod.val <numéral résiduel> = 1 ; les simp/norm_num de val_natCast ne ferment pas ces expressions numériques. Aucune réfutation d'identité ni obstruction de parité n'est observée. Ce raccord OfNat/val nécessite une révision SOURCE distincte et une nouvelle gate ; aucun correctif ni nouveau compiler exécuté ici.
+
+18 prints Roots présents dans l'ordre exact : bankRoot dépend de propext/Quot.sound ;7 autres déclarations standard ont propext/Classical.choice/Quot.sound ;5 primalités et5 racines portent sorryAx généré par recovery. Zéro déclaration sans axiomes. Aucun olean ; le module entier reçoit zéro crédit. Bridge10 est NON_INVOKED, sans START/FIN/log/olean, conformément au premier échec. Le lot visait28=22thm6defs, aucun des28 n'est crédité.
+
+Log/receipt/FIN réellement lus FULLf900fb ; log SHAff1a8a6604d45cf2ad3336ef8b433c33b974f7766845c9411c29d68dd04e399f. Clôture metadata indépendante :8380 inputs,1268 anciensJuge inclus,3089 archives et35 captures originales/copies physiquement rehashés intacts ; PRE/POST et gate concordants. Les trois dépendances readonly restent intactes, zéro ancienne compilation ou bank replay. Le grand manifeste est traité en totalité comme métadonnées+bytes, sans prétendre RAW_FULL des milliers de sources imports.
+
+Status INDEPENDENT_BATCH21_FAILED ; modules_passed=0, declarations_passed=0, all_current_bytes_preserved=true. Baseline ROOT80/1339 inchangée, aucun PASS global/H1/coefficientN/D_N/WIN. Les anciens lots et sources auteur restent gelés.

@@ -1,0 +1,122 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_LAMBDA_TAIL_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_READS_ONLY_PENDING_DEPENDENCIES_NOT_PREPARED",
+  "source": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/ComplexGammaMellinLambdaTail22.lean",
+    "sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+    "bytes": 11335,
+    "scope": "FULL",
+    "chunk": "046014"
+  },
+  "contract": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_contract22.md",
+    "sha256": "17e038d03f977e026853905eb3b7cb88f2d7fd574b71cbc73e9de774392c90bc",
+    "scope": "FULL",
+    "chunk": "c82c47"
+  },
+  "catalog": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_tail_source01/source_catalog22.json",
+    "sha256": "f094c54a6a10aa0ad026dce78233f98e53d972341e2f2ce08d86306492e330ea",
+    "scope": "FULL",
+    "chunk": "c82c47",
+    "count_scope": "MANUAL_FULL_SOURCE_16=12theorems4defs"
+  },
+  "pending_dependencies": [
+    {
+      "module": "ComplexGammaMellinLambda22",
+      "source_sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+      "source_scope": "FULL",
+      "source_chunk": "909df9",
+      "handoff_sha256": "7cbd95b3bb74cbfec4587aa5a40c4b0be420865b83e15794888a3f3bae56e1e3",
+      "handoff_scope": "FULL",
+      "handoff_chunk": "d38427",
+      "compiler_PASS": false
+    },
+    {
+      "module": "ComplexGammaMellinTail22",
+      "selected_SOURCE_revision": "03",
+      "source_sha256": "e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0",
+      "source_scope": "FULL",
+      "source_chunk": "029894",
+      "handoff_sha256": "6fecef00afcdb57161d9df1a75955dfebc2216cf3a896a6e7f1202b13ba638f0",
+      "handoff_scope": "FULL",
+      "handoff_chunk": "1d654e",
+      "compiler_PASS": false,
+      "previous_actual29": "FAILED;noolean;0modulecredit"
+    }
+  ],
+  "independent_SOURCE_reviews": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/complex_gamma_mellin_lambda_source_review01/review22.md",
+      "sha256": "525e2577b47e49a3673056df681647778b2dd02ec01aca24172a31d01a81d887",
+      "scope": "FULL",
+      "chunk": "3c9cf8"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/complex_gamma_mellin_lambda_source_review01/read_receipts22.json",
+      "sha256": "48160480ff66c428f1f9da359f8719abc762224b837753a9a100f6c84f0b4cd5",
+      "scope": "FULL",
+      "chunk": "3c9cf8"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/complex_gamma_mellin_tail_source_review03.md",
+      "sha256": "37c8bfe364a1c7430b51e7d90ec4fae88bb9232d796f1f5af742e9b63d3d0722",
+      "scope": "FULL",
+      "chunk": "6c532d"
+    }
+  ],
+  "API_reads": [
+    {
+      "path": "Mathlib/MeasureTheory/Integral/SetIntegral.lean",
+      "scope": "TARGETED173-181;719-747",
+      "chunk": "07dda2",
+      "purpose": "integral_add_compl with explicit volume,f,s; endpoint-null transport"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Measure/Lebesgue/Integral.lean",
+      "scope": "TARGETED85-111",
+      "chunk": "07dda2",
+      "purpose": "integral_comp_neg_Ioi"
+    },
+    {
+      "path": "Mathlib/Topology/Algebra/Monoid.lean",
+      "scope": "TARGETED207-217",
+      "chunk": "6c532d",
+      "purpose": "ContinuousAt.mul for real radius"
+    },
+    {
+      "path": "Mathlib/Topology/Basic.lean",
+      "scope": "TARGETED1399-1458;variables1362 search",
+      "chunks": [
+        "378f98",
+        "029894"
+      ],
+      "purpose": "ContinuousAt.comp explicit inner f,outer g,point x"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/Bochner.lean",
+      "scope": "INHERITED_TARGETED817-828;1328-1339",
+      "purpose": "integral_mul_left and norm-integral/ae comparison; same-author Tail receipts linked"
+    }
+  ],
+  "paid_analytic_provenance": {
+    "Holo27": "Actual independent PASS15;source/olean/receipt/ROOTobservation readonly, no recompile",
+    "Local26": "Actual independent rowPASS22 of globally FAILED26; source/olean/receipt/ROOTobservation readonly, no global26 PASS",
+    "old_read_scopes": "Same-author FULL sources and receipts from Lambda/Tail handoffs; binary oleans BYTE_HASH_ONLY; no new FULL cache claim"
+  },
+  "scope_exclusions": [
+    "No candidate source parser/compiler/API probe",
+    "No complete transitive import closure or PREP",
+    "Compact Arg/atan phase constants PAPER only",
+    "No continuity theorem of the complex moving tail",
+    "No spectral uniform producer, PP removal, canonical sign cancellation or D_N"
+  ],
+  "author_Lean_invocations": 0,
+  "API_probes": 0,
+  "candidate_parser_invocations": 0,
+  "Python_math_invocations": 0,
+  "native_invocations": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "WIN": false
+}

@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "arithmetic": "Integer phase histograms and exact cyclotomic polynomial division",
+  "inverse_completion": [
+    {
+      "q": 11,
+      "conductor": 11,
+      "tau_squared": -11,
+      "tau_H_delta1": 11,
+      "nonunit_remainder_delta1": 0,
+      "exact_double_unit_projection": "1/1",
+      "primal_delta1_projection": 1,
+      "dropping_remainder_is_false": false,
+      "cyclotomic": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "general_support_Fchi": 3,
+      "general_support_Gchi": 0,
+      "all_h_retained": "Unit h in H and every nonunit h in E"
+    },
+    {
+      "q": 15,
+      "conductor": 3,
+      "tau_squared": -3,
+      "tau_H_delta1": 3,
+      "nonunit_remainder_delta1": 12,
+      "exact_double_unit_projection": "1/25",
+      "primal_delta1_projection": 1,
+      "dropping_remainder_is_false": true,
+      "cyclotomic": [
+        1,
+        -1,
+        0,
+        1,
+        -1,
+        1,
+        0,
+        -1,
+        1
+      ],
+      "general_support_Fchi": 4,
+      "general_support_Gchi": -8,
+      "all_h_retained": "Unit h in H and every nonunit h in E"
+    },
+    {
+      "q": 100,
+      "conductor": 5,
+      "tau_squared": 0,
+      "tau_H_delta1": 0,
+      "nonunit_remainder_delta1": 100,
+      "exact_double_unit_projection": "0/1",
+      "primal_delta1_projection": 1,
+      "dropping_remainder_is_false": true,
+      "cyclotomic": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "general_support_Fchi": -7,
+      "general_support_Gchi": -11,
+      "all_h_retained": "Unit h in H and every nonunit h in E"
+    }
+  ],
+  "large_N_induced_character": {
+    "N": 100000000,
+    "conductor": 5,
+    "step": 20000000,
+    "unit_count": 40000000,
+    "orbit_count": 8000000,
+    "all_unit_classes_mod10": [
+      {
+        "unit_class_mod10": 1,
+        "chi_mod5": 1,
+        "orbit": [
+          1,
+          20000001,
+          40000001,
+          60000001,
+          80000001
+        ]
+      },
+      {
+        "unit_class_mod10": 3,
+        "chi_mod5": -1,
+        "orbit": [
+          3,
+          20000003,
+          40000003,
+          60000003,
+          80000003
+        ]
+      },
+      {
+        "unit_class_mod10": 7,
+        "chi_mod5": -1,
+        "orbit": [
+          7,
+          20000007,
+          40000007,
+          60000007,
+          80000007
+        ]
+      },
+      {
+        "unit_class_mod10": 9,
+        "chi_mod5": 1,
+        "orbit": [
+          9,
+          20000009,
+          40000009,
+          60000009,
+          80000009
+        ]
+      }
+    ],
+    "phase_identity": "Each orbit contributes chi(x)*e_N(x)*(1+zeta5+zeta5^2+zeta5^3+zeta5^4)=0",
+    "tau_exact": 0,
+    "consequence_for_F_delta1": "The exact completion identity requires E=N; dropping all nonunit h loses the whole primal mass",
+    "scope": "Exact five-residue-class orbit argument covers the unit group; no enumeration of 40000000 units and no asymptotic estimate"
+  },
+  "coupled_C_h_benchmark": {
+    "q": 100,
+    "R": 70,
+    "K": 3,
+    "a": 1,
+    "b": 1,
+    "receipts": [
+      {
+        "s": 3,
+        "t": 7,
+        "C": 21,
+        "Z": 3,
+        "eta": 19,
+        "F_support": [
+          1,
+          3
+        ],
+        "G_support": [
+          1,
+          3
+        ],
+        "primal": 0,
+        "full_dual_numerator": 0,
+        "denominator": 10000,
+        "unit_h_l_only_reduced": [
+          1000
+        ],
+        "energy": {
+          "product_histogram": {
+            "1": 1,
+            "3": 2,
+            "9": 1
+          },
+          "energy": 6,
+          "exact_weighted_collision_count": 6,
+          "scope": "All products are strictly below q; cyclic collisions are literal integer collisions"
+        },
+        "phases_sha256": "53df94d0ad3f2a98fd8dee4b9fb42efa983c7184fe1afce482d5446101aed179"
+      },
+      {
+        "s": 3,
+        "t": 11,
+        "C": 33,
+        "Z": 2,
+        "eta": 3,
+        "F_support": [
+          1
+        ],
+        "G_support": [
+          1,
+          3
+        ],
+        "primal": 1,
+        "full_dual_numerator": 10000,
+        "denominator": 10000,
+        "unit_h_l_only_reduced": [
+          4000
+        ],
+        "energy": {
+          "product_histogram": {
+            "1": 1,
+            "3": 1
+          },
+          "energy": 2,
+          "exact_weighted_collision_count": 2,
+          "scope": "All products are strictly below q; cyclic collisions are literal integer collisions"
+        },
+        "phases_sha256": "7c62984ca176dcb1e678b1b3ea64f7f7bdb379e79626c21479a306b8f8438f29"
+      }
+    ],
+    "frozen_C_counterexample": {
+      "actual_C": 33,
+      "frozen_C": 21,
+      "eta": 3,
+      "actual_primal": 1,
+      "frozen_primal": 2
+    },
+    "formula": "P_C=(1/q^2)sum_{all h,l residues} Fhat_C(h)Ghat(l)Kloos(eta*h*b,l;q)",
+    "scope": "Finite cyclic congruence benchmark only; not an assertion that original HH windows separate"
+  },
+  "formula": "tau*H=q*Fchi-E_nonunit; tau^2*H*L/q^2=(Fchi-EF/q)*(Gchi-EG/q)",
+  "limitations": "No factorization of the original joint HH selectors; all nonunit h and collision diagonals retained; no global D_N or asymptotic moment bound",
+  "script_sha256": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c"
+}

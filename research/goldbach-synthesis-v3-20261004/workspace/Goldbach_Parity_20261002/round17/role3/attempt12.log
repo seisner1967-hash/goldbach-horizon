@@ -1,0 +1,22 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:634:20: error: unknown constant 'ArithmeticFunction.map_prod_of_prime'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:634:20: error: tactic 'rewrite' failed, equality or iff proof expected
+  ?m.222602
+d : Finset ℕ
+hd : ∀ p ∈ d, Nat.Prime p
+⊢ sign d = ↑(ArithmeticFunction.moebius (∏ p ∈ d, p))
+'GoldbachRound17.Selberg.finite_support_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:746:35: warning: unused variable `p`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:754:2: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+Use `set_option maxHeartbeats <num>` to set the limit.
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:785:6: error: unknown identifier 'actual_four_form_upper_bound'
+'GoldbachRound17.Selberg.actual_four_form_sieve_dichotomy' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.Selberg.weight_abs_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.canonical_weight_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.product_exceeds_weight_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.finite_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,85 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\HarmonicKernelVariation.lean:23:39: error: unsolved goals
+case intro
+Q N n k : ℕ
+hn : Nat.Prime n
+hQn : Q < n
+hk : k ∈ Icc 1 Q
+hkpos : 1 ≤ k
+hkQ : k ≤ Q
+hkn : k.Coprime n
+⊢ k.Coprime N → k.Coprime n
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\HarmonicKernelVariation.lean:52:16: error: don't know how to synthesize implicit argument 'N'
+  @prime_above_cap_units Q ?m.5366 n k hn hQn hk
+context:
+Q a N n m : ℕ
+ha : 0 < a
+hm : 0 < m
+hn : Nat.Prime n
+hQn : Q < n
+k : ℕ
+hk : k ∈ Icc 1 Q
+⊢ ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\HarmonicKernelVariation.lean:52:7: error: failed to infer 'have' declaration type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\HarmonicKernelVariation.lean:46:72: error: unsolved goals
+Q a N n m : ℕ
+ha : 0 < a
+hm : 0 < m
+hn : Nat.Prime n
+hQn : Q < n
+k : ℕ
+hk : k ∈ Icc 1 Q
+⊢ (if a * k < m ∧ k.Coprime (n * N) then mu k * Real.log (↑k / ↑m) / ↑k.totient else 0) =
+    if a * k < m then unitCoefficient N k * Real.log (↑k / ↑m) else 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\HarmonicKernelVariation.lean:70:4: error: application type mismatch
+  le_trans (Nat.div_le_div_right (Nat.sub_le_sub_right hmN 1)) (Nat.div_le_div_left haa)
+argument
+  Nat.div_le_div_left haa
+has type
+  0 < alpha → ?m.5812 / a ≤ ?m.5812 / alpha : Prop
+but is expected to have type
+  (N - 1) / a ≤ (N - 1) / alpha : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round13\lean\HarmonicKernelVariation.lean:167:17: error: application type mismatch
+  le_trans (abs_sub_le ?m.20987 ?m.20988)
+argument
+  abs_sub_le ?m.20987 ?m.20988
+has type
+  ∀ (c : ?m.20985), |?m.20987 - c| ≤ |?m.20987 - ?m.20988| + |?m.20988 - c| : Prop
+but is expected to have type
+  |Real.log (↑m₀ / ↑m₁) * unitPrefix N (sourceFront Q a m₁) -
+        unitLogTail N (sourceFront Q a m₁) (sourceFront Q a m₀) m₀| ≤
+    ?m.20982 : Prop
+'GoldbachRound13.HarmonicKernelVariation.unitCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.unitPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.unitLogPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.unitLogTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.sourceFront' does not depend on any axioms
+'GoldbachRound13.HarmonicKernelVariation.prime_above_cap_units' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.strict_front_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.front_filter_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.actual_kernel_eq_prefix' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.source_front_mono' depends on axioms: [propext]
+'GoldbachRound13.HarmonicKernelVariation.source_cap_inactive' depends on axioms: [propext, sorryAx]
+'GoldbachRound13.HarmonicKernelVariation.interval_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.interval_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.prefix_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.logarithm_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.prefix_log_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.actual_kernel_variation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.coefficient_abs_le_reciprocal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.prefix_abs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.tail_abs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound13.HarmonicKernelVariation.actual_kernel_abs_variation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

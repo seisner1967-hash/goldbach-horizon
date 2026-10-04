@@ -1,0 +1,221 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH36",
+  "time_utc": "2026-10-04T04:18:32.653169+00:00",
+  "status": "INDEPENDENT_BATCH36_FAILED",
+  "actual_status": "INDEPENDENT_BATCH36_FAILED",
+  "attempt": "batch36_attempt01",
+  "actual_child_invocations": 1,
+  "modules_passed": 0,
+  "module_count_passed": 0,
+  "declarations_passed": 0,
+  "theorems_passed": 0,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "input_count": 10246,
+  "closed_judge_file_count": 2957,
+  "protected_archive_count": 3089,
+  "capture_count": 125,
+  "axiom_counts": {
+    "standard_triplet": 13,
+    "empty": 0,
+    "recovery": 3,
+    "custom_or_native": 0
+  },
+  "axiom_rows": [
+    {
+      "declaration": "GoldbachComplexGammaMellin22.signedLambdaMellinTail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTailRadius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTruncated",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinProduct_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.signedLambdaMellinTail_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.signedLambdaMellinTail_norm_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTail_norm_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.signedLambdaMellinTail_true_eq_Iio",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinThermal_sub_truncated_eq_tail",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinThermal_truncation_error_le",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTailRadius_eq_closed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTailRadius_continuousAt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTailRadius_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.lambdaMellinTailRadius_antitone",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.exists_local_uniform_Lambda_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "module_evidence": [
+    {
+      "module": "ComplexGammaMellinLambdaTail22",
+      "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+      "exit_code": 1,
+      "started_at": "2026-10-04T04:08:48.201347+00:00",
+      "finished_at": "2026-10-04T04:09:19.232205+00:00",
+      "declarations_passed": 0,
+      "source_sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+      "log_sha256": "cf48c948d8ff6de63793d7aa8410802f3c035f31bfcc3f07b8deb601f25d6d6e",
+      "olean_sha256": null,
+      "error_sites": [
+        [
+          "118",
+          "6",
+          "tactic 'rewrite' failed, did not find instance of the pattern in the target expression"
+        ]
+      ],
+      "warning_count": 1,
+      "axiom_counts": {
+        "standard_triplet": 13,
+        "empty": 0,
+        "recovery": 3,
+        "custom_or_native": 0
+      }
+    },
+    {
+      "module": "ComplexGammaCircleGeometry22",
+      "status": "NON_INVOKED_STOP_FIRST_FAILURE",
+      "exit_code": null,
+      "declarations_passed": 0,
+      "source_sha256": "2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5",
+      "observed_prints": 0
+    }
+  ],
+  "actual_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\batch36_attempt01\\receipt.json",
+  "actual_receipt_sha256": "4307d388d3dac634c08c9e342538bab45bf4c10945898ddc0ae453959c0574e7",
+  "adjudication_sha256": "6aa8ae6880fda07dff158f9677766d5914cc5d967fe7ac3f67dbaa9ac4d2cacb",
+  "PREEXEC_sha256": "c67ce107860a173361edb900aa53e3ee9a08fdc4a7b6379e64d2210b8f5d4d2d",
+  "POSTEXEC_sha256": "181b9e1d412b59ee2efd13fbb4f0fe552540223ccf9e2c6f6d2834975ec83f4f",
+  "START_sha256": "c253d9b5f83287af2fb671a14c9dcd45ec2b12383a1907c92049a62ccbb69905",
+  "FIN_sha256": "5d3fea459fd94f32973a538477fe4843d59d4a55ef0b6b32ac422f1b60ef5603",
+  "gate_sha256": "a86b4dd45ae154266a91c9a01b6e4a236a4048eba86cc6b77dac181051ab59d9",
+  "metadata_helper_sha256": "28dae139911479f22b2737ce281972896146f6fbb70ae3b6b5d68abe410d8a7d",
+  "logs_read_scope": "OWN_FULL6d0298",
+  "actual_receipt_read_scope": "OWN_FULLa50f11",
+  "large_PRE_POST_read_scope": "HEADER_PROJECTION91ef5a_PLUS_ALL_ROWS_CURRENT_BYTE_HASHES_NOT_RAW_FULL",
+  "compiler_invocations_in_closure": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "official_modules_before_ROOT_observation": 88,
+  "official_declarations_before_ROOT_observation": 1488,
+  "hypothetical_after_ROOT_modules": 88,
+  "hypothetical_after_ROOT_declarations": 1488,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "Lambda_tail_paid_by_this_batch": false,
+  "circle_geometry_paid_by_this_batch": false,
+  "native_refinement_paid": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false
+}

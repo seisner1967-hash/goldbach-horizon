@@ -1,0 +1,65 @@
+'GoldbachRound18.DoubleExtraction.anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.resource1' does not depend on any axioms
+'GoldbachRound18.DoubleExtraction.resource0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.quotient1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.quotient0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.progressionIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.Cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.q_lt_N' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.resource1_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.resource0_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness1_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness1_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness1_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness1_ge_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0_ge_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.resource1_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.resource0_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.q_mod_witness1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_q_mod_witness0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witness0_ne_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witnesses_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.witnesses_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.prime_unit_ge_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.resources_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_resource0_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_witness0_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.modulus_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.progression_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative_mod_witness1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative_anchor_mod_witness0' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative_is_actual_CRT' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.representative_unique_linear_CRT' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.distinct_prime_product_not_primePow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.anchor_q_rawLambda_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.reciprocal_axis1_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.DoubleExtraction.reciprocal_axis0_rawLambda_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.reciprocal_axis0_theta_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.DoubleExtraction.resource1_injective' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.DoubleExtraction.label_union_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]

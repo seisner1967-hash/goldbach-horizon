@@ -1,0 +1,81 @@
+{
+  "round": 20,
+  "role": "logicalROLE4",
+  "node": "14.5",
+  "at_utc": "2026-10-03T04:19:58.099433+00:00",
+  "original_read_receipt": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\read_input_sha256.json",
+    "sha256": "34221a9382390a461bc1c3abcd3a335a7b1cf797fdfc3f2bb71ef47daf434baf"
+  },
+  "additional_compile_gates": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase4.json",
+      "sha256": "adf069de88fee864939e6c16be819c5e91b0b6f8ef0f62aa3ec43bb971c002ff",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase6.json",
+      "sha256": "71a28448ca6b324541642057200e6ea000f81dd5638ae9113608097b5ba63b61",
+      "scope": "FULL_TEXT_READ"
+    }
+  ],
+  "geometry_final_source": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4_geometry\\FriableSourceGeometry.lean",
+    "sha256": "bc249b736e460716cccc7e8a9f9ccab9ac508133c8664bd6278795bd3dcb890a",
+    "scope": "FULL_TEXT_READ_TOOL105473_AFTER_ACTUAL_PASS02"
+  },
+  "geometry_previous_read": "Partial source excerpts only before the final FULL read; no retroactive FULL claim.",
+  "own_final_sources": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPrefix.lean",
+      "sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableEulerRankin.lean",
+      "sha256": "df9ddafb7b497a286e7625ad27563b4610c6eb3cb22cc4a8dca3328f7e95d5d0",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableKernelEnvelope.lean",
+      "sha256": "80051a67fa9d7bbc29c7766344a9fc7a02f483195b0696cfc70bf2556433d0a8",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePrimeHarmonic.lean",
+      "sha256": "53df26ec4a5880427d81ab394855f3d89238485487a07c6e36086b576f2894d4",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean",
+      "sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalPayment.lean",
+      "sha256": "b4b108b424066321e19691cd643faa60058f72c573e1325370993075e73a6f21",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriablePhysicalDemand.lean",
+      "sha256": "b02cb0aced0d29e812b57900b0181082289760f20d123ff5d5157f44a404baad",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableDemandAggregation.lean",
+      "sha256": "b564591ccb21b15817ed6edad0fff78ddbd10d50a509b2f4b3732d6b8ac58aa2",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableSourceBudget.lean",
+      "sha256": "9dd811fe823f50d8af08e4afa04f977011df4e01cf976df1fc663f9c85fceba4",
+      "scope": "OWNED_PROOF_SOURCE_WRITTEN_AND_READ"
+    }
+  ],
+  "numerical_bindings": "38 hash bindings from the canonical new actual PASS; no bank reexecution or mathematical Python.",
+  "historical_bindings": "18 readonly hash bindings; targeted source scopes remain as originally recorded.",
+  "old_Lean_reexecution": false,
+  "PASS_replay": false,
+  "new_mathematical_python": 0,
+  "victory": false
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "alpha": 100,
+  "p": 3,
+  "q": 7,
+  "cap": 20000,
+  "checks": {
+    "actual_mixed_product_difference": 121,
+    "actual_fII_curvature_identity": 121,
+    "complete_four_site_101_product_difference": 1
+  },
+  "domain": "All 1<=base<=floor(20000/21) with gcd(base,N*21)=1, mu(base)!=0 and all four first axes squarefree",
+  "E5": "Delta(fB)=B1 Delta f+fpq Delta B+(fpq-fp)(Bp-B1)+(fpq-fq)(Bq-B1)",
+  "E6": "Delta fII=Delta Lambda+log((N-pb)(N-qb)/((N-b)(N-pqb)))",
+  "curvature": "Strictly positive smooth-log ratio by exact numerator-denominator = N*b*(p-1)*(q-1)>0",
+  "base101_ratio": "9999899000214221/9999777800214221",
+  "base101_actual_block_certificate": {
+    "sign": "NEGATIVE",
+    "justification": "Rational artanh bounds enclose every log and every signed product",
+    "terms": 6,
+    "lower": "-378244839481402013234537929/6000000000000000000000000",
+    "upper": "-63040778582100425823285213/1000000000000000000000000"
+  },
+  "main_script_sha256": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+  "main_receipt_sha256": "b65a3e85d73758621259204d11f665c875af52a82747b67ffa3e00a811220028",
+  "main_artifacts_preserved": true,
+  "script_sha256": "435410918e854573d9d697b40670890df834ebc328e0cb24a38e149421116e56",
+  "scope": "Exact finite identities; all mixed terms are retained; no D_N estimate"
+}

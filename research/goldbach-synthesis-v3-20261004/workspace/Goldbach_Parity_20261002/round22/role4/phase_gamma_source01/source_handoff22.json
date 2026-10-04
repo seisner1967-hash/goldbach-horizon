@@ -1,0 +1,102 @@
+{
+  "schema": "ROUND22_ROLE4_PHASE_GAMMA_SOURCE_HANDOFF_01",
+  "created_utc": "2026-10-03T14:50:09.2437309Z",
+  "status": "SOURCE_ONLY_NOT_PREPARED_NOT_COMPILED",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\PhaseGammaSharp22.lean",
+      "sha256": "4e5bd36752b198c1ce5b220d4397caa090585b24c80dad52c921ab8276486871",
+      "bytes": 11898
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\PhaseGammaTails22.lean",
+      "sha256": "11f720329e1136313e06a23e2858fcf395182e83732a5b844eaa44e2c42b6253",
+      "bytes": 14472
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\source_contract22.md",
+      "sha256": "7a6974a1aff953c36cf3dc5d3fafc795487a23bb187b7a8dfd93e903c960a132",
+      "bytes": 4273
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\erratum_bank02_status22.md",
+      "sha256": "38f9461ac5c7837c0921984434fce7ba5954bd5bf07b2eb06070c35b96b1d7bc",
+      "bytes": 681
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\phase_gamma_source01\\read_sources22.json",
+      "sha256": "eaa4a4d380c3fb770d86a8b224bc17513ecfecd48e88592886ba551c94634b1e",
+      "bytes": 10877
+    }
+  ],
+  "binding_count": 5,
+  "modules": [
+    {
+      "name": "PhaseGammaSharp22.lean",
+      "defs": 9,
+      "theorems": 17,
+      "declarations": 26,
+      "qualified_prints": 26,
+      "forbidden_proof_token_count": 0
+    },
+    {
+      "name": "PhaseGammaTails22.lean",
+      "defs": 5,
+      "theorems": 20,
+      "declarations": 25,
+      "qualified_prints": 25,
+      "forbidden_proof_token_count": 0
+    }
+  ],
+  "total_declarations": 51,
+  "total_defs": 14,
+  "total_theorems": 37,
+  "total_qualified_prints": 51,
+  "independent_deficit_report": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\continuous_correlation_source_review22.md",
+    "sha256": "04f40ed82430c203c8695180d7762a06a52bd5d0ce11a9657e80740e24e6f59c",
+    "scope": "FULL",
+    "read_chunk": "599197",
+    "interpretation": "Motivation/source deficit only; this new package has not been independently reviewed or compiled."
+  },
+  "dependencies": {
+    "local": "PhaseGammaTails22 imports the new uncompiled PhaseGammaSharp22",
+    "mathlib_cache_targeted_bindings": 19,
+    "transitive_import_closure_prepared": false,
+    "previous_projection62": "Immutable SOURCE handoffs remain unmodified; this package does not import or recompile them."
+  },
+  "domains": {
+    "gamma_half_five_half": "all real t",
+    "principal_branch_and_gap": "a>0, all real theta and t",
+    "real_tail_kernels": "delta>0, all real T",
+    "actual_signed_gamma_tail_bounds": "a>0, T>=0, theta real, either Bool sign",
+    "closed_tail_continuity": "joint (a,theta) on a>0 for fixed real T"
+  },
+  "concrete_derivations": [
+    "actual Gamma reflection and conjugation give norm-square pi/cosh(pi*t)",
+    "genuine pi/2 decay and two actual Gamma recurrences",
+    "exact principal-power norm retaining t*Arg(w)",
+    "positive continuous phase gap delta=pi/2-abs(Arg(w))",
+    "explicit derivative primitives and atTop limits construct integrable real kernels and exact tail integrals",
+    "actual complex Gamma products continuous and dominated for both signs",
+    "joint continuity of explicit closed left/right Gamma-only tails"
+  ],
+  "non_free_premises": "Only stated real domains, positive real parts for a general Gamma continuity helper, and w!=0 for the principal-power identity. No strengthened Gamma bound, final integrability, final trace equality, zeta identity, oracle or target bound is assumed.",
+  "open_obligations": [
+    "Gamma(s+1) weighted thermal products are not a representation of the unweighted projection trace T(w)",
+    "actual zeta/chi factors, their quantitative polynomial/log moments and uniform product tails",
+    "actual uniform phase Mellin/contour representation and trace periodicity",
+    "certified phase-node numerical producer and actual bank",
+    "prime-power corrections, canonical frontier, D_N bound and WIN"
+  ],
+  "cost": "delta may tend to zero near the right-half-plane branch edge. delta^-1, delta^-2, delta^-3 remain explicit; no cutoff, runtime or numeric accuracy is promised.",
+  "execution": {
+    "compiler_invocations": 0,
+    "axiom_audits_executed": 0,
+    "numerical_invocations": 0,
+    "lean_probe_invocations": 0,
+    "source_only": true,
+    "new_root_gate_required_before_execution": true
+  },
+  "official_credit_added": 0
+}

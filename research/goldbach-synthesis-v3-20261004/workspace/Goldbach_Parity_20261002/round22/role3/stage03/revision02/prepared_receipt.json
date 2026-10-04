@@ -1,0 +1,24 @@
+{
+  "schema": "round22.role3.unfold_revision02.prepared_receipt.v1",
+  "time": "2026-10-03T07:54:39.2773735+00:00",
+  "status": "PREPARED_SOURCE_ONLY_REQUEST_ROOT_FULL_SHA_REVIEW",
+  "source_manifest_sha256": "4094bdfdcbb047a0d0a51f3e345e4b9156bc3562ce27efca92cce751ad280ca5",
+  "launcher_sha256": "c2bc6854b51527b55122b7169f37baa9c9ff6d474454b1857eac44d7bd20ec3c",
+  "input_count": 36,
+  "module_rows": [
+    {
+      "module": "EpsteinUnfold22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision02\\EpsteinUnfold22.lean",
+      "sha256": "eadf5f67ca294583194968f1acc1a95fc17dde5dc4dede9c479f2ff44e84cdfd",
+      "theorem_count": 16,
+      "definition_count": 3,
+      "axiom_print_count": 19,
+      "status": "SOURCE_ONLY_UNCOMPILED"
+    }
+  ],
+  "Lean_gate": "CLOSED",
+  "new_compiler_calls": 0,
+  "Python_math_calls": 0,
+  "no_win": true,
+  "metadata_exit_credit": "actual tool return required separately"
+}

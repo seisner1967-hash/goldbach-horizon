@@ -1,0 +1,159 @@
+{
+  "status": "FINAL_PROSPECTIVE_ROLE1_NOTE_UNSELECTED_UNEVALUATED_NO_WIN",
+  "role": 1,
+  "prospective_round": 20,
+  "canonical_agent": "/root/round20_ideation_gamma",
+  "created_at_utc": "2026-10-03T01:53:21.3026977Z",
+  "binding_phase": "READ_ONLY_INPUT_DIGESTS_OBSERVED_AFTER_PAPER_DRAFT_NOT_PREEXEC_OR_COMPILER_ATTESTATION",
+  "artifact": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role1_prospective.md",
+    "bytes": 24250,
+    "sha256": "1a4cbddf965c6584e0c35aa94a2407eeb1527b0f33dfa794532fbb75b4a88082"
+  },
+  "input_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent1_weighted_aggregate.md",
+      "bytes": 28136,
+      "sha256": "d1cd64e27c46ad5aacfe2ee33c1b13681b77ae84e6d78c8585a3ef47acaf42bb",
+      "read_scope": "FULL_READ_d9290f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent3_formalisation.md",
+      "bytes": 4955,
+      "sha256": "4755d2b0a787b0df71071dd1d1bc126b9901b8be059ca833fd1d6f45a7dfadc2",
+      "read_scope": "FULL_READ_187788"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent1_gap_review.md",
+      "bytes": 10384,
+      "sha256": "fa023d133e631516f29ab3680e0ec8c029c4eb85ad1e89ea30ce618dfb06b9d3",
+      "read_scope": "FULL_READ_1c00dc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round19_failure_feedback_in_progress.md",
+      "bytes": 8147,
+      "sha256": "d5d754aa9c4f78881a2b036b2bfa7cf14ec761fa83d5aeee6947b007d63e9286",
+      "read_scope": "FULL_READ_3cf49e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\CONTRACT.md",
+      "bytes": 9277,
+      "sha256": "3440776f74f1f883f636e4b4e47ca5cc09767fd631070f559c69245f4040d3d9",
+      "read_scope": "FULL_READ_cdd274_historical_1024_not_adopted"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\monographie.txt",
+      "bytes": 132972,
+      "sha256": "ded7e6252ed3b620537fc471d11778fe16abd1305ec4c6959fa185546a5be687",
+      "read_scope": "RG_AND_SELECTED_SECTIONS_11_12_13_22e67a_f56135"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\sources\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.txt",
+      "bytes": 12838,
+      "sha256": "06252f566ffae9b1c0b6f295cbce9b98a722681d345691ed3bad2f99976d5b0e",
+      "read_scope": "FIRST_160_LINES_f56135"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round19_primary_source_context.md",
+      "bytes": 1218,
+      "sha256": "22938ebee592d373f2df7d3d6910833079cd3028aac535a3f8658d221de3afe1",
+      "read_scope": "FULL_READ_cdd274"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role3\\EulerAnchor.lean",
+      "bytes": 21105,
+      "sha256": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+      "read_scope": "RG_21481e_AND_LINES_379_TO_427_3eb3fe_READ_ONLY_NO_COMPILATION"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4\\LeastMissingPrimeMargin.lean",
+      "bytes": 4473,
+      "sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+      "read_scope": "FIRST_108_LINES_379f55_READ_ONLY_NO_COMPILATION"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\agent4_formalisation.md",
+      "bytes": 6499,
+      "sha256": "b12adfa9f03ed0af0735278946ebbf09f9bf41e3a6c4d42cc8912ddedb0097b7",
+      "read_scope": "FULL_READ_379f55"
+    },
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-ideate\\SKILL.md",
+      "bytes": 5323,
+      "sha256": "1b55bc6f7fc81c91a9a0627d897cb8bf9b19c580d5b1867650222db672503683",
+      "read_scope": "FULL_READ_5d7c2a"
+    },
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-tools\\scripts\\arbor_state.py",
+      "bytes": 47135,
+      "sha256": "cd52fd407a10df8a02ba7675cfd122b8fd70ffc1f6b16e00a4d2d73f9dcc3278",
+      "read_scope": "METADATA_VIEW_EXECUTABLE_ONLY_NO_MATH_EVALUATION"
+    }
+  ],
+  "constraints": {
+    "actual_fresh_view_tool_chunk": "2583c1",
+    "full_read": true,
+    "observed_findings": 33,
+    "observed_pruned": 5,
+    "observed_max_depth": 2,
+    "observed_running_nodes": [
+      "13.11",
+      "14.4"
+    ],
+    "no_claim_that_the_view_is_current_after_later_root_updates": true
+  },
+  "primary_web_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2405.19063",
+      "observed_version": "v3_2025-03-14",
+      "read_scope": "Introduction_Lemma2.5_Assumption3.1_Theorem3.2",
+      "tools": [
+        "turn103view0",
+        "turn106view1",
+        "turn106view3"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2608.13299",
+      "observed_version": "v2_2026-09-03",
+      "read_scope": "Introduction_Theorem1.4_Lemma2.7_Lemma3.2",
+      "tools": [
+        "turn104view0",
+        "turn105view2",
+        "turn105view3",
+        "turn105view4"
+      ]
+    }
+  ],
+  "mathematical_python_invocations": 0,
+  "lean_invocations": 0,
+  "judge_invocations": 0,
+  "previous_producer_replays": 0,
+  "new_tree_nodes": 0,
+  "new_node_selections": 0,
+  "source19_writes": 0,
+  "writes_in_this_role": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role1_prospective.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role1_prospective_receipt.json"
+  ],
+  "actual_results": [
+    "PAPER_DERIVED_BONFERRONI_POINTWISE_LOWER_WEIGHT",
+    "PAPER_DERIVED_COMPOSITE_SUBTRACTION_INCIDENCE_INEQUALITY",
+    "PAPER_DERIVED_AP_COEFFICIENT_AND_ENDPOINT_ERROR",
+    "LITERAL_LARGE_P_TAIL_RETAINED",
+    "POSITIVE_SELBERG_IDEAL_PRINCIPAL_DIAGNOSTIC_ONLY_NOT_UNIFORM_NO_GO"
+  ],
+  "open_obligations": [
+    "NO_PROOF_OF_SD_GROWING_SHIFT_SIGNED_AP_REMAINDER_ESTIMATE",
+    "NO_PROOF_OF_FAVORABLE_COMPLETE_PRINCIPAL",
+    "NO_PAID_SOURCE_AP_CONSTANTS_OR_ONSET",
+    "NO_WHOLE_LEDGER_CLOSURE"
+  ],
+  "observation_incidents": [
+    "Initial_batched_tool_output_was_truncated_constraints_were_then_read_in_full_at2583c1",
+    "Broad_rg_search_encountered_access_denied_in_old_judge_temp_directories_no_mutation",
+    "Guessed_round16_agent1_canonical_margin_path_absent_rg_resolved_actual_EulerAnchor_source"
+  ],
+  "score": 0,
+  "victory": false
+}

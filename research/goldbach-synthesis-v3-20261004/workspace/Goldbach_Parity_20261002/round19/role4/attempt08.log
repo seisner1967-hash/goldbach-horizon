@@ -1,0 +1,165 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:162:67: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  c
+has type
+  ?m.21619
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:162:57: error: ambiguous, possible interpretations 
+  _root_.conductor ?m.21627 : ?m.21628 → Ideal ?m.21628
+  
+  Switch.conductor ?m.22392 : ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:165:32: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  c
+has type
+  ?m.27725
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:165:22: error: ambiguous, possible interpretations 
+  _root_.conductor ?m.27733 : ?m.27734 → Ideal ?m.27734
+  
+  Switch.conductor ?m.28498 : ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:165:48: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  c
+has type
+  ?m.27725
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:165:38: error: ambiguous, possible interpretations 
+  _root_.conductor ?m.33783 : ?m.33784 → Ideal ?m.33784
+  
+  Switch.conductor ?m.34548 : ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:168:32: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  c
+has type
+  ?m.40016
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:168:22: error: ambiguous, possible interpretations 
+  _root_.conductor ?m.40024 : ?m.40025 → Ideal ?m.40025
+  
+  Switch.conductor ?m.40789 : ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:168:52: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  c
+has type
+  ?m.40016
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:168:42: error: ambiguous, possible interpretations 
+  _root_.conductor ?m.46074 : ?m.46075 → Ideal ?m.46075
+  
+  Switch.conductor ?m.46839 : ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:175:4: error: simp made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:178:6: error: simp made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:180:6: error: simp made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:192:2: error: tactic 'apply' failed, failed to unify
+  ?m.65049 = ?m.65049
+with
+  decodeSignedLabel N (encodeSignedLabel N v) = v
+alpha N Z M : ℕ
+v : ℕ × ℕ
+hv : v ∈ physicalDomain alpha N Z M
+⊢ decodeSignedLabel N (encodeSignedLabel N v) = v
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:219:4: error: tactic 'apply' failed, failed to unify
+  ?m.70617 = ?m.70617
+with
+  encodeSignedLabel N (decodeSignedLabel N s) = s
+case mpr.intro
+alpha N Z M : ℕ
+s : ℕ × SignedCoordinates
+hv : decodeSignedLabel N s ∈ physicalDomain alpha N Z M
+hg : SignedGuard N s.2
+hq : (reconstructQ N s.2).toNat = decode N (unpack N s.2)
+hcell : ResourceCell N (decode N (unpack N s.2))
+⊢ encodeSignedLabel N (decodeSignedLabel N s) = s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:232:14: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  decodeSignedLabel N (encodeSignedLabel N v)
+case a.intro.intro
+alpha N Z M : ℕ
+s : { s // s ∈ signedDomain alpha N Z M }
+v : ℕ × ℕ
+hv : v ∈ physicalDomain alpha N Z M
+he : encodeSignedLabel N v = ↑s
+⊢ ↑((fun v => ⟨encodeSignedLabel N ↑v, ⋯⟩) ((fun s => ⟨decodeSignedLabel N ↑s, ⋯⟩) s)) = encodeSignedLabel N v
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:243:62: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 1
+  d ≥ 1
+  c ≥ 0
+  b ≥ 0
+  b - e ≤ 0
+  b - e - f ≥ 1
+  a ≥ 0
+  a - b ≥ 1
+where
+ a := ↑(M ^ 2)
+ b := ↑N
+ c := ↑((fun v => v.1 * v.2) w)
+ d := ↑v.1
+ e := ↑v.1 * ↑v.2
+ f := ↑(N - 1) / ↑alpha
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:248:41: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  (fun v => v.1 * v.2) v
+alpha N Z M : ℕ
+hM : N < M ^ 2
+v : ℕ × ℕ
+hv : v ∈ ↑(physicalDomain alpha N Z M)
+w : ℕ × ℕ
+hw : w ∈ ↑(physicalDomain alpha N Z M)
+he : (fun v => v.1 * v.2) v = (fun v => v.1 * v.2) w
+hs : StructuralSupport alpha N Z M v.1 v.2
+ht : StructuralSupport alpha N Z M w.1 w.2
+hepos : 0 < v.1
+hmpos : 0 < v.1 * v.2
+hmN : v.1 * v.2 < N
+hneq : ¬v.2 = w.2
+hc : v.2.Coprime w.2
+hqv : v.2 ∣ v.1 * v.2
+⊢ w.2 ∣ v.1 * v.2
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\NonSSBracketSwitch.lean:257:8: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  w.2
+alpha N Z M : ℕ
+hM : N < M ^ 2
+v : ℕ × ℕ
+hv : v ∈ ↑(physicalDomain alpha N Z M)
+w : ℕ × ℕ
+hw : w ∈ ↑(physicalDomain alpha N Z M)
+he : (fun v => v.1 * v.2) v = (fun v => v.1 * v.2) w
+hs : StructuralSupport alpha N Z M v.1 v.2
+ht : StructuralSupport alpha N Z M w.1 w.2
+hepos : 0 < v.1
+hmpos : 0 < v.1 * v.2
+hmN : v.1 * v.2 < N
+hqeq : v.2 = w.2
+⊢ v.1 = w.1
+'GoldbachRound19.NonSS.smallSemiprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.nonSSSelector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.StructuralSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.physicalDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.encodeLabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.decodeLabel' does not depend on any axioms
+'GoldbachRound19.NonSS.factorDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.physicalDomain_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.decode_encode_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.encodeLabel_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.mem_factorDomain_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.balancedResourceEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.physicalCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.thetaBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.rawLambda' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.rawBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.thetaBracket_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.raw_prime_equals_theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.literal_selected_properpower_price' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.thetaCoordinateWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.rawCoordinateWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.theta_coordinate_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.raw_coordinate_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.nonSS_actual_bracket_switch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.nonSS_actual_raw_switch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.actual_conductor_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.actual_three_stratum_sum' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.encodeSignedLabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.signedDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.decodeSignedLabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.decode_encode_signed_label' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.signedLabel_injective' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.mem_signedDomain_iff' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.balancedSignedResourceEquiv' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.physical_product_injective' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.nonSquarefree_reciprocal_bracket_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.reciprocal0_raw_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.reciprocal0_theta_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.NonSS.nonSS_actual_signed_CRT_switch' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

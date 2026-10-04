@@ -1,0 +1,8 @@
+{
+  "node_id": "10.1",
+  "hypothesis": "Mechanism: Nondegenerate two-axis character correlation at small conductor coprime to N, retaining its physical projection.\nHypothesis: A genuine Jacobi-type oscillation absent when q divides N may control an actual HH component if an exact insertion and all principal and exceptional sectors are paid independently.\nObservable: Literal arithmetic projection, q-unit exceptions, full CRT and weighted finite tests at N=100000000, with a complete signed cost audit before formalization.\nConflicts: An artificially introduced character or a nonprincipal component estimate does not bound the original principal moment; no conductor substitution or loss of coupled weights is allowed.",
+  "score": 0.0,
+  "insight": "Jacobi and principal reconstruction identities retain the complete physical R_p and the independent centered model M_HH. Summing modes reconstructs the principal mass; the prefix bound <=2 is per admissible unit-step cell. The native row uses conjugate chi(N), not conjugate chi(m): the actual k=7 tuple gives all proposed twists zero and native row5/6. OldPq is retained as an acquisition. Specific native transfer fails, not all character methods.",
+  "result": "Round7 Judge replay matched Jacobi and native trace JSON exactly, including all fields and hashes. Diagnostics p=3,7,13 with A=273 are unmasked normalization only; the corresponding p-unit fibre is empty. No Lean submission, no compiler error, no quantitative signed gain; semantic score zero. Code ref is a source file path, not a Git branch.",
+  "branch": "round7/trace_checks.py"
+}

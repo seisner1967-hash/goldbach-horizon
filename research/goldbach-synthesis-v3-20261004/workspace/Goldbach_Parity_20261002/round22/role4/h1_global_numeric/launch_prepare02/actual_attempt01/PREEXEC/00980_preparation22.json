@@ -1,0 +1,88 @@
+{
+  "schema": "ROUND22_GLOBAL_THERMAL_PREPARATION_22",
+  "created_utc": "2026-10-03T12:45:58.6284818Z",
+  "status": "PREPARED_METADATA_ONLY_NOT_EXECUTED",
+  "actor": "ROLE6",
+  "metadata_owner": "ROLE4",
+  "scope": "ROUND22_GLOBAL_THERMAL_H1_NUMERIC_ONLY",
+  "bank_id": "THERMAL_GLOBAL_H1_22_SOURCEPACK01",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\transport_catalogue_source22.py",
+      "sha256": "2fd2937811e5627746bb9e4a6bdcf9564073ef8ce4abf8b846e7a2aa1ee46bc8",
+      "bytes": 4946,
+      "kind": "SOURCE_PACKET_INPUT",
+      "module_alias": "transport_catalogue_source22"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare01\\prepared_manifest22.json",
+      "sha256": "2cf83b5b923ec0da9b090e85ba4669fd0e5739c331e579ec25d98e6a44890024",
+      "bytes": 2080,
+      "kind": "PREPARED_MANIFEST",
+      "module_alias": ""
+    }
+  ],
+  "binding_count": 2,
+  "prepared_manifest_sha256": "2cf83b5b923ec0da9b090e85ba4669fd0e5739c331e579ec25d98e6a44890024",
+  "runtime_path": "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "runtime_flags": [
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "utf8"
+  ],
+  "root_gate_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_global_thermal_h1_authorization01.json",
+  "future_actual_directory": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare01\\actual_attempt01",
+  "source_manifest_sha256": "e1caa3d115dd492cfa6d91478240b0e8418614b6faf8798f48e15312dfe11a51",
+  "independent_review_receipt_sha256": "973da581891aa1c1746999efd7684a88507feaae0e2b83b80197bb01a61217b6",
+  "independent_review_report_sha256": "55679d2dc4ee4251d2f7357d290073d10500f0ada59384101499807f02e6c28c",
+  "independent_domain_addendum_sha256": "a26a64dea1e392d62dfbad3a0751cc5e3414dd3be0e52603f7b05884f9b0a1c2",
+  "future_evaluation_level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER",
+  "analytic_certification_level": "PAPER_DERIVATIONS_WITH_EXACT_DOMAINS_NOT_LEAN_CERTIFICATION",
+  "structural_PASS_is_enclosure_PASS": false,
+  "child_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare01\\thermal_child_source22.py",
+  "launcher_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare01\\run_global_once_source22.py",
+  "runtime_alias_order": [
+    "dyadic_r01",
+    "analytic_r01",
+    "kernel_r01",
+    "unit_transport_source22",
+    "arithmetic_catalogue_source22",
+    "transport_catalogue_source22",
+    "envelopes_source22",
+    "producer_source22",
+    "structural_checker_source22"
+  ],
+  "limits": {
+    "catalogue_parameter_change_allowed": false,
+    "retry_count": 0,
+    "max_wall_seconds": 3600,
+    "expected_arithmetic_integers": 999999,
+    "max_artifact_bytes": 2147483648,
+    "expected_vertical_nodes": 204800,
+    "max_children": 1,
+    "expected_arch_nodes": 12288
+  },
+  "structural_checker_alone_authorizes_PASS": false,
+  "enclosure_review_required": true,
+  "actual_boxtail_guard_required": true,
+  "formal_H1": "OPEN",
+  "horizontal_volet": "UNIMPLEMENTED",
+  "coefficient_N": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false,
+  "command_template": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\launch_prepare01\\run_global_once_source22.py",
+    "--root-authorization",
+    "EXACT_ROOT_GATE",
+    "--root-authorization-sha256",
+    "EXACT_ROOT_GATE_SHA"
+  ]
+}

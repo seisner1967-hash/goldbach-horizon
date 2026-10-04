@@ -1,0 +1,100 @@
+{
+  "round": 20,
+  "role": "logicalROLE4",
+  "node": "14.5",
+  "at_utc": "2026-10-03T03:48:16.129798+00:00",
+  "primary_inputs": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\PROBE_BLOCK.md",
+      "sha256": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent2_friable.md",
+      "sha256": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role2\\numeric_contract.md",
+      "sha256": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role2\\final_receipt.json",
+      "sha256": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role2_selection.json",
+      "sha256": "3930ab3778ebf3e00bf80616b64d7d9ef63f6e80c2f74d63c8c5fbe7efe2944f",
+      "scope": "FULL_STRUCTURED_METADATA_AND_DUPLICATE_EXECUTOR_PROMPT_READ_SEPARATELY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\experiments\\14.5\\executor_prompt.md",
+      "sha256": "bd16a6e01bbb602c723bda6551e84d547067a1a205e873e7fed6380e406df436",
+      "scope": "FULL_TEXT_READ"
+    }
+  ],
+  "skills": [
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-executor\\SKILL.md",
+      "sha256": "54f445fb2591b649420013c872e70dc009af42de38162b63e0e76239b8880337",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-merge-eval\\SKILL.md",
+      "sha256": "d0ba4902fd6f101bd79f9918796900c5fad6b05f94379770df48202244c0ecfc",
+      "scope": "FULL_TEXT_READ"
+    }
+  ],
+  "dependency_source_scopes": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\NonSSBracketSwitch.lean",
+      "sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\BalancedResourceSwitch.lean",
+      "sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+      "scope": "PARTIAL_FIRST_100_LINES"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ThreeAdicPrimePairing.lean",
+      "sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+      "scope": "PARTIAL_FIRST_84_LINES"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies\\ShortDivisorComplement.lean",
+      "sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "scope": "PARTIAL_LINES_1_38_AND_141_184"
+    }
+  ],
+  "compile_gates": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase1.json",
+      "sha256": "9c606483ede95023f8d5ee8728649df4672d40672f73d4cfb710af31d3877493",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase2.json",
+      "sha256": "48ff0f573a2bfb3a7b3db22bf789c457c58fc993ad999b67d4c48fae739e5d3d",
+      "scope": "FULL_TEXT_READ"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_formal4_authorization_phase3.json",
+      "sha256": "fa94239c8bbac3a758382f977a14a05ec1b10e80327f508059b0fbe7e675e219",
+      "scope": "FULL_TEXT_READ"
+    }
+  ],
+  "historical_dependency_manifest": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\dependencies_readonly.json",
+    "sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+    "scope": "18_BINDINGS_HASH_CHECKED_NOT_18_FULL_SOURCE_READS"
+  },
+  "mathlib_reads": "Targeted actual API excerpts: smoothNumbers, finite Euler, arithmetic multiplicativity/tau, totient, squarefree divisors, geometric HasSum, harmonic bounds, p-series, integrals, inverse/order, finite sums and Nat.ModEq.",
+  "mutable_idea_tree": "observation only; no frozen input substitution",
+  "old_producer_reexecution": false,
+  "old_Lean_reexecution": false,
+  "new_mathematical_python": 0,
+  "victory": false
+}

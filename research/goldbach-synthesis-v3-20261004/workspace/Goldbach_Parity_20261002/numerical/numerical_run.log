@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "profiles": {
+    "alpha_quarter": 100,
+    "Q_quarter": 999999,
+    "alpha_eighth": 10,
+    "Q_eighth": 9999999
+  },
+  "finite_domains": {
+    "coefficient_n_inclusive": [
+      1,
+      3000
+    ],
+    "coefficient_y": [
+      1,
+      2,
+      6,
+      10,
+      100
+    ],
+    "ledger_a_r_inclusive": [
+      1,
+      80
+    ],
+    "ledger_y": [
+      1,
+      2,
+      6,
+      10
+    ],
+    "large_N_sample_count": 4096,
+    "large_N_sample_formula": "n_i=3+(i*104729+7919) mod (N//2-3), i=0..sample_count-1",
+    "large_N_admissible_tuples": 935,
+    "all_alpha100_rough_squarefree_triprimes_below_N": 535693,
+    "triprime_domain": "Every prime triple 100<p<q<r and p*q*r<100000000; exact enumeration",
+    "large_N_tuple_rule": "b=least prime factor(n), a=n/b, r=N-n, k=1; retain mu(n)mu(m)!=0, gcd(n,N)=1, Omega(n)>=2"
+  },
+  "checks": {
+    "literal_convolution_identity": 47768,
+    "squarefree_carrier_identity": 29084,
+    "rough_complete_parity_identity": 15532,
+    "rough_squarefree_parity_weight": 13044,
+    "small_bilinear_parity_ledger": 7588,
+    "coprime_parity_XOR_identity": 4866,
+    "fourfold_truncated_HeathBrown_Mobius_identity": 18866,
+    "full_HeathBrown_identity_with_remainder": 12001,
+    "alpha_rough_prime_detection_minus_triprime": 539648,
+    "bounded_Omega_prime_detection_weight": 539648,
+    "all_N_100000000_alpha100_triprimes": 535693,
+    "N_100000000_admissible_bilinear_ledger": 3740
+  },
+  "sign_histograms": {
+    "2": {
+      "zero": 743,
+      "positive": 192
+    },
+    "6": {
+      "zero": 732,
+      "positive": 148,
+      "negative": 55
+    },
+    "10": {
+      "zero": 727,
+      "positive": 126,
+      "negative": 82
+    },
+    "100": {
+      "zero": 758,
+      "positive": 95,
+      "negative": 82
+    }
+  },
+  "killed_candidate": {
+    "name": "automatic complete internal positive-negative cancellation at a fixed CRT root",
+    "verdict": "FALSE",
+    "counterexample": {
+      "a": 21,
+      "r": 99999727,
+      "y": 2,
+      "H_a": 2,
+      "H_r": 2,
+      "U_a": 2,
+      "U_r": 2,
+      "positive": 4,
+      "negative": 0,
+      "net": 4,
+      "maximum_internal_cancellation": 0,
+      "N": 100000000,
+      "n": 273,
+      "m": 99999727,
+      "b": 13,
+      "k": 1,
+      "alpha": 100,
+      "W": 2,
+      "CRT_modulus": 2099994267,
+      "factor_a": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "factor_r": [
+        [
+          7951,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ]
+    }
+  },
+  "script_sha256": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+  "elapsed_seconds": 19.71
+}

@@ -1,0 +1,53 @@
+{
+  "status": "FINAL_ROLE4_HARMONIC_MARGIN_AUXILIARY",
+  "frozen_utc": "2026-10-02T18:28:36.6097189Z",
+  "producer_invocations": 1,
+  "exit_code": 0,
+  "theorem_count": 9,
+  "definition_count": 0,
+  "actual_Lean_failures": 0,
+  "source_banned_token_count": 0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "victory": false,
+  "score": 0,
+  "report_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\agent4_formalisation.md",
+  "report_sha256": "b12adfa9f03ed0af0735278946ebbf09f9bf41e3a6c4d42cc8912ddedb0097b7",
+  "selected_role2_input_sha256": "f6f12c39afc445ce82482850c34482fa2450b9df1df7dbeef2089574b308128b",
+  "files": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4\\LeastMissingPrimeMargin.lean",
+      "bytes": 4473,
+      "sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4\\LeastMissingPrimeMargin.olean",
+      "bytes": 772888,
+      "sha256": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4\\compile_new.ps1",
+      "bytes": 2170,
+      "sha256": "a565f42b2b7d4b9b048dfb19e09feb80861d7e629729128ab7d29c5caa388389"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4\\attempt1.lean",
+      "bytes": 4473,
+      "sha256": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4\\attempt1.log",
+      "bytes": 959,
+      "sha256": "91504945ea420cb4a870d7c98ae5d2d0ae9f3d80937a6a848ed8ceababc02199"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4\\attempt1_receipt.json",
+      "bytes": 684,
+      "sha256": "21e73415ac9f0ef23bdda5ba1c29d37088c2fe436f0965d434207398562956f3"
+    }
+  ],
+  "semantics": "Actual harmonic margin for all p>=13 and certified small logarithms. Role3 must connect actual Euler product; global incidence and capacity remain unestimated."
+}

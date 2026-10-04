@@ -1,0 +1,31 @@
+{
+  "Lean_invocations": 0,
+  "Weil_invocations": 0,
+  "actual_FINISH": "2026-10-03T06:49:54.814953+00:00",
+  "actual_START": "2026-10-03T06:49:45.399357+00:00",
+  "attempt_token": "5737a2bd29dd4cd7a8851212a692e7c3",
+  "coefficient_N_invocations": 0,
+  "command": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\epstein_bank22.py",
+    "--contract",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\epstein_contract22.json",
+    "--output",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\actual_epstein22\\epstein_result22.json"
+  ],
+  "exit_code": 0,
+  "heat_invocations": 0,
+  "launch_error": null,
+  "log_sha256": "dd449fa87ee1f21be5c9deed2b5192f576ed16ed9778dbda0297a1d662b9d9fd",
+  "no_credit_if_bound_source_mutated": true,
+  "post_integrity": true,
+  "preparation_sha256": "78685e62dd2e771ce3c8dde3a89e76817c32479de0ca3e0418ab4fb171134f91",
+  "result_sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+  "root_gate_sha256": "01a3ca80f8bab24a72cb49d9c8490ca1241598ee8a6d34d9aa7b4814a847b17f",
+  "schema": "round22.epstein_unfolding_aux.actual_receipt.v1",
+  "scope": "EPSTEIN_UNFOLDING_AUX_ONLY",
+  "sqrt_certificate_sha256": "605f8dcdb49407dccffdfc3a33142bf1cc27d66e6ba0e015c762ea4007a6b129"
+}

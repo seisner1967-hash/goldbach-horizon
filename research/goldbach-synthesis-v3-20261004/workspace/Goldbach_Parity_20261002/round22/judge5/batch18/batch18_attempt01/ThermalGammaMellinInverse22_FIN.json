@@ -1,0 +1,117 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.expKernel"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.gammaLine"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.expKernel_continuous"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.gammaLine_continuous"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.gammaLine_half_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.gammaLine_integrable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.expKernel_mellin_convergent_two"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.mellin_expKernel_eq_Gamma"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.expKernel_mellin_vertical_two"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.mellinInv_Gamma_two"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachThermalMellin22.real_exp_eq_Gamma_integral"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\ThermalGammaMellinInverse22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\sources\\ThermalGammaMellinInverse22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": false,
+  "exit_code": 1,
+  "finished_at": "2026-10-03T19:27:28.429800+00:00",
+  "launch_error": null,
+  "log_sha256": "ad9e08512e1a5af905830b98d083925ec8ea4f36c5d01773864c0ca885d2395e",
+  "module": "ThermalGammaMellinInverse22",
+  "olean_sha256": null,
+  "source_prior_status": "SOURCE_ONLY_NOT_COMPILED",
+  "source_sha256": "5271bbf9a9917a3ab61c6c7e0e747af4014e214b0867a9c81b43b5aa08fccec1",
+  "started_at": "2026-10-03T19:27:01.930969+00:00",
+  "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+  "timed_out": false
+}

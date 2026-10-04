@@ -1,0 +1,24 @@
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:74:14: error: unsolved goals
+case succ
+k : ℕ
+hk : 2 ≤ k
+hkR : 2 ≤ ↑k
+n : ℕ
+ih : ∏ i ∈ range n, (1 - 1 / ↑(k + i) ^ 2) = (↑k - 1) * ↑(k + n) / (↑k * (↑(k + n) - 1))
+hnR : 0 ≤ ↑n
+⊢ ↑k + (-(↑k * ↑n) - ↑k * ↑n ^ 2 * 3) + ↑k * ↑n ^ 3 + (-↑k ^ 2 - ↑k ^ 2 * ↑n * 3) + (↑k ^ 2 * ↑n ^ 2 * 3 - ↑k ^ 3) +
+          ↑k ^ 3 * ↑n * 3 +
+        ↑k ^ 4 +
+      (↑n - ↑n ^ 3) =
+    ↑k * ↑n ^ 2 * (↑k * ↑n + ↑k ^ 2)⁻¹ - ↑k * ↑n ^ 4 * (↑k * ↑n + ↑k ^ 2)⁻¹ + ↑k ^ 2 * ↑n * (↑k * ↑n + ↑k ^ 2)⁻¹ * 2 +
+                    (-(↑k ^ 2 * ↑n ^ 2 * (↑k * ↑n + ↑k ^ 2)⁻¹) - ↑k ^ 2 * ↑n ^ 3 * (↑k * ↑n + ↑k ^ 2)⁻¹ * 4) +
+                  ↑k ^ 2 * ↑n ^ 4 * (↑k * ↑n + ↑k ^ 2)⁻¹ +
+                (-(↑k ^ 3 * ↑n * (↑k * ↑n + ↑k ^ 2)⁻¹ * 2) - ↑k ^ 3 * ↑n ^ 2 * (↑k * ↑n + ↑k ^ 2)⁻¹ * 6) +
+              ↑k ^ 3 * ↑n ^ 3 * (↑k * ↑n + ↑k ^ 2)⁻¹ * 4 +
+            (↑k ^ 3 * (↑k * ↑n + ↑k ^ 2)⁻¹ - ↑k ^ 4 * ↑n * (↑k * ↑n + ↑k ^ 2)⁻¹ * 4) +
+          (↑k ^ 4 * ↑n ^ 2 * (↑k * ↑n + ↑k ^ 2)⁻¹ * 6 - ↑k ^ 4 * (↑k * ↑n + ↑k ^ 2)⁻¹) +
+        (↑k ^ 5 * ↑n * (↑k * ↑n + ↑k ^ 2)⁻¹ * 4 - ↑k ^ 5 * (↑k * ↑n + ↑k ^ 2)⁻¹) +
+      ↑k ^ 6 * (↑k * ↑n + ↑k ^ 2)⁻¹
+'GoldbachRound16.Anchor.harmonic_le_eulerPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_product' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

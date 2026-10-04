@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "outputs_isolated": true,
+  "original_artifacts_preserved": true,
+  "checks": [
+    {
+      "file": "multifibre.json",
+      "deterministic_fields_equal": true,
+      "excluded_metadata": [
+        "elapsed_seconds",
+        "previous_artifact_sha256"
+      ],
+      "original_sha256": "312c27b0cdf99d039dcdeb11efe2efb577bf0fe06c1b31d23b39fc95537246d1",
+      "replay_sha256": "b65a3e85d73758621259204d11f665c875af52a82747b67ffa3e00a811220028"
+    },
+    {
+      "file": "mixed_difference.json",
+      "deterministic_fields_equal": true,
+      "excluded_metadata": [
+        "main_receipt_sha256"
+      ],
+      "original_sha256": "3c5510a346cb624e119e07656871fc2356acf74c52499212ab0d0b02b8c1df1a",
+      "replay_sha256": "ea144f8be2f10bab03ae86c7600b4cc289206465d8045efe9cfeca40788254d1"
+    }
+  ],
+  "production_sha256_before": {
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\agent6.md": "a33bf44277c99c7f684fac7924b6492256ec4d8bddc5f1e335d1cad3de898d06",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\agent6_round2.md": "7825d429f353a056cf0e374c2c68b08ad476b604db6772ba7a1b540cfb36a469",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\chen_multiplicity.json": "4386b2d1dc044e1d27525395ee98c69e9a34b854d0687886a42808619261f8d7",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\chen_multiplicity_checks.py": "afddd7e071e4aa2ea1cb86f6e5026535d79fbf0a7dd3494499be6198bd3b3846",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\numerical.json": "65b4f36cd219209079c0dd3a2e8900c7be1ca095244aa3c1ebb36b67e380c565",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\numerical_run.log": "95dc532be41ea8c0d9636ced8f6f7a6d0d311accc1b96676166b2a2215467020",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\round2.json": "aeda3a3d6661224de8cc7fcdf41b9d1c1cf1e2a143c2ea6a926ab93e10c1da65",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\round2_run.log": "e880f9aba10806148b1ed5b61ced5a4c77ca23cbe973209b0df22244d4c0cb5d",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\build-judge.ps1": "c8bb5e686450a240c070f7a0951eb6ca06edc567ec58b0aeacb86ce00ef6e5bf",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\judge_receipt.json": "72f72df35dcf6aaf812e7ea5d400e3073ea5b4296ef9550602ac0ab130a0e86c",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\multifibre.json": "312c27b0cdf99d039dcdeb11efe2efb577bf0fe06c1b31d23b39fc95537246d1",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\mixed_difference_checks.py": "435410918e854573d9d697b40670890df834ebc328e0cb24a38e149421116e56",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\mixed_difference.json": "3c5510a346cb624e119e07656871fc2356acf74c52499212ab0d0b02b8c1df1a"
+  },
+  "production_sha256_after": {
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\agent6.md": "a33bf44277c99c7f684fac7924b6492256ec4d8bddc5f1e335d1cad3de898d06",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\agent6_round2.md": "7825d429f353a056cf0e374c2c68b08ad476b604db6772ba7a1b540cfb36a469",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\chen_multiplicity.json": "4386b2d1dc044e1d27525395ee98c69e9a34b854d0687886a42808619261f8d7",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\chen_multiplicity_checks.py": "afddd7e071e4aa2ea1cb86f6e5026535d79fbf0a7dd3494499be6198bd3b3846",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\numerical.json": "65b4f36cd219209079c0dd3a2e8900c7be1ca095244aa3c1ebb36b67e380c565",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\numerical_run.log": "95dc532be41ea8c0d9636ced8f6f7a6d0d311accc1b96676166b2a2215467020",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\round2.json": "aeda3a3d6661224de8cc7fcdf41b9d1c1cf1e2a143c2ea6a926ab93e10c1da65",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\numerical\\round2_run.log": "e880f9aba10806148b1ed5b61ced5a4c77ca23cbe973209b0df22244d4c0cb5d",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\build-judge.ps1": "c8bb5e686450a240c070f7a0951eb6ca06edc567ec58b0aeacb86ce00ef6e5bf",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\judge_receipt.json": "72f72df35dcf6aaf812e7ea5d400e3073ea5b4296ef9550602ac0ab130a0e86c",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\multifibre.json": "312c27b0cdf99d039dcdeb11efe2efb577bf0fe06c1b31d23b39fc95537246d1",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\mixed_difference_checks.py": "435410918e854573d9d697b40670890df834ebc328e0cb24a38e149421116e56",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round3\\mixed_difference.json": "3c5510a346cb624e119e07656871fc2356acf74c52499212ab0d0b02b8c1df1a"
+  },
+  "wrapper_sha256": "4f7766014da8af7a18475814463a42bfd7c77a377899356ba3f0db8889888882",
+  "limitations": "Exact finite independent replay; no aggregate D_N estimate"
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "ROUND22_ROOTS_REVISION02_SOURCE_HANDOFF",
+  "status": "FROZEN_SOURCE_ONLY_NOT_PREPARED_NOT_ELABORATED",
+  "directory": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\roots_revision02",
+  "order": [
+    "ConcreteNTTRoots22",
+    "ConcreteNTTA32Projection22"
+  ],
+  "module_count": 2,
+  "declaration_count": 28,
+  "theorem_count": 22,
+  "definition_count": 6,
+  "expected_print_count": 28,
+  "headers_and_domains": "MANUAL_FULL_SOURCE_READ_UNCHANGED_NOT_ELABORATED",
+  "bridge_byte_identical": true,
+  "source_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\roots_revision02\\ConcreteNTTRoots22.lean",
+      "bytes": 9456,
+      "sha256": "16c414a5d2f05c4ad273dde2245282aad452880b4d51df0aaed78f08d944b3bc",
+      "read_scope": "FULL",
+      "tool_receipt": "c6e533"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\roots_revision02\\ConcreteNTTA32Projection22.lean",
+      "bytes": 3783,
+      "sha256": "cefc07197945f1e9710895d4a01455861ae6db21365cc44dec206178e76af4c3",
+      "read_scope": "FULL",
+      "tool_receipt": "c6e533"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\roots_revision02\\source_contract22.md",
+      "bytes": 4563,
+      "sha256": "08f08208cf959b3e92074b3ed95e7ae921114a1baf6b7ef5f7dd76784d570bcc",
+      "read_scope": "FULL",
+      "tool_receipt": "372106"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\roots_revision02\\source_catalog22.json",
+      "bytes": 2499,
+      "sha256": "aebeddfef2cf0ada938394c3478efbff937dd2f76ee283fbd794b080078bf489",
+      "read_scope": "FULL",
+      "tool_receipt": "372106"
+    }
+  ],
+  "read_receipts_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\roots_revision02\\source_read_receipts22.json",
+  "read_receipts_sha256": "4051672be3f6635da7444f13f161ab20e2d0c2b9a7da4b8a8f91b228268353ea",
+  "full_source_read_receipt": "c6e533",
+  "full_documents_read_receipt": "372106",
+  "true_failure_read_receipts": [
+    "90f99a",
+    "f740d5"
+  ],
+  "true_failure_log_sha256": "ff1a8a6604d45cf2ad3336ef8b433c33b974f7766845c9411c29d68dd04e399f",
+  "true_failure_error_sites": 16,
+  "prior_status": "INDEPENDENT_BATCH21_FAILED",
+  "prior_credit": 0,
+  "projection21_invoked": false,
+  "readonly_olean_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch19\\batch19_attempt01\\FiniteFieldProjection22.olean",
+      "bytes": 603408,
+      "sha256": "0304400125a93cfddace45bcc4428d835c8ee204817f88f156e9fd44ee856f4f",
+      "read_scope": "BYTE_HASH_ONLY_READONLY",
+      "tool_receipt": "16c70a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\QuantizedLambdaEnvelope22.olean",
+      "bytes": 266384,
+      "sha256": "e821070b97b3fa4b71a3e279ecb9bc6c0de6cafdfe9dc8712b5d5a22858a6485",
+      "read_scope": "BYTE_HASH_ONLY_READONLY",
+      "tool_receipt": "16c70a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\RationalLogQuantization22.olean",
+      "bytes": 1120744,
+      "sha256": "20db07cdfb5717d7f9ab0b3e75d3c15b9e16c6820ad5285bd7debb62b0a31434",
+      "read_scope": "BYTE_HASH_ONLY_READONLY",
+      "tool_receipt": "16c70a"
+    }
+  ],
+  "revision_source_olean_exists": false,
+  "source_read_binding_count": 19,
+  "old_sources_preserved_by_hash": true,
+  "old_21_manifest_preserved_by_hash": true,
+  "old_inputs_full_rehash_performed": false,
+  "old_3089_archives_modified": false,
+  "author_compilations": 0,
+  "API_probes": 0,
+  "numeric_runs": 0,
+  "candidate_imports_or_parsers": 0,
+  "new_gate_created": false,
+  "new_launcher_created": false,
+  "official_baseline_modules": 80,
+  "official_baseline_declarations": 1339,
+  "D_N_paid": false,
+  "victory": false,
+  "excluded_invalid_draft": "metadata_draft_invalid01; preserved but not selected",
+  "next": "INDEPENDENT_SOURCE_REVIEW_THEN_NEW_ROOT_SELECTION_AND_GATE"
+}

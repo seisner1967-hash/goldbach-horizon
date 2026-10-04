@@ -1,0 +1,54 @@
+{
+  "round": 18,
+  "role": 5,
+  "root_authorized_after_FINAL3_FINAL4_inspection": true,
+  "root_authorized_after_ALL_FINAL18_and_distinct_annex_inspection": true,
+  "scope": "One independent audit with fresh compilation of the eight new round18 sources only; stored data integer/rational checks, no producer, W/D/log/sign/PDF or historical Lean replay",
+  "root_observations_sha256": {
+    "round18_final34_root_observation.json": "9086ab33bd4501b9d06675416b7c3096489a33df1405c4d61fc65f0c6584a3b9",
+    "round18_crt_root_observation.json": "56e175077d38d6937d535de78e22541bf01b6ceafddc0e9ec03a149cf5a1b26a",
+    "round18_final_annexes_root_observation.json": "4b0533aecd2f6e92f27f3ba35f708e8cf73edcb790d162fbc5a8856969a9e0ae"
+  },
+  "judge_code_sha256": {
+    "audit.py": "26ad93f0d4e7be2cf5fb59736be9c57513032e5f8a5af5debfe2343ea6afd6bc",
+    "run_once.py": "73dfd991b3c19a974436856fbcd8247e882c190a9f9094224ca541edb18d1cf6"
+  },
+  "FINAL_reports_sha256": {
+    "agent3_formalisation.md": "b0d82b52621c6f57a1a34f24d3a422437847a685678e1b905aea2058062bcb62",
+    "agent4_formalisation.md": "9f30e03fbfab99eeb88ef421e6f1dc35f1897383cc910b41ea9cdc661592b81d",
+    "agent6_crt.md": "a29cfc376d2daa28c1681a2a46fb0562a5982f933ad502723a9575b2e895200a",
+    "agent5_content.md": "31ac4754529f0faf0418f3a6ca0083413180f5962f9b06193bdde9dc19cfdade"
+  },
+  "distinct_final_inputs_sha256": {
+    "role6_crt/manifest.json": "66b2bbf6884cb3fc27afcab847259f068a91f40378354f31c5d7874d2e9101b4",
+    "role6_crt/final_receipt.json": "54bcbf41e6a7e1c7701db1aa1605c378c4085f07edf10f13a093a6a51460e8ed",
+    "role6_crt/closure_receipt.json": "234d4ee75aacbb03d0a060322401aa0b49eb9ed2eafa2b357a5b71bc7d36b8c8",
+    "role5_content/manifest.json": "d989cac73826ed0fd17924ba781b88f77c15c7e0288380b253e173c3475fa0ab",
+    "role5_content/final_receipt.json": "37b1670fd92b2248ae78b19244c79ce3b17abd821f79ce76de6c6d93a884bc72"
+  },
+  "distinct_annex_inputs": [
+    "role6_crt/manifest.json", "role6_crt/final_receipt.json", "role6_crt/closure_receipt.json",
+    "role5_content/manifest.json", "role5_content/final_receipt.json"
+  ],
+  "distinct_annex_dirs": ["role6_crt", "role5_content"],
+  "new_module_source_order": [
+    "role3/SeparatedTypeII.lean", "role3/SeparatedTypeIIPrice.lean",
+    "role3/SeparatedTypeIICount.lean", "role3/SeparatedTypeIILower.lean",
+    "role4/DoubleExtractionArithmetic.lean", "role4/DividedFourForms.lean",
+    "role4/DividedRootCounts.lean", "role4/DividedSelbergBridge.lean"
+  ],
+  "new_module_sources_sha256": {
+    "role3/SeparatedTypeII.lean": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+    "role3/SeparatedTypeIIPrice.lean": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+    "role3/SeparatedTypeIICount.lean": "55ac598030d5bd67202553a5a8ffffc6fcc2ba3aa796428808aecb9586d5d5d1",
+    "role3/SeparatedTypeIILower.lean": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+    "role4/DoubleExtractionArithmetic.lean": "be85b2d59e5af092e943e6714981997f372b1ad8a2e9ae14ab7153814a5e1f76",
+    "role4/DividedFourForms.lean": "613dba073eb175ab7f96c588f0da1b7cf34844f197383e7cf3391078965bf68a",
+    "role4/DividedRootCounts.lean": "f7c4a4e4f2cad55275a37473a8d7e909497cf4dfd0d7e77f950ed55515655302",
+    "role4/DividedSelbergBridge.lean": "2b5f1edaaab665560e5e1b6668f29794e3e10e2305b28428082f590458150db3"
+  },
+  "Count_style_warning_expected_and_permitted": true,
+  "CRT_replay_authorized": false,
+  "victory_presumed": false,
+  "post_PASS_stage_rerun_authorized": false
+}

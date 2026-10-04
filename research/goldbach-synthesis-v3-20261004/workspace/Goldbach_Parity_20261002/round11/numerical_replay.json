@@ -1,0 +1,136 @@
+{
+  "status": "PASS_NEW_ROUND11_BYTES_AND_FIELDS_REPLAY",
+  "N": 100000000,
+  "banks": [
+    {
+      "script": "contract_witnesses.py",
+      "receipt": "witnesses.json",
+      "command": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\contract_witnesses.py",
+        "--output-dir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\isolated_output_probe"
+      ],
+      "exit_code": 0,
+      "all_JSON_fields_equal": true,
+      "exact_bytes_equal": true,
+      "canonical_unchanged": true,
+      "script_sha256": "1aacaf000d49772126a3a9824d9a9a4a9650eb99450b48df9f98a353da6e9c68",
+      "canonical_sha256": "74dd4515d76d7325cd3e08ed23c84f687cbd14f773398653b3eb12a39379cf05",
+      "replay_sha256": "74dd4515d76d7325cd3e08ed23c84f687cbd14f773398653b3eb12a39379cf05",
+      "bytes": 7854,
+      "status": "VERIFIED_NEW_FINITE_WITNESSES_ONLY"
+    },
+    {
+      "script": "ap_prefix_checks.py",
+      "receipt": "ap_prefix.json",
+      "command": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\ap_prefix_checks.py",
+        "--output-dir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\isolated_output_probe"
+      ],
+      "exit_code": 0,
+      "all_JSON_fields_equal": true,
+      "exact_bytes_equal": true,
+      "canonical_unchanged": true,
+      "script_sha256": "b58ea3d4fc41ffb60c548a44e6f92bad2fc01d812bf3a4338d2b0d70d834f1c1",
+      "canonical_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+      "replay_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+      "bytes": 14587,
+      "status": "PASS_NEW_FINITE_CONTRACTS_ONLY"
+    },
+    {
+      "script": "paired_axes_checks.py",
+      "receipt": "paired_axes.json",
+      "command": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\paired_axes_checks.py",
+        "--output-dir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\isolated_output_probe"
+      ],
+      "exit_code": 0,
+      "all_JSON_fields_equal": true,
+      "exact_bytes_equal": true,
+      "canonical_unchanged": true,
+      "script_sha256": "5c3f5d86120bbe5950dc4670e2b4854412de5f8077a3fc006a97a6d46343d2eb",
+      "canonical_sha256": "ff1f8526553f2861776e9aa3f492969274a664055b8e3fb6ea41bebe079c6173",
+      "replay_sha256": "ff1f8526553f2861776e9aa3f492969274a664055b8e3fb6ea41bebe079c6173",
+      "bytes": 1792782,
+      "status": "PASS_NEW_PAIR_IDENTITY_ONLY"
+    }
+  ],
+  "artifact_sha256": {
+    "conservation.py": "df7f76db124733dd15b63239ccc419c2bdd1a1557d16d9a2fa566479a8d5b135",
+    "shared.py": "1959d27b60cfe7dc8e6211c36a0bc6b710c0fd13c80b95be55ad045092b3d4ee",
+    "exact11.py": "a41e33ae49a98f0b15e0de990337ddabcc47dc92a84894cce1141559eb1571f8",
+    "contract_witnesses.py": "1aacaf000d49772126a3a9824d9a9a4a9650eb99450b48df9f98a353da6e9c68",
+    "ap_prefix_checks.py": "b58ea3d4fc41ffb60c548a44e6f92bad2fc01d812bf3a4338d2b0d70d834f1c1",
+    "paired_axes_checks.py": "5c3f5d86120bbe5950dc4670e2b4854412de5f8077a3fc006a97a6d46343d2eb",
+    "replay_checks.py": "ef555d9738917bf0ed5fb5f7a4649ed43c5107bcfdbef3e498d5b79db0767567",
+    "previous_artifacts_sha256.json": "f86a31f72d624124338afad6932cd859dceae164a6f3422f9b8998164fcf9e05",
+    "conservation.json": "1b48bb2e3a7f8b59e87fcd141718a37cc579edbff659cfc2273f60fd3bf2ca1d",
+    "witnesses.json": "74dd4515d76d7325cd3e08ed23c84f687cbd14f773398653b3eb12a39379cf05",
+    "ap_prefix.json": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+    "paired_axes.json": "ff1f8526553f2861776e9aa3f492969274a664055b8e3fb6ea41bebe079c6173",
+    "agent1_signed_compensation.md": "41cf2ead5d3cb8aa399bfc148e1e29f0f543135ca8b225b0d92c7fb2253ed7dd",
+    "agent2_bilateral_compensation.md": "ea3d4944f5a55df6eb9bbc30fed1fb90a00d24b2c505d196d8b61559394e9830"
+  },
+  "conservation_before": {
+    "status": "PRESERVED",
+    "files": 405,
+    "round10_files": 64,
+    "round10_controller_sha256": "c48e0480b9f227c9e404c1322dacb239d81720d9242ecb45e05037df8f177b2f",
+    "baseline_sha256": "f86a31f72d624124338afad6932cd859dceae164a6f3422f9b8998164fcf9e05",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "conservation_after": {
+    "status": "PRESERVED",
+    "files": 405,
+    "round10_files": 64,
+    "round10_controller_sha256": "c48e0480b9f227c9e404c1322dacb239d81720d9242ecb45e05037df8f177b2f",
+    "baseline_sha256": "f86a31f72d624124338afad6932cd859dceae164a6f3422f9b8998164fcf9e05",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "old_passed_banks_executed": false,
+  "old_production_modified": false,
+  "bytecode_written": false,
+  "global_D_N": false,
+  "asymptotic": false,
+  "payments": false,
+  "Lean_called": false,
+  "victory": false
+}

@@ -1,0 +1,243 @@
+{
+    "schema":  "ROLE2_READ_MANIFEST22_V1",
+    "created_utc":  "2026-10-03T06:36:04.8588914Z",
+    "local_reads":  [
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\USER_DIRECTIVE.md",
+                            "bytes":  1919,
+                            "sha256":  "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+                            "scope":  "FULL",
+                            "capture":  "835ce9; reread8fad34",
+                            "detail":  "Current authoritative pivot; instructions distinguished from historical attached materials."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\PROBE_BLOCK.md",
+                            "bytes":  2405,
+                            "sha256":  "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+                            "scope":  "FULL",
+                            "capture":  "529d21; reread8fad34",
+                            "detail":  "Two concrete evidence items, all four probe questions, gates."
+                        },
+                        {
+                            "path":  "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-ideate\\SKILL.md",
+                            "bytes":  5323,
+                            "sha256":  "1b55bc6f7fc81c91a9a0627d897cb8bf9b19c580d5b1867650222db672503683",
+                            "scope":  "FULL",
+                            "capture":  "66f6bf after freshviewf4cd25; reread849967",
+                            "detail":  "Valid sequence restarted after earlier premature skill read2b721e."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent5_judge.md",
+                            "bytes":  7480,
+                            "sha256":  "fb4abdd6cb56bcbf6d8fb85abb9f4990119f3ca495faeefd6cc077c0df95e672",
+                            "scope":  "FULL",
+                            "capture":  "fcbb47",
+                            "detail":  "Read-only historical adjudication, not recompiled or numerically replayed."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\fresh_constraints.txt",
+                            "bytes":  15868,
+                            "sha256":  "1a64dce9a1036dbf50a52f4b608ebbeaeaf7f98dde34c618ae60a545b8221b25",
+                            "scope":  "FULL",
+                            "capture":  "f4cd25",
+                            "detail":  "Actual fresh helper output, no TreeAdd invoked by ROLE2."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\MellinInversion.lean",
+                            "bytes":  5852,
+                            "sha256":  "38cdb4e7f404dab6199f50b5a29a045ac2f9bbcc19d37a0430626f0914e5b49e",
+                            "scope":  "FULL",
+                            "capture":  "53747d",
+                            "detail":  "Read-only source; actual API hypotheses, no Lean probe."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Fourier\\PoissonSummation.lean",
+                            "bytes":  12133,
+                            "sha256":  "3a109c51a2db6112014f75ce380a92ab47e63c6c29500b5863c7e785c4982cd9",
+                            "scope":  "FULL",
+                            "capture":  "1c82bb",
+                            "detail":  "Read-only source; Schwartz and convergence APIs, no Lean probe."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LSeries\\RiemannZeta.lean",
+                            "bytes":  11648,
+                            "sha256":  "440f090659cdc41b5aca482e21dff0df1f7944313c94003f5a0307c6c42fde57",
+                            "scope":  "TARGETED",
+                            "capture":  "75ffaa",
+                            "detail":  "rg hits for definitions, differentiability and Dirichlet-series statement; not entire module."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LSeries\\Dirichlet.lean",
+                            "bytes":  20336,
+                            "sha256":  "a5d58ca2daca9cbe650318e25cc2b5b16307e5a4abf85df665450d8df48e4df0",
+                            "scope":  "TARGETED",
+                            "capture":  "e94d22",
+                            "detail":  "Lines325-421 read in full; existing Lambda convolution provenance disclosed; no method application or compilation."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\agent2_operator.md",
+                            "bytes":  19265,
+                            "sha256":  "be2a121cd14fe3513c9ee8ae28458a8a03f38957599d4a9bbba4e2174dbdcafe",
+                            "scope":  "FULL",
+                            "capture":  "84a979",
+                            "detail":  "Final paper report4817tokens before manifest creation."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\uniform_formula.md",
+                            "bytes":  12736,
+                            "sha256":  "720b8b2363c222321e7f50752591a8a5d0e992c119bfc3b4f445b9c80b7b7825",
+                            "scope":  "FULL",
+                            "capture":  "6bab79",
+                            "detail":  "Complete uniform derivation3185tokens, paper-only."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\lean_contract.md",
+                            "bytes":  9865,
+                            "sha256":  "9648829a0eb94f57f2a2e0e056836fac03e611d5a1d2fb21e4f453a04e953dbc",
+                            "scope":  "FULL",
+                            "capture":  "259db0",
+                            "detail":  "Final contract2467tokens, no Lean sources executed."
+                        },
+                        {
+                            "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\numeric_contract.md",
+                            "bytes":  9129,
+                            "sha256":  "943470e906efd8a77b2fbdbe50f001978e9bbaa9c20101f6ad379bcca9e03ebf",
+                            "scope":  "FULL",
+                            "capture":  "82cd13",
+                            "detail":  "Complete contract2283tokens; only two Markdown bullet spaces corrected afterwards, no mathematical change."
+                        }
+                    ],
+    "web_sources":  [
+                        {
+                            "url":  "https://math.dartmouth.edu/~specgeom/Borthwick_slides.pdf",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "Pages24,30,35-38,63; Friedrichs, continuum, Eisenstein, channel formula.",
+                            "title":  "Borthwick modular spectral geometry slides"
+                        },
+                        {
+                            "url":  "https://sites.math.rutgers.edu/~chanillo/te.pdf",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "Section2; current primary read153view0 lines513-577 identifies excluded Mobius/totient proof.",
+                            "title":  "Cakoni-Chanillo Transmission Eigenvalues and the Riemann Zeta Function"
+                        },
+                        {
+                            "url":  "https://arxiv.org/pdf/math/0412039",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "Pages1-2, equations1,2,10,11; full nonprimitive Epstein and constant term, no RH inference.",
+                            "title":  "Lagarias-Suzuki integrals of Eisenstein series"
+                        },
+                        {
+                            "url":  "https://dlmf.nist.gov/",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "2.5.E1/E2,5.4.E3,5.5.E1,5.7.E6,25.2,27.4.E12; exact formulas and domains, not whole site.",
+                            "title":  "NIST DLMF"
+                        },
+                        {
+                            "url":  "https://people.maths.ox.ac.uk/trefethen/publication/PDF/2014_149.pdf",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "Section5 pages14-16, equations5.8/5.9; outline proof not assumed.",
+                            "title":  "Trefethen-Weideman exponentially convergent trapezoidal rule"
+                        },
+                        {
+                            "url":  "https://archive.mpim-bonn.mpg.de/346/1/preprint_1990_86.pdf",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "SectionsII-III, pages2-9; current153view1 OCR ambiguous radius acknowledged, no closed tail claimed.",
+                            "title":  "Mayer Selberg zeta via continued fraction dynamics"
+                        },
+                        {
+                            "url":  "https://alainconnes.org/wp-content/uploads/selecta.ps-2.pdf",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "Introduction pages1-2 and Theorem3 pages20-23; global open qualification and local regularization.",
+                            "title":  "Connes trace formula and zeros"
+                        },
+                        {
+                            "url":  "https://www.its.caltech.edu/~matilde/qBostConnes.pdf",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "Hamiltonian logk and partition page1 only; full article/title not inspected, no KMS facts used.",
+                            "title":  "Marcolli qBostConnes"
+                        },
+                        {
+                            "url":  "https://arxiv.org/pdf/math-ph/0604013",
+                            "hash_note":  "No raw PDF downloaded; text tool captures separately hashed. TARGETED denotes content actually inspected.",
+                            "raw_pdf_sha256":  null,
+                            "scope":  "TARGETED",
+                            "portions":  "Actual155view0 pages0-7 lines0-390, boundary pairs/Weyl/resolvent formula; not full39pages.",
+                            "title":  "Behrndt-Malamud-Neidhardt Scattering matrices and Weyl functions"
+                        }
+                    ],
+    "text_tool_captures":  [
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_birman_rankone.json",
+                                   "bytes":  22099,
+                                   "sha256":  "7585d3a562a53c532cace2941a15be1aab9e5a45b8631bb2f133478cedfddb4a"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_epstein_search.json",
+                                   "bytes":  29727,
+                                   "sha256":  "11ddefdf747a7ea3d1276f99c186ddadc8f61596502111ec8ecb9cca3f30e140"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r1.json",
+                                   "bytes":  19739,
+                                   "sha256":  "08813674be26a0a0c9b94288e93867c80770ee7cf79e07a6a26e7ba5cdbfe061"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r2.json",
+                                   "bytes":  24616,
+                                   "sha256":  "36c42637b1c47c5679f9fb41443025f2efae8791825fbe531ecb15cd3c9e445f"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r3.json",
+                                   "bytes":  22402,
+                                   "sha256":  "15abe199923fd22b9695e7f9b603e9faad23e544c6f47497b1609f48ade64624"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r4.json",
+                                   "bytes":  29809,
+                                   "sha256":  "da07c24d31334fa74dfe33eb9447c5f7075b0699169835e46805c0b9ae914e74"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r5.json",
+                                   "bytes":  22259,
+                                   "sha256":  "a0582149667755fb0851cf8a43197ba7596b6d9459bbf74682ac8d860d37a1c5"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r6.json",
+                                   "bytes":  24649,
+                                   "sha256":  "bb24b3732d61dfd3e29b03ca5661b994c615e72e084793cbd48c1a68fff84841"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r7.json",
+                                   "bytes":  19862,
+                                   "sha256":  "21f47b85ba9a253d66cd8eef30a7d221ebf5037021be122a3513e706336b446f"
+                               },
+                               {
+                                   "path":  "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\web_sources_r8.json",
+                                   "bytes":  20054,
+                                   "sha256":  "bd4ea51ef9913db8db800662d37ad0922ebce0156980d5b3a12f9783b3aefaef"
+                               }
+                           ],
+    "incomplete_or_failed_reads":  [
+                                       "Zagier scanned PDF: text0 and screenshot metadata only, NOT READ; attempted download failed, no local file.",
+                                       "Original Bost-Connes scan inaccessible, no full-source claim.",
+                                       "Simon bibliography timed out154view0/1, not used.",
+                                       "Broad local rg418002 truncated, only observed hits, not FULL module."
+                                   ],
+    "historical_constraints":  "No old mathematical PASS replay, no round21 writes, no source method from forbidden family applied."
+}

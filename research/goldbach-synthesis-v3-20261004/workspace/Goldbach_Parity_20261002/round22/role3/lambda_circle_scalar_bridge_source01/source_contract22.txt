@@ -1,0 +1,57 @@
+RACCORD EXACT DU RAYON MELLIN–Λ AU POINT FIXÉ — SOURCE
+
+Statut : PENDING_DEPENDENCIES_NOT_ELABORATED. Un module distinct,
+LambdaCircleScalarRadiusBridge22, contient huit théorèmes, aucune nouvelle
+définition et huit demandes qualifiées #print axioms. Aucune compilation,
+PREP, sonde, import candidat ou évaluation numérique n'a été exécuté.
+
+Les deux imports directs sont encore prospectifs au gel :
+1. LambdaCircleTruncationEnvelope22, source bf9b8257760a20d33dd21714221401cd8fd327596f72e56c4d024200b2cb6c4c,
+   paquet ROLE4/lambda_circle_truncation_source01, 34 déclarations.
+2. ScalarRadiusRealConnectors22, source 6ba4b8d4cca0ba1f8a44438f843f6991d196623cce14b7229c34165e5122fd5f,
+   paquet ROLE4/scalar_radius_real_connectors_source01, 26 déclarations.
+Leurs revues SOURCE ne valent pas des verdicts du compilateur. Toute future
+compilation du raccord exige leurs vrais PASS indépendants, une sélection
+explicite de leur fermeture et une revue indépendante de ce nouveau module.
+Les statuts historiques des sources et des anciens lots restent conservés.
+
+Les quatre égalités écrites sont définitionnelles, pour tous a,H réels et N
+naturel. Elles identifient exactement projectionAmplitude avec radiusAmplitude,
+circleDecayFloor avec radiusDecay, lambdaCircleEpsilon avec radiusEpsilon et
+lambdaCircleCoefficientError avec radiusError. Les définitions effectivement
+lues donnent
+U(a)=exp(-a)/(1-exp(-a))², d(a)=atan(a/pi)/2,
+epsilon(a,H)=24 exp(-d(a)H)/(pi a²d(a)),
+E_N(a,H)=exp(aN)(2U(a)epsilon(a,H)+epsilon(a,H)²).
+Ces identifications ne demandent aucune hypothèse d'égalité finale. Leur
+validité arithmétique formelle à tous paramètres ne promeut pas l'estimation
+analytique hors de son domaine : celle-ci utilise a>0 et H>=0.
+
+Les deux bornes générales emploient exactement les théorèmes importés
+lambdaCircleCenteredCoefficient_error_le et
+lambdaCircleAdditiveCoefficient_error_le, puis remplacent le rayon par E.
+La seconde garde le vrai projectionAdditiveCoefficient N, défini à partir de
+la fonction de von Mangoldt de mathlib, avec toutes les puissances premières.
+Aucune périodicité de la coupure Mellin, intégrabilité, domination, égalité de
+coefficient, précision numérique ou annulation n'est offerte en prémisse ici.
+Les charges analytiques appartiennent aux preuves du module importé.
+
+Les deux dernières déclarations fixent littéralement N=100000000,
+a=1/100000000=10^-8, H=100000000000=10^11 et tau=1/1000000=10^-6.
+Elles composent la borne générale avec error_point_lt_tau et les deux gardes
+réelles pointA_pos, pointHeight_nonneg du module scalaire. Elles visent
+|C_N-C_NH(a)|<tau et sa variante à coefficient centré. Le terme epsilon² est
+conservé dans le rayon ; aucune borne finale libre n'est ajoutée.
+
+C_NH(a) est l'intégrale exacte de la trace Mellin tronquée, pas une valeur
+calculée. Le raccord ne contrôle pas la troncature de la série D(t), les deux
+quadratures, les positions, l'arrondi, le catalogue natif ou NTT/CRT. Il ne
+formalise pas le témoin rationnel multinomial S150 et ne rejoue pas l'ancien
+test scalaire. La positivité arithmétique, le retrait des PP, la frontière
+r>alpha, la cible D_N et la condition de victoire restent ouverts.
+
+Les lectures propres et les SHA sont consignés séparément. Un premier
+affichage groupé a été tronqué et un catalogue supposé catalogue22.json était
+absent dans le paquet coefficient ; ils ne sont pas revendiqués FULL. Les
+fichiers nécessaires ont été réellement relus séparément. Aucune fermeture
+transitive de cache, préparation ou inventaire d'archives n'est prétendue.

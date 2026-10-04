@@ -1,0 +1,204 @@
+{
+  "schema": "ROUND22_NATIVE02_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_READ_ONLY_NOT_IMPORTED_NOT_PREPARED",
+  "utc": "2026-10-03T18:25:43.9889363Z",
+  "author": "ROLE4",
+  "full_source_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\producer_dit22.cpp",
+      "sha256": "bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74",
+      "bytes": 11771,
+      "scope": "FULL",
+      "tool_chunk": "a97aec",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\checker_dif22.cpp",
+      "sha256": "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb",
+      "bytes": 18764,
+      "scope": "FULL",
+      "tool_chunk": "72ee64",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\run_native_once22.py",
+      "sha256": "1cb5585e6e940afa3d4d7b3b1fb40259ed39a6bd8ca13a07877cb5651ac65908",
+      "bytes": 16441,
+      "scope": "FULL",
+      "tool_chunk": "c3a44f",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\windows_job22.py",
+      "sha256": "78db7ebf8292142a1c51b2d9f27a9c64b53768d0ee7e213e5e2ac8b2ded44a31",
+      "bytes": 13397,
+      "scope": "FULL",
+      "tool_chunk": "7c9488",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\native_controls_contract22.md",
+      "sha256": "a29d3fe1473ffbb38cc0df7ae8ea3a0f8851173f3d7d7781765533daaceedea1",
+      "bytes": 7429,
+      "scope": "FULL",
+      "tool_chunk": "534d07",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build_plan22.json",
+      "sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92",
+      "bytes": 1854,
+      "scope": "FULL",
+      "tool_chunk": "534d07",
+      "import_or_execution": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\resource_observation22.json",
+      "sha256": "d6cd25735dc5c92ac05b3b04d4243535f60bd0b2ca4542aa36ed56476aadd9e7",
+      "bytes": 1126,
+      "scope": "FULL",
+      "tool_chunk": "534d07",
+      "import_or_execution": false
+    }
+  ],
+  "targeted_API_reads": [
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\winnt.h",
+      "sha256": "b1cadbd1a361cf4f8bb9315c648a4c667a129eb07561fef32b8e1ef5b1663715",
+      "bytes": 403745,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\winbase.h",
+      "sha256": "20e60d35e414f149ee5790af23d8a5551a2bb692025dd1d42071610dde5a2841",
+      "bytes": 176130,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\processthreadsapi.h",
+      "sha256": "fa2a3887fbae6c61ee3c20027101dbe71492c1c2d63ab178746b16777cff052b",
+      "bytes": 16830,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\psapi.h",
+      "sha256": "248f067fe8fdad9c66947d99a49cea439b89d31df9951681d231ee4668577267",
+      "bytes": 9313,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\jobapi.h",
+      "sha256": "6afc405b2c6363ef100a3636bb71800f92ba31d26a29a06c13e09f1a0f72b743",
+      "bytes": 513,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\include\\memoryapi.h",
+      "sha256": "f2f0fbb3f1620104d786ad02a9237200f4adb2fdeca8fc3837dfb8bd620f5f29",
+      "bytes": 12143,
+      "scope": "TARGETED",
+      "tool_chunks": [
+        "f166f8",
+        "90e4ae",
+        "6531b7",
+        "5c5f31",
+        "304020"
+      ],
+      "topics": "Job structs/flags/limits; CreateProcess suspended; STARTUPINFOEX handle list; process memory and working-set; OpenProcess and IsProcessInJob",
+      "full_text_read": false,
+      "ABI_probe": false
+    }
+  ],
+  "previous_judge_review": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\circle_native_source_review01.md",
+    "sha256": "6d6899b9c2fea5ca7fa000c85876c0a29f5dfdc0e1e412feb41c2b42541dfe1c",
+    "scope": "FULL",
+    "tool_chunk": "220ac6"
+  },
+  "closure_snapshot": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\closure_snapshot22.json",
+    "sha256": "12bd8ab8c067e4881b837689ce705e7f029826b20482b85fbc6a6d18e3717e06",
+    "scope": "BYTE_HASH_AND_METADATA_PROJECTION_NOT_FULL_TEXT",
+    "tool_chunks": [
+      "adb8ee",
+      "2cc4c2",
+      "99031c",
+      "886616"
+    ],
+    "bindings": 6332,
+    "bound_bytes": 639196429,
+    "effective_include_and_loader_closure": false
+  },
+  "conservation_receipt": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\metadata_conservation22.json",
+    "sha256": "543bcacce66349667e99aa1581c34d20354e7c080acaee1c584b4d5d919f83ff",
+    "scope": "METADATA_WRITTEN_AND_BYTES_CHECKED_FULL_READ_FOLLOWS",
+    "tool_chunk": "886616"
+  },
+  "resource_snapshot": {
+    "scope": "READ_ONLY_TEMPORAL_OBSERVATION",
+    "counter_inventory_chunk": "b81623",
+    "counter_snapshot_chunk": "eb63cf",
+    "CIM_previous_status": "ACCESS_DENIED",
+    "future_reservation": false
+  },
+  "candidate_compiler_calls": 0,
+  "native_program_calls": 0,
+  "Python_candidate_imports": 0,
+  "candidate_parser_calls": 0,
+  "preprocessor_calls": 0,
+  "version_or_help_calls": 0,
+  "ABI_probe_calls": 0,
+  "D_N": false,
+  "WIN": false
+}

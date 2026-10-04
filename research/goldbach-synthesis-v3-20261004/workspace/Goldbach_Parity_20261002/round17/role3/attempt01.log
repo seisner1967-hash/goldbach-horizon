@@ -1,0 +1,18 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:30:42: error: unexpected token 'λ'; expected '_' or identifier
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:39:6: error: failed to rewrite using equation theorems for 'GoldbachRound17.Selberg.sign'.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:56:33: error: application type mismatch
+  sdiff_subset_sdiff hrt
+argument
+  hrt
+has type
+  r ⊆ t : Prop
+but is expected to have type
+  t ⊆ t : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:90:28: error: type mismatch
+  HasSubset.Subset.antisymm (sdiff_eq_empty_iff_subset.mp h) hrt
+has type
+  t = r : Prop
+but is expected to have type
+  r = t : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:102:11: error: unknown identifier 'ite_sum'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:102:11: error: simp made no progress

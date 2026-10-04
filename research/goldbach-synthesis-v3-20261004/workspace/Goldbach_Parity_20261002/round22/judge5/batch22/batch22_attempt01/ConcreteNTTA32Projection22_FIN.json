@@ -1,0 +1,103 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact2013265921"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact2281701377"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact3221225473"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact3489660929"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.primeFact3892314113"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_2013265921"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_2281701377"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_3221225473"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_3489660929"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachConcreteNTTA32Projection22.projection_3892314113"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch22\\batch22_attempt01\\ConcreteNTTA32Projection22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch22\\sources\\ConcreteNTTA32Projection22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": true,
+  "exit_code": 0,
+  "finished_at": "2026-10-03T20:58:42.549461+00:00",
+  "launch_error": null,
+  "log_sha256": "e3d4cc4d9b9ac0ddef4fd2cef00f9ea18966af64592e74e9b431d079111d970e",
+  "module": "ConcreteNTTA32Projection22",
+  "olean_sha256": "588115c73b63fce9c946a15bd3bf7694907766d716a58ef2c5cce81f7b1ba689",
+  "source_prior_status": "SOURCE_ONLY_NOT_ELABORATED",
+  "source_sha256": "cefc07197945f1e9710895d4a01455861ae6db21365cc44dec206178e76af4c3",
+  "started_at": "2026-10-03T20:58:31.824611+00:00",
+  "status": "INDEPENDENT_LEAN_AUX_PASS",
+  "timed_out": false
+}

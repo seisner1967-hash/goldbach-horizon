@@ -1,0 +1,49 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch29\sources\ComplexGammaMellinTail22.lean:116:58: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch29\sources\ComplexGammaMellinTail22.lean:216:74: error: application type mismatch
+  ContinuousAt.comp (complexGammaTailRadius_continuousAt hw) hp
+argument
+  hp
+has type
+  ContinuousAt (fun z => (z, H)) w : Prop
+but is expected to have type
+  ContinuousAt (Prod.mk w) H : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch29\sources\ComplexGammaMellinTail22.lean:217:4: error: type mismatch, term
+  h
+after simplification has type
+  ContinuousAt ((fun q => complexGammaTailRadius q.1 q.2) ∘ Prod.mk w) H : Prop
+but is expected to have type
+  ContinuousAt (fun z => complexGammaTailRadius z H) w : Prop
+'GoldbachComplexGammaMellin22.signedGammaTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTruncated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.exponential_Ioi_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.exponential_Ioi_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.kernelCoefficient_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.rotationAngle_cos_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.kernelCoefficient_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.signedGammaTail_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.signedGammaTail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.signedGammaTail_true_eq_Iio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaInverse_sub_truncated_eq_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaInverse_truncation_error_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.rotationAngle_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.decayGap_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.kernelCoefficient_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius_continuousAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaTailRadius_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.exists_local_uniform_Gamma_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

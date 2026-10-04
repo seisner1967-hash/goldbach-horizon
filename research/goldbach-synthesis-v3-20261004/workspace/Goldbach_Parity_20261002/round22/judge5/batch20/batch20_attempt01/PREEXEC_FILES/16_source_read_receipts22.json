@@ -1,0 +1,89 @@
+{
+  "schema": "ROUND22_ROLE3_THERMAL_GAMMA_MELLIN_REVISION02_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_FROZEN_UNCOMPILED",
+  "actor": "ROLE3",
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\sources\\ThermalGammaMellinInverse22.lean",
+      "bytes": 6906,
+      "sha256": "5271bbf9a9917a3ab61c6c7e0e747af4014e214b0867a9c81b43b5aa08fccec1",
+      "scope": "FULL60c875"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\batch18_attempt01\\ThermalGammaMellinInverse22.log",
+      "bytes": 3341,
+      "sha256": "ad9e08512e1a5af905830b98d083925ec8ea4f36c5d01773864c0ca885d2395e",
+      "scope": "FULLca1767"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\thermal_gamma_mellin_revision02\\ThermalGammaMellinInverse22.lean",
+      "bytes": 7284,
+      "sha256": "daad8b5d5fb1181bfc714e1b470edd7d9a6ae07e9a1b76c384481964a42caf91",
+      "scope": "FULLa4c29e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Basic.lean",
+      "bytes": 80226,
+      "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+      "scope": "TARGETED80ac6a_LINES1425_1459"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Order\\Interval\\Set\\Defs.lean",
+      "bytes": 3361,
+      "sha256": "d5a03c2a54af8f9d9c6563151b7f8e93aff2ae0d726b84a0bb8a947a8e822c25",
+      "scope": "TARGETED80ac6a_LINES67_79"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\L1Space.lean",
+      "bytes": 72775,
+      "sha256": "7d041392ff5a34fb256b5ce97cc04b8c681919350c849647d4309bdc29af4a2a",
+      "scope": "TARGETED34a23e_LINES427_446"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean",
+      "bytes": 18040,
+      "sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "scope": "TARGETED99d597_LINES39_56_AND299_328"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22.olean",
+      "bytes": 605536,
+      "sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "scope": "SHA_ONLY_READONLY_NOT_LOADED"
+    }
+  ],
+  "actual_failure_preserved": {
+    "batch": 18,
+    "module": "ThermalGammaMellinInverse22",
+    "source": "5271bbf9a9917a3ab61c6c7e0e747af4014e214b0867a9c81b43b5aa08fccec1",
+    "log": "ad9e08512e1a5af905830b98d083925ec8ea4f36c5d01773864c0ca885d2395e",
+    "diagnostics": 7,
+    "prints": 11,
+    "recovery_sorryAx": 6,
+    "olean_exists": false,
+    "unchanged_current_hashes": true
+  },
+  "source_catalogue": {
+    "textual_scan_chunk": "65846c",
+    "Lean_parser_invocations": 0,
+    "declarations": 11,
+    "theorems": 9,
+    "definitions": 2,
+    "qualified_axiom_prints": 11,
+    "first_header_lines_and_prints_unchanged": true,
+    "changes_restricted_to_body_sites": [
+      "ContinuousAt.comp_explicit_types_point",
+      "Set.mem_Ioi.mp_typed_positivity",
+      "Function.comp_apply_and_abs_normalization"
+    ]
+  },
+  "new_Lean_compiler_invocations": 0,
+  "new_API_probes": 0,
+  "numeric_runs": 0,
+  "builder_invocations": 0,
+  "gate_created": false,
+  "PASS_claim": false,
+  "target_M_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

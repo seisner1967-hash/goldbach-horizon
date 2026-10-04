@@ -1,0 +1,16 @@
+{
+  "state": "PREPARED_FOR_ROOT_REVIEW_NO_EXECUTION_AUTHORIZED",
+  "round": 18,
+  "role": "6_CRT_annex",
+  "node": "13.10",
+  "input_registry": "input_registry.json",
+  "input_registry_sha256": "3c6302eb5166221a74f436f3ad52d8e3329745b4ce0901b272d289a93bf4f19c",
+  "parameters": {"N": 100000000, "d": 91, "h": 39, "ell": 11, "V": 10, "A": 879120, "B": 989010, "x": 20000000},
+  "checks": ["all_integer_gcd_units", "all_divisors_including_moebius_zero", "mobius_inclusion_exclusion", "density_equals_totient_ratio", "front_equals_squarefree_divisor_count", "each_divisor_each_admissible_row_unique_CRT", "direct_left_predicate_equals_full_right_class", "all_floor_fronts_at_most_one", "row_and_unit_fronts", "JR_equals_sum_real_rows", "R4a_b_c_as_premises_only", "corrected_reference_has_false_ell_H_guard"],
+  "R5_requires_all_R4_premises": true,
+  "source_onset_or_R6_to_be_applied": false,
+  "new_log_sign_positions": 0,
+  "old_producers_or_kernels_to_be_run": false,
+  "Lean_to_be_run": false,
+  "victory": false
+}

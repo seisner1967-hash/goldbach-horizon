@@ -1,0 +1,49 @@
+# Boucle 17 — rôle 6 numérique FINAL
+
+Les deux nouvelles banques sélectionnées et leurs uniques copies isolées sont terminées, avec octets et champs identiques. Exactement 799 artefacts anciens sont préservés. Un véritable échec Type II est conservé avant correction ; aucune banque PASS n’est relancée. Ce reçu porte sur deux contrats finis, sans estimation de whole D_N, sans Lean par ce rôle, score 0 et victoire fausse.
+
+## Conservation et exécutions réelles
+
+Registry SHA `1c21af8d00924e126bf541c03f13277fa699c6f8e9d3a9edbbda337b9cead420` : 701 anciens + 98 finaux 16, dont les 97 bindings du controller16 et ce controller lui-même. Controller16 SHA `10d9f68fc649d965aa5eecac96fecf5fd20f705527d42f52b855662acec02332`. L’inventaire réel détecte ajouts, suppressions et mutations ; exclusions : rounds de numéro ≥17, caches conventionnels, .arbor, .git et REPORT.md central vivant. Les 13 paires de logs/snapshots Lean16, les neuf véritables échecs, copies fraîches du Juge, sources, oleans et manifests sont inclus. Originaux PDF `bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24` et ZIP `32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd` intacts.
+
+Les helpers historiques sont vérifiés par SHA et importés inertement ; aucun ancien producteur/main/PASS, Lean, dépendance ou rendu n’est exécuté. Rough scanne seulement les valeurs m des JSON protégés, en dédupliquant les copies, puis vérifie que ses 47 kernels nouveaux ne coïncident avec aucun des 7011 m lus. Aucun ancien W n’est recalculé. Type II ne calcule aucun D/W.
+
+Préflight : un essai exit0. Rough : un essai canonique exit0, puis un seul replay isolé. Type II : essai1 exit1 réel, essai2 exit0, puis un seul replay isolé. L’échec venait du radical de hN envoyé au helper historique qui exige n≤N ; snapshot `a58db731…`, log `da05cdd2…` et failure.json sont conservés. Le source final réunit les facteurs de h,77,N, chacun dans le domaine, sans changer le contrat. Sources, snapshots, logs, gates et reçus sont liés au manifeste. Aucun échec factice, aucun essai Lean par ce rôle.
+
+Les flags `numeric_contract_launched_by_this_verification=false` et `mathematical_identity_certified_by_conservation=false` décrivent uniquement la vérification de conservation. Ils ne décrivent pas l’exécution globale des banques ; les commandes, journaux et reçus canoniques attestent ces launches. Aucun préflight ou PASS figé n’a été réécrit pour changer les flags.
+
+## Quatre formes : partition réelle et carré rationnel
+
+FINAL2 `agent2_capacity_incidence.md` SHA `2c3b2dfadb507925b0fdc92a69b5174353f8f93ba2fc188175dadf05b38ad8d7`. Tous les 201 entiers q∈[1200100,1200300] sont factorisés/testés ; 9 q premiers unitaires. Tous les e SF/unitaires sous cap82 sont examinés : 28 cœurs, e1 et e3 inclus, 252 candidats physiques distincts. Les rangs≥3 sont vides seulement à ce cap, car le minimum unitaire 231>82. Chaque n=N−eq conserve facteurs, θ première et raw Λ_N distincts, unités/bulk/Q originaux, µ, Λ(e), whole U_a et diviseurs courts complets. Les 47 D/W couvrent tous axes actifs et les 18 contrôles e1/e3 ; les 205 axes exactement nuls gardent W littéral non estimé. Properpowers : zéro dans cette fenêtre seulement.
+
+C_q=−logq−W ; C_eq=Λ(e)−µ(e)W pour e≥2. Les primitifs W exacts sont catalogués une seule fois ; C et les sommes θ/raw ont des recettes exactes par références, avec certificats de signe. U_alpha, annulus, original Q, R=min(Q,(m−1)//a), front ak<m et k1 conjoint sont présents. Les modèles S(bN) conservent les vrais b=m/p et logp/logm ; ils ne sont pas remplacés par S(N). Les principaux θ restent affines sur l’enclosure acquise 847/512≤S_N≤11011/6144, distincts des vrais kernels.
+
+La partition des 29 demandes premières e>3 est A=11, R=0, S=18. A signifie une ressource première e1/e3 présente ; R exige les deux absences ET les deux complémentaires100-rugueux ; S garde les absences avec un petit facteur. Le témoin S est le plus petit facteur de n1 s’il existe≤100, sinon celui de n3, avec priorité et face n1 rugueuse explicites. Pour e≡j modℓ, l’axe θ(n_e) est réellement nul ; son éventuel raw reste séparé. Les ressources premières sont e1=0, e3=4, comptées une fois par q.
+
+T_A et T_S, définis par max(Bθ,0), sont POSITIVE ; T_R=0. Ressources uniques POSITIVE, déficit de la demande positive après leur consommation unique POSITIVE ; la somme signée entière θ est aussi POSITIVE. Les poids négatifs, les zéros et les ressources ne sont pas reconstruits depuis des labels. A/S restent non payés au source ; R vide fini ne démontre aucune borne source.
+
+Pour chaque e>3, toutes racines des quatre formes F_e(q)=q(N−eq)(N−q)(N−3q) sont comptées modulo chaque premier≤100. Dix cœurs ont saturation modulo3 et R vide : 11, 17, 23, 29, 41, 47, 53, 59, 71, 77. Aucun G à dénominateur nul n’est formé. Pour les 16 autres, tous h/G/λ SF d≤100 sont rationnels, λ1=1 et |λ|≤1 ; diagonalisation principale exactement1/G. CRT est calculé sur chaque lcm, avec racines locales et compte exact des 201 entiers, reste |r|≤ρ. Les carrés point par point majorent le masque rough, et leur somme vaut exactement201/G+reste signé. Le majorant avec reste absolu et son CRT+1 peuvent être très faibles : leurs valeurs exactes restent publiées, aucune valeur petite n’est postulée.
+
+Trois falsifications nouvelles sont locales : absence des deux incidences n’implique pas roughness (demande réelle en S), ρℓ=4 partout omet les collisions/saturations, et appliquer C6 à toute la demande finie en omettant A/S échoue. Pour cette dernière seule promotion, logN>18 et log18>2 sont encadrés rationnellement, donc N/(8192logNloglogN)<N/294912 ; la demande mesurée dépasse ce majorant. C6/C7 et U4 source ne sont jamais appliqués à N=10^8, et leur onset u≥10^24 n’est pas réfuté.
+
+Source `rough_checks.py` SHA `5fe6120ab216dd3320798574e9043db071141802a00c2f300278c3ac5929a698` ; gate `rough.json` SHA `e4dd2c8e12cbfd34c90208ffb90745472bc8e2c3a3f777681a9d52735fcadfbb` ; replay SHA `7273b4a611a130e6d92cf14347718a2b966b8e13be8029ac788b3b76ddf2b392`. Source et gate PASS restent immuables.
+
+## Mode Type II réel et deux conventions unitaires
+
+FINAL1 SHA `446c2d8fe21c86b05fbaf0e2864e7129da1b964287f31ff4287c0a19251103a9`, addendum SHA `51735b4ecd379b8b58066d24b952ff779347af5ae8a32ecd4b4ac303b7636cac`. Entière progression b∈[974026,1136363], 162338 entiers ; j∈[12500049,24999998], X=12499950, X−77#I=−76. Les colonnes compactes donnent TOUTES les factorisations b/j, les bits exacts β/θ et des six masques, et leur indexation complète. Bornes propres : s293..451, q≤3878, bases de factorisation j≤25 millions jusqu’à5000 ; aucun ancien qcap9889 n’est transporté.
+
+β reste structurel, sans primalité de j : 181 images canoniques, chacune une fois. Les endpoints physiques q sont max(a,11s,11,ceil(bmin/s)−1)<q≤floor(bmax/s), distincts des endpoints source. Les tableaux AP comptent les vrais q premiers de ces intervalles et les douze classes unitaires modulo13v, avec retraits d’unités, caractères et résidus exacts.
+
+V10 donne v17 et19 après tests exacts ; χ13(v)χ13(w)=χ13(j) et normes≤1 sont vérifiées sur chaque couple entier j=vw. Les recettes complètes de deux progressions en b gardent les w et la multiplicité j divisible323. Cette multiplicité analytique ne devient pas une capacité physique. Les candidats premiers >v n’ont aucun tel facteur ; les 12460 axes θ et 8 properpowers unitaires sont tous examinés. Le raw conserve log(base), exposants, prix propres et aucune µ(j)^2.
+
+J^0_1/3/39=64936/43291/39961 ; J^77_1/3/39=50599/33732/31136, toutes densités A/J exactes. U39 retire b0 mod13, tandis que la primalité candidate exclut b4 ; les deux classes sont distinctes. Les valeurs du mode II h1/3/39 sont respectivement ^0 : −259563/64936, −173345/43291, −93236/39961 ; ^77 : −202939/50599, −11425/2811, −18647/7784. Ce sont des résultats mesurés, aucun signe n’avait été imposé.
+
+Les prix E77_h, L3 et L13 sont séparés pour θ, II et II_raw. U1/U2, les deux télescopages et les normalisations x/A sont exacts. L13θ est NEGATIVE dans les deux conventions ; tous les autres signes et valeurs restent au catalogue. Les références AP θ conservent classes admissibles, vraie longueur X et résidus exacts ; les principales B2/B6 ou U4 Type II conservent hV/h0, les fronts et erreurs AP/unités exacts. BV n’est pas appliqué au banc. L13II n’est pas identifié au prix θ, et aucun nouveau crédit de capacité n’est tiré des calibrations.
+
+Source `typeii_checks.py` SHA `7ec02d82d4610547456078fec5b099b8b09865aea1d9ded2041b3f90965ed1b2` ; gate `typeii.json` SHA `b3af5c0357201e2a710a2a6c761f34ec1d63d2c87fbbd459a54154f925e6ad5e` ; replay SHA `f70dbd1d68322743a99af8970760dbb433a84451862dd0b67b892f91832717d5`. Un mode Type II est mesuré ; tous coefficients Type II, Γ39 et comparaison pondérée entière restent non estimés. D/W de ce raccord restent littéraux hors de ce mode.
+
+## Portée du FINAL
+
+Le seul ledger reste D_N=B_prime^a+B_pp^a+P_band_ge2+Z_face_ge2+I_alpha+2max(e,0). P5/K2 porte sur J2bulk ENTIER avant retraits ; U4/variation restent alternatives, sans deuxième NG54. α/Q originaux, whole U_a, raw sans µ(n)^2, c1/e1/b1,−S(N)N,S(bN), cofacteurs longs, faces/célibataires/nonbulk et autres couches restent présents. Source u≥10^24 et onset BV supplémentaire inconnu restent distincts du banc fini. Les formaliseurs et le Juge ont leurs compteurs séparés ; ce rôle produit zéro module/théorème Lean et ne recompte aucune dépendance historique.
+
+Clôture en lecture seule : 390 positions de certificats sont contrôlées à partir de leurs bornes stockées, sans recomputations de signes ni de kernels. Ce compteur n’est pas un nombre de théorèmes. Les deux banques/replays sont gelés ; manifeste et reçu lient les sources/helpers, les trois essais canoniques dont l’échec réel, et toutes leurs sorties. Whole D_N≤N/(256u logu) demeure ouvert. Score0/victoryfalse ; recherche globale active.

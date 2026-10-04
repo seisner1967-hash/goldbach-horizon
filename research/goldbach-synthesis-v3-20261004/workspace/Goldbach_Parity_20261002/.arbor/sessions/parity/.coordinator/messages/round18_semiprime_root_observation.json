@@ -1,0 +1,57 @@
+{
+  "status": "ROOT_INSPECTED_EXISTING_CANONICAL_SS18_PASS_COMPILE_GATE_OPEN",
+  "checked_inputs_sha256": {
+    "semiprime_checks.py": "3c196ecbfe8d66a864bc421e0bf76bdfd95e9d7a2849a4c6c743133b5a04e23c",
+    "role6/semiprime_helpers.py": "106ba674bca2c4f111f51c8c8497a4f87e40d432610f71a4722e272530be7fe7",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a",
+    "role6/run_semiprime_once.py": "c774bdf29c6fd33697326b2363b3c4612b0aa025a974f68a906fc53125810ac7",
+    "semiprime.json": "c30c84e1a7d01cb6146caedb08e5addb81b8795d90c89875e878a6fc1e924f0c",
+    "role6/semiprime_attempt02.log": "8ab8df1c047cfefa87c08c4361cdd82d14527846b68eb4c1068ab460d97cbdd1",
+    "role6/semiprime_canonical_receipt.json": "5b0ef9f42846574090e8ba43fe20b53cb92021324bba238e6607c55521a1889f"
+  },
+  "actual_attempts": 2,
+  "actual_exit_codes": [
+    1,
+    0
+  ],
+  "first_failure": "encoding generator has no len; captured one-line correction only",
+  "stored_strict_sign_positions": 222,
+  "stored_sign_distribution": {
+    "POSITIVE": 151,
+    "NEGATIVE": 58,
+    "ZERO": 13
+  },
+  "measure_signs": {
+    "SS_raw_proper_power_signed": "ZERO",
+    "partial_SS_minus_measured_m1": "POSITIVE",
+    "positive_debt_SS_theta": "POSITIVE",
+    "signed_SS_theta": "POSITIVE",
+    "unique_m1_capacity_measured": "POSITIVE",
+    "unique_physical_union_signed": "POSITIVE"
+  },
+  "complete_partition": {
+    "SS_resource_q_count": 14,
+    "S_equals_SS_plus_exact_remainder": true,
+    "all_target_axis_rows": 7326,
+    "other_cells_unpaid": true,
+    "theta_demand_counts": {
+      "A": 258,
+      "R": 32,
+      "S": 674,
+      "SS": 40,
+      "S_minus_SS": 634
+    }
+  },
+  "physical_counts": {
+    "unique_vertex_count": 68,
+    "unique_active_kernel_count": 54,
+    "literal_zero_vertex_count": 14,
+    "existing_anchor_p0_count": 2
+  },
+  "four_finite_local_falsifiers": true,
+  "actual_selected_identity_false": false,
+  "source_bounds_not_used_finitely": true,
+  "formal4_candidate_compilation_authorized": true,
+  "root_reran_producer_signs_Lean_or_audit": false,
+  "victory": false
+}

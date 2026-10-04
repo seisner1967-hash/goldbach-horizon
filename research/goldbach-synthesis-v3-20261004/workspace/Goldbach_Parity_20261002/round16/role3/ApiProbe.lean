@@ -1,0 +1,24 @@
+import Mathlib.NumberTheory.EulerProduct.Basic
+import Mathlib.NumberTheory.Harmonic.EulerMascheroni
+import Mathlib.Topology.Algebra.InfiniteSum.Order
+import ThreeAdicPrimePairing
+
+#check Finset.prod_sdiff
+#check Finset.prod_sdiff_of_subset
+#check Finset.prod_le_one
+#check Finset.sum_le_tsum
+#check HasSum.sum_le
+#check Finset.sum_image
+#check Finset.sum_attach
+#check Finset.sum_subtype
+#check Nat.mem_smoothNumbers_of_lt
+#check tendsto_atTop_ciInf
+#check Real.log_natCast_pos
+#check HasProd.mul
+#check hasProd_prod_of_ne_finset_one
+#check Nat.mem_primeFactors
+#check Finset.prod_le_prod
+#check Finset.prod_filter
+#check Finset.prod_mono_set_of_le_one
+#check Nat.castMonoidHom
+#check MonoidHom.inv

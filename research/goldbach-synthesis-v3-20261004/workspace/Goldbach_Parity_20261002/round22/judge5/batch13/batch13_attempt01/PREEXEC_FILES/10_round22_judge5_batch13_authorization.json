@@ -1,0 +1,38 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH13_AUTHORIZATION",
+  "time_utc": "2026-10-03T16:17:43.019579+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch13_attempt01",
+  "modules": [
+    "ThermalProjectionIdentity22"
+  ],
+  "compiler_invocations_maximum": 1,
+  "source_manifest_sha256": "8325dbd4e56e470a323b83868db8ecdc2eaae8ca2ff6c97735b38288eae9992f",
+  "launcher_sha256": "1eb138a390f99cfc11b064641961d84c13c5e2354c81d1771331c1147c40a288",
+  "preparation_receipt_sha256": "cdce0d96bba32f23054595018a772501785a6285d81b16921c23c3bf2dc494be",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "ThermalProjectionEnvelope22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "ROOT_FULL_read_receipts": "Builder and audit FULL597bdb; launcher FULL3d3985; reads FULLaf2f10; prepared receipt and exact catalogue FULL445f7b; repair handoff diagnostic and reads FULL1c085a; generic gate helper FULL2fe083",
+  "source_math_review_owner": "ROLE5",
+  "large_JSON_scope": "All entries parsed and bound bytes hashed; raw FULL import source text not claimed",
+  "inputs_verified": 7997,
+  "old_judge_files_verified": 861,
+  "archives_verified": 3089,
+  "prior_modules": 74,
+  "prior_declarations": 1203,
+  "stop_first_failure": true,
+  "retries": 0,
+  "ROOT_compiler_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

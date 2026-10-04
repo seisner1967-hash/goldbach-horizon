@@ -1,0 +1,58 @@
+BUILD_ONLY04 — ROLE6, préparation metadata close, aucun build
+
+Les deux pièces indépendantes04 sont lues FULL0dc9d7 et liées sans modification :
+review04.md SHAe72b4d3b61086f9cd2293de005af4e7c21457b8fcb357cf3201c5fd717fce1ef,
+trust04.json SHAb4574128d6cc24bd15c547f3222c8456e1880cf993a036e237af9c568f13b899.
+Le helper SOURCE78d64b8f825ddf904e155fc3feef3fc165d00dc1fc5153bdbdd53ea64eb0c509
+était lu FULL5bd762 avant son unique exécution metadata autorisée par ROOT.
+
+Exécution415338/session30297 ->4ac54a exit0 :
+START2026-10-03T20:16:02.8398336Z, FIN2026-10-03T20:16:15.1800168Z.
+Arguments exacts : -IndependentReviewSha256 e72b4d3b61086f9cd2293de005af4e7c21457b8fcb357cf3201c5fd717fce1ef
+-TrustReviewSha256 b4574128d6cc24bd15c547f3222c8456e1880cf993a036e237af9c568f13b899.
+Aucun parent BUILD04, compilateur, candidat importé, programme produit,
+parseur PE/Lean, probe API ou calcul numérique n'a été lancé.
+
+Réunion gelée6332/12/29 :6372 chemins, puis ensemble exact du parent6375.
+Tous les6375 fichiers,641611253 octets, sont vérifiés par taille et SHA.
+972 fichiers runtime Python et3089 archives sont conservés. Les anciens
+handoffs BUILD01/02/03 (5/8/12 bindings), les6358 anciens inputs03,
+30 contrôles originaux/copies03 et sorties du vrai échec03 sont vérifiés
+intacts. Le brouillon metadata_error03 du Juge reste conservé séparément.
+44 bindings du manifeste demandent une capture future.
+
+build_preparation22.json,3550 octets,
+SHA4b2339ee900e2b3535ff038008936b209d6cfc10354a7f86d976516440b699ec.
+build_manifest22.json,1462487 octets,
+SHA24ea81c9ae7134f71837baed91dabc9c64f45a2438ca6223e1aedc2154a85c2f.
+metadata_conservation22.json,
+SHA584d660ee8e0ffe5a6b76626aef11ff701353c66824d2fa51e18b0351ec03806.
+metadata_only_execution22.log,
+SHA194c46dc585d081a3104cdd58590c34fb752a6de90faff309e12e061d43da0e9.
+Petites sorties lues FULLbb51a6. Manifeste lu HEADER_PROJECTION et
+PARSED_METADATA de toutes ses6375 entrées, pas RAW_FULL ; tous bytes liés.
+
+Copie ROOT-autorisée exclusive et byteidentique au chemin parent
+role4/circle_native_build_source04/build_preparation22.json :
+chunk53e34e,2026-10-03T20:16:52.9256284Z,3550 octets, même SHA4b2339ee… .
+La source ROLE6 reste conservée. Le statut BUILD_ONLY_METADATA_PREPARED
+ne constitue aucune autorisation d'exécution : une gate ROOT04 reste requise.
+Le pending antérieur286fa36c…/29236e84… demeure historique et immuable ;
+les revues sont maintenant présentes et ne sont plus une dette metadata.
+
+Les ressources correspondent exactement au parent SOURCE : deux drivers
+fixes maximum,STOP_FIRST_FAIL,zéro retry,300s partagés,Job flags8968,
+working_set_limit_flag_requested=false. Commit Job/processus2GiB et active16
+sont des limites OS demandées à relire avant reprise. Total32 est surveillé.
+rss_os_enforced=false ; RSS processus2GiB/somme RSS vivante4GiB sont des
+moniteurs échantillonnés, sans garantie universelle de RSS. Les descendants
+très courts et le parent hors Job restent hors de cette garantie de monitor.
+CWD/TEMP-TMP/output/receipt04 sont exclusifs ; aucun ancien output nettoyé.
+
+Les66 images/825 imports déclarés et119 candidats locaux/706 arêtes Windows
+restent de la metadata statique. La confiance Windows/GCC est une hypothèse
+opérationnelle explicite, sans observation de chargements effectifs ou
+fermeture universelle. Aucune API de working-set ni élévation n'est ajoutée.
+L'acceptation future des contrôles Windows et le build sont encore OPEN.
+numeric_authorization=false, produced_binary_invocations=0. Le futur build
+ne paiera ni raffinement GMP/NTT/CRT, ni coefficientN1e8, D_N ou WIN.

@@ -1,0 +1,88 @@
+{
+  "D_N": "UNPAID",
+  "Lean_invocations": 0,
+  "WIN": false,
+  "actor": "ROLE6",
+  "actual_FINISH": "2026-10-03T16:03:41.019653+00:00",
+  "actual_START": "2026-10-03T14:48:16.467623+00:00",
+  "analytic_certification_level": "PAPER_DERIVATIONS_WITH_EXACT_DOMAINS_NOT_LEAN_CERTIFICATION",
+  "artifact_bytes_observed": 668069381,
+  "bank_id": "THERMAL_GLOBAL_H1_22_SOURCEPACK02",
+  "child_exit_code": 0,
+  "child_process_FINISH": "2026-10-03T16:03:31.717554+00:00",
+  "closed_attempt_integrity": true,
+  "coefficient_N": "OPEN",
+  "control_error": null,
+  "cost_previously_measured": false,
+  "formal_H1": "OPEN",
+  "future_evaluation_level": "PAPER_AUDITED_DIRECTED_INTERVAL_PRODUCER_WITH_INDEPENDENT_STRUCTURAL_CHECKER",
+  "horizontal_volet": "UNIMPLEMENTED",
+  "independent_domain_addendum_sha256": "821d67b2f8448533d707e9e23a5c33c44c4b316b297bb7f8129ac8f7d89cb4b7",
+  "independent_review_receipt_sha256": "638b1aaba849473a1806fe3b4bb967265b35f2ecb901b4003c0b661b114a1ddf",
+  "independent_review_report_sha256": "dfdc7d3a573c9d31364e198b8db749216316bec2162b19f4533babc1d2005286",
+  "mathematical_children_started": 1,
+  "metadata_owner": "ROLE3",
+  "metadata_pre_start": "2026-10-03T14:48:03.468105+00:00",
+  "old_bank_replays": 0,
+  "output_errors": [],
+  "outputs": [
+    {
+      "bytes": 569088,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\global_thermal_result.json",
+      "sha256": "95ed53517770a7390df16fa78b32317bb15cd146da3ec0e9ef876a86bd7a09e0"
+    },
+    {
+      "bytes": 381,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\structural_checker_result.json",
+      "sha256": "10f4d49fde68193885fe79cab5aada62fa719e88de17e8d5c9ffc23f6afa561e"
+    },
+    {
+      "bytes": 495574057,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\new_nodes.ndjson",
+      "sha256": "3fe08917bfe62e5e6fd682ba6c405c7d2a9a0b440d746ba2518244bd6161aeb8"
+    },
+    {
+      "bytes": 120583189,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\numeric_data\\new_arithmetic.ndjson",
+      "sha256": "9ef22d7f5b1fe6f466ce8dd2045a94348df8d9bdac5f60be3097d4ad80e4ef45"
+    },
+    {
+      "bytes": 106026,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child.stdout.log",
+      "sha256": "e3a65552d0b85a46eae6a18d76a70aa0d0b9e74e216ca553b2e27490699ad9c9"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1411,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\actual_attempt01\\child_FIN.json",
+      "sha256": "c620aa37845fa9434ed8b5cecf92227d9d9798d1f97d20fed0c31a4d9014ad41"
+    }
+  ],
+  "post_integrity": true,
+  "postcheck_finish": "2026-10-03T16:03:40.277613+00:00",
+  "preparation_sha256": "8d08bc4db8f702a53ae3340a2ba9102969caf7ea7995aa282638cd0e84919433",
+  "resource_addendum_sha256": "2d43730db7a5c28d2e35aae1600953cf6df8a191545d83160f63ec819631e2ef",
+  "resource_failure": null,
+  "resource_limits": {
+    "catalogue_parameter_change_allowed": false,
+    "expected_arch_nodes": 12288,
+    "expected_arithmetic_integers": 999999,
+    "expected_vertical_nodes": 204800,
+    "max_artifact_bytes": 2147483648,
+    "max_children": 1,
+    "max_wall_seconds": 10800,
+    "retry_count": 0
+  },
+  "retries": 0,
+  "root_gate_sha256": "6847fff85e007303594f3257f2a027a7a4ccfb31393674338ebae22307f7a5c9",
+  "schema": "ROUND22_GLOBAL_THERMAL_ACTUAL_RECEIPT_22",
+  "scope": "ROUND22_GLOBAL_THERMAL_H1_NUMERIC_ONLY",
+  "status": "THERMAL_TRACE_NUMERICAL_AUX_PASS_SOURCE_AUDITED",
+  "structural_PASS_is_enclosure_PASS": false,
+  "structural_checker_alone_is_primitive_certificate": false,
+  "token": "b104f84087a84a55a8ebfccdf5558a21"
+}

@@ -1,0 +1,18 @@
+{
+  "round": 18,
+  "actor": "root metadata observer only",
+  "actual_tool_chunk_id": "0f44f8",
+  "exit_code": 1,
+  "exception": "KeyError: 'lean_sha256'",
+  "source_line": 24,
+  "cause": "Root incorrectly assumed authorization.json contains a lean_sha256 key. The actual frozen input manifest does contain this key and the fixed executable SHA is known.",
+  "unchanged_source_capture": "round18_judge_start_root_failed01_source_POSTEXEC.py.txt",
+  "capture_sha256": "3b6e99f8d4437dc61fec60d5a07f6ec67f96669d65f067217bb86f7422c26f7c",
+  "capture_timing": "POSTEXEC after actual failure and before correction; no PREEXEC capture is claimed",
+  "audit_executed_by_root": false,
+  "compiler_executed_by_root": false,
+  "mathematical_or_parity_failure": false,
+  "Judge_failure": false,
+  "observation_or_checkpoint_written_before_failure": false,
+  "correction": "Compare the manifest and actual executable against the verified fixed Lean SHA; do not assume a nonexistent authorization field."
+}

@@ -1,0 +1,57 @@
+The apparent singularity at s = −1 is removable. To justify the identity, average the Mellin
+step kernel over the box. Its averaged weight is continuous, zero below (1+h)−32 and one above
+1; its Mellin transform is Gh(s)/s . The decay |t|−32 gives absolute integrability and licenses
+Fubini on ℜs = c >1. Also |Mh −Mf | ≤ 64hx + 1. The +1 is the integer endpoint, not an
+omitted small error.
+On the rectangle |Gh| ≤ 2; for |t| ≥ T1, |Gh(s)| ≤ [3/ (h|t|)]32. Truncating and shifting to
+ℜs = 1 −δcrosses neither a zero of L nor the pole at s = 0. Divide every resulting fee by x/u 4.
+The ﬁve upper bounds are precisely
+A1 = 2 26u79e−3E/ 40, A2 = 6 · 224332u78e−11E/ 120,
+A3 = 6 · 332u5e−2E/ 15, A4 = 64u4e−E/ 240, A5 =u4e−u/ 8. (68)
+A1 is the shifted vertical integral: x−δ≤e−E/ 8, the inverse norm costs T 6
+1 , and the logarithmic
+integration costs at most u. A2 is the horizontal integral, whose smoothing decay T −17
+1 beats
+thatT 6
+1 . A3 is the two tails on the original absolute-convergence line, using |F (c+it)| ≤ 2u. A4
+andA5 are the box-averaging fee and its endpoint. An unsmoothed degree-one Perron estimate
+would not justify A2.
+At u0 = 10 24, u0 < 280, 54 < ℓ0 < 56 and E0 > 1012/ 564 > 100000. With e >2, the ﬁve
+fees are below
+26346−7500, 26331−9166, 2467−13333, 2326−416, 2320−10000,
+respectively, hence each is below 1/ 8. Their uniform monotonicity follows from d logE/d logu =
+1/ 2 − 4/ℓ> 2/ 5 and a − (2/ 5)bE <0 for each uae−bE above. We obtain the explicit retained
+nonprincipal bound
+|Mf (x)|<x/u 4 (N 1/ 8 ≤x ≤N ). (69)
+This proof controls 1/L itself and avoids the possible pole. It does not infer a Mertens-in-
+progressions estimate from a ψ-formula, and does not assume a bound for 1/L ′(β∗).
+12.7 Whole Type-I error accounting, including the paid primitive line
+The genuine scalar is I = ID −IW . A complementary-divisor switch, with the strict face
+retained, gives
+ID = −
+∑
+k≤Q
+(k,N )=1
+µ(k)2 ∑
+α<r≤⌊(N −1)/k ⌋
+(r,kN )=1
+µ(r) logr log(N −kr).
+The identity used is µ(k)µ(kr) = µ(k)2µ(r)1(k,r )=1. For K ≤ N 2, ordinary masked Mertens
+convolution split at √x gives, for x ≥N 1/ 4,
+|MK(x)|/x ≤ 26u2e−
+√
+u/ 48 +e−u/ 32.
+The mask-smooth coeﬃcient has reciprocal moment at most 2(1 + logK) and half-moment at
+moste12√u. The weight logt log(N −kt) has supremum at most u2 and variation at most 2u2.
+Abel summation, with both endpoints, then costs at most 4Ru2 times the normalized preﬁx
+bound. The outer sum is harmonic, not of size Q. Thus
+|ID|/N ≤ 208u5e−
+√
+u/ 48 + 8u3e−u/ 32.
+Let
+Tsing =
+∑
+1≤n<N
+(n,N )=1
+µ(N −n) logn S(nN ).
+33

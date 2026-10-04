@@ -1,0 +1,13 @@
+{
+  "status": "METADATA_FAILURE_ARCHIVED",
+  "tool_capture": "32f7bb",
+  "command": "powershell -NoProfile -ExecutionPolicy Bypass -File D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role2/freeze_metadata.ps1",
+  "exit_code": 1,
+  "source_snapshot": "metadata_failure32f7bb_source.ps1",
+  "log": "false : Le terme false n'est pas reconnu. freeze_metadata.ps1:62 win=false; d_n_gain=false; numeric_pass=false; formal_pass=false. CommandNotFoundException.",
+  "cause": "PowerShell Boolean literal must be $false; this is metadata serialization, not Lean, mathematics or a numerical bank.",
+  "correction": "Replace four false literals by $false, preserve failed source, then rerun metadata generation.",
+  "math_invocations": 0,
+  "lean_invocations": 0,
+  "numeric_invocations": 0
+}

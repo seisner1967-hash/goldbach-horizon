@@ -1,0 +1,80 @@
+{
+  "schema": "ROUND22_IDENTITY_REVISION02_SOURCE_READS",
+  "status": "SOURCE_ONLY_NOT_PREPARED",
+  "full_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_source01\\ThermalProjectionIdentity22.lean",
+      "output": "c3da78"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\projection_identity_revision02\\ThermalProjectionIdentity22.lean",
+      "output": "fa946e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\ThermalProjectionIdentity22.log",
+      "output": "64ef45"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\receipt.json",
+      "output": "8254db"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\ThermalProjectionIdentity22_FIN.json",
+      "output": "6df7ab"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch11\\batch11_attempt01\\ThermalProjectionEnvelope22_FIN.json",
+      "output": "6df7ab"
+    }
+  ],
+  "api_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals.lean",
+      "sha256": "bac1446917ac212aaea7b11701f00a8acf6b698cba75251eb8fc572b02e2699f",
+      "scope": "TARGETED",
+      "lines": "307-332,431-451",
+      "read_output": "503857/6f1ea9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Basic.lean",
+      "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b",
+      "scope": "TARGETED",
+      "lines": "477-506",
+      "read_output": "278638"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Hom\\Defs.lean",
+      "sha256": "a2fcfcb266cbbc9e1c2bbf9cd47a84aa5e8fd466c98ab2d7a95dc8a73b7fa441",
+      "scope": "TARGETED",
+      "lines": "417-429",
+      "read_output": "008a58"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Ring\\Hom\\Defs.lean",
+      "sha256": "cafe2eedee8a649520c1e7e5dbf2540d7dd39a1a41a586db9da9d8797f45bb6b",
+      "scope": "TARGETED",
+      "lines": "514-523",
+      "read_output": "008a58"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset.lean",
+      "sha256": "a67817959f6217811364eed2700027060dc7cd62188a94a583453ec41c5c6630",
+      "scope": "TARGETED",
+      "lines": "785-809,832-847",
+      "read_output": "278638/008a58"
+    }
+  ],
+  "headers_identical": true,
+  "declarations": 20,
+  "definitions": 2,
+  "theorems": 18,
+  "qualified_prints_written": 20,
+  "qualified_prints_executed": 0,
+  "forbidden_proof_token_count": 0,
+  "lean_invocations": 0,
+  "numeric_runs": 0,
+  "candidate_imports": 0,
+  "probes": 0,
+  "prepare_or_builder_runs": 0,
+  "closed_import_graph_claimed": false
+}

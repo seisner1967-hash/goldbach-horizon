@@ -1,0 +1,1062 @@
+{
+  "round": 13,
+  "status": "PARTIAL_ACTUAL_PRIME_SEMIPRIME_SWITCH_WITH_UNPAID_COMPLEMENT",
+  "recorded_at_utc": "2026-10-02T16:09:56.771448+00:00",
+  "input_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\input_sha256.json",
+  "input_manifest_sha256": "98ccb5777ef45aa9cfa053ccf314ab3013d973479693003f2ec812d715a7767f",
+  "input_sha256": {
+    "agent1_exchange.md": "2b64a5434c1dfde766436d5abd44b62a2714615992193a3f0e21bf90554d8c54",
+    "agent2_signed_operator.md": "91946283d4ca1f5021de670b16167e0a0714d0945104d30c4070ca9a26bc9c46",
+    "agent3_formalisation.md": "7fc3187840c63090bbdd180e6fe877f2c16f889022a9a7505a52673acc49f3b0",
+    "agent4_formalisation.md": "8989da2b8610afdf237ecc7292d82522c2543b3520fd0871aa726d17a2a2e813",
+    "agent6.md": "00e234c7543fbb77d41f3f7d297c15b6bb649b6d940179509f7d916e68bb6bc0",
+    "conservation.json": "91971be723dcce9eae59295bef2d93b4f95e811b53d6dd2c2ef15240b952169f",
+    "conservation.py": "e64bd0ac1a8217d0026fe3c60c2ffcd880c9d06e51696f1c6ad4ad550d48bf89",
+    "exchange.json": "d120360aeebf570b9cf75ca0922070bd40e750607e77d8362a8fff636eb6352d",
+    "exchange_checks.py": "cdb1721ce1da9e92485c337f94fe5ce9410856b34b73ac2898cd4a8155c22264",
+    "isolated_output_probe/exchange.json": "d120360aeebf570b9cf75ca0922070bd40e750607e77d8362a8fff636eb6352d",
+    "isolated_output_probe/operator.json": "d2c1cd93571533777de9c09bcc94c575098500ae59929fb3774ad1f940c9be8e",
+    "lean/HarmonicKernelVariation.lean": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+    "lean/PrimeSemiprimeSwitch.lean": "21462365bb2fe343015161fc67639ed7bbba1234cfbbd985c90bb3d591a84da4",
+    "numeric_manifest.json": "c8468f94a118555c842a47879772620bf9dca9d520a6b89cec54f2895a38f932",
+    "numerical_replay.json": "73b8b29449601032016218afa9a49873925426b9d32efe33393fe312a3163b3c",
+    "operator.json": "d2c1cd93571533777de9c09bcc94c575098500ae59929fb3774ad1f940c9be8e",
+    "operator_checks.py": "64fcc468c5df6672ac123ee6103cef9ce0739052c3367be7593bac3aea78c9f2",
+    "previous_artifacts_sha256.json": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "PROBE_BLOCK.md": "e5a16808fd9acd3759aaa85808251f283d15bf3798260a16e957ab47fcb23889",
+    "replay_checks.py": "44efe63a9216dd1755826e9a4df605b61a5de8281183287d2ba60a7612be0822",
+    "role3/attempt01.log": "23df879e954765ecd84b70fd9d6612d768bca9bd8dc86f038a790cb9ae04f4d5",
+    "role3/attempt01_source.lean.txt": "0a2a040caabaf52ada2a7de34916b49f16069cf8a14c89bc957f56b5592edac6",
+    "role3/attempt02.log": "4db9f1746c101de311f2135954250fa0eecf45ad536d6818ec86d13bbb3631eb",
+    "role3/attempt02_source.lean.txt": "0a235906457012b15dd8e8c250e386b1a894914f1907f66bb0274181b4bba2b6",
+    "role3/attempt03.log": "9aeed66b8a0ef2aa784045bdebf7a5eaf6da7fe2e099230020aa678315a1cddf",
+    "role3/attempt03_source.lean.txt": "8cf96e9351266d8415d9ba397c8351518bdf43af4a904d14051facef851704ba",
+    "role3/attempt04.log": "f4e3ca58b66572bca01e51eb58a2f4a1c2c708f38b7c9328b0c04e5eeda793e8",
+    "role3/attempt04_source.lean.txt": "9a6e39256d90fcebbedfb8ca01614ef81a7c65478ca00121faff82d60164f5db",
+    "role3/attempt05.log": "d83fafb7154483d6fdeb932b4a468fb3522d43cef536a0108461373e40a9a2a3",
+    "role3/attempt05_source.lean.txt": "9f489e69e21622eb956362e6627bf979402cd75c4f11930b94793f3187493a7f",
+    "role3/attempt06.log": "474a4bc640a94978c669ce895e9a46c760d3f3a2c68ef24e95544d6bac13c960",
+    "role3/attempt06_source.lean.txt": "21462365bb2fe343015161fc67639ed7bbba1234cfbbd985c90bb3d591a84da4",
+    "role3/build.py": "33eaa6233ca1444851f103939c8b1f4287dfccc49d53b7d929e2ca8dfc8e26a7",
+    "role3/build_receipt.json": "f2b308de3681617729f736640cf90663099812e35ff1c39df2f40a5ae7cec413",
+    "role3/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "role3/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+    "role3/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+    "role3/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+    "role3/dependency_ShortDivisorComplement.log": "88f1a49cd9ed0ee0159a87b3d7e8e3d024a8ccb4c95dfb2e5b552d541f227bf3",
+    "role3/dependency_ThreeAdicPrimePairing.log": "fb630c246c30538e6375b952f4d3ff0da0caa4af47b1cd5df6a6ae96f9cce6e5",
+    "role3/finalize.py": "fd2a2da8ff1f378ad7e2ff8a4ebe92eb75d57ad5269ac8f60d9408290f1107a8",
+    "role3/PrimeSemiprimeSwitch.olean": "ed464227c5dc43759324cd50db71a4e7ddfd54c130069342094f51b38de6cb72",
+    "role3_final_receipt.json": "4c56ef717bf7e9b75f6463d33259b385ead05ac66e38067a8930a359baf7caf2",
+    "role4/attempt01.log": "74fcf3102b4c556614daa4e53563e3944b1afafe6123e25155365efa6f887080",
+    "role4/attempt01_source.lean": "521e1f03ca3ad5d1079cfdcc6614768b2d2710248c6dd01b7a2870c7d38ae804",
+    "role4/attempt02.log": "21d8b004b7101a934afe3f2e94c0d0169dc59093ed5d02d0094eedf14b2f6028",
+    "role4/attempt02_source.lean": "73683da9ca93d58c6842a2b3a433edda73c075ff53a43352d4fb7a34d3a882b7",
+    "role4/attempt03.log": "5229efccdd84fc28d2dca52d9224ddbd5f191f42b26fb868f2c797d7f7aa5b3c",
+    "role4/attempt03_source.lean": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+    "role4/attempts.json": "646a82c392a9e877a9ef69f8b41f6aa28c5f075ea332fdd53c646046cc653798",
+    "role4/build.py": "1d0244754c50b81148b90654017354181cff2c15ec80c1ed8ec821a3db44cbb6",
+    "role4/dependencies/DependencyAudit.lean": "97f4d5704fa0987088402db5f1e5ebc54cf7a492f0edeb012219cf6c59c8a52a",
+    "role4/dependencies/DependencyAudit.olean": "6df329f5fcc69e84bbc6b0c464a33bf8b46c34c33a135c4ee7cd37d7297712e0",
+    "role4/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "role4/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+    "role4/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+    "role4/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+    "role4/dependency_axioms.log": "2fd3e8ec10d9e5de6be94c1ccc5a9042bbde7e074ae1373441ca79032e2bf723",
+    "role4/finalize.py": "ee77317949265af74ca7f57d96c19f2fe57287fbbaa003fba29452b676b84647",
+    "role4/HarmonicKernelVariation.olean": "1e5b7ec6ec7e3d4dbcc43baf083dfe8bff74eaff0ed90fd151597f1e343ebc3b",
+    "role4/ShortDivisorComplement_fresh.log": "88f1a49cd9ed0ee0159a87b3d7e8e3d024a8ccb4c95dfb2e5b552d541f227bf3",
+    "role4/ThreeAdicPrimePairing_fresh.log": "fb630c246c30538e6375b952f4d3ff0da0caa4af47b1cd5df6a6ae96f9cce6e5",
+    "role4_final_receipt.json": "59f2ed42f942d5daaf3c7b7d4d843eb26ae783de4d493c5f656ab504dbf6111c",
+    "shared.py": "2eba4c18b1013677a168e99a7e896146a63bdcff4dee1180c1c4ba2e4323b43d"
+  },
+  "external_sha256": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48"
+  },
+  "final_role_signals": {
+    "role3": {
+      "terminated": true,
+      "report": "agent3_formalisation.md",
+      "report_sha256": "7fc3187840c63090bbdd180e6fe877f2c16f889022a9a7505a52673acc49f3b0",
+      "module": "lean/PrimeSemiprimeSwitch.lean",
+      "module_sha256": "21462365bb2fe343015161fc67639ed7bbba1234cfbbd985c90bb3d591a84da4"
+    },
+    "role4": {
+      "terminated": true,
+      "report": "agent4_formalisation.md",
+      "report_sha256": "8989da2b8610afdf237ecc7292d82522c2543b3520fd0871aa726d17a2a2e813",
+      "module": "lean/HarmonicKernelVariation.lean",
+      "module_sha256": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95"
+    }
+  },
+  "numerical_audit": {
+    "status": "PASS_READ_ONLY_FROZEN_REPLAY_AUDIT",
+    "banks": {
+      "exchange.json": {
+        "status": "PASS_NEW_CROSS_KERNEL_EXCHANGE_IDENTITY_ONLY",
+        "script_sha256": "cdb1721ce1da9e92485c337f94fe5ce9410856b34b73ac2898cd4a8155c22264",
+        "receipt_sha256": "d120360aeebf570b9cf75ca0922070bd40e750607e77d8362a8fff636eb6352d",
+        "bytes": 1399652,
+        "all_fields_equal": true,
+        "all_bytes_equal": true,
+        "producer_executed_by_judge": false
+      },
+      "operator.json": {
+        "status": "PASS_NEW_ACTUAL_OPERATOR_IDENTITIES_ONLY",
+        "script_sha256": "64fcc468c5df6672ac123ee6103cef9ce0739052c3367be7593bac3aea78c9f2",
+        "receipt_sha256": "d2c1cd93571533777de9c09bcc94c575098500ae59929fb3774ad1f940c9be8e",
+        "bytes": 85959,
+        "all_fields_equal": true,
+        "all_bytes_equal": true,
+        "producer_executed_by_judge": false
+      }
+    },
+    "numerical_manifest_sha256": "c8468f94a118555c842a47879772620bf9dca9d520a6b89cec54f2895a38f932",
+    "original_replay_receipt_sha256": "73b8b29449601032016218afa9a49873925426b9d32efe33393fe312a3163b3c",
+    "producer_repeated_by_judge": false,
+    "falsifiers": {
+      "exchange.json.literal_W_difference.false_tail_omitted": "ERROR_FALSIFIER",
+      "exchange.json.false_direction_ignored": "ERROR_FALSIFIER",
+      "exchange.json.false_parent_coverage": "ERROR_FALSIFIER",
+      "exchange.json.false_bare_downward_pair_nonpositive": "ERROR_FALSIFIER",
+      "operator.json.false_small_commutator_promotion": "ERROR_FALSIFIER",
+      "operator.json.false_oriented_mass_equals_symmetrization": "ERROR_FALSIFIER",
+      "operator.json.false_full_H_positive_semidefinite": "ERROR_FALSIFIER",
+      "operator.json.false_theta_substituted_for_raw_on_long_edge": "ERROR_FALSIFIER"
+    },
+    "falsifier_count": 8,
+    "rational_signs": {
+      "exchange.json.exchanges.minus_two_joint.whole_sign": "POSITIVE",
+      "exchange.json.exchanges.minus_two_joint.principal_constant_sign": "NEGATIVE",
+      "exchange.json.exchanges.minus_two_joint.principal_S_sign": "NEGATIVE",
+      "exchange.json.exchanges.plus_two_joint.whole_sign": "POSITIVE",
+      "exchange.json.exchanges.plus_two_joint.principal_constant_sign": "POSITIVE",
+      "exchange.json.exchanges.plus_two_joint.principal_S_sign": "POSITIVE",
+      "exchange.json.exchanges.minus_two_unmatched_parent.whole_sign": "POSITIVE",
+      "exchange.json.exchanges.minus_two_unmatched_parent.principal_constant_sign": "POSITIVE",
+      "exchange.json.exchanges.minus_two_unmatched_parent.principal_S_sign": "POSITIVE",
+      "exchange.json.literal_W_difference.false_tail_omitted.sign": "NEGATIVE",
+      "exchange.json.false_direction_ignored.principal_S_sign": "POSITIVE",
+      "exchange.json.false_parent_coverage.actual_incidence": "POSITIVE",
+      "exchange.json.false_bare_downward_pair_nonpositive.actual_sign": "POSITIVE",
+      "operator.json.false_small_commutator_promotion.sign": "POSITIVE",
+      "operator.json.false_oriented_mass_equals_symmetrization.oriented_sign": "POSITIVE",
+      "operator.json.false_full_H_positive_semidefinite.sign": "NEGATIVE",
+      "operator.json.false_theta_substituted_for_raw_on_long_edge.sign": "POSITIVE"
+    },
+    "rational_sign_count": 17,
+    "strict_signs": true,
+    "floating_values": 0,
+    "asymptotic_tested": false,
+    "analytic_payment_tested": false,
+    "source_onset_tested": false
+  },
+  "numerical_audit_receipt_sha256": "079dbac93e3037db902b463f845e213c5f3c9e103530a26c49fdfca4efec3582",
+  "preservation_before": {
+    "status": "PRESERVED",
+    "files": 514,
+    "round12_files": 27,
+    "previous_protected_files": 487,
+    "controller12_sha256": "d84cca25948c6794764f3afbc7b6fa23d46faa4152fdad17f2f87da69929a400",
+    "registry_sha256": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "external": {
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+      },
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\ShortDivisorComplement.lean": {
+        "expected_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+        "actual_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447"
+      },
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\ThreeAdicPrimePairing.lean": {
+        "expected_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+        "actual_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48"
+      }
+    }
+  },
+  "preservation_after": {
+    "status": "PRESERVED",
+    "files": 514,
+    "round12_files": 27,
+    "previous_protected_files": 487,
+    "controller12_sha256": "d84cca25948c6794764f3afbc7b6fa23d46faa4152fdad17f2f87da69929a400",
+    "registry_sha256": "02c04c95e5348369b9c4577ac3a14e5b4b89e15f53e142e75a37e58b6bde7351",
+    "external": {
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+      },
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\ShortDivisorComplement.lean": {
+        "expected_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+        "actual_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447"
+      },
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\ThreeAdicPrimePairing.lean": {
+        "expected_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+        "actual_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48"
+      }
+    }
+  },
+  "previous_auxiliary_modules": 13,
+  "previous_auxiliary_conclusions": 169,
+  "lean_invoked": true,
+  "compiler": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+  "compiler_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "compiler_version": "Lean (version 4.15.0, x86_64-w64-windows-gnu, commit 11651562caae, Release)",
+  "mathlib_commit": "9837ca9d65d9de6fad1ef4381750ca688774e608",
+  "mathlib_packages": {
+    "aesop": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib",
+    "batteries": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib",
+    "importGraph": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib",
+    "LeanSearchClient": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib",
+    "mathlib": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib",
+    "plausible": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib",
+    "proofwidgets": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib",
+    "Qq": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib"
+  },
+  "fresh_build_directory": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm",
+  "lean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "reused_custom_oleans": false,
+  "modules": [
+    {
+      "module": "PrimeSemiprimeSwitch",
+      "new_module": true,
+      "original_source_sha256": "21462365bb2fe343015161fc67639ed7bbba1234cfbbd985c90bb3d591a84da4",
+      "instrumented_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\PrimeSemiprimeSwitch.lean",
+      "instrumented_source_sha256": "f50a469970d7ba219cd9393df251a4b7066996fcf37a2fdcd871844fde916f67",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\PrimeSemiprimeSwitch_original_source.txt",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\PrimeSemiprimeSwitch.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\PrimeSemiprimeSwitch.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm",
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\PrimeSemiprimeSwitch.log",
+      "log_sha256": "c9aef46796f3828e13efe8c05400f2c4db0411340a077cdf9a25b431537b941d",
+      "theorem_count": 23,
+      "theorem_names": [
+        "GoldbachRound13.PrimeSemiprimeSwitch.divisor_prime_extension",
+        "GoldbachRound13.PrimeSemiprimeSwitch.divisor_three_primes",
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_filter_large_prime",
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_filter_image",
+        "GoldbachRound13.PrimeSemiprimeSwitch.mu_prime",
+        "GoldbachRound13.PrimeSemiprimeSwitch.image_arithmetic",
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_sum_parent",
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_sum_image",
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_filter_parent",
+        "GoldbachRound13.PrimeSemiprimeSwitch.parent_arithmetic",
+        "GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_two",
+        "GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_three",
+        "GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_four",
+        "GoldbachRound13.PrimeSemiprimeSwitch.ordered_two_primes_unique",
+        "GoldbachRound13.PrimeSemiprimeSwitch.ordered_three_primes_unique",
+        "GoldbachRound13.PrimeSemiprimeSwitch.ordered_four_primes_unique",
+        "GoldbachRound13.PrimeSemiprimeSwitch.parent_canonical",
+        "GoldbachRound13.PrimeSemiprimeSwitch.image_canonical",
+        "GoldbachRound13.PrimeSemiprimeSwitch.parent_image_disjoint",
+        "GoldbachRound13.PrimeSemiprimeSwitch.actual_source_coefficients",
+        "GoldbachRound13.PrimeSemiprimeSwitch.downward_displacement",
+        "GoldbachRound13.PrimeSemiprimeSwitch.actual_source_pair",
+        "GoldbachRound13.PrimeSemiprimeSwitch.actual_admissible_switch"
+      ],
+      "definition_count": 0,
+      "definition_names": [],
+      "forbidden_executable_tokens": [],
+      "imports": [
+        "ThreeAdicPrimePairing"
+      ],
+      "status": "PASS_FRESH_COMPILE_STANDARD_AXIOMS",
+      "warnings": [],
+      "theorem_axioms": {
+        "GoldbachRound13.PrimeSemiprimeSwitch.divisor_prime_extension": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.divisor_three_primes": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_filter_large_prime": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_filter_image": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.mu_prime": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.image_arithmetic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_sum_parent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_sum_image": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.short_filter_parent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.parent_arithmetic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_two": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_three": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.prime_dvd_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.ordered_two_primes_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.ordered_three_primes_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.ordered_four_primes_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.parent_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.image_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.parent_image_disjoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.actual_source_coefficients": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.downward_displacement": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.actual_source_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.PrimeSemiprimeSwitch.actual_admissible_switch": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "definition_axioms": {},
+      "other_printed_axioms": {
+        "GoldbachRound10.ShortDivisorComplement.mu": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.shortDivisorSum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.cappedDivisorKernel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.longDivisorSum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.harmonicKernel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.sourceBracket": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.theta": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.primeIncidence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ArithmeticFunction.moebius": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ArithmeticFunction.vonMangoldt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Nat.totient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\PrimeSemiprimeSwitch.olean",
+      "olean_sha256": "ed464227c5dc43759324cd50db71a4e7ddfd54c130069342094f51b38de6cb72"
+    },
+    {
+      "module": "HarmonicKernelVariation",
+      "new_module": true,
+      "original_source_sha256": "7bc1ee92e0e9c6000fd31afdc05a0a827a254d60354d6519c145727e886b1e95",
+      "instrumented_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\HarmonicKernelVariation.lean",
+      "instrumented_source_sha256": "5a4b1fe3af1afad1715c7e5b1a36175bb85d71407b3edaad114d07d129396d98",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\HarmonicKernelVariation_original_source.txt",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\HarmonicKernelVariation.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\HarmonicKernelVariation.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm",
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\HarmonicKernelVariation.log",
+      "log_sha256": "3df886f1ac1d0e2a9aa75d60260c32d3acdf4edd371fd16ea74d6edc7b21b568",
+      "theorem_count": 16,
+      "theorem_names": [
+        "GoldbachRound13.HarmonicKernelVariation.prime_above_cap_units",
+        "GoldbachRound13.HarmonicKernelVariation.strict_front_iff",
+        "GoldbachRound13.HarmonicKernelVariation.front_filter_eq",
+        "GoldbachRound13.HarmonicKernelVariation.actual_kernel_eq_prefix",
+        "GoldbachRound13.HarmonicKernelVariation.source_front_mono",
+        "GoldbachRound13.HarmonicKernelVariation.source_cap_inactive",
+        "GoldbachRound13.HarmonicKernelVariation.interval_split",
+        "GoldbachRound13.HarmonicKernelVariation.interval_disjoint",
+        "GoldbachRound13.HarmonicKernelVariation.prefix_split",
+        "GoldbachRound13.HarmonicKernelVariation.logarithm_change",
+        "GoldbachRound13.HarmonicKernelVariation.prefix_log_change",
+        "GoldbachRound13.HarmonicKernelVariation.actual_kernel_variation",
+        "GoldbachRound13.HarmonicKernelVariation.coefficient_abs_le_reciprocal",
+        "GoldbachRound13.HarmonicKernelVariation.prefix_abs_bound",
+        "GoldbachRound13.HarmonicKernelVariation.tail_abs_bound",
+        "GoldbachRound13.HarmonicKernelVariation.actual_kernel_abs_variation"
+      ],
+      "definition_count": 5,
+      "definition_names": [
+        "GoldbachRound13.HarmonicKernelVariation.unitCoefficient",
+        "GoldbachRound13.HarmonicKernelVariation.unitPrefix",
+        "GoldbachRound13.HarmonicKernelVariation.unitLogPrefix",
+        "GoldbachRound13.HarmonicKernelVariation.unitLogTail",
+        "GoldbachRound13.HarmonicKernelVariation.sourceFront"
+      ],
+      "forbidden_executable_tokens": [],
+      "imports": [
+        "ThreeAdicPrimePairing"
+      ],
+      "status": "PASS_FRESH_COMPILE_STANDARD_AXIOMS",
+      "warnings": [],
+      "theorem_axioms": {
+        "GoldbachRound13.HarmonicKernelVariation.prime_above_cap_units": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.strict_front_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.front_filter_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.actual_kernel_eq_prefix": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.source_front_mono": [
+          "propext"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.source_cap_inactive": [
+          "propext"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.interval_split": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.interval_disjoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.prefix_split": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.logarithm_change": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.prefix_log_change": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.actual_kernel_variation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.coefficient_abs_le_reciprocal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.prefix_abs_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.tail_abs_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.actual_kernel_abs_variation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "definition_axioms": {
+        "GoldbachRound13.HarmonicKernelVariation.unitCoefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.unitPrefix": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.unitLogPrefix": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.unitLogTail": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound13.HarmonicKernelVariation.sourceFront": []
+      },
+      "other_printed_axioms": {},
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\HarmonicKernelVariation.olean",
+      "olean_sha256": "1e5b7ec6ec7e3d4dbcc43baf083dfe8bff74eaff0ed90fd151597f1e343ebc3b"
+    }
+  ],
+  "dependency_rebuilds": [
+    {
+      "module": "ShortDivisorComplement",
+      "new_module": false,
+      "original_source_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "instrumented_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ShortDivisorComplement.lean",
+      "instrumented_source_sha256": "ebb3c12ce7b6e7319421ba4f8b84daff4f01cdd35f0512eb66b2b1e05dcfa052",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ShortDivisorComplement_original_source.txt",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ShortDivisorComplement.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ShortDivisorComplement.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm",
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ShortDivisorComplement.log",
+      "log_sha256": "ed58120a9bd460747c43ac174448ae3068a265ebe40365bdeec443636a6ad0e4",
+      "theorem_count": 17,
+      "theorem_names": [
+        "GoldbachRound10.ShortDivisorComplement.mu_mul_of_coprime",
+        "GoldbachRound10.ShortDivisorComplement.mu_square_of_squarefree",
+        "GoldbachRound10.ShortDivisorComplement.mu_zero_of_not_squarefree",
+        "GoldbachRound10.ShortDivisorComplement.quotient_coprime",
+        "GoldbachRound10.ShortDivisorComplement.complementary_moebius",
+        "GoldbachRound10.ShortDivisorComplement.logarithm_complement",
+        "GoldbachRound10.ShortDivisorComplement.strict_front_iff",
+        "GoldbachRound10.ShortDivisorComplement.active_divisor_below_cap",
+        "GoldbachRound10.ShortDivisorComplement.whole_coefficient_eq_long_sum",
+        "GoldbachRound10.ShortDivisorComplement.short_plus_long",
+        "GoldbachRound10.ShortDivisorComplement.short_divisor_complement",
+        "GoldbachRound10.ShortDivisorComplement.source_cap",
+        "GoldbachRound10.ShortDivisorComplement.short_divisor_complement_source",
+        "GoldbachRound10.ShortDivisorComplement.physical_divisor_units",
+        "GoldbachRound10.ShortDivisorComplement.physical_kernel_eq",
+        "GoldbachRound10.ShortDivisorComplement.physical_short_divisor_complement_source",
+        "GoldbachRound10.ShortDivisorComplement.at_one"
+      ],
+      "definition_count": 5,
+      "definition_names": [
+        "GoldbachRound10.ShortDivisorComplement.mu",
+        "GoldbachRound10.ShortDivisorComplement.cappedDivisorKernel",
+        "GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel",
+        "GoldbachRound10.ShortDivisorComplement.shortDivisorSum",
+        "GoldbachRound10.ShortDivisorComplement.longDivisorSum"
+      ],
+      "forbidden_executable_tokens": [],
+      "imports": [
+        "Mathlib.NumberTheory.VonMangoldt",
+        "Mathlib.Tactic"
+      ],
+      "status": "PASS_FRESH_COMPILE_STANDARD_AXIOMS",
+      "warnings": [],
+      "theorem_axioms": {
+        "GoldbachRound10.ShortDivisorComplement.mu_mul_of_coprime": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.mu_square_of_squarefree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.mu_zero_of_not_squarefree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.quotient_coprime": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.complementary_moebius": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.logarithm_complement": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.strict_front_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.active_divisor_below_cap": [
+          "propext",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.whole_coefficient_eq_long_sum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.short_plus_long": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.short_divisor_complement": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.source_cap": [
+          "propext",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.short_divisor_complement_source": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.physical_divisor_units": [
+          "propext"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.physical_kernel_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.physical_short_divisor_complement_source": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.at_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "definition_axioms": {
+        "GoldbachRound10.ShortDivisorComplement.mu": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.cappedDivisorKernel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.shortDivisorSum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound10.ShortDivisorComplement.longDivisorSum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "other_printed_axioms": {},
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ShortDivisorComplement.olean",
+      "olean_sha256": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b"
+    },
+    {
+      "module": "ThreeAdicPrimePairing",
+      "new_module": false,
+      "original_source_sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+      "instrumented_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ThreeAdicPrimePairing.lean",
+      "instrumented_source_sha256": "825b88be5b0823108b6e471694db8ab0e1807fce7bcf2a0ad0785fa360f349fe",
+      "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ThreeAdicPrimePairing_original_source.txt",
+      "command_argv": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ThreeAdicPrimePairing.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ThreeAdicPrimePairing.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm",
+      "exit_code": 0,
+      "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ThreeAdicPrimePairing.log",
+      "log_sha256": "2b501a06355d6403ab915a273c82814c91b69fd40528bb8725d820202ad0d7c4",
+      "theorem_count": 19,
+      "theorem_names": [
+        "GoldbachRound11.short_filter_prime_pair",
+        "GoldbachRound11.complete_short_prime_pair",
+        "GoldbachRound11.prime_pair_arithmetic",
+        "GoldbachRound11.actual_source_bracket_j2",
+        "GoldbachRound11.mu_three_mul",
+        "GoldbachRound11.actual_three_adic_pair",
+        "GoldbachRound11.three_mul_mem_grid",
+        "GoldbachRound11.core_grid_partition",
+        "GoldbachRound11.paired_disjoint_image",
+        "GoldbachRound11.paired_union_disjoint_face",
+        "GoldbachRound11.sum_core_grid",
+        "GoldbachRound11.three_coprime_mask",
+        "GoldbachRound11.literal_bulk_front",
+        "GoldbachRound11.bulk_cap_le_front",
+        "GoldbachRound11.actual_bracket_partition",
+        "GoldbachRound11.actual_p1_partition",
+        "GoldbachRound11.principal_pair_split",
+        "GoldbachRound11.principal_face_split",
+        "GoldbachRound11.actual_principal_partition"
+      ],
+      "definition_count": 15,
+      "definition_names": [
+        "GoldbachRound11.harmonicKernel",
+        "GoldbachRound11.primeIncidence",
+        "GoldbachRound11.theta",
+        "GoldbachRound11.sourceBracket",
+        "GoldbachRound11.coreGrid",
+        "GoldbachRound11.pairedBases",
+        "GoldbachRound11.geometricFaces",
+        "GoldbachRound11.bulkCap",
+        "GoldbachRound11.pairedSourceExpression",
+        "GoldbachRound11.twinConstant",
+        "GoldbachRound11.singularSeries",
+        "GoldbachRound11.principalTerm",
+        "GoldbachRound11.entropyTerm",
+        "GoldbachRound11.commonTerm",
+        "GoldbachRound11.singletonTerm"
+      ],
+      "forbidden_executable_tokens": [],
+      "imports": [
+        "ShortDivisorComplement",
+        "Mathlib.Data.Nat.Totient"
+      ],
+      "status": "PASS_FRESH_COMPILE_STANDARD_AXIOMS",
+      "warnings": [],
+      "theorem_axioms": {
+        "GoldbachRound11.short_filter_prime_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.complete_short_prime_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.prime_pair_arithmetic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.actual_source_bracket_j2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.mu_three_mul": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.actual_three_adic_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.three_mul_mem_grid": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.core_grid_partition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.paired_disjoint_image": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.paired_union_disjoint_face": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.sum_core_grid": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.three_coprime_mask": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.literal_bulk_front": [
+          "propext",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.bulk_cap_le_front": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.actual_bracket_partition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.actual_p1_partition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.principal_pair_split": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.principal_face_split": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.actual_principal_partition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "definition_axioms": {
+        "GoldbachRound11.harmonicKernel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.primeIncidence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.theta": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.sourceBracket": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.coreGrid": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.pairedBases": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.geometricFaces": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.bulkCap": [],
+        "GoldbachRound11.pairedSourceExpression": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.twinConstant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.singularSeries": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.principalTerm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.entropyTerm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.commonTerm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "GoldbachRound11.singletonTerm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "other_printed_axioms": {},
+      "olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\judge\\fresh_a1wb0tpm\\ThreeAdicPrimePairing.olean",
+      "olean_sha256": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4"
+    }
+  ],
+  "new_lean_modules": 2,
+  "new_lean_conclusions": 39,
+  "new_definition_count": 5,
+  "cumulative_auxiliary_modules": 15,
+  "cumulative_auxiliary_conclusions": 208,
+  "written_switch_payment": {
+    "amount": "21*N^(31/32)*u^2",
+    "subset": "actually matched admissible tuples only",
+    "elementary_derivation_u_min": 16,
+    "ledger_source_u_min": "10^24",
+    "written_not_compiler_certified": true,
+    "paired_fee_only": true,
+    "unmatched_not_assumed_small": true,
+    "P5_full_bulk_J2_preserved": true
+  },
+  "semantic_open_obligations": [
+    "Coverage and unmatched physical J0/J1/J2 remain unestimated",
+    "Signed B13 operator and matching S(cN), c=1, -S(N)N and c>a remain unpaid",
+    "H2, singleton and face terms remain in their complete principal model",
+    "Physical-band BV extra effective onset and covered 2 max(e,0) remain unpaid"
+  ],
+  "old_banks_rerun": false,
+  "old_independent_modules_rerun": false,
+  "required_old_dependencies_rebuilt": true,
+  "custom_oleans_reused": false,
+  "source_adaptive_u_min": "10^24",
+  "finite_N": 100000000,
+  "global_no_go": false,
+  "victory": false,
+  "score": 0,
+  "judge_scripts_sha256": {
+    "audit-judge.ps1": "0d0a229b9b52dce59692807181e0a8bedcb43921d2dd6ee24be81a3427918c29",
+    "freeze-inputs.py": "4d347d89a987ce4db93ac61464af0b152eafd436edfe3afabb853fc3b3e5815c",
+    "run-audit.py": "e84811471884c2c841e986ae441922848aa61600771163476f73e36f763eb3c9",
+    "lean-audit.py": "dd67126c4ba6f70f49cd651be61febac0cfe5563f690503616090afed7b0d726"
+  }
+}

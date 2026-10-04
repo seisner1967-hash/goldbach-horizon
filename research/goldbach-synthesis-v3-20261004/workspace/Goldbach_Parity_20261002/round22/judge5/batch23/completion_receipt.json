@@ -1,0 +1,324 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH23",
+  "time_utc": "2026-10-03T21:41:15.257658+00:00",
+  "status": "INDEPENDENT_BATCH23_FAILED",
+  "actual_status": "INDEPENDENT_BATCH23_FAILED",
+  "attempt": "batch23_attempt01",
+  "actual_child_invocations": 1,
+  "modules_passed": 0,
+  "module_count_passed": 0,
+  "declarations_passed": 0,
+  "theorems_passed": 0,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "input_count": 7748,
+  "closed_judge_file_count": 1459,
+  "protected_archive_count": 3089,
+  "capture_count": 81,
+  "axiom_counts": {
+    "standard_triplet": 19,
+    "empty": 0,
+    "recovery": 11
+  },
+  "axiom_rows": [
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBase",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularPower",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularCharacter",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularIntegrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularDerivative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularNormalizer",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularJ",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBorder",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBase_re",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBase_mem_slitPlane",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBase_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularPower_hasDerivAt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularCharacter_hasDerivAt",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularIntegrand_hasDerivAt",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularPower_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularCharacter_continuous",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularIntegrand_continuous",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularDerivative_continuous",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularIntegrand_intervalIntegrable",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularDerivative_intervalIntegrable",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularCharacter_pi",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularCharacter_neg_pi",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularIntegral_derivative_eq",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularJ_balance",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularJ_recurrence",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBorder_explicit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBorder_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularQuadratic_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBorder_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachAngularMellinBorder22.angularBorder_one_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "module_evidence": [
+    {
+      "module": "AngularMellinBorder22",
+      "started_at": "2026-10-03T21:37:14.356259+00:00",
+      "finished_at": "2026-10-03T21:37:45.406858+00:00",
+      "exit_code": 1,
+      "declarations_passed": 0,
+      "printed_declarations": 30,
+      "source_sha256": "3719a79cfd8aa0915cb15aa57111ac0529a3fa245387ceff19540395aa5756ea",
+      "log_sha256": "a9c287bf1dff63999fa115dd1e71e9b83d142883c62b89254b522e51002fc0a9",
+      "olean_sha256": null,
+      "error_lines": [
+        80,
+        116,
+        176
+      ],
+      "warning_count": 5,
+      "failure_class": "PROOF_NORMALIZATION_API_COERCIONS"
+    }
+  ],
+  "actual_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch23\\batch23_attempt01\\receipt.json",
+  "actual_receipt_sha256": "38d1b67caed9630fa24cdb587e0e98c303ab0dc02217efb69881602561b55b6d",
+  "adjudication_sha256": "222e7cdb7e6afb98e898c50d21fff0c92c61214ccfe195a02c1db82023696718",
+  "PREEXEC_sha256": "b4d74c3467e38ef7d37b7f67be0270e428716b188c2be022908daf51270b44a6",
+  "POSTEXEC_sha256": "17a7f9691d03f99f571e13ff3a4f872c4d7f551b0aedf014e9f88a3cae343976",
+  "START_sha256": "8c6aab33e44209beaeca42615f3f9c852f79e1c52bbaaa8a4d10befeb41432fe",
+  "FIN_sha256": "0a6e468b8dd932de17fa03c74838862c34894deb7178d24513a7355bcffadc86",
+  "gate_sha256": "cf950c5c9d5b744c6d82218e1143c5ed13edefe206da8c6114006f74db1a6642",
+  "metadata_helper_sha256": "c5b0bba3ff9e77cd08c3c5739402bcc20345814f95c6c12a56e251f8f970529f",
+  "logs_read_scope": "FULL 94f926",
+  "actual_receipt_read_scope": "FULL f5b981",
+  "module_START_FIN_read_scope": "FULL 5a841c",
+  "large_PRE_POST_read_scope": "CONTROL_HEADER_PLUS_ALL_JSON_ROWS_AND_CURRENT_BYTE_HASH_NOT_RAW_FULL",
+  "compiler_invocations_in_closure": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "official_modules_before_ROOT_observation": 82,
+  "official_declarations_before_ROOT_observation": 1367,
+  "hypothetical_after_ROOT_modules": 82,
+  "hypothetical_after_ROOT_declarations": 1367,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "native_refinement_paid": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false
+}

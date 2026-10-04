@@ -1,0 +1,59 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\MultifibreObstruction.lean:171:2: error: unsolved goals
+case h.e'_3
+hp3 : Nat.Prime 3
+hp7 : Nat.Prime 7
+hp101 : Nat.Prime 101
+hm303 : muReal (3 * 101) = -1 * -1
+hm707 : muReal (7 * 101) = -1 * -1
+⊢ 1 = -1 * -1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\MultifibreObstruction.lean:172:2: error: unsolved goals
+case h.e'_3
+hp3 : Nat.Prime 3
+hp7 : Nat.Prime 7
+hp101 : Nat.Prime 101
+hm303 : muReal (3 * 101) = -1 * -1
+hm707 : muReal (7 * 101) = -1 * -1
+⊢ 1 = -1 * -1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\MultifibreObstruction.lean:197:4: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  Real.log (3 / ?m.53905)
+case intro.intro.intro.intro
+hm1 : muReal 1 = 1
+hm3 : muReal 3 = -1
+hm7 : muReal 7 = -1
+hm303 : muReal 303 = 1
+hm707 : muReal 707 = 1
+hset : Finset.Icc 1 3 = {1, 2, 3}
+hphi1 : Nat.totient 1 = 1
+hphi3 : Nat.totient 3 = 2
+hcop2 : ¬Nat.Coprime 2 ((100000000 - 303) * 100000000)
+hcop3 : Nat.Coprime 3 ((100000000 - 303) * 100000000)
+hdiv2 : ¬2 ∣ 303
+hdiv3 : 3 ∣ 303
+hpref : literalPrefix 303 = 3
+⊢ -(Real.log 1 - Real.log 101) + 1 / 2 * (Real.log 1 - Real.log 101) = Real.log 101 / 2
+'GoldbachResearch.MultifibreObstruction.firstAxis_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.MultifibreObstruction.shifted_product_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.MultifibreObstruction.archimedean_curvature_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.MultifibreObstruction.logarithmic_shift_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.MultifibreObstruction.logarithmic_curvature_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.MultifibreObstruction.semiprime_nonprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.MultifibreObstruction.semiprime_firstAxis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.MultifibreObstruction.concrete_first_axis_sites' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.MultifibreObstruction.kernel303_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.MultifibreObstruction.kernel707_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.MultifibreObstruction.closedFourSiteBlock_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.MultifibreObstruction.closedFourSiteBlock_neg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

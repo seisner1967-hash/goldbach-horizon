@@ -1,0 +1,88 @@
+{
+  "schema": "ROUND22_ROLE5_ELAMBDA_GEOMETRY36_SCIENTIFIC_SOURCE_REVIEW_HANDOFF",
+  "status": "SOURCE_SCIENTIFIC_CHAIN_COHERENT_NOT_ELABORATED",
+  "reviewer": "ROLE5",
+  "source_author": "ROLE4",
+  "created_utc": "2026-10-04T03:42:40.7477957Z",
+  "scope": "SCIENCE_READONLY_2_MODULES_41_DECLARATIONS_NO_TOOL_PREP_NO_LEAN",
+  "report": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\lambda_tail_geometry_source_review36\\review22.md",
+    "bytes": 6300,
+    "sha256": "f3e4972113fe07af80d63aa175e8e344b530e920b7a7c273f42dcf7e4451c5a3",
+    "own_FULL_chunk": "2d1789"
+  },
+  "read_receipts": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\lambda_tail_geometry_source_review36\\read_receipts22.json",
+    "bytes": 23098,
+    "sha256": "b0ee226a6074a4dbbdffa399e5177cb28598e7e2dd0f633f7ecf5d7949d5e0b7",
+    "own_FULL_chunk": "9d6785",
+    "scope": "18_OWN_FULL_FILES_13_TARGETED_APIS_54_HISTORICAL_BINDING_ROWS_6_CURRENT_READONLY_DEPENDENCIES"
+  },
+  "selected_sources": [
+    {
+      "module": "ComplexGammaMellinLambdaTail22",
+      "sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+      "declarations": 16,
+      "theorems": 12,
+      "definitions": 4,
+      "own_FULL_chunk": "b2bad7"
+    },
+    {
+      "module": "ComplexGammaCircleGeometry22",
+      "sha256": "2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5",
+      "declarations": 25,
+      "theorems": 22,
+      "definitions": 3,
+      "own_FULL_chunk": "b84a6f"
+    }
+  ],
+  "root_source_selection": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_lambda_tail_geometry_source36_selection.json",
+    "sha256": "dbbea57ff1b555ebd9093b577b95d40b0dbb40d9ea5ce5ae4d62413a104b7576",
+    "own_FULL_chunk": "6dfc66"
+  },
+  "baseline": {
+    "modules": 88,
+    "declarations": 1488,
+    "root35_observation_sha256": "dc598597605146946c2deb26bba7db1542e2b4d328821c102d89bf0d8ffcb1c7",
+    "own_FULL_chunk": "de695b"
+  },
+  "catalogue": {
+    "modules": 2,
+    "declarations": 41,
+    "theorems": 34,
+    "definitions": 7,
+    "written_prints": 41,
+    "observed_candidate_prints": 0,
+    "scope": "MANUAL_FULL_SOURCE_REVIEW_ONLY"
+  },
+  "precise_scientific_objections": [],
+  "true_readonly_import_closure": [
+    "Gamma02",
+    "Thermal20",
+    "Local26_ROW_PASS22_GLOBAL_FAILED",
+    "Holo27",
+    "Tail30",
+    "main35_SOURCE03"
+  ],
+  "old_main01_and_failed31_not_promoted": true,
+  "source_interfaces_no_new_premises": true,
+  "all_historical_binding_bytes_match": true,
+  "review_inputs_rehashed_count": 31,
+  "uniform_24_envelope_assembly": "PAPER_ONLY",
+  "exact_Cbar": "PAPER_ONLY",
+  "radius_continuity": "SOURCE_JOINT_REW_POSITIVE_H_REAL",
+  "moving_complex_tail_continuity": "NOT_DECLARED",
+  "formal_elaboration": "OPEN",
+  "PREP_invocations": 0,
+  "Lean_invocations": 0,
+  "numeric_invocations": 0,
+  "candidate_parser_invocations": 0,
+  "candidate_import_invocations": 0,
+  "new_auxiliary_credit": 0,
+  "archives_rehashed_here": 0,
+  "old_scientific_or_closed_files_modified": 0,
+  "D_N": false,
+  "WIN": false,
+  "pre_freeze_receipt_scope_clarification": "Initial receipt c88df299... FULL5cf7e9 replaced before gel by a note qualifying rg bounding ranges; final b0ee226a... FULL9d6785. No science or protected input changed."
+}

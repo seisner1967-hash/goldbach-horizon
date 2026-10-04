@@ -1,0 +1,43 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch36\sources\ComplexGammaMellinLambdaTail22.lean:110:58: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch36\sources\ComplexGammaMellinLambdaTail22.lean:118:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∫ (x : ℝ) in Ioi ?c, ?f (-x)
+w : ℂ
+H : ℝ
+⊢ ∫ (t : ℝ) in Ioi H, lambdaMellinDirichlet (-t) * complexGammaKernel w (-t) =
+    ∫ (t : ℝ) in Iio (-H), lambdaMellinDirichlet t * complexGammaKernel w t
+'GoldbachComplexGammaMellin22.signedLambdaMellinTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTailRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTruncated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinProduct_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.signedLambdaMellinTail_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.signedLambdaMellinTail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.signedLambdaMellinTail_true_eq_Iio' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinThermal_sub_truncated_eq_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinThermal_truncation_error_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTailRadius_eq_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTailRadius_continuousAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTailRadius_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.lambdaMellinTailRadius_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.exists_local_uniform_Lambda_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

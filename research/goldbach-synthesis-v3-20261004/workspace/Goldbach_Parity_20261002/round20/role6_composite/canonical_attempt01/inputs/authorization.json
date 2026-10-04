@@ -1,0 +1,102 @@
+{
+  "authorization": "ROOT20_COMPOSITE_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+  "root_authorized": true,
+  "round": 20,
+  "role": 6,
+  "node": "13.12",
+  "attempt": 1,
+  "authorized_at_utc": "2026-10-03T03:52:18.783077+00:00",
+  "all_sources_fully_read": true,
+  "canonical_new_numerical_execution_authorized": true,
+  "new_bank_only": "COMPOSITE20_13.12",
+  "code_sha256": {
+    "composite_checks.py": "51d78a603be32ca7a4fe2a99f23b22871cb21d8cb79ed9b2331d92941f4e2e81",
+    "bank.py": "77768ba2d0b97b82b22aca9dc06de9ed7b14691ca2afe05926b5e80e4541dbbd",
+    "ap.py": "9bbec647cb84f22e991159eb9143ba518fc5d9efcdccb5deff10ae680d54e82a",
+    "reference.py": "43c8c6edeef1bf444adca197bb366a2e0a27be5f3b5f576e43c5454b265b184e",
+    "storage.py": "03ab76be3988c5f6ad5d1d3e5423ec45744ab747c5439f87dcc48dfd42b9ba96",
+    "integral.py": "512f7f51841720350c407cfc754f4b0e5dad4492abcca4f2b13e745364b9e3f4",
+    "certify.py": "4d3a9acf183b86ba67b99e282cc0d3021f6b1fbb916f065a61de3723b5134ef2",
+    "arithmetic.py": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+    "outward.py": "9823d58d56a8854759cd05268c9fe4fe80b9943b34b190dd129618abbf1b43a8",
+    "run_once.py": "2c7a502f123c6b7eab29d311d8cceac0d741a509e8508a65aa8d4cfa0f803230"
+  },
+  "preparation_sha256": "06a746a70fee6f2149819265e9322d3256ea85cfe323bcf7e62c835125b4e5b0",
+  "preparation_version": 4,
+  "frozen_input_sha256": {
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\PROBE_BLOCK.md": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\previous_artifacts_sha256.json": "9f238497b57a2dc7e46e26a67cb5e6a468be8f4e6a73525449a87406304a36b5",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent1_switched_composite.md": "1c52ccfe6aaf393fe02b606ecbaeb56ae62810f0b93d6db604672ba560a241d9",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role1\\final_receipt.json": "569865f04368b6feb9fc152efcc32ec15564baccc78f7c5cb57eef7e8008b988",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role1\\input_manifest.json": "8cf3aaadd8984d8ce238cd994d2b7094c7ae121967f7e4785c7d850f04591a7f",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role1_selection.json": "76ec5e44560ee8f6b72e57079f8a0209f99a377a5a70b2b8bc257a2ead0c63d9",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\experiments\\13.12\\executor_prompt.md": "2e1aa422888fd4986e062edf8b8b9535179d48f7eec929cc1d2d1baf94e5d6af",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6\\conservation_final_receipt.json": "1116d2b99b4c66d6d5f04ef8d46475462f7560b233a5797346c351a9329d7c34",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6\\conservation_final.md": "5750066dab914a4f194d4822381a9d46f0103b5595c88f95ca8d2792afa20bfd",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_conservation_root_observation.json": "ed8d2868607450b0fc30115aa711920d0d6f4294bae72860085b871120309032",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\INPUT_HASHES.json": "5f3f8498fc1343b69ade24634d0253ec662c090641a852465e6b70059b005460",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build\\SeparatedTypeII.lean": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent1_weighted_aggregate.md": "d1cd64e27c46ad5aacfe2ee33c1b13681b77ae84e6d78c8585a3ef47acaf42bb",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent1_gap_review.md": "fa023d133e631516f29ab3680e0ec8c029c4eb85ad1e89ea30ce618dfb06b9d3",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\controller_manifest.json": "299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\final_receipt.json": "aaf671b7f891cd5d7f1337e5df4695852bc4d6843f0b087610054229a072d3bd",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\final_manifest.json": "1ae836273667f20ea28b3e9bd35cc81e17c1d55ac523ecc165376caffb4425ba",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\final.md": "fea1dca1f27eb517f87b09d65455ba98e2e8b26fade6f3623cea5ebda1392c9d",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role6_friable\\canonical_attempt01\\receipt.json": "545387c240e8d7c4d4f9c110b9ce3ef9dae0042e1452b7b51e5d1940b37045a1",
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+  },
+  "full_root_reads": {
+    "bank.py": [
+      "60aecc:first175",
+      "acd8a2:175..399",
+      "183f04:400..609",
+      "f12d16:610..end"
+    ],
+    "ap.py": [
+      "d0183f"
+    ],
+    "reference.py": [
+      "54050c:complete-source-before-preparation"
+    ],
+    "certify.py": [
+      "1c92ec"
+    ],
+    "composite_checks.py": [
+      "1c92ec"
+    ],
+    "run_once.py": [
+      "5e051d"
+    ],
+    "preparation.json": [
+      "60aecc"
+    ],
+    "storage.py": [
+      "c753bb"
+    ],
+    "integral.py": [
+      "7e7343"
+    ],
+    "arithmetic.py": [
+      "ddaf18"
+    ],
+    "outward.py": [
+      "dc8689"
+    ]
+  },
+  "policy": {
+    "one_canonical_new_execution_only": true,
+    "routine_PASS_replay": false,
+    "old_producer_execution": false,
+    "historical_Lean_compilation": false,
+    "actual_FIXED_sign_or_exact_ZERO_required": true,
+    "nonseparated_FIXED_nonzero_aborts": true,
+    "principal_integral_SN_box_scope_distinct": true,
+    "source_onset_or_budget_not_inferred_from_finite_bank": true,
+    "all_33_PREEXEC_captures_START_exit_binarylog_and_after_bytes_required": true
+  },
+  "root_lean_executions": 0,
+  "root_mathematical_executions": 0,
+  "source_budget_established": false,
+  "victory": false
+}

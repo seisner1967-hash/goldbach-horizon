@@ -1,0 +1,8 @@
+{
+  "node_id": "13.2",
+  "hypothesis": "Mechanism: Flot signé sur le graphe de suppression de facteurs premiers conservant le bulk et les vrais kernels J0/J1/J2.\nHypothesis: Les demandes positives seraient couvertes par les capacités négatives dans chaque composant de noyau de grands facteurs ; cette version locale universelle est testée avant Lean, sans hypothèse de masse Goldbach.\nObservable: Coupes fermées, demande moins capacité, étoile entière c=1,3,7 et deux grands facteurs à N=10^8, enfants admissibles et nonbulk réellement conservés.\nConflicts: Les transports4 et13.1 ne paient pas entropie/célibataires/faces ; aucune arête nonbulk payée par un corner réutilisé ni nouveau crédit rough. Une réfutation finie ne teste pas le seuil source.",
+  "score": 0.0,
+  "insight": "Judge12 readonly confirms all three true incidences and kernels in complete star c1/3/7: actual/model defect positive. Keeping bulk under prime deletion preserves large-factor core, so component cannot reach prime-pair capacity. Universal local Hall promotion fails; finite witness does not refute future source-threshold-only/global-flow estimates. Nonbulk complements remain unpaid; no Lean12.",
+  "result": "LOCAL_UNIVERSAL_BULK_COMPONENT_CAPACITY_REJECTED_BEFORE_LEAN; exact finite gate/audit pass; no global impossibility or parity gain.",
+  "branch": "round12/star_detector_checks.py"
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "ROUND22_ROLE3_GAMMA_EXP_TAIL_BRIDGE_INDEPENDENT_SOURCE_READS",
+  "reviewer": "/root/round22_formal3_prepare",
+  "status": "SOURCE_REVIEW_ONLY_NO_ELABORATION",
+  "time_utc": "2026-10-04T01:24:24.5614371Z",
+  "review_report": {
+    "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role3/gamma_exp_tail_bridge_source_review01/review22.txt",
+    "bytes": 3097,
+    "sha256": "8d7eaef4972475be3c4edc884d03613e9c6480cae807218d101dae3369d5c0fb"
+  },
+  "reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinExpTailBridge22.lean",
+      "bytes": 1193,
+      "sha256": "4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c",
+      "scope": "FULL",
+      "evidence_tool_chunk": "cc3e38"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/pending_bridge_catalog22.json",
+      "bytes": 826,
+      "sha256": "86164d7575b79c3ace42ebb1f56d2b88be0078873f76c0998175c1c0ae6604cb",
+      "scope": "FULL",
+      "evidence_tool_chunk": "cc3e38"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/sources/ComplexGammaMellinHolomorphy22.lean",
+      "bytes": 14158,
+      "sha256": "b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2",
+      "scope": "TARGETED",
+      "evidence_tool_chunk": "d5df65",
+      "line_ranges": [
+        "226-230"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/sources/ComplexGammaMellinTail22.lean",
+      "bytes": 13443,
+      "sha256": "e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0",
+      "scope": "TARGETED",
+      "evidence_tool_chunk": "d5df65",
+      "line_ranges": [
+        "15-30",
+        "125-129",
+        "162-166"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch27_closed_observation.json",
+      "bytes": 1381,
+      "sha256": "7ae697adeb55bd7aa124c19ed69e7ef1d0b2cb05b10fc386f4cd55a312478f2f",
+      "scope": "FULL_PREVIOUS_TASK",
+      "evidence_tool_chunk": "58923a"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch30_closed_observation.json",
+      "bytes": 1426,
+      "sha256": "7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292",
+      "scope": "FULL_PREVIOUS_TASK",
+      "evidence_tool_chunk": "fbc37e"
+    }
+  ],
+  "paid_readonly_oleans_metadata": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/batch27_attempt01/ComplexGammaMellinHolomorphy22.olean",
+      "bytes": 431840,
+      "sha256": "f831358e15e1a088988b8bc102a3f7ca23df4a32c3210cfb072273ae4abcccbf"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch30/batch30_attempt01/ComplexGammaMellinTail22.olean",
+      "bytes": 401736,
+      "sha256": "168112f8064e3355b387c53dc50b82fac024309acdbd68bbbd0d1ed4060d2ad5"
+    }
+  ],
+  "written_bridge_theorems": 2,
+  "written_bridge_axiom_prints": 2,
+  "observed_bridge_axiom_prints": 0,
+  "mainLambda_assumed_paid": false,
+  "scientific_source_modifications": 0,
+  "compiler_invocations": 0,
+  "numeric_invocations": 0,
+  "candidate_imports": 0,
+  "candidate_parser_invocations": 0,
+  "PREP": false,
+  "gate": false,
+  "human07_frozen": false,
+  "D_N_paid": false,
+  "WIN": false,
+  "scope_limit": "Source and exact paid signatures only; no transitive import closure or loader claim"
+}

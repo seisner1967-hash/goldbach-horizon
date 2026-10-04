@@ -1,0 +1,17 @@
+{
+  "attempt": 7,
+  "module": "PhysicalCompositeSubtraction",
+  "actual_lean_exit_code": 1,
+  "classification": "TECHNICAL_BINDER_PRECEDENCE_AND_BRANCH_ELABORATION_FAILURE",
+  "actual_log": "round20/role3/attempt07_PhysicalCompositeSubtraction.log",
+  "actual_receipt": "round20/role3/attempt07_PhysicalCompositeSubtraction_receipt.json",
+  "errors": [
+    {"line": 48, "obligation": "rawLambda minus theta as one finite-sum summand", "repair": "Parenthesize the difference to keep q within the sum binder"},
+    {"lines": [123, 124], "obligation": "nonnegativity of the composite branch", "repair": "Explicit candidate Prime split and explicit candidate parameter in the weight nonnegativity lemma"},
+    {"line": 129, "obligation": "raw equals theta plus the proper-power difference", "repair": "Consequential repair from the corrected summand binder"}
+  ],
+  "mathematical_identity_changed": false,
+  "rawLambda_prime_powers_retained": true,
+  "parity_obstacle_inferred_from_this_failure": false,
+  "victory": false
+}

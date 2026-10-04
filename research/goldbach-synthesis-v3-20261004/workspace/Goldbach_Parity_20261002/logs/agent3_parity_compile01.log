@@ -1,0 +1,29 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\lean\ParityWeights.lean:113:6: error: linarith failed to find a contradiction
+case h
+p q r : ℕ
+hp : Nat.Prime p
+hq : Nat.Prime q
+hr : Nat.Prime r
+h : Nat.Prime (p * q * r)
+hd : p ∣ p * q * r
+hprod : p = p * q * r
+a✝ : p ≥ p * q * r
+⊢ False failed
+'GoldbachResearch.ParityWeights.weights_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.weights_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.muReal_mul_of_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.odd_bilinear_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.even_bilinear_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.muReal_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.prime_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.semiprime_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.triprime_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.oddWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.evenWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.oddWeight_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.weights_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.ParityWeights.triprime_nonprime' depends on axioms: [propext, sorryAx, Quot.sound]
+'GoldbachResearch.ParityWeights.parity_detector_retains_composite' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,70 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:94:13: error: don't know how to synthesize implicit argument 'x'
+  @DifferentiableAt.const_cpow ℂ instNormedAddCommGroup InnerProductSpace.toNormedSpace (fun y => -(1 - id y)) ?m.22711
+    (2 * ↑Real.pi) (DifferentiableAt.neg (DifferentiableAt.const_sub differentiableAt_id 1)) (Or.inl hbase)
+context:
+s : ℂ
+hs : s.re < 0
+hg : DifferentiableAt ℂ Gamma (1 - s)
+hbase : 2 * ↑Real.pi ≠ 0
+⊢ ℂ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:95:30: error: don't know how to synthesize implicit argument 'b'
+  @Or.inl (2 * ↑Real.pi ≠ 0) (-(1 - id ?m.22711) ≠ 0) hbase
+context:
+s : ℂ
+hs : s.re < 0
+hg : DifferentiableAt ℂ Gamma (1 - s)
+hbase : 2 * ↑Real.pi ≠ 0
+⊢ Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:94:14: error: don't know how to synthesize implicit argument 'x'
+  @DifferentiableAt.neg ℂ DenselyNormedField.toNontriviallyNormedField ℂ instNormedAddCommGroup
+    InnerProductSpace.toNormedSpace ℂ instNormedAddCommGroup InnerProductSpace.toNormedSpace (fun y => 1 - id y)
+    ?m.22711 (DifferentiableAt.const_sub differentiableAt_id 1)
+context:
+s : ℂ
+hs : s.re < 0
+hg : DifferentiableAt ℂ Gamma (1 - s)
+hbase : 2 * ↑Real.pi ≠ 0
+⊢ ℂ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:94:15: error: don't know how to synthesize implicit argument 'x'
+  @DifferentiableAt.const_sub ℂ DenselyNormedField.toNontriviallyNormedField ℂ instNormedAddCommGroup
+    InnerProductSpace.toNormedSpace ℂ instNormedAddCommGroup InnerProductSpace.toNormedSpace id ?m.22711
+    differentiableAt_id 1
+context:
+s : ℂ
+hs : s.re < 0
+hg : DifferentiableAt ℂ Gamma (1 - s)
+hbase : 2 * ↑Real.pi ≠ 0
+⊢ ℂ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:94:35: error: don't know how to synthesize placeholder
+context:
+s : ℂ
+hs : s.re < 0
+hg : DifferentiableAt ℂ Gamma (1 - s)
+hbase : 2 * ↑Real.pi ≠ 0
+⊢ ℂ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:94:7: error: failed to infer 'have' declaration type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:82:39: error: unsolved goals
+s : ℂ
+hs : s.re < 0
+hg : DifferentiableAt ℂ Gamma (1 - s)
+hbase : 2 * ↑Real.pi ≠ 0
+⊢ DifferentiableAt ℂ (fun s => 2 * (2 * ↑Real.pi) ^ (-(1 - s)) * Gamma (1 - s) * cos (↑Real.pi * (1 - s) / 2)) s
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:124:38: error: unknown identifier 'add_neg_eq_sub'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:124:4: error: type mismatch, term
+  hd
+after simplification has type
+  deriv riemannZeta s =
+    deriv contourChi s * (riemannZeta ∘ HSub.hSub 1) s + -(contourChi s * (deriv riemannZeta (1 - s) * 1)) : Prop
+but is expected to have type
+  deriv riemannZeta s = deriv contourChi s * riemannZeta (1 - s) - contourChi s * deriv riemannZeta (1 - s) : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch06\sources\ZetaReflection22.lean:131:2: error: no goals to be solved
+'GoldbachContinuous22.contourChi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contourZeta_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contour_cos_ne_zero_in_left_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contourChi_ne_zero_in_left_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contourZeta_ne_zero_in_left_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contourChi_differentiableAt' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.contourZeta_logDeriv_reflection' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

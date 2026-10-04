@@ -1,0 +1,16 @@
+{
+  "status": "POSTEXEC_ROOT_METADATA_READER_FAILURE",
+  "actual_chunk": "e31ee1",
+  "actual_exit_code": 1,
+  "operation": "Read rank19 stored producer.log as a single JSON document",
+  "actual_error": "json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 143)",
+  "cause": "The log contains ten progress JSON objects followed by a final JSON object; it is not one JSON document.",
+  "source_capture": "round19_rank_root_reader_failed01_source_POSTEXEC.py.txt",
+  "capture_phase": "POSTEXEC honest, no retrospective PREEXEC",
+  "root_gate_created_before_failure": false,
+  "math_producer_or_Lean_execution": 0,
+  "numeric_result_changed": false,
+  "numeric_PASS_replayed": false,
+  "next_reader_fix": "Decode consecutive stored JSON objects and select the final object",
+  "victory": false
+}

@@ -1,0 +1,43 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalDemand.lean:47:6: error: type mismatch, term
+  abs_add (ArithmeticFunction.vonMangoldt e) (-mu e * harmonicKernel ((N - 1) / alpha) a N (N - e * q) (e * q))
+after simplification has type
+  |ArithmeticFunction.vonMangoldt e + -mu e * harmonicKernel ((N - 1) / alpha) a N (N - e * q) (e * q)| ≤
+    |ArithmeticFunction.vonMangoldt e| + |-mu e * harmonicKernel ((N - 1) / alpha) a N (N - e * q) (e * q)| : Prop
+but is expected to have type
+  |ArithmeticFunction.vonMangoldt e + -(mu e * harmonicKernel ((N - 1) / alpha) a N (N - e * q) (e * q))| ≤
+    |ArithmeticFunction.vonMangoldt e| + |mu e * harmonicKernel ((N - 1) / alpha) a N (N - e * q) (e * q)| : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalDemand.lean:66:45: error: application type mismatch
+  mul_le_mul hf hc (abs_nonneg (physicalCoefficient alpha a N e q)) ?m.79463
+argument
+  ?m.79463
+has type
+  0 ≤ Real.log ↑N : Prop
+but is expected to have type
+  0 ≤ 1 * Real.log ↑N : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalDemand.lean:80:45: error: application type mismatch
+  mul_le_mul hf hc (abs_nonneg (physicalCoefficient alpha a N e q)) ?m.87657
+argument
+  ?m.87657
+has type
+  0 ≤ Real.log ↑N : Prop
+but is expected to have type
+  0 ≤ 1 * Real.log ↑N : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalDemand.lean:102:98: error: typeclass instance problem is stuck, it is often due to metavariables
+  Preorder ?m.103853
+'GoldbachRound20.Friable.actual_cofactor_rank_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_physicalCoefficient_abs_le_seven_log_sq' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_theta_demand_abs_le_seven_log_cube' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_raw_demand_abs_le_seven_log_cube' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_friable_rank_theta_demand_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

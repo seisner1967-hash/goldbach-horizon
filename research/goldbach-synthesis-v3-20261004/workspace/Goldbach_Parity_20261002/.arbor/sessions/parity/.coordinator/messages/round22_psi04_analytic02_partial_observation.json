@@ -1,0 +1,37 @@
+{
+  "schema": "ROUND22_PSI04_ANALYTIC02_PARTIAL_AUTHOR_OBSERVATION",
+  "time_utc": "2026-10-03T11:30:38.391118+00:00",
+  "receipts": [
+    "73580f763b089606dbe488720d86920658dacad1b100657c26b9c8cc2cf4209b",
+    "d0bb6fda4cbdb187bea72c72423764a888c6a9cbd8ba87112e9d2519184dcbab"
+  ],
+  "ROOT_FULL_reads": {
+    "psi_receipt": "c0c379",
+    "Dup_log": "f5f546",
+    "analytic_receipt": "a71330",
+    "Contour_log": "f5c6c8"
+  },
+  "author_PASS_pending_judge": {
+    "Beta": 23,
+    "Integral_P1": 10,
+    "GammaBox": 12
+  },
+  "author_technical_FAIL_modules": [
+    "Duplication",
+    "GammaContour"
+  ],
+  "Dup_diagnostic": "four tactic errors: numeral projections, unreduced comp/id, quotient inverse simplification",
+  "Contour_diagnostic": "ContinuousAt.comp base point inference; absent Real.integral_exp_neg_Ioi and rewrite cascade",
+  "Mellin_modules_not_invoked": 2,
+  "psi_inputs_verified": 74,
+  "psi_cache_verified": 6476,
+  "analytic_inputs_verified": 6524,
+  "analytic_captures_verified": 24,
+  "archives_verified": 3089,
+  "official_count_delta": 0,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

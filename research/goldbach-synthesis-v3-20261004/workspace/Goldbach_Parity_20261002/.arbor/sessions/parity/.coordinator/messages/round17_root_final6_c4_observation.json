@@ -1,0 +1,45 @@
+{
+  "status": "ROOT_FROZEN_C4_ANNEX_BINDINGS_AND_STORED_CERTIFICATES_VERIFIED",
+  "bindings": 15,
+  "report_separate": true,
+  "cores": 16,
+  "new_positions": 64,
+  "signs": {
+    "POSITIVE": 54,
+    "NEGATIVE": 10
+  },
+  "condition_true": [
+    7,
+    21,
+    31,
+    43,
+    57,
+    73
+  ],
+  "condition_false": [
+    13,
+    19,
+    33,
+    37,
+    39,
+    51,
+    61,
+    67,
+    69,
+    79
+  ],
+  "all_tails_retained": [
+    105,
+    210
+  ],
+  "unique_canonical_and_replay_exit0": true,
+  "copies_bytes_and_fields_identical": true,
+  "initial33_unchanged": true,
+  "initial390_not_recounted": true,
+  "numeric_or_sign_producer_reran_by_root": false,
+  "source_C4_C6_not_applied": true,
+  "report_sha256": "e92c7d210b11743e0079166c29d47195e2ab7a4b36bf110ab0528b991e192bb0",
+  "manifest_sha256": "9671e8f8c3ffb32101544103cf57056f6c643aed92d2e86ef4dfadc05b8d6198",
+  "receipt_sha256": "e6b3d9f8d1d3dc3374b6be67368cd831f43e941f0dd354f3e365635eb8355e91",
+  "victory": false
+}

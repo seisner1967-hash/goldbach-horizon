@@ -1,0 +1,38 @@
+{
+  "schema": "ROUND22_ROOT_BUILD_ONLY04_CLOSED_OBSERVATION",
+  "time_utc": "2026-10-03T20:25:59.599650+00:00",
+  "status": "NATIVE_BUILD_EXIT0",
+  "parent_invocations": 1,
+  "compiler_driver_invocations": 2,
+  "compiler_exit_codes": [
+    0,
+    0
+  ],
+  "produced_binary_files": 2,
+  "binary_sha256": [
+    "44d2d571a0190f7dbbb975225559d16a012693bda4197738e6311c14892cadb0",
+    "2e7e095c2972fea09ee26500df9dae207ff52497d0f61f2052d76d464ebe6990"
+  ],
+  "produced_binary_invocations": 0,
+  "retries": 0,
+  "input_bindings_verified": 6375,
+  "captures_originals_and_copies_verified": 47,
+  "archives_verified": 3089,
+  "ROLE6_closure_sha256": "dd506cebebcdbf7c75fd138d26cfb744552bdd6912e3cc37fbaa3a58fd8c0c15",
+  "ROOT_reads": "d01659,dbfc87,9a6d92,a074a7,6d973d,4c8110-header-only,0d5b0a",
+  "large_catalogue_scope": "all entries parsed and bound bytes rehashed; no raw FULL source claim",
+  "official_modules": 80,
+  "official_declarations": 1339,
+  "auxiliary_Lean_count_change": 0,
+  "rss_os_enforced": false,
+  "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM",
+  "job_limit_flags_requested": 8968,
+  "ROOT_compiler_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "numeric_authorization": false,
+  "coefficient_N": false,
+  "D_N": false,
+  "WIN": false
+}

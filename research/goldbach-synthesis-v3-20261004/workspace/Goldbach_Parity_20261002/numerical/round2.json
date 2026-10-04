@@ -1,0 +1,1149 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "alpha": 100,
+  "Q": 999999,
+  "arithmetic": "Integers and exact Fraction coefficients of symbolic logs",
+  "checks": {
+    "rough_prime_detection_multiplicity_weight": 24371,
+    "Omega_1": 893,
+    "Omega_2": 1678,
+    "nonsquarefree_weight_cases": 22978,
+    "Omega_3": 21800,
+    "all_rough_prime_squares_below_N": 1204,
+    "all_rough_prime_cubes_below_N": 65,
+    "all_rough_mixed_p_squared_q_below_N": 21648,
+    "symbolic_local_switch_counterexample": 1,
+    "rough_r_only_weight_counterexample": 1
+  },
+  "total_cases": 94639,
+  "chen_domain": "1<n<(alpha+1)^4, every prime divisor of n>alpha, Omega counts multiplicities",
+  "finite_domains": {
+    "tiny_n_inclusive": [
+      2,
+      3000
+    ],
+    "deterministic_additive_samples": 4096,
+    "candidate_axes": 8192,
+    "exhaustive_repeated_support": "all p^2,p^3,p^2*q<N with primes p,q>100 and p!=q"
+  },
+  "selected_repeated_prime_examples": [
+    {
+      "n": 101,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 10201,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1030301,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1030301,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1050703,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          2
+        ],
+        [
+          103,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1091507,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          2
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1111909,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          2
+        ],
+        [
+          109,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1295527,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          2
+        ],
+        [
+          127,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 103,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 10609,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1092727,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1071509,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ],
+        [
+          103,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1092727,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1135163,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          2
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1156381,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          2
+        ],
+        [
+          109,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1347343,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          2
+        ],
+        [
+          127,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 107,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 11449,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1225043,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1156349,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ],
+        [
+          107,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1179247,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          1
+        ],
+        [
+          107,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1225043,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1247941,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          2
+        ],
+        [
+          109,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1454023,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          2
+        ],
+        [
+          127,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 109,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 11881,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1295029,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1199981,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ],
+        [
+          109,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1223743,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          1
+        ],
+        [
+          109,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1271267,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          1
+        ],
+        [
+          109,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1295029,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1508887,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          2
+        ],
+        [
+          127,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 127,
+      "alpha": 100,
+      "factorization": [
+        [
+          127,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 16129,
+      "alpha": 100,
+      "factorization": [
+        [
+          127,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2048383,
+      "alpha": 100,
+      "factorization": [
+        [
+          127,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1629029,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ],
+        [
+          127,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1661287,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          1
+        ],
+        [
+          127,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1725803,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          1
+        ],
+        [
+          127,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1758061,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          1
+        ],
+        [
+          127,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2048383,
+      "alpha": 100,
+      "factorization": [
+        [
+          127,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 131,
+      "alpha": 100,
+      "factorization": [
+        [
+          131,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 17161,
+      "alpha": 100,
+      "factorization": [
+        [
+          131,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2248091,
+      "alpha": 100,
+      "factorization": [
+        [
+          131,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1733261,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ],
+        [
+          131,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1767583,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          1
+        ],
+        [
+          131,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1836227,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          1
+        ],
+        [
+          131,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1870549,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          1
+        ],
+        [
+          131,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2179447,
+      "alpha": 100,
+      "factorization": [
+        [
+          127,
+          1
+        ],
+        [
+          131,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 137,
+      "alpha": 100,
+      "factorization": [
+        [
+          137,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 18769,
+      "alpha": 100,
+      "factorization": [
+        [
+          137,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2571353,
+      "alpha": 100,
+      "factorization": [
+        [
+          137,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1895669,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ],
+        [
+          137,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1933207,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          1
+        ],
+        [
+          137,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2008283,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          1
+        ],
+        [
+          137,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2045821,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          1
+        ],
+        [
+          137,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2383663,
+      "alpha": 100,
+      "factorization": [
+        [
+          127,
+          1
+        ],
+        [
+          137,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 139,
+      "alpha": 100,
+      "factorization": [
+        [
+          139,
+          1
+        ]
+      ],
+      "Omega_with_multiplicity": 1,
+      "weight": 1,
+      "prime_indicator": 1
+    },
+    {
+      "n": 19321,
+      "alpha": 100,
+      "factorization": [
+        [
+          139,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 2,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2685619,
+      "alpha": 100,
+      "factorization": [
+        [
+          139,
+          3
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1951421,
+      "alpha": 100,
+      "factorization": [
+        [
+          101,
+          1
+        ],
+        [
+          139,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 1990063,
+      "alpha": 100,
+      "factorization": [
+        [
+          103,
+          1
+        ],
+        [
+          139,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2067347,
+      "alpha": 100,
+      "factorization": [
+        [
+          107,
+          1
+        ],
+        [
+          139,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2105989,
+      "alpha": 100,
+      "factorization": [
+        [
+          109,
+          1
+        ],
+        [
+          139,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    },
+    {
+      "n": 2453767,
+      "alpha": 100,
+      "factorization": [
+        [
+          127,
+          1
+        ],
+        [
+          139,
+          2
+        ]
+      ],
+      "Omega_with_multiplicity": 3,
+      "weight": 0,
+      "prime_indicator": 0
+    }
+  ],
+  "chen_filter": "PASS under complete roughness; no squarefree assumption required",
+  "local_switch_counterexample": {
+    "n": 99999697,
+    "m": 303,
+    "factor_n": [
+      [
+        7,
+        1
+      ],
+      [
+        41,
+        1
+      ],
+      [
+        348431,
+        1
+      ]
+    ],
+    "factor_m": [
+      [
+        3,
+        1
+      ],
+      [
+        101,
+        1
+      ]
+    ],
+    "mu_m": 1,
+    "alpha": 100,
+    "Q": 999999,
+    "prefix": 3,
+    "admitted_divisors": [
+      1,
+      3
+    ],
+    "admitted_harmonic_k": [
+      1,
+      3
+    ],
+    "unit_excluded_k": [
+      2
+    ],
+    "D": {
+      "3": "-1/1"
+    },
+    "W": {
+      "3": "-1/1",
+      "101": "-1/2"
+    },
+    "D_minus_W": {
+      "101": "1/2"
+    },
+    "literal_kernel": {
+      "101": "1/2"
+    },
+    "fII": {
+      "7": "-1/1",
+      "41": "-1/1",
+      "348431": "-1/1"
+    },
+    "Sfull_log_product_coefficients": {
+      "7,101": "-1/2",
+      "41,101": "-1/2",
+      "101,348431": "-1/2"
+    }
+  },
+  "switched_prime_partner": {
+    "n": 99999899,
+    "m": 101,
+    "factor_n": [
+      [
+        17,
+        1
+      ],
+      [
+        5882347,
+        1
+      ]
+    ],
+    "factor_m": [
+      [
+        101,
+        1
+      ]
+    ],
+    "mu_m": -1,
+    "alpha": 100,
+    "Q": 999999,
+    "prefix": 1,
+    "admitted_divisors": [
+      1
+    ],
+    "admitted_harmonic_k": [
+      1
+    ],
+    "unit_excluded_k": [],
+    "D": {
+      "101": "-1/1"
+    },
+    "W": {
+      "101": "-1/1"
+    },
+    "D_minus_W": {},
+    "literal_kernel": {},
+    "fII": {
+      "17": "-1/1",
+      "5882347": "-1/1"
+    },
+    "Sfull_log_product_coefficients": {}
+  },
+  "incomplete_roughness_counterexample": {
+    "r": 1113121,
+    "k": 3,
+    "m": 3339363,
+    "factor_m": [
+      [
+        3,
+        1
+      ],
+      [
+        101,
+        1
+      ],
+      [
+        103,
+        1
+      ],
+      [
+        107,
+        1
+      ]
+    ],
+    "Omega": 4,
+    "weight": 1,
+    "prime_indicator": 0
+  },
+  "falsified_claim": "Uniform zero or favorable pointwise diagonal after switching m=3*101 to m=101 at fixed N",
+  "diagnostic_scope": "One strictly negative Sfull term survives at r>alpha; no contradiction of a future global D_N bound",
+  "previous_script_sha256": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+  "previous_numerical_receipt_sha256": "65b4f36cd219209079c0dd3a2e8900c7be1ca095244aa3c1ebb36b67e380c565",
+  "previous_artifacts_preserved": true,
+  "harness_repair": "Preliminary run rejected an expected prime-factor oracle treating cofactor 14285671 as prime. Actual factorization is 7*41*348431; corrected oracle. Counterexample sign unchanged.",
+  "script_sha256": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+  "elapsed_seconds": 0.412
+}

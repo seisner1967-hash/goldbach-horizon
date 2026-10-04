@@ -1,0 +1,53 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC04_METADATA_HELPER_SOURCE_HANDOFF",
+  "status": "SOURCE_ONLY_FROZEN_NOT_INVOKED_NOT_PREPARED_NOT_AUTHORIZED",
+  "actor": "ROLE3_ROLE6_METADATA_SOURCE",
+  "utc": "2026-10-03T21:12:49.9163289Z",
+  "binding_count": 3,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_metadata_source01\\prepare_numeric04_metadata22.ps1",
+      "bytes": 24607,
+      "sha256": "6944ecda1f24f20dca6350ed5b1198bc3fe9e48ec06dedabaf536c1c7f67c172",
+      "capture": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_metadata_source01\\metadata_source_contract22.txt",
+      "bytes": 5103,
+      "sha256": "f58a314bdda794db5406a648eaa1fa85bb4e7e1b4d2fb4afef5af66687fac30f",
+      "capture": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_metadata_source01\\read_receipts22.json",
+      "bytes": 4206,
+      "sha256": "9cf501e7caea44a81f401059c3ce4874a99c87312508586a456b3933a357b95e",
+      "capture": false
+    }
+  ],
+  "source01_handoff_sha256": "0c839fc7c602c52c6c3f0d47d6f643342c8641a0cc8527b656a4e7cf70e74616",
+  "reviews_as_required_argv": {
+    "IndependentReviewSha256": "f1afc6db690b7ee706f66d2ea9d14878eb36b3374eceffbadc6157e9c2cf9012",
+    "TrustReviewSha256": "5fdf1c49cef3b85d1b617d79b31cca39573c5bc964f23df1535f933406b5c2c7"
+  },
+  "runtime_union_family_counts": {
+    "BUILD04_inputs": 6375,
+    "SOURCE01_bindings": 25,
+    "BUILD04_outputs": 17,
+    "BUILD04_images": 2,
+    "BUILD04_original_copy_pairs": 47,
+    "extra_control_occurrences": 5,
+    "final_unique_count": "COMPUTED_ONLY_BY_FUTURE_METADATA_INVOCATION",
+    "runtime_files": 972,
+    "archives": 3089
+  },
+  "metadata_source_bindings_are_ROOT_controls_outside_frozen_parent_runtime_set": true,
+  "expected_runtime_set_not_widened": true,
+  "pending_permission": "ROOT_FULL_HELPER_READING_AND_ONE_METADATA_INVOCATION_AUTHORIZATION",
+  "helper_invocations": 0,
+  "candidate_imports_or_parses": 0,
+  "compiler_invocations": 0,
+  "produced_binary_invocations": 0,
+  "numeric_authorization": false,
+  "D_N": false,
+  "WIN": false
+}

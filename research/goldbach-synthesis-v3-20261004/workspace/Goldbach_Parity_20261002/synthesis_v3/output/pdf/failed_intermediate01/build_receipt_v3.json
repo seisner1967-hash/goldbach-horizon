@@ -1,0 +1,24 @@
+{
+  "schema": "GOLDBACH_V3_DOCUMENT_BUILD",
+  "started_at_utc": "2026-10-04T04:49:57.905173+00:00",
+  "finished_at_utc": "2026-10-04T04:50:00.117975+00:00",
+  "command": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Research_20260930\\tools\\tectonic.exe",
+    "--only-cached",
+    "--untrusted",
+    "--keep-logs",
+    "--keep-intermediates",
+    "--outdir",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\synthesis_v3\\output\\pdf",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\synthesis_v3\\goldbach_synthesis_v3.tex"
+  ],
+  "exit_code": 1,
+  "source_sha256": "676104df217edbb8e870a0e25c9f2ae287667ff736de19a2637bf14799a43188",
+  "engine_sha256": "c20a0c7ddf7d26e33f30d4d6fa6d0ab48c4279bba2f4112e011f68eb470bc818",
+  "PDF_bytes": 132697,
+  "PDF_sha256": "07025d4aa6f193f8db2e39f306c7fa6e8bd3614cc54584206f8774e915988b36",
+  "stdout_sha256": "6e793d6efa7c54439f24967284a9b6ce46535860bd3427c671fb9f63c9e170bf",
+  "stderr_sha256": "6009cf5387a1295f69ca9759357abf738ce997a10fa0973248656406c81ba69b",
+  "scientific_executions": 0,
+  "scope": "Document compilation only; no Lean, native coefficient checker or mathematical experiment."
+}

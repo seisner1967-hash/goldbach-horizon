@@ -1,0 +1,8 @@
+{
+  "node_id": "11.2",
+  "hypothesis": "Mechanism: Déplier le carré-diviseur du préfixe U_a entier et ses coefficients lcm/phi avant AP, puis confronter son principal conservé au vrai poids bilatéral mu(m)^2 Lambda(m)+S(N)mu(m).\nHypothesis: B6 possède les vrais Möbius/totient et P carré-libre, r|P; les queues et l'erreur AP restent explicites, aucune estimation de muLambda ou minoration du moment n'est supposée.\nObservable: Produit fini exact sur les premiers de P, intersections lcm(r,d²), préfixe bas/bande et tête/queue, avec nouveau triprime m483 rejetant le minorant positif.\nConflicts: Le principal S(N)N est acquis au §6 et conservé; B13 reste impayé, properpowers/raw/unités/Q/+1 maintenus, gate numérique requis avant compilation.",
+  "score": 0.0,
+  "insight": "Judge11 fresh compile9 actual arithmetic theorems, only standard axioms; exact B6 retains real mu/totient/lcm and units. Finite coefficient does not pay the signed bilateral moment, source principal and both tails retained. No parity victory.",
+  "result": "Actual B6 auxiliary certificate independently verified; B13 minoration open.",
+  "branch": "round11/lean/SquarefreeLcmCoefficient.lean"
+}

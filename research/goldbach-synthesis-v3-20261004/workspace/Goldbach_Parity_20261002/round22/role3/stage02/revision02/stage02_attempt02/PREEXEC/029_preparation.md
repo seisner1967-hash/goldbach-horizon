@@ -1,0 +1,11 @@
+# ROLE3 — fenêtre finie, révision02
+
+PREPARED_SOURCE_ONLY. stage02_attempt01 a réellement invoqué Finite une fois : START07:21:53.361741UTC, FIN07:22:16.079502UTC, exit1, aucun olean,21inputs inchangés. Source ed4d3bcf1c9427c157045356115445944f94224369458ba4bcceb91b17414434 et journal28397f513fdeac16b40385e057add160964585fde61e54ee22f31424425de9df restent gelés. Journal/reçu lus FULLdb9e19. La précédente autorisation est consommée.
+
+Cette copie distincte corrige trois formulations : Continuous.const_mul absent est remplacé par continuous_const.mul ; les deux extrémités n+m et m+n de l’intégrale affine sont normalisées avant field_simp et le résidu propositionnel True∨weight y=0 est fermé par simp ; Int.negSucc_eq est explicité dans la conversion natAbs. integral_const_mul est inconditionnel dans la source mathlib4.15 : le deuxième échec n’était pas une hypothèse d’intégrabilité admise. Les définitions, gardes et identités restent inchangées. Le log élaborait sans erreur la bijection de fenêtre et les vrais télescopages ; la source entière n’a encore aucune compilation réussie.
+
+Kernel revision02 demeure une dépendance réellement compilée immuable, olean9bf2da2b6cb3a5780868c51916afdf173e79a971d56fdf7a52c6b2abfa9def8d. Le nouveau launcher n’invoque que Finite UNE FOIS, depuis cette révision, avec cet olean sur LEAN_PATH. CapturesPREEXEC, START, commande/log/exit, POSTEXEC et reçu sont neufs. Aucun retry automatique, recompile Kernel, sondage API, Python math ou rejeu de banc.
+
+Gate distinct requis : C/messages/round22_role3_stage02_attempt02_authorization.json ; role=ROLE3, node_id=16.1, attempt=stage02_attempt02, stage=G0_FINITE_REVISION02, authorized=true, numeric_verdict=EPSTEIN_UNFOLDING_AUX_PASS, modules=[EpsteinFinite22], source_manifest_sha256, launcher_sha256, python_sha256, lean_sha256, dependency_olean_sha256=9bf2da2b6cb3a5780868c51916afdf173e79a971d56fdf7a52c6b2abfa9def8d, no_win=true. Commande future fermée : PythonCanonical -B -X utf8 role3/stage02/revision02/run_revision02_once.py --gate ce_chemin --attempt stage02_attempt02.
+
+La source a14théorèmes,4définitions et18audits qualifiés. Aucun axiome cible ou placeholder ajouté. L’infini et la queue restent SOURCE hors gate ; diffusion, chaleur, coefficientN,D_N et victoire restent ouverts. Officiel57/942 inchangé avant le Juge indépendant.

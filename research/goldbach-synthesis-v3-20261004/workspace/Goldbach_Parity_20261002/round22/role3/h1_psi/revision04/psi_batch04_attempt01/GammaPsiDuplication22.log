@@ -1,0 +1,65 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision04\source_final\GammaPsiDuplication22.lean:25:4: error: linarith failed to find a contradiction
+case h
+z : ℂ
+hz : 0 < z.re
+hzhalf : 0 < (z + 1 / 2).re
+a✝ : 0 ≥ Complex.re 2 * z.re - Complex.im 2 * z.im
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision04\source_final\GammaPsiDuplication22.lean:41:2: error: ring failed, ring expressions not equal
+z : ℂ
+hz : 0 < z.re
+hzhalf : 0 < (z + 1 / 2).re
+hz2 : 0 < (2 * z).re
+hleft :
+  HasDerivAt (fun y => Complex.Gamma y * (Complex.Gamma ∘ fun x => id x + 1 / 2) y)
+    (deriv Complex.Gamma z * (Complex.Gamma ∘ fun x => id x + 1 / 2) z +
+      Complex.Gamma z * (deriv Complex.Gamma (z + 1 / 2) * 1))
+    z
+hGamma : HasDerivAt (Complex.Gamma ∘ HMul.hMul 2) (deriv Complex.Gamma (2 * z) * (2 * 1)) z
+hpower : HasDerivAt (fun x => 2 ^ (1 - 2 * id x)) (2 ^ (1 - 2 * id z) * Complex.log 2 * (0 - 2 * 1)) z
+hright :
+  HasDerivAt (fun y => (Complex.Gamma ∘ HMul.hMul 2) y * 2 ^ (1 - 2 * id y) * ↑√Real.pi)
+    ((deriv Complex.Gamma (2 * z) * (2 * 1) * 2 ^ (1 - 2 * id z) +
+        (Complex.Gamma ∘ HMul.hMul 2) z * (2 ^ (1 - 2 * id z) * Complex.log 2 * (0 - 2 * 1))) *
+      ↑√Real.pi)
+    z
+heq :
+  (fun w => Complex.Gamma w * Complex.Gamma (w + 1 / 2)) =ᶠ[𝓝 z] fun w =>
+    Complex.Gamma (2 * w) * 2 ^ (1 - 2 * w) * ↑√Real.pi
+h :
+  deriv Complex.Gamma z * (Complex.Gamma ∘ fun x => id x + 1 / 2) z +
+      Complex.Gamma z * deriv Complex.Gamma (z + 1 / 2) =
+    (deriv Complex.Gamma (2 * z) * 2 * 2 ^ (1 - 2 * id z) +
+        (Complex.Gamma ∘ HMul.hMul 2) z * (2 ^ (1 - 2 * id z) * Complex.log 2 * -2)) *
+      ↑√Real.pi
+⊢ deriv Complex.Gamma z * Complex.Gamma (z + 1 / 2) -
+            deriv Complex.Gamma z * (Complex.Gamma ∘ fun x => id x + 1 / 2) z +
+          deriv Complex.Gamma (2 * z) * 2 ^ (1 - 2 * id z) * ↑√Real.pi * 2 +
+        (-(deriv Complex.Gamma (2 * z) * ↑√Real.pi * 2 ^ (1 - 2 * z) * 2) -
+          2 ^ (1 - 2 * id z) * (Complex.Gamma ∘ HMul.hMul 2) z * Complex.log 2 * ↑√Real.pi * 2) +
+      Complex.log 2 * ↑√Real.pi * 2 ^ (1 - 2 * z) * Complex.Gamma (2 * z) * 2 =
+    0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision04\source_final\GammaPsiDuplication22.lean:52:4: error: linarith failed to find a contradiction
+case h
+z : ℂ
+hz : 0 < z.re
+hzhalf : 0 < (z + 1 / 2).re
+a✝ : 0 ≥ Complex.re 2 * z.re - Complex.im 2 * z.im
+⊢ False failed
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\h1_psi\revision04\source_final\GammaPsiDuplication22.lean:65:59: error: unsolved goals
+z : ℂ
+hz : 0 < z.re
+hzhalf : 0 < (z + 1 / 2).re
+hz2 : 0 < (2 * z).re
+hΓ0 : Complex.Gamma z ≠ 0
+hΓhalf : Complex.Gamma (z + 1 / 2) ≠ 0
+hΓ2 : Complex.Gamma (2 * z) ≠ 0
+hp : 2 ^ (1 - 2 * z) ≠ 0
+hsq : ↑√Real.pi ≠ 0
+⊢ deriv Complex.Gamma z + deriv Complex.Gamma (1 / 2 + z) * Complex.Gamma z * (Complex.Gamma (1 / 2 + z))⁻¹ =
+    deriv Complex.Gamma z * Complex.Gamma z * Complex.Gamma (1 / 2 + z) * (Complex.Gamma (1 / 2 + z))⁻¹ *
+        (Complex.Gamma z)⁻¹ +
+      deriv Complex.Gamma (1 / 2 + z) * Complex.Gamma z ^ 2 * (Complex.Gamma (1 / 2 + z))⁻¹ * (Complex.Gamma z)⁻¹
+'GoldbachContinuous22.deriv_Gamma_duplication' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaPsi_duplication' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

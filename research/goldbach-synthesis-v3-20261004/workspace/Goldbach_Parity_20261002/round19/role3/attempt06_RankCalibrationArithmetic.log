@@ -1,0 +1,155 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:81:47: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:85:47: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:147:16: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  (fun z => z.1) z
+F q : ℕ
+S : Finset (ℕ × ℕ × ℕ)
+hF : F ≠ 0
+hS : ∀ z ∈ S, z.1 ∣ F ∧ Squarefree z.2.1 ∧ z.2.2 ∣ z.2.1 ∧ q = z.1 * (z.2.1 * z.2.2)
+z : ℕ × ℕ × ℕ
+hz : z ∈ ↑S
+z' : ℕ × ℕ × ℕ
+hz' : z' ∈ ↑S
+hsame : (fun z => z.1) z = (fun z => z.1) z'
+hf : z.1 ∣ F
+hd : Squarefree z.2.1
+hk : z.2.2 ∣ z.2.1
+he : q = z.1 * (z.2.1 * z.2.2)
+hf' : z'.1 ∣ F
+hd' : Squarefree z'.2.1
+hk' : z'.2.2 ∣ z'.2.1
+he' : q = z'.1 * (z'.2.1 * z'.2.2)
+hf0 : z.1 ≠ 0
+⊢ q = z.1 * (z'.2.1 * z'.2.2)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:153:2: error: tactic 'simp' failed, nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:182:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:196:42: error: unsolved goals
+⊢ (7 - ↑(#(filter (fun a => Nat.Coprime 7 a) (range 7)))) / (↑(#(filter (fun a => Nat.Coprime 7 a) (range 7))) * 6) =
+      1 / 36 ∧
+    (11 - ↑(#(filter (fun a => Nat.Coprime 11 a) (range 11)))) /
+          (↑(#(filter (fun a => Nat.Coprime 11 a) (range 11))) * 10) =
+        1 / 100 ∧
+      (23 - ↑(#(filter (fun a => Nat.Coprime 23 a) (range 23)))) /
+            (↑(#(filter (fun a => Nat.Coprime 23 a) (range 23))) * 22) =
+          1 / 484 ∧
+        (77 - ↑(#(filter (fun a => Nat.Coprime 77 a) (range 77)))) /
+              (↑(#(filter (fun a => Nat.Coprime 77 a) (range 77))) * 76) =
+            17 / 4560 ∧
+          (161 - ↑(#(filter (fun a => Nat.Coprime 161 a) (range 161)))) /
+                (↑(#(filter (fun a => Nat.Coprime 161 a) (range 161))) * 160) =
+              29 / 21120 ∧
+            (253 - ↑(#(filter (fun a => Nat.Coprime 253 a) (range 253)))) /
+                  (↑(#(filter (fun a => Nat.Coprime 253 a) (range 253))) * 252) =
+                1 / 1680 ∧
+              (1771 - ↑(#(filter (fun a => Nat.Coprime 1771 a) (range 1771)))) /
+                  (↑(#(filter (fun a => Nat.Coprime 1771 a) (range 1771))) * 1770) =
+                41 / 212400
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:200:67: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationArithmetic.lean:203:39: error: unsolved goals
+case inr.inl
+hd : 7 ∣ 1771
+ht : 1 < 7
+⊢ 41 / 212400 ≤
+    (7 - ↑(#(filter (fun a => Nat.Coprime 7 a) (range 7)))) / (↑(#(filter (fun a => Nat.Coprime 7 a) (range 7))) * 6)
+
+case inr.inr.inl
+hd : 11 ∣ 1771
+ht : 1 < 11
+⊢ 41 / 212400 ≤
+    (11 - ↑(#(filter (fun a => Nat.Coprime 11 a) (range 11)))) /
+      (↑(#(filter (fun a => Nat.Coprime 11 a) (range 11))) * 10)
+
+case inr.inr.inr.inl
+hd : 23 ∣ 1771
+ht : 1 < 23
+⊢ 41 / 212400 ≤
+    (23 - ↑(#(filter (fun a => Nat.Coprime 23 a) (range 23)))) /
+      (↑(#(filter (fun a => Nat.Coprime 23 a) (range 23))) * 22)
+
+case inr.inr.inr.inr.inl
+hd : 77 ∣ 1771
+ht : 1 < 77
+⊢ 41 / 212400 ≤
+    (77 - ↑(#(filter (fun a => Nat.Coprime 77 a) (range 77)))) /
+      (↑(#(filter (fun a => Nat.Coprime 77 a) (range 77))) * 76)
+
+case inr.inr.inr.inr.inr.inl
+hd : 161 ∣ 1771
+ht : 1 < 161
+⊢ 41 / 212400 ≤
+    (161 - ↑(#(filter (fun a => Nat.Coprime 161 a) (range 161)))) /
+      (↑(#(filter (fun a => Nat.Coprime 161 a) (range 161))) * 160)
+
+case inr.inr.inr.inr.inr.inr.inl
+hd : 253 ∣ 1771
+ht : 1 < 253
+⊢ 41 / 212400 ≤
+    (253 - ↑(#(filter (fun a => Nat.Coprime 253 a) (range 253)))) /
+      (↑(#(filter (fun a => Nat.Coprime 253 a) (range 253))) * 252)
+
+case inr.inr.inr.inr.inr.inr.inr
+hd : 1771 ∣ 1771
+ht : 1 < 1771
+⊢ 41 / 212400 ≤
+    (1771 - ↑(#(filter (fun a => Nat.Coprime 1771 a) (range 1771)))) /
+      (↑(#(filter (fun a => Nat.Coprime 1771 a) (range 1771))) * 1770)
+'GoldbachRound19.RankCalibration.smallSelector' depends on axioms: [propext, Quot.sound]
+'GoldbachRound19.RankCalibration.smallConductor' depends on axioms: [propext, Quot.sound]
+'GoldbachRound19.RankCalibration.rankChi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.selector_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.small_unit_modulus_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.final_small_unit_modulus_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.squarefree_conductor_of_primes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.squarefree_subdivisor_reconstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.fixed_factor_representation_multiplicity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.fixed_factor_divisor_count' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_ap_representation_multiplicity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_chi_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.rank_price_principal_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_price_principal_nonpositive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_price_principal_negative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.fixed_rank_chi_values' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.fixed_rank_divisor_list' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.fixed_rank_chi_lower_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.canonical_fixed_rank_chi_lower_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

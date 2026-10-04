@@ -1,0 +1,108 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH03_PREPARATION_RECEIPT",
+  "time_utc": "2026-10-03T11:06:54.3344075Z",
+  "status": "PREPARED_SOURCE_ONLY_GATE_CLOSED",
+  "role": "ROLE5",
+  "modules": [
+    "GammaDerivative22"
+  ],
+  "attempt": "batch03_attempt01",
+  "module_count": 1,
+  "theorem_count": 8,
+  "definition_count": 0,
+  "qualified_print_count": 8,
+  "source_manifest_sha256": "9213cfc197ce5f594005f4fdfbd7ff88b1dd54cc216c14fdfd6cb801089bd86d",
+  "launcher_sha256": "bf81956b2328f7b6a84faee912d3332327906491b4fc6ebcd6da1dcb8fdc711f",
+  "import_modules": 3235,
+  "immutable_input_count": 6597,
+  "closed_judge_file_count": 90,
+  "archive_count": 3089,
+  "explicit_Init_seed": "Init",
+  "unresolved": [],
+  "metadata_launcher_chunk": "e88029",
+  "metadata_completion_chunk": "432053",
+  "metadata_exit_code": 0,
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\prepare_metadata.py",
+      "sha256": "e4b73b5b1153a21ad54baf719b3594b57035c264d1235ae1ecaf7b828d7460c8",
+      "bytes": 15884,
+      "scope": "FULL",
+      "chunk": "2062be"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\run_once.py",
+      "sha256": "bf81956b2328f7b6a84faee912d3332327906491b4fc6ebcd6da1dcb8fdc711f",
+      "bytes": 11980,
+      "scope": "FULL",
+      "chunk": "badb0d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\preparation.md",
+      "sha256": "b3601e7b3dbd5f2311aeb9234ebb2e6c4f4f9f4d567c5cd2c620f9659c741bda",
+      "bytes": 3925,
+      "scope": "FULL",
+      "chunk": "badb0d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\sources\\GammaDerivative22.lean",
+      "sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "bytes": 9978,
+      "scope": "FULL",
+      "chunk": "25c355"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\catalog.json",
+      "sha256": "0b0596ccd339972fdf86e0414ca6f2e6935d9201b010cc33e984373326f2ab7a",
+      "bytes": 5816,
+      "scope": "FULL",
+      "chunk": "25c355"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\read_receipts.json",
+      "sha256": "897c4f853b084ba88926b0eefde62f776080da13745108079d8cc58b3703645f",
+      "bytes": 5651,
+      "scope": "FULL",
+      "chunk": "e31534"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\prepared_manifest.json",
+      "sha256": "9213cfc197ce5f594005f4fdfbd7ff88b1dd54cc216c14fdfd6cb801089bd86d",
+      "bytes": 1660215,
+      "scope": "PARSED_HEADER_AND_ALL_BYTES_SHA_NOT_FULL_RAW",
+      "chunk": "e31534"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\import_bindings.json",
+      "sha256": "13af0cb58ef7f51fa20067ae03540fb8ff1362bf2b9d1e650231e513f3744008",
+      "bytes": 1974916,
+      "scope": "PARSED_HEADER_AND_ALL_BYTES_SHA_NOT_FULL_RAW",
+      "chunk": "e31534"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\closed_judge_bindings.json",
+      "sha256": "f7abb8b461c5efd2b7eb19bcccf77c0185ae01451905c52ee1d875359aa1e86c",
+      "bytes": 21811,
+      "scope": "PARSED_HEADER_AND_ALL_BYTES_SHA_NOT_FULL_RAW",
+      "chunk": "e31534"
+    }
+  ],
+  "numeric_bank_replayed": false,
+  "numeric_PASS_required_for_theorem": false,
+  "compiler_invocations": 0,
+  "mathematical_numeric_invocations": 0,
+  "gate_created_by_role5": false,
+  "scope_incidents": [
+    "cd59b9 result absent selected keys returned null; use FULL closure receipt for scope/counts",
+    "e31534 generic projection on absent arrays displayed count1; only schema-specific real arrays determine 6597/3235/90 counts"
+  ],
+  "official_baseline_modules": 62,
+  "official_baseline_auxiliaries": 1049,
+  "hypothetical_success_modules": 63,
+  "hypothetical_success_auxiliaries": 1057,
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

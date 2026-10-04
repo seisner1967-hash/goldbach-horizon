@@ -1,0 +1,28 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\SquarefreeLcmCoefficient.lean:74:2: error: linarith failed to find a contradiction
+case h1.h
+r d : ℕ
+hr : Squarefree r
+hd : 0 < d
+hrpos : 0 < r
+hn : (r.gcd d).totient * (r.lcm (d ^ 2)).totient = r.totient * (d * d.totient)
+hq : ↑(r.gcd d).totient * ↑(r.lcm (d ^ 2)).totient = ↑r.totient * (↑d * ↑d.totient)
+hd0 : ↑d ≠ 0
+hdphi : ↑d.totient ≠ 0
+hlpos : 0 < r.lcm (d ^ 2)
+hlphi : ↑(r.lcm (d ^ 2)).totient ≠ 0
+hm :
+  (fun x => ↑(ArithmeticFunction.moebius d) * x) (↑(r.gcd d).totient * ↑(r.lcm (d ^ 2)).totient) =
+    (fun x => ↑(ArithmeticFunction.moebius d) * x) (↑r.totient * (↑d * ↑d.totient))
+a✝ :
+  ↑(ArithmeticFunction.moebius d) * ↑(r.gcd d).totient * ↑(r.lcm (d ^ 2)).totient <
+    ↑r.totient * ↑(ArithmeticFunction.moebius d) * (↑d * ↑d.totient)
+⊢ False failed
+'GoldbachRound11.totient_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.totient_gcd_lcm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.gcd_square_of_squarefree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.normalized_isMultiplicative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.normalized_eq_lcm' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.normalized_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.primeFactors_filter_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.squarefree_lcm_coefficient' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.squarefree_lcm_coefficient_unit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

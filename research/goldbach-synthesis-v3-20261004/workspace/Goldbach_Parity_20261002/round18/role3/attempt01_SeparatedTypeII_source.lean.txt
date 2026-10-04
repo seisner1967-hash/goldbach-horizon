@@ -1,0 +1,587 @@
+import Mathlib
+
+/-!
+Round18/node13.10.  The structural mask has actual prime factors and physical
+caps, and never tests primality of the candidate N-d*b.  The bilinear object is
+defined on (v,w); its count is independently defined on (v,b).  No compilation
+of this source is permitted before the selected numerical canonical PASS and
+the root's explicit compile authorization.
+-/
+
+namespace GoldbachRound18.SeparatedTypeII
+
+open scoped BigOperators
+open Finset
+noncomputable section
+local attribute [instance] Classical.propDecidable
+
+structure Parameters where
+  N : ℕ
+  c : ℕ
+  r : ℕ
+  a : ℕ
+  Q : ℕ
+  M : ℕ
+
+def conductor (P : Parameters) : ℕ := P.c * P.r
+
+structure PhysicalWitness (P : Parameters) (b : ℕ) where
+  s : ℕ
+  q : ℕ
+  c_prime : P.c.Prime
+  r_prime : P.r.Prime
+  s_prime : s.Prime
+  q_prime : q.Prime
+  c_lt_r : P.c < P.r
+  r_lt_s : P.r < s
+  s_le_a : s ≤ P.a
+  a_lt_q : P.a < q
+  cr_le_a : conductor P ≤ P.a
+  cs_le_a : P.c * s ≤ P.a
+  a_lt_rs : P.a < P.r * s
+  rs_lt_q : P.r * s < q
+  a_lt_crs : P.a < conductor P * s
+  b_eq : b = s * q
+  unit_m : Nat.Coprime (conductor P * b) P.N
+  bulk : P.M ≤ conductor P * b
+  original_front : conductor P * b + P.Q < P.N
+
+def physicalMask (P : Parameters) (b : ℕ) : Prop :=
+  Nonempty (PhysicalWitness P b)
+
+def beta (P : Parameters) (b : ℕ) : ℝ :=
+  if physicalMask P b then 1 else 0
+
+def units (I : Finset ℕ) (H : ℕ) : Finset ℕ :=
+  I.filter fun b => Nat.Coprime b H
+
+def structureCount (P : Parameters) (I : Finset ℕ) : ℕ :=
+  (I.filter (physicalMask P)).card
+
+def unitCount (I : Finset ℕ) (H : ℕ) : ℕ := (units I H).card
+
+def density (P : Parameters) (I : Finset ℕ) (H : ℕ) : ℝ :=
+  (structureCount P I : ℝ) / (unitCount I H : ℝ)
+
+def reference (P : Parameters) (I : Finset ℕ) (H b : ℕ) : ℝ :=
+  density P I H * if b ∈ units I H then 1 else 0
+
+def centered (P : Parameters) (I : Finset ℕ) (H b : ℕ) : ℝ :=
+  beta P b - reference P I H b
+
+def rows (P : Parameters) (V h ell : ℕ) : Finset ℕ :=
+  (Ioc V (2 * V)).filter fun v =>
+    Nat.Coprime v (P.N * conductor P * h * ell)
+
+def xi (E : Finset ℕ) (v : ℕ) : ℝ := if v ∈ E then 1 else 0
+
+/-- A union of actual product congruences; no primality is queried here. -/
+def kappa (N d ell : ℕ) (E : Finset ℕ) (w : ℕ) : ℝ :=
+  if ∃ v ∈ E, Nat.ModEq (d * ell) (v * w) N then -1 else 0
+
+def candidate (P : Parameters) (b : ℕ) : ℕ := P.N - conductor P * b
+
+def onProgression (P : Parameters) (I : Finset ℕ) (j : ℕ) : Prop :=
+  j ≤ P.N ∧ conductor P ∣ P.N - j ∧ (P.N - j) / conductor P ∈ I
+
+def profile (P : Parameters) (I : Finset ℕ) (H j : ℕ) : ℝ :=
+  if onProgression P I j then centered P I H ((P.N - j) / conductor P) else 0
+
+/-- The actual bilinear sum on the candidate product j=v*w. -/
+def adversarialSum (P : Parameters) (I : Finset ℕ) (H ell : ℕ)
+    (E : Finset ℕ) : ℝ :=
+  ∑ t ∈ E.product (range (P.N + 1)),
+    xi E t.1 * kappa P.N (conductor P) ell E t.2 * profile P I H (t.1 * t.2)
+
+def productPairs (P : Parameters) (I : Finset ℕ) (E : Finset ℕ) :
+    Finset (ℕ × ℕ) :=
+  (E.product (range (P.N + 1))).filter fun t => onProgression P I (t.1 * t.2)
+
+def divisorPairs (P : Parameters) (I : Finset ℕ) (E : Finset ℕ) :
+    Finset (ℕ × ℕ) :=
+  (E.product I).filter fun t => t.1 ∣ candidate P t.2
+
+/-- Independently counted incidences (v,b), preserving repeated candidates. -/
+def omittedPairs (P : Parameters) (I : Finset ℕ) (H ell : ℕ)
+    (E : Finset ℕ) : Finset (ℕ × ℕ) :=
+  (divisorPairs P I E).filter fun t => Nat.Coprime t.2 H ∧ ell ∣ t.2
+
+def omittedCount (P : Parameters) (I : Finset ℕ) (H ell : ℕ)
+    (E : Finset ℕ) : ℕ := (omittedPairs P I H ell E).card
+
+def toDivisor (P : Parameters) (t : ℕ × ℕ) : ℕ × ℕ :=
+  (t.1, (P.N - t.1 * t.2) / conductor P)
+
+def toProduct (P : Parameters) (t : ℕ × ℕ) : ℕ × ℕ :=
+  (t.1, candidate P t.2 / t.1)
+
+theorem beta_bounds (P : Parameters) (b : ℕ) : 0 ≤ beta P b ∧ beta P b ≤ 1 := by
+  unfold beta
+  split_ifs <;> norm_num
+
+theorem mask_large_factors (P : Parameters) {b ell : ℕ}
+    (hb : physicalMask P b) (hell : ell * ell ≤ P.a) :
+    ∃ s q, b = s * q ∧ s.Prime ∧ q.Prime ∧ ell < s ∧ ell < q := by
+  rcases hb with ⟨t⟩
+  have hs : ell < t.s := by
+    by_contra hn
+    have hle : t.s ≤ ell := by omega
+    have ha := t.a_lt_rs
+    have hp : P.r * t.s ≤ ell * ell :=
+      Nat.mul_le_mul (le_trans (Nat.le_of_lt t.r_lt_s) hle) hle
+    omega
+  exact ⟨t.s, t.q, t.b_eq, t.s_prime, t.q_prime, hs,
+    lt_trans hs (lt_of_le_of_lt t.s_le_a t.a_lt_q)⟩
+
+theorem omitted_mask_zero (P : Parameters) {b ell : ℕ}
+    (hell : ell.Prime) (hsmall : ell * ell ≤ P.a) (hdvd : ell ∣ b) :
+    beta P b = 0 := by
+  have hn : ¬ physicalMask P b := by
+    intro hb
+    obtain ⟨s, q, hbq, hs, hq, hls, hlq⟩ := mask_large_factors P hb hsmall
+    rw [hbq] at hdvd
+    rcases (hell.dvd_mul.mp hdvd) with h | h
+    · have he := (Nat.prime_dvd_prime_iff_eq hell hs).mp h
+      omega
+    · have he := (Nat.prime_dvd_prime_iff_eq hell hq).mp h
+      omega
+  simp [beta, hn]
+
+theorem mask_unit_short_conductor (P : Parameters) {b : ℕ}
+    (hb : physicalMask P b) : Nat.Coprime b (P.N * conductor P) := by
+  rcases hb with ⟨t⟩
+  have hbN : Nat.Coprime b P.N :=
+    t.unit_m.coprime_dvd_left (dvd_mul_left b (conductor P))
+  have hsc : Nat.Coprime t.s P.c :=
+    (Nat.coprime_primes t.s_prime t.c_prime).mpr (by have := t.c_lt_r; have := t.r_lt_s; omega)
+  have hsr : Nat.Coprime t.s P.r :=
+    (Nat.coprime_primes t.s_prime t.r_prime).mpr (by have := t.r_lt_s; omega)
+  have hqc : Nat.Coprime t.q P.c :=
+    (Nat.coprime_primes t.q_prime t.c_prime).mpr (by
+      have := t.c_lt_r; have := t.r_lt_s; have := t.s_le_a; have := t.a_lt_q; omega)
+  have hqr : Nat.Coprime t.q P.r :=
+    (Nat.coprime_primes t.q_prime t.r_prime).mpr (by
+      have := t.r_lt_s; have := t.s_le_a; have := t.a_lt_q; omega)
+  have hbd : Nat.Coprime b (conductor P) := by
+    rw [t.b_eq, conductor]
+    exact (hsc.mul_right hsr).mul_left (hqc.mul_right hqr)
+  exact hbN.mul_right hbd
+
+theorem mask_unit_reference (P : Parameters) {b h : ℕ}
+    (hb : physicalMask P b)
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a) :
+    Nat.Coprime b (P.N * conductor P * h) := by
+  rcases hb with ⟨t⟩
+  have hbh : Nat.Coprime b h := by
+    by_contra hn
+    obtain ⟨p, hp, hpb, hph⟩ := Nat.Prime.not_coprime_iff_dvd.mp hn
+    have hz := omitted_mask_zero P hp (hsmall p hp hph) hpb
+    have ho : beta P b = 1 := by simp [beta, show physicalMask P b from ⟨t⟩]
+    linarith
+  exact (mask_unit_short_conductor P ⟨t⟩).mul_right hbh
+
+theorem structure_le_units (P : Parameters) (I : Finset ℕ) (h : ℕ)
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a) :
+    structureCount P I ≤ unitCount I (P.N * conductor P * h) := by
+  apply card_le_card
+  intro b hb
+  simp only [structureCount, mem_filter] at hb
+  simp only [unitCount, units, mem_filter]
+  exact ⟨hb.1, mask_unit_reference P hb.2 hsmall⟩
+
+theorem density_zero_structure (P : Parameters) (I : Finset ℕ) (H : ℕ)
+    (hA : structureCount P I = 0) : density P I H = 0 := by
+  simp [density, hA]
+
+theorem empty_units_empty_structure (P : Parameters) (I : Finset ℕ) (h : ℕ)
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a)
+    (hJ : unitCount I (P.N * conductor P * h) = 0) :
+    structureCount P I = 0 := by
+  have h := structure_le_units P I h hsmall
+  omega
+
+theorem xi_bound (E : Finset ℕ) (v : ℕ) : |xi E v| ≤ 1 := by
+  unfold xi
+  split_ifs <;> norm_num
+
+theorem kappa_bound (N d ell : ℕ) (E : Finset ℕ) (w : ℕ) :
+    |kappa N d ell E w| ≤ 1 := by
+  unfold kappa
+  split_ifs <;> norm_num
+
+theorem kappa_periodic (N d ell : ℕ) (E : Finset ℕ) {w w' : ℕ}
+    (hw : Nat.ModEq (d * ell) w w') :
+    kappa N d ell E w = kappa N d ell E w' := by
+  have he : (∃ v ∈ E, Nat.ModEq (d * ell) (v * w) N) ↔
+      (∃ v ∈ E, Nat.ModEq (d * ell) (v * w') N) := by
+    constructor
+    · rintro ⟨v, hv, hm⟩
+      exact ⟨v, hv, (hw.symm.mul_left v).trans hm⟩
+    · rintro ⟨v, hv, hm⟩
+      exact ⟨v, hv, (hw.mul_left v).trans hm⟩
+  simp only [kappa, he]
+
+theorem separate_columns {N d V v1 v2 w : ℕ}
+    (hNd : Nat.Coprime N d) (hwidth : V < d)
+    (hv1 : V < v1 ∧ v1 ≤ 2 * V) (hv2 : V < v2 ∧ v2 ≤ 2 * V)
+    (h1 : Nat.ModEq d (v1 * w) N) (h2 : Nat.ModEq d (v2 * w) N) :
+    v1 = v2 := by
+  have hp : Nat.Coprime (v1 * w) d := by
+    change Nat.gcd (v1 * w) d = 1
+    rw [h1.gcd_eq]
+    exact hNd
+  have hw : Nat.Coprime d w :=
+    (hp.coprime_dvd_left (dvd_mul_left w v1)).symm
+  have hm : Nat.ModEq d v1 v2 :=
+    (h1.trans h2.symm).cancel_right_of_coprime hw
+  apply hm.eq_of_abs_lt
+  rw [abs_lt]
+  constructor <;> omega
+
+theorem equation_modeq {N d b v w : ℕ} (heq : N = d * b + v * w) :
+    Nat.ModEq d (v * w) N := by
+  rw [heq]
+  simp [Nat.ModEq, Nat.add_mod]
+
+theorem periodic_class_iff_omitted (P : Parameters) {V h ell b v w : ℕ}
+    (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P)
+    (hdel : Nat.Coprime ell (conductor P))
+    (hv : v ∈ rows P V h ell) (heq : P.N = conductor P * b + v * w) :
+    (∃ u ∈ rows P V h ell, Nat.ModEq (conductor P * ell) (u * w) P.N)
+      ↔ ell ∣ b := by
+  have hvI : V < v ∧ v ≤ 2 * V := (mem_filter.mp hv).1 |> mem_Ioc.mp
+  constructor
+  · rintro ⟨u, hu, hm⟩
+    have huI : V < u ∧ u ≤ 2 * V := (mem_filter.mp hu).1 |> mem_Ioc.mp
+    have hue : u = v := separate_columns hNd hwidth huI hvI
+      (hm.of_mul_right ell) (equation_modeq heq)
+    subst u
+    have hdiv : ell ∣ conductor P * b := by
+      have he : Nat.ModEq ell (v * w) P.N := hm.of_mul_left (conductor P)
+      rw [heq] at he
+      have hz : Nat.ModEq ell 0 (conductor P * b) := by
+        simpa [add_comm] using (Nat.ModEq.add_right_cancel' (v * w) he)
+      exact (Nat.modEq_zero_iff_dvd.mp hz.symm)
+    exact hdel.dvd_mul_left.mp hdiv
+  · intro hb
+    refine ⟨v, hv, ?_⟩
+    obtain ⟨k, hk⟩ := hb
+    rw [heq, hk]
+    simp [Nat.ModEq, Nat.add_mod, Nat.mul_mod, mul_assoc]
+
+theorem rows_positive (P : Parameters) {V h ell v : ℕ}
+    (hv : v ∈ rows P V h ell) : 0 < v := by
+  have hvI := mem_Ioc.mp (mem_filter.mp hv).1
+  omega
+
+theorem product_equation (P : Parameters) (I E : Finset ℕ)
+    {t : ℕ × ℕ} (ht : t ∈ productPairs P I E) :
+    P.N = conductor P * (toDivisor P t).2 + t.1 * t.2 := by
+  have hp := (mem_filter.mp ht).2
+  rcases hp with ⟨hjn, hdvd, hbI⟩
+  change P.N = conductor P * ((P.N - t.1 * t.2) / conductor P) + t.1 * t.2
+  rw [Nat.mul_div_cancel' hdvd]
+  exact (Nat.sub_add_cancel hjn).symm
+
+theorem forward_mem (P : Parameters) (I E : Finset ℕ)
+    {t : ℕ × ℕ} (ht : t ∈ productPairs P I E) :
+    toDivisor P t ∈ divisorPairs P I E := by
+  have hprod := mem_product.mp (mem_filter.mp ht).1
+  have hp := (mem_filter.mp ht).2
+  have heq := product_equation P I E ht
+  have hc : candidate P (toDivisor P t).2 = t.1 * t.2 := by
+    unfold candidate
+    omega
+  simp only [divisorPairs, mem_filter, mem_product, toDivisor]
+  refine ⟨⟨hprod.1, hp.2.2⟩, ?_⟩
+  change t.1 ∣ candidate P (toDivisor P t).2
+  rw [hc]
+  exact dvd_mul_right t.1 t.2
+
+theorem divisor_equation (P : Parameters) (I E : Finset ℕ)
+    (hcap : ∀ b ∈ I, conductor P * b ≤ P.N)
+    {t : ℕ × ℕ} (ht : t ∈ divisorPairs P I E) :
+    P.N = conductor P * t.2 + t.1 * (toProduct P t).2 := by
+  have hprod := mem_product.mp (mem_filter.mp ht).1
+  have hdiv := (mem_filter.mp ht).2
+  change P.N = conductor P * t.2 + t.1 * (candidate P t.2 / t.1)
+  rw [Nat.mul_div_cancel' hdiv]
+  unfold candidate
+  have hn := hcap t.2 hprod.2
+  omega
+
+theorem backward_mem (P : Parameters) (I : Finset ℕ) (V h ell : ℕ)
+    (hd : 0 < conductor P)
+    (hcap : ∀ b ∈ I, conductor P * b ≤ P.N)
+    {t : ℕ × ℕ} (ht : t ∈ divisorPairs P I (rows P V h ell)) :
+    toProduct P t ∈ productPairs P I (rows P V h ell) := by
+  have hprod := mem_product.mp (mem_filter.mp ht).1
+  have heq := divisor_equation P I (rows P V h ell) hcap ht
+  have hw : (toProduct P t).2 < P.N + 1 := by
+    have hj : candidate P t.2 ≤ P.N := Nat.sub_le _ _
+    have hdiv : candidate P t.2 / t.1 ≤ candidate P t.2 := Nat.div_le_self _ _
+    change candidate P t.2 / t.1 < P.N + 1
+    omega
+  have hjN : t.1 * (toProduct P t).2 ≤ P.N := by omega
+  have hb : P.N - t.1 * (toProduct P t).2 = conductor P * t.2 := by omega
+  simp only [productPairs, mem_filter, mem_product, mem_range, toProduct]
+  refine ⟨⟨hprod.1, hw⟩, ?_⟩
+  change onProgression P I (t.1 * (toProduct P t).2)
+  refine ⟨hjN, ?_, ?_⟩
+  · rw [hb]
+    exact dvd_mul_right (conductor P) t.2
+  · rw [hb, Nat.mul_div_cancel_left _ hd]
+    exact hprod.2
+
+theorem inverse_product (P : Parameters) (I : Finset ℕ) (V h ell : ℕ)
+    {t : ℕ × ℕ} (ht : t ∈ productPairs P I (rows P V h ell)) :
+    toProduct P (toDivisor P t) = t := by
+  have hv := (mem_product.mp (mem_filter.mp ht).1).1
+  have heq := product_equation P I (rows P V h ell) ht
+  have hc : candidate P (toDivisor P t).2 = t.1 * t.2 := by
+    unfold candidate
+    omega
+  apply Prod.ext
+  · rfl
+  · change candidate P (toDivisor P t).2 / t.1 = t.2
+    rw [hc, Nat.mul_div_cancel_left _ (rows_positive P hv)]
+
+theorem inverse_divisor (P : Parameters) (I : Finset ℕ) (V h ell : ℕ)
+    (hd : 0 < conductor P) (hcap : ∀ b ∈ I, conductor P * b ≤ P.N)
+    {t : ℕ × ℕ} (ht : t ∈ divisorPairs P I (rows P V h ell)) :
+    toDivisor P (toProduct P t) = t := by
+  have heq := divisor_equation P I (rows P V h ell) hcap ht
+  have hb : P.N - t.1 * (toProduct P t).2 = conductor P * t.2 := by omega
+  apply Prod.ext
+  · rfl
+  · change (P.N - t.1 * (toProduct P t).2) / conductor P = t.2
+    rw [hb, Nat.mul_div_cancel_left _ hd]
+
+theorem adversarial_reindex (P : Parameters) (I : Finset ℕ) (V h ell H : ℕ)
+    (hd : 0 < conductor P) (hcap : ∀ b ∈ I, conductor P * b ≤ P.N) :
+    adversarialSum P I H ell (rows P V h ell) =
+      ∑ t ∈ divisorPairs P I (rows P V h ell),
+        kappa P.N (conductor P) ell (rows P V h ell) (toProduct P t).2 *
+          centered P I H t.2 := by
+  let E := rows P V h ell
+  have hfilter : adversarialSum P I H ell E =
+      ∑ t ∈ productPairs P I E,
+        kappa P.N (conductor P) ell E t.2 * centered P I H (toDivisor P t).2 := by
+    unfold adversarialSum productPairs
+    rw [sum_filter]
+    apply sum_congr rfl
+    intro t ht
+    have hv := (mem_product.mp ht).1
+    by_cases hp : onProgression P I (t.1 * t.2)
+    · simp [profile, hp, xi, hv, toDivisor]
+    · simp [profile, hp]
+  rw [hfilter]
+  apply sum_bij' (fun t _ => toDivisor P t) (fun t _ => toProduct P t)
+  · intro t ht
+    exact forward_mem P I E ht
+  · intro t ht
+    exact backward_mem P I V h ell hd hcap ht
+  · intro t ht
+    exact inverse_product P I V h ell ht
+  · intro t ht
+    exact inverse_divisor P I V h ell hd hcap ht
+  · intro t ht
+    have he := inverse_product P I V h ell ht
+    change kappa P.N (conductor P) ell E t.2 * centered P I H (toDivisor P t).2 =
+      kappa P.N (conductor P) ell E (toProduct P (toDivisor P t)).2 *
+        centered P I H (toDivisor P t).2
+    rw [he]
+
+theorem adversarial_entry (P : Parameters) (I : Finset ℕ) (V h ell : ℕ)
+    (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P)
+    (hdel : Nat.Coprime ell (conductor P)) (hell : ell.Prime)
+    (hellSmall : ell * ell ≤ P.a)
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a)
+    (hcap : ∀ b ∈ I, conductor P * b ≤ P.N)
+    {t : ℕ × ℕ} (ht : t ∈ divisorPairs P I (rows P V h ell)) :
+    kappa P.N (conductor P) ell (rows P V h ell) (toProduct P t).2 *
+        centered P I (P.N * conductor P * h) t.2 =
+      density P I (P.N * conductor P * h) *
+        if Nat.Coprime t.2 (P.N * conductor P * h) ∧ ell ∣ t.2 then 1 else 0 := by
+  have hprod := mem_product.mp (mem_filter.mp ht).1
+  have heq := divisor_equation P I (rows P V h ell) hcap ht
+  have hclass := periodic_class_iff_omitted P hNd hwidth hdel hprod.1 heq
+  by_cases hl : ell ∣ t.2
+  · have hz := omitted_mask_zero P hell hellSmall hl
+    have hc : ∃ u ∈ rows P V h ell,
+        Nat.ModEq (conductor P * ell) (u * (toProduct P t).2) P.N := hclass.mpr hl
+    by_cases hu : Nat.Coprime t.2 (P.N * conductor P * h)
+    · simp [kappa, hc, centered, hz, reference, units, hprod.2, hu, hl]
+    · simp [kappa, hc, centered, hz, reference, units, hprod.2, hu, hl]
+  · have hc : ¬ ∃ u ∈ rows P V h ell,
+        Nat.ModEq (conductor P * ell) (u * (toProduct P t).2) P.N := by
+      exact fun hh => hl (hclass.mp hh)
+    simp [kappa, hc, hl]
+
+theorem adversarial_sum_identity (P : Parameters) (I : Finset ℕ) (V h ell : ℕ)
+    (hd : 0 < conductor P)
+    (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P)
+    (hdel : Nat.Coprime ell (conductor P)) (hell : ell.Prime)
+    (hellSmall : ell * ell ≤ P.a)
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a)
+    (hcap : ∀ b ∈ I, conductor P * b ≤ P.N) :
+    adversarialSum P I (P.N * conductor P * h) ell (rows P V h ell) =
+      density P I (P.N * conductor P * h) *
+        (omittedCount P I (P.N * conductor P * h) ell (rows P V h ell) : ℝ) := by
+  rw [adversarial_reindex P I V h ell (P.N * conductor P * h) hd hcap]
+  calc
+    _ = ∑ t ∈ divisorPairs P I (rows P V h ell),
+        density P I (P.N * conductor P * h) *
+          if Nat.Coprime t.2 (P.N * conductor P * h) ∧ ell ∣ t.2 then 1 else 0 := by
+      apply sum_congr rfl
+      intro t ht
+      exact adversarial_entry P I V h ell hNd hwidth hdel hell hellSmall hsmall hcap ht
+    _ = density P I (P.N * conductor P * h) *
+        ∑ t ∈ divisorPairs P I (rows P V h ell),
+          (if Nat.Coprime t.2 (P.N * conductor P * h) ∧ ell ∣ t.2 then (1 : ℝ) else 0) := by
+      rw [mul_sum]
+    _ = _ := by
+      rw [sum_boole]
+      rfl
+
+theorem adversarial_sum_zero_structure (P : Parameters) (I : Finset ℕ) (V h ell : ℕ)
+    (hd : 0 < conductor P)
+    (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P)
+    (hdel : Nat.Coprime ell (conductor P)) (hell : ell.Prime)
+    (hellSmall : ell * ell ≤ P.a)
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a)
+    (hcap : ∀ b ∈ I, conductor P * b ≤ P.N)
+    (hA : structureCount P I = 0) :
+    adversarialSum P I (P.N * conductor P * h) ell (rows P V h ell) = 0 := by
+  rw [adversarial_sum_identity P I V h ell hd hNd hwidth hdel hell hellSmall hsmall hcap,
+    density_zero_structure P I (P.N * conductor P * h) hA, zero_mul]
+
+theorem normalized_adversarial_sum (P : Parameters) (I : Finset ℕ)
+    (V h ell : ℕ) (x : ℝ)
+    (hd : 0 < conductor P)
+    (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P)
+    (hdel : Nat.Coprime ell (conductor P)) (hell : ell.Prime)
+    (hellSmall : ell * ell ≤ P.a)
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a)
+    (hcap : ∀ b ∈ I, conductor P * b ≤ P.N)
+    (hA : 0 < structureCount P I) :
+    x / (structureCount P I : ℝ) *
+      adversarialSum P I (P.N * conductor P * h) ell (rows P V h ell) =
+        x * (omittedCount P I (P.N * conductor P * h) ell (rows P V h ell) : ℝ) /
+          (unitCount I (P.N * conductor P * h) : ℝ) := by
+  have hJ : 0 < unitCount I (P.N * conductor P * h) :=
+    lt_of_lt_of_le hA (structure_le_units P I h hsmall)
+  have hA' : (structureCount P I : ℝ) ≠ 0 := by exact_mod_cast (Nat.ne_of_gt hA)
+  have hJ' : (unitCount I (P.N * conductor P * h) : ℝ) ≠ 0 := by exact_mod_cast (Nat.ne_of_gt hJ)
+  rw [adversarial_sum_identity P I V h ell hd hNd hwidth hdel hell hellSmall hsmall hcap,
+    density]
+  field_simp [hA', hJ']
+  <;> ring
+
+def theta (N j : ℕ) : ℝ :=
+  if j.Prime ∧ Nat.Coprime j N then Real.log (j : ℝ) else 0
+
+def rawLambda (N j : ℕ) : ℝ :=
+  if Nat.Coprime j N then ArithmeticFunction.vonMangoldt j else 0
+
+def weightedProfile (P : Parameters) (I : Finset ℕ) (H : ℕ)
+    (weight : ℕ → ℝ) : ℝ :=
+  ∑ b ∈ I, centered P I H b * weight (candidate P b)
+
+def calibrationPrice (P : Parameters) (I : Finset ℕ) (H H' : ℕ)
+    (weight : ℕ → ℝ) : ℝ :=
+  ∑ b ∈ I, (reference P I H' b - reference P I H b) * weight (candidate P b)
+
+theorem weighted_calibration (P : Parameters) (I : Finset ℕ)
+    (H H' : ℕ) (weight : ℕ → ℝ) :
+    weightedProfile P I H weight = weightedProfile P I H' weight +
+      calibrationPrice P I H H' weight := by
+  unfold weightedProfile calibrationPrice
+  rw [← sum_add_distrib]
+  apply sum_congr rfl
+  intro b hb
+  unfold centered
+  ring
+
+theorem theta_calibration (P : Parameters) (I : Finset ℕ) (H H' : ℕ) :
+    weightedProfile P I H (theta P.N) = weightedProfile P I H' (theta P.N) +
+      calibrationPrice P I H H' (theta P.N) :=
+  weighted_calibration P I H H' (theta P.N)
+
+theorem raw_calibration (P : Parameters) (I : Finset ℕ) (H H' : ℕ) :
+    weightedProfile P I H (rawLambda P.N) = weightedProfile P I H' (rawLambda P.N) +
+      calibrationPrice P I H H' (rawLambda P.N) :=
+  weighted_calibration P I H H' (rawLambda P.N)
+
+theorem raw_theta_price_difference (P : Parameters) (I : Finset ℕ) (H H' : ℕ) :
+    calibrationPrice P I H H' (rawLambda P.N) - calibrationPrice P I H H' (theta P.N) =
+      ∑ b ∈ I, (reference P I H' b - reference P I H b) *
+        (rawLambda P.N (candidate P b) - theta P.N (candidate P b)) := by
+  unfold calibrationPrice
+  rw [← sum_sub_distrib]
+  apply sum_congr rfl
+  intro b hb
+  ring
+
+end
+end GoldbachRound18.SeparatedTypeII
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound18.SeparatedTypeII.Parameters
+#print axioms GoldbachRound18.SeparatedTypeII.conductor
+#print axioms GoldbachRound18.SeparatedTypeII.PhysicalWitness
+#print axioms GoldbachRound18.SeparatedTypeII.physicalMask
+#print axioms GoldbachRound18.SeparatedTypeII.beta
+#print axioms GoldbachRound18.SeparatedTypeII.units
+#print axioms GoldbachRound18.SeparatedTypeII.structureCount
+#print axioms GoldbachRound18.SeparatedTypeII.unitCount
+#print axioms GoldbachRound18.SeparatedTypeII.density
+#print axioms GoldbachRound18.SeparatedTypeII.reference
+#print axioms GoldbachRound18.SeparatedTypeII.centered
+#print axioms GoldbachRound18.SeparatedTypeII.rows
+#print axioms GoldbachRound18.SeparatedTypeII.xi
+#print axioms GoldbachRound18.SeparatedTypeII.kappa
+#print axioms GoldbachRound18.SeparatedTypeII.candidate
+#print axioms GoldbachRound18.SeparatedTypeII.onProgression
+#print axioms GoldbachRound18.SeparatedTypeII.profile
+#print axioms GoldbachRound18.SeparatedTypeII.adversarialSum
+#print axioms GoldbachRound18.SeparatedTypeII.productPairs
+#print axioms GoldbachRound18.SeparatedTypeII.divisorPairs
+#print axioms GoldbachRound18.SeparatedTypeII.omittedPairs
+#print axioms GoldbachRound18.SeparatedTypeII.omittedCount
+#print axioms GoldbachRound18.SeparatedTypeII.toDivisor
+#print axioms GoldbachRound18.SeparatedTypeII.toProduct
+#print axioms GoldbachRound18.SeparatedTypeII.beta_bounds
+#print axioms GoldbachRound18.SeparatedTypeII.mask_large_factors
+#print axioms GoldbachRound18.SeparatedTypeII.omitted_mask_zero
+#print axioms GoldbachRound18.SeparatedTypeII.mask_unit_short_conductor
+#print axioms GoldbachRound18.SeparatedTypeII.mask_unit_reference
+#print axioms GoldbachRound18.SeparatedTypeII.structure_le_units
+#print axioms GoldbachRound18.SeparatedTypeII.density_zero_structure
+#print axioms GoldbachRound18.SeparatedTypeII.empty_units_empty_structure
+#print axioms GoldbachRound18.SeparatedTypeII.xi_bound
+#print axioms GoldbachRound18.SeparatedTypeII.kappa_bound
+#print axioms GoldbachRound18.SeparatedTypeII.kappa_periodic
+#print axioms GoldbachRound18.SeparatedTypeII.separate_columns
+#print axioms GoldbachRound18.SeparatedTypeII.equation_modeq
+#print axioms GoldbachRound18.SeparatedTypeII.periodic_class_iff_omitted
+#print axioms GoldbachRound18.SeparatedTypeII.rows_positive
+#print axioms GoldbachRound18.SeparatedTypeII.product_equation
+#print axioms GoldbachRound18.SeparatedTypeII.forward_mem
+#print axioms GoldbachRound18.SeparatedTypeII.divisor_equation
+#print axioms GoldbachRound18.SeparatedTypeII.backward_mem
+#print axioms GoldbachRound18.SeparatedTypeII.inverse_product
+#print axioms GoldbachRound18.SeparatedTypeII.inverse_divisor
+#print axioms GoldbachRound18.SeparatedTypeII.adversarial_reindex
+#print axioms GoldbachRound18.SeparatedTypeII.adversarial_entry
+#print axioms GoldbachRound18.SeparatedTypeII.adversarial_sum_identity
+#print axioms GoldbachRound18.SeparatedTypeII.adversarial_sum_zero_structure
+#print axioms GoldbachRound18.SeparatedTypeII.normalized_adversarial_sum
+#print axioms GoldbachRound18.SeparatedTypeII.theta
+#print axioms GoldbachRound18.SeparatedTypeII.rawLambda
+#print axioms GoldbachRound18.SeparatedTypeII.weightedProfile
+#print axioms GoldbachRound18.SeparatedTypeII.calibrationPrice
+#print axioms GoldbachRound18.SeparatedTypeII.weighted_calibration
+#print axioms GoldbachRound18.SeparatedTypeII.theta_calibration
+#print axioms GoldbachRound18.SeparatedTypeII.raw_calibration
+#print axioms GoldbachRound18.SeparatedTypeII.raw_theta_price_difference

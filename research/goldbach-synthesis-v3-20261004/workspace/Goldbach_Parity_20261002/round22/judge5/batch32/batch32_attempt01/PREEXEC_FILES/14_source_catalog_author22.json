@@ -1,0 +1,26 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_EXP_TAIL_PENDING_BRIDGE_CATALOG",
+  "status": "SOURCE_ONLY_PENDING_TAIL_DEPENDENCY_NOT_SELECTED_NOT_EXECUTABLE",
+  "module": "ComplexGammaMellinExpTailBridge22",
+  "namespace": "GoldbachComplexGammaMellin22",
+  "theorems": [
+    "complex_exp_sub_truncated_eq_tail",
+    "complex_exp_truncation_error_le"
+  ],
+  "declarations": 2,
+  "theorem_count": 2,
+  "definition_count": 0,
+  "qualified_print_axioms": 2,
+  "direct_imports": [
+    "ComplexGammaMellinHolomorphy22",
+    "ComplexGammaMellinTail22"
+  ],
+  "pending_dependency": "Actual Tail28 FAILED; independent future verdict on Tail SOURCE02 still required",
+  "not_in_main30_handoff": true,
+  "domain": "Re(w)>0,H>=0",
+  "compiler_invocations": 0,
+  "PREP_created": false,
+  "source_credit": 0,
+  "D_N": false,
+  "WIN": false
+}

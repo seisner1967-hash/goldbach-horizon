@@ -1,0 +1,75 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\SignedHyperbolicCRT.lean:40:25: error: invalid 'by' tactic, expected type has not been provided
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\SignedHyperbolicCRT.lean:199:2: error: unsolved goals
+case direct
+N : ℕ
+s : SignedCoordinates
+hg : SignedGuard N s
+h : ResourceCell N (decode N (unpack N s))
+he : encode N (decode N (unpack N s)) = unpack N s
+⊢ (encode N
+        (decode N
+          { direct := s.direct, a := s.a, b := s.b, x := (reconstructX N s).toNat,
+            y := (reconstructY N s).toNat })).direct =
+    s.direct
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\SignedHyperbolicCRT.lean:200:2: error: unsolved goals
+case a
+N : ℕ
+s : SignedCoordinates
+hg : SignedGuard N s
+h : ResourceCell N (decode N (unpack N s))
+he : encode N (decode N (unpack N s)) = unpack N s
+⊢ (encode N
+        (decode N
+          { direct := s.direct, a := s.a, b := s.b, x := (reconstructX N s).toNat, y := (reconstructY N s).toNat })).a =
+    s.a
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role4\SignedHyperbolicCRT.lean:201:2: error: unsolved goals
+case b
+N : ℕ
+s : SignedCoordinates
+hg : SignedGuard N s
+h : ResourceCell N (decode N (unpack N s))
+he : encode N (decode N (unpack N s)) = unpack N s
+⊢ (encode N
+        (decode N
+          { direct := s.direct, a := s.a, b := s.b, x := (reconstructX N s).toNat, y := (reconstructY N s).toNat })).b =
+    s.b
+'GoldbachRound19.SignedCRT.baseX' does not depend on any axioms
+'GoldbachRound19.SignedCRT.baseY' does not depend on any axioms
+'GoldbachRound19.SignedCRT.index' does not depend on any axioms
+'GoldbachRound19.SignedCRT.inverse_congruence' depends on axioms: [propext, Quot.sound]
+'GoldbachRound19.SignedCRT.baseX_congruence' depends on axioms: [propext, Quot.sound]
+'GoldbachRound19.SignedCRT.baseX_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.cancel_coefficient' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.baseY_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.signed_linear_solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.signed_parameter_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.actualConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.actualBaseX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.actualBaseY' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.actualIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.tuple_b_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.actual_signed_coordinates' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.SignedCRT.actual_signed_q_formula' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.SignedCoordinates' does not depend on any axioms
+'GoldbachRound19.SignedCRT.SignedCoordinates.ext' does not depend on any axioms
+'GoldbachRound19.SignedCRT.encodeSigned' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.reconstructQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.signed_reconstruction' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.signed_encoding_injective' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.SignedCRT.reconstructX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.reconstructY' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.unpack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.SignedGuard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.reconstructX_encode' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.reconstructY_encode' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.unpack_encode' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.signedGuard_encode' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.index_unpack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.encodeSigned_unpack' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.SignedCRT.signed_q_equals_decoded' depends on axioms: [propext, Classical.choice, Quot.sound]

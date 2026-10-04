@@ -1,0 +1,51 @@
+{
+  "schema": "ROUND22_ELAMBDA02_MANUAL_SOURCE_CATALOGUE",
+  "status": "SOURCE02_REPAIR_NOT_PREPARED_NOT_COMPILED",
+  "module": "ComplexGammaMellinLambdaTail22",
+  "namespace": "GoldbachComplexGammaMellin22",
+  "source_sha256": "0da22247d6f1085d0ca481f7f943c026570b1b7d6497fa420eabbffcd1c3cd37",
+  "source_bytes": 11538,
+  "modules": 1,
+  "declarations": 16,
+  "theorems": 12,
+  "definitions": 4,
+  "qualified_print_axioms": 16,
+  "definition_names": [
+    "signedLambdaMellinTail",
+    "lambdaMellinTail",
+    "lambdaMellinTailRadius",
+    "lambdaMellinTruncated"
+  ],
+  "theorem_names": [
+    "lambdaMellinProduct_bound",
+    "signedLambdaMellinTail_integrable",
+    "signedLambdaMellinTail_norm_le",
+    "lambdaMellinTail_norm_le",
+    "signedLambdaMellinTail_true_eq_Iio",
+    "lambdaMellinThermal_sub_truncated_eq_tail",
+    "lambdaMellinThermal_truncation_error_le",
+    "lambdaMellinTailRadius_eq_closed",
+    "lambdaMellinTailRadius_continuousAt",
+    "lambdaMellinTailRadius_pos",
+    "lambdaMellinTailRadius_antitone",
+    "exists_local_uniform_Lambda_tail"
+  ],
+  "local_imports": [
+    "ComplexGammaMellinLambda22",
+    "ComplexGammaMellinTail22"
+  ],
+  "schema_scope": "Manual inventory; identical names/definitions/statements/imports/prints guaranteed by raw byte equality outside the single reflection proof block, not a Lean parser",
+  "domains": {
+    "reflection": "w complex, H real arbitrary",
+    "truncation": "Re(w)>0,H>=0",
+    "radius_continuity": "Re(w)>0,H real"
+  },
+  "dependencies": {
+    "Main35": "Actual independent PASS30; readonly source4a944156 and olean8b557d2c",
+    "Tail30": "Actual independent PASS22; readonly sourcee5ba9961 and olean168112f8",
+    "Geometry25": "Not imported or promoted; original unchanged, NON_INVOKED36"
+  },
+  "new_compiler_or_credit": 0,
+  "D_N": false,
+  "WIN": false
+}

@@ -1,0 +1,37 @@
+{"stage": "STAGE_STARTED", "name": "01_preservation"}
+{"stage": "STAGE_PASS", "name": "01_preservation", "receipt_sha256": "fd4b7fc0555135a7e77f1c94d2111e5c80df1beee1f7750aff52f6c4c5c76811"}
+{"stage": "STAGE_STARTED", "name": "02_stored_numeric"}
+{"stage": "STAGE_PASS", "name": "02_stored_numeric", "receipt_sha256": "16eba50ac00e5c2296e49cd0bd352ce2f86a97ad4f73273c370b49e13a19f392"}
+{"stage": "STAGE_STARTED", "name": "03_nonss_stored_integers"}
+{"stage": "STAGE_PASS", "name": "03_nonss_stored_integers", "receipt_sha256": "95aa8940f8198b2a48828667150c062dad66e9d1ff6ecce3f4837569a4779e49"}
+{"stage": "STAGE_STARTED", "name": "04_rank_stored_integers"}
+{"stage": "STAGE_PASS", "name": "04_rank_stored_integers", "receipt_sha256": "141fdc857ae3a5299d6cdabd19e496b08262a8ad8a1bed62468ec1d66b0cb184"}
+{"stage": "STAGE_STARTED", "name": "05_author_actual_attempts"}
+{"stage": "STAGE_PASS", "name": "05_author_actual_attempts", "receipt_sha256": "8055f35cdc0fc9207a543fe0aadbb7604e9fb89759d67d35046b60903461cece"}
+{"stage": "STAGE_STARTED", "name": "06_fresh_independent_Lean"}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "RankCalibrationFace", "explicit_declarations": 22, "axiom_prints": 22}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "RankCalibrationFace", "olean_sha256": "c55f2e96a87abfd9d9da2fe95c5bf228c9bade8261bab64e0ee3d061c8001c90", "axiom_prints": 22}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "RankCalibrationPrice", "explicit_declarations": 31, "axiom_prints": 31}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "RankCalibrationPrice", "olean_sha256": "4140678e7d205091b7d030cd567f26bb731f622bcda9058def00fb11f6859de3", "axiom_prints": 31}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "RankCalibrationArithmetic", "explicit_declarations": 19, "axiom_prints": 19}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "RankCalibrationArithmetic", "olean_sha256": "4b4ce92493184ebb5bc68b277bf9356fae0137cc087dc1e410b3a75c51a52010", "axiom_prints": 19}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "RankCalibrationUnitLoss", "explicit_declarations": 9, "axiom_prints": 9}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "RankCalibrationUnitLoss", "olean_sha256": "93b286a703b664fe58fc77e62bdf9707f3532618b6979ea34e2da2193528bdf7", "axiom_prints": 9}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "RankCalibrationEuler", "explicit_declarations": 17, "axiom_prints": 17}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "RankCalibrationEuler", "olean_sha256": "adc02be84c0d89fe5c30a481c0c15d767f11d19ffdad53edab579f676f5b36be", "axiom_prints": 17}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "RankCalibrationEstimator", "explicit_declarations": 10, "axiom_prints": 10}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "RankCalibrationEstimator", "olean_sha256": "0bd26e528500b1e1c5c92fd71fbffd440da43ae067dd54007ef7d4bd035b234e", "axiom_prints": 10}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "TerminalPrimeExtraction", "explicit_declarations": 22, "axiom_prints": 22}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "TerminalPrimeExtraction", "olean_sha256": "e682cd3eeeadd6f0330570b6a0a55d7ec5a0f450365deed2599f6651a8386a1d", "axiom_prints": 22}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "BalancedResourceSwitch", "explicit_declarations": 40, "axiom_prints": 41}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "BalancedResourceSwitch", "olean_sha256": "7d872e21f21a61d89d9fe7368d6d49ae546deaf865b4f3b49c1312f85ff74e82", "axiom_prints": 41}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "SignedHyperbolicCRT", "explicit_declarations": 33, "axiom_prints": 34}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "SignedHyperbolicCRT", "olean_sha256": "ce3fe38749e6b5dcfc74ca5474b15c0080ca65702b9fe9ac357fa1e4c0c1fa24", "axiom_prints": 34}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "NonSSBracketSwitch", "explicit_declarations": 39, "axiom_prints": 39}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "NonSSBracketSwitch", "olean_sha256": "d1cc7dd91bb6d4f7e044cf6ba9e2d49690203e53f2369d42d872d6ef82587888", "axiom_prints": 39}
+{"stage": "ACTUAL_FRESH_NEW_LEAN_STARTED", "module": "RankTwoHarmonic", "explicit_declarations": 24, "axiom_prints": 24}
+{"stage": "FRESH_NEW_INDEPENDENT_LEAN_PASS", "module": "RankTwoHarmonic", "olean_sha256": "24f5fc8f86ef7484def0ec4cbe722b4c6f71a297514e9f54a756ee51f33594c6", "axiom_prints": 24}
+{"stage": "STAGE_PASS", "name": "06_fresh_independent_Lean", "receipt_sha256": "e54cefb8364d86e5f933eaa5bc42210494c8e7c617937ed2e48e81563dc60ae9"}
+{"stage": "STAGE_STARTED", "name": "07_preservation_after"}
+{"stage": "STAGE_PASS", "name": "07_preservation_after", "receipt_sha256": "fd4b7fc0555135a7e77f1c94d2111e5c80df1beee1f7750aff52f6c4c5c76811"}
+{"stage": "ACTUAL_JUDGE19_FINISHED", "status": "PASS_INDEPENDENT_ROUND19_AUXILIARY_ONLY", "new_counts": {"modules": 11, "theorems": 185, "defs": 78, "structures": 3, "instances": 0, "axiom_prints": 268}, "victory": false}

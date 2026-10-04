@@ -1,0 +1,25 @@
+{
+  "round": 15,
+  "status": "OBSERVED_SINGLE_READ_ONLY_AUDIT_EXIT_ZERO",
+  "audit_mode": "read_only_existing_three_replays_and_stored_vectors",
+  "command": "& 'D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round15\\judge\\audit-judge.ps1' *> 'D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round15\\judge\\audit_launch.log'\n$judgeExitCode = $LASTEXITCODE\nGet-Content -LiteralPath 'D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round15\\judge\\audit_launch.log'\nexit $judgeExitCode",
+  "shell": "powershell",
+  "working_directory": "D:\\Users\\Utilisateur\\Desktop\\Maths",
+  "actual_exec_session_id": 39411,
+  "actual_exec_final_chunk_id": "89dbdb",
+  "exit_code": 0,
+  "invocations": 1,
+  "audit_reexecuted_for_logging": false,
+  "producer_executed_by_judge": false,
+  "Lean_invoked": false,
+  "stdout_and_stderr_captured_from_original_launch": true,
+  "bindings_sha256": {
+    "audit_launch.log": "332069762a68fa3bd9917c0d951661d97300b38317d29c38d06eb66a7252d82b",
+    "audit-judge.ps1": "6498fae53a421e7e7cd4caf1cd526be6beba33daf0aefca782141583ea9ce73e",
+    "run-audit.py": "14f041ca31687a14a4cca380d42920db7e657d1895c79b53622faa305ab4d819",
+    "input_sha256.json": "2e107ea84ee1403550e3a60c4b9a8bab54a65fca434e4c36ce073a4673b76be3",
+    "judge_receipt.json": "e679efb162c6eed5c93675b38af648e9796c7b92aa06be62b2d8edfd52645bab"
+  },
+  "score": 0,
+  "victory": false
+}

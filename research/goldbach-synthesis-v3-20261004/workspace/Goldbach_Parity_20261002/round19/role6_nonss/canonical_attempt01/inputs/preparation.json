@@ -1,0 +1,103 @@
+{
+  "round": 19,
+  "role": 6,
+  "node": "14.4",
+  "status": "READY_PREPARATION_ONLY_WAITING_DISTINCT_ROOT19_NONSS_AFTER_FULL_SOURCE_READ",
+  "prepared_at_utc": "2026-10-03T00:11:53.3181095+00:00",
+  "bindings": {
+    "producer": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\nonss_checks.py",
+      "sha256": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+      "bytes": 3438
+    },
+    "arithmetic": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_nonss\\arithmetic.py",
+      "sha256": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+      "bytes": 10400
+    },
+    "bank": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_nonss\\bank.py",
+      "sha256": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+      "bytes": 28047
+    },
+    "launcher": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_nonss\\run_nonss_once.py",
+      "sha256": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+      "bytes": 7963
+    },
+    "contract": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role2\\test_contract.json",
+      "sha256": "29c4474d148a6e8cbe3a431130cc9143af2efc277682f4c38b5e5be99bb06037",
+      "bytes": 3813
+    },
+    "FINAL2": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\agent2_nonss.md",
+      "sha256": "20ca15ceba20b72459102b2da8429b7e6d72a7c4bd52dca7de7bc3a58a61cbc2",
+      "bytes": 29162
+    },
+    "probe": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\PROBE_BLOCK.md",
+      "sha256": "5f9e429bc264002044da60139f3942e7c3de909116d41e6cc52f70afb9a5a12d",
+      "bytes": 7143
+    },
+    "prompt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\experiments\\14.4\\executor_prompt.md",
+      "sha256": "794c2f289241cb550f83fa0928d0b9627ee878e85064e0196ee18822b4d20bbe",
+      "bytes": 16506
+    },
+    "role2_manifest": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role2\\manifest.json",
+      "sha256": "66a5e12172d93ccbc4460bf5733a81c284aeb101976f9319c7fc1909ad449252",
+      "bytes": 2767
+    },
+    "role2_receipt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role2\\final_receipt.json",
+      "sha256": "6081619ec9d4c942b24cb5fbd72b9ee316712d99b61a5503a98c83790f2df1d0",
+      "bytes": 759
+    },
+    "registry1361": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\previous_artifacts_sha256.json",
+      "sha256": "8c0abf930ee8c47b64d335ed286af4566fc674b573216f82f12b05c4ec877150",
+      "bytes": 154061
+    },
+    "preflight19_receipt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6\\conservation_final_receipt.json",
+      "sha256": "e647e21e5512c48d34c818c9942bb312d172524682b361552c52422fd3c15c53",
+      "bytes": 3590
+    }
+  },
+  "all_integer_q": [
+    1600100,
+    1601100
+  ],
+  "mathematical_producer_invocations": 0,
+  "Lean_invocations": 0,
+  "old_producer_preflight_Lean_PDF_replays": 0,
+  "canonical_attempt": 1,
+  "source_loop_contains_all_1001_q_and_per_q_SF_unit_cores": true,
+  "no_target_prime_filter_before_resource_coordinates": true,
+  "SS_selector": "minFac <= Z and minfac quotient prime; no extra strict inequality",
+  "exact_prime_multisets_and_repetitions": true,
+  "B_original_ceil_N_1_over_64": 2,
+  "B_hyp_floor_N_1_over_8": 10,
+  "B_test": 2048,
+  "source_D_short_empty_guard_not_adjusted": true,
+  "arithmetic": "fresh integer SPF/mu/phi and positive atanh48 rational tail with 128-bit outward dyadic rounding",
+  "all_signs_counts_and_PP_occurrences": "UNCOMPUTED_PENDING_GATE",
+  "zero_m1_mu": "literal zero, no kernel",
+  "e1_e3": "literal exceptions outside source e>p0 support",
+  "m0_zero": "only under q prime > p0; q nonprime selected measure I(q)=0",
+  "physical_capacity": "no credit or ledger payment; union m1 once and merge demand overlaps",
+  "source_onset_logN": "10^24 unchanged, not inferred from N=10^8",
+  "written_rank3_onset_logN": "10^40 separate",
+  "canonical_result": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\nonss.json",
+  "future_log_receipt_and_captures": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_nonss\\canonical_attempt01",
+  "future_command_must_supply": [
+    "--root-authorization ROOT19_NONSS...",
+    "--source-sha256",
+    "--launcher-sha256",
+    "--preparation-sha256"
+  ],
+  "gate_authorized": false,
+  "victory": false
+}

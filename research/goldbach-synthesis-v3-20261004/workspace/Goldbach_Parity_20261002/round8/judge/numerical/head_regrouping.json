@@ -1,0 +1,1323 @@
+{
+  "status": "PASS_HEAD_IDENTITY_ONLY",
+  "N": 100000000,
+  "alpha": 100,
+  "H": 1000,
+  "B_physical": 1,
+  "head_identity": "sum_r mu(r)log(r)sum_k mu(k)^2 Lambda_N(N-r*k)1_(k,r)=sum_(b,c)w(b\u00b2c)psi_N(N-1;b\u00b2c,N)",
+  "selection_scope": "Verified coefficientwise at the twelve listed m; the same selection mask is retained on both sides. Complete AP prefixes/head are not enumerated",
+  "square_part_weight": "mu(b)mu(c)*sum_(g|b,alpha<c*g<=H)mu(g)log(c*g)",
+  "b_c_support": "b,c squarefree,gcd(b,c)=1,gcd(b*c,N)=1",
+  "selected_arguments": [
+    {
+      "m": 173,
+      "n": 99999827,
+      "factor_m": [
+        [
+          173,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          99999827,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "original_r_slots": 1,
+      "modulus_terms": 1,
+      "full_coefficients": {
+        "173": "-1"
+      },
+      "full_weighted_terms": 1,
+      "Lambda_N": {
+        "99999827": "1"
+      },
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "173": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "173": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {
+            "173": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "173": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "173": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {
+            "173": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {
+        "173": "-1"
+      },
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 303,
+      "n": 99999697,
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          101,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          7,
+          1
+        ],
+        [
+          41,
+          1
+        ],
+        [
+          348431,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "original_r_slots": 2,
+      "modulus_terms": 2,
+      "full_coefficients": {
+        "3": "1"
+      },
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {
+        "3": "1",
+        "101": "1"
+      },
+      "k_ge_2_coefficients": {
+        "101": "-1"
+      },
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 311,
+      "n": 99999689,
+      "factor_m": [
+        [
+          311,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          113,
+          1
+        ],
+        [
+          199,
+          1
+        ],
+        [
+          4447,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "original_r_slots": 1,
+      "modulus_terms": 1,
+      "full_coefficients": {
+        "311": "-1"
+      },
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "311": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "311": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {
+            "311": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "311": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "311": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {
+            "311": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {
+        "311": "-1"
+      },
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 369,
+      "n": 99999631,
+      "factor_m": [
+        [
+          3,
+          2
+        ],
+        [
+          41,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          59,
+          1
+        ],
+        [
+          1694909,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "original_r_slots": 2,
+      "modulus_terms": 2,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "3": "1",
+            "41": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1",
+            "41": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "3": "1",
+            "41": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1",
+            "41": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {
+        "3": "0",
+        "41": "0"
+      },
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 841,
+      "n": 99999159,
+      "factor_m": [
+        [
+          29,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          59,
+          1
+        ],
+        [
+          3343,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "original_r_slots": 1,
+      "modulus_terms": 0,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {
+        "29": "0"
+      },
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 909,
+      "n": 99999091,
+      "factor_m": [
+        [
+          3,
+          2
+        ],
+        [
+          101,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          359,
+          1
+        ],
+        [
+          278549,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "original_r_slots": 3,
+      "modulus_terms": 3,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {
+        "3": "0",
+        "101": "0"
+      },
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 10201,
+      "n": 99989799,
+      "factor_m": [
+        [
+          101,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          37,
+          1
+        ],
+        [
+          521,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "original_r_slots": 1,
+      "modulus_terms": 2,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {},
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 30603,
+      "n": 99969397,
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          101,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          11,
+          1
+        ],
+        [
+          421,
+          1
+        ],
+        [
+          21587,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "original_r_slots": 2,
+      "modulus_terms": 4,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "3": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {},
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 44541,
+      "n": 99955459,
+      "factor_m": [
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          101,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          2069,
+          1
+        ],
+        [
+          48311,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "original_r_slots": 6,
+      "modulus_terms": 8,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "3": "1",
+            "7": "1",
+            "101": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1",
+            "7": "-1",
+            "101": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "3": "1",
+            "7": "1",
+            "101": "1"
+          },
+          "tail_coefficients": {
+            "3": "-1",
+            "7": "-1",
+            "101": "-1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "3": "-1",
+            "7": "-1",
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "3": "1",
+            "7": "1",
+            "101": "1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "3": "-1",
+            "7": "-1",
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "3": "1",
+            "7": "1",
+            "101": "1"
+          },
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {},
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 112211,
+      "n": 99887789,
+      "factor_m": [
+        [
+          11,
+          1
+        ],
+        [
+          101,
+          2
+        ]
+      ],
+      "factor_n": [
+        [
+          99887789,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "original_r_slots": 1,
+      "modulus_terms": 2,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {
+        "99887789": "1"
+      },
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": true,
+          "tail_weighted_active": true
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": true,
+          "tail_weighted_active": true
+        },
+        {
+          "B": 4,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": true,
+          "tail_weighted_active": true
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": true,
+          "tail_weighted_active": true
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "101": "-1"
+          },
+          "tail_coefficients": {
+            "101": "1"
+          },
+          "head_weighted_active": true,
+          "tail_weighted_active": true
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {},
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 658911,
+      "n": 99341089,
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          41,
+          1
+        ],
+        [
+          487,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          9967,
+          2
+        ]
+      ],
+      "mu_m": 1,
+      "original_r_slots": 3,
+      "modulus_terms": 3,
+      "full_coefficients": {
+        "3": "1",
+        "11": "1",
+        "41": "2",
+        "487": "-1"
+      },
+      "full_weighted_terms": 4,
+      "Lambda_N": {
+        "9967": "1"
+      },
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {
+            "3": "1",
+            "11": "1",
+            "41": "2",
+            "487": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {
+            "3": "1",
+            "11": "1",
+            "41": "2",
+            "487": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {
+            "3": "1",
+            "11": "1",
+            "41": "2",
+            "487": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {
+            "3": "1",
+            "11": "1",
+            "41": "2",
+            "487": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {
+            "3": "1",
+            "11": "1",
+            "41": "2",
+            "487": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {
+            "3": "1",
+            "11": "1",
+            "41": "2",
+            "487": "-1"
+          },
+          "tail_coefficients": {},
+          "head_weighted_active": true,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {},
+      "k_ge_2_coefficients": {
+        "3": "1",
+        "11": "1",
+        "41": "2",
+        "487": "-1"
+      },
+      "k1_removed_exactly": true
+    },
+    {
+      "m": 99999727,
+      "n": 273,
+      "factor_m": [
+        [
+          7951,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "original_r_slots": 0,
+      "modulus_terms": 0,
+      "full_coefficients": {},
+      "full_weighted_terms": 0,
+      "Lambda_N": {},
+      "cuts": [
+        {
+          "B": 1,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 2,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 4,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 8,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 16,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        },
+        {
+          "B": 128,
+          "head_coefficients": {},
+          "tail_coefficients": {},
+          "head_weighted_active": false,
+          "tail_weighted_active": false
+        }
+      ],
+      "k1_coefficients": {},
+      "k_ge_2_coefficients": {},
+      "k1_removed_exactly": true
+    }
+  ],
+  "physical_cuts": "B=1 is floor(N^(1/32)); other integer B values are finite algebra stress cuts, not alternate asymptotic parameters",
+  "incomplete_fibers": [
+    {
+      "b": 1,
+      "c": 101,
+      "all_divisor_sum": {
+        "101": "1"
+      },
+      "actual_cut_sum": {
+        "101": "1"
+      },
+      "complete_in_physical_head": true,
+      "verdict": "Use -Lambda(b) only on complete fibers; keep every incomplete fiber literal"
+    },
+    {
+      "b": 3,
+      "c": 101,
+      "all_divisor_sum": {
+        "3": "-1"
+      },
+      "actual_cut_sum": {
+        "3": "-1"
+      },
+      "complete_in_physical_head": true,
+      "verdict": "Use -Lambda(b) only on complete fibers; keep every incomplete fiber literal"
+    },
+    {
+      "b": 7,
+      "c": 101,
+      "all_divisor_sum": {
+        "7": "-1"
+      },
+      "actual_cut_sum": {
+        "7": "-1"
+      },
+      "complete_in_physical_head": true,
+      "verdict": "Use -Lambda(b) only on complete fibers; keep every incomplete fiber literal"
+    },
+    {
+      "b": 21,
+      "c": 101,
+      "all_divisor_sum": {},
+      "actual_cut_sum": {
+        "3": "-1",
+        "7": "-1",
+        "101": "-1"
+      },
+      "complete_in_physical_head": false,
+      "verdict": "Use -Lambda(b) only on complete fibers; keep every incomplete fiber literal"
+    },
+    {
+      "b": 3,
+      "c": 41,
+      "all_divisor_sum": {
+        "3": "-1"
+      },
+      "actual_cut_sum": {
+        "3": "-1",
+        "41": "-1"
+      },
+      "complete_in_physical_head": false,
+      "verdict": "Use -Lambda(b) only on complete fibers; keep every incomplete fiber literal"
+    }
+  ],
+  "repeated_factor_falsifier": {
+    "r": 303,
+    "k": 63,
+    "n": 99980911,
+    "factor_k": [
+      [
+        3,
+        2
+      ],
+      [
+        7,
+        1
+      ]
+    ],
+    "factor_n": [
+      [
+        99980911,
+        1
+      ]
+    ],
+    "correct": 0,
+    "illegal_product_formula": -1,
+    "corrected_lcm": 0,
+    "corrected_d_restriction": 0,
+    "verdict": "Allowing d to share r while keeping d\u00b2*t gives a spurious active coefficient; retain gcd(d,r)=1 or use the general lcm"
+  },
+  "special_prefix_counts": [
+    {
+      "q": 3,
+      "positive_v_count": 33333332,
+      "bound": "100000000/3",
+      "endpoint_n_one_removed": true
+    },
+    {
+      "q": 101,
+      "positive_v_count": 990098,
+      "bound": "100000000/101",
+      "endpoint_n_one_removed": true
+    },
+    {
+      "q": 303,
+      "positive_v_count": 330032,
+      "bound": "100000000/303",
+      "endpoint_n_one_removed": true
+    },
+    {
+      "q": 369,
+      "positive_v_count": 271002,
+      "bound": "100000000/369",
+      "endpoint_n_one_removed": false
+    },
+    {
+      "q": 10201,
+      "positive_v_count": 9802,
+      "bound": "100000000/10201",
+      "endpoint_n_one_removed": false
+    },
+    {
+      "q": 112211,
+      "positive_v_count": 891,
+      "bound": "100000000/112211",
+      "endpoint_n_one_removed": false
+    },
+    {
+      "q": 44541,
+      "positive_v_count": 2245,
+      "bound": "100000000/44541",
+      "endpoint_n_one_removed": false
+    }
+  ],
+  "prefix_count_scope": "No +1 is needed for n=N-q*v,1<=v<=floor((N-2)/q), this special full prefix only; other interval/fiber +1 terms are retained",
+  "nonsquarefree_cut_diagnostic": "m=112211 has prime n=99887789: full head zero, B=1 head=-log101*log99887789 and tail=+log101*log99887789",
+  "k1_diagnostic": "m=173,n=99999827 both prime: all-k head retains -log173*log99999827; k>=2 head removes it, or HARM cancels it jointly",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 227,
+    "baseline_sha256": "b973b6ea8ce1fdef2a704e1e0bcc977ee7ac5b140e71d17cc3d90c165317243a",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round8\\previous_artifacts_sha256.json"
+  },
+  "script_sha256": "4e2b87f912177f05871bdefd6d532db99ca02ec1ac888cda5bfb9032ad3eb65e",
+  "limitations": "No analytical tail bound, no acquired I payment recomputed, no complete head/complement enumeration and no whole D_N claim"
+}

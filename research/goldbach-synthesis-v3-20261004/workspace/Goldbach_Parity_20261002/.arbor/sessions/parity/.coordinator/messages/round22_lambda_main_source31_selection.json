@@ -1,0 +1,32 @@
+{
+  "schema": "ROUND22_ROOT_SOURCE_LEAF_SELECTION",
+  "user_instruction": "continue; unified continuous pivot 22 remains in force",
+  "node": "15.3",
+  "selected_module": "ComplexGammaMellinLambda22",
+  "next_stage": "batch31_SOURCE_TOOLS_ONLY_AFTER_REAL_BATCH30_CLOSURE",
+  "source": "round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinLambda22.lean",
+  "source_sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+  "independent_source_review": "round22/judge5/complex_gamma_mellin_lambda_source_review01/review22.md",
+  "review_sha256": "525e2577b47e49a3673056df681647778b2dd02ec01aca24172a31d01a81d887",
+  "ROOT_review_read": "5a2259",
+  "ROOT_review_receipts_read": "f96b60",
+  "theorems": 24,
+  "definitions": 6,
+  "declarations": 30,
+  "readonly_dependencies": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22",
+    "ComplexGammaMellinLocal22",
+    "ComplexGammaMellinHolomorphy22"
+  ],
+  "reason": "Construct absolute convergence and the actual exchange of the true Lambda series with complex Gamma Mellin inversion; do not add the target identity or integrability as a premise.",
+  "baseline_rule": "Use the genuine ROOT-observed closed batch30 state; no advance credit.",
+  "excluded_modules": ["ComplexGammaMellinExpTailBridge22", "ComplexGammaMellinLambdaTail22"],
+  "SOURCE_tool_preparation_authorized": true,
+  "PREP_authorized": false,
+  "compiler_authorized": false,
+  "numeric_authorized": false,
+  "new_Lean_credit": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

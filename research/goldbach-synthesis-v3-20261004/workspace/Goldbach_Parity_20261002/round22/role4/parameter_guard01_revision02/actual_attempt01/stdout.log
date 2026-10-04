@@ -1,0 +1,132 @@
+{
+  "D_N": false,
+  "K": 134217728,
+  "N": 100000000,
+  "S": "288230376151711744",
+  "WIN": false,
+  "coefficient_N_computed": false,
+  "complete_catalogue_checked": false,
+  "constants": {
+    "CRT_product": 200988950952742247103310192629436327377560928257,
+    "catalogue_checked": false,
+    "coefficient_upper": 8507059258094053316818981051637857144342052864,
+    "error_denominator": 83076749736557242056487941267521536,
+    "full_projection_computed": false,
+    "joint_error_numerator": 3689348851635398470819103234,
+    "primitive_Lean_certified": false,
+    "rows": [
+      {
+        "K_inverse": 2013265906,
+        "c": 15,
+        "g": 31,
+        "omega": 440564289,
+        "omega_inverse": 1713844692,
+        "p": 2013265921,
+        "trial_divisions": 44868
+      },
+      {
+        "K_inverse": 2281701360,
+        "c": 17,
+        "g": 3,
+        "omega": 129140163,
+        "omega_inverse": 2059821446,
+        "p": 2281701377,
+        "trial_divisions": 47766
+      },
+      {
+        "K_inverse": 3221225449,
+        "c": 24,
+        "g": 5,
+        "omega": 229807484,
+        "omega_inverse": 2980752801,
+        "p": 3221225473,
+        "trial_divisions": 56754
+      },
+      {
+        "K_inverse": 3489660903,
+        "c": 26,
+        "g": 3,
+        "omega": 1392672017,
+        "omega_inverse": 3037652682,
+        "p": 3489660929,
+        "trial_divisions": 59072
+      },
+      {
+        "K_inverse": 3892314084,
+        "c": 29,
+        "g": 3,
+        "omega": 1094924467,
+        "omega_inverse": 3531907051,
+        "p": 3892314113,
+        "trial_divisions": 62387
+      }
+    ],
+    "status": "FIXED_PARAMETER_CHECKS_ONLY"
+  },
+  "global_NTT_computed": false,
+  "log_primitive_Lean_certified": false,
+  "model_sha256": "80718ee9c1306a974554a70322ad36648897216890f6747ed2ddede840421d98",
+  "mutations": [
+    {
+      "diagnostic": "INVALID_MODULAR_PARAMETER_COMPOSITE",
+      "name": "COMPOSITE_3_TIMES_44739243",
+      "rejected": true
+    },
+    {
+      "diagnostic": "ROOT_ORDER_FAILED",
+      "name": "ROOT_ONE_ORDER_ONE",
+      "rejected": true
+    },
+    {
+      "diagnostic": "RECORD_LOW_ENDPOINT_FAILED",
+      "name": "POINT_32_FOR_LOG_2",
+      "rejected": true
+    },
+    {
+      "diagnostic": "AUX_TAU_TOO_LARGE",
+      "name": "SCALE_ONE_TAU_VIOLATION",
+      "rejected": true
+    }
+  ],
+  "samples": [
+    {
+      "argument": 2,
+      "argument_primality_claimed": false,
+      "log40_endpoint_guards": true,
+      "point32": "199786072581291495",
+      "point40": "199786072581291495"
+    },
+    {
+      "argument": 3,
+      "argument_primality_claimed": false,
+      "log40_endpoint_guards": true,
+      "point32": "316653433207702182",
+      "point40": "316653433207702182"
+    },
+    {
+      "argument": 4,
+      "argument_primality_claimed": false,
+      "log40_endpoint_guards": true,
+      "point32": "399572145162582989",
+      "point40": "399572145162582989"
+    },
+    {
+      "argument": 99999989,
+      "argument_primality_claimed": false,
+      "log40_endpoint_guards": true,
+      "point32": "5309399708094640507",
+      "point40": "5309399708094640507"
+    },
+    {
+      "argument": 100000000,
+      "argument_primality_claimed": false,
+      "log40_endpoint_guards": true,
+      "point32": "5309399739799983627",
+      "point40": "5309399739799983627"
+    }
+  ],
+  "schema": "ROUND22_PARAMETER_GUARD01_RESULT",
+  "scope": "PARAMETER_GUARD01_ONLY",
+  "spectral_H1": false,
+  "status": "PARAMETER_GUARDS_AND_FIVE_LOG_SAMPLES_AUX_PASS"
+}

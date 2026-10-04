@@ -1,0 +1,75 @@
+{
+  "status": "PASS_EXACT_REPLAY",
+  "jsons": {
+    "witnesses.json": {
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "production_sha256": "74dd4515d76d7325cd3e08ed23c84f687cbd14f773398653b3eb12a39379cf05",
+      "replay_sha256": "74dd4515d76d7325cd3e08ed23c84f687cbd14f773398653b3eb12a39379cf05",
+      "status": "VERIFIED_NEW_FINITE_WITNESSES_ONLY"
+    },
+    "ap_prefix.json": {
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "production_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+      "replay_sha256": "84d4cd68709aa9a16fd4a96d44374726c427b3cce40df9b364b1eae8c474d917",
+      "status": "PASS_NEW_FINITE_CONTRACTS_ONLY"
+    },
+    "paired_axes.json": {
+      "all_fields_equal": true,
+      "all_bytes_equal": true,
+      "production_sha256": "ff1f8526553f2861776e9aa3f492969274a664055b8e3fb6ea41bebe079c6173",
+      "replay_sha256": "ff1f8526553f2861776e9aa3f492969274a664055b8e3fb6ea41bebe079c6173",
+      "status": "PASS_NEW_PAIR_IDENTITY_ONLY"
+    }
+  },
+  "contract_statuses": {
+    "witnesses.json": "VERIFIED_NEW_FINITE_WITNESSES_ONLY",
+    "ap_prefix.json": "PASS_NEW_FINITE_CONTRACTS_ONLY",
+    "paired_axes.json": "PASS_NEW_PAIR_IDENTITY_ONLY"
+  },
+  "falsifiers": {
+    "ap_prefix.json.finite_coefficients.nonunit_r5": "ERROR_FALSIFIER",
+    "ap_prefix.json.finite_coefficients.nonsquarefree_r9": "ERROR_FALSIFIER",
+    "ap_prefix.json.finite_coefficients.intersection": "ERROR_FALSIFIER",
+    "ap_prefix.json.prefix_expansion.omitted_tail": "ERROR_FALSIFIER",
+    "ap_prefix.json.prefix_expansion.actual_intersection": "ERROR_FALSIFIER",
+    "ap_prefix.json.scope_and_reference.rows.low_prefix": "ERROR_FALSIFIER",
+    "ap_prefix.json.scope_and_reference.rows.low_plus_band": "ERROR_FALSIFIER",
+    "ap_prefix.json.scope_and_reference.rows.negative_reference": "ERROR_FALSIFIER",
+    "ap_prefix.json.scope_and_reference.false_pointwise_G_nonnegative": "ERROR_FALSIFIER",
+    "ap_prefix.json.properpower_first_axis": "ERROR_FALSIFIER",
+    "paired_axes.json.false_pair_favorable": "ERROR_FALSIFIER",
+    "paired_axes.json.incidence_defect": "ERROR_FALSIFIER",
+    "paired_axes.json.missing_face": "ERROR_FALSIFIER"
+  },
+  "falsifier_count": 13,
+  "strict_rational_signs_checked": true,
+  "sign_certificate_count": 15,
+  "sign_certificates": {
+    "paired_axes.json.pairs.both_prime.pair_sign": "POSITIVE",
+    "paired_axes.json.pairs.both_prime.entropy_sign": "POSITIVE",
+    "paired_axes.json.pairs.both_prime.principal_sign": "NEGATIVE",
+    "paired_axes.json.pairs.one_prime_axis.pair_sign": "POSITIVE",
+    "paired_axes.json.pairs.one_prime_axis.entropy_sign": "POSITIVE",
+    "paired_axes.json.pairs.one_prime_axis.principal_sign": "POSITIVE",
+    "paired_axes.json.pairs.c7_missing_face.pair_sign": "POSITIVE",
+    "paired_axes.json.pairs.c7_missing_face.entropy_sign": "POSITIVE",
+    "paired_axes.json.pairs.c7_missing_face.principal_sign": "POSITIVE",
+    "paired_axes.json.full_partitions.both_prime.whole_actual_sign": "POSITIVE",
+    "paired_axes.json.full_partitions.one_prime_axis.whole_actual_sign": "POSITIVE",
+    "paired_axes.json.false_pair_favorable.negative_model_over_S": "NEGATIVE",
+    "paired_axes.json.false_pair_favorable.positive_whole_pair": "POSITIVE",
+    "paired_axes.json.incidence_defect.actual_principal_sign": "POSITIVE",
+    "paired_axes.json.incidence_defect.incorrect_sign": "NEGATIVE"
+  },
+  "finite_domain_N": 100000000,
+  "B6_divisor_cases": 16,
+  "AP_cut_cases": 12,
+  "restricted_prime_E_count": 5,
+  "three_adic_partitions": 2,
+  "old_banks_replayed": false,
+  "analytical_payments_tested": false,
+  "global_D_N_estimated": false,
+  "victory": false
+}

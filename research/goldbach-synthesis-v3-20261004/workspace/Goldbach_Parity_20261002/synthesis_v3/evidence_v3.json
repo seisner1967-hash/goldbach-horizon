@@ -1,0 +1,685 @@
+{
+  "schema": "GOLDBACH_SYNTHESIS_V3_EVIDENCE",
+  "language": "en",
+  "date": "2026-10-04",
+  "scope": "Clôture documentaire uniquement ; aucun nouveau calcul scientifique, compilation Lean, programme natif, probe ou opération Git par l'auteur de cette synthèse.",
+  "official_inventory": {
+    "modules": 88,
+    "auxiliary_declarations": 1488,
+    "includes_definitions": true,
+    "baseline_observation_id": "root35"
+  },
+  "research_frozen": true,
+  "coefficient_N_computed": false,
+  "D_N_proved": false,
+  "WIN": false,
+  "documents": [
+    {
+      "id": "tex_v3",
+      "path": "synthesis_v3/goldbach_synthesis_v3.tex",
+      "status": "DOCUMENT_SOURCE",
+      "sha256": "349fac599874b6fca010b03094a3eb7ee137c122562cbd45a2167ede4db80b73",
+      "bytes": 42969
+    },
+    {
+      "id": "handoff_v3",
+      "path": "synthesis_v3/HANDOFF_THEORY_V3.txt",
+      "status": "DOCUMENT_HANDOFF",
+      "sha256": "ffcec87fd39397bc0f9efa46b3e42b83a6c146cc914915ae3018bd002e23050e",
+      "bytes": 7719
+    }
+  ],
+  "evidence_files": [
+    {
+      "id": "monographie",
+      "path": "monographie.txt",
+      "status": "HISTORICAL_DOCUMENT",
+      "read_scope": "TARGETED",
+      "read_chunks": [
+        "11284f"
+      ],
+      "ranges": "1-246;2299-2421; pas de FULL du corpus entier",
+      "sha256": "ded7e6252ed3b620537fc471d11778fe16abd1305ec4c6959fa185546a5be687",
+      "bytes": 132972
+    },
+    {
+      "id": "frame_tex",
+      "path": "../Goldbach_Final_20261001/goldbach_synthesis.tex",
+      "status": "FIXED_FRAME_SOURCE",
+      "read_scope": "TARGETED",
+      "read_chunks": [
+        "fe789a"
+      ],
+      "ranges": "1-186; u=log N>=10^24",
+      "sha256": "1d8494f00a8e3c1d9a628cb2562dc309b587af03e9186147c8c428f0c2413871",
+      "bytes": 152850
+    },
+    {
+      "id": "heat_envelope",
+      "path": "round22/judge5/batch11/sources/ThermalProjectionEnvelope22.lean",
+      "status": "INDEPENDENT_MODULE_ROW_PASS42_GLOBAL_BATCH_FAILED",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "0c053b"
+      ],
+      "sha256": "77cdab8bed77a3580767bf20dfa8069860ea888490d673daf5144f1aba050ed5",
+      "bytes": 17761
+    },
+    {
+      "id": "heat_envelope_adjudication",
+      "path": "round22/judge5/batch11/adjudication.md",
+      "status": "CLOSED_PARTIAL_PASS42",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "11a29e"
+      ],
+      "sha256": "dd25619f5d0e8ab7f35b45a72527e55837da1743e240fc9170f46aeafa793018",
+      "bytes": 3308
+    },
+    {
+      "id": "circle_identity",
+      "path": "round22/judge5/batch13/sources/ThermalProjectionIdentity22.lean",
+      "status": "INDEPENDENT_MODULE_PASS20",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "580cee"
+      ],
+      "sha256": "8bb1eb5ec6ab4bf5e0c8cc053dcbe743049641dab5a3a3858205ad8ee2e2e9aa",
+      "bytes": 15587
+    },
+    {
+      "id": "discrete",
+      "path": "round22/judge5/batch15/sources/DiscreteThermalProjection22.lean",
+      "status": "INDEPENDENT_MODULE_PASS29",
+      "read_scope": "METADATA_SHA_BOUND; statements supported by adjudication15",
+      "sha256": "f24c702b0a6cd71e88ae1279061a45e02fa04f12f8e8641444d3b5e1803e8f02",
+      "bytes": 13937
+    },
+    {
+      "id": "adjudication15",
+      "path": "round22/judge5/batch15/adjudication.md",
+      "status": "INDEPENDENT_BATCH_PASS29",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "59742a"
+      ],
+      "sha256": "e2fda965a5cc1060a42920e5e889dc41f1867a2a6f091fb75ba132b7baaf1f49",
+      "bytes": 2282
+    },
+    {
+      "id": "log32",
+      "path": "round22/judge5/batch17/sources/RationalLogQuantization22.lean",
+      "status": "INDEPENDENT_MODULE_PASS38",
+      "read_scope": "METADATA_SHA_BOUND; prior source review retained, adjudication17 FULL",
+      "sha256": "dfabcabf39ecc1ba7769eb99ea73e0483dc6925f0bb3d11c05891d22c0a787a7",
+      "bytes": 16997
+    },
+    {
+      "id": "q_envelope",
+      "path": "round22/judge5/batch17/sources/QuantizedLambdaEnvelope22.lean",
+      "status": "INDEPENDENT_MODULE_PASS14",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "99e3c8"
+      ],
+      "sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "bytes": 7365
+    },
+    {
+      "id": "adjudication17",
+      "path": "round22/judge5/batch17/adjudication.md",
+      "status": "INDEPENDENT_BATCH_PASS52",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "59742a"
+      ],
+      "sha256": "ffab547e870266510c64ebe011b89998fe1d218ec27f347f8ca8a3ce38a331e3",
+      "bytes": 3611
+    },
+    {
+      "id": "finitefield",
+      "path": "round22/judge5/batch19/sources/FiniteFieldProjection22.lean",
+      "status": "INDEPENDENT_MODULE_PASS24",
+      "read_scope": "METADATA_SHA_BOUND; adjudication19 FULL",
+      "sha256": "2b1cc267ce780a6a45c039f4b4b82d5a4ad4541fa224d76413dec5432658a48a",
+      "bytes": 13279
+    },
+    {
+      "id": "adjudication19",
+      "path": "round22/judge5/batch19/adjudication.md",
+      "status": "INDEPENDENT_BATCH_PASS24",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "59742a"
+      ],
+      "sha256": "af4bb865b233d921d895ca44b4dbfe265b3d6eac918ae311830c833ad860c5a1",
+      "bytes": 2996
+    },
+    {
+      "id": "concrete_roots",
+      "path": "round22/judge5/batch22/sources/ConcreteNTTRoots22.lean",
+      "status": "INDEPENDENT_MODULE_PASS18",
+      "read_scope": "METADATA_SHA_BOUND; adjudication22 FULL",
+      "sha256": "16c414a5d2f05c4ad273dde2245282aad452880b4d51df0aaed78f08d944b3bc",
+      "bytes": 9456
+    },
+    {
+      "id": "concrete_A32",
+      "path": "round22/judge5/batch22/sources/ConcreteNTTA32Projection22.lean",
+      "status": "INDEPENDENT_MODULE_PASS10",
+      "read_scope": "METADATA_SHA_BOUND; adjudication22 FULL",
+      "sha256": "cefc07197945f1e9710895d4a01455861ae6db21365cc44dec206178e76af4c3",
+      "bytes": 3783
+    },
+    {
+      "id": "adjudication22",
+      "path": "round22/judge5/batch22/adjudication.md",
+      "status": "INDEPENDENT_BATCH_PASS28",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "4dc8bc"
+      ],
+      "sha256": "6972ea6238f127dd5f3b7ec82c7ab3fd1fbd1815ce1e9fb31b0820b6a724be23",
+      "bytes": 2964
+    },
+    {
+      "id": "local26_adjudication",
+      "path": "round22/judge5/batch26/adjudication.md",
+      "status": "MODULE_ROW_PASS22_GLOBAL_BATCH_FAILED",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "11a29e"
+      ],
+      "sha256": "4dc543b413e46307d181b9dbe38a201b50ae313d31dd76970ca1711b3600c154",
+      "bytes": 3807
+    },
+    {
+      "id": "mellin35",
+      "path": "round22/judge5/batch35/sources/ComplexGammaMellinLambda22.lean",
+      "status": "INDEPENDENT_MODULE_PASS30_24_THEOREMS_6_DEFINITIONS",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "ea2f50"
+      ],
+      "sha256": "4a94415678e4c3295b989dccbcda9e049483e131c17efce68099d05686e1c72d",
+      "bytes": 16780
+    },
+    {
+      "id": "catalog35",
+      "path": "round22/judge5/batch35/catalog.json",
+      "status": "HISTORICAL_PRECOMPILE_CATALOGUE_IMMUTABLE",
+      "read_scope": "PARSED_METADATA",
+      "read_chunks": [
+        "11a29e"
+      ],
+      "note": "source path and counts projected; historical SOURCE_ONLY flag is superseded by actual receipt35, without changing the catalogue",
+      "sha256": "3502fe72c4fbe82c7fbbd5fcf4b6577e5404b665f82ad0e751d41860e309d902",
+      "bytes": 25109
+    },
+    {
+      "id": "receipt35",
+      "path": "round22/judge5/batch35/batch35_attempt01/receipt.json",
+      "status": "INDEPENDENT_BATCH35_AUX_PASS",
+      "read_scope": "SHA_BOUND; actual status and exact counts supported by own FULL adjudication35 and root35",
+      "sha256": "3cffa331b39283808678dbfa5dc36081f4e5a2698c8a9f278d6b8b6a63ec6832",
+      "bytes": 8758
+    },
+    {
+      "id": "adjudication35",
+      "path": "round22/judge5/batch35/adjudication.md",
+      "status": "CLOSED_PASS30",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "4dc1ea"
+      ],
+      "sha256": "31b573a82aa1f6d198ed76b8d411bb14684e5d769504ab0c0d8f6d9db80970e4",
+      "bytes": 3040
+    },
+    {
+      "id": "root35",
+      "path": ".arbor/sessions/parity/.coordinator/messages/round22_judge_batch35_closed_observation.json",
+      "status": "OFFICIAL88_1488",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "5222a2"
+      ],
+      "sha256": "dc598597605146946c2deb26bba7db1542e2b4d328821c102d89bf0d8ffcb1c7",
+      "bytes": 1462
+    },
+    {
+      "id": "adjudication36",
+      "path": "round22/judge5/batch36/adjudication.md",
+      "status": "CLOSED_FAILED0_ELAMBDA; GEOMETRY_NOT_INVOKED",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "4dc1ea"
+      ],
+      "sha256": "6aa8ae6880fda07dff158f9677766d5914cc5d967fe7ac3f67dbaa9ac4d2cacb",
+      "bytes": 2863
+    },
+    {
+      "id": "receipt36",
+      "path": "round22/judge5/batch36/batch36_attempt01/receipt.json",
+      "status": "INDEPENDENT_BATCH36_FAILED",
+      "read_scope": "METADATA_SHA_BOUND; adjudication36 FULL",
+      "sha256": "4307d388d3dac634c08c9e342538bab45bf4c10945898ddc0ae453959c0574e7",
+      "bytes": 5751
+    },
+    {
+      "id": "tail02",
+      "path": "round22/role4/complex_gamma_mellin_lambda_tail_source02/ComplexGammaMellinLambdaTail22.lean",
+      "status": "SOURCE_REPAIRED_NOT_COMPILED16",
+      "read_scope": "METADATA_SHA_BOUND; actual repair and scope read in full contract02",
+      "sha256": "0da22247d6f1085d0ca481f7f943c026570b1b7d6497fa420eabbffcd1c3cd37",
+      "bytes": 11538
+    },
+    {
+      "id": "tail02_contract",
+      "path": "round22/role4/complex_gamma_mellin_lambda_tail_source02/source_contract22.md",
+      "status": "SOURCE_NOT_COMPILED",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "4dc1ea"
+      ],
+      "sha256": "50fbf0c1b4253f56a62e72180fe3ce1885d6f0899eadd32d1de2d49e8f92c9fa",
+      "bytes": 3981
+    },
+    {
+      "id": "geometry25",
+      "path": "round22/role4/complex_gamma_circle_geometry_source01/ComplexGammaCircleGeometry22.lean",
+      "status": "SOURCE25_NOT_INVOKED36",
+      "read_scope": "FULL prior independent source review",
+      "read_chunks": [
+        "224610"
+      ],
+      "sha256": "2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5",
+      "bytes": 12002
+    },
+    {
+      "id": "coefficient34",
+      "path": "round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean",
+      "status": "SOURCE34_NOT_COMPILED",
+      "read_scope": "FULL prior independent source review",
+      "read_chunks": [
+        "816d6e"
+      ],
+      "sha256": "bf9b8257760a20d33dd21714221401cd8fd327596f72e56c4d024200b2cb6c4c",
+      "bytes": 20097
+    },
+    {
+      "id": "scalar26",
+      "path": "round22/role4/scalar_radius_real_connectors_source01/ScalarRadiusRealConnectors22.lean",
+      "status": "SOURCE26_NOT_COMPILED",
+      "read_scope": "FULL prior independent source review",
+      "read_chunks": [
+        "816d6e"
+      ],
+      "sha256": "6ba4b8d4cca0ba1f8a44438f843f6991d196623cce14b7229c34165e5122fd5f",
+      "bytes": 11575
+    },
+    {
+      "id": "bridge8",
+      "path": "round22/role3/lambda_circle_scalar_bridge_source01/LambdaCircleScalarRadiusBridge22.lean",
+      "status": "SOURCE8_PENDING_DEPENDENCIES_NOT_ELABORATED",
+      "read_scope": "FULL own source",
+      "read_chunks": [
+        "0d9c26"
+      ],
+      "sha256": "cfb0d2cfd23883d47bad6472b2f5bee4f69aa7b91dacc6ac4b7dc36743b1ed8c",
+      "bytes": 4192
+    },
+    {
+      "id": "scalar_actual_receipt",
+      "path": "round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/receipt.json",
+      "status": "EXACT_RATIONAL_POINT_PASS_ONLY",
+      "read_scope": "METADATA_SHA_BOUND; status/formula supported by FULL scalar report and ROOT observation",
+      "sha256": "d46e3ffeb6d03447963451fdd13f7399cd62f92e4a5a5d21ccfd1e393fdb4edb",
+      "bytes": 13070
+    },
+    {
+      "id": "scalar_actual_report",
+      "path": "round22/role4/mellin_circle_radius_point_execution_control01/execution_report22.md",
+      "status": "EXACT_RATIONAL_B_LESS_TAU; NO_COEFFICIENT",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "60205f"
+      ],
+      "sha256": "df3f3f72a7b8c884fcbcff59a1deaed3cdc872707eef213dbe85ef8a01e6539a",
+      "bytes": 2807
+    },
+    {
+      "id": "scalar_root",
+      "path": ".arbor/sessions/parity/.coordinator/messages/round22_scalar_radius_point01_closed_observation.json",
+      "status": "OBSERVED_RATIONAL_POINT_PASS_ONLY",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "60205f"
+      ],
+      "sha256": "2de8d53926812fe1357d725423b683e01251dc596715804cc91b0d23fbcebca2",
+      "bytes": 1718
+    },
+    {
+      "id": "build_root",
+      "path": ".arbor/sessions/parity/.coordinator/messages/round22_native_build04_closed_observation.json",
+      "status": "NATIVE_BUILD_TWO_EXIT0; NO_LEAN_REFINEMENT",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "5222a2"
+      ],
+      "sha256": "f4ceb714c272e3fe5b665101492b3465eea52316501ade6a916ea0c33a8a902a",
+      "bytes": 1390
+    },
+    {
+      "id": "checker05_fin",
+      "path": "round22/role3/native_numeric_checker_only_consumer_source05_revision02/actual_numeric05_checker_only_attempt01/checker_FIN.json",
+      "status": "EXIT238_HARD_WALL_NO_VERDICT",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "60205f"
+      ],
+      "sha256": "a4936fe92ab2442b3be2834e0b0f0b66c2ebefd698e79c010aaa227ff42672c6",
+      "bytes": 1017
+    },
+    {
+      "id": "checker05_receipt",
+      "path": "round22/role3/native_numeric_checker_only_consumer_source05_revision02/actual_numeric05_checker_only_attempt01/receipt.json",
+      "status": "PARENT_EXIT1_STOP_NO_MATHEMATICAL_VERDICT; NO_COEFFICIENT",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "60205f"
+      ],
+      "sha256": "a4fd71445174b04f0bd70dc66bf086727f8b08d5624e550a46647583f785641d",
+      "bytes": 3712
+    },
+    {
+      "id": "checker05_root",
+      "path": ".arbor/sessions/parity/.coordinator/messages/round22_native_numeric05_closed_observation.json",
+      "status": "CONSERVATION_VERIFIED_STOP_NO_VERDICT",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "60205f"
+      ],
+      "sha256": "4498eff7cbf14bbecd4994f7dbc2f597869d5c25454119581817400252dbd047",
+      "bytes": 1649
+    },
+    {
+      "id": "finite_contract",
+      "path": "round22/role4/circle_ntt_paper01/projection_contract22_final.md",
+      "status": "HISTORICAL_PAPER_FINAL; LATER_PROOF_STATUSES_SEPARATE",
+      "read_scope": "FULL union",
+      "read_chunks": [
+        "4dc8bc",
+        "99e3c8"
+      ],
+      "ranges": "1-93 then last3; entire96lines",
+      "sha256": "dd86c92c15e05febad687c240eb58d9dae2f930b646356f1dfe99e3bb35a680f",
+      "bytes": 18055
+    },
+    {
+      "id": "cost_paper",
+      "path": "round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md",
+      "status": "PAPER_COST_OF_SUFFICIENT_MAJORANT; NO_EXECUTION_PROMISE",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "99e3c8"
+      ],
+      "sha256": "dd79d3e6211b5478dd8c04f1e584eb93c3954d3ec7c7f89844c733cb471c86cb",
+      "bytes": 12480
+    },
+    {
+      "id": "ledger_paper",
+      "path": "round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md",
+      "status": "PAPER_FIXED_LEDGER; SIGNED_GAP_OPEN",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "b83f4e"
+      ],
+      "sha256": "51aea90f4290f160cbeb602f235148813c51b6c55121ab1ddd19e7d8d7879b72",
+      "bytes": 8536
+    },
+    {
+      "id": "weil_review",
+      "path": "round22/judge5/signed_weil_source_review01/review22.md",
+      "status": "PAPER_COHERENT_UNDER_OPEN_DEBTS; NO_SIGN_PROOF",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "59742a"
+      ],
+      "sha256": "4c356fc0030838251249cc0d9620060525ad764bc94de3726682ef8807ae9445",
+      "bytes": 6308
+    },
+    {
+      "id": "orbit_review",
+      "path": "round22/role4/zero_orbit_source_review01/review22.md",
+      "status": "PAPER_SCOPE_ONLY; NO_UNIVERSAL_IMPOSSIBILITY",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "59742a"
+      ],
+      "sha256": "aeb411a7605600e8d80e96c03a4958557ea4cd3e53e51f208c010d10a88c8b83",
+      "bytes": 4955
+    },
+    {
+      "id": "fejer_paper",
+      "path": "round22/role1/spectral_next_paper01/spectral_next22.md",
+      "status": "PAPER_TRI_ATOM_POSITIVE_RECONSTRUCTION; DN_OPEN",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "55f9bc"
+      ],
+      "sha256": "ae5dfce2d677484c5962c112bb80777cd9eeb6a5e01b6b711194f634fa49e601",
+      "bytes": 10244
+    },
+    {
+      "id": "adjudication25",
+      "path": "round22/judge5/batch25/adjudication.md",
+      "status": "INDEPENDENT_MODULE_PASS",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "564d3f"
+      ],
+      "sha256": "d411dff9b61bbfbee5040136eaee921e070b293f2e4b2d31b80727a4fb7d0753",
+      "bytes": 2915
+    },
+    {
+      "id": "adjudication30",
+      "path": "round22/judge5/batch30/adjudication.md",
+      "status": "INDEPENDENT_MODULE_PASS",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "564d3f"
+      ],
+      "sha256": "4db49fd30e40cca6ad30005ef9ee5ed3856fae00a824662bb5fe08c8f2b631a0",
+      "bytes": 3958
+    },
+    {
+      "id": "adjudication32",
+      "path": "round22/judge5/batch32/adjudication.md",
+      "status": "INDEPENDENT_MODULE_PASS",
+      "read_scope": "FULL",
+      "read_chunks": [
+        "564d3f"
+      ],
+      "sha256": "f6be51d13601af135e56efa6e37ced669bdfa919e8fc88edc270328473ade85b",
+      "bytes": 3383
+    }
+  ],
+  "claims": [
+    {
+      "id": "fixed_frame",
+      "statement": "u=log N>=10^24 is the fixed analytic regime; N=10^8 is outside onset.",
+      "status": "FRAME_CONSERVED",
+      "evidence_ids": [
+        "frame_tex",
+        "monographie",
+        "ledger_paper"
+      ]
+    },
+    {
+      "id": "inventory",
+      "statement": "88 modules/1488 auxiliary declarations including definitions; batch36 adds0.",
+      "status": "OFFICIAL_ACTUAL",
+      "evidence_ids": [
+        "root35",
+        "adjudication35",
+        "adjudication36"
+      ]
+    },
+    {
+      "id": "thermal_circle",
+      "statement": "True Lambda including all prime powers; continuous additive extraction and actual geometric envelopes.",
+      "status": "PAID_INDEPENDENT",
+      "declarations": 62,
+      "evidence_ids": [
+        "heat_envelope",
+        "heat_envelope_adjudication",
+        "circle_identity"
+      ]
+    },
+    {
+      "id": "finite_projection",
+      "statement": "M>=N,K>max(N,2M-N), finite complex and finite-field projectors without alias; finite a=0 permitted only.",
+      "status": "PAID_INDEPENDENT",
+      "evidence_ids": [
+        "discrete",
+        "adjudication15",
+        "finitefield",
+        "adjudication19"
+      ]
+    },
+    {
+      "id": "canonical_precision",
+      "statement": "Canonical rational log32/nearest-even/clamp; true Lambda error<=1/S; E_log=(N+1)(64/S+1/S^2), 2E_log<=1e-6 at N1e8,S2^58.",
+      "status": "PAID_INDEPENDENT52",
+      "evidence_ids": [
+        "log32",
+        "q_envelope",
+        "adjudication17"
+      ]
+    },
+    {
+      "id": "five_roots",
+      "statement": "Five concrete primes and root ordersK, modular projection of canonicalA32 independently compiled. NTT implementation/CRT/word refinement not implied.",
+      "status": "PAID_INDEPENDENT28",
+      "evidence_ids": [
+        "concrete_roots",
+        "concrete_A32",
+        "adjudication22",
+        "finite_contract"
+      ]
+    },
+    {
+      "id": "mellin_exact",
+      "statement": "Rew>0, principalLog, D(t)=sum trueLambda*n^(-2-it), |D|<=6, continuity and actual sum/integral exchange giving P(w)=1/(2pi)integral D*Gamma*w^(-2-it).",
+      "status": "PAID_INDEPENDENT30",
+      "theorems": 24,
+      "definitions": 6,
+      "evidence_ids": [
+        "mellin35",
+        "catalog35",
+        "receipt35",
+        "adjudication35",
+        "root35"
+      ]
+    },
+    {
+      "id": "weighted_tail_geometry",
+      "statement": "E_Lambda16 failed36 at reflection118:6; SOURCE02repair uncompiled; Geometry25 not invoked. E_Lambda=6C exp(-deltaH)/(pi delta), C(a-i theta)<=4/a^2 and delta>=atan(a/pi)/2 remain SOURCE.",
+      "status": "NOT_PAID",
+      "evidence_ids": [
+        "adjudication36",
+        "receipt36",
+        "tail02",
+        "tail02_contract",
+        "geometry25"
+      ]
+    },
+    {
+      "id": "coefficient_radius",
+      "statement": "Coefficient34, scalar26, bridge8 uncompiled. eps=24exp(-dH)/(pi*a^2*d), E_N=exp(aN)(2Ueps+eps^2), jointcontinuous radius proposed; full coefficient error linkage not independently compiled.",
+      "status": "SOURCE_PENDING",
+      "evidence_ids": [
+        "coefficient34",
+        "scalar26",
+        "bridge8",
+        "tail02_contract"
+      ]
+    },
+    {
+      "id": "scalar_point",
+      "statement": "One exact-rational test N1e8,H1e11,m150 passes B<tau; B=3(128N^5q+4096N^6q^2), q=1/S150(125). E_N<=B proposed PAPER/SOURCE, no C_N or E_N computation.",
+      "status": "ACTUAL_RATIONAL_ONLY",
+      "evidence_ids": [
+        "scalar_actual_receipt",
+        "scalar_actual_report",
+        "scalar_root",
+        "scalar26",
+        "bridge8"
+      ]
+    },
+    {
+      "id": "native_result",
+      "statement": "BUILD04twoexit0; checker05child238 HARD_WALL_NO_VERDICT, parentexit1 elapsed~3312s. No coefficient; preservation verified6576inputs109capturepairs3payloadpairs3089archives.",
+      "status": "ACTUAL_STOP_NO_MATHEMATICAL_VERDICT",
+      "evidence_ids": [
+        "build_root",
+        "checker05_fin",
+        "checker05_receipt",
+        "checker05_root"
+      ]
+    },
+    {
+      "id": "falsifiable_contract",
+      "statement": "N=M1e8,K2^27,S2^58; five residues determine bounded I_N on PAPER; producing verified I_N yields interval I_N/S^2+-E_log. Complete catalogue, code refinements and actual result remain open.",
+      "status": "PAID_PRECISION_PLUS_PAPER_NATIVE_CONTRACT",
+      "evidence_ids": [
+        "finite_contract",
+        "q_envelope",
+        "adjudication22",
+        "checker05_receipt"
+      ]
+    },
+    {
+      "id": "dn_gap",
+      "statement": "Preserved covered ledger D_N=R_ref-C_N+Q_N+2max(e,0)-eps_tr; coefficient enclosure alone does not pay signed gap, PP/fronts/excess or target.",
+      "status": "DN_AND_WIN_OPEN",
+      "evidence_ids": [
+        "ledger_paper",
+        "root35"
+      ]
+    },
+    {
+      "id": "fejer_continuous",
+      "statement": "PAPER positive triangular extractionA_T=sum c_n sinc^2(Tlog(m/n)/2);0<=A_T-c_m<=24/(T^2log^2(1+1/m)),T>0,m>=1. Reconstruction positivity does not give strict additive minorant.",
+      "status": "PAPER_ONLY",
+      "evidence_ids": [
+        "fejer_paper"
+      ]
+    },
+    {
+      "id": "cost_and_weil",
+      "statement": "PAPER sufficient Mellin-height/budget estimates and signedWeil/orbits strategies have explicit debts; no error lower-bound, global sign, imminent discovery or practical-runtime claim.",
+      "status": "PAPER_ONLY",
+      "evidence_ids": [
+        "cost_paper",
+        "weil_review",
+        "orbit_review",
+        "ledger_paper"
+      ]
+    },
+    {
+      "id": "bord_and_gamma_tail",
+      "statement": "AngularMellinBorder25 exact principal-branch boundary identity,30=22theorems8defs; nonweightedGammaTail30,22=18theorems4defs; inversionTailBridge32,2theorems. No weightedLambda-tail or coefficient credit follows automatically.",
+      "status": "PAID_INDEPENDENT",
+      "evidence_ids": [
+        "adjudication25",
+        "adjudication30",
+        "adjudication32"
+      ]
+    }
+  ],
+  "read_scope_policy": "FULL is asserted only for the designated file or explicit union actually returned without loss. Large raw inventories are not claimed FULL. SHA_BOUND records bind bytes and are not a fresh scientific reproof. Old source status comments are retained; actual receipts control current proof status. No external primary bibliography was newly consulted.",
+  "compilation_responsibility": "ROOT exports/reviews PDF independently. This evidence records document sources and mathematical statuses, not a new Lean run.",
+  "metadata_sha_binding_count": 47,
+  "metadata_operation": "Filesystem metadata/SHA only; no scientific computation, source parsing, candidate import, compiler or native invocation."
+}

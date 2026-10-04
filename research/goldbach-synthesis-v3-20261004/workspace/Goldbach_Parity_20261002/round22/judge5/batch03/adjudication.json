@@ -1,0 +1,242 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH03_DOCUMENTARY_ADJUDICATION",
+  "time_utc": "2026-10-03T11:20:00.662023+00:00",
+  "status": "INDEPENDENT_BATCH03_AUX_PASS",
+  "scope": "TRUE_GAMMA_DERIVATIVE_AUXILIARY_ONLY",
+  "rows": [
+    {
+      "axiom_rows": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.realGamma_le_nine_fifths_on_extended_strip"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.quarter_angle_coefficient_le_three_extended"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.Gamma_extended_strip_exponential_bound"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.exp_eighth_pi_le_seven_quarters"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.Gamma_differentiableOn_rightHalfPlane"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.Gamma_half_disc_domain"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.Gamma_circle_dominating_bound"
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "GoldbachContinuous22.Gamma_derivative_strip_exponential_bound"
+        }
+      ],
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-DmaxHeartbeats=1000000",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\sources\\GammaDerivative22.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\sources",
+      "exact_axiom_coverage_standard_only": true,
+      "exit_code": 0,
+      "finished_at": "2026-10-03T11:16:13.463477+00:00",
+      "launch_error": null,
+      "module": "GammaDerivative22",
+      "olean_sha256": "0618f801c5feec7b760ba18ab3dddc960519b398dd1d1b719acc809132518125",
+      "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "started_at": "2026-10-03T11:15:36.167966+00:00",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "481976d42be39d2c68d818081eb257a30b408fba26803a89c75cf1205ba06add",
+      "timed_out": false
+    }
+  ],
+  "module_count": 1,
+  "theorem_count": 8,
+  "definition_count": 0,
+  "actual_child_invocations": 1,
+  "stdout_FULL_read_chunk": "f912b2",
+  "stderr_FULL_read_chunk": "f912b2",
+  "receipt_FULL_read_chunk": "f912b2",
+  "source_FULL_read_chunk": "25c355",
+  "gate_FULL_read_chunk": "45155a",
+  "prepost_read_scope": "COMPLETE_JSON_PARSED_AND_ALL_INPUT_BYTES_VERIFIED_NOT_FULL_RAW_DISPLAY",
+  "prepost_header_chunk": "ce5de6",
+  "input_bytes_verified": 6597,
+  "closed_judge_bytes_verified": 90,
+  "protected_archive_bytes_verified": 3089,
+  "captures_verified": 21,
+  "all_conserved": true,
+  "active_source_forbidden_tokens": [],
+  "axiom_rows": [
+    {
+      "declaration": "GoldbachContinuous22.realGamma_le_nine_fifths_on_extended_strip",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.quarter_angle_coefficient_le_three_extended",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.Gamma_extended_strip_exponential_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.exp_eighth_pi_le_seven_quarters",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.Gamma_differentiableOn_rightHalfPlane",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.Gamma_half_disc_domain",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.Gamma_circle_dominating_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachContinuous22.Gamma_derivative_strip_exponential_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "lint_warning_count": 4,
+  "paid_statement": "1 <= Re(s) <= 2 implies norm(deriv Complex.Gamma s) <= 19*exp(-(pi/4)*abs(Im(s)))",
+  "proof_provenance": "Actual Gamma rotation (independent GammaPrerequisites22), convexity/recurrence, actual holomorphy and mathlib Cauchy derivative estimate on radius1/2",
+  "unpaid_target_premises": [],
+  "global_implications": "No H1, C3, C5, Weil identity, infinite contour shift, coefficientN or D_N theorem follows from this auxiliary alone",
+  "artifacts": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\START.json",
+      "sha256": "afbd66cb8f258437de7f4a3f0bffc78c8de90367e7f87cbd8912db23b4d1cf44"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22_START.json",
+      "sha256": "4b4799d84fb286015283135c4c9b6fcbb38017208d6804ecbec5120fbfc63961"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22_FIN.json",
+      "sha256": "943d3a1ff4ff5206649bf924295525ddb74c0f3c26395323bad1f3c80ec0f003"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\FIN.json",
+      "sha256": "091c9a12974f8c4f573ce39a89e54523428e4c423ea9d35b5d184210dbc1cb8a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\receipt.json",
+      "sha256": "74959436b372e6dc180b1f5b79e51e17bded56361ba70774695a906dc3f3d4ee"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22.stdout.log",
+      "sha256": "481976d42be39d2c68d818081eb257a30b408fba26803a89c75cf1205ba06add"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22.olean",
+      "sha256": "0618f801c5feec7b760ba18ab3dddc960519b398dd1d1b719acc809132518125"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\PREEXEC.json",
+      "sha256": "9507a4d8a876896729d77e9ddc094017c2f6ce2391c742b45bc2980548f7dedc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\POSTEXEC.json",
+      "sha256": "2d359d216cdfd57fec818b87c72b1bdc8311854540a913192e076d08166bdad1"
+    }
+  ],
+  "metadata_adjudicator": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\adjudicate_metadata.py",
+    "sha256": "b641edbbd6818762266a21f71e8cf8d7a35685eac4d41bfbbeec4f14b62756e4"
+  },
+  "prior_official_modules": 62,
+  "prior_official_auxiliaries": 1049,
+  "proposed_total_after_ROOT_observation_modules": 63,
+  "proposed_total_after_ROOT_observation_auxiliaries": 1057,
+  "compiler_invocations_this_adjudication": 0,
+  "mathematical_numeric_invocations": 0,
+  "old_replays": 0,
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

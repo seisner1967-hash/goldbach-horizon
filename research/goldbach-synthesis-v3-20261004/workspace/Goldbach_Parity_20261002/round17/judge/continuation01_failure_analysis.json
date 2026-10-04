@@ -1,0 +1,11 @@
+{
+  "status": "REAL_CONTINUATION01_EXIT1_TECHNICAL_PRE_LEAN",
+  "source_sha256": "2faf3564e16991ed6dc394972e390629e3bfe8abc516e951e416e14da7903caa",
+  "log_sha256": "86c7ad7801573126b4835abb6bda4cc0a83ee6aee8c27721a227590d22d7fca9",
+  "failure": "205 inactive records retain kernel_ref:null and C_recipe:null; key presence does not indicate an active reference",
+  "corrected_guard": "row.get(kernel_ref) is not None",
+  "Lean_called": false,
+  "producer_called": false,
+  "false_identity": false,
+  "prior_PASS_not_rerun": true
+}

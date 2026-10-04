@@ -1,0 +1,253 @@
+import BalancedResourceSwitch
+
+/-! Signed CRT coordinates for the actual balanced equation. The constant
+y0 may be negative. Integer subtraction and division are used throughout. -/
+namespace GoldbachRound19.SignedCRT
+
+open GoldbachRound19.Switch
+noncomputable section
+
+def baseX (A b : ℕ) (c : ℤ) : ℤ := (Nat.gcdA A b * c) % (b : ℤ)
+def baseY (A b : ℕ) (c : ℤ) : ℤ := ((A : ℤ) * baseX A b c - c) / (b : ℤ)
+def index (A b : ℕ) (c x : ℤ) : ℤ := (x - baseX A b c) / (b : ℤ)
+
+theorem inverse_congruence {A b : ℕ} (hcop : A.Coprime b) :
+    (A : ℤ) * Nat.gcdA A b ≡ 1 [ZMOD (b : ℤ)] := by
+  simpa only [hcop.gcd_eq_one, Nat.cast_one] using Int.gcd_a_modEq A b
+
+theorem baseX_congruence {A b : ℕ} (hcop : A.Coprime b) (c : ℤ) :
+    (A : ℤ) * baseX A b c ≡ c [ZMOD (b : ℤ)] := by
+  have hm := (Int.mod_modEq (Nat.gcdA A b * c) (b : ℤ)).mul_left (A : ℤ)
+  have hi := (inverse_congruence hcop).mul_right c
+  exact hm.trans (by simpa [mul_assoc] using hi)
+
+theorem baseX_bounds {A b : ℕ} (hb : 0 < b) (c : ℤ) :
+    0 ≤ baseX A b c ∧ baseX A b c < b := by
+  have hbz : (0 : ℤ) < b := by exact_mod_cast hb
+  exact ⟨Int.emod_nonneg _ hbz.ne', Int.emod_lt_of_pos _ hbz⟩
+
+theorem cancel_coefficient {A b : ℕ} (hcop : A.Coprime b) {x y : ℤ}
+    (hxy : (A : ℤ) * x ≡ (A : ℤ) * y [ZMOD (b : ℤ)]) :
+    x ≡ y [ZMOD (b : ℤ)] := by
+  have hi := inverse_congruence hcop
+  have hl := hxy.mul_left (Nat.gcdA A b)
+  have hx := hi.mul_right x
+  have hy := hi.mul_right y
+  have hx' : (Nat.gcdA A b * (A : ℤ)) * x ≡ x [ZMOD (b : ℤ)] := by
+    simpa [mul_comm, mul_left_comm, mul_assoc] using hx
+  have hy' : (Nat.gcdA A b * (A : ℤ)) * y ≡ y [ZMOD (b : ℤ)] := by
+    simpa [mul_comm, mul_left_comm, mul_assoc] using hy
+  have hl' : (Nat.gcdA A b * (A : ℤ)) * x ≡
+      (Nat.gcdA A b * (A : ℤ)) * y [ZMOD (b : ℤ)] := by
+    simpa [mul_assoc] using hl
+  exact hx'.symm.trans (hl'.trans hy')
+
+theorem baseY_equation {A b : ℕ} (hcop : A.Coprime b) (c : ℤ) :
+    (A : ℤ) * baseX A b c - (b : ℤ) * baseY A b c = c := by
+  have hd : (b : ℤ) ∣ (A : ℤ) * baseX A b c - c := by
+    have hm := (baseX_congruence hcop c).symm
+    exact Int.modEq_iff_dvd.mp hm
+  have hy : (b : ℤ) * baseY A b c = (A : ℤ) * baseX A b c - c :=
+    Int.mul_ediv_cancel' hd
+  linarith
+
+theorem signed_linear_solution {A b : ℕ} (hcop : A.Coprime b) (hb : 0 < b)
+    {c x y : ℤ} (heq : (A : ℤ) * x - (b : ℤ) * y = c) :
+    x = baseX A b c + (b : ℤ) * index A b c x ∧
+      y = baseY A b c + (A : ℤ) * index A b c x := by
+  have hAx : (A : ℤ) * x ≡ c [ZMOD (b : ℤ)] := by
+    apply Int.modEq_iff_dvd.mpr
+    use -y
+    nlinarith [heq]
+  have hx := cancel_coefficient hcop ((baseX_congruence hcop c).trans hAx.symm)
+  have hd : (b : ℤ) ∣ x - baseX A b c := Int.modEq_iff_dvd.mp hx
+  have hprod : (b : ℤ) * index A b c x = x - baseX A b c := Int.mul_ediv_cancel' hd
+  have hxout : x = baseX A b c + (b : ℤ) * index A b c x := by linarith
+  refine ⟨hxout, ?_⟩
+  have hbz : (0 : ℤ) < b := by exact_mod_cast hb
+  have hbase := baseY_equation hcop c
+  have he : (b : ℤ) * y = (b : ℤ) * (baseY A b c + (A : ℤ) * index A b c x) := by
+    nlinarith [heq, hbase, hprod]
+  exact mul_left_cancel₀ hbz.ne' he
+
+theorem signed_parameter_unique {b : ℕ} (hb : 0 < b) {x0 x t t' : ℤ}
+    (ht : x = x0 + (b : ℤ) * t) (ht' : x = x0 + (b : ℤ) * t') : t = t' := by
+  have hbz : (0 : ℤ) < b := by exact_mod_cast hb
+  nlinarith
+
+def actualConstant (N : ℕ) : ℤ := ((anchor N : ℤ) - 1) * N
+def actualBaseX (N : ℕ) (c : FactorTuple) : ℤ :=
+  baseX (anchor N * c.a) c.b (actualConstant N)
+def actualBaseY (N : ℕ) (c : FactorTuple) : ℤ :=
+  baseY (anchor N * c.a) c.b (actualConstant N)
+def actualIndex (N : ℕ) (c : FactorTuple) : ℤ :=
+  index (anchor N * c.a) c.b (actualConstant N) (c.x : ℤ)
+
+theorem tuple_b_pos {N q : ℕ} (h : ResourceCell N q) : 0 < (encode N q).b := by
+  have hg := encode_channel h
+  cases hd : (encode N q).direct
+  · have hg' : ((encode N q).a).Prime ∧ ((encode N q).b).Prime ∧
+        2 ≤ (encode N q).x ∧ 2 ≤ (encode N q).y ∧
+        (∀ p ∈ ((encode N q).x).primeFactorsList, p ≤ (encode N q).a) ∧
+        (∀ p ∈ ((encode N q).y).primeFactorsList, p ≤ (encode N q).b) ∧
+        (encode N q).a * (encode N q).b < (encode N q).x * (encode N q).y := by
+      simpa [ChannelGuard, hd] using hg
+    exact hg'.2.1.pos
+  · have hg' : 2 ≤ (encode N q).a ∧ 2 ≤ (encode N q).b ∧
+        ((encode N q).x).Prime ∧ ((encode N q).y).Prime ∧
+        (∀ p ∈ ((encode N q).a).primeFactorsList, p ≤ (encode N q).x) ∧
+        (∀ p ∈ ((encode N q).b).primeFactorsList, p ≤ (encode N q).y) ∧
+        (encode N q).a * (encode N q).b ≤ (encode N q).x * (encode N q).y := by
+      simpa [ChannelGuard, hd] using hg
+    omega
+
+theorem actual_signed_coordinates {N q : ℕ} (h : ResourceCell N q) :
+    ((encode N q).x : ℤ) = actualBaseX N (encode N q) +
+      ((encode N q).b : ℤ) * actualIndex N (encode N q) ∧
+    ((encode N q).y : ℤ) = actualBaseY N (encode N q) +
+      (anchor N : ℤ) * (encode N q).a * actualIndex N (encode N q) := by
+  have he := balanced_integer_equation h
+  have he' : ((anchor N * (encode N q).a : ℕ) : ℤ) * (encode N q).x -
+      ((encode N q).b : ℤ) * (encode N q).y = actualConstant N := by
+    simpa [actualConstant, Nat.cast_mul, mul_assoc] using he
+  have hh := signed_linear_solution (conductor_coefficients_coprime h) (tuple_b_pos h) he'
+  simpa [actualBaseX, actualBaseY, actualIndex, Nat.cast_mul, mul_assoc] using hh
+
+theorem actual_signed_q_formula {N q : ℕ} (h : ResourceCell N q) :
+    (q : ℤ) = (N : ℤ) - ((encode N q).a : ℤ) * actualBaseX N (encode N q) -
+      ((encode N q).a : ℤ) * (encode N q).b * actualIndex N (encode N q) := by
+  have hp : (encode N q).a * (encode N q).x + q = N := by
+    rw [(encode_products h).1]
+    exact Nat.sub_add_cancel (q_lt_N h).le
+  have hz : ((encode N q).a : ℤ) * (encode N q).x + q = N := by exact_mod_cast hp
+  have hx := (actual_signed_coordinates h).1
+  nlinarith
+
+@[ext] structure SignedCoordinates where
+  direct : Bool
+  a : ℕ
+  b : ℕ
+  t : ℤ
+  deriving DecidableEq
+
+def encodeSigned (N q : ℕ) : SignedCoordinates :=
+  let c := encode N q
+  ⟨c.direct, c.a, c.b, actualIndex N c⟩
+
+def reconstructQ (N : ℕ) (s : SignedCoordinates) : ℤ :=
+  (N : ℤ) - (s.a : ℤ) * baseX (anchor N * s.a) s.b (actualConstant N) -
+    (s.a : ℤ) * s.b * s.t
+
+theorem signed_reconstruction {N q : ℕ} (h : ResourceCell N q) :
+    reconstructQ N (encodeSigned N q) = q := by
+  simpa [reconstructQ, encodeSigned, actualBaseX] using (actual_signed_q_formula h).symm
+
+theorem signed_encoding_injective (N : ℕ) :
+    Set.InjOn (encodeSigned N) {q | ResourceCell N q} := by
+  intro q hq q' hq' he
+  have hh := congrArg (reconstructQ N) he
+  rw [signed_reconstruction hq, signed_reconstruction hq'] at hh
+  exact_mod_cast hh
+
+def reconstructX (N : ℕ) (s : SignedCoordinates) : ℤ :=
+  baseX (anchor N * s.a) s.b (actualConstant N) + (s.b : ℤ) * s.t
+def reconstructY (N : ℕ) (s : SignedCoordinates) : ℤ :=
+  baseY (anchor N * s.a) s.b (actualConstant N) +
+    (anchor N : ℤ) * s.a * s.t
+def unpack (N : ℕ) (s : SignedCoordinates) : FactorTuple :=
+  ⟨s.direct, s.a, s.b, (reconstructX N s).toNat, (reconstructY N s).toNat⟩
+def SignedGuard (N : ℕ) (s : SignedCoordinates) : Prop :=
+  0 < s.b ∧ 0 ≤ reconstructX N s ∧ 0 ≤ reconstructY N s ∧ ValidTuple N (unpack N s)
+
+theorem reconstructX_encode {N q : ℕ} (h : ResourceCell N q) :
+    reconstructX N (encodeSigned N q) = (encode N q).x := by
+  simpa [reconstructX, encodeSigned, actualBaseX] using
+    (actual_signed_coordinates h).1.symm
+
+theorem reconstructY_encode {N q : ℕ} (h : ResourceCell N q) :
+    reconstructY N (encodeSigned N q) = (encode N q).y := by
+  simpa [reconstructY, encodeSigned, actualBaseY] using
+    (actual_signed_coordinates h).2.symm
+
+theorem unpack_encode {N q : ℕ} (h : ResourceCell N q) :
+    unpack N (encodeSigned N q) = encode N q := by
+  ext
+  · rfl
+  · rfl
+  · rfl
+  · simp only [unpack, reconstructX_encode h, Int.toNat_natCast]
+  · simp only [unpack, reconstructY_encode h, Int.toNat_natCast]
+
+theorem signedGuard_encode {N q : ℕ} (h : ResourceCell N q) :
+    SignedGuard N (encodeSigned N q) := by
+  refine ⟨tuple_b_pos h, ?_, ?_, ?_⟩
+  · rw [reconstructX_encode h]; positivity
+  · rw [reconstructY_encode h]; positivity
+  · rw [unpack_encode h]; exact encode_valid h
+
+theorem index_unpack {N : ℕ} {s : SignedCoordinates} (hg : SignedGuard N s) :
+    actualIndex N (unpack N s) = s.t := by
+  have hbz : (s.b : ℤ) ≠ 0 := by exact_mod_cast hg.1.ne'
+  unfold actualIndex index unpack
+  rw [Int.toNat_of_nonneg hg.2.1]
+  unfold reconstructX
+  rw [add_sub_cancel_left, Int.mul_ediv_cancel_left _ hbz]
+
+/-- Independent signed guards reconstruct every admitted tuple. -/
+theorem encodeSigned_unpack {N : ℕ} {s : SignedCoordinates} (hg : SignedGuard N s)
+    (h : ResourceCell N (decode N (unpack N s))) :
+    encodeSigned N (decode N (unpack N s)) = s := by
+  have he := encode_decode hg.2.2.2 h
+  unfold encodeSigned
+  rw [he]
+  apply SignedCoordinates.ext
+  · rfl
+  · rfl
+  · rfl
+  · exact index_unpack hg
+
+theorem signed_q_equals_decoded {N : ℕ} {s : SignedCoordinates} (hg : SignedGuard N s) :
+    reconstructQ N s = (decode N (unpack N s) : ℕ) := by
+  have hle : s.a * (reconstructX N s).toNat ≤ N := hg.2.2.2.1.le
+  change reconstructQ N s = ((N - s.a * (reconstructX N s).toNat : ℕ) : ℤ)
+  rw [Nat.cast_sub hle, Nat.cast_mul, Int.toNat_of_nonneg hg.2.1]
+  unfold reconstructQ reconstructX
+  ring
+
+#print axioms baseX
+#print axioms baseY
+#print axioms index
+#print axioms inverse_congruence
+#print axioms baseX_congruence
+#print axioms baseX_bounds
+#print axioms cancel_coefficient
+#print axioms baseY_equation
+#print axioms signed_linear_solution
+#print axioms signed_parameter_unique
+#print axioms actualConstant
+#print axioms actualBaseX
+#print axioms actualBaseY
+#print axioms actualIndex
+#print axioms tuple_b_pos
+#print axioms actual_signed_coordinates
+#print axioms actual_signed_q_formula
+#print axioms SignedCoordinates
+#print axioms SignedCoordinates.ext
+#print axioms encodeSigned
+#print axioms reconstructQ
+#print axioms signed_reconstruction
+#print axioms signed_encoding_injective
+#print axioms reconstructX
+#print axioms reconstructY
+#print axioms unpack
+#print axioms SignedGuard
+#print axioms reconstructX_encode
+#print axioms reconstructY_encode
+#print axioms unpack_encode
+#print axioms signedGuard_encode
+#print axioms index_unpack
+#print axioms encodeSigned_unpack
+#print axioms signed_q_equals_decoded
+
+end
+end GoldbachRound19.SignedCRT

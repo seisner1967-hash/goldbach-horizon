@@ -1,0 +1,42 @@
+{
+  "kind": "FINAL1_ROUND21_CONCEPTUAL_AUXILIARY_PRE_SELECTION",
+  "created_utc": "2026-10-03T05:25:05.9309190Z",
+  "status": "FINAL1_FROZEN_NO_WIN",
+  "report_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round21\\agent1_signed.md",
+  "report_sha256": "0e6bac077503477d03f78c3c121b40134a67e1504b733bfb26175efeca884d70",
+  "manifest_sha256": "271579f39a1f5a722c032cb0aa0842253da561042e9aaef37c389a4bf541fdb7",
+  "input_manifest_sha256": "2bf790acb9e5cb3b431266f852ce532db86cf51439e48bca84bd73d9bbdec0f8",
+  "input_count": 16,
+  "full_count": 13,
+  "targeted_count": 3,
+  "input_integrity_unchanged": true,
+  "proposed_parent": "13",
+  "proposed_depth": 2,
+  "candidate_count": 5,
+  "chosen": "physical-frame, finite AP envelope and Abel variation",
+  "paper_bound": "|actualAP-main| <= (32/7)*E_phys + (16/7)*log N; E_phys constructed finite max, no small-error premise",
+  "numerical_contract": {
+    "N": 100000000,
+    "lower_j_exclusive": 12500000,
+    "upper_j_inclusive": 25000000,
+    "whole_window_before_masks": true,
+    "old19_old20_overlap_explicit": true,
+    "producer_new_required": true,
+    "source_onset_false_at_finite_N": true,
+    "no_execution_authorized_by_role1": true
+  },
+  "actual_Lean_invocations": 0,
+  "actual_math_Python_invocations": 0,
+  "actual_Judge_invocations": 0,
+  "old_replay_count": 0,
+  "tree_node_mutations": 0,
+  "score": 0,
+  "victory": false,
+  "scope_limits": [
+    "E_phys distribution/SD/BV aggregation unproved",
+    "principal/M0/kappa global bridge unproved",
+    "tails/slack/rawPP and all source capacities retained",
+    "D_N full ledger unproved"
+  ],
+  "source_outputs_frozen": true
+}

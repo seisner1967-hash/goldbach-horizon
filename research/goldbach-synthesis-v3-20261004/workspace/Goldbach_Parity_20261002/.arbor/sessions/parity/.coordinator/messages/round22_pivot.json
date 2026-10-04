@@ -1,0 +1,23 @@
+{
+  "status": "ROUND22_USER_PIVOT_INSTALLED_ALL_EXECUTION_GATES_CLOSED",
+  "created_utc": "2026-10-03T05:54:37.778834+00:00",
+  "directive_sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+  "probe_sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+  "interrupted21_controller_sha256": "72669c69efa86282a3bd89cf5d371690c4464a88b51e3f2bdbea221b195ea256",
+  "round21_own_files_frozen": 60,
+  "old3028_registry_sha256": "5c1c372a2a723a1a06224c6531c2e0775978bbe902f02cf910450a583772896c",
+  "root_fresh_constraints_full_chunk": "1489d7",
+  "root_ideation_skill_full_chunk": "37af85",
+  "root_metadata_cli_failures": [
+    "0c368d unsupported --run-dir, exit1",
+    "4679e0 missing UTF8 output, exit1"
+  ],
+  "root_metadata_cli_correction": "1489d7 correct --cwd/--run-name and -X utf8 exit0",
+  "actual_actor_interrupts": {
+    "round21_formal3_prepare": "running interrupted",
+    "round21_ideation1_signed": "running interrupted",
+    "round21_numeric_conservation": "running interrupted"
+  },
+  "proof_or_numeric_execution_authorized": false,
+  "victory": false
+}

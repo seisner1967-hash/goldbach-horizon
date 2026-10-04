@@ -1,0 +1,207 @@
+{
+  "LEAN_PATH": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "actual_exit_code": 0,
+  "audit_sha256": "6ecf1f28163623c7a691341aeb724eba8e3e4265e6555bf359346e84344f8726",
+  "authorization_sha256": "a321f065d36d8d18529d12356d2502e12a75e78fd87a59effeb6db562fba7c03",
+  "axiom_prints": 17,
+  "axioms": {
+    "GoldbachRound20.Friable.actual_TotientSumBound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.actual_harmonicKernel_abs_unconditional": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.inverseTotient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.inverseTotient_interval_expansion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.inverseTotient_multiplicative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.inverseTotient_prime": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.multiples_inverse_sum_le_harmonic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.nat_div_totient_squarefree_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.one_add_inverseTotient_prime": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.reciprocal_successive_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.squarefreeUpTo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.squarefree_divisor_sum_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.squarefree_sum_le_prime_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.squarefree_weighted_inverse_sum_le_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.totient_inverse_sum_le_three_one_add_log": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.weightedInverseTotient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GoldbachRound20.Friable.weightedInverseTotient_multiplicative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "before_integrity": {
+    "all_frozen_bindings_unchanged": true,
+    "author_sources_or_oleans_reexecuted": false,
+    "binding_count": 3588
+  },
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriableTotientEnvelope.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriableTotientEnvelope.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit",
+  "declaration_specification": {
+    "declaration_counts": {
+      "def": 3,
+      "theorem": 14
+    },
+    "explicit_declarations": [
+      "GoldbachRound20.Friable.inverseTotient",
+      "GoldbachRound20.Friable.weightedInverseTotient",
+      "GoldbachRound20.Friable.inverseTotient_multiplicative",
+      "GoldbachRound20.Friable.weightedInverseTotient_multiplicative",
+      "GoldbachRound20.Friable.squarefree_divisor_sum_product",
+      "GoldbachRound20.Friable.inverseTotient_prime",
+      "GoldbachRound20.Friable.one_add_inverseTotient_prime",
+      "GoldbachRound20.Friable.nat_div_totient_squarefree_sum",
+      "GoldbachRound20.Friable.squarefreeUpTo",
+      "GoldbachRound20.Friable.squarefree_sum_le_prime_product",
+      "GoldbachRound20.Friable.reciprocal_successive_sum",
+      "GoldbachRound20.Friable.squarefree_weighted_inverse_sum_le_three",
+      "GoldbachRound20.Friable.multiples_inverse_sum_le_harmonic",
+      "GoldbachRound20.Friable.inverseTotient_interval_expansion",
+      "GoldbachRound20.Friable.totient_inverse_sum_le_three_one_add_log",
+      "GoldbachRound20.Friable.actual_TotientSumBound",
+      "GoldbachRound20.Friable.actual_harmonicKernel_abs_unconditional"
+    ],
+    "imports": [
+      "FriableKernelEnvelope",
+      "Mathlib.Data.Complex.ExponentialBounds"
+    ],
+    "namespace": "GoldbachRound20.Friable",
+    "requested_axiom_prints": [
+      "GoldbachRound20.Friable.inverseTotient",
+      "GoldbachRound20.Friable.weightedInverseTotient",
+      "GoldbachRound20.Friable.inverseTotient_multiplicative",
+      "GoldbachRound20.Friable.weightedInverseTotient_multiplicative",
+      "GoldbachRound20.Friable.squarefree_divisor_sum_product",
+      "GoldbachRound20.Friable.inverseTotient_prime",
+      "GoldbachRound20.Friable.one_add_inverseTotient_prime",
+      "GoldbachRound20.Friable.nat_div_totient_squarefree_sum",
+      "GoldbachRound20.Friable.squarefreeUpTo",
+      "GoldbachRound20.Friable.squarefree_sum_le_prime_product",
+      "GoldbachRound20.Friable.reciprocal_successive_sum",
+      "GoldbachRound20.Friable.squarefree_weighted_inverse_sum_le_three",
+      "GoldbachRound20.Friable.multiples_inverse_sum_le_harmonic",
+      "GoldbachRound20.Friable.inverseTotient_interval_expansion",
+      "GoldbachRound20.Friable.totient_inverse_sum_le_three_one_add_log",
+      "GoldbachRound20.Friable.actual_TotientSumBound",
+      "GoldbachRound20.Friable.actual_harmonicKernel_abs_unconditional"
+    ],
+    "source_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906"
+  },
+  "finished_utc": "2026-10-03T04:48:18.298471+00:00",
+  "fresh_imports_sha256": {
+    "CompositeAPConductor": "c085762bfeab487c98eccd4c7cc227a0d4eedbc8f403fc75dbb3018d49a1d072",
+    "FriableEulerRankin": "ae2125579cfee86f6e0a8617d896e10d7242f95115f6f230ef56ba3f3162d811",
+    "FriableKernelEnvelope": "53bfffe6f24a5f0848740005e387a7c7c2d4918e1e96c203492609e0386bd55b",
+    "FriablePhysicalPrefix": "7bc952b06114beeffde8c3d6d35246f4045249c78392b99a98815896b9d06407",
+    "FriablePrimeHarmonic": "dababb47d7453bcef79e4a71e6486f042fcab96cd272126c51cf1612c63ba36a",
+    "LeastFactorComposite": "99ac76f4392a5fb979d847e5f32859cafa41a5504c0908d6a5dd8971c5b31831",
+    "OddBonferroniArithmetic": "560f459dbe58119a29d850d62377ea97f084d546d48c60022de563b7a9d5e3a6",
+    "PhysicalCompositeSubtraction": "46a056e1a288f0b1863fabb4f14c882af9f69049f3c5af7076866508c91b8881",
+    "SwitchedIncidenceEstimator": "c20624c8424d54f986a8906feb72300d543ed1191e58189d415f7b9850b5f51e",
+    "SwitchedSelbergWeight": "50ede2395b77d60045db5b56a1433f5abd3270628dcb7a1c00d8a245a3553576"
+  },
+  "input_manifest_sha256": "c37af3ac54572855e80a124f1f4f733997fbd61a6d7152be3205522e7b2c4305",
+  "launch_error": null,
+  "launcher_sha256": "858c657259a4dc844736ffe33e6fd4934168323d1ce64ca8ba08cdd170308299",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "module": "FriableTotientEnvelope",
+  "olean_sha256": "14fb7886799c11479ebd1b6271fa43be2ceab4a23cb289949d11991415994940",
+  "output_olean_exists": true,
+  "outputs": {
+    "log": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\FriableTotientEnvelope.log",
+      "sha256": "3cedf6e6b9a9995f9ad645c29627005df35b6767935ab56475fe9b98da42c516"
+    },
+    "stderr": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\FriableTotientEnvelope.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\FriableTotientEnvelope.stdout.bin",
+      "sha256": "3cedf6e6b9a9995f9ad645c29627005df35b6767935ab56475fe9b98da42c516"
+    }
+  },
+  "phase": "FINISHED_AUDITED",
+  "post_integrity": {
+    "all_frozen_bindings_unchanged": true,
+    "author_sources_or_oleans_reexecuted": false,
+    "binding_count": 3588
+  },
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "role": 5,
+  "round": 20,
+  "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\audit\\FriableTotientEnvelope.lean",
+  "source_capture": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\preexec\\round20__role4__FriableTotientEnvelope.lean.txt",
+  "source_capture_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+  "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role4\\FriableTotientEnvelope.lean",
+  "source_sha256": "14419032ada260a92b8f9b69b8e7e20794c26ecd1efcd505539caaa775a83906",
+  "started_utc": "2026-10-03T04:47:50.798195+00:00",
+  "status": "PASS_FRESH_INDEPENDENT_LEAN",
+  "warning_lines": []
+}

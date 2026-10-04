@@ -1,0 +1,99 @@
+{
+  "status": "PRELIMINARY_WRITER_STAGE_READS_NOT_COMPILE_AUTHORIZATION",
+  "observed_at_utc": "2026-10-03T02:30:31.474549+00:00",
+  "reads": [
+    {
+      "path": "round20/role3/OddBonferroniArithmetic.lean",
+      "full_read_chunk": "1632d0",
+      "earlier_postread_hash": "19744aea379a901c303e4b50611916f4d8ac81582914eef58cec64a0b1749693",
+      "current_observed_sha256": "19744aea379a901c303e4b50611916f4d8ac81582914eef58cec64a0b1749693",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role3/LeastFactorComposite.lean",
+      "full_read_chunk": "7232d2",
+      "earlier_postread_hash": "3da564e432950544344e52b9dae66cd6bf401abf323a7eb10e7d89897c9b5cc8",
+      "current_observed_sha256": "3da564e432950544344e52b9dae66cd6bf401abf323a7eb10e7d89897c9b5cc8",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role3/SwitchedSelbergWeight.lean",
+      "full_read_chunk": "b368f9",
+      "earlier_postread_hash": "d729f7beeaf9d88cdb5f186281b7a6e5cde36176c5230fce0c4822d75e870be0",
+      "current_observed_sha256": "d729f7beeaf9d88cdb5f186281b7a6e5cde36176c5230fce0c4822d75e870be0",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role3/PhysicalCompositeSubtraction.lean",
+      "full_read_chunk": "982f93",
+      "earlier_postread_hash": null,
+      "current_observed_sha256": "5a28d369c2a837c366fe4b5f082645a3d1e4903e70e0636d9f79c70bd883e93a",
+      "matches_earlier_postread_hash": null
+    },
+    {
+      "path": "round20/role3/CompositeAPConductor.lean",
+      "full_read_chunk": "d1d3e8",
+      "earlier_postread_hash": null,
+      "current_observed_sha256": "e5bef8193dd49c91ccbefa0463511c23f1872b0465d7865a07bb36ff2dc04482",
+      "matches_earlier_postread_hash": null
+    },
+    {
+      "path": "round20/role4/FriablePhysicalPrefix.lean",
+      "full_read_chunk": "a76f69",
+      "earlier_postread_hash": "131db9e6bffb1cfb1ba374337dbdea8a55486f5f40c32d4c0f16e520f7fb4e71",
+      "current_observed_sha256": "131db9e6bffb1cfb1ba374337dbdea8a55486f5f40c32d4c0f16e520f7fb4e71",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role4/FriableEulerRankin.lean",
+      "full_read_chunk": "9b9f60",
+      "earlier_postread_hash": "5bed718fdb946c1e1574a6d4de3789e30397071f49089e5df1624e14ad38a9b1",
+      "current_observed_sha256": "5bed718fdb946c1e1574a6d4de3789e30397071f49089e5df1624e14ad38a9b1",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role4/build.py",
+      "full_read_chunk": "88457b",
+      "earlier_postread_hash": "89dea53493843f1196bdcdb2fd8ad376649870db665b1e8aef532e1bd6c8616a",
+      "current_observed_sha256": "89dea53493843f1196bdcdb2fd8ad376649870db665b1e8aef532e1bd6c8616a",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role4/preparation.json",
+      "full_read_chunk": "2fa47c",
+      "earlier_postread_hash": null,
+      "current_observed_sha256": "7692d30f01353c329fed22b0c5557fbc7c35436fd63fb776b92138d70a3b9392",
+      "matches_earlier_postread_hash": null
+    },
+    {
+      "path": "round20/role4/dependencies_readonly.json",
+      "full_read_chunk": "d5fd1f",
+      "earlier_postread_hash": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+      "current_observed_sha256": "4c84a5c9851711c1acb44af92bf717b0cff39e4e752ff96d9e81b85e0543882d",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role6_composite/outward.py",
+      "full_read_chunk": "9d5af0",
+      "earlier_postread_hash": "d1786c0583bd83572c36746e52d992e0c4b92eb826ad39bcd494c32eea16a41b",
+      "current_observed_sha256": "d1786c0583bd83572c36746e52d992e0c4b92eb826ad39bcd494c32eea16a41b",
+      "matches_earlier_postread_hash": true
+    },
+    {
+      "path": "round20/role6_composite/arithmetic.py",
+      "full_read_chunk": "ddaf18",
+      "earlier_postread_hash": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+      "current_observed_sha256": "131a38a8bf82a46fbc954455d63b6de8ac3055b7b73199b1c555826d04f9cbbc",
+      "matches_earlier_postread_hash": true
+    }
+  ],
+  "role3_independent_paper_review_full_chunk": "79a022",
+  "role4_historical_bindings_checked": 18,
+  "postread_digests_not_PREEXEC_attestation": true,
+  "all_sources_may_still_be_written_before_first_compile": true,
+  "Lean_PASS_count20": 0,
+  "numeric_bank_executions20": 0,
+  "compile_gates20_closed": true,
+  "math_execution_by_root": false,
+  "victory": false
+}

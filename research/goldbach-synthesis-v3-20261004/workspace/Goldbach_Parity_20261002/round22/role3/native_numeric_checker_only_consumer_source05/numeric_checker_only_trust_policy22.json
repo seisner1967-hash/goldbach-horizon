@@ -1,0 +1,34 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC05_CHECKER_ONLY_EXPLICIT_TRUST_SOURCE_POLICY",
+  "status": "SOURCE_POLICY_ONLY_NOT_A_REVIEW_NOT_A_NUMERIC_AUTHORIZATION",
+  "scope": "NATIVE_NUMERIC05_CHECKER_ONLY_N1E8",
+  "operational_assumptions_proposed": [
+    "Installed Windows loader, API-set, Kernel32 and operating-system services are trusted operationally under the historical bound snapshot",
+    "The unchanged actually compiled BUILD04 checker image and installed GCC/GMP native dependencies are trusted to implement the reviewed CPP until a separate machine-refinement proof exists",
+    "The canonical isolated Python runtime and its 972 inherited selected byte-bound runtime files are trusted operationally",
+    "The readonly BUILD04 Job backend uses an explicit C:/Windows/System32/kernel32.dll and installed PATH; no effective-load or universal dependency closure is claimed"
+  ],
+  "checker_binary_sha256": "2e7e095c2972fea09ee26500df9dae207ff52497d0f61f2052d76d464ebe6990",
+  "checker_source_sha256": "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb",
+  "backend_sha256": "88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3",
+  "build_receipt_sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8",
+  "old04_producer_payloads_mathematically_validated": false,
+  "old04_parent_receipt_reconstructed": false, "old04_parent_POST_reconstructed": false,
+  "ROOT_numeric_gate_explicit_acknowledgment_required": true,
+  "acknowledgment_fields": ["accept_installed_Windows_and_frozen_native_runtime_trust", "reuse_unvalidated_producer04_payload_bytes"],
+  "required_independent_source_review_status": "NUMERIC05_CHECKER_ONLY_SOURCE_REVIEW_CLOSED_WITH_NATIVE_REFINEMENT_OPEN",
+  "required_independent_trust_review_status": "NUMERIC05_CHECKER_ONLY_FIXED_IMAGE_REVIEWED_WITH_EXPLICIT_WINDOWS_NATIVE_TRUST",
+  "selected_reviewer_for_ROLE3_parent": "ROLE4",
+  "review_scope_note": "New parent and controls independently reviewed by ROLE4; previously acquired CPP/backend reviews of ROLE5 are reused, without a new independent audit of ROLE4's CPP",
+  "required_review_resource_fields": {
+    "job_limit_flags_requested": 8968, "working_set_limit_flag_requested": false,
+    "rss_os_enforced": false, "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM",
+    "wall_seconds": 3600, "checker_deadline_parent_offset_seconds": 3300, "FIN_POST_reserve_seconds": 300
+  },
+  "effective_loads_observed": false, "universal_loader_closure_verified": false,
+  "all_non_OS_imports_bound": false,
+  "native_GMP_catalogue_NTT_CRT_Lean_refinement": false,
+  "installed_Windows_and_frozen_native_runtime_trusted_is_operational_assumption": true,
+  "numeric_authorization": false, "produced_binary_invocations": 0,
+  "D_N": false, "WIN": false
+}

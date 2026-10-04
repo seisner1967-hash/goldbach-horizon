@@ -1,0 +1,41 @@
+{
+  "schema": "round22.role6.read_scope.v1",
+  "metadata_only": true,
+  "no_new_math_or_Lean_executed": true,
+  "local_FULL": [
+    {"path":"round22/USER_DIRECTIVE.md", "chunks":["392b8e","024a56"], "sha256":"c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947"},
+    {"path":"round22/PROBE_BLOCK.md", "chunks":["a1d7f3","1c3541"], "sha256":"a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3"},
+    {"path":"round22/agent1_continuous.md", "chunk":"6f4837", "scope":"FULL current body then; final report later appended/gelled and must have its own root binding"},
+    {"path":"round22/role2/uniform_formula.md", "chunks":["2c26df","80139e"], "scope":"FULL draft then FULL final before preparation", "final_sha256":"720b8b2363c222321e7f50752591a8a5d0e992c119bfc3b4f445b9c80b7b7825"},
+    {"path":"round22/role2/numeric_contract.md", "chunk":"e8cf01", "scope":"FULL final G0/H0/C0", "final_sha256":"943470e906efd8a77b2fbdbe50f001978e9bbaa9c20101f6ad379bcca9e03ebf"},
+    {"path":"round22/role1/real_trace_annex.md", "chunk":"e4a3b3", "scope":"FULL final", "final_sha256":"4736c056f047c84f4ebe38ed4f60b1a9c473481006dcee8341c168afdd9ea2b5"},
+    {"path":"round22/role1/numeric_contract.md", "chunk":"80c93c", "scope":"FULL final", "final_sha256":"8c593946be90aa424120b7ec74b664cf447e9791af3510143df791efd986280a"},
+    {"path":"round22/role6/interval22.py", "chunk":"7d6b5c", "scope":"FULL final source; no import"},
+    {"path":"round22/role6/epstein_bank22.py", "chunk":"24ef8e", "scope":"FULL final source; no import"},
+    {"path":"round22/role6/run_epstein_once22.py", "chunk":"2bab6a", "scope":"FULL final source; no invocation"},
+    {"path":"round22/role6/pivot_ack22.json", "chunk":"f4c404", "scope":"FULL historical metadata ACK only"}
+  ],
+  "local_targeted": [
+    {"path":"round22/previous_artifacts_sha256.json", "chunk":"22ee78", "scope":"first16lines and metadata hash; no new full3089 byte preflight"},
+    {"path":"mathlib/NumberTheory/LSeries/RiemannZeta.lean", "chunk":"3c0d10", "scope":"targeted declaration search, no compiler"},
+    {"path":"mathlib/Analysis/MellinTransform.lean and MellinInversion.lean", "chunk":"c444de", "scope":"targeted declarations, no compiler"},
+    {"path":"known Python runtime Lib/site-packages", "chunks":["4bdf47","484679"], "scope":"full directory-name inventory and relevant metadata names; no imports/API probes"}
+  ],
+  "web_targeted_primary": [
+    {"url":"https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf", "scope":"sectionV p8 classW/Mellin/explicitformula; parsed text", "receipts":["turn147view0","turn148view0"]},
+    {"url":"https://www.claymath.org/library/monographs/MPPc.pdf", "scope":"explicitformula section in volume; targeted parsed text; attempted screenshot failed", "receipts":["turn132view3","turn139view0","turn142view0"]},
+    {"url":"https://arxiv.org/pdf/1208.5846", "scope":"Corollary1 and definitionNpositive, targeted pages", "receipts":["turn132view1","turn133view0","turn139view1"]},
+    {"url":"https://arxiv.org/pdf/2004.09765", "scope":"intro/theorem/method p1-2 and absence of stored high-precision isolation", "receipts":["turn147view1","turn148view1"]},
+    {"url":"https://dlmf.nist.gov/5.4.E3", "scope":"gamma modulus special value with recurrence derived separately", "receipts":["turn147view2"]},
+    {"url":"https://arxiv.org/pdf/math/0412039", "scope":"equations1,2,10,11 pp1-2; nonprimitive Epstein normalization; no arithmetic proof copied", "receipts":["turn150view0"]},
+    {"url":"https://arxiv.org/pdf/1710.00603", "scope":"intro and decomposition of Selberg trace p5; no full-paper read claimed", "receipts":["turn132view4","turn139view4"]},
+    {"url":"https://dlmf.nist.gov/25.11", "scope":"Euler-Maclaurin section read as future evaluator route, not an implemented certificate", "receipts":["turn150view1"]},
+    {"url":"https://dlmf.nist.gov/5.11", "scope":"asymptotic expansion/error section; no unsupported asymptotic truncation used", "receipts":["turn150view2"]}
+  ],
+  "honesty": {"web_bytes_sha_not_invented":true, "targeted_read_not_full_pdf":true, "screenshot_failure_not_a_math_FAILURE":true, "cache_search_not_proof_of_global_API_absence":true},
+  "metadata_edit_incident": {"kind":"apply_patch verification failed on an unmatched whole paragraph", "following_read_chunk":"64a32f", "math_or_Lean_execution":false, "resolution":"correct whole paragraph and source formatting patched before preparation freeze"},
+  "paper_audit_messages": [
+    {"actor":"ROLE2", "task":"/root/round21_ideation1_signed", "claim":"q-recovery, signed reduction, endpoint indices, tail and highYcap paper audited; no execution"},
+    {"actor":"ROLE3", "task":"/root/round22_formal3_prepare", "claim":"FULL contract1080b6 and bank991d66, signed prefactor/endpoints/tail APIs audit; no execution"}
+  ]
+}

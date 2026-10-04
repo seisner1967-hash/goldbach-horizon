@@ -1,0 +1,57 @@
+{
+  "schema": "ROUND22_COMPLEX_GAMMA_MELLIN_SOURCE_CATALOG_02",
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "namespace": "GoldbachComplexGammaMellin22",
+  "module_order": ["ComplexGammaMellinLocal22", "ComplexGammaMellinHolomorphy22"],
+  "declarations": 37,
+  "theorems": 27,
+  "definitions": 10,
+  "qualified_print_axioms": 37,
+  "counts_method": "Manual FULL source reading; no candidate parser or compiler",
+  "modules": [
+    {
+      "name": "ComplexGammaMellinLocal22",
+      "declarations": 22,
+      "definitions": [
+        "verticalS", "complexGammaKernel", "rotationAngle", "decayGap",
+        "kernelCoefficient", "complexGammaInverse"
+      ],
+      "theorems": [
+        "verticalS_re", "verticalS_im", "verticalS_continuous",
+        "rightHalfPlane_mem_slitPlane", "rightHalfPlane_ne_zero",
+        "rotationAngle_pos", "rotationAngle_lt_pi_half", "decayGap_pos",
+        "norm_Gamma_fixed_rotation", "norm_principal_power",
+        "complexGammaKernel_bound", "complexGammaKernel_continuous",
+        "complexGammaKernel_half_integrable", "complexGammaKernel_integrable",
+        "complexGammaKernel_hasDerivAt_w", "complexGammaInverse_real"
+      ],
+      "local_imports": ["ThermalGammaMellinInverse22"]
+    },
+    {
+      "name": "ComplexGammaMellinHolomorphy22",
+      "declarations": 15,
+      "definitions": [
+        "localArgRadius", "localDecayGap", "localDerivativeCoefficient",
+        "localDerivativeEnvelope"
+      ],
+      "theorems": [
+        "local_parameters", "exists_local_kernel_ball", "verticalS_norm_le",
+        "complexGammaKernel_local_bound", "complexGammaDerivative_local_bound",
+        "weightedExponential_integrable", "localDerivativeEnvelope_integrable",
+        "complexGammaInverse_hasDerivAt", "complexGammaInverse_analytic",
+        "complexGammaInverse_eq_exp", "complex_exp_eq_Gamma_integral"
+      ],
+      "local_imports": ["ComplexGammaMellinLocal22"]
+    }
+  ],
+  "readonly_independent_dependencies": [
+    "ThermalGammaMellinInverse22 (batch20)", "GammaPrerequisites22 (batch02)"
+  ],
+  "domain": "w complex with strictly positive real part; integration t real over volume; Gamma actual at 2+it; cpow principal",
+  "free_final_L1_derivative_holomorphy_inversion_premises": false,
+  "author_olean": false,
+  "independent_pass": false,
+  "formal_tail_formula_proved_in_this_package": false,
+  "Lambda_exchange_uniform_zeta_trace_D_N_proved": false,
+  "WIN": false
+}

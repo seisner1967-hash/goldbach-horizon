@@ -1,0 +1,174 @@
+import SeparatedTypeIICount
+
+/-! R4/R5 with independent arithmetic fronts and actual incidence counts.
+This is a conditional finite arithmetic bound; it does not assume R6 and
+does not assert that source-onset inequalities have been proved in Lean. -/
+namespace GoldbachRound18.SeparatedTypeII
+open scoped BigOperators
+open Finset
+noncomputable section
+attribute [local instance] Classical.propDecidable
+
+theorem admissible_rows_front {V H ell : ℕ} (hH : 0 < H) (hell : 0 < ell) :
+    |((units (Ioc V (2 * V)) (H * ell)).card : ℚ) -
+      (V : ℚ) * arithmeticDensity (H * ell)| ≤ arithmeticFront (H * ell) := by
+  have hf := unit_count_front (A := V) (B := 2 * V)
+    (by omega) (Nat.mul_pos hH hell)
+  have he : (2 : ℚ) * V - V = V := by ring
+  simpa only [unitCount, Nat.cast_mul, Nat.cast_ofNat, he] using hf
+
+theorem admissible_rows_at_most_width (V H ell : ℕ) :
+    (units (Ioc V (2 * V)) (H * ell)).card ≤ V := by
+  have h := (Ioc V (2 * V)).card_filter_le (fun v => Nat.Coprime v (H * ell))
+  rw [Nat.card_Ioc] at h
+  unfold units
+  omega
+
+theorem omitted_count_lower_R5 (P : Parameters) {A B H ell V : ℕ}
+    (hAB : A ≤ B) (hH : 0 < H) (hell : 0 < ell) (hV : 0 < V)
+    (hHd : conductor P ∣ H) (hlH : Nat.Coprime ell H)
+    (hcap : ∀ b ∈ Ioc A B, conductor P * b ≤ P.N)
+    (R4a : 2 * arithmeticFront (H * ell) ≤ (V : ℚ) * arithmeticDensity (H * ell))
+    (R4c : (V : ℚ) * arithmeticFront H ≤
+      ((B : ℚ) - A) * arithmeticDensity H * arithmeticDensity (H * ell) / (8 * ell)) :
+    ((B : ℚ) - A) * arithmeticDensity H * arithmeticDensity (H * ell) / (8 * ell) ≤
+      (omittedCount P (Ioc A B) H ell (units (Ioc V (2 * V)) (H * ell)) : ℚ) := by
+  let E := units (Ioc V (2 * V)) (H * ell)
+  let F : ℚ := ((B : ℚ) - A) * arithmeticDensity H
+  have hF : 0 ≤ F := mul_nonneg (sub_nonneg.mpr (by exact_mod_cast hAB))
+    (le_of_lt (arithmetic_density_positive hH))
+  have hVl : (V : ℚ) ≠ 0 := by exact_mod_cast Nat.ne_of_gt hV
+  have hellq : (ell : ℚ) ≠ 0 := by exact_mod_cast Nat.ne_of_gt hell
+  have hD : 0 < (2 : ℚ) * ell * V := by positivity
+  have hcoef : 0 ≤ F / (2 * ell * V) := div_nonneg hF (le_of_lt hD)
+  have hEta := arithmetic_front_nonnegative H
+  have hEfront := admissible_rows_front (V := V) hH hell
+  have hEhalf : (V : ℚ) * arithmeticDensity (H * ell) / 2 ≤ (E.card : ℚ) := by
+    have hlo := (abs_le.mp hEfront).1
+    change -(arithmeticFront (H * ell)) ≤
+      (E.card : ℚ) - (V : ℚ) * arithmeticDensity (H * ell) at hlo
+    linarith
+  have hEcap : (E.card : ℚ) ≤ V := by
+    exact_mod_cast admissible_rows_at_most_width V H ell
+  have hentry : ∀ v ∈ E, F / (2 * ell * V) - arithmeticFront H ≤
+      (rowCount P (Ioc A B) H ell v : ℚ) := by
+    intro v hvE
+    have hvI := mem_Ioc.mp (mem_filter.mp hvE).1
+    have hvU := (mem_filter.mp hvE).2
+    have hvH : Nat.Coprime v H := hvU.coprime_dvd_right (dvd_mul_right H ell)
+    have hvl : Nat.Coprime v ell := hvU.coprime_dvd_right (dvd_mul_left ell H)
+    have hvp : 0 < v := by omega
+    have hf := row_count_front P hAB hH hell hvp hHd hlH hvH hvl hcap
+    have hlo := (abs_le.mp hf).1
+    have he : (((B : ℚ) - A) / (ell * v)) * arithmeticDensity H = F / (ell * v) := by
+      dsimp [F]
+      ring
+    rw [he] at hlo
+    have hden : (ell : ℚ) * v ≤ 2 * ell * V := by
+      have hvq : (v : ℚ) ≤ 2 * V := by exact_mod_cast hvI.2
+      nlinarith [show (0 : ℚ) ≤ ell by positivity]
+    have hdiv : F / (2 * ell * V) ≤ F / (ell * v) :=
+      div_le_div_of_nonneg_left hF (by positivity) hden
+    linarith
+  have hsum : (omittedCount P (Ioc A B) H ell E : ℚ) =
+      ∑ v ∈ E, (rowCount P (Ioc A B) H ell v : ℚ) := by
+    rw [omitted_count_rows, Nat.cast_sum]
+  have hbase : (E.card : ℚ) * F / (2 * ell * V) - (E.card : ℚ) * arithmeticFront H ≤
+      (omittedCount P (Ioc A B) H ell E : ℚ) := by
+    rw [hsum]
+    calc
+      _ = ∑ v ∈ E, (F / (2 * ell * V) - arithmeticFront H) := by
+        rw [sum_const, nsmul_eq_mul]
+        ring
+      _ ≤ _ := sum_le_sum hentry
+  have hm := mul_le_mul_of_nonneg_right hEhalf hcoef
+  have hn := mul_le_mul_of_nonneg_right hEcap hEta
+  have heq : ((V : ℚ) * arithmeticDensity (H * ell) / 2) *
+      (F / (2 * ell * V)) = F * arithmeticDensity (H * ell) / (4 * ell) := by
+    field_simp [hVl, hellq]
+    ring
+  rw [heq] at hm
+  change (V : ℚ) * arithmeticFront H ≤ F * arithmeticDensity (H * ell) / (8 * ell) at R4c
+  change F * arithmeticDensity (H * ell) / (8 * ell) ≤
+    (omittedCount P (Ioc A B) H ell E : ℚ)
+  have he2 : F * arithmeticDensity (H * ell) / (4 * ell) =
+      2 * (F * arithmeticDensity (H * ell) / (8 * ell)) := by ring
+  rw [he2] at hm
+  have hm' : 2 * (F * arithmeticDensity (H * ell) / (8 * ell)) ≤
+      (E.card : ℚ) * F / (2 * ell * V) := by simpa only [mul_div_assoc] using hm
+  linarith
+
+theorem omitted_ratio_lower_R5 (P : Parameters) {A B H ell V : ℕ}
+    (hAB : A ≤ B) (hH : 0 < H) (hell : 0 < ell) (hV : 0 < V)
+    (hHd : conductor P ∣ H) (hlH : Nat.Coprime ell H)
+    (hcap : ∀ b ∈ Ioc A B, conductor P * b ≤ P.N)
+    (hJ : 0 < unitCount (Ioc A B) H)
+    (R4a : 2 * arithmeticFront (H * ell) ≤ (V : ℚ) * arithmeticDensity (H * ell))
+    (R4b : arithmeticFront H ≤ ((B : ℚ) - A) * arithmeticDensity H)
+    (R4c : (V : ℚ) * arithmeticFront H ≤
+      ((B : ℚ) - A) * arithmeticDensity H * arithmeticDensity (H * ell) / (8 * ell)) :
+    arithmeticDensity (H * ell) / (16 * ell) ≤
+      (omittedCount P (Ioc A B) H ell (units (Ioc V (2 * V)) (H * ell)) : ℚ) /
+        (unitCount (Ioc A B) H : ℚ) := by
+  have hJq : (0 : ℚ) < unitCount (Ioc A B) H := by exact_mod_cast hJ
+  have hlo := omitted_count_lower_R5 P hAB hH hell hV hHd hlH hcap R4a R4c
+  have hf := unit_count_front hAB hH
+  have hupper := (abs_le.mp hf).2
+  have hJup : (unitCount (Ioc A B) H : ℚ) ≤
+      2 * (((B : ℚ) - A) * arithmeticDensity H) := by linarith
+  have hcoef : 0 ≤ arithmeticDensity (H * ell) / (16 * ell) :=
+    div_nonneg (le_of_lt (arithmetic_density_positive (Nat.mul_pos hH hell))) (by positivity)
+  apply (le_div_iff₀ hJq).mpr
+  calc
+    _ ≤ (arithmeticDensity (H * ell) / (16 * ell)) *
+        (2 * (((B : ℚ) - A) * arithmeticDensity H)) :=
+      mul_le_mul_of_nonneg_left hJup hcoef
+    _ = ((B : ℚ) - A) * arithmeticDensity H * arithmeticDensity (H * ell) / (8 * ell) := by ring
+    _ ≤ _ := hlo
+
+theorem normalized_adversarial_lower_R5 (P : Parameters) {A B V h ell : ℕ} (x : ℝ)
+    (hx : 0 ≤ x) (hAB : A ≤ B) (hH : 0 < P.N * conductor P * h)
+    (hV : 0 < V) (hd : 0 < conductor P)
+    (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P)
+    (hdel : Nat.Coprime ell (conductor P)) (hell : ell.Prime)
+    (hellSmall : ell * ell ≤ P.a)
+    (hlH : Nat.Coprime ell (P.N * conductor P * h))
+    (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a)
+    (hcap : ∀ b ∈ Ioc A B, conductor P * b ≤ P.N)
+    (hA : 0 < structureCount P (Ioc A B))
+    (R4a : 2 * arithmeticFront (P.N * conductor P * h * ell) ≤
+      (V : ℚ) * arithmeticDensity (P.N * conductor P * h * ell))
+    (R4b : arithmeticFront (P.N * conductor P * h) ≤
+      ((B : ℚ) - A) * arithmeticDensity (P.N * conductor P * h))
+    (R4c : (V : ℚ) * arithmeticFront (P.N * conductor P * h) ≤
+      ((B : ℚ) - A) * arithmeticDensity (P.N * conductor P * h) *
+        arithmeticDensity (P.N * conductor P * h * ell) / (8 * ell)) :
+    x * (arithmeticDensity (P.N * conductor P * h * ell) : ℝ) / (16 * ell) ≤
+      x / (structureCount P (Ioc A B) : ℝ) *
+        adversarialSum P (Ioc A B) (P.N * conductor P * h) ell (rows P V h ell) := by
+  have hJ : 0 < unitCount (Ioc A B) (P.N * conductor P * h) :=
+    lt_of_lt_of_le hA (structure_le_units P (Ioc A B) h hsmall)
+  have hHd : conductor P ∣ P.N * conductor P * h := by
+    exact dvd_mul_of_dvd_left (dvd_mul_left (conductor P) P.N) h
+  have hr := omitted_ratio_lower_R5 P hAB hH hell.pos hV hHd hlH hcap hJ R4a R4b R4c
+  have heE : units (Ioc V (2 * V)) (P.N * conductor P * h * ell) = rows P V h ell := by
+    ext v
+    simp [units, rows]
+  rw [heE] at hr
+  have hrr : (arithmeticDensity (P.N * conductor P * h * ell) : ℝ) / (16 * ell) ≤
+      (omittedCount P (Ioc A B) (P.N * conductor P * h) ell (rows P V h ell) : ℝ) /
+        (unitCount (Ioc A B) (P.N * conductor P * h) : ℝ) := by
+    exact_mod_cast hr
+  rw [normalized_adversarial_sum P (Ioc A B) V h ell x hd hNd hwidth hdel hell
+    hellSmall hsmall hcap hA]
+  simpa only [mul_div_assoc] using mul_le_mul_of_nonneg_left hrr hx
+
+end
+end GoldbachRound18.SeparatedTypeII
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound18.SeparatedTypeII.admissible_rows_front
+#print axioms GoldbachRound18.SeparatedTypeII.admissible_rows_at_most_width
+#print axioms GoldbachRound18.SeparatedTypeII.omitted_count_lower_R5
+#print axioms GoldbachRound18.SeparatedTypeII.omitted_ratio_lower_R5
+#print axioms GoldbachRound18.SeparatedTypeII.normalized_adversarial_lower_R5

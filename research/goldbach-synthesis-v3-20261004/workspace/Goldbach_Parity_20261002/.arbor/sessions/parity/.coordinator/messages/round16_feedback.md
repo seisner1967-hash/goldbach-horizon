@@ -1,0 +1,11 @@
+# Feedback16 gelé — acquis et obligations pour17
+
+A7 est désormais acquis sous Lean sur les définitions réelles : N pair non nul, p0 premier impair minimal absent, enclosure acquise2541/4096<=C2, S(N)-logp0>=1/144. Convergence tprod, queue et Euler/harmonique sont prouvés ; ne pas les redériver. A9 C<=-1/288 sous le raccord source U4 reste écrit seulement. L'existence et la masse des incidences q,N-p0q premières ne sont pas prouvées. Une famille vide apporte0 ; aucun coût global n'est payé par le seul signe local.
+
+TypeI3 : centrage uniforme exact réfuté ; correction locale3/481 contre2/481 dans le banc d77, défaut38 devient2 et la différence36 reste réelle. Écriture Gamma=Gamma_star+L3, prix principal L3=-1/4 du terme uniforme, parents eux aussi3rough. Les hypothèses TypeII concernent le produit du candidat j, pas automatiquement les facteurs d*s*q du complément. Gamma_star/TypeII/comparaison parent restent ouverts. BMOR pi_AP3 exige les deux endpoints>=8e9 ; aucun usage asymptotique sur le banc1e8.
+
+Capacité : banc entier18q34cores612vertices, branches e1 et primeLambda(e) gardées, trois incidences e3 favorables mais déficit entier principal/actuelPOS. Consommer la capacité de chaque vertex physique une seule fois. Les labels ne sont pas de nouvelles ressources. Trois falsifiers locaux additionnels réfutent la gratuité, la suppression de Lambda(e) et le recyclage multiple. NOCEX sur trois points e3 n'est pas une preuve de disponibilité source.
+
+Neuf échecs Lean réels archivés :1API indisponible,2réduction/coercions/commutation/induction,3dénominateur,5sup/lambda/cast,6numéral,7if/API,8indices,10petitsFinsets,12if dépendant. Ils sont techniques ; n'inventer aucun message de parité. Producteur3:13invocations dont1probe+12candidats, PASS4/9/11/13; producteur4:1PASS; Juge:2compiles frais PASS. Aucun numericfailure16. Cumul17modules244théorèmes auxiliaires, huit définitions nouvelles séparées. Aucune victoire.
+
+Ledger, I global/sourceu>=10^24, rawproperpowers, wholeU_a, originalalpha/Q, S(bN), c1/e1/b1, cofacteurs longs, référence-S(N)N, restes J0/J1/J2, faces/nonbulk, P5K2 entier avant retrait et onset BV supplémentaire restent conservés.799 artefacts protégés pour17. Audit16 unique terminé, aucun rerun producteur/Lean ancien/PASS/PDF par root ; aucune hypothèse d'indépendance ou disponibilité ajoutée.

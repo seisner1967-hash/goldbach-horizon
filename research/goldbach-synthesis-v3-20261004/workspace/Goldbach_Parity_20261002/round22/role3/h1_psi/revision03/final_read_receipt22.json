@@ -1,0 +1,95 @@
+{
+  "schema": "round22.psi.revision03.final_read_receipt.v1",
+  "time": "2026-10-03T10:53:33.6022467Z",
+  "status": "PREPARED_SOURCE_ONLY_GATE_CLOSED",
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiCore22.lean",
+      "sha256": "450962be9526866fa0ffebc39ef29a819d94b57a90000291337550e9f4dc7284",
+      "scope": "FULL",
+      "capture": "45aabb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiBetaLimit22.lean",
+      "sha256": "b625725b3aa3fa03f4a2fa76a493054043e2579ce6b0afd6f36697226c8f6d12",
+      "scope": "FULL",
+      "capture": "45aabb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiIntegral22.lean",
+      "sha256": "3f254cdfeee333aa66eba719b944f64a693fa2e15f0265f340ace9c2a99f6aaf",
+      "scope": "FULL",
+      "capture": "45aabb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiDuplication22.lean",
+      "sha256": "8a7f2c014866bfe49814c9310dfc012acd05e87c962b5976a32cf0fec9a2179f",
+      "scope": "BYTE_IDENTICAL_PRIOR_FULL",
+      "capture": "e0f033"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\run_psi_batch_once22.py",
+      "sha256": "14cc89e8afdd600843e276d6bad789e19449041370c883168848ab295848857c",
+      "scope": "FULL",
+      "capture": "666428"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\prepare_psi_metadata22.ps1",
+      "sha256": "95e17ef463f0db00e6185d10bdc15e52f49f50d9a7cbdbe79cea754829233e33",
+      "scope": "FULL",
+      "capture": "666428"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\preparation22.md",
+      "sha256": "6c556af2c04a84a68a6c8b365c20e5c8dcee2c08ffd07fa16f800ecf4a6a7643",
+      "scope": "FULL",
+      "capture": "7a307e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\read_scope22.md",
+      "sha256": "49608ba390f2b59560249729578a4395077157ad73d2b0330f064b1026d2b2b3",
+      "scope": "FULL",
+      "capture": "7a307e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\failure02_diagnosis22.md",
+      "sha256": "43267ff09cf67763eb9d3bfd8852b1712f8dc94323aed4f36ca738914a2296b8",
+      "scope": "FULL",
+      "capture": "7a307e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\psi_source_manifest22.json",
+      "sha256": "e69c215fe676eaf5b3a6902d9797a50a7d03f86d5bd9f136aeee378c94bbc43f",
+      "scope": "FULL",
+      "capture": "565542"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\psi_prepared_receipt22.json",
+      "sha256": "cb98633b3f43e47f66ad161665f4b3994846dd4eeb5d473be08f11dad7c60522",
+      "scope": "FULL",
+      "capture": "565542"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\psi_cache_closure22.json",
+      "sha256": "8211d1e3ba1f94f4f415c20a4a26ad12cbd4cdc5a3458a3a8becb17482aac0d6",
+      "scope": "HEADER_PARSE_BYTE_HASH_NOT_FULL",
+      "capture": "7a307e/b737cf"
+    }
+  ],
+  "metadata_run": "7a307e/b737cf exit0",
+  "all_65_bindings_verified": true,
+  "actual_Lean_invocations_revision03": 0,
+  "previous_actual_Core_exit": 1,
+  "previous_actual_receipt_sha256": "0961062ade0d902dcd6f377ba23ccac67021187d32bdc68e4c14c94ed1aa724b",
+  "notation_API_read": {
+    "capture": "b26fba",
+    "scope": "TARGETED",
+    "Beta_lines": "56,252",
+    "IntervalIntegral_lines": "424,429"
+  },
+  "numeric_PASS": false,
+  "counterexample_established": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "victory": false
+}

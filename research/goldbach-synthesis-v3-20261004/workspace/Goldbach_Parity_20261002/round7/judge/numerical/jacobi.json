@@ -1,0 +1,1068 @@
+{
+  "status": "PASS_IDENTITIES_ONLY",
+  "N": 100000000,
+  "complete_Jacobi": [
+    {
+      "p": 3,
+      "C": 10403,
+      "generator": 2,
+      "all_nonprincipal_characters": 1,
+      "quadratic_order4_receipts": [
+        {
+          "character_index": 1,
+          "order": 2,
+          "Jacobi_reduced": [
+            1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            -1
+          ],
+          "without_C_expected": "-chi(-C)"
+        }
+      ],
+      "principal_count": 1,
+      "reconstructed_complete_sum": 1,
+      "verdict": "Exact reconstruction of the p-2 principal terms; no saving"
+    },
+    {
+      "p": 7,
+      "C": 10403,
+      "generator": 3,
+      "all_nonprincipal_characters": 5,
+      "quadratic_order4_receipts": [
+        {
+          "character_index": 3,
+          "order": 2,
+          "Jacobi_reduced": [
+            1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            1
+          ],
+          "without_C_expected": "-chi(-C)"
+        }
+      ],
+      "principal_count": 5,
+      "reconstructed_complete_sum": 5,
+      "verdict": "Exact reconstruction of the p-2 principal terms; no saving"
+    },
+    {
+      "p": 11,
+      "C": 10403,
+      "generator": 2,
+      "all_nonprincipal_characters": 9,
+      "quadratic_order4_receipts": [
+        {
+          "character_index": 5,
+          "order": 2,
+          "Jacobi_reduced": [
+            1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            -1
+          ],
+          "without_C_expected": "-chi(-C)"
+        }
+      ],
+      "principal_count": 9,
+      "reconstructed_complete_sum": 9,
+      "verdict": "Exact reconstruction of the p-2 principal terms; no saving"
+    },
+    {
+      "p": 13,
+      "C": 10403,
+      "generator": 2,
+      "all_nonprincipal_characters": 11,
+      "quadratic_order4_receipts": [
+        {
+          "character_index": 3,
+          "order": 4,
+          "Jacobi_reduced": [
+            1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            1
+          ],
+          "without_C_expected": "-chi(-C)"
+        },
+        {
+          "character_index": 6,
+          "order": 2,
+          "Jacobi_reduced": [
+            -1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            -1
+          ],
+          "without_C_expected": "-chi(-C)"
+        }
+      ],
+      "principal_count": 11,
+      "reconstructed_complete_sum": 11,
+      "verdict": "Exact reconstruction of the p-2 principal terms; no saving"
+    },
+    {
+      "p": 17,
+      "C": 10403,
+      "generator": 3,
+      "all_nonprincipal_characters": 15,
+      "quadratic_order4_receipts": [
+        {
+          "character_index": 4,
+          "order": 4,
+          "Jacobi_reduced": [
+            -1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            -1
+          ],
+          "without_C_expected": "-chi(-C)"
+        },
+        {
+          "character_index": 8,
+          "order": 2,
+          "Jacobi_reduced": [
+            -1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            -1
+          ],
+          "without_C_expected": "-chi(-C)"
+        }
+      ],
+      "principal_count": 15,
+      "reconstructed_complete_sum": 15,
+      "verdict": "Exact reconstruction of the p-2 principal terms; no saving"
+    },
+    {
+      "p": 19,
+      "C": 10403,
+      "generator": 2,
+      "all_nonprincipal_characters": 17,
+      "quadratic_order4_receipts": [
+        {
+          "character_index": 9,
+          "order": 2,
+          "Jacobi_reduced": [
+            1
+          ],
+          "expected": "-chi(-1)",
+          "without_C_reduced": [
+            -1
+          ],
+          "without_C_expected": "-chi(-C)"
+        }
+      ],
+      "principal_count": 17,
+      "reconstructed_complete_sum": 17,
+      "verdict": "Exact reconstruction of the p-2 principal terms; no saving"
+    }
+  ],
+  "centered_prefixes": [
+    {
+      "p": 3,
+      "C": 10403,
+      "prefix_cases": 60,
+      "max_absolute_discrepancy": "2/3",
+      "exact_bound": "<=2 for p not dividing progression slope",
+      "nonunit_slope_exception": {
+        "slope": 3,
+        "offset": 1,
+        "length": 9,
+        "discrepancy": "6",
+        "verdict": "Constant residue; the <=2 assertion does not apply"
+      }
+    },
+    {
+      "p": 7,
+      "C": 10403,
+      "prefix_cases": 924,
+      "max_absolute_discrepancy": "10/7",
+      "exact_bound": "<=2 for p not dividing progression slope",
+      "nonunit_slope_exception": {
+        "slope": 7,
+        "offset": 1,
+        "length": 21,
+        "discrepancy": "6",
+        "verdict": "Constant residue; the <=2 assertion does not apply"
+      }
+    },
+    {
+      "p": 11,
+      "C": 10403,
+      "prefix_cases": 3740,
+      "max_absolute_discrepancy": "18/11",
+      "exact_bound": "<=2 for p not dividing progression slope",
+      "nonunit_slope_exception": {
+        "slope": 11,
+        "offset": 1,
+        "length": 33,
+        "discrepancy": "6",
+        "verdict": "Constant residue; the <=2 assertion does not apply"
+      }
+    },
+    {
+      "p": 13,
+      "C": 10403,
+      "prefix_cases": 6240,
+      "max_absolute_discrepancy": "22/13",
+      "exact_bound": "<=2 for p not dividing progression slope",
+      "nonunit_slope_exception": {
+        "slope": 13,
+        "offset": 1,
+        "length": 39,
+        "discrepancy": "6",
+        "verdict": "Constant residue; the <=2 assertion does not apply"
+      }
+    },
+    {
+      "p": 17,
+      "C": 10403,
+      "prefix_cases": 14144,
+      "max_absolute_discrepancy": "30/17",
+      "exact_bound": "<=2 for p not dividing progression slope",
+      "nonunit_slope_exception": {
+        "slope": 17,
+        "offset": 1,
+        "length": 51,
+        "discrepancy": "-45",
+        "verdict": "Constant residue; the <=2 assertion does not apply"
+      }
+    },
+    {
+      "p": 19,
+      "C": 10403,
+      "prefix_cases": 19836,
+      "max_absolute_discrepancy": "34/19",
+      "exact_bound": "<=2 for p not dividing progression slope",
+      "nonunit_slope_exception": {
+        "slope": 19,
+        "offset": 1,
+        "length": 57,
+        "discrepancy": "6",
+        "verdict": "Constant residue; the <=2 assertion does not apply"
+      }
+    }
+  ],
+  "centered_prefix_cases": 44944,
+  "actual_HH_points": [
+    {
+      "b": 13,
+      "u": 3,
+      "v": 7,
+      "k": 1,
+      "s": 7951,
+      "t": 12577,
+      "zeta": 1,
+      "x": 1,
+      "A": 273,
+      "C": 99999727,
+      "n": 273,
+      "m": 99999727,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7951,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "W": 2,
+      "y": 2,
+      "four_Mobius_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "four_Mobius_product": 1,
+      "twists": {
+        "2": {
+          "full_product": [
+            1,
+            0
+          ],
+          "missing_C_product": [
+            -1,
+            0
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        },
+        "4": {
+          "full_product": [
+            -1,
+            0
+          ],
+          "missing_C_product": [
+            0,
+            -1
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "b": 13,
+      "u": 3,
+      "v": 75469,
+      "k": 1,
+      "s": 7717,
+      "t": 12577,
+      "zeta": 1,
+      "x": 1,
+      "A": 2943291,
+      "C": 97056709,
+      "n": 2943291,
+      "m": 97056709,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          163,
+          1
+        ],
+        [
+          463,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          7717,
+          1
+        ],
+        [
+          12577,
+          1
+        ]
+      ],
+      "W": 2,
+      "y": 2,
+      "four_Mobius_signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "four_Mobius_product": -1,
+      "twists": {
+        "2": {
+          "full_product": [
+            1,
+            0
+          ],
+          "missing_C_product": [
+            1,
+            0
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        },
+        "4": {
+          "full_product": [
+            -1,
+            0
+          ],
+          "missing_C_product": [
+            1,
+            0
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "b": 13,
+      "u": 3,
+      "v": 7,
+      "k": 1,
+      "s": 11,
+      "t": 17,
+      "zeta": 43063,
+      "x": 336803,
+      "A": 273,
+      "C": 187,
+      "n": 91947219,
+      "m": 8052781,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          336803,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          43063,
+          1
+        ]
+      ],
+      "W": 2,
+      "y": 2,
+      "four_Mobius_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "four_Mobius_product": 1,
+      "twists": {
+        "2": {
+          "full_product": [
+            1,
+            0
+          ],
+          "missing_C_product": [
+            -1,
+            0
+          ],
+          "isolated_zeta": [
+            -1,
+            0
+          ]
+        },
+        "4": {
+          "full_product": [
+            -1,
+            0
+          ],
+          "missing_C_product": [
+            0,
+            -1
+          ],
+          "isolated_zeta": [
+            0,
+            -1
+          ]
+        }
+      }
+    },
+    {
+      "b": 13,
+      "u": 3,
+      "v": 7,
+      "k": 1,
+      "s": 11,
+      "t": 17,
+      "zeta": 44701,
+      "x": 335681,
+      "A": 273,
+      "C": 187,
+      "n": 91640913,
+      "m": 8359087,
+      "factor_n": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          335681,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          44701,
+          1
+        ]
+      ],
+      "W": 2,
+      "y": 2,
+      "four_Mobius_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "four_Mobius_product": 1,
+      "twists": {
+        "2": {
+          "full_product": [
+            1,
+            0
+          ],
+          "missing_C_product": [
+            -1,
+            0
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        },
+        "4": {
+          "full_product": [
+            -1,
+            0
+          ],
+          "missing_C_product": [
+            0,
+            -1
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "b": 101,
+      "u": 103,
+      "v": 107,
+      "k": 1,
+      "s": 3,
+      "t": 71,
+      "zeta": 244769,
+      "x": 43,
+      "A": 1113121,
+      "C": 213,
+      "n": 47864203,
+      "m": 52135797,
+      "factor_n": [
+        [
+          43,
+          1
+        ],
+        [
+          101,
+          1
+        ],
+        [
+          103,
+          1
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "factor_m": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          71,
+          1
+        ],
+        [
+          73,
+          1
+        ],
+        [
+          479,
+          1
+        ]
+      ],
+      "W": 2,
+      "y": 2,
+      "four_Mobius_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "four_Mobius_product": 1,
+      "twists": {
+        "2": {
+          "full_product": [
+            1,
+            0
+          ],
+          "missing_C_product": [
+            -1,
+            0
+          ],
+          "isolated_zeta": [
+            1,
+            0
+          ]
+        },
+        "4": {
+          "full_product": [
+            -1,
+            0
+          ],
+          "missing_C_product": [
+            0,
+            1
+          ],
+          "isolated_zeta": [
+            -1,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "weighted_reconstruction": [
+    {
+      "p": 3,
+      "Omega": 5,
+      "Omega_p": 0,
+      "nonunit_sites": [
+        {
+          "n": 273,
+          "m": 99999727,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 2943291,
+          "m": 97056709,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": -1
+        },
+        {
+          "n": 91947219,
+          "m": 8052781,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 91640913,
+          "m": 8359087,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 47864203,
+          "m": 52135797,
+          "q_divides_n": false,
+          "q_divides_m": true,
+          "Mobius_product": 1
+        }
+      ],
+      "identity": "S_HH=R_p+T0 ; T0=-sum_(chi nonprincipal) conj(chi(-1))*Tchi",
+      "R_symbolic_terms": 11,
+      "R_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "163753299629869065009467981/1000000000000000000000000",
+        "upper": "163753358380348001121142683/1000000000000000000000000"
+      },
+      "S_symbolic_terms": 11,
+      "S_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "163753299629869065009467981/1000000000000000000000000",
+        "upper": "163753358380348001121142683/1000000000000000000000000"
+      },
+      "principal_weighted_terms": 0,
+      "all_character_factors_preserved": true,
+      "weight": "mu(u)mu(v)mu(s)mu(t)*log(b)*log(s*t*zeta), original finite tuple selection",
+      "verdict": "Nonunit remainder retained; complete unweighted Jacobi means are not substituted for these weights"
+    },
+    {
+      "p": 7,
+      "Omega": 5,
+      "Omega_p": 1,
+      "nonunit_sites": [
+        {
+          "n": 273,
+          "m": 99999727,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 91947219,
+          "m": 8052781,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 91640913,
+          "m": 8359087,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 47864203,
+          "m": 52135797,
+          "q_divides_n": false,
+          "q_divides_m": true,
+          "Mobius_product": 1
+        }
+      ],
+      "identity": "S_HH=R_p+T0 ; T0=-sum_(chi nonprincipal) conj(chi(-1))*Tchi",
+      "R_symbolic_terms": 11,
+      "R_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "52731194788235724905977623/250000000000000000000000",
+        "upper": "26365604781300392206144229/125000000000000000000000"
+      },
+      "S_symbolic_terms": 11,
+      "S_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "163753299629869065009467981/1000000000000000000000000",
+        "upper": "163753358380348001121142683/1000000000000000000000000"
+      },
+      "principal_weighted_terms": 2,
+      "all_character_factors_preserved": true,
+      "weight": "mu(u)mu(v)mu(s)mu(t)*log(b)*log(s*t*zeta), original finite tuple selection",
+      "verdict": "Nonunit remainder retained; complete unweighted Jacobi means are not substituted for these weights"
+    },
+    {
+      "p": 11,
+      "Omega": 5,
+      "Omega_p": 3,
+      "nonunit_sites": [
+        {
+          "n": 91947219,
+          "m": 8052781,
+          "q_divides_n": false,
+          "q_divides_m": true,
+          "Mobius_product": 1
+        },
+        {
+          "n": 91640913,
+          "m": 8359087,
+          "q_divides_n": false,
+          "q_divides_m": true,
+          "Mobius_product": 1
+        }
+      ],
+      "identity": "S_HH=R_p+T0 ; T0=-sum_(chi nonprincipal) conj(chi(-1))*Tchi",
+      "R_symbolic_terms": 4,
+      "R_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "10208619999397844782468039/125000000000000000000000",
+        "upper": "81668982657577408453508741/1000000000000000000000000"
+      },
+      "S_symbolic_terms": 11,
+      "S_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "163753299629869065009467981/1000000000000000000000000",
+        "upper": "163753358380348001121142683/1000000000000000000000000"
+      },
+      "principal_weighted_terms": 7,
+      "all_character_factors_preserved": true,
+      "weight": "mu(u)mu(v)mu(s)mu(t)*log(b)*log(s*t*zeta), original finite tuple selection",
+      "verdict": "Nonunit remainder retained; complete unweighted Jacobi means are not substituted for these weights"
+    },
+    {
+      "p": 13,
+      "Omega": 5,
+      "Omega_p": 1,
+      "nonunit_sites": [
+        {
+          "n": 273,
+          "m": 99999727,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 2943291,
+          "m": 97056709,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": -1
+        },
+        {
+          "n": 91947219,
+          "m": 8052781,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        },
+        {
+          "n": 91640913,
+          "m": 8359087,
+          "q_divides_n": true,
+          "q_divides_m": false,
+          "Mobius_product": 1
+        }
+      ],
+      "identity": "S_HH=R_p+T0 ; T0=-sum_(chi nonprincipal) conj(chi(-1))*Tchi",
+      "R_symbolic_terms": 6,
+      "R_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "81745573773560960724962999/1000000000000000000000000",
+        "upper": "81745609235914139844893819/1000000000000000000000000"
+      },
+      "S_symbolic_terms": 11,
+      "S_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "163753299629869065009467981/1000000000000000000000000",
+        "upper": "163753358380348001121142683/1000000000000000000000000"
+      },
+      "principal_weighted_terms": 5,
+      "all_character_factors_preserved": true,
+      "weight": "mu(u)mu(v)mu(s)mu(t)*log(b)*log(s*t*zeta), original finite tuple selection",
+      "verdict": "Nonunit remainder retained; complete unweighted Jacobi means are not substituted for these weights"
+    },
+    {
+      "p": 17,
+      "Omega": 5,
+      "Omega_p": 3,
+      "nonunit_sites": [
+        {
+          "n": 91947219,
+          "m": 8052781,
+          "q_divides_n": false,
+          "q_divides_m": true,
+          "Mobius_product": 1
+        },
+        {
+          "n": 91640913,
+          "m": 8359087,
+          "q_divides_n": false,
+          "q_divides_m": true,
+          "Mobius_product": 1
+        }
+      ],
+      "identity": "S_HH=R_p+T0 ; T0=-sum_(chi nonprincipal) conj(chi(-1))*Tchi",
+      "R_symbolic_terms": 4,
+      "R_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "10208619999397844782468039/125000000000000000000000",
+        "upper": "81668982657577408453508741/1000000000000000000000000"
+      },
+      "S_symbolic_terms": 11,
+      "S_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "163753299629869065009467981/1000000000000000000000000",
+        "upper": "163753358380348001121142683/1000000000000000000000000"
+      },
+      "principal_weighted_terms": 7,
+      "all_character_factors_preserved": true,
+      "weight": "mu(u)mu(v)mu(s)mu(t)*log(b)*log(s*t*zeta), original finite tuple selection",
+      "verdict": "Nonunit remainder retained; complete unweighted Jacobi means are not substituted for these weights"
+    },
+    {
+      "p": 19,
+      "Omega": 5,
+      "Omega_p": 5,
+      "nonunit_sites": [],
+      "identity": "S_HH=R_p+T0 ; T0=-sum_(chi nonprincipal) conj(chi(-1))*Tchi",
+      "R_symbolic_terms": 0,
+      "R_certificate": {
+        "sign": "ZERO",
+        "lower": "0/1",
+        "upper": "0/1",
+        "terms": 0
+      },
+      "S_symbolic_terms": 11,
+      "S_certificate": {
+        "sign": "POSITIVE",
+        "terms": 6,
+        "lower": "163753299629869065009467981/1000000000000000000000000",
+        "upper": "163753358380348001121142683/1000000000000000000000000"
+      },
+      "principal_weighted_terms": 11,
+      "all_character_factors_preserved": true,
+      "weight": "mu(u)mu(v)mu(s)mu(t)*log(b)*log(s*t*zeta), original finite tuple selection",
+      "verdict": "Nonunit remainder retained; complete unweighted Jacobi means are not substituted for these weights"
+    }
+  ],
+  "CRT_twists": {
+    "p": 11,
+    "A": 273,
+    "C": 10403,
+    "CRT": {
+      "B": 1,
+      "M": 819,
+      "g": 1,
+      "v0": 107,
+      "residue": 107,
+      "period": 819,
+      "reduced_modulus": 819
+    },
+    "J": [
+      1,
+      9612
+    ],
+    "points": [
+      {
+        "zeta": 107,
+        "n": 98886879,
+        "m": 1113121,
+        "quadratic_full_twist": 1,
+        "q_unit": true
+      },
+      {
+        "zeta": 926,
+        "n": 90366822,
+        "m": 9633178,
+        "quadratic_full_twist": -1,
+        "q_unit": true
+      },
+      {
+        "zeta": 1745,
+        "n": 81846765,
+        "m": 18153235,
+        "quadratic_full_twist": 0,
+        "q_unit": false
+      },
+      {
+        "zeta": 2564,
+        "n": 73326708,
+        "m": 26673292,
+        "quadratic_full_twist": -1,
+        "q_unit": true
+      },
+      {
+        "zeta": 3383,
+        "n": 64806651,
+        "m": 35193349,
+        "quadratic_full_twist": -1,
+        "q_unit": true
+      },
+      {
+        "zeta": 4202,
+        "n": 56286594,
+        "m": 43713406,
+        "quadratic_full_twist": 0,
+        "q_unit": false
+      },
+      {
+        "zeta": 5021,
+        "n": 47766537,
+        "m": 52233463,
+        "quadratic_full_twist": -1,
+        "q_unit": true
+      },
+      {
+        "zeta": 5840,
+        "n": 39246480,
+        "m": 60753520,
+        "quadratic_full_twist": 1,
+        "q_unit": true
+      },
+      {
+        "zeta": 6659,
+        "n": 30726423,
+        "m": 69273577,
+        "quadratic_full_twist": 1,
+        "q_unit": true
+      },
+      {
+        "zeta": 7478,
+        "n": 22206366,
+        "m": 77793634,
+        "quadratic_full_twist": 1,
+        "q_unit": true
+      },
+      {
+        "zeta": 8297,
+        "n": 13686309,
+        "m": 86313691,
+        "quadratic_full_twist": 1,
+        "q_unit": true
+      },
+      {
+        "zeta": 9116,
+        "n": 5166252,
+        "m": 94833748,
+        "quadratic_full_twist": 1,
+        "q_unit": true
+      }
+    ],
+    "interpretation": "Signed e=3 expansion cells, not SF HH points; p-unit exceptions remain"
+  },
+  "conductor_divides_N_baseline": "q=5: full twist constant chi(-1) on q units; kept distinct",
+  "arithmetic": "Integer phase polynomials modulo exact cyclotomic polynomials, rational centering; no complex floating approximation",
+  "previous_artifacts": {
+    "status": "PRESERVED",
+    "files": 190,
+    "baseline_sha256": "900367574d957bfe8e48341ca532022fc0e742d5a001099e3d402863e467de61"
+  },
+  "script_sha256": "145946390471b70630b29e3c43918db4db4ba432021709b50b0e8a0f51bdbc9d",
+  "limitations": "Exactly five admissible HH tuples and stated finite CRT cells, not global HH support; no asymptotic gain or D_N bound"
+}

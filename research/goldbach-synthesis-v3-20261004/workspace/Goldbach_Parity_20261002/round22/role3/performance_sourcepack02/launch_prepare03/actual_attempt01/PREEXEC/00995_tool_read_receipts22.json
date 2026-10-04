@@ -1,0 +1,66 @@
+{
+  "schema": "ROUND22_SOURCEPACK02_LAUNCH03_TOOL_SOURCE_READS",
+  "status": "DRAFT_SOURCE_REVIEW_READY_NOT_PREPARED",
+  "source_author": "ROLE3",
+  "future_actor": "ROLE6",
+  "source_manifest_sha256": "914c210931fb8029f59727a58b473402f8ec28c8e3e86328144e350d0fec362f",
+  "tools": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\prepare_metadata_source22.ps1",
+      "sha256": "f3cc88bcf976753ad768048ba6db41020edb9b2d0c77c8df3d00ed476d73d921",
+      "bytes": 18571,
+      "read_scope": "FULL19cd00"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\run_global_once_source22.py",
+      "sha256": "e0486e0c004e53249d6b99ffa2aa908e01f456249b870d01dc8a54bcfa868c2d",
+      "bytes": 24345,
+      "read_scope": "FULLf13f3d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\thermal_child_source22.py",
+      "sha256": "402222f0538f3e9db72a0bb0f0bc4a2420b79ac9e1fe6d30822f80e83857819f",
+      "bytes": 11991,
+      "read_scope": "FULL2e31c0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\launch_contract_source22.md",
+      "sha256": "d1df1f8907d5afffe9f1e56241d9d6e65088cc96529380d707ef3a4418c69409",
+      "bytes": 5165,
+      "read_scope": "FULL6b34ce"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\launch_prepare03\\resource_addendum_source22.md",
+      "sha256": "2d43730db7a5c28d2e35aae1600953cf6df8a191545d83160f63ec819631e2ef",
+      "bytes": 2753,
+      "read_scope": "FULL6b34ce"
+    }
+  ],
+  "parent_templates": {
+    "builder_and_old_contract": "FULL393bb5",
+    "old_controller": "FULL5bad9c",
+    "old_child": "FULLfde0b8",
+    "closed_reservation": "FULL09a854"
+  },
+  "source_packet_bindings": 21,
+  "expected_runtime_aliases": 9,
+  "expected_runtime_inventory": 972,
+  "limits_future": {
+    "max_wall_seconds": 10800,
+    "max_artifact_bytes": 2147483648,
+    "max_children": 1,
+    "retry_count": 0
+  },
+  "independent_ROLE5_review": "REQUIRED_PENDING",
+  "builder_invocations": 0,
+  "Python_parsers": 0,
+  "Python_imports": 0,
+  "Python_math_invocations": 0,
+  "Lean_invocations": 0,
+  "runtime_probes": 0,
+  "prepared_files_created": false,
+  "gate_created": false,
+  "new_actual_created": false,
+  "old_bank_changed": false,
+  "WIN": false
+}

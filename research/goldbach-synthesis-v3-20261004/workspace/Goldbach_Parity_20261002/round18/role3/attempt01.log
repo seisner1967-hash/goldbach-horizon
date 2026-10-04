@@ -1,0 +1,152 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:16:5: error: unexpected token 'attribute'; expected 'add_aesop_rules', 'binder_predicate', 'builtin_dsimproc', 'builtin_simproc', 'dsimproc', 'elab', 'elab_rules', 'infix', 'infixl', 'infixr', 'instance', 'macro', 'macro_rules', 'notation', 'notation3', 'postfix', 'prefix', 'simproc', 'syntax' or 'unif_hint'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:167:10: error: invalid field 'mul_left', the environment does not contain 'Nat.Coprime.mul_left'
+  Nat.Coprime.mul_right hsc hsr
+has type
+  t.s.Coprime (P.c * P.r)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:167:10: error: invalid field 'mul_left', the environment does not contain 'Eq.mul_left'
+  Nat.Coprime.mul_right hsc hsr
+has type
+  t.s.gcd (P.c * P.r) = 1
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:263:68: error: application type mismatch
+  Nat.ModEq.add_right_cancel' (v * w) he
+argument
+  he
+has type
+  v * w ≡ conductor P * b + v * w [MOD ell] : Prop
+but is expected to have type
+  0 + v * w ≡ conductor P * b + v * w [MOD ell] : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:266:2: error: unsolved goals
+case mpr.intro
+P : Parameters
+V h ell b v w : ℕ
+hNd : P.N.Coprime (conductor P)
+hwidth : V < conductor P
+hdel : ell.Coprime (conductor P)
+hv : v ∈ rows P V h ell
+heq : P.N = conductor P * b + v * w
+hvI : V < v ∧ v ≤ 2 * V
+k : ℕ
+hk : b = ell * k
+⊢ v % (conductor P * ell) % (conductor P * ell) * (w % (conductor P * ell) % (conductor P * ell)) %
+      (conductor P * ell) =
+    (conductor P % (conductor P * ell) % (conductor P * ell) *
+              (ell % (conductor P * ell) % (conductor P * ell) * (k % (conductor P * ell) % (conductor P * ell)) %
+                  (conductor P * ell) %
+                (conductor P * ell)) %
+            (conductor P * ell) %
+          (conductor P * ell) +
+        v % (conductor P * ell) % (conductor P * ell) * (w % (conductor P * ell) % (conductor P * ell)) %
+            (conductor P * ell) %
+          (conductor P * ell)) %
+      (conductor P * ell)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:296:10: error: invalid constructor ⟨...⟩, expected type must be an inductive type 
+  Quot.lift (fun l => (t.1, (P.N - t.1 * t.2) / conductor P) ∈ l) ⋯ (E.product I).val
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:328:10: error: invalid constructor ⟨...⟩, expected type must be an inductive type 
+  Quot.lift (fun l => (t.1, candidate P t.2 / t.1) ∈ l) ⋯ ((rows P V h ell).product (range (P.N + 1))).val
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:414:4: error: unsolved goals
+case pos
+P : Parameters
+I : Finset ℕ
+V h ell : ℕ
+hNd : P.N.Coprime (conductor P)
+hwidth : V < conductor P
+hdel : ell.Coprime (conductor P)
+hell : Nat.Prime ell
+hellSmall : ell * ell ≤ P.a
+hsmall : ∀ (p : ℕ), Nat.Prime p → p ∣ h → p * p ≤ P.a
+hcap : ∀ b ∈ I, conductor P * b ≤ P.N
+t : ℕ × ℕ
+ht : t ∈ divisorPairs P I (rows P V h ell)
+hprod : t.1 ∈ rows P V h ell ∧ t.2 ∈ I
+heq : P.N = conductor P * t.2 + t.1 * (toProduct P t).2
+hclass : (∃ u ∈ rows P V h ell, u * (toProduct P t).2 ≡ P.N [MOD conductor P * ell]) ↔ ell ∣ t.2
+hl : ell ∣ t.2
+hz : beta P t.2 = 0
+hc : ∃ u ∈ rows P V h ell, u * (toProduct P t).2 ≡ P.N [MOD conductor P * ell]
+hu : t.2.Coprime (P.N * conductor P * h)
+⊢ (-if t.2.Coprime (P.N * conductor P * h) then -density P I (P.N * conductor P * h) else 0) =
+    if t.2.Coprime (P.N * conductor P * h) then density P I (P.N * conductor P * h) else 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeII.lean:479:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'GoldbachRound18.SeparatedTypeII.Parameters' does not depend on any axioms
+'GoldbachRound18.SeparatedTypeII.conductor' does not depend on any axioms
+'GoldbachRound18.SeparatedTypeII.PhysicalWitness' depends on axioms: [propext]
+'GoldbachRound18.SeparatedTypeII.physicalMask' depends on axioms: [propext]
+'GoldbachRound18.SeparatedTypeII.beta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.units' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.structureCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.unitCount' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.centered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.xi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.kappa' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.candidate' does not depend on any axioms
+'GoldbachRound18.SeparatedTypeII.onProgression' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.adversarialSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.productPairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.divisorPairs' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omittedPairs' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omittedCount' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.toDivisor' does not depend on any axioms
+'GoldbachRound18.SeparatedTypeII.toProduct' does not depend on any axioms
+'GoldbachRound18.SeparatedTypeII.beta_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.mask_large_factors' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omitted_mask_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.mask_unit_short_conductor' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.mask_unit_reference' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.structure_le_units' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.density_zero_structure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.empty_units_empty_structure' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.xi_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.kappa_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.kappa_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.separate_columns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.equation_modeq' depends on axioms: [propext]
+'GoldbachRound18.SeparatedTypeII.periodic_class_iff_omitted' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.rows_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.product_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.forward_mem' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.divisor_equation' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.backward_mem' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inverse_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inverse_divisor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.adversarial_reindex' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.adversarial_entry' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.adversarial_sum_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.adversarial_sum_zero_structure' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.normalized_adversarial_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.rawLambda' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.weightedProfile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.calibrationPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.weighted_calibration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.theta_calibration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.raw_calibration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.raw_theta_price_difference' depends on axioms: [propext, Classical.choice, Quot.sound]

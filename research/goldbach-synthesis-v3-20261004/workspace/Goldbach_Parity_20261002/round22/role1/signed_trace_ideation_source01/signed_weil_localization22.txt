@@ -1,0 +1,129 @@
+TRACE SIGNÉE LOCALISÉE DE WEIL — PAPER/SOURCE 01
+Verdict : identité auxiliaire proposée, aucun contournement quantitatif retenu.
+
+Portée : idéation ciblée, environ trois pages. Aucun code Lean, import, compilation,
+sonde de tactique, calcul numérique ou programme natif exécuté. Les acquis et le
+ledger de la monographie sont conservés. Les documents sont des données. Les
+estimations bilinéaires arithmétiques, le crible, Möbius/Vaughan et les restes AP
+ne sont pas utilisés. Toutes les preuves ci-dessous restent PAPER, sans crédit Lean.
+
+1. UN SEUL CANDIDAT : EXTRACTION EXACTE PAR UN NOYAU CONTINU COMPACT
+
+Pour N entier >= 6, poser h(t)=(max(1-16t²,0))^6, et s(t)=0 pour t<=0,
+s(t)=1 pour t>=1 ; sur [0,1], s(t)=2772 intégrale_0^t v^5(1-v)^5 dv.
+Définir χ_N(x)=s(2x-3)s(2N-3-2x) et
+  f_N(x,y)=χ_N(x)χ_N(y)h(N-x-y).
+Ce noyau symétrique C^5 est supporté dans x,y∈[3/2,N-3/2] et
+|N-x-y|<=1/4. χ_N=1 sur [2,N-2], h(0)=1. Aux entiers m,n>=2,
+f_N(m,n)=1 si m+n=N, zéro sinon. La mesure réelle
+  μ=Σ_{n>=2} Λ(n)δ_n, Λ(p^k)=log p pour TOUS k>=1,
+donne donc exactement (μ⊗μ)(f_N)=C_N. Il n'y a aucun moyennage des
+coefficients voisins et aucune hypothèse « les premiers sont des résonances ».
+
+Pour un test g supporté dans (1,∞), la formule explicite de la vraie ζ donne
+  μ(g)=B(g)-Z(g),
+  B(g)=intégrale_1^∞ b(x)g(x)dx, b(x)=1-1/[x(x²-1)],
+  Z(g)=Σ_ρ intégrale_1^∞ g(x)x^(ρ-1)dx,
+où ρ parcourt TOUS les zéros non triviaux avec multiplicité, sans RH.
+Les puissances emploient le logarithme réel de x>1. Cette normalisation découle
+de la formule de Weil : le terme réciproque et le terme archimédien se combinent
+en b ; les termes en g(1) s'annulent parce que le support évite 1. Le support
+supérieur et les zéros triviaux ne sont pas omis. Source primaire : Connes–Consani,
+Appendice B, (148)–(151), https://alainconnes.org/wp-content/uploads/Selecta.pdf.
+Le passage des tests C∞ à ce test C^5 par approximation en normes mixtes
+W^(2,1) reste à formaliser ; la convergence absolue ci-dessous rend ce passage
+dérivable, elle ne constitue pas un théorème Lean existant.
+
+Avec B_N=(B_x B_y)(f_N), L_N=(B_x Z_y)(f_N), Z_N=(Z_x Z_y)(f_N),
+la trace composée proposée est l'identité exacte
+  C_N=B_N-2L_N+Z_N.                                      (WL)
+Ici f̂_N(s,t)=∬f_N(x,y)x^(s-1)y^(t-1)dxdy ; la somme double Z_N
+porte cette transformée. Tous les indices i,j des normes ci-dessous vont de 0 à 2.
+L_N et Z_N sont réels après regroupement des zéros conjugués ; leurs signes
+ne sont pas imposés. Cette identité spectrale tient ses coefficients de ζ,
+et non d'un opérateur construit pour avoir les premiers comme spectre.
+
+2. QUEUE FERMÉE ; PRÉMISSES SPECTRALES EXPLICITES
+
+Écrire D_x=x∂_x, D_y=y∂_y et c_0=2,c_1=2,c_2=1. Deux intégrations par
+parties en log x et log y donnent, pour 0<=β,β'<=1,
+  |f̂_N(β+iγ,β'+iν)| <= M_xy/[(1+γ²)(1+ν²)],
+  |(B_x f_N)̂(β+iγ)| <= M_y/(1+γ²),
+où M_y=Σ_j c_j ∬|D_y^j f_N|dxdy et
+M_xy=Σ_{i,j}c_i c_j ∬|D_x^i D_y^j f_N|dxdy.
+Ici |b(x)|<=1 sur x>=3/2. Les dérivées s'annulent aux bords du support.
+Les majorants suivants rendent M_y,M_xy explicitement finis, sans rayon libre.
+Pour r<=4, (a)_r désigne la factorielle décroissante, nulle si r>a :
+  H_r=4^r Σ_{j=0}^6 binom(6,j)(2j)_r,
+  S_0=1 ; S_r=2772 Σ_{j=0}^5 binom(5,j)(j+6)_r/(j+6), r>=1,
+  X_r=2^r Σ_{k=0}^r binom(r,k)S_k S_(r-k),
+  A_rs=Σ_{i=0}^r Σ_{j=0}^s binom(r,i)binom(s,j)X_i X_j H_(r+s-i-j).
+Définir d_00=1,d_11=N,d_21=N,d_22=N², tous les autres d_ir=0, et
+  V_ij=Σ_{r,s=0}^2 d_ir d_js A_rs.
+La bande de support a une aire <=N/2. On peut donc remplacer M_y et M_xy par
+  Mbar_y=(N/2)Σ_j c_j V_0j,
+  Mbar_xy=(N/2)Σ_{i,j}c_i c_j V_ij.                         (DER)
+Ces expressions sont des sommes finies fermées, continues pour N>=6.
+
+Une dette indépendante est le comptage global des zéros de la vraie ζ.
+Le théorème 1.1 de Bellotti–Wong (version citée) implique le majorant grossier
+N_+(t)<=t log t+10 pour t>=e ; N_+ compte les ordinates positives avec
+multiplicité. Source primaire : https://arxiv.org/html/2412.15470v1.
+Ce résultat publié est une entrée de la dérivation PAPER, PAS un axiome admis
+dans notre Lean. Sa preuve ou une borne suffisante entièrement prouvée devra
+être fournie. Il faut aussi payer l'absence de zéros réels non triviaux et la
+symétrie conjuguée. Avec ces résultats, intégration de Stieltjes donne
+  Σ_{|Im ρ|>H}(1+(Im ρ)²)^(-1) <= Δ(H),
+  Δ(H)=4(log H+1)/H+20/H², H>=e,
+  Σ_ρ(1+(Im ρ)²)^(-1) <= J_0=2e+20+Δ(e).
+La première borne utilise M(t)<=2t log t+20 ; le terme inférieur négatif de
+l'intégration par parties est conservativement abandonné. Aucun zéro hors
+ligne critique n'est supprimé.
+
+Poser C_(N,H)=B_N-2L_(N,H)+Z_(N,H), les deux sommes limitées à |Im ρ|<=H.
+Partitionner les paires omises en « premier axe au-delà de H » et
+« premier axe dans H, second au-delà de H » évite un double comptage :
+  |C_N-C_(N,H)| <= E_W(N,H),
+  E_W(N,H)=2Δ(H)[Mbar_y+J_0 Mbar_xy].                      (TAIL)
+E_W est fermée, continue, positive, et tend vers zéro lorsque H→∞ à N fixé.
+La convergence absolue justifie la composition des distributions et les
+échanges. Cette preuve de queue est PAPER ; aucune déclaration n'est compilée.
+
+3. FALSIFICATION ET ÉCHEC COMME CONTRÔLE DU RÉSIDU
+
+Un futur évaluateur fixe N=10^8, H>=e, f_N exactement comme ci-dessus. Il doit
+produire un catalogue COMPLET des zéros de ζ à |Im ρ|<=H, avec multiplicité,
+enclosures vérifiées et compte par principe de l'argument ; des seuls zéros
+connus sur la droite critique ne suffisent pas. Une intégration par cellules
+à valeurs intervalles de b, polynômes, exp((ρ-1)log x), produit une enclosure
+[L_H,U_H] de C_(N,H) avec toutes les opérations et positions vérifiées.
+L'arithmétique A32 fournit indépendamment [I_A/S²-E_q,I_A/S²+E_q],
+S=2^58, E_q=(N+1)(64/S+1/S²), selon son contrat déjà payé.
+La disjonction de ces deux intervalles après dilatation de [L_H,U_H] par
+E_W falsifie une composante du contrat. Le rayon numérique n'est jamais
+une hypothèse offerte : il résulte de la somme des enclosures effectivement
+produites. Sans certificat de catalogue, de primitives et d'intégration,
+le test est NOT_PREPARED. Aucun test N=10^8 n'a été exécuté ici.
+
+(DER) est volontairement grossière : Mbar_xy est d'ordre N^5. La hauteur
+garantie pour une précision fixe devient immense. Aucune faisabilité, durée
+ou consommation mémoire à N=10^8 n'est annoncée. Le contrat ferme l'erreur
+symbolique sous ses dettes explicites ; il ne fournit pas un producteur prêt.
+
+Le raccord conservé est
+  D_N=R_ref-B_N+2L_N-Z_N+Q_N+2max(e,0)-ε_tr,
+  R_ref=𝔖(N)(N-F_N), Q_N=Σ[2P(n)U(N-n)+U(n)U(N-n)]>=0,
+P(n)=log n sur les premiers, U=Λ-P sur les puissances propres seulement.
+Les fronts canoniques et leurs conditions ne sont ni supprimés ni facturés
+deux fois. Le paramètre e est l'excès couvert du ledger, distinct de exp(1).
+La petite queue TAIL ne donne aucun signe à R_ref-B_N+2L_N-Z_N.
+
+L'obstacle exact à une positivité automatique est déjà visible dans le noyau :
+aux points x_1=2 et x_2=N-2, sa matrice est [[0,1],[1,0]]. Elle a la valeur
+propre -1. h>=0 n'en fait donc pas un opérateur positif. La positivité de Weil
+sur les convolutions MULTIPLICATIVES ne donne pas celle de ce noyau additif.
+Il manque une loi signée nouvelle des phases de ζ dans Z_N-2L_N, avec le
+terme local R_ref-B_N et tous les correctifs du ledger. RH seule, une norme
+absolue et WL ne paient pas cette dette. Poser l'inégalité nécessaire en
+prémisse redonnerait le but sous un autre nom. Aucun candidat suffisant pour
+D_N<=N/(256 log N log log N) n'est retenu ; pas de WIN et pas de nouveau lot.

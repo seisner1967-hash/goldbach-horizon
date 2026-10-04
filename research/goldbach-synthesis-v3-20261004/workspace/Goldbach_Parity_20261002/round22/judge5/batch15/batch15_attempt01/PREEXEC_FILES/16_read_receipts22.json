@@ -1,0 +1,52 @@
+{
+  "prints": 29,
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "compilations": 0,
+  "math_evaluations": 0,
+  "headers": 29,
+  "headers_equal": true,
+  "old_source_immutable": true,
+  "actor": "ROLE3",
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\DiscreteThermalProjection22.log",
+      "scope": "FULL",
+      "tool_receipt": "41623b",
+      "sha256": "879f2978a6de8935608661b3194a36c728fbff743c864c3f114405fc463c3d0a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch14\\batch14_attempt01\\DiscreteThermalProjection22_FIN.json",
+      "scope": "FULL",
+      "tool_receipt": "ca7b9b",
+      "sha256": "1ef1a87c885aafa907c810a4a17f973923ea17755a5b4748c616616ccfc84104"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\revision02\\DiscreteThermalProjection22.lean",
+      "scope": "FULL",
+      "tool_receipt": "41623b",
+      "sha256": "7ee2abb27d959f1511abb59e8425578b420d3e972a8d03eaff26635ac8fd581c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\revision03\\DiscreteThermalProjection22.lean",
+      "scope": "FULL",
+      "tool_receipt": "91fa47",
+      "sha256": "f24c702b0a6cd71e88ae1279061a45e02fa04f12f8e8641444d3b5e1803e8f02"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\discrete_circle_source22\\revision03\\source_review22.md",
+      "scope": "FULL",
+      "tool_receipt": "e73253",
+      "sha256": "9fd8d6e2d25dd3cfed25f01adae5b9e559b40b468b19899a0ba615879bfe6350"
+    }
+  ],
+  "api_reads": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Basic.lean",
+    "scope": "TARGETED",
+    "ranges": [
+      "192-209",
+      "738-752"
+    ],
+    "tool_receipt": "ca7b9b",
+    "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b"
+  }
+}

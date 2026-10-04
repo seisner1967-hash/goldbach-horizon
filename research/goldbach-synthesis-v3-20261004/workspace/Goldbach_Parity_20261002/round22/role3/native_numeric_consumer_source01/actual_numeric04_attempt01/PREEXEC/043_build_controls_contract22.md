@@ -1,0 +1,27 @@
+# BUILD_ONLY04 — commit Job OS, RSS monitor uniquement
+
+SOURCE distincte, non exécutée ; native02/build03 et leur tentative sont conservés. Deux drivers g++ fixes au plus, STOPFIRSTFAIL, zéro retry, wall partagé300s, commit Job et processus2GiB, active16, total32 observé. Aucun .exe produit n'est lancé et aucune gate numérique implicite n'existe. Le backend04 n'est jamais importé, parsé ou essayé par l'auteur.
+
+## Diagnostic réel, limité à ce que les traces établissent
+
+BUILD03 a demandé SetInformationJobObject(job,9,Extended) avec LimitFlags0x2309 : KILL_ON_JOB_CLOSE, ACTIVE_PROCESS, PROCESS_MEMORY, JOB_MEMORY et WORKINGSET. Les champs working-set imposaient minimum1MiB, maximum2GiB. START_REQUEST19:39:17.228505UTC puis FIN19:39:17.247815UTC indiquent OSError1314 à cet appel, pid0, created_suspended=false, resumed=false, total_job_processes0, job vide. stdout/stderr sont vides, aucune invocation du compilateur. Le parent a clos exit1 à19:39:26.850630UTC. Ce n'est ni un échec d'identité mathématique ni un rejet de revue automatique.
+
+Microsoft identifie [1314](https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--1300-1699-) comme ERROR_PRIVILEGE_NOT_HELD. Sa [structure Job](https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_limit_information) distingue WORKINGSET0x1, les commits processus0x100/Job0x200, active0x8 et kill-on-close0x2000. La documentation de [SetProcessWorkingSetSizeEx](https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-setprocessworkingsetsizeex) précise qu'augmenter les tailles par rapport aux limites courantes peut exiger SE_INC_WORKING_SET_NAME. Ce second appel n'a pas été atteint dans03.
+
+La source suspecte est donc la route des working-set quotas : elle est retirée dans04. L'appel03 contenait plusieurs bits et aucune observation du token ni expérience d'isolement n'est autorisée. Nous n'affirmons pas avoir prouvé quel privilège précis contrôlait JOB_OBJECT_LIMIT_WORKINGSET dans cette installation, ni que le nouvel appel passera. Aucun privilège n'est activé, aucun mode administrateur, probe, essai réduit ou fallback n'est ajouté. Un nouvel échec API fermerait également04 avant tout autre driver.
+
+## Réparation SOURCE étroite et garanties distinctes
+
+Le backend04 demande exactement LimitFlags0x2308, working-set minimum/maximum0 ignorés. Il relit exactement les flags, active16, ProcessMemoryLimit=JobMemoryLimit=2147483648, avant création/reprise. Le CreateProcess suspendu, l'assignation au Job, l'absence de breakaway, les seuls handles de flux hérités, les drains bornés, la fermeture/terminaison et les gardes de conservation restent ceux de03. Les signatures et appels Set/GetProcessWorkingSetSizeEx sont supprimés.
+
+La limite de commit est demandée au système sur le Job et chaque membre ; elle sera réellement garantie seulement si l'appel et sa relecture passent. Le RSS de chaque processus énuméré est surveillé par PeakWorkingSetSize≤2GiB ; la somme des RSS vivants énumérés est surveillée à4GiB. Ces deux seuils sont des moniteurs : rss_os_enforced=false, rss_control=SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM. Les pics RSS de descendants très courts peuvent échapper à l'énumération, et la mémoire résidente mappée n'est pas identique au commit privé. Aucun hard RSS universel n'est revendiqué. Le parent Python reste hors Job ; le moniteur disque n'est pas un quota NTFS. Les états futurs PREP/gate doivent reconnaître ces champs exacts, sans réutiliser l'ancien hard_working_set_requested comme garantie.
+
+## Chemins, arguments, confiance et contrôle
+
+Nouveau sandbox exclusif circle_native_build_source04/actual_build04_attempt01 ; CWD=sandbox, TEMP/TMP=sandbox/tmp. Sorties exclusives native02/build-final04 et reçu native02/build_receipt04.json. L'ancien build-final de03, vide après l'échec, reste conservé : aucun nettoyage, move/delete ou réemploi. Le préflight vérifie les anciens arguments du plan natif contre l'ancien output, puis les nouveaux contre le plan effectif04 ; le seul argument changé est la destination −o. CPP, includes/link/static flags et toolchain sont identiques. Le futur consumer numérique doit être adapté séparément au vrai reçu/plan04 ; aucun consumer gelé n'est modifié ici.
+
+La confiance03 Windows/GCC installé et les imports PE déclarés restent identiques, policy72fd49d9 copiée byte-identique. Les chargements effectifs, specs/helpers réellement sélectionnés et fermeture universelle restent non observés. Aucun all_non_OS_imports_bound=true n'est accepté. Une nouvelle revue indépendante des contrôles04, une préparation exacte et une gate ROOT04 sont nécessaires. Le contrat de confiance scoped03 demeure une pièce historique réutilisable, pas une revue des nouveaux contrôles.
+
+Les seuils log1MiB, captures32MiB, metadata16MiB, binaries64MiB chacun, tmp64MiB, output256MiB restent identiques. PREPOST rehash chaque input, contrôle original et copie, registry3089 et archives ; nouvelles sources et anciennes traces03 seront liées. Le receipt distingue demandes, observations réelles, commit OS et RSS monitor. Deux exit0 vérifiés ne prouveraient que la construction et les bytes des images, jamais la validité GMP/NTT, le coefficientN1e8, H1, D_N ou WIN.
+
+Au handoff : SOURCE_ONLY_FROZEN_NOT_PREPARED_NOT_COMPILED, aucune actual/prep/gate04 créée par l'auteur. Aucun build, import, parser candidat, appel API runtime, version/help, install ou élévation.

@@ -1,0 +1,113 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH18",
+  "time_utc": "2026-10-03T19:17:45.815607+00:00",
+  "modules": [
+    {
+      "module": "ThermalGammaMellinInverse22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\sources\\ThermalGammaMellinInverse22.lean",
+      "source_sha256": "5271bbf9a9917a3ab61c6c7e0e747af4014e214b0867a9c81b43b5aa08fccec1",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\phase_mellin_inversion_source22\\ThermalGammaMellinInverse22.lean",
+      "source_status": "SOURCE_ONLY_NOT_COMPILED",
+      "theorem_count": 9,
+      "definition_count": 2,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachThermalMellin22.expKernel"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachThermalMellin22.gammaLine"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.expKernel_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.gammaLine_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.gammaLine_half_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.gammaLine_integrable"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.expKernel_mellin_convergent_two"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.mellin_expKernel_eq_Gamma"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.expKernel_mellin_vertical_two"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.mellinInv_Gamma_two"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachThermalMellin22.real_exp_eq_Gamma_integral"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachThermalMellin22.expKernel",
+        "GoldbachThermalMellin22.gammaLine",
+        "GoldbachThermalMellin22.expKernel_continuous",
+        "GoldbachThermalMellin22.gammaLine_continuous",
+        "GoldbachThermalMellin22.gammaLine_half_integrable",
+        "GoldbachThermalMellin22.gammaLine_integrable",
+        "GoldbachThermalMellin22.expKernel_mellin_convergent_two",
+        "GoldbachThermalMellin22.mellin_expKernel_eq_Gamma",
+        "GoldbachThermalMellin22.expKernel_mellin_vertical_two",
+        "GoldbachThermalMellin22.mellinInv_Gamma_two",
+        "GoldbachThermalMellin22.real_exp_eq_Gamma_integral"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "REAL_GAMMA_SCALAR_MELLIN_INVERSION_X_POSITIVE_AUX_ONLY",
+      "author_olean_allowed": false
+    }
+  ],
+  "module_count": 1,
+  "total_declarations": 11,
+  "theorem_count": 9,
+  "definition_count": 2,
+  "common_source_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\sources",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22"
+  ],
+  "dependency_bindings": [
+    {
+      "module": "GammaPrerequisites22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "olean_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch18\\readonly_oleans\\GammaPrerequisites22.olean",
+      "olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\receipt.json",
+      "independent_receipt_sha256": "a159b22e7ac4e8718f0572fdbf3e6d424294571eab01d5ed1ff979a821af48f9",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "recompile_authorized": false
+    }
+  ],
+  "support_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\mellin_inverse_source_review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\phase_mellin_inversion_source22\\source_contract22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\phase_mellin_inversion_source22\\read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\completion_receipt.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch17\\batch17_attempt01\\receipt.json"
+  ],
+  "author_provenance_capture_paths": [],
+  "modules_author_PASS_claimed": false,
+  "compiler_invocations": 0,
+  "win": false
+}

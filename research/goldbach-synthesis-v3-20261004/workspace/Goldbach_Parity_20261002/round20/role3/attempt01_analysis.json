@@ -1,0 +1,16 @@
+{
+  "attempt": 1,
+  "module": "OddBonferroniArithmetic",
+  "actual_lean_exit_code": 1,
+  "classification": "TECHNICAL_PROOF_ELABORATION_FAILURE",
+  "actual_log": "round20/role3/attempt01_OddBonferroniArithmetic.log",
+  "actual_receipt": "round20/role3/attempt01_OddBonferroniArithmetic_receipt.json",
+  "errors": [
+    {"line": 145, "obligation": "if (h divides v and cardinal condition) equals nested if", "repair": "Explicit case split on h divides v; keep the actual xi definition"},
+    {"line": 170, "obligation": "rewrite sum over powerset by cardinal bins", "repair": "Supply the actual cardinal-dependent lambda to sum_powerset_apply_card"}
+  ],
+  "post_receipt_display_incident": "Python cp1252 cannot print a Lean Unicode natural-number symbol; the raw compiler log and exit receipt were already preserved. Future launcher process uses PYTHONIOENCODING=utf-8.",
+  "mathematical_identity_changed": false,
+  "parity_obstacle_inferred_from_this_failure": false,
+  "victory": false
+}

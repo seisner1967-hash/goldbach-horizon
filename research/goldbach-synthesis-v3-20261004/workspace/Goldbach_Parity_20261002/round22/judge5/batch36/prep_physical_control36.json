@@ -1,0 +1,127 @@
+{
+  "schema": "ROUND22_ROLE5_PREP36_PHYSICAL_CONTROL",
+  "scope": "COMPLETE_METADATA_ARRAY_VALIDATION_AND_CURRENT_BYTE_HASHES_NOT_RAW_FULL_TEXT",
+  "start_utc": "2026-10-04T04:04:02.4480920Z",
+  "fin_utc": "2026-10-04T04:04:15.6668819Z",
+  "all_current_bytes_preserved": true,
+  "immutable_inputs": 10246,
+  "unique_immutable_paths": 10246,
+  "closed_inputs": 2957,
+  "import_modules": 3623,
+  "Init_and_Prelude_present": true,
+  "unresolved": [],
+  "archive_files": 3089,
+  "readonly_dependencies": [
+    {
+      "module": "GammaPrerequisites22",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "copy_matches_original": true,
+      "receipt_global_status": "INDEPENDENT_BATCH02_AUX_PASS",
+      "recompile_authorized": false
+    },
+    {
+      "module": "ThermalGammaMellinInverse22",
+      "source_sha256": "daad8b5d5fb1181bfc714e1b470edd7d9a6ae07e9a1b76c384481964a42caf91",
+      "olean_sha256": "e9442776bb512a4f83391b63402a1dc86bce61070dfc386bc8b6873af521ce24",
+      "copy_matches_original": true,
+      "receipt_global_status": "INDEPENDENT_BATCH20_AUX_PASS",
+      "recompile_authorized": false
+    },
+    {
+      "module": "ComplexGammaMellinLocal22",
+      "source_sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+      "olean_sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+      "copy_matches_original": true,
+      "receipt_global_status": "INDEPENDENT_BATCH26_FAILED",
+      "recompile_authorized": false
+    },
+    {
+      "module": "ComplexGammaMellinHolomorphy22",
+      "source_sha256": "b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2",
+      "olean_sha256": "f831358e15e1a088988b8bc102a3f7ca23df4a32c3210cfb072273ae4abcccbf",
+      "copy_matches_original": true,
+      "receipt_global_status": "INDEPENDENT_BATCH27_AUX_PASS",
+      "recompile_authorized": false
+    },
+    {
+      "module": "ComplexGammaMellinTail22",
+      "source_sha256": "e5ba99611a069111292c9057a2a70b5cd936f24d244c9e23d966dfb12bb884a0",
+      "olean_sha256": "168112f8064e3355b387c53dc50b82fac024309acdbd68bbbd0d1ed4060d2ad5",
+      "copy_matches_original": true,
+      "receipt_global_status": "INDEPENDENT_BATCH30_AUX_PASS",
+      "recompile_authorized": false
+    },
+    {
+      "module": "ComplexGammaMellinLambda22",
+      "source_sha256": "4a94415678e4c3295b989dccbcda9e049483e131c17efce68099d05686e1c72d",
+      "olean_sha256": "8b557d2ccc8f8f6efbf5a33147aca94e12a3d7b2fcdd095af9024ffb492777c5",
+      "copy_matches_original": true,
+      "receipt_global_status": "INDEPENDENT_BATCH35_AUX_PASS",
+      "recompile_authorized": false
+    }
+  ],
+  "controls": [
+    {
+      "name": "prepare_metadata.py",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\prepare_metadata.py",
+      "sha256": "059f0d0344b853b2fd0b3aef8b8c5c47df1d4dcad41f6867e06e49fe6f5b97f0",
+      "bytes": 38591
+    },
+    {
+      "name": "run_once.py",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\run_once.py",
+      "sha256": "432271875753e28c90cc1223a6e11c974b62de1051dcb3b8744fc7ee70007c7d",
+      "bytes": 14891
+    },
+    {
+      "name": "preparation.md",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\preparation.md",
+      "sha256": "bdf74296633429244be56b04e43d5beaeb38d8c91ace5af452433149737df5b7",
+      "bytes": 9224
+    },
+    {
+      "name": "prepared_manifest.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\prepared_manifest.json",
+      "sha256": "761992bb0df8a04028badd6dff114070f8da866686f858e8627dc28026ef77cb",
+      "bytes": 2833633
+    },
+    {
+      "name": "catalog.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\catalog.json",
+      "sha256": "d11bc89b86e0d06ca0d2d083d81c07c7f99d4b8e42326d772558f6831b065904",
+      "bytes": 31081
+    },
+    {
+      "name": "read_receipts.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\read_receipts.json",
+      "sha256": "8eba3a542accf9099b0a8c918ed3cdbc9d7adb11819ce69dd3bf1ceb3d210dda",
+      "bytes": 41325
+    },
+    {
+      "name": "prepared_receipt.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\prepared_receipt.json",
+      "sha256": "5c7788b95427a6ce5a688e4f0c14573c47a114c82fca8de563a0c141d3cd2f3c",
+      "bytes": 1897
+    },
+    {
+      "name": "import_bindings.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\import_bindings.json",
+      "sha256": "c0659c21543086a473c0247942ec8769a72395c060b708c2c8131050dbafecb5",
+      "bytes": 2254226
+    },
+    {
+      "name": "closed_judge_bindings.json",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch36\\closed_judge_bindings.json",
+      "sha256": "30615d4571d268d0c2b4f6e08ab164bffbd5d1f2b668225a39f2ceae899473b6",
+      "bytes": 824231
+    }
+  ],
+  "errors": [],
+  "compiler_invocations": 0,
+  "numeric_invocations": 0,
+  "actual36_present": false,
+  "official_modules": 88,
+  "official_declarations": 1488,
+  "WIN": false
+}

@@ -1,0 +1,149 @@
+{
+  "schema": "round22.role3.kernel_revision02.source_manifest.v1",
+  "time": "2026-10-03T07:12:08.7102398+00:00",
+  "stage": "G0_KERNEL_REVISION02",
+  "node_id": "16.1",
+  "modules": [
+    "EpsteinKernel22"
+  ],
+  "module_rows": [
+    {
+      "module": "EpsteinKernel22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\EpsteinKernel22.lean",
+      "sha256": "b465bf53b124fa158eed1b5f01171d18ce7f8d7252bf27cf30db1ed7575a773c",
+      "theorem_count": 28,
+      "definition_count": 5,
+      "axiom_print_count": 33,
+      "status": "SOURCE_ONLY_UNCOMPILED_REVISION02"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\experiments\\16.1\\executor_prompt.md",
+      "sha256": "ef1a3b96ec5c14d305b24f5405146c7997513b6f2fff27e89d9967e062c0faf2"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\agent2_operator.md",
+      "sha256": "be2a121cd14fe3513c9ee8ae28458a8a03f38957599d4a9bbba4e2174dbdcafe"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\uniform_formula.md",
+      "sha256": "720b8b2363c222321e7f50752591a8a5d0e992c119bfc3b4f445b9c80b7b7825"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\lean_contract.md",
+      "sha256": "9648829a0eb94f57f2a2e0e056836fac03e611d5a1d2fb21e4f453a04e953dbc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role2\\numeric_contract.md",
+      "sha256": "943470e906efd8a77b2fbdbe50f001978e9bbaa9c20101f6ad379bcca9e03ebf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\USER_DIRECTIVE.md",
+      "sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\PROBE_BLOCK.md",
+      "sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\EpsteinKernel22.lean",
+      "sha256": "cd5cb975242aa38d7d118ac9378409c4bfe406d41227371a7006972d1c145053"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\run_stage_once.py",
+      "sha256": "25a364f023e00e0cad5d9e8308b1a46e8d1ae2a49fc75d892dd81b1e04bd06a0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\phase_read_receipts.json",
+      "sha256": "e56106e4bbdcdc66ac48d28319e721c80a504d7b2c7351fccf6c68f62e9ec201"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage01_preparation.md",
+      "sha256": "55feeb9e3b392d05ff920978c738b09019ddbc418054927854bfde263805be6f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\api_plan.md",
+      "sha256": "28190632ec805264788ef311b54d3e8b4fc8342f8406262748fcddf1e0825a18"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\preparation_readonly.md",
+      "sha256": "d36045a0382a14370e277b7417199fcc90ec70bce6ec302e455c7deba5d36b2e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\input_manifest.json",
+      "sha256": "d4f7a72e02188351e092290b50ccfebbb09399b0d9818f3b8d8d9e1d4575cc57"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\read_receipts.json",
+      "sha256": "695aa4ac0ab313daa1111854f4d75c449b79b23b31c62563f95506babb86a90e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\preparation_manifest.json",
+      "sha256": "1ccf7fb13d2f33080f4b23201d9c2480f0e7349d0cd7f66ea307ac9e3c2efd05"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\preparation_receipt.json",
+      "sha256": "5aec80e83fc552fbd95ff6691f5c9ae06f448fa2a8e6c0f70a5763b95217ee69"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\write_preparation_metadata.ps1",
+      "sha256": "68e3706fa0cb1d66af4516f4535f7c26f6a101c6fea61c6eb794110903ad5f13"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\write_stage01_metadata.ps1",
+      "sha256": "4509350f553a90519f6dc4f243d0540c72e402df66e1054619cb51556383b799"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage01_source_manifest.json",
+      "sha256": "23b93f300ebba68e462f0e258048b4baca07bb7dea4804f656194d9f2b6ed443"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage01_prepared_receipt.json",
+      "sha256": "c36ac9c14f8cb8041b96e54bf2e2333fe9f0ab1f6ecbf6f9cc59db808873d6bb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage01_attempt01\\EpsteinKernel22.log",
+      "sha256": "8affa881e01451cff53f978bd16fddddcc1dc4eb83b7fd3cd42c7b6f30f5552a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage01_attempt01\\PREEXEC.json",
+      "sha256": "2a5cd77d4451ad3962e061b8ce25b004c83a6590206a96a65a6455c022b4fcf4"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage01_attempt01\\POSTEXEC.json",
+      "sha256": "65a8f7d8b3a942ec80e8f90164cf4ea0e6334242c9285c8e3737f197d9ddadd9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage01_attempt01\\receipt.json",
+      "sha256": "478bca1dd44341d8c940256dfe39310ae07df8d36a05f06c2e1d95381a4f24cc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\EpsteinKernel22.lean",
+      "sha256": "b465bf53b124fa158eed1b5f01171d18ce7f8d7252bf27cf30db1ed7575a773c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\run_revision02_once.py",
+      "sha256": "ec1dc5ec8d9d80802d5a87b5573bd4f99ab0c91e3ad5a55236934d18e92fe51f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\preparation.md",
+      "sha256": "f04f2b8a28d18ff0b0a1503f0bbe6303f5632b5c02745e3e4c754d796eb00ab0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\read_receipts.json",
+      "sha256": "f074ea78fb42d0375df0054cf71ac869267a3ce28a9ba49d0c5233b8f2b9a0bd"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision02\\write_metadata.ps1",
+      "sha256": "312826b9ab3afb256a4a11917ec7d169bbaafbf1498eefb7920635123a8a51ad"
+    }
+  ],
+  "previous_actual_attempt": "stage01_attempt01",
+  "previous_actual_exit": 1,
+  "previous_actual_log_sha256": "8affa881e01451cff53f978bd16fddddcc1dc4eb83b7fd3cd42c7b6f30f5552a",
+  "new_Lean_invocations": 0,
+  "infinite_G0_complete": false,
+  "new_D_N_bound": false,
+  "victory": false
+}

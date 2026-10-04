@@ -1,0 +1,94 @@
+{
+  "schema": "ROUND22_JUDGE5_COMPLETION_BATCH32",
+  "time_utc": "2026-10-04T02:11:39.786100+00:00",
+  "status": "INDEPENDENT_BATCH32_AUX_PASS",
+  "actual_status": "INDEPENDENT_BATCH32_AUX_PASS",
+  "attempt": "batch32_attempt01",
+  "actual_child_invocations": 1,
+  "modules_passed": 1,
+  "module_count_passed": 1,
+  "declarations_passed": 2,
+  "theorems_passed": 2,
+  "definitions_passed": 0,
+  "all_current_bytes_preserved": true,
+  "input_count": 9787,
+  "closed_judge_file_count": 2532,
+  "protected_archive_count": 3089,
+  "capture_count": 109,
+  "axiom_counts": {
+    "standard_triplet": 2,
+    "empty": 0,
+    "recovery": 0
+  },
+  "axiom_rows": [
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complex_exp_sub_truncated_eq_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "GoldbachComplexGammaMellin22.complex_exp_truncation_error_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "module_evidence": [
+    {
+      "module": "ComplexGammaMellinExpTailBridge22",
+      "status": "INDEPENDENT_LEAN_AUX_PASS",
+      "started_at": "2026-10-04T02:07:12.252554+00:00",
+      "finished_at": "2026-10-04T02:07:24.952591+00:00",
+      "exit_code": 0,
+      "declarations_passed": 2,
+      "theorems_passed": 2,
+      "definitions_passed": 0,
+      "source_sha256": "4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c",
+      "log_sha256": "12e79a8d0935c1cbb36d7c280bae6e1d1686c083fbd7e6cd4c8e369adb4e69cb",
+      "olean_sha256": "54edc77d7f7848b55a0a1a36ebec0460e82afd1204b7c5127e80c8a0b344448d",
+      "error_sites": [],
+      "warning_count": 0,
+      "axiom_counts": {
+        "standard_triplet": 2,
+        "empty": 0,
+        "recovery": 0
+      },
+      "scope": "COMPLEX_GAMMA_EXP_TAIL_BRIDGE_AUX_ONLY"
+    }
+  ],
+  "actual_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch32\\batch32_attempt01\\receipt.json",
+  "actual_receipt_sha256": "f8f1f0523f6fb245f4e50f8bf7936e499d6061db37d70a3e85b4bef38ba20a65",
+  "adjudication_sha256": "f6be51d13601af135e56efa6e37ced669bdfa919e8fc88edc270328473ade85b",
+  "PREEXEC_sha256": "29a3e3f5d30e9658590df61714770a97b4287e7757962d11abb44aec7139ef3e",
+  "POSTEXEC_sha256": "e6aa4a38d3e88d51cf395eed834522be1b29a88249a6f9bdc662a6fbbb5b2fdd",
+  "START_sha256": "77452c0a44b01b9e73207f70cc6f73b3fd0e3059b2998323c6ead24e11ea6afc",
+  "FIN_sha256": "6b66ba2bb07f8c5d63e8015489b53c42dd67d9aef034fa1a82548686c156cba3",
+  "gate_sha256": "c3b57278e72f2262f52d12dd0b2544f800d8f097a1e3d50e1e74d4cf5fb591d3",
+  "metadata_helper_sha256": "0d79714355a1f9e8a4317856f060e999e8d54b886cb5befc3d1c6a3699b32990",
+  "logs_read_scope": "FULL0d59c3",
+  "actual_receipt_read_scope": "FULLd3d2d3",
+  "module_START_FIN_read_scope": "FULL52fa7e plus exact equality to receipt row",
+  "large_PRE_POST_read_scope": "CONTROL_HEADER_PLUS_ALL_JSON_ROWS_AND_CURRENT_BYTE_HASH_NOT_RAW_FULL",
+  "compiler_invocations_in_closure": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "old_batches_recompiled": false,
+  "author_olean_used": false,
+  "official_modules_before_ROOT_observation": 86,
+  "official_declarations_before_ROOT_observation": 1456,
+  "hypothetical_after_ROOT_modules": 87,
+  "hypothetical_after_ROOT_declarations": 1458,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "exp_bridge_paid_by_this_module": true,
+  "Lambda_weighted_tail_paid": false,
+  "native_refinement_paid": false,
+  "coefficient_N_computed": false,
+  "D_N_paid": false,
+  "WIN": false
+}

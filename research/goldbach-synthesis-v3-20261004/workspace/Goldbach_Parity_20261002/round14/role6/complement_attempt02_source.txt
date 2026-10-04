@@ -1,0 +1,84 @@
+"""New complete CRT cuts, finite shifts and all-descent neighbor unions."""
+import sys
+sys.dont_write_bytecode=True
+from pathlib import Path
+from fractions import Fraction
+from math import gcd,isqrt
+import argparse,json
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+import shared as s
+
+def cut(residue,modulus,q_condition=None):
+ c=7;limit=(s.N-s.Q-1)//c;pmax=isqrt(limit);parents=[];examined=[]
+ for p in range(s.A+1,pmax+1):
+  if p%modulus!=residue or not s.prime(p):continue
+  qmax=limit//p
+  for q in range(p+1,qmax+1):
+   if not s.prime(q) or (q_condition is not None and not q_condition(q)):continue
+   m=c*p*q;n=s.N-m;assert m<=s.N-s.Q-1 and n>s.Q
+   guards=s.M<=m<=s.N-2 and gcd(c*p*q,s.N)==1
+   record={'p':p,'q':q,'qmax':qmax,'m':m,'n':n,'n_prime':s.prime(n),'n_factorization':s.factors_json(n),'unit':gcd(n,s.N)==1,'raw_Lambda_N_n':s.serialize(s.Lambda(n) if gcd(n,s.N)==1 else {}),'proper_prime_power_axis':bool(s.Lambda(n)) and not s.prime(n),'bulk':guards}
+   examined.append(record)
+   if guards and record['unit'] and record['n_prime']:parents.append(record)
+ return parents,{'c':c,'residue':residue,'modulus':modulus,'pmax':pmax,'q_upper_formula':'floor((N-Q-1)/(7*p))','all_prime_pq_candidates':examined,'raw_proper_powers_count':sum(x['proper_prime_power_axis'] for x in examined),'complete_candidate_count':len(examined),'accepted_count':len(parents)}
+
+def evaluate_group(label,parents,shifts,both_axes,small_primes):
+ c=7;profiles={};shift_records=[];allimages={};edges=[];debt={}
+ for parent in parents:
+  p,q=parent['p'],parent['q'];pid=f'{p}:{q}';profile=s.source_profile(c*p*q)
+  assert profile[0]['mu_m']==-1 and profile[0]['short_prefix']==s.serialize({k:-v for k,v in s.log_vector(c).items()})
+  profiles[pid]=profile;s.add(debt,profile[1])
+  axes=[('p',p,q)]+([('q',q,p)] if both_axes else [])
+  for axis,x,y in axes:
+   for d,ell in zip(shifts,small_primes):
+    t=x-d;assert t%ell==0 and ell<=c
+    candidates=s.image_candidates(c,y,t,t);assert not candidates
+    shift_records.append({'parent':pid,'axis':axis,'x':x,'other_large_prime':y,'d':d,'ell':ell,'t':t,'factorization':s.factors_json(t),'small_factor_divides':True,'neighbors':[],'failure':'prime_factor_at_most_c_forbids_r_greater_than_c'})
+   images=s.image_candidates(c,y,s.A+1,x-1)
+   for v in images:
+    key=f"{y}:{v['t']}";assert (x-v['t'])%2==0 and 0<x-v['t']
+    allimages[key]={'key':key,'remaining_large_prime':y,**v}
+    edges.append({'parent':pid,'axis':axis,'x':x,'y':y,'t':v['t'],'h':(x-v['t'])//2,'image':key})
+ imageprofiles={key:s.source_profile(v['m']) for key,v in sorted(allimages.items())}
+ for key,prof in imageprofiles.items():
+  assert prof[0]['mu_m']==1 and prof[0]['short_prefix']==s.serialize(s.log_vector(c))
+ image_sum=s.add_many([v[1] for v in imageprofiles.values()]);capacity={k:-v for k,v in image_sum.items()}
+ defect=s.difference(debt,capacity)
+ cert=s.assert_resolved(s.sign_certificate(debt));assert cert['sign']=='POSITIVE'
+ capacity_cert=s.assert_resolved(s.sign_certificate(capacity));defect_cert=s.assert_resolved(s.sign_certificate(defect))
+ degP={pid:sum(e['parent']==pid for e in edges) for pid in profiles};degI={key:sum(e['image']==key for e in edges) for key in allimages}
+ fibres={}
+ for e in edges:
+  fibres.setdefault(str(e['y']),{})[e['x']]=set(x['t'] for x in edges if x['y']==e['y'] and x['x']==e['x'])
+ nested={}
+ for y,rows in fibres.items():
+  ordered=sorted(rows);assert all(rows[ordered[i]]<=rows[ordered[i+1]] for i in range(len(ordered)-1))
+  nested[y]=[{'x':x,'neighbors':sorted(rows[x])} for x in ordered]
+ principal_const=s.multiply(s.add_many([s.log_vector(v['n']) for v in parents]),s.log_vector(c))
+ principal_S=s.add_many([s.log_vector(v['n']) for v in parents])
+ for v in allimages.values():
+  s.add(principal_const,s.multiply(s.log_vector(v['n']),s.log_vector(c)),-1)
+  s.add(principal_S,s.log_vector(v['n']),-1)
+ return {'label':label,'parents':parents,'parent_count':len(parents),'finite_shifts':shifts,'both_large_axes_tested':both_axes,'all_shift_candidates_complete':shift_records,'finite_family_degrees':{pid:0 for pid in profiles},'finite_family_neighbor_union':[],'all_actual_parent_profiles':{pid:v[0] for pid,v in profiles.items()},'actual_unmatched_finite_family_debt':s.serialize(debt),'strict_positive_debt_certificate':cert,'finite_family_capacity_claim':'REFUTED_NEW_COMPLETE_CUT_DEGREE_ZERO_WITH_POSITIVE_ACTUAL_DEBT','Gamma_all':list(allimages.values()),'Gamma_all_distinct_count':len(allimages),'all_descent_edges':edges,'all_descent_parent_degrees':degP,'all_descent_image_multiplicity':degI,'all_descent_nested_fibres':nested,'all_descent_image_profiles':{key:v[0] for key,v in imageprofiles.items()},'actual_distinct_image_capacity':s.serialize(capacity),'capacity_sign_certificate':capacity_cert,'actual_cut_minus_all_neighbor_capacity':s.serialize(defect),'defect_sign_certificate':defect_cert,'principal_S_symbolic':{'constant':s.serialize(principal_const),'S_N_coefficient':s.serialize(principal_S),'S_N_not_numerically_evaluated':True},'zero_finite_degree_not_promoted_to_all_orphan':True,'all_union_counted_once_per_y_t':True,'outside_cut_complement_retained':True,'Hall_or_capacity_lower_bound_assumed':False}
+
+def run():
+ before=s.conservation.verify()
+ C1,scan1=cut(104,105)
+ C2,scan2=cut(32,35,lambda q:q%35==32)
+ double105,scan105=cut(104,105,lambda q:q%105==104)
+ assert not double105
+ for v in scan105['all_prime_pq_candidates']:
+  assert v['p']%3==v['q']%3==2 and v['n']%3==0 and v['n']>3 and not v['n_prime']
+ assert any(v['p']==3359 and v['q']==3517 for v in C1)
+ assert any(v['p']==3217 and v['q']==4337 for v in C2)
+ assert s.factor(3359)==((3359,1),) and s.factor(3357)==((3,2),(373,1)) and s.factor(3355)==((5,1),(11,1),(61,1)) and s.factor(3353)==((7,1),(479,1))
+ assert s.factor(11793077)==((73,2),(2213,1))
+ assert s.factor(2335097)==((2335097,1),)
+ group1=evaluate_group('C1_complete_CRT105_p_only',C1,(2,4,6),False,(3,5,7))
+ group2=evaluate_group('C2_complete_mod35_both_axes_H2',C2,(2,4),True,(5,7))
+ return {'status':'PASS_NEW_COMPLETE_CRT_CUTS_AND_ACTUAL_NEIGHBOR_CAPACITIES_ONLY','N':s.N,'alpha':s.ALPHA,'a':s.A,'Q':s.Q,'M':s.M,'H':s.H,'new_parent_C1':{'c':7,'p':3359,'q':3517,'m':82695221,'n':17304779,'n_prime':True},'new_parent_C2':{'c':7,'p':3217,'q':4337,'m':97664903,'n':2335097,'n_prime':True},'proposed_C2_witness_rejected':{'c':7,'p':3217,'q':3917,'p_prime':s.prime(3217),'q_prime':s.prime(3917),'m':88206923,'n':11793077,'n_factorization':s.factors_json(11793077),'n_prime':False,'raw_Lambda_N_n':s.serialize(s.Lambda(11793077)),'status':'REJECTED_COMPOSITE_COMPLEMENT_NOT_AN_ACCEPTED_VERTEX'},'scan_C1_complete':scan1,'scan_C2_complete':scan2,'double_CRT105_both_axes_empty':{'scan_complete':scan105,'parents':[],'proof_mod3':{'N_mod3':s.N%3,'c_mod3':7%3,'p_mod3':2,'q_mod3':2,'N_minus_7pq_mod3':0},'raw_proper_power_axis_not_filtered':True},'C1':group1,'C2':group2,'ERROR_FALSIFIER':[{'claim':'p-only shifts2,4,6 cover the complete CRT105 cut','status':'REFUTED_NEW_COMPLETE_C1_ZERO_CAPACITY','positive_actual_debt':True},{'claim':'H2 shifts on both large axes cover the complete mod35 cut','status':'REFUTED_NEW_COMPLETE_C2_ZERO_CAPACITY','positive_actual_debt':True}],'strict_rational_only':True,'imports_sha256':s.IMPORTS,'conservation_before':before,'conservation_after':s.conservation.verify(),'source_u_minimum':'10^24','finite_N_outside_source':True,'global_D_N':False,'asymptotic':False,'payments':False,'Lean_called':False,'victory':False}
+if __name__=='__main__':
+ parser=argparse.ArgumentParser();parser.add_argument('--output-dir',type=Path,default=s.ROOT)
+ args=parser.parse_args();data=run();d=s.conservation.output_directory(args.output_dir)
+ (d/'complement.json').write_text(json.dumps(data,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+ print(json.dumps({'status':data['status'],'C1':data['C1']['parent_count'],'C2':data['C2']['parent_count'],'Gamma_all_C1':data['C1']['Gamma_all_distinct_count'],'Gamma_all_C2':data['C2']['Gamma_all_distinct_count'],'C1_debt_sign':data['C1']['strict_positive_debt_certificate']['sign'],'C2_debt_sign':data['C2']['strict_positive_debt_certificate']['sign'],'victory':False}))

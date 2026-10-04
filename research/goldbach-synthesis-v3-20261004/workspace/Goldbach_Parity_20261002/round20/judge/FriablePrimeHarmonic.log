@@ -1,0 +1,31 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\judge\audit\FriablePrimeHarmonic.lean:35:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\judge\audit\FriablePrimeHarmonic.lean:38:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\judge\audit\FriablePrimeHarmonic.lean:38:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\judge\audit\FriablePrimeHarmonic.lean:116:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'GoldbachRound20.Friable.pseries_partial_le_one_add_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.pseries_tsum_le_one_add_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_euler_minus_le_pseries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.eulerProduct_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.log_eulerProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.prime_rpow_sigma_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.prime_reciprocal_le_three_euler_minus_term' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.prime_harmonic_le_three_log_one_add_inv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.prime_plus_term_le_two_thirds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.neg_log_one_sub_le_three_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.log_euler_plus_le_nine_prime_harmonic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_euler_plus_le_u_pow_27' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_rankin_D_le_u_neg64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_divisor_band_mass_le_u_neg37' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_rankin_M_le_u_neg96' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_smooth_tau_tail_le_N_u_neg42' depends on axioms: [propext, Classical.choice, Quot.sound]

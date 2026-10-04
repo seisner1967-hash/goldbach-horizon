@@ -1,0 +1,122 @@
+{
+  "schema": "ROUND22_ROLE4_GAMMA_PREEXEC_5",
+  "time_utc": "2026-10-03T08:32:26.026143+00:00",
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\GammaPrerequisites22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\GammaPrerequisites22.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02",
+  "lean_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+  "launcher_sha256": "4ed2b6f92eb9b7ad2a42e2cbe56153ce48646e196edc5d6ee087078547846096",
+  "manifest_sha256": "a44df37751101863d8da221d5a30e0024a049a9f4d1260c86ae0e8b3bdf37c9d",
+  "gate_sha256": "215a0c504384dbe734693551c10eeb9dca0c94f5a41a02cd796a2a37b0b9611d",
+  "gamma_bank_sha256": "595b15340efe03bd215eebe7f6d526cd1f2f5d07865f074a3b7927687beb967a",
+  "previous_failure_receipt_sha256": "5ebfd56de12c3b3e01342a3dbf73690a5a24c66a9d1eb11aa1e449b6c8e8070f",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "declarations": [
+    "realGamma_le_one_on_unit_strip",
+    "real_laplace_integrable",
+    "laplaceIntegrand",
+    "norm_laplaceIntegrand",
+    "laplaceIntegrand_aestronglyMeasurable",
+    "complex_laplace_integrable",
+    "real_rate_laplace_identity",
+    "laplaceTransform",
+    "rightHalfPlane",
+    "hasDerivAt_laplaceIntegrand",
+    "laplace_derivative_local_bound",
+    "hasDerivAt_laplaceTransform",
+    "rightHalfPlane_isOpen",
+    "rightHalfPlane_isPreconnected",
+    "laplaceTransform_analytic",
+    "laplace_rhs_analytic",
+    "laplaceTransform_real_rate",
+    "complex_rate_laplace_identity",
+    "norm_laplaceTransform_le",
+    "norm_rotation_power",
+    "Gamma_rotation_bound",
+    "quarter_angle_coefficient_le_two",
+    "Gamma_strip_exponential_bound"
+  ],
+  "compiler_invocations": 1,
+  "compiler_invocations_role4_previously": 2,
+  "mathematical_numeric_invocations": 0,
+  "old_archive_replay": 0,
+  "archive_before": {
+    "checked": 3089,
+    "changed": [],
+    "scope": "metadata byte conservation only"
+  },
+  "captured_inputs": [
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\GammaPrerequisites22.lean",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\GammaPrerequisites22.lean",
+      "sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\run_gamma_once22_v5.py",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\run_gamma_once22_v5.py",
+      "sha256": "4ed2b6f92eb9b7ad2a42e2cbe56153ce48646e196edc5d6ee087078547846096"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_preparation5.md",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\gamma_preparation5.md",
+      "sha256": "6e5f0a12a68fbd3159dddd7e2ba9233548b9913cf2cd421a99174b9dc3f1794d"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\prepare_gamma_metadata5.py",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\prepare_gamma_metadata5.py",
+      "sha256": "8ca2431875ab50d76a37c5e4eb596f5571dea4c5c3dd549808a73c3c6765af70"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_read_receipts5.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\gamma_read_receipts5.json",
+      "sha256": "27c3dcfd3e8a41814cefb8295c8d65ddb099eb0dc801da8ae79505cb302e6996"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_prepared_manifest5.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\gamma_prepared_manifest5.json",
+      "sha256": "a44df37751101863d8da221d5a30e0024a049a9f4d1260c86ae0e8b3bdf37c9d"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_gamma_role4_authorization3.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\root_authorization3.json",
+      "sha256": "215a0c504384dbe734693551c10eeb9dca0c94f5a41a02cd796a2a37b0b9611d"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\gamma_h2\\actual_gamma22\\gamma_result22.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\informative_gamma_bank.json",
+      "sha256": "595b15340efe03bd215eebe7f6d526cd1f2f5d07865f074a3b7927687beb967a"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\gamma_attempt2\\START.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\previous_START.json",
+      "sha256": "11f5d161442da85540eb6f9727472e40dd7fe88e33dcb6ec6999be4469e0d0f7"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\gamma_attempt2\\stdout.log",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\previous_stdout.log",
+      "sha256": "4c2790f81b08e622cb8b970fab77edce0214f12a228e0ddd60f98d21c5cd614f"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\gamma_attempt2\\stderr.log",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\previous_stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\gamma_attempt2\\exit.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\previous_exit.json",
+      "sha256": "0a6d2ddb679183429aa262f9482e97ad8595aa5d75e99c694aac74840c7ff522"
+    },
+    {
+      "original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision01\\gamma_attempt2\\receipt.json",
+      "captured": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\revision02\\gamma_attempt3\\PREEXEC_FILES\\previous_receipt.json",
+      "sha256": "5ebfd56de12c3b3e01342a3dbf73690a5a24c66a9d1eb11aa1e449b6c8e8070f"
+    }
+  ]
+}

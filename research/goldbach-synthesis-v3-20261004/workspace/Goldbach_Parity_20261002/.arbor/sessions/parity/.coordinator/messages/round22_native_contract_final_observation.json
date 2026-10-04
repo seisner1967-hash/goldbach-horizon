@@ -1,0 +1,76 @@
+{
+  "schema": "ROUND22_ROOT_NATIVE_SOURCE_AND_NUMERIC_CONTRACT_CHECKPOINT",
+  "time_utc": "2026-10-03T18:52:33.930136+00:00",
+  "status": "CONTRACT_WITH_COMPILED_ERROR_DELIVERED_NATIVE_EXECUTION_UNPREPARED",
+  "entries": [
+    {
+      "path": "round22/role4/circle_native_revision02/source_handoff22.json",
+      "sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88",
+      "bytes": 5776
+    },
+    {
+      "path": "round22/role4/circle_native_build_source01/source_handoff22.json",
+      "sha256": "12a414e0b96d068f65f0130474683bd3db27223ad9fc76f4f2b09c5946d3b8d1",
+      "bytes": 3762
+    },
+    {
+      "path": "round22/role4/circle_native_build_source02/source_handoff22.json",
+      "sha256": "13ee77e4b0dd922596c390e64f399b8ea423d075bb9eb5f25fa29785d94c3027",
+      "bytes": 4583
+    },
+    {
+      "path": "round22/judge5/circle_native_build_controls_source_review01.md",
+      "sha256": "a973cf3a34b61bd9d5c6dfa3272fccbf84ae829fc9be2fca7fa19999e74c7662",
+      "bytes": 6327
+    },
+    {
+      "path": "round22/judge5/circle_native_controls_source_review02.md",
+      "sha256": "205bf40885e9458d8e72684903cb2b67d586b05fd632ab0a786b90c6825cd81e",
+      "bytes": 7406
+    },
+    {
+      "path": "round22/judge5/circle_native_build_controls_source_review02.md",
+      "sha256": "1fee0de6627591ae3fb91e26c72649f66d026039230b2b6b6f6d11f10dbe6720",
+      "bytes": 4823
+    },
+    {
+      "path": "round22/role3/native_build_metadata01/preflight_observation_manifest22.json",
+      "sha256": "52a0686c1e03e4341dd29679c97a8bc50e7f64303f3373d0c03d3e244ce3f5e5",
+      "bytes": 4661
+    },
+    {
+      "path": "round22/role3/native_build_metadata01/preflight_read_receipts22.json",
+      "sha256": "b30f4a900038944aa917b37e22f717204557ce686b71c1f976ffcbf9d44cba26",
+      "bytes": 6638
+    },
+    {
+      "path": "round22/role3/continuous_contract_delivery22_revision04.txt",
+      "sha256": "f6cdd64d1f1d7853ed91ebdd004a46b97fbf49bd1b7964b52e140974f3af8e32",
+      "bytes": 8020
+    },
+    {
+      "path": "round22/role3/continuous_contract_delivery22_revision04_read_receipts.json",
+      "sha256": "3fb43e6e9e3ed83f17869ff0885b20e4591a605f1e430601706f89f4c9212df1",
+      "bytes": 5416
+    }
+  ],
+  "ROOT_FULL_reads": "helper806e34;native-handoffs85df77/847a97;reviews01-02-460d6e;build02-handoffplan791d81;reviewbuild02d00541;conditionalpreflight-supportd921b5/readse3db90;delivery04-5eca27/reads85845a",
+  "bound_unique_files_physically_rehashed": 6372,
+  "snapshot_binding_count": 6332,
+  "protected_archives_physically_rehashed": 3089,
+  "large_catalogue_scope": "ALL_ENTRIES_PARSED_AND_ALL_BOUND_BYTES_VERIFIED_NOT_RAW_FULL",
+  "independent_source_math_owner": "ROLE3_ROLE4_ROLE5",
+  "SOURCE_CWD_repair_reviewed": true,
+  "compiler_loader_prerequisite_paid": false,
+  "native_build_prepared": false,
+  "build_gate_created": false,
+  "compiler_invocations": 0,
+  "native_numeric_invocations": 0,
+  "new_Lean_credit": 0,
+  "official_modules": 78,
+  "official_declarations": 1304,
+  "global_coefficient_N_computed": false,
+  "H1_uniform_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

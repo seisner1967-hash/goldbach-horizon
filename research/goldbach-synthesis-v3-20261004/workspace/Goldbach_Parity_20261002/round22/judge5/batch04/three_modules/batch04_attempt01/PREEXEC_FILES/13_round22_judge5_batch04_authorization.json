@@ -1,0 +1,37 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH04_AUTHORIZATION",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch04_attempt01",
+  "modules": [
+    "GammaPsiCore22",
+    "GammaPsiBetaLimit22",
+    "GammaPsiIntegral22"
+  ],
+  "compiler_invocations_maximum": 3,
+  "source_manifest_sha256": "162d544328c64989800156bc816095373eb19bb0308f1b49719e3f9491eadd05",
+  "launcher_sha256": "2fdc406b57faed224314885218bd299bac6e1158dee8e43c7f0800e897473624",
+  "preparation_receipt_sha256": "a6bbf2f5235421e0ba2bcbde828f9e12848959a5d9a68c406c397988d536cbd6",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "created_utc": "2026-10-03T11:35:58.503636+00:00",
+  "root_FULL_reads": {
+    "launcher": "755474",
+    "builder": "758b29",
+    "preparation": "f5c3ed",
+    "prepared_receipt": "620a74",
+    "read_receipts": "be9a35",
+    "Core_identical_prior": "0e6adc",
+    "Beta_identical_prior": "604408",
+    "Integral_identical_prior": "0e6adc"
+  },
+  "manifest_scope": "Complete JSON parsed/all6648bytes and134closedJudgefiles/3089archives checked; no FULLraw cache mathclaim",
+  "inputs_verified": 6648,
+  "archives_verified": 3089,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0
+}

@@ -1,0 +1,30 @@
+{
+  "D_N_bound": false,
+  "actual_child_invocations": 1,
+  "all_source_inputs_unchanged": true,
+  "attempt": "stage03_attempt04",
+  "infinite_unfolding_complete": true,
+  "rows": [
+    {
+      "command": [
+        "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+        "-o",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\stage03_attempt04\\EpsteinUnfold22.olean",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04\\EpsteinUnfold22.lean"
+      ],
+      "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\stage03\\revision04",
+      "exit_code": 0,
+      "finished_at": "2026-10-03T08:29:29.900322+00:00",
+      "log_sha256": "12cc50cc686994a04af46290727ed38de7e11eaf09622c67d5fcfb1544c63060",
+      "module": "EpsteinUnfold22",
+      "olean_sha256": "b3e0d60e7633cc46e2084c0131e2fd42aef0f1fca60d4db7682d45ece1774bc0",
+      "source_sha256": "79384d3502ab8042b44104e0ba4e56087c47430c267c2b9f16f9c6f228426aea",
+      "started_at": "2026-10-03T08:29:04.716790+00:00",
+      "status": "LEAN_PASS_AUX"
+    }
+  ],
+  "stage": "G0_UNFOLD_REVISION04",
+  "status": "AUTHOR_STAGE_AUX_PASS",
+  "time": "2026-10-03T08:29:29.949245+00:00",
+  "victory": false
+}

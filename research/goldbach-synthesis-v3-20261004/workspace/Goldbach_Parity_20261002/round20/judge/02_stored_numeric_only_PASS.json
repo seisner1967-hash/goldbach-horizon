@@ -1,0 +1,60 @@
+{
+  "banks": {
+    "composite": {
+      "N": 100000000,
+      "actual_canonical_exit_code": 0,
+      "factorization_primality_sieve_D_W_or_Python_math_called": false,
+      "result_sha256": "f8c8e4806464d1a0267ad5fbf004c7a493e526cc71b94a2a4823a762a9d4034a",
+      "status": "PASS_NEW_COMPOSITE20_FINITE_IDENTITIES_SOURCE_GUARDS_FALSE",
+      "stored_counts": {
+        "AP_components": 64698274,
+        "AP_groups": 40434830,
+        "composite_j": 31474,
+        "empty_integer_windows": 21196,
+        "empty_prime_windows": 21198,
+        "pairs": 514,
+        "physical_q": 40394,
+        "prime_j": 8920,
+        "properpower_j": 12,
+        "reference_PP_axes": 318,
+        "reference_b_axes": 17736480,
+        "reference_theta_axes": 770451,
+        "triples": 21427
+      },
+      "stored_logarithmic_signs_recomputed": false,
+      "stored_result_only_no_new_experiment": true,
+      "stored_source_guards": {
+        "source_analytic_ceil_and_BV_SD_guards_not_proved_by_bank": true,
+        "source_low_layer_empty_at_finite_N": true,
+        "source_onset": "u>=10^24",
+        "u_ge10pow24": false,
+        "x_test_le_Nover4": false
+      }
+    },
+    "friable": {
+      "N": 100000000,
+      "actual_canonical_exit_code": 0,
+      "factorization_primality_sieve_D_W_or_Python_math_called": false,
+      "result_sha256": "053f4bc927baa4340cbec74ba71b7b78fb76cf55b036f9b204d04bb0a9fe4cd1",
+      "status": "PASS_NEW_FRIABLE20_FINITE_IDENTITIES_SOURCE_GUARDS_FALSE",
+      "stored_counts": {
+        "F": 323,
+        "H": 867,
+        "H_long": 765,
+        "H_medium": 102,
+        "active_raw": 41,
+        "active_theta": 41
+      },
+      "stored_logarithmic_signs_recomputed": false,
+      "stored_result_only_no_new_experiment": true,
+      "stored_source_guards": {
+        "ell_ge6": false,
+        "logY_ge4": false,
+        "u_ge10pow24": false
+      }
+    }
+  },
+  "final_manifest_binding_count": 677,
+  "numeric_producers_imported_or_executed": false,
+  "source_onset_certified_by_finite_N": false
+}

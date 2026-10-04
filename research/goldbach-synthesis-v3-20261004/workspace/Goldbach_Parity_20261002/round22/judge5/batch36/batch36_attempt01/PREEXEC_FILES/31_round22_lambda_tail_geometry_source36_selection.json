@@ -1,0 +1,88 @@
+{
+  "schema": "ROUND22_ROOT_SOURCE36_SELECTION",
+  "status": "SOURCE_TOOLS_ONLY_AFTER_GENUINE_ROOT35_CLOSED_PASS30",
+  "owner": "ROOT_COORDINATOR",
+  "batch": "batch36",
+  "modules": [
+    {
+      "module": "ComplexGammaMellinLambdaTail22",
+      "source_dir": "round22/role4/complex_gamma_mellin_lambda_tail_source01",
+      "source_sha256": "68a008f55e1dcff723dfcbf398061a69e3c3495fee739965f3cfdc884232b01e",
+      "catalog_sha256": "f094c54a6a10aa0ad026dce78233f98e53d972341e2f2ce08d86306492e330ea",
+      "contract_sha256": "17e038d03f977e026853905eb3b7cb88f2d7fd574b71cbc73e9de774392c90bc",
+      "handoff_sha256": "31bbd5ddef991c58a9c58bdb0f1aca2d90f3a71a0dcffdbb751871c7434c4298",
+      "reads_sha256": "d535fcfec37e6cd003a732fb3f0c33c0a7e2bcb1e4c3c19b0f80bb81fd936a37",
+      "declarations": 16,
+      "theorems": 12,
+      "definitions": 4,
+      "review_dir": "round22/role3/elambda16_source_review01",
+      "review_sha256": "0497ba1f300dd5916fbac27835a04c1968822ef707182dc6e94c10d1bce8d252",
+      "review_reads_file": "read_receipts22_revision02.json",
+      "review_reads_sha256": "b0ef828f7df8e5eef01c93515f016b47ea80bb433f21f137d3ebc8728f0b395f",
+      "review_handoff_file": "source_handoff22_revision02.json",
+      "review_handoff_sha256": "f2b93e0fa76f3b82a4a389355a70736847d5064fc9c59c1940b6ed2a343b62a6"
+    },
+    {
+      "module": "ComplexGammaCircleGeometry22",
+      "source_dir": "round22/role4/complex_gamma_circle_geometry_source01",
+      "source_sha256": "2322915060c608e58c499af0c9303d3032f488e12980bc240aa7eca0807c44c5",
+      "catalog_sha256": "6f85beb2fd6eaf111a2ef453614938081385456a7d567bfb3e0f39b61e371312",
+      "contract_sha256": "002993384eb6d114ea33b429a9c410729588efc700e881b970ed215e15f80e1a",
+      "handoff_sha256": "a9e2f04e5a2244b1f017aeb2b998ea569f964464bc7a99db4297cfa4f0d8bfd6",
+      "reads_sha256": "4a0c0e52c40fbe6243389da59d25e6feab8e939fbb9eff485750851b43ff4822",
+      "declarations": 25,
+      "theorems": 22,
+      "definitions": 3,
+      "review_dir": "round22/role3/circle_gamma_geometry_source_review01",
+      "review_sha256": "992e109a51a906a6b2e3d9010addcd967f6ac918bb94c91a69207d378cd2c85b",
+      "review_reads_file": "read_receipts22.json",
+      "review_reads_sha256": "863accf7c91d9c8381b593acab3a75661e37f741ca83052a3dd6bb4d1a793f12",
+      "review_handoff_file": "source_handoff22.json",
+      "review_handoff_sha256": "16fe9a2936376c19e36a5561c1e129e00f680515441178cea2399aeb03617708"
+    }
+  ],
+  "module_order": [
+    "ComplexGammaMellinLambdaTail22",
+    "ComplexGammaCircleGeometry22"
+  ],
+  "module_count": 2,
+  "declaration_count": 41,
+  "theorem_count": 34,
+  "definition_count": 7,
+  "qualified_print_count": 41,
+  "official_at_selection": {
+    "modules": 88,
+    "declarations": 1488
+  },
+  "baseline_observation_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge_batch35_closed_observation.json",
+  "baseline_observation_sha256": "dc598597605146946c2deb26bba7db1542e2b4d328821c102d89bf0d8ffcb1c7",
+  "baseline_status": "INDEPENDENT_BATCH35_AUX_PASS",
+  "paid_readonly_closure": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22",
+    "ComplexGammaMellinLocal22",
+    "ComplexGammaMellinHolomorphy22",
+    "ComplexGammaMellinTail22",
+    "ComplexGammaMellinLambda22"
+  ],
+  "main_paid_source_sha256": "4a94415678e4c3295b989dccbcda9e049483e131c17efce68099d05686e1c72d",
+  "main_paid_olean_sha256": "8b557d2ccc8f8f6efbf5a33147aca94e12a3d7b2fcdd095af9024ffb492777c5",
+  "main_actual_receipt_sha256": "3cffa331b39283808678dbfa5dc36081f4e5a2698c8a9f278d6b8b6a63ec6832",
+  "main_completion_sha256": "751b5a57c5fccfc146682b7a78a5dae4829b301d78e6698ee8689ae100efb825",
+  "ROOT_FULL_receipts": "E_contract4c1baf;catalogfccfbe;reads98b775;handofff7a9ee;reviewba7491;reviewreads5bcb3f;reviewhandoffa12889;Geometrycontractfcea61;catalog6a47b8;reads1fb7b3;handoffd572b1;review08699d;reviewreads563771;reviewhandoffb70276;current54bindinghash649074;ROOT35closure1592e4;ROOT35SHA91aa76",
+  "historical_provenance_policy": "Frozen candidate handoffs keep their original unpaid main-source references unchanged. New preparation resolves unchanged module interfaces to the genuinely paid main35 and Tail30, with complete receipt/olean/source/ROOT-closure bindings. Historical SOURCE provenance is never relabelled PASS.",
+  "independent_scientific_review": "ROLE3 frozen reviews exist; ROLE5 reviews these two SOURCE modules independently before any PREP/compiler authorization. No positive compiler verdict is presumed.",
+  "stopped_tools34": "All six DRAFT files immutable and permanently STOPPED because their PASS33 prerequisite failed; never prepare, invoke, mutate or reuse their attempt. They may be read solely as historical source templates.",
+  "excluded_candidates": [
+    "ComplexGammaMellinExpTailBridge22",
+    "LambdaCircleTruncationEnvelope22"
+  ],
+  "next": "ROLE3 authors new SOURCE tools36; ROLE5 scientific and tool reviews, distinct PREP then ROOT compiler gate remain required. First E16 then Geometry25, stop first failure, whole-module credit only after actual closure.",
+  "compiler_authorized": false,
+  "PREP_authorized": false,
+  "numeric_authorized": false,
+  "advance_credit": 0,
+  "ROOT_scientific_invocations": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

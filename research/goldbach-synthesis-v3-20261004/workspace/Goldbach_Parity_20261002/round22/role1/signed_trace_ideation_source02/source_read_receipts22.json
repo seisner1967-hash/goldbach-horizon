@@ -1,0 +1,46 @@
+{
+  "schema": "ROUND22_ZERO_ORBIT_PAPER_READ_RECEIPTS_02",
+  "actor": "/root/round22_ideation_signed_trace",
+  "scope": "PAPER_ONLY_NO_LEAN_NO_NUMERIC_NO_RUNTIME",
+  "local_full_reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/signed_weil_source_review01/review22.md",
+      "sha256": "4c356fc0030838251249cc0d9620060525ad764bc94de3726682ef8807ae9445",
+      "full_read_output": "7ff164",
+      "hash_output": "49e772",
+      "truncated": false
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role1/signed_trace_ideation_source02/zero_orbit_symmetry22.txt",
+      "sha256": "8cbca7b5bbbbc244f5064d5540cf5acda8c275370448b147024ff61d32ee6cb7",
+      "full_read_output": "4c988f",
+      "hash_output": "a2ce40",
+      "truncated": false
+    }
+  ],
+  "primary_sources_targeted_reads": [
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "scope": "Reflection equations 25.4.3 and completed xi definition 25.4.4",
+      "whole_document_claim": false
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.10",
+      "scope": "Section 25.10(i), nontrivial zero symmetry and critical strip",
+      "whole_document_claim": false
+    }
+  ],
+  "audit_corrections_incorporated": [
+    "Mixed derivative indices i,j each through two, including total order four",
+    "Approximation supports in one fixed compact uniformly away from x=1 and y=1",
+    "Uniform convergence for the arithmetic measure and absolute convergence before infinite exchanges"
+  ],
+  "lean_invocations": 0,
+  "numeric_evaluations": 0,
+  "native_or_math_runtime_invocations": 0,
+  "new_lean_modules": 0,
+  "compiled_credit": 0,
+  "new_batch_proposed": false,
+  "D_N_target_proved": false,
+  "WIN": false
+}

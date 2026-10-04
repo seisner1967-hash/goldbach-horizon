@@ -1,0 +1,38 @@
+{
+  "schema": "ROUND22_PARAMETER_GUARD01_REVISION02_READ_RECEIPTS",
+  "scope": "SOURCE_TEXT_AND_BYTE_METADATA_ONLY",
+  "new_controller_and_identical_contract": {
+    "tool_chunk": "103f77",
+    "scope": "FULL"
+  },
+  "new_parent_and_repair_note": {
+    "tool_chunk": "159805",
+    "scope": "FULL"
+  },
+  "old_six_files": {
+    "old_hashes": {
+      "parameter_guard22.py": "3cf9b27e50aa196aacd9e78f6093c2f6741f75af21414206b9b0bdf1c5684396",
+      "run_parameter_guard_once22.py": "c093bd5b4b5652d3ebde82820a8da45a084ae54583dbbc9531b2b6d257c846ac",
+      "contract22.md": "a9366f53f0939a0d3e6bae1b54766027cddb01a17e8b268494f5452c08dc50ff",
+      "read_receipts22.json": "4120755a50dc1ee63e0736d58a64a7ad0910ba4d8b66b342a29a17534fb523c8",
+      "prepared_manifest22.json": "6e9db8525d2467c941fdc0dad85ccd5bcec7556fa49cf0368ef4052e223018d2",
+      "preparation22.json": "418654b335c4e26043b1262eb371a2517e3bcde39db470190f5a25320a88a3bc"
+    },
+    "all_intact": true,
+    "scope": "BYTE_HASH_EXPECTED_EXACT"
+  },
+  "old_998_bindings": {
+    "all_intact": true,
+    "scope": "PROJECTION_AND_BYTE_HASH_NOT_FULL"
+  },
+  "immutable_model": {
+    "sha256": "80718ee9c1306a974554a70322ad36648897216890f6747ed2ddede840421d98",
+    "scope": "FULL_PREVIOUSLY_READ_AND_CURRENT_BYTES_MATCH"
+  },
+  "candidate_imports": 0,
+  "Python_parser_runs": 0,
+  "numeric_runs": 0,
+  "Lean_invocations": 0,
+  "native_builds": 0,
+  "root_gate_created": false
+}

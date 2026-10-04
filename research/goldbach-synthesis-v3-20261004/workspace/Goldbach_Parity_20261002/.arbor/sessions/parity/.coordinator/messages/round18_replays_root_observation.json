@@ -1,0 +1,32 @@
+{
+  "status": "ROOT_READ_TWO_UNIQUE_ISOLATED18_REPLAYS_PASS",
+  "banks": [
+    {
+      "bank": "typeii",
+      "actual_exit_code": 0,
+      "actual_isolated_replays": 1,
+      "started_at_utc": "2026-10-02T21:58:31.965826+00:00",
+      "finished_at_utc": "2026-10-02T21:58:39.174897+00:00",
+      "receipt_sha256": "3c8c34b9972dc49fa5009483b257a3ce9230a6aaeeb8be74318c17303f1401c7",
+      "started_sha256": "a445a285db95aeec7eb716f531bedd4336bfbdfb0f54d1d583f796d19f943ca3",
+      "output_sha256": "31e873ab0170b1d479c95fdbbe38d989e260cbdd30b5fbba5974f9fc51c63687",
+      "log_sha256": "b4705e9e66599af582bc5fed8174a2d802f92b42bb3aacebd7380cb8454a3e2e",
+      "bytes_and_fields_identical": true
+    },
+    {
+      "bank": "semiprime",
+      "actual_exit_code": 0,
+      "actual_isolated_replays": 1,
+      "started_at_utc": "2026-10-02T21:58:52.852809+00:00",
+      "finished_at_utc": "2026-10-02T21:59:39.062088+00:00",
+      "receipt_sha256": "730c3661d7ff6f5fe88875daeff322d7b7ba8ad60ff1f38e885c8d7948fad759",
+      "started_sha256": "b2e729a5f473b2a5b3e338bc6e7429c397932ea2382eef40f90d4d001110da36",
+      "output_sha256": "c30c84e1a7d01cb6146caedb08e5addb81b8795d90c89875e878a6fc1e924f0c",
+      "log_sha256": "8ab8df1c047cfefa87c08c4361cdd82d14527846b68eb4c1068ab460d97cbdd1",
+      "bytes_and_fields_identical": true
+    }
+  ],
+  "frozen_canonical_sources_helpers_registry_outputs_receipts_unchanged": true,
+  "root_reran_Lean_producer_sign_or_audit": false,
+  "victory": false
+}

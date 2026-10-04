@@ -1,0 +1,297 @@
+{
+  "schema": "ROUND22_SCALAR_REAL_CONNECTORS_SOURCE_READ_RECEIPTS",
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "scope": "AUTHOR_STATIC_SOURCE_AND_REAL_API_READS",
+  "source_parser_invocations": 0,
+  "candidate_import_invocations": 0,
+  "lean_compiler_invocations": 0,
+  "api_probe_invocations": 0,
+  "python_math_invocations": 0,
+  "native_invocations": 0,
+  "prep_or_gate_created": false,
+  "local_dependencies": [],
+  "full_new_packet_read": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/scalar_radius_real_connectors_source01/ScalarRadiusRealConnectors22.lean",
+      "sha256": "6ba4b8d4cca0ba1f8a44438f843f6991d196623cce14b7229c34165e5122fd5f",
+      "bytes": 11575,
+      "scope": "FULL FINAL SOURCE",
+      "tool_chunk": "249f23"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/scalar_radius_real_connectors_source01/source_contract22.md",
+      "sha256": "5b5c91efb26d7d0af0615dfa2cbfd5c5fe4eb332448aa323dfd40c9ff8cb3bdc",
+      "bytes": 4265,
+      "scope": "FULL FINAL SOURCE",
+      "tool_chunk": "249f23"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/scalar_radius_real_connectors_source01/catalogue22.json",
+      "sha256": "3fed3cd8739128d5c6615512e95442a11b1d2386b6e1aed7b3d7246a2171277c",
+      "bytes": 4110,
+      "scope": "FULL FINAL SOURCE",
+      "tool_chunk": "249f23"
+    }
+  ],
+  "full_upstream_read": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/radius_point22.py",
+      "sha256": "a612d5863785a1aa2c29da8333a448087a38afccc5567ef95a7584807dfa7078",
+      "scope": "FULL",
+      "tool_chunk": "9cae47"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/source_contract22.md",
+      "sha256": "d62fe8d04d8ec4685caca029305c3be80817f180e868570e174dc18096559c41",
+      "scope": "FULL",
+      "tool_chunk": "9cae47"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_circle_radius_point_source_review01/review22.md",
+      "sha256": "30f22c99ba748e0952a6e1db4e9d057fad921fbb310b0b6399a7f39780a12627",
+      "scope": "FULL",
+      "tool_chunk": "9cae47"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_circle_radius_point_execution_control01/execution_report22.md",
+      "sha256": "df3f3f72a7b8c884fcbcff59a1deaed3cdc872707eef213dbe85ef8a01e6539a",
+      "scope": "FULL_PREVIOUS_TASK_REUSED",
+      "tool_chunk": "294a44"
+    }
+  ],
+  "targeted_mathlib_read": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Basic.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "615-650",
+        "640-655",
+        "669-681"
+      ],
+      "tool_chunks": [
+        "2dacd0",
+        "66a5cd",
+        "26f549"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Inv.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "134-149"
+      ],
+      "tool_chunks": [
+        "2dacd0"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Add.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "45-58",
+        "160-180",
+        "213-231",
+        "266-280"
+      ],
+      "tool_chunks": [
+        "180745",
+        "ec942e",
+        "26f549"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/MeanValue.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "1020-1044"
+      ],
+      "tool_chunks": [
+        "31842f"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/ArctanDeriv.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "68-88"
+      ],
+      "tool_chunks": [
+        "31842f"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/Deriv.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "628-647"
+      ],
+      "tool_chunks": [
+        "31842f"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/Exponential.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "680-725",
+        "858-880",
+        "950-970",
+        "1020-1038"
+      ],
+      "tool_chunks": [
+        "2dacd0",
+        "31842f",
+        "66a5cd",
+        "1489d3"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/ExponentialBounds.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "1-39"
+      ],
+      "tool_chunks": [
+        "180745"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Real/Pi/Bounds.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "150-169"
+      ],
+      "tool_chunks": [
+        "66a5cd"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/Order/GroupWithZero/Unbundled.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "1054-1066",
+        "1130-1145",
+        "1530-1560",
+        "1832-1843",
+        "1880-1890"
+      ],
+      "tool_chunks": [
+        "2dacd0",
+        "66a5cd",
+        "180745",
+        "1489d3"
+      ]
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/GroupWithZero/Units/Basic.lean",
+      "scope": "TARGETED",
+      "ranges": [
+        "433-442"
+      ],
+      "tool_chunks": [
+        "180745"
+      ]
+    }
+  ],
+  "byte_bindings": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Basic.lean",
+      "sha256": "9576d3ea4e2988124154e7ddf538e48b2d6b6d5eca409cbbe31128759374f1d6",
+      "bytes": 32095,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Inv.lean",
+      "sha256": "ad3669cc88e89d944a86bfc9525c96c01851ce74c64f8550e114936781d73886",
+      "bytes": 7563,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Add.lean",
+      "sha256": "02d06a0157abb2273db1e3199cf04db2a01853b60e99881d6c0bd2f99cdd3a6a",
+      "bytes": 14236,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/MeanValue.lean",
+      "sha256": "bc441942872e5fa25a45c38ab6f378d8f76de28809fdbacf78534136c4156acc",
+      "bytes": 70309,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/ArctanDeriv.lean",
+      "sha256": "b8edb2e8185b9190d70cf594a0507a521782e3ff54c0b0904cbc4828ea0e1632",
+      "bytes": 7951,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/Deriv.lean",
+      "sha256": "8720230cf591aa862f4e1427f9012308766130fb60f26e33cfdd93d2cb188760",
+      "bytes": 42012,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/Exponential.lean",
+      "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+      "bytes": 59817,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/ExponentialBounds.lean",
+      "sha256": "249d3f5f948a2db9407d47d60505cc3ae0436619d440327433875340079fa225",
+      "bytes": 2672,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Real/Pi/Bounds.lean",
+      "sha256": "5d1f1f5d832ad15218d1b739283c6f937991b74c2e2dba44305667a5941c5b4e",
+      "bytes": 11983,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/Order/GroupWithZero/Unbundled.lean",
+      "sha256": "88097fc3af252bef1867c8ff416aa643e82f9208bfdef41c55606628b70fab02",
+      "bytes": 87329,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/GroupWithZero/Units/Basic.lean",
+      "sha256": "7beae059e4e36da8a597ff9bfd8faf12cc4f4a20f523ce2a3a7b6cf740ff7fb0",
+      "bytes": 20033,
+      "scope": "BYTE_HASH_ONLY"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Tactic.lean",
+      "sha256": "5a8a488140e9f87a5d07f004c761de7e5753d7d8b3c11c9ef755dc3bf9ff771c",
+      "bytes": 9959,
+      "scope": "BYTE_HASH_ONLY"
+    }
+  ],
+  "path_discovery": {
+    "tool_chunk": "c609fc",
+    "method": "rg --files and rg text search; no compiler probe"
+  },
+  "absent_reads": [
+    {
+      "tool_chunk": "31842f",
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/Hyperbolic.lean",
+      "status": "ABSENT_NOT_READ",
+      "other_segments_in_call": "TARGETED successfully returned before rg exit1"
+    },
+    {
+      "tool_chunk": "66a5cd",
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/ExponentialBounds.lean",
+      "status": "ABSENT_NOT_READ",
+      "replacement_actual_path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/ExponentialBounds.lean",
+      "replacement_read": "TARGETED 180745"
+    }
+  ],
+  "historical_inventory_limits": "Earlier incomplete or truncated API searches in the workpoint are not credited as FULL. This receipt credits only the listed complete excerpts and FULL own/upstream texts.",
+  "axiom_audit": "26 print requests written, not executed; no actual axiom-output verdict",
+  "obligations": [
+    "Independent SOURCE review",
+    "Lean elaboration and 26 real print-axioms checks in a distinct authorized lot",
+    "Upstream coefficient identity dependencies not imported or adjudicated by this module",
+    "No D_N or parity claim"
+  ]
+}

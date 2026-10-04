@@ -1,0 +1,56 @@
+{
+  "status": "ROOT_OBSERVED_CANONICAL_ONLY_AWAITING_FINAL_REPLAY_AND_JUDGE",
+  "protected_archives": 799,
+  "source_full_read": [
+    "round17/rough_checks.py",
+    "round17/shared.py",
+    "round17/run_new.py",
+    "round17/replay_new.py"
+  ],
+  "bindings_checked": {
+    "attempt": 1,
+    "exit_code": 0,
+    "producer": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\rough_checks.py",
+    "producer_sha256": "5fe6120ab216dd3320798574e9043db071141802a00c2f300278c3ac5929a698",
+    "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\rough_attempt01_source.txt",
+    "source_snapshot_sha256": "5fe6120ab216dd3320798574e9043db071141802a00c2f300278c3ac5929a698",
+    "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\role6\\rough_attempt01.log",
+    "log_sha256": "278f13b64998e0b4bc348554bd8c0f279777987a158b81f79a26ea784c6f5acf",
+    "command_argv": [
+      "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\rough_checks.py"
+    ],
+    "output": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\rough.json",
+    "output_sha256": "e4dd2c8e12cbfd34c90208ffb90745472bc8e2c3a3f777681a9d52735fcadfbb",
+    "status": "CANONICAL_NEW_SUCCESS_DO_NOT_RERUN"
+  },
+  "counts": {
+    "A": 11,
+    "R": 0,
+    "S": 18
+  },
+  "q": 9,
+  "cores": 28,
+  "candidates": 252,
+  "kernels": 47,
+  "literal_zero_axis_W": 205,
+  "sign_position_counts": {
+    "POSITIVE": 206,
+    "ZERO": 54,
+    "NEGATIVE": 28
+  },
+  "absence_witness_sign": "POSITIVE",
+  "finite_selberg_core_statuses": {
+    "EXACT_FINITE_SELBerg_SQUARE_VERIFIED": 16,
+    "LOCAL_SATURATION_ROUGH_CELL_EMPTY": 10
+  },
+  "falsifier_statuses": [
+    "REFUTED_NEW_SMALL_FACTOR_ABSENCE_VERTEX",
+    "REFUTED_NEW_EXACT_LOCAL_COLLISIONS",
+    "REFUTED_NEW_FINITE_PROMOTION_ONLY"
+  ],
+  "root_executed_math_producer": false,
+  "root_executed_Lean": false,
+  "source_asymptotic_bounds_applied": false,
+  "victory": false
+}

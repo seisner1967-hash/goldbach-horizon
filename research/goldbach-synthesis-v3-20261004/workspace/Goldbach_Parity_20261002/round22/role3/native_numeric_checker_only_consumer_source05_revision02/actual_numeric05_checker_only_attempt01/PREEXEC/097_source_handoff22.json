@@ -1,0 +1,128 @@
+{
+  "schema": "ROUND22_NATIVE02_SOURCE_HANDOFF",
+  "status": "SOURCE_ONLY_FROZEN_NOT_BUILT_NOT_RUNTIME_PREPARED",
+  "utc": "2026-10-03T18:25:44.0410460Z",
+  "author": "ROLE4",
+  "binding_count": 12,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\producer_dit22.cpp",
+      "bytes": 11771,
+      "sha256": "bdb7b022ae20ed8dce02959b77db62ca690a9798393292db62edf262d938ed74",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\checker_dif22.cpp",
+      "bytes": 18764,
+      "sha256": "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\run_native_once22.py",
+      "bytes": 16441,
+      "sha256": "1cb5585e6e940afa3d4d7b3b1fb40259ed39a6bd8ca13a07877cb5651ac65908",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\windows_job22.py",
+      "bytes": 13397,
+      "sha256": "78db7ebf8292142a1c51b2d9f27a9c64b53768d0ee7e213e5e2ac8b2ded44a31",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\native_controls_contract22.md",
+      "bytes": 7429,
+      "sha256": "a29d3fe1473ffbb38cc0df7ae8ea3a0f8851173f3d7d7781765533daaceedea1",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\build_plan22.json",
+      "bytes": 1854,
+      "sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\resource_observation22.json",
+      "bytes": 1126,
+      "sha256": "d6cd25735dc5c92ac05b3b04d4243535f60bd0b2ca4542aa36ed56476aadd9e7",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\closure_snapshot22.json",
+      "bytes": 1830681,
+      "sha256": "12bd8ab8c067e4881b837689ce705e7f029826b20482b85fbc6a6d18e3717e06",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\metadata_conservation22.json",
+      "bytes": 2369,
+      "sha256": "543bcacce66349667e99aa1581c34d20354e7c080acaee1c584b4d5d919f83ff",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\read_receipts22.json",
+      "bytes": 7795,
+      "sha256": "ca54f39379fa8bee83ac7c7c30ac6902ffae0b5681afcfa1781987a0a5717d9a",
+      "kind": "FROZEN_NATIVE02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\circle_native_source_review01.md",
+      "bytes": 8759,
+      "sha256": "6d6899b9c2fea5ca7fa000c85876c0a29f5dfdc0e1e412feb41c2b42541dfe1c",
+      "kind": "IMMUTABLE_PRIOR_SOURCE_REVIEW",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_source01\\source_handoff22.json",
+      "bytes": 17052,
+      "sha256": "7c5eb71cc23ac7f4235bd566e8aa5e07653a756fab6c58ad4a61aa183e11f834",
+      "kind": "IMMUTABLE_PRIOR_NATIVE01_HANDOFF",
+      "capture": true
+    }
+  ],
+  "closure_snapshot_binding_count": 6332,
+  "closure_snapshot_bound_bytes": 639196429,
+  "closure_scope": "CONSERVATIVE_BYTE_BINDINGS_NOT_EFFECTIVE_INCLUDE_OR_LOADER_PROOF",
+  "cpp_change": "Only odd-candidate heartbeat guard changed to (d&4095)==4095; producer byteidentical; parameters/log32/40/catalogue/DIT/DIF/CRT unchanged.",
+  "numeric_scope": "NATIVE_FULL_N1E8_ONLY",
+  "fixed_N": 100000000,
+  "fixed_K": 134217728,
+  "fixed_S": "288230376151711744",
+  "fixed_future_numeric_limits": {
+    "max_children": 2,
+    "max_active_job_processes": 1,
+    "max_retries": 0,
+    "wall_seconds": 3600,
+    "commit_bytes": 2147483648,
+    "rss_bytes": 2147483648,
+    "output_bytes": 2147483648,
+    "log_bytes": 1048576,
+    "capture_bytes": 33554432,
+    "metadata_bytes": 16777216
+  },
+  "OPEN": [
+    "Independent SOURCE audit of native02 parent/backend",
+    "Compiler build and actual imports/Windows trust-base reviews",
+    "Windows ABI/quotas/resources exercised",
+    "GMP/carries/catalogue/NTT/CRT machine refinement",
+    "Runtime preparation and ROOT numeric gate",
+    "Actual coefficient N=1e8 outputs and runtime feasibility",
+    "Uniform zeta spectral bridge, PP/frontier and D_N"
+  ],
+  "automatic_runtime_preparation": false,
+  "compiler_invocations": 0,
+  "native_program_invocations": 0,
+  "Python_candidate_imports": 0,
+  "D_N": false,
+  "WIN": false
+}

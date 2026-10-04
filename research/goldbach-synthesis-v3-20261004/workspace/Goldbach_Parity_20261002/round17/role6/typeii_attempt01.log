@@ -1,0 +1,18 @@
+{"stage": "complete_beta_masks", "I_integers": 162338, "beta": 181, "J": {"0:1": 64936, "0:3": 43291, "0:39": 39961, "77:1": 50599, "77:3": 33732, "77:39": 31136}, "qcap_own": 3878, "v": [17, 19]}
+Traceback (most recent call last):
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\typeii_checks.py", line 247, in <module>
+    data=run();out=s.conservation.output_directory(args.output_dir)
+         ^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\typeii_checks.py", line 191, in run
+    k=key(scope,h);model,coefficient=theta_AP_model(scope,h);main=coefficient*length
+                                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\typeii_checks.py", line 31, in theta_AP_model
+    modulus=rad((77 if scope else 1)*h*s.N);nmod=D*modulus
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\typeii_checks.py", line 29, in rad
+    def rad(n):return prod(p for p,_ in s.factor(n))
+                                        ^^^^^^^^^^^
+  File "D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\numerical\parity_checks.py", line 34, in factor
+    assert 1 <= n <= N
+           ^^^^^^^^^^^
+AssertionError

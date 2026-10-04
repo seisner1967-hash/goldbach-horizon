@@ -1,0 +1,27 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC04_QUIESCENCE_METADATA",
+  "gate_sha256": "b5dc57f1afa98304645f9e62505026c805c7a536946a15eedec399922aeba932",
+  "session_id": 17351,
+  "parent_session_complete": true,
+  "known_created_child_pids_absent": true,
+  "parent_exit_code": 1,
+  "session_closed_tool_chunk": "b762cb",
+  "known_created_child_pids": [
+    32676,
+    6864
+  ],
+  "additional_observed_job_pids_absent": [
+    2100
+  ],
+  "matching_known_processes": [],
+  "observed_utc": "2026-10-03T22:17:42.6277585Z",
+  "observation_tool_chunk": "03842b",
+  "quiescence_scope": "External session completion and callback PIDs absent; not universal process graph closure",
+  "actual_status": "HARD_WALL_NO_VERDICT_POST_UNVERIFIED",
+  "watchdog_sha256": "cd559e4e5a3355639dfe3d46d358537ee3ee9984d29206efa1781fc7f7e1f706",
+  "parent_receipt_present": false,
+  "parent_POST_present": false,
+  "checker_FIN_present": false,
+  "coefficient_report_present": false,
+  "new_native_invocations": 0
+}

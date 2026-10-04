@@ -1,0 +1,45 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:12:2: error: application type mismatch
+  image (fun r => r) (range l)
+argument
+  range l
+has type
+  Finset ℕ : Type
+but is expected to have type
+  Finset (ZMod l) : Type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:35:2: warning: declaration uses 'sorry'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormRoots.lean:33:8: warning: declaration uses 'sorry'
+'GoldbachRound17.FourFormRoots.actualForm' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.FourFormRoots.residueUniverse' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.actualRoots' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.actualRho' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.localDensity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.candidates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.collisionProduct' depends on axioms: [propext, Quot.sound]
+'GoldbachRound17.FourFormRoots.natDelta' does not depend on any axioms
+'GoldbachRound17.FourFormRoots.residueUniverse_eq_univ' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormRoots.mem_actualRoots' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.zero_mem_actualRoots' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_lower' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_le_modulus' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.coprime_cast_not_both_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.linear_root_eq_div_of_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.linear_root_eq_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.roots_subset_candidates' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormRoots.candidates_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_le_four' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.rho_bounds' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.roots_eq_candidates_of_nonzero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormRoots.density_positive' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormRoots.density_lt_one_of_nonsaturated' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

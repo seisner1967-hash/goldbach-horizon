@@ -1,0 +1,52 @@
+{
+  "status": "ROOT19_NONSS_UNIQUE_NEW_CANONICAL_AUTHORIZED_AFTER_FULL_READ",
+  "authorized_utc": "2026-10-03T00:14:34.520130+00:00",
+  "token": "ROOT19_NONSS_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+  "node": "14.4",
+  "source_launcher_preparation_sha256": {
+    "nonss_checks.py": "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+    "role6_nonss/arithmetic.py": "cd6b82ca09ae15289887dc9381a858d338d3d2047a04887a144de49e19665cc2",
+    "role6_nonss/bank.py": "11865a7f9fe6147c9fa07da2131649cffadaac73d4fc0335d562af22ce5ab4e9",
+    "role6_nonss/run_nonss_once.py": "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+    "role6_nonss/preparation.json": "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3"
+  },
+  "bindings12_verified": true,
+  "full_source_read_chunks": [
+    "c2f10f",
+    "cc909f arithmetic full",
+    "eb44cb bank full final"
+  ],
+  "new_command_authorized": [
+    "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\role6_nonss\\run_nonss_once.py",
+    "--root-authorization",
+    "ROOT19_NONSS_AUTHORIZED_FULL_SOURCE_READ_CANONICAL_ATTEMPT01",
+    "--source-sha256",
+    "a68438eed436be3bd88d6e7e19bd3375622f9298fd18f27a796e0eed7cae3d7b",
+    "--launcher-sha256",
+    "a2366f9777d756380ef08c192b308ac43433b66e3f335d0d7f83246effa8d5a0",
+    "--preparation-sha256",
+    "e8f7a40704d600f91f92e417cf2092a9b72708fbbeb6156333f9f33dd8ff59a3"
+  ],
+  "canonical_attempts_authorized": 1,
+  "replay_authorized": false,
+  "mathematical_producer_executed_by_root": false,
+  "new_producer_start_observed": false,
+  "no_old_producer_preflight_Lean_PDF_execution": true,
+  "compiler_gate_still_closed": true,
+  "victory": false,
+  "actual_review": [
+    "all1001 integers/allperqSFunitcores beforeprime masks",
+    "literal oldA/R/S/SS matched by source read only",
+    "e1/e3 exceptions, universalC/F1 onlye>p0 andqprime",
+    "allrank/repeatedfactors/signedCRT/3strata/front+1 and both inverses",
+    "theta/raw/properpowers literal, unique physicaltarget/m1, mu-zero nofakeW",
+    "H8 completeuncut2048 inclprime-squared diagonal",
+    "128bitoutward rational atanh48/geometric tail, nofloats/assumedsigns",
+    "imports onlynewcapturedhelpers, exclusive13captures andreceipt onfail",
+    "source1e24/local1e40 notfiniteonsets, no analyticalpayment"
+  ]
+}

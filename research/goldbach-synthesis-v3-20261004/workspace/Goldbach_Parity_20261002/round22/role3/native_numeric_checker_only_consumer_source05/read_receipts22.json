@@ -1,0 +1,46 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC05_CHECKER_ONLY_SOURCE_READ_RECEIPT",
+  "status": "SOURCE_ONLY_NOT_METADATA_PREPARED_NOT_EXECUTED",
+  "author": "ROLE3",
+  "official_baseline_at_source_handoff": {"modules": 84, "auxiliary_declarations_including_definitions": 1419},
+  "own_full_reads": [
+    {"file": "run_native05_checker_only_once22.py", "sha256": "2b073990ccb6b66248d6fb68df6b21141e04324f311e40ec0fae41c12a703001", "bytes": 36695, "scope": "FULL_SOURCE_SEGMENTED_LINES_1_270_AND_271_616", "source_read_chunks": ["610ca9", "547df1"], "forwarded_completely_after_outer_batch_truncation": true},
+    {"file": "prepare_native05_checker_only_metadata22.ps1", "sha256": "2ff936cac29de289d22986ba6cb3ba834eaa37ec251b330f445b50a8151b4cc7", "bytes": 17353, "scope": "FULL_SOURCE", "source_read_chunk": "519f0c", "forwarded_completely_after_outer_batch_truncation": true},
+    {"file": "numeric_checker_only_execution_plan22.json", "sha256": "cf508080acd96b0fa75c20fe9a5b45c3abf3aea1ff55dd6eb2a3fb7e4e541f4b", "bytes": 5404, "scope": "FULL_SOURCE_METADATA", "source_read_chunk": "9c1bb6"},
+    {"file": "numeric_checker_only_trust_policy22.json", "sha256": "642b5ca51c3eaa7e687293dc4e8eaaed6bdd733fd7b7fa80b79b4b21d3d09af1", "bytes": 2777, "scope": "FULL_SOURCE_METADATA", "source_read_chunk": "9c1bb6"},
+    {"file": "source_contract22.txt", "sha256": "00854925f4d2ce99218a0127565002316893ee2f730486a632d9e08fb9d3d035", "bytes": 5039, "scope": "FULL_SOURCE", "source_read_chunk": "9c1bb6"},
+    {"path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\native_numeric05_checker_only_contract_source01\\checker_only_contract22.md", "sha256": "8fd1e59d4c751d38a1320aadeed9686dd788eed8c1fb473151924afc7827ad30", "bytes": 9475, "scope": "FULL_STATIC_REQUIREMENTS_SOURCE", "source_read_chunk": "3f741f", "independent_CPP_review": false}
+  ],
+  "previous_reads_reused_without_reexecution": [
+    {"source": "native_numeric_consumer_source01 parent/plan/policy", "scope": "FULL_SOURCE", "read_chunk": "94739e", "purpose": "Reuse fixed integer report interpreter and metadata utilities as source text; no import or parser probe"},
+    {"source": "circle_native_build_source04/windows_build_job22.py", "scope": "FULL_SOURCE", "read_chunk": "465acf", "purpose": "Preserve fixed Win32 job backend 8968, commit OS limit and RSS monitor distinction"},
+    {"source": "circle_native_revision02/checker_dif22.cpp", "scope": "TARGETED_LINES_226_334", "read_chunk": "465acf", "purpose": "Observe one directory argument, three readonly input files and nine stdout lines; existing ROLE5 CPP review reused"},
+    {"source": "native_numeric_closure_source01/numeric_execution_closure22.json", "scope": "FULL_ACTUAL_EXTERNAL_METADATA", "read_chunk": "62e9a7", "purpose": "Old04 STOP facts, absent parent receipt/POST/coefficient and external byte conservation"},
+    {"source": "native_numeric_closure_source01/closure_evidence_bindings22.json", "scope": "PARSED_METADATA_ALL_ROWS_AND_SHA_NOT_RAW_FULL", "read_chunk": "62e9a7", "purpose": "Bind prior actual output set without numerical interpretation"},
+    {"source": "native_numeric_closure_source01/quiescence_evidence22.json", "scope": "FULL_SCOPED_KNOWN_PID_EVIDENCE", "read_chunk": "932a95", "purpose": "Prior producer/checker known PIDs absent; no universal process graph claim"},
+    {"source": "ROOT native_numeric04 closed observation", "scope": "FULL_METADATA", "read_chunk": "f790ce", "purpose": "Bind ROOT physical STOP observation"},
+    {"source": "Old04 PRE and numeric manifest", "scope": "PARSED_METADATA_HEADERS_COUNTS_KEYS_AND_SHA_NOT_RAW_FULL", "read_chunk": "d88a7b", "purpose": "Future exact union inherits 6456 bindings, 66 capture pairs and selected 972 Python runtime files"},
+    {"source": "Old04 authorization metadata controls", "scope": "TARGETED_METADATA_AND_SHA", "read_chunk": "a288c6", "purpose": "Preserve the five old metadata controls"}
+  ],
+  "source_inspection": {
+    "new_fixed_child_commands": 1,
+    "future_direct_checker_children_maximum": 1,
+    "compiler_and_producer_invocations_permitted": 0,
+    "future_parent_total_seconds": 3600,
+    "future_checker_deadline_parent_offset_seconds": 3300,
+    "future_FIN_POST_reserve_seconds": 300,
+    "POST_completion_guaranteed": false,
+    "source_union_binding_count_not_evaluated_yet": true,
+    "source_union_count_will_be_generated_by_separately_authorized_metadata_helper": true,
+    "big_payloads_scope": "Prior frozen size/SHA declarations and provenance only; no payload parser or arithmetic validation in this source phase",
+    "prior_6456_66_3089_5_83_conservation": "Previous ROOT physical observation, not a new conservation run by this receipt"
+  },
+  "not_performed": ["candidate_import", "candidate_parser_probe", "Python_math", "native_image_invocation", "compiler_invocation", "metadata_helper_invocation", "PREPARED_creation", "authorization_gate_creation", "ACTUAL05_creation", "independent_SOURCE05_review"],
+  "old04_payloads_mathematically_validated": false,
+  "native_Lean_refinement": false,
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "all_non_OS_imports_bound": false,
+  "D_N": false,
+  "WIN": false
+}

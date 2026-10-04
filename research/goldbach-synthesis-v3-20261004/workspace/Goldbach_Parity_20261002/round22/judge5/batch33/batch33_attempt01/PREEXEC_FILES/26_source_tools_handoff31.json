@@ -1,0 +1,99 @@
+{
+  "schema": "ROUND22_JUDGE5_SOURCE_TOOLS_HANDOFF_BATCH31",
+  "time_utc": "2026-10-04T01:19:16.0231345Z",
+  "status": "SOURCE_FROZEN_NOT_PREPARED_NOT_EXECUTED",
+  "role": "ROLE5",
+  "module": "ComplexGammaMellinLambda22",
+  "modules": 1,
+  "declarations": 30,
+  "theorems": 24,
+  "definitions": 6,
+  "qualified_print_axioms": 30,
+  "source": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+  "bindings_count": 5,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch31\\prepare_metadata.py",
+      "sha256": "a6b6b3b555ae989e9a18d9e149ae92df8afa05eb0fea0b3b2804002bd12676de",
+      "bytes": 28037,
+      "scope": "FULL_SOURCE_ONLY",
+      "chunk": "9cd4d4"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch31\\run_once.py",
+      "sha256": "d660b7954b68681849feeeb21a018d5425a408ce9d251849e7b488d567934da7",
+      "bytes": 13277,
+      "scope": "FULL_SOURCE_ONLY",
+      "chunk": "a567e5"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch31\\preparation.md",
+      "sha256": "5b708036b18fb5f060b8e5bb762cb2eb8bb21e021f1cb316e83baccffa2aebf8",
+      "bytes": 6049,
+      "scope": "FULL_SOURCE_ONLY",
+      "chunk": "8324ad"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch31\\sources\\ComplexGammaMellinLambda22.lean",
+      "sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+      "bytes": 16534,
+      "scope": "FULL_EXACT_SOURCE_COPY",
+      "chunk": "a6183a"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch31\\source_catalog_author22.json",
+      "sha256": "c580f9713f97677d0b866db62102d1c8802be3980278c20ae313e6a6c3f60b4a",
+      "bytes": 2329,
+      "scope": "FULL_EXACT_AUTHOR_CATALOG_COPY",
+      "chunk": "9da888"
+    }
+  ],
+  "source_tool_reads_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch31\\source_tool_reads31.json",
+  "source_tool_reads_sha256": "d43058964a84541cd70dc49f4785d0f2c9eab245e762381c83316e26e7b2f8bb",
+  "official_modules": 86,
+  "official_declarations": 1456,
+  "baseline_observation": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round22_judge_batch30_closed_observation.json",
+    "sha256": "7fd118336cfc1b1106c166282f88030c79e49014efa55bc6a4ce0e463357e292",
+    "scope": "FULL",
+    "chunk": "63fd59"
+  },
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22",
+    "ComplexGammaMellinLocal22",
+    "ComplexGammaMellinHolomorphy22"
+  ],
+  "readonly_provenance": "PASS02, PASS20, actual26 globalFAILED rowPASS22 plus ROOTpartial, actual27 globalPASS15 plus ROOTclosed",
+  "prior_all_Judge_files_and_explicit_role4_closed21_preserved": true,
+  "archive_registry_count": 3089,
+  "future_common_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch31\\sources",
+  "future_candidate_children_maximum": 1,
+  "child_wall_seconds": 300,
+  "max_heartbeats": 1000000,
+  "retry_count_maximum": 0,
+  "author_olean_allowed": false,
+  "bridges_and_weighted_Lambda_tail_excluded": true,
+  "Tail_imported": false,
+  "prepare_authorized": false,
+  "compile_authorized": false,
+  "compiler_invocations": 0,
+  "metadata_PREP_invocations": 0,
+  "numeric_invocations": 0,
+  "produced_binary_calls": 0,
+  "next_action": "ROOT FULL source tools then distinct one-time metadata PREP authorization; fresh Lean gate only after real PREP closure",
+  "future_PREP_flags": [
+    "--builder-read",
+    "9cd4d4",
+    "--launcher-read",
+    "a567e5",
+    "--audit-read",
+    "8324ad",
+    "--source-read",
+    "a6183a"
+  ],
+  "import_inputs_closed_counts": "NOT_YET_OBSERVED_BEFORE_METADATA_PREP",
+  "H1_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

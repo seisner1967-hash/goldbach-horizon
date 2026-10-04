@@ -1,0 +1,5604 @@
+{
+  "Lean_called": false,
+  "N": 100000000,
+  "P": [
+    2,
+    3,
+    5,
+    7
+  ],
+  "asymptotic": false,
+  "conservation_after": {
+    "initial33_numeric_bindings_verified": true,
+    "initial_numeric_manifest_sha256": "c6e1efe0ef1e4c2448bb9d53eb6df1635b29eb9a077723620ce62d4f45a6b1e4",
+    "initial_reports_and_addendum_unchanged": true,
+    "old799": {
+      "all13_role3_invocation_log_snapshot_pairs_preserved": true,
+      "baseline_sha256": "1c21af8d00924e126bf541c03f13277fa699c6f8e9d3a9edbbda337b9cead420",
+      "controller_97_bindings_verified": true,
+      "exact_inventory_additions_and_removals_checked": true,
+      "files": 799,
+      "flags_describe_this_readonly_verification_not_global_execution": true,
+      "fresh_judge_Lean_sources_oleans_logs_manifests_preserved": true,
+      "mathematical_identity_certified_by_conservation": false,
+      "nine_real_failed_Lean_attempts_preserved": true,
+      "numeric30_bindings_preserved": true,
+      "numeric_contract_launched_by_this_verification": false,
+      "old_Lean_recompiled": false,
+      "old_PASS_replayed": false,
+      "old_PDF_rerendered": false,
+      "old_W_recomputed": false,
+      "old_dependency_recompiled": false,
+      "old_producer_executed_by_this_verification": false,
+      "original_sources": {
+        "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+          "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+          "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+          "status": "PRESERVED"
+        },
+        "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+          "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+          "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+          "status": "PRESERVED"
+        }
+      },
+      "previous_protected_files": 701,
+      "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\previous_artifacts_sha256.json",
+      "round16_controller_sha256": "10d9f68fc649d965aa5eecac96fecf5fd20f705527d42f52b855662acec02332",
+      "round16_files": 98,
+      "scope": "READ_ONLY_CONSERVATION_VERIFICATION",
+      "status": "PRESERVED",
+      "two_round16_numeric_copies_bytes_and_fields_preserved": true
+    },
+    "old_or_initial_producer_kernel_sign_Lean_render_executed": false,
+    "status": "PRESERVED_799_AND_FROZEN_INITIAL_FINAL6"
+  },
+  "conservation_before": {
+    "initial33_numeric_bindings_verified": true,
+    "initial_numeric_manifest_sha256": "c6e1efe0ef1e4c2448bb9d53eb6df1635b29eb9a077723620ce62d4f45a6b1e4",
+    "initial_reports_and_addendum_unchanged": true,
+    "old799": {
+      "all13_role3_invocation_log_snapshot_pairs_preserved": true,
+      "baseline_sha256": "1c21af8d00924e126bf541c03f13277fa699c6f8e9d3a9edbbda337b9cead420",
+      "controller_97_bindings_verified": true,
+      "exact_inventory_additions_and_removals_checked": true,
+      "files": 799,
+      "flags_describe_this_readonly_verification_not_global_execution": true,
+      "fresh_judge_Lean_sources_oleans_logs_manifests_preserved": true,
+      "mathematical_identity_certified_by_conservation": false,
+      "nine_real_failed_Lean_attempts_preserved": true,
+      "numeric30_bindings_preserved": true,
+      "numeric_contract_launched_by_this_verification": false,
+      "old_Lean_recompiled": false,
+      "old_PASS_replayed": false,
+      "old_PDF_rerendered": false,
+      "old_W_recomputed": false,
+      "old_dependency_recompiled": false,
+      "old_producer_executed_by_this_verification": false,
+      "original_sources": {
+        "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+          "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+          "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+          "status": "PRESERVED"
+        },
+        "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+          "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+          "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+          "status": "PRESERVED"
+        }
+      },
+      "previous_protected_files": 701,
+      "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\previous_artifacts_sha256.json",
+      "round16_controller_sha256": "10d9f68fc649d965aa5eecac96fecf5fd20f705527d42f52b855662acec02332",
+      "round16_files": 98,
+      "scope": "READ_ONLY_CONSERVATION_VERIFICATION",
+      "status": "PRESERVED",
+      "two_round16_numeric_copies_bytes_and_fields_preserved": true
+    },
+    "old_or_initial_producer_kernel_sign_Lean_render_executed": false,
+    "status": "PRESERVED_799_AND_FROZEN_INITIAL_FINAL6"
+  },
+  "core_count": 16,
+  "false_condition_cores": [
+    13,
+    19,
+    33,
+    37,
+    39,
+    51,
+    61,
+    67,
+    69,
+    79
+  ],
+  "global_D_N": false,
+  "imports_sha256": {
+    "numerical/parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical/round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "round11/exact11.py": "a41e33ae49a98f0b15e0de990337ddabcc47dc92a84894cce1141559eb1571f8",
+    "round11/shared.py": "1959d27b60cfe7dc8e6211c36a0bc6b710c0fd13c80b95be55ad045092b3d4ee",
+    "round13/conservation.py": "e64bd0ac1a8217d0026fe3c60c2ffcd880c9d06e51696f1c6ad4ad550d48bf89",
+    "round13/shared.py": "2eba4c18b1013677a168e99a7e896146a63bdcff4dee1180c1c4ba2e4323b43d",
+    "round3/multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "round4/inverse_checks.py": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c",
+    "round6/exact_tools.py": "f48bb0b2b608aa734944cbfe978c19ad55f5aa249068dcc313a1de6da5a393cc"
+  },
+  "initial390_positions_not_recounted": true,
+  "initial_numeric_manifest_sha256": "c6e1efe0ef1e4c2448bb9d53eb6df1635b29eb9a077723620ce62d4f45a6b1e4",
+  "input_rough_sha256": "e4dd2c8e12cbfd34c90208ffb90745472bc8e2c3a3f777681a9d52735fcadfbb",
+  "new_interval_certificate_positions": 64,
+  "no_W_kernel_or_old_bank_recomputed": true,
+  "no_source_estimate_applied_to_finite_N": true,
+  "payments": false,
+  "rows": [
+    {
+      "G_P_exact": "99/8",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "1867675547623099553071/73382077559249058600",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "3/7"
+      },
+      "Tail_weight_exact": "3/4",
+      "Z_sum_and_product_exact": "105/8",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "3/8"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "3/8"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_TRUE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "1127285372484543551582085444913/16637914127995510894644229570560",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "53680570189890125155951391501/792281625142643375935439503360"
+      },
+      "e": 7,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "3/7",
+          "h": "3/4",
+          "rho": 3
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-3/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "32804610084267620537549919573153/1267650600228229401496703205376",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "32804613899067517557271270164617/1267650600228229401496703205376"
+      },
+      "markov_no_division_exact": {
+        "2": "81/16",
+        "3": "35/4",
+        "5": "9/8",
+        "7": "45/8"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "105/16",
+        "3": "35/4",
+        "5": "21/8",
+        "7": "45/8"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "2109021047151296456911/73382077559249058600",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 13,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "17317692712910368023103/587056620473992468800",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 19,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "99/8",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "1867675547623099553071/73382077559249058600",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "3/7"
+      },
+      "Tail_weight_exact": "3/4",
+      "Z_sum_and_product_exact": "105/8",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "3/8"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "3/8"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_TRUE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "1127285372484543551582085444913/16637914127995510894644229570560",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "53680570189890125155951391501/792281625142643375935439503360"
+      },
+      "e": 21,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "3/7",
+          "h": "3/4",
+          "rho": 3
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-3/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "32804610084267620537549919573153/1267650600228229401496703205376",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "32804613899067517557271270164617/1267650600228229401496703205376"
+      },
+      "markov_no_division_exact": {
+        "2": "81/16",
+        "3": "35/4",
+        "5": "9/8",
+        "7": "45/8"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "105/16",
+        "3": "35/4",
+        "5": "21/8",
+        "7": "45/8"
+      }
+    },
+    {
+      "G_P_exact": "99/8",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "618546444614513394557/24460692519749686200",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "3/7"
+      },
+      "Tail_weight_exact": "3/4",
+      "Z_sum_and_product_exact": "105/8",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "3/8"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "3/8"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_TRUE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "1127285372484543551582085444913/16637914127995510894644229570560",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "53680570189890125155951391501/792281625142643375935439503360"
+      },
+      "e": 31,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "3/7",
+          "h": "3/4",
+          "rho": 3
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-3/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "32804610084267620537549919573153/1267650600228229401496703205376",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "32804613899067517557271270164617/1267650600228229401496703205376"
+      },
+      "markov_no_division_exact": {
+        "2": "81/16",
+        "3": "35/4",
+        "5": "9/8",
+        "7": "45/8"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "105/16",
+        "3": "35/4",
+        "5": "21/8",
+        "7": "45/8"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "8320371523713147728759/293528310236996234400",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 33,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "2155430712460800560021/73382077559249058600",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 37,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "16674648285113392939223/587056620473992468800",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 39,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "99/8",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "1863630125398679412661/73382077559249058600",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "3/7"
+      },
+      "Tail_weight_exact": "3/4",
+      "Z_sum_and_product_exact": "105/8",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "3/8"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "3/8"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_TRUE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "1127285372484543551582085444913/16637914127995510894644229570560",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "53680570189890125155951391501/792281625142643375935439503360"
+      },
+      "e": 43,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "3/7",
+          "h": "3/4",
+          "rho": 3
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-3/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "32804610084267620537549919573153/1267650600228229401496703205376",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "32804613899067517557271270164617/1267650600228229401496703205376"
+      },
+      "markov_no_division_exact": {
+        "2": "81/16",
+        "3": "35/4",
+        "5": "9/8",
+        "7": "45/8"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "105/16",
+        "3": "35/4",
+        "5": "21/8",
+        "7": "45/8"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "2160270528627809856221/73382077559249058600",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 51,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "99/8",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "14743884288887817708503/587056620473992468800",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "3/7"
+      },
+      "Tail_weight_exact": "3/4",
+      "Z_sum_and_product_exact": "105/8",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "3/8"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "3/8"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_TRUE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "1127285372484543551582085444913/16637914127995510894644229570560",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "53680570189890125155951391501/792281625142643375935439503360"
+      },
+      "e": 57,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "3/7",
+          "h": "3/4",
+          "rho": 3
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-3/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "32804610084267620537549919573153/1267650600228229401496703205376",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "32804613899067517557271270164617/1267650600228229401496703205376"
+      },
+      "markov_no_division_exact": {
+        "2": "81/16",
+        "3": "35/4",
+        "5": "9/8",
+        "7": "45/8"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "105/16",
+        "3": "35/4",
+        "5": "21/8",
+        "7": "45/8"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "7884200011798498521971/266010031152277837425",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 61,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "16630987890290442904093/587056620473992468800",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 67,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "8132782486926493643099/293528310236996234400",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 69,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    },
+    {
+      "G_P_exact": "99/8",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "81155063492283244757/3190525111271698200",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "3/7"
+      },
+      "Tail_weight_exact": "3/4",
+      "Z_sum_and_product_exact": "105/8",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "3/4"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "3/2"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "3/16"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "3/8"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "3/8"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_TRUE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "1127285372484543551582085444913/16637914127995510894644229570560",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "53680570189890125155951391501/792281625142643375935439503360"
+      },
+      "e": 73,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "3/7",
+          "h": "3/4",
+          "rho": 3
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-3/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "32804610084267620537549919573153/1267650600228229401496703205376",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "32804613899067517557271270164617/1267650600228229401496703205376"
+      },
+      "markov_no_division_exact": {
+        "2": "81/16",
+        "3": "35/4",
+        "5": "9/8",
+        "7": "45/8"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "105/16",
+        "3": "35/4",
+        "5": "21/8",
+        "7": "45/8"
+      }
+    },
+    {
+      "G_P_exact": "97/6",
+      "G_P_le_actual_G_by_inclusion": true,
+      "G_P_plus_Tail_equals_Z": true,
+      "G_actual100_from_frozen_catalog": "16666511886338402517287/587056620473992468800",
+      "M_sum_g_logp_exact": {
+        "2": "1/2",
+        "3": "2/3",
+        "5": "1/5",
+        "7": "4/7"
+      },
+      "Tail_weight_exact": "4/3",
+      "Z_sum_and_product_exact": "35/2",
+      "all16_subsets": [
+        {
+          "bits": 0,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {},
+          "natural_product": 1,
+          "primes": [],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 1,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1"
+          },
+          "natural_product": 2,
+          "primes": [
+            2
+          ],
+          "weight_exact": "1"
+        },
+        {
+          "bits": 2,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1"
+          },
+          "natural_product": 3,
+          "primes": [
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 3,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1"
+          },
+          "natural_product": 6,
+          "primes": [
+            2,
+            3
+          ],
+          "weight_exact": "2"
+        },
+        {
+          "bits": 4,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1"
+          },
+          "natural_product": 5,
+          "primes": [
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 5,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1"
+          },
+          "natural_product": 10,
+          "primes": [
+            2,
+            5
+          ],
+          "weight_exact": "1/4"
+        },
+        {
+          "bits": 6,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 15,
+          "primes": [
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 7,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1"
+          },
+          "natural_product": 30,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "weight_exact": "1/2"
+        },
+        {
+          "bits": 8,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "7": "1"
+          },
+          "natural_product": 7,
+          "primes": [
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 9,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "7": "1"
+          },
+          "natural_product": 14,
+          "primes": [
+            2,
+            7
+          ],
+          "weight_exact": "4/3"
+        },
+        {
+          "bits": 10,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 21,
+          "primes": [
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 11,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "7": "1"
+          },
+          "natural_product": 42,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "weight_exact": "8/3"
+        },
+        {
+          "bits": 12,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 35,
+          "primes": [
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 13,
+          "cell": "HEAD_INCLUDED_IN_ACTUAL_G100",
+          "log_product_exact": {
+            "2": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "natural_product": 70,
+          "primes": [
+            2,
+            5,
+            7
+          ],
+          "weight_exact": "1/3"
+        },
+        {
+          "bits": 14,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-2",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 105,
+          "primes": [
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "1932764250804882114793565601/39614081257132168796771975168",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "3865589326813146005632917197/79228162514264337593543950336"
+          },
+          "weight_exact": "2/3"
+        },
+        {
+          "bits": 15,
+          "cell": "TAIL_RETAINED_PRODUCT_GT100",
+          "log_product_exact": {
+            "2": "1",
+            "3": "1",
+            "5": "1",
+            "7": "1"
+          },
+          "log_product_minus_log100_exact": {
+            "2": "-1",
+            "3": "1",
+            "5": "-1",
+            "7": "1"
+          },
+          "natural_product": 210,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "strict_tail_certificate": {
+            "bits": 96,
+            "lower": "58782306108683908477699105463/79228162514264337593543950336",
+            "sign": "POSITIVE",
+            "terms": 6,
+            "upper": "29391179166438983852604201151/39614081257132168796771975168"
+          },
+          "weight_exact": "2/3"
+        }
+      ],
+      "coefficient_identity_each_logp_Z_times_g_verified": true,
+      "condition_M_le_half_log100_status": "CONDITION_FALSE_FINITE",
+      "condition_sign_certificate": {
+        "bits": 96,
+        "lower": "-3497841201891920732117325607067/16637914127995510894644229570560",
+        "sign": "NEGATIVE",
+        "terms": 6,
+        "upper": "-166563526956585939451347937159/792281625142643375935439503360"
+      },
+      "e": 79,
+      "effective_local_values": {
+        "2": {
+          "g": "1/2",
+          "h": "1",
+          "rho": 1
+        },
+        "3": {
+          "g": "2/3",
+          "h": "2",
+          "rho": 2
+        },
+        "5": {
+          "g": "1/5",
+          "h": "1/4",
+          "rho": 1
+        },
+        "7": {
+          "g": "4/7",
+          "h": "4/3",
+          "rho": 4
+        }
+      },
+      "half_G_not_inferred_from_false_condition": true,
+      "half_log100_minus_M_exact": {
+        "2": "1/2",
+        "3": "-2/3",
+        "5": "4/5",
+        "7": "-4/7"
+      },
+      "head_products_support_inclusion": [
+        1,
+        2,
+        3,
+        6,
+        5,
+        10,
+        15,
+        30,
+        7,
+        14,
+        21,
+        42,
+        35,
+        70
+      ],
+      "markov_formula": "(G_P-Z)*log100+Z*M >=0; equivalent G_P >= Z*(1-M/log100)",
+      "markov_no_division_certificate": {
+        "bits": 96,
+        "lower": "11990099879939100981477052722575/316912650057057350374175801344",
+        "sign": "POSITIVE",
+        "terms": 6,
+        "upper": "11990101260831570266844662132991/316912650057057350374175801344"
+      },
+      "markov_no_division_exact": {
+        "2": "73/12",
+        "3": "35/3",
+        "5": "5/6",
+        "7": "10"
+      },
+      "observed_G_P_ge_half_Z": true,
+      "source_C4_C6_U4_BV_not_applied": true,
+      "weighted_log_product_sum_exact": {
+        "2": "35/4",
+        "3": "35/3",
+        "5": "7/2",
+        "7": "10"
+      }
+    }
+  ],
+  "score": 0,
+  "status": "PASS_NEW_C4_FINITE_MOMENT_AND_TAIL_ONLY",
+  "true_condition_cores": [
+    7,
+    21,
+    31,
+    43,
+    57,
+    73
+  ],
+  "victory": false,
+  "whole_D_N_uncontrolled": true,
+  "z": 100
+}

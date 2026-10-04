@@ -1,0 +1,76 @@
+REVUE INDÉPENDANTE SOURCE — COEFFICIENT CENTRÉ MELLIN–Λ, 34 DÉCLARATIONS
+
+Auteur de la revue : ROLE3 / round22_formal3_prepare ; auteur scientifique : ROLE4.
+Statut : SOURCE_CIRCLE_COEFFICIENT_AND_RADIUS_COHERENT_NOT_ELABORATED.
+La lecture n'a identifié aucun défaut mathématique ou raccord API précis imposant une réparation. Ce verdict porte sur les preuves écrites ; il n'est ni une élaboration Lean, ni une autorisation d'exécution, ni un certificat numérique. Les trois dépendances prospectives restent à payer par leurs véritables verdicts.
+
+Pièce scientifique : round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean, 20097 octets, SHA256 bf9b8257760a20d33dd21714221401cd8fd327596f72e56c4d024200b2cb6c4c. Catalogue manuel : 34 déclarations = 28 théorèmes + 6 définitions, 34 impressions qualifiées, toutes confrontées à la source intégralement lue. Aucun changement scientifique n'a été effectué.
+
+1. Objets, domaines et dépendances
+
+P(w)=Σ(n≥0) Λ(n)exp(−nw) ; D(t)=Σ(n≥0)Λ(n)n^(−2−it), avec les conventions cpow de mathlib et les vrais termes n=0,1. Λ est ArithmeticFunction.vonMangoldt : toutes les puissances premières sont conservées. K(w,t)=Γ(2+it)w^(−2−it) utilise la puissance principale. P_H(w)=(2π)^(−1)∫[−H,H]D(t)K(w,t)dt est exactement la définition de EΛ16, pas une trace de substitution.
+
+Les identités algébriques avec la trace thermique sont écrites pour a,θ réels quelconques. L'identification au coefficient arithmétique, les bornes et l'intégrabilité de cercle utilisent a>0. La borne de troncature demande H≥0 et |θ|≤π. Les déclarations de continuité en θ de P_H sont à H réel fixé. Les déclarations de continuité conjointe du rayon demandent seulement a>0, avec H réel quelconque ; elles ne promettent pas la continuité de P_H lorsque H varie.
+
+Identity13 et Envelope11 sont réellement compilés : leurs sources et reçus readonly sont liés. Le reçu global11 est FAILED, mais sa ligne ThermalProjectionEnvelope22 est PASS/exit0/42 impressions standards ; le module Identity utilisé est exclusivement le vrai PASS indépendant13/20 impressions, pas sa vieille source échouée11. Cette distinction a été vérifiée dans les deux reçus.
+
+ComplexGammaMellinLambdaTail22/EΛ16, ComplexGammaCircleGeometry22/Geometry25 et le mainΛ SOURCE02 sont prospectifs au gel scientifique et dans cette revue. Le main02 conserve les véritables bornes de D, intégrabilités et échange infini ; aucun de ces résultats n'est transformé ici en verdict. Local26, Holo27 et Tail30 ont des PASS historiques indépendants, ce qui ne compile pas leurs descendants. Le PASS du bridge32 ne constitue pas une dépendance de ce module. La baseline officielle communiquée par ROOT est 87 modules/1458 déclarations ; aucune déclaration n'y est ajoutée par cette revue.
+
+2. Exactitude du transport centré : lignes47–147
+
+Le raccord terme à terme exp(−n(a−iθ))=exp(−a)^n exp(inθ) conserve les vrais coefficients Λ(n), avec égalité d'exposants explicitement payée. exp_nat_mul et ofReal_exp ont les formes nécessaires. Les caractères entiers vérifient exp(2πik)=1 ; la preuve normalise effectivement l'ordre des facteurs avant d'appliquer exp_int_mul_two_pi_mul_I. La périodicité est celle de P(a−iθ), transférée terme à terme à la somme, puis celle de exp(−iNθ). Aucune périodicité de la puissance principale w^(−2−it) ou de P_H n'est requise ou déclarée.
+
+Le véritable lemme star_projectionHeatTerm_neg et tsum_star donnent star(P(a+iθ))=P(a−iθ), donc la corrélation acquise vaut P². L'API réelle Function.Periodic.intervalIntegral_add_eq affirme l'égalité des intégrales sur [t,t+T] et [s,s+T]. Les paramètres t=−π, s=0 et T=2π paient exactement le passage [−π,π]→[0,2π], sans laisser un bord ni renverser son orientation. Cette API n'offre pas le coefficient final : celui-ci provient du théorème indépendant13 et de a>0.
+
+C_N=Σ(m=0..N)Λ(m)Λ(N−m)
+   = exp(aN)/(2π) ∫[−π,π] P(a−iθ)² exp(−iNθ)dθ.
+
+La définition discrète équivalente reste celle de l'antidiagonale naturelle acquise. N=0 est admis, aucun besoin de N>0 n'est ajouté. Le carré est celui de la trace complexe ; il n'est pas remplacé par |P|².
+
+3. Rayon uniforme construit : lignes161–209
+
+d(a)=atan(a/π)/2>0. Les résultats Geometry25 invoqués sont C(a−iθ)≤4/a² pour a>0 et δ(a−iθ)≥d(a) lorsque |θ|≤π. EΛ fournit la vraie borne des deux queues pondérées D·K : 6C(w)exp(−δ(w)H)/(πδ(w)).
+
+La preuve multiplie δ≥d par H≥0 avant de comparer les exponentielles. Elle paie les signes du numérateur, de a² et des deux dénominateurs. La signature div_le_div₀ exige précisément c≥0, a≤c, d>0 et d≤b pour a/b≤c/d ; les arguments de la ligne195 concordent avec cette direction. La normalisation finale donne
+
+ε(a,H)=24 exp(−d(a)H)/(πa²d(a)),
+|P(a−iθ)−P_H(a−iθ)|≤ε(a,H), a>0,H≥0,|θ|≤π.
+
+Le facteur24 est 6×4 ; aucun facteur2 ou2π supplémentaire n'a été perdu. Il n'y a ni précision offerte en prémisse, ni annulation du noyau non pondéré substituée à la queue pondérée. L'enveloppe est fermée mais encore SOURCE à cause des imports prospectifs.
+
+4. Continuité dominée et intégrabilité réelle : lignes212–302
+
+À w fixé dans Re(w)>0, le main02 donne une vraie boule ε>0 de points z restant dans le demi-plan droit et le majorant concret
+
+B_w(t)=6[(||w||/2)^(−2)sec²η(w)] exp(−δ_loc(w)|t|).
+
+Ce majorant dépend de w, pas du point voisin z ni d'une précision libre. Sa réelle intégrabilité et celle de D·K sont les preuves SOURCE du main02. Les restrictions Integrable.integrableOn produisent la mesurabilité et l'intégrabilité pour la même mesure volume.restrict(Icc(−H,H)). La domination éventuelle provient de la boule positive Metric.ball_mem_nhds. La continuité du cpow en z est légitime parce que Re(w)>0 place w dans le plan fendu ; le reste de l'intégrande est constant en z à t fixé.
+
+Les quatre arguments de continuousAt_of_dominated sont effectivement écrits : mesurabilité éventuelle, domination presque partout, majorant intégrable, continuité presque partout. L'hypothèse topologique requise par l'API est FirstCountableTopology du paramètre complexe, disponible pour ℂ. Le recours à cette API ne prend ni L1 final ni continuité de l'intégrale en prémisse. La multiplication par (2π)^(−1) puis la composition θ↦a−iθ sont typées explicitement. Les deux fonctions carrées multipliées par le vrai caractère deviennent effectivement IntervalIntegrable sur [−π,π].
+
+H reste fixé dans cette preuve ; si H<0, Icc(−H,H) est vide, sans incohérence. L'erreur analytique, elle, n'est affirmée que pour H≥0. L'inférence de la mesure restreinte, les casts et l'exécution des tactiques restent des risques d'élaboration non testés.
+
+5. Erreur du coefficient et continuité du rayon : lignes256–371
+
+Le vrai Envelope11 fournit U(a)=exp(−a)/(1−exp(−a))². La décomposition P_H=P−(P−P_H) donne |P_H|≤U+ε. La factorisation P²−P_H²=(P−P_H)(P+P_H), avec les deux bornes et ε>0, donne 2Uε+ε². Le caractère entier a norme1. Les deux intégrabilités justifient integral_sub ; la borne constante d'intégrale porte sur uIoc(−π,π), converti en Ioc via −π≤π. Les deux signes de θ nécessaires à |θ|≤π sont donc réellement obtenus.
+
+La longueur de l'intervalle vaut2π. La norme du normalisateur positif exp(aN)/(2π) annule exactement ce facteur, d'où
+
+|C_N−C_{N,H}(a)| ≤ E_N(a,H)
+E_N(a,H)=exp(aN)(2U(a)ε(a,H)+ε(a,H)²).
+
+La continuité conjointe de ε et E_N sur a>0,H∈ℝ est écrite à partir de la continuité de atan et des expressions explicites, avec d(a)>0 et1−exp(−a)>0. N est fixé dans cette déclaration. Aucune propriété uniforme lorsque a→0 n'en découle. Aucun H efficace, aucune convergence mobile de P_H, aucune annulation arithmétique signée n'est offerte par cette continuité.
+
+6. Étendue du verdict et de l'évaluateur
+
+Le futur évaluateur doit encore payer la troncature de D, les quadratures en t et θ, les positions des nœuds, Γ/cpow/exp dirigés, l'arrondi et leur propagation au carré. E_N ne paie que la coupure Mellin H, même si sa formule est fermée. La note de coût PAPER précédente indique un seuil astronomique pour ce majorant à a=1/N ; ce seuil n'est pas une minoration de l'erreur réelle, et aucune faisabilité de banque complète ne découle du présent module.
+
+La revue ne réclame aucune réparation scientifique et ne constate aucun FAIL Lean : aucune Lean invocation n'a été faite. Elle laisse l'élaboration et tous imports prospectifs ouverts. Aucun coefficient numérique, native-refinement, annulation canonique, retrait PP, contribution de frontière r>α, estimation de D_N ou victoire n'est validé. L'architecture bilantielle et les acquis de la monographie sont conservés.
+
+7. Lectures et conservation
+
+FULL : source34 a7c123/bb5afe ; contrat bf0082 (et1d3a78) ; catalogue8bd4ce ; reçus auteur b984fa ; handoff auteur8a8782 ; sources Identity13/Envelope11 210c04. TARGETED : APIs959439/3b1f20/b7f9a2/ce9a9c ; blocs du main02, EΛ16 et Geometry25 bf0082 ; deux reçus réels de compilation b7f9a2, sous scope métadonnées des rows seulement. Le champ reçu global11 FAILED est conservé sans l'ériger en échec du module Envelope effectivement PASS.
+
+Les36 bindings auteur ont été physiquement rehashés et leurs tailles vérifiées, sans modification, contrôle8bd4ce. Le contrôle final est lié dans le reçu de lecture. Les dépendances API supplémentaires lues sont liées séparément. Les grandes listes d'archives, tous imports transitifs et tous anciens lots n'ont pas été reswept ; aucun flag universel n'est fabriqué. Le chemin absent pending_catalog22.json de la commande1ef65c est un incident de lecture metadata, corrigé par source_catalog22.json8bd4ce ; il ne vaut aucune lecture FULL. Les reprises intégrales b984fa/8a8782, seules, paient les sorties qui avaient été tronquées dans un agrégat initial. SOURCEtools33 et livraison07 DRAFT sont intangibles.
+
+Exécutions candidat/Lean/compilateur/probe/Python math/PREP/builder : zéro.

@@ -1,0 +1,56 @@
+{
+  "schema": "ROUND22_GLOBAL_NUMERIC_SOURCE_ROOT_OBSERVATION",
+  "time_utc": "2026-10-03T12:10:17.980286+00:00",
+  "status": "SOURCE_RECEIVED_INDEPENDENT_ANALYTIC_REVIEW_PENDING",
+  "manifest_sha256": "e1caa3d115dd492cfa6d91478240b0e8418614b6faf8798f48e15312dfe11a51",
+  "source_binding_count": 14,
+  "runtime_source_count": 9,
+  "new_source_count": 5,
+  "ROOT_FULL_reads": {
+    "manifest": "a5375c",
+    "new_transport_envelopes_arithmetic": "69f784",
+    "producer": "fd7c38",
+    "checker": "b1529e",
+    "source_contract": "659e89",
+    "readonly_unit_transport": "44cbd6"
+  },
+  "prior_unchanged_ROOT_FULL_reads": {
+    "dyadic_r01": "11d2a7",
+    "analytic_r01": "121f25",
+    "kernel_r01": "f633ac"
+  },
+  "scope": "Byte binding and source intake only; mathematical source audit delegated to ROLE3/ROLE5",
+  "parameters": {
+    "X": 1000000,
+    "Y": 10000,
+    "Q": 1000000,
+    "R": 1000000,
+    "T": 100,
+    "tau": "1/1000000",
+    "N": 100000000
+  },
+  "planned_catalogue": {
+    "track_advances": 26181632,
+    "shared_steps": 128,
+    "EM_seeds": 32512,
+    "arithmetic_integers": 999999,
+    "arch_nodes": 12288,
+    "Y_seeds": 256,
+    "vertical_nodes": 204800
+  },
+  "numeric_run": false,
+  "numeric_gate": false,
+  "SOURCE_PREPARED": false,
+  "numeric_PASS": false,
+  "structural_checker_certifies_primitives": false,
+  "runtime_cost_measured": false,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "official_modules": 66,
+  "official_declarations": 1109,
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

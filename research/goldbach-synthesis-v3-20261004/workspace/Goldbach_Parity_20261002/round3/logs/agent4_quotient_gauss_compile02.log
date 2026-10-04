@@ -1,0 +1,60 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:53:13: error: unknown constant 'Equiv.mulLeft_apply'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:53:60: error: unknown constant 'Units.val_inv_mul'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:53:2: error: simp made no progress
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:87:45: error: unsolved goals
+case e_a
+R : Type u_1
+inst✝² : CommRing R
+inst✝¹ : Fintype R
+inst✝ : DecidableEq R
+χ : MulChar R ℂ
+ψ : AddChar R ℂ
+h b l x : Rˣ
+hx : x ∈ Finset.univ
+eta : Rˣ
+heta : eta ∈ Finset.univ
+⊢ χ⁻¹ ↑eta = χ⁻¹ ↑eta * ψ (↑h * ↑b * ↑x * ↑eta)
+
+case e_a
+R : Type u_1
+inst✝² : CommRing R
+inst✝¹ : Fintype R
+inst✝ : DecidableEq R
+χ : MulChar R ℂ
+ψ : AddChar R ℂ
+h b l x : Rˣ
+hx : x ∈ Finset.univ
+eta : Rˣ
+heta : eta ∈ Finset.univ
+⊢ ψ (↑eta * ↑h * ↑b * ↑x) * ψ (↑l * ↑x⁻¹) = ψ (↑l * ↑x⁻¹)
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round3\lean\QuotientGauss.lean:106:58: error: unsolved goals
+R : Type u_1
+inst✝² : CommRing R
+inst✝¹ : Fintype R
+inst✝ : DecidableEq R
+χ : MulChar R ℂ
+ψ : AddChar R ℂ
+h b l : Rˣ
+⊢ unitGauss χ⁻¹ ψ ^ 2 * χ ↑h * χ ↑b * χ ↑l = unitGauss χ⁻¹ ψ ^ 2 * χ ↑(h * b * l)
+'GoldbachResearch.QuotientGauss.unitGauss_eq_gaussSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuotientGauss.inverse_character_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.QuotientGauss.unitGauss_shift' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachResearch.QuotientGauss.inverse_unitGauss_shift' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuotientGauss.inverse_phase_sum' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachResearch.QuotientGauss.kloosterman_unit_transform' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuotientGauss.kloosterman_gaussSum_transform' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.QuotientGauss.zmod_standard_transform' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

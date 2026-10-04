@@ -1,0 +1,32 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\revision02\EpsteinFinite22.lean:63:31: warning: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\revision02\EpsteinFinite22.lean:63:40: warning: 'simp' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\revision02\EpsteinFinite22.lean:63:31: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\revision02\EpsteinFinite22.lean:63:40: warning: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\role3\stage02\revision02\EpsteinFinite22.lean:163:4: error: type mismatch, term
+  finiteShiftIntegral_neg y (↑(n + 1)) Q
+after simplification has type
+  finiteShiftIntegral y (-1 + -↑n) Q = finiteShiftIntegral y (↑n + 1) Q : Prop
+but is expected to have type
+  finiteShiftIntegral y (-1 + -↑n) Q = finiteShiftIntegral y |-1 + -↑n| Q : Prop
+'Epstein22.shiftKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.shiftWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.endpointSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.abs_cast_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.shiftKernel_eq_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.continuous_shiftKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.intervalIntegrable_shiftKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.affineCellIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.shiftKernel_neg_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteWindow_neg_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.sum_int_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.range_shift_telescope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.sum_Icc_shift_telescope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_pos_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_natAbs' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Epstein22.finiteShiftIntegral_formula' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

@@ -1,0 +1,618 @@
+{
+  "schema": "ROUND22_JUDGE5_CATALOG_BATCH08",
+  "time_utc": "2026-10-03T14:03:24.215286+00:00",
+  "modules": [
+    {
+      "module": "GammaPsiReflection22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\sources\\GammaPsiReflection22.lean",
+      "source_sha256": "a931bbceb530fbbf179d2223972f46405a80f74c2a139d84a671ce741f3f1ff2",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision_gamma_reflection08\\GammaPsiReflection22.lean",
+      "source_status": "SOURCE_NOT_COMPILED_REVISION_DISTINCT_FROM_BATCH07_FAIL",
+      "theorem_count": 5,
+      "definition_count": 0,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_shift_arguments_re_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.sin_half_pi_ne_zero_on_left_strip"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_shift_reflection"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.deriv_Gamma_shift_reflection"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaPsi_shift_reflection"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.Gamma_shift_arguments_re_pos",
+        "GoldbachContinuous22.sin_half_pi_ne_zero_on_left_strip",
+        "GoldbachContinuous22.Gamma_shift_reflection",
+        "GoldbachContinuous22.deriv_Gamma_shift_reflection",
+        "GoldbachContinuous22.gammaPsi_shift_reflection"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "TRUE_CHI_PSI_PAIRED_KERNEL_AND_MIXED_FUBINI_AUX_ONLY",
+      "author_olean_allowed": false
+    },
+    {
+      "module": "ContourChiPsi22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\source_final\\ContourChiPsi22.lean",
+      "source_sha256": "30c44bb1e376c32c28201e79adaad55043143081d56d4429c6d0b30e8f217540",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision_contour_chi09\\ContourChiPsi22.lean",
+      "source_status": "SOURCE_NOT_COMPILED_REVISION_DISTINCT_FROM_PRELIMINARY_COPY",
+      "theorem_count": 9,
+      "definition_count": 1,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourChi_eq_sine"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.deriv_contourChi_sine"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourChi_logDeriv_direct"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.complex_log_two_pi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourChi_logDeriv_symmetric"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.contourPsiPairIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPsiPair_eq_negPsi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrableOn_contourPsiPair"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPsiPair_integral"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourChi_logDeriv_eq_pair_integral"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.contourChi_eq_sine",
+        "GoldbachContinuous22.deriv_contourChi_sine",
+        "GoldbachContinuous22.contourChi_logDeriv_direct",
+        "GoldbachContinuous22.complex_log_two_pi",
+        "GoldbachContinuous22.contourChi_logDeriv_symmetric",
+        "GoldbachContinuous22.contourPsiPairIntegrand",
+        "GoldbachContinuous22.contourPsiPair_eq_negPsi",
+        "GoldbachContinuous22.integrableOn_contourPsiPair",
+        "GoldbachContinuous22.contourPsiPair_integral",
+        "GoldbachContinuous22.contourChi_logDeriv_eq_pair_integral"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "TRUE_CHI_PSI_PAIRED_KERNEL_AND_MIXED_FUBINI_AUX_ONLY",
+      "author_olean_allowed": false
+    },
+    {
+      "module": "ContourChiScaled22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\sources\\ContourChiScaled22.lean",
+      "source_sha256": "d0aa03290fe806f9c84c0311a7e07a2fe0737148c9c1de7c80876118fb7a64d7",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\ContourChiScaled22.lean",
+      "source_status": "SOURCE_NOT_COMPILED",
+      "theorem_count": 8,
+      "definition_count": 2,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.contourPsiScaledKernel"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.leftChiPoint"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.scaleTwo_image_Ioi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.scaleTwo_injOn_Ioi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPsiPair_scaleTwo"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrableOn_contourPsiScaledKernel"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPsiPair_integral_eq_scaled"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourChi_logDeriv_eq_scaled_integral"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.leftChiPoint_re"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPsiScaledKernel_left_line"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.contourPsiScaledKernel",
+        "GoldbachContinuous22.leftChiPoint",
+        "GoldbachContinuous22.scaleTwo_image_Ioi",
+        "GoldbachContinuous22.scaleTwo_injOn_Ioi",
+        "GoldbachContinuous22.contourPsiPair_scaleTwo",
+        "GoldbachContinuous22.integrableOn_contourPsiScaledKernel",
+        "GoldbachContinuous22.contourPsiPair_integral_eq_scaled",
+        "GoldbachContinuous22.contourChi_logDeriv_eq_scaled_integral",
+        "GoldbachContinuous22.leftChiPoint_re",
+        "GoldbachContinuous22.contourPsiScaledKernel_left_line"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "TRUE_CHI_PSI_PAIRED_KERNEL_AND_MIXED_FUBINI_AUX_ONLY",
+      "author_olean_allowed": false
+    },
+    {
+      "module": "PsiKernelEnvelope22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\sources\\PsiKernelEnvelope22.lean",
+      "source_sha256": "949c6fc0d895003b522518e18ae89bdf6b5062448d5273f146685645afb72ef8",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\PsiKernelEnvelope22.lean",
+      "source_status": "SOURCE_NOT_COMPILED",
+      "theorem_count": 8,
+      "definition_count": 1,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.psiKernelEnvelope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiKernelEnvelope_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiKernelEnvelope_joint_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiKernelEnvelope_ge_near"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiKernelEnvelope_ge_tail"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.negativeScale_image_Ioi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.negativeScale_injOn_Ioi"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrableOn_exp_negative_scale"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrableOn_psiKernelEnvelope"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.psiKernelEnvelope",
+        "GoldbachContinuous22.psiKernelEnvelope_nonneg",
+        "GoldbachContinuous22.psiKernelEnvelope_joint_continuous",
+        "GoldbachContinuous22.psiKernelEnvelope_ge_near",
+        "GoldbachContinuous22.psiKernelEnvelope_ge_tail",
+        "GoldbachContinuous22.negativeScale_image_Ioi",
+        "GoldbachContinuous22.negativeScale_injOn_Ioi",
+        "GoldbachContinuous22.integrableOn_exp_negative_scale",
+        "GoldbachContinuous22.integrableOn_psiKernelEnvelope"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "TRUE_CHI_PSI_PAIRED_KERNEL_AND_MIXED_FUBINI_AUX_ONLY",
+      "author_olean_allowed": false
+    },
+    {
+      "module": "PsiKernelDomination22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\sources\\PsiKernelDomination22.lean",
+      "source_sha256": "80b85c14c7db79121f7c9cb003edf97a7d5e947f785ce8402f910ea93aad48bc",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\PsiKernelDomination22.lean",
+      "source_status": "SOURCE_NOT_COMPILED",
+      "theorem_count": 19,
+      "definition_count": 2,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.psiSlopeCoeff"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.psiKernelNumerator"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiSlopeCoeff_re"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_psiSlopeCoeff_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_cexp_real_mul"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_cexp_real_mul"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_cexp_derivative_le_coeff"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiKernelNumerator_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.hasDerivAt_psiKernelNumerator"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_deriv_psiKernelNumerator_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_psiKernelNumerator_le_linear"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_psiKernelNumerator_le_exponential"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiDenominator_ge_fraction"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiDenominator_ge_near"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiDenominator_ge_tail"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiDenominator_pos"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_complex_psiDenominator"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.contourPsiScaledKernel_left_eq_numerator"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_contourPsiScaledKernel_left_le_near"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_contourPsiScaledKernel_left_le_tail"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_contourPsiScaledKernel_left_le_envelope"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.psiSlopeCoeff",
+        "GoldbachContinuous22.psiKernelNumerator",
+        "GoldbachContinuous22.psiSlopeCoeff_re",
+        "GoldbachContinuous22.norm_psiSlopeCoeff_le",
+        "GoldbachContinuous22.norm_cexp_real_mul",
+        "GoldbachContinuous22.hasDerivAt_cexp_real_mul",
+        "GoldbachContinuous22.norm_cexp_derivative_le_coeff",
+        "GoldbachContinuous22.psiKernelNumerator_zero",
+        "GoldbachContinuous22.hasDerivAt_psiKernelNumerator",
+        "GoldbachContinuous22.norm_deriv_psiKernelNumerator_le",
+        "GoldbachContinuous22.norm_psiKernelNumerator_le_linear",
+        "GoldbachContinuous22.norm_psiKernelNumerator_le_exponential",
+        "GoldbachContinuous22.psiDenominator_ge_fraction",
+        "GoldbachContinuous22.psiDenominator_ge_near",
+        "GoldbachContinuous22.psiDenominator_ge_tail",
+        "GoldbachContinuous22.psiDenominator_pos",
+        "GoldbachContinuous22.norm_complex_psiDenominator",
+        "GoldbachContinuous22.contourPsiScaledKernel_left_eq_numerator",
+        "GoldbachContinuous22.norm_contourPsiScaledKernel_left_le_near",
+        "GoldbachContinuous22.norm_contourPsiScaledKernel_left_le_tail",
+        "GoldbachContinuous22.norm_contourPsiScaledKernel_left_le_envelope"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "TRUE_CHI_PSI_PAIRED_KERNEL_AND_MIXED_FUBINI_AUX_ONLY",
+      "author_olean_allowed": false
+    },
+    {
+      "module": "PsiMixedFubini22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\sources\\PsiMixedFubini22.lean",
+      "source_sha256": "d143b0fbdf795a1b400f737274a5eae5c8c5bba0c2e4ecaf145d86932df0b250",
+      "original_source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\PsiMixedFubini22.lean",
+      "source_status": "SOURCE_NOT_COMPILED",
+      "theorem_count": 17,
+      "definition_count": 2,
+      "declarations": [
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.psiMixedEnvelope"
+        },
+        {
+          "kind": "def",
+          "qualified_name": "GoldbachContinuous22.psiTrueMixedIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.leftChiPoint_im"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.gammaContourPoint_left_eq"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.Gamma_halfline_exponential_bound"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_gammaContourFactor_left_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiMixedEnvelope_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiMixedEnvelope_joint_continuous"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.norm_psiTrueMixedIntegrand_le"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.neg_image_Iio_zero"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrable_abs_extension"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrable_exp_negative_abs"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrable_abs_mul_exp_negative_abs"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrable_linear_abs_exp_negative_abs"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrableOn_exp_one_sub"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrable_psiMixedEnvelope"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.continuousOn_psiTrueMixedIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.integrable_psiTrueMixedIntegrand"
+        },
+        {
+          "kind": "theorem",
+          "qualified_name": "GoldbachContinuous22.psiTrueMixedIntegrand_fubini"
+        }
+      ],
+      "qualified_prints": [
+        "GoldbachContinuous22.psiMixedEnvelope",
+        "GoldbachContinuous22.psiTrueMixedIntegrand",
+        "GoldbachContinuous22.leftChiPoint_im",
+        "GoldbachContinuous22.gammaContourPoint_left_eq",
+        "GoldbachContinuous22.Gamma_halfline_exponential_bound",
+        "GoldbachContinuous22.norm_gammaContourFactor_left_le",
+        "GoldbachContinuous22.psiMixedEnvelope_nonneg",
+        "GoldbachContinuous22.psiMixedEnvelope_joint_continuous",
+        "GoldbachContinuous22.norm_psiTrueMixedIntegrand_le",
+        "GoldbachContinuous22.neg_image_Iio_zero",
+        "GoldbachContinuous22.integrable_abs_extension",
+        "GoldbachContinuous22.integrable_exp_negative_abs",
+        "GoldbachContinuous22.integrable_abs_mul_exp_negative_abs",
+        "GoldbachContinuous22.integrable_linear_abs_exp_negative_abs",
+        "GoldbachContinuous22.integrableOn_exp_one_sub",
+        "GoldbachContinuous22.integrable_psiMixedEnvelope",
+        "GoldbachContinuous22.continuousOn_psiTrueMixedIntegrand",
+        "GoldbachContinuous22.integrable_psiTrueMixedIntegrand",
+        "GoldbachContinuous22.psiTrueMixedIntegrand_fubini"
+      ],
+      "compiler_options": [
+        "-DmaxHeartbeats=1000000"
+      ],
+      "scope": "TRUE_CHI_PSI_PAIRED_KERNEL_AND_MIXED_FUBINI_AUX_ONLY",
+      "author_olean_allowed": false
+    }
+  ],
+  "module_count": 6,
+  "total_declarations": 74,
+  "theorem_count": 66,
+  "definition_count": 8,
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "GammaDerivative22",
+    "GammaBoxBounds22",
+    "GammaContourComponent22",
+    "GammaPsiCore22",
+    "GammaPsiBetaLimit22",
+    "GammaPsiIntegral22",
+    "ZetaEulerDirect22",
+    "ZetaReflection22",
+    "GammaPsiDuplication22"
+  ],
+  "dependency_bindings": [
+    {
+      "module": "GammaPrerequisites22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean",
+      "source_sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaPrerequisites22.olean",
+      "olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaDerivative22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\sources\\GammaDerivative22.lean",
+      "source_sha256": "026ced6097c7d658b41501254bfbcdefe86ff2e68fb9fbe3fab01023a4cb0975",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\GammaDerivative22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaDerivative22.olean",
+      "olean_sha256": "0618f801c5feec7b760ba18ab3dddc960519b398dd1d1b719acc809132518125",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch03\\batch03_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaBoxBounds22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\sources\\GammaBoxBounds22.lean",
+      "source_sha256": "4874192b1c2ca9edc7262d8a46f9d4a1e339c565e5bb48fefbf4d6d100071edf",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\batch05_attempt01\\GammaBoxBounds22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaBoxBounds22.olean",
+      "olean_sha256": "4cb4d50f6d7dd8087e9d227d7052cb445527f018249dc3ffe6493ea2a87bfce3",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\batch05_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaContourComponent22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\sources\\GammaContourComponent22.lean",
+      "source_sha256": "891454d4714e68039a0976e7eb9347e10653237f4608993b52b481cc95b0a3fe",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\batch05_attempt01\\GammaContourComponent22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaContourComponent22.olean",
+      "olean_sha256": "f9b5a9b2f47dd0ee03a58e6cd666d702ff5fc6eba39d07e89566a254df44648b",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch05\\batch05_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaPsiCore22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiCore22.lean",
+      "source_sha256": "450962be9526866fa0ffebc39ef29a819d94b57a90000291337550e9f4dc7284",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\GammaPsiCore22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaPsiCore22.olean",
+      "olean_sha256": "15f66830eab0ee8e192d4fffee9518abd001b3167c28c527881bbdaabefb9a4b",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaPsiBetaLimit22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiBetaLimit22.lean",
+      "source_sha256": "b4adf3ac71dd7c9d0e6e78f83ce805ddc7eaf5e8f5978aa4c1d6b87bc8caceb8",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\GammaPsiBetaLimit22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaPsiBetaLimit22.olean",
+      "olean_sha256": "28e54d352bde19a6ab175dfa6dfa7667f41e2f644b81c90ac6256ead16b40cd0",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaPsiIntegral22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiIntegral22.lean",
+      "source_sha256": "3f254cdfeee333aa66eba719b944f64a693fa2e15f0265f340ace9c2a99f6aaf",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\GammaPsiIntegral22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaPsiIntegral22.olean",
+      "olean_sha256": "5dd15ee927c32894e7cafb4f05c78fb65c48e1cca93d91eee7ae96518f43ee1e",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\batch04_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "ZetaEulerDirect22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\sources\\ZetaEulerDirect22.lean",
+      "source_sha256": "0d790ed67706e2f3c3556d2c5e7fefd50664177f5fb54584beee1d137e430a71",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\batch06_attempt01\\ZetaEulerDirect22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\ZetaEulerDirect22.olean",
+      "olean_sha256": "555b108cb867d2f87686539b647cda24600e4b747ebc25aa253b0c71a327c454",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch06\\batch06_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "ZetaReflection22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\sources\\ZetaReflection22.lean",
+      "source_sha256": "cc39bd76e00889d154a3acefea0588ca1ec7408836210f68752d5d2055f8ca2f",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\batch07_attempt01\\ZetaReflection22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\ZetaReflection22.olean",
+      "olean_sha256": "288614def47a85100c41a064597bf6003b39ab2dcaf7b694683583e940892a43",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\batch07_attempt01\\receipt.json",
+      "recompiled": false
+    },
+    {
+      "module": "GammaPsiDuplication22",
+      "source": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\sources\\GammaPsiDuplication22.lean",
+      "source_sha256": "0491177c6cfc1ef35b28796be404a3ca7975bac357cc6551b80d12333726812e",
+      "independent_olean": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\batch07_attempt01\\GammaPsiDuplication22.olean",
+      "olean_copy": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\readonly_oleans\\GammaPsiDuplication22.olean",
+      "olean_sha256": "535c3f53fe81ff03d6c05540a67bd82335b6379d98f81a97ccd7784744f67bcf",
+      "independent_receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\batch07_attempt01\\receipt.json",
+      "recompiled": false
+    }
+  ],
+  "support_capture_paths": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\C5_checkpoint_after_psi05.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\C5_source_review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\error_contract_source_review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision_gamma_reflection08\\review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision_gamma_reflection08\\read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision_contour_chi09\\review22.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\revision_contour_chi09\\read_receipts22.json",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch08\\sources\\ContourChiPsi22.lean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\adjudication.md",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\completion_receipt.json"
+  ],
+  "author_provenance_capture_paths": [],
+  "modules_author_PASS_claimed": false,
+  "compiler_invocations": 0,
+  "win": false
+}

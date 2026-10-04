@@ -1,0 +1,77 @@
+{
+  "round": 10,
+  "role_reports": 5,
+  "numerical_sources": 2,
+  "final_role_signals": {
+    "3": {
+      "completed": true,
+      "report": "agent3_formalisation.md",
+      "report_sha256": "f3bbd0ab002fa7f1a5b1accab55605ee767cec9e5b87c3d8021921ad9d6f0895",
+      "module": "lean/PrimeCofactorIdentity.lean",
+      "module_sha256": "a31895518a60c169a81cdc43201742b4f91efce6d9b032a6a07cc1a8617a4819",
+      "authorization": "Explicit TERMINÉ + final SHA received from completed role"
+    },
+    "4": {
+      "completed": true,
+      "report": "agent4_formalisation.md",
+      "report_sha256": "bc74baa07c966dbf6efe3d25d50d361c6da75a3709e8e6b80532a3bac32eaefc",
+      "module": "lean/ShortDivisorComplement.lean",
+      "module_sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "authorization": "Explicit TERMINÉ + final SHA received from completed role"
+    }
+  },
+  "new_lean_sources": [
+    "lean/PrimeCofactorIdentity.lean",
+    "lean/ShortDivisorComplement.lean"
+  ],
+  "sha256": {
+    "agent1_prime_signed.md": "e439a43eea07380643c233ca6e48442d79e0c6cd1bdff4d67adc590797791064",
+    "agent2_prime_operator.md": "55b0eddd21732a6d9052f888d6df7114c4041ad41e8e59c33c6568bab261b4fa",
+    "agent3_formalisation.md": "f3bbd0ab002fa7f1a5b1accab55605ee767cec9e5b87c3d8021921ad9d6f0895",
+    "agent4_formalisation.md": "bc74baa07c966dbf6efe3d25d50d361c6da75a3709e8e6b80532a3bac32eaefc",
+    "agent6.md": "3453e489eb94df5a187b107173a9081c95471116ae0369de4dd3d0d1cb7ef413",
+    "conservation.json": "f7d4426a6fa1151c329396ca539cbd4438f82b4a33b3f5bea2fb6f539816ef4f",
+    "conservation.py": "6b27a617019d937fd4c40d243b0173240984d126ecd377d15cbf2b9934cc7254",
+    "isolated_output_probe/conservation.json": "f7d4426a6fa1151c329396ca539cbd4438f82b4a33b3f5bea2fb6f539816ef4f",
+    "isolated_output_probe/paired_cofactors.json": "909df1b5cd38a4ed42cad65ca8930c47930d7ba8afd356148d87f4c7edcf34b2",
+    "isolated_output_probe/witnesses.json": "527df6b3bc8a71cdbf6e76b428b048d13c8cf6af764f94d0fb7b94a5f008d598",
+    "lean/PrimeCofactorIdentity.lean": "a31895518a60c169a81cdc43201742b4f91efce6d9b032a6a07cc1a8617a4819",
+    "lean/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "numerical_replay.json": "c94340168a6fd0e3e83f688d4817c9f470c6a876d85d931f19259f8a0ed962a8",
+    "paired_cofactor_checks.py": "bdee7952e47419fef2a0512d8e74a7234bf3da6800e2dc9561b94f9bd34d5ef2",
+    "paired_cofactors.json": "909df1b5cd38a4ed42cad65ca8930c47930d7ba8afd356148d87f4c7edcf34b2",
+    "previous_artifacts_sha256.json": "39210db5693d97ad22ffe54bfb3e21c238de207b7cb4f73262aae1e0d3a4f9cb",
+    "PROBE_BLOCK.md": "b189ecc41a4747b9647d1872260ac04376c41a0f265d80f85807990b6d66cedd",
+    "role3_build/attempt01.log": "99e096d3ead7943a6fcdef83fa2b9074944411943526f3cae39ddd76e45c63c7",
+    "role3_build/attempt01_source.txt": "1b436a3b4370cec00e59821d5338e4caac191190acd2246a42c8196d86f8b7d2",
+    "role3_build/attempt02.log": "6657ed57588302261afcbcbab56c627e3f304abfcb2d739a02bb3edaec3a6534",
+    "role3_build/attempt02_source.txt": "c491c9ccbd515f7fc1f3fa59519ab87b0f288c8b3de0812cbf4cf1785356f6d6",
+    "role3_build/attempt03.log": "e2374db365b5240dcd7309657555d893f55f927c8fca1244c141402635245b89",
+    "role3_build/attempt03_source.txt": "a31895518a60c169a81cdc43201742b4f91efce6d9b032a6a07cc1a8617a4819",
+    "role3_build/PrimeCofactorIdentity.olean": "489d17d3ccbe9752fb1d4711edc06ccd4d80712e0682158f42acede5bcac4e5b",
+    "role3_build.py": "e0c334c42bc04fd1aca7873c0de58f8956210f54f3ebc3206974016051314640",
+    "role3_build_receipt.json": "721d8ccbb0819b301b66c235f3a048e165e5328a4737656a1b566a32a82f21b2",
+    "role3_final_receipt.json": "4bd4cdff1b382bd0e9c668eb1a029a7005459522ad74fbb4ee55edd8d7dc0e1b",
+    "role4_build/attempt01.log": "7991dc8d353f3fca0df89af43ca33f138c8b7f1634aa68acfc3e6db60384abf8",
+    "role4_build/attempt01_source.txt": "064afaf0bfdc4adc5fb02d626f5d12fc45d6e4d93d678b6965f81c393b67e485",
+    "role4_build/attempt02.log": "22c9c745a1dceaed865cc482ea248c785fe9b7efb02b3c1b83067b2abf07fe19",
+    "role4_build/attempt02_source.txt": "2bbb11cf9e22145c2ea2d0ef6ebe7cd40a8acccf0ddb1d1d85bfeeb936000f67",
+    "role4_build/attempt03.log": "840ff3b21ad32074999dce3eb7ae10c962aca0bb50ad37d865b2d565afe5ebff",
+    "role4_build/attempt03_source.txt": "4bd98c7a9c6be6a0ec0f3bd21836ca9a4dc42aa3d58c1fb9bba128d109dfbcc2",
+    "role4_build/attempt04.log": "88f1a49cd9ed0ee0159a87b3d7e8e3d024a8ccb4c95dfb2e5b552d541f227bf3",
+    "role4_build/attempt04_source.txt": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "role4_build/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+    "role4_build.py": "33400397a61cf49aeb2dad3b81d5b75e8485289c012ceffead7bae447b4426d7",
+    "role4_build_receipt.json": "75ba330f5d6711d3f82b98abed400a6f9d1fff82b06e6c7f6cbd2f8e31e6c0c8",
+    "shared.py": "1c49e5abc36ceacfd65e8fc7ca97cee1705a60e693870b6e4942091ba2a1d868",
+    "witness_search.py": "3ac3774c25997c8a59c13862ada7b843bb19f7dd178bba0b45d0d5be5ddd28bb",
+    "witnesses.json": "527df6b3bc8a71cdbf6e76b428b048d13c8cf6af764f94d0fb7b94a5f008d598"
+  },
+  "external_sha256": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd"
+  },
+  "source_onset": "u>=10^24",
+  "previous_artifacts": 341,
+  "snapshot_scope": "All existing final round10 production outside judge and agent5; final role signals required"
+}

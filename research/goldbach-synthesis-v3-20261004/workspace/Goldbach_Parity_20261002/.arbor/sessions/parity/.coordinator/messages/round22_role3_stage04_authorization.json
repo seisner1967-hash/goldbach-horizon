@@ -1,0 +1,49 @@
+{
+  "schema": "round22.root.role3.compiler_authorization.tail.v1",
+  "role": "ROLE3",
+  "actor_task": "/root/round22_formal3_prepare",
+  "node_id": "16.1",
+  "attempt": "stage04_attempt01",
+  "stage": "G0_TAIL_STAGE04",
+  "authorized": true,
+  "created_utc": "2026-10-03T08:34:22.934485+00:00",
+  "numeric_verdict": "EPSTEIN_UNFOLDING_AUX_PASS",
+  "numeric_receipt_sha256": "054707ed73a7db70bd6bb026a1974663dd5362b6318ee109b22315c21c2e66da",
+  "numeric_result_sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+  "source_manifest_sha256": "ab0c0442f7c9bbe84e1880b242166e6d3dcfb4cea801c70139d9c262fa13d12b",
+  "launcher_sha256": "431e60bb7f61c6b73dc8917bd0f5346f7965876daaccfef7e8433131c15aec07",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "modules": [
+    "EpsteinTail22"
+  ],
+  "no_win": true,
+  "child_invocations_maximum": 1,
+  "hidden_retries_allowed": false,
+  "unchanged_PASS_replay_allowed": false,
+  "root_FULL_reads": {
+    "source_and_launcher": "b2b8ef",
+    "preparation_builder_reads_prepared": "e6ee74"
+  },
+  "formal_scope": "Derived finite affine geometric window, signed substitution, negation isometry and endpoint telescope only; genuine infinite integral and continuous tail remain outside this child.",
+  "forbidden_credits": [
+    "full_G0_unfolding",
+    "Weil",
+    "heat",
+    "operator_scattering",
+    "coefficient_N",
+    "D_N_bound",
+    "WIN"
+  ],
+  "independent_judge_pending": true,
+  "source_sha256": "5f9d3f180df2e165d43aebfe2e72b963091bb2b90fdfa4e786a66cc82745af8e",
+  "dependency_olean_sha256": "b3e0d60e7633cc46e2084c0131e2fd42aef0f1fca60d4db7682d45ece1774bc0",
+  "Kernel_recompile": false,
+  "previous_actual_exit": 1,
+  "dependency_pass_observation_sha256": "700d4559ff8857c8312502472767f65a80256ba80d6bb37c4a9effc766abd656",
+  "Finite_recompile": false,
+  "previous_failure_observation_sha256": "eecd1d35bb7159a8e8f913841dfcc36a8e1e392d9ac3827022eb9f029c147810",
+  "previous_actual_attempt": "stage03_attempt04_AUTHOR_PASS",
+  "root_manifest_scope": "Complete manifest parsed and all30 immutable bytes checked; whole text read in current task.",
+  "numeric_replay": false
+}

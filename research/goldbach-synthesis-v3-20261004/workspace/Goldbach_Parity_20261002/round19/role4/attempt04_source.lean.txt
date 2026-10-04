@@ -1,0 +1,361 @@
+import TerminalPrimeExtraction
+import DoubleExtractionArithmetic
+
+/-! All-rank extraction and the genuine D/P orientation. The cell contains
+physical arithmetic guards only; quotient primality is not a premise. -/
+namespace GoldbachRound19.Switch
+
+open GoldbachRound19.Terminal
+noncomputable section
+attribute [local instance] Classical.propDecidable
+
+def anchor (N : ℕ) : ℕ := GoldbachRound16.Anchor.leastMissingOddPrime N
+def resource1 (N q : ℕ) : ℕ := N - q
+def resource0 (N q : ℕ) : ℕ := N - anchor N * q
+def h1 (N q : ℕ) : ℕ := cofactor (resource1 N q)
+def h0 (N q : ℕ) : ℕ := cofactor (resource0 N q)
+def r1 (N q : ℕ) : ℕ := terminalPrime (resource1 N q)
+def r0 (N q : ℕ) : ℕ := terminalPrime (resource0 N q)
+
+structure ResourceCell (N q : ℕ) : Prop where
+  N_ne_zero : N ≠ 0
+  N_even : Even N
+  q_pos : 0 < q
+  q_unit : q.Coprime N
+  anchor_mul_q_lt : anchor N * q < N
+  resource1_two : 2 ≤ resource1 N q
+  resource0_two : 2 ≤ resource0 N q
+  resource1_composite : ¬ (resource1 N q).Prime
+  resource0_composite : ¬ (resource0 N q).Prime
+
+variable {N q : ℕ}
+
+theorem anchor_spec (h : ResourceCell N q) :
+    (anchor N).Prime ∧ anchor N ≠ 2 ∧ ¬ anchor N ∣ N ∧
+      ∀ l, l.Prime → l < anchor N → l ∣ N :=
+  GoldbachRound16.Anchor.leastMissingOddPrime_spec h.N_ne_zero h.N_even
+
+theorem anchor_three (h : ResourceCell N q) : 3 ≤ anchor N := by
+  have hp := (anchor_spec h).1.two_le
+  have h2 := (anchor_spec h).2.1
+  omega
+
+theorem anchor_unit (h : ResourceCell N q) : (anchor N).Coprime N :=
+  (anchor_spec h).1.coprime_iff_not_dvd.mpr (anchor_spec h).2.2.1
+
+theorem q_lt_N (h : ResourceCell N q) : q < N := by
+  nlinarith [anchor_three h, h.anchor_mul_q_lt]
+
+theorem resource1_unit (h : ResourceCell N q) : (resource1 N q).Coprime N :=
+  (Nat.coprime_self_sub_left (q_lt_N h).le).mpr h.q_unit
+
+theorem resource0_unit (h : ResourceCell N q) : (resource0 N q).Coprime N :=
+  (Nat.coprime_self_sub_left h.anchor_mul_q_lt.le).mpr
+    (Nat.coprime_mul_iff_left.mpr ⟨anchor_unit h, h.q_unit⟩)
+
+/-- General anchor statement: its resources may share a divisor of p-1. -/
+theorem resource_common_divisor_dvd_anchor_sub_one {p d : ℕ}
+    (hp : 1 ≤ p) (hpq : p * q ≤ N) (hq : q.Coprime N)
+    (hd1 : d ∣ N - q) (hd0 : d ∣ N - p * q) : d ∣ p - 1 := by
+  have hqN : q ≤ N := by nlinarith
+  have hdN : d.Coprime N := Nat.Coprime.of_dvd_left hd1
+    ((Nat.coprime_self_sub_left hqN).mpr hq)
+  have hm1 : q ≡ N [MOD d] := (Nat.modEq_iff_dvd' hqN).mpr hd1
+  have hm0 : p * q ≡ N [MOD d] := (Nat.modEq_iff_dvd' hpq).mpr hd0
+  have hm : N ≡ p * N [MOD d] := hm0.symm.trans (hm1.mul_left p)
+  have hle : N ≤ p * N := by nlinarith
+  have hd : d ∣ (p - 1) * N := by
+    simpa only [Nat.sub_mul, one_mul] using (Nat.modEq_iff_dvd' hle).mp hm
+  exact hdN.dvd_of_dvd_mul_right hd
+
+/-- No primality of either quotient is used here. -/
+theorem canonical_resources_coprime (h : ResourceCell N q) :
+    (resource1 N q).Coprime (resource0 N q) := by
+  apply Nat.coprime_of_dvd
+  intro l hl hl1 hl0
+  have hlN := Nat.Coprime.of_dvd_left hl1 (resource1_unit h)
+  have hge : anchor N ≤ l := by
+    by_contra hc
+    exact (hl.coprime_iff_not_dvd.mp hlN)
+      ((anchor_spec h).2.2.2 l hl (by omega))
+  have hd : l ∣ anchor N - 1 :=
+    resource_common_divisor_dvd_anchor_sub_one (by have := anchor_three h; omega)
+      h.anchor_mul_q_lt.le h.q_unit hl1 hl0
+  have hpos : 0 < anchor N - 1 := by have := anchor_three h; omega
+  have hle := Nat.le_of_dvd hpos hd
+  omega
+
+theorem anchor_resource0_coprime (h : ResourceCell N q) :
+    (anchor N).Coprime (resource0 N q) := by
+  apply (anchor_spec h).1.coprime_iff_not_dvd.mpr
+  intro hd
+  have hadd := dvd_add hd (dvd_mul_right (anchor N) q)
+  have hn : anchor N ∣ N := by
+    simpa only [resource0, Nat.sub_add_cancel h.anchor_mul_q_lt.le] using hadd
+  exact (anchor_spec h).2.2.1 hn
+
+theorem terminal_factorizations (h : ResourceCell N q) :
+    h1 N q * r1 N q = resource1 N q ∧ h0 N q * r0 N q = resource0 N q :=
+  ⟨terminal_factorization h.resource1_two, terminal_factorization h.resource0_two⟩
+
+theorem terminal_primes (h : ResourceCell N q) :
+    (r1 N q).Prime ∧ (r0 N q).Prime :=
+  ⟨terminalPrime_prime h.resource1_two, terminalPrime_prime h.resource0_two⟩
+
+theorem cofactors_two (h : ResourceCell N q) : 2 ≤ h1 N q ∧ 2 ≤ h0 N q :=
+  ⟨(composite_iff_cofactor_two h.resource1_two).mp h.resource1_composite,
+    (composite_iff_cofactor_two h.resource0_two).mp h.resource0_composite⟩
+
+@[ext] structure FactorTuple where
+  direct : Bool
+  a : ℕ
+  b : ℕ
+  x : ℕ
+  y : ℕ
+  deriving DecidableEq
+
+def directCondition (N q : ℕ) : Prop := h1 N q * h0 N q ≤ r1 N q * r0 N q
+
+def encode (N q : ℕ) : FactorTuple :=
+  if directCondition N q then ⟨true, h1 N q, h0 N q, r1 N q, r0 N q⟩
+  else ⟨false, r1 N q, r0 N q, h1 N q, h0 N q⟩
+
+def decode (N : ℕ) (c : FactorTuple) : ℕ := N - c.a * c.x
+def conductor (c : FactorTuple) : ℕ := c.a * c.b
+
+def ChannelGuard (c : FactorTuple) : Prop :=
+  if c.direct then
+    2 ≤ c.a ∧ 2 ≤ c.b ∧ c.x.Prime ∧ c.y.Prime ∧
+      (∀ p ∈ c.a.primeFactorsList, p ≤ c.x) ∧
+      (∀ p ∈ c.b.primeFactorsList, p ≤ c.y) ∧ c.a * c.b ≤ c.x * c.y
+  else
+    c.a.Prime ∧ c.b.Prime ∧ 2 ≤ c.x ∧ 2 ≤ c.y ∧
+      (∀ p ∈ c.x.primeFactorsList, p ≤ c.a) ∧
+      (∀ p ∈ c.y.primeFactorsList, p ≤ c.b) ∧ c.a * c.b < c.x * c.y
+
+def ValidTuple (N : ℕ) (c : FactorTuple) : Prop :=
+  c.a * c.x < N ∧ c.b * c.y + anchor N * decode N c = N ∧ ChannelGuard c
+
+theorem encode_products (h : ResourceCell N q) :
+    (encode N q).a * (encode N q).x = resource1 N q ∧
+    (encode N q).b * (encode N q).y = resource0 N q := by
+  have hf := terminal_factorizations h
+  by_cases hc : directCondition N q
+  · simpa [encode, hc] using hf
+  · simpa [encode, hc, mul_comm] using hf
+
+theorem decode_encode (h : ResourceCell N q) : decode N (encode N q) = q := by
+  unfold decode
+  rw [(encode_products h).1]
+  exact Nat.sub_sub_self (q_lt_N h).le
+
+theorem encode_channel (h : ResourceCell N q) : ChannelGuard (encode N q) := by
+  have ht := terminal_primes h
+  have hh := cofactors_two h
+  have ho1 : ∀ p ∈ (h1 N q).primeFactorsList, p ≤ r1 N q :=
+    fun _ hp => cofactor_prime_order h.resource1_two hp
+  have ho0 : ∀ p ∈ (h0 N q).primeFactorsList, p ≤ r0 N q :=
+    fun _ hp => cofactor_prime_order h.resource0_two hp
+  by_cases hc : directCondition N q
+  · simpa [encode, ChannelGuard, hc, h1, h0, r1, r0] using
+      (show 2 ≤ h1 N q ∧ 2 ≤ h0 N q ∧ (r1 N q).Prime ∧ (r0 N q).Prime ∧
+        (∀ p ∈ (h1 N q).primeFactorsList, p ≤ r1 N q) ∧
+        (∀ p ∈ (h0 N q).primeFactorsList, p ≤ r0 N q) ∧
+        h1 N q * h0 N q ≤ r1 N q * r0 N q from
+          ⟨hh.1, hh.2, ht.1, ht.2, ho1, ho0, hc⟩)
+  · have hlt : r1 N q * r0 N q < h1 N q * h0 N q := by
+      simpa [directCondition] using lt_of_not_ge hc
+    simpa [encode, ChannelGuard, hc, h1, h0, r1, r0] using
+      (show (r1 N q).Prime ∧ (r0 N q).Prime ∧ 2 ≤ h1 N q ∧ 2 ≤ h0 N q ∧
+        (∀ p ∈ (h1 N q).primeFactorsList, p ≤ r1 N q) ∧
+        (∀ p ∈ (h0 N q).primeFactorsList, p ≤ r0 N q) ∧
+        r1 N q * r0 N q < h1 N q * h0 N q from
+          ⟨ht.1, ht.2, hh.1, hh.2, ho1, ho0, hlt⟩)
+
+theorem encode_valid (h : ResourceCell N q) : ValidTuple N (encode N q) := by
+  have hf := encode_products h
+  refine ⟨?_, ?_, encode_channel h⟩
+  · rw [hf.1]
+    dsimp [resource1]
+    have hqpos := h.q_pos
+    omega
+  · rw [hf.2, decode_encode h]
+    exact Nat.sub_add_cancel h.anchor_mul_q_lt.le
+
+theorem encode_injective : Set.InjOn (encode N) {q | ResourceCell N q} := by
+  intro q hq q' hq' he
+  have hd := congrArg (decode N) he
+  rwa [decode_encode hq, decode_encode hq'] at hd
+
+/-- The tuple selector is sufficient, not merely necessary. Its inverse uses
+terminal uniqueness, including the full order and equality-channel guards. -/
+theorem encode_decode {c : FactorTuple} (hv : ValidTuple N c)
+    (h : ResourceCell N (decode N c)) : encode N (decode N c) = c := by
+  have hf1 : c.a * c.x = resource1 N (decode N c) := by
+    dsimp only [resource1, decode]
+    exact (Nat.sub_sub_self hv.1.le).symm
+  have hf0 : c.b * c.y = resource0 N (decode N c) := by
+    dsimp only [resource0]
+    have hh := hv.2.1
+    omega
+  cases hd : c.direct
+  · obtain ⟨haP, hbP, hx2, hy2, ho1, ho0, hbal⟩ :=
+      (show c.a.Prime ∧ c.b.Prime ∧ 2 ≤ c.x ∧ 2 ≤ c.y ∧
+        (∀ p ∈ c.x.primeFactorsList, p ≤ c.a) ∧
+        (∀ p ∈ c.y.primeFactorsList, p ≤ c.b) ∧ c.a * c.b < c.x * c.y from
+        by simpa [ChannelGuard, hd] using hv.2.2)
+    have hu1 := largestPrimeExtraction_unique h.resource1_two haP
+      (by simpa [mul_comm] using hf1) ho1
+    have hu0 := largestPrimeExtraction_unique h.resource0_two hbP
+      (by simpa [mul_comm] using hf0) ho0
+    have ha : c.a = r1 N (decode N c) := hu1.1
+    have hb : c.b = r0 N (decode N c) := hu0.1
+    have hx : c.x = h1 N (decode N c) := hu1.2
+    have hy : c.y = h0 N (decode N c) := hu0.2
+    have hc : ¬ directCondition N (decode N c) := by
+      dsimp only [directCondition]
+      rw [← ha, ← hb, ← hx, ← hy]
+      omega
+    ext <;> simp [encode, hc, ← ha, ← hb, ← hx, ← hy, hd]
+  · obtain ⟨ha2, hb2, hxP, hyP, ho1, ho0, hbal⟩ :=
+      (show 2 ≤ c.a ∧ 2 ≤ c.b ∧ c.x.Prime ∧ c.y.Prime ∧
+        (∀ p ∈ c.a.primeFactorsList, p ≤ c.x) ∧
+        (∀ p ∈ c.b.primeFactorsList, p ≤ c.y) ∧ c.a * c.b ≤ c.x * c.y from
+        by simpa [ChannelGuard, hd] using hv.2.2)
+    have hu1 := largestPrimeExtraction_unique h.resource1_two hxP hf1 ho1
+    have hu0 := largestPrimeExtraction_unique h.resource0_two hyP hf0 ho0
+    have hx : c.x = r1 N (decode N c) := hu1.1
+    have hy : c.y = r0 N (decode N c) := hu0.1
+    have ha : c.a = h1 N (decode N c) := hu1.2
+    have hb : c.b = h0 N (decode N c) := hu0.2
+    have hc : directCondition N (decode N c) := by
+      dsimp only [directCondition]
+      rw [← ha, ← hb, ← hx, ← hy]
+      exact hbal
+    ext <;> simp [encode, hc, ← ha, ← hb, ← hx, ← hy, hd]
+
+theorem conductor_eq_min : conductor (encode N q) =
+    min (h1 N q * h0 N q) (r1 N q * r0 N q) := by
+  by_cases hc : directCondition N q
+  · simp [encode, conductor, hc, directCondition, min_eq_left hc]
+  · have hr : r1 N q * r0 N q ≤ h1 N q * h0 N q := by
+      simpa [directCondition] using le_of_lt (lt_of_not_ge hc)
+    simp [encode, conductor, hc, min_eq_right hr]
+
+theorem conductor_square_le_resources (h : ResourceCell N q) :
+    conductor (encode N q) ^ 2 ≤ resource1 N q * resource0 N q := by
+  have hf := terminal_factorizations h
+  rw [← hf.1, ← hf.2, conductor_eq_min]
+  have hcomm : (h1 N q * r1 N q) * (h0 N q * r0 N q) =
+      (h1 N q * h0 N q) * (r1 N q * r0 N q) := by ring
+  rw [hcomm]
+  by_cases hc : h1 N q * h0 N q ≤ r1 N q * r0 N q
+  · rw [min_eq_left hc, pow_two]
+    exact Nat.mul_le_mul_left _ hc
+  · have hr : r1 N q * r0 N q ≤ h1 N q * h0 N q := by omega
+    rw [min_eq_right hr, pow_two]
+    exact Nat.mul_le_mul_right _ hr
+
+theorem conductor_lt_N (h : ResourceCell N q) : conductor (encode N q) < N := by
+  have hc := conductor_square_le_resources h
+  have h1lt : resource1 N q < N := by
+    have hsum : resource1 N q + q = N := Nat.sub_add_cancel (q_lt_N h).le
+    have hqpos := h.q_pos
+    omega
+  have h0lt : resource0 N q < N := by
+    have hsum : resource0 N q + anchor N * q = N :=
+      Nat.sub_add_cancel h.anchor_mul_q_lt.le
+    have hp : 0 < anchor N := by have := anchor_three h; omega
+    have hprodpos := Nat.mul_pos hp h.q_pos
+    omega
+  have h1pos := h.resource1_two
+  have h0pos := h.resource0_two
+  have hNpos : 0 < N := by omega
+  have hp1 : resource1 N q * resource0 N q < N * resource0 N q :=
+    Nat.mul_lt_mul_of_pos_right h1lt (by omega)
+  have hp0 : N * resource0 N q < N * N :=
+    Nat.mul_lt_mul_of_pos_left h0lt hNpos
+  have hprod : resource1 N q * resource0 N q < N * N := hp1.trans hp0
+  by_contra hn
+  have hge : N ≤ conductor (encode N q) := by omega
+  have hsq := Nat.mul_le_mul hge hge
+  rw [pow_two] at hc
+  omega
+
+theorem balanced_integer_equation (h : ResourceCell N q) :
+    (anchor N : ℤ) * (encode N q).a * (encode N q).x -
+      (encode N q).b * (encode N q).y = ((anchor N : ℤ) - 1) * N := by
+  have hf := encode_products h
+  have hsum1 : (encode N q).a * (encode N q).x + q = N := by
+    rw [hf.1]; exact Nat.sub_add_cancel (q_lt_N h).le
+  have hsum0 : (encode N q).b * (encode N q).y + anchor N * q = N := by
+    rw [hf.2]; exact Nat.sub_add_cancel h.anchor_mul_q_lt.le
+  have hz1 : ((encode N q).a : ℤ) * (encode N q).x + q = N := by exact_mod_cast hsum1
+  have hz0 : ((encode N q).b : ℤ) * (encode N q).y + (anchor N : ℤ) * q = N := by exact_mod_cast hsum0
+  nlinarith
+
+theorem conductor_coefficients_coprime (h : ResourceCell N q) :
+    (anchor N * (encode N q).a).Coprime (encode N q).b := by
+  have hf := encode_products h
+  have ha : (encode N q).a ∣ resource1 N q := by
+    rw [← hf.1]; exact dvd_mul_right _ _
+  have hb : (encode N q).b ∣ resource0 N q := by
+    rw [← hf.2]; exact dvd_mul_right _ _
+  have hab := ((canonical_resources_coprime h).of_dvd_left ha).of_dvd_right hb
+  have hpb := (anchor_resource0_coprime h).of_dvd_right hb
+  exact Nat.coprime_mul_iff_left.mpr ⟨hpb, hab⟩
+
+/-- Equality belongs to D only; neither primality of a,b in D nor primality
+of x,y in P is asserted. -/
+theorem channel_equality_goes_D (he : h1 N q * h0 N q = r1 N q * r0 N q) :
+    (encode N q).direct = true := by simp [encode, directCondition, he]
+
+theorem three_strata (B : ℕ) (c : FactorTuple) :
+    conductor c ≤ B ∨
+      (B < conductor c ∧ conductor c ^ 2 ≤ N) ∨
+      (B < conductor c ∧ N < conductor c ^ 2) := by omega
+
+#print axioms anchor
+#print axioms resource1
+#print axioms resource0
+#print axioms h1
+#print axioms h0
+#print axioms r1
+#print axioms r0
+#print axioms ResourceCell
+#print axioms anchor_spec
+#print axioms anchor_three
+#print axioms anchor_unit
+#print axioms q_lt_N
+#print axioms resource1_unit
+#print axioms resource0_unit
+#print axioms resource_common_divisor_dvd_anchor_sub_one
+#print axioms canonical_resources_coprime
+#print axioms anchor_resource0_coprime
+#print axioms terminal_factorizations
+#print axioms terminal_primes
+#print axioms cofactors_two
+#print axioms FactorTuple
+#print axioms FactorTuple.ext
+#print axioms directCondition
+#print axioms encode
+#print axioms decode
+#print axioms conductor
+#print axioms ChannelGuard
+#print axioms ValidTuple
+#print axioms encode_products
+#print axioms decode_encode
+#print axioms encode_channel
+#print axioms encode_valid
+#print axioms encode_injective
+#print axioms encode_decode
+#print axioms conductor_eq_min
+#print axioms conductor_square_le_resources
+#print axioms conductor_lt_N
+#print axioms balanced_integer_equation
+#print axioms conductor_coefficients_coprime
+#print axioms channel_equality_goes_D
+#print axioms three_strata
+
+end
+end GoldbachRound19.Switch

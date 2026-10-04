@@ -1,0 +1,189 @@
+import RankCalibrationEuler
+
+/-!
+An exact arithmetic estimator of the rank price. Its errors are the actual
+prime progression remainders and the actual normalizations of the two finite
+supports. No target bound on the price is a premise. The local unit-ratio K14,
+conversion to ordinary cumulative AP errors, and source K18 remain separate
+analytic/arithmetic obligations, and this module does not claim them.
+-/
+namespace GoldbachRound19.RankCalibration
+
+open scoped BigOperators
+open Finset
+open GoldbachRound18.SeparatedTypeII
+noncomputable section
+attribute [local instance] Classical.propDecidable
+set_option maxHeartbeats 4000000
+
+def integerDensity (H : ℕ) : ℝ := (Nat.totient H : ℝ) / H
+
+def faceEulerRemainder (F : Parameters) (I : Finset ℕ) (K t : ℕ) (X : ℝ) : ℝ :=
+  ∑ k ∈ effectiveDivisors K F.N,
+    (ArithmeticFunction.moebius k : ℝ) * divisorPrimeRemainder F I X (k * t)
+
+def outsideUnits (I : Finset ℕ) (H t : ℕ) : Finset ℕ :=
+  (units I H).filter fun b => ¬ t ∣ b
+
+def rankMainMass (F : Parameters) (I : Finset ℕ) (K : ℕ) (X : ℝ) : ℝ :=
+  (structureCount F I : ℝ) * X * eulerCoefficient F K /
+    ((I.card : ℝ) * integerDensity (F.N * K))
+
+theorem actual_density_positive {H : ℕ} (hH : 0 < H) : 0 < integerDensity H := by
+  unfold integerDensity
+  exact div_pos (by exact_mod_cast Nat.totient_pos.mpr hH) (by exact_mod_cast hH)
+
+theorem normalized_density_error_bound (A J : ℕ) {ideal : ℝ}
+    (hideal : 0 < ideal) (hA : A ≤ J) :
+    |(A : ℝ) / J - (A : ℝ) / ideal| ≤ |(J : ℝ) - ideal| / ideal := by
+  by_cases hJ : J = 0
+  · have hAz : A = 0 := by omega
+    simp [hAz]
+    positivity
+  have hj : 0 < (J : ℝ) := by exact_mod_cast Nat.pos_of_ne_zero hJ
+  have ha : 0 ≤ (A : ℝ) := by positivity
+  have hratio : (A : ℝ) / J ≤ 1 := by
+    apply (div_le_iff₀ hj).mpr
+    simpa only [one_mul] using (show (A : ℝ) ≤ J by exact_mod_cast hA)
+  have he : (A : ℝ) / J - (A : ℝ) / ideal =
+      -((A : ℝ) / J) * ((J : ℝ) - ideal) / ideal := by
+    field_simp
+    ring
+  rw [he, abs_div, abs_mul, abs_neg, abs_of_nonneg (div_nonneg ha (le_of_lt hj)),
+    abs_of_pos hideal]
+  apply div_le_div_of_nonneg_right
+  · simpa only [one_mul] using
+      mul_le_mul_of_nonneg_right hratio (abs_nonneg ((J : ℝ) - ideal))
+  · exact le_of_lt hideal
+
+theorem rank_main_normalization_identity (A X a z : ℝ) {t : ℕ} (ht : 1 < t) :
+    A / (z * (1 - 1 / (t : ℝ))) * (X * a - X * a / Nat.totient t) -
+      A / z * (X * a) = -(A * X * a / z) * rankChi t := by
+  by_cases hz : z = 0
+  · simp [hz]
+  have hp : (Nat.totient t : ℝ) ≠ 0 := by
+    exact_mod_cast Nat.ne_of_gt (Nat.totient_pos.mpr (show 0 < t by omega))
+  have ht0 : (t : ℝ) ≠ 0 := by exact_mod_cast (show t ≠ 0 by omega)
+  have ht1 : (t : ℝ) - 1 ≠ 0 := by
+    have hh : (1 : ℝ) < t := by exact_mod_cast ht
+    linarith
+  unfold rankChi
+  field_simp
+  ring
+
+theorem outside_unit_sum (I : Finset ℕ) (H t : ℕ) (f : ℕ → ℝ) :
+    (∑ b ∈ outsideUnits I H t, f b) = (∑ b ∈ units I H, f b) -
+      (∑ b ∈ (units I H).filter (fun b => t ∣ b), f b) := by
+  have he : (∑ b ∈ outsideUnits I H t, f b) +
+      (∑ b ∈ (units I H).filter (fun b => t ∣ b), f b) =
+      (∑ b ∈ units I H, f b) := by
+    unfold outsideUnits
+    rw [sum_filter, sum_filter, ← sum_add_distrib]
+    apply sum_congr rfl
+    intro b hb
+    split_ifs <;> ring
+  linarith
+
+theorem rank_price_exact_euler_estimator (F : Parameters) (I : Finset ℕ) {K t : ℕ}
+    (hK : K ≠ 0) (hKt : Nat.Coprime K t) (hdt : Nat.Coprime (conductor F) t)
+    (ht : 1 < t) (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) (X : ℝ) :
+    let U := units I (F.N * K)
+    let V := outsideUnits I (F.N * K) t
+    let A : ℝ := structureCount F I
+    let z := (I.card : ℝ) * integerDensity (F.N * K)
+    let T := ∑ b ∈ U, theta F.N (candidate F b)
+    let T_F := ∑ b ∈ U.filter (fun b => t ∣ b), theta F.N (candidate F b)
+    let r₀ := A / z
+    let r₁ := A / (z * (1 - 1 / (t : ℝ)))
+    supportPrice F I U V (theta F.N) =
+      -rankMainMass F I K X * rankChi t +
+      (A / V.card - r₁) * (T - T_F) - (A / U.card - r₀) * T +
+      r₁ * (eulerRemainder F I K X - faceEulerRemainder F I K t X) -
+      r₀ * eulerRemainder F I K X := by
+  dsimp
+  have hT := actual_theta_euler_decomposition F I hK hfront X
+  have hTF := actual_rank_face_euler_decomposition F I hK hKt hdt hfront X
+  change (∑ b ∈ (units I (F.N * K)).filter (fun b => t ∣ b),
+      theta F.N (candidate F b)) =
+    X * eulerCoefficient F K / Nat.totient t + faceEulerRemainder F I K t X at hTF
+  have hm := rank_main_normalization_identity (structureCount F I : ℝ) X
+    (eulerCoefficient F K) ((I.card : ℝ) * integerDensity (F.N * K)) ht
+  unfold supportPrice referenceMass
+  rw [outside_unit_sum I (F.N * K) t (fun b => theta F.N (candidate F b))]
+  unfold rankMainMass
+  rw [hT, hTF]
+  rw [← hm]
+  ring
+
+theorem rank_price_estimator_error_bound (F : Parameters) (I : Finset ℕ) {K t : ℕ}
+    (hK : K ≠ 0) (hKt : Nat.Coprime K t) (hdt : Nat.Coprime (conductor F) t)
+    (ht : 1 < t) (hfront : ∀ b ∈ I, conductor F * b ≤ F.N) (X : ℝ) :
+    let U := units I (F.N * K)
+    let V := outsideUnits I (F.N * K) t
+    let A : ℝ := structureCount F I
+    let z := (I.card : ℝ) * integerDensity (F.N * K)
+    let T := ∑ b ∈ U, theta F.N (candidate F b)
+    let T_F := ∑ b ∈ U.filter (fun b => t ∣ b), theta F.N (candidate F b)
+    let r₀ := A / z
+    let r₁ := A / (z * (1 - 1 / (t : ℝ)))
+    |supportPrice F I U V (theta F.N) + rankMainMass F I K X * rankChi t| ≤
+      |A / V.card - r₁| * |T - T_F| + |A / U.card - r₀| * |T| +
+      |r₁| * |eulerRemainder F I K X - faceEulerRemainder F I K t X| +
+      |r₀| * |eulerRemainder F I K X| := by
+  have he := rank_price_exact_euler_estimator F I hK hKt hdt ht hfront X
+  dsimp at he ⊢
+  rw [he]
+  have hring :
+      -rankMainMass F I K X * rankChi t +
+      ((structureCount F I : ℝ) / (outsideUnits I (F.N * K) t).card -
+        (structureCount F I : ℝ) /
+          ((I.card : ℝ) * integerDensity (F.N * K) * (1 - 1 / (t : ℝ)))) *
+        ((∑ b ∈ units I (F.N * K), theta F.N (candidate F b)) -
+          ∑ b ∈ (units I (F.N * K)).filter (fun b => t ∣ b), theta F.N (candidate F b)) -
+      ((structureCount F I : ℝ) / (units I (F.N * K)).card -
+        (structureCount F I : ℝ) / ((I.card : ℝ) * integerDensity (F.N * K))) *
+        (∑ b ∈ units I (F.N * K), theta F.N (candidate F b)) +
+      ((structureCount F I : ℝ) /
+        ((I.card : ℝ) * integerDensity (F.N * K) * (1 - 1 / (t : ℝ)))) *
+        (eulerRemainder F I K X - faceEulerRemainder F I K t X) -
+      ((structureCount F I : ℝ) / ((I.card : ℝ) * integerDensity (F.N * K))) *
+        eulerRemainder F I K X + rankMainMass F I K X * rankChi t =
+      ((structureCount F I : ℝ) / (outsideUnits I (F.N * K) t).card -
+        (structureCount F I : ℝ) /
+          ((I.card : ℝ) * integerDensity (F.N * K) * (1 - 1 / (t : ℝ)))) *
+        ((∑ b ∈ units I (F.N * K), theta F.N (candidate F b)) -
+          ∑ b ∈ (units I (F.N * K)).filter (fun b => t ∣ b), theta F.N (candidate F b)) +
+      -(((structureCount F I : ℝ) / (units I (F.N * K)).card -
+        (structureCount F I : ℝ) / ((I.card : ℝ) * integerDensity (F.N * K))) *
+        (∑ b ∈ units I (F.N * K), theta F.N (candidate F b))) +
+      ((structureCount F I : ℝ) /
+        ((I.card : ℝ) * integerDensity (F.N * K) * (1 - 1 / (t : ℝ)))) *
+        (eulerRemainder F I K X - faceEulerRemainder F I K t X) +
+      -(((structureCount F I : ℝ) / ((I.card : ℝ) * integerDensity (F.N * K))) *
+        eulerRemainder F I K X) := by ring
+  rw [hring]
+  have htriangle (v₁ v₂ v₃ v₄ : ℝ) :
+      |v₁ + v₂ + v₃ + v₄| ≤ |v₁| + |v₂| + |v₃| + |v₄| := by
+    calc
+      _ ≤ |v₁ + v₂ + v₃| + |v₄| := abs_add _ _
+      _ ≤ (|v₁ + v₂| + |v₃|) + |v₄| := add_le_add_right (abs_add _ _) _
+      _ ≤ (|v₁| + |v₂| + |v₃|) + |v₄| :=
+        add_le_add_right (add_le_add_right (abs_add _ _) _) _
+  apply le_trans (htriangle _ _ _ _)
+  simp only [abs_neg, abs_mul]
+  exact le_rfl
+
+end
+end GoldbachRound19.RankCalibration
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound19.RankCalibration.integerDensity
+#print axioms GoldbachRound19.RankCalibration.faceEulerRemainder
+#print axioms GoldbachRound19.RankCalibration.outsideUnits
+#print axioms GoldbachRound19.RankCalibration.rankMainMass
+#print axioms GoldbachRound19.RankCalibration.actual_density_positive
+#print axioms GoldbachRound19.RankCalibration.normalized_density_error_bound
+#print axioms GoldbachRound19.RankCalibration.rank_main_normalization_identity
+#print axioms GoldbachRound19.RankCalibration.outside_unit_sum
+#print axioms GoldbachRound19.RankCalibration.rank_price_exact_euler_estimator
+#print axioms GoldbachRound19.RankCalibration.rank_price_estimator_error_bound

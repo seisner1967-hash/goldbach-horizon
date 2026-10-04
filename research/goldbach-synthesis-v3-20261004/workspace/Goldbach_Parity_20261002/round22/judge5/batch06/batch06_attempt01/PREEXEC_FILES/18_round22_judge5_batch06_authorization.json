@@ -1,0 +1,60 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH06_AUTHORIZATION",
+  "time_utc": "2026-10-03T13:05:37.519553+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch06_attempt01",
+  "modules": [
+    "ZetaEulerDirect22",
+    "ZetaReflection22",
+    "GammaPsiDuplication22",
+    "GammaPsiReflection22",
+    "ContourChiPsi22",
+    "ContourChiScaled22",
+    "PsiKernelEnvelope22",
+    "PsiKernelDomination22",
+    "PsiMixedFubini22"
+  ],
+  "compiler_invocations_maximum": 9,
+  "source_manifest_sha256": "3ac0f1daf0dc8735f11ea6635bdb9405f38f8121252ac874269bf341e2edb929",
+  "launcher_sha256": "c79764dbd3e70c2cf3eca90fc40c63ef17824a96189632950ac899e33dd02d56",
+  "preparation_receipt_sha256": "8243cc24096ebd79e1e3a760c6e82d39bf9b0235c541762422cf44dc41792909",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "GammaDerivative22",
+    "GammaBoxBounds22",
+    "GammaContourComponent22",
+    "GammaPsiCore22",
+    "GammaPsiBetaLimit22",
+    "GammaPsiIntegral22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "ROOT_FULL_read_receipts": {
+    "launcher": "1f0405",
+    "builder": "1d7424",
+    "source_audit": "21fe32",
+    "catalog": [
+      "0f80be",
+      "928127"
+    ],
+    "reads": "cc3cfb",
+    "prepared_receipt": "d88f70"
+  },
+  "source_math_review_owner": "ROLE5; ROOT binds review and hashes, does not perform mathematical audit",
+  "large_JSON_scope": "Completely parsed and every bound byte hashed; no raw FULL import/runtime text claim",
+  "inputs_verified": 7019,
+  "old_judge_files_verified": 270,
+  "archives_verified": 3089,
+  "stop_first_failure": true,
+  "retries": 0,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

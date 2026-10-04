@@ -1,0 +1,71 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormCollisionLoss.lean:19:22: error: function expected at
+  div_lt_one ?m.2591
+term has type
+  ?m.2540 / ?m.2541 < 1 ↔ ?m.2540 < ?m.2541
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormCollisionLoss.lean:19:33: error: application type mismatch
+  div_lt_one (LT.lt.trans_le' hp1)
+argument
+  LT.lt.trans_le' hp1
+has type
+  ?m.2552 ≤ 1 → ?m.2552 < ↑p : Prop
+but is expected to have type
+  0 < ?m.2541 : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormCollisionLoss.lean:50:74: error: unsolved goals
+N e p0 y p : ℕ
+h1 : 1 ≤ p0
+hpe : p0 ≤ e
+hns : ∀ p ∈ Selberg.primeSupport y, FourFormRoots.actualRho p N e p0 < p
+hp : p ∈ Selberg.primeSupport y
+hpprime : Nat.Prime p
+this : Fact (Nat.Prime p)
+hp0 : 0 < ↑p
+hb : 0 < primeBase p
+hbne : primeBase p ≠ 0
+left✝ : 0 < Selberg.actualDensity N e p0 p
+hg1 : Selberg.actualDensity N e p0 p < 1
+hd : p ∣ FourFormRoots.natDelta N e p0
+hr : 1 ≤ ↑(FourFormRoots.actualRho p N e p0)
+hg : 1 / ↑p ≤ Selberg.actualDensity N e p0 p
+⊢ primeBase p ^ 3 * primeBase p = primeBase p ^ 4
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormCollisionLoss.lean:68:6: error: linarith failed to find a contradiction
+case a
+N e p0 y p : ℕ
+h1 : 1 ≤ p0
+hpe : p0 ≤ e
+hns : ∀ p ∈ Selberg.primeSupport y, FourFormRoots.actualRho p N e p0 < p
+hp : p ∈ Selberg.primeSupport y
+hpprime : Nat.Prime p
+this : Fact (Nat.Prime p)
+hp0 : 0 < ↑p
+hb : 0 < primeBase p
+hbne : primeBase p ≠ 0
+left✝ : 0 < Selberg.actualDensity N e p0 p
+hg1 : Selberg.actualDensity N e p0 p < 1
+hd : ¬p ∣ FourFormRoots.natDelta N e p0
+hr4 : FourFormRoots.actualRho p N e p0 = 4
+hg4 : Selberg.actualDensity N e p0 p = 4 / ↑p
+ht : -2 ≤ -(1 / ↑p)
+hbern : 1 ≤ (1 + -(↑p)⁻¹) ^ 4 + 4 * (↑p)⁻¹
+a✝ : 1 - 4 / ↑p > (1 - 1 / ↑p) ^ 4
+⊢ False failed
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role4\FourFormCollisionLoss.lean:81:37: error: failed to prove positivity/nonnegativity/nonzeroness
+'GoldbachRound17.FourFormCollisionLoss.primeBase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormCollisionLoss.mertensEuler' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormCollisionLoss.collisionLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormCollisionLoss.primeBase_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormCollisionLoss.actualEuler_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound17.FourFormCollisionLoss.collision_factor_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormCollisionLoss.actualEuler_collision_loss' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound17.FourFormCollisionLoss.actualG_collision_loss_half' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

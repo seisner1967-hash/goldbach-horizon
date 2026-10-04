@@ -1,0 +1,8 @@
+{
+  "node_id": "11.3",
+  "hypothesis": "Mechanism: Transfert prime-déletion normalisé du vrai G_N, avec modèle apparié S(cN), puis dispersion des deux premiers couplés sur cofactors courts et longs.\nHypothesis: Une estimation indépendante du moment centré pourrait contrôler la compensation bilatérale ; elle doit traiter la variance à trois formes et le modèle signé, aucune petitesse manquante n’est supposée.\nObservable: Identité finie avec gardes, logp/logpc, c1 et c>a, racines unitaires exactes, DD-DM-MD+MM, polynôme sur sélection seulement comme probe falsifiable.\nConflicts: BV de progression ne paie pas mu(c)Lambda_N(N-pc) ; principal source conservé, correction properpower/raw et trois formes restent. La log-concavité sur toute sélection est distincte du polynôme global.",
+  "score": 0.0,
+  "insight": "Complete normalized transfer retains actual mu(c)Lambda_N(N-pc),logp/logpc, matching S(cN), c1/reference and c>a. D8/D9 dispersion remains unestimated, not disproved: its prime branch has three forms and raw properpowers persist. Selection E29/561 disproves universal-selection log-concavity only, no global polynomial no-go. All10 local falsifiers independently audited; no Lean12.",
+  "result": "VALID_NORMALIZED_TRANSFER_WITH_UNESTIMATED_THREE_FORM_DISPERSION; NUMERICAL_FALSE_SIMPLIFICATIONS_REJECTED; score0, global signed compensation open.",
+  "branch": "round12/deletion_checks.py"
+}

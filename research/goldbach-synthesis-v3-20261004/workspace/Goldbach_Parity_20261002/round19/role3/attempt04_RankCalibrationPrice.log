@@ -1,0 +1,89 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationPrice.lean:151:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationPrice.lean:154:45: warning: unused variable `hu`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationPrice.lean:188:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationPrice.lean:213:2: error: unsolved goals
+case pos
+A : ℕ
+U V : Finset ℕ
+f : ℕ → ℝ
+hVU : V ⊆ U
+hA : A ≤ #V
+u : ℝ
+hu : 0 ≤ u
+hf : ∀ b ∈ U, 0 ≤ f b ∧ f b ≤ u
+hs : |referenceMass A V f - referenceMass A U f| ≤ u * ↑A * ↑(#(U \ V)) / ↑(#U)
+hu0 : #U = 0
+hv0 : #V = 0
+ha0 : A = 0
+⊢ 0 ≤ u * ↑(#(U \ V))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationPrice.lean:226:30: error: mod_cast has type
+  2 ≤ j : Prop
+but is expected to have type
+  1 ≤ j : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round19\role3\RankCalibrationPrice.lean:243:25: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'GoldbachRound19.RankCalibration.normalizedReference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.referenceMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.centeredMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.supportPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.cofactorWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.aggregateGamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.aggregatePrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.normalized_reference_zero_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.reference_mass_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.reference_mass_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.reference_mass_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.old_reference_is_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.old_weighted_profile_is_centered_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.centered_mass_calibration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.support_price_two_steps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.weighted_rank_price_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.theta_weighted_rank_price_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.raw_weighted_rank_price_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.support_price_raw_theta_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.aggregate_price_raw_theta_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_reference_empty_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.normalized_rank_price_cross_mean' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.normalized_reference_change_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.normalized_reference_change_bound_card' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.theta_nonnegative' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.raw_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.theta_candidate_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.reference_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound19.RankCalibration.canonical_profile_on_rank_face_nonpositive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_face_prime_summand_nonpositive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound19.RankCalibration.rank_face_raw_summand_nonpositive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

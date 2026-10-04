@@ -1,0 +1,74 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch26\sources\ComplexGammaMellinHolomorphy22.lean:142:4: error: type mismatch, term
+  GoldbachContinuous22.real_laplace_integrable
+    (of_eq_true
+      (eq_true
+        (Mathlib.Meta.NormNum.isNat_lt_true (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero)
+          (Mathlib.Meta.NormNum.isNat_ofNat ℝ (Eq.refl 2)) (Eq.refl false))))
+    hd
+after simplification has type
+  IntegrableOn (fun t => t * Real.exp (-(d * t))) (Ioi 0) volume : Prop
+but is expected to have type
+  IntegrableOn (fun t => t * Real.exp (t * -d)) (Ioi 0) volume : Prop
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch26\sources\ComplexGammaMellinHolomorphy22.lean:145:68: error: unsolved goals
+case h
+d : ℝ
+hd : 0 < d
+C : ℝ
+h0 : IntegrableOn (fun t => Real.exp (-d * t)) (Ioi 0) volume
+h1 : IntegrableOn (fun t => t * Real.exp (-d * t)) (Ioi 0) volume
+t : ℝ
+ht : t ∈ Ioi 0
+⊢ C * ((fun x => 2 * Real.exp (-d * x)) + fun t => t * Real.exp (-d * t)) t = C * (2 + t) * Real.exp (-d * t)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch26\sources\ComplexGammaMellinHolomorphy22.lean:157:6: error: type mismatch, term
+  hp
+after simplification has type
+  IntegrableOn (fun t => C * (2 + |t|) * Real.exp (-d * |t|)) (Ioi 0) volume : Prop
+but is expected to have type
+  IntegrableOn ((fun t => C * (2 + |t|) * Real.exp (-d * |t|)) ∘ fun t => -t) (Ioi 0) volume : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch26\sources\ComplexGammaMellinHolomorphy22.lean:224:16: error: unknown identifier 'Tendsto'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch26\sources\ComplexGammaMellinHolomorphy22.lean:227:18: error: unknown identifier 'Tendsto'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch26\sources\ComplexGammaMellinHolomorphy22.lean:232:10: error: unknown identifier 'Eventually.of_forall'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch26\sources\ComplexGammaMellinHolomorphy22.lean:233:4: error: tactic 'introN' failed, insufficient number of binders
+w : ℂ
+hw : 0 < w.re
+hexp : AnalyticOnNhd ℂ (fun z => Complex.exp (-z)) GoldbachContinuous22.rightHalfPlane
+rates : ℕ → ℝ := fun n => 1 + 1 / (↑n + 1)
+hrates : sorry
+hcomplex : sorry
+⊢ Type ?u.129929
+'GoldbachComplexGammaMellin22.localArgRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.localDecayGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.localDerivativeCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.localDerivativeEnvelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.local_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.exists_local_kernel_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.verticalS_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaKernel_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaDerivative_local_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.weightedExponential_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.localDerivativeEnvelope_integrable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaInverse_hasDerivAt' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaInverse_analytic' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complexGammaInverse_eq_exp' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachComplexGammaMellin22.complex_exp_eq_Gamma_integral' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

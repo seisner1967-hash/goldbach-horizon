@@ -1,0 +1,252 @@
+{
+  "Lean_execution_authorized": false,
+  "compiler_waits_new_canonical_numeric_PASS_rootgate": true,
+  "fixed_bindings": {
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\agent2_friable.md": "5635cff82cbd5e6e395dfef3617f8d2d89ead40f6dbbdfffa943bf0f6a785be5",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role2\\final_receipt.json": "ac9dab67bf69abc898b66212992be434de087e5a34cab343e01230e8a99e8dcb",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role2\\numeric_contract.md": "331417f2f63c2080900787c03f325279728d3eae33769aa38c56a3334bec8ed9",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\role2\\read_input_sha256.json": "f7dc265c2531d17e2c8dc2c69ce72b979114c70f4f330f3227741ab147d6b265"
+  },
+  "formal_sourcewriting_authorized": true,
+  "fresh_constraints_full_read_chunk": "6dead8",
+  "helper_metadata_calls": [
+    {
+      "command": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-tools\\scripts\\arbor_state.py",
+        "add",
+        "--cwd",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002",
+        "--run-name",
+        "parity",
+        "--parent-id",
+        "14",
+        "--hypothesis",
+        "Mechanism: Retrait absolu de la couche de ressources entièrement friables par préfixe multiset à D=ceil(sqrt N), réunion des classes réelles et paiement Euler-Rankin des fronts et réciproques F1 physiques uniques.\nHypothesis: Le cap e*q+Q+1<=N et e>p0 forcent les ressources>=M>=D ; leurs grands diviseurs friables ont une masse et un cardinal assez petits, dérivés de véritables produits Euler, pour un paiement au source u>=10^24, sans hypothèse de petite demande ou de capacité.\nObservable: N=10^8, tous les1001 q de1800100 à1801100 avant masks, Ysource=1 distinct de Ytest=4096, certificats/classes/+1/true theta et raw, Euler fini complet et union unique m1 ; la cible formelle est F1–F4 calculée sur les objets19 réels.\nConflicts: La couverture1 de[1.2] n'est pas promue en gain ; répétitions, non-unités, rawproperpowers, F0 privé de F1 réciproque, support source absent et autres coûts du ledger restent explicites, aucune disponibilité/Hall ni signe favorable ajouté."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Added node 14.5 (depth=2) under 14\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-tools\\scripts\\arbor_state.py",
+        "update",
+        "--cwd",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002",
+        "--run-name",
+        "parity",
+        "--node-id",
+        "14.5",
+        "--status",
+        "running",
+        "--insight",
+        "Frozen FINAL2_20 FULL830ce4+F2ABSdelta9f57ee, contractbdd40c/input5cc01b/receipt08311b andimmutableinputs verified; mutabletreeSHA recordedobservation only. Fresh35constraints FULL6dead8,13.12running, maxdepth2. Actual newfriable layer paper derives Eminus/p-series3ell,Eplusu27,S_Du^-37,F2/F3/F4 atsource1e24 with capresources/M/D, repeatedPF/two+1/uniqueF1 reciprocals. No free sum/capacity/targetpremise. F0minusF1 nonfriablem1 andsourcebridge/complement/fullledger unpaid. Newbank1001q/Ysource1false/Ytest4096 finiteonly. Sourcewriting/preparationnow, no math/Leanuntilgates, noWin."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Updated 14.5: status, insight\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-tools\\scripts\\arbor_state.py",
+        "prompt-executor",
+        "--cwd",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002",
+        "--run-name",
+        "parity",
+        "--node-id",
+        "14.5",
+        "--workdir",
+        "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002",
+        "--additional-context",
+        "Read PROBE20, frozen FINAL2_20 FULL, role2/numeric_contract.md and feedback19. Protect1808/sourceu>=1e24/fullledger. New actual friable payment only on declared NonSS.physicalDomain/StructuralSupport19: cap e*q+Q+1<=N,e>p0 force actual resources>=M>=D. Multiset prefix actual primeFactorsList with repeats gives d|n,D<=d<DY; exact two affine classes, incompatible p0/N nonunits and every+1. Derive actual finite-prime Euler geometric/tau sums with local summability only (NOT global zeta at1-sigma), Eminus positive p-series<=1+1/sigma -> sum1/p<=3ell -> Eplusu27 -> S_Du^-37; no small sum as hypothesis. Derive finite totient identity/TK<=3(1+logX), actual harmonicKernel/sourceBracket abs raw/theta envelopes, cofactor identity using audited source without new untrackedimport. F2ABS(theta) OR ABS(raw) alternatives, F3 unique physical F1 reciprocals once and F4u1e24 sourcewrapper ifproved. F0minusF1 nonfriablem1 remainsUNPAID, sourceHbridge/remaining allranks/mediumlong/Gamma/T_A/fullledger open. Independent geometric or TK provisional guard must be named and no unconditional payment credit untilderived. Judge19/18/16/13build imports readonly; nooldPASS/compiler/kernelreplay. NEW numerical contract ALL1001q1800100..1801100/allintegercores beforemasks, fulltruePF/strata/rawPP, Ysource1withguardsFALSE/sigmaundefined vsYtest4096, actualprefix/classes/+1/newD/Wactivevertices/physicalunique m1/remainingm1unpaid. Independent Euler2401exponenttuplesY7/K6 plusFULL1..64 and1..112/totient1..4096 arefiniteonly, no sourcebudget certification. StrictFractions/rational log/root intervals,nofloat/unresolved. New numericalsources/preparation only until FULLsource+lance+prep rootreview and concrete uniquegate. New Lean sourcewritingnowauthorized, eachactualcompile waits newcanonical14.5bankPASS rootinspect+concretecompilegate; no rootcompilerexecution. PreserveeveryrealFAIL/sourcePREEXEC/log/exit, repairsafterFAIL only, no unchangedPASSreplay. PlannedJudge20 evalcmd is notcreated/gatedyet and is never an authorization; no inheritedJudge19execution. Ownedround20directories provideisolation, noGitstateactionsneeded. Auxiliary modules/localpayment neverWin."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "## Codebase\n\nWorking directory: D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\n\n## Git Isolation\n\nWork in the assigned experiment branch/worktree. Do not switch back to the main repository for implementation or evaluation.\n\n## Research Idea\n\n**ID**: 14.5\n**Hypothesis**:\nMechanism: Retrait absolu de la couche de ressources entièrement friables par préfixe multiset à D=ceil(sqrt N), réunion des classes réelles et paiement Euler-Rankin des fronts et réciproques F1 physiques uniques.\nHypothesis: Le cap e*q+Q+1<=N et e>p0 forcent les ressources>=M>=D ; leurs grands diviseurs friables ont une masse et un cardinal assez petits, dérivés de véritables produits Euler, pour un paiement au source u>=10^24, sans hypothèse de petite demande ou de capacité.\nObservable: N=10^8, tous les1001 q de1800100 à1801100 avant masks, Ysource=1 distinct de Ytest=4096, certificats/classes/+1/true theta et raw, Euler fini complet et union unique m1 ; la cible formelle est F1–F4 calculée sur les objets19 réels.\nConflicts: La couverture1 de[1.2] n'est pas promue en gain ; répétitions, non-unités, rawproperpowers, F0 privé de F1 réciproque, support source absent et autres coûts du ledger restent explicites, aucune disponibilité/Hall ni signe favorable ajouté.\n\n## Evaluation Info\n\n- **Evaluation command (B_dev)**: `\"C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -B -X utf8 \"D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\judge\\run_once.py\"`\n- **Dataset info**: Round20 inprogress:1808protected/uniqueconservationPASS;13.12actualBonferroni/compositeAPnewbank24m..48m preparationonly;ROLE2friablepending;sourceu1e24;41modules692aux unchanged;newJudge20plannedNOTYETCREATED_OR_AUTHORIZED;nooldreplay/noWin\n- **Baseline score**: 0\n- **Current trunk score**: 0\n\nUse B_dev for final experiment scoring. Do NOT use B_test.\n\n## Insights From Prior Experiments\n\n- ROOT: FINAL19 closed: one actual independent audit exit0 at01:36:25UTC,11fresh Lean PASS,185thm78defs3structures268standardprints/3benignUnitLosswarnings; cumul41modules692aux,noWin. Both new N1e8banks uniquePASS0replay,973nonSS+48308rank storedcertificatepositions only. Authors29actualLean18technicalFAIL and1preLeanPythonparseFAIL, no JudgeFAIL/continuation. All1361archives and307frozeninputs/26historicaldeps/145Judgeownedbindings verified; controller19 binds446+self447, next1808, SHA299a605efaa7cf6721e3b65bfea8af976bcbfcdbb1bc841eee6f4a0d9d9d4d08. True weighted calibration price and allrank nonSS reindex retain every term; GammaRank compensates negativeprincipal, ordinary AP/K14/K18/BV/mediumlong/capacity/parents/supportbridge/e1p0/singletons/fullledger unpaid. Sourceu>=1e24, writtenlocal1e40 notsubstitute. Root onlymetadata/storedhashes+labels read, no proof/compiler/producer/audit/logsign execution.\nFINAL18 closed: one actual independent audit exit0, eight fresh Lean PASS, 170 theorems /68 defs /4 structures /242 standard-axiom prints. Cumulative30 modules507 auxiliary theorems, no victory. Exact997 archives and267 frozen inputs/22 historical dependencies preserved,91 Judge-owned bindings/10 closure bindings checked. Controller18 binds363+self364 for next1361, SHAce00517b1df6f4fc89f27667be44dd7f2c4d3331c8022fd14e4c505392175c5c. Numeric320 stored positions191POS83NEG46ZERO; original3canonical invocations with one encoding failure and2 unique replays, distinct CRT1canonical0replay/1944 checks. Authors23 Lean invocations15 technical failures, no Judge failure or continuation, sole benign Count warning. Actual R5/CRT and actual divided G are proved with their independent premises. R6 source application, D5/D10/D11 analytic conversion/rough bridge/uniform errors/allparameter aggregation, onset1e24..1e36 and whole Gamma/unique capacity/T_A/S remainder/full D_N remain open. Root only read receipts/sources/logs and metadata; one root metadata KeyError corrected with honest POSTEXEC capture, not mathematical failure. A7 and fixed acquis unchanged.\nGoal active, no victory. FINAL17 independent audit3actualattempts exit1,exit1,exit0; two pre-Lean reader errors guard/null corrected in limited continuations without rerunning PASS stages, all originals retained. Five new Lean modules93theorems40defs1instance/134standardaxiomprints, freshindependent5PASS, cumul22modules337aux. Actualfourform roots and arithmeticMobius Selberg weights/support/norm/principal1/G derived; actualG>=P(y)^4 L_Delta(y)/2 under independent prime-log sum and scale/coprime/unsat guards. FullsourceC4/Mertens/totient/CRT+1/C6 notLeanproved. Rough201integers9q28cores252vertices47W205zeroaxes/A11R0S18/17488CRT/10sat16unsat; wholepositive demand/deficit unpaid. TypeII162338fullintegers181beta12460theta8rawpp/sixmasks, realj=v*w17/19/503double323 and distincttheta/II/IIrawprices retained. Onechi13mode writtenonly and additional BVonset; Gamma39/allcoeff/globalcapacity unestimated. Original390strictpositions242POS62NEG86ZERO plusnewC4annex64=54POS10NEG, all16subsets/105210tails,6TRUE10FALSEconditions and16MarkovPOS; no finite1e8sourceonsetusage. Producer30Leaninvocations23technicalexit1/PASS15warning and one numericaldomainfailure retained. 799oldpreserved,143authorinputs/33+15numericbindings/52Judgebindings checked; controller17 binds197+self198 SHA5d20d749aa30bcf939e33cd0f1d1efc1049c85634f6054ae79c81890e6d628a4; nextprotected997. Full ledger, sourceonsetu>=10^24, acquiredA7 unchanged. No mathcompiler/numeric/audit rerun byroot.\nGoal active, no victory. FINAL16 independent unique audit exit0;78 frozen inputs/five FINALroles,30numericbindings/two full existing identical copies,1879strict rational signpositions654POS95NEG1130ZERO; four localfalsifiers and one finiteNOCEX. Two fresh new Lean modules36theorems8defs, cumul17/244 standardaxioms/no sorry/error/warning. Actual canonical leastmissingoddprime p0 and actual singularSeries margin S(N)-logp0>=1/144 certified under acquired2541/4096<=C2 only; real tprod convergence/tail/Euler-harmonic relation proved, no free S or margin assumption. A9 signed bracket sourceU4 written only, prime incidence availability remains unestimated. Complete capacity bank18q34cores612vertices128profiles,95incidences/e1zero/e3three, wholeprincipaldeficitPOS/endpoints actualsumPOS, no erasedLambdae or duplicatedcapacity. TypeI3 d77 bank129870integers51948units216beta0/106/110, uniformdrift38 corrected2 literaldifference36; Gamma/Gamma_star/L3 NEGfinite, nine rawproperpowers retained. Written AP3 valid at endpoints8e9/sourceU4 only; finite1e8 test notsourceonset. Gamma_star/TypeII/parentscomparison/F6/unioncapacity/wholeD_N unestimated. Nine real technical exit1 Leanproducerattempts documented (oneAPIprobe/eightcandidatefailures), no parityfailure invented; twofreshJudgecompilesexit0.701oldpreserved, controller16 binds97+self98 SHA10d9f68fc649d965aa5eecac96fecf5fd20f705527d42f52b855662acec02332; nextprotected799. Coordination threadlimit/pendinginit resolved by successfulfreshJudge and finalization, no external blocker.\nGoal active, no victory. Judge15 unique readonly audit exit0 after FINAL1/2/6:39 frozen production inputs35numericbindings3fullbyte+field identical copies,4localfalsifiers and1NO_COUNTEREXAMPLE_IN_WINDOW,1138rational sign positions (1131certificates+7moment/AP intervals),zero floats/unresolved. No actual failed numerical or Lean attempt in15; corrected provisional e1/E-rank guards before freeze not compiler errors. Cumul15modules208aux unchanged. Canonical shortconductor d=cr<=a exposes genuine semiprime mask beta without nprimefilter; written Chebyshev bound/norm valid, aggregate covariance Gamma stillunestimated. Complete d141 bank695035 integers278014units60982prime axes4201beta912prime images,GammaNEG,49rawproperpowers4masked;5D/Wraccord samples only,907unsampledWerrors unpaid. Necessary read-only L4/AP supplement certifies variance/CauchygapPOS, X97999795/front−35/23; no kernels/PASSrerun. BV cumulative keepsdyadicK_N/front and additionalonsetunknown; TypeII conditions not shown. Smallcomplete J1core fusion F1e>=2/e1exception andF2–F5Eevenrank>=4,compositeoddrank>=3. Entire oneE/q principal<=explicit first-prime orphan mass F4; F6/globalparentreuse not estimated. Full21qwindow86labels78cores1680vertices416profiles360primeparents7targets112edges,248primeparents with composite target retained. Delta/BentireNEG, actualpairs71NEG41POS despite112principalNEG;0orphans only finite no counterexample.400prime labels count360physicalvertices; finite6factor/J2c<=9 cuts no asymptoticNoGo.651oldpreserved; root15binds49+self50, SHA7b2522fbeec0c17965b9bfba4df418552f0e31b2b4881c91edff00b79a81869f; nextprotected701.\nGoal active, no victory. Judge14 readonly exit0 after FINAL1/2/6 freeze:37 inputs,32 numericbindings,two full byte+field identical isolated copies;78 distinct actual vertices,44 expanded C4 edges,seven pairs checked. Four precise local coverage falsifiers,27 rational sign positions,zero floats/unresolved. One real composite-parent numerical assertion exit1 before correction, source/log retained; no Lean14 or invented compiler failure. Cumul15modules208aux unchanged. Normalized1/H graph charge retains BOTH deficits; nested all-descendant graph computes prefix recurrence, not an independent incidence estimate. Complete c3q3581 fibre P12/T11/E_H1/all37edges/matching7/all deficit5,interior4; unusedlate images retained. Formal principal negative butactualpairs6POS/1NEG. C16 whole weighted comparison independent of matching; C17 coupled prime-vs-semiprime real incidences unestimated, cq may be N9/16>sqrtN. CRT C1 p-only10parents21uniqueimages and C2bothaxes1parent23uniqueimages have finite zero degrees/debtPOS but expanded capacityPOS/defectNEG; separate groups/no globalcapacitysum/Hall. DoubleCRT105physicallyempty. Written42N63/64u² only normalizedmatchedwindow;28N37/64u³(1+u) entireprime-c front only, using acquired totient sum<=3(1+u). Writtenonly,sourceu>=10^24,not Leananalytic/payment certified byfiniteN1e8. AlternateU4 error epsilonW N u replaces localvariation withoutdoubleNG54.603 protected before/after; root14 binds47 files+self48, SHA6795b8ed10872337ac8d0f7caf7ef428b8611b6f35376e575c22661ff68e30bf; next protected651.\nJudge13 fresh build retained two new modules23+16=39 actual theorems and5 separately audited definitions, cumulative15/208. Necessary dependencies17+19 rebuilt not recounted. Literal divisisors {1,c}/{1,c,r,s,cr,cs}, actual mu/Lambda and sourceBracket coefficients, displacement, canonical factors and disjoint supports compiled under c<r<s<=a<p<q, cr,cs<=a<rs,crs>a,rs+2=p. Harmonic variation keeps originalQ,minQ floor((m-1)/a),prime>Q commonNmask,k1,whole head/tail and finite abs coefficient bound. Written21N31/32u² only matched tuples; no coverage/cardinal lowerbound. Standard axioms only,no warning/no sorry final. Four real technical Lean failures archived distinct from absent analytic estimate. Root13 binds88+self89,old514 protected.13 operator nilpotence/anticommutation doesn't bound oriented physicalmass; free1/u commutator,zero symmetrized replacement,positivity and rawtheta swap false only their universal promotions.12 localHall deletion false because bulk preserves factors>a; full absolutecoverage is1,not inverse-log. Normalized deletion/three-form centered dispersion still unestimated,not disproved.\nFixed ledger D_N=B_prime^a+B_pp^a+P_band_ge2+Z_face_ge2+I_alpha+2max(e,0),a=ceilN7/16,M=ceilN3/4,wholeU_a inclr<=alpha and originalQ. I,properpowers,face/corner/mobility eachonce. RawLambda_N keepsproperpowers,no mu(n)^2 firstaxis. Guarded bilateral mu²Lambda+SNmu keepsc1,-SN N,c>a,matchingS(cN),units/CRT+1 beforeAP. Source54 literal-sqrt(u/60),deliberatelyweaker-sqrtu/60. Sourceonsetu>=10^24 distinctfiniteN1e8,no globalnoGo. P5 common-only under3coprimeN=(9/2)Csieve SN²N/u²+2SNsqrtN,mask3N/CRT+1,sourceSN<3logu,replacesP4. P5 applies ENTIRE K2 J2bulk before exact parent/principal/error withdrawal; pairedremaining/errors supports disjoint,no double roughcredit orNG54. Native physicalq|k phase1,HHfourmu signs/conductors/APnonunits retained; genericBV/Gram/Gauss doesn't paycoupledmuLambda. H2/singletons/faces/nonbulk/J0/J1/J2remaining, bilateralprincipal/reference/c1/long,physical-band extraeffective BVonset,e remain unpaid.\nNext18 must seek a genuinely quantitative new estimate for nonrough T_S/T_A after single-consumption physical union, or calibrated whole Gamma/TypeII with literal theta prices, while keeping conditional actualG acquisition. Do not rederive roots/finiteSelberg/truncation/collision or canonical A7. FullC4 analytic conversion can be an explicit remaining task but alone never pays D_N. No equivalent target/availability/orphan premise, no generic projection/norm identity labeled bypass. Fixedledger and997 oldartifacts remain protected; newmath bank only after freshconstraints/newconcept selection.\nNext19: seek an actual new quantitative estimate for the entire weighted signed cofactor aggregate with all literal calibration prices, or a quantitative mechanism covering the remaining non-SS family and physical capacity assignment. A stronger SS estimate alone cannot pay the entire residue. Do not spend another iteration rederiving acquired product bijections, Mobius/CRT fronts, generic Gram identities, divided roots, finite Selberg weights or the same local adversarial counterexample. Source R4/R6 formalization is a possible bounded subtask, but its conditional local result is not a parity Win. Keep all1361 archives immutable, source u>=10^24 and the full fixed ledger. New concept selection and new mathematical bank require fresh constraints. No target-equivalent, availability or aggregate-bound premise may be promoted to victory.\nNext20: obtain a genuinely new quantitative incidence bound keeping q primality and actual least-factor composite subtraction, or pay an actual exceptional cofactor layer with every +1 and unique reciprocal before addressing its complement. Do not rederive19calibration/bijections/IE/32counts/H8 or promote a favorable price to wholeGamma. Preserve all1808archives/acquis/sourceu>=1e24/fullledger. Fresh constraints and unique conservation required before new selection/banks; no target-equivalent/availability/smallGamma premise or finiteonsetpromotion.\n- 14: Children findings: [14.1, done, score=0] FINAL16 independent fresh Lean compiles validate actual canonical p0 odd prime absent N, all smaller odd primes divide N, real tprod convergence/tail and Euler/harmonic prefix, yielding actual S(N)-logp0>=1/144 for nonzero even N under acquired lower C2 enclosure only. New36theorems8defs in two modules, cumul17/244, standard axioms no sorry. Written A9 C<=-1/288 at U4 not Lean-certified; source first-prime availability and global capacity unestimated. Complete18q34cores612vertices128profiles/484exactzeros,95primeincidences e1zero/e3three. Entire principal deficitPOS both endpoints/actualsumPOS; no free resource reuse or erasedLambda(e). Finite A9 no counterexample only, source onset preserved. A7 genuine partial arithmetic gain retained; no globalD_N or Win. | [14.2, done, score=0] FINAL17 independent5newLeancompiles PASS93theorems40defs1instance/134standardaxiomprints; cumul22/337. Actualroots/rho/collisions/saturation and actualMobius Selberg weights/support/normalization/norm/principal1/G derived, no free G or availability. ActualG>=P(y)^4 L_Delta(y)/2 proved with independent analytic prime-log input and scale/coprime/unsat guards, not...\n\n## Additional Context\n\nRead PROBE20, frozen FINAL2_20 FULL, role2/numeric_contract.md and feedback19. Protect1808/sourceu>=1e24/fullledger. New actual friable payment only on declared NonSS.physicalDomain/StructuralSupport19: cap e*q+Q+1<=N,e>p0 force actual resources>=M>=D. Multiset prefix actual primeFactorsList with repeats gives d|n,D<=d<DY; exact two affine classes, incompatible p0/N nonunits and every+1. Derive actual finite-prime Euler geometric/tau sums with local summability only (NOT global zeta at1-sigma), Eminus positive p-series<=1+1/sigma -> sum1/p<=3ell -> Eplusu27 -> S_Du^-37; no small sum as hypothesis. Derive finite totient identity/TK<=3(1+logX), actual harmonicKernel/sourceBracket abs raw/theta envelopes, cofactor identity using audited source without new untrackedimport. F2ABS(theta) OR ABS(raw) alternatives, F3 unique physical F1 reciprocals once and F4u1e24 sourcewrapper ifproved. F0minusF1 nonfriablem1 remainsUNPAID, sourceHbridge/remaining allranks/mediumlong/Gamma/T_A/fullledger open. Independent geometric or TK provisional guard must be named and no unconditional payment credit untilderived. Judge19/18/16/13build imports readonly; nooldPASS/compiler/kernelreplay. NEW numerical contract ALL1001q1800100..1801100/allintegercores beforemasks, fulltruePF/strata/rawPP, Ysource1withguardsFALSE/sigmaundefined vsYtest4096, actualprefix/classes/+1/newD/Wactivevertices/physicalunique m1/remainingm1unpaid. Independent Euler2401exponenttuplesY7/K6 plusFULL1..64 and1..112/totient1..4096 arefiniteonly, no sourcebudget certification. StrictFractions/rational log/root intervals,nofloat/unresolved. New numericalsources/preparation only until FULLsource+lance+prep rootreview and concrete uniquegate. New Lean sourcewritingnowauthorized, eachactualcompile waits newcanonical14.5bankPASS rootinspect+concretecompilegate; no rootcompilerexecution. PreserveeveryrealFAIL/sourcePREEXEC/log/exit, repairsafterFAIL only, no unchangedPASSreplay. PlannedJudge20 evalcmd is notcreated/gatedyet and is never an authorization; no inheritedJudge19execution. Ownedround20directories provideisolation, noGitstateactionsneeded. Auxiliary modules/localpayment neverWin.\n\n## Instructions\n\n1. Understand the code before editing.\n2. Implement the idea faithfully.\n3. Run quick checks to ensure the new logic is active.\n4. Iterate on implementation bugs.\n5. Run the B_dev evaluation when credible.\n6. Report Changes, Baseline vs Result, Score, and Insight. The score must be the absolute primary metric, not a delta.\n\nSave results to `results/14.5-<brief-description>/`.\n"
+    }
+  ],
+  "immutable_inputs_verified": [
+    {
+      "path": "C:\\Users\\Utilisateur\\.codex\\skills\\arbor-agent-ideate\\SKILL.md",
+      "purpose": "IDEATE discipline",
+      "read_scope": "FULL",
+      "sha256": "1b55bc6f7fc81c91a9a0627d897cb8bf9b19c580d5b1867650222db672503683",
+      "tool_chunk": "skill read current"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round20\\PROBE_BLOCK.md",
+      "purpose": "round20 launch and scope",
+      "read_scope": "FULL",
+      "sha256": "69df06d7abc3619ba51465b74912f6bf32a2f49f901d72533c4ba9945777685e",
+      "tool_chunk": "current PROBE full"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round19_failure_feedback_in_progress.md",
+      "purpose": "actual failures vs analytic gaps",
+      "read_scope": "FULL",
+      "sha256": "d5d754aa9c4f78881a2b036b2bfa7cf14ec761fa83d5aeee6947b007d63e9286",
+      "tool_chunk": "3326c9"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role2_prospective.md",
+      "purpose": "immutable original F1-F4",
+      "read_scope": "FULL",
+      "sha256": "d26b6f010f57aa754d2b0429239ecc07ed9c1a629cacecac8d760360e33492ed",
+      "tool_chunk": "aa1e54"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\messages\\round20_role2_prospective_receipt.json",
+      "purpose": "immutable prospective receipt",
+      "read_scope": "metadata SHA only current; author receipt previously",
+      "sha256": "08d7c73480bd2f653f4d33a014350842fb2397f404445c7a560542b919326468",
+      "tool_chunk": "metadata receipt"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\NonSSBracketSwitch.lean",
+      "purpose": "actual H/brackets/unique and zero reciprocity",
+      "read_scope": "EXCERPTS lines1-120,231-300 and theorem index",
+      "sha256": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+      "tool_chunk": "0be86a;679ea6;ead706"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\BalancedResourceSwitch.lean",
+      "purpose": "actual resource guards/canonical anchor",
+      "read_scope": "EXCERPT lines1-55",
+      "sha256": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+      "tool_chunk": "fce8ca"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round19\\judge\\build\\RankTwoHarmonic.lean",
+      "purpose": "avoid duplicate H8",
+      "read_scope": "theorem-index search only current",
+      "sha256": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b",
+      "tool_chunk": "ead706"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\ShortDivisorComplement.lean",
+      "purpose": "source cap/physical U1 actual definitions",
+      "read_scope": "EXCERPTS lines1-27,96-185",
+      "sha256": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+      "tool_chunk": "af0302 and current"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\lean\\PrimeCofactorIdentity.lean",
+      "purpose": "sign check; not proposed new untracked import",
+      "read_scope": "EXCERPTS lines1-32,106-140",
+      "sha256": "a31895518a60c169a81cdc43201742b4f91efce6d9b032a6a07cc1a8617a4819",
+      "tool_chunk": "0f0ec0 and current"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round11\\lean\\ThreeAdicPrimePairing.lean",
+      "purpose": "true theta/source/W units and fronts",
+      "read_scope": "EXCERPT lines1-105",
+      "sha256": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+      "tool_chunk": "current"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\SmoothNumbers.lean",
+      "purpose": "strict smooth definition and factorization products",
+      "read_scope": "FULL prior continuation read",
+      "sha256": "a3b6f51d2138a348342c31437f033fb6589360f37010398dd53c6b89e4aed473",
+      "tool_chunk": "8f96c4"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\EulerProduct\\Basic.lean",
+      "purpose": "local Euler without false global summability",
+      "read_scope": "EXCERPTS65-148,274-333",
+      "sha256": "715da6e30d79dbfbbbce8172fe07ff48cba911470e289d28f40851626da4e165",
+      "tool_chunk": "1e11eb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Harmonic\\Bounds.lean",
+      "purpose": "harmonic finite sum/integral pattern",
+      "read_scope": "FULL prior continuation read",
+      "sha256": "dbcfa96f8493669004abc9f84201cad23cdbbfd1d6a17afe44780f194b8e94c3",
+      "tool_chunk": "e226df"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ArithmeticFunction.lean",
+      "purpose": "actual tau and finite totient routes",
+      "read_scope": "API searches selected sigma/multiplicativity/Mobius/SF Euler",
+      "sha256": "48c9529038f4e11220c2b09d28468f6c0d1107f328b5a15cc5587efa11223631",
+      "tool_chunk": "8e62b8;d6f51f;ee3e1f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Totient.lean",
+      "purpose": "finite TK proof feasibility",
+      "read_scope": "API searches selected totient Euler/primepower",
+      "sha256": "cea69134e95c917a0babbec5b668dc997246b33b8bd2b3e0f72cc5a5760d44cc",
+      "tool_chunk": "d6f51f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecificLimits\\Normed.lean",
+      "purpose": "weighted geometric k+1",
+      "read_scope": "EXCERPT376-421",
+      "sha256": "71cb31a2d09f8868ff64867a5bfd42e42eea6bf7ec8fd61f5dbda4f5fabec855",
+      "tool_chunk": "df48a3"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\PSeries.lean",
+      "purpose": "positive sigma p-series summability",
+      "read_scope": "API search selected summable_nat_rpow",
+      "sha256": "d7c885113b040aa6d735a6f006dd448ddf198ad7f3880e53f2d59d28f99a88ab",
+      "tool_chunk": "ee3e1f"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals.lean",
+      "purpose": "p-series sum-integral constant",
+      "read_scope": "API search integral_rpow",
+      "sha256": "bac1446917ac212aaea7b11701f00a8acf6b698cba75251eb8fc572b02e2699f",
+      "tool_chunk": "4c6bcb"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\VonMangoldt.lean",
+      "purpose": "actual raw Lambda upper bound",
+      "read_scope": "EXCERPT137-156 and bound index",
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "tool_chunk": "dd3324;0a4cc7"
+    }
+  ],
+  "mutable_input_observations": [
+    {
+      "current_sha256": "eaa6b0d34ca55ba98fc80d9e5266164cf909cbb12184e0838cac8aadccd0bc7a",
+      "historical_metadata_observation_only": true,
+      "not_PREEXEC_or_protected_binding": true,
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\.arbor\\sessions\\parity\\.coordinator\\idea_tree.json",
+      "purpose": "fresh35validated5pruned/maxdepth2",
+      "read_scope": "helper constraints FULL, not raw JSON FULL",
+      "sha256": "eaa6b0d34ca55ba98fc80d9e5266164cf909cbb12184e0838cac8aadccd0bc7a",
+      "tool_chunk": "1f98ed exit0"
+    }
+  ],
+  "node": "14.5",
+  "numerical_execution_authorized": false,
+  "numerical_source_preparation_authorized": true,
+  "protected_artifacts": 1808,
+  "role": 2,
+  "root_full_contract_read": "bdd40c",
+  "root_full_metadata_reads": [
+    "5cc01b",
+    "08311b"
+  ],
+  "root_full_report_reads": [
+    "830ce4",
+    "9f57ee"
+  ],
+  "selected_at_utc": "2026-10-03T02:16:35.790926+00:00",
+  "status": "ROUND20_ROLE2_SELECTED_NEW_SOURCE_PREPARATION_ONLY",
+  "victory": false
+}

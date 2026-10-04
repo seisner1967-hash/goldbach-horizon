@@ -1,0 +1,107 @@
+ORBITES DES ZÉROS : IDENTITÉ RÉELLE ET LIMITE DU SIGNE — PAPER/SOURCE 02
+
+Verdict : regroupement exact proposé, aucun contrôle signé de D_N obtenu.
+Cette note complète SOURCE01 sans la modifier. La revue indépendante Juge
+4c356fc0030838251249cc0d9620060525ad764bc94de3726682ef8807ae9445 a été lue
+FULL. Aucun code Lean, import, runtime, sonde ou calcul numérique exécuté.
+Les acquis, puissances premières propres et correctifs du ledger sont conservés.
+Aucune méthode arithmétique bilinéaire, crible, Möbius/Vaughan ou reste AP.
+
+1. PRÉREQUIS DE LA VRAIE ζ ; STABILISATEURS ET MULTIPLICITÉS
+
+Employer ξ(s)=s(s-1)Γ(s/2)π^(-s/2)ζ(s)/2. L'équation fonctionnelle
+ξ(s)=ξ(1-s), et ξ(conj s)=conj ξ(s), donnent les involutions commuting
+c(ρ)=conj ρ et r(ρ)=1-ρ. Le groupe engendré a quatre éléments.
+Sources primaires ciblées : DLMF 25.4.E3/E4 et 25.10(i),
+https://dlmf.nist.gov/25.4 et https://dlmf.nist.gov/25.10.
+L'égalité des multiplicités suit des développements locaux : la réflexion
+change le premier coefficient non nul par (-1)^m, la conjugaison conjugue
+ce coefficient. Dans 0<Re s<1 le facteur de complétion est holomorphe et
+non nul ; l'ordre d'annulation de ξ est donc celui de ζ. Ces faits doivent
+être prouvés pour la vraie ζ/Γ dans Lean, sans axiome de spectre prescrit.
+L'absence de zéro réel non trivial reste une obligation analytique annoncée.
+
+Pour chaque orbite non réelle, choisir le représentant β+iγ avec γ>0 et
+1/2<=β<1, et noter λ=β-1/2, m>=1 la multiplicité de CHAQUE zéro distinct.
+Si λ>0, l'orbite comporte β±iγ et (1-β)±iγ, quatre zéros distincts.
+Si λ=0, elle ne comporte que 1/2±iγ : r et c donnent le même partenaire.
+Son stabilisateur a alors deux éléments. Aucun facteur quatre n'est permis.
+Les classes à |γ|<=H sont finies et complètes ; c,r préservent |γ|, donc la
+troncature ne coupe pas une orbite, y compris à sa frontière.
+
+Pour x>1 et les puissances définies par exp((ρ-1)log x), l'identité exacte est
+  Σ_{ρ distinct dans O} m x^(ρ-1) = κ_O(x),
+  κ_O(x)=d_O m x^(-1/2) cosh(λ log x) cos(γ log x),        (ORB)
+  d_O=4 si λ>0 ; d_O=2 si λ=0.
+Preuve : associer d'abord les conjugués, puis x^λ et x^(-λ) ; dans le cas
+λ=0 ne pas répéter des éléments identiques. Cette égalité est purement
+algébrique, réelle et continue en x>1 pour une orbite fixée. Le catalogue
+numérique ne peut décider λ=0 à partir d'un intervalle qui traverse 1/2 :
+il lui faut une certification exacte ou un comptage de racines distinctes.
+
+2. TRANSPORT À LA TRACE LOCALISÉE ; AUCUNE SOMME INFINIE POINTWISE
+
+Garder le noyau canonique f_N de SOURCE01 (N entier>=6), b(x)=1-1/[x(x²-1)],
+et poser pour la collection FINIE d'orbites à hauteur H
+  K_H(x)=Σ_O κ_O(x),
+  L_(N,H)=∬ b(x)f_N(x,y)K_H(y)dxdy,
+  Z_(N,H)=Σ_{O,O'} ∬f_N(x,y)κ_O(x)κ_O'(y)dxdy.           (BLOCK)
+Par linéarité finie, BLOCK égale exactement les sommes sur les zéros de
+SOURCE01. Elle conserve les couplages entre orbites différentes, les deux
+phases et les multiplicités ; supprimer ces couplages ne serait pas ORB.
+Elle donne C_(N,H)=B_N-2L_(N,H)+Z_(N,H), sans information nouvelle de signe.
+
+Pour passer H→∞, le sens est celui des actions sur les tests, pas celui d'une
+densité K_∞(x) définie par une série convergente point par point. La correction
+de l'audit est explicite : la norme mixte est
+  Σ_{0<=i,j<=2} ||D_x^i D_y^j f||_L¹, D_x=x∂_x,D_y=y∂_y,
+et inclut donc l'ordre total quatre. L'approximation C∞→f_N doit avoir support
+dans un compact FIXE contenu dans (1,∞)^2, uniformément loin des axes x=1,y=1,
+convergence dans cette norme et convergence uniforme pour l'action de la mesure
+arithmétique finie. Une norme d'ordre total deux ne remplace pas ces conditions.
+La formule explicite, la convergence absolue et les dominations des échanges
+restent à formaliser. La queue fermée PAPER de SOURCE01 est conservée :
+  |C_N-C_(N,H)|<=2Δ(H)[Mbar_y+J_0 Mbar_xy], H>=exp(1),
+  Δ(H)=4(log H+1)/H+20/H², J_0=2exp(1)+20+Δ(exp(1)).
+Le regroupement ne réduit PAS cette borne ; comptage global, dérivées et
+primitives restent des dettes explicites. Aucun producteur N=10^8 n'est prêt.
+
+3. LIMITE ALGÉBRIQUE DÉMONTRABLE : LE COSINUS RESTE SIGNÉ
+
+Pour tout bloc γ>0,m>0, x^(-1/2)cosh(λ log x) est strictement positif.
+Choisir un entier k>=0 assez grand pour x_0=exp((2k+1)π/γ)>3/2.
+Alors cos(γ log x_0)=-1 et κ_O(x_0)<0. Par continuité il existe un
+intervalle ouvert autour de x_0, compactement contenu dans (1,∞), où κ_O<0.
+Pour tout test g>=0, non nul, lisse et compactement supporté dans cet intervalle,
+  Σ_{ρ dans O} m ĝ(ρ)=intégrale g(x)κ_O(x)dx < 0.        (NEG)
+Un choix x_1=exp(2kπ/γ)>3/2 et un test voisin donne au contraire une valeur
+positive. Ainsi CHAQUE bloc non réel échoue à définir une distribution positive.
+NEG s'applique aux paramètres d'une véritable orbite lorsqu'elle est donnée ;
+il ne choisit pas un nombre arbitraire puis ne le déclare pas zéro de ζ.
+Sur le compact du coefficient fixé, la présence de chaque zone n'est pas
+automatique pour toute γ : elle exige de contrôler les phases réellement présentes.
+
+Même pour une seule orbite sur la ligne critique, le produit dans BLOCK contient
+  cos(γ log x)cos(γ log y)
+    =[cos(γ log(x/y))+cos(γ log(xy))]/2.                 (PHASE)
+La conjugaison ne laisse pas seulement une différence de phases positive.
+La réflexion ajoute cosh ; elle ne retire aucun des deux cosinus. Sur la courbe
+x+y=N, log(x/y) et log(xy) varient avec x. La symétrie x↔N-x ne rend ni
+phase constante et conserve le produit plutôt que de l'annuler. Entre orbites
+distinctes, les phases sont γ log x±γ' log y et restent tout aussi présentes.
+Le noyau additif a de plus sa restriction [[0,1],[1,0]] aux points 2,N-2,
+donc une valeur propre -1. Ni ORB ni la positivité multiplicative de Weil ne
+convertissent BLOCK en une trace positive ou en une somme de carrés.
+
+NEG réfute seulement une implication de positivité fondée sur les SYMÉTRIES.
+Il ne prouve pas Z_N-2L_N<0 pour le noyau canonique, et ne réfute aucune borne
+sur le véritable coefficient ou les acquis. Une loi supplémentaire portant
+sur les phases de la vraie ζ pourrait encore fournir une annulation ; elle
+n'est pas obtenue par ce regroupement. L'identité précise du ledger demeure
+  D_N=R_ref-B_N+2L_N-Z_N+Q_N+2max(e,0)-ε_tr,
+  Q_N=Σ_{n=0}^N[2P(n)U(N-n)+U(n)U(N-n)]>=0,
+avec P log-pondéré sur les premiers et U=Λ-P sur les seules puissances propres.
+R_ref et tous les fronts gardent leurs conditions originales. Aucune inégalité
+équivalente à la cible n'est prise en prémisse. Résultat retenu : ORB/BLOCK/NEG
+sont des obligations auxiliaires précises proposées sur papier ; aucune
+annulation globale, aucune cible D_N, aucun nouveau lot Lean, aucun WIN.

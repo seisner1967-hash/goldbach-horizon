@@ -1,0 +1,35 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH03_AUTHORIZATION",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch03_attempt01",
+  "modules": [
+    "GammaDerivative22"
+  ],
+  "compiler_invocations_maximum": 1,
+  "source_manifest_sha256": "9213cfc197ce5f594005f4fdfbd7ff88b1dd54cc216c14fdfd6cb801089bd86d",
+  "launcher_sha256": "bf81956b2328f7b6a84faee912d3332327906491b4fc6ebcd6da1dcb8fdc711f",
+  "preparation_receipt_sha256": "2e21cb47c6d53ea9cd5a1c1041acd324accaddd8070666f50f19e0b44c9ec8d6",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_batch02_dependency_directory": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01",
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "created_utc": "2026-10-03T11:14:53.795699+00:00",
+  "inputs_verified": 6597,
+  "old_judge_files_verified": 90,
+  "archives_verified": 3089,
+  "root_FULL_reads": {
+    "launcher": "bad2ed",
+    "builder": "689b3c",
+    "preparation": "7fef05_complete_preparation_tail_only",
+    "prepared_receipt": "9f59a2",
+    "read_receipts": "3e93d2",
+    "source_identical_prior": "8e198f"
+  },
+  "manifest_read_scope": "Complete JSON parsed and all6597 inputs hashed; no FULL raw manifest or all-import mathematical claim",
+  "numeric_PASS_required": false,
+  "root_compiler_invocations": 0,
+  "root_numeric_invocations": 0
+}

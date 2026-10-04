@@ -1,0 +1,571 @@
+{
+  "schema": "round22.psi.author_prepared.v1",
+  "status": "PREPARED_SOURCE_ONLY",
+  "node_id": "15.3",
+  "role": "ROLE3",
+  "generated_at": "2026-10-03T10:51:09.4023753Z",
+  "modules": [
+    "GammaPsiCore22",
+    "GammaPsiBetaLimit22",
+    "GammaPsiIntegral22",
+    "GammaPsiDuplication22"
+  ],
+  "catalog": [
+    {
+      "module": "GammaPsiCore22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiCore22.lean",
+      "sha256": "450962be9526866fa0ffebc39ef29a819d94b57a90000291337550e9f4dc7284",
+      "declaration_count": 19,
+      "declarations": [
+        "GoldbachContinuous22.gammaPsi",
+        "GoldbachContinuous22.betaGammaRatio",
+        "GoldbachContinuous22.betaStep",
+        "GoldbachContinuous22.betaDifferenceIntegrand",
+        "GoldbachContinuous22.gammaDifferentiableAt_of_re_pos",
+        "GoldbachContinuous22.deriv_Gamma_add_one_right",
+        "GoldbachContinuous22.gammaPsi_add_one",
+        "GoldbachContinuous22.gammaPsi_one",
+        "GoldbachContinuous22.betaGammaRatio_zero",
+        "GoldbachContinuous22.hasDerivAt_betaGammaRatio_zero",
+        "GoldbachContinuous22.hasDerivAt_betaGammaRatio_real_zero",
+        "GoldbachContinuous22.betaStep_pos",
+        "GoldbachContinuous22.betaStep_le_one",
+        "GoldbachContinuous22.betaStep_tendsto_zero",
+        "GoldbachContinuous22.betaStep_tendsto_zero_right",
+        "GoldbachContinuous22.betaGammaRatio_eq_mul_betaIntegral",
+        "GoldbachContinuous22.betaDifference_eq_ratio",
+        "GoldbachContinuous22.betaDifference_tendsto",
+        "GoldbachContinuous22.betaDifference_eq_integral"
+      ],
+      "imports": [
+        "Mathlib.NumberTheory.Harmonic.GammaDeriv",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
+        "Mathlib.Analysis.Calculus.Deriv.Slope",
+        "Mathlib.Analysis.Complex.RealDeriv",
+        "Mathlib.Analysis.SpecificLimits.Basic",
+        "Init"
+      ]
+    },
+    {
+      "module": "GammaPsiBetaLimit22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiBetaLimit22.lean",
+      "sha256": "b625725b3aa3fa03f4a2fa76a493054043e2579ce6b0afd6f36697226c8f6d12",
+      "declaration_count": 23,
+      "declarations": [
+        "GoldbachContinuous22.betaEndpointConstant",
+        "GoldbachContinuous22.betaDifferenceMajorant",
+        "GoldbachContinuous22.psiBetaIntegrand",
+        "GoldbachContinuous22.betaEndpointConstant_nonneg",
+        "GoldbachContinuous22.betaDifferenceMajorant_nonneg",
+        "GoldbachContinuous22.rpow_le_half_endpoint_sum",
+        "GoldbachContinuous22.norm_ofReal_cpow",
+        "GoldbachContinuous22.hasDerivAt_ofReal_cpow",
+        "GoldbachContinuous22.norm_cpow_sub_one_le_endpoint",
+        "GoldbachContinuous22.norm_betaFactor_le_two",
+        "GoldbachContinuous22.norm_betaDifference_le_left",
+        "GoldbachContinuous22.norm_betaDifference_le_right",
+        "GoldbachContinuous22.norm_betaDifference_le_majorant",
+        "GoldbachContinuous22.intervalIntegrable_betaDifferenceMajorant",
+        "GoldbachContinuous22.intervalIntegrable_betaDifference",
+        "GoldbachContinuous22.betaDifference_pointwise_tendsto",
+        "GoldbachContinuous22.betaDifference_limit_aestronglyMeasurable",
+        "GoldbachContinuous22.integrableOn_betaDifference_limit",
+        "GoldbachContinuous22.betaDifference_dominated_limit",
+        "GoldbachContinuous22.betaDifference_zero_integral",
+        "GoldbachContinuous22.betaDifference_zero_eq_neg_psiBeta",
+        "GoldbachContinuous22.integrableOn_psiBetaIntegrand",
+        "GoldbachContinuous22.gammaPsi_eq_beta_integral"
+      ],
+      "imports": [
+        "GammaPsiCore22",
+        "Mathlib.Analysis.Calculus.MeanValue",
+        "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+        "Mathlib.Analysis.SpecialFunctions.Integrals",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Init"
+      ]
+    },
+    {
+      "module": "GammaPsiIntegral22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiIntegral22.lean",
+      "sha256": "3f254cdfeee333aa66eba719b944f64a693fa2e15f0265f340ace9c2a99f6aaf",
+      "declaration_count": 10,
+      "declarations": [
+        "GoldbachContinuous22.psiExpIntegrand",
+        "GoldbachContinuous22.expNeg_image_Ioi",
+        "GoldbachContinuous22.hasDerivAt_expNeg",
+        "GoldbachContinuous22.expNeg_injOn_Ioi",
+        "GoldbachContinuous22.ofReal_exp_cpow",
+        "GoldbachContinuous22.expNeg_mul_cpow",
+        "GoldbachContinuous22.psiBeta_exp_jacobian",
+        "GoldbachContinuous22.psiBeta_integral_eq_exp_integral",
+        "GoldbachContinuous22.integrableOn_psiExpIntegrand",
+        "GoldbachContinuous22.gammaPsi_eq_exp_integral"
+      ],
+      "imports": [
+        "GammaPsiBetaLimit22",
+        "Mathlib.MeasureTheory.Function.Jacobian",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+        "Init"
+      ]
+    },
+    {
+      "module": "GammaPsiDuplication22",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiDuplication22.lean",
+      "sha256": "8a7f2c014866bfe49814c9310dfc012acd05e87c962b5976a32cf0fec9a2179f",
+      "declaration_count": 2,
+      "declarations": [
+        "GoldbachContinuous22.deriv_Gamma_duplication",
+        "GoldbachContinuous22.gammaPsi_duplication"
+      ],
+      "imports": [
+        "GammaPsiCore22",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Init"
+      ]
+    }
+  ],
+  "declarations": 54,
+  "inputs": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiCore22.lean",
+      "sha256": "450962be9526866fa0ffebc39ef29a819d94b57a90000291337550e9f4dc7284",
+      "bytes": 8446,
+      "read_scope": "AUTHOR_FULL_FINAL_SOURCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiCore22.lean",
+      "sha256": "450962be9526866fa0ffebc39ef29a819d94b57a90000291337550e9f4dc7284",
+      "bytes": 8446,
+      "read_scope": "BYTE_IDENTICAL_FROZEN_COPY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiBetaLimit22.lean",
+      "sha256": "b625725b3aa3fa03f4a2fa76a493054043e2579ce6b0afd6f36697226c8f6d12",
+      "bytes": 13239,
+      "read_scope": "AUTHOR_FULL_FINAL_SOURCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiBetaLimit22.lean",
+      "sha256": "b625725b3aa3fa03f4a2fa76a493054043e2579ce6b0afd6f36697226c8f6d12",
+      "bytes": 13239,
+      "read_scope": "BYTE_IDENTICAL_FROZEN_COPY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiIntegral22.lean",
+      "sha256": "3f254cdfeee333aa66eba719b944f64a693fa2e15f0265f340ace9c2a99f6aaf",
+      "bytes": 4077,
+      "read_scope": "AUTHOR_FULL_FINAL_SOURCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiIntegral22.lean",
+      "sha256": "3f254cdfeee333aa66eba719b944f64a693fa2e15f0265f340ace9c2a99f6aaf",
+      "bytes": 4077,
+      "read_scope": "BYTE_IDENTICAL_FROZEN_COPY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\GammaPsiDuplication22.lean",
+      "sha256": "8a7f2c014866bfe49814c9310dfc012acd05e87c962b5976a32cf0fec9a2179f",
+      "bytes": 3676,
+      "read_scope": "AUTHOR_FULL_FINAL_SOURCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\source_final\\GammaPsiDuplication22.lean",
+      "sha256": "8a7f2c014866bfe49814c9310dfc012acd05e87c962b5976a32cf0fec9a2179f",
+      "bytes": 3676,
+      "read_scope": "BYTE_IDENTICAL_FROZEN_COPY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Harmonic\\GammaDeriv.lean",
+      "sha256": "f1d319c97dd25f23ff787680dc359cfabdaf19983e5bb9d8ce2cd22107b6e2da",
+      "bytes": 11794,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Gamma\\Beta.lean",
+      "sha256": "6ed0322724e35b5ac2b83b8b38516ed95fba308ee892e1baa622a49a13c722da",
+      "bytes": 29210,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Real.lean",
+      "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+      "bytes": 49324,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Deriv.lean",
+      "sha256": "f03b4534a6afbfd5275433d2c56dce6627441e405353fab6813cae03672ea410",
+      "bytes": 31462,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Continuity.lean",
+      "sha256": "47b6018f8597ae353961ae3835d8b96915803978d12d0c9c3dd555fb0118b8c1",
+      "bytes": 21819,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Pow\\Complex.lean",
+      "sha256": "2472ae69befd020eb8beaaa4994d206fb8e6bf8f9c96ec92f10755e5fc775644",
+      "bytes": 12182,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\MeanValue.lean",
+      "sha256": "bc441942872e5fa25a45c38ab6f378d8f76de28809fdbacf78534136c4156acc",
+      "bytes": 70309,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Basic.lean",
+      "sha256": "9576d3ea4e2988124154e7ddf538e48b2d6b6d5eca409cbbe31128759374f1d6",
+      "bytes": 32095,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Slope.lean",
+      "sha256": "c54a07f273da10e257bcfc3805d83f81bf6f7ce8c5ef6677dc00ee1bd7513197",
+      "bytes": 12124,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\RealDeriv.lean",
+      "sha256": "165a46a88000346b475c28da407ce0d0197b035fdc46e6a1af380d828815ec45",
+      "bytes": 6048,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecificLimits\\Basic.lean",
+      "sha256": "c68e79813f3c8e0ba33eccb99cd3849b8d1e3b0197b9ff9a7671a4bbcd202ca9",
+      "bytes": 35326,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals.lean",
+      "sha256": "bac1446917ac212aaea7b11701f00a8acf6b698cba75251eb8fc572b02e2699f",
+      "bytes": 36535,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\DominatedConvergence.lean",
+      "sha256": "dcd3681d95530d0a475a260324501f3928ad03ea92cf7adca07fa1f2c0e472f3",
+      "bytes": 35884,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\IntervalIntegral.lean",
+      "sha256": "a642c4dbf6c6a924b1b4f4ac94150d4ead8c06a9aa8b6e32192d26eb3be1fb2c",
+      "bytes": 54351,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\Jacobian.lean",
+      "sha256": "0fda4e28d0030c4a72842ba6ece3b23ff0e3b60ab8ffa875bd1a699fc2f632f9",
+      "bytes": 74399,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\L1Space.lean",
+      "sha256": "7d041392ff5a34fb256b5ce97cc04b8c681919350c849647d4309bdc29af4a2a",
+      "bytes": 72775,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Function\\StronglyMeasurable\\Basic.lean",
+      "sha256": "2eb21a168f6c61713867610e61bd14ebb2acb1e668218e3b82f4642ac22b84bf",
+      "bytes": 96091,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Complex\\Log.lean",
+      "sha256": "09da69b28b9bce06f75edd53489d43e2bd770c04e729c0b8b3f9672d9fcef25a",
+      "bytes": 13098,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Basic.lean",
+      "sha256": "4766375ac5a937f01afffced804fb17498f39e0dfbf0f6efe5f3023072d20ded",
+      "bytes": 22941,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ExpDeriv.lean",
+      "sha256": "da437100f0386396288328305d2a42342af1563b48bbe0b81fb5cc5446faf838",
+      "bytes": 13300,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Exponential.lean",
+      "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+      "bytes": 59817,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\IntegrableOn.lean",
+      "sha256": "377d50adedf2a1705a1e4acc6126076e7b40c8213f0600fec8898f7a019e7492",
+      "bytes": 36007,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\MeasureTheory\\Integral\\SetIntegral.lean",
+      "sha256": "2fc90a7ecb3b4d9e47299a2b3b8eebf97a4e2a177d28daf3c48a4c0e059c4c86",
+      "bytes": 83514,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\ContinuousOn.lean",
+      "sha256": "1265b4f500c4fbb5e74743deb790ccbd01b2427807d0307e4637c3f1e39848be",
+      "bytes": 72895,
+      "read_scope": "TARGETED_API_SEE_read_scope22.md"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\run_psi_batch_once22.py",
+      "sha256": "14cc89e8afdd600843e276d6bad789e19449041370c883168848ab295848857c",
+      "bytes": 10485,
+      "read_scope": "PREPARATION_SOURCE_OR_METADATA_ONLY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\prepare_psi_metadata22.ps1",
+      "sha256": "95e17ef463f0db00e6185d10bdc15e52f49f50d9a7cbdbe79cea754829233e33",
+      "bytes": 13326,
+      "read_scope": "PREPARATION_SOURCE_OR_METADATA_ONLY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\preparation22.md",
+      "sha256": "6c556af2c04a84a68a6c8b365c20e5c8dcee2c08ffd07fa16f800ecf4a6a7643",
+      "bytes": 2280,
+      "read_scope": "PREPARATION_SOURCE_OR_METADATA_ONLY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\read_scope22.md",
+      "sha256": "49608ba390f2b59560249729578a4395077157ad73d2b0330f064b1026d2b2b3",
+      "bytes": 1413,
+      "read_scope": "PREPARATION_SOURCE_OR_METADATA_ONLY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\C5_next_obligations22.md",
+      "sha256": "b20d93c85c5baa06864510751df54254caedd45940e4d20af8567961c8402960",
+      "bytes": 2583,
+      "read_scope": "PREPARATION_SOURCE_OR_METADATA_ONLY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\psi_api_inventory22.json",
+      "sha256": "75c5044d92935d61e945a42e0e68cd745a40058031cfb99a28688acbe6420e7d",
+      "bytes": 8377,
+      "read_scope": "PREPARATION_SOURCE_OR_METADATA_ONLY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\psi_cache_closure22.json",
+      "sha256": "8211d1e3ba1f94f4f415c20a4a26ad12cbd4cdc5a3458a3a8becb17482aac0d6",
+      "bytes": 3243847,
+      "read_scope": "PREPARATION_SOURCE_OR_METADATA_ONLY"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_contour\\psi_c5_subcontract22.md",
+      "sha256": "2c0382c7069d7480fdb31d0c63baa56136e2ab4e0ac563de0f582899c2500c79",
+      "bytes": 4741,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\contour_formula22.md",
+      "sha256": "42faea33cdcd56c08f6fb593dbd42c5c293b8e72beb9c823db68e9576ac1edb7",
+      "bytes": 9429,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\h1_source_review01\\review.md",
+      "sha256": "11b5cf745f50e75a10d670e55f39bb0e612902673a21bf13daa03bff41656e7f",
+      "bytes": 10895,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_sources\\GammaPrerequisites22.lean",
+      "sha256": "9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7",
+      "bytes": 18040,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\GammaPrerequisites22.olean",
+      "sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+      "bytes": 605536,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch02_attempt01\\receipt.json",
+      "sha256": "a159b22e7ac4e8718f0572fdbf3e6d424294571eab01d5ed1ff979a821af48f9",
+      "bytes": 15241,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\actual_receipt.json",
+      "sha256": "2c7409087b6f4c18d9de616592d3c8b3274622bd05feb9fd12d54f93a0548f48",
+      "bytes": 1670,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\actual.log",
+      "sha256": "5e311aa6a0bcd7fa6d8a92134a1dd9f56a183540f1031b698c6539f81ae66d45",
+      "bytes": 1493,
+      "read_scope": "READONLY_REQUIRED_OR_ACTUAL_EVIDENCE"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_source_manifest22.json",
+      "sha256": "3403b51391a8ccba3578d100533615dfdd8dd1ce08560bbe7f419cde39a0c253",
+      "bytes": 24194,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_prepared_receipt22.json",
+      "sha256": "9dedf9019ef32ace6af93066ba975e250f8a47de5c35f567d4bc8b671f15dea6",
+      "bytes": 635,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_batch01_attempt01\\receipt.json",
+      "sha256": "273774ecce0500c970ecac573a6a541be786dae1ea9d52e647aaad21ef048f20",
+      "bytes": 5838,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_batch01_attempt01\\GammaPsiCore22.log",
+      "sha256": "1128364831728b06a269a279a56534a2d3c4144fa0da80d7c34c641f9e6a38ed",
+      "bytes": 4657,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_batch01_attempt01\\START.json",
+      "sha256": "b9c74dce866b56c5fed496b43bb9964c6d651db2fcd390ba075e3fa30222415d",
+      "bytes": 224,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_batch01_attempt01\\GammaPsiCore22_FIN.json",
+      "sha256": "6f5370848c084beeacb6465f0e1556313cf2ff2b76c753e705d880ea6fe7c01d",
+      "bytes": 4360,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_batch01_attempt01\\PREEXEC.json",
+      "sha256": "8949389899265c608ffc375985dd362e3e7688a201b1276adf6e8537a33dc2b4",
+      "bytes": 1643864,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\psi_batch01_attempt01\\POSTEXEC.json",
+      "sha256": "fd644afe1383eb1a545e3d0b1fc21f6c22978cf2583a54911e6b924bda53d808",
+      "bytes": 1641517,
+      "read_scope": "READONLY_PREVIOUS_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\failure01_diagnosis22.md",
+      "sha256": "5dc77fa7f52dbad23701f02bb4b999fd6643b4ae2b5edc788b2d50731e8d3396",
+      "bytes": 2331,
+      "read_scope": "FULL_ACTUAL_FAILURE_DIAGNOSIS"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_source_manifest22.json",
+      "sha256": "ac2e76173f00e65e20914de041f654ba8394cfff2eaa7da2529c963deccc8ebf",
+      "bytes": 27580,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_prepared_receipt22.json",
+      "sha256": "3bbf392f96aa67dfa3032d738e29c3573c1ad2c364ebaae2827bcbc8d835aa01",
+      "bytes": 635,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_batch02_attempt01\\receipt.json",
+      "sha256": "0961062ade0d902dcd6f377ba23ccac67021187d32bdc68e4c14c94ed1aa724b",
+      "bytes": 5851,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_batch02_attempt01\\GammaPsiCore22.log",
+      "sha256": "98abb8afebf7bb1c0594cafd6f8320c3cdfb2d4dbe5a0280141821188642d470",
+      "bytes": 3273,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_batch02_attempt01\\START.json",
+      "sha256": "71f80308e0c66e87582e8dc4ae6bc83853403b84a1d56c23382096a999cf77b8",
+      "bytes": 224,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_batch02_attempt01\\GammaPsiCore22_FIN.json",
+      "sha256": "a41d3194a6a451436b94c624c454a71b9643030c2e177d8c1070fc36cd3872fc",
+      "bytes": 4377,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_batch02_attempt01\\PREEXEC.json",
+      "sha256": "906d942538d5ec35d23c9541c6cba66a20f2c38fd02e63c195b7057d675a4fe5",
+      "bytes": 1646207,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision02\\psi_batch02_attempt01\\POSTEXEC.json",
+      "sha256": "b4cabe19ac2d1411d67c37ff3228abe196c369e85c2fb16bb7c5f2cb8f4874c7",
+      "bytes": 1643848,
+      "read_scope": "READONLY_SECOND_ACTUAL_FAILURE_NOT_REPLAYED"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\failure02_diagnosis22.md",
+      "sha256": "43267ff09cf67763eb9d3bfd8852b1712f8dc94323aed4f36ca738914a2296b8",
+      "bytes": 1735,
+      "read_scope": "FULL_SECOND_ACTUAL_FAILURE_DIAGNOSIS"
+    }
+  ],
+  "cache_closure_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\h1_psi\\revision03\\psi_cache_closure22.json",
+  "cache_closure_module_count": 3238,
+  "cache_closure_artifact_count": 6476,
+  "lean_path_libraries": [
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib"
+  ],
+  "python_path": "C:\\Users\\Utilisateur\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_path": "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "mathlib_commit_context": "9837ca9d65d9de6fad1ef4381750ca688774e608",
+  "readonly_gamma_olean_sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+  "independent_SOURCE_review": {
+    "actor": "ROLE4",
+    "captures": [
+      "a84072",
+      "41e749"
+    ],
+    "APIs": [
+      "60792f",
+      "c40ad1"
+    ],
+    "compile_invocations": 0,
+    "scope": "Original analytical proofs reviewed; Core composition corrected; interval lower bound parenthesized as actual Beta.lean notation in revision03"
+  },
+  "numeric_evidence": {
+    "receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\actual_component22\\actual_receipt.json",
+    "receipt_sha256": "2c7409087b6f4c18d9de616592d3c8b3274622bd05feb9fd12d54f93a0548f48",
+    "numeric_PASS": false,
+    "counterexample_established": false,
+    "classification": "TECHNICAL_EXPORT_FAILURE_NO_MATH_COUNTEREXAMPLE",
+    "exit_code": 1,
+    "result_sha256": null,
+    "post_integrity": true,
+    "ROOT_clarification": "numeric PASS is not a mathematical precondition for this independent auxiliary theorem"
+  },
+  "compiler_gate_required": true,
+  "compiler_invocations": 0,
+  "C5_paid": false,
+  "global_H1_paid": false,
+  "D_N_paid": false,
+  "victory": false
+}

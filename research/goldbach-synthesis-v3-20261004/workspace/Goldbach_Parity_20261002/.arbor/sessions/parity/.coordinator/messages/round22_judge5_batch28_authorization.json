@@ -1,0 +1,43 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH28_AUTHORIZATION",
+  "time_utc": "2026-10-03T23:52:46.640890+00:00",
+  "role": "ROLE5",
+  "authorized": true,
+  "attempt": "batch28_attempt01",
+  "modules": [
+    "ComplexGammaMellinTail22"
+  ],
+  "compiler_invocations_maximum": 1,
+  "source_manifest_sha256": "f90bff9271e5ec445b1a061ceb6fe653f314185f49b0208f4cb739c9f25a272c",
+  "launcher_sha256": "d7b848dd07d3bb2b50ca3e26a8c086a927733cc4cd121b5dd4105a0231766bef",
+  "preparation_receipt_sha256": "42540914d418437432cfbb1ed6b46751ac2b46fb2ee81b09a2e864a8edf68958",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "readonly_local_dependencies": [
+    "GammaPrerequisites22",
+    "ThermalGammaMellinInverse22",
+    "ComplexGammaMellinLocal22"
+  ],
+  "independent_audit": true,
+  "author_olean_allowed": false,
+  "no_win": true,
+  "ROOT_FULL_read_receipts": "4a6e4f builder; 4a289a launcher; 3fa42f doc; 9dc520 handoff; 1afe08 toolsReads; 3c3f26 independentReview; 5b3a74 catalog; faa328 reads FULL replaces truncated cee953; 25efea prepReceipt replaces omitted aggregate; 6379e4 gatehelper FULL replaces omitted aggregate; all large metadata rows and current byte hashes at gate, no raw FULL import sources",
+  "source_math_review_owner": "ROLE5",
+  "large_JSON_scope": "All entries parsed and bound bytes hashed; raw FULL import source text not claimed",
+  "inputs_verified": 9260,
+  "old_judge_files_verified": 2010,
+  "archives_verified": 3089,
+  "prior_modules": 85,
+  "prior_declarations": 1434,
+  "stop_first_failure": true,
+  "retries": 0,
+  "ROOT_compiler_invocations": 0,
+  "ROOT_numeric_invocations": 0,
+  "child_wall_seconds": 300,
+  "max_heartbeats": 1000000,
+  "retry_count_maximum": 0,
+  "H1_paid": false,
+  "C5_global_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

@@ -1,0 +1,77 @@
+CONTRAT CONTINU GOLDBACH — BOUCLE 22 — RÉVISION 06
+État documentaire au 4 octobre 2026, après observation ROOT du banc natif04 interrompu et du PASS indépendant BORD25. Les révisions antérieures et tous les journaux d'échec sont conservés. Ce texte ne lance aucune évaluation.
+
+Le cadre fixé conduit à une identité continue exacte et à une enveloppe de coefficient réellement construite. Le registre officiel observé par ROOT comprend 83 modules Lean et 1397 déclarations auxiliaires. Ces acquis ne constituent pas encore l'annulation signée requise sur la frontière ni une preuve de la cible D_N. Aucun WIN n'est déclaré.
+
+1. OBJETS ET IDENTITÉ CONTINUE COMPILÉE
+On utilise la vraie fonction de von Mangoldt : Λ(n)=log p lorsque n=p^k avec p premier et k≥1, et Λ(n)=0 sinon, notamment pour n=0,1. Toutes les puissances de premiers sont incluses. Posons C_N=Σ_{n=0}^N Λ(n)Λ(N−n). Pour a>0,
+  T_a(θ)=Σ_{n≥0} Λ(n) exp(−an) exp(inθ).
+Les enveloppes et les échanges payés dans les lots indépendants 11 et 13 donnent
+  C_N = exp(aN)/(2π) ∫_0^{2π} T_a(θ) conj(T_a(−θ)) exp(−iNθ) dθ.
+Les coefficients réels donnent conj(T_a(−θ))=T_a(θ). Il s'agit d'une extraction de coefficient par caractères continus. Aucune somme infinie T_0 n'est postulée.
+
+Avec r=exp(−a), A=r/(1−r)^2 et
+  B_M=r^(M+1)((M+1)/(1−r)+A),
+la troncature P_{a,M}(θ)=Σ_{n=0}^M Λ(n)exp(−an)exp(inθ) vérifie |T_a−P_{a,M}|≤B_M et une erreur de projection ≤2 exp(aN) A B_M. Cette enveloppe est continue sur a>0 et tend vers zéro en M. Envelope42, Identity20 et Discrete29 ont été compilés indépendamment, sans sorry ni axiome cible ; les échecs techniques antérieurs restent archivés.
+
+2. PROJECTEUR FINI SANS ALIAS ET PARAMÈTRES FIXÉS
+Pour N≤M et K>max(N,2M−N), l'orthogonalité discrète compilée dans le lot15 donne exactement
+  C_N = exp(aN)/K Σ_{j=0}^{K−1} P_{a,M}(2πj/K)^2 exp(−2πiNj/K).
+Ici a≥0 est permis car le polynôme est fini. Le contrat numérique fixe
+  N=M=100000000, K=2^27=134217728, S=2^58=288230376151711744,
+et a=0 dans ce seul projecteur fini. K>N exclut les autres indices congrus à N dans le carré du polynôme de degré 2N. Cette identité ne fournit aucune majoration des corrélations signées de zéros.
+
+3. COEFFICIENTS ENTIERS CANONIQUES ET RAYON PAYÉ PAR LEAN17
+Pour 2≤p≤N, k=floor(log_2 p), z=(p−2^k)/(p+2^k), donc 0≤z≤1/3 et k≤26. On définit
+  L_32(z)=2 Σ_{j<32} z^(2j+1)/(2j+1), R_32=9/(4·65·3^65).
+Le logarithme réel appartient à l'intervalle construit
+  [k L_32(1/3)+L_32(z), k L_32(1/3)+L_32(z)+(k+1)R_32].
+A_32(p) est l'entier obtenu en arrondissant S fois le milieu de cet intervalle au plus proche, avec égalité départagée vers l'entier pair, puis borné dans [0,32S]. Le lot17 prouve la construction, ses raccords réels et |A_32(p)/S−log p|≤1/S ; aucune hypothèse libre de précision n'est ajoutée.
+Posons A_n=A_32(minFac n) si n est une vraie puissance de premier, et A_n=0 sinon. Alors
+  I_A=Σ_{n=0}^N A_n A_{N−n},
+  E=(N+1)(64/S+1/S^2)=(N+1)(64S+1)/S^2,
+  |C_N−I_A/S^2|≤E.
+L'enveloppe réelle E(N,s) est continue pour s>0. La garde entière fixe 2(N+1)(64S+1)·10^6≤S^2 est compilée : 2E≤10^−6. Sources indépendantes : judge5/batch17/sources/RationalLogQuantization22.lean et QuantizedLambdaEnvelope22.lean, 52 déclarations payées. Le calcul de référence B40 et son raffinement GMP restent des contrôles auxiliaires dont la formalisation réelle et machine n'est pas acquise par ce lot.
+
+4. CINQ PROJECTIONS MODULAIRES CONCRÈTES
+Les cinq couples (p_i,g_i), avec p_i=c_iK+1, sont :
+  p_i          g_i   c_i
+  2013265921   31    15
+  2281701377   3     17
+  3221225473   5     24
+  3489660929   3     26
+  3892314113   3     29
+Dans F_{p_i}, ω_i=g_i^((p_i−1)/K) a exactement l'ordre K. Avec A_n=0 pour N<n<K,
+  F_i(j)=Σ_{n<K} A_n ω_i^(jn),
+  r_i=K^−1 Σ_{j<K} F_i(j)^2 ω_i^(−Nj) = I_A mod p_i.
+Le lot19 paie l'orthogonalité générique du corps fini. Le lot22 a réellement compilé les cinq primalités, les cinq racines et les cinq spécialisations au constructeur A32 : ConcreteNTTRoots22.lean et ConcreteNTTA32Projection22.lean, 28 déclarations indépendantes. Ces théorèmes ne certifient pas les instructions des deux exécutables.
+
+Avec Π=∏_i p_i, le contrat SOURCE/PAPER déjà gelé prévoit la reconstruction CRT unique dans [0,Π), sous la borne
+  0≤I_A≤(N+1)(32S)^2<2^153<Π.
+La réalisation DIT/DIF, les reports entiers, les tableaux minFac/puissances de premiers, GMP et la reconstruction CRT native restent à relier aux objets Lean. Aucun résultat natif n'est assimilé à ces théorèmes sans ces raccords.
+
+5. COMPARAISON FALSIFIABLE DU RÔLE6 ET RÉSULTAT RÉEL DU BANC04
+Le contrat exige du producteur le catalogue complet 0..N, l'égalité de chaque coefficient avec A32, les cinq résidus et un entier C_A. Le contrôleur distinct doit redériver A32, contrôler les encadrements logarithmiques, les facteurs/puissances, l'extraction DIT/DIF et la CRT, puis comparer C_A au coefficient auxiliaire C_B : |C_A−C_B|≤2(N+1)(64S+1) et 2(N+1)(64S+1)·10^6≤S^2. Le rayon primaire publié, après liaison exacte au coefficient, serait E autour de C_A/S^2. Aucune valeur ni précision n'est fournie comme prémisse.
+
+Deux exécutables gelés ont réellement été construits avec deux codes de sortie nuls dans BUILD04. La confiance opérationnelle Windows/GCC/natif est déclarée ; aucune fermeture universelle du chargeur n'est prétendue. Le seul banc natif04 autorisé a ensuite créé successivement producteur puis contrôleur, sans retry :
+  producteur PID32676 : START 03/10/2026 21:16:43.457247 UTC ; FIN 21:35:22.455884 UTC ; exit0 et Job vide confirmé ;
+  contrôleur PID6864 : START 21:35:23.137749 UTC ; aucun FIN ni résultat final laissé ;
+  watchdog : 22:16:27.628186 UTC, plafond partagé 3600s, HARD_WALL_NO_VERDICT_POST_UNVERIFIED ;
+  session parent17351 : retour outil b762cb, exit1 observé.
+Les journaux du contrôleur sont vides. Aucun receipt.json parent, POST.json, coefficient_result.json ou checker_FIN.json n'existe. Aucun coefficient validé, comparaison effective, rayon numérique final ou garde de résultat n'est déclaré. Zéro mutant a été exécuté dans ce banc ; les contrôles ponctuels antérieurs ne servent pas d'oracle global.
+
+Après fermeture réelle et absence observée des PIDs callbacks, une unique clôture externe purement metadata a rehashé 6456 entrées, 66 paires original/copie, 3089 archives et cinq contrôles. Elle a gelé 83 sorties. Statut : CLOSED_STOP_NO_MATHEMATICAL_VERDICT. ROOT a physiquement observé cette clôture externe à 22:25:54.346933 UTC le 03/10/2026 (be669d/session5966→fc587a, exit0), avec 6456 entrées, 66 paires, 3089 archives, cinq contrôles et 83 sorties conservés. Cette conservation externe ne remplace pas le POST absent du parent. Le calcul est incomplet pour raison de durée ; aucune fausseté mathématique n'a été établie. Dossier : role3/native_numeric_closure_source01 ; clôture SHA a99a5e58768d09a16c7a1ae248448be41016cac228fc57c69372d6abb2774df3. Aucun banc n'est relancé par ce contrat.
+
+6. DETTE CONTINUE SIGNÉE ET CONDITION DE VICTOIRE
+La revue indépendante de Weil signé est cohérente sur papier sous les charges explicites de formule de trace, régularité mixte, convergence et catalogue de zéros avec multiplicités. Son noyau n'est pas un opérateur positif démontré ; aucune inégalité signée du ledger n'en découle encore. La revue des orbites de zéros paie sur papier les blocs réels sous conjugaison/reflet, mais leurs cosinus changent de signe : ni la réalité des blocs ni l'échange x↔y sur x+y=N ne fournit l'annulation requise.
+Le lot BORD24 est conservé en échec technique. Le lot25 a ensuite compilé indépendamment AngularMellinBorder22 révision04 : 30 déclarations (22 théorèmes, huit définitions), zéro erreur et trente listes d'axiomes exactement standards. ROOT a observé sa conservation à 22:26:36.396725 UTC le 03/10/2026, officialisant 83 modules/1397 déclarations, dont 26 modules/455 déclarations nouveaux dans round22.
+Pour a>0, N naturel strictement positif et q complexe quelconque, cette preuve construit réellement les dérivées, la continuité, l'intégrabilité et FTC pour
+  J(a,N,q)=(1/(2π))∫_{−π}^{π}(a−iθ)^(−q) exp(−iNθ) dθ,
+  B(a,N,q)=i(−1)^N[(a−iπ)^(−q)−(a+iπ)^(−q)]/(2πN),
+  J(a,N,q)=B(a,N,q)+(q/N)J(a,N,q+1).
+Le bord est nul à q=0 et vaut −(−1)^N/[N(a²+π²)]≠0 à q=1. Il doit donc être conservé dans tout raccord spectral ; aucune périodicité de la puissance complexe ni annulation de bord n'est supposée. Source indépendante : judge5/batch25/sources/AngularMellinBorder22.lean SHA601a3360ff92f9bb1f7ecc64bc0754f2bb2a703cf143ff00f16d3b5bec6be2c4 ; olean SHA94e699cca181f9fdb3a550ee0a2736688c9770ed0c7735ca71f80a1b55ccfb3d. Ce PASS ne paie pas la corrélation signée globale ni D_N. Le paquet Mellin complexe37 est cohérent en SOURCE sur Re(w)>0, non élaboré : ses constantes dégénèrent lorsque |Arg(w)|→π/2, et ses queues quantitatives restent PAPER. Il ne paie pas encore la représentation uniforme de T_a, les échanges avec ζ'/ζ ou le signe du ledger.
+
+L'identité de coefficient isole exactement la contribution arithmétique globale et inclut tous les PP ; elle n'impose pas un signe aux termes spectraux. Restent à payer la correction des puissances de premiers pour la contribution voulue, la frontière du ledger et l'inégalité de résidu D_N≤N/(256 log N log log N). Ni la positivité requise ni une annulation modulaire/spectrale globale n'est supposée. La victoire exige toujours une nouvelle preuve Lean compilée sans sorry du contournement demandé ; D_N et WIN demeurent OPEN.
+
+Références gelées : PAPER projection dd86c92c15e05febad687c240eb58d9dae2f930b646356f1dfe99e3bb35a680f ; spécification native 6bc24ecfe96437e5c437fe003788194548b379c0c7bbf0dfed81f118c0eb322b ; revue Weil signé 4c356fc0030838251249cc0d9620060525ad764bc94de3726682ef8807ae9445 ; revue orbites aeb411a7605600e8d80e96c03a4958557ea4cd3e53e51f208c010d10a88c8b83 ; revue Mellin ca32797494416b44fc688dd1d27898256419a0183ecfce3adab8ac037ba1923e. Le registre ROOT garde la priorité pour toute actualité postérieure à ce gel.
+Observations officielles distinctes : .arbor/sessions/parity/.coordinator/messages/round22_judge_batch25_closed_observation.json (ROOT326713/session66364→1ae414, exit0) ; round22_native_numeric04_closed_observation.json (ROOTbe669d/session5966→fc587a, exit0, clôture WATCHDOG). Les deux observations sont metadata, sans recomputation du coefficient. La révision05 et ses reçus restent immuables ; aucun autre PASS n'est anticipé dans cette révision06.

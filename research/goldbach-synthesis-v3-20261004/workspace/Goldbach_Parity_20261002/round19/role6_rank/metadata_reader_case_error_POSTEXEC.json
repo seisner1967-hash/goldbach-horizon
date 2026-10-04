@@ -1,0 +1,16 @@
+{
+  "event": "POSTEXEC_METADATA_READER_CASE_COLLISION",
+  "actual_operation": "Get-Content allrang.json -Raw | ConvertFrom-Json -Depth 100, followed by selected metadata fields",
+  "actual_error": "Cannot convert the JSON string because it contains keys with different casing. Please use the -AsHashTable switch instead. The key that was attempted to be added to the existing key 'R' was 'r'.",
+  "cause": "Stored AP representations legitimately contain uppercase R cutoff and lowercase r conductor prime. JSON keys are case sensitive; the default PowerShell PSCustomObject reader cannot preserve both.",
+  "failed_selection_output": "All selected fields were null; this output is discarded and never interpreted as numerical evidence.",
+  "actual_shell_exit_not_printed_by_tool_wrapper": true,
+  "mathematical_producer_exit": 0,
+  "mathematical_producer_replays": 0,
+  "bank_or_source_changed": false,
+  "next_reader_only_fix": "ConvertFrom-Json -AsHashtable -Depth 100 and case-sensitive bracket indexing",
+  "PREEXEC_capture_existed_for_this_reader": false,
+  "trace_capture_phase": "POSTEXEC_HONEST_NO_RETROACTIVE_PREEXEC",
+  "Lean_or_mathematical_failure": false,
+  "victory": false
+}

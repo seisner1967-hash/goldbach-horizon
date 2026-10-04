@@ -1,0 +1,56 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:122:6: error: tactic 'apply' failed, failed to unify
+  ∑ x ∈ t.powerset, ?m.16430 x = ∑ x ∈ P.powerset, ?m.16430 x
+with
+  (∑ d ∈ P.powerset, if r ⊆ d then if d ⊆ t then sign (t \ d) * f t else 0 else 0) =
+    ∑ i ∈ t.powerset, (if r ⊆ i then sign (t \ i) else 0) * f t
+P : Finset ℕ
+f : Finset ℕ → ℝ
+r : Finset ℕ
+hr : r ⊆ P
+spread :
+  ∀ (d : Finset ℕ),
+    (if r ⊆ d then ∑ t ∈ P.powerset, if d ⊆ t then sign (t \ d) * f t else 0 else 0) =
+      ∑ t ∈ P.powerset, if r ⊆ d then if d ⊆ t then sign (t \ d) * f t else 0 else 0
+t : Finset ℕ
+ht : t ∈ P.powerset
+⊢ (∑ d ∈ P.powerset, if r ⊆ d then if d ⊆ t then sign (t \ d) * f t else 0 else 0) =
+    ∑ i ∈ t.powerset, (if r ⊆ i then sign (t \ i) else 0) * f t
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:129:11: error: simp made no progress
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:177:2: error: no goals to be solved
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:181:35: warning: unused variable `ht`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:217:2: error: tactic 'apply' failed, failed to unify
+  Finset.sum ?m.45493 ?m.45488 = Finset.sum ?m.45493 ?m.45489
+with
+  ∑ x ∈ P.powerset, ((if x ⊆ t then w t * gprod g t else 0) * if x ⊆ d then w d * gprod g d else 0) / hprod g x =
+    w d * w t * ∑ i ∈ P.powerset, gprod g d * gprod g t * if i ⊆ d ∧ i ⊆ t then (hprod g i)⁻¹ else 0
+P : Finset ℕ
+g : ℕ → ℝ
+hg : ∀ p ∈ P, 0 < g p ∧ g p < 1
+w : Finset ℕ → ℝ
+d : Finset ℕ
+hd : d ∈ P.powerset
+t : Finset ℕ
+ht : t ∈ P.powerset
+⊢ ∑ x ∈ P.powerset, ((if x ⊆ t then w t * gprod g t else 0) * if x ⊆ d then w d * gprod g d else 0) / hprod g x =
+    w d * w t * ∑ i ∈ P.powerset, gprod g d * gprod g t * if i ⊆ d ∧ i ⊆ t then (hprod g i)⁻¹ else 0
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:237:10: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ?a ^ 2
+case pos
+P : Finset ℕ
+z : ℕ
+g : ℕ → ℝ
+hz : 1 ≤ z
+hg : ∀ p ∈ P, 0 < g p ∧ g p < 1
+hG : G P z g ≠ 0
+r : Finset ℕ
+hr : r ∈ P.powerset
+hm : r ∈ support P z
+hh : hprod g r ≠ 0
+hs : sign r * sign r = 1
+⊢ (sign r * hprod g r / G P z g) ^ 2 / hprod g r = hprod g r / G P z g ^ 2
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round17\role3\SelbergFourForms.lean:242:2: error: 'change' tactic failed, pattern
+  G P z g / G P z g ^ 2 = 1 / G P z g
+is not definitionally equal to target
+  (∑ i ∈ filter (fun a => a ∈ support P z) P.powerset, hprod g i) / G P z g ^ 2 = 1 / G P z g
+'GoldbachRound17.Selberg.principal_optimum' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

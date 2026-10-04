@@ -1,0 +1,24 @@
+{
+  "status": "ROOT_READ_ACTUAL_FAILED_LEAN18_ROLE3_ATTEMPT01",
+  "attempt": 1,
+  "exit_code": 1,
+  "source_snapshot_sha256": "4c146142daa3e265bf1013bb4d4e5ab1099b4b538de698f122f913f100ed6d48",
+  "log_sha256": "c8b1353eee5cc92cd269f798f8bede0a625af7a5b74e992751b7ebe2d990793b",
+  "builder_snapshot_sha256": "fd8b0326456a742b77482432e559888d0ab64b9e14a598b6a46642455d36e433",
+  "error_diagnostics": 8,
+  "warning_diagnostics": 1,
+  "classification": "technical elaboration/API errors",
+  "groups": [
+    "local attribute syntax",
+    "Nat.Coprime.mul_left missing API",
+    "Nat.ModEq cancellation/normalization",
+    "Finset product memberships",
+    "conditional expression simplification"
+  ],
+  "explicit_source_sorry_or_admit": false,
+  "failed_log_contains_Lean_generated_sorryAx": true,
+  "mathematical_parity_deduction_falsified": false,
+  "old_Lean_rebuilds": 0,
+  "producer_or_Lean_or_audit_rerun_by_root": false,
+  "victory": false
+}

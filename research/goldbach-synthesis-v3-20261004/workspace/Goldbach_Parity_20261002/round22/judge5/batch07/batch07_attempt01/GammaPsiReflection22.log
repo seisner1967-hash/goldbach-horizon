@@ -1,0 +1,88 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch07\sources\GammaPsiReflection22.lean:38:40: warning: unused variable `hs0`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch07\sources\GammaPsiReflection22.lean:79:2: error: ring failed, ring expressions not equal
+s : ℂ
+hs0 : -1 < s.re
+hs1 : s.re < 0
+hpos : 0 < (1 - s / 2).re ∧ 0 < (1 + s / 2).re
+hc : HasDerivAt (Complex.Gamma ∘ fun x => 1 - id x / 2) (deriv Complex.Gamma (1 - s / 2) * -(1 / 2)) s
+hb : HasDerivAt (Complex.Gamma ∘ fun x => 1 + id x / 2) (deriv Complex.Gamma (1 + s / 2) * (0 + 1 / 2)) s
+hleft :
+  HasDerivAt (fun y => (Complex.Gamma ∘ fun x => 1 - id x / 2) y * (Complex.Gamma ∘ fun x => 1 + id x / 2) y)
+    (deriv Complex.Gamma (1 - s / 2) * -(1 / 2) * (Complex.Gamma ∘ fun x => 1 + id x / 2) s +
+      (Complex.Gamma ∘ fun x => 1 - id x / 2) s * (deriv Complex.Gamma (1 + s / 2) * (0 + 1 / 2)))
+    s
+hlin : HasDerivAt (fun y => ↑Real.pi * (id y / 2)) (↑Real.pi * (1 / 2)) s
+hsin :
+  HasDerivAt (Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) (Complex.cos (↑Real.pi * (s / 2)) * (↑Real.pi * (1 / 2))) s
+hright :
+  HasDerivAt (fun y => ↑Real.pi * (id y / 2) / (Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) y)
+    ((↑Real.pi * (1 / 2) * (Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) s -
+        ↑Real.pi * (id s / 2) * (Complex.cos (↑Real.pi * (s / 2)) * (↑Real.pi * (1 / 2)))) /
+      (Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) s ^ 2)
+    s
+heq :
+  (fun w => Complex.Gamma (1 - w / 2) * Complex.Gamma (1 + w / 2)) =ᶠ[𝓝 s] fun w =>
+    ↑Real.pi * (w / 2) / Complex.sin (↑Real.pi * (w / 2))
+h :
+  deriv Complex.Gamma (1 - s / 2) * -(1 / 2) * (Complex.Gamma ∘ fun x => 1 + id x / 2) s +
+      (Complex.Gamma ∘ fun x => 1 - id x / 2) s * (deriv Complex.Gamma (1 + s / 2) * (1 / 2)) =
+    (↑Real.pi * (1 / 2) * (Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) s -
+        ↑Real.pi * (id s / 2) * (Complex.cos (↑Real.pi * (s / 2)) * (↑Real.pi * (1 / 2)))) /
+      (Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) s ^ 2
+⊢ deriv Complex.Gamma (1 - s / 2) * Complex.Gamma (1 + s / 2) * (-1 / 2) +
+                  deriv Complex.Gamma (1 - s / 2) * (Complex.Gamma ∘ fun x => 1 + id x / 2) s * (1 / 2) +
+                Complex.Gamma (1 - s / 2) * deriv Complex.Gamma (1 + s / 2) * (1 / 2) +
+              deriv Complex.Gamma (1 + s / 2) * (Complex.Gamma ∘ fun x => 1 - id x / 2) s * (-1 / 2) +
+            ↑Real.pi * (Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) s *
+                ((Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) s)⁻¹ ^ 2 *
+              (1 / 2) +
+          ↑Real.pi * Complex.sin (↑Real.pi * (s / 2)) * (Complex.sin (↑Real.pi * (s / 2)))⁻¹ ^ 2 * (-1 / 2) +
+        ↑Real.pi ^ 2 * id s * Complex.cos (↑Real.pi * (s / 2)) *
+            ((Complex.sin ∘ fun y => ↑Real.pi * (id y / 2)) s)⁻¹ ^ 2 *
+          (-1 / 4) +
+      ↑Real.pi ^ 2 * Complex.cos (↑Real.pi * (s / 2)) * s * (Complex.sin (↑Real.pi * (s / 2)))⁻¹ ^ 2 * (1 / 4) =
+    0
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch07\sources\GammaPsiReflection22.lean:95:69: error: unsolved goals
+s : ℂ
+hs0 : -1 < s.re
+hs1 : s.re < 0
+hpos : 0 < (1 - s / 2).re ∧ 0 < (1 + s / 2).re
+hΓC : Complex.Gamma (1 - s / 2) ≠ 0
+hΓB : Complex.Gamma (1 + s / 2) ≠ 0
+hsin : Complex.sin (↑Real.pi * (s / 2)) ≠ 0
+hπ : ↑Real.pi ≠ 0
+hs : s ≠ 0
+⊢ deriv Complex.Gamma (1 + s * (-1 / 2)) * (Complex.Gamma (1 + s * (-1 / 2)))⁻¹ * (-1 / 2) +
+      deriv Complex.Gamma (1 + s * (1 / 2)) * (Complex.Gamma (1 + s * (1 / 2)))⁻¹ * (1 / 2) =
+    deriv Complex.Gamma (1 + s * (-1 / 2)) * (Complex.Gamma (1 + s * (-1 / 2)))⁻¹ * Complex.Gamma (1 + s * (1 / 2)) *
+          (Complex.Gamma (1 + s * (1 / 2)))⁻¹ *
+        (-1 / 2) +
+      Complex.Gamma (1 + s * (-1 / 2)) * (Complex.Gamma (1 + s * (-1 / 2)))⁻¹ * deriv Complex.Gamma (1 + s * (1 / 2)) *
+          (Complex.Gamma (1 + s * (1 / 2)))⁻¹ *
+        (1 / 2)
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round22\judge5\batch07\sources\GammaPsiReflection22.lean:98:13: error: unsolved goals
+s : ℂ
+hs0 : -1 < s.re
+hs1 : s.re < 0
+hpos : 0 < (1 - s / 2).re ∧ 0 < (1 + s / 2).re
+hΓC : Complex.Gamma (1 - s / 2) ≠ 0
+hΓB : Complex.Gamma (1 + s / 2) ≠ 0
+hsin : Complex.sin (↑Real.pi * (s / 2)) ≠ 0
+hπ : ↑Real.pi ≠ 0
+hs : s ≠ 0
+⊢ ↑Real.pi * s * Complex.sin (↑Real.pi * s * (1 / 2)) ^ 2 * (↑Real.pi)⁻¹ * s⁻¹ *
+        (Complex.sin (↑Real.pi * s * (1 / 2)))⁻¹ ^ 2 +
+      ↑Real.pi ^ 2 * s ^ 2 * Complex.sin (↑Real.pi * s * (1 / 2)) * Complex.cos (↑Real.pi * s * (1 / 2)) *
+              (↑Real.pi)⁻¹ *
+            s⁻¹ *
+          (Complex.sin (↑Real.pi * s * (1 / 2)))⁻¹ ^ 2 *
+        (-1 / 2) =
+    1 + ↑Real.pi * s * Complex.cos (↑Real.pi * s * (1 / 2)) * (Complex.sin (↑Real.pi * s * (1 / 2)))⁻¹ * (-1 / 2)
+'GoldbachContinuous22.Gamma_shift_arguments_re_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.sin_half_pi_ne_zero_on_left_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.Gamma_shift_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachContinuous22.deriv_Gamma_shift_reflection' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachContinuous22.gammaPsi_shift_reflection' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

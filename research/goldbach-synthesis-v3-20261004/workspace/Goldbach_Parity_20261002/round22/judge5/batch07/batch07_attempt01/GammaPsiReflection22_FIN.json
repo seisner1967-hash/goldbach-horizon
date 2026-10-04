@@ -1,0 +1,65 @@
+{
+  "axiom_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.Gamma_shift_arguments_re_pos"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.sin_half_pi_ne_zero_on_left_strip"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.Gamma_shift_reflection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.deriv_Gamma_shift_reflection"
+    },
+    {
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "GoldbachContinuous22.gammaPsi_shift_reflection"
+    }
+  ],
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-DmaxHeartbeats=1000000",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\batch07_attempt01\\GammaPsiReflection22.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch07\\sources\\GammaPsiReflection22.lean"
+  ],
+  "exact_axiom_coverage_standard_only": false,
+  "exit_code": 1,
+  "finished_at": "2026-10-03T13:31:06.269310+00:00",
+  "launch_error": null,
+  "log_sha256": "de57424af08c1724a9e872ae267e0fe9394a3d23d58ab4f4191841ddab04bdd5",
+  "module": "GammaPsiReflection22",
+  "olean_sha256": null,
+  "source_prior_status": "SOURCE_NOT_COMPILED",
+  "source_sha256": "8e070c18a483ac71703f66b80dbcf4129f0f16ada8f2a933497655b3a7cdaa30",
+  "started_at": "2026-10-03T13:30:39.965351+00:00",
+  "status": "INDEPENDENT_LEAN_AUDIT_FAIL",
+  "timed_out": false
+}

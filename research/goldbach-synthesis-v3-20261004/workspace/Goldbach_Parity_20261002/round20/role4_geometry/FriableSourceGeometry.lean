@@ -1,0 +1,470 @@
+import FriablePrimeHarmonic
+import FriablePhysicalPayment
+import Mathlib.Algebra.Order.Floor
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Data.Complex.ExponentialBounds
+import Mathlib.NumberTheory.Harmonic.Bounds
+
+/-!
+Source parameter geometry for the already selected Round20 node 14.5.
+This file is source preparation: no compiler invocation has been made.
+The only size premise is the original source onset log N >= 10^24.
+-/
+
+namespace GoldbachRound20.Friable.SourceGeometry
+
+open Finset
+noncomputable section
+
+def sourceU (N : ℕ) : ℝ := Real.log (N : ℝ)
+def sourceEll (N : ℕ) : ℝ := Real.log (sourceU N)
+def sourceT (N : ℕ) : ℝ := sourceU N / (128 * sourceEll N)
+def sourceY (N : ℕ) : ℕ := Nat.floor (Real.exp (sourceT N))
+def sourceSigma (N : ℕ) : ℝ := (Real.log (sourceY N : ℝ))⁻¹
+def sourceD (N : ℕ) : ℕ := Nat.ceil (Real.sqrt (N : ℝ))
+def sourceM (N : ℕ) : ℕ := Nat.ceil ((N : ℝ) ^ (3 / 4 : ℝ))
+def sourceA (N : ℕ) : ℕ := Nat.ceil ((N : ℝ) ^ (7 / 16 : ℝ))
+def sourceAlpha (N : ℕ) : ℕ := Nat.ceil ((N : ℝ) ^ (1 / 4 : ℝ))
+def sourceZ (N : ℕ) : ℕ := Nat.floor ((N : ℝ) ^ (1 / 4 : ℝ))
+def sourceQ (N : ℕ) : ℕ := (N - 1) / sourceAlpha N
+/-- The exact rank cap of FINAL2, with natural division (the floor). -/
+def sourceEcap (N : ℕ) : ℕ := (N - sourceQ N - 1) / sourceM N
+/-- A positive enlargement for summing all ranks in F2. -/
+def sourceEupper (N : ℕ) : ℕ := N / sourceM N
+
+def SourceOnset (N : ℕ) : Prop := (10 : ℝ) ^ (24 : ℕ) ≤ sourceU N
+
+theorem source_u_large {N : ℕ} (h : SourceOnset N) :
+    (10 : ℝ) ^ (24 : ℕ) ≤ sourceU N := h
+
+theorem source_u_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceU N := by
+  have hh := source_u_large h
+  norm_num at hh ⊢
+  linarith
+
+theorem source_u_one {N : ℕ} (h : SourceOnset N) : 1 ≤ sourceU N := by
+  have hh := source_u_large h
+  norm_num at hh ⊢
+  linarith
+
+theorem source_N_pos {N : ℕ} (h : SourceOnset N) : 0 < N := by
+  by_contra hn
+  have hz : N = 0 := Nat.eq_zero_of_not_pos hn
+  norm_num [SourceOnset, sourceU, hz] at h
+
+theorem source_N_real_one {N : ℕ} (h : SourceOnset N) : 1 < (N : ℝ) := by
+  exact (Real.log_pos_iff (by exact_mod_cast source_N_pos h)).mp (source_u_pos h)
+
+theorem source_Q_le_N_sub_one (N : ℕ) : sourceQ N ≤ N - 1 :=
+  Nat.div_le_self _ _
+
+theorem source_Q_floor {N : ℕ} (h : SourceOnset N) :
+    sourceQ N = Nat.floor (((N : ℝ) - 1) / (sourceAlpha N : ℝ)) := by
+  have hn : 1 ≤ N := Nat.succ_le_of_lt (source_N_pos h)
+  calc
+    sourceQ N = Nat.floor (((N - 1 : ℕ) : ℝ) / (sourceAlpha N : ℝ)) :=
+      (Nat.floor_div_eq_div (N - 1) (sourceAlpha N)).symm
+    _ = Nat.floor (((N : ℝ) - 1) / (sourceAlpha N : ℝ)) := by
+      rw [Nat.cast_sub hn]
+      norm_num
+
+theorem source_Ecap_floor {N : ℕ} (h : SourceOnset N) :
+    sourceEcap N = Nat.floor
+      (((N : ℝ) - (sourceQ N : ℝ) - 1) / (sourceM N : ℝ)) := by
+  have hn : 1 ≤ N := Nat.succ_le_of_lt (source_N_pos h)
+  have hQ1 : sourceQ N + 1 ≤ N := Nat.add_le_of_le_sub hn (source_Q_le_N_sub_one N)
+  have hQ : sourceQ N ≤ N := (Nat.le_add_right (sourceQ N) 1).trans hQ1
+  have hsub : 1 ≤ N - sourceQ N := Nat.le_sub_of_add_le' hQ1
+  calc
+    sourceEcap N = Nat.floor (((N - sourceQ N - 1 : ℕ) : ℝ) / (sourceM N : ℝ)) :=
+      (Nat.floor_div_eq_div (N - sourceQ N - 1) (sourceM N)).symm
+    _ = Nat.floor (((N : ℝ) - (sourceQ N : ℝ) - 1) / (sourceM N : ℝ)) := by
+      rw [Nat.cast_sub hsub, Nat.cast_sub hQ]
+      norm_num
+
+theorem source_ell_six {N : ℕ} (h : SourceOnset N) : 6 ≤ sourceEll N := by
+  have hu := source_u_large h
+  have he : Real.exp 1 ≤ (3 : ℝ) := Real.exp_one_lt_d9.le.trans (by norm_num)
+  have he6 : Real.exp 6 ≤ (3 : ℝ) ^ (6 : ℕ) := by
+    calc
+      Real.exp 6 = Real.exp 1 ^ (6 : ℕ) := by simp
+      _ ≤ (3 : ℝ) ^ (6 : ℕ) := by gcongr
+  apply (Real.le_log_iff_exp_le (source_u_pos h)).mpr
+  exact he6.trans (by norm_num at hu ⊢; linarith)
+
+theorem source_ell_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceEll N := by
+  linarith [source_ell_six h]
+
+/-- The elementary bound log u <= 2 sqrt u is sufficient at the fixed onset. -/
+theorem source_ell_le_two_sqrt {N : ℕ} (h : SourceOnset N) :
+    sourceEll N ≤ 2 * Real.sqrt (sourceU N) := by
+  have hh := Real.log_le_rpow_div (source_u_pos h).le
+    (by norm_num : (0 : ℝ) < 1 / 2)
+  calc
+    sourceEll N ≤ sourceU N ^ (1 / 2 : ℝ) / (1 / 2 : ℝ) := hh
+    _ = 2 * Real.sqrt (sourceU N) := by rw [← Real.sqrt_eq_rpow]; ring
+
+theorem source_T_eight {N : ℕ} (h : SourceOnset N) : 8 ≤ sourceT N := by
+  have hu := source_u_large h
+  have hu0 := source_u_pos h
+  have he0 := source_ell_pos h
+  have he := source_ell_le_two_sqrt h
+  have hs : (2048 : ℝ) ≤ Real.sqrt (sourceU N) := by
+    apply (Real.le_sqrt' (by norm_num : (0 : ℝ) < 2048)).mpr
+    norm_num at hu ⊢
+    linarith
+  apply (le_div_iff₀ (by positivity : 0 < 128 * sourceEll N)).mpr
+  nlinarith [Real.sq_sqrt hu0.le]
+
+theorem source_T_le_u_div_128 {N : ℕ} (h : SourceOnset N) :
+    sourceT N ≤ sourceU N / 128 := by
+  have hu0 := source_u_pos h
+  have he := source_ell_six h
+  exact div_le_div_of_nonneg_left hu0.le (by norm_num) (by nlinarith)
+
+theorem source_expT_one {N : ℕ} (h : SourceOnset N) :
+    1 ≤ Real.exp (sourceT N) := by
+  linarith [source_T_eight h, Real.add_one_le_exp (sourceT N)]
+
+theorem source_Y_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceY N := by
+  exact Nat.floor_pos.mpr (source_expT_one h)
+
+theorem source_logY_le_T {N : ℕ} (h : SourceOnset N) :
+    Real.log (sourceY N : ℝ) ≤ sourceT N := by
+  have hy : 0 < (sourceY N : ℝ) := by exact_mod_cast source_Y_pos h
+  calc
+    Real.log (sourceY N : ℝ) ≤ Real.log (Real.exp (sourceT N)) :=
+      Real.log_le_log hy (Nat.floor_le (Real.exp_pos _).le)
+    _ = sourceT N := Real.log_exp _
+
+theorem source_logY_four {N : ℕ} (h : SourceOnset N) :
+    4 ≤ Real.log (sourceY N : ℝ) := by
+  have hhalf : Real.exp (sourceT N) / 2 < (sourceY N : ℝ) :=
+    Nat.div_two_lt_floor (source_expT_one h)
+  have hl := Real.log_le_log (by positivity : 0 < Real.exp (sourceT N) / 2) hhalf.le
+  rw [Real.log_div (Real.exp_ne_zero _) (by norm_num : (2 : ℝ) ≠ 0), Real.log_exp] at hl
+  have htwo : Real.log (2 : ℝ) ≤ 1 := by
+    calc
+      Real.log (2 : ℝ) ≤ (2 : ℝ) - 1 :=
+        Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 2)
+      _ = 1 := by norm_num
+  linarith [source_T_eight h]
+
+theorem source_sigma_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceSigma N := by
+  exact inv_pos.mpr (by linarith [source_logY_four h])
+
+theorem source_sigma_le_quarter {N : ℕ} (h : SourceOnset N) :
+    sourceSigma N ≤ (1 / 4 : ℝ) := by
+  simpa only [sourceSigma, one_div] using
+    one_div_le_one_div_of_le (by norm_num : (0 : ℝ) < 4) (source_logY_four h)
+
+theorem source_one_add_logY_le_u {N : ℕ} (h : SourceOnset N) :
+    1 + Real.log (sourceY N : ℝ) ≤ sourceU N := by
+  have hy := (source_logY_le_T h).trans (source_T_le_u_div_128 h)
+  have hu := source_u_large h
+  norm_num at hu
+  linarith
+
+theorem source_scale {N : ℕ} (h : SourceOnset N) :
+    128 * Real.log (sourceU N) * Real.log (sourceY N : ℝ) ≤ sourceU N := by
+  have he := source_ell_pos h
+  have hp : 0 < 128 * sourceEll N := by positivity
+  have hy := mul_le_mul_of_nonneg_left (source_logY_le_T h) hp.le
+  have hc : (128 * sourceEll N) * sourceT N = sourceU N := by
+    dsimp [sourceT]
+    exact mul_div_cancel₀ _ hp.ne'
+  calc
+    128 * Real.log (sourceU N) * Real.log (sourceY N : ℝ) =
+        (128 * sourceEll N) * Real.log (sourceY N : ℝ) := rfl
+    _ ≤ (128 * sourceEll N) * sourceT N := hy
+    _ = sourceU N := hc
+
+theorem source_Y_le_small_power {N : ℕ} (h : SourceOnset N) :
+    (sourceY N : ℝ) ≤ (N : ℝ) ^ (1 / 128 : ℝ) := by
+  have hn : 0 < (N : ℝ) := by exact_mod_cast source_N_pos h
+  calc
+    (sourceY N : ℝ) ≤ Real.exp (sourceT N) := Nat.floor_le (Real.exp_pos _).le
+    _ ≤ Real.exp (sourceU N / 128) := Real.exp_le_exp.mpr (source_T_le_u_div_128 h)
+    _ = (N : ℝ) ^ (1 / 128 : ℝ) := by
+      rw [Real.rpow_def_of_pos hn]
+      congr 1
+      simp [sourceU, div_eq_mul_inv]
+
+theorem source_Y_le_Z {N : ℕ} (h : SourceOnset N) : sourceY N ≤ sourceZ N := by
+  apply Nat.le_floor
+  exact (source_Y_le_small_power h).trans
+    (Real.rpow_le_rpow_of_exponent_le (source_N_real_one h).le (by norm_num))
+
+theorem source_D_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceD N := by
+  exact Nat.ceil_pos.mpr (Real.sqrt_pos.mpr (by exact_mod_cast source_N_pos h))
+
+theorem source_D_gt_one {N : ℕ} (h : SourceOnset N) : 1 < sourceD N := by
+  apply Nat.lt_ceil.mpr
+  have hh := Real.sqrt_lt_sqrt (by norm_num : (0 : ℝ) ≤ 1) (source_N_real_one h)
+  simpa using hh
+
+theorem source_M_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceM N := by
+  exact Nat.ceil_pos.mpr (Real.rpow_pos_of_pos (by exact_mod_cast source_N_pos h) _)
+
+theorem source_M_le_N {N : ℕ} (h : SourceOnset N) : sourceM N ≤ N := by
+  apply Nat.ceil_le.mpr
+  calc
+    (N : ℝ) ^ (3 / 4 : ℝ) ≤ (N : ℝ) ^ (1 : ℝ) :=
+      Real.rpow_le_rpow_of_exponent_le (source_N_real_one h).le (by norm_num)
+    _ = (N : ℝ) := Real.rpow_one _
+
+theorem source_Eupper_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceEupper N := by
+  exact Nat.div_pos (source_M_le_N h) (source_M_pos h)
+
+theorem source_alpha_pos {N : ℕ} (h : SourceOnset N) : 0 < sourceAlpha N := by
+  exact Nat.ceil_pos.mpr (Real.rpow_pos_of_pos (by exact_mod_cast source_N_pos h) _)
+
+theorem source_a_one {N : ℕ} (h : SourceOnset N) : 1 ≤ sourceA N := by
+  exact Nat.one_le_ceil_iff.mpr (Real.rpow_pos_of_pos (by exact_mod_cast source_N_pos h) _)
+
+theorem source_alpha_le_a {N : ℕ} (h : SourceOnset N) : sourceAlpha N ≤ sourceA N := by
+  exact Nat.ceil_mono (Real.rpow_le_rpow_of_exponent_le (source_N_real_one h).le (by norm_num))
+
+theorem source_D_le_M {N : ℕ} (h : SourceOnset N) : sourceD N ≤ sourceM N := by
+  apply Nat.ceil_mono
+  rw [Real.sqrt_eq_rpow]
+  exact Real.rpow_le_rpow_of_exponent_le (source_N_real_one h).le (by norm_num)
+
+theorem source_D_log {N : ℕ} (h : SourceOnset N) :
+    sourceU N / 2 ≤ Real.log (sourceD N : ℝ) := by
+  have hn : 0 < (N : ℝ) := by exact_mod_cast source_N_pos h
+  calc
+    sourceU N / 2 = Real.log (Real.sqrt (N : ℝ)) := (Real.log_sqrt hn.le).symm
+    _ ≤ Real.log (sourceD N : ℝ) :=
+      Real.log_le_log (Real.sqrt_pos.mpr hn) (Nat.le_ceil _)
+
+theorem source_M_log {N : ℕ} (h : SourceOnset N) :
+    3 * sourceU N / 4 ≤ Real.log (sourceM N : ℝ) := by
+  have hn : 0 < (N : ℝ) := by exact_mod_cast source_N_pos h
+  calc
+    3 * sourceU N / 4 = Real.log ((N : ℝ) ^ (3 / 4 : ℝ)) := by
+      rw [Real.log_rpow hn]
+      dsimp [sourceU]
+      ring
+    _ ≤ Real.log (sourceM N : ℝ) :=
+      Real.log_le_log (Real.rpow_pos_of_pos hn _) (Nat.le_ceil _)
+
+theorem source_D_le_two_sqrt {N : ℕ} (h : SourceOnset N) :
+    (sourceD N : ℝ) ≤ 2 * Real.sqrt (N : ℝ) := by
+  apply Nat.ceil_le_two_mul
+  have hs := Real.one_le_sqrt.mpr (source_N_real_one h).le
+  norm_num
+  linarith
+
+theorem source_a_lt_M {N : ℕ} (h : SourceOnset N) : sourceA N < sourceM N := by
+  have hn : 0 < (N : ℝ) := by exact_mod_cast source_N_pos h
+  have hu := source_u_large h
+  have ha : (1 : ℝ) ≤ (N : ℝ) ^ (7 / 16 : ℝ) := by
+    simpa using Real.rpow_le_rpow_of_exponent_le (source_N_real_one h).le
+      (by norm_num : (0 : ℝ) ≤ 7 / 16)
+  have hg : (2 : ℝ) ≤ (N : ℝ) ^ (5 / 16 : ℝ) := by
+    rw [Real.rpow_def_of_pos hn]
+    have hx := Real.add_one_le_exp (Real.log (N : ℝ) * (5 / 16 : ℝ))
+    change (10 : ℝ) ^ (24 : ℕ) ≤ Real.log (N : ℝ) at hu
+    norm_num at hu
+    linarith
+  have hsplit : (N : ℝ) ^ (3 / 4 : ℝ) =
+      (N : ℝ) ^ (7 / 16 : ℝ) * (N : ℝ) ^ (5 / 16 : ℝ) := by
+    rw [← Real.rpow_add hn]
+    norm_num
+  have hgap : (N : ℝ) ^ (7 / 16 : ℝ) + 1 ≤ (N : ℝ) ^ (3 / 4 : ℝ) := by
+    rw [hsplit]
+    nlinarith
+  have hc := Nat.ceil_lt_add_one (Real.rpow_nonneg (Nat.cast_nonneg N) (7 / 16 : ℝ))
+  have hm := Nat.le_ceil ((N : ℝ) ^ (3 / 4 : ℝ))
+  have hlt : (sourceA N : ℝ) < (sourceM N : ℝ) := hc.trans_le (hgap.trans hm)
+  exact_mod_cast hlt
+
+theorem source_Ecap_le_Eupper (N : ℕ) : sourceEcap N ≤ sourceEupper N := by
+  exact Nat.div_le_div_right ((Nat.sub_le _ 1).trans (Nat.sub_le N (sourceQ N)))
+
+theorem source_Eupper_le_quarter_power {N : ℕ} (h : SourceOnset N) :
+    (sourceEupper N : ℝ) ≤ (N : ℝ) ^ (1 / 4 : ℝ) := by
+  have hn : 0 < (N : ℝ) := by exact_mod_cast source_N_pos h
+  have hm : 0 < (sourceM N : ℝ) := by exact_mod_cast source_M_pos h
+  have hmul : (N : ℝ) ^ (1 / 4 : ℝ) * (N : ℝ) ^ (3 / 4 : ℝ) = (N : ℝ) := by
+    rw [← Real.rpow_add hn]
+    norm_num
+  calc
+    (sourceEupper N : ℝ) ≤ (N : ℝ) / (sourceM N : ℝ) := Nat.cast_div_le
+    _ ≤ (N : ℝ) ^ (1 / 4 : ℝ) := by
+      apply (div_le_iff₀ hm).mpr
+      calc
+        (N : ℝ) = (N : ℝ) ^ (1 / 4 : ℝ) * (N : ℝ) ^ (3 / 4 : ℝ) := hmul.symm
+        _ ≤ (N : ℝ) ^ (1 / 4 : ℝ) * (sourceM N : ℝ) :=
+          mul_le_mul_of_nonneg_left (Nat.le_ceil _) (Real.rpow_nonneg (Nat.cast_nonneg N) _)
+
+theorem source_Eupper_le_a {N : ℕ} (h : SourceOnset N) : sourceEupper N ≤ sourceA N := by
+  have hh : (sourceEupper N : ℝ) ≤ (sourceA N : ℝ) :=
+    (source_Eupper_le_quarter_power h).trans
+      ((Real.rpow_le_rpow_of_exponent_le (source_N_real_one h).le (by norm_num)).trans
+        (Nat.le_ceil _))
+  exact_mod_cast hh
+
+theorem source_Ecap_le_a {N : ℕ} (h : SourceOnset N) : sourceEcap N ≤ sourceA N :=
+  (source_Ecap_le_Eupper N).trans (source_Eupper_le_a h)
+
+theorem source_rank_harmonic_le_half_u {N e : ℕ} (h : SourceOnset N)
+    (he : e ≤ sourceEupper N) : (harmonic e : ℝ) ≤ sourceU N / 2 := by
+  by_cases hz : e = 0
+  · simp only [hz, harmonic_zero, Rat.cast_zero]
+    exact div_nonneg (source_u_pos h).le (by norm_num)
+  have he0 : 0 < (e : ℝ) := by exact_mod_cast Nat.pos_of_ne_zero hz
+  have hn : 0 < (N : ℝ) := by exact_mod_cast source_N_pos h
+  have hlog : Real.log (e : ℝ) ≤ sourceU N / 4 := by
+    calc
+      Real.log (e : ℝ) ≤ Real.log ((N : ℝ) ^ (1 / 4 : ℝ)) :=
+        Real.log_le_log he0 ((by exact_mod_cast he : (e : ℝ) ≤ (sourceEupper N : ℝ)).trans
+          (source_Eupper_le_quarter_power h))
+      _ = sourceU N / 4 := by rw [Real.log_rpow hn]; dsimp [sourceU]; ring
+  have hu := source_u_large h
+  have hh := harmonic_le_one_add_log e
+  norm_num at hu
+  linarith
+
+/-- The original cap gives the exact floor cutoff, before any enlargement. -/
+theorem actual_source_cap_rank {N e q : ℕ} (h : SourceOnset N)
+    (hH : GoldbachRound19.NonSS.StructuralSupport
+      (sourceAlpha N) N (sourceZ N) (sourceM N) e q) : e ≤ sourceEcap N := by
+  have hcap : e * q + sourceQ N + 1 ≤ N := hH.2.2.2.2.2.2.1
+  have hsub : e * q ≤ N - sourceQ N - 1 := by
+    have hh := Nat.le_sub_of_add_le (Nat.le_sub_of_add_le hcap)
+    simpa only [Nat.sub_sub, Nat.add_comm] using hh
+  have hm : e * sourceM N ≤ N - sourceQ N - 1 :=
+    (Nat.mul_le_mul_left e hH.2.2.1).trans hsub
+  exact (Nat.le_div_iff_mul_le (source_M_pos h)).mpr hm
+
+theorem actual_source_cofactor_guards {N e q : ℕ} (h : SourceOnset N)
+    (hH : GoldbachRound19.NonSS.StructuralSupport
+      (sourceAlpha N) N (sourceZ N) (sourceM N) e q) :
+    e ≤ sourceA N ∧ sourceA N < q := by
+  exact ⟨(actual_source_cap_rank h hH).trans (source_Ecap_le_a h),
+    (source_a_lt_M h).trans_le hH.2.2.1⟩
+
+/-- All source guards consumed by the already compiled Euler/Rankin modules. -/
+structure SourceGuards (N : ℕ) : Prop where
+  u_pos : 0 < sourceU N
+  u_one : 1 ≤ sourceU N
+  ell_six : 6 ≤ sourceEll N
+  Y_pos : 0 < sourceY N
+  logY_four : 4 ≤ Real.log (sourceY N : ℝ)
+  one_add_logY : 1 + Real.log (sourceY N : ℝ) ≤ sourceU N
+  scale : 128 * Real.log (sourceU N) * Real.log (sourceY N : ℝ) ≤ sourceU N
+  D_one : 1 < sourceD N
+  M_pos : 0 < sourceM N
+  M_le_N : sourceM N ≤ N
+  Eupper_pos : 0 < sourceEupper N
+  D_le_M : sourceD N ≤ sourceM N
+  D_log : sourceU N / 2 ≤ Real.log (sourceD N : ℝ)
+  M_log : 3 * sourceU N / 4 ≤ Real.log (sourceM N : ℝ)
+  alpha_pos : 0 < sourceAlpha N
+  alpha_le_a : sourceAlpha N ≤ sourceA N
+  a_one : 1 ≤ sourceA N
+  a_lt_M : sourceA N < sourceM N
+  Eupper_le_a : sourceEupper N ≤ sourceA N
+  Ecap_le_a : sourceEcap N ≤ sourceA N
+  Eupper_le_quarter : (sourceEupper N : ℝ) ≤ (N : ℝ) ^ (1 / 4 : ℝ)
+  D_le_two_sqrt : (sourceD N : ℝ) ≤ 2 * Real.sqrt (N : ℝ)
+  Y_le_small_power : (sourceY N : ℝ) ≤ (N : ℝ) ^ (1 / 128 : ℝ)
+  Y_le_Z : sourceY N ≤ sourceZ N
+  harmonic_Eupper : (harmonic (sourceEupper N) : ℝ) ≤ sourceU N / 2
+
+theorem source_geometry {N : ℕ} (h : SourceOnset N) : SourceGuards N := by
+  exact ⟨source_u_pos h, source_u_one h, source_ell_six h, source_Y_pos h,
+    source_logY_four h, source_one_add_logY_le_u h, source_scale h,
+    source_D_gt_one h, source_M_pos h, source_M_le_N h, source_Eupper_pos h,
+    source_D_le_M h, source_D_log h,
+    source_M_log h, source_alpha_pos h, source_alpha_le_a h, source_a_one h,
+    source_a_lt_M h, source_Eupper_le_a h, source_Ecap_le_a h,
+    source_Eupper_le_quarter_power h, source_D_le_two_sqrt h,
+    source_Y_le_small_power h, source_Y_le_Z h, source_rank_harmonic_le_half_u h le_rfl⟩
+
+theorem actual_source_divisor_band_mass {N : ℕ} (h : SourceOnset N) :
+    (∑ d ∈ divisorBand (sourceD N) (sourceY N), (d : ℝ)⁻¹) ≤
+      sourceU N ^ (-37 : ℝ) := by
+  exact actual_divisor_band_mass_le_u_neg37 (source_D_pos h) (source_u_pos h)
+    (source_logY_four h) (source_one_add_logY_le_u h) (source_D_log h) (source_scale h)
+
+theorem actual_source_smooth_tau_tail {N : ℕ} (h : SourceOnset N) :
+    (∑ n ∈ smoothInterval (sourceM N) N (sourceY N), tau n) ≤
+      (N : ℝ) * sourceU N ^ (-42 : ℝ) := by
+  exact actual_smooth_tau_tail_le_N_u_neg42 (source_M_pos h) (source_u_pos h)
+    (source_logY_four h) (source_one_add_logY_le_u h) (source_M_log h) (source_scale h)
+
+theorem actual_source_unique_F1_reciprocal {N : ℕ} (h : SourceOnset N) :
+    uniqueReciprocalCost1 (sourceAlpha N) (sourceA N) N (sourceZ N)
+      (sourceM N) (sourceY N) ≤ 7 * (N : ℝ) * sourceU N ^ (-39 : ℝ) := by
+  exact actual_unique_F1_reciprocal_payment (source_a_one h) (source_M_pos h)
+    (source_u_one h) (source_logY_four h) (source_one_add_logY_le_u h)
+    (source_M_log h) (source_scale h)
+
+#print axioms sourceU
+#print axioms sourceEll
+#print axioms sourceT
+#print axioms sourceY
+#print axioms sourceSigma
+#print axioms sourceD
+#print axioms sourceM
+#print axioms sourceA
+#print axioms sourceAlpha
+#print axioms sourceZ
+#print axioms sourceQ
+#print axioms sourceEcap
+#print axioms sourceEupper
+#print axioms SourceOnset
+#print axioms SourceGuards
+#print axioms source_u_large
+#print axioms source_u_pos
+#print axioms source_u_one
+#print axioms source_N_pos
+#print axioms source_N_real_one
+#print axioms source_Q_le_N_sub_one
+#print axioms source_Q_floor
+#print axioms source_Ecap_floor
+#print axioms source_ell_six
+#print axioms source_ell_pos
+#print axioms source_ell_le_two_sqrt
+#print axioms source_T_eight
+#print axioms source_T_le_u_div_128
+#print axioms source_expT_one
+#print axioms source_Y_pos
+#print axioms source_logY_le_T
+#print axioms source_logY_four
+#print axioms source_sigma_pos
+#print axioms source_sigma_le_quarter
+#print axioms source_one_add_logY_le_u
+#print axioms source_scale
+#print axioms source_Y_le_small_power
+#print axioms source_Y_le_Z
+#print axioms source_D_pos
+#print axioms source_D_gt_one
+#print axioms source_M_pos
+#print axioms source_M_le_N
+#print axioms source_Eupper_pos
+#print axioms source_alpha_pos
+#print axioms source_a_one
+#print axioms source_alpha_le_a
+#print axioms source_D_le_M
+#print axioms source_D_log
+#print axioms source_M_log
+#print axioms source_D_le_two_sqrt
+#print axioms source_a_lt_M
+#print axioms source_Ecap_le_Eupper
+#print axioms source_Eupper_le_quarter_power
+#print axioms source_Eupper_le_a
+#print axioms source_Ecap_le_a
+#print axioms source_rank_harmonic_le_half_u
+#print axioms actual_source_cap_rank
+#print axioms actual_source_cofactor_guards
+#print axioms source_geometry
+#print axioms actual_source_divisor_band_mass
+#print axioms actual_source_smooth_tau_tail
+#print axioms actual_source_unique_F1_reciprocal
+
+end
+end GoldbachRound20.Friable.SourceGeometry

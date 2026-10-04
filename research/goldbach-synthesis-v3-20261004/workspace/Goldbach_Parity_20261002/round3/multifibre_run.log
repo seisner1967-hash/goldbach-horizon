@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "N": 100000000,
+  "alpha": 100,
+  "Q": 999999,
+  "checks": {
+    "actual_four_site_block_with_moving_prefixes": 1,
+    "actual_two_site_transport_identity": 3084,
+    "actual_pair_sign_certificate": 3084,
+    "finite_global_transport_with_unpaired_upper_face": 2,
+    "separable_exact_unit_quotient_histogram": 1,
+    "coupled_selector_factorization_counterexample": 1,
+    "exact_Legendre_Kloosterman_Gauss_phase_histogram": 2,
+    "unit_squarefree_HH_point_mass_nonzero_primitive_character": 1
+  },
+  "gauss_phase_diagnostics": [
+    {
+      "q": 11,
+      "character": "Legendre",
+      "phase_at_zero": -10,
+      "phase_at_nonzero": 1,
+      "exact_value_after_sum_of_nontrivial_qth_roots_equals_minus_one": -11,
+      "scope": "Exact finite phase coefficients; no conductor-uniform saving inferred"
+    },
+    {
+      "q": 829,
+      "character": "Legendre",
+      "phase_at_zero": 828,
+      "phase_at_nonzero": -1,
+      "exact_value_after_sum_of_nontrivial_qth_roots_equals_minus_one": 829,
+      "scope": "Exact finite phase coefficients; no conductor-uniform saving inferred"
+    }
+  ],
+  "previous_numerical_artifacts_preserved": true,
+  "script_sha256": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+  "elapsed_seconds": 5.914
+}
+{
+  "pair_sign_counts": {
+    "ZERO": 216,
+    "NEGATIVE": 1602,
+    "POSITIVE": 1266
+  },
+  "accepted_pairs": 3084,
+  "four_site_sign": "NEGATIVE",
+  "spectral_residues": 2214,
+  "coupled_selector_counterexample": {
+    "selector": "a<s",
+    "eta": 122399,
+    "factorized_coefficient": -4,
+    "actual_coupled_coefficient": -2
+  }
+}

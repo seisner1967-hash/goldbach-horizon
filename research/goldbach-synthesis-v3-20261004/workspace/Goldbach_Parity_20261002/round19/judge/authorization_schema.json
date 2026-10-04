@@ -1,0 +1,20 @@
+{
+  "status": "SCHEMA_ONLY_NOT_AUTHORIZATION",
+  "required_fields_after_all_FINALs_root_review": {
+    "authorization": "ROOT19_JUDGE_CANONICAL_ATTEMPT01",
+    "root_authorized": true,
+    "round": 19,
+    "role": 5,
+    "all_required_FINALs_inspected": true,
+    "independent_new_module_compile_authorized": true,
+    "canonical_NEW_numeric_results_inspected": true,
+    "preparation_sha256": "ACTUAL_FINAL_PREPARATION_SHA256",
+    "judge_code_sha256": {
+      "audit.py": "ACTUAL_ROOT_REVIEWED_SHA256",
+      "run_once.py": "ACTUAL_ROOT_REVIEWED_SHA256"
+    }
+  },
+  "compiler_version_invocation_authorized_by_schema": false,
+  "automatic_replays": false,
+  "source_or_audit_presence_authorizes_execution": false
+}

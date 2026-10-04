@@ -1,0 +1,41 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH35_INDEPENDENT_SOURCE_TOOLS_REVIEW",
+  "reader": "ROLE5",
+  "tools_author": "ROLE3",
+  "scientific_author": "ROLE4",
+  "status": "SOURCE_TOOLS_COHERENT_NOT_PREPARED_NOT_EXECUTED",
+  "objections": [],
+  "root": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch35",
+  "own_FULL_entries": [
+    {"file": "prepare_metadata.py", "bytes": 34455, "sha256": "bc8faf413a83cbd79156df4189d2c716e39524f7fa8279ca838ad571844fed7f", "scope": "FULL_SOURCE_UNION_1_TO_473", "chunks": [{"chunk": "cba618", "lines": [1,300]}, {"chunk": "678ece", "lines": [301,473]}]},
+    {"file": "run_once.py", "bytes": 14585, "sha256": "1ddef18df038c3ba6cf9c5dacaccd43c1b6f41a7e9bf7ba20e93966cbe6c2a13", "scope": "FULL_SOURCE", "chunk": "82249a"},
+    {"file": "preparation.md", "bytes": 7283, "sha256": "758ffc8410307f7b2b7ae6836e7cee9685833520dae4e09965a7aa6221612f2c", "scope": "FULL_DOCUMENT", "chunk": "080bb3"},
+    {"file": "sources/ComplexGammaMellinLambda22.lean", "bytes": 16780, "sha256": "4a94415678e4c3295b989dccbcda9e049483e131c17efce68099d05686e1c72d", "scope": "FULL_EXACT_SCIENTIFIC_COPY_NOT_ELABORATED", "chunk": "7ae9c0"},
+    {"file": "source_catalog_author22.json", "bytes": 3173, "sha256": "46c97a2e44c1bd9649220c215033648ef3ba5823f0cf04b4950c48128e6fef0b", "scope": "FULL_MANUAL_CATALOG_COPY", "chunk": "733bee"},
+    {"file": "source_tool_reads35.json", "bytes": 8549, "sha256": "77ba13e21b18b14f3e6d50e1d02eee7b36e2fa10218ea40136f3ea27fcec4109", "scope": "FULL_AUTHOR_PROVENANCE_JSON_NOT_OWN_HISTORICAL_READS", "chunk": "0f2d97"},
+    {"file": "source_tools_handoff35.json", "bytes": 31256, "sha256": "9019247b58404d3dbb30d3091229fa9bfa9936a4f2478468e0e91ebdef9cd03e", "scope": "FULL_METADATA_UNION_1_TO_599", "chunks": [{"chunk": "449a05", "lines": [1,350]}, {"chunk": "9b95ca", "lines": [351,599]}]}
+  ],
+  "own_controls": [
+    {"path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_lambda_revision03_source35_selection.json", "sha256": "3adf18b845e05861906a6f56838786311765439ada0f2169b088a19f51f47dac", "scope": "FULL_ROOT_SELECTION", "chunk": "d1ae6a"},
+    {"path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch33_closed_observation.json", "sha256": "0dc5c9b420f62c43269450bad7dda4a5d030ac3893d40d592569aa0d13e1f1eb", "scope": "FULL_REAL_ROOT_FAILED0_OBSERVATION", "chunk": "94769e"}
+  ],
+  "own_targeted_only": [{"file": "source_tools_handoff35.json", "chunk": "06ace7", "lines": [1,160]}],
+  "physical_check": {"chunk": "26265b", "exit_code": 0, "scope": "ALL78_CURRENT_BYTE_HASHES_NOT_TRANSITIVE_IMPORT_CLOSURE_OR_ARCHIVE_SWEEP", "bindings": 78, "unique_paths": 78, "mismatches": 0, "SOURCE_files_plus_handoff": 7, "stopped34_bound_files": 6, "source_root_files": ["ComplexGammaMellinLambda22.lean"], "PREP_outputs_absent": 7, "actual_absent": true, "gate_absent": true},
+  "catalog_counts": {"modules": 1, "declarations": 30, "theorems": 24, "definitions": 6, "qualified_prints": 30},
+  "readonly_independent_dependencies": ["GammaPrerequisites22", "ThermalGammaMellinInverse22", "ComplexGammaMellinLocal22", "ComplexGammaMellinHolomorphy22"],
+  "Local26_global_FAILED_row_PASS22_and_ROOT_partial_provenance_required": true,
+  "baseline": {"official_modules": 87, "official_declarations": 1458, "batch33_status": "INDEPENDENT_BATCH33_FAILED", "new_credit33": 0},
+  "future_own_read_flags": {"builder_read": "cba618+678ece", "launcher_read": "82249a", "audit_read": "080bb3", "source_read": "7ae9c0"},
+  "historical_SUPPORT_and_read_scope_note_chunks_owner": "ROLE3_AUTHOR_INHERITED_NOT_OWN_ROLE5_FULL",
+  "frozen_tools_modified": false,
+  "metadata_PREP_invocations": 0,
+  "compiler_invocations": 0,
+  "candidate_parser_or_import_invocations": 0,
+  "probe_invocations": 0,
+  "numeric_invocations": 0,
+  "all_mathlib_FULL_claim": false,
+  "current_import_closure_paid": false,
+  "new_credit": 0,
+  "D_N_paid": false,
+  "WIN": false
+}

@@ -1,0 +1,924 @@
+% !TEX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,tabularx}
+\usepackage{microtype}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{pdftitle={Identités continues, formalisation et budgets explicites pour Goldbach binaire -- Synthèse V3},pdfauthor={Durand Serge},pdfsubject={Synthèse de recherche et frontière de vérification},pdfkeywords={Goldbach binaire, von Mangoldt, Mellin, projection, Lean 4}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.14}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Définition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remarque}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\Sing}{\mathfrak S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\paid}{\textbf{Preuve Lean compilée.}\space}
+\newcommand{\source}{\textbf{SOURCE non compilée.}\space}
+\newcommand{\paper}{\textbf{PAPER : argument écrit.}\space}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\sech}{sech}
+\title{Identités continues, formalisation et budgets explicites\\
+pour Goldbach binaire\\[5pt]\large Synthèse V3 et clôture d'étape}
+\author{Durand Serge\\\small Chercheur indépendant\\\small\texttt{seisner1967@gmail.com}}
+\date{4 octobre 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Cette synthèse poursuit la monographie V2 en conservant son cadre bilantiel et
+ses notations. La recherche de la boucle 22 transpose le couplage additif dans
+des traces continues, des intégrales de Mellin et des projections de caractères.
+L'inventaire arrêté après le lot indépendant 35 contient 88 modules et
+1\,488 déclarations auxiliaires, définitions incluses. Les acquis nouveaux
+comprennent l'extraction exacte du coefficient de la vraie fonction de von
+Mangoldt sur le cercle, sa projection discrète sans alias, une quantification
+canonique des logarithmes à l'échelle $2^{58}$, les cinq racines de corps finis
+du contrat, et une représentation de Mellin avec échange somme--intégrale
+effectivement justifié. Les enveloppes de troncature pondérées, leur géométrie
+uniforme et leur raccord complet au coefficient demeurent des sources de
+preuve non compilées. Un test rationnel exact valide un majorant scalaire
+inférieur à $10^{-6}$ au point $N=10^8$ ; il n'évalue pas le coefficient.
+Le contrôleur natif indépendant s'arrête sans verdict mathématique à sa limite
+de temps. La borne cible pour $D_N$, la contribution signée globale et la
+conjecture de Goldbach binaire restent ouvertes.
+\end{abstract}
+\noindent\textbf{Mots-clés :} Goldbach binaire ; von Mangoldt ; Mellin ;
+projection continue ; erreurs explicites ; Lean 4.
+\par\noindent\textbf{Classification :} 11P32.
+\par\noindent\textbf{Portée.} Ce texte est une clôture de recherche et un
+contrat de reprise. Il ne contient aucune annonce de preuve de Goldbach ni de
+franchissement du mur de la parité. Les statuts se rapportent aux reçus
+conservés, et non au nombre d'identités que l'on pourrait encore formaliser.
+\par\noindent{\small Le manuscrit a été préparé avec assistance d'agents de
+recherche et d'outils de rédaction. L'assistance ne constitue pas une
+validation scientifique externe. Les preuves compilées sont identifiées par
+leurs sources et les audits indépendants de leurs axiomes.}
+
+\clearpage
+\section{Cadre conservé et frontière de vérification}\label{sec:frame}
+Pour un entier pair $N$, on conserve les notations
+\[
+u=\log N,\qquad L=1+u,\qquad \ell=\log u,
+\]
+avec logarithmes naturels. Le seuil du cadre analytique fixé est
+\begin{equation}\label{eq:onset}
+u\ge 10^{24}.
+\end{equation}
+Le point $N=10^8$ sert de boussole finie ; il se situe hors de ce régime.
+Une vérification à ce point ne couvre ni le seuil \eqref{eq:onset}, ni tous les
+entiers pairs en dessous de celui-ci. La présente étape conserve les acquis
+du cadre et examine leur raccord à de nouveaux objets continus.
+
+La référence du bilan reste
+\begin{equation}\label{eq:reference}
+R_{\mathrm{ref}}=\Sing(N)(N-F_N),\quad
+\Sing(N)=2C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2},\quad
+C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right).
+\end{equation}
+Les dépendances analytiques antérieures de $F_N$ et de la référence gardent
+leur statut dans la monographie. Cette synthèse ne transforme pas une entrée
+analytique rapportée en un nouveau théorème Lean autoportant. La cible de la
+recherche demeure
+\begin{equation}\label{eq:target}
+D_N\le \tau_N:=\frac{N}{256u\ell}.
+\end{equation}
+Les coupures du profil conservé sont
+\[
+\alpha=\lceil N^{1/4}\rceil,\quad Q=\left\lfloor\frac{N-1}{\alpha}\right\rfloor,
+\quad a_{\mathrm{cut}}=\lceil N^{7/16}\rceil,
+\quad M_{\mathrm{cut}}=\lceil N^{3/4}\rceil.
+\]
+Le paramètre thermique $a>0$ introduit plus loin est distinct de
+$a_{\mathrm{cut}}$. Tous les fronts, bandes, coins, unités et restrictions
+du support bilantiel restent à leurs places.
+
+\subsection*{Quatre niveaux de preuve}
+\begin{tabularx}{\textwidth}{@{}p{29mm}Y@{}}
+\toprule
+Niveau & Sens exact dans cette synthèse\\
+\midrule
+Lean compilé & Source gelée, compilation indépendante réussie, catalogue
+exact et audit des axiomes ; crédit au module entier.\\
+SOURCE & Texte de preuve Lean rédigé et éventuellement relu ; élaboration
+et compilation encore absentes ou échouées.\\
+PAPER & Identité ou estimation dérivée dans une note ; ses obligations de
+formalisation et d'évaluation demeurent explicites.\\
+Calcul observé & Programme effectivement lancé sous un contrat précis ;
+son résultat n'est crédité qu'à la portée de ce contrat.\\
+\bottomrule
+\end{tabularx}
+Les 1\,488 déclarations comptées incluent les définitions. Elles ne représentent
+pas 1\,488 théorèmes de Goldbach. Les axiomes usuels apparaissant dans les
+audits comprennent \texttt{propext}, \texttt{Classical.choice} et
+\texttt{Quot.sound}. Aucun \texttt{sorryAx} n'est accepté dans un module crédité.
+Les sorties de récupération après une élaboration échouée restent des faits
+d'échec technique, sans crédit de preuve.
+
+\clearpage
+\section{La vraie trace thermique et le coefficient additif}\label{sec:heat}
+On utilise la fonction arithmétique réelle
+\[
+\Lam(0)=\Lam(1)=0,\qquad
+\Lam(n)=\begin{cases}\log p,&n=p^k,\ p\text{ premier},\ k\ge1,\\0,&\text{sinon}.
+\end{cases}
+\]
+Toutes les puissances premières sont conservées. Pour $a>0$ et $\theta\in\R$,
+\begin{equation}\label{eq:heat}
+T_a(\theta)=\sum_{n\ge0}\Lam(n)e^{-an}e^{in\theta},\qquad
+C_N=\sum_{n=0}^{N}\Lam(n)\Lam(N-n).
+\end{equation}
+L'usage d'une fonction de trace abstraite n'est pas nécessaire : la série
+ci-dessus est l'objet effectivement formalisé.
+
+Posons $r=e^{-a}\in(0,1)$ et
+\begin{align}
+U(a)&=\frac{r}{(1-r)^2},\label{eq:U}\\
+B(a,M)&=r^{M+1}\left(\frac{M+1}{1-r}+U(a)\right).
+\label{eq:heat-tail}
+\end{align}
+\paid Le lot 11 construit directement $0\le\Lam(n)\le n$, la
+sommabilité des termes, la continuité de $T_a$, et les bornes uniformes
+\[
+|T_a(\theta)|\le U(a),\qquad
+|T_a(\theta)-T_{a,M}(\theta)|\le B(a,M),
+\quad T_{a,M}(\theta)=\sum_{n=0}^{M}\Lam(n)r^ne^{in\theta}.
+\]
+Il prouve aussi la continuité des enveloppes en $a>0$, et l'erreur entre
+les projections intégrales complète et partielle, majorée par
+$2e^{aN}U(a)B(a,M)$. Le majorant géométrique est construit ; il n'est pas
+fourni comme une hypothèse de précision.
+
+\begin{theorem}[Projection continue exacte ; lot 13]\label{thm:circle}
+Pour tout $a>0$ et tout $N\in\N$,
+\begin{equation}\label{eq:circle}
+C_N=\frac{e^{aN}}{2\pi}\int_0^{2\pi}
+T_a(\theta)\,\overline{T_a(-\theta)}\,e^{-iN\theta}\,d\theta
+=\frac{e^{aN}}{2\pi}\int_0^{2\pi}T_a(\theta)^2e^{-iN\theta}\,d\theta.
+\end{equation}
+\end{theorem}
+\paid La preuve extrait d'abord les caractères sur un rectangle fini,
+paie l'orthogonalité intégrale et le facteur de normalisation, puis passe à
+la limite avec l'enveloppe \eqref{eq:heat-tail}. Dès $M\ge N$, la projection
+intégrale du polynôme $T_{a,M}$ vaut déjà exactement $C_N$.
+
+La conjugaison porte sur la phase réfléchie :
+$\overline{T_a(-\theta)}=T_a(\theta)$. Le produit $|T_a(\theta)|^2$
+sélectionnerait des différences de fréquences ; il ne fournit pas le
+coefficient additif recherché. La forme centrée sur $[-\pi,\pi]$ repose sur
+la périodicité de la vraie série. Son assemblage avec la troncature de Mellin
+est rédigé séparément, au statut SOURCE décrit en section~\ref{sec:radius}.
+
+\clearpage
+\section{Projecteur fini sans alias et projection de corps fini}\label{sec:finite}
+L'identité continue possède une variante entièrement finie. Elle sert de
+contrat exact à un calcul éventuel, sans remplacer la vraie fonction $\Lam$.
+Pour $K\ge1$, posons $\theta_j=2\pi j/K$.
+
+\begin{theorem}[Orthogonalité discrète et extraction ; lot 15]
+Pour $N\le M$ et
+\begin{equation}\label{eq:alias}
+K>\max(N,2M-N),
+\end{equation}
+on a, pour tout réel $a$,
+\begin{equation}\label{eq:discrete}
+C_N=\frac{e^{aN}}{K}\sum_{j=0}^{K-1}
+T_{a,M}(\theta_j)^2e^{-iN\theta_j}.
+\end{equation}
+\end{theorem}
+\paid Le lot 15 prouve l'orthogonalité des véritables caractères
+exponentiels, puis leur expansion et la sélection de l'antidiagonale.
+La condition \eqref{eq:alias} interdit les fréquences parasites
+$m+n-N\in K\Z$ avec $0\le m,n\le M$. Elle est une garde mathématique,
+et non une tolérance expérimentale. Le choix $a=0$ est licite dans ce
+polynôme fini ; aucune trace infinie $T_0$ n'est introduite.
+
+Une projection analogue existe dans un corps fini. Pour un nombre premier
+$p$, un élément $\omega\in\mathbb F_p$ d'ordre exactement $K$ et
+$K\ne0$ dans $\mathbb F_p$, l'orthogonalité donne
+\[
+\frac1K\sum_{j=0}^{K-1}\omega^{jk}
+=\begin{cases}1,&K\mid k,\\0,&K\nmid k.\end{cases}
+\]
+\paid Le lot 19 prouve cette identité depuis la racine primitive ;
+l'orthogonalité finale n'est pas une prémisse. Pour une suite finie $A_n$ et
+\eqref{eq:alias}, sa projection sélectionne
+$\sum_{n=0}^N A_nA_{N-n}$ dans $\mathbb F_p$.
+
+La représentation par un cercle continu et cette projection de caractères
+ont un objet commun : le coefficient additif exact. Une identité de
+projection ne dit pas que ce coefficient est assez grand. Elle n'établit
+pas non plus la conformité d'un programme de transformée rapide à la somme
+finie du théorème. Cette conformité exige les invariants de ses étages, les
+normalisations, les bornes des mots machine et la reconstruction entière.
+
+Le contrat final retient
+\begin{equation}\label{eq:fixed}
+N=M=100\,000\,000,\qquad K=2^{27}=134\,217\,728,
+\qquad S=2^{58}=288\,230\,376\,151\,711\,744.
+\end{equation}
+Ici $K>N$ satisfait \eqref{eq:alias}. Les preuves finies demeurent valides
+indépendamment de l'achèvement d'un calcul à cette taille. Le contrat de
+validation doit conserver les coefficients issus de toutes les puissances
+premières, y compris celles de degré au moins deux.
+
+\clearpage
+\section{Logarithmes canoniques et précision effectivement construite}\label{sec:quant}
+La quantification du lot 17 ne suppose pas une précision fournie par un
+oracle. Pour $2\le p\le10^8$, posons
+\[
+k=\lfloor\log_2p\rfloor,\qquad
+z=\frac{p-2^k}{p+2^k},\qquad 0\le z<\frac13,
+\]
+et définissons la somme rationnelle
+\begin{equation}\label{eq:log32}
+L_{32}(z)=2\sum_{j=0}^{31}\frac{z^{2j+1}}{2j+1},\qquad
+\rho_{32}=\frac{9}{4\cdot65\cdot3^{65}}.
+\end{equation}
+La représentation réelle de $\log(1+z)-\log(1-z)$ par cette série,
+sa queue géométrique et la décomposition par $2^k$ donnent l'intervalle
+\begin{equation}\label{eq:logbox}
+b_p=kL_{32}(1/3)+L_{32}(z),\qquad
+\log p\in[b_p,b_p+(k+1)\rho_{32}].
+\end{equation}
+\paid La largeur satisfait, sur le domaine fixé,
+\[
+(k+1)\rho_{32}\le\frac{243}{260\cdot3^{65}}<2^{-96}.
+\]
+Le point canonique $A_p$ est obtenu en multipliant le milieu de
+\eqref{eq:logbox} par $S$, en arrondissant à l'entier le plus proche avec
+égalité départagée vers l'entier pair, puis en le bornant dans $[0,32S]$.
+Le constructeur utilise quotient et reste rationnels exacts. Il n'est pas
+identifié sans preuve à une fonction d'arrondi différente.
+
+Pour tous les entiers, définissons
+\[
+A_n=\begin{cases}
+A_{\min\mathrm{Fac}(n)},& n\text{ est une puissance première},\\
+0,&\text{sinon},
+\end{cases}\qquad q_n=A_n/S.
+\]
+Les cas $0$ et $1$ sont traités séparément. L'emploi de la définition directe
+de $\Lam$ et de son facteur premier minimal conserve chaque $p^k$.
+\paid La preuve établit, pour $0\le n\le10^8$,
+\begin{equation}\label{eq:q-error}
+0\le\Lam(n),q_n\le32,\qquad |\Lam(n)-q_n|\le 1/S.
+\end{equation}
+La précision provient de \eqref{eq:log32}--\eqref{eq:logbox} et de l'arrondi
+construit ; elle n'apparaît pas comme hypothèse libre du théorème.
+
+Posons $I_N=\sum_{n=0}^{N}A_nA_{N-n}\in\Z_{\ge0}$. Le même lot prouve
+\begin{equation}\label{eq:E-log}
+\left|C_N-\frac{I_N}{S^2}\right|\le E_{\log}(N,S),\qquad
+E_{\log}(N,s)=(N+1)\left(\frac{64}{s}+\frac1{s^2}\right),\quad s>0.
+\end{equation}
+L'enveloppe est continue en $s>0$. La garde entière fixée
+\begin{equation}\label{eq:q-guard}
+2(N+1)(64S+1)10^6\le S^2
+\end{equation}
+est compilée, donc $2E_{\log}(10^8,2^{58})\le10^{-6}$. Ce résultat paie
+la quantification réelle, sans calculer $I_N$ ni $C_N$.
+
+\clearpage
+\section{Cinq modules premiers, résidus exacts et dette native}\label{sec:crt}
+Le contrat fixe les cinq paires suivantes ; leur primalité et l'ordre
+des racines ont été compilés indépendamment au lot 22.
+\begin{center}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$i$ & $p_i$ & $(p_i-1)/K$ & $g_i$\\
+\midrule
+1 & 2\,013\,265\,921 & 15 & 31\\
+2 & 2\,281\,701\,377 & 17 & 3\\
+3 & 3\,221\,225\,473 & 24 & 5\\
+4 & 3\,489\,660\,929 & 26 & 3\\
+5 & 3\,892\,314\,113 & 29 & 3\\
+\bottomrule
+\end{tabular}
+\end{center}
+Dans $\mathbb F_{p_i}$, on pose
+$\omega_i=g_i^{(p_i-1)/K}$. La preuve établit l'ordre $K$, à partir
+des certificats de primalité et des contrôles des puissances nécessaires.
+
+\begin{theorem}[Projection canonique concrète ; lot 22]
+Avec les paramètres \eqref{eq:fixed} et les entiers canoniques $A_n$,
+\begin{equation}\label{eq:ntt-projection}
+F_i(j)=\sum_{n=0}^{N}A_n\omega_i^{jn},\qquad
+r_i=K^{-1}\sum_{j=0}^{K-1}F_i(j)^2\omega_i^{-Nj}
+=I_N\pmod {p_i}.
+\end{equation}
+\end{theorem}
+\paid Le théorème instancie la projection de corps fini avec les
+vraies racines du tableau. Il ne prend ni le résidu final ni la précision
+des coefficients en prémisse.
+
+\paper Pour $\Pi=\prod_{i=1}^5p_i$, les bornes du contrat sont
+\begin{equation}\label{eq:crt-size}
+0\le I_N\le(N+1)(32S)^2<2^{153}<\Pi.
+\end{equation}
+Elles fournissent le domaine de reconstruction unique par restes chinois.
+Une reconstruction $c\in[0,\Pi)$ ayant les cinq bons résidus doit donc être
+$I_N$, sous le raccord exact au constructeur et aux projections.
+La preuve du comportement du code CRT, de ses mots machine et de la
+transformée rapide reste distincte de \eqref{eq:ntt-projection}.
+
+Le producteur et le checker natifs ont tous deux été construits au
+BUILD04 : deux compilations terminées avec code zéro. Cela établit
+l'existence de deux images exécutables gelées, sans prouver leur raffinement
+par rapport aux fonctions Lean. Le checker doit encore certifier tout le
+catalogue jusqu'à $N$, la classification des puissances premières, l'égalité
+de chaque point enregistré au constructeur canonique $A32$, les résidus,
+la reconstruction et les gardes entières. Un contrôle auxiliaire par une
+série $B40$ n'est pas le constructeur primaire $A32$ ; son code et sa
+précision réelle n'ont pas de preuve Lean complète dans cette étape.
+
+La fenêtre de ressources est une contrainte opérationnelle. La confiance
+déclarée en Windows, GCC et les images natives n'est ni une fermeture
+universelle du chargeur ni une observation de toutes les dépendances
+dynamiques. Aucune de ces hypothèses opérationnelles ne remplace un
+théorème de raffinement du programme.
+
+\clearpage
+\section{Mellin : identité exacte avec la vraie série de von Mangoldt}\label{sec:mellin}
+Soit $w\in\C$ tel que $\Re w>0$. Le logarithme principal détermine
+$w^{-s}=\exp(-s\Log w)$. Posons
+\begin{equation}\label{eq:mellin-objects}
+s(t)=2+it,\quad
+D(t)=\sum_{n\ge2}\Lam(n)n^{-2-it},\quad
+P(w)=\sum_{n\ge0}\Lam(n)e^{-nw},\quad
+K(w,t)=\Gamma(2+it)w^{-2-it}.
+\end{equation}
+Les termes de rang zéro et un de $D$ sont nuls dans la définition formelle. Pour
+$n\ge1$, les puissances utilisent le logarithme réel positif de $n$.
+En particulier $P(a-i\theta)=T_a(\theta)$.
+
+\begin{theorem}[Inversion et échange infini ; lot 35]\label{thm:mellin}
+Pour $\Re w>0$, la fonction $t\mapsto D(t)K(w,t)$ est intégrable et
+\begin{equation}\label{eq:mellin}
+P(w)=\frac1{2\pi}\int_{\R}D(t)\Gamma(2+it)w^{-2-it}\,dt.
+\end{equation}
+De plus $D$ est continue et $|D(t)|\le6$ pour tout $t\in\R$.
+\end{theorem}
+\paid Le lot 35 contient 30 déclarations : 24 théorèmes et 6
+définitions. Sa compilation indépendante et l'audit exact de ses axiomes
+ont réussi. L'échange ne repose pas sur une hypothèse finale d'intégrabilité
+ou sur une égalité fournie de l'extérieur.
+
+La preuve commence par la série positive
+\[
+b_n=\Lam(n)n^{-2},\qquad
+0\le b_n\le 2n^{-3/2}\ (n\ge1),\qquad \sum_n b_n\le6.
+\]
+Elle construit la convergence uniforme de la série $D$ et sa borne.
+Les identités d'inversion Gamma, l'holomorphie sur le demi-plan droit et
+les majorants intégrables du noyau proviennent de dépendances indépendantes
+déjà compilées. Pour chaque $n>0$, le transport de branche
+$(nw)^{-s}=n^{-s}w^{-s}$ est payé avec $n$ réel positif. Enfin la
+sommabilité des intégrales des normes autorise l'échange réel entre la
+série en $n$ et l'intégrale en $t$. Les termes $\Lam(p^k)$ restent présents.
+
+Sur la droite $\Re s=2$, l'identification classique de cette série avec
+$-\zeta'(s)/\zeta(s)$ appartient au raccord zêta distinct. Le théorème
+\ref{thm:mellin} utilise directement la vraie série $D$ ; son crédit ne
+vaut pas validation de toutes les formules explicites en zéros, de tous
+les déplacements de contour ni d'un évaluateur uniforme de $\zeta$.
+
+L'identité \eqref{eq:mellin} transpose exactement le couplage en une
+représentation continue. Elle ne fournit encore aucun signe favorable du
+coefficient \eqref{eq:circle}. La domination absolue assure l'existence
+des intégrales et les échanges ; une annulation signée nouvelle demeure
+une obligation séparée.
+
+\clearpage
+\section{Troncatures signées et géométrie du demi-plan droit}\label{sec:tails}
+On conserve les définitions concrètes des paquets de troncature. Pour
+$\Re w>0$, soit
+\begin{equation}\label{eq:Cdelta}
+\eta(w)=\frac{\pi/2+|\Arg w|}{2},\quad
+\delta(w)=\frac{\pi/2-|\Arg w|}{2}>0,\quad
+C(w)=|w|^{-2}\sec^2\eta(w).
+\end{equation}
+Le noyau Gamma dispose de majorants exponentiels construits sur ce domaine.
+Le lot 30, indépendant et compilé, paie les queues non pondérées et leurs
+deux orientations. Le bridge du lot 32 relie l'inversion Gamma complète
+à la troncature correspondante. Ces crédits n'incluent pas automatiquement
+la nouvelle queue pondérée par $D$.
+
+\source Le paquet $E_\Lam$ définit, pour $H\ge0$,
+\begin{align}
+P_H(w)&=\frac1{2\pi}\int_{-H}^{H}D(t)K(w,t)\,dt,\\
+T_+(w,H)&=\int_H^\infty D(t)K(w,t)\,dt,\qquad
+T_-(w,H)=\int_H^\infty D(-t)K(w,-t)\,dt.
+\end{align}
+Il vise les énoncés exacts
+\begin{equation}\label{eq:lambda-tail}
+P(w)-P_H(w)=\frac{T_-(w,H)+T_+(w,H)}{2\pi},\qquad
+|P(w)-P_H(w)|\le
+\frac{6C(w)e^{-\delta(w)H}}{\pi\delta(w)}.
+\end{equation}
+Le facteur 6 vient du théorème \ref{thm:mellin}. La réflexion concerne les
+deux facteurs $D$ et $K$. La source comporte des preuves concrètes
+d'intégrabilité et de queue ; aucune prémisse égale à
+\eqref{eq:lambda-tail} n'est ajoutée.
+
+Le lot 36 échoue sur une réécriture de la réflexion à la ligne 118:6.
+Il n'a produit aucun objet de preuve compilé pour ce module ; la géométrie
+suivante n'a pas été invoquée. La réparation est conservée dans un nouveau
+paquet SOURCE02, sans nouvelle compilation à la clôture de cette étape.
+Le diagnostic est un raccord d'élaboration, sans réfutation analytique
+ni preuve d'obstruction de parité.
+
+\source Le paquet Geometry25 construit, pour $a>0$,
+\begin{equation}\label{eq:geometry}
+C(a-i\theta)=\frac2{a^2}
+\left(1+\frac{|\theta|}{\sqrt{a^2+\theta^2}}\right)\le\frac4{a^2}.
+\end{equation}
+Pour $|\theta|\le\pi$, il vise également
+\begin{equation}\label{eq:d}
+\delta(a-i\theta)\ge d(a):=\tfrac12\arctan(a/\pi)>0.
+\end{equation}
+Les branches, quadrants, signes, racines carrées et continuités sont
+explicitement rédigés. Les rayons sont fermés et continus sur leurs
+domaines : $\Re w>0$ et $H\in\R$ pour leur expression, $H\ge0$ pour la
+borne de queue. Cette continuité d'une expression ne vaut pas une preuve
+supplémentaire de continuité d'une intégrale à frontière mobile.
+
+\clearpage
+\section{Enveloppe de coefficient et raccord scalaire restant}\label{sec:radius}
+À partir de \eqref{eq:lambda-tail}--\eqref{eq:d}, le rayon uniforme proposé est
+\begin{equation}\label{eq:eps}
+\varepsilon(a,H)=\frac{24e^{-d(a)H}}{\pi a^2d(a)},\qquad a>0,\ H\ge0.
+\end{equation}
+La source du coefficient définit la projection centrée de la troncature
+\[
+C_{N,H}=\frac{e^{aN}}{2\pi}\int_{-\pi}^{\pi}
+P_H(a-i\theta)^2e^{-iN\theta}\,d\theta
+\]
+et le rayon fermé
+\begin{equation}\label{eq:E-mellin}
+\mathcal E_N(a,H)=e^{aN}\bigl(2U(a)\varepsilon(a,H)
++\varepsilon(a,H)^2\bigr).
+\end{equation}
+\source Les 34 déclarations de ce paquet construisent le transport du
+cercle centré, la continuité et l'intégrabilité angulaires à $H$ fixé,
+puis visent
+\begin{equation}\label{eq:coef-error}
+|C_N-C_{N,H}|\le\mathcal E_N(a,H).
+\end{equation}
+L'inégalité élémentaire employée est
+$|x^2-y^2|\le2|x||x-y|+|x-y|^2$. Avec $|T_a|\le U(a)$, elle explique
+les deux termes du budget. La continuité jointe du rayon est rédigée pour
+$a>0$ et $H\in\R$ ; son interprétation comme erreur de troncature exige
+$H\ge0$. Le théorème n'est pas compilé à la clôture.
+
+La vraie série $T_a$ est périodique. La puissance complexe
+$(a-i\theta)^{-2-it}$, prise isolément sur sa branche principale, ne l'est
+pas. La source ne postule pas la périodicité de $P_H$. Le déplacement de
+l'intervalle de projection concerne la trace complète, dont la périodicité
+provient de la série ; la troncature reçoit ensuite son propre budget.
+
+\source Le paquet scalaire de 26 déclarations définit les mêmes fonctions
+$U$, $d$, $\varepsilon$ et $\mathcal E_N$, et rédige une chaîne réelle au
+point
+\begin{equation}\label{eq:point}
+N=10^8,\qquad a=10^{-8}=1/N,\qquad H=10^{11},\qquad\tau=10^{-6}.
+\end{equation}
+Il vise notamment $d(a)>1/(8N)$, une borne de $U$ par l'identité en
+$\sinh$, $e^{125}>10^{50}$, puis
+$\mathcal E_N(a,H)\le576/10^{10}<\tau$.
+Il n'est pas compilé. Un bridge distinct de huit théorèmes rédige les
+égalités des deux définitions de rayon et l'instanciation de
+\eqref{eq:coef-error} par ce résultat scalaire. Ses deux imports sont
+prospectifs ; le bridge n'est pas compilé non plus.
+
+Ces sources traitent des obligations théoriques précises sans établir un
+coefficient numérique. Avant leur compilation indépendante, aucune chaîne
+Lean complète n'autorise à promouvoir \eqref{eq:coef-error} et son
+instanciation au point \eqref{eq:point} en résultat formel acquis.
+
+\clearpage
+\section{Le test rationnel effectivement terminé et sa portée}\label{sec:scalar-test}
+Le test scalaire observé emploie uniquement des fractions exactes. Au point
+\eqref{eq:point}, il définit
+\[
+S_{150}(125)=\sum_{k=0}^{150}\frac{125^k}{k!},\qquad
+q=\frac1{S_{150}(125)},\qquad
+\mathcal B=3\bigl(128N^5q+4096N^6q^2\bigr).
+\]
+\textbf{Calcul observé : PASS rationnel.} Une invocation réelle, sans
+réessai, vérifie exactement
+\begin{equation}\label{eq:B-test}
+\mathcal B<10^{-6}.
+\end{equation}
+Les contrôles conservés incluent
+$S_6(5)>100$ et
+$S_{150}(125)\ge S_6(5)^{25}>10^{50}$.
+Le résultat est lié au reçu de l'acteur et à l'observation physique ROOT
+répertoriés en annexe. Il n'emploie aucune approximation flottante.
+
+La comparaison \eqref{eq:B-test} est un résultat scalaire. Le programme
+n'intègre pas $D$, ne calcule ni $P_H$ ni $C_{N,H}$, et n'évalue pas
+$C_N$. Il ne vérifie pas la conformité d'un catalogue de nombres premiers,
+la transformée native ou une identité de Goldbach. Le raccord entre
+$\mathcal B$ et le rayon réel \eqref{eq:E-mellin} utilise les inégalités
+analytiques rédigées dans le paquet scalaire et le bridge de la section
+\ref{sec:radius}. Leur statut reste SOURCE.
+
+\paper Le raccord analytique au même rayon s'écrit explicitement comme
+suit. Les inégalités réelles des connecteurs donnent $3<\pi<7/2$,
+$d(1/N)>1/(8N)$ et
+$U(1/N)=1/(4\sinh^2(1/(2N)))\le N^2$.
+Ainsi $dH>125$ au point fixé. La série de Taylor positive assure
+$S_{150}(125)\le e^{125}$, donc
+$e^{-dH}\le e^{-125}\le q$. L'expression \eqref{eq:eps} vérifie alors
+\[
+\varepsilon(1/N,H)\le
+\frac{24}{3}N^2(8N)q=64N^3q.
+\]
+Comme $aN=1$ et $e<3$, \eqref{eq:E-mellin} implique
+\[
+\mathcal E_N(1/N,H)\le
+3\bigl(2N^2\cdot64N^3q+(64N^3q)^2\bigr)=\mathcal B<\tau.
+\]
+Cette chaîne explique exactement la portée analytique proposée du test.
+Elle reste PAPER/SOURCE jusqu'à compilation des connecteurs et du bridge
+au coefficient ; le calcul rationnel seul ne vérifie pas ces dépendances.
+
+\subsection*{Faisabilité d'une évaluation Mellin littérale}
+\paper La géométrie serrée donne le rayon uniforme
+\[
+\overline C(a)=\frac2{a^2}\left(1+
+\frac{\pi}{\sqrt{a^2+\pi^2}}\right)<\frac4{a^2},\qquad
+\overline\varepsilon=
+\frac{6\overline C(a)e^{-d(a)H}}{\pi d(a)}.
+\]
+La note de coût étudie le seuil du majorant
+$e^{aN}(2U\overline\varepsilon+\overline\varepsilon^2)$.
+Pour les paramètres \eqref{eq:point}, elle place ce seuil entre
+$5\cdot10^{10}$ et $10^{11}$ par des inégalités fermées.
+Cette estimation porte sur une condition suffisante issue d'un majorant ;
+elle n'est pas une minoration de l'erreur réelle et n'impose pas cette
+hauteur à toutes les méthodes possibles.
+
+La même note paie sur papier une queue littérale de $D$ par
+$(\log M+1)/M$ et une quadrature angulaire par un majorant de dérivée.
+Des choix extrêmement grossiers tels que $M=10^{52}$ et $J=10^{67}$
+illustrent la fermeture symbolique de ces budgets. Ils ne décrivent ni
+un programme disponible ni une exécution achevable dans la fenêtre
+de ressources de cette étape. La certification dirigée des primitives
+sur tous les n\oe{}uds et la quadrature verticale demeurent ouvertes.
+Le succès scalaire \eqref{eq:B-test} n'est donc pas une mesure de
+performance de l'évaluation globale de Mellin.
+
+\clearpage
+\section{Contrat numérique falsifiable et arrêt natif sans verdict}\label{sec:numeric}
+Le contrat fini de la section \ref{sec:crt} donne une cible falsifiable :
+produire $I_N$ depuis les coefficients canoniques, reconstruire le même
+entier par les cinq résidus, et vérifier toutes les gardes. Alors
+\eqref{eq:E-log} fournit l'intervalle
+\[
+C_N\in\left[I_N/S^2-E_{\log},\ I_N/S^2+E_{\log}\right].
+\]
+Le rayon n'est pas choisi après observation ; sa construction réelle et
+sa garde sont déjà compilées. La validité d'un résultat natif exige encore
+la conformité des enregistrements à $A32$, la couverture complète du
+catalogue et les vérifications du calcul entier.
+
+\paper Pour $K=2^{27}$, une transformée radix 2 possède
+$K\cdot27/2=1\,811\,939\,328$ papillons par transformée. Les comptes du
+contrat donnent des dizaines de milliards de produits modulaires pour
+les cinq modules et leur contrôle indépendant. Un tableau de $K$ mots
+de 32 bits occupe 536\,870\,912 octets ; les points en 64 bits sur
+$0,\ldots,N$ occupent 800\,000\,008 octets, et les facteurs en 32 bits
+400\,000\,004 octets. Ces comptes de charges utiles ne sont pas une
+mesure de mémoire totale ni une promesse de durée.
+
+\textbf{Calcul observé : STOP sans verdict.} Le consumer05 réutilise
+trois payloads gelés du producteur04 dans des copies identiques, et une
+image checker issue du BUILD04. Les payloads demeurent non validés tant
+que le checker n'a pas terminé son contrat. La tentative crée un seul
+checker, aucun producteur et aucun compilateur, sans réessai.
+Le budget parent est de 3\,600 secondes ; le checker dispose d'une
+échéance à 3\,300 secondes, avec une réserve de 300 secondes pour les
+journaux et les contrôles de conservation.
+
+Le checker s'arrête avec le code 238 et le statut
+\texttt{HARD\_WALL\_NO\_VERDICT}. Le parent termine avec code 1 après
+environ 3\,312 secondes, soit 55 minutes. Aucun coefficient n'est présent.
+La fermeture documente la quiescence et le POST réellement produit ;
+l'observation ROOT vérifie la conservation de 6\,576 entrées, 109 paires
+de captures, trois paires de payloads et 3\,089 fichiers d'archives.
+L'arrêt constitue un échec de ressources sans verdict mathématique,
+et non un contre-exemple à l'identité ou à la précision construite.
+
+Les ressources OS distinguent une limite de mémoire engagée du Job de
+2 Gio et un suivi RSS qui n'est pas une limite RSS imposée par l'OS.
+La confiance opérationnelle Windows/GCC/natif reste déclarée, à portée
+bornée ; une fermeture universelle du chargeur n'est pas affirmée.
+Aucune nouvelle tentative ni extrapolation de débit n'est intégrée
+dans cette clôture.
+
+\clearpage
+\section{Raccord au bilan : la dette signée demeure}\label{sec:dn}
+Le coefficient $C_N$ contient des puissances premières propres.
+Définissons directement
+\[
+P_{\mathrm{pr}}(n)=\begin{cases}\log n,&n\text{ premier},\\0,&\text{sinon},\end{cases}
+\qquad V_{\mathrm{pp}}(n)=\Lam(n)-P_{\mathrm{pr}}(n).
+\]
+La notation $V_{\mathrm{pp}}$ évite de confondre ce poids avec l'amplitude
+$U(a)$. Dans l'audit du ledger, le coefficient de paires premières et la
+correction sont
+\begin{align}
+R_{\mathrm{sf}}&=\sum_{n=0}^N P_{\mathrm{pr}}(n)P_{\mathrm{pr}}(N-n),\\
+Q_N&=C_N-R_{\mathrm{sf}}\nonumber\\
+&=\sum_{n=0}^N\bigl(2P_{\mathrm{pr}}(n)V_{\mathrm{pp}}(N-n)
++V_{\mathrm{pp}}(n)V_{\mathrm{pp}}(N-n)\bigr)\ge0.
+\label{eq:PP}
+\end{align}
+\paper Le majorant direct $Q_N\le2\sqrt N\,u^2$ pour $N\ge2$
+est conservé dans cette note. Il n'est pas crédité ici comme un nouveau
+théorème Lean. Ce terme global n'est pas interchangeable avec les termes
+de puissances premières dont le bilan garde ses propres supports.
+
+Le pont couvert de la monographie, avec ses conditions et exactement
+le même support, conserve
+\begin{equation}\label{eq:ledger}
+D_N+\varepsilon_{\mathrm{tr}}
+=R_{\mathrm{ref}}-R_{\mathrm{sf}}+2\max(e,0).
+\end{equation}
+Son raccord au coefficient continu est donc
+\begin{equation}\label{eq:gap}
+D_N=R_{\mathrm{ref}}-C_N+Q_N+2\max(e,0)-\varepsilon_{\mathrm{tr}}.
+\end{equation}
+Le ledger conserve une fois chacun
+$B_{\mathrm{prime}}^{(a_{\mathrm{cut}})}$,
+$B_{\mathrm{pp}}^{(a_{\mathrm{cut}})}$,
+$P_{\mathrm{band},\ge2}$, $Z_{\mathrm{face},\ge2}$, $I_\alpha$ et
+$2\max(e,0)$. La présente transposition ne redéveloppe pas ces objets
+par les méthodes arithmétiques abandonnées dans la boucle 22.
+
+La connaissance d'un intervalle étroit pour $C_N$ ne donne pas le signe
+de $R_{\mathrm{ref}}-C_N$, ni le contrôle de $e$, des fronts et des coins.
+Pour établir \eqref{eq:target}, il reste à démontrer une estimation
+signée compatible avec \eqref{eq:gap}, en conservant ces charges et les
+conditions du pont. Poser cette estimation comme une prémisse égale à
+la cible ne constituerait pas un contournement du mur de la parité.
+
+Les identités continues établissent des représentations exactes et les
+budgets décrivent une erreur de troncature ou de quantification. Aucune
+annulation globale de la vraie contribution spectrale transportée au
+ledger n'a été prouvée. Cette dette reste ouverte même si un futur
+calcul fini produit $C_N$ au point $10^8$. Elle doit être traitée au
+seuil \eqref{eq:onset} et avec la couverture finie requise par le cadre.
+
+\clearpage
+\section{Bords, zéros et invariance : pistes à portée précise}\label{sec:strategy}
+Le pivot continu conserve la phase avant de prendre une norme. Pour
+$a>0$, $N\ge1$ et $q\in\C$, on considère
+\[
+J_{a,N}(q)=\frac1{2\pi}\int_{-\pi}^{\pi}
+(a-i\theta)^{-q}e^{-iN\theta}\,d\theta.
+\]
+\paid Le lot 25 formalise une intégration par parties et le vrai bord
+sur la branche principale :
+\begin{equation}\label{eq:bord}
+J_{a,N}(q)=\frac{i(-1)^N}{2\pi N}
+\bigl((a-i\pi)^{-q}-(a+i\pi)^{-q}\bigr)
++\frac qN J_{a,N}(q+1).
+\end{equation}
+Le bord ne s'annule pas point par point. Ce module de 30 déclarations
+ne donne aucun signe favorable à la projection spectrale complète.
+La périodicité de la trace après inversion ne rend pas périodique
+chaque noyau tronqué.
+
+\paper La stratégie de formule explicite signée localise une fonction
+test lisse près de $x+y=N$, puis vise la décomposition
+\[
+C_N=\mathcal B_N-2\mathcal L_N+\mathcal Z_N.
+\]
+Les trois termes désignent respectivement fond, couplage au canal des
+zéros, et contribution à deux zéros dans la formule explicite envisagée.
+L'identité complète, les corrections archimédiennes, les multiplicités,
+les échanges et les queues de zéros demeurent à payer dans ce canal.
+Les revues conservées constatent la cohérence sous ces dettes ; elles
+ne créditent ni un signe de $\mathcal Z_N-2\mathcal L_N$, ni une preuve
+Lean de la formule globale.
+
+L'organisation en orbites conjugaison--réflexion conserve les zéros hors
+de la droite critique. Une orbite de quatre points engendre une densité
+de type
+\[
+4m x^{-1/2}\cosh\bigl((\beta-1/2)\log x\bigr)
+\cos(\gamma\log x),
+\]
+et une orbite critique de deux points la densité
+$2m x^{-1/2}\cos(\gamma\log x)$, avec multiplicité $m$.
+Les stabilisateurs empêchent de compter deux fois une orbite dégénérée.
+La phase cosinus peut changer de signe : une organisation correcte des
+orbites n'est pas une positivité automatique du coefficient additif.
+
+La revue du noyau canonique montre une direction négative dans une
+restriction de dimension deux ; elle exclut l'argument de positivité
+naïve examiné. Sa portée est ce noyau précis. Elle n'est ni une
+impossibilité universelle de toute approche opératorielle, ni une
+réfutation de Goldbach. De même, une modularité ou une invariance
+exacte proposée devra être démontrée pour les vrais objets et devra
+isoler le terme signé requis dans \eqref{eq:gap}. Aucun tel raccord
+suffisant n'est annoncé comme imminent dans cette clôture.
+
+\clearpage
+\section{Fejér continu : reconstruction et signe restant}\label{sec:fejer}
+La nouvelle note spectrale part de la vraie série $D$ du lot 35, avec
+$c_n=\Lam(n)/n^2$ pour $n\ge2$ et $c_0=c_1=0$.
+La masse $\sum c_n\le6$ rend $D$ de type positif : pour des familles
+finies $(z_j,t_j)$,
+\[
+\sum_{j,k}\overline z_jz_kD(t_k-t_j)
+=\sum_{n\ge2}c_n\left|\sum_k z_ke^{-it_k\log n}\right|^2\ge0.
+\]
+\paper Pour $T>0$ et $m\ge1$ entier, la moyenne triangulaire
+\begin{equation}\label{eq:fejer-cont}
+\begin{split}
+A_T(m)&=\frac1T\int_{-T}^{T}\left(1-\frac{|t|}{T}\right)
+D(t)e^{it\log m}\,dt\\
+&=\sum_{n\ge2}c_n\operatorname{sinc}^2\!\left(\frac T2\log\frac mn\right)
+\end{split}
+\end{equation}
+est réelle et positive. Ici $\operatorname{sinc}(x)=\sin(x)/x$ si
+$x\ne0$ et $\operatorname{sinc}(0)=1$. L'échange sur le compact est
+payé par la sommabilité ; le triangle est l'autocorrélation d'une
+indicatrice d'intervalle. Les fréquences distinctes vérifient
+$|\log(m/n)|\ge\log(1+1/m)$. La note dérive donc le rayon fermé
+\begin{equation}\label{eq:fejer-radius}
+0\le A_T(m)-c_m\le
+\frac{24}{T^2\log^2(1+1/m)},\qquad T>0.
+\end{equation}
+Le cas $m=1$ a $c_1=0$ et conserve la même borne. Le rayon est continu
+en $T>0$ et tend vers zéro à $m$ fixé. Ni cette identité ni ses
+connecteurs ne sont compilés dans cette étape.
+
+Ce mécanisme reconstruit des amplitudes depuis la donnée verticale vraie,
+puis peut les insérer dans les blocs réfléchis $n,N-n$. Il ne crée pas
+de masse commune à une paire. La note conserve un contre-modèle borné :
+le seul secteur des puissances de 2 est de type positif et satisfait la
+même reconstruction, alors que son coefficient additif à $N=14$ est nul.
+Ce constat exclut la déduction d'un minorant strict uniforme depuis cette
+seule positivité. Il ne remplace pas la vraie zêta et n'exclut pas une
+identité supplémentaire spécifique à sa donnée complète.
+
+Un évaluateur futur devrait produire les intervalles des vraies
+intégrales $A_T(m)$, avec les primitives, positions et quadratures
+contrôlées. \eqref{eq:fejer-radius} ne paie aucune de ces erreurs
+d'évaluation. Le coût augmente avec $m$, et aucune faisabilité à $10^8$
+n'est annoncée. Les identités anciennes de grilles divisibles et leurs
+covariances demeurent dans V2, avec leurs conventions de supports ; la
+présente piste concerne la variable spectrale continue $t$.
+
+La recherche est gelée. Une reprise doit établir un raccord signé
+supplémentaire au ledger \eqref{eq:gap}, plutôt que rebaptiser cette
+reconstruction comme annulation de parité. Aucun mécanisme suffisant
+pour \eqref{eq:target} ni découverte imminente n'est revendiqué.
+
+\clearpage
+\section{Inventaire formel arrêté et journal des limites}\label{sec:inventory}
+L'observation indépendante du lot 35 fixe l'inventaire officiel à
+\textbf{88 modules / 1\,488 déclarations auxiliaires, définitions incluses}.
+Le lot 36 n'ajoute aucun crédit. Le tableau suivant isole les éléments
+utilisés dans cette synthèse ; il n'est pas une somme exhaustive de
+l'inventaire historique.
+
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\noindent
+\begin{tabularx}{\textwidth}{@{}p{12mm}Yp{22mm}p{25mm}@{}}
+\toprule
+Lot & Objet & Déclarations & Statut\\
+\midrule
+11 & Enveloppe géométrique de la vraie trace thermique & 42 & Row PASS ; lot FAILED\\
+13 & Identité continue d'extraction & 20 & Lean PASS\\
+15 & Orthogonalité et projecteur discret complexe & 29 & Lean PASS\\
+17 & Logarithmes canoniques et enveloppe & 52 & Lean PASS\\
+19 & Projecteur générique de corps fini & 24 & Lean PASS\\
+22 & Cinq racines concrètes et projection $A32$ & 28 & Lean PASS\\
+25 & Intégration par parties et terme de bord & 30 & Lean PASS\\
+26/27 & Inversion Gamma locale et holomorphe & 22/15 & Row PASS26 ; PASS27\\
+30/32 & Queues Gamma et bridge non pondéré & 22/2 & Lean PASS\\
+35 & Mellin de la vraie série $\Lam$ & 30 & Lean PASS\\
+36 & Queue pondérée $E_\Lam$ ; géométrie & 16 ; 25 & FAIL ; non invoqué\\
+\bottomrule
+\end{tabularx}
+\endgroup
+
+Les lots 11 et 26 ont un statut global FAILED : chacun conserve une
+ligne de module entier PASS (respectivement Envelope42 et Local22),
+tandis qu'un autre module du même lot échoue. Leurs crédits partiels
+sont attestés par les adjudications et observations ; les modules
+défaillants ne sont pas comptés comme acquis. Le lot 13 et le lot 27
+valident ultérieurement des sources corrigées distinctes.
+
+Les sources du coefficient (34), des connecteurs scalaires (26) et du
+bridge coefficient--scalaire (8) n'ont pas été compilées. Leurs nombres
+de déclarations sont des catalogues de sources ; ils ne s'ajoutent pas
+à 1\,488. Les anciens commentaires \texttt{SOURCE ONLY} de certains
+fichiers devenus PASS restent dans les captures historiques ; le statut
+actuel vient de l'adjudication et du reçu, pas d'une réécriture rétroactive.
+
+Les lots de correction ont conservé leurs échecs : le lot 16 présente
+des raccords de série et de conversions rationnelles, réparés et compilés
+dans le lot 17 ; les lots 31 et 33 présentent des raccords d'instances
+ou de continuité, réparés dans la source effectivement compilée au lot
+35. Le lot 36 échoue sur la réflexion du produit de deux fonctions.
+Ces diagnostics ne sont pas des preuves du mur de la parité. À
+l'inverse, un PASS auxiliaire ne vaut pas victoire sur cette obstruction.
+
+La vérification est une propriété du fichier exact, du catalogue exact
+et de ses dépendances. Les contrôles conservent les anciens journaux,
+captures, sources et archives ; ils distinguent lecture intégrale d'un
+texte, lecture ciblée, inventaire métadonnées et hachage des octets.
+Le fichier compagnon \path{evidence_v3.json} précise cette frontière
+pour les principales affirmations de ce manuscrit.
+
+\clearpage
+\appendix
+\section{Provenance compacte et reprise}\label{app:provenance}
+Tous les chemins ci-dessous sont relatifs à la racine du corpus
+\path{Goldbach_Parity_20261002}. Les préfixes SHA-256 servent à la lecture ;
+les empreintes complètes, tailles, statuts et scopes de lecture sont
+conservés dans \path{synthesis_v3/evidence_v3.json}. Les chemins de sources
+ne remplacent pas les reçus d'exécution.
+Le corpus publié est accessible dans le dépôt
+\href{https://github.com/seisner1967-hash/goldbach-horizon}{\texttt{goldbach-horizon}},
+avec le registre compagnon de la V3.
+
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\noindent
+\begin{tabularx}{\textwidth}{@{}p{20mm}Yp{23mm}@{}}
+\toprule
+Pièce & Chemin relatif & Préfixe SHA\\
+\midrule
+Mellin PASS & \path{round22/judge5/batch35/sources/ComplexGammaMellinLambda22.lean} & \texttt{4a94415678e4}\\
+Reçu 35 & \path{round22/judge5/batch35/batch35_attempt01/receipt.json} & \texttt{3cffa331b392}\\
+Observation 35 & \path{.arbor/sessions/parity/.coordinator/messages/round22_judge_batch35_closed_observation.json} & \texttt{dc5985976051}\\
+Queue réparée & \path{round22/role4/complex_gamma_mellin_lambda_tail_source02/ComplexGammaMellinLambdaTail22.lean} & Voir JSON\\
+Géométrie SOURCE & \path{round22/role4/complex_gamma_circle_geometry_source01/ComplexGammaCircleGeometry22.lean} & \texttt{2322915060c6}\\
+Coefficient SOURCE & \path{round22/role4/lambda_circle_truncation_source01/LambdaCircleTruncationEnvelope22.lean} & \texttt{bf9b8257760a}\\
+Scalaire SOURCE & \path{round22/role4/scalar_radius_real_connectors_source01/ScalarRadiusRealConnectors22.lean} & \texttt{6ba4b8d4cca0}\\
+Bridge SOURCE & \path{round22/role3/lambda_circle_scalar_bridge_source01/LambdaCircleScalarRadiusBridge22.lean} & \texttt{cfb0d2cfd238}\\
+Point rationnel & \path{round22/role6/mellin_circle_radius_point_source01/actual_radius_point01_attempt01/receipt.json} & \texttt{d46e3ffeb6d0}\\
+Ledger & \path{round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md} & Voir JSON\\
+\bottomrule
+\end{tabularx}
+\endgroup
+
+\subsection*{Contrat autonome de remise}
+La pièce \path{synthesis_v3/HANDOFF_THEORY_V3.txt} résume les objets, les
+paramètres, les acquis et les dettes. Le calcul de $C_N$ à $10^8$ demeure
+absent. La reprise native éventuelle exigerait un nouveau contrat de
+ressources et un verdict complet ; les sorties
+STOP ne peuvent servir d'oracle. Une reprise d'ingénierie analytique
+éventuelle devra compiler indépendamment les sources de queue,
+géométrie, coefficient et connecteurs, puis payer les primitives et
+quadratures réellement choisies. La reprise théorique sur le signe de
+$D_N$ peut partir du socle compilé, en conservant ces statuts ouverts.
+Une borne signée sur le ledger demeure l'obligation centrale.
+
+\subsection*{Sources documentaires locales}
+Cette synthèse utilise la monographie antérieure, les sources Lean gelées,
+les adjudications et les revues réellement consultées. Elle ne prétend pas
+avoir vérifié de nouvelles références externes ni les citations secondaires
+des notes. La bibliographie ci-dessous identifie les documents locaux qui
+portent les arguments écrits et leurs limites.
+\begin{thebibliography}{9}\small
+\bibitem{v2} Durand Serge, \emph{Finite Identities and Explicit Error Budgets
+in a Framework for Binary Goldbach}, synthèse V2, 1 octobre 2026.
+Titre, auteur et continuité relevés dans la source publique conservée.
+\bibitem{mono} Durand Serge, monographie finale et extraction locale
+\path{monographie.txt} ; conventions actualisées par le cadre source
+\path{Goldbach_Final_20261001/goldbach_synthesis.tex}.
+\bibitem{ntt} ROLE4, \emph{Contrat de projection fini},
+\path{round22/role4/circle_ntt_paper01/projection_contract22_final.md}.
+\bibitem{cost} ROLE4, \emph{Faisabilité Mellin--Lambda},
+\path{round22/role4/mellin_lambda_feasibility_paper01/feasibility22.md}.
+\bibitem{gap} ROLE4, \emph{Audit du raccord spectral à $D_N$},
+\path{round22/role4/continuous_dn_gap_paper01/dn_gap_audit22.md}.
+\bibitem{weil} Juge indépendant, \emph{Revue de formule explicite signée},
+\path{round22/judge5/signed_weil_source_review01/review22.md}.
+\bibitem{orbit} ROLE4, \emph{Revue des orbites de zéros},
+\path{round22/role4/zero_orbit_source_review01/review22.md}.
+\bibitem{fejer} ROLE1, \emph{Positivité réelle de $D$ et reconstruction
+des blocs conservés},
+\path{round22/role1/spectral_next_paper01/spectral_next22.md}.
+\end{thebibliography}
+\end{document}

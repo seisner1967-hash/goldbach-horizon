@@ -1,0 +1,375 @@
+{
+  "schema": "ROUND22_ROLE3_SCALAR_REAL_CONNECTORS_SOURCE_REVIEW_READS",
+  "status": "SOURCE_REAL_CONNECTORS_CHAIN_COHERENT_NOT_ELABORATED",
+  "reviewer": "ROLE3",
+  "scientific_author": "ROLE4",
+  "created_utc": "2026-10-04T04:04:33.7459874Z",
+  "own_full_count": 9,
+  "own_full_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\scalar_radius_real_connectors_source01\\ScalarRadiusRealConnectors22.lean",
+      "bytes": 11575,
+      "sha256": "6ba4b8d4cca0ba1f8a44438f843f6991d196623cce14b7229c34165e5122fd5f",
+      "scope": "OWN_FULL_NONTRUNCATED",
+      "chunk": "74e9bc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\scalar_radius_real_connectors_source01\\source_contract22.md",
+      "bytes": 4265,
+      "sha256": "5b5c91efb26d7d0af0615dfa2cbfd5c5fe4eb332448aa323dfd40c9ff8cb3bdc",
+      "scope": "OWN_FULL_NONTRUNCATED",
+      "chunk": "74e9bc"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\scalar_radius_real_connectors_source01\\catalogue22.json",
+      "bytes": 4110,
+      "sha256": "3fed3cd8739128d5c6615512e95442a11b1d2386b6e1aed7b3d7246a2171277c",
+      "scope": "OWN_FULL_NONTRUNCATED",
+      "chunk": "3886c1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\scalar_radius_real_connectors_source01\\read_receipts22.json",
+      "bytes": 11382,
+      "sha256": "1e9ec55dcb1f3b16fb5f7660bf461edd006e5df88d79d12f94d9e40cfdbd4ea0",
+      "scope": "OWN_FULL_NONTRUNCATED",
+      "chunk": "3886c1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\scalar_radius_real_connectors_source01\\source_handoff22.json",
+      "bytes": 8910,
+      "sha256": "a879b312f408c12e5502d66784bfd2201155750eb408f43a1049d8cf7731a9b4",
+      "scope": "OWN_FULL_NONTRUNCATED",
+      "chunk": "3886c1"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\mellin_circle_radius_point_source01\\radius_point22.py",
+      "bytes": 6987,
+      "sha256": "a612d5863785a1aa2c29da8333a448087a38afccc5567ef95a7584807dfa7078",
+      "scope": "OWN_FULL_UPSTREAM_TEXT_ONLY_NO_REPLAY_OR_OUTPUT_RECHECK",
+      "chunk": "df2ae0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\mellin_circle_radius_point_source01\\source_contract22.md",
+      "bytes": 4431,
+      "sha256": "d62fe8d04d8ec4685caca029305c3be80817f180e868570e174dc18096559c41",
+      "scope": "OWN_FULL_UPSTREAM_TEXT_ONLY_NO_REPLAY_OR_OUTPUT_RECHECK",
+      "chunk": "df2ae0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\mellin_circle_radius_point_execution_control01\\execution_report22.md",
+      "bytes": 2807,
+      "sha256": "df3f3f72a7b8c884fcbcff59a1deaed3cdc872707eef213dbe85ef8a01e6539a",
+      "scope": "OWN_FULL_UPSTREAM_TEXT_ONLY_NO_REPLAY_OR_OUTPUT_RECHECK",
+      "chunk": "df2ae0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\scalar_radius_real_connectors_source_review01\\review22.txt",
+      "bytes": 6811,
+      "sha256": "2509c63d5a67d7f4c18a585380a995c57b77e9158181612adeed83f7eb603b11",
+      "scope": "OWN_FULL_NONTRUNCATED",
+      "chunk": "e3cb97"
+    }
+  ],
+  "own_targeted_api_count": 11,
+  "own_targeted_api_reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Trigonometric\\ArctanDeriv.lean",
+      "bytes": 7951,
+      "sha256": "b8edb2e8185b9190d70cf594a0507a521782e3ff54c0b0904cbc4828ea0e1632",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "68-88",
+      "chunks": [
+        "50bed4"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\MeanValue.lean",
+      "bytes": 70309,
+      "sha256": "bc441942872e5fa25a45c38ab6f378d8f76de28809fdbacf78534136c4156acc",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "1014-1044",
+      "chunks": [
+        "50bed4"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Inv.lean",
+      "bytes": 7563,
+      "sha256": "ad3669cc88e89d944a86bfc9525c96c01851ce74c64f8550e114936781d73886",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "128-153",
+      "chunks": [
+        "50bed4"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Basic.lean",
+      "bytes": 32095,
+      "sha256": "9576d3ea4e2988124154e7ddf538e48b2d6b6d5eca409cbbe31128759374f1d6",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "610-654;355-370;585-605;344-354;670-679",
+      "chunks": [
+        "50bed4",
+        "f55b75",
+        "7707c2"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\Deriv\\Add.lean",
+      "bytes": 14236,
+      "sha256": "02d06a0157abb2273db1e3199cf04db2a01853b60e99881d6c0bd2f99cdd3a6a",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "208-237;40-60;154-183;267-275;293-301",
+      "chunks": [
+        "50bed4",
+        "a7c7d0",
+        "f55b75"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Trigonometric\\Deriv.lean",
+      "bytes": 42012,
+      "sha256": "8720230cf591aa862f4e1427f9012308766130fb60f26e33cfdd93d2cb188760",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "620-650",
+      "chunks": [
+        "50bed4"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\Exponential.lean",
+      "bytes": 59817,
+      "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "680-725;858-880;950-970;1020-1038",
+      "chunks": [
+        "a7c7d0"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Complex\\ExponentialBounds.lean",
+      "bytes": 2672,
+      "sha256": "249d3f5f948a2db9407d47d60505cc3ae0436619d440327433875340079fa225",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "1-39",
+      "chunks": [
+        "a7c7d0"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Real\\Pi\\Bounds.lean",
+      "bytes": 11983,
+      "sha256": "5d1f1f5d832ad15218d1b739283c6f937991b74c2e2dba44305667a5941c5b4e",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "145-170",
+      "chunks": [
+        "a7c7d0"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\GroupWithZero\\Unbundled.lean",
+      "bytes": 87329,
+      "sha256": "88097fc3af252bef1867c8ff416aa643e82f9208bfdef41c55606628b70fab02",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "1048-1069;1530-1565;1830-1847;1875-1895;1131-1149;1258-1279",
+      "chunks": [
+        "a7c7d0",
+        "7707c2"
+      ]
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\GroupWithZero\\Units\\Basic.lean",
+      "bytes": 20033,
+      "sha256": "7beae059e4e36da8a597ff9bfd8faf12cc4f4a20f523ce2a3a7b6cf740ff7fb0",
+      "scope": "OWN_TARGETED_API_EXCERPTS_ONLY",
+      "ranges": "429-445",
+      "chunks": [
+        "a7c7d0"
+      ]
+    }
+  ],
+  "api_range_scope_note": "Explicit intervals were read contiguously except rg context groups; only displayed groups are credited, never omitted gaps. No FULL mathlib claim.",
+  "source_targeted_reinspection": {
+    "chunk": "7707c2",
+    "range": "30-141",
+    "scope": "SOURCE_TARGETED_SUPPLEMENT_TO_ALREADY_FULL74e9bc"
+  },
+  "historical_author_bindings_check": {
+    "handoff_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\scalar_radius_real_connectors_source01\\source_handoff22.json",
+    "handoff_sha256": "a879b312f408c12e5502d66784bfd2201155750eb408f43a1049d8cf7731a9b4",
+    "rows_checked": 20,
+    "physical_sha_bytes_match": true,
+    "metadata_chunk": "c978a7",
+    "scope": "ALL_AUTHOR_DIRECT_BYTE_BINDINGS_NO_TRANSITIVE_CLOSURE",
+    "bindings": [
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/scalar_radius_real_connectors_source01/ScalarRadiusRealConnectors22.lean",
+        "sha256": "6ba4b8d4cca0ba1f8a44438f843f6991d196623cce14b7229c34165e5122fd5f",
+        "bytes": 11575,
+        "scope": "FULL FINAL SOURCE"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/scalar_radius_real_connectors_source01/source_contract22.md",
+        "sha256": "5b5c91efb26d7d0af0615dfa2cbfd5c5fe4eb332448aa323dfd40c9ff8cb3bdc",
+        "bytes": 4265,
+        "scope": "FULL FINAL SOURCE"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/scalar_radius_real_connectors_source01/catalogue22.json",
+        "sha256": "3fed3cd8739128d5c6615512e95442a11b1d2386b6e1aed7b3d7246a2171277c",
+        "bytes": 4110,
+        "scope": "FULL FINAL SOURCE"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Basic.lean",
+        "sha256": "9576d3ea4e2988124154e7ddf538e48b2d6b6d5eca409cbbe31128759374f1d6",
+        "bytes": 32095,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Inv.lean",
+        "sha256": "ad3669cc88e89d944a86bfc9525c96c01851ce74c64f8550e114936781d73886",
+        "bytes": 7563,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Add.lean",
+        "sha256": "02d06a0157abb2273db1e3199cf04db2a01853b60e99881d6c0bd2f99cdd3a6a",
+        "bytes": 14236,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Calculus/MeanValue.lean",
+        "sha256": "bc441942872e5fa25a45c38ab6f378d8f76de28809fdbacf78534136c4156acc",
+        "bytes": 70309,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/ArctanDeriv.lean",
+        "sha256": "b8edb2e8185b9190d70cf594a0507a521782e3ff54c0b0904cbc4828ea0e1632",
+        "bytes": 7951,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Trigonometric/Deriv.lean",
+        "sha256": "8720230cf591aa862f4e1427f9012308766130fb60f26e33cfdd93d2cb188760",
+        "bytes": 42012,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/Exponential.lean",
+        "sha256": "03b179e0a84eee7f83eae19ff7ead761843966431868a6afbe9205dfdaf5e5c7",
+        "bytes": 59817,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/ExponentialBounds.lean",
+        "sha256": "249d3f5f948a2db9407d47d60505cc3ae0436619d440327433875340079fa225",
+        "bytes": 2672,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Real/Pi/Bounds.lean",
+        "sha256": "5d1f1f5d832ad15218d1b739283c6f937991b74c2e2dba44305667a5941c5b4e",
+        "bytes": 11983,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/Order/GroupWithZero/Unbundled.lean",
+        "sha256": "88097fc3af252bef1867c8ff416aa643e82f9208bfdef41c55606628b70fab02",
+        "bytes": 87329,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/GroupWithZero/Units/Basic.lean",
+        "sha256": "7beae059e4e36da8a597ff9bfd8faf12cc4f4a20f523ce2a3a7b6cf740ff7fb0",
+        "bytes": 20033,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Tactic.lean",
+        "sha256": "5a8a488140e9f87a5d07f004c761de7e5753d7d8b3c11c9ef755dc3bf9ff771c",
+        "bytes": 9959,
+        "scope": "BYTE_HASH_ONLY"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/scalar_radius_real_connectors_source01/read_receipts22.json",
+        "sha256": "1e9ec55dcb1f3b16fb5f7660bf461edd006e5df88d79d12f94d9e40cfdbd4ea0",
+        "bytes": 11382,
+        "scope": "FULL 306e32"
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/radius_point22.py",
+        "sha256": "a612d5863785a1aa2c29da8333a448087a38afccc5567ef95a7584807dfa7078",
+        "scope": "FULL",
+        "tool_chunk": "9cae47",
+        "bytes": 6987
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role6/mellin_circle_radius_point_source01/source_contract22.md",
+        "sha256": "d62fe8d04d8ec4685caca029305c3be80817f180e868570e174dc18096559c41",
+        "scope": "FULL",
+        "tool_chunk": "9cae47",
+        "bytes": 4431
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_circle_radius_point_source_review01/review22.md",
+        "sha256": "30f22c99ba748e0952a6e1db4e9d057fad921fbb310b0b6399a7f39780a12627",
+        "scope": "FULL",
+        "tool_chunk": "9cae47",
+        "bytes": 3963
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/mellin_circle_radius_point_execution_control01/execution_report22.md",
+        "sha256": "df3f3f72a7b8c884fcbcff59a1deaed3cdc872707eef213dbe85ef8a01e6539a",
+        "scope": "FULL_PREVIOUS_TASK_REUSED",
+        "tool_chunk": "294a44",
+        "bytes": 2807
+      }
+    ]
+  },
+  "nonreads": [
+    {
+      "chunk": "74e9bc",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\scalar_radius_real_connectors_source01\\source_catalog22.json",
+      "status": "ABSENT_NOT_READ",
+      "replacement": "catalogue22.json_FULL3886c1",
+      "valid_same_call_segments": "Source and contract were FULL returned before nonexistent-path error"
+    },
+    {
+      "chunk": "0deb7b",
+      "status": "POWERSHELL_METADATA_PARSE_ERROR_NO_BODY_EXECUTED",
+      "replacement": "c978a7_PHYSICAL_BYTE_CHECK",
+      "candidate_parsing": false
+    }
+  ],
+  "current_baseline_known_modules": 88,
+  "current_baseline_known_declarations": 1488,
+  "observed_candidate_prints": 0,
+  "manual_declarations": 26,
+  "manual_theorems": 19,
+  "manual_definitions": 7,
+  "local_imports": 0,
+  "precise_mathematical_objections": [],
+  "actual_Lean_verdict": "NONE",
+  "multinomial_S150_constructor_formalized": false,
+  "scalar_numeric_replayed": false,
+  "real_closed_radius_evaluated_here": false,
+  "coefficient_error_evaluated_here": false,
+  "all_candidate_source_bytes_unchanged": true,
+  "transitive_import_closure_claim": false,
+  "all_cache_FULL_claim": false,
+  "archives_rehashed_here": 0,
+  "compiler_invocations": 0,
+  "api_probe_invocations": 0,
+  "PREP_invocations": 0,
+  "candidate_parser_invocations": 0,
+  "candidate_import_invocations": 0,
+  "numeric_invocations": 0,
+  "native_invocations": 0,
+  "gate_created": false,
+  "new_credit": 0,
+  "human07_frozen": false,
+  "D_N": false,
+  "WIN": false
+}

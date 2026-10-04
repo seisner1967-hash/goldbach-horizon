@@ -1,0 +1,65 @@
+{
+  "status": "ALL_REQUIRED_FINALS_FULLY_READ_METADATA_ONLY",
+  "observed_utc": "2026-10-03T01:22:50Z",
+  "reviewer": "/root/round19_judge",
+  "Judge_audit_Lean_probe_invocations": 0,
+  "root_unique_canonical_gate_yet_received": false,
+  "final_new_source_sha256": {
+    "round19/role3/RankCalibrationFace.lean": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+    "round19/role3/RankCalibrationPrice.lean": "ce00b2b3d416d43d522cdd64f23fc075e179a669df551b87cb002b9444563574",
+    "round19/role3/RankCalibrationArithmetic.lean": "3ac4ec121db2be08222863ba188277ed87151f8466e00bbbd140a030faabe11d",
+    "round19/role3/RankCalibrationUnitLoss.lean": "2a3eaafd2e74c1a8dd819f7e5dc84e901773ac95ea134cfa0b196aecbbed642f",
+    "round19/role3/RankCalibrationEuler.lean": "30449aa225e946eb1fe6f7681602550f774c3ea71ae2df09d4a755b03922bb69",
+    "round19/role3/RankCalibrationEstimator.lean": "2d175fb994792cf98de647d860b4315da1dfbe94914c7fe14970a3ede3f2885e",
+    "round19/role4/TerminalPrimeExtraction.lean": "e7e6e458143bb647380ad6ab385e42583cc53dd0494e0997582286440cf0b382",
+    "round19/role4/BalancedResourceSwitch.lean": "310338aef835c39e461bfa92780bc394d68149d8ff1d1c9c622a886904ecb01f",
+    "round19/role4/SignedHyperbolicCRT.lean": "69d0e23f36b148bac0a9af5a99ae61b600f8ed132314e0aa7f2fb5736e5a81d8",
+    "round19/role4/NonSSBracketSwitch.lean": "8d4cc04aa370c59deaa2672bad04df51f6bb937853344f3ec7e983d0033aa9db",
+    "round19/role4/RankTwoHarmonic.lean": "06cbe631518bdf1c4b30cd49e7d4379eb87e9173d1dfc75de4674ec0fb8a006b"
+  },
+  "final_receipt_sha256": {
+    "round19/role1/final_receipt.json": "99a76bc309945c02a051d6943b9e82f098fdd24da3043dfdeedf310026ad0eb6",
+    "round19/role2/final_receipt.json": "6081619ec9d4c942b24cb5fbd72b9ee316712d99b61a5503a98c83790f2df1d0",
+    "round19/role3/final_receipt.json": "2b592e3dba7c2a84d7665b98be29d6233fc332f0f9164cad0e5c9e2018f2567e",
+    "round19/role4/final_receipt.json": "502243fc6fd5954e1255bd0c70354f0511a618323fe71e68370179d546ec8ecb",
+    "round19/role6_nonss/final_receipt.json": "1090604087418b7b940147f3504b519364d095bff453461969bf7d02b5ddee2b",
+    "round19/role6_rank/final_receipt.json": "a08fbf8e3e402713317c0a146ddddd79d654be0d3732d8d08db7c7d9c55005c9",
+    "round19/role1_gap_review/final_receipt.json": "83571b7628b8632a65c985e673e25839fdb0f85a15c4e647aec9a31c0c7c7bdf"
+  },
+  "full_reads": [
+    "PROBE19, FINAL1, FINAL2, test_contract2, executor prompts13.11/14.4, coordinator content plan and feedback18",
+    "Both frozen FINAL6 reports, final receipts and canonical receipts; new rank producer/strict sources read without execution",
+    "FINAL4 report/receipt/manifest and all five frozen source modules, manifest display truncation resolved by segmented reads",
+    "FINAL3 report/receipt/manifest and all six frozen source modules; manifest display truncation resolved by supplementary segment700..1130",
+    "All eleven actual failed ROLE3 logs read in full; no compiler diagnostic was classified as an analytic parity failure",
+    "Frozen gap paper report/receipt, root nonSS/rank/final4 observations"
+  ],
+  "subsequent_root_FINAL3_observation_FULL_read": {
+    "path": ".arbor/sessions/parity/.coordinator/messages/round19_final3_root_observation.json",
+    "after_initial_review_timestamp": true,
+    "root_actual_author_bindings_verified": 131,
+    "root_readonly_dependencies_verified": 4,
+    "root_numeric_bindings_verified": 30,
+    "Judge_compiler_or_numeric_execution": false
+  },
+  "static_subreview": {
+    "agent": "/root/round19_judge/static_audit_check",
+    "full_read_sources": ["audit.py", "run_once.py", "freeze_inputs.py"],
+    "finding": "No precise static schema defect identified; FINAL6 receipt fields and author capture aliases agree",
+    "execution_or_write_count": 0,
+    "not_FINAL3_or_compiler_attestation": true
+  },
+  "declared_author_counts_not_official_Judge_counts": {
+    "new_modules": 11,
+    "explicit_theorems": 185,
+    "defs": 78,
+    "structures": 3,
+    "axiom_prints_including_two_generated_ext": 268,
+    "actual_author_Lean_invocations": 29,
+    "actual_author_Lean_FAIL_technical": 18,
+    "separate_pre_Lean_Python_launcher_FAIL": 1
+  },
+  "semantic_verdict_before_compiler": "Auxiliary identities only; no source quantitative Gamma_rank, parity bypass or D_N target; true incidence and full ledger remain open",
+  "score": 0,
+  "victory": false
+}

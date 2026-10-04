@@ -1,0 +1,69 @@
+{
+  "schema": "ROUND22_NATIVE_NUMERIC05_CHECKER_ONLY_SCOPED_TRUST_REVIEW",
+  "status": "NUMERIC05_CHECKER_ONLY_FIXED_IMAGE_REVIEWED_WITH_EXPLICIT_WINDOWS_NATIVE_TRUST",
+  "scope": "NATIVE_NUMERIC05_CHECKER_ONLY_N1E8",
+  "reviewer": "ROLE4",
+  "source_handoff_sha256": "9b721db7eff5bd27936be11937350f9811f8c7c2f0126eab066e57b6647478cf",
+  "checker_binary_sha256": "2e7e095c2972fea09ee26500df9dae207ff52497d0f61f2052d76d464ebe6990",
+  "checker_source_sha256": "4275ef5afc07f23c2d4b860de8f452ff1e2c07e8ab0d01686c16bdb0d09fe0eb",
+  "backend_sha256": "88d857ce33eece8f90906bc5088d5cac905b868e60ede1b6439b1a3af3126cc3",
+  "policy_sha256": "2da30d086338b3801f4ecc234eedf99b7afa563d94357c07a461740ea52ace9b",
+  "build_receipt_sha256": "04ce22f9ee05215ee9c7c335b41755b1da4e001a82fa20085cfe7dccca1a7fc8",
+  "actual_build_plan_sha256": "538cc14faf3466bb8a0505e8f6aae3007fc84b2b6246afb2da55d37be5718156",
+  "installed_Windows_and_frozen_native_runtime_trusted": true,
+  "trust_true_is_explicit_proposed_operational_assumption_not_runtime_or_formal_proof": true,
+  "required_future_ROOT_acknowledgments": [
+    "accept_installed_Windows_and_frozen_native_runtime_trust",
+    "reuse_unvalidated_producer04_payload_bytes"
+  ],
+  "reused_independent_ROLE5_reviews": [
+    {
+      "file": "judge5/circle_native_source_review01.md",
+      "sha256": "6d6899b9c2fea5ca7fa000c85876c0a29f5dfdc0e1e412feb41c2b42541dfe1c"
+    },
+    {
+      "file": "judge5/circle_native_build_controls_source_review04.md",
+      "sha256": "e72b4d3b61086f9cd2293de005af4e7c21457b8fcb357cf3201c5fd717fce1ef"
+    },
+    {
+      "file": "judge5/circle_native_build_trust_review04.json",
+      "sha256": "b4574128d6cc24bd15c547f3222c8456e1880cf993a036e237af9c568f13b899"
+    }
+  ],
+  "review_scope": "New parent/policy links only; CPP/backend independent review inheritedROLE5, not independently re-reviewed by historical authorROLE4",
+  "new_independent_CPP_audit": false,
+  "effective_loads_observed": false,
+  "universal_loader_closure_verified": false,
+  "all_non_OS_imports_bound": false,
+  "job_limit_flags_requested": 8968,
+  "working_set_limit_flag_requested": false,
+  "rss_os_enforced": false,
+  "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM",
+  "wall_seconds": 3600,
+  "checker_deadline_parent_offset_seconds": 3300,
+  "FIN_POST_reserve_seconds": 300,
+  "commit_OS_limit_bytes": 2147483648,
+  "RSS_scope": "sampled peak per process2GiB and liveJob sum4GiB; parent outsideJob",
+  "process_scope": "one new direct checker, active16OS,total32monitor, no producer/compiler",
+  "unresolved_execution_blockers": [],
+  "separate_parent_SOURCE_review_is_blocked": false,
+  "trust_review_alone_authorizes_nothing": true,
+  "old04_payloads_mathematically_validated": false,
+  "old04_missing_parent_POST_or_receipt_reconstructed": false,
+  "native_GMP_catalogue_NTT_CRT_machine_refinement": false,
+  "B40_real_log_refinement_Lean": false,
+  "numeric_authorization": false,
+  "produced_binary_invocations": 0,
+  "candidate_imports": 0,
+  "PREP_created": false,
+  "gate_created": false,
+  "D_N": false,
+  "WIN": false,
+  "last_parent_deadline_check_before_backend": true,
+  "expired_at_last_parent_deadline_check_creates_no_child": true,
+  "backend_checks_deadline_before_resume": true,
+  "atomic_OS_CreateProcess_deadline_guarantee": false,
+  "deadline_scope": "STOP withoutbackendcall if expired at last parent check; separatebackend check beforeResume, no atomicdeadline of OSCreateProcess",
+  "source_revision": "REVISION02",
+  "runtime_validation": false
+}

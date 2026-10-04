@@ -1,0 +1,393 @@
+{
+  "status": "VERIFIED_FINITE_WITNESSES_ONLY",
+  "N": 100000000,
+  "a9": 3163,
+  "Q": 999999,
+  "witnesses": {
+    "rough_prime_bulk": {
+      "m": 1000037,
+      "n": 98999963,
+      "m_factors": [
+        [
+          1000037,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          98999963,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "attempted": 19,
+      "parameters": {
+        "p": 1000037,
+        "domain": "odd p in [1000001,1099999]"
+      }
+    },
+    "rough_semiprime_bulk": {
+      "m": 10036223,
+      "n": 89963777,
+      "m_factors": [
+        [
+          3167,
+          1
+        ],
+        [
+          3169,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          89963777,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "attempted": 1,
+      "parameters": {
+        "c": 1,
+        "p": 3167,
+        "q": 3169,
+        "domain": "q prime in (3167,10000]"
+      }
+    },
+    "small3_two_large_bulk": {
+      "m": 30108669,
+      "n": 69891331,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          3167,
+          1
+        ],
+        [
+          3169,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          69891331,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "attempted": 1,
+      "parameters": {
+        "c": 3,
+        "p": 3167,
+        "q": 3169,
+        "domain": "q prime in (3167,10000]"
+      }
+    },
+    "one_large_small_prime": {
+      "m": 22169,
+      "n": 99977831,
+      "m_factors": [
+        [
+          7,
+          1
+        ],
+        [
+          3167,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99977831,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "attempted": 1,
+      "parameters": {
+        "c": 7,
+        "p": 3167,
+        "domain": "p prime in (3163,10000]"
+      }
+    },
+    "one_large_small_squarefree_plus": {
+      "m": 66549,
+      "n": 99933451,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          3169,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99933451,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "attempted": 2,
+      "parameters": {
+        "c": 21,
+        "p": 3169,
+        "domain": "p prime in (3163,10000]"
+      }
+    },
+    "one_large_small_squarefree_minus": {
+      "m": 737121,
+      "n": 99262879,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          3191,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99262879,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "attempted": 5,
+      "parameters": {
+        "c": 231,
+        "p": 3191,
+        "domain": "p prime in (3163,10000]"
+      }
+    },
+    "one_large_small_nonsquarefree": {
+      "m": 28629,
+      "n": 99971371,
+      "m_factors": [
+        [
+          3,
+          2
+        ],
+        [
+          3181,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99971371,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "attempted": 3,
+      "parameters": {
+        "c": 9,
+        "p": 3181,
+        "domain": "p prime in (3163,10000]"
+      }
+    },
+    "nonsquarefree_bulk": {
+      "m": 30089667,
+      "n": 69910333,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          3167,
+          2
+        ]
+      ],
+      "n_factors": [
+        [
+          69910333,
+          1
+        ]
+      ],
+      "mu_m": 0,
+      "attempted": 1,
+      "parameters": {
+        "c": 3,
+        "p": 3167,
+        "domain": "p prime in (3163,10000], m=3*p^2"
+      }
+    },
+    "excluded_square_bulk_search": {
+      "status": "STRUCTURAL_WITNESS_EXCLUSION",
+      "domain": "m=p^2, p prime>3163, n=N-m>Q",
+      "reason": "N mod3=1 and p!=3 imply n mod3=0; n>Q>3 cannot be prime"
+    },
+    "one_large_incomplete_small_fibre": {
+      "m": 10526181,
+      "n": 89473819,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          1061,
+          1
+        ],
+        [
+          3307,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          89473819,
+          1
+        ]
+      ],
+      "mu_m": -1,
+      "attempted": 18,
+      "parameters": {
+        "c": 3183,
+        "p": 3307,
+        "domain": "p prime in (3163,10000], c=3*1061>a"
+      }
+    },
+    "all_small_bulk": {
+      "m": 1174173,
+      "n": 98825827,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          98825827,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "attempted": 1,
+      "parameters": {
+        "c": 51051,
+        "p": 23,
+        "domain": "p prime in [23,3163], m=3*7*11*13*17*p<N-Q"
+      }
+    },
+    "small_p_extrapolation": {
+      "m": 69,
+      "n": 99999931,
+      "m_factors": [
+        [
+          3,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "n_factors": [
+        [
+          99999931,
+          1
+        ]
+      ],
+      "mu_m": 1,
+      "attempted": 6,
+      "parameters": {
+        "p": 3,
+        "c": 23,
+        "domain": "c prime <=3163, unit to N, c!=3"
+      }
+    }
+  },
+  "conservation_before": {
+    "status": "PRESERVED",
+    "files": 341,
+    "round9_files": 34,
+    "round9_controller_sha256": "ef316624b2c49ee3689de9ce24cbf9ecb531fc05e913760341118c47afc334d3",
+    "baseline_sha256": "39210db5693d97ad22ffe54bfb3e21c238de207b7cb4f73262aae1e0d3a4f9cb",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "conservation_after": {
+    "status": "PRESERVED",
+    "files": 341,
+    "round9_files": 34,
+    "round9_controller_sha256": "ef316624b2c49ee3689de9ce24cbf9ecb531fc05e913760341118c47afc334d3",
+    "baseline_sha256": "39210db5693d97ad22ffe54bfb3e21c238de207b7cb4f73262aae1e0d3a4f9cb",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round10\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "imports": {
+    "numerical/parity_checks.py": "6f201c898eb6bfc4e05703d02cdca4e211d1a7311cb11a0644192c90990cb8b2",
+    "numerical/round2_checks.py": "619a3e8d0828b3d053fb436d343c0b30a1b4b836cbd03e9c873ecee94b70627b",
+    "round3/multifibre_checks.py": "f1a2ac839f149d240ecbc25b1ace0acf6130c483425c2c1443a86e0b73e688b5",
+    "round6/exact_tools.py": "f48bb0b2b608aa734944cbfe978c19ad55f5aa249068dcc313a1de6da5a393cc",
+    "round4/inverse_checks.py": "4a9e78c5e9e3003bb0a3b12507a8fcf65924e1eb12d21ababa363c88f0190a4c",
+    "round10/conservation.py": "6b27a617019d937fd4c40d243b0173240984d126ecd377d15cbf2b9934cc7254"
+  },
+  "script_sha256": "3ac3774c25997c8a59c13862ada7b843bb19f7dd178bba0b45d0d5be5ddd28bb",
+  "victory": false
+}

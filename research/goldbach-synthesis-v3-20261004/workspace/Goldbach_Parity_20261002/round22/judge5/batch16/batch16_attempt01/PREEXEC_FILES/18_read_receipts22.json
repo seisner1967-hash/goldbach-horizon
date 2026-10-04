@@ -1,0 +1,318 @@
+{
+  "source_phase": "revision02",
+  "open": [
+    "Lean validation and independent axiom audit",
+    "native rational/common-denominator/divmod/carry realization",
+    "native catalogue prime/prime-power/minFac certification",
+    "exact NTT/CRT/native arithmetic proof and actual coefficient run",
+    "global H1/phase/D_N/WIN"
+  ],
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "read_records": [
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "9e59eb6b8aa4efcb5cc6cdc27d7d7a7d24517986fcd1ad2b4413b97c0efc1fb0",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision02\\RationalLogQuantization22.lean",
+      "tool_receipts": [
+        "481f32"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "526354f4b96006eb2b297477fb6f09dd8a683e88cc95feb816a31357df0a2331",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision02\\QuantizedLambdaEnvelope22.lean",
+      "tool_receipts": [
+        "481f32"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "cdb1b8510c13fe6ff69b6ed510df90335a831cef0181182c050c1781965fe91f",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\revision02\\dependency_contract22.md",
+      "tool_receipts": [
+        "481f32"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "d7ea4d46f0c595c05ccb140ee310996e3c257a240bde29a58c6a7c7811bce396",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\RationalLogQuantization22.lean",
+      "tool_receipts": [
+        "cac876"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "428836508d2edfe22c4639101f0b7a99ff34dbf57ea9375b72ab509e410ec1a3",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\log_quantization_source22\\QuantizedLambdaEnvelope22.lean",
+      "tool_receipts": [
+        "a3df1f"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "dd86c92c15e05febad687c240eb58d9dae2f930b646356f1dfe99e3bb35a680f",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\projection_contract22_final.md",
+      "tool_receipts": [
+        "d95a24"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "80718ee9c1306a974554a70322ad36648897216890f6747ed2ddede840421d98",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\fixed_parameter_log_model22.py",
+      "tool_receipts": [
+        "63a6f8"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "78e0fe0b58dfee998fa4095164e109a1806c5237939f29b8e4f2c97ca35ccf72",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\next_theorem_obligations22.md",
+      "tool_receipts": [
+        "29c9b5"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "6bc24ecfe96437e5c437fe003788194548b379c0c7bbf0dfed81f118c0eb322b",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\native_spec22_final.md",
+      "tool_receipts": [
+        "29c9b5"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "fbbf4bef50bae5fb9de72e2bb923a3fbc0cfc03982a26abf2bb6f889002a1eab",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_ntt_paper01\\source_handoff22.json",
+      "tool_receipts": [
+        "d95a24"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "c5aa8310ad54c57726339a8e99057f158254eb6d113ac3aeb71ddc9627f23947",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\USER_DIRECTIVE.md",
+      "tool_receipts": [
+        "63a6f8"
+      ]
+    },
+    {
+      "ranges": [],
+      "scope": "FULL",
+      "sha256": "a896c9d0fa4114845b20c3023246dcb987463923df798cac2c537c70cfb73fc3",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\PROBE_BLOCK.md",
+      "tool_receipts": [
+        "63a6f8"
+      ]
+    },
+    {
+      "ranges": [
+        "272..299"
+      ],
+      "scope": "TARGETED",
+      "sha256": "b21ae1d96f59f3c8edd6fce834940b4e070a91e8d38477e8ad2f07b3407a41af",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Deriv.lean",
+      "tool_receipts": [
+        "8be3fd"
+      ]
+    },
+    {
+      "ranges": [
+        "106..150,208..234"
+      ],
+      "scope": "TARGETED",
+      "sha256": "820bea08a07a7371487be584e38695a92cc1cd9a36a66626b40410f7257c3423",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Log.lean",
+      "tool_receipts": [
+        "8be3fd"
+      ]
+    },
+    {
+      "ranges": [
+        "30..61"
+      ],
+      "scope": "TARGETED",
+      "sha256": "21380cf2bd3743676d5090323e0334dae11989ad9f142b4ab5efc309cc7d1f92",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Order.lean",
+      "tool_receipts": [
+        "8be3fd"
+      ]
+    },
+    {
+      "ranges": [
+        "197..234"
+      ],
+      "scope": "TARGETED",
+      "sha256": "7e9a09e58953544be3b754011213624232d37d9dbfb76d2f143fb85235133eab",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\NatInt.lean",
+      "tool_receipts": [
+        "8be3fd"
+      ]
+    },
+    {
+      "ranges": [
+        "278..300"
+      ],
+      "scope": "TARGETED",
+      "sha256": "c68e79813f3c8e0ba33eccb99cd3849b8d1e3b0197b9ff9a7671a4bbcd202ca9",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecificLimits\\Basic.lean",
+      "tool_receipts": [
+        "8be3fd"
+      ]
+    },
+    {
+      "ranges": [
+        "1..125"
+      ],
+      "scope": "TARGETED",
+      "sha256": "08b6e8ea95141786af7425526114f5e9e7cd98f743b7360d39a1f4819063dda0",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\InfiniteSum\\Ring.lean",
+      "tool_receipts": [
+        "8b8d03"
+      ]
+    },
+    {
+      "ranges": [
+        "1..28"
+      ],
+      "scope": "TARGETED",
+      "sha256": "70d5d54a614072240961699798828ec43db7f9be680c9e09ef3258122741be8d",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Rat\\Floor.lean",
+      "tool_receipts": [
+        "8b8d03"
+      ]
+    },
+    {
+      "ranges": [
+        "642..680"
+      ],
+      "scope": "TARGETED",
+      "sha256": "f1a613a55899438013392c2938ab136efc19c0e4ff40dc6aebb4aa4070ea58ff",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\Floor.lean",
+      "tool_receipts": [
+        "28b633"
+      ]
+    },
+    {
+      "ranges": [
+        "58..86"
+      ],
+      "scope": "TARGETED",
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\VonMangoldt.lean",
+      "tool_receipts": [
+        "28b633"
+      ]
+    },
+    {
+      "ranges": [
+        "254..284;signaturesearch28b633"
+      ],
+      "scope": "TARGETED",
+      "sha256": "1306f8b5c6a28d80dc922565a2b13fbb6c5252b4485fe8fe0545ae0b887dacb2",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Prime\\Defs.lean",
+      "tool_receipts": [
+        "95934c"
+      ]
+    },
+    {
+      "ranges": [
+        "149..172"
+      ],
+      "scope": "TARGETED",
+      "sha256": "7dc019765efff57710a7fee1307d5a08b47cd62a4ee9398cce43aeeb1833e24a",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Data\\Nat\\Factorization\\PrimePow.lean",
+      "tool_receipts": [
+        "28b633"
+      ]
+    },
+    {
+      "ranges": [
+        "272..290"
+      ],
+      "scope": "TARGETED",
+      "sha256": "0e11d9b338fa211ed86b6692fa08b4c6cf47033aaf8bc14a055d6e8976dc5d10",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\BigOperators\\Ring.lean",
+      "tool_receipts": [
+        "28b633"
+      ]
+    },
+    {
+      "ranges": [
+        "215..231"
+      ],
+      "scope": "TARGETED",
+      "sha256": "ddee3a9d818bbf22936e546887aa4facf02aa7f68924550e55d6f3ba42cac139",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.lean",
+      "tool_receipts": [
+        "1d5ef8"
+      ]
+    },
+    {
+      "ranges": [
+        "116..136,251..287"
+      ],
+      "scope": "TARGETED",
+      "sha256": "4766375ac5a937f01afffced804fb17498f39e0dfbf0f6efe5f3023072d20ded",
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Log\\Basic.lean",
+      "tool_receipts": [
+        "1d5ef8"
+      ]
+    }
+  ],
+  "python_imports": 0,
+  "failed_reads_not_counted_as_full": [
+    {
+      "scope": "TRUNCATED",
+      "corrected_by": "d95a24",
+      "receipt": "2204c7"
+    },
+    {
+      "scope": "TRUNCATED",
+      "corrected_by": "d95a24,29c9b5",
+      "receipt": "02ee1f"
+    },
+    {
+      "scope": "WRONG_PATH_ERROR",
+      "corrected_by": "63a6f8",
+      "receipt": "927c13"
+    },
+    {
+      "scope": "WRONG_PRIMEPOW_PATH_ERROR_ONLY",
+      "corrected_by": "28b633",
+      "receipt": "95934c"
+    }
+  ],
+  "scope_policy": "FULL source/paper where actually read; TARGETED local cache APIs; SHA only is not a full read",
+  "runtime_builders": 0,
+  "role4_review": {
+    "full_receipts": [
+      "1dfa9c",
+      "c3a330"
+    ],
+    "source_header_checks": "13f784: 38+14 identical headers/prints",
+    "old_second_module_sha256": "428836508d2edfe22c4639101f0b7a99ff34dbf57ea9375b72ab509e410ec1a3",
+    "revision02_audit": "pending distinct source review, no compile",
+    "native_equality_guard": "independent checker must also verify equality to canonical A32",
+    "math_status": "no free precision hypothesis",
+    "scope": "SOURCE/PAPER only",
+    "old_first_module_sha256": "d7ea4d46f0c595c05ccb140ee310996e3c257a240bde29a58c6a7c7811bce396"
+  },
+  "compilations": 0,
+  "api_probes": 0,
+  "schema": "ROUND22_LOG_QUANTIZATION_SOURCE_READ_RECEIPTS_22",
+  "actor": "ROLE3",
+  "math_evaluations": 0
+}

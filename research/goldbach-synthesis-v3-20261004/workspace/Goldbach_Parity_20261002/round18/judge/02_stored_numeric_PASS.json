@@ -1,0 +1,1634 @@
+{
+  "combined": {
+    "NEGATIVE": 83,
+    "POSITIVE": 191,
+    "ZERO": 46
+  },
+  "copies_bytes_and_fields_identical": true,
+  "counts_by_bank": {
+    "semiprime": {
+      "positions": 222,
+      "signs": {
+        "NEGATIVE": 58,
+        "POSITIVE": 151,
+        "ZERO": 13
+      }
+    },
+    "typeii": {
+      "positions": 98,
+      "signs": {
+        "NEGATIVE": 25,
+        "POSITIVE": 40,
+        "ZERO": 33
+      }
+    }
+  },
+  "kernel_log_sign_recalculated": false,
+  "positions": 320,
+  "stored_certificates": {
+    "semiprime": [
+      {
+        "json_pointer": "/new_selected_kernel_profiles/15437147/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ec35b2cf68a641e34d6ba566b35eaf1f3dde55e94b95063d8f640b60f78ea959"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/15437147/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "182db7d0404b6bcf14b13d940f1e51d47f506176ee796820297d87835dc114af"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/15437147/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "4adb055693e824cdb966a6d2fb40cd2ea39578969d33fd01f46bdeac4850e3eb"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18244421/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "19f969dcdd67fee1e1d044209e0da9aa9d5ab7c6c216500f7a4182e8e16df76c"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18244421/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "d9c0ea8df10a9e3a15dd405763be09dc9ad3aa4f0cd893087aa8fe2bc85b3f52"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18244421/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d8bd4b05bfa46a62baff18f4319e96c8e484df4eadff4b45efd9bd6588c16c73"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18244889/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "780f1a9f058df00fdb78408dd465774a9a28b03b7b3aad6353b52af61352ed91"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18244889/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "5171af7596e7dc1b534622c990e6d6220bc366f53d68bac7ef05abde746acad2"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18244889/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "be8314c98407d6444562a170c9286760905f8489f29fac9cdadc5969d31f8254"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18248711/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "588b07c168fe37df20882e38e845ab27cc05bcea8cee59cd1c2a07533041a4fa"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18248711/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "fe5e518076e87fe3e8f7af742f7bbb16196fcfc530252ed1d3a4cdec1d8f1eab"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18248711/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ad069d514156cb579419ac1006c306fb0cfecbaa6907fc0a3a107fb0d1eeb1d9"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18260723/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "1d56526f06536e18ce6963dab2db3212f2d63200d101feb632a9d8ce7322412e"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18260723/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "68a609effbed71df9ed4f9852a1a16f881c53fb10398b33d0f2bfbf4133fd0b9"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/18260723/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "da74c1895a64bd7cff68589271d44736e105dca06710f72b8a0946a7d4173440"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29471757/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "887edce25443d7ca723bd42d51eb8695549303e5d203e0c0cb133b0f3b03cc71"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29471757/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "586a478f3865cf72921704c25761decfaf175d478d9822d0f542c542916c7967"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29471757/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a7685485c5421943c6cad26195d2f91d6d92628c8150cec421bfe68ce7ee8caf"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29478687/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d393a7b702c48e6e8af19103ba8ebf6abe3edbcf2e1be879e1fa98b4c9d88d40"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29478687/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "d93ecf02a2137ea9e86dbd5c6f8512bfb9e596d58383cc8ea2539ab8dc91f4cd"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29478687/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8fda8921e330a251169b8d0a03e53583ee799db2088311e76843c1c5a46f2ed7"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29485239/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "78e157246c4f62feec6c6969364ca10c9419161cab13404b6ffa701f37d3f4ea"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29485239/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "ecaf8fe83a783855062d6d283ec0e511aa81bea1fc1418196c50382eee3736d5"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29485239/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "075cbfd96d890628511b9f6da45fa738e86cb5a2489e6cc80b4004e350a70cd1"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29507037/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "67430a97fcd6e3fbe4b889813eb99590d29aecd25af18fe13cf5a62206b0668b"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29507037/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "bb20c98ef984b45018a75ead97b99f041d76389a9366cbad3783ef5235cff851"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/29507037/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "29f40403196505f0975911ae62917bdb848da66f7c228fa343a2cf2ba4c5c6ff"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/43505927/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "bdf073bc7b6804978de3410fd5a33cc65d910484660c105a1697e52581e41358"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/43505927/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "ab2b4e75f24fd6687d37cc3842c534f92ad6976c592e442c9ad409cd319541b5"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/43505927/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "c07b79bd9a45280604fe1bc3ac64c0af9fb72bc972d71fa931f2ddb3f00c1735"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/43558007/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5893b0f57d10d2c129c300cdb811c8ecbc9197fa76c97bcfc5212cd584423806"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/43558007/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "9e8bf48c38bd2cbb5d6890769a1a8e2147271a32af694e752d26e95e007441c1"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/43558007/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "34cbed3e82440ec6221a97b3b9774d63e276cc6e09dcf381c8626d7d845b3604"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/46220691/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "3ea82fd40c6356babdc937979e54c719cc3a93ff00b09fbda065e0b56bbf589d"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/46220691/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "d171d7efa7b2ff1a880645aaff5222826f0c80a2046c90a3c7e3df76f62fc971"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/46220691/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7a64a5bd037c259201f9b855386db6c7d7f855b282e324a05a8ed6fd999959e0"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/51889577/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "83c2420df4d2cae4c757418a063dcff73acb6f80a068692b5fd2195e9462bcad"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/51889577/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "fb5314c9a42b7115cab1e614cb166ad6c0ce331341ffcd7ea7a5f35caaadbdb1"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/51889577/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5c3a022677829c042214814cd7a8591acac98ec75d679c87605ae079badf8bc9"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/51938639/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f6614f9cf6caf8147a72111b31cd9e235c078e4a6ac500357729fa11aa9c1c79"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/51938639/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "2abe30334ff63ddc0127886bb679a9eb405fd4fc2dd656bb84a67a284c481e77"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/51938639/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "92efcf5b9415e294d53b60077c2c492119f32a7aebf665576f5d29d736c207cc"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/54734667/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "73919d28888b8c01d4b7d285d1326f28e09d83f618a209319ec835d31cfe9121"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/54734667/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "893d4bc4001f4a3247ae2d3dd711e5c7d4c2951c8bdf2f82e0db568aad0bef9b"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/54734667/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "19f525cdcfa8aca5fdcac0e6bce0ba48aedf5854cca414638ea6920236681d43"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/54758301/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "1c4a061643fd7befdc87df1b8492cc0ecf8ec129e5a56e500911abdb54e1544a"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/54758301/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "b21b8f752942a30e4a8cae7f7d48cecbb222f48cbc00b32784dfdec6fe5e3929"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/54758301/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "923b7a73163fe936ab87e0aff7bc002733e93c9aefb6f03be8dbee5fd04be464"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/60387953/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "361ea9dfad46132e567ac6027897b1b5a017f9ffd5efc042949847fe9b615840"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/60387953/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "c11ea695bf728b2132734c3b050a901c4120958d67da4b42a0d31a26c53614a9"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/60387953/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "4d0dcc111e1a9ce49c9df6c3b2285c7ca3a10ae03ee6c23fd62f72e56d93c849"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/60419171/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7610f50ae3d739c5ad710a2e96a584c8c06980647e095970ae9182af405c7282"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/60419171/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "567f2a49423336aeca334b713804f4471a0733133e4da655d85b012585813207"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/60419171/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "c437072b84499aa40fab3068504c49e2396b4aba39719e9f309df840b9643f5e"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71550093/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "e7aa77059e84e1ebac3206eb150d51e8f3c7ccd2a0ee1d6b8b72a3b83ea0044b"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71550093/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "c203417b7f78505f73d9337eba834b0e5d0c5a04e61cfaf9236d68d75ab1c250"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71550093/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "95ef5a7bd4528d9d2ec279d6c20df3c522550d7c5b49614cb7b78a9bd9921b88"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71553459/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "6dc3fa20e0be291a40a9999f4eea944c00c34a7134f7e5bbab4acb183df1c7df"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71553459/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "2b14b3a2c9930e7b705081c22e193b3e986620a9c23f2e58110656fe92e2174d"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71553459/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5e74123a7148c854d2eb65c57225964fee6fa6876d3dd7a66fdaa99d6faf7ccb"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71576103/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8ae7ae40bb6531af9cac69b1aaa25bde15467f3cdc3330267a3ccb013bcc25d6"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71576103/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "b53fdc246aef4c61e8cbe1db141fa973f3e58e0a781e800bbc1027833d1ab461"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/71576103/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ca5e62b6e16a49c99efea14b1f17d5983d55c19bd1c07914a170d30ac9e2c49f"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/74378981/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "dc1e61eef8c5b6cd1246e5de43ae699efa90f7924cd3e1e40354ec084cf80211"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/74378981/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "479d57f2ce7dc1c8efbd91bbc2c0ce9d3f8a48cebba7d2bac4d648e4380384a9"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/74378981/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "00181e3b91d626e2110a2bc72ffcc41eb9f0bb72a2359f0a43a149105b0c2733"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79861731/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "6f0a2ace027aa4aa4599994cfaade26b7af219e9ff0f70c3701583e72dfc0a79"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79861731/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "e458f0f31fb28e83a8a2b106fca71c4a1f9f95cac61a79c4f3c8c94024cce020"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79861731/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "543e6bfb056479034cdc62a5e16dfe20ace7cca2cff62edc69fc8f6c829bb316"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79967751/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d06d1f4919c83052834981afe52ecb176c946ed308046c376f1179aaa55cb66b"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79967751/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "1043a03a74d752b3bfb616368b325aff0684f8b0a8cb693e016be4efdeb3771c"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79967751/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "03cd903124a00910d83aab6ec8a4ebaa44a43fadc240779d29f2d71436eb98a3"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79994769/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f614de5f23ed988e72a6b32d1c7920d1697b3e6d8f746eddc96036f586875949"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79994769/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "f052d40f261d7a9b57db4f91becdd1a891ae563597a2e3cf520eb8625f00ce26"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/79994769/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "17082794a16aab2cbd9d866f46af5920e10776b99491ae7b044830e740adddaa"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/82857653/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "b5f720156e495d572fd8b40ad42980cea1686dadb52212ae21a5b3dd79ef0dc8"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/82857653/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "f2abe4e9791de5c8df81560804695cc992d566683f729cf554356af90f83cb77"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/82857653/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "47447f126bcd9502923747d681c17acf3b5ebbd52ab9156ee474ba8679ae094a"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85438247/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "56e6d04bd785fd93982748e2d62dda5a1d809b4360d22b473eb446476083644a"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85438247/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "649ae9a95f92e1c1c1c230be348caf73fbc838a4a056c1ac9ad095cc072bdb16"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85438247/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "69f8150fa933ef0c89e897960c9c0f65275f32bafd98fd047514eb52918312e7"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85608437/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ab7fb4b320c85d2673001fd22c94268394b7595e477650c8cfd7c63fda1a03b4"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85608437/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "abbc512624fd528f3abae8084484dbd075d16095835acec90752538efda1d2fc"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85608437/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "79eae415b3653e8ab896e5148ff67c1ade141d0422777d43304a8245f8f75fdf"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85666631/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "6e71c42c91fc1f382209213d1e444df6822c0968c9431105ff75d346f7ba19ac"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85666631/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "e0a97f7a185aaf662d1e789a75b39f1091b67bdc94956f61851536a190752544"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/85666631/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8be791a798af49f2f0da7ff55cdb6618ca3a74c6899d9adb90909587497735c3"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/93962207/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "384942466d884b66fe541f877334cba8ea7190f1669bc88a8f5a2c85b80af3f1"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/93962207/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "22f2ba5cd4f751ca938bd564f5e7270a441f09b76fe68f3a83e3b8c966639331"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/93962207/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "57c767082c6103ac7f3bf3e7220eaf9f23060ff981981b5596a0c7fc07df2684"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94028939/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a70612373fdb206f3848f1ce6ec665c1d7c4c24068f3d6d4764e8a08e689bdbb"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94028939/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "b8424a3236289245965cd033ed226f24c00d9805e01e258e198848defeb4cfc1"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94028939/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d5e007aee969267df119004b1ee4f195ae4be828015e0cb392527c9dc27660e7"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94071953/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "dfd58fecd94b60468c4cddd280b294bed122698469e187abd78170032881e7b4"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94071953/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "7680dfa7453b4422e72e8bf6d068e169eedd05b90a89dcbdd171597098d87ab5"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94071953/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "322b19608e39e4ae22e3286b00f3405827b098f3e894ca11fad6cffed34fbc1f"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94112957/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7528c12b692724cfed54587149d57c05eef5c147a357a3779c2d4ef616a5a62e"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94112957/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "3259553e7ece923b7ebbe23e33e0d5f75a1c4c2e49b2a46c57f2bec6227712ab"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/94112957/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "79d184f9161edc8dee196d8193661c749be0bd4d0a538e0e15073df73333568d"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96803067/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "158d21c3ff34e6e219bb2745696d9d1c0ebf3a9979a07295cde5233a6566a545"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96803067/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "c5af6c0866ae6c21b3c56f3a8d870287127657542990adf19fb3f08477a3254e"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96803067/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "247da8a5694af7fd3d63246ba9e365c59b21e7efc3e54117db2ac3b7cd74e61a"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96833013/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "e6fd544a6ff324e6791c8de6b8f92bea6935d6b6bb9f154c511913cda823137f"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96833013/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "a342f72f6241f7205bf4979edda6a9cc4ff8b94d2d2afdddbd86f42dd9721c93"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96833013/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8e4ba3a86f6a463b851152e7e07cd0ce5d08a8b0908884ba99a90c410d8cfb3f"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96880071/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d9ecdb94f098e0097392972b247fc419151ad2405597f92e6695d9574df2bb5f"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96880071/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "ec844cca1620f4184bfc0ae5f0d59827d4e8d1fbcd794f388343525e1d28da98"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96880071/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "38e55b5a14847c5dcc37a35bb1921c3ca73a5f4fac56886e659e0329611009de"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96901323/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7529f72889cd66f31c7387a748485247ddfd43d3ea377f72ed0f292a6b6d3780"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96901323/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "af6525c6ebb47eca7998e7c5dededb300be5b184a9f0f149e8947bfb2ac0a614"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/96901323/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f16af4aa1dd04ab2583ad7d3df9dd7e5a7a326a23cee31b89a5661c533a2de14"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9820601/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "2a97c91f17966d7609c1a87d66be56b88cb157e81f1334a02e2b671087038ac1"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9820601/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "8dfd30decbdf525d461b48b52e033cbfe8d3fb22a277fece940205496b1e2847"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9820601/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5a54e084100e5b3b943aa6f4d5e3d0f92963dc344b5b3484beb97432a56a3d0d"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9821063/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "87f2db7f7fd46ed5845d2552723906b0a58de7334b9daabcf38fc6f52db4986e"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9821063/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "5e4470f66f70b630466fc433ce7de3214ef82d3cf55d534ca88b94972c3e06cf"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9821063/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f2a5656d1c559cf527422a84de61008a1317fc2baaaa9572a6535b71615a4498"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9830597/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "abdaf1a4c20e61659b8719ddeadb67a32b7c15e61f5fe868e0c8888fbc9baf36"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9830597/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "6d8eb7effd8c69f0a1efb7e9e034fd3d6f833c13b6368339137c1d7a29a155cd"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/9830597/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5fa3c4849ecdd28185ce772da495c8043b89ee6db94f3f533ccced581667c4af"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98594903/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "bb034a21ec76e20552d37a74049b6d9e4e459baed83f4f298338a246e67163cf"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98594903/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "cedf6e1b00809e032e35019db659499f2d3103016f5ccb6ae8db7137b33334e5"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98594903/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a2a317e5cfd9a2fe3e6d358025e1facfba26298e7ba6103a18d384541574718b"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595329/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "49852cafad7e0965992f3e9f609f3de7a4a722f533ca61a143d074bf094d8027"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595329/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "f6de358b2903df2d9369ab859986b46125acfb73919977eb0effe5bd256aae73"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595329/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "73a06c8e149704f65592581ee57fae0fccc64c8f023ed7ef4e2fc2a9b2042b6d"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595629/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "112fef7bc149a490a7871fd6d198c14f9180404bdbf280ebca9adfcd2a210d46"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595629/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "a6092c70c6402aab01ba76c8a510e2f395f82667b74bb40c110cd293a3834426"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595629/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "30ceb31b216a39b061f77c9f2482cd8af9db4c4ecd96f459ed85d3aa828ae378"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595633/C_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "16e39cb0abe9197274a47f07519103d7b5f469cdc3eec651ea71bae5362e364a"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595633/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "456856251fa0234dc59f1d39a673959d77320d68373f1fdd9a6009ec63580f27"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595633/weighted_raw_C_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "985b885d1ea28e56468e360c0f1fbcb3a496a0c16512c1b7c78af7ef1f453b90"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595941/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "4971293375a4ec6c376aa12834c04cdcca541f91daee33068acb2c12288b99e8"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595941/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "72e400822dbdcadd048ee07d4191bbab1388c8921279c1dbe5c9c3db39f7187c"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98595941/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "bdf65029a46f828f7967c53c891cb0d1d80a0de4347d812e1f01b3b8d7bc6aaf"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596253/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "dae40a661c04b2b8d9c60d3b76525b36c4d6ee89da2d04255b71b40905c8fc29"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596253/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "ea81cb5b9c0a10523533b692eadb23923961ffaaa721a471232a1ecccca24d2b"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596253/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8143a8178fd69fa2df353c3d077a3b4ab5a9ad5b72f87bcc20e61ca016357b21"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596547/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5c42d274adfff6967c7bc8528fe7dabeecd87a0debdcb7867a67a30242043c73"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596547/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "8579f764d7920b84faa70afa2340094ed6c2b8590bd51e4f1f06b9236576d8a2"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596547/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "da1c6b64ba94ab20e3711f1027aeed5735ce5e267ae5d19683c6319188d1d37c"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596583/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "9c9069493abca24bd9d6b6f3961bc52ad00d4d794ab365c7dfb8aefa793a8bf5"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596583/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "91018a7daa0f7946afafefa4272db44252a567997c7b777a968a678cf34788ae"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596583/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "90cc2901c61da9803b2eb2ec11861ab9e7d815c33986a41264bd94f8ed64f5fb"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596623/C_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "e53abc30c48c6eb3b0a03b2bf8dddcebc58a93a6d2933dab101a1490fd2642b7"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596623/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "62bdfc3eb392f0b72831b87e8a7d1122d1b85da055b1fe70a93a6b505ddf37d2"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596623/weighted_raw_C_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "7fae1d4cb7f9a9e10f518a831f87f63cc34757d7fb0a6e84f50dee7f92ead5af"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596991/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "502cff949c43e3f7c8a01cdf19051d18603b9103106beb9039201880a78532d1"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596991/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "e1fa5ca5931ba6f9645758b2122965701013eeef02336ec92030c1d43ab3786f"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98596991/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "c3f599ab8f0cde26b838141277fe5a208cad0a75ad8e316938ff793ccd5948cc"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98597057/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "322683d0673a27abc1d61fad1dcec4f670a2e67ad3f89daf3b7a8016f702a718"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98597057/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "e77585352cf1b7af4ef89eb7ae6ee2c7ca964541ef877127841e6fee6bed871b"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98597057/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "e77468cab0365381277e33c8b6d2805b2b31768fd2a6e709e99592d5842ffd29"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98597579/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "cfe37d929b96a7157936e40404a324379046be03c287451caaf9a07ed3f1d244"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98597579/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "e106daa328197b2498e4a2dc845f6639da4b25bcf1bc427bb0779c7a86a5caa2"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98597579/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "23dfe37feae0690b8d03a28019c03023279852b55f3b0af9b76c04e05f2cdd61"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98598917/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "50967c0b67aa8f25453c8c57490008562b2b3f8bf5ba6dd80c027cadeafcd299"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98598917/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "ac4072a82b2290166872c9c58178cb20af59f0c812fb3e121da107a2bafdb2a0"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98598917/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "3d6cd1bee4d3f12aa305bb821e1777ff6aa0f69091e8e3731a7c7c01697309db"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98599373/C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "359a5204b66d46864b20cd8b9a9debe7b01deb5ed3823e900da3156a2ddd1b5e"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98599373/W_kernel_sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "81955a4cf55f595a377148fb960484448e932f66034c5409a8962d9edc804f05"
+      },
+      {
+        "json_pointer": "/new_selected_kernel_profiles/98599373/weighted_raw_C_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5de4575ac570ec4dd733da64ec064c1896f539cb87837f969e4f4dd23daa3ab6"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/0/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/1/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/2/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/3/capacity_positive_part_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8cddd6cf7ff87e8c44ad5f38b51f1ed385db1072b0d05529b9cbf2b973a82c04"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/4/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/5/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/6/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/7/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/8/capacity_positive_part_sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "206866e46d82cad5fa2a074a88472f5ff2d0c69696b08abf38ac5e7c475f5d7f"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/9/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/10/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/11/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/12/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/physical_union/reciprocal_m1_resources_counted_once/13/capacity_positive_part_sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/selected_measures/SS_raw_proper_power_signed/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/selected_measures/partial_SS_minus_measured_m1/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7b3355d45237677ab95058b9ef976d866860dc9b129b7b6b67c55de6be50a710"
+      },
+      {
+        "json_pointer": "/selected_measures/positive_debt_SS_theta/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "480a0f5426e3835b359adc7d3235ba99463dd6e4807b3c1789495688d5458116"
+      },
+      {
+        "json_pointer": "/selected_measures/signed_SS_theta/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "480a0f5426e3835b359adc7d3235ba99463dd6e4807b3c1789495688d5458116"
+      },
+      {
+        "json_pointer": "/selected_measures/unique_m1_capacity_measured/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7634f16343825659f379d157813471761a575c52d6cecc72cc501477bb4d042d"
+      },
+      {
+        "json_pointer": "/selected_measures/unique_physical_union_signed/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d9c6b154dfd89deed06d401262bc47ecda61b6f8b03ae0a9a93496417cfbdfac"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/15437147/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "4adb055693e824cdb966a6d2fb40cd2ea39578969d33fd01f46bdeac4850e3eb"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/18244421/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d8bd4b05bfa46a62baff18f4319e96c8e484df4eadff4b45efd9bd6588c16c73"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/18244889/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "be8314c98407d6444562a170c9286760905f8489f29fac9cdadc5969d31f8254"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/18248711/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ad069d514156cb579419ac1006c306fb0cfecbaa6907fc0a3a107fb0d1eeb1d9"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/18260723/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "da74c1895a64bd7cff68589271d44736e105dca06710f72b8a0946a7d4173440"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/29471757/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a7685485c5421943c6cad26195d2f91d6d92628c8150cec421bfe68ce7ee8caf"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/29478687/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8fda8921e330a251169b8d0a03e53583ee799db2088311e76843c1c5a46f2ed7"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/29485239/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "075cbfd96d890628511b9f6da45fa738e86cb5a2489e6cc80b4004e350a70cd1"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/29507037/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "29f40403196505f0975911ae62917bdb848da66f7c228fa343a2cf2ba4c5c6ff"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/43505927/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "c07b79bd9a45280604fe1bc3ac64c0af9fb72bc972d71fa931f2ddb3f00c1735"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/43558007/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "34cbed3e82440ec6221a97b3b9774d63e276cc6e09dcf381c8626d7d845b3604"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/46220691/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7a64a5bd037c259201f9b855386db6c7d7f855b282e324a05a8ed6fd999959e0"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/51889577/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5c3a022677829c042214814cd7a8591acac98ec75d679c87605ae079badf8bc9"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/51938639/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "92efcf5b9415e294d53b60077c2c492119f32a7aebf665576f5d29d736c207cc"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/54734667/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "19f525cdcfa8aca5fdcac0e6bce0ba48aedf5854cca414638ea6920236681d43"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/54758301/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "923b7a73163fe936ab87e0aff7bc002733e93c9aefb6f03be8dbee5fd04be464"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/60387953/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "4d0dcc111e1a9ce49c9df6c3b2285c7ca3a10ae03ee6c23fd62f72e56d93c849"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/60419171/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "c437072b84499aa40fab3068504c49e2396b4aba39719e9f309df840b9643f5e"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/71550093/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "95ef5a7bd4528d9d2ec279d6c20df3c522550d7c5b49614cb7b78a9bd9921b88"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/71553459/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5e74123a7148c854d2eb65c57225964fee6fa6876d3dd7a66fdaa99d6faf7ccb"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/71576103/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ca5e62b6e16a49c99efea14b1f17d5983d55c19bd1c07914a170d30ac9e2c49f"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/74378981/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "00181e3b91d626e2110a2bc72ffcc41eb9f0bb72a2359f0a43a149105b0c2733"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/79861731/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "543e6bfb056479034cdc62a5e16dfe20ace7cca2cff62edc69fc8f6c829bb316"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/79967751/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "03cd903124a00910d83aab6ec8a4ebaa44a43fadc240779d29f2d71436eb98a3"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/79994769/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "17082794a16aab2cbd9d866f46af5920e10776b99491ae7b044830e740adddaa"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/82857653/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "47447f126bcd9502923747d681c17acf3b5ebbd52ab9156ee474ba8679ae094a"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/85438247/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "69f8150fa933ef0c89e897960c9c0f65275f32bafd98fd047514eb52918312e7"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/85608437/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "79eae415b3653e8ab896e5148ff67c1ade141d0422777d43304a8245f8f75fdf"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/85666631/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8be791a798af49f2f0da7ff55cdb6618ca3a74c6899d9adb90909587497735c3"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/93962207/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "57c767082c6103ac7f3bf3e7220eaf9f23060ff981981b5596a0c7fc07df2684"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/94028939/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d5e007aee969267df119004b1ee4f195ae4be828015e0cb392527c9dc27660e7"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/94071953/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "322b19608e39e4ae22e3286b00f3405827b098f3e894ca11fad6cffed34fbc1f"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/94112957/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "79d184f9161edc8dee196d8193661c749be0bd4d0a538e0e15073df73333568d"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/96803067/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "247da8a5694af7fd3d63246ba9e365c59b21e7efc3e54117db2ac3b7cd74e61a"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/96833013/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8e4ba3a86f6a463b851152e7e07cd0ce5d08a8b0908884ba99a90c410d8cfb3f"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/96880071/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "38e55b5a14847c5dcc37a35bb1921c3ca73a5f4fac56886e659e0329611009de"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/96901323/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f16af4aa1dd04ab2583ad7d3df9dd7e5a7a326a23cee31b89a5661c533a2de14"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/9820601/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5a54e084100e5b3b943aa6f4d5e3d0f92963dc344b5b3484beb97432a56a3d0d"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/9821063/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f2a5656d1c559cf527422a84de61008a1317fc2baaaa9572a6535b71615a4498"
+      },
+      {
+        "json_pointer": "/selected_theta_axes_signs/9830597/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "5fa3c4849ecdd28185ce772da495c8043b89ee6db94f3f533ccced581667c4af"
+      }
+    ],
+    "typeii": [
+      {
+        "json_pointer": "/R1_complete_column_sign_certificate/0:39/operator_l1/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a37da2e729b5a9302f943143bdf435fbd0d5bda5f20984746bd92d598be72268"
+      },
+      {
+        "json_pointer": "/R1_complete_column_sign_certificate/0:429/operator_l1/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "e9d1dc3266a39984abc81b678aa2fd73bd959103324805ffdd3fe441dd4636ae"
+      },
+      {
+        "json_pointer": "/R1_complete_column_sign_certificate/91:39/operator_l1/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "1509b1b638efe84663f80d5a2844a3fafda5f725a54a24b1a056128fc0f6c35e"
+      },
+      {
+        "json_pointer": "/R1_complete_column_sign_certificate/91:429/operator_l1/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a6724ca88a3aeb1644aaa09dca27d8032451323d77b356ea3ff58fd92c71d5a8"
+      },
+      {
+        "json_pointer": "/R2_R7_R8_by_scope/0/finite_budget_comparison/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "6e21ae562e5365b7069d173a1da1392512eb82eb9754b41e5a6fc68063000f9b"
+      },
+      {
+        "json_pointer": "/R2_R7_R8_by_scope/91/finite_budget_comparison/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "01b7231d1107f7e27e3074fc9a00d5593f9d95456d75cded75b6a9b230e50db0"
+      },
+      {
+        "json_pointer": "/R9_R10_details/0/raw_minus_theta_price/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/R9_R10_details/0/raw_removed_class_primitive/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a796a254357517c6ff67a64fb9ecbcecd4dda959f3a8cbaf63ffb4a10aa9c207"
+      },
+      {
+        "json_pointer": "/R9_R10_details/0/theta_removed_class_primitive/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "a796a254357517c6ff67a64fb9ecbcecd4dda959f3a8cbaf63ffb4a10aa9c207"
+      },
+      {
+        "json_pointer": "/R9_R10_details/91/raw_minus_theta_price/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/R9_R10_details/91/raw_removed_class_primitive/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "fe6ce35e58aeeb654fb42950c4999fbec078c1f46fd549bdccc14cadb889da4a"
+      },
+      {
+        "json_pointer": "/R9_R10_details/91/theta_removed_class_primitive/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "fe6ce35e58aeeb654fb42950c4999fbec078c1f46fd549bdccc14cadb889da4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/beta_primitive/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/0:39/normalized_x_over_A/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "383ce1607bfff403bf9abf40f9e6a75d805eee09060071a82469e2398f2ca5bb"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/0:39/reference/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "dc596e916ab14cdfd5328fa7e68621c8e360a8b7321998123f43236a1987cd9b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/0:39/z_functional/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "79de3047840e6dc7889e617b7f9fc9a3dc2b59092061dad5b5bc8e31af09b9aa"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/0:429/normalized_x_over_A/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/0:429/reference/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/0:429/z_functional/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/91:39/normalized_x_over_A/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "92a724fded2850fd251acb235c03365c23b0d463203d5089d4cf76a21aebf1e8"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/91:39/reference/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "8cc73b1307b81c51800f7456d8502b6bf2f7a6057c2b7837314d3f55d1aee719"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/91:39/z_functional/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "9843a75eb755ab6b64047ae50275e7c37c2e9ad5bc76a3ef27433d15d9b55d25"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/91:429/normalized_x_over_A/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/91:429/reference/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/by_mask/91:429/z_functional/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/unit_primitives/0:39/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "94ec68d102e356a6ab42162fe1b47d04f1a669fab56de397c5668998e947ca9d"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/unit_primitives/0:429/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/unit_primitives/91:39/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "a35834cf23dbcbc2479d5bbd3e9dbdb9301306eb1b558a0fbbb0bf38823eeda1"
+      },
+      {
+        "json_pointer": "/functionals_exact/II/unit_primitives/91:429/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/beta_primitive/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/0:39/normalized_x_over_A/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/0:39/reference/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/0:39/z_functional/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/0:429/normalized_x_over_A/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/0:429/reference/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/0:429/z_functional/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/91:39/normalized_x_over_A/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/91:39/reference/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/91:39/z_functional/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/91:429/normalized_x_over_A/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/91:429/reference/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/by_mask/91:429/z_functional/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/unit_primitives/0:39/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/unit_primitives/0:429/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/unit_primitives/91:39/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/II_raw/unit_primitives/91:429/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/beta_primitive/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d8b84b86cd5119b6cb096e382f517e3efc59d4a846ad3df61bf9c5bd926208e4"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/0:39/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "4010105160009b1a45a87354886127a856db33d84eb1ae517118b591341ba91f"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/0:39/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "e0672354e57929cffeca39e884c6742addc3ed1b47047acd78bdd78a65283dcf"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/0:39/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "a05db402590f5d611547d124aeab23547bc4cc1635dafc90ef6d944da3140297"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/0:429/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "43d83fffa478096d4b03dd271ad6d9aaa3ee847164b31ba1c2168cca67743a67"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/0:429/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f3b4f5d0f7364dfa35cadd2cdc660b31107ca9cb687ac8255dbebf464b0ad8c8"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/0:429/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "37c3371d7d1ffba2ac4cd0afa17e0e3a1986c0abab94b1ce08262cbc01aa2421"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/91:39/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "c1e56a57d28edee1840487177f33ac3997bcee212794cf161e71a903a4c99113"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/91:39/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ead15f866c7432854584a818b549325dd0967a2bf648c6d63ba674869aedd41f"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/91:39/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "f3ca6dd749723e104c0f69cfc5a0d4e18d04d5bbdf1a717fd2197f1b2c230db3"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/91:429/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "4a298cc33b5a8b05479872e7abbec93df10a4d5c8aeb2002d4b3fef492c9940d"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/91:429/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "cca209c1f17f5d1977201cb85f3cbafbb708383ff6300bbcf9f0221e45635aaf"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/by_mask/91:429/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "704c899f64b097990e4c89e1a67fb1fabf9e854f2768bb78929bb210c5fedce9"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/unit_primitives/0:39/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8e9906fd270493b66c6523b3edaaadd3846877535315c4590b9830af38ba7446"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/unit_primitives/0:429/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7db6304580f5737f049c805817d53e4c53f3f14aef44f60ea2824a7063788968"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/unit_primitives/91:39/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "b461c8765f1818fd783d595b8f29db73413062a2f0eab36a1796bfa9a8b9abef"
+      },
+      {
+        "json_pointer": "/functionals_exact/raw/unit_primitives/91:429/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "de5e5bc811c0e2f7c677c6981a385d9b15b7d5e5248761d55b23ff8652c92e15"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/beta_primitive/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "d8b84b86cd5119b6cb096e382f517e3efc59d4a846ad3df61bf9c5bd926208e4"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/0:39/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "4010105160009b1a45a87354886127a856db33d84eb1ae517118b591341ba91f"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/0:39/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "e0672354e57929cffeca39e884c6742addc3ed1b47047acd78bdd78a65283dcf"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/0:39/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "a05db402590f5d611547d124aeab23547bc4cc1635dafc90ef6d944da3140297"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/0:429/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "43d83fffa478096d4b03dd271ad6d9aaa3ee847164b31ba1c2168cca67743a67"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/0:429/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f3b4f5d0f7364dfa35cadd2cdc660b31107ca9cb687ac8255dbebf464b0ad8c8"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/0:429/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "37c3371d7d1ffba2ac4cd0afa17e0e3a1986c0abab94b1ce08262cbc01aa2421"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/91:39/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "c1e56a57d28edee1840487177f33ac3997bcee212794cf161e71a903a4c99113"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/91:39/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "ead15f866c7432854584a818b549325dd0967a2bf648c6d63ba674869aedd41f"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/91:39/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "f3ca6dd749723e104c0f69cfc5a0d4e18d04d5bbdf1a717fd2197f1b2c230db3"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/91:429/normalized_x_over_A/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "4a298cc33b5a8b05479872e7abbec93df10a4d5c8aeb2002d4b3fef492c9940d"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/91:429/reference/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "cca209c1f17f5d1977201cb85f3cbafbb708383ff6300bbcf9f0221e45635aaf"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/by_mask/91:429/z_functional/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "704c899f64b097990e4c89e1a67fb1fabf9e854f2768bb78929bb210c5fedce9"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/unit_primitives/0:39/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "8e9906fd270493b66c6523b3edaaadd3846877535315c4590b9830af38ba7446"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/unit_primitives/0:429/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "7db6304580f5737f049c805817d53e4c53f3f14aef44f60ea2824a7063788968"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/unit_primitives/91:39/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "b461c8765f1818fd783d595b8f29db73413062a2f0eab36a1796bfa9a8b9abef"
+      },
+      {
+        "json_pointer": "/functionals_exact/theta/unit_primitives/91:429/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "de5e5bc811c0e2f7c677c6981a385d9b15b7d5e5248761d55b23ff8652c92e15"
+      },
+      {
+        "json_pointer": "/local_promotion_falsifiers/0/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "6e21ae562e5365b7069d173a1da1392512eb82eb9754b41e5a6fc68063000f9b"
+      },
+      {
+        "json_pointer": "/local_promotion_falsifiers/1/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "01b7231d1107f7e27e3074fc9a00d5593f9d95456d75cded75b6a9b230e50db0"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II/E91/39/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "7e992031ecb269bceae75c194a62f08c80e98ea99a0e555da2382ebb3bb89d0d"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II/E91/429/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "82a0a462189e23aece5a3b37282165c6b113d4bd5fef1e18fa66bbb0479fe71b"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II/L11/0/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "79de3047840e6dc7889e617b7f9fc9a3dc2b59092061dad5b5bc8e31af09b9aa"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II/L11/91/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "9843a75eb755ab6b64047ae50275e7c37c2e9ad5bc76a3ef27433d15d9b55d25"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II_raw/E91/39/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II_raw/E91/429/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II_raw/L11/0/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/prices_by_weight/II_raw/L11/91/sign_certificate",
+        "sign": "ZERO",
+        "stored_certificate_sha256": "c093af9eec0f01ba466a98aea914b060fd14a408b4a55de30f3f4c5054282b4a"
+      },
+      {
+        "json_pointer": "/prices_by_weight/raw/E91/39/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "3ea78c266f231e471431b465eb6ac35c7549fa34282458288e366c3c54a2b2cd"
+      },
+      {
+        "json_pointer": "/prices_by_weight/raw/E91/429/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f0b4b074087ada2180f06f2a36d8bbf5b4b4877f2f4204ef7ea9f51d19ff502e"
+      },
+      {
+        "json_pointer": "/prices_by_weight/raw/L11/0/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "b026dd1059fb2bdf4bdb81b6af867c9b4a51afbe80c847a52760b5e49f4abdfd"
+      },
+      {
+        "json_pointer": "/prices_by_weight/raw/L11/91/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "340688629fd3d9123c923a0de6132f9af79af615b8a6549ab284cfb5db38687f"
+      },
+      {
+        "json_pointer": "/prices_by_weight/theta/E91/39/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "3ea78c266f231e471431b465eb6ac35c7549fa34282458288e366c3c54a2b2cd"
+      },
+      {
+        "json_pointer": "/prices_by_weight/theta/E91/429/sign_certificate",
+        "sign": "POSITIVE",
+        "stored_certificate_sha256": "f0b4b074087ada2180f06f2a36d8bbf5b4b4877f2f4204ef7ea9f51d19ff502e"
+      },
+      {
+        "json_pointer": "/prices_by_weight/theta/L11/0/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "b026dd1059fb2bdf4bdb81b6af867c9b4a51afbe80c847a52760b5e49f4abdfd"
+      },
+      {
+        "json_pointer": "/prices_by_weight/theta/L11/91/sign_certificate",
+        "sign": "NEGATIVE",
+        "stored_certificate_sha256": "340688629fd3d9123c923a0de6132f9af79af615b8a6549ab284cfb5db38687f"
+      }
+    ]
+  }
+}

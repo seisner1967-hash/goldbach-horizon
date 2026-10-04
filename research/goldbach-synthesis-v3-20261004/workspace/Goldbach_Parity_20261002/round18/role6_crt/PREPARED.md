@@ -1,0 +1,15 @@
+# Annexe CRT18 — PRÊTE À LA LECTURE, aucun lancement
+
+Ce contrat neuf valide les identités entières/rationnelles des modules Count/Lower gelés du node13.10. Il utilise N=100000000, d91, h39, ell11, V10 et Ioc(879120,989010), puis H=N*d*h et K=H*ell. Le TypeII canonique est lu comme données seulement. Aucun ancien producteur, prix, W/D, signe logarithmique, compilateur, préflight ou PDF n'est lancé ou importé.
+
+Le helper est autonome : trialdivision exacte, diviseurs complets et Möbius par exposants, Euclide étendu, counts/floors et Fraction. Le producteur conserve les972 diviseursH et1944 diviseursK, y compris tous ceux de Möbius nul. Pour chaque k|H et chaque v réellement unitaire dans11..20, il compare l'ensemble complet des multiplesk*ell vérifiant la congruence au candidat à l'ensemble complet de la classe CRT unique. Les deux énumérations donnent l'équivalence sur tout I, puis le front rationnel≤1. Les unités sont comptées directement par gcd et comparées à l'inclusion-exclusion entière ; chaque indicatrice est vérifiée, et JR est la somme des lignes réelles.
+
+Les gardes R4a/b/c sont évaluées comme prémisses. Les attentes finies sont FALSE/TRUE/FALSE, donc aucun R5 ne sera appliqué. Les deux comparaisons numériques avec la conclusion seront seulement des observations finies, explicitement marquées comme telles. Pour la référence corrigéeH*ell, ell n'est plus copremier à H ; JR=0 n'autorise pas l'ancien minorant. A196 est lu dans le catalogue structurel gelé, sans filtrage de primalité du candidat. Aucune source-onset, R6, Gamma ou borneD_N n'est évaluée ou postulée.
+
+Entrées et onze empreintes : input_registry.json. Les sourcesCRT Count/Lower, FINAL1/3/6, TypeII, FINAL6 manifeste/reçu/clôture et le registre997 seront copiés en captures PREEXEC exclusives, avec source/helper/launcher/contract/registry. Les997 archives et FINAL6 restent inchangés. Les320 positions de signe existantes ne reçoivent aucune nouvelle position.
+
+Le launcher run_once.py exige canonical_authorization.json contenant root_authorized=true, kind=canonical, attempt=1 et reviewed_sha256 exact pour crt_checks.py, crt_helpers.py, run_once.py, contract.json et input_registry.json. Le gate n'existe pas et n'est pas créé avant l'autorisation explicite du root. Toutes les captures, commandes, marqueurs, logs et reçus sont créés exclusivement. Le subprocess exécute les sources neuves copiées avant lancement ; ses exit réels et les incidents de lancement/validation sont conservés.
+
+Après le PASS canonique seulement, un rejeu isolé nouveau exigera un gate distinct replay_authorization.json, lié au reçu et à la sortie canoniques gelés. Il s'arrêtera si un rejeu existe déjà. La comparaison sera octet par octet et champ par champ, sans altérer le canonique. Ni canonical ni replay n'est encore autorisé. La clôture FINAL6CRT, son manifeste/reçu et agent6_crt.md seront séparés du FINAL6 initial.
+
+Statut présent : PREPARED, zéro subprocess mathématique, aucun PASS annoncé, score0 et victoirefausse.

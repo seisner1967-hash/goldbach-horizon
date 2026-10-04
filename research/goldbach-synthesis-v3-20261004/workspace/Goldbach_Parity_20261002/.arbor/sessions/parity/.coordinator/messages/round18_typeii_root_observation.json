@@ -1,0 +1,26 @@
+{
+  "status": "ROOT_INSPECTED_EXISTING_CANONICAL_TYPEII18_PASS_COMPILE_GATE_OPEN",
+  "checked_inputs_sha256": {
+    "typeii_checks.py": "39dc54f832069e4171c666ab244123a371575f48d90cc6e2e0fe8ef97254aec8",
+    "role6/strict.py": "20aada21669af3869b1ef1fee4b0e846cbc64b543e765fbf1943dcc8f2825a8a",
+    "role6/run_once.py": "a5541c468c45a55b0cd66cb8ad6083983e24c7ae04a00568516da6b5620279f0",
+    "typeii.json": "31e873ab0170b1d479c95fdbbe38d989e260cbdd30b5fbba5974f9fc51c63687",
+    "role6/typeii_attempt01.log": "b4705e9e66599af582bc5fed8174a2d802f92b42bb3aacebd7380cb8454a3e2e",
+    "role6/typeii_canonical_receipt.json": "623a5c64d7f60f4b8e390aa6b51ebeedb49a775bbaebc7c08b194fbfe9f4db22"
+  },
+  "actual_attempts": 1,
+  "actual_exit_code": 0,
+  "stored_strict_sign_positions": 98,
+  "stored_sign_distribution": {
+    "POSITIVE": 40,
+    "ZERO": 33,
+    "NEGATIVE": 25
+  },
+  "two_local_promotion_falsifiers": true,
+  "actual_identity_false": false,
+  "source_bounds_not_used_finitely": true,
+  "formal3_candidate_compilation_authorized": true,
+  "semiprime_compile_gate_still_pending": true,
+  "root_reran_producer_signs_Lean_or_audit": false,
+  "victory": false
+}

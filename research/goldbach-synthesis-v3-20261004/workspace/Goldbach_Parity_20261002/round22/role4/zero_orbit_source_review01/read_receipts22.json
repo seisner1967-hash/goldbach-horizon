@@ -1,0 +1,95 @@
+{
+  "schema": "ROUND22_ZERO_ORBIT_INDEPENDENT_SOURCE_REVIEW_READS_01",
+  "status": "PAPER_ONLY_REVIEW_COMPLETE_NO_GLOBAL_SIGNED_RESULT",
+  "reviewer": "ROLE4",
+  "author": "ROLE1",
+  "created_utc": "2026-10-03T21:25:51.1950813Z",
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\signed_trace_ideation_source02\\zero_orbit_symmetry22.txt",
+      "sha256": "8cbca7b5bbbbc244f5064d5540cf5acda8c275370448b147024ff61d32ee6cb7",
+      "size": 6886,
+      "read_scope": "FULL",
+      "read_observation": "c10d07"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\signed_trace_ideation_source02\\source_handoff22.json",
+      "sha256": "93ed59fac7cd50fc3ca6378a7a125713799d333f8568b70609595702ca8bd0cd",
+      "size": 2651,
+      "read_scope": "FULL",
+      "read_observation": "c10d07"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\signed_trace_ideation_source02\\source_read_receipts22.json",
+      "sha256": "413c7895405d5fef046292be8f74ebba93a3a630aab3371c1eea0a778c19c57b",
+      "size": 1772,
+      "read_scope": "FULL",
+      "read_observation": "c10d07"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1\\signed_trace_ideation_source01\\signed_weil_localization22.txt",
+      "sha256": "ab424c4bce032eedd9bf3ae4c478eb177f317975900d9cb7859e5e0476747648",
+      "size": 7816,
+      "read_scope": "FULL_CONTEXT_NOT_NEW_GLOBAL_WEIL_PROOF",
+      "read_observation": "f988f0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\signed_weil_source_review01\\review22.md",
+      "sha256": "4c356fc0030838251249cc0d9620060525ad764bc94de3726682ef8807ae9445",
+      "size": 6308,
+      "read_scope": "FULL_PRIOR_REVIEW_CONTEXT",
+      "read_observation": "f988f0"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\zero_orbit_source_review01\\review22.md",
+      "sha256": "aeb411a7605600e8d80e96c03a4958557ea4cd3e53e51f208c010d10a88c8b83",
+      "size": 4955,
+      "read_scope": "FULL_OWN_REVIEW",
+      "read_observation": "43d411"
+    }
+  ],
+  "primary_reads": [
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "scope": "TARGETED E3/E4 completed xi and functional equation",
+      "whole_document_claim": false
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.10",
+      "scope": "TARGETED section(i) strip and zero symmetry",
+      "whole_document_claim": false
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.2",
+      "scope": "TARGETED section(i) Gamma nonzero and poles",
+      "whole_document_claim": false
+    }
+  ],
+  "reviewed_claims": [
+    "orbit4 off-line / orbit2 on-line / stabilizers",
+    "equal local multiplicities of each distinct zero",
+    "finite full orbit transport including cross-orbit and diagonal ordered pairs",
+    "NEG localized test construction and limited consequence",
+    "PHASE plus/minus cosine and swap behavior",
+    "mixed norm total order four / fixed support / no pointwise infinite density"
+  ],
+  "scope_limits": [
+    "No new proof of the true zeta functional equation or multiplicity invariance",
+    "No new proof of global zero counting / real-zero exclusion / catalogue completeness",
+    "No global Weil/Fubini or tail proof compiled",
+    "No phase law, positivity of the total coefficient or D_N result"
+  ],
+  "sources_modified": 0,
+  "archives_rehashed": false,
+  "lean_invocations": 0,
+  "api_probe_invocations": 0,
+  "candidate_parser_invocations": 0,
+  "numeric_evaluations": 0,
+  "native_or_math_runtime_invocations": 0,
+  "new_lean_modules": 0,
+  "compiled_credit": 0,
+  "new_numeric_bank": false,
+  "D_N_target_proved": false,
+  "WIN": false,
+  "metadata_scope": "PowerShell file metadata/hash and exclusive JSON writes only; no source interpreter or candidate parser."
+}

@@ -1,0 +1,132 @@
+{
+  "schema": "ROUND22_JUDGE5_BATCH04_PREPARATION_RECEIPT",
+  "time_utc": "2026-10-03T11:33:38.6193296Z",
+  "status": "PREPARED_SOURCE_ONLY_GATE_CLOSED",
+  "role": "ROLE5",
+  "modules": [
+    "GammaPsiCore22",
+    "GammaPsiBetaLimit22",
+    "GammaPsiIntegral22"
+  ],
+  "attempt": "batch04_attempt01",
+  "module_count": 3,
+  "theorem_count": 44,
+  "definition_count": 8,
+  "qualified_print_count": 52,
+  "source_manifest_sha256": "162d544328c64989800156bc816095373eb19bb0308f1b49719e3f9491eadd05",
+  "launcher_sha256": "2fdc406b57faed224314885218bd299bac6e1158dee8e43c7f0800e897473624",
+  "import_modules": 3238,
+  "immutable_input_count": 6648,
+  "closed_judge_file_count": 134,
+  "archive_count": 3089,
+  "explicit_Init_seed": "Init",
+  "unresolved": [],
+  "source_writer_chunk": "5c3714",
+  "metadata_launcher_chunk": "0b1c9f",
+  "metadata_completion_chunk": "280f3c",
+  "metadata_exit_code": 0,
+  "reads": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\write_sources.py",
+      "sha256": "220fe8157f6169563a15b7b667374534ac4186ae58ece53afc844bd3f47b3a40",
+      "bytes": 15385,
+      "scope": "FULL",
+      "chunk": "fef49b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\prepare_metadata.py",
+      "sha256": "2ac0967a7bb0f29f9c6416c57be11531a63535693d2c525872adea4be20e6ea7",
+      "bytes": 13856,
+      "scope": "FULL",
+      "chunk": "e00a63"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\run_once.py",
+      "sha256": "2fdc406b57faed224314885218bd299bac6e1158dee8e43c7f0800e897473624",
+      "bytes": 11344,
+      "scope": "FULL",
+      "chunk": "d6a58d"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\preparation.md",
+      "sha256": "91ee071a8520e41739e2f6e93c5e8330ec3272cf928333faa13d5ab83675bbde",
+      "bytes": 3613,
+      "scope": "FULL",
+      "chunk": "fef49b"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiCore22.lean",
+      "sha256": "450962be9526866fa0ffebc39ef29a819d94b57a90000291337550e9f4dc7284",
+      "bytes": 8446,
+      "scope": "FULL",
+      "chunk": "22254c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiBetaLimit22.lean",
+      "sha256": "b4adf3ac71dd7c9d0e6e78f83ce805ddc7eaf5e8f5978aa4c1d6b87bc8caceb8",
+      "bytes": 13661,
+      "scope": "FULL",
+      "chunk": "22254c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\sources\\GammaPsiIntegral22.lean",
+      "sha256": "3f254cdfeee333aa66eba719b944f64a693fa2e15f0265f340ace9c2a99f6aaf",
+      "bytes": 4077,
+      "scope": "FULL",
+      "chunk": "22254c"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\catalog.json",
+      "sha256": "d58f7af4dfdeadabb228b85384bb08fd92e439be022f24fcac48328cdb2dc633",
+      "bytes": 28855,
+      "scope": "FULL",
+      "chunk": "676ecf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\read_receipts.json",
+      "sha256": "c54f83bd1abdf658c55d19bf3068554147b72740d7c45e72bd3c1465b04bd2aa",
+      "bytes": 4238,
+      "scope": "FULL",
+      "chunk": "676ecf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\prepared_manifest.json",
+      "sha256": "162d544328c64989800156bc816095373eb19bb0308f1b49719e3f9491eadd05",
+      "bytes": 1672938,
+      "scope": "PARSED_HEADER_AND_ALL_BYTES_SHA_NOT_FULL_RAW",
+      "chunk": "CURRENT_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\import_bindings.json",
+      "sha256": "af5a8480abab06e71c0c1d756bf9816ffd4a31cf4b4eec0f81b66e2815047e7f",
+      "bytes": 1976945,
+      "scope": "PARSED_HEADER_AND_ALL_BYTES_SHA_NOT_FULL_RAW",
+      "chunk": "CURRENT_METADATA"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\judge5\\batch04\\three_modules\\closed_judge_bindings.json",
+      "sha256": "153b726a0ee53cd8c8144747712dee9fb1a42c811dbef8814e61c0dc3419fef7",
+      "bytes": 32716,
+      "scope": "PARSED_HEADER_AND_ALL_BYTES_SHA_NOT_FULL_RAW",
+      "chunk": "CURRENT_METADATA"
+    }
+  ],
+  "readonly_local_dependencies": [],
+  "author_olean_used": false,
+  "numeric_bank_replayed": false,
+  "numeric_PASS_required": false,
+  "compiler_invocations": 0,
+  "mathematical_numeric_invocations": 0,
+  "gate_created_by_role5": false,
+  "superseded_Core_only_draft_executed": false,
+  "previous_independent_modules": 63,
+  "previous_independent_auxiliaries": 1057,
+  "hypothetical_success_modules": 66,
+  "hypothetical_success_auxiliaries": 1109,
+  "P1_independently_certified": false,
+  "H1_paid": false,
+  "C3_paid": false,
+  "C5_paid": false,
+  "D_N_paid": false,
+  "WIN": false
+}

@@ -1,0 +1,9 @@
+FINITE CHECK REPLAY
+
+Run with Python 3 and its standard library:
+  python exact_checks.py
+
+This regenerates EXACT_CHECKS.json using exact integers and fractions.
+It does not compile Lean or prove an asymptotic estimate.
+The written argument and its declared Rosser input are in the French note.
+No historical source or archive is modified by the script.

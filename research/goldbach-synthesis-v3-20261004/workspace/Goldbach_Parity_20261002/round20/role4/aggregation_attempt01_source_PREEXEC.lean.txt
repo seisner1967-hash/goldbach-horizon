@@ -1,0 +1,161 @@
+import FriablePhysicalDemand
+
+namespace GoldbachRound20.Friable
+
+open Finset GoldbachRound19.Switch GoldbachRound19.NonSS
+noncomputable section
+attribute [local instance] Classical.propDecidable
+
+def friableDemandDomain (alpha N Z M Y : ℕ) : Finset (ℕ × ℕ) :=
+  (physicalDomain alpha N Z M).filter
+    (fun v => Smooth Y (resource0 N v.2) ∨ Smooth Y (resource1 N v.2))
+
+def friableRank (alpha N Z M Y e : ℕ) : Finset ℕ :=
+  ((friableDemandDomain alpha N Z M Y).filter (fun v => v.1 = e)).image Prod.snd
+
+theorem friableRank_support {alpha N Z M Y e q : ℕ}
+    (hq : q ∈ friableRank alpha N Z M Y e) :
+    StructuralSupport alpha N Z M e q ∧
+      (Smooth Y (resource0 N q) ∨ Smooth Y (resource1 N q)) := by
+  obtain ⟨v, hv, heq⟩ := mem_image.mp hq
+  obtain ⟨hvF, hve⟩ := mem_filter.mp hv
+  obtain ⟨hvH, hvSmooth⟩ := mem_filter.mp hvF
+  exact ⟨by simpa only [hve, heq] using physicalDomain_support hvH,
+    by simpa only [heq] using hvSmooth⟩
+
+theorem friableRank_snd_injective (alpha N Z M Y e : ℕ) :
+    Set.InjOn Prod.snd ((friableDemandDomain alpha N Z M Y).filter (fun v => v.1 = e)) := by
+  intro v hv w hw hsnd
+  exact Prod.ext ((mem_filter.mp hv).2.trans (mem_filter.mp hw).2.symm) hsnd
+
+theorem actual_friable_theta_fiber_sum (alpha a N Z M Y e : ℕ) :
+    (∑ v ∈ (friableDemandDomain alpha N Z M Y).filter (fun v => v.1 = e),
+      |thetaBracket alpha a N v.1 v.2|) =
+      ∑ q ∈ friableRank alpha N Z M Y e, |thetaBracket alpha a N e q| := by
+  unfold friableRank
+  rw [Finset.sum_image (friableRank_snd_injective alpha N Z M Y e)]
+  apply Finset.sum_congr rfl
+  intro v hv
+  rw [(mem_filter.mp hv).2]
+
+def friableThetaDemand (alpha a N Z M Y : ℕ) : ℝ :=
+  ∑ v ∈ friableDemandDomain alpha N Z M Y, |thetaBracket alpha a N v.1 v.2|
+
+/-- All physical ranks are summed; the cutoff is derived from the actual cap. -/
+theorem actual_friable_demand_payment_mass {alpha a N Z M D Y : ℕ}
+    (hM : 0 < M) (hD : 1 < D) (hDM : D ≤ M) (hY : 0 < Y)
+    (halpha : 0 < alpha) (haa : alpha ≤ a) (hEa : N / M ≤ a) (haM : a < M)
+    (hu : 1 ≤ Real.log (N : ℝ)) :
+    friableThetaDemand alpha a N Z M Y ≤
+      14 * Real.log (N : ℝ) ^ 3 *
+        (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹) *
+        ((N : ℝ) * (harmonic (N / M) : ℝ) +
+          (N / M : ℕ) * ((D : ℝ) * (Y : ℝ))) := by
+  let F := friableDemandDomain alpha N Z M Y
+  let E := N / M
+  have hmap : ∀ v ∈ F, v.1 ∈ Icc 1 E := by
+    intro v hv
+    have hs := physicalDomain_support (mem_filter.mp hv).1
+    have hp := anchor_three hs.1
+    have hanchor := hs.2.2.2.1
+    exact mem_Icc.mpr ⟨by omega, actual_cofactor_rank_le hM hs⟩
+  have hsplit : friableThetaDemand alpha a N Z M Y =
+      ∑ e ∈ Icc 1 E, ∑ q ∈ friableRank alpha N Z M Y e,
+        |thetaBracket alpha a N e q| := by
+    unfold friableThetaDemand
+    rw [← Finset.sum_fiberwise_of_maps_to hmap]
+    exact Finset.sum_congr rfl
+      (fun e _ => actual_friable_theta_fiber_sum alpha a N Z M Y e)
+  have hpoint : ∀ e ∈ Icc 1 E,
+      (∑ q ∈ friableRank alpha N Z M Y e, |thetaBracket alpha a N e q|) ≤
+      14 * Real.log (N : ℝ) ^ 3 * ((N : ℝ) / (e : ℝ) *
+        (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹) + ((divisorBand D Y).card : ℝ)) := by
+    intro e he
+    apply actual_friable_rank_theta_demand_le (S := friableRank alpha N Z M Y e)
+      (by have := (mem_Icc.mp he).1; omega) hD hDM hY halpha haa
+      ((mem_Icc.mp he).2.trans hEa) hu
+    · intro q hq
+      exact (friableRank_support hq).1
+    · intro q hq
+      exact haM.trans_le (friableRank_support hq).1.2.2.1
+    · intro q hq
+      exact (friableRank_support hq).2
+  have hsum : (∑ e ∈ Icc 1 E, (N : ℝ) / (e : ℝ) *
+      (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹)) =
+      (N : ℝ) * (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹) * (harmonic E : ℝ) := by
+    simp only [harmonic_eq_sum_Icc, Rat.cast_sum, Rat.cast_inv, Rat.cast_natCast,
+      Finset.mul_sum, div_eq_mul_inv]
+    apply Finset.sum_congr rfl
+    intro e he
+    ring
+  have hconst : (∑ _e ∈ Icc 1 E, ((divisorBand D Y).card : ℝ)) =
+      (E : ℝ) * ((divisorBand D Y).card : ℝ) := by simp
+  have hcard := actual_divisor_band_card_le_mass D Y
+  simp only [Nat.cast_mul] at hcard
+  have hmass0 : 0 ≤ ∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹ :=
+    Finset.sum_nonneg (fun d _ => by positivity)
+  rw [hsplit]
+  calc
+    _ ≤ ∑ e ∈ Icc 1 E, 14 * Real.log (N : ℝ) ^ 3 * ((N : ℝ) / (e : ℝ) *
+        (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹) + ((divisorBand D Y).card : ℝ)) :=
+      Finset.sum_le_sum hpoint
+    _ = 14 * Real.log (N : ℝ) ^ 3 *
+        ((N : ℝ) * (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹) * (harmonic E : ℝ) +
+          (E : ℝ) * ((divisorBand D Y).card : ℝ)) := by
+      rw [← Finset.mul_sum, Finset.sum_add_distrib, hsum, hconst]
+    _ ≤ 14 * Real.log (N : ℝ) ^ 3 *
+        ((N : ℝ) * (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹) * (harmonic E : ℝ) +
+          (E : ℝ) * (((D : ℝ) * (Y : ℝ)) *
+            (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹))) := by
+      apply mul_le_mul_of_nonneg_left
+        (add_le_add_left (mul_le_mul_of_nonneg_left hcard (Nat.cast_nonneg E)) _) (by positivity)
+    _ = _ := by dsimp only [E]; ring
+
+/-- The actual mass is derived from Euler; no aggregate payment is assumed. -/
+theorem actual_friable_demand_payment_local {alpha a N Z M D Y : ℕ}
+    (hM : 0 < M) (hD : 1 < D) (hDM : D ≤ M) (hYpos : 0 < Y)
+    (halpha : 0 < alpha) (haa : alpha ≤ a) (hEa : N / M ≤ a) (haM : a < M)
+    (hu : 1 ≤ Real.log (N : ℝ))
+    (hY : 4 ≤ Real.log (Y : ℝ)) (hYu : 1 + Real.log (Y : ℝ) ≤ Real.log (N : ℝ))
+    (hDlog : Real.log (N : ℝ) / 2 ≤ Real.log (D : ℝ))
+    (hscale : 128 * Real.log (Real.log (N : ℝ)) * Real.log (Y : ℝ) ≤ Real.log (N : ℝ)) :
+    friableThetaDemand alpha a N Z M Y ≤
+      14 * Real.log (N : ℝ) ^ (-34 : ℝ) *
+        ((N : ℝ) * (harmonic (N / M) : ℝ) +
+          (N / M : ℕ) * ((D : ℝ) * (Y : ℝ))) := by
+  have hu0 : 0 < Real.log (N : ℝ) := by linarith
+  have hmass := actual_divisor_band_mass_le_u_neg37
+    (by omega : 0 < D) hu0 hY hYu hDlog hscale
+  have htail : 0 ≤ (N : ℝ) * (harmonic (N / M) : ℝ) +
+      (N / M : ℕ) * ((D : ℝ) * (Y : ℝ)) := by
+    have hhRat : 0 ≤ harmonic (N / M) := by unfold harmonic; positivity
+    have hh : 0 ≤ (harmonic (N / M) : ℝ) := by exact_mod_cast hhRat
+    positivity
+  have hh := actual_friable_demand_payment_mass hM hD hDM hYpos halpha haa hEa haM hu
+  calc
+    _ ≤ 14 * Real.log (N : ℝ) ^ 3 *
+        (∑ d ∈ divisorBand D Y, (d : ℝ)⁻¹) *
+        ((N : ℝ) * (harmonic (N / M) : ℝ) +
+          (N / M : ℕ) * ((D : ℝ) * (Y : ℝ))) := hh
+    _ ≤ 14 * Real.log (N : ℝ) ^ 3 * Real.log (N : ℝ) ^ (-37 : ℝ) *
+        ((N : ℝ) * (harmonic (N / M) : ℝ) +
+          (N / M : ℕ) * ((D : ℝ) * (Y : ℝ))) :=
+      mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_left hmass (by positivity)) htail
+    _ = _ := by
+      have he : Real.log (N : ℝ) ^ 3 * Real.log (N : ℝ) ^ (-37 : ℝ) =
+          Real.log (N : ℝ) ^ (-34 : ℝ) := by
+        rw [← Real.rpow_natCast, ← Real.rpow_add hu0]
+        norm_num
+      rw [mul_assoc (14 : ℝ), he]
+
+#print axioms friableDemandDomain
+#print axioms friableRank
+#print axioms friableRank_support
+#print axioms friableRank_snd_injective
+#print axioms actual_friable_theta_fiber_sum
+#print axioms friableThetaDemand
+#print axioms actual_friable_demand_payment_mass
+#print axioms actual_friable_demand_payment_local
+
+end
+end GoldbachRound20.Friable

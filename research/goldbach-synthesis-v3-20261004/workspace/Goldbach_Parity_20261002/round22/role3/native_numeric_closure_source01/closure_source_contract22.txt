@@ -1,0 +1,53 @@
+CLÔTURE NUMERIC04 — SOURCE MÉTADATA, AUCUNE INVOCATION AUTORISÉE ICI
+
+Le seul calcul actif est session17351, parent consumer SOURCE01 autorisé
+par gate b5dc57f1afa98304645f9e62505026c805c7a536946a15eedec399922aeba932.
+Le producteur a réellement démarré à21:16:43.457247UTC/PID32676. Le helper
+close_numeric04_metadata22.ps1 reste SOURCE et ne sera appelé qu'après
+lecture FULL ROOT, nouvelle autorisation metadata et quiescence observée.
+Il ne lance ni parent, binary, compiler, Python, API, probe ou calcul.
+
+Arguments futurs : -QuiescenceEvidencePath, -QuiescenceEvidenceSha256,
+-ParentExitCode, -SessionClosedToolChunk. Le reçu quiescence externe réel
+doit donner schema ROUND22_NATIVE_NUMERIC04_QUIESCENCE_METADATA,
+gate_sha256 exact, session_id17351, parent_session_complete=true,
+parent_exit_code et session_closed_tool_chunk du vrai résultat outil,
+known_created_child_pids et known_created_child_pids_absent=true observés.
+Ses PIDs doivent correspondre exactement aux callbacks CREATED_SUSPENDED
+du parent (un ou deux), sans transformer les START_REQUEST en créations.
+Ce reçu n'est pas fabriqué pendant le calcul. Scope : session terminée et
+PIDs connus absents ; aucune fermeture universelle du graphe Windows.
+Le helper ne stoppe pas lui-même un processus et ne contourne pas la garde.
+
+Vérifications futures physiques :6456 inputs gelés et leurs tailles/SHA,
+66 paires PRE original/copie,3089 archives, gate/manifeste/préparation et
+les cinq metadata_control_bindings du gate séparés de l'union runtime.
+Inventaire/hash de tous fichiers ACTUAL, y compris payloads et logs,
+sans parser facteurs/records ni recomputer logs, NTT, CRT, C_A/C_B ou rayon.
+Les gros catalogues sont BYTES_SHA_ONLY, les inventaires PARSED_METADATA.
+Le helper ne modifie aucune pièce ACTUAL ni anciens outputs/captures.
+
+Outputs exclusifs isolés sous role3/native_numeric_closure_source01 :
+numeric_execution_closure22.json
+closure_evidence_bindings22.json
+actual_closure01_attempt01/START.json et FIN.json.
+Un défaut conserve les outputs partiels et FIN d'échec, sans aucun retry.
+La clôture donne actual_parent_receipt_sha256 (null s'il est absent),
+parent_invocations=1, retry_count=0, actual_processes_quiescent=true selon
+le reçu externe, all_current_bytes_preserved=true seulement après les
+vérifications physiques, et output_bindings path/bytes/sha256 exacts.
+
+Cas normal : lecture réelle receipt/POST/FIN. Une classification aux du
+parent demande deux FIN exit0 avec wait/Jobempty, receipt exit0/succès,
+POST acquis et coefficient_result présent. Aucune valeur ni comparaison
+n'est refaite par le helper ; son niveau demeure PAPER natif non raffiné.
+Cas STOP/timeout/watchdog : aucune fausseté mathématique n'est établie.
+Ne jamais fabriquer receipt ou POST du parent quand ils manquent.
+La conservation physique externe, si payée, est distincte du POST parent.
+L'observateur ROOT normal attend un receipt réel ; un watchdog sans
+receipt/POST demande un observateur metadata distinct choisi par ROOT.
+
+Zéro mutant dans les binaries gelés. Charges catalogue/GMP/carries/NTT/CRT,
+B40 réel Lean, loader effectif/universel, H1 uniforme, D_N et WIN restent
+ouverts même si la tentative rapporte un coefficient. Baseline de sa
+gate :82 modules/1367 auxiliaires, sans crédit numérique anticipé.

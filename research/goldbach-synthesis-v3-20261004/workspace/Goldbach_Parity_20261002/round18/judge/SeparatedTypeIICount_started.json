@@ -1,0 +1,47 @@
+{
+  "LEAN_PATH": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round17\\judge\\build;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role3;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round16\\role4;D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round13\\role4\\dependencies;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\aesop\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\batteries\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\importGraph\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\mathlib\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\plausible\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\proofwidgets\\.lake\\build\\lib;D:\\Users\\Utilisateur\\Desktop\\Maths\\q356-canonical-binding-replay\\.lake\\packages\\Qq\\.lake\\build\\lib",
+  "audit_source_sha256": "26ad93f0d4e7be2cf5fb59736be9c57513032e5f8a5af5debfe2343ea6afd6bc",
+  "command": [
+    "C:\\Users\\Utilisateur\\.elan\\toolchains\\leanprover--lean4---v4.15.0\\bin\\lean.exe",
+    "-o",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build\\SeparatedTypeIICount.olean",
+    "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build\\SeparatedTypeIICount.lean"
+  ],
+  "cwd": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\build",
+  "dependency_sources_and_oleans_sha256": {
+    "round13/role4/dependencies/DependencyAudit.lean": "97f4d5704fa0987088402db5f1e5ebc54cf7a492f0edeb012219cf6c59c8a52a",
+    "round13/role4/dependencies/DependencyAudit.olean": "6df329f5fcc69e84bbc6b0c464a33bf8b46c34c33a135c4ee7cd37d7297712e0",
+    "round13/role4/dependencies/ShortDivisorComplement.lean": "25f38fcb6f84b73551bf9d4131745d5c234a3187dd3e92a8402f8e81b721b447",
+    "round13/role4/dependencies/ShortDivisorComplement.olean": "733128e14b663152143ea15a6939437691d0d3477837f10b686def852a56cc6b",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.lean": "b3c22b714566b3d6e1fa864c4414201c9a2215c506350bdf1c8373a598d26f48",
+    "round13/role4/dependencies/ThreeAdicPrimePairing.olean": "25cddc8edd9a9bd2b027846196faca5959664514cf67671671c08ce1d18ceac4",
+    "round16/role3/ApiProbe.lean": "2369b9ff80d39af9d027a7b8bd5b97755fafaf1725144af5c94ca4f397dfe2ff",
+    "round16/role3/EulerAnchor.lean": "88bbbb4d8e49cf2906ec3ae06ec7a9f4bcaf6e08ee811733f090fb084fce0285",
+    "round16/role3/EulerAnchor.olean": "1e8c5866c2eb416ffb2ea45c7d63eba0bf726e24188918dac4bb3ca1d2bb50a4",
+    "round16/role4/LeastMissingPrimeMargin.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+    "round16/role4/LeastMissingPrimeMargin.olean": "b06c8bc51d8d097766f47e1ec553b48a3bde67daa08c9a0ece1ff901e76f0595",
+    "round16/role4/attempt1.lean": "e1dbd4f8a68b433c4641c90d6eb12366e7084b0d8b7b7b045b8b11ebd41e6b4a",
+    "round17/judge/build/FourFormCollisionLoss.lean": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5",
+    "round17/judge/build/FourFormCollisionLoss.olean": "e8f5c07ef6225671165e1fb942d4f0c39e3540ee8d1a3ee1e21d0205e10a3091",
+    "round17/judge/build/FourFormRoots.lean": "49cbf93fd8eb9aa75236419d5d7b95e1841d67571865171115ffbbdfcb71e9fa",
+    "round17/judge/build/FourFormRoots.olean": "4a13fc20feabfd5ff552f5dbd18c99c6b66bcfe1a65a3f44fff555417d7b4021",
+    "round17/judge/build/FourFormTruncation.lean": "577ff585207e72bf5d31121743fc218effc91eb8a460cef9fa9ee2e05a3996e0",
+    "round17/judge/build/FourFormTruncation.olean": "340667c515537e2d5501e19329c4becb39cef6989699439107f85a4ec520dbc1",
+    "round17/judge/build/PowersetMoment.lean": "971f351decef7e78112ec940c5ee553806abecccaf19440a4d661881c4ae188d",
+    "round17/judge/build/PowersetMoment.olean": "f1b9c19267d9c6df430156f3731613bd1fbcf58bf50e626417a74dc8449f1905",
+    "round17/judge/build/SelbergFourForms.lean": "b1b658aa92f8e02cef29667e9e60b763ca3ef57bb25dcbc8aa9c50ba33591ce1",
+    "round17/judge/build/SelbergFourForms.olean": "9639c1f7ae9eb03d07c1de2fd79cdea4dd503d29716e5de3adb4085de21fc46c"
+  },
+  "fresh_imports_sha256": {
+    "SeparatedTypeII": "896daceeb6a093f808313556ee63a93761ecd5831bc6279b8b88ffe9212d1dd5",
+    "SeparatedTypeIIPrice": "4d93de985a4e7dc95fbc49bd045315c8be18c5e2dee1b2e8afafacb394c41ac2"
+  },
+  "input_manifest_sha256": "a1e5fa8eaa4d3e455c46f0e1bea20ce516bc0f0473195b6ef0a3e73e7ad2114e",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "module": "SeparatedTypeIICount",
+  "source_original": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\role3\\SeparatedTypeIICount.lean",
+  "source_sha256": "55ac598030d5bd67202553a5a8ffffc6fcc2ba3aa796428808aecb9586d5d5d1",
+  "source_snapshot": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round18\\judge\\SeparatedTypeIICount_source.lean.txt",
+  "status": "PREEXEC",
+  "utc": "2026-10-02T23:00:04.456304+00:00"
+}

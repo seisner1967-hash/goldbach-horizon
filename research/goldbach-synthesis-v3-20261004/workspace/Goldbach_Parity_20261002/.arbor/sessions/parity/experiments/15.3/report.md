@@ -1,0 +1,1 @@
+Clôture36 observée : échec technique réflexion118:6, zéro crédit, Geometry non invoquée. Baseline88modules/1488déclarations auxiliaires inchangée. Directive humaine : gel ingénierie pour SynthèseV3 et transfert théorie ; aucune nouvelle compilation, aucun coefficient N=10^8 ni borne D_N ni WIN.

@@ -1,0 +1,86 @@
+{
+  "schema": "ROUND22_NATIVE_BUILD_ONLY02_SOURCE_HANDOFF",
+  "status": "SOURCE_ONLY_FROZEN_NOT_PREPARED_NOT_COMPILED",
+  "utc": "2026-10-03T18:39:35.7594774Z",
+  "author": "ROLE4",
+  "binding_count": 8,
+  "bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\run_build_only_once22.py",
+      "bytes": 16483,
+      "sha256": "4489a9e290b41a270bb44e20b738cd7f85131a945bc26d836d65748ec14d3e8b",
+      "kind": "FROZEN_BUILD_ONLY02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\windows_build_job22.py",
+      "bytes": 16756,
+      "sha256": "a4dcc246f5e491e63f6d9cff849ef2ae774dbf8b9a99a565bc251e94fd12dbed",
+      "kind": "FROZEN_BUILD_ONLY02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\build_execution_plan22.json",
+      "bytes": 2908,
+      "sha256": "34c3a25272f591c44eeeafec41d1727631df99b84043ff0ae6b0219c6040a25a",
+      "kind": "FROZEN_BUILD_ONLY02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\build_controls_contract22.md",
+      "bytes": 2835,
+      "sha256": "f3df147ca765e23cb6747133b16ad61cb28843837d25d716f553c1e664fdc4cd",
+      "kind": "FROZEN_BUILD_ONLY02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\revision_conservation22.json",
+      "bytes": 1986,
+      "sha256": "df7ea6c2f10591a680cbd5e9a10b1ea4678439161c61490184b2f21c6d8b898f",
+      "kind": "FROZEN_BUILD_ONLY02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\read_receipts22.json",
+      "bytes": 3937,
+      "sha256": "35c08c138f6635da2a225dc5845cbc10ef5d08fa2bf9742c8058e5366b4617a1",
+      "kind": "FROZEN_BUILD_ONLY02_SOURCE_OR_METADATA",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_revision02\\source_handoff22.json",
+      "bytes": 5776,
+      "sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88",
+      "kind": "READONLY_NATIVE02_HANDOFF",
+      "capture": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source01\\source_handoff22.json",
+      "bytes": 3762,
+      "sha256": "12a414e0b96d068f65f0130474683bd3db27223ad9fc76f4f2b09c5946d3b8d1",
+      "kind": "IMMUTABLE_BUILD_ONLY01_HANDOFF",
+      "capture": true
+    }
+  ],
+  "native_source_handoff_sha256": "889d4e221911bdfe75104361d62f36accf3770a17f48f29d84a9ba8d1952da88",
+  "previous_build_handoff_sha256": "12a414e0b96d068f65f0130474683bd3db27223ad9fc76f4f2b09c5946d3b8d1",
+  "native_source_plan_sha256": "330ef3979d5ad467c03682f2d9f1c791b946c752e0cdc6c5456d0d7f04301e92",
+  "actual_build_plan_sha256": "34c3a25272f591c44eeeafec41d1727631df99b84043ff0ae6b0219c6040a25a",
+  "working_directory_future": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\actual_build02_attempt01",
+  "temporary_directory_future": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\circle_native_build_source02\\actual_build02_attempt01\\tmp",
+  "change": "Only distinct authority/actual paths, normative CWD/TMP/environment plan and explicit preflight checks, effective-plan receipt links.",
+  "backend_CPP_arguments_quotas_unchanged": true,
+  "build_scope": "NATIVE_BUILD_ONLY_TWO_FIXED_TARGETS",
+  "compiler_invocations": 0,
+  "produced_binary_invocations": 0,
+  "automatic_runtime_preparation": false,
+  "OPEN": [
+    "Independent SOURCE review of this revision",
+    "Compiler-loader review under Windows trust base",
+    "Actual compilation, ABI and quota exercise",
+    "Legacy numeric parent only checks SOURCE plan linkage; actual-plan receipt review required before a separate numerical gate",
+    "Native imports/refinement/coefficientN/H1/D_N"
+  ],
+  "D_N": false,
+  "WIN": false
+}

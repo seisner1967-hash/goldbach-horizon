@@ -1,0 +1,455 @@
+{
+  "schema": "ROUND22_ROLE3_MAIN_LAMBDA_REVISION02_INDEPENDENT_SOURCE_READS",
+  "reviewer": "ROLE3",
+  "author": "ROLE4",
+  "status": "SOURCE_THREE_PROOF_REPAIRS_COHERENT_NOT_ELABORATED",
+  "full_reads": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinLambda22.lean",
+      "bytes": 16534,
+      "sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+      "scope": "FULL",
+      "tool_chunk": "d95c0a"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/ComplexGammaMellinLambda22.lean",
+      "bytes": 16648,
+      "sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+      "scope": "FULL",
+      "tool_chunk": "60fe14"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_contract22.md",
+      "bytes": 5881,
+      "sha256": "37c828bcdddf04cb51d8c891d91f07760c1c7ef3e52da44bf808c59e69ab9589",
+      "scope": "FULL",
+      "tool_chunk": "614c46"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_catalog22.json",
+      "bytes": 2806,
+      "sha256": "6a00ebf0f9ad320c602bef18fdb949775468462babd645f1c7b2b66b96cce907",
+      "scope": "FULL",
+      "tool_chunk": "614c46"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_read_receipts22.json",
+      "bytes": 7148,
+      "sha256": "0102ef8d2c346372b423f85396740704cad761c0d51205fe5e3c52d13562ef92",
+      "scope": "FULL",
+      "tool_chunk": "a3b6fb"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_handoff22.json",
+      "bytes": 27461,
+      "sha256": "323c3d3194474951ca554895221fac0d5c1464a6cb1249bb639f518dfa829b53",
+      "scope": "FULL",
+      "tool_chunk": "a3b6fb"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch31/batch31_attempt01/ComplexGammaMellinLambda22.log",
+      "bytes": 5744,
+      "sha256": "baf6fe9d6f7ba57c9259eaec5481de08f993228748891793a9234626737bc367",
+      "scope": "FULL",
+      "tool_chunk": "0b768e"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch31/batch31_attempt01/receipt.json",
+      "bytes": 8925,
+      "sha256": "470f798110abde794b6742605c5dc66e4c7aabe7bc6a9e81e502e3c41aab9d1c",
+      "scope": "FULL",
+      "tool_chunk": "0b768e"
+    }
+  ],
+  "targeted_API": [
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Order/Interval/Set/UnorderedInterval.lean",
+      "bytes": 15091,
+      "sha256": "9325266d2b69ec674fbddfe7f1c0b900e9c766820e4ba0e4acb27454f7ed55a4",
+      "scope": "TARGETED",
+      "start": 41,
+      "end": 76,
+      "tool_chunk": "67e81c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/BigOperators/Group/Finset.lean",
+      "bytes": 105225,
+      "sha256": "a67817959f6217811364eed2700027060dc7cd62188a94a583453ec41c5c6630",
+      "scope": "TARGETED",
+      "start": 1307,
+      "end": 1338,
+      "tool_chunk": "67e81c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+      "bytes": 49324,
+      "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+      "scope": "TARGETED",
+      "start": 100,
+      "end": 139,
+      "tool_chunk": "67e81c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction.lean",
+      "bytes": 54060,
+      "sha256": "48c9529038f4e11220c2b09d28468f6c0d1107f328b5a15cc5587efa11223631",
+      "scope": "TARGETED",
+      "start": 94,
+      "end": 111,
+      "tool_chunk": "67e81c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Basic.lean",
+      "bytes": 80226,
+      "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+      "scope": "TARGETED",
+      "start": 1473,
+      "end": 1484,
+      "tool_chunk": "67e81c"
+    },
+    {
+      "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/VonMangoldt.lean",
+      "bytes": 6152,
+      "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+      "scope": "TARGETED",
+      "start": 37,
+      "end": 86,
+      "tool_chunk": "67e81c"
+    }
+  ],
+  "metadata_bindings": {
+    "scope": "PHYSICAL_BYTE_SHA_BINDINGS_METADATA_ONLY",
+    "count": 45,
+    "declared": 45,
+    "all_match": true,
+    "rows": [
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/sources/ComplexGammaMellinHolomorphy22.lean",
+        "bytes": 14158,
+        "sha256": "b8b69c16cdbe1afc6e0cbccf28b4a64903d91266bb4eae68652f8ebe5640b7f2",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/batch27_attempt01/ComplexGammaMellinHolomorphy22.olean",
+        "bytes": 431840,
+        "sha256": "f831358e15e1a088988b8bc102a3f7ca23df4a32c3210cfb072273ae4abcccbf",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/batch27_attempt01/receipt.json",
+        "bytes": 5356,
+        "sha256": "63bc0f7463b2c5e42841b30846cda0a44f17bd40c3256e2952248c5e64a86f11",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch27_closed_observation.json",
+        "bytes": 1381,
+        "sha256": "7ae697adeb55bd7aa124c19ed69e7ef1d0b2cb05b10fc386f4cd55a312478f2f",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/sources/ComplexGammaMellinLocal22.lean",
+        "bytes": 10837,
+        "sha256": "e54cac5b2ab3996eb7bb86165448e0eff4c837b2fbda0af923e454962e526e08",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/batch26_attempt01/ComplexGammaMellinLocal22.olean",
+        "bytes": 414008,
+        "sha256": "364ac79a2fb46546da4ffdb94993479ce90bbb861c5c5cd27e253cbc5f1968b5",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch26/batch26_attempt01/receipt.json",
+        "bytes": 11262,
+        "sha256": "53201e46ee6a6418915358d37a61655a286bd2d814930d0fe68520fec4c92cdb",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/.arbor/sessions/parity/.coordinator/messages/round22_judge_batch26_closed_observation.json",
+        "bytes": 1423,
+        "sha256": "9b7697d2d35d12903e436403e77fb44e8ea76c6f586940e28d168ab851340e9b",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/readonly_oleans/GammaPrerequisites22.olean",
+        "bytes": 605536,
+        "sha256": "fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch27/readonly_oleans/ThermalGammaMellinInverse22.olean",
+        "bytes": 242264,
+        "sha256": "e9442776bb512a4f83391b63402a1dc86bce61070dfc386bc8b6873af521ce24",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/VonMangoldt.lean",
+        "bytes": 6152,
+        "sha256": "63065599d85a85a8f33adc76d25ab51b0e9d6cc8e64d125223f26e2db016556f",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction.lean",
+        "bytes": 54060,
+        "sha256": "48c9529038f4e11220c2b09d28468f6c0d1107f328b5a15cc5587efa11223631",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/PSeries.lean",
+        "bytes": 23152,
+        "sha256": "d7c885113b040aa6d735a6f006dd448ddf198ad7f3880e53f2d59d28f99a88ab",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SumIntegralComparisons.lean",
+        "bytes": 7109,
+        "sha256": "95c51ef1a6b6992513393f0e3105f4fa61c3b0a1b0854fb0c9450cff94cff7b9",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/NormedSpace/FunctionSeries.lean",
+        "bytes": 6247,
+        "sha256": "6ec000e38e60a897f36b367b0edd5ec7cf209eb741c2c8073a2971809cc825b3",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Integrals.lean",
+        "bytes": 36535,
+        "sha256": "bac1446917ac212aaea7b11701f00a8acf6b698cba75251eb8fc572b02e2699f",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Complex/Log.lean",
+        "bytes": 13098,
+        "sha256": "09da69b28b9bce06f75edd53489d43e2bd770c04e729c0b8b3f9672d9fcef25a",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Complex.lean",
+        "bytes": 12182,
+        "sha256": "2472ae69befd020eb8beaaa4994d206fb8e6bf8f9c96ec92f10755e5fc775644",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+        "bytes": 49324,
+        "sha256": "ab694db611eb09d0ee44704ae0225358823e2c0c1cf624847b9ec95f3fb4ea05",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Complex/Basic.lean",
+        "bytes": 31542,
+        "sha256": "94f9503f4e2eb3ca6e798404177aadc0cdf340810d54e3ceea8a21cc5122ba9b",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+        "bytes": 35884,
+        "sha256": "dcd3681d95530d0a475a260324501f3928ad03ea92cf7adca07fa1f2c0e472f3",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/Bochner.lean",
+        "bytes": 99539,
+        "sha256": "b58d6339786ee0602d5d1577042e7d407112682b670150d909a853115b9b339b",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Algebra/InfiniteSum/Real.lean",
+        "bytes": 5645,
+        "sha256": "0a395ce7703a8592afb8ad2abc0062f26bcd4d8d37452359c1d0c35ff9188e22",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Algebra/InfiniteSum/Ring.lean",
+        "bytes": 10860,
+        "sha256": "08b6e8ea95141786af7425526114f5e9e7cd98f743b7360d39a1f4819063dda0",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Data/Nat/Prime/Defs.lean",
+        "bytes": 16135,
+        "sha256": "1306f8b5c6a28d80dc922565a2b13fbb6c5252b4485fe8fe0545ae0b887dacb2",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+        "bytes": 22941,
+        "sha256": "4766375ac5a937f01afffced804fb17498f39e0dfbf0f6efe5f3023072d20ded",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Analysis/Normed/Group/InfiniteSum.lean",
+        "bytes": 9081,
+        "sha256": "829003497ddf909ad4ba01fdbd4a9b2546432389b2cd4b38044b13a1ca858c25",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Algebra/InfiniteSum/NatInt.lean",
+        "bytes": 23365,
+        "sha256": "7e9a09e58953544be3b754011213624232d37d9dbfb76d2f143fb85235133eab",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinLambda22.lean",
+        "bytes": 16534,
+        "sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_contract22.md",
+        "bytes": 9786,
+        "sha256": "f22355b45749755605a2e28245984760f72e1d49a45323a94a8d4a11c9e6a09a",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_catalog22.json",
+        "bytes": 2329,
+        "sha256": "c580f9713f97677d0b866db62102d1c8802be3980278c20ae313e6a6c3f60b4a",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_read_receipts22.json",
+        "bytes": 9163,
+        "sha256": "29a8be4f74bde8b1a98813062add1f881cc203db9efb3a7ebef27e6d190d0322",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/source_handoff22.json",
+        "bytes": 17435,
+        "sha256": "7cbd95b3bb74cbfec4587aa5a40c4b0be420865b83e15794888a3f3bae56e1e3",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/ComplexGammaMellinExpTailBridge22.lean",
+        "bytes": 1193,
+        "sha256": "4e804a6c678274c01848d290845c1a76b6820d790bfd14a34a80abb59feda38c",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source01/pending_bridge_catalog22.json",
+        "bytes": 826,
+        "sha256": "86164d7575b79c3ace42ebb1f56d2b88be0078873f76c0998175c1c0ae6604cb",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch31/batch31_attempt01/ComplexGammaMellinLambda22.log",
+        "bytes": 5744,
+        "sha256": "baf6fe9d6f7ba57c9259eaec5481de08f993228748891793a9234626737bc367",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch31/batch31_attempt01/receipt.json",
+        "bytes": 8925,
+        "sha256": "470f798110abde794b6742605c5dc66e4c7aabe7bc6a9e81e502e3c41aab9d1c",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/judge5/batch31/sources/ComplexGammaMellinLambda22.lean",
+        "bytes": 16534,
+        "sha256": "c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Order/Interval/Set/UnorderedInterval.lean",
+        "bytes": 15091,
+        "sha256": "9325266d2b69ec674fbddfe7f1c0b900e9c766820e4ba0e4acb27454f7ed55a4",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Algebra/BigOperators/Group/Finset.lean",
+        "bytes": 105225,
+        "sha256": "a67817959f6217811364eed2700027060dc7cd62188a94a583453ec41c5c6630",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/q356-canonical-binding-replay/.lake/packages/mathlib/Mathlib/Topology/Basic.lean",
+        "bytes": 80226,
+        "sha256": "8def33217c240cb0f3247974fbe9bc6eb8dc2eb74f8d8a09194419c85d892f02",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/ComplexGammaMellinLambda22.lean",
+        "bytes": 16648,
+        "sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_contract22.md",
+        "bytes": 5881,
+        "sha256": "37c828bcdddf04cb51d8c891d91f07760c1c7ef3e52da44bf808c59e69ab9589",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_catalog22.json",
+        "bytes": 2806,
+        "sha256": "6a00ebf0f9ad320c602bef18fdb949775468462babd645f1c7b2b66b96cce907",
+        "matches_declared": true
+      },
+      {
+        "path": "D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02/source_read_receipts22.json",
+        "bytes": 7148,
+        "sha256": "0102ef8d2c346372b423f85396740704cad761c0d51205fe5e3c52d13562ef92",
+        "matches_declared": true
+      }
+    ],
+    "tool_chunk": "a98c3f"
+  },
+  "literal_text_comparison": {
+    "scope": "LITERAL_RAW_TEXT_ONLY_NOT_LEAN_PARSER",
+    "tool_chunk": "546d81",
+    "three_unique_old_blocks": [
+      1,
+      1,
+      1
+    ],
+    "exact_new_after_only_three_proof_replacements": true,
+    "all_headers_domains_definitions_imports_prints_other_proofs_preserved": true
+  },
+  "actual31": {
+    "status": "INDEPENDENT_BATCH31_FAILED",
+    "compiler_invocations": 1,
+    "exit_code": 1,
+    "started_utc": "2026-10-04T01:32:49.390502Z",
+    "finished_utc": "2026-10-04T01:33:30.707890Z",
+    "diagnostics": 5,
+    "sites": 3,
+    "standard_prints": 20,
+    "sorryAx_recovery_prints": 10,
+    "module_credit": 0,
+    "olean": null
+  },
+  "catalogue": {
+    "declarations": 30,
+    "theorems": 24,
+    "definitions": 6,
+    "qualified_print_axioms": 30,
+    "scope": "MANUAL_FULL_SOURCE_INSPECTION"
+  },
+  "read_limitations": [
+    "Initial aggregate docs call truncated at functions output; stored second result a3b6fb re-emitted alone completely. No truncated aggregate treated FULL.",
+    "Metadata comparison2c8d86 failed only on PowerShell parameter -Depth4; source readonly. Corrected literal text comparison546d81, no math/candidate invocation.",
+    "Paid dependency provenance here physically bytebound; Holo/Local receipts not newly read FULL in this repair. Prior independent reads remain historical, not invented current FULL.",
+    "No transitive import closure/cache/archives sweep claimed."
+  ],
+  "guards": {
+    "compiler_invocations_here": 0,
+    "probe": 0,
+    "candidate_parser_or_import": 0,
+    "numeric": 0,
+    "native": 0,
+    "PREP": false,
+    "gate": false,
+    "scientific_source_modified": false,
+    "new_credit": 0,
+    "D_N": false,
+    "WIN": false
+  },
+  "root_baseline_communicated": {
+    "modules": 86,
+    "declarations": 1456,
+    "actual31": "ROOT_OBSERVED_CLOSED_FAILED0"
+  },
+  "delivery07": "DRAFT_PENDING_ROOT_FINAL_STATES"
+}

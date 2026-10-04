@@ -1,0 +1,48 @@
+{
+  "schema": "round22.root.role3.compiler_authorization.finite.v1",
+  "role": "ROLE3",
+  "actor_task": "/root/round22_formal3_prepare",
+  "node_id": "16.1",
+  "attempt": "stage02_attempt01",
+  "stage": "G0_FINITE_STAGE02",
+  "authorized": true,
+  "created_utc": "2026-10-03T07:21:19.659182+00:00",
+  "numeric_verdict": "EPSTEIN_UNFOLDING_AUX_PASS",
+  "numeric_receipt_sha256": "054707ed73a7db70bd6bb026a1974663dd5362b6318ee109b22315c21c2e66da",
+  "numeric_result_sha256": "e9e72edeaf787644aa6a0f341992ec82270428d14e876ac4b7be00d5cc3e508a",
+  "source_manifest_sha256": "2212fd2031c856a289328f1636615056d9c4fbaa0ad50d6aee4840b3bf4de1ae",
+  "launcher_sha256": "3cf55b5486b1a87df8ba95622795bbde1337a62dd7a19e1e1467c6636307f2e9",
+  "python_sha256": "4278cf2a296f31737cae77cafeeb3dc71683094cf3b8fd6f3f02c968687e771c",
+  "lean_sha256": "8a1ef18583d74d917194bba4743ce9765bad64b00c52bada002ee44796fb9e08",
+  "modules": [
+    "EpsteinFinite22"
+  ],
+  "no_win": true,
+  "child_invocations_maximum": 1,
+  "hidden_retries_allowed": false,
+  "unchanged_PASS_replay_allowed": false,
+  "root_FULL_reads": {
+    "source": "6819d6",
+    "launcher": "437665",
+    "preparation": "2b4b32",
+    "metadata_builder": "de74e0",
+    "manifest": "d9caf3",
+    "read_receipts": "49fa36",
+    "prepared_receipt": "1aaaf1",
+    "kernel_actual": "861542+b39137+4cd2aa+db90a3"
+  },
+  "formal_scope": "Derived finite affine geometric window, signed substitution, negation isometry and endpoint telescope only; genuine infinite integral and continuous tail remain outside this child.",
+  "forbidden_credits": [
+    "full_G0_unfolding",
+    "Weil",
+    "heat",
+    "operator_scattering",
+    "coefficient_N",
+    "D_N_bound",
+    "WIN"
+  ],
+  "independent_judge_pending": true,
+  "source_sha256": "ed4d3bcf1c9427c157045356115445944f94224369458ba4bcceb91b17414434",
+  "dependency_olean_sha256": "9bf2da2b6cb3a5780868c51916afdf173e79a971d56fdf7a52c6b2abfa9def8d",
+  "Kernel_recompile": false
+}

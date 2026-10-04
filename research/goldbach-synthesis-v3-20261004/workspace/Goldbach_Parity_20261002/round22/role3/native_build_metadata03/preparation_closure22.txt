@@ -1,0 +1,69 @@
+BUILD_ONLY03 — préparation ROLE6, clôture metadata seule
+
+Le helper PowerShell lu intégralement (61803a) a été exécuté une seule fois :
+chunk 6f6a01, exit 0, START 2026-10-03T19:35:00.5249633Z,
+FIN 2026-10-03T19:35:08.4466171Z. Il n'a lancé ni compilateur,
+programme candidat, import Python, parseur Lean, parseur PE ou calcul numérique.
+
+Le manifeste exact comporte 6358 chemins normalisés distincts. La réunion
+des trois sources gelées contient 6355 chemins : snapshot native02 (6332),
+handoff native02 (12), handoff BUILD03 (12). Les trois contrôles eux-mêmes
+et les deux revues indépendantes sont réunis selon l'ensemble exact du parent ;
+les recouvrements ne sont comptés qu'une fois. Les 6358 fichiers (641518964
+octets), les 972 fichiers du runtime Python et les 3089 archives ont été
+vérifiés physiquement par taille et SHA256. Les anciens handoffs BUILD01/02
+et leurs 5/8 bindings sont conservés. Le brouillon metadata_error du Juge
+(6 octets, SHA abdfbffecbe18ed94df9829819e596ee285b52a94aa108514452a9121721c789)
+est également conservé ; il ne fait pas partie de l'ensemble exact du parent.
+27 bindings requièrent une capture lors de l'exécution future.
+
+build_preparation22.json
+SHA 094a8459aba59ac402085988639ac7b7a4901d879e01646a27d67b0e57c3b4fc
+build_manifest22.json
+SHA fdbdbb9f0fee7becc32f320b259ef0b2072dc18f257d8790c6ae9d4ba9607d50
+metadata_conservation22.json
+SHA bcca922da764341e2754b62ea75a836c327bd122533e46f94b10b94ca7c0d139
+metadata_only_execution22.log
+SHA ddbbfb5d4e4d662d216dd6899b19a5691e3537220b852cdd703d47acad1d11d9
+
+Les petites sorties preparation/conservation/log ont été lues FULL b8c858.
+Le manifeste (1457266 octets) a été lu par projection de tous ses headers
+et PARSED_METADATA de ses 6358 entrées, sans prétendre une lecture raw FULL.
+Ses octets complets sont liés par SHA. Les contrôles candidats sont lus comme
+sources ou octets, jamais chargés. Aucune observation PE n'a été rejouée.
+
+Revue SOURCE indépendante du Juge :
+round22/judge5/circle_native_build_controls_source_review03.md
+SHA 514419b15d0e17300e852f4baec4bb3046f4f65c5f1da470f8faab125637cad2
+Reçu de confiance scoped existant, non modifié :
+round22/judge5/circle_native_build_trust_review03.json
+SHA 3d47ef4040924caec5c863b7009b389830bc4f1a2e97a46cd675e4a679fd14bd
+Les deux sont lus FULL 0400fb. Handoff BUILD03 426074681af64190ea25ed1cb03229af34f8d26f490ebdc9b23e3dc240a8f07a,
+plan effectif fc77f58cc215b1851e5a87b164407aadcc5cd8f2c7621dcccc6e0c3c38f13f61,
+policy 72fd49d993e3291a174d4ba5a139a649ab916e9e757274c0e89f0a6092b4f6a6.
+
+La confiance accordée aux installations Windows et GCC est une hypothèse
+opérationnelle explicite pour BUILD_ONLY. L'observation statique antérieure
+couvre 66 images, 825 imports déclarés, 119 candidats locaux liés et 706
+arêtes Windows/API-set. Le multiensemble de descripteurs et d'arêtes est
+vérifié dans leurs metadata gelées. effective_loads_observed,
+universal_loader_closure_verified et all_non_OS_imports_bound restent false.
+La sélection effective des specs/sous-processus GCC reste non observée.
+
+Statut BUILD_ONLY_METADATA_PREPARED signifie préparation administrative,
+pas autorisation d'exécution. À l'observation initiale, la gate, l'actual,
+build-final, build_receipt et la préparation locale du parent étaient absents.
+Sur instruction ROOT explicite, une copie exclusive byteidentique de la
+préparation a ensuite été installée au chemin local du parent :
+round22/role4/circle_native_build_source03/build_preparation22.json,
+3378 octets, SHA094a8459aba59ac402085988639ac7b7a4901d879e01646a27d67b0e57c3b4fc,
+chunk7ffb55, 2026-10-03T19:37:07.3094723Z. La source ROLE6 est conservée.
+ROOT doit encore remettre sa gate distincte avant toute invocation.
+
+Le futur contrat est limité à deux drivers fixes, STOP_FIRST_FAIL, zéro retry,
+300 secondes, Job Windows actif <=16, total <=32, commit Job 2147483648 octets.
+Les bornes par processus, RSS agrégé échantillonné et sorties restent celles
+du parent gelé ; elles n'ont pas été exercées. CWD futur actual_build03_attempt01,
+TEMP/TMP actual_build03_attempt01/tmp. Aucun exécutable produit ne sera lancé
+par ce contrat. numeric_authorization=false ; coefficient N, native/NTT/CRT,
+D_N et WIN restent non payés. Aucune permission de banc n'est déduite de ce dossier.

@@ -1,0 +1,28 @@
+{
+  "schema": "ROUND22_ROOT_SOURCE34_DEPENDENCY_STOP",
+  "status": "SOURCE34_EXECUTION_BLOCKED_BY_REQUIRED_ACTUAL33_FAILED",
+  "selection_sha256": "fa8163de9b010ade111e22a13080cbab376ce2775cc7e1e434edb78d8a7c56ab",
+  "actual33": {
+    "tool_start": "2026-10-04T02:32:24.7145794Z",
+    "tool_fin": "2026-10-04T02:33:38.6281999Z",
+    "tool_start_chunk": "b748aa",
+    "session": 9762,
+    "tool_fin_chunk": "31f18e",
+    "exit_code": 1,
+    "source_sha256": "dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b",
+    "log_sha256": "9193c890ddf67dee7b41ba985ce996582b7d6dc0ac4c3d8d6b55c73fed763bbd",
+    "judge_FULL_log": "53146b",
+    "ROOT_FULL_receipt": "6520f3",
+    "standard_axiom_rows": 25,
+    "recovery_sorryAx_rows": 5,
+    "whole_module_credit": 0,
+    "diagnostic_from_Judge": "149:4: Continuous(fun x => 0) versus Continuous(lambdaMellinCoefficient 0); normalization of the zero case remains unelaborated.",
+    "ROOT_closed_observation": "NOT_YET_CREATED_AT_THIS_EVENT"
+  },
+  "policy": "Preserve all existing SOURCEtools34 files without cleanup or mutation. No PREP34, gate34 or actual34. Its fixed future PASS33 prerequisite cannot be satisfied by the immutable failed attempt.",
+  "next_authorized_source_work": "ROLE4 distinct mainLambda SOURCE03 one-block proof repair; ROLE3 independent review then future SOURCEtools35 after ROOT selection. No Lean before separate gate.",
+  "future_tail_geometry": "E-Lambda16 and Geometry25 retain source reviews; require a new explicit selection and genuinely compiled repaired main dependency before a separate future batch36.",
+  "parity_obstacle_refuted_or_proved": false,
+  "D_N_paid": false,
+  "WIN": false
+}

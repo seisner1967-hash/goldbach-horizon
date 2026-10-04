@@ -1,0 +1,84 @@
+# DRAFT4 — réduction non-SS à tous les rangs, sources prêtes
+
+État : `READY_SOURCES_UNCOMPILED_PENDING_NEW_NUMERIC_PASS_AND_EXPLICIT_ROOT_GATE`.
+Ce rapport n'est pas un FINAL. Aucune invocation Lean, aucun test mathématique
+ni producteur numérique n'a été exécuté par ce rôle. Score prévu 0, aucune
+victoire. Le coordinateur attend le résultat de l'unique nouvelle banque à
+N=10^8, puis doit donner `ROOT19_FORMAL4_COMPILE` avant la première compilation.
+
+La branche 14.4 est réellement sélectionnée. Lecture complète de PROBE19,
+FINAL2, son contrat de test, le prompt d'exécution14.4 et feedback18. Les
+skills Arbor executor et merge-eval sont appliqués dans l'ownership assigné
+`round19/role4/**` et ce rapport ; il n'y a pas de checkout Git à modifier.
+Les dix dépendances historiques sont liées dans `dependencies_readonly.json`,
+dont les oleans audités indépendamment Judge18 et Judge16. Elles restent en
+lecture seule, sans recompilation ni décompte de leurs théorèmes.
+
+Les cinq nouvelles sources contiennent actuellement 100 théorèmes explicites,
+55 définitions, 3 structures et 160 prints d'axiomes. Deux prints portent sur
+les lemmes d'extension générés des structures de coordonnées. Ce sont des
+comptes de sources non compilées et ils n'augmentent pas le cumul officiel.
+
+1. `TerminalPrimeExtraction.lean` définit les facteurs maximaux effectifs par
+   `Nat.primeFactors.sup id`, relie leur appartenance à la véritable
+   `primeFactorsList`, extrait `n=h*r`, prouve l'ordre maximal et l'unicité,
+   et conserve `Omega(n)=Omega(h)+1`. Les puissances répétées sont comptées ;
+   le cas 3^3 donne h=3^2 et interdit la fausse coprimalité h/r. P+(1)=1 est
+   traité séparément par `largestPrime`.
+2. `BalancedResourceSwitch.lean` étend le raccord canonique de coprimalité
+   à toutes les ressources composites, sans quotient supposé premier.
+   Le cas d'un anchor libre conserve d|p-1. Les vraies extractions donnent
+   les deux orientations D/P ; le sélecteur impose leurs primalités et leurs
+   ordres respectifs, l'égalité va uniquement à D. `encode_decode` prouve
+   la suffisance du sélecteur complet. C=min(h1*h0,r1*r0), C^2<=n1*n0 et C<N
+   sont prouvés comme objectifs, sans annoncer C<=sqrt(N).
+3. `SignedHyperbolicCRT.lean` construit x0 par Bezout et reste entier, y0 par
+   division entière signée et t dans Z. L'équation réelle donne x=x0+b*t,
+   y=y0+p0*a1*t et q=N-a1*x0-a1*b*t. `SignedGuard` contient les fronts
+   de signe, le sélecteur factoriel complet et les contraintes de canal ;
+   ses reconstructions sont réciproques. Aucun y0 n'est une soustraction
+   naturelle tronquée.
+4. `NonSSBracketSwitch.lean` définit la famille physique S privé de SS avant
+   masque n_e premier. Le sélecteur SS reprend exactement le programme18 :
+   minFac<=Z et quotient premier, pour les deux ressources. Le quotient
+   strictement supérieur est une conséquence source éventuelle, pas une
+   condition finie ajoutée. Les unités, e squarefree, e>p0, q premier, M et
+   le cap original Q=floor((N-1)/alpha) restent explicites. Les équivalences
+   de subtypes, y compris coordonnées signées, reindexent le vrai
+   `GoldbachRound11.sourceBracket`. Theta et raw Lambda sont distincts ;
+   leur différence properpower reste littérale. D/P et les trois strates
+   gardent leurs sommes medium/longues entières. Le produit physique e*q
+   est injectif sur ce support sous le front indépendant M^2>N. Un m1 non
+   squarefree a bracket nul ; m0 a raw/theta nul sous q>p0, avec la vraie
+   hypothèse de premiers distincts.
+5. `RankTwoHarmonic.lean` somme les vrais entiers premiers et leurs produits
+   ordonnés p<=q. Leur unicité et la disjonction rang1/rang2 sont prouvées,
+   les p^2 sont conservés, et la réciproque vient du multiset réel de longueur
+   1 ou 2. Le cut h<=B est exactement le filtre Omega de [2,B]. Le cofacteur
+   terminal réel d'une ressource de rang2/3 appartient à ce cut sous h<=B,
+   par le théorème d'extraction, sans représentation libre. H8 est
+   `H2=S1+(S1^2+S2)/2`, avec coefficient entier de chaque diagonale ; aucun
+   input de densité ou de cardinal libre n'est utilisé.
+
+Le seuil auxiliaire H9 est B_hyp=floor(N^(1/8)), distinct du B original fixé.
+La couche rank3short, ses nouveaux rho/cofacteurs composites, ses conversions
+Selberg/Mertens/totient/floors et son onset écrit u>=10^40 ne sont pas prouvés
+par ces fichiers. Le source u>=10^24 reste inchangé ; le segment intermédiaire,
+les rangs>=4 et les conducteurs medium/longs ne sont pas payés. Aucune
+disponibilité, petite Gamma, capacité suffisante, borne H9 ou cible D_N ne
+sert de prémisse de victoire. H4 conserve la somme, sans lui fournir un signe
+ou une estimation. T_A, l'union des capacités et tout le ledger restent ouverts.
+
+`build.py` contient le protocole PREEXEC exclusif : sources et lanceur capturés,
+commande/cwd/LEAN_PATH/compiler SHA, hashes du nouveau test passé et de dix
+imports readonly, log intégral, exit et reçu de chaque réelle tentative.
+Un module PASS ne peut pas être recompilé. Les réparations techniques
+éventuelles seront conservées et distinguées du mur de parité. Le schéma
+`compile_gate_schema.json` est seulement un schéma ; il n'autorise rien.
+
+`preparation.json` conserve l'état initial réel des sources à 00:15:25 UTC.
+Avant toute invocation, trois améliorations statiques ont ensuite donné des
+quantifications d'ordre explicites, des produits monotones Nat pour les deux
+bounds, puis le raccord direct du cofacteur effectif au cut H8. Ces edits ne
+sont ni des erreurs de compilation ni des échecs mathématiques. Les futurs
+PREEXEC captureront les versions exactes réellement soumises à Lean.

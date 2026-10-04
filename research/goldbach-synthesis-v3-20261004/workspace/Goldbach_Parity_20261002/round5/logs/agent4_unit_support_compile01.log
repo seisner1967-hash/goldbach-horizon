@@ -1,0 +1,53 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round5\lean\UnitSupportedCompletion.lean:87:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∑ i : ZMod q, χ⁻¹ i * ZMod.stdAddChar (-i)
+q : ℕ
+inst✝ : NeZero q
+χ : DirichletCharacter ℂ q
+hsub :
+  ∑ i : ZMod q, χ⁻¹ ((Equiv.neg (ZMod q)) i) * ZMod.stdAddChar (-(Equiv.neg (ZMod q)) i) =
+    ∑ i : ZMod q, χ⁻¹ i * ZMod.stdAddChar (-i)
+⊢ ∑ x : ZMod q, ZMod.stdAddChar (-x) * χ⁻¹ x = χ⁻¹ (-1) * tau χ⁻¹
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round5\lean\UnitSupportedCompletion.lean:95:0: warning: automatically included section variable(s) unused in theorem 'GoldbachResearch.UnitSupportedCompletion.character_neg_one_cancellation':
+  [NeZero q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero q] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round5\lean\UnitSupportedCompletion.lean:100:0: warning: automatically included section variable(s) unused in theorem 'GoldbachResearch.UnitSupportedCompletion.character_neg_one_square':
+  [NeZero q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero q] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+'GoldbachResearch.UnitSupportedCompletion.physicalMoment_eq_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_phase_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_supported_frequencyMoment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.gauss_conjugation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.character_neg_one_cancellation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.character_neg_one_square' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.inverse_gauss_conjugation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.kappa_eq_normSq' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_supported_gauss_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.unit_supported_nonunitDefect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachResearch.UnitSupportedCompletion.double_unit_supported_completion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

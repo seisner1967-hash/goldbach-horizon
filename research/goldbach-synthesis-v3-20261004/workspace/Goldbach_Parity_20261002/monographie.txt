@@ -1,0 +1,2938 @@
+PAGE 1
+Finite Identities and Explicit Error Budgets
+in a Framework for Binary Goldbach
+Durand Serge
+Independent researcher
+seisner1967@gmail.com
+1 October 2026
+Research synthesis and reproducibility report, version 2
+Abstract
+We consolidate a research corpus on binary Goldbach into a support-preserving frame-
+work with a documented veriﬁcation boundary. Exact Fejér grid covariance and Ramanujan-
+proxy identities yield short-average variance bounds, including an even-support correction
+and a logarithmic reﬁnement. Arithmetic reductions retain actual Vaughan coeﬃcients,
+Möbius signs, coprimality masks, divisor caps and moving endpoints. The canonical Lean4
+inventory contains 658 individually axiom-audited declarations; the last cycle contributes
+19 ﬁnite conclusions. Written reductions to a reported primitive-character remainder in-
+put give a conditional universal reference gap N −FN ≥ N/ (256 logN log logN ) and a
+conditional eﬀective exterior assembly for α= ⌈N 1/ 4⌉. The input’s full direct remainder
+substitution remains outside the self-contained veriﬁcation in this report. A separate classi-
+cal sieve argument at α= ⌈N 1/ 8⌉ gives a negative composite sector and a one-sided bound
+for its rough complement, with an unevaluated onset. These proﬁles are not combined. We
+supply statements, parameter and dependency tables, explicit estimates, a formal appendix
+and reproduction material. The global signed remainder, a complete positive prime-pair
+margin and ﬁnite coverage below the analytic thresholds remain open. No proof of binary
+Goldbach or claim to overcome the parity barrier is made.
+Keywords: binary Goldbach; Möbius correlation; Vaughan coeﬃcients; explicit error budgets;
+sieve methods; Lean4.
+Mathematics Subject Classiﬁcation: 11P32.
+Copyright 2026 Durand Serge. Manuscript licensed under CC BY 4.0 . Licences of software and retained
+evidence are speciﬁed separately.
+1
+
+PAGE 2
+Contents
+1 Main results, scope and conventions 4
+1.1 Four contributions and their scope . . . . . . . . . . . . . . . . . . . . . . . . . 4
+1.2 What this report establishes and what it does not . . . . . . . . . . . . . . . . . 4
+1.3 Relation to existing work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.4 Reading the proof status . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2 Ordered pairs and the CS21 reference audit 6
+3 Exact grid covariance and Ramanujan proxies 7
+3.1 The exact Fejér defect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.2 Actual proxy coeﬃcients and short averages . . . . . . . . . . . . . . . . . . . . 8
+3.3 The parity correction and the later coeﬃcient-energy reﬁnement . . . . . . . . 9
+4 Finite additive certiﬁcates and limits of linear information 10
+5 From ﬁnite V aughan ﬁbres to the signed arithmetic remainder 11
+6 The literal terminal scalar and its transfer identities 12
+7 An elementary rational singular-factor enclosure 14
+7.1 An earlier explicit reference on a restricted family . . . . . . . . . . . . . . . . . 15
+8 A conditional universal reference gap from missing prime squares 15
+9 A negative small-part sector at the eighth-power cutoﬀ 18
+10 Uniform preﬁxes and the entire rough complement 20
+11 Relation to the ﬁnite formal ingredients 23
+12 Explicit exterior estimates and their analytic scope 24
+12.1 Parameters, genuine weights and historical allowances . . . . . . . . . . . . . . 24
+12.2 Ordinary Mertens input and exact harmonic transport . . . . . . . . . . . . . . 25
+12.3 The ﬁnite model and the signed conductor projection . . . . . . . . . . . . . . . 27
+12.4 Arithmetic moments and all-module conductor transport . . . . . . . . . . . . . 28
+12.5 Reported primitive all-preﬁx certiﬁcate . . . . . . . . . . . . . . . . . . . . . . . 30
+12.6 A zero-avoiding contour for the genuine Type-I head . . . . . . . . . . . . . . . 32
+12.7 Whole Type-I error accounting, including the paid primitive line . . . . . . . . 33
+12.8 Whole EJ , centering corrections and exceptional main . . . . . . . . . . . . . . 35
+12.9 The complete centering component and detector losses . . . . . . . . . . . . . . 36
+12.10Conditional exterior conclusion and the unresolved target . . . . . . . . . . . . 36
+12.11Relation to prior work and responsible scope claims . . . . . . . . . . . . . . . 37
+13 The unresolved terminal estimate 38
+13.1 What a subsequent proof would have to add . . . . . . . . . . . . . . . . . . . . 38
+14 Corpus audit, reproducibility and documentary scope 39
+2
+
+PAGE 3
+14.1 The historical interface audit . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+14.2 Frozen packages and current checks . . . . . . . . . . . . . . . . . . . . . . . . . 40
+14.3 Public, versioned reproduction material . . . . . . . . . . . . . . . . . . . . . . 40
+14.4 AI assistance and author responsibility . . . . . . . . . . . . . . . . . . . . . . . 41
+15 Priorities for independent review 42
+A Finite Lean certiﬁcates, inventory and trust boundary 42
+A.1 What the formal count means . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+A.2 Deﬁnitions needed to read the latest statements . . . . . . . . . . . . . . . . . . 43
+A.3 The 19 exact latest-cycle declarations . . . . . . . . . . . . . . . . . . . . . . . 45
+A.3.1 GoldbachActualEulerProjection . . . . . . . . . . . . . . . . . . . . . . . 45
+A.3.2 GoldbachActualDivisorFibreBound . . . . . . . . . . . . . . . . . . . . . 45
+A.3.3 GoldbachActualTerminalCutoﬀInvariant . . . . . . . . . . . . . . . . . . 45
+A.3.4 GoldbachCompleteHPrimeOrbit . . . . . . . . . . . . . . . . . . . . . . 46
+A.3.5 GoldbachLiteralDivisorCompletion . . . . . . . . . . . . . . . . . . . . . 46
+A.3.6 GoldbachActualSmallDivisorCredit . . . . . . . . . . . . . . . . . . . . . 47
+A.4 Source hashes and reproduction references . . . . . . . . . . . . . . . . . . . . . 48
+3
+
+PAGE 4
+1 Main results, scope and conventions
+Binary Goldbach asks whether every even integer N ≥ 4 is a sum of two primes. This report
+closes a research phase of Project Horizon by separating exact ﬁnite identities, written analytic
+arguments, reproducible computations and remaining hypotheses. It concentrates on binary
+Goldbach. Neither the global signed estimate needed here nor an unconditional positive prime-
+pair margin has been proved.
+The mathematical objects are the actual Möbius function µ, von Mangoldt function Λ and
+Euler totient φ. We write u = logN , L = 1 + u and ℓ= logu when u> 1. All logarithms are
+natural. Indicator functions are denoted by 1. Strict inequalities in integer selectors are literal;
+replacing an integer ﬂoor by a real endpoint can change a coeﬃcient. The Goldbach singular
+factor is
+S(N ) = 2C2
+∏
+p|N
+p>2
+p − 1
+p − 2, C 2 =
+∏
+p>2
+(
+1 − 1
+(p − 1)2
+)
+(1)
+for even N . The same expression deﬁnes S(K) for an even positive mask K. A reference term
+involving S(N ) is distinct from an actual count of prime pairs.
+1.1 Four contributions and their scope
+The report makes four concrete contributions within a partial research framework.
+1. It gives explicit ﬁnite Fejér covariance and Ramanujan-proxy identities, with the even-
+support main term corrected and the proxy energy reﬁnement stated with its exact con-
+stants. These use classical harmonic tools and do not estimate the true prime-pair re-
+mainder.
+2. It assembles support-preserving Vaughan, character and divisor identities with a terminal
+error ledger. The ﬁnite Lean statements retain actual coeﬃcients and literal boundaries;
+they do not supply the missing analytic cancellation.
+3. It exposes the dependency chain for explicit exterior allowances in the quarter proﬁle,
+conditionally on the stated primitive-character input, and proves a separate eventual
+signed sector estimate in the eighth proﬁle using classical sieve arguments. The two
+proﬁles remain distinct.
+4. It supplies a versioned reproduction record connecting formal statements, retained com-
+piler evidence, rational checks and written deductions. Speciﬁc counterexamples delimit
+particular naive envelopes; they do not establish the failure of every possible analytic
+method.
+These contributions concern precise formulation, explicit calculations and ﬁnite formalization.
+The declaration count is an inventory measure, and priority or novelty beyond these descriptions
+is not claimed.
+1.2 What this report establishes and what it does not
+The earlier geometric stage gives exact Fejér grid defects and gcd covariance, actual Ramanujan-
+proxy variance bounds and a correction of the proxy’s even-support main term. The later
+arithmetic stage retains the actual Vaughan coeﬃcients, coprimality masks, character correc-
+tions and moving support. Its ﬁnite conclusions have been formalized in Lean4; its analytic
+distribution, zero-free-region and sieve inputs have not.
+4
+
+PAGE 5
+The most recent written arguments reduce a universal reference gap and a scoped eﬀective
+exterior assembly to explicit reported analytic inputs in one parameter proﬁle. A signed nega-
+tive composite sector has a separate classical proof in a diﬀerent proﬁle. The direct primitive-
+character remainder substitution is documented in the retained sources, but has not been com-
+pletely reproduced in this manuscript; the consequences depending on that input are stated
+conditionally. The ﬁnite ingredients include literal divisor completion, the exact small-divisor
+credit and cutoﬀ invariance. They do not by themselves prove the mass of a prime sector or
+the smallness of the complementary signed sum.
+Result family Retained conclusion Evidence and boundary
+Fejér and Ramanujan
+geometry
+Exact covariance; short-centre proxy bounds;
+corrected even main
+Written proofs and
+ﬁnite formal
+ingredients; proxy only
+Finite arithmetic
+infrastructure
+658 individually audited declarations across 71
+canonical sources; 19 latest public conclusions
+Retained
+compiler/axiom
+evidence; imports and
+copies not recounted
+Universal reference Conditional bound N −FN ≥N/ (256uℓ) for
+u ≥ 8 · 106
+Reduction to the
+explicitly reported
+primitive-character
+input
+Quarter-proﬁle exterior Conditional assembly
+εtr < (8 · 10−6 + 2 · 10−12)N/ (uℓ) for u ≥ 1024
+Reported primitive
+input and completion
+bridges; no Lean
+analytic certiﬁcate
+Eighth-proﬁle sector FC +Frough < −N/ 3000 eventually Classical sieve
+deduction; onset
+unevaluated
+Global signed remainder A suﬃcient target is DN ≤N/ (256uℓ) in the
+quarter proﬁle
+Open; covered bridge is
+a separate premise
+Table 1: Evidence classes. “Audited” refers to the retained source, compilation and axiom
+records; it does not mean that the analytic estimates have been checked by Lean.
+1.3 Relation to existing work
+The circle-method reference in ( 1) is classical [ 1]. The prime/Möbius transfer belongs to the
+same general problem as the twisted distribution hypotheses studied by Huang–Li [ 4]. The
+proxy estimates use ordinary Ramanujan algebra and the large sieve [ 5, 6]; the sector counts use
+classical sieve distribution, rather than a new theorem overcoming the parity barrier. Recent
+work on the Goldbach exceptional set is surveyed by Bhowmik–Grimmelt [ 2]. This report
+claims no improved exceptional-set exponent and no new formula generating primes.
+The defensible contribution is a source-bound formal and analytic research synthesis: ex-
+plicit support-preserving identities, particular constants and error components, and a repro-
+ducible record of the residual arithmetic obstruction. Priority for a standalone analytic result
+or a broader publication claim has not been established. Finite computational veriﬁcation,
+including the published range up to 4 · 1018 [3], cannot bridge the interval below exp(1024) if a
+future argument only works above that onset.
+5
+
+PAGE 6
+Proﬁle Parameters Admissibility and status
+Earlier polylogarithmic
+Vaughan
+Fixed U,V ≤LB0; Q ≤C0N 1−θ Written Type-I removal;
+constants not all
+numerically evaluated
+Eﬀective terminal
+quarter
+U =V = 1, α= ⌈N 1/ 4⌉, Q = ⌊(N − 1)/α⌋ Common onset u ≥ 1024
+for the ﬁnal exterior
+assembly
+Qualitative signed
+eighth
+U =V = 1, α= ⌈N 1/ 8⌉, Q = ⌊(N − 1)/α⌋ Classical eventual sector
+estimates; no evaluated
+common exterior budget
+Auxiliary
+square/conductor cuts
+B = ⌈L20⌉, Rc = ⌊L16⌋ Used with their stated
+proﬁle; not independent
+free parameters
+Table 2: Proﬁles that must remain separate. The onset u ≥ 1024 is not assigned to the eighth
+proﬁle.
+1.4 Reading the proof status
+An exact ﬁnite theorem may be fully kernel checked while the subsequent analytic consequence
+remains a written argument using external theorems. Rational scripts check algebraic com-
+parisons, exponents and ﬁnite conﬁgurations; they do not verify a region free of zeros or an
+asymptotic sieve estimate. Repeated archive hashes certify provenance. Reviews by separate
+AI agents are internal checks, and are not external peer review. The electronic registry records
+the distinction for each formal declaration and excludes the weak historical interfaces described
+in Section 14.1.
+2 Ordered pairs and the CS21 reference audit
+Let
+G(N ) = # {p ≤N/ 2 : p,N −p prime}, R 2(N ) = # {(p,q ) : p +q =N, p,q prime}.
+Then R2(N ) = 2G(N ) − 1N/ 2 prime. The baseline
+B0(N ) = C2
+∏
+p|N
+p>2
+p − 1
+p − 2
+N
+log2N
+is an unordered baseline. The original CS21 residual used G(N ) − 2B0(N ) [18]; the factor2
+belongs to the ordered count. A more accurate classical unordered reference is
+Bint(N ) = C2
+∏
+p|N
+p>2
+p − 1
+p − 2
+∫ N −2
+2
+dt
+logt log(N −t).
+Correcting a baseline changes the residual being predicted, not the prime data.
+The reproduction uses M = 997 , weights p−1/ 2, 23 nonzero modes in {0, 1, 2, 3} ×
+{0, 1, 2, 3, 4, 5}, training-only standardization and ridge parameter1 with an unpenalized inter-
+cept. The ﬁve k = 0 features do not depend on M and account for the original test signal. On
+this window the signal disappears after the integral reference. No new permutation-signiﬁcance
+test or universal absence of subleading arithmetic structure is claimed. Further windows and
+perturbations are preserved in the companion CSV.
+6
+
+PAGE 7
+Residual reference Predictor Test correlation Test R2
+2B0 (original) 23 torus modes 0. 178892 0 . 031662
+2B0 (original) Five k = 0 modes 0. 178941 0 . 031773
+B0 (normalized) 23 torus modes 0. 154728 0 . 021582
+Bint 23 torus modes −0. 013187 −0. 030667
+Table 3: Retained CS21 reanalysis on the second half of [120000, 240000]. Parameters were ﬁt
+on the ﬁrst half. These are ﬂoating-point diagnostics, not formal asymptotic theorems.
+Two mathematical checks explain why this distinction matters. First, ﬁxed-modulus fea-
+tures of the form ∑
+p≤N
+p−1/ 2 cos
+(
+2π
+(kp
+M + j logp
+logX
+))
+have leading term (cM (k)/φ(M )) 2
+√
+N/ logN , uniformly for N/X in a ﬁxed compact subset of
+(0, ∞), for ﬁxed M,k,j . The PNT in ﬁxed residue classes and Abel summation prove this: on
+[ϵX,bX] the logarithmic phase tends uniformly to1, and the smaller primes cost O(
+√
+ϵX/logX).
+TakingX → ∞ then ϵ→ 0 gives the claim. Standardization can amplify lower terms, so this
+is not a theorem about the ﬁtted ridge model.
+Second, the classical PNT and summation by parts yield, for each ﬁxed A> 0,
+∑
+4≤N ≤X
+N even
+(G(N ) −Bint(N )) = OA(X 2 log−AX). (2)
+For completeness, expand f (m) = ∏
+p|m,p> 2(1 + 1/ (p − 2)) as a divisor sum with coeﬃcient
+a(d) = µ(d)212∤d
+∏
+p|d(p − 2)−1. Its mean is Y/C 2 +Oϵ(Yϵ) because ∑a(d)/d = 1/C 2 and∑a(d)d−ϵ< ∞. Twice replacing the prime measure by dt/ logt gives the triangular double
+integral with an arbitrary logarithmic saving. Removing the prime2 pairs and the diagonal
+costs O(π(X)). Abel summation of the mean of f matches the integral reference, proving ( 2).
+This is signed cumulative agreement; it gives neither a bound at each even N nor positivity at
+that N .
+3 Exact grid covariance and Ramanujan proxies
+These results concern a geometric or Ramanujan proxy. They preserve useful arithmetic coef-
+ﬁcients, but do not replace the convolution of two actual prime sequences.
+3.1 The exact Fejér defect
+For integers H,d ≥ 1 and s ∈ Z, put
+BH,s (n) =
+(
+1 − |n −s|
+H
+)
++
+, ∆ H,d (s) =
+∑
+d|n
+BH,s (n) − H
+d.
+The sum runs over all integers; it is ﬁnite because of the triangular support. Write r =H modd,
+v =s modd with 0 ≤r,v <d .
+Theorem 3.1 (Exact defect and covariance) . One has
+∆ H,d (s) = (r −v)+ + (r +v −d)+ −r2/d
+H , |∆ H,d (s)| ≤ d
+4H. (3)
+7
+
+PAGE 8
+In particular it vanishes if d | H. Its mean over s modd is zero. If g = gcd(d,e ) and ag =
+min(H modg,g −H modg), then the covariance over a common period is
+Es[∆ H,d (s)∆ H,e (s)] = g(2a3
+g +ag)/ 3 −a4
+g
+deH 2 . (4)
+Proof. The triangle is the autocorrelation of 1{0,...,H −1} divided by H. The residue counts
+of this interval are t + 1{0,...,r −1}, where H = td +r. Its cyclic intersection at shift v is
+(r −v)+ + (r +v −d)+. Subtracting H/d gives (3). The largest positive deviation is r −r2/d ≤
+d/ 4 before division by H; complementing the interval gives the same bound on the negative
+deviation.
+Forr ≤d/ 2, the cyclic intersection has value r once, each value 1,...,r − 1 twice, and zero
+elsewhere. Its sums are r2 and (2r3 +r)/ 3. Complementing handles r>d/ 2, so
+Var(∆H,d ) = 1
+H 2
+(
+2a3
+d +ad
+3d − a4
+d
+d2
+)
+.
+Let e(t) = exp(2πit) and ˆBH (t) = H −1| ∑H−1
+j=0 e(jt)|2. Finite Fourier orthogonality gives
+∆ H,d (s) = 1
+d
+d−1∑
+j=1
+ˆBH (j/d )e(js/d ).
+The covariance retains only the common opposite frequencies j/g , whence it equals g2/ (de)
+times the variance with modulus g. This proves ( 4).
+For arbitrary ﬁnite complex coeﬃcients ωd, the exact energy is therefore
+Es
+⏐⏐⏐⏐⏐
+∑
+d
+ωd∆ H,d (s)
+⏐⏐⏐⏐⏐
+2
+=
+∑
+d,e
+ωdωe
+g(2a3
+g +ag)/ 3 −a4
+g
+deH 2 .
+This retains covariance instead of separately paying every entry. Markov’s inequality bounds
+the proportion of large defects. It gives no estimate at a prescribed centre, and a common
+period may vastly exceed the interval of interest.
+3.2 Actual proxy coeﬃcients and short averages
+Let cq(n) = ∑
+a modq, (a,q )=1e(an/q ) be the Ramanujan sum and deﬁne
+AQ(n) =
+∑
+q≤Q
+µ(q)
+φ(q)cq(n), G Q =
+∑
+q≤Q
+µ(q)2
+φ(q), PQ =
+∏
+p≤Q
+(
+1 + 9p
+(p − 1)2
+)
+.
+The exact expansion AQ(n)2 = ∑
+gSgcg(n) is supported on squarefree g ≤Q2, with primes at
+most Q. For squarefree g, set
+ξ(t) =
+∏
+p|t
+p − 2
+p − 1, ΓQ(t,v,w ;g) =
+∑
+j≤Q/ (t max(v,w ))
+(j,g )=1
+µ(j)2
+φ(j).
+Then
+Sg = µ(g)
+φ(g)
+∑
+tvw=g
+µ(t)ξ(t)ΓQ(t,v,w ;g), S 1 =GQ, |Sg| ≤ GQ3ω(g)
+φ(g) . (5)
+To verify this, use c2
+p = (p − 2)cp + (p − 1). In a pair q =tjv,r =tjw, common primes retained
+in the Ramanujan term belong to t, common primes replaced by the constant belong to j, and
+8
+
+PAGE 9
+primes occurring in just one factor belong to v,w . These four factors are pairwise coprime and
+squarefree. Their actual cutoﬀs give the displayed ΓQ; there are 3ω(g) choices of t,v,w . The
+signs are present in the identity and only afterwards bounded absolutely.
+Put KH (g) = ∑
+1≤a<g, (a,g )=1 | ˆBH (a/g )|2. Parseval on a residue period gives 0 ≤KH (g) ≤
+gH : reduce the geometric sum to length ag ≤H, and compare its triangular square norm with
+that of a nonoverlapping triangle modulo g. The centred proxy defect
+EH,Q (s) =
+∑
+n
+BH,s (n)AQ(n)2 −HGQ
+has complete-period energy ∑
+g>1S2
+gKH (g) ≤ HG 2
+QPQ. Distinct reduced frequencies have
+denominators at most Q2 and separation at least Q−4. The dual large sieve [ 5] consequently
+yields
+1
+T
+s0+T∑
+s=s0+1
+|EH,Q (s)|2 ≤
+(
+1 + Q4
+T
+)
+HG 2
+QPQ ≪H
+(
+1 + Q4
+T
+)
+log11(2Q). (6)
+The last estimate uses only classical harmonic prime bounds. It assumes no cancellation in a
+shifted Möbius correlation.
+3.3 The parity correction and the later coeﬃcient-energy reﬁnement
+On even integers the proxy compresses exactly:
+AQ(2m) = VQ(m) :=
+∑
+Q/ 2<q≤Q
+q odd
+µ(q)
+φ(q)cq(m). (7)
+Pair q with 2q for odd q ≤ Q/ 2 and use c2q(2m) = cq(m) to see the cancellation. For H =
+2h,s = 2t, the even-support sum becomes ∑
+mBh,t (m)VQ(m)2. Its main term is
+hGterm
+Q , G term
+Q =
+∑
+Q/ 2<q≤Q
+q odd
+µ(q)2
+φ(q) − →log 2
+2 .
+ForQ = 6 the correct main is H/ 8, whereas incorrectly using (H/ 2)GQ gives 13H/ 8.
+The elementary dyadic bound ∑
+x<n≤2x 1/φ(n)< 2 follows fromn/φ(n) = ∑
+d|nµ(d)2/φ(d),
+the harmonic dyadic sum at most1, and ∏
+p(1 + 1/ [p(p − 1)])< 2. Applying it to ( 5) bounds
+the terminal coeﬃcients by 2 3ω(g)/φ(g) and replaces the exponent11 in ( 6) by9. The limit of
+Gterm
+Q follows by convolving the odd harmonic sequence with the absolutely summable local
+correction b(p) = 1/ [p(p − 1)], b(p2) = −1/ [p(p − 1)].
+Deﬁne the even-support defect explicitly by
+E even
+h,Q (t) =
+∑
+m
+Bh,t (m)VQ(m)2 −hGterm
+Q .
+The subsequent ﬁnite coeﬃcient audit improves this further. If V 2
+Q = ∑
+gRgcg, deﬁne
+KQ =
+∏
+p≤Q
+p odd
+(
+1 + 2p − 1
+p(p − 1)2
+)
+, H harm
+Q =
+∑
+n≤Q
+1
+n,
+and
+P (x) = 1 + 31x
+12 + 17x2
+12 + 739x3
+2592 + 199x4
+7776
++ 17x5
+15552 + x6
+46656 + x7
+6531840.
+9
+
+PAGE 10
+The retained arithmetic coeﬃcient theorem is
+∑
+g
+gR2
+g ≤ 8K11
+Q min{(H harm
+Q )7,P (2 logQ)}. (8)
+Its ﬁnite reconstruction assigns each prime in a quadruple of squarefree moduli to one of
+eleven incidence patterns. Four anchor ﬁbres have total mass at most 8K4
+Q; the seven re-
+maining variables have full harmonic masses or a constrained simplex mass. Their degrees
+are (d1,...,d 7) = (2 , 2, 3, 3, 3, 3, 4) and their actual product constraint is ∏
+jDdj
+j ≤ Q4. The
+positive odd harmonic simplex bound expands to
+P (t) =
+∑
+I⊆{1,..., 7}
+t|I|
+|I|! ∏
+j∈Idj
+,
+evaluated at t = 2 log Q; the four terminal anchor diameters are (4, 4, 2, 4), which give the
+factor8. The source-bound ﬁnite proof, including the coeﬃcient identity and that polynomial
+identiﬁcation, is in the canonical phase4 modules and the electronic statement registry. The
+full harmonic sum used above is a harmless larger envelope for the formal odd harmonic sum.
+The resulting variance transfer is still a written Fourier/large-sieve argument; it is not identiﬁed
+with an actual prime-pair variance theorem in Lean. Since KQ is bounded by an absolutely
+convergent Euler product, ( 8) gives
+1
+T
+t0+T∑
+t=t0+1
+|E even
+h,Q (t)|2 ≪h(1 +Q4/T ) log7(2Q). (9)
+Forh ≍ Xθ,Q ≍ Xκ,T ≍ X and 4κ <1 + θ, Chebyshev gives a relative defect tending to
+zero for almost all centres, for any power saving X −δwith 2δ <min(θ,1 +θ− 4κ). Neither
+theQ4/T loss nor the exceptional centres are removed. The result is an explicit internal proxy
+improvement using classical tools, not a resolution of the parity obstruction.
+4 Finite additive certiﬁcates and limits of linear information
+Theorem 4.1 (A phase-preserving ﬁnite certiﬁcate) . For realf on Z/M Z, put E = ∑
+xf (x)2
+and Ck(N ) = ∑
+xf (x) cos(2πk(x −N/ 2)/M ). For any distinct residues K,
+∑
+x
+f (x)f (N −x) ≥ 2
+M
+∑
+k∈K
+Ck(N )2 −E.
+If f is the indicator of primes at most N − 2 and M >2(N − 2), a positive right side proves
+an actual prime representation of N .
+Proof. Set zk = e(−kN/ (2M )) ∑
+xf (x)e(kx/M ). Fourier convolution and the identity ℜz2 =
+2(ℜz)2−|z|2, together with Parseval, give the equality with all M modes. Dropping nonnegative
+real squares gives the inequality. The stated modulus prevents sums of two support elements
+from wrapping around.
+AtN = 100,M = 201,E = 25, the 19 modes
+{0, ±1, ±3, ±15, ±21, ±40, ±60, ±67, ±99, ±100}
+have a rigorously evaluated lower side exceeding 0. 417911728893458011239466727237. Rational
+intervals forπand cosine, with explicit Taylor remainders, certify the sign. The mode selection
+used the full spectrum, so no eﬃcient uniform mode-selection algorithm follows. Larger FFT
+10
+
+PAGE 11
+examples are diagnostics. The later ﬁnite formalization and the rational interval computation
+have separate evidence records.
+A diﬀerent limitation is elementary. For every ﬁxed B, one can remove only O(x/ log2x)
+primes below x, preserve all primes below B and every ﬁxed reduced-class PNT, yet create
+inﬁnitely many holes in the sumset of the remaining primes. Indeed take Xj = 4jX0 > 2B.
+By averaging pairs over even targets in [Xj, 2Xj], choose Nj with O(Xj/ log2Xj) unordered
+representations. Remove the larger member of each pair. Each removed member belongs
+to [Xj/ 2, 2Xj] and determines its unique partner, so summing the geometric scales gives the
+claimed removal bound at every x. The remaining set has the same ﬁxed-class densities, and its
+normalized Mangoldt Fourier transform diﬀers from that of the primes by at most O(1/ logx),
+uniformly in phase. Every Nj is nevertheless missing from its binary sumset.
+This construction is not a counterexample to Goldbach for actual primes. It shows why
+qualitative linear density or Fourier proximity at that rate does not supply the desired pointwise
+binary conclusion. Likewise an absolutely summable linear zero expansion Z(x) = ∑
+ρcρxρwith
+ℜρ <1 satisﬁes Z(x) = o(x) by ﬁnite-core/tail splitting; that qualitative fact alone does not
+prove a bound on the additive quadratic prime correlation.
+5 From ﬁnite Vaughan ﬁbres to the signed arithmetic remain-
+der
+The standard actual coeﬃcient
+βV (b) =
+∑
+d|b
+d>V
+Λ(d)
+obeys ∑
+ab=nµ(a)βV (b) = Λ( n)1n>V . This is Dirichlet inversion of the divisor identity for logn,
+rather than a new prime-generation formula. Splitting the a ﬁbre at U gives the actual short
+component and the Type-II component used later. A completed ﬁbre cancels composites, but
+an incomplete dyadic rectangle need not.
+Expanding the real coeﬃcient energy produces the four signs
+µ(a)µ(c)µ(N −ab)µ(N −cb),
+with the actual βV (b) weights, support and centring. Their smallness does not follow from
+orthogonality. Retaining µ(a) in a signed correlation is more informative than absorbing it
+in a generic L2 norm, but its quantitative cancellation remains an arithmetic input. On the
+coprime arithmetic line, a = a0 +kt, r = r0 −bt, preserving the linear relation ba +kr = N .
+The CRT divisor modulus in the separate two-divisor expansion remains ar. Replacing the
+retained coeﬃcients by a bare µ(a0 +kt)µ(r0 −bt) correlation requires a proved transfer.
+The exact completed character decomposition Rk =Bk +Ck +Ek keeps nonunits, the mask
+(n,Nk ) = 1 , and the unit correction. Character orthogonality diagonalizes residues; it does
+not diagonalize the arithmetic four-sign correlation. For the actual squarefree primitive trace
+on unit-n, unit-N support,
+Pq(N −n) =
+∏
+p|q
+(
+(p − 1)1p|N −n − 1
+)
+,
+one has Pq(m) = µ(q) if (q,m ) = 1 . Thus µ(q)Pq(m)/φ(q) = 1/φ(q) there: the two displayed
+factors are not independent sign oscillators. For a unit t, the map x ↦→t/x on the unit group in
+the relevant ﬁnite Kloosterman geometry is a permutation and preserves energy. An entrywise
+bound cannot by itself contract arbitrary coeﬃcient directions.
+11
+
+PAGE 12
+The four energy sectors have diﬀerent diagonals. If E = ∑
+bwb(∑
+a,k xa,k,b )2, let D00 keep
+a = c,k = k′, Da keep a = c, and Dk keep k = k′. Removing nonzero shifts c −a subtracts
+Da, not just D00. A multiplicity estimate E ≤ MDa is valid but too costly in the parameter
+range considered. Local multiplicity improves constants; large Gram eigenvalues only exclude
+particular uniform operator bounds and do not determine the projection of the actual Möbius
+direction.
+The later HH expansion keeps coeﬃcients Hy(a)Hy(r) and the actual CRT modulus ar.
+The sign conductor T in a grouping ∑
+Tµ(T )AT is not automatically the CRT modulus. A
+discrepancy Ca,r −Ma,r can be signed, so positive masses must be deﬁned before subtracting
+the model. The Rosser remainder uses Φ(n,p (e)), where Φ(n,z ) = 1(n,
+∏
+p<zp)=1; it must not
+exclude the prime p(e) itself [ 16]. On a ﬁxed short cofactor sector ζ≤ LB with ﬁxed B, the
+written absolute amplitude improves to NL 3+o(1). Setting another short rough divisor to1
+only changes two factors of type Lo(1) and supplies no second full logarithmic saving. Neither
+estimate is the necessary signed global budget.
+These reductions explain the ﬁnal choice of exact scalar error accounting. No enumeration
+of ﬁnite identities, nor a sharper proxy amplitude, replaces the missing bound for the aggregate
+on its complete arithmetic support.
+6 The literal terminal scalar and its transfer identities
+All logarithms in this section are natural. We use the actual arithmetic functions µ, Λ and φ.
+Let N ≥ 2 be an integer, put u = logN , and, when u> 1, put ℓ= logu. For even K deﬁne
+C2 =
+∏
+p>2
+(
+1 − 1
+(p − 1)2
+)
+, S(K) = 2C2
+∏
+p|K
+p>2
+p − 1
+p − 2. (10)
+The inﬁnite product in this deﬁnition converges. The scalar
+FN =
+∑
+1≤n<N
+Λ(n)µ(N −n) (11)
+is a signed prime–Möbius correlation. It is not a prime-pair count.
+Let α,Q be positive integers, write m =N −n, and retain the literal kernels
+DQ(m) =
+∑
+k|m
+k≤Q
+αk<m
+µ(k) log k
+m, (12)
+WQ(n,m ) =
+∑
+1≤k≤Q
+(k,nN )=1
+αk<m
+µ(k)
+φ(k) log k
+m. (13)
+Inactive and empty sums are zero. In particular the strict inequality αk < mis part of the
+deﬁnition; it is not replaced by a real endpoint or an unproved completion. If
+R = min
+(
+Q,
+⌊m − 1
+α
+⌋)
+,
+then the second kernel is the preﬁx through this exact integer R. For V ≥ 1, set
+ρ(n) = 1{n>V }1{(n,N )=1}.
+12
+
+PAGE 13
+The complete ﬁxed scalar is
+Fﬁxed =
+∑
+1≤n<N
+ρ(n)Λ(n)µ(m)
+(
+WQ(n,m ) −DQ(m)
+)
+. (14)
+Every unit, divisor and moving-boundary restriction in this expression remains in force below.
+Lemma 6.1 (The omitted-divisor coeﬃcient) . Form ≥ 1, deﬁne
+JQ,α(m) = −
+∑
+d|m
+d≤αor m>Qd
+µ(d) logd.
+Then
+µ(m)DQ(m) = µ(m)2(
+Λ(m) −JQ,α(m)
+)
+. (15)
+If 1 ≤m<N , Q ≥α, and Q(α+ 1)>N − 1, this becomes
+JQ,α(m) = jα(m), j α(m) = −
+∑
+d|m
+d≤α
+µ(d) logd.
+Proof. For complementary divisors kd = m, the exact identity µ(k)µ(m) = µ(m)2µ(d) holds.
+It follows either by multiplicativity when m is squarefree, or because both sides vanish when
+it is not. Substitution in ( 12) gives
+µ(m)DQ(m) = −µ(m)2 ∑
+d|m
+d>α
+m/d ≤Q
+µ(d) logd.
+The full divisor sum is −Λ(m). Its omitted part is exactly the union deﬁning JQ,α, proving
+(15). If d>α andm>Qd , then m ≥Q(α+ 1) + 1>N , contradicting m<N . Thus the extra
+condition contributes no omitted divisor under the stated hypotheses.
+For the proﬁles used below, α= ⌈Nϑ⌉ and Q = ⌊(N − 1)/α⌋, with ﬁxed 0<ϑ< 1/ 2. For
+suﬃciently large N , Q ≥ α. Writing N − 1 = αQ+r, 0 ≤ r < α, gives Q > rand hence
+Q(α+ 1)>N − 1. This proves the required cap condition; it does not identify αwith Nϑ.
+At U = V = 1 the actual Vaughan short component is h1(n) = log n, and fII(n) =
+Λ(n) − logn on n> 1. Introduce
+Sfull =
+∑
+1≤n<N
+1{(n,N )=1}fII(n)µ(m)(DQ −WQ),
+I =
+∑
+1≤n<N
+1{(n,N )=1}h1(n)µ(m)(DQ −WQ),
+Jref =
+∑
+1≤n<N
+ρ(n)Λ(n)µ(m)2JQ,α(m),
+Zref =
+∑
+1≤n<N
+ρ(n)Λ(n)µ(m)WQ(n,m ),
+Runit =
+∑
+1≤n<N
+ρ(n)Λ(n)µ(m)2Λ(m),
+Rsf =
+∑
+1≤n<N
+µ(n)2Λ(n)µ(m)2Λ(m).
+The last quantity is the actual weighted ordered prime-pair detector on both axes: its nonzero
+summands are logp logq, with p +q =N and p,q prime.
+13
+
+PAGE 14
+Proposition 6.2 (Exact complete transfer) . ForU =V = 1, with the preceding actual kernels
+and coeﬃcients,
+Sfull =Runit −Jref −Zref −I. (16)
+There are nonnegative quantities Pret andTpairs such that Runit =Rsf +Pret −Tpairs: the former
+counts retained proper prime powers on the ﬁrst axis with a prime second axis, and the latter
+counts the union of omitted actual prime pairs. For even N , put
+EJ = S(N )N −Jref, E Z = −S(N )FN −Zref, εtr =Pret −Tpairs +EJ +EZ −I.
+Then
+Sfull =Rsf − S(N )(N −FN ) +εtr, (17)
+Rsf = S(N )(N −FN ) − Fﬁxed −Pret +Tpairs −EJ −EZ. (18)
+Proof. Recombine fII +h1 = Λ and apply ( 15) to obtain ( 16). The support of µ(m)2Λ(m)
+is precisely the prime support, so the ﬁrst-axis proper powers and the omitted prime pairs
+give the stated nonnegative partition. This is a union partition, without double counting its
+low-n and nonunit faces. For even N the nonunit prime-pair face is conﬁned to p =q =N/ 2.
+Substitution gives ( 17). Finally Fﬁxed = −(Sfull +I) gives ( 18).
+Remark 6.3 (The remaining quantitative premise) . If a covered decomposition with the same
+complete kernels has been proved in the form Sfull = −Ecov +e + Sunc, then the deﬁnition
+DN =Ecov − Sunc + |e| gives
+DN = −Sfull + 2 max(e, 0), R sf ≥ S(N )(N −FN ) −DN −εtr.
+The existence and scope of that covered decomposition, and the desired bound on DN , are
+separate obligations. No such bound is deduced from the identities. Equivalently,
+DN +εtr = S(N )(N −FN ) −Rsf + 2 max(e, 0).
+For the complete direct identity ( 18), I and this artiﬁcial covered excess cancel. These are
+alternative accounting choices; their overlapping losses must not be added.
+7 An elementary rational singular-factor enclosure
+Lemma 7.1. The inﬁnite Euler product satisﬁes
+2541
+4096 ≤C2 ≤ 11011
+16384.
+Consequently S(N ) ≥ 2541/ 2048 for every even N ≥ 2.
+Proof. For integers Z >Y ≥ 2,
+Z∏
+j=Y +1
+(
+1 − 1
+(j − 1)2
+)
+= (Y − 1)Z
+Y (Z − 1).
+Every factor is in (0, 1). The prime tail, indexed by j =p>Y , is a subproduct of the all-integer
+tail and is therefore at least the latter. The convergence of C2 follows from the summability of
+the deﬁcits. Passing to the limit gives
+Y − 1
+Y C2(Y ) ≤C2 ≤C2(Y ), C 2(Y ) =
+∏
+2<p≤Y
+(
+1 − 1
+(p − 1)2
+)
+.
+Direct rational multiplication gives C2(13) = 11011 / 16384; its 12/ 13 multiple is 2541/ 4096.
+All ﬁnite factors multiplying 2C2 in ( 10) are at least one.
+14
+
+PAGE 15
+A ﬁnite prime product is an upper bound for C2 until the tail has been paid. The passage
+to the inﬁnite product in this proof is written analysis; it is distinct from the ﬁnite telescoping
+Lean certiﬁcate. We also use the standard uniform bound
+S(N ) ≤ N
+φ(N ) =O(log logN ) ( N even). (19)
+The ﬁrst inequality follows by comparing the factors in ( 10) with N/φ(N ); the remaining
+ﬁnite subproduct of the C2 factors bounds the full product from above. The usual totient
+estimate [ 15, Theorem 15] gives the second assertion. Numerical versions, when used, belong
+to the explicitly calibrated analytical appendix.
+7.1 An earlier explicit reference on a restricted family
+The published small-modulus bounds also give a reference estimate that does not use the
+reported primitive input below. Suppose x = N − 1 ≥ 8 · 109 and an odd prime p ≤ 97 does
+not divide N . Then
+N −FN ≥ N
+60000. (20)
+Indeed, 1 −µ(m) ≥ 0, and it equals1 if p2 |m; hence
+N −FN ≥N −ψ(x) +ψ(x;p2,N ).
+Bennett–Martin–O’Bryant–Rechnitzer [ 11, Theorem 1.1 and Table 1] give |ψ(x;q,a ) −
+x/φ(q)|<x/ (840 logx) for the reduced progression q =p2 ≤ 9409, and the sharper coeﬃcient
+cψ(3) = 0 . 0003964 for the two reduced classes modulo3 at this onset. The powers of3
+contribute at most logx to ψ(x). Therefore
+N −FN > 1 +x
+[ 1
+9312 − 2(0. 0003964) + 1/ 840
+logx − logx
+x
+]
+.
+Forx ≥ 8 · 109, logx> 22 and logx/x< 24/ (8 · 109). The remaining coeﬃcient is at least
+1
+9312 − 2(0. 0003964) + 1/ 840
+22 − 24
+8 · 109 = 386215979
+22407000000000 > 1
+60000.
+This proves ( 20). Its condition on p does not cover every even integer, and this earlier reference
+is not spent a second time in the later universal-proﬁle ledger.
+8 A conditional universal reference gap from missing prime
+squares
+The universal estimate below is conditional on a reported project-derived primitive-character
+input. We state the exact needed input, rather than attributing its numerical constant to a
+diﬀerent published theorem.
+Reported analytic input 8.1 (Project primitive input for the reference) . Let u = logN ≥
+8 000 000. Choose the at most one possible primitive real Page pair (χ∗,β∗) among conductors
+at most u10. For every integer 1<r ≤u10, the complete primitive nonprincipal group satisﬁes
+∑
+χmodr primitive
+χ̸=χ0
+⏐⏐⏐⏐⏐ψ(N,χ) + 1{χ=χ∗}
+Nβ∗
+β∗
+⏐⏐⏐⏐⏐ ≤ 100N
+u8 . (21)
+When no exceptional pair exists, its correction is absent.
+15
+
+PAGE 16
+The retained source derives this input from the signed explicit formula, zero-free region
+and direct remainder estimates of Bordignon [ 8], including the actual Perron endpoint and the
+reﬂected exceptional-zero fee. The analytical section identiﬁes its direct remainder envelope;
+the complete substitution into every printed primary-source formula has not been independently
+reproduced in this manuscript. It remains a reported written input, rather than a new self-
+contained certiﬁcate or a Lean theorem. In the application below the exceptional character
+is absent from the retained groups, so no model sign is assumed. A stronger uniform preﬁx
+estimate using (yβ∗ − 1)/β∗ also supplies this endpoint lemma after paying the constant 1/β∗
+correction.
+Theorem 8.2 (Conditional universal signed reference) . Assume Input 8.1. Then for every
+integerN with u = logN ≥ 8 000 000,
+N −FN ≥ N
+256u logu. (22)
+For even N ,
+S(N )(N −FN ) ≥ 2541N
+524288u logu. (23)
+Proof. Put X =N − 1. The explicit ordinary estimates used below are Akbary–Hambrook [ 7,
+Lemma 3.1(d),(f)] and Johnston–Yang [ 9, Theorem 1.1]. A convenient conservative consequence
+of the latter is
+|ψ(N ) −N | ≤ NE (u), E (u) = 34u2 exp
+(
+− 4
+5
+√u
+)
+. (24)
+Choice of the square obstructions. Consider the literal real interval (2u, 4u]. The explicit
+theta bound gives
+θ(4u) −θ(2u) ≥ 2u − 6u
+5(logu)2.
+Remove its primes dividing N ; their logarithmic mass is at most log rad(N ) ≤ u. Remove at
+most one additional prime if the possible Page conductor itself is a prime in that interval. Call
+the remaining set P. This second removal costs at most log(4u), regardless of whether the pair
+exists. Since logu> 15 and log(4u)/u< 1/ 100 at the stated onset,
+∑
+λ∈P
+logλ>u
+2. (25)
+The logarithmic ratio decreases thereafter. Put
+M = |P|, A =
+∑
+λ∈P
+1
+φ(λ2).
+Because λ≤ 4u and log(4u) ≤ 2 logu,
+1
+64u logu ≤A ≤ 2
+u, M ≤ 4u. (26)
+Indeed ( 25) gives M > u/[2 log(4u)], while φ(λ2) ≤ 16u2 supplies the lower bound. For the
+upper bound use λ>2u, φ(λ2) ≥ 2u2, and M ≤ 4u.
+The individual square progressions. For everyλ∈ P , the class N modulo q =λ2 is reduced
+and q ≤ 16u2 ≤ u10. An odd real character modulo λ2 factors through λ: the kernel of
+reduction has odd order λ, whereas the real character has image of order at most two. Thus a
+possible primitive real conductor dividing λ2 isλ, not λ2. That prime was removed if necessary.
+Composite or even Page conductors cannot divide these retained moduli.
+16
+
+PAGE 17
+Every nonprincipal character moduloλ2 has primitive conductorλorλ2. Induction between
+them changes no prime support, hence no von Mangoldt term. Applying Input 8.1 to the two
+complete groups costs at most 200N/u 8. The principal character removes at most u inλ-power
+weight. Character orthogonality therefore gives
+ψ(N ;λ2,N ) ≥ N −NE (u) −u − 200N/u 8
+φ(λ2) .
+Passing to X =N − 1 removes the actual face Λ(N ) ≤u. Since φ(λ2) ≤ 16u2,
+ψ(X;λ2,N ) ≥ N
+φ(λ2)
+(
+1 −E(u) − 200
+u8 − 17u3e−u
+)
+≥ 3N
+4φ(λ2). (27)
+All three error envelopes decrease from this onset, and their sum is less than 1/ 4 there. These
+are endpoint estimates at N with the n = N face paid; no altered logarithmic threshold at
+N − 1 is silently used.
+Intersections and ﬁnite Bonferroni. For distinct λ,ν∈ P the intersection is the reduced
+class N modulo (λν)2. Its modulus is at most 256u4 ≤ N 3/ 8. Brun–Titchmarsh at N gives
+the prime-log bound 16N/ [5φ((λν)2)], because log(N/q ) ≥ 5u/ 8. Grouping proper powers by
+their prime base gives total von Mangoldt weight at most
+√
+Nu for each intersection. CRT
+and φ((λν)2) = φ(λ2)φ(ν2) yield
+∑
+λ,ν∈P
+λ<ν
+ψ(X; (λν)2,N ) ≤ 8
+5NA 2 + 1
+2M 2√
+Nu
+≤ 8
+5NA 2 + 8
+√
+Nu 3 ≤ 1
+4NA. (28)
+For the last comparison, A ≤ 2/u gives (8/ 5)A2 < A/ 8. The remaining ratio is bounded by
+512u4 logue −u/ 2< 1/ 8, a decreasing envelope on this range. No exceptional-character estimate
+is required for these upper intersection counts.
+Let G be the actual nonnegative Λ mass of the union {λ2 | N −n for some λ∈ P} , with
+1 ≤n<N . Finite Bonferroni and ( 27)–( 28) give
+G ≥ 1
+2NA ≥ N
+128u logu. (29)
+If the union indicator is one, µ(N − n) = 0 ; otherwise µ(N − n) ≤ 1. Thus, pointwise,
+µ(N −n) ≤ 1 − 1union, and FN ≤ψ(X) −G. Equation ( 24) implies
+N −FN ≥G −NE (u).
+Finally E(u) ≤ 1/ [256u logu] on this range. Its normalized envelope 8704u3 logue −(4/ 5)√u
+decreases here. At u = 8 000 000 , √u > 2800, u < 223 and e > 2 already give a very gener-
+ous rational comparison. The same elementary comparisons verify the previous endpoint and
+overlap inequalities. This proves ( 22). Multiplication by Lemma 7.1 proves ( 23) when N is
+even.
+Remark 8.3 (What this estimate does not establish) . The proof removes at most one actual
+prime to pay the possible Page uncertainty, and thus also treats multiples of every ﬁxed primo-
+rial. It does not assume squarefree N or a favourable Möbius sign. Its scale N/ (logN log logN )
+is smaller than a ﬁxed positive multiple of N . It neither estimates Fﬁxed nor implies positivity
+of Rsf . A ﬁxed linear exterior allowance cannot automatically be spent against this shrinking
+reference, and no lower-range ﬁnite coverage is supplied.
+17
+
+PAGE 18
+9 A negative small-part sector at the eighth-power cutoﬀ
+The next results use a diﬀerent parameter proﬁle:
+U =V = 1, α = ⌈N 1/ 8⌉, Q =
+⌊N − 1
+α
+⌋
+. (30)
+They have an unevaluated onset under classical Bombieri–Vinogradov. In particular the nu-
+merical onset of an exterior estimate proved with α= ⌈N 1/ 4⌉ must not be assigned to ( 30).
+Deﬁnition 9.1 (The actual composite sector) . Let a = 21/ 500, b = 3/ 50, and let PN consist
+of the products P = p1p2p3 of three distinct primes in (Na,N b], none dividing N . Let C be
+the physical rows with N/ 2<n ≤ 3N/ 4 prime, m =N −n =PL , P ∈ PN , and L squarefree
+with every prime divisor strictly greater than α. Both parities of L are retained. Deﬁne
+AC =
+∑
+n∈C
+Λ(n), F C =
+∑
+n∈C
+Λ(n)µ(m)(WQ(n,m ) −DQ(m)).
+The divisor and centering kernels are still ( 12)–( 13).
+Theorem 9.2 (A classical negative composite sector) . For every suﬃciently large even N in
+(30),
+AC > N
+260 logN, F C < − N
+2500. (31)
+The threshold is unevaluated and is not asserted eﬀective under the classical inputs used in the
+proof.
+Proof. We give the ﬁbre-distribution argument explicitly. In particular we do not assume
+Bombieri–Vinogradov separately for every P .
+The exact coeﬃcient and its uniform sign. The ﬁxed gaps
+3a = 63
+500 > 1
+8, 2b = 3
+25 < 1
+8
+imply that P >αeventually, whereas every proper divisor of P is at most α. The primes of L
+exceed α, so P is the unique entire small-prime part of m. The product m is squarefree. Also
+n is a unit modulo N : a prime n>N/ 2 cannot divide even N in this physical interval.
+All divisors of m at most αare therefore proper divisors of P . For a squarefree product
+of three primes, ∑
+d|Pµ(d) logd = 0 and µ(P ) = −1. Removing its top divisor gives jα(m) =
+− logP . The cap condition in Lemma 6.1 holds eventually. Consequently the exact actual row
+is
+Λ(n) [− logP +µ(m)WQ(n,m )]. (32)
+No pointwise sign for a character-minus-model discrepancy is being assumed here.
+The true preﬁx R is at least N 7/ 8/ 16 eventually, since m ≥ N/ 4 and α= N 1/ 8 +O(1).
+The mask is the actual even integer nN < N2, and the true phase is log(k/m ). The ﬁxed-
+polynomial-mask preﬁx estimate proved below gives WQ(n,m ) = −S(nN ) + o(1) uniformly.
+Since n is prime and (n,N ) = 1 ,
+S(nN ) = S(N )n − 1
+n − 2 ≤ 2S(N ) = O(logu).
+Because logP >63u/ 500, the gap 63/ 500 − 3/ 25 = 3/ 500 absorbs this logarithmic term. Thus,
+for both parities of the retained L,
+Λ(n) [− logP +µ(m)WQ(n,m )] ≤ − 3u
+25 Λ(n) (33)
+18
+
+PAGE 19
+eventually. It remains to lower-bound the actual nonnegative mass.
+The weighted sequence and its local density. ForP ∈ PN , put xP =N/P ,XP =N/ [4φ(P )],
+and letaP (L) equal log(N −PL ) whenN −PL is prime in (N/ 2, 3N/ 4], and zero otherwise. Be-
+fore removing squareful L, this is a nonnegative sequence supported in L ≤xP . For squarefree
+d coprime to N , its d-divisibility count is the prime-log sum in the reduced class N mod-
+ulo Pd on the same two physical endpoints. Relative to XP , its multiplicative local density
+vP (p) = gP (p)/p is
+vP (p) =
+
+
+
+0, p |N,
+1/p, p |P,
+1/ (p − 1), p ∤NP.
+(34)
+If p | P and p | d, the actual modulus has p2; φ(Pp ) = pφ(P ) proves its displayed density.
+That overlap is not removed. If d has a prime divisor of N , the central prime count is exactly
+zero, as is the model. No nonunit class is fed into a reduced-class theorem.
+For odd primesvP (p) ≤ 1/ (p−1), andvP (2) = 0 . The inverse dimension product is bounded
+by the ordinary odd-prime baseline. Mertens’ product estimate and the convergent quadratic
+correction give its logarithmic-ratio upper bound with absolute constants, independently of the
+growing masks P,N . Thus the density condition in [ 13, Deﬁnition 2.4] is uniform.
+Joint distribution and the good–bad partition. Take the ﬁxed exponent θ0 = 31/ 82 and
+individual level D′
+P =xθ0
+P . Then
+PD ′
+P ≤N 49/ 100, x P ≥N 41/ 50, lim inf logD′
+P
+log(α+ 1) ≥ 62
+25 > 12
+5 . (35)
+The positive gaps absorb the integer ceilings. Deﬁne the actual error
+EP =
+∑
+d≤D′
+P
+µ(d)2
+⏐⏐⏐⏐⏐⏐
+∑
+L≤xP/d
+aP (dL) −XP
+gP (d)
+d
+⏐⏐⏐⏐⏐⏐
+.
+Call P good when EP ≤ XP/ (logxP )100, and bad otherwise. This is an exact classiﬁcation,
+not an assertion of individual good distribution for all ﬁbres.
+LetEθ(q) be the maximum of |θ(y;q,c ) −y/φ(q)| overy ≤N and reduced classes c modq.
+An integer q ≤ N 49/ 100 has at most eleven distinct primes in (Na,N b], because twelve would
+giveq >N12a>N 49/ 100. Each possible P is a triplet of those primes and determines d =q/P
+uniquely. Hence there are at most
+(11
+3
+)
+= 165 representations, even when q is not squarefree.
+Paying both actual endpoints gives
+∑
+P
+EP ≤ 330
+∑
+q≤N 49/100
+Eθ(q). (36)
+Classical all-preﬁx Bombieri–Vinogradov, in the form recalled in [ 7] and [ 14, (6.24)], bounds
+the corresponding ψsum by OA(N/u A) for every ﬁxed A, since N 49/ 100 <
+√
+N/u B eventually
+for every ﬁxed B. The complete ψ-to-θproper-power diﬀerence is O(N 99/ 100u2) after summing
+these moduli, again smaller than N/u A for any ﬁxed A eventually. Exceptional characters are
+included in this classical input; its constants and onset are not evaluated. Thus ∑
+PEP =
+OA(N/u A).
+Choosing A = 300 pays the lost bad main mass:
+∑
+P bad
+XP ≤u100 ∑
+P
+EP =O(N/u 200),
+∑
+P bad
+1
+φ(P ) =O(u−200). (37)
+Only the nonnegative actual count is discarded on bad ﬁbres in the lower estimate. Their
+model errors, or signed discrepancies, are not called positive. Each good sequence meets [ 13,
+19
+
+PAGE 20
+Deﬁnition 2.4] with distribution constant one and the same uniform density constants. Its
+Lemma 2.5 therefore supplies a relative o(1) uniformly in P,N ; its constants do not depend on
+the particular physical sequence.
+The main mass and its constants. Writez =α+ 1 so that primes p ≤αare excluded. The
+baseline product satisﬁes
+V0(z) =
+∏
+2<p<z
+(
+1 − 1
+p − 1
+)
+∼ 2e−γC2
+logz .
+The true product VP (z) = ∏
+p<z(1 −vP (p)) is at least V0(z). The lower sieve function in [ 13,
+(2.4)–(2.5)] is f (s) = 2eγlog(s − 1)/s for 2 ≤s ≤ 4. The gap in ( 35) and monotonicity on the
+present interval give
+lim infuf (sP )VP (z) ≥ 40
+3 C2 log 7
+5 > 40
+9 C2> 27
+10. (38)
+Here sP = logD′
+P/ logz. The strict logarithm inequality log(7/ 5) > 1/ 3 follows, for example,
+from e < 11743/ 4320 < 49/ 18 < (7/ 5)3. This rational upper bound for e is obtained by
+summing through 1/ 5! and bounding the remaining tail by 7/ 4320. Lemma 7.1 proves the last
+rational comparison. The uniform relative sieve error is absorbed before using VP ≥V0.
+The reciprocal-prime mass in the window tends to log(b/a ) = log(10 / 7) > 1/ 3. At most
+twenty-three of its primes divide N , and their removed reciprocal mass is at most 24N −a.
+The equal-prime diagonals tend to zero. The unordered distinct triples therefore have limiting
+reciprocal mass greater than 1/ 162. Since 1/φ(P ) ≥ 1/P , subtracting the paid bad mass in
+(37) leaves
+∑
+P good
+1
+φ(P ) > 1
+170 (39)
+eventually, uniformly over even N . The lower sieve on the good ﬁbres consequently supplies
+rough-L prime-log mass at least (27/ 6800 −o(1))N/u .
+SquarefreeL and the actual signed sum. For each P , an oﬀending squared prime p > α
+contributes at most N/ (Pp 2) + 1 possible integers L. Keeping this +1, the total lost prime-log
+mass is at most
+u
+
+N
+α
+∑
+P
+1
+P +
+∑
+P
+√
+N
+P
+
+ =O(N 7/ 8u) +O(N 617/ 1000u) = o(N/u ). (40)
+We used the bounded P harmonic mass, P > N63/ 500 and at most N 9/ 50 distinct integer
+products P . The exponent in the second term is 1/ 2 + 9/ 50 − 63/ 1000 = 617 / 1000. The
+remaining original summands have unique P and all their original masks. The combined
+qualitative losses are eventually less than N/ (10000u). Since 27/ 6800 − 1/ 10000> 1/ 260, this
+provesAC >N/ (260u). Applying ( 33) gives FC < −3N/ 6500< −N/ 2500.
+Remark 9.3 (Scope of the lower sieve) . Only P , the small part of m, has three prime factors.
+The cofactor L may have further rough factors, with both parities retained; the theorem is
+not a prime-plus-three-primes theorem. The good–bad argument uses classical BV with an
+unevaluated, ineﬀective threshold. The rational parameter checks do not evaluate it. The proof
+uses the normalized primary lower sieve of [ 13]; it does not adopt a preliminary argument based
+on the erroneous printed remainder sign in Richert’s (11.80).
+10 Uniform preﬁxes and the entire rough complement
+We record the polynomial-mask preﬁx estimate needed both in the preceding theorem and
+in the rough complement. It is a written ordinary Mertens consequence; no shifted-prime
+cancellation is assumed.
+20
+
+PAGE 21
+Lemma 10.1 (A ﬁxed-polynomial-mask preﬁx) . LetK be even and positive, and deﬁne
+AK(x) =
+∑
+r≤x
+(r,K )=1
+µ(r)
+φ(r), W K(R) =
+∑
+r≤R
+(r,K )=1
+µ(r)
+φ(r) log r
+R.
+There is an absolute c such that, for every ﬁxed D> 1,
+|AK(x)| ≪D
+log(2K)
+log(2x)D +x−1/ 4 exp(c
+√
+log(2K)),
+|WK(R) + S(K)| ≪D
+log(2K)
+log(2R)D−1 +R−1/ 4 exp(c
+√
+log(2K)).
+For every ﬁxed C, these save any prescribed logarithmic power uniformly when K ≤RC. For
+the actual phase one has exactly
+∑
+r≤R
+(r,K )=1
+µ(r)
+φ(r) log r
+m =WK(R) + log R
+mAK(R). (41)
+Proof. PutaK(r) = µ(r)1{(r,K )=1}/φ(r) andb(r) = µ(r)/r . The exact convolution aK =hK ∗b
+has
+hK(pj) =
+{
+p−j, p |K,
+−p−j/ (p − 1), p ∤K, j ≥ 1.
+Its absolute Euler products give
+∑
+d
+|hK(d)| ≪ log(2K),
+∑
+d
+|hK(d)|
+√
+d ≪ exp(c
+√
+log(2K)).
+The ﬁrst product is the reciprocal-totient product on the mask times an absolutely convergent
+quadratic correction. The second is bounded by splitting its mask primes at a logarithmic scale;
+the remaining prime mass is limited by logK. These are uniform absolute moments, not ﬁxed-
+K unspeciﬁed constants. The ordinary phase-zero Mertens estimate and partial summation
+give B(t) = ∑
+j≤tµ(j)/j ≪D log(2t)−D, with total harmonic sum zero. Such an ordinary
+input follows, for example, from [ 10]; no eﬀectivity of the ﬁnal classical lower-sieve threshold
+is claimed here.
+In AK(x) = ∑
+d≤xhK(d)B(x/d ) split at √x. The ﬁrst moment handles the head, and
+boundedness of B with the half moment gives the tail x−1/ 4 ∑|hK(d)|
+√
+d. Moreover WK(R) =
+−
+∫R
+1 AK(t)dt/t . For each ﬁxed K, its convergent full integral is the value S(K), obtained from
+ζ(1 +s)−1HK(s)/s as s ↓ 0. The absolutely convergent HK at zero gives HK(0) = S(K) for
+even K by its Euler factors. Subtracting the ﬁnite integral and applying the already uniform
+tail estimate yields the second bound. Thus a ﬁxed- K limit has not been used as an unproved
+uniform limit. Finally ( 41) is the exact ﬁnite logarithmic identity. Its endpoint term must be
+retained.
+Theorem 10.2 (A one-sided upper for all rough rows) . On (30), let Frough be the complete
+physical contribution to (14) with squarefree m = N −n and all prime factors of m greater
+than α. Include m = 1 with its zero value. Uniformly over even N ,
+Frough ≤o(N ). (42)
+This is a one-sided upper, not an absolute-value estimate.
+21
+
+PAGE 22
+Proof. Literal completion and the actual preﬁx. If m is α-rough, every proper divisor k | m
+has m/k > αand k < m/α≤ (N − 1)/α. Its integer k is therefore at most Q, and the strict
+boundary admits it. The omitted k = m term has zero logarithm. Full divisor convolution
+givesDQ(m) = −Λ(m) exactly.
+For every rough composite m, m > α2 ≥ N 1/ 4. The same lower endpoint can be used
+for rough prime m ≥ N 1/ 4. Since α≤ 2N 1/ 8, the exact integer preﬁx has R ≥ N 1/ 8/ 8
+eventually. Hence the actual even mask K = nN < N2 satisﬁes K ≤ R18 eventually, while
+| log(R/m )| ≤ u =O(logR). Lemma 10.1 and its shifted identity give
+WQ(n,m ) = −S(nN ) +o(1) (43)
+uniformly on these rows. The safe ﬁxed exponent 18 absorbs the factor 8 in the endpoint;
+K ≤R16 does not follow automatically from this lower bound. No previously evaluated preﬁx
+theorem requiring R ≥N 1/ 5 is invoked.
+Whenever a unit ﬁrst-axis prime power n =pj contributes,p is odd, p ∤N and
+S(nN ) = S(N )p − 1
+p − 2 ≤ 2S(N ).
+Equations ( 19) and ( 43) show that WQ< 0 and |WQ| ≤ 3S(N ) eventually.
+Favourable signs and the corner budgets. For a rough prime m ≥ N 1/ 4, the actual row
+is Λ(n)[− logm −WQ] ≤ 0 eventually. For a rough squarefree composite with even Ω(m) it
+is Λ(n)WQ ≤ 0. Odd composite parity contributes −Λ(n)WQ ≤ 3S(N )Λ(n). Eight primes
+greater than αwould force m>N ; thus the only positive composite parities are 3, 5, 7.
+We pay the exceptional faces absolutely without changing their support. For every k ≥ 1,
+φ(k) ≥
+√
+k/ 2: in φ(k)2/k every prime-power factor is at least one except the single possible
+factor p = 2, exponent one, which equals 1/ 2. Consequently
+∑
+k≤Q
+1
+φ(k) ≤ 2
+√
+2Q, |WQ −DQ| ≤ u(1 + 2
+√
+2Q) = O(uN 7/ 16).
+Grouping all proper ﬁrst-axis prime powers by their base gives total von Mangoldt mass at
+most
+√
+Nu . Their complete contribution is O(N 15/ 16u2) = o(N ). Prime m < N1/ 4 costs
+O(N 11/ 16u2), and prime n ≤ N 1/ 8 costs O(N 9/ 16u2). Overlap among these nonnegative up-
+per allowances is harmless. These are single-Mangoldt corner budgets, not another two-axis
+detector fee or a second Type-I allowance. Nonsquarefree m already contributes zero.
+A single ﬁnite upper sieve for the positive union. Put z =N 1/ 8. For the remaining prime
+n > zand rough m, both forms n,N −n avoid every prime below z. Let B(N,z ) count all
+integers 1 ≤n<N with this property. The root number for n(N −n) is
+ω(p) =
+{
+1, p |N,
+2, p ∤N.
+In particular ω(2) = 1 . Put g(p) = ω(p)/ (p −ω(p)) and G(z) = ∑
+d<zµ(d)2g(d). The ﬁnite
+Selberg identities [ 14, (9.28)–(9.33)] give optimal weights with λ1 = 1 , |λd| ≤ 1 and quadratic
+main 1/G (z). CRT has remainder at most ω([d,e ]) ≤ [d,e ] ≤de. The full double remainder is
+therefore at most z4, giving
+B(N,z ) ≤ N
+G(z) +z4. (44)
+This is a count of all integers in two forms, with no prime-AP distribution assumption.
+For completeness, the needed lowerG bound is uniform in the growing mask. Take y =z1/ 16
+and the ﬁnite positive Euler mass E(y) = ∏
+p≤y(1 −ω(p)/p )−1. Under its divisor probability,
+22
+
+PAGE 23
+the mean of logd is ∑
+p≤yω(p) logp/p ≤ 4 + 4 logy, using the published global θ(t) ≤ 2t bound
+in [ 7]. For logz ≥ 16, this is at most 1
+2 logz; Markov gives G(z) ≥ E (y)/ 2. The exact Euler
+factors, including the factor at two, imply
+E(y) ≥ C2
+S(N )
+
+ ∏
+p≤y
+(1 − 1/p )−1
+
+
+2
+.
+The full identity has the extra factors 1/C 2(y) ≥ 1 and ∏
+p|N,p>y (p−1)/ (p−2) ≥ 1; they are not
+discarded in an adverse direction. The harmonic Euler product is at least ∑
+j≤⌊y⌋ 1/j ≥ logy.
+Lemma 7.1 thus gives
+G(z) ≥ 2541
+2097152S(N ) (logz)2, B (N,z ) ≤ 134217728
+2541
+S(N )N
+u2 +
+√
+N.
+The entire positive parity union 3, 5, 7 is counted once. Since prime ﬁrst-axis weights are at
+most u, its contribution and the paid corners satisfy
+Frough ≤ 402653184
+2541
+S(N )2N
+u + 3S(N )u
+√
+N +o(N ) = o(N ),
+because S(N ) = O(logu). The favourable rough prime and even-parity contributions have
+been retained, not asserted absolutely small. This proves ( 42).
+Corollary 10.3 (A disjoint combined negative sector) . On (30), for every suﬃciently large
+even N ,
+FC +Frough< − N
+3000. (45)
+The onset remains unevaluated and ineﬀective under the classical lower-sieve input.
+Proof. The sector C has a nontrivial α-small part, so it is disjoint from the all-rough sector.
+Eventually the one-sided upper in Theorem 10.2 is less than N/ 15000. Theorem 9.2 and
+1/ 2500 − 1/ 15000 = 1/ 3000 give the claim.
+Remark 10.4 (The unestimated complementary scalar) . The exact partition is
+Fﬁxed =FC +Frough +Fnonrough, rem.
+There is no suﬃcient upper bound for Fnonrough, rem in this work. In particular positive one-
+small-prime rows are not removed. The negative jαcredit is already inside Jref and cannot be
+spent a second time after replacing the entireJref by its main. The new eighth-power proﬁle has
+not inherited the evaluated exterior estimates of a quarter-power proﬁle. Neither this corollary
+nor the universal reference theorem proves a bound on DN or an eﬀective positive prime-pair
+margin.
+11 Relation to the ﬁnite formal ingredients
+The manuscript distinguishes ﬁnite identities from their analytical uses. The actual Vaughan
+ﬁbre identityµ∗βV = Λ 1{n>V }, literal cap and coprimality identities, character decompositions
+and ﬁnite dispersion partitions have separate Lean certiﬁcates. Complete ﬁbre cancellation is
+not assumed on an incomplete selected ﬁbre. The exact prime support of µ(n)2Λ(n) likewise
+supplies the ﬁnite detector interpretation in Proposition 6.2. The inﬁnite Euler limits, ordinary
+Mertens bounds, prime-AP estimates, linear sieve and asymptotic conclusions above are written
+analysis; they have not been formalized in Lean.
+23
+
+PAGE 24
+Two earlier conventions are particularly relevant to the use of upper-sieve and bilinear
+reductions. If IW (n) denotes absence of prime factors at most W and Φ(n,z ) = 1{(n,
+∏
+p<zp)=1},
+then for integer W one has IW = Φ( ·,W + 1), while for real W the exact endpoint is ⌊W ⌋ +
+1. The stopped term in Rosser’s identity [ 16, Lemma 8] uses Φ(n,p (e)), not Ip(e)(n), which
+vanishes whenever e | n. Its fundamental-lemma bound is an additional analytical input, not
+the ﬁnite primorial-boundary certiﬁcate.
+Similarly, completion of selected bilinear or HH roots cannot erase their actual support
+or alter the modulus ar to a proper sign carrier T | ar. A small continuous density main or
+a local positive amplitude is not a bound for the discrete signed observable. These cautions
+explain why the sector inequalities above preserve the actual scalar and identify its remaining
+complement rather than announce a global cancellation theorem.
+The source audits and isolated compilation replays were performed within an AI-assisted
+workﬂow. They are internal reproducibility checks, not external peer review. No claim of
+external priority, a new general sieve theorem, a completed parity-barrier argument, or a proof
+of binary Goldbach is made here.
+12 Explicit exterior estimates and their analytic scope
+This section records the analytic component of the project. Its ﬁnite coeﬃcient identities, writ-
+ten analytic deductions, published inputs and numerical certiﬁcates have diﬀerent veriﬁcation
+statuses. In particular, none of the complex analysis in this section is claimed to have been
+formalized in Lean. Independent agent reviews are useful reproducibility evidence, but are not
+external mathematical peer review.
+There is also a distinction between a detailed proof and a reported analytic certiﬁcate.
+The ordinary Mertens transport, the coeﬃcient moments, the ﬁnite growing-mask estimate
+and the smoothed contour argument are explained below. The direct substitution in the long
+explicit remainder formula of Bordignon is recorded as an explicit reported analytic input
+in Lemma 12.1. The ﬁnal numerical assembly is conditional on that certiﬁcate and on the
+stated literal completion estimates. This qualiﬁcation prevents a compilation receipt or a ﬁnite
+rational test from being substituted for an unprovided inﬁnite-range analytic proof.
+12.1 Parameters, genuine weights and historical allowances
+All logarithms are natural. Write
+u = logN, ℓ = logu, L = 1 +u, X =N − 1,
+and, for the quarter-power proﬁle, use
+α= ⌈N 1/ 4⌉, Q =
+⌊N − 1
+α
+⌋
+, B = ⌈L20⌉, Y =B2α, R = ⌊L16⌋.
+Unless otherwise stated, N is even and 1 ≤ V ≤ N 1/ 4. The Type-I bounds below further
+require U =V = 1. On this specialization the genuine Vaughan coeﬃcient is
+β1(n) =
+∑
+d|n, d>1
+Λ(d) = log n.
+It is not an arbitrary coeﬃcient with the same size. At u ≥ 106, the rounding guards give
+B ≤ 2L20, α ≤ 2N 1/ 4, Y ≤ 8L40N 1/ 4 ≤N 3/ 8, R ≥L16/ 2.
+24
+
+PAGE 25
+For example, log 8< 3 and logL ≤
+√
+L reduce the third inequality to 3 + 40√1 +u ≤u/ 8; its
+left-to-right ratio decreases after the displayed onset.
+The ﬁnite, repeated-modulus coeﬃcient is
+wB(q) =
+∑
+b≤B, d ≤α
+[b2,d ]=q, (bd,N )=1
+µ(b)µ(d) logd. (46)
+Each active q is odd, coprime to N , and cube-free. Its unique factorization q = b2c, with b,c
+square-free and (b,c ) = 1 , gives
+wB(b2c) = µ(b)µ(c)
+∑
+e|b
+ce≤α
+µ(e) log(ce). (47)
+The constraint ce ≤αis literal. A complete-ﬁbre identity cannot be used when bc>α.
+The following allowances describe diﬀerent historical evaluations of the same components.
+They are not cumulative errors.
+Quantity Written allowance Stated onset in u = logN
+Rmain, ﬁnite reference model 10−30N 106
+Rmain, reﬁned evaluation 10−40N 8 · 106
+Whole EJ , all-preﬁx evaluation 10−6N 8 · 106
+Whole I, shrinking evaluation N/ (1012uℓ) 2128
+Whole EJ , shrinking evaluation N/ (1012uℓ) 2128
+Whole EZ, shrinking evaluation N/ (10100uℓ) 2128
+Adaptive exterior assembly see ( 72) 1024
+These are bounds for exterior components; their onsets are not Goldbach thresholds. The
+qualitative sector with α= ⌈N 1/ 8⌉ elsewhere in this manuscript has a diﬀerent proﬁle and no
+evaluated onset. Its conclusions cannot be imported into this table.
+12.2 Ordinary Mertens input and exact harmonic transport
+We pin the ordinary Mertens input to Lee–Leong [ 10], arXiv:2208.06141v5, dated 9 September
+2026. The constants used belong to the classical block of their table, with
+c = 839
+25 = 33. 56, w = 139
+25 = 5. 56, s 0 = 22946
+5 = 4589. 20.
+Their published theorem supplies
+|M (t)| ≤ ct logt exp{−
+√
+logt/w }, logt ≥s0, M (t) =
+∑
+n≤t
+µ(n). (48)
+The computation underlying the published constant is an external input, not a computation
+revalidated by this manuscript. The unversioned 2022 preprint must not be cited as though all
+its constants coincided with v5.
+Put Bµ(t) = ∑
+n≤tµ(n)/n . A useful global short-argument bound is |Bµ(t)| ≤ 1 for t ≥ 1.
+Indeed, for m = ⌊t⌋, Dirichlet inversion gives
+∑
+n≤m
+µ(n)⌊m/n ⌋ = 1, mB µ(m) = 1 +
+∑
+n≤m
+µ(n){m/n }.
+25
+
+PAGE 26
+Then = 1 fractional part vanishes and there are at most m−1 remaining summands of absolute
+value at most one. Partial summation and ( 48) show that Bµ(t) converges. Its limit is zero: for
+η >0, absolute Dirichlet convolution gives ∑µ(n)n−1−η= 1/ζ(1+η), while partial summation
+gives its Abel limit as the limit of Bµ. The inequality ζ(1 +η) ≥ 1/η forces that limit to be
+zero. Consequently,
+Bµ(t) = M (t)
+t −
+∫ ∞
+t
+M (v)
+v2 dv.
+Fors = logt ≥s0 and z =
+√
+s/w this proves
+|Bµ(t)| ≤ ce−z{s + 2w2P3(z)}, P 3(z) = z3 + 3z2 + 6z + 6. (49)
+Here the integral is obtained by substituting logv = wz2 and integrating z3e−z three times.
+Omitting the integral would not give the stated harmonic-preﬁx bound.
+For a positive integer K let
+aK(r) = µ(r)
+φ(r) 1(r,K )=1.
+Division of local Euler factors yields the exact convolution aK = hK ∗ (µ(r)/r ), where hK is
+multiplicative and
+hK(pj) =
+{
+p−j, p |K,
+−p−j/ (p − 1), p ∤K, j ≥ 1, h K(1) = 1.
+The absolutely convergent products give the uniform moments
+∑
+d
+|hK(d)| ≤ 8(1 + logK),
+∑
+d
+√
+d |hK(d)| ≤ 32 exp{6
+√
+max(2, log(2K))}. (50)
+For the ﬁrst bound, the unmasked product is at most 2 exp(1/ 2) < 4; the masked product is
+at most ζ(2) ∑
+d|radK 1/d ≤ 2(1 + logK). For the second, isolate the factors at 2, 3, bound the
+rest by exp{(5/ 2) ∑
+p≥5p−3/ 2} < 5, and use − log(1 −p−1/ 2) ≤ 2p−1/ 2 on the masked factors.
+Splitting the prime divisors of K at Y0 = max(2, log(2K)) bounds their reciprocal-square-root
+sum by 3√Y0. These estimates retain every prime of the growing mask.
+Deﬁne
+AK(x) =
+∑
+r≤x
+aK(r), W K(R) =
+∑
+r≤R
+aK(r) log(r/R ).
+Fors ≥ 2s0 set z =
+√
+s/ (2w) and
+ΦA(s) = ce−z{wz2 + 2w2P3(z)},
+ΦW (s) = ce−z{4w2P3(z) + 8w3Q4(z)},
+Q4(z) = z4 + 7z3 + 27z2 + 60z + 60.
+Split the convolution at d = √x and use the global short bound on its tail. With L0 = ∑|hK|
+and L1/ 2 = ∑√
+d|hK(d)|,
+|AK(x)| ≤ L0ΦA(logx) +L1/ 2x−1/ 4, (51)
+|WK(R) +HK(0)| ≤ L0ΦW (logR) + 4L1/ 2R−1/ 4, (52)
+whereHK(0) = ∑hK(d). To justify the nonzero main term, WK(R) = −
+∫R
+1 AK(t)dt/t exactly.
+Absolute integrability on the large tail, the Dirichlet series HK(s)/ζ(1 +s) and the residue-one
+26
+
+PAGE 27
+pole of ζimply
+∫ ∞
+1 AK(t)dt/t =HK(0). For even K, this value is S(K); for odd K it is zero.
+The integral giving ( 52) is veriﬁed by Q4 −Q′
+4 =zP3. The real phase is
+∑
+r≤R
+aK(r) log(r/m ) = WK(R) + log(R/m )AK(R). (53)
+Thus the endpoint term must be retained. An empty R = 0 preﬁx is zero and has no limiting
+main term.
+UsingP3(z) ≤ 16z3,Q4(z) ≤ 155z4,c< 34,w< 6, ( 50) implies the useful explicit envelope
+u{|WK(R) +HK(0)| +u|AK(R)|} ≤ 4 · 108u5e−
+√
+u/ 60 + 160u2e−u/ 40 (54)
+when K ≤N 3, R ≥N 1/ 5 and u ≥ 106. Indeed, the head has z ≥
+√
+u/ 60 and the half-moment
+tail has exponent 12√u −u/ 20 ≤ −u/ 40. These statements use the actual quotient arguments
+and do not invoke an asymptotic notation with an unevaluated constant.
+12.3 The ﬁnite model and the signed conductor projection
+WriteT =X −V and
+CB = −
+∑
+q
+wB(q)
+φ(q) , R main = S(N )N −TCB.
+Forp ∤N put ap = 1/ [p(p − 1)]. Completing the b sum ﬁrst, at each ﬁxed square-free d, gives
+a Dirichlet series
+F1(s) =
+∏
+p∤N
+(1 −ap −p−1−s) = H1(s)
+ζ(1 +s), ℜs> 0.
+For an odd square-free conductor r coprime to N , forcing r | [b2,d ] changes the local factor at
+p |r to −ap −p−1−s. Hence
+Fr(s) =
+∏
+p∤Nr
+(1 −ap −p−1−s)
+∏
+p|r
+(−ap −p−1−s) = Hr(s)
+ζ(1 +s).
+The quotient of the changed and unchanged factors at s = 0 is −1/ (p − 2). Consequently
+Hr(0) = S(N )κ(r), κ (r) = µ(r)∏
+p|r(p − 2). (55)
+Thisκis signed. It diﬀers from the positive coeﬃcient g in the Type-I divisor expansion below.
+The coeﬃcients of Hr have local factors
+p |N : (1 −z/p )−1,
+p ∤Nr : 1 −ap −ap
+∑
+j≥1zj/p j,
+p |r : −ap − (1 +ap) ∑
+j≥1zj/p j,
+z =p−s.
+Their coeﬃcient at 1 is not generally 1. The unmasked absolute zeroth-moment factors are at
+most 1, and the forced factor is p/ (p − 1)2 ≤ 1 forp ≥ 3. Their half-moment factors are at most
+1 forp ≥ 5, since p(1 −ap)2 ≥ 5(19/ 20)2> 4; the factor at 3 is less than 2. Thus, uniformly in
+r, ∑
+|hr(d)| ≤ 1 + 2u,
+∑ √
+d|hr(d)| ≤ 2e12√u.
+This gives a conductor-uniform harmonic transport; it does not assert that the singular projec-
+tion itself is zero.
+27
+
+PAGE 28
+A conservative weakening of ( 48) is |M (t)| ≤ 34t logte −√logt/ 6 for logt ≥ 5000. Repeated
+partial summation gives, with v = √logt,
+β(v) = 34e−v/ 6(12v3 + 217v2 + 2592v + 15552),
+ω(v) = 68e−v/ 6(72v4 + 3030v3 + 70092v2 + 934416v + 5606496).
+They bound |Bµ(t)| and | ∑
+n≤tµ(n)n−1 log(n/t ) + 1|, respectively. The polynomial identities
+(B0 −v2)′ − (B0 −v2)/ 6 = −2v3 and T ′
+0 −T0/ 6 = −vB0 verify the integrations. Splitting
+the new coeﬃcient convolution at √αretains its coeﬃcient tail and its logαendpoint. The
+resulting error is at most
+H(u) = 9(1 + 2u)[ω(
+√
+u/ 8) +uβ(
+√
+u/ 8)],
+G(u) = (1 + 2u + 2u2)e16+12√u−u/ 16.
+The inﬁnite model b > B tail is distinct from a physical prime progression tail. Put
+b =gh,d =gk, where g = (b,d ); then [b2,d ] = g2h2k. Taking absolute values before removing
+masks gives
+|model tail | ≤ 3uL
+B [L(6 + 2 logB) + 4(logB)2 + 16 logB + 16] ≤ 7000L−16.
+For example, ∑
+gh>t(gh)−2 ≤ (6+2 logt)/t follows from the harmonic hyperbola decomposition;
+integrating this estimate gives the log-weighted tail. The factor 3 inq/φ(q) is already included
+in 7000 and is not charged again.
+ForMr(B) = ∑
+r|qwB(q)/φ(q) this proves the reported ﬁnite projection envelope
+|Mr(B) + S(N )κ(r)| ≤ H (u) + G(u) + 7000L−16. (56)
+The same calculation at r = 1, together with the exact endpoint N −T =V + 1, gives
+|Rmain|
+N ≤ H(u) + G(u) + 7000L−16 + 4Le−3u/ 4. (57)
+Atu ≥ 8·106 these displayed envelopes were evaluated in the project below 10−40. At u ≥ 8·1010
+each of H, G, 7000L−16, 4Le−3u/ 4 is at most u−4. For instance, with v =
+√
+u/ 8, u4H(u) <
+249v15e−v/ 6; at the latter onset v = 10 5, the positive factor is less than 2304 and the negative
+exponential is less than 2−16000. The envelope decreases because 15/v − 1/ 6 < 0. Similar
+comparisons give u4G ≤ 5u6e−u/ 32 and the two elementary polynomial and endpoint bounds.
+This variable evaluation is needed when the reference itself decreases like N/ (u logu).
+An active real primitive exceptional character has odd square-free conductor. Indeed, odd
+prime-power unit kernels have odd order, so a real character factors through the prime modulus
+locally. The active moduli are odd and unit against N . Even or nonunit conductors have zero
+actual projection. This is a statement about real primitive characters, not a claim that every
+primitive conductor is square-free.
+12.4 Arithmetic moments and all-module conductor transport
+By ( 47), |wB(b2c)| ≤ τ(b) logαand φ(b2c) = bφ(b)φ(c). Dropping masks only after a positive
+majorization gives
+∑
+q
+|wB(q)|2
+φ(q) ≤ (logα)2 ∏
+p≥3
+(
+1 + 4
+p(p − 1)
+) ∑
+c≤α
+c odd
+1
+φ(c).
+28
+
+PAGE 29
+The product is at most e2< 9. From c/φ(c) = ∑
+d|cµ(d)2/φ(d), the odd reciprocal totient sum
+is at most e1/ 2(1 + logα)< 2(1 + logα). Consequently, including every truncated ﬁbre,
+∑
+q
+|wB(q)|2
+φ(q) ≤ 18L3. (58)
+Let E(q) be the maximum over all reduced classes and all 1 ≤ y ≤ N of |ψ(y;q,a ) −
+ψ(y)/φ(q)|. Brun–Titchmarsh, in the form quoted in [ 7], gives a prime contribution at endpoint
+N at most 16N/ (5φ(q)) for q ≤ N 3/ 8. Proper prime powers cost at most
+√
+Nu ≤ N 5/ 8 ≤
+N/φ(q). Using monotonicity of the positive preﬁxes, not Brun–Titchmarsh at an inadmissibly
+short argument, proves E(q)< 7N/φ(q). Thus
+∑
+q
+|wB(q)|2E(q) ≤ 126NL 3. (59)
+For a ﬁxed Page pair (χ∗,r ∗,β∗) deﬁne
+Hβ∗(y) = yβ∗ − 1
+β∗
+=
+∫ y
+1
+tβ∗−1dt, ∆ #(y;q,a ) = ψ(y;q,a ) − ψ(y)
+φ(q) + 1r∗|q
+χ∗(a)Hβ∗(y)
+φ(q) .
+If there is no pair the added term is zero. Since 0 ≤H ≤y − 1, the corresponding maximum
+E#(q) satisﬁes
+E#(q) ≤ 8N
+φ(q),
+∑
+q
+|wB(q)|2E#(q) ≤ 144NL 3. (60)
+The high-conductor input is Theorem 1.2 of [ 7]. It states
+M(t) :=
+∑
+d≤t
+d
+φ(d)
+∗∑
+χ(mod d)
+max
+y≤N
+|ψ(y,χ)| ≤ c0u7/ 2[4N + 2
+√
+Nt 2 + 6N 2/ 3t3/ 2 + 5N 5/ 6t],
+where the published formula permits c0 < 50. A rational check uses 693/ 1000 < log 2 <
+694/ 1000, log(4/ 3)> 287/ 1000, log(log 2/ log(4/ 3))< 89/ 100, π >157/ 50,
+√
+2< 283/ 200 and√
+ψ(113)/ 113 < 51/ 50; substitution in that formula gives 2567195785600/ 52251571449 < 50.
+The identiﬁcation of its maximum with ψ(113)/ 113 remains a published input.
+The exchange q = dm, φ(dm) ≥ φ(d)φ(m) and ∑
+m≤z 1/φ(m) < 3(1 + logz) give, on all
+modules,
+H>R ≤ 3L
+∑
+R<d≤Y
+A(d)
+φ(d)
+≤ 3c0Lu7/ 2[4N/R + 4
+√
+NY + 18N 2/ 3√
+Y + 5N 5/ 6(1 + log(Y/R ))]
+≤ 5250NL −23/ 2,
+where A(d) = ∑∗
+χmaxy≤N |ψ(y,χ)|. The second line is Stieltjes summation of M(t)/t ; only
+favorable endpoint terms are dropped. The normalized bracket is at most 8L−16 + 4e−u/ 8 +
+18e−7u/ 48 + 5Le−u/ 6 ≤ 35L−16. This use of AH1.2 does not impose a least-prime condition.
+AH1.3 would have such a condition and cannot replace it.
+Induction is exact:
+ψ(y,χq) −ψ(y,χr) = −
+∑
+p|q
+p∤r
+logp
+∑
+pj ≤y
+χr(p)j.
+Its absolute value is at most uω(q). The principal character has the same lost-prime-power
+correction. A veraging over the actual characters does not add an extra φ(q); summing over
+29
+
+PAGE 30
+q ≤ Y costs at most 2YL 2. It is absorbed by 2NL −23/ 2. The printed inequality (12) in [ 8],
+which omits this logarithmic factor, is not used. Thus the full corrected mean satisﬁes
+∑
+q≤Y
+E#(q) ≤N [5252L−23/ 2 +δlow(N )], (61)
+where
+δlow(N ) = 3L
+N
+∑
+2≤r≤R
+1
+φ(r)
+∗∑
+χ(mod r)
+sup
+1≤y≤N
+|ψ(y,χ) + 1χ=χ∗Hβ∗(y)|.
+The suprema are required; an endpoint-only estimate does not prove this norm.
+12.5 Reported primitive all-preﬁx certiﬁcate
+The following certiﬁcate is the explicit analytic dependency of the low-conductor part. Its inter-
+nal reviews and rational tests are recorded in the corpus. The proof below shows the reduction
+to direct remainder envelopes. It does not reproduce every lengthy remainder deﬁnition from
+[8]; the substitution asserted in part (b) is therefore identiﬁed as a reported project-derived
+analytic step, rather than as a new fully independently established theorem of this manuscript.
+Lemma 12.1 (Reported primitive certiﬁcate) . Assume u ≥ 8 · 106, R = ⌊L16⌋, and select at
+most one primitive real Page pair up to R with
+β∗ ≥ 1 − 1
+2(2. 0452) logR.
+Use the signed primitive explicit formula, the zero count and the local and common Page zero-
+free regions of [ 8]. Assume also the direct remainder substitution in part (b) below. Then, for
+each conductor 1<r ≤R,
+∗∑
+χ(mod r)
+sup
+1≤y≤N
+|ψ(y,χ) + 1χ=χ∗Hβ∗(y)| ≤ 100N/u 14,
+and δlow(N )< 40000ℓ/u13.
+Proof. (a) Fix the same height T0 =u34 for all characters and all preﬁxes. Since R ≤ 2u16 ≤u17,
+log(r(T0 + 2)) ≤ 52ℓ. The published local constant 6. 3970 and common Page constant 2. 0452
+give, for every unselected zero in the signed sum with real part at least 1/ 2,
+1 − ℜρ≥ 1
+340ℓ.
+The selected zero is removed before absolute values. Its reﬂected zero 1 −β∗ remains in the
+remainder containing zeros with real part below 1/ 2. The pair is selected once, not at a new
+height or modulus for each preﬁx.
+Fory <N7/ 8, use |ψ(y,χ)| ≤ ψ(y) ≤ 2y andHβ∗(y) ≤y − 1. After at most 2u16 characters
+and division byN/u 14 this costs at most 6u30e−u/ 8. For N 7/ 8 ≤y ≤N , the zero count is at most
+200T0ℓper character and |ρ| ≥ 1/ 2. The remaining-zero sum, after the same normalization, is
+bounded by
+800u65 exp{−7u/ (2720ℓ)}. (62)
+The same lower value of logy applies to every character, so this allows the supremum inside
+each character sum.
+30
+
+PAGE 31
+(b) The direct remainder certiﬁcate uses the signed formula (21) and the direct remainders
+on pp. 1425–1429 of [ 8], with the half-integer Perron endpoint transported back to y. The
+asserted generous substitutions, uniform on the above long range, are
+R2 ≤ 1000Nuℓ/T0, R 3 ≤ 100Nu 2/T 0,
+R5 ≤ 36uT0, R7 ≤ 100000Nℓ2/T 0,
+R8 ≤ 4000ℓ/T0, R 11 ≤ 10000
+√
+Nu 10,
+with the additional Nr 4/ (T0 − 1) at most 200Nℓ/T0. For clarity, the substitution checks
+recorded in the project are: r1(r, 1) ≤ 10ℓ, r1(r,T 0 ± 1) ≤ 16ℓ, r4 < 100ℓ, the shifted r5
+maximum below 250ℓ, and the shifted r6 maximum below 70ℓ. In R7, the ﬁrst factor is below
+3N/T 0 and the bracket below 11000ℓ2. In R8, the ﬁrst factor is below 12/T 0 and the bracket
+below 270ℓ. In R11, √r ≤ 2u8 bounds the ﬁrst term by 18
+√
+Nu 8ℓ2, and the remaining bracket
+is below 1700ℓ2 with multiplier below 2
+√
+N . These estimates include the inverse gap of the
+reﬂected real zero. In R3 the ﬁrst logy term is additive, not a multiplier of the entire numerator.
+R2 must keep both near-ﬂoor neighbors and the half-integer padding. These last substitutions
+are the reported analytic certiﬁcate, not a consequence of rational arithmetic alone.
+After the characters and normalization, the complete direct fee is bounded by
+2000ℓ
+u3 + 200
+u2 + 200000ℓ2 + 400ℓ
+u4 + 20000u66e−u + 20000u40e−u/ 2. (63)
+Changing yβ∗/β∗ to Hβ∗(y) adds the constant 1/β∗ < 2 on only the selected character; it is
+included in the exponential group. The source’s Table 6 and equation (33) are not inputs of
+this certiﬁcate.
+(c) At u0 = 8 · 106, u0 < 223 and 15 < ℓ0 < 16. The zero exponent in ( 62) exceeds 1280.
+Usinge> 8/ 3 gives 800 21495(3/ 8)1280< 10−80. The ﬁrst four terms of ( 63) total less than 10−6,
+and its exponential terms and the short-preﬁx fee are less than 10−100. Each term decreases
+thereafter; for the zero fee its logarithmic derivative in logu is at most 65 − (7/ 2720)(u/ℓ)(1 −
+1/ℓ)< 0. There is ample slack for the conservative bound 100N/u 14. Finally,
+δlow ≤ 900L(1 + 17ℓ)/u 14 ≤ 32400ℓ/u13< 40000ℓ/u13.
+This proves the stated implications of the certiﬁcate.
+The numerical direction of this bound matters. It is less than 10−70, not 1070. A stronger
+immediate consequence is
+δlow< 640000
+(8 · 106)13 < 2 · 10−84 (u ≥ 8 · 106), (64)
+because ℓ/u13 decreases and ℓ0 < 16. These are upper bounds for a corrected norm, not
+measured sizes of a Goldbach error.
+Combining ( 60) and ( 61), two-preﬁx Cauchy gives the complete weighted remainder
+|W #|
+N ≤ 24
+√
+5252L−17/ 2 +L3δlow. (65)
+The factor 24 already contains both endpoints X and V . It is not doubled a second time. At
+u0, retain L−17/ 2<u −8
+0 / 2828 and use L3δlow ≤ 320000ℓ0/u 10
+0 . The exact rational comparison
+576
+[ 5252
+2828u8
+0
++ 320000 · 16
+u10
+0
+]
+< 64
+1054
+therefore proves the reported sharpened allowance |W #| < 8 · 10−27N , conditional on
+Lemma 12.1. This is not the exceptional main term.
+31
+
+PAGE 32
+12.6 A zero-avoiding contour for the genuine Type-I head
+For the adaptive quarter-proﬁle evaluation assume now
+u ≥ 1024, U =V = 1, δ = 1√uℓ4, E =δu=
+√u
+ℓ4 , T 1 =eE/ 120, h =T −1/ 2
+1 , J = 32.
+(66)
+Use the same Page pair up to R as before. In the Type-I head d ≤u8, exclude only that one
+primitive character if its conductor r>uℓ4. If it is absent, outside the head, even, non-square-
+free or nonunit, its actual head contribution is zero. All other characters on every multiple of
+its conductor are retained.
+For a retained primitive nonprincipal character of conductor q ≤ u8, and any K with
+logK ≤ 2u, use the real arithmetic series
+F (s) =
+∑
+n≥1
+µ(n)χ(n)1(n,K )=1n−s = 1
+L(s,χ)
+∏
+p|K
+(1 −χ(p)p−s)−1.
+The series identity initially holds on ℜs > 1. The local published real-zero gap is 1 −β≥
+100/ (√q log2q) when a local Siegel zero exists. For the selected r ≤ uℓ4, this is at least 25δ.
+Every other local real zero has common Page gap above 1/ (80ℓ). The ordinary zero-free-region
+check is
+28δ(8ℓ+E/ 120 + 1)< 1.
+It follows that the disks of radius 4δcentered at 1 + 2δ+it, |t| ≤ T1, are zero-free. No possible
+reciprocal-L pole is crossed.
+Here is the ﬁnite growing-mask bound. If δ≤ min(1/ 4, 1/ (2ℓ)) and ℜs ≥ 1 −δ, then
+⏐⏐⏐⏐⏐⏐
+∏
+p|K
+(1 −χ(p)p−s)−1
+⏐⏐⏐⏐⏐⏐
+≤u6.
+Indeedp−1+δ< 3/ 5 and − log(1 −t) ≤ (5/ 2)t on that range. For p ≤u enlarge to the integers
+and use pδ< 2 to bound the sum by 2ℓ. There are at most 2u/ℓmask primes above u, with
+sum at most 4/ℓ. Thus the logarithm of the product is at most 5ℓ+ 10/ℓ≤ 6ℓ. Every actual
+mask prime remains.
+Nonprincipal periodicity supplies | ∑
+n≤tχ(n)| ≤ q. Partial summation continues L to
+ℜs> 0 and bounds it by q|s|/ ℜs. On the larger disk use |L(s)| ≤ 4q(T1 + 3). At its center the
+Euler logarithm is bounded by logζ(1 + 2δ) ≤ log(1/δ). Borel–Caratheodory with radii 4δ,3δ
+then gives
+|1/L (s,χ)| ≤ [4q(T1 + 3)]6δ−7
+on the inner disk. On the rectangle 1 −δ≤ ℜs ≤c = 1 + 1/ logx, |ℑs| ≤ T1, N 1/ 8 ≤x ≤N ,
+this proves
+|F (s)| ≤ 224u74T 6
+1. (67)
+Here q6 ≤u48, δ−7 =u7/ 2ℓ28 and ℓ28 ≤u14 give exponent 6 + 48 + 7/ 2 + 14< 74.
+Let Mf (x) = ∑
+n≤xµ(n)χ(n)1(n,K )=1. Use the exact multiplicative box average
+Mh(x) = h−32
+∫
+[1, 1+h]32
+Mf (xt1 · · ·t32)dt1 · · ·dt32.
+Its absolutely convergent Mellin representation is
+Mh(x) = 1
+2πi
+∫ c+i∞
+c−i∞
+F (s)xsGh(s)ds
+s , G h(s) =
+[
+(1 +h)s+1 − 1
+h(s + 1)
+] 32
+.
+32
+
+PAGE 33
+The apparent singularity at s = −1 is removable. To justify the identity, average the Mellin
+step kernel over the box. Its averaged weight is continuous, zero below (1+h)−32 and one above
+1; its Mellin transform is Gh(s)/s . The decay |t|−32 gives absolute integrability and licenses
+Fubini on ℜs = c >1. Also |Mh −Mf | ≤ 64hx + 1. The +1 is the integer endpoint, not an
+omitted small error.
+On the rectangle |Gh| ≤ 2; for |t| ≥ T1, |Gh(s)| ≤ [3/ (h|t|)]32. Truncating and shifting to
+ℜs = 1 −δcrosses neither a zero of L nor the pole at s = 0. Divide every resulting fee by x/u 4.
+The ﬁve upper bounds are precisely
+A1 = 2 26u79e−3E/ 40, A2 = 6 · 224332u78e−11E/ 120,
+A3 = 6 · 332u5e−2E/ 15, A4 = 64u4e−E/ 240, A5 =u4e−u/ 8. (68)
+A1 is the shifted vertical integral: x−δ≤e−E/ 8, the inverse norm costs T 6
+1 , and the logarithmic
+integration costs at most u. A2 is the horizontal integral, whose smoothing decay T −17
+1 beats
+thatT 6
+1 . A3 is the two tails on the original absolute-convergence line, using |F (c+it)| ≤ 2u. A4
+andA5 are the box-averaging fee and its endpoint. An unsmoothed degree-one Perron estimate
+would not justify A2.
+At u0 = 10 24, u0 < 280, 54 < ℓ0 < 56 and E0 > 1012/ 564 > 100000. With e >2, the ﬁve
+fees are below
+26346−7500, 26331−9166, 2467−13333, 2326−416, 2320−10000,
+respectively, hence each is below 1/ 8. Their uniform monotonicity follows from d logE/d logu =
+1/ 2 − 4/ℓ> 2/ 5 and a − (2/ 5)bE <0 for each uae−bE above. We obtain the explicit retained
+nonprincipal bound
+|Mf (x)|<x/u 4 (N 1/ 8 ≤x ≤N ). (69)
+This proof controls 1/L itself and avoids the possible pole. It does not infer a Mertens-in-
+progressions estimate from a ψ-formula, and does not assume a bound for 1/L ′(β∗).
+12.7 Whole Type-I error accounting, including the paid primitive line
+The genuine scalar is I = ID −IW . A complementary-divisor switch, with the strict face
+retained, gives
+ID = −
+∑
+k≤Q
+(k,N )=1
+µ(k)2 ∑
+α<r≤⌊(N −1)/k ⌋
+(r,kN )=1
+µ(r) logr log(N −kr).
+The identity used is µ(k)µ(kr) = µ(k)2µ(r)1(k,r )=1. For K ≤ N 2, ordinary masked Mertens
+convolution split at √x gives, for x ≥N 1/ 4,
+|MK(x)|/x ≤ 26u2e−
+√
+u/ 48 +e−u/ 32.
+The mask-smooth coeﬃcient has reciprocal moment at most 2(1 + logK) and half-moment at
+moste12√u. The weight logt log(N −kt) has supremum at most u2 and variation at most 2u2.
+Abel summation, with both endpoints, then costs at most 4Ru2 times the normalized preﬁx
+bound. The outer sum is harmonic, not of size Q. Thus
+|ID|/N ≤ 208u5e−
+√
+u/ 48 + 8u3e−u/ 32.
+Let
+Tsing =
+∑
+1≤n<N
+(n,N )=1
+µ(N −n) logn S(nN ).
+33
+
+PAGE 34
+For physicalm =N −n ≥
+√
+N , the exact preﬁx min(Q, ⌊(m − 1)/α⌋) is at least N 1/ 5. Its mask
+is nN , and ( 53) has main −S(nN ), not −S(N ) on a general log-weighted row. All physical
+shortm, including empty preﬁxes, cost at most 8
+√
+NL 3. The literal completion therefore gives
+|I −Tsing|/N ≤ 4 · 108u5e−
+√
+u/ 60 + 160u2e−u/ 40 + 8L3e−u/ 2
++ 208u5e−
+√
+u/ 48 + 8u3e−u/ 32<u −4
+at the adaptive onset, by elementary decreasing-envelope comparisons.
+Deﬁne the positive odd-square-free coeﬃcient g(d) = ∏
+p|d(p − 2)−1, g(1) = 1 , zero oﬀ that
+support. Finite Euler expansion gives exactly
+S(nN ) = S(N )
+∑
+d|n
+(d,N )=1
+g(d),
+henceTsing is a weighted sum of actual reduced classes m ≡N (mod d), with the unit-N mask
+retained. Its coeﬃcient moments are
+∑
+d≤D
+g(d)< 8(1 + logD),
+∑
+d>D
+g(d)
+d < 6(1 + logD)
+D (D ≥e).
+For the second bound, compare local Euler factors to obtain ∑g(d)d−σ< 2ζ(1+σ) ≤ 2(1+1/σ).
+Forσ= 1/ logD ≤ 1, Rankin’s inequality gives the displayed tail. For the ﬁrst, factor g =
+h ∗ (1/n ); the absolute moment is (3/ 2) ∏
+p>2(1 + 3/ [p(p − 2)]) < 8, by telescoping the odd
+reciprocal quadratic series.
+TakeD =u8. Orthogonality on each actual d induces a primitive character with exact mask
+K =Nd , logK ≤ 2u. There is no unrestricted-conductor dimension factor: its φ(d) characters
+cancel its own 1/φ(d). The principal character is separate. Ordinary masked Mertens, now
+calibrated at x ≥ N 1/ 8, bounds its normalized preﬁx by 13u2e−
+√
+u/ 96 +e−u/ 64 < u−4. For
+smaller preﬁxes all characters use the direct maximum N 1/ 8<N/u 4. Abel summation for the
+decreasing weight log(N −m) costs at most u. The retained head, bridge and entire d > u8
+tail, normalized by N/ (uℓ), total at most
+ℓ
+u3 + 648ℓ(1 +ℓ)(1 + 8ℓ)
+u2 + 486ℓ(1 +ℓ)(1 + 8ℓ)
+u6 < 10−12. (70)
+The absence of a +1 in this positive divisor tail is justiﬁed by the original positive multiples
+n =dj, whose count is exactly ⌊(N − 1)/d ⌋ ≤ N/d . It is not an arbitrary interval count.
+The one excluded primitive character is paid on all its actual multiples. Its positive coeﬃ-
+cient mass is
+Pg(r) =
+∑
+r|d
+g(d)
+φ(d) < 3g(r)
+φ(r) < 6
+r2
+( r
+φ(r)
+) 3
+< 162(log logr)3
+r2 .
+The ﬁrst Euler product is below e <3; the second comparison uses ∏
+p|r(1 + 1/ [p(p − 2)]) <
+e1/ 2 < 2. The last step uses the universal Rosser–Schoenfeld totient bound [ 15]; its 2. 50637
+version covers its small exceptional integer. Also S(N ) < 3ℓ. Exactly one induced character
+occurs on each multiple, not φ(d/r ) characters. Bounding the genuine masked, log-weighted
+inner sum by Nu pays this line with normalized allowance
+486 [log(ℓ+ 4 logℓ)]3
+ℓ6 ≤ 486 [log(2ℓ)]3
+ℓ6 < 486 · 125
+546 < 1
+400000.
+This decreases with ℓ. Together with ( 70), it proves the reported |I| < 3 · 10−6N/ (uℓ). No
+active modulus has been discarded, and no favorable character phase has been assumed.
+34
+
+PAGE 35
+12.8 Whole EJ , centering corrections and exceptional main
+The literal omitted-divisor union reduces on this cap family to J(m) = − ∑
+d|m,d ≤αµ(d) logd.
+IndeedQ ≥αandQ(α+1) >X , so the other union branch cannot occur for d>α. Expanding
+µ(m)2 before grouping gives the exact error allocation
+EJ =Rmain +
+∑
+q
+wB(q)∆ ∗(q) −TB,
+where
+∆ ∗(q) = ψ(X;q,N ) −ψ(V ;q,N ) −UN (q;V,X ) − X −V
+φ(q) .
+UN is the exact lost nonunit prime-power mass. TB is the signed physical remainder with
+B < b≤
+√
+X in the square-free expansion; it is not the inﬁnite model tail used above. The
+elementary AP count ψs(X;q,N ) ≤ (N/q + 1)u and the b =gh,d =gk decomposition give
+|TB|/N ≤ 2u2L(2 + logB)/B + 2u2e−u/ 4 ≤ 46L−16 + 2u2e−u/ 4.
+The second term pays the physical counting +1 and must remain.
+Put Ω = ψ(X) −ψ(V ) andJβ= (Xβ∗ −Vβ∗)/β∗ ≤N . On every active modulus, including
+multiples of r∗, the two-preﬁx identity is
+∑
+q
+wB(q)
+[
+ψ(X;q,N ) −ψ(V ;q,N ) − Ω
+φ(q)
+]
+= −χ∗(N )JβMr∗(B) +W #.
+Inserting ( 56), the exceptional main is
++χ∗(N )S(N )κ(r∗)Jβ.
+Its eﬀective sign depends on χ∗(N )µ(r∗). It is not automatically favorable. The projection
+error and W # have diﬀerent error components.
+Recentering from Ω to X −V adds exactly (Ω − (X −V ))/φ(q), and the retained unit
+correction subtracts UN (q;V,X ). The exact endpoint identity is
+Ω − (X −V ) = (ψ(N ) −N ) − Λ(N ) + 1 − (ψ(V ) −V ).
+It retains Λ(N ), including N = 2t. From ( 58) and ∑1/φ(q)< 3L, ∑|wB(q)|/φ(q)< 8L2. The
+ordinary published estimate in [ 9] implies the safe weakening |ψ(N ) −N | ≤ 34Nu 2e−(4/ 5)√u.
+The endpoint and lower-preﬁx cost is at most 8L2(u + 1 + 3V ). The nonunit prime-power mass
+is at most 2u2, and ∑|wB(q)| ≤ uαB(1 + logB). Their joint variable envelope is therefore
+272u2L2e−(4/ 5)√u + 220L24e−3u/ 4
+after division by N . At u ≥ 8 · 1010 this is at most 2u−4. All the projection, model and
+physical-tail rates then give, using ( 65), the total nonexceptional allowance
+|nonexceptional components |/N ≤ 14411u−4, 14411 = 14400 + 3 + 4 + 2 + 2 .
+The ﬁrst constant pays W # by 24
+√
+(5252 + 320000)/u 8 < 14400/u 4; the next constants pay
+projection, Rmain, TB and the corrections exactly once.
+The exceptional main requires two alternative cases, not two added fees. If r∗ >u 3/ 2, the
+totient bound and ∏
+p|r(1 + 1/ [p(p − 2)])< 2 give its normalized cost
+54ℓ2[log(1. 5ℓ)]2/ √u.
+35
+
+PAGE 36
+If 3 ≤r∗ ≤u3/ 2, the published local gap and the coeﬃcient bound S(N )|κ(r)| ≤ 54ℓ3/r give at
+most 2 · 54ℓ3r−1 exp{−100u/ (√r log2r)} before normalization. Using logr ≤ 1. 5ℓand setting
+t = 1/ √r, the elementary maximum of t2e−at, namely 4e−2/a 2, yields
+|small-conductor main |/N ≤ (2187/ 10000)ℓ7/u 2.
+At u0 = 10 24 the normalized large and small alternatives are respectively below 54 · 562 ·
+25/ 1012< 9/ (2·106) and 0. 2187·568/ 1024< 10−10. Both functions decrease thereafter. Adding
+the nonexceptional 14411ℓ/u3< 10−12 gives the reported whole bound
+|EJ |< 5 · 10−6N
+uℓ.
+This conclusion depends on the all-preﬁx certiﬁcate, not just a small endpoint value or an
+exceptional-modulus-free theorem.
+12.9 The complete centering component and detector losses
+Use the literal endpoint x(m) = min(Q, ⌊(m − 1)/α⌋) in WQ(n,m ). For a retained prime row
+n =p>Q , all k ≤x(m) are less than p, so the ﬁnite mask nN is exactly the mask N before
+taking any limit. On the further physical bulk m> ⌈
+√
+N ⌉, x(m) ≥N 1/ 5; ( 54) therefore gives
+main −S(N ). Its total Mangoldt weight is at most Nu , so its whole error is bounded by N
+times that envelope.
+The literal physical partition keeps low primes p ≤Q, primes with short m, proper prime
+powers, n ≤ V omissions and nonunit omissions. The separate original corner estimates sum
+to
+6QL3 + 6⌈
+√
+N ⌉L3 + 12
+√
+NL 4 + 3VL 2 + 6L3 ≤ 40N 3/ 4L4.
+This is the reported literal corner certiﬁcate; it does not apply the bulk mask to those other
+rows. Together with the bulk it gives the complete, variable error envelope
+|EZ|/N ≤ 4 · 108u5e−
+√
+u/ 60 + 160u2e−u/ 40 + 40L4e−u/ 4. (71)
+The proper powers here belong to the one-Mangoldt centering component, not to the two-
+Mangoldt detector conversion. The latter has its own nonnegative retained proper-power mass,
+satisfying
+Pretained ≤
+√
+N (logN )2.
+For each prime base p ≤
+√
+N , the sum of logp over its proper powers below N is at most u,
+and the second Mangoldt factor is at most u, proving this estimate.
+Normalize (71) and the detector estimate by N/ (uℓ). At u0 = 10 24 every negative exponent
+is larger than 1011, while the positive factors are below 2516, 2254, 2416 and 2246, respectively.
+They are individually below 2−1000; the corresponding polynomial-exponential envelopes de-
+crease. Thus
+|EZ|< 10−12N/ (uℓ), P retained< 10−12N/ (uℓ).
+The omitted-prime-pair selector loss Tpairs is nonnegative and appears with a favorable minus
+sign. It need not be charged as an additional positive upper error.
+12.10 Conditional exterior conclusion and the unresolved target
+Under the analytic certiﬁcate and literal completion estimates speciﬁed above, the quarter-
+power assembly gives
+|I|< 3 · 10−6N/ (uℓ), |EJ |< 5 · 10−6N/ (uℓ),
+|EZ|< 10−12N/ (uℓ), P retained< 10−12N/ (uℓ),
+u ≥ 1024, U =V = 1. (72)
+36
+
+PAGE 37
+Their useful exterior sum is
+ϵtr =Pretained −Tpairs +EJ +EZ −I <(8 · 10−6 + 2 · 10−12)N/ (uℓ).
+This reevaluates the original components; no old ﬁxed allowance is added to it. The uni-
+versal reference lower bound from the separate prime-square argument is S(N )(N −FN ) ≥
+2541N/ (524288uℓ). If the exact covered/uncovered bridge holds and if the still-open analytic
+target
+DN ≤N/ (256uℓ)
+is established on the same support and proﬁle, the terminal ledger would leave the positive
+coeﬃcient 2541
+524288 − 1
+256 − 8
+106 − 2
+1012 = 119337327869
+128000000000000 > 0.
+The equality of rational numbers is a certiﬁcate of a conditional margin. Neither the covered
+bridge nor the required bound for DN is proved by this arithmetic. A smaller Type-I component
+also does not make DN smaller: at ﬁxed V,α,Q , changing U redistributes the same arithmetic
+term between IU and DU , with its covered positive error still present.
+12.11 Relation to prior work and responsible scope claims
+The external tools are classical: ordinary Mertens cancellation, primitive character mean values,
+zero-free regions, partial summation, Euler products, Borel–Caratheodory and a smoothed
+Perron contour. Their coeﬃcient-speciﬁc combination and explicit error allocation are project
+deductions; no priority claim for a new distribution theorem has been established. The formal
+contribution concerns exact ﬁnite bridges and certiﬁcates with declared hypotheses. It does
+not establish binary Goldbach, overcome the parity barrier or prove an analytic inﬁnite-range
+statement in Lean.
+Sedunova’s two papers have diﬀerent bibliographic identities. The 2018 Besancon paper is
+A partial Bombieri–Vinogradov theorem with explicit constants ; the 2019 Bordeaux paper [ 12] is
+A logarithmic improvement in the Bombieri–Vinogradov theorem , 31(3), 635–651. A corollary
+with an eﬀective implied constant does not provide a particular numerical constant unless it is
+evaluated. The explicit assembly here uses the stated AH primitive theorem, not an invented
+numerical Sedunova constant.
+M. Ram Murty and A. Vatwani, A remark on a conjecture of Chowla , Journal of the
+Ramanujan Mathematical Society 33(2) (2018), 111–123, is relevant qualitative context for raw
+Mertens cancellation in progressions with maximal preﬁxes. Such a theorem cannot by itself
+provide the numerical 1024 budget here; the manuscript’s explicit route treats the reciprocal- L
+function and its mask directly. The latest author publication page conﬁrms the 2018 journal
+entry, but the former institutional PDF redirects. No fresh primary-PDF veriﬁcation of its
+Proposition 3 is claimed in this manuscript support review.
+Weighted sieves with switching [ 13] and the sieve framework [ 14] support the separate
+qualitative sector. That sector has a diﬀerent αand an unevaluated onset. In particular, the
+printed sign of the absolute remainder in Richert’s (11.80) is not used as a lower-bound input;
+the adopted sector proof uses a good/bad partition and the stated modern linear-sieve lemma
+instead. Chen-type prime plus at-most-two-prime-factor conclusions do not imply a prime plus
+prime conclusion or a sign comparison of proper semiprime and triple-prime masses. Prime
+credit must remain in the exact terminal row.
+The historical repository’s own AUDIT_NOTE.md states that four interface predicates were
+weak enough to admit trivial witnesses, while PCBAsymptotic already expresses asymptotic
+Goldbach. Accordingly, compiling a conditional interface theorem is not a proof of the corre-
+sponding number-theoretic hypothesis. The present corpus should be described by its exact
+37
+
+PAGE 38
+theorem statements, source hashes, axiom checks and open assumptions, without an unsup-
+ported claim of being a ﬁrst formal proof of Goldbach.
+Finally, arXiv’s published policy [ 21] requires disclosure of signiﬁcant generative-tool use
+and keeps responsibility for all content with the named human authors; a language model is not
+an author. An appropriate disclosure is that generative tools assisted research, proof drafting,
+code generation and language editing, while the human author takes responsibility for the
+mathematical statements and references. The reviews in this corpus are internal computational-
+assistant reviews. An arXiv-friendly source package is a technical format, not a guarantee of
+moderation acceptance or external peer review.
+13 The unresolved terminal estimate
+The reference lower bound and a numerical loss allowance must be compared on the same
+support and the same parameter proﬁle. In the quarter proﬁle, a suﬃcient covered-route
+target remains
+DN ≤ N
+256 logN log logN. (73)
+It is not an established theorem, and it is not asserted necessary. If the reported primitive
+input, the exact covered identity and the stated written exterior assembly apply, ( 73) leaves
+the conditional coeﬃcient
+2541
+524288 − 1
+256 − 8
+106 − 2
+1012 = 119337327869
+128000000000000 > 9
+10000.
+The positive rational comparison is a consequence of the premises. It does not discharge ( 73),
+nor prove that the covered decomposition has the required complete support.
+The complete direct scalar formulation avoids the artiﬁcial covered excess:
+Rsf = S(N )(N −FN ) −Fﬁxed −Pretained +Tpairs −EJ −EZ.
+An upper bound for Fﬁxed +EJ +EZ +Pretained −Tpairs below the reference would suﬃce in that
+convention. It must not be added to the covered-route losses as if they were diﬀerent errors.
+The cutoﬀ-invariance identity in the formal appendix shows that completing a Vaughan ﬁbre
+redistributes the same prime row between the short and long components. It does not supply
+new cancellation simply by changing U .
+The eighth-proﬁle sector result has a diﬀerent remaining object:
+Fﬁxed =FC +Frough +Fnonrough, remaining.
+The two ﬁrst supports are disjoint and have a negative combined upper bound. The third
+includes potentially large positive rows; no usable global upper bound has been obtained for
+it. In addition, the quarter-proﬁle eﬀective exterior bounds have not been transferred to this
+eighth proﬁle. A negative coeﬃcient already included in Jref cannot also be spent as an extra
+credit after the whole Jref has been replaced by its main term.
+13.1 What a subsequent proof would have to add
+A future argument must supply a quantitative estimate for the actual signed aggregate, with
+its masks, weights, strict faces and complement retained. It may use a combined estimate
+rather than separate absolute bounds, but no proof has shown that every possible absolute or
+spectral method fails. The N/ 64 obstruction concerns the particular positive envelope tested.
+Similarly, a large Gram eigenvalue rules out a speciﬁed uniform operator bound; it does not
+38
+
+PAGE 39
+determine the projection of the actual arithmetic vector. A failed local sign matching shows
+that matching is not automatic, whereas other complete ﬁbres do cancel at one ﬁxed CRT root.
+For coprime a,r , that root is unique modulo ar; multiple sign conductors inside the same ar
+are a diﬀerent matter.
+Once a suﬃcient large- N estimate is proved, its constants and onset must be eﬀective
+and compatible with every external input. Finally the entire interval below that onset must be
+covered by an independent theorem or veriﬁed computation. A statement above N ≥ exp(1024)
+would leave an enormous gap above the published ﬁnite veriﬁcation range. The present report
+supplies no coverage of that gap.
+No extension to twin primes or to other additive conjectures is implied. The shared vocab-
+ulary of Type-II decomposition and sieve masks is not itself a transfer theorem. For one ﬁxed
+N there are only ﬁnitely many prime representations; any prospective quantitative conclusion
+concerns their ﬁnite number as N varies.
+14 Corpus audit, reproducibility and documentary scope
+The synthesis uses the supplied local mathematical collections, the accessible Google Drive
+research folder and the public GitHub repository. Corpus triage and ﬁle integrity are distinct
+from proof validation. The electronic coverage record lists inspected sources and the exclusions;
+no whole-computer proof review is claimed.
+Collection Inventory evidence Review scope
+Local earlier
+manuscripts
+936 selected ﬁles; 616
+PDF copies; 560 distinct
+PDF hashes; 5,643
+extracted pages
+Retained extraction index from the initial audit;
+selected mathematical chains read in detail
+Current formal corpus 894 physical Lean ﬁles;
+502 distinct hashes; 71
+canonical recent sources
+Deduplication, theorem headers, source-bound
+logs, receipts and axiom vocabulary checked
+Google Drive 900 folders visited; 770
+PDF metadata entries
+outside
+dependency/build/Git
+exclusions
+Recursive research metadata and selected source
+text; pending dependency directories excluded,
+not silently treated as reviewed proofs
+GitHub 1,254 tree nodes;
+response not truncated
+Pinned tree and interface audit read; conditional
+historical architecture separated from recent
+certiﬁcates
+Primary literature Versioned arXiv articles,
+publisher and
+author-hosted sources
+Theorem applicability and proof inputs identiﬁed;
+no exhaustive literature novelty certiﬁcation
+Table 4: Coverage evidence. Metadata counts include copies and are not counts of indepen-
+dently proved mathematical results.
+The GitHub snapshot is commit
+979c05416140504f11c6e9ba6ad1dd565838bea1.
+It was retrieved from https://github.com/seisner1967-hash/goldbach-horizon. The sup-
+plied Drive entry is the Project Horizon research folder . The recursive inventory stopped
+traversing third-party Mathlib/build/Git directories after classifying the remaining queued di-
+rectories; it also excluded unrelated topics. Source documents such as CS21 and the E4 family
+39
+
+PAGE 40
+were retrieved directly. The descriptive L’Horloge Invisible is background context rather than
+an arithmetic proof. Retrieved documents about other conjectures are outside this report’s
+mathematical scope.
+14.1 The historical interface audit
+The repository’s own AUDIT_NOTE.md records that four of ﬁve old interface predicates were
+trivially satisﬁable or not suﬃciently connected to the intended arithmetic operators. Its
+PCBAsymptotic predicate already asserts eventual positivity of the Goldbach representation
+count for every even integer. Consequently inhabiting that architecture cannot be described
+as an independent proof of asymptotic Goldbach. Historical source ﬂags include gaps, custom
+axioms and ﬁnite native certiﬁcates; these are separated from the canonical recent standard-
+axiom inventory. The mathematical content of an individual ﬁnite certiﬁcate remains mean-
+ingful within its exact scope, but a repository-wide assertion of “no gaps and no nonstandard
+axioms” would be false.
+14.2 Frozen packages and current checks
+The three immutable packages preserve complementary evidence. Their complete SHA256
+values are in the electronic manifest; Table 5 gives distinguishing preﬁxes. During ﬁnal prepa-
+ration all ZIP CRC, payload byte sizes and manifest hashes were replayed: 398/398, 67/67
+and 7/7 payloads matched. This ﬁnal preparation did not recompile Lean or re-execute every
+previously reported ﬁnite test.
+Package Payloads New latest conclusions SHA256 preﬁx
+Sprint21 audit snapshot 398 16 3b88e4f9367fb2b9
+Reviewed continuation addendum 67 3 66dc5eecb878c78a2
+Post-freeze rough supplement 7 0 9d44c84e76e78af0
+Table 5: Frozen evidence packages. Manifests are not counted as payloads. The rough supple-
+ment does not add Lean theorems.
+The companion folder contains the standalone English TeX source, the full electronic formal-
+statement registry, 71 canonical Lean sources, original compilation scripts, retained receipts
+and axiom logs, selected written proofs and exact-constant checkers. Lean4.15.0 and the exact
+Mathlib revision are pinned. A portable replay driver accepts an explicit compiler, the pinned
+dependency library directories and a fresh build directory; it performs no installation or network
+update. The original scripts retain their host-speciﬁc provenance. An old matching compiled
+ﬁle is not a fresh source replay.
+The computational examples are reproducible with the retained Python scripts. The initial
+grid checker reports 51,000 defect cases and 3,072 covariance cases; subsequent reports include
+exact rational onset guards and ﬁnite ﬁbre tests. These counts describe the individual deliv-
+ered checkers and are not added into an artiﬁcial total of independent mathematical evidence.
+The complete axiom-audited theorem appendix is supplied electronically instead of printing
+hundreds of historical helper statements inside the main analytic narrative.
+14.3 Public, versioned reproduction material
+The frozen evidence snapshot is publicly available at the following commit-addressed directory:
+Project Horizon: reproducibility snapshot, 1 October 2026 .
+40
+
+PAGE 41
+The exact revision is
+8ef89b3cef4cddffd9bf9ca81141280b31ea6af6.
+The ﬁle goldbach_verification_bundle.zip contains 362 manifest-listed payloads. Its
+SHA256 is
+310c63cdb09e9a190da5bc01ddd781515a7cc717d73b680c8f30ef8fae7b8625.
+This is the unchanged evidence snapshot accompanying version 1. The present editorial revision
+changes presentation and scope explanations, without rewriting retained Lean sources or histor-
+ical receipts. Within the archive, review/lean_inventory_full_statement_appendix.txt
+supplies the complete statement registry; reproducibility/lean supplies canonical sources,
+dependency pins and replay instructions. The selected analytic notes retain the unresolved
+primitive-input boundary. Historical wording in archived notes is provenance; the current
+manuscript governs current claims.
+The manuscript and its standalone TeX source are CC BY 4.0. This licence does not
+relicense software dependencies or historical evidence ﬁles. No DOI, journal acceptance, or
+fresh Lean compilation is inferred from this public repository link.
+14.4 AI assistance and author responsibility
+Substantial generative-AI assistance was used in corpus retrieval, code generation, derivation,
+drafting and internal cross-checks. The named human author is Durand Serge; no AI system
+is listed as an author. This version has internal source and numerical checks, but has not
+undergone external mathematical peer review. The human author must inspect and accept
+responsibility for its content before submission. This disclosure follows the arXiv policy on
+substantial AI assistance [ 21]. This public research report is formatted for arXiv-compatible
+source processing. Repository dissemination does not imply endorsement, moderation approval,
+journal acceptance or external mathematical validation.
+41
+
+PAGE 42
+15 Priorities for independent review
+The next work should proceed in the following order, with each result retaining its evidence
+status.
+1. Complete the primitive analytic input. For every remainder in the Bordignon-
+based argument, state the original formula, its domain, each substitution, and the ﬁnal
+numerical majorant. Until this chain has been independently checked, Lemma 12.1 and
+its dependent estimates keep their conditional status.
+2. Estimate the actual signed complement. Obtain a quantitative upper bound on the
+nonrough remaining sector or on the complete covered-route aggregate, with the original
+masks, logarithmic weights, endpoints and favourable terms retained. A new identity or
+a ﬁner absolute envelope is not a substitute for this estimate.
+3. Reconcile parameters and thresholds. Establish the complete transfer identity on
+the same support as the chosen analytic bounds. Do not import the eﬀective quarter-
+proﬁle allowance into the eighth proﬁle without a new argument; then evaluate the re-
+sulting common onset.
+4. Reproduce and review. Rebuild the canonical Lean sources with pinned dependen-
+cies, inspect the full declaration registry, rerun the rational checkers and obtain external
+specialist review of the analytic passages. Finally, any Goldbach theorem would require
+coverage of the entire interval below its eﬀective onset.
+This version is intended to make these tasks inspectable. It does not assert proximity to a
+proof or replace them by a publication claim.
+A Finite Lean certiﬁcates, inventory and trust boundary
+The printed listings render Lean Unicode symbols with ordinary mathematical fonts. The
+electronic statement inventory and bundled Lean sources retain their original Unicode text.
+A.1 What the formal count means
+The canonical numbered-sprint inventory contains 71 source ﬁles, 66 of which contain theorem
+or lemma declarations. There are 852 lexical declarations (833 public declarations and 19
+private helpers). The individually printed, standard-axiom subset contains 658 distinct fully
+qualiﬁed name/statement pairs ; copies, extracted archives and repeated imports do not increase
+that count. These are accumulated ﬁnite identities, inequalities and conditional interfaces, not
+658 estimates resolving the remaining arithmetic problem. The last research cycle contributes
+exactly 19 new public conclusions in six modules: 16 in the immutable snapshot and three in
+its separate continuation addendum. Private helpers and old dependencies recompiled for a
+fresh replay are excluded from those 19.
+Table 6: Individually axiom-audited formal families.
+Phase Count Finite formal content and boundary
+3 52 Fourier/Parseval and convolution; interval semantics; a ﬁnite
+spectral example and arithmetic variance/Gram identities.
+42
+
+PAGE 43
+Phase Count Finite formal content and boundary
+4 132 Proxy coeﬃcient energy, four-modulus combinatorics, anchors,
+diagonal and ﬁnite mass/simplex geometry; no signed cancellation.
+5 51 Ramanujan/Fourier formulas, folded windows, smoothing and
+signed cofactor kernels; no ﬁnal arithmetic contraction.
+6 57 Exact Vaughan and ﬁnite Heath–Brown-type identities; Type-II
+rectangle assembly and variance reduction.
+7–9 25 Four-sign structure, genuine beta-weighted ﬁbers and literal
+cutoﬀ/calibration geometry.
+10–12 123 CRT/coprimality masks, character/nonunit splitting, Kloosterman
+energy, conductor support and shifted dispersion sectors.
+13–15 135 Multiplicity, diagonal and conditional oﬀ-diagonal budgets; ﬁnite
+Euler factors, margin interfaces and cofactor boundaries.
+16–18 58 Ratio pushforward, ﬁnite Gauss factorization, Rosser boundary,
+signed assembly and actual parity/reference interfaces.
+19 0 Explicit analytic preﬁx/mask transport was written outside Lean.
+20 6 Actual Möbius-log ﬁbers and exact truncated-prime branches.
+21 19 The latest coeﬃcient/support identities displayed below.
+Total 658 Repeated imports and physical replay copies are not counted.
+The accepted recent toolchain is Lean 4.15.0 (commit 11651562caae) with Mathlib pinned
+to 9837ca9d65d9de6fad1ef4381750ca688774e608. Every one of the latest 19 conclusions
+has a retained production compilation and a separate fresh replay, with exit code zero and
+source/log/compiled-artifact hashes. The printed axioms are drawn only from propext,
+Classical.choice, and Quot.sound. No latest theorem uses sorry, admit, native_decide,
+or a custom analytic axiom. The ﬁnal inventory checked existing evidence; it did not run
+another compilation or turn written analytic estimates into Lean theorems.
+The electronic lean_inventory.json records all canonical source hashes, exact headers
+and hypotheses, receipt and log hashes, imports, compile-script references and physical-copy
+groups. The full electronic statement appendix lists the 658 explicitly audited statements. The
+historical Horizon repository is separate: its own interface audit identiﬁes weak predicates,
+while PCBAsymptotic already assumes eventual Goldbach positivity. Historical ﬁles containing
+gaps or custom axioms are not included in the latest trust claim.
+A.2 Deﬁnitions needed to read the latest statements
+Multiplication of arithmetic functions denotes Dirichlet convolution, (f ∗ g)(n) =∑
+ab=nf (a)g(b), and arithmetic functions vanish at zero. Write µfor the actual Möbius
+function, Λ for von Mangoldt, and φfor Euler’s totient. Lean’s natural subtraction is trun-
+cated subtraction and its divisions between natural numbers are integer divisions. Real.log
+is the total real logarithm; in particular it is deﬁned at zero. No positive logarithm argument
+may be inferred without the displayed hypotheses. n.divisors and n.divisorsAntidiagonal
+are ﬁnite divisor sets; the latter consists of pairs whose product is n.
+43
+
+PAGE 44
+Local Euler projection and literal-cut coeﬃcient. For a Boolean selector ε, put d =p
+if it is true and d = 1 otherwise. The deﬁnitions in the ﬁrst two modules are
+localProjection(p,ε) =
+∑
+b∈{1,p }
+µ(b)µ(d)
+φ(lcm(b2,d )),
+wα(r,s ) = µ(s)µ(r)
+∑
+t|s
+1rt≤αµ(t) log(rt).
+The Lean name for the second deﬁnition is signedDivisorCoefficient r s alpha . The
+factor s.divisors.card in its bound is the actual number of divisors of s. The bound does
+not assume that the complete ﬁber is admitted.
+Literal divisor and harmonic kernels. Form =N −n, deﬁne
+Dα,Q(m) =
+∑
+k|m
+1k≤Q1αk<mµ(k) log(k/m ),
+WN,α,Q(n) =
+∑
+1≤k≤Q
+1(k,N )=11(n,k )=11αk<m
+µ(k)
+φ(k) log(k/m ),
+KN,α,Q(n) = 1(n,N )=1µ(m)
+(
+Dα,Q(m) −WN,α,Q(n)
+)
+.
+divisorKernel alpha Q m is Dα,Q(m). literalKernel N alpha Q n is KN,α,Q(n). The
+strict moving face is part of these deﬁnitions.
+Let µ≤U = µ1n≤U , µ>U = µ1n>U , and βV = Λ 1n>V ∗ζ, where the arithmetic function ζ
+equals one on positive integers. The code deﬁnes TU,V =µ>U ∗βV and AU,V =µ≤U ∗βV . Its
+three rows and its formal deﬁcit are
+fullRow =
+∑
+0≤n<N
+TU,V (n)KN,α,Q(n),
+smallRow =
+∑
+0≤n<N
+AU,V (n)KN,α,Q(n),
+primeRow =
+∑
+0≤n<N
+Λ(n)1n>VKN,α,Q(n),
+ledgerDeﬁcit = −fullRow +e + |e|.
+The name primeRow does not exclude proper prime powers of the ﬁrst axis. The formal
+ledgerDeficit equals a proposed external ledger quantity only after its exact covered bridge
+is supplied; the module does not prove that bridge or a deﬁcit bound.
+Complete H and small-divisor credit. For natural y, put µ>y(n) = µ(n)1n>y and deﬁne
+the actual integer coeﬃcient
+Hy(n) = (µ>y ∗µ>y ∗ζ)(n) =
+∑
+d|n
+∑
+uv=d
+µ(u)1u>yµ(v)1v>y.
+The predicate rough y n used in this module means exactly ∀d | n, d ≤ y ⇒ d = 1 . The
+hypotheses explicitly require positive arguments where necessary; the special value n = 1 is
+retained in the rough formula. The ﬁnal coeﬃcient deﬁnition is
+jα(m) = −
+∑
+d|m, d≤α
+µ(d) logd, smallDivisorCredit alpha m =jα(m).
+IsPrimePow P means that P is a positive prime power. The last theorem assumes both its
+negation and µ(P ) = −1; those assumptions are not conclusions of a density estimate.
+44
+
+PAGE 45
+A.3 The 19 exact latest-cycle declarations
+The displayed headers retain every hypothesis and the original Lean parameter order. They
+omit only the proof bodies and normalize blank lines. Names are relative to the indicated
+namespace; the full qualiﬁed name is the namespace followed by the displayed theorem name.
+The lettered labels below are exposition labels, not additional Lean declarations. The subse-
+quent analytic use of an identity is separate from its ﬁnite kernel-checked statement.
+A.3.1 GoldbachActualEulerProjection
+Namespace: GoldbachResearch.ActualEulerProjection.
+This is a ﬁnite two-choice projection with actual Möbius signs and the actual lcm totient.
+No inﬁnite Euler product or analytic remainder is formalized.
+theorem actual_local_euler_projection {p : N} (hp : p.Prime)
+(dSelected : Bool) :
+localProjection p dSelected =
+if dSelected then -(1 : R) / (p : R)
+else 1 - 1 / ((p : R) * ((p : R) - 1))
+A.3.2 GoldbachActualDivisorFibreBound
+Namespace: GoldbachResearch.ActualDivisorFibreBound.
+The actual ﬁnite cutoﬀ is retained. This is the coeﬃcient bound used by a later written
+weighted-distribution argument, not that distribution theorem.
+theorem actual_truncated_fibre_abs_bound {r s alpha : N}
+(hr : 1 ≤ r) (hs : 1 ≤ s) (ha : 1 ≤ alpha) :
+|signedDivisorCoefficient r s alpha| ≤
+(s.divisors.card : R) * Real.log (alpha : R)
+A.3.3 GoldbachActualT erminalCutoﬀInvariant
+Namespace: GoldbachResearch.ActualTerminalCutoffInvariant.
+These identities retain the actual kernel and genuine Vaughan coeﬃcients. Changing the
+U cut transfers terms between the two rows; it does not make their sum small or discharge a
+covered-support hypothesis.
+theorem actual_rows_complete (N alpha Q U V : N) :
+fullRow N alpha Q U V + smallRow N alpha Q U V =
+primeRow N alpha Q V
+theorem actual_terminal_defect (N alpha Q U V : N) (e : R) :
+ledgerDeficit N alpha Q U V e - smallRow N alpha Q U V =
+-primeRow N alpha Q V + e + |e|
+45
+
+PAGE 46
+theorem actual_terminal_U_invariant (N alpha Q U U’ V : N) (e e’ : R) :
+(ledgerDeficit N alpha Q U V e - smallRow N alpha Q U V) -
+(ledgerDeficit N alpha Q U’ V e’ - smallRow N alpha Q U’ V) =
+(e + |e|) - (e’ + |e’|)
+A.3.4 GoldbachCompleteHPrimeOrbit
+Namespace: GoldbachResearch.CompleteHPrimeOrbit.
+The complete arithmetic coeﬃcient is retained. The last inequality allows arbitrary real
+high, requires nonnegative low, and exposes the boundary through max(high-low,0); it does
+not assert favorable closure of the actual selectors.
+theorem H_literal_finite_sum (y n : N) :
+H y n =
+∑
+d ∈ n.divisors,
+∑
+uv ∈ d.divisorsAntidiagonal,
+(if y < uv.1 then ArithmeticFunction.moebius uv.1 else 0) *
+(if y < uv.2 then ArithmeticFunction.moebius uv.2 else 0)
+theorem H_rough_formula {y n : N} (hy : 1 ≤ y) (hn : 0 < n)
+(hr : rough y n) :
+H y n = ArithmeticFunction.moebius n + 1 - 2 * (if n = 1 then 1 else 0)
+theorem prime_divisor_orbit_partition {p L k : N} (hp : p.Prime)
+(hk : k | p * L) :
+(k | L ∧ ¬ p | k) ∨ ∃ x, x | L ∧ k = p * x
+theorem H_one_small_prime {y p e : N} (hy : 1 ≤ y) (hp : p.Prime)
+(hpy : p ≤ y) (he : 0 < e) (hr : rough y e) :
+H y (p * e) = -H y e
+theorem actual_complete_orbit_upper {y p a e b : N}
+(hy : 1 ≤ y) (hp : p.Prime) (hpy : p ≤ y)
+(ha : 0 < a) (hra : rough y a) (he : 0 < e) (hre : rough y e)
+(hb : 1 ≤ b) (low high : R) (hlow : 0 ≤ low) :
+0 ≤ (H y a : R) * Real.log b * (H y e : R) * low * Real.log p ∧
+(H y a : R) * Real.log b *
+((H y e : R) * high * Real.log e +
+(H y (p*e) : R) * low * Real.log (p*e))
+≤ (H y a : R) * Real.log b * (H y e : R) *
+(max (high-low) 0 * Real.log e - low * Real.log p)
+A.3.5 GoldbachLiteralDivisorCompletion
+Namespace: GoldbachResearch.LiteralDivisorCompletion.
+46
+
+PAGE 47
+These conclusions preserve the integer ﬂoor cap and strict face. They require the written
+proper-divisor or prime-roughness assumptions; no analytic sign or size estimate for W is
+included.
+theorem full_literal_divisor_sum (m : N) (hm : m ̸= 0) :
+(
+∑
+k ∈ m.divisors, muReal k * Real.log ((k : R) / (m : R))) =
+-ArithmeticFunction.vonMangoldt m
+theorem literal_completion_of_proper_admission (alpha Q m : N) (hm : m ̸= 0)
+(hadmit : ∀ k ∈ m.divisors, k ̸= m → k ≤ Q ∧ alpha * k < m) :
+divisorKernel alpha Q m = -ArithmeticFunction.vonMangoldt m
+theorem actual_floor_cap_admits_proper_divisors (N alpha m : N)
+(hm : m ̸= 0) (hN : m ≤ N - 1) (ha : 0 < alpha)
+(hcofactor : ∀ c ∈ m.divisors, c ̸= 1 → alpha < c) :
+∀ k ∈ m.divisors, k ̸= m →
+k ≤ (N - 1) / alpha ∧ alpha * k < m
+theorem literal_completion_at_original_floor (N alpha m : N)
+(hm : m ̸= 0) (hN : m ≤ N - 1) (ha : 0 < alpha)
+(hcofactor : ∀ c ∈ m.divisors, c ̸= 1 → alpha < c) :
+divisorKernel alpha ((N - 1) / alpha) m =
+-ArithmeticFunction.vonMangoldt m
+theorem rough_prime_factors_control_cofactors (alpha m : N) (hm : m ̸= 0)
+(hrough : ∀ p : N, Nat.Prime p → p | m → alpha < p) :
+∀ c ∈ m.divisors, c ̸= 1 → alpha < c
+theorem rough_literal_completion_at_original_floor (N alpha m : N)
+(hm : m ̸= 0) (hN : m ≤ N - 1) (ha : 0 < alpha)
+(hrough : ∀ p : N, Nat.Prime p → p | m → alpha < p) :
+divisorKernel alpha ((N - 1) / alpha) m =
+-ArithmeticFunction.vonMangoldt m
+A.3.6 GoldbachActualSmallDivisorCredit
+Namespace: GoldbachResearch.ActualSmallDivisorCredit.
+The support equality is proved from roughness of L and the full proper-divisor condition
+on P. The negative coeﬃcient does not by itself prove that a sector contains enough prime
+ﬁrst-axis mass.
+47
+
+PAGE 48
+theorem literal_small_divisors_product {alpha P L : N}
+(hP : alpha < P) (hL : 0 < L)
+(hproper : ∀ d ∈ P.divisors, d ̸= P → d ≤ alpha)
+(hrough : ∀ p : N, p.Prime → p | L → alpha < p) :
+(P * L).divisors.filter (fun d => d ≤ alpha) = P.divisors.erase P
+theorem actual_small_divisor_credit {alpha P L : N}
+(hP : alpha < P) (hL : 0 < L)
+(hproper : ∀ d ∈ P.divisors, d ̸= P → d ≤ alpha)
+(hrough : ∀ p : N, p.Prime → p | L → alpha < p) :
+smallDivisorCredit alpha (P * L) = ArithmeticFunction.vonMangoldt P +
+(ArithmeticFunction.moebius P : R) * Real.log (P : R)
+theorem actual_negative_composite_credit {alpha P L : N}
+(hP : alpha < P) (hL : 0 < L)
+(hproper : ∀ d ∈ P.divisors, d ̸= P → d ≤ alpha)
+(hrough : ∀ p : N, p.Prime → p | L → alpha < p)
+(hpow : ¬IsPrimePow P) (hmu : ArithmeticFunction.moebius P = -1) :
+smallDivisorCredit alpha (P * L) = -Real.log (P : R)
+A.4 Source hashes and reproduction references
+The exact source identiﬁers are as follows. Full production and independent-replay receipt
+paths and hashes are in lean_inventory.json; source-copy equality, compiler exit zero, and
+log/compiled-artifact hashes were checked against those receipts. Compiled-artifact hashes can
+diﬀer between fresh directories because build paths are embedded; each must match its own
+receipt.
+GoldbachActualEulerProjection.lean
+SHA256 7521a244da3f6000d4841156dee78f819bf9a1e075d6da127dacf6c0170520c0
+GoldbachActualDivisorFibreBound.lean
+SHA256 f9cdd1d266889b5f672ef76c35b845e51e1b81a6d3bedcd49737b01c26281e44
+GoldbachActualTerminalCutoffInvariant.lean
+SHA256 52a6a5b0d0f59879d2567df1415d8d4d9e2f5ff695a57421db18282a97a5c039
+GoldbachCompleteHPrimeOrbit.lean
+SHA256 df14ac670788ddbf2091cc62c41b93156267425ef937927f12945edf5f2ffa5e
+GoldbachLiteralDivisorCompletion.lean
+SHA256 fd3c4885ff79241c25b977af1954cbd8c1512e133dc4ccf9f391b6558c474fde
+GoldbachActualSmallDivisorCredit.lean
+SHA256 25feafb7ce3ce408ec76cd83e36682e947b508d0e580cd419ab6630c62c11a16
+The read-only reproduction folder contains the 71 canonical sources and their dependency-
+closed local import graph, the original compile scripts, retained source-bound receipts and
+axiom logs, and a byte-hash manifest. Its original scripts record the authoring host’s absolute
+paths. They are evidence and templates, not automatically portable commands; a replay on
+another host must resolve equivalent pinned libraries and build into a new empty directory.
+48
+
+PAGE 49
+The original accepted fresh replays imported exactly the eight dependency library roots aesop,
+batteries, importGraph, LeanSearchClient, mathlib, plausible, proofwidgets and Qq. Standard
+Lean system libraries are implicit. The reproduction folder contains no dependency cache or
+copied olean that could silently replace a requested fresh compilation.
+The immutable latest-cycle archives are identiﬁed by:
+base snapshot (16 new public conclusions):
+3b88e4f9367fb2b9718450df362149d1f4bcfa1fda886851e0db22091c35d720
+continuation addendum (3 new public conclusions; combined19):
+66dc5eecb878c78a260a469200bb6f81d48d8b14146b5fd4a06a357c7b1a5347
+post-freeze rough-sector supplement (0 new Lean conclusions):
+9d44c84e76e78af0a0de3219881a821976f397688c5db271fa21b6034eff1442
+Independent exterior receipts checked every CRC, hash, payload size and byte correspondence,
+and the unchanged prior archives. These integrity checks establish provenance, not another
+mathematical estimate.
+No declaration above formalizes Davenport, a large-sieve or Bombieri–Vinogradov input, a
+zero-avoiding contour, or the lower-sieve density used by the written alpha-eighth credit the-
+orem. The negative aggregate credit has a separate qualitative, unevaluated/ineﬀective onset
+and a still uncontrolled complement. A one-sided transfer to a positive prime-pair mass also re-
+quires the stated suﬃcient reference and loss reserve. Neither the 19 latest ﬁnite certiﬁcates nor
+the 658-entry historical/current inventory discharges the remaining signed arithmetic estimate
+or proves Goldbach.
+49
+
+PAGE 50
+References
+[1] G. H. Hardy and J. E. Littlewood, Some problems of Partitio Numerorum; III: On the
+expression of a number as a sum of primes , Acta Mathematica 44 (1923), 1–70. https:
+//doi.org/10.1007/BF02403921.
+[2] G. Bhowmik and L. Grimmelt, The exceptional set of the Goldbach problem ,
+arXiv:2607.27282v2, 13 August 2026. https://arxiv.org/abs/2607.27282v2.
+[3] T. Oliveira e Silva, S. Herzog and S. Pardi, Empirical veriﬁcation of the even Goldbach
+conjecture and computation of prime gaps up to 4 · 1018, Mathematics of Computation 83
+(2014), 2033–2060. https://doi.org/10.1090/S0025-5718-2013-02787-1 .
+[4] J.-J. Huang and H. Li, On the connection between the Goldbach conjecture and the Elliott–
+Halberstam conjecture, arXiv:2005.03811v2, 28 August 2022. https://arxiv.org/abs/
+2005.03811v2.
+[5] H. L. Montgomery and R. C. Vaughan, The large sieve , Mathematika 20 (1973), 119–134.
+https://doi.org/10.1112/S0025579300004708.
+[6] D. A. Goldston and C. Y. Yildirim, Higher correlations of divisor sums related to primes
+II: variations of the error term in the prime number theorem , Proceedings of the London
+Mathematical Society 95 (2007), 199–247. https://arxiv.org/abs/math/0412366.
+[7] A. Akbary and K. Hambrook, A variant of the Bombieri–Vinogradov theorem with explicit
+constants and applications, arXiv:1309.2730v2. Author-hosted ﬁnal text: https://www.cs.
+uleth.ca/~akbary/EBVT-Final.pdf.
+[8] M. Bordignon, Medium-sized values for the prime number theorem for primes in arithmetic
+progressions, New York Journal of Mathematics 27 (2021), 1415–1438. https://nyjm.
+albany.edu/j/2021/27-54p.pdf.
+[9] D. R. Johnston and A. Yang, Some explicit estimates for the error term in the prime
+number theorem, arXiv:2204.01980v2. https://arxiv.org/abs/2204.01980v2.
+[10] E. S. Lee and N. Leong, New explicit bounds for Mertens function and the reciprocal of
+the Riemann zeta-function , arXiv:2208.06141v5, 9 September 2026. https://arxiv.org/
+abs/2208.06141v5. The version is material to the constants used here.
+[11] M. A. Bennett, G. Martin, K. O’Bryant and A. Rechnitzer, Explicit bounds for primes
+in arithmetic progressions , Illinois Journal of Mathematics 62 (2018), 427–532. https:
+//personal.math.ubc.ca/~bennett/BeMaObRe-IJM-2018.pdf.
+[12] A. Sedunova, A logarithmic improvement in the Bombieri–Vinogradov theorem , Journal de
+Théorie des Nombres de Bordeaux 31 (2019), 635–651. https://jtnb.centre-mersenne.
+org/articles/10.5802/jtnb.1098/.
+[13] K. Matomäki and S. Zuniga–Alterman, Weighted sieves with switching , Mathematical
+Proceedings of the Cambridge Philosophical Society 179 (2025), 351–372. https://doi.
+org/10.1017/S0305004125000258.
+[14] H.-E. Richert, Lectures on Sieve Methods , Tata Institute of Fundamental Research,
+Bombay (1976). https://mathweb.tifr.res.in/Documents/Publications/Lectures/
+tifr55.pdf.
+50
+
+PAGE 51
+[15] J. B. Rosser and L. Schoenfeld, Approximate formulas for some functions of prime num-
+bers, Illinois Journal of Mathematics 6 (1962), 64–94. https://doi.org/10.1215/ijm/
+1255631807.
+[16] Y. Motohashi, Lectures on Sieve Methods and Prime Number Theory , Tata
+Institute of Fundamental Research, Bombay (1983). Accessible text: https:
+//www.math.utoledo.edu/~codenth/Spring_13/3200/NT-books/Lectures_on_Sieve_
+Methods_and_Prime_Number_Theory-Motohashi.pdf.
+[17] S. Durand, goldbach-horizon, Project Horizon public repository, com-
+mit 979c05416140504f11c6e9ba6ad1dd565838bea1. https://github.com/
+seisner1967-hash/goldbach-horizon. Source and interface audit retrieved 1 Oc-
+tober 2026.
+[18] S. Durand, CS21: The Shadow Equation , Project Horizon computational note,
+version9.0 (January 2026), supplied corpus. https://drive.google.com/file/d/
+1KxZSfj0eWZ7zfwYhKgovQbaWzdysnwlY/view.
+[19] L. de Moura and S. Ullrich, The Lean4 theorem prover and programming language ,
+CADE28 (2021), 625–635. https://doi.org/10.1007/978-3-030-79876-5_37 .
+[20] The Mathlib Community, Mathlib4, mathematical library, revision
+9837ca9d65d9de6fad1ef4381750ca688774e608. https://github.com/
+leanprover-community/mathlib4.
+[21] arXiv, Moderation: content guidelines and policy on generative AI . https://info.arxiv.
+org/help/moderation/index.html. Accessed 1 October 2026.
+51

@@ -1,0 +1,277 @@
+import SeparatedTypeIIPrice
+
+/-! Arithmetic counts attached to the independent (v,b) incidence.  Every
+progression front is retained.  No estimate of Gamma or of its source target
+is a hypothesis, and the source exponential-onset argument is not asserted. -/
+namespace GoldbachRound18.SeparatedTypeII
+open scoped BigOperators ArithmeticFunction
+open Finset
+noncomputable section
+attribute [local instance] Classical.propDecidable
+
+def arithmeticDensity (H : ℕ) : ℚ :=
+  ∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) / (k : ℚ)
+
+def arithmeticFront (H : ℕ) : ℚ :=
+  ∑ k ∈ H.divisors, |(ArithmeticFunction.moebius k : ℚ)|
+
+def rowCount (P : Parameters) (I : Finset ℕ) (H ell v : ℕ) : ℕ :=
+  (I.filter fun b => Nat.Coprime b H ∧ ell ∣ b ∧ v ∣ candidate P b).card
+
+def inverseResidue (N d v : ℕ) : ℕ :=
+  (((d : ZMod v)⁻¹) * (N : ZMod v)).val
+
+def crtResidue (N d k ell v : ℕ) (hkv : Nat.Coprime (k * ell) v) : ℕ :=
+  (Nat.chineseRemainder hkv 0 (inverseResidue N d v)).val
+
+theorem inverse_residue_equation {N d v : ℕ}
+    (hv : 0 < v) (hdv : Nat.Coprime d v) :
+    Nat.ModEq v (d * inverseResidue N d v) N := by
+  haveI : NeZero v := ⟨Nat.ne_of_gt hv⟩
+  apply (ZMod.natCast_eq_natCast_iff _ _ _).mp
+  simp only [Nat.cast_mul, inverseResidue, ZMod.natCast_zmod_val]
+  rw [← mul_assoc, ZMod.coe_mul_inv_eq_one d hdv, one_mul]
+
+theorem crt_residue_characterization {N d k ell v b : ℕ}
+    (hv : 0 < v) (hdv : Nat.Coprime d v) (hkl : Nat.Coprime k ell)
+    (hkv : Nat.Coprime (k * ell) v) :
+    (k ∣ b ∧ ell ∣ b ∧ Nat.ModEq v (d * b) N) ↔
+      Nat.ModEq (k * ell * v) b (crtResidue N d k ell v hkv) := by
+  have hi := inverse_residue_equation (N := N) hv hdv
+  constructor
+  · rintro ⟨hk, hl, hm⟩
+    have hz : Nat.ModEq (k * ell) b 0 :=
+      Nat.modEq_zero_iff_dvd.mpr (hkl.mul_dvd_of_dvd_of_dvd hk hl)
+    have hr : Nat.ModEq v b (inverseResidue N d v) :=
+      (hm.trans hi.symm).cancel_left_of_coprime hdv.symm
+    exact Nat.chineseRemainder_modEq_unique hkv hz hr
+  · intro hm
+    have hc := (Nat.chineseRemainder hkv 0 (inverseResidue N d v)).prop
+    have hz : Nat.ModEq (k * ell) b 0 := (hm.of_mul_right v).trans hc.1
+    have hdiv := Nat.modEq_zero_iff_dvd.mp hz
+    refine ⟨dvd_trans (dvd_mul_right k ell) hdiv,
+      dvd_trans (dvd_mul_left ell k) hdiv, ?_⟩
+    exact ((hm.of_mul_left (k * ell)).trans hc.2).mul_left d |>.trans hi
+
+theorem residue_front {A B k r : ℕ} (hAB : A ≤ B) (hk : 0 < k) :
+    |(((Ioc A B).filter fun b => Nat.ModEq k b r).card : ℚ) -
+      ((B : ℚ) - A) / k| ≤ 1 := by
+  let fa : ℤ := ⌊((A : ℚ) - r) / k⌋
+  let fb : ℤ := ⌊((B : ℚ) - r) / k⌋
+  have hab : ((A : ℚ) - r) / k ≤ ((B : ℚ) - r) / k := by
+    apply div_le_div_of_nonneg_right
+    · exact sub_le_sub_right (by exact_mod_cast hAB) _
+    · positivity
+  have hfloor : fa ≤ fb := Int.floor_mono hab
+  have hc : (((Ioc A B).filter fun b => Nat.ModEq k b r).card : ℤ) = fb - fa := by
+    rw [Nat.Ioc_filter_modEq_card A B hk r, max_eq_left (sub_nonneg.mpr hfloor)]
+  have hcq : (((Ioc A B).filter fun b => Nat.ModEq k b r).card : ℚ) =
+      (fb : ℚ) - (fa : ℚ) := by exact_mod_cast hc
+  have ha := Int.floor_le (((A : ℚ) - r) / k)
+  have ha' := Int.lt_floor_add_one (((A : ℚ) - r) / k)
+  have hb := Int.floor_le (((B : ℚ) - r) / k)
+  have hb' := Int.lt_floor_add_one (((B : ℚ) - r) / k)
+  have he : ((B : ℚ) - A) / k = ((B : ℚ) - r) / k - ((A : ℚ) - r) / k := by ring
+  rw [hcq, he, abs_le]
+  dsimp [fa, fb] at *
+  constructor <;> linarith
+
+theorem unit_indicator_moebius (b H : ℕ) (hH : H ≠ 0) :
+    (if Nat.Coprime b H then (1 : ℚ) else 0) =
+      ∑ k ∈ H.divisors, if k ∣ b then (ArithmeticFunction.moebius k : ℚ) else 0 := by
+  have hfilter : H.divisors.filter (fun k => k ∣ b) = (Nat.gcd b H).divisors := by
+    have hg : Nat.gcd b H ≠ 0 := Nat.gcd_ne_zero_right hH
+    ext k
+    simp only [mem_filter, Nat.mem_divisors, hH, hg,
+      and_true, Nat.dvd_gcd_iff]
+    tauto
+  have hs : (∑ k ∈ (Nat.gcd b H).divisors,
+      (ArithmeticFunction.moebius : ArithmeticFunction ℚ) k) =
+      if Nat.gcd b H = 1 then 1 else 0 := by
+    rw [← ArithmeticFunction.coe_mul_zeta_apply,
+      ArithmeticFunction.coe_moebius_mul_coe_zeta, ArithmeticFunction.one_apply]
+  rw [← sum_filter, hfilter]
+  exact (show _ = _ from (by simpa only [ArithmeticFunction.intCoe_apply] using hs)).symm
+
+theorem sifted_count_inclusion (I : Finset ℕ) (H : ℕ) (R : ℕ → Prop)
+    (hH : H ≠ 0) :
+    ((I.filter fun b => Nat.Coprime b H ∧ R b).card : ℚ) =
+      ∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) *
+        ((I.filter fun b => k ∣ b ∧ R b).card : ℚ) := by
+  rw [natCast_card_filter]
+  have he : ∀ b, (if Nat.Coprime b H ∧ R b then (1 : ℚ) else 0) =
+      ∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) *
+        if k ∣ b ∧ R b then 1 else 0 := by
+    intro b
+    by_cases hR : R b
+    · simp only [hR, and_true]
+      rw [unit_indicator_moebius b H hH]
+      apply sum_congr rfl
+      intro k hk
+      split_ifs <;> simp
+    · simp [hR]
+  simp_rw [he]
+  rw [sum_comm]
+  apply sum_congr rfl
+  intro k hk
+  rw [← mul_sum, sum_boole]
+
+theorem units_inclusion (I : Finset ℕ) (H : ℕ) (hH : H ≠ 0) :
+    (unitCount I H : ℚ) =
+      ∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) *
+        ((I.filter fun b => k ∣ b).card : ℚ) := by
+  simpa only [unitCount, units, and_true] using sifted_count_inclusion I H (fun _ => True) hH
+
+theorem arithmetic_density_totient {H : ℕ} (hH : 0 < H) :
+    arithmeticDensity H = (H.totient : ℚ) / H := by
+  have ht : unitCount (Ioc 0 H) H = H.totient := by
+    have hi : Ioc 0 H = Ico 1 (1 + H) := by
+      simpa only [Nat.succ_eq_add_one, zero_add, Nat.add_comm] using
+        (Nat.Ico_succ_succ (a := 0) (b := H)).symm
+    unfold unitCount units
+    rw [hi]
+    have hs : ((Ico 1 (1 + H)).filter fun b => Nat.Coprime b H) =
+        ((Ico 1 (1 + H)).filter fun b => Nat.Coprime H b) := by
+      ext b
+      simp [Nat.coprime_comm]
+    rw [hs]
+    simpa only [Nat.add_comm] using Nat.filter_coprime_Ico_eq_totient H 1
+  have hu := units_inclusion (Ioc 0 H) H (Nat.ne_of_gt hH)
+  rw [ht] at hu
+  have he : (H.totient : ℚ) = (H : ℚ) * arithmeticDensity H := by
+    rw [hu, arithmeticDensity, mul_sum]
+    apply sum_congr rfl
+    intro k hk
+    rw [Nat.Ioc_filter_dvd_card_eq_div,
+      Nat.cast_div_charZero (Nat.dvd_of_mem_divisors hk)]
+    ring
+  have hHq : (H : ℚ) ≠ 0 := by exact_mod_cast Nat.ne_of_gt hH
+  rw [he]
+  field_simp
+
+theorem arithmetic_density_positive {H : ℕ} (hH : 0 < H) :
+    0 < arithmeticDensity H := by
+  rw [arithmetic_density_totient hH]
+  exact div_pos (by exact_mod_cast Nat.totient_pos.mpr hH) (by exact_mod_cast hH)
+
+theorem arithmetic_front_nonnegative (H : ℕ) : 0 ≤ arithmeticFront H :=
+  sum_nonneg fun _ _ => abs_nonneg _
+
+theorem arithmetic_front_squarefree_count (H : ℕ) :
+    arithmeticFront H = (H.divisors.filter Squarefree).card := by
+  unfold arithmeticFront
+  rw [natCast_card_filter]
+  apply sum_congr rfl
+  intro k hk
+  exact_mod_cast (ArithmeticFunction.abs_moebius (n := k))
+
+theorem inclusion_front (H : ℕ) (f : ℕ → ℚ) (L : ℚ)
+    (hf : ∀ k ∈ H.divisors, |f k - L / k| ≤ 1) :
+    |(∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) * f k) -
+      L * arithmeticDensity H| ≤ arithmeticFront H := by
+  have he : (∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) * f k) -
+      L * arithmeticDensity H =
+      ∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) * (f k - L / k) := by
+    unfold arithmeticDensity
+    rw [mul_sum, ← sum_sub_distrib]
+    apply sum_congr rfl
+    intro k hk
+    ring
+  rw [he]
+  calc
+    _ ≤ ∑ k ∈ H.divisors, |(ArithmeticFunction.moebius k : ℚ) * (f k - L / k)| :=
+      abs_sum_le_sum_abs _ _
+    _ ≤ arithmeticFront H := by
+      apply sum_le_sum
+      intro k hk
+      rw [abs_mul]
+      simpa only [mul_one] using mul_le_mul_of_nonneg_left (hf k hk) (abs_nonneg _)
+
+theorem unit_count_front {A B H : ℕ} (hAB : A ≤ B) (hH : 0 < H) :
+    |(unitCount (Ioc A B) H : ℚ) - ((B : ℚ) - A) * arithmeticDensity H| ≤
+      arithmeticFront H := by
+  rw [units_inclusion (Ioc A B) H (Nat.ne_of_gt hH)]
+  apply inclusion_front
+  intro k hk
+  have hf := residue_front (r := 0) hAB (Nat.pos_of_mem_divisors hk)
+  simpa only [Nat.modEq_zero_iff_dvd] using hf
+
+theorem row_count_front (P : Parameters) {A B H ell v : ℕ}
+    (hAB : A ≤ B) (hH : 0 < H) (hell : 0 < ell) (hv : 0 < v)
+    (hHd : conductor P ∣ H) (hlH : Nat.Coprime ell H)
+    (hvH : Nat.Coprime v H) (hvl : Nat.Coprime v ell)
+    (hcap : ∀ b ∈ Ioc A B, conductor P * b ≤ P.N) :
+    |(rowCount P (Ioc A B) H ell v : ℚ) -
+      (((B : ℚ) - A) / (ell * v)) * arithmeticDensity H| ≤ arithmeticFront H := by
+  have hdv : Nat.Coprime (conductor P) v := (hvH.coprime_dvd_right hHd).symm
+  have hi : (rowCount P (Ioc A B) H ell v : ℚ) =
+      ∑ k ∈ H.divisors, (ArithmeticFunction.moebius k : ℚ) *
+        (((Ioc A B).filter fun b => k ∣ b ∧ ell ∣ b ∧ v ∣ candidate P b).card : ℚ) :=
+    by simpa [rowCount] using
+      sifted_count_inclusion (Ioc A B) H (fun b => ell ∣ b ∧ v ∣ candidate P b)
+        (Nat.ne_of_gt hH)
+  rw [hi]
+  apply inclusion_front
+  intro k hk
+  have hkp := Nat.pos_of_mem_divisors hk
+  have hkH := Nat.dvd_of_mem_divisors hk
+  have hkl : Nat.Coprime k ell := (hlH.coprime_dvd_right hkH).symm
+  have hkv : Nat.Coprime (k * ell) v :=
+    (((hvH.coprime_dvd_right hkH).mul_right hvl).symm)
+  have he : ((Ioc A B).filter fun b => k ∣ b ∧ ell ∣ b ∧ v ∣ candidate P b) =
+      ((Ioc A B).filter fun b =>
+        Nat.ModEq (k * ell * v) b (crtResidue P.N (conductor P) k ell v hkv)) := by
+    ext b
+    simp only [mem_filter]
+    constructor
+    · rintro ⟨hb, hk, hl, hvd⟩
+      refine ⟨hb, (crt_residue_characterization hv hdv hkl hkv).mp ⟨hk, hl, ?_⟩⟩
+      exact (Nat.modEq_iff_dvd' (hcap b hb)).mpr hvd
+    · rintro ⟨hb, hm⟩
+      obtain ⟨hk, hl, hm'⟩ := (crt_residue_characterization hv hdv hkl hkv).mpr hm
+      exact ⟨hb, hk, hl, (Nat.modEq_iff_dvd' (hcap b hb)).mp hm'⟩
+  rw [he]
+  have hf := residue_front hAB (Nat.mul_pos (Nat.mul_pos hkp hell) hv)
+    (r := crtResidue P.N (conductor P) k ell v hkv)
+  have heq : (((B : ℚ) - A) / (ell * v)) / k = ((B : ℚ) - A) / (k * ell * v) := by
+    push_cast
+    ring
+  rw [heq]
+  simpa only [Nat.cast_mul] using hf
+
+theorem omitted_count_rows (P : Parameters) (I E : Finset ℕ) (H ell : ℕ) :
+    omittedCount P I H ell E = ∑ v ∈ E, rowCount P I H ell v := by
+  unfold omittedCount omittedPairs divisorPairs rowCount
+  simp only [filter_filter, card_eq_sum_ones, sum_filter, sum_product]
+  rw [sum_product' E I (fun v b =>
+    if v ∣ candidate P b ∧ Nat.Coprime b H ∧ ell ∣ b then (1 : ℕ) else 0)]
+  apply sum_congr rfl
+  intro v hv
+  apply sum_congr rfl
+  intro b hb
+  by_cases hvd : v ∣ candidate P b <;> by_cases hu : Nat.Coprime b H <;>
+    by_cases hl : ell ∣ b <;> simp [hvd, hu, hl]
+
+end
+end GoldbachRound18.SeparatedTypeII
+
+-- AXIOM_AUDIT_BEGIN
+#print axioms GoldbachRound18.SeparatedTypeII.arithmeticDensity
+#print axioms GoldbachRound18.SeparatedTypeII.arithmeticFront
+#print axioms GoldbachRound18.SeparatedTypeII.rowCount
+#print axioms GoldbachRound18.SeparatedTypeII.inverseResidue
+#print axioms GoldbachRound18.SeparatedTypeII.crtResidue
+#print axioms GoldbachRound18.SeparatedTypeII.inverse_residue_equation
+#print axioms GoldbachRound18.SeparatedTypeII.crt_residue_characterization
+#print axioms GoldbachRound18.SeparatedTypeII.residue_front
+#print axioms GoldbachRound18.SeparatedTypeII.unit_indicator_moebius
+#print axioms GoldbachRound18.SeparatedTypeII.sifted_count_inclusion
+#print axioms GoldbachRound18.SeparatedTypeII.units_inclusion
+#print axioms GoldbachRound18.SeparatedTypeII.arithmetic_density_totient
+#print axioms GoldbachRound18.SeparatedTypeII.arithmetic_density_positive
+#print axioms GoldbachRound18.SeparatedTypeII.arithmetic_front_nonnegative
+#print axioms GoldbachRound18.SeparatedTypeII.arithmetic_front_squarefree_count
+#print axioms GoldbachRound18.SeparatedTypeII.inclusion_front
+#print axioms GoldbachRound18.SeparatedTypeII.unit_count_front
+#print axioms GoldbachRound18.SeparatedTypeII.row_count_front
+#print axioms GoldbachRound18.SeparatedTypeII.omitted_count_rows

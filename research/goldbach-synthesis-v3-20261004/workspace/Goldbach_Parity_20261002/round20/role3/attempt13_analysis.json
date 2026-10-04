@@ -1,0 +1,14 @@
+{
+  "attempt": 13,
+  "module": "SwitchedIncidenceEstimator",
+  "actual_lean_exit_code": 1,
+  "classification": "TECHNICAL_DEPENDENT_DECIDABLE_REWRITE_FAILURE",
+  "actual_log": "round20/role3/attempt13_SwitchedIncidenceEstimator.log",
+  "actual_receipt": "round20/role3/attempt13_SwitchedIncidenceEstimator_receipt.json",
+  "error": {"line": 268, "obligation": "rewrite actual conductor divisibility within an if", "repair": "Use simp only with the already proved arithmetic equivalence, whose congruence handling respects dependent Decidable instances"},
+  "actual_signed_cells_omitted": false,
+  "small_remainder_hypothesis_added": false,
+  "mathematical_identity_changed": false,
+  "parity_obstacle_inferred_from_this_failure": false,
+  "victory": false
+}

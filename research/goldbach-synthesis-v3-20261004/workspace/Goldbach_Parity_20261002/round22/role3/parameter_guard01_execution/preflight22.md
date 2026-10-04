@@ -1,0 +1,13 @@
+# PARAMETER_GUARD01 — préflight ROLE6 en lecture seule
+
+Les deux scripts, le contrat, preparation22.json et read_receipts22.json ont été lus FULL (866e52/874f6f). Le modèle80718ee9… a également été relu FULL (dd3d34), sans import ni parsing Python. Le manifeste6e9db852… a été lu en projection d'en-têtes et PARSED_METADATA, sans revendication de lecture textuelle exhaustive.
+
+Le préflight administratif réel d7c977 a vérifié998 paths uniques et998 bytes/SHA exacts, dont972 fichiers runtime, et les3089 archives du registre875cebdd… ; aucun écart. Aucun nouveau freeze, builder, modèle, enfant, compilateur ou noyau natif n'a été exécuté. Le dossier actual_attempt01 et la gate spécifique étaient absents au contrôle. La préparation418654b3… reste liée au manifeste exact.
+
+Le contrôleur proposé garde exclusivement N=100000000, K=2^27, S=2^58, les cinq arguments2,3,4,99999989,100000000 et les quatre mutations explicitement annoncées. Les arguments des logs ne reçoivent aucune revendication de primalité. Les points32 et40 utilisent le même modèle et ne sont pas deux implémentations indépendantes. Les rejets attendus ont des diagnostics exacts et les substitutions de paramètres sont restaurées dans finally ; aucun rejet n'est déjà observé.
+
+Le launcher proposé vérifie les998 bindings et les archives avant/après, crée des captures de contrôle avant START, puis lance au maximum un enfant Python canonique -I -S -B -X utf8. Le watchdog ferme à60s ou au plafond total1048576bytes, avec zéro retry. Les captures connues avant ajout de la future gate/revue occupent312148bytes, sur le seuil524288. Ce chiffre est un décompte de fichiers, pas une mesure de temps ni une promesse d'exécution. Le launcher vérifiera la taille réelle incluant gate et revue avant de démarrer le child. Le résultat enfant est limité32768bytes et65536 sont réservés aux dernières métadonnées.
+
+Le contenu futur PARAMETER_GUARDS_AND_FIVE_LOG_SAMPLES_AUX_PASS concerne seulement les paramètres fixes et cinq échantillons de boîtes sous les primitives SOURCE/PAPER. Le checker ne prouve pas les primitives Lean, ne parcourt pas le catalogue complet, ne calcule pas la NTT ou le coefficientN, et ne produit aucune conclusion sur H1, D_N ou WIN. Les quatre mutations restent des attentes papier jusqu'à une invocation réelle autorisée.
+
+Aucun bloqueur administratif n'a été observé dans les fichiers lus. Une revue SOURCE indépendante et une nouvelle gate ROOT spécifique sont encore requises ; ce préflight ne les remplace pas et n'autorise aucun lancement. Les sources et préparations ROLE4 n'ont pas été modifiées. Le paquet SOURCE52 de quantification, le Discret03 et tous les anciens lots restent intacts.

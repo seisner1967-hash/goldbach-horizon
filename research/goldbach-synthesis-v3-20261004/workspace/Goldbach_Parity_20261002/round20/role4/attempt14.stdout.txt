@@ -1,0 +1,141 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:28:28: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  (fun q => (q - first) / d) q
+S : Finset ℕ
+L U d : ℕ
+hd : 0 < d
+hS : ∀ q ∈ S, L ≤ q ∧ q ≤ U
+hmod : ∀ q ∈ S, ∀ r ∈ S, q ≡ r [MOD d]
+hne : S.Nonempty
+first : ℕ := S.min' hne
+hfirst : first ∈ S
+hlow : ∀ q ∈ S, first ≤ q
+hdiv : ∀ q ∈ S, d ∣ q - first
+q : ℕ
+hq : q ∈ ↑S
+r : ℕ
+hr : r ∈ ↑S
+heq : (fun q => (q - first) / d) q = (fun q => (q - first) / d) r
+hqeq : (q - first) / d * d = q - first
+hreq : (r - first) / d * d = r - first
+⊢ (q - first) / d * d = (r - first) / d * d
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:103:55: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≤ -2
+  a ≥ 0
+  a - b ≥ 1
+where
+ a := ↑N
+ b := ↑(N - 1) / ↑alpha
+Try this: ring_nf
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:160:13: error: unsolved goals
+S : Finset ℕ
+alpha N Z M e D Y : ℕ
+he : 0 < e
+hD : 1 < D
+hDM : D ≤ M
+hY : 0 < Y
+hH : ∀ q ∈ S, StructuralSupport alpha N Z M e q
+hF : ∀ q ∈ S, Smooth Y (resource0 N q) ∨ Smooth Y (resource1 N q)
+C0 : ℕ → Finset ℕ := fun d => filter (fun q => d ∣ resource0 N q) S
+C1 : ℕ → Finset ℕ := fun d => filter (fun q => d ∣ resource1 N q) S
+hcover : S ⊆ (divisorBand D Y).biUnion fun d => C0 d ∪ C1 d
+hcard : #S ≤ ∑ d ∈ divisorBand D Y, (#(C0 d) + #(C1 d))
+hcardR : ↑(#S) ≤ ∑ d ∈ divisorBand D Y, (↑(#(C0 d)) + ↑(#(C1 d)))
+⊢ ∑ x ∈ divisorBand D Y, 2 * (↑N * ((↑x)⁻¹ * (↑e)⁻¹)) + ↑(#(divisorBand D Y)) * 2 =
+    ∑ x ∈ divisorBand D Y, 2 * (↑N * (↑e)⁻¹ * (↑x)⁻¹) + 2 * ↑(#(divisorBand D Y))
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:296:10: error: invalid field notation, type is not of the form (C ...) where C is a constant
+  htriangle
+has type
+  ∀ (c : ℝ),
+    |physicalDivisorKernel ((N - 1) / alpha) a m n N - c| ≤
+      |physicalDivisorKernel ((N - 1) / alpha) a m n N - harmonicKernel ((N - 1) / alpha) a N n m| +
+        |harmonicKernel ((N - 1) / alpha) a N n m - c|
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:314:2: error: mod_cast has type
+  (1 : ℕ) ≤ #m.divisors : Prop
+but is expected to have type
+  (1 : ℝ) ≤ tau m : Prop
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:320:13: error: don't know how to synthesize implicit argument 'alpha'
+  @actual_sourceBracket_abs_tau_envelope ?m.134937 a N n m ha hm hmN hnN hu
+context:
+alpha a N n m : ℕ
+ha : 1 ≤ a
+hm : 0 < m
+hmN : m ≤ N
+hnN : n ≤ N
+hu : 1 ≤ Real.log ↑N
+⊢ ℕ
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:320:7: error: failed to infer 'have' declaration type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round20\role4\FriablePhysicalPayment.lean:319:72: error: unsolved goals
+alpha a N n m : ℕ
+ha : 1 ≤ a
+hm : 0 < m
+hmN : m ≤ N
+hnN : n ≤ N
+hu : 1 ≤ Real.log ↑N
+⊢ |sourceBracket alpha a N n m| ≤ 7 * Real.log ↑N ^ 3 * tau m
+'GoldbachRound20.Friable.friableLabels1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.finite_interval_congruence_card_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.finite_interval_congruence_card_le_real' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.structural_q_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_resource1_incidence_card_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_resource0_incidence_card_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_front_le_N_div_e_d' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_resource1_incidence_card_le_N' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_resource0_incidence_card_le_N' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_friable_union_card_le_mass' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.friableQ1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.uniqueResources1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.friableQ1_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.friableQ1_resource_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.uniqueResources1_subset_smoothInterval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_unique_F1_tau_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_unique_F1_tau_sum_le_N_u_neg42' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_physicalDivisorKernel_abs_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.primeIncidence_abs_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.theta_abs_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.rawLambda_abs_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_sourceBracket_abs_tau_envelope' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.tau_one_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_sourceBracket_abs_le_seven_tau' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.uniqueReciprocalCost1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound20.Friable.actual_unique_F1_reciprocal_cost_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound20.Friable.actual_unique_F1_reciprocal_payment' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

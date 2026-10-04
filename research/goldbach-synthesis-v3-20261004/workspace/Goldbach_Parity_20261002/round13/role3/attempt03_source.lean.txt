@@ -1,0 +1,220 @@
+import ThreeAdicPrimePairing
+
+/- Literal arithmetic part of the downward prime/semiprime switch.
+   No density, coverage, global remainder, or analytic smallness is assumed. -/
+namespace GoldbachRound13.PrimeSemiprimeSwitch
+
+open Finset GoldbachRound10.ShortDivisorComplement GoldbachRound11
+
+theorem divisor_prime_extension {d t p : ℕ} (hp : p.Prime) (h : d ∣ t * p) :
+    d ∣ t ∨ ∃ e, e ∣ t ∧ d = e * p := by
+  by_cases hpd : p ∣ d
+  · obtain ⟨e, rfl⟩ := hpd
+    have he : e ∣ t := Nat.dvd_of_mul_dvd_mul_right hp.pos (by
+      simpa [Nat.mul_comm] using h)
+    exact Or.inr ⟨e, he, by ring⟩
+  · exact Or.inl ((hp.coprime_iff_not_dvd.mpr hpd).symm.dvd_mul_right.mp h)
+
+theorem divisor_three_primes {d c r s : ℕ} (hc : c.Prime) (hr : r.Prime) (hs : s.Prime)
+    (hd : d ∣ c * r * s) :
+    d = 1 ∨ d = c ∨ d = r ∨ d = s ∨ d = c*r ∨ d = c*s ∨ d = r*s ∨ d = c*r*s := by
+  rcases divisor_prime_extension hs hd with h | ⟨e, he, rfl⟩
+  · rcases divisor_prime_extension hr h with h | ⟨e, he, rfl⟩
+    · rcases (Nat.dvd_prime hc).mp h with h | h <;> simp [h]
+    · rcases (Nat.dvd_prime hc).mp he with h | h <;> simp [h]
+  · rcases divisor_prime_extension hr he with h | ⟨f, hf, rfl⟩
+    · rcases (Nat.dvd_prime hc).mp h with h | h <;> simp [h]
+    · rcases (Nat.dvd_prime hc).mp hf with h | h <;> simp [h]
+
+theorem short_filter_large_prime {a t q : ℕ} (ht : t ≠ 0) (hq : q.Prime) (haq : a < q) :
+    ((t*q).divisors.filter (fun d => d ≤ a)) = t.divisors.filter (fun d => d ≤ a) := by
+  classical
+  ext d
+  constructor
+  · intro hd
+    obtain ⟨hdm, hda⟩ := Finset.mem_filter.mp hd
+    have hdc : d.Coprime q := (hq.coprime_iff_not_dvd.mpr
+      (Nat.not_dvd_of_pos_of_lt (Nat.pos_of_mem_divisors hdm) (lt_of_le_of_lt hda haq))).symm
+    exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+      ⟨hdc.dvd_mul_right.mp (Nat.mem_divisors.mp hdm).1,ht⟩,hda⟩
+  · intro hd
+    obtain ⟨hdt,hda⟩ := Finset.mem_filter.mp hd
+    exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+      ⟨dvd_mul_of_dvd_left (Nat.mem_divisors.mp hdt).1 q,mul_ne_zero ht hq.ne_zero⟩,hda⟩
+
+theorem short_filter_image {a c r s q : ℕ}
+    (hc : c.Prime) (hr : r.Prime) (hs : s.Prime) (hq : q.Prime)
+    (hcr : c < r) (hrs : r < s) (hsa : s ≤ a) (haq : a < q)
+    (hcra : c*r ≤ a) (hcsa : c*s ≤ a) (hars : a < r*s) (hacrs : a < c*r*s) :
+    ((c*r*s*q).divisors.filter (fun d => d ≤ a)) = {1,c,r,s,c*r,c*s} := by
+  classical
+  have hprod0 : c*r*s ≠ 0 := mul_ne_zero (mul_ne_zero hc.ne_zero hr.ne_zero) hs.ne_zero
+  rw [short_filter_large_prime (mul_ne_zero (mul_ne_zero hc.ne_zero hr.ne_zero) hs.ne_zero) hq haq]
+  ext d
+  constructor
+  · intro hd
+    obtain ⟨hdm,hda⟩ := Finset.mem_filter.mp hd
+    rcases divisor_three_primes hc hr hs (Nat.mem_divisors.mp hdm).1 with
+      h | h | h | h | h | h | h | h
+    all_goals try omega
+    all_goals simp [h]
+  · intro hd
+    simp only [Finset.mem_insert, Finset.mem_singleton] at hd
+    rcases hd with h | h | h | h | h | h
+    · subst d; exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr ⟨one_dvd _,hprod0⟩,by omega⟩
+    · subst d; exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+        ⟨dvd_mul_of_dvd_left (dvd_mul_of_dvd_left (dvd_refl c) r) s,hprod0⟩,by omega⟩
+    · subst d; exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+        ⟨dvd_mul_of_dvd_left (dvd_mul_left r c) s,hprod0⟩,by omega⟩
+    · subst d; exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+        ⟨dvd_mul_left s (c*r),hprod0⟩,hsa⟩
+    · subst d; exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+        ⟨dvd_mul_right (c*r) s,hprod0⟩,hcra⟩
+    · subst d; exact Finset.mem_filter.mpr ⟨Nat.mem_divisors.mpr
+        ⟨by use r; ring,hprod0⟩,hcsa⟩
+
+theorem mu_prime {p : ℕ} (hp : p.Prime) : mu p = -1 := by
+  simp [mu,ArithmeticFunction.moebius_apply_prime hp]
+
+theorem image_arithmetic {c r s q : ℕ} (hc : c.Prime) (hr : r.Prime) (hs : s.Prime)
+    (hq : q.Prime) (hcr : c < r) (hrs : r < s) (hsq : s < q) :
+    Squarefree (c*r*s*q) ∧ mu (c*r*s*q) = 1 ∧ ArithmeticFunction.vonMangoldt (c*r*s*q) = 0 := by
+  have hcopcr : c.Coprime r := (Nat.coprime_of_lt_prime hc.pos hcr hr).symm
+  have hcops : (c*r).Coprime s :=
+    ((Nat.coprime_of_lt_prime hc.pos (lt_trans hcr hrs) hs).mul_right
+      (Nat.coprime_of_lt_prime hr.pos hrs hs)).symm
+  have hcopq : (c*r*s).Coprime q :=
+    (((Nat.coprime_of_lt_prime hc.pos (lt_trans (lt_trans hcr hrs) hsq) hq).mul_right
+      (Nat.coprime_of_lt_prime hr.pos (lt_trans hrs hsq) hq)).mul_right
+      (Nat.coprime_of_lt_prime hs.pos hsq hq)).symm
+  have hsfcr : Squarefree (c*r) := (Nat.squarefree_mul hcopcr).mpr ⟨hc.squarefree,hr.squarefree⟩
+  have hsfcrs : Squarefree (c*r*s) := (Nat.squarefree_mul hcops).mpr ⟨hsfcr,hs.squarefree⟩
+  have hsf : Squarefree (c*r*s*q) := (Nat.squarefree_mul hcopq).mpr ⟨hsfcrs,hq.squarefree⟩
+  have hm : mu (c*r*s*q) = 1 := by
+    rw [mu_mul_of_coprime hcopq,mu_mul_of_coprime hcops,mu_mul_of_coprime hcopcr,
+      mu_prime hc,mu_prime hr,mu_prime hs,mu_prime hq]
+    norm_num
+  have hnot : ¬ (c*r*s*q).Prime := by
+    have hprod : c*r*s ≠ 1 := by simp [mul_eq_one,hc.ne_one,hr.ne_one,hs.ne_one]
+    simp [Nat.prime_mul_iff,hprod,hq.ne_one]
+  have hl : ArithmeticFunction.vonMangoldt (c*r*s*q) = 0 := by
+    apply ArithmeticFunction.vonMangoldt_eq_zero_iff.mpr
+    intro hpow
+    exact hnot (Nat.squarefree_and_prime_pow_iff_prime.mp ⟨hsf,hpow⟩)
+  exact ⟨hsf,hm,hl⟩
+
+theorem short_sum_parent {a c p q : ℕ} (hc : c.Prime) (hca : c ≤ a)
+    (hp : p.Prime) (hq : q.Prime) (hap : a < p) (hpq : p < q) :
+    shortDivisorSum a (c*p*q) = -Real.log (c : ℝ) := by
+  rw [complete_short_prime_pair hc.pos hca hp hq hap hpq,ArithmeticFunction.vonMangoldt_apply_prime hc]
+
+theorem short_sum_image {a c r s q : ℕ}
+    (hc : c.Prime) (hr : r.Prime) (hs : s.Prime) (hq : q.Prime)
+    (hcr : c < r) (hrs : r < s) (hsa : s ≤ a) (haq : a < q)
+    (hcra : c*r ≤ a) (hcsa : c*s ≤ a) (hars : a < r*s) (hacrs : a < c*r*s) :
+    shortDivisorSum a (c*r*s*q) = Real.log (c : ℝ) := by
+  classical
+  have hcopcr : c.Coprime r := (Nat.coprime_of_lt_prime hc.pos hcr hr).symm
+  have hcopcs : c.Coprime s := (Nat.coprime_of_lt_prime hc.pos (lt_trans hcr hrs) hs).symm
+  have hmucr : mu (c*r) = 1 := by rw [mu_mul_of_coprime hcopcr,mu_prime hc,mu_prime hr];norm_num
+  have hmucs : mu (c*s) = 1 := by rw [mu_mul_of_coprime hcopcs,mu_prime hc,mu_prime hs];norm_num
+  have hc2 := hc.two_le
+  have hr2 := hr.two_le
+  have hs2 := hs.two_le
+  have hne : c ≠ r ∧ c ≠ s ∧ r ≠ s ∧ 1 ≠ c ∧ 1 ≠ r ∧ 1 ≠ s ∧
+      c ≠ c*r ∧ c ≠ c*s ∧ r ≠ c*r ∧ r ≠ c*s ∧ s ≠ c*r ∧ s ≠ c*s ∧ c*r ≠ c*s := by
+    have hcsr : c*s > c*r := Nat.mul_lt_mul_of_pos_left hrs hc.pos
+    have hrc : r < c*r := by nlinarith [hc.two_le,hr.pos]
+    have hsc : s < c*s := by nlinarith [hc.two_le,hs.pos]
+    have hsn : s ≠ c*r := by
+      intro h
+      have : (c*r).Prime := h ▸ hs
+      simpa [Nat.prime_mul_iff,hc.ne_one,hr.ne_one] using this
+    omega
+  unfold shortDivisorSum
+  rw [← Finset.sum_filter,short_filter_image hc hr hs hq hcr hrs hsa haq hcra hcsa hars hacrs]
+  simp [hne,ne_comm,mu_prime hc,mu_prime hr,mu_prime hs,hmucr,hmucs,
+    Real.log_mul (Nat.cast_ne_zero.mpr hc.ne_zero) (Nat.cast_ne_zero.mpr hr.ne_zero),
+    Real.log_mul (Nat.cast_ne_zero.mpr hc.ne_zero) (Nat.cast_ne_zero.mpr hs.ne_zero),Nat.cast_mul]
+  ring
+
+theorem actual_source_coefficients {alpha a N n0 n1 c p q r s : ℕ}
+    (halpha : 0 < alpha) (ha : alpha ≤ a)
+    (hc : c.Prime) (hp : p.Prime) (hq : q.Prime) (hr : r.Prime) (hs : s.Prime)
+    (hcr : c < r) (hrs : r < s) (hsa : s ≤ a) (hap : a < p) (hpq : p < q)
+    (hcra : c*r ≤ a) (hcsa : c*s ≤ a) (hars : a < r*s) (hacrs : a < c*r*s)
+    (hn0 : n0.Prime) (hn1 : n1.Prime) (hu0 : n0.Coprime N) (hu1 : n1.Coprime N)
+    (hpoint0 : c*p*q+n0=N) (hpoint1 : c*r*s*q+n1=N) :
+    sourceBracket alpha a N n0 (c*p*q) = Real.log (n0 : ℝ) *
+      (Real.log (c : ℝ)-harmonicKernel ((N-1)/alpha) a N n0 (c*p*q)) ∧
+    sourceBracket alpha a N n1 (c*r*s*q) = Real.log (n1 : ℝ) *
+      (-Real.log (c : ℝ)+harmonicKernel ((N-1)/alpha) a N n1 (c*r*s*q)) := by
+  have hca : c ≤ a := le_trans (Nat.le_of_lt (lt_trans hcr hrs)) hsa
+  have hpar := prime_pair_arithmetic hc.pos hca hc.squarefree hp hq hap hpq
+  have himg := image_arithmetic hc hr hs hq hcr hrs (lt_of_le_of_lt hsa (lt_trans hap hpq))
+  have hs0 := short_sum_parent hc hca hp hq hap hpq
+  have hs1 := short_sum_image hc hr hs hq hcr hrs hsa (lt_trans hap hpq) hcra hcsa hars hacrs
+  have hm0 := mul_ne_zero (mul_ne_zero hc.ne_zero hp.ne_zero) hq.ne_zero
+  have hm1 := mul_ne_zero (mul_ne_zero (mul_ne_zero hc.ne_zero hr.ne_zero) hs.ne_zero) hq.ne_zero
+  have hphys0 := physical_short_divisor_complement_source hm0 hpoint0 hn0.pos hu0 halpha ha
+  have hphys1 := physical_short_divisor_complement_source hm1 hpoint1 hn1.pos hu1 halpha ha
+  have hmu0 : mu (c*p*q) = -1 := hpar.2.1.trans (mu_prime hc)
+  have ht0 : theta N n0 = Real.log (n0 : ℝ) := by simp [theta,primeIncidence,hn0,hu0]
+  have ht1 : theta N n1 = Real.log (n1 : ℝ) := by simp [theta,primeIncidence,hn1,hu1]
+  constructor
+  · unfold sourceBracket
+    rw [ht0,mul_sub,hphys0,hmu0,hpar.2.2,hs0]
+    ring
+  · unfold sourceBracket
+    rw [ht1,mul_sub,hphys1,himg.2.1,himg.2.2,hs1]
+    ring
+
+theorem downward_displacement {N n0 n1 c p q r s : ℕ}
+    (hc : c.Prime) (hq : q.Prime) (hswitch : r*s+2=p)
+    (hpoint0 : c*p*q+n0=N) (hpoint1 : c*r*s*q+n1=N) :
+    c*p*q=c*r*s*q+2*(c*q) ∧ n1=n0+2*(c*q) ∧ n0<n1 := by
+  have hprod : c*p*q=c*r*s*q+2*(c*q) := by rw [← hswitch];ring
+  have hn : n1=n0+2*(c*q) := by omega
+  exact ⟨hprod,hn,by rw [hn];nlinarith [Nat.mul_pos hc.pos hq.pos]⟩
+
+/-- X5 for the actual two physical source brackets. The W kernels are literal
+    and remain distinct. The direction and two prime axes are arithmetical. -/
+theorem actual_source_pair {alpha a N n0 n1 c p q r s : ℕ}
+    (halpha : 0 < alpha) (ha : alpha ≤ a)
+    (hc : c.Prime) (hp : p.Prime) (hq : q.Prime) (hr : r.Prime) (hs : s.Prime)
+    (hcr : c < r) (hrs : r < s) (hsa : s ≤ a) (hap : a < p) (hpq : p < q)
+    (hcra : c*r ≤ a) (hcsa : c*s ≤ a) (hars : a < r*s) (hacrs : a < c*r*s)
+    (hn0 : n0.Prime) (hn1 : n1.Prime) (hu0 : n0.Coprime N) (hu1 : n1.Coprime N)
+    (hswitch : r*s+2=p) (hpoint0 : c*p*q+n0=N) (hpoint1 : c*r*s*q+n1=N) :
+    n0<n1 ∧
+    sourceBracket alpha a N n0 (c*p*q)+sourceBracket alpha a N n1 (c*r*s*q) =
+      -(Real.log (c : ℝ)-harmonicKernel ((N-1)/alpha) a N n0 (c*p*q)) *
+        Real.log ((n1 : ℝ)/(n0 : ℝ)) +
+      Real.log (n1 : ℝ) * (harmonicKernel ((N-1)/alpha) a N n1 (c*r*s*q)-
+        harmonicKernel ((N-1)/alpha) a N n0 (c*p*q)) := by
+  have hcoeff := actual_source_coefficients halpha ha hc hp hq hr hs hcr hrs hsa hap hpq
+    hcra hcsa hars hacrs hn0 hn1 hu0 hu1 hpoint0 hpoint1
+  refine ⟨(downward_displacement hc hq hswitch hpoint0 hpoint1).2.2,?_⟩
+  rw [hcoeff.1,hcoeff.2,Real.log_div (Nat.cast_ne_zero.mpr hn1.ne_zero)
+    (Nat.cast_ne_zero.mpr hn0.ne_zero)]
+  ring
+
+end GoldbachRound13.PrimeSemiprimeSwitch
+
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.divisor_prime_extension
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.divisor_three_primes
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.short_filter_large_prime
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.short_filter_image
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.mu_prime
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.image_arithmetic
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.short_sum_parent
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.short_sum_image
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.actual_source_coefficients
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.downward_displacement
+#print axioms GoldbachRound13.PrimeSemiprimeSwitch.actual_source_pair
+#print axioms GoldbachRound10.ShortDivisorComplement.mu
+#print axioms GoldbachRound10.ShortDivisorComplement.shortDivisorSum
+#print axioms GoldbachRound10.ShortDivisorComplement.physicalDivisorKernel
+#print axioms GoldbachRound11.harmonicKernel
+#print axioms GoldbachRound11.sourceBracket
+#print axioms GoldbachRound11.theta

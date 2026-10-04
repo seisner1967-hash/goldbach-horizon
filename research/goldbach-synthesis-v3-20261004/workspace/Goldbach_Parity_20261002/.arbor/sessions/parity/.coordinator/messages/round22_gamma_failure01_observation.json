@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-03T07:54:25.438986+00:00",
+  "status": "AUTHOR_GAMMA_H2_COMPILE_FAIL",
+  "actual_compiler_invocations": 1,
+  "started": "2026-10-03T07:49:03.589923+00:00",
+  "finished": "2026-10-03T07:50:40.633827+00:00",
+  "exit_code": 1,
+  "source_sha256": "8bcfef577be2dbf3412646bd7938fe3d929dc0efdd4d1d7c29149ff6102ed7a0",
+  "stdout_sha256": "3735c5ebe7fbfe53920bc03d47a5d1894422e4aab4557a61576490649911cf0f",
+  "receipt_sha256": "85f95efc916eb5de022ac8a4ca79f82d5d2df1c717cc1bf216fd2a927c80db45",
+  "copies_verified": 8,
+  "inputs_verified": 6392,
+  "root_FULL_reads": {
+    "log": "b1f5c1",
+    "receipt": "5ad642",
+    "START": "a59c59"
+  },
+  "error_lines": [
+    79,
+    132,
+    197,
+    223,
+    241,
+    293
+  ],
+  "error_count": 6,
+  "classes": [
+    "missing cpow continuity API",
+    "two redundant tactics after solved goal",
+    "commuting exponential argument",
+    "positivity on inappropriate target",
+    "beta-reduction before norm rewrite"
+  ],
+  "sorryAx_recovery_zero_formal_credit": true,
+  "analytic_or_parity_refutation_claim": false,
+  "revision_policy": "Distinct SOURCE ONLY input and root gate required.",
+  "WIN": false,
+  "root_compiler_invocations": 0
+}

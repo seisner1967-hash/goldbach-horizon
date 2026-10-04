@@ -1,0 +1,46 @@
+{
+  "status": "FROZEN_NUMERICAL_INPUTS_TERMINATED",
+  "file_count": 13,
+  "sha256": {
+    "conservation.py": "374c141b465df16cf531e2ea077adfc3fe4e7271144ab3037db32a320b2d7576",
+    "shared.py": "f1214938e49610a62323f3166a321e520fc6c0a5e3cc9061d832c51db377e5d9",
+    "witness_search.py": "fe3221a86eeb1624b4de14545823424d2542582ae35798253bf79ce1c3d34b3e",
+    "deletion_checks.py": "ec4e465a866c94a9a8cc6f2ce11e571f9bf34b074150f03165e5f4e4de64044c",
+    "star_detector_checks.py": "b758b026ba648b19067ff9341832a48fc44dbced5e1bb53ebf6f76e318147343",
+    "replay_checks.py": "6179bc583150479a9ddd6d50e51f394f15f116622c75685a4fc4c5d0d3ad9e83",
+    "previous_artifacts_sha256.json": "9a0a1010cdc4ad16eeb28b15f960f1d7dd3621bc91cc4d241a8781ccc2e543b1",
+    "conservation.json": "f788cfeb78fbd672b00c1661b63d94ee60d65efe0e1ab9ff5c72a360a0a4de3e",
+    "witnesses.json": "bd5a575a7dbf102447f4a414c7a98e4f6810bdcd976d8ae57a10e0f2343faf48",
+    "deletion.json": "1b71dfdf22387479b468840ff38bb2546e3674182b5364d72f42305ea26086c3",
+    "star_detector.json": "ea074f16953f96c038c3d124394b182ffb5549a3951052c5e883263e8c0b6545",
+    "numerical_replay.json": "653b4089491e6f18050394e226208dcdd287c1e16e97adf64fe0b9f0b082bcc0",
+    "agent6.md": "ee2383547abc96817911f7120e09246a2d36e579e940004cd8d2062688198759"
+  },
+  "conservation": {
+    "status": "PRESERVED",
+    "files": 487,
+    "round11_files": 82,
+    "previous_protected_files": 405,
+    "round11_controller_sha256": "3860be999898b537fda692534cbf1943225a7aa65e3bb182b48476a5933dd000",
+    "baseline_sha256": "9a0a1010cdc4ad16eeb28b15f960f1d7dd3621bc91cc4d241a8781ccc2e543b1",
+    "registry": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round12\\previous_artifacts_sha256.json",
+    "original_sources": {
+      "D:\\Users\\Utilisateur\\Downloads\\Goldbach_Continuation_Cofacteur_Court_2026-10-01.zip": {
+        "expected_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "actual_sha256": "32b12b8d6823ed71323bb76ed1ba1ed7bc2d1ffad38fa973f043f4ae933e49cd",
+        "status": "PRESERVED"
+      },
+      "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": {
+        "expected_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "actual_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+        "status": "PRESERVED"
+      }
+    }
+  },
+  "all_JSON_fields_and_bytes_replayed": true,
+  "global_D_N": false,
+  "asymptotic": false,
+  "payments": false,
+  "Lean_called": false,
+  "victory": false
+}

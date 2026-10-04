@@ -1,0 +1,105 @@
+{
+  "round": 9,
+  "status": "PARTIAL_PAYMENTS_WITH_OPEN_PRIME_SIGNED_MOMENT",
+  "victory": false,
+  "score": 0,
+  "lean_invoked": false,
+  "compiler_exit_code": null,
+  "new_lean_modules": 0,
+  "new_lean_conclusions": 0,
+  "previous_auxiliary_modules": 9,
+  "previous_auxiliary_conclusions": 116,
+  "recorded_at_utc": "2026-10-02T11:59:39.3778600Z",
+  "input_manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\judge\\input_sha256.json",
+  "input_manifest_sha256": "8719737073aa1e7616d330da245f1d92aa9c1e22974ec5de42f2e90a77521e74",
+  "role3_completion_sha256": "491b72cb88aa1f2d55c5c65ce725e845b41d478a152ed4166697aadd84c7ec2d",
+  "source_sha256": {
+    "agent1_joint_long.md": "2456a7620e436bf569aa973022579db2a4d1eeb097cae6df5339027ea00354ab",
+    "agent2_weighted_operator.md": "43bd75aa25f7ef905936ee10405e05442fbeb48283cf6576cb273c9f8b8c3d8a",
+    "agent3_contract_audit.md": "491b72cb88aa1f2d55c5c65ce725e845b41d478a152ed4166697aadd84c7ec2d",
+    "agent4_contract_audit.md": "9f82aa8b1422d781c46539909d2a4f57b0ef8af670cf3aefe89a780edb6932ef",
+    "agent6.md": "b5cc44da24fb60f44460e342cb6ede463733eac02d9b014b4aebadb946aaca83",
+    "PROBE_BLOCK.md": "75536fd38ed150b3f79fee16c9d344effd5ae5f308cf4f6348f16a1cc8cfab0b",
+    "new_contract_checks.py": "e0b8fb5a56757b7773d8be30365d78af36aa7ab7aa6b999735923dfc0bc79b1c",
+    "new_contracts.json": "ac5bad36c2527886c6f3ac10150aa44c8f20550d683ef5a0eedab5160a60271d",
+    "shared.py": "ee0ec92266a9a4c76e6df2a346a65bc28e4fc2a1cb4718b2bb6e1ebb09889694",
+    "conservation.py": "38ca5bab121ddf0d9b1eced2cee3a31d49973140f8f2c26a98642b37572124ff",
+    "conservation.json": "3576958ebdeb5fe2b1e4561a8a0030a5d7357842dbf9852da56350789cb4b581",
+    "previous_artifacts_sha256.json": "4a637dc44cd1fe2d7ae5850b4999ab052c069084143d69aa52484f66e250fe0f",
+    "SOURCE54_CLARIFICATION.md": "9bba7b734df126e95cff51d582fccf04a3c1ba82bc56f18d3416db944f6bfc23",
+    "source54_render_receipt.json": "7401abfbb91eed0c9eca503ade085656efb308ac75e0a5c52a674c3d88a850a8",
+    "render_source54.py": "0cb8d5cc3ccf4af18bc321dab86b4043b365c484d13fb6f7f24b390ab6c8e673",
+    "source54_page27.png": "890eef47a566adb22c7ef10a9f5594e19c9c84dc4499bac38efe714910660c1e",
+    "source54_page27.txt": "8715816a60891819cc02534ee6f0df68d1f49df5e9f6bd855f8895f2c65a8a56"
+  },
+  "external_source_sha256": {
+    "D:\\Users\\Utilisateur\\Downloads\\goldbach_synthesis.pdf": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24"
+  },
+  "numerical_gate": {
+    "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\new_contracts.json",
+    "status": "FINITE_NEW_CONTRACT_CHECKS_ONLY",
+    "sha256": "ac5bad36c2527886c6f3ac10150aa44c8f20550d683ef5a0eedab5160a60271d",
+    "source_sha256": "e0b8fb5a56757b7773d8be30365d78af36aa7ab7aa6b999735923dfc0bc79b1c",
+    "contract_statuses": {
+      "face": "PASS_IDENTITY_ONLY_CORRECTED_V2",
+      "weighted": "PASS_IDENTITY_ONLY_WEIGHTED_ENERGY",
+      "V1": "ERROR_FALSIFIER",
+      "m311": "ERROR_FALSIFIER"
+    },
+    "properpower_analytic_payment_tested": false
+  },
+  "numerical_replay": {
+    "status": "PASS_EXACT_REPLAY",
+    "exit_code": 0,
+    "all_fields_equal": true,
+    "all_bytes_equal": true,
+    "receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\judge\\numerical\\replay_receipt.json",
+    "receipt_sha256": "e9441caf9270cc96ad95a803c2bddd1f5f5ed8fe53d02a7f65709cc7469323b0",
+    "log": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\judge\\numerical_replay.log",
+    "log_sha256": "be3d0d7f0e5956c5217e3d6a0a16fdc00c92ef08bd0bd7ca7614a9aa1e5b73ae"
+  },
+  "judge_scripts_sha256": {
+    "audit-judge.ps1": "a561e69959e27f8654a1b2ba50ec65d51bab6c8229f4e7209a699363284cdbf4",
+    "verify-frozen.ps1": "fbe49e9eced34d6b6e95d45a2c7382bcb13e59b2778d0bd4e1f7b4447e1e5a7f",
+    "replay.py": "dd38e15ea7de53b4906a78136000dd16fd8fac6dc00b1284ce9da5008070a80b"
+  },
+  "source54": {
+    "physical_page": 27,
+    "original_pdf_sha256": "bbcbe5849e2b169f01a2d64457ccf7d1f3b25edcf2b5ca911bcf01343586eb24",
+    "pixels_text_and_receipt_bytes_equal": true,
+    "receipt": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\judge\\source_pages\\source54_render_receipt.json",
+    "receipt_sha256": "7401abfbb91eed0c9eca503ade085656efb308ac75e0a5c52a674c3d88a850a8",
+    "literal_exponent": "-sqrt(u/60)",
+    "weaker_round9_majorant": "-sqrt(u)/60"
+  },
+  "preserved_previous_artifacts_before": {
+    "status": "PRESERVED",
+    "files": 307,
+    "round8_files": 54,
+    "manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\previous_artifacts_sha256.json",
+    "baseline_sha256": "4a637dc44cd1fe2d7ae5850b4999ab052c069084143d69aa52484f66e250fe0f",
+    "explicit_round9_helper": true,
+    "earlier_inventory_additions_checked": true
+  },
+  "preserved_previous_artifacts_after": {
+    "status": "PRESERVED",
+    "files": 307,
+    "round8_files": 54,
+    "manifest": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round9\\previous_artifacts_sha256.json",
+    "baseline_sha256": "4a637dc44cd1fe2d7ae5850b4999ab052c069084143d69aa52484f66e250fe0f",
+    "explicit_round9_helper": true,
+    "earlier_inventory_additions_checked": true
+  },
+  "written_partial_payments": {
+    "J3": "Effective harmonic-face allowance at source u >= 10^24; weaker exponent explicitly distinguished",
+    "J4": "Qualitative physical-band allowance; extra BV threshold unevaluated",
+    "W12": "First-axis proper-power positive bound effective for u >= 65536; no Lean certificate"
+  },
+  "ledger_routes": {
+    "original_H": "B_H = P_tail^H - M_alpha; W12 initial application, with its own head",
+    "raised_a9": "B_a9 = P^a9 - M_a9; separate raised-face route J5",
+    "fee_rule": "No summation of the two ledgers or equality of their signed proper-power pieces; one direct uniform-positive W11/W12 fee in the chosen ledger"
+  },
+  "unresolved": "Prime-axis signed moment J6/W13 and covered bridge 2 max(e,0); effective BV calibration also remains",
+  "scope": "Only one new finite bank; corrected identities and specific falsifiers retained; no global impossibility asserted"
+}

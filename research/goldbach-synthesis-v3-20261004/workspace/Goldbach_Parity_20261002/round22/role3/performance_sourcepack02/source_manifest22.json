@@ -1,0 +1,237 @@
+{
+  "schema": "ROUND22_PERFORMANCE_SOURCEPACK02_REVIEW_MANIFEST",
+  "status": "SOURCE_REVIEW_READY_NOT_PREPARED",
+  "core_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\dyadic_r01.py",
+      "module_alias": "dyadic_r01",
+      "role": "new_local_runtime_source",
+      "sha256": "1a267168a01bd8d581cc8ccf6e69e89f3285dad079a30971e8a32b9b05511072",
+      "bytes": 14968,
+      "read_scope": "FULL bb0b0b",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\dyadic_r01.py",
+      "original_sha256": "290d0e708bf30f7cd418a1dc006adcc8c89e9dd1893687ba5d832180f27c6a17",
+      "byte_identical_to_original": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\analytic_r01.py",
+      "module_alias": "analytic_r01",
+      "role": "new_local_runtime_source",
+      "sha256": "838f9b1520e47191da1459a35ee120c16a40d9abf0842374bbb2a4c9c8877557",
+      "bytes": 10522,
+      "read_scope": "FULL d38163; reread4078b2",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\analytic_r01.py",
+      "original_sha256": "a00fc6f520a82e8c86d6fbe7964c5e47cf62fe2f863543947071b870781f3f77",
+      "byte_identical_to_original": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\kernel_r01.py",
+      "module_alias": "kernel_r01",
+      "role": "new_local_runtime_source",
+      "sha256": "03a55736742d73df0c7e048ed1311184513749899978163243504a03dc4c8bb5",
+      "bytes": 7055,
+      "read_scope": "FULL0850cd",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\revision01\\kernel_r01.py",
+      "original_sha256": "03a55736742d73df0c7e048ed1311184513749899978163243504a03dc4c8bb5",
+      "byte_identical_to_original": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\unit_transport_source22.py",
+      "module_alias": "unit_transport_source22",
+      "role": "new_local_runtime_source",
+      "sha256": "c44fc225a52ef58424b73685853054fe65ee57f81d0c58ad5b1b8618e6a0b2d8",
+      "bytes": 5692,
+      "read_scope": "FULL0850cd",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\global_h1_source22\\unit_transport_source22.py",
+      "original_sha256": "c44fc225a52ef58424b73685853054fe65ee57f81d0c58ad5b1b8618e6a0b2d8",
+      "byte_identical_to_original": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\arithmetic_catalogue_source22.py",
+      "module_alias": "arithmetic_catalogue_source22",
+      "role": "new_local_runtime_source",
+      "sha256": "ce60c65700fe4a3aa476a056769afd735b9296f8bc13df3223a89ff1c82874b7",
+      "bytes": 7493,
+      "read_scope": "FULL0850cd",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\arithmetic_catalogue_source22.py",
+      "original_sha256": "ce60c65700fe4a3aa476a056769afd735b9296f8bc13df3223a89ff1c82874b7",
+      "byte_identical_to_original": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\transport_catalogue_source22.py",
+      "module_alias": "transport_catalogue_source22",
+      "role": "new_local_runtime_source",
+      "sha256": "8e0f60d3280ed652ce5605a2d47dfe0b0e7be921d63561a70cfc2ce828da71b1",
+      "bytes": 6989,
+      "read_scope": "FULL0bc231; reread4078b2",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\transport_catalogue_source22.py",
+      "original_sha256": "2fd2937811e5627746bb9e4a6bdcf9564073ef8ce4abf8b846e7a2aa1ee46bc8",
+      "byte_identical_to_original": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\envelopes_source22.py",
+      "module_alias": "envelopes_source22",
+      "role": "new_local_runtime_source",
+      "sha256": "f988d3edbcd28ce40698515f2e608d67a2615ab6bf777e4daf42f0820e8d5e67",
+      "bytes": 1558,
+      "read_scope": "FULL0850cd",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\envelopes_source22.py",
+      "original_sha256": "f988d3edbcd28ce40698515f2e608d67a2615ab6bf777e4daf42f0820e8d5e67",
+      "byte_identical_to_original": true
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\producer_source22.py",
+      "module_alias": "producer_source22",
+      "role": "new_local_runtime_source",
+      "sha256": "cda911ed17e3b332e13ebfa293d0c27ff84d026af7b082caf1448e74286dfc54",
+      "bytes": 12862,
+      "read_scope": "FULL457aa2",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\producer_source22.py",
+      "original_sha256": "e47dfc7c5ca55c23c47dfd373a32b04603dac85017ec97fe5b8421463b8a2407",
+      "byte_identical_to_original": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\structural_checker_source22.py",
+      "module_alias": "structural_checker_source22",
+      "role": "new_local_runtime_source",
+      "sha256": "230297407f09a02286e0aff56436dae3e28b2908661578f73cd89ba262191c0d",
+      "bytes": 15251,
+      "read_scope": "FULL890c8e",
+      "original_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\structural_checker_source22.py",
+      "original_sha256": "b2e9e36927b850b1f861e59cacb580bc06643a0247320f600c372e4d9aee7f7e",
+      "byte_identical_to_original": false
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\thermal_h1\\global_h1_source22\\arithmetic_source22.py",
+      "module_alias": null,
+      "role": "readonly_prior_paper_or_source_provenance_only",
+      "sha256": "4677ff39c979386d4e595175dcfa72cd1bdf93a9e5307af3261322a4fa9c6a68",
+      "bytes": 7040,
+      "read_scope": "prior receipt: FULL a3a587"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role1_bridge\\numeric_precontract22.md",
+      "module_alias": null,
+      "role": "readonly_prior_paper_or_source_provenance_only",
+      "sha256": "02cba2d0b3478b5fe3bddb46c1df0862a7c6287452f19892b7cec8ba100db05b",
+      "bytes": 9467,
+      "read_scope": "prior receipt: FULL numeric text27a4bf"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\contour_precritique22\\precritique_report22.md",
+      "module_alias": null,
+      "role": "readonly_prior_paper_or_source_provenance_only",
+      "sha256": "00c2484f8479fef2ca3104ba61fce542697b1596639805ffe7677a796d711048",
+      "bytes": 16828,
+      "read_scope": "prior receipt: FULL 8d46f8"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role6\\contour_precritique22\\evaluator_requirements22.md",
+      "module_alias": null,
+      "role": "readonly_prior_paper_or_source_provenance_only",
+      "sha256": "57f5cbe28c5e26ba115070c94c0ea9dafd67eb3cf8e491ef861e279634c12f23",
+      "bytes": 14378,
+      "read_scope": "prior receipt: FULL 01a14e"
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role4\\h1_global_numeric\\source_contract22.md",
+      "module_alias": null,
+      "role": "readonly_prior_paper_or_source_provenance_only",
+      "sha256": "cea359055df1966ece11887305856bed46c24bb6de62f1a052d2e54c0e7d6cec",
+      "bytes": 8509,
+      "read_scope": "prior receipt: FULL 0adda9"
+    }
+  ],
+  "core_bindings_count": 14,
+  "runtime_modules": 9,
+  "modified_runtime_modules": 5,
+  "byte_identical_runtime_modules": 4,
+  "runtime_alias_order": [
+    "dyadic_r01",
+    "analytic_r01",
+    "kernel_r01",
+    "unit_transport_source22",
+    "arithmetic_catalogue_source22",
+    "transport_catalogue_source22",
+    "envelopes_source22",
+    "producer_source22",
+    "structural_checker_source22"
+  ],
+  "support_bindings": [
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\source_contract22.md",
+      "sha256": "331e1b576d47ccca169364aa554e77268f8f4d36e2a0e42ea601773f9afb3ccd",
+      "bytes": 6495
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\integer_endpoint_equivalence22.md",
+      "sha256": "5e7409682950787bfbffec44d851fd1ab1d5e7b3a7da526466ebaf0d34d86b33",
+      "bytes": 5349
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\copy_provenance22.json",
+      "sha256": "27bb05f1f51ce5fff466530f2a60ac5e5df4325920eb6cc2eb8e703692ff1d43",
+      "bytes": 5877
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\performance_sourcepack02\\read_receipts22.json",
+      "sha256": "f478e13efd6ac0595f57321aa1d0a7612141b5fb3e70b2325a20a5bbfae74b6d",
+      "bytes": 4008
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\global_h1_review_source22\\review_receipt22.json",
+      "sha256": "973da581891aa1c1746999efd7684a88507feaae0e2b83b80197bb01a61217b6",
+      "bytes": 8942
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\global_h1_review_source22\\review22.md",
+      "sha256": "55679d2dc4ee4251d2f7357d290073d10500f0ada59384101499807f02e6c28c",
+      "bytes": 10497
+    },
+    {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\global_h1_review_source22\\domain_addendum22.md",
+      "sha256": "a26a64dea1e392d62dfbad3a0751cc5e3414dd3be0e52603f7b05884f9b0a1c2",
+      "bytes": 2693
+    }
+  ],
+  "support_bindings_count": 7,
+  "total_bound_files": 21,
+  "parameters": {
+    "X": 1000000,
+    "Y": 10000,
+    "Q": 1000000,
+    "R": 1000000,
+    "T": 100,
+    "tau": "1/1000000",
+    "N": 100000000
+  },
+  "catalogue": {
+    "track_advances": 26181632,
+    "shared_steps": 128,
+    "EM_seeds": 32512,
+    "arithmetic_integers": 999999,
+    "arch_nodes": 12288,
+    "Y_seeds": 256,
+    "vertical_nodes": 204800
+  },
+  "limits_proposed": {
+    "max_wall_seconds": 3600,
+    "max_artifact_bytes": 2147483648
+  },
+  "new_independent_review": "REQUIRED_PENDING",
+  "old_review_is_authorization": false,
+  "imports_closure_scope": "LEXICAL_SOURCE_ONLY; future launcher must resolve nine local aliases and bind full stdlib runtime",
+  "runtime_inventory_prepared": false,
+  "launcher_exists": false,
+  "gate_exists": false,
+  "numeric_result_exists": false,
+  "runtime_cost_measured": false,
+  "structural_checker_is_interval_certificate": false,
+  "horizontal_volet": "UNIMPLEMENTED",
+  "formal_H1": "OPEN",
+  "coefficient_N": "OPEN",
+  "D_N": "UNPAID",
+  "WIN": false,
+  "active_bank_modified": false,
+  "old_results_are_inputs": false
+}

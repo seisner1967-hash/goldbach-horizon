@@ -1,0 +1,11 @@
+# ROLE4 — vrai FAIL2 Gamma, erreur résiduelle de normalisation
+
+L'unique invocation autorisée par root2 SHA03b3c65b731825f1390ac8e60a853a15b9126eaee4628fe1c2aa6f2dc69ddf31 a commencé à2026-10-03T08:13:37.219471UTC et fini à2026-10-03T08:15:13.970859UTC, sortie1. Deux appels Lean ROLE4 ont donc eu lieu au total ; aucun probe ou calcul mathématique ROLE4. L'essai2 est conservé sous revision01/gamma_attempt2 avec13 copies PREEXEC. Les6415 inputs et3089 archives restent intacts avant/après ; aucun olean n'existe.
+
+Source de l'essai2 SHA c66707c8bf24428e80ccc9000a769790d19d734d00cff0efe1e807364acb10fc ; manifeste4 SHA016bb67767b61cbf15fbaf679a3e435bc9e88d4053f26873e4557b4727ba1f9b ; START SHA11f5d161442da85540eb6f9727472e40dd7fe88e33dcb6ec6999be4469e0d0f7 ; stdout SHA4c2790f81b08e622cb8b970fab77edce0214f12a228e0ddd60f98d21c5cd614f ; reçu SHA5ebfd56de12c3b3e01342a3dbf73690a5a24c66a9d1eb11aa1e449b6c8e8070f. Le stderr est vide. Sorties/exit relus FULL f8a86e et reçu FULL82359c.
+
+Le journal comporte une erreur ligne202 : la réécriture Complex.ofReal_mul cherche ↑(r*t), absent du but. Le `change` précédent a déjà élaboré le produit dansℂ. Le but réel est `exp(-↑r*↑t)*pow = pow*exp(-(↑r*↑t))`. La révision02 retire uniquement Complex.ofReal_mul de cette réécriture, conserve neg_mul puis mul_comm. Les énoncés, domaines, hypothèses et imports restent identiques.
+
+Les cinq autres réparations de FAIL1 sont élaborées sans erreur. Les23 impressions comportent19 audits avec axiomes standards et4 dépendances sorryAx de ce seul défaut. Les quatre théorèmes affectés sont laplaceTransform_real_rate, complex_rate_laplace_identity, Gamma_rotation_bound et Gamma_strip_exponential_bound. Ceci ne certifie donc pas H2, et aucune erreur observée n'est une contradiction de la formule analytique ou un résultat sur la parité.
+
+L'original, révision01, préparations1–4, gates et essais1–2 restent inchangés. Revision02 et préparation5 sont SOURCE_ONLY et exigent une nouvelle gate3 pour toute future invocation. Aucun banc Γ ou G0 n'est rejoué. Les modules Γ′/queues restent des sources séparées non compilées ; H1 Weil, compte complet des zéros, transport aux boîtes, Stieltjes H3, coefficientN et D_N restent ouverts.

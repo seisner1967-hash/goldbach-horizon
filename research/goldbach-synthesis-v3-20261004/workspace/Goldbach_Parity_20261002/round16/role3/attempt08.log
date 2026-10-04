@@ -1,0 +1,27 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:229:38: warning: unused variable `hp`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:296:43: error: application type mismatch
+  sdiff (N.primeFactors.erase 2)
+argument
+  N.primeFactors.erase 2
+has type
+  Finset ℕ : Type
+but is expected to have type
+  Finset ℝ : Type
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round16\role3\EulerAnchor.lean:302:6: error: type mismatch, term
+  hb
+after simplification has type
+  True : Prop
+but is expected to have type
+  1 ≤
+    (∏ x ∈ N.primeFactors.erase 2 \ forcedPrefix p, (↑x - 1)) /
+      ∏ x ∈ N.primeFactors.erase 2 \ forcedPrefix p, (↑x - 2) : Prop
+'GoldbachRound16.Anchor.harmonic_le_eulerPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.integer_tail_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twinFactor_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.tail_infinite_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.twin_prefix_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound16.Anchor.singularSeries_ge_harmonic_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,16 @@
+{
+  "status": "REAL_FIRST_AUDIT_EXIT1_TECHNICAL_PRE_LEAN",
+  "first_launch_utc": "2026-10-02T20:40:07.626737+00:00",
+  "source_sha256": "72dfe2d380e173948899d14e5334d96ed4cdca2c5149fe3d0ea3482e944e740b",
+  "log_sha256": "e6c340a5f28473a04c44d3709c82b9401b496e445023a6d4bb7c99ac7a9a0ae5",
+  "failing_assertion": "small_factor_exclusion_verified imposed unconditionally on all candidates",
+  "actual_guard": "witness exists and e mod ell = witness j mod ell",
+  "correction": "check recorded exclusion flag equals its actual guard, and inactive prime axis only under that guard",
+  "prior_PASS_stages": ["143 frozen inputs and 799 preservation", "initial 33 and distinct C4 15 bindings and copies", "390 plus 64 strict stored certificate positions"],
+  "Lean_invocations_at_failure": 0,
+  "producer_invocations_by_Judge": 0,
+  "false_arithmetic_identity": false,
+  "parity_failure": false,
+  "first_files_remain_frozen": true,
+  "continuation_limited_to_remaining_stages": true
+}

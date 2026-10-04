@@ -1,0 +1,229 @@
+RELECTURE DOCUMENTAIRE INDÉPENDANTE — SYNTHÈSE V3
+Agent : v3_git_inventory — 4 octobre 2026
+
+Verdict : aucune erreur factuelle bloquante identifiée dans le manuscrit gelé
+ci-dessous. Ses affirmations et ses limites sont cohérentes avec les pièces
+de validation relues. Ce verdict est une relecture documentaire ; il ne
+constitue aucune nouvelle preuve Lean, évaluation scientifique ou victoire.
+
+1. Source effectivement relue
+
+goldbach_synthesis_v3.tex : 44957 octets.
+SHA256 : b065079d9aa1c4e79cdf7ceee2fee8d24eb3a6ebde1e5b9659fc6dd2bd01be81.
+Lecture intégrale du texte exact, sortie complète sans troncature ; empreinte
+identique avant et après lecture. Les premiers états ccfee8cd... et 676104df...
+ont aussi été relus par blocs ; ils ne sont pas le manuscrit évalué ici.
+La première sortie globale tronquée est exclue de toute qualification FULL.
+
+2. Pièces confrontées aux affirmations
+
+Lectures intégrales documentaires : adjudications des lots 11, 17, 19, 22,
+26, 35 et 36 ; engineering_freeze_v3.json ; observations ROOT du BUILD04,
+du NUMERIC05 et du point rationnel ; reçu réel NUMERIC05 ; rapport réel du
+point rationnel et son contrat ; audit du raccord D_N ; note de faisabilité
+Mellin ; note Fejér continue spectral_next22.md ; revues indépendantes Weil
+et orbites ; contrats des projections de corps fini et racines concrètes,
+et clôture des gardes de paramètres. Des lectures de ces contrats sont
+historiques : leurs mentions SOURCE ne remplacent pas les adjudications
+ultérieures effectivement consultées.
+
+Contrôle de chemins et octets : les pièces du tableau de provenance du TeX
+existent réellement ; les préfixes SHA imprimés concordent avec les fichiers.
+La source main35 se trouve bien dans batch35/sources/. Les autres notes
+locales citées et spectral_next22.md existent également. Ce contrôle de
+métadonnées n'est pas une nouvelle relecture des corps de toutes les preuves
+Lean ni de l'intégralité du cache mathlib.
+
+3. Résultats acquis et nombres de déclarations
+
+Le total officiel est 88 modules et 1488 déclarations auxiliaires, définitions
+incluses. Le lot35 a réellement compilé 30 déclarations : 24 théorèmes et
+6 définitions. Son audit ne comporte pas de récupération sorryAx.
+
+La table distingue correctement les modules entiers PASS conservés dans
+des lots globalement FAILED : Envelope42 au lot11 et Local22 au lot26.
+Les modules en échec n'obtiennent aucun crédit. Les corrections distinctes
+des lots13 et27 ne réécrivent pas les anciens journaux.
+
+Les lots17/19/22 établissent le constructeur canonique A32, son enveloppe,
+la projection générique, puis les cinq primalités/racines et leur projection
+concrète. Les paramètres et les cinq paires (p,g) du manuscrit correspondent
+aux pièces effectivement consultées. Toutes les puissances premières restent
+présentes ; A_n utilise le facteur premier minimal, et non log(n) pour p^k.
+Le texte ne confond pas ces identités avec le raffinement des butterflies,
+du CRT natif, des mots machine ou un coefficient effectivement évalué.
+
+4. Budget fermé, comparaison rationnelle et frontière analytique
+
+Le test exact observé est seulement B=3(128N^5q+4096N^6q^2)<10^-6, avec
+q=1/S150(125), au point N=10^8, a=10^-8 et H=10^11. Le rapport réel confirme
+une invocation, un enfant, aucun réessai et des fractions/entiers exacts.
+
+Les expressions U, d, epsilon et E_N du manuscrit correspondent aux contrats
+conservés. La chaîne courte E_N<=B conserve le terme epsilon^2 et explicite
+les raccords réels sur U, d, pi, exp et la série de Taylor positive. Elle
+porte correctement le statut PAPER/SOURCE ; elle ne transforme pas la
+comparaison rationnelle en compilation du raccord au coefficient.
+
+Le manuscrit ne prétend pas calculer D, P_H, C_N,H ou C_N. Il ne présente
+pas les budgets de quadrature ou de primitives comme acquittés par ce test.
+L'enveloppe logarithmique compilée est distinguée du budget Mellin encore
+SOURCE. Les hauteurs et coûts de la note de faisabilité sont présentés
+comme conditions suffisantes issues d'un majorant, et non comme minorants
+de l'erreur réelle ou impossibilités universelles.
+
+5. Échec technique et exécution native
+
+Le lot36 a un échec de réflexion à 118:6, zéro crédit et aucune olean neuve
+pour E_Lambda. Geometry25 est non invoquée. La source réparée E_Lambda02
+reste non compilée. La synthèse ne déduit pas une obstruction de parité
+d'un diagnostic de réécriture Lean.
+
+BUILD04 a construit deux exécutables avec deux codes zéro ; ce résultat
+ne prouve pas le raffinement des programmes. NUMERIC05 est STOP sans
+verdict mathématique : enfant238, parent1, environ3312 secondes et aucun
+coefficient. Le reçu réel contient précisément elapsed_parent_seconds=
+3312.1879999999946. Le manuscrit distingue la limite Job de mémoire engagée
+du suivi RSS et ne revendique pas une fermeture universelle du chargeur.
+
+6. Dette signée, Fejér et régime du cadre
+
+La cible demeure D_N<=N/(256u log(u)), avec u=log(N)>=10^24. Le point10^8
+est explicitement hors de ce régime, sans prétention de couverture globale.
+Le ledger conserve Q_N, l'excès couvert et les mêmes supports/fronts.
+Une enclosure de C_N ne paie pas le signe du défaut de référence.
+
+Les formules d'orbites et la restriction négative de dimension deux restent
+limitées aux noyaux et aux obligations effectivement examinés par les revues
+PAPER. Elles ne sont pas présentées comme une impossibilité universelle.
+
+La section Fejér suit la note continue SHA
+ae5dfce2d677484c5962c112bb80777cd9eeb6a5e01b6b711194f634fa49e601.
+TRI et ATOM sont reproduites avec les domaines T>0 et m>=1, sinc(0)=1,
+la masse<=6, et le rayon24/(T^2 log^2(1+1/m)). Leur statut est PAPER,
+sans évaluateur ni nouveau crédit Lean. Le secteur p=2 au point14 est
+un contre-modèle de l'inférence depuis cette seule positivité, pas une
+substitution à la vraie zêta ni une réfutation de Goldbach.
+
+La reprise théorique sur D_N est séparée d'une éventuelle reprise d'ingénierie
+des sources de queue/coefficient et des quadratures. Aucune découverte
+imminente, aucune annulation suffisante et aucun WIN ne sont annoncés.
+
+7. Limites de cette relecture
+
+Aucun Lean, programme natif, calcul de nombres premiers, test numérique,
+nouveau lemme ou preuve mathématique n'a été exécuté. Aucune mutation du
+TeX, de Git ou des sources scientifiques anciennes n'a été effectuée.
+Ce contrôle porte sur le texte gelé et les pièces documentaires énumérées,
+pas sur une réexécution de leurs contrats. La compilation et l'inspection
+visuelle du PDF sont prises en charge séparément par ROOT.
+
+Le fichier compagnon evidence_v3.json était encore en finalisation lors
+de la dernière vérification de sa disponibilité. La publication doit
+inclure sa version gelée ; ses bindings futurs ne sont pas déclarés
+indépendamment revalidés par cette présente relecture.
+
+8. Addendum final — manuscrit et manifeste refermés
+
+La réserve précédente sur le manifeste en cours de finalisation est levée
+pour les fichiers exacts ci-dessous. Le manuscrit final a été relu FULL,
+avec SHA identique avant et après lecture : 45133 octets, SHA256
+222f187546550d9f03589e219e008d11e07e6c0e1a85f39834c3e1e8319c02f1.
+Par rapport au manuscrit b065 évalué ci-dessus, les changements sont
+documentaires : trois macros ajoutent des espaces, le titre Fejér est
+raccourci et une phrase indique le dépôt public GitHub. Aucune modification
+de la portée scientifique relue n'a été identifiée.
+
+HANDOFF_THEORY_V3.txt a été relu FULL : 7719 octets, SHA256
+ffcec87fd39397bc0f9efa46b3e42b83a6c146cc914915ae3018bd002e23050e.
+Il conserve la distinction entre budget scalaire, résultat de coefficient,
+formalisation acquise et dette signée. Les deux précisions finales sont
+la racine primitive d'ordre exact K et le départ de D(t) à n=2.
+
+evidence_v3.json final : 24920 octets, SHA256
+85dfd54972b23d38398d7b36d549a5c6502afb70a7d55748365bec07632c798e,
+identique avant et après le contrôle physique. Ses 47 bindings déclarés
+ont 47 identifiants et 47 chemins distincts ; les 47 fichiers existent,
+leurs 47 empreintes SHA256 et leurs 47 tailles concordent. Les 16 claims
+ont zéro référence interne non résolue. Ce contrôle vérifie les métadonnées
+physiques ; il ne remplace pas une nouvelle compilation ou une lecture
+intégrale de chaque corps de preuve et de chaque journal référencé.
+
+Un écart avait été détecté dans le manifeste antérieur bbf50aa4... : il
+liait le handoff ancien de 7711 octets. La version finale lie correctement
+le handoff de 7719 octets ci-dessus. Trois adjudications documentaires
+ajoutées au manifeste ont été relues FULL : lot25, SHA d411dff9... ;
+lot30, SHA 4db49fd3... ; lot32, SHA f6be51d1.... Elles confirment
+respectivement 30 déclarations (22 théorèmes, 8 définitions), 22
+déclarations (18 théorèmes, 4 définitions), puis deux théorèmes.
+Leurs objets acquis sont le bord exact de branche principale, les queues
+Gamma non pondérées et leur raccord à exp(-w). Aucune queue pondérée par
+Lambda, aucun coefficient N=10^8 ni aucune dette de signe D_N ne sont
+acquittés par ce crédit. Le nouveau claim correspondant respecte cette
+frontière, comme les 15 claims antérieurs.
+
+Les limites essentielles restent conformes : total 88/1488 définitions
+incluses ; main35=24 théorèmes+6 définitions ; point rationnel scalaire
+seul ; raccord coefficient SOURCE ; FAIL36 technique sans crédit et
+Geometry25 non invoquée ; régime u>=10^24 ; D_N et WIN ouverts.
+La compilation et la QA du PDF final demeurent le contrôle séparé de ROOT.
+Verdict documentaire final : aucune objection bloquante identifiée pour
+le TeX, le handoff et le manifeste exacts ci-dessus. Aucun calcul
+scientifique, Lean, programme natif ou Git n'a été lancé pour cet addendum,
+et aucune de ces trois sources documentaires n'a été modifiée par le
+relecteur.
+
+9. Independent review of the English translation — 4 October 2026
+
+The complete, stable English manuscript was read FULL without truncated
+output: 42969 bytes, SHA256
+349fac599874b6fca010b03094a3eb7ee137c122562cbd45a2167ede4db80b73.
+Its hash was identical before and after that reading. This is the approved
+English source for the current delivery; sections 1–8 above remain the
+historical review of the French edition, which is retained byte-exact in
+synthesis_v3/fr_archive.
+
+An independent textual comparison with the French source SHA222f1875...
+found 261 mathematical blocks in each version. After whitespace
+normalization, 258 are identical; the other three differ only in translated
+text conditions: prime, prime power and otherwise. Those translations
+preserve their precise meaning. The comparison excludes the title's
+\\[5pt] layout command from display mathematics. No formula, sign, domain,
+cutoff, constant or target inequality was altered by the translation.
+This was a document comparison, not a scientific computation or proof.
+
+The FULL English reading confirms the same evidence boundaries throughout
+the abstract, body, tables, appendix and bibliography: 88 modules and 1488
+auxiliary declarations including definitions; the main Mellin module has
+24 theorems and 6 definitions; genuine Lambda retains all prime powers;
+the finite-field and A32 identities do not establish native refinement;
+the rational point is a scalar PASS, not a coefficient result. Weighted
+tails, geometry and coefficient/scalar connectors remain SOURCE. Batch36
+receives zero credit and Geometry25 was not invoked. The native STOP has
+no mathematical verdict. The onset remains log(N)>=10^24; the signed D_N
+target, global cancellation, Goldbach and WIN remain open. Fejer and
+signed explicit-formula directions retain their PAPER obligations without
+an imminent-discovery claim.
+
+The English evidence registry was independently rehashed: 24920 bytes,
+SHA256 7393b6a4a3b63a49e1811276e1e195103e5de8f408c56c1c48cb29c4c935a47f,
+stable before and after the audit, with language=en. All 47 bindings exist
+and match their exact sizes and SHA256 hashes; their 47 IDs and 47 paths
+are distinct. All 16 claims have resolved evidence references. Compared
+with the preserved French registry, the evidence_files and claims objects
+are unchanged; the current source binding now identifies the English
+manuscript above. The handoff remains ffcec87f.../7719 bytes. Research is
+frozen, coefficient_N_computed=false, D_N_proved=false and WIN=false.
+This physical check does not recompile Lean or reread every proof body.
+
+The French source222f1875..., PDF0edf0847..., registry85dfd549... and
+review37ac0cf7... were checked as preserved snapshots during this review.
+Their historic path mappings are explained by fr_archive/README.md.
+The English PDF compilation and visual QA are performed separately by
+ROOT; no independent PDF compilation or visual assessment is claimed here.
+
+Final translation-review verdict: no blocking factual or translation
+objection identified in the exact English source and registry above.
+Only this review record was appended by the reviewer. No manuscript,
+French snapshot, research source, Lean proof, native program or Git state
+was modified, and no scientific evaluation was run.

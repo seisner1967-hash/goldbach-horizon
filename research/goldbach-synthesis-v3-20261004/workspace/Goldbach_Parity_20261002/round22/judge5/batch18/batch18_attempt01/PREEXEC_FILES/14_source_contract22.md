@@ -1,0 +1,25 @@
+# Fragment M réel : inversion de Gamma, SOURCE 22
+
+Statut SOURCE_ONLY, 11 déclarations (9 théorèmes, 2 définitions), 11 `#print axioms` qualifiés, aucun compilateur/probe/builder/gate ni nouveau calcul. Le module `ThermalGammaMellinInverse22.lean` est distinct de tous les paquets gelés. Il importe uniquement la dépendance locale `GammaPrerequisites22` déjà vérifiée indépendamment et des modules mathlib ; il n'importe pas les trois nouveaux modules Re2 SOURCE.
+
+La dépendance Gamma est la source readonly `judge5/batch02_sources/GammaPrerequisites22.lean`, SHA9f5e5fe14d18e2b7c3ab364e461bfcc01d29ee4ef4af6d627d6ad9fcd102fbe7, olean indépendant fc0dad0b550f13a5c3a5b1e7cf1cfa22fc3a233822fc548cce155ab7a7274477. Son adjudication6488a47… déjà lue rapporte23 audits standards. Aucune recompilation de cette dépendance n'est faite.
+
+La vraie Gamma sur s=2+it est continue puisque cette droite ne contient aucun entier non positif. Sa borne readonly effectivement vérifiée est2 exp(−π|t|/4). Sur chaque demi-droite, `real_laplace_integrable` au paramètre réel1 et au tauxπ/4 construit l'intégrabilité du majorant. La réflexion t↦−t est transportée par la mesure de Lebesgue préservée et son plongement mesurable ; l'union Iic0∪Ioi0 paie l'intégrabilité sur toute R. Aucun L1 vertical n'est une prémisse du nouveau module.
+
+Le noyau est la vraie fonction expKernel(x)=exp(−x) plongée dans C. La convergence de son transformé à s=2 est le théorème concret `Complex.GammaIntegral_convergent`, avec l'ordre des deux facteurs raccordé. `Complex.GammaIntegral_eq_mellin` et `Complex.Gamma_eq_integral` identifient son vrai transformé à Gamma pour Re(s)>0. L'intégrabilité verticale de ce transformé vient de la construction précédente.
+
+`Mathlib.Analysis.MellinInversion` a été lu intégralement. Son changement de variables x=exp(−u), son Jacobien signé et son inversion de Fourier sont des preuves mathlib, pas une hypothèse d'inversion fournie ici. Après paiement des trois charges (convergence du noyau, L1 vertical du transformé, continuité du noyau au point positif), le fragment construit pour x>0
+
+\[
+e^{-x}=\frac1{2\pi}\int_{\mathbb R}\Gamma(2+it)x^{-2-it}\,dt.
+\]
+
+Le facteur1/(2π), le plongement de l'action réelle dans C, la puissance principale et l'ordre Gamma/pouvoir sont raccordés dans le dernier théorème. Les anciennes constantes API absentes `Complex.ofNat_re` et `Complex.ofNat_im` sont évitées : les parties réelle et imaginaire des arguments sont établies localement par `simp` avant leur emploi. Cela reste SOURCE, sans observation d'élaboration.
+
+Ce fragment ne conclut pas l'identité M de la vraie trace. Le paquet Re2 de ROLE4 a été lu FULL : contrat11bf1c0… et modules25481da…/1ec90d6…/d8930f8…,49 déclarations SOURCE non compilées. Sa borne G2, DOM et les queues sont des preuves proposées ; ses dépendances EulerDerivativefe51… et EulerLambda1a08… restent SOURCE et ne sont jamais promues PASS. EulerDirect et GammaPrerequisites sont les seuls socles readonly déjà jugés pertinents ici.
+
+L'étape suivante doit écrire le véritable échange somme/intégrale, avec les valeurs0 et1 de Λ séparées avant d'utiliser x=an>0. Sur a>0 réel, chaque terme a la norme a^-2 |Gamma(2+it)| |Lambda(n)n^-2-it|. Le majorant dérivé du paquet Re2 est2n^-3/2 pour n≥2 et sa somme vaut au plus4. Le produit explicite avec2a^-2 exp(−π|t|/4) donne une somme d'intégrales finie, au plus64/(πa²). Il faut construire cette charge par les vrais théorèmes de sommabilité et d'intégration, prouver le pont entre `contourLambdaWeight` et la définition mathlib Λ, puis appliquer `integral_tsum` à ces mêmes termes. Le quotient réel −ζ′/ζ doit être identifié par la chaîne Euler SOURCE réelle, et non supposé égal à une série cible. Aucune de ces étapes n'est une hypothèse du fragment livré ; elles restent ouvertes.
+
+La continuation au taux complexe w=a−iθ exige encore deux véritables fonctions holomorphes sur Re(w)>0 : la série ΣΛ(n)exp(−wn) et l'intégrale Gamma*L*w^-s. Pour une boule autour w0, le rayon Re(w0)/2 fournit b=Re(w0)/2>0. Avec B=1+|Im(w0)|+Re(w0)/2, le défaut uniforme concret d=atan(b/B)>0 contrôle les arguments sur cette boule. DOM devient e²b^-2(t²+4)exp(−d|t|) et la dérivée ajoute le facteur(2+|t|)/b. Les moments exponentiels doivent payer l'intégration différentiée. La dérivée de la vraie trace se domine par Σn²exp(−bn), provenant de Λ(n)≤n. Enfin, l'égalité sur tous les taux réels positifs et un point d'accumulation intérieur doivent payer le théorème d'identité holomorphe. Cette continuation, son dominateur formel, et l'identité M complète ne sont ni écrits comme théorèmes ni admis comme prémisses.
+
+Dette exacte : élaborer et juger les11 nouvelles déclarations ; construire la somme/intégrale réelle et les ponts Euler/Λ ; construire la continuation holomorphe et ses dérivées sous intégrale. Aucun axiome, `sorry`, fonction de trace abstraite ou rayon libre ne comble cette dette. L'égalité complète T_a(θ), sa périodicité spectrale, sa quadrature praticable, le coefficientN, D_N et WIN restent ouverts. La banque active phase0 ne teste pas cette nouvelle source.

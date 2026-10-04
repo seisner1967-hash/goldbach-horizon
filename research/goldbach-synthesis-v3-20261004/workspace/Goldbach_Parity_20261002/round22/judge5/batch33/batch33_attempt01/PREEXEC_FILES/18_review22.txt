@@ -1,0 +1,41 @@
+REVUE INDÉPENDANTE SOURCE — MAIN Λ–MELLIN RÉVISION02
+ROLE3, 2026-10-04. Statut : SOURCE_THREE_PROOF_REPAIRS_COHERENT_NOT_ELABORATED.
+
+Paquet examiné : D:/Users/Utilisateur/Desktop/Maths/Goldbach_Parity_20261002/round22/role4/complex_gamma_mellin_lambda_source02.
+Source16648B SHA dd04449274b1e5490d8be016a01d069bc6f128989d885976f6200d97b7ea2f6b.
+Handoff27461B SHA323c3d3194474951ca554895221fac0d5c1464a6cb1249bb639f518dfa829b53.
+Les sources nouvelle et ancienne ont été lues FULL, ainsi que le nouveau contrat, catalogue, reçus, handoff et le vrai journal/reçu du lot31. Les 45 bindings déclarés sont conformes physiquement SHA256/octets ; aucune ancienne source ou sortie n'a été modifiée.
+
+Le vrai FAIL31 est conservé
+Le log5744B SHA baf6fe9d6f7ba57c9259eaec5481de08f993228748891793a9234626737bc367 et le reçu8925B SHA470f798110abde794b6742605c5dc66e4c7aabe7bc6a9e81e502e3c41aab9d1c montrent un unique enfant, exit1, START01:32:49.390502UTC, FIN01:33:30.707890UTC, sans olean. Cinq diagnostics concernent trois sites : Membership ℝ(List(List ℝ)) et réécriture/cast au site84–85 ; somme Finset.range2 non réduite au site110 ; simp sans progrès au site146.
+Les 30 impressions contiennent20 listes standards et10 récupérations sorryAx. Le module entier a zéro crédit ; les20 listes standards ne sont pas promues en acquisition partielle. Aucun contre-exemple analytique ou échec de parité n'est montré. L'observation ROOT31 CLOSED_FAILED0 a été communiquée ; baseline officielle86/1456.
+
+Contrôle de périmètre
+La source ancienne16534B SHA c0653c546413d5f2aac9715a301303c2ac5750dca5d96054bfb450c91ab3249c et la source nouvelle concordent en dehors des trois remplacements ci-dessous. La comparaison littérale546d81 reconstruisait le texte nouveau en remplaçant exactement trois blocs uniques de l'ancien texte ; elle a renvoyé true. C'est une comparaison de texte brut, sans parser Lean, import ou élaboration.
+Les30 headers/domaines, six définitions, huit lignes d'import et30 #print axioms sont inchangés. Le catalogue30=24thm+6defs concorde avec la lecture manuelle. Aucune prémisse d'intégrabilité, de majorant final ou d'inversion Mellin n'a été ajoutée.
+
+Ancien84–85 → nouveau84–88
+La notation non ouverte [[1,1+K]] était interprétée comme une liste imbriquée. La source02 utilise uIcc (1:ℝ) (1+(K:ℝ)), avec open Set déjà inchangé, et un hle explicitement réel construit depuis Nat.cast_nonneg K : (0:ℝ)≤(K:ℝ).
+Set.uIcc est réellement un Set α ; sa notation [[...]] requiert la portée Interval. La signature uIcc_of_le (h:a≤b) transforme ce vrai ensemble en Icc a b. Les types des deux bornes et de hle sont maintenant fixés avant la réécriture. Le simp final exclut0 de Icc1(1+K). Cette correction répond aux trois diagnostics liés ; aucun nouveau domaine ou intervalle fourni en prémisse n'intervient.
+
+Ancien110 → nouveau112–113
+La somme est exactement ∑n∈range2,(n:ℝ)^(-(3/2:ℝ)). La nouvelle preuve demande norm_num [Finset.sum_range_succ,Real.zero_rpow].
+Finset.sum_range_succ existe via la déclaration additive générée depuis prod_range_succ. Deux dépliages donnent les termes0 et1. Real.zero_rpow requiert l'exposant non nul ; -(3/2:ℝ)≠0 est une proposition rationnelle que norm_num doit décharger. Le terme1 utilise one_rpow. Le membre droit reste1, et Q≤6 dépend toujours de la vraie comparaison intégrale et de la sommabilité.
+La route est correcte en SOURCE ; cette revue ne prétend pas que la combinaison du simplificateur et de norm_num a été élaborée.
+
+Ancien146–147 → nouveau149–150
+Dans la branche n=0, la révision transporte une preuve continuous_const explicitement typée Continuous(fun _:ℝ=>(0:ℂ)), par simpa [lambdaMellinCoefficient].
+La vraie ArithmeticFunction.map_zero est marquée simp et vaut f0=0 ; Λ est la vraie fonction vonMangoldt arithmétique. Le cast complexe du zéro puis zero_mul réduisent le coefficient à la fonction nulle, indépendamment de la valeur totalisée du cpow0. La signature de continuous_const a le domaine/codomaine généraux, ici fixés àℝ etℂ. Il n'y a pas de continuité du coefficient final donnée en hypothèse.
+
+Charges scientifiques conservées
+Toutes les autres preuves sont textuellement inchangées. La définition directe IsPrimePow/minFac/log de Λ conserve toutes les puissances premières. La source garde Λ≤log n puis Λ(n)n⁻²≤2n⁻³ᐟ², la sommabilité et le test intégral Q≤6. Elle conserve la norme exacte des coefficients, la continuité de D et |D|≤6.
+Le L1 de chaque terme et de D·K est toujours construit ; la sommabilité des intégrales de normes est conservée avant integral_tsum_of_summable_integral_norm. La factorisation du cpow sous multiplication par un réel positif et l'inversion Gamma en nw restent écrites, pour Re(w)>0 et n>0, le terme0 étant nul.
+La seule dépendance locale directe demeure Holo27 indépendant PASS observé. Local26 désigne la ligne LocalPASS22 dans un reçu globalFAILED26 ; aucun ancien module n'est recompilé ici. Tail30, bridge2, EΛ16 et Geometry25 sont distincts et ne fournissent aucune prémisse dans mainΛ02.
+Cette constatation de conservation ne remplace pas un nouveau verdict Lean. Le précédent avis SOURCE cohérent ne neutralise pas le vrai FAIL31.
+
+Verdict et limites
+Aucune objection précise trouvée aux trois raccords après lecture des signatures réelles. Statut SOURCE_THREE_PROOF_REPAIRS_COHERENT_NOT_ELABORATED. Les seuls risques résiduels signalés ici sont l'élaboration du dépliage conditionnel zero_rpow et le transport par simpa de la fonction constante. La preuve mathématique globale n'a pas été réévaluée numériquement ni auditée par une nouvelle compilation.
+Zéro compiler/probe/parser ou import candidat/PREP/banque. Aucun coefficientN, annulation uniforme, correction PP/front, D_N ou WIN n'est payé. La livraison07 reste DRAFT.
+
+Lectures : ancienFULLd95c0a, nouveauFULL60fe14 ; log/reçu31FULL0b768e ; contrat/catalogueFULL614c46 ; reçus/handoffFULLa3b6fb, rediffusés seuls pour remplacer le premier agrégat tronqué. API TARGETED67e81c : UnorderedInterval41–76, Finset1307–1338, Pow/Real100–139, ArithmeticFunction94–111, Topology/Basic1473–1484, VonMangoldt37–86.
+Métadonnées physiques45bindings a98c3f ; comparaison littérale corrigée546d81. La première émission de cette comparaison2c8d86 a échoué uniquement sur le paramètre PowerShell -Depth4 ; aucun fichier/candidat n'était exécuté ou modifié. Le contrôle de texte a été réémis avec -Depth 4, sans mathématique ni élaboration.

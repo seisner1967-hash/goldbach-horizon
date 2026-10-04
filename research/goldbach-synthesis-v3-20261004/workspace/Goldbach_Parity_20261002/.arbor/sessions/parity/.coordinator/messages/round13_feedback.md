@@ -1,0 +1,13 @@
+# Retour définitif13 — à conserver dans la suite
+
+Judge13 FINAL : source/arithmetic PASS,39 nouveaux théorèmes,5 nouvelles définitions séparées,15 modules208 auxiliaires, standardaxioms uniquement, quatre builds frais code0/no warnings. Quatre vrais essais producteurs échoués sont archivés (3:01/02/04,4:01) ; ils sont techniques et ne constituent pas une erreur fictive du mur de la parité. Root13 controller64417450e8b96dfdd562765d4919d27d2e8ba98919ff79ac806d94d10bdd201d lie88 fichiers plus lui-même89. Conservation514 parJudge ; nouveau603 par6/root. Aucun test refait parroot.
+
+Acquis utiles : p→p-2=rs traverse les grands noyaux, donne U_a=-logc/+logc depuis les vrais diviseurs, vrais signesµ etMangoldt nul. Le bracket physique donne l'entropie et les deuxW distincts. Canonicalité parent/image et disjonction sont démontrées ; pas de densityhyp. Vraie variation W1-W0 avec originalQ/minQ floor((m-1)/a)/masqueN/k1/tail et borne absolue finie compilée.
+
+Paiement21N31/32u² : écrit et contre-lu sousgardes source, uniquement tuples effectivement appariés. La borne de phi, les floors/+1, les exposants et le seuil10^24 ne sont pas compilés ici. A_real>=0 parU4 ne fournit pas K>0/coverage. Le reste J0+J1privéT+J2privéP et toutes les gardes échouées/nonbulk restent présents. P5 surK2J2bulk ENTIER avant retrait exact principaux/erreursparent ; U4 sur reste seulement, X16 sur appariés seulement, pas de deuxièmeNG54/roughcredit.
+
+Eightfalsifiers/17positionsstrictsigns inclreprises,11bindings/twobyte+fieldcopies exactes. Universelle paire réelle<=0 sansvariation, omissiontail/direction/partnerprime false ; universelsmallcommutator1/u, orientationbysymmetrization, fullHPSD, rawtothetalong false. Ces rejets ne réfutent pas toute couverture/spectrale ou estimation limitée au source. N1e8 horssourceu10^24.
+
+Suite14 doit apporter information indépendante de couverture ou comparaison des contributions non appariées. Famillesmultiples conservent degrés/chargesdeuxcôtés ; déplacementvariable détruit l'ancienne injectionimage. Le grapheall-descendant peut donner des voisinages emboîtés et défautspréfixes exacts, mais comparaison des incidencesprime pas donnée gratuitement. Cuts CRT fixedfamily doivent distinguerpetitp/deuxgrandsaxes/complémentall et situationsphysvides. Un nouveau petitfrais/front ou identitéstandard ne suffitpas à sélection bypass.
+
+Garderledger unique,sourceQ/wholeU_a/rawproperpowers, c1-SN N/longmatchingS(cN), conducteurs/APnonunits/CRT+1/nativephase1. I/properpowers/face/corner/mobility unefois. J0/J1/J2restant,H2/singles/faces, B13/principal, BVeffectifet2max(e,0) restentnonpayés. Score0/victoryfalse/objectiveactive ; aucune conclusion globale de no-go.

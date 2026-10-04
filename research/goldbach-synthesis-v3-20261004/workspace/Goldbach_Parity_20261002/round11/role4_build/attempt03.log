@@ -1,0 +1,131 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:288:60: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  l - m + n ≤ -1
+  l ≥ 0
+  l + n ≥ 0
+  j ≥ 1
+  1 ≤ j - 3*k ≤ 2
+  i ≥ 0
+  i - 3*j ≥ 0
+  i - j ≥ 0
+  h ≥ 0
+  h - l - n ≥ 0
+  g ≤ -1
+  g - l ≤ -1
+  g - l - n ≤ -2
+  f ≥ 0
+  e ≥ 0
+  e - f ≤ -1
+  c ≥ 4
+  c - e ≤ -1
+  c - i ≥ 0
+  b ≥ 1
+  b - c ≤ 0
+where
+ b := ↑alpha
+ c := ↑a
+ e := ↑p
+ f := ↑q
+ g := ↑(N - 1) / ↑alpha
+ h := ↑(a ^ 3)
+ i := ↑(bulkCap ((N - 1) / alpha) N p q)
+ j := ↑d
+ k := ↑d / 3
+ l := ↑(N - 3 * d * (p * q))
+ m := ↑d * ↑(p * q)
+ n := ↑(3 * d) * ↑(p * q)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:289:73: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  l ≥ 0
+  l + m ≥ 0
+  l + m - n ≤ -1
+  j ≥ 1
+  1 ≤ j - 3*k ≤ 2
+  i ≥ 0
+  i - 3*j ≥ 0
+  i - j ≥ 0
+  h ≥ 0
+  h - l - m ≥ 0
+  g - l ≤ -1
+  g - l - m ≤ -2
+  g ≤ -1
+  f ≥ 0
+  e ≥ 0
+  e - f ≤ -1
+  c ≥ 4
+  c - e ≤ -1
+  c - i ≥ 0
+  b ≥ 1
+  b - c ≤ 0
+where
+ b := ↑alpha
+ c := ↑a
+ e := ↑p
+ f := ↑q
+ g := ↑(N - 1) / ↑alpha
+ h := ↑(a ^ 3)
+ i := ↑(bulkCap ((N - 1) / alpha) N p q)
+ j := ↑d
+ k := ↑d / 3
+ l := ↑(N - d * (p * q))
+ m := ↑d * ↑(p * q)
+ n := ↑(3 * d) * ↑(p * q)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round11\lean\ThreeAdicPrimePairing.lean:298:60: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  m ≥ 0
+  k ≥ 1
+  1 ≤ k - 3*l ≤ 2
+  j ≥ 0
+  j - 3*k ≤ -1
+  j - k ≥ 0
+  i ≥ 0
+  h ≤ -1
+  g ≥ 0
+  g - h ≥ 2
+  g - i ≤ 0
+  g - m ≤ -1
+  f ≥ 0
+  e ≥ 0
+  e - f ≤ -1
+  c ≥ 4
+  c - e ≤ -1
+  c - j ≥ 0
+  b ≥ 1
+  b - c ≤ 0
+where
+ b := ↑alpha
+ c := ↑a
+ e := ↑p
+ f := ↑q
+ g := ↑N
+ h := ↑(N - 1) / ↑alpha
+ i := ↑(a ^ 3)
+ j := ↑(bulkCap ((N - 1) / alpha) N p q)
+ k := ↑d
+ l := ↑d / 3
+ m := ↑d * ↑(p * q)
+'GoldbachRound11.short_filter_prime_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.complete_short_prime_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.prime_pair_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_source_bracket_j2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.mu_three_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_three_adic_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.three_mul_mem_grid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.core_grid_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.paired_disjoint_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.paired_union_disjoint_face' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.sum_core_grid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.three_coprime_mask' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.literal_bulk_front' depends on axioms: [propext, Quot.sound]
+'GoldbachRound11.bulk_cap_le_front' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_bracket_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_p1_partition' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound11.principal_pair_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.principal_face_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound11.actual_principal_partition' depends on axioms: [propext, Classical.choice, Quot.sound]

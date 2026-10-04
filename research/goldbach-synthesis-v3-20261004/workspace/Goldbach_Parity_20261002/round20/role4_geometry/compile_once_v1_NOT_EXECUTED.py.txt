@@ -1,0 +1,132 @@
+"""Prepared launcher: a distinct root geometry gate is mandatory before Lean.
+
+Targets only the new geometry source. Existing PASS modules are read-only imports.
+This launcher has not been executed during geometry preparation.
+"""
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+from datetime import datetime, timezone
+
+sys.dont_write_bytecode = True
+W = Path(__file__).resolve().parent
+B = W.parents[1]
+SRC = W / "FriableSourceGeometry.lean"
+PREP = W / "preparation.json"
+LEAN = Path(r"C:\Users\Utilisateur\.elan\toolchains\leanprover--lean4---v4.15.0\bin\lean.exe")
+CACHE = Path(r"D:\Users\Utilisateur\Desktop\Maths\q356-canonical-binding-replay\.lake\packages")
+PACKAGES = ["aesop", "batteries", "importGraph", "LeanSearchClient", "mathlib",
+            "plausible", "proofwidgets", "Qq"]
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def write_new(p, data):
+    with p.open("x", encoding="utf-8") as h:
+        h.write(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+
+
+if len(sys.argv) != 2:
+    raise SystemExit("Require the distinct root geometry gate path; no implicit gate")
+gate_path = Path(sys.argv[1]).resolve()
+gate = json.loads(gate_path.read_text(encoding="utf-8"))
+prep = json.loads(PREP.read_text(encoding="utf-8"))
+assert gate["authorization"] == "ROOT20_GEOMETRY_COMPILE"
+assert gate["root_authorized"] is True
+assert gate["round"] == 20 and gate["node"] == "14.5"
+assert gate["full_geometry_source_read"] is True
+assert gate["full_geometry_launcher_read"] is True
+assert gate["full_geometry_preparation_read"] is True
+assert gate["canonical_new_numeric_pass_inspected"] is True
+assert gate["source_sha256"] == prep["source_sha256"] == sha(SRC)
+assert gate["launcher_sha256"] == prep["launcher_sha256"] == sha(Path(__file__))
+assert gate["preparation_sha256"] == sha(PREP)
+assert gate["report_sha256"] == prep["report_sha256"] == sha(B / "round20" / "agent4_geometry_preparation.md")
+assert sha(LEAN) == prep["compiler_sha256"]
+
+manifest_path = W / "inputs_sha256.json"
+assert sha(manifest_path) == prep["inputs_manifest_sha256"]
+manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+for item in manifest["bindings"]:
+    assert sha(Path(item["path"])) == item["sha256"], "Frozen read-only input changed"
+
+content = SRC.read_text(encoding="utf-8")
+assert not re.search(r"\b(sorry|admit|native_decide|trustMe)\b", content)
+assert not re.search(r"^\s*axiom\s+", content, re.M)
+assert content.count("#print axioms") == prep["print_axioms_count"]
+ledger_path = W / "geometry_build_receipt.json"
+ledger = json.loads(ledger_path.read_text(encoding="utf-8")) if ledger_path.exists() else {
+    "round": 20, "node": "14.5", "role": "source_geometry",
+    "attempts": [], "successful_modules": {},
+    "historical_source_compiles": 0, "victory": False, "score": 0}
+assert not ledger["successful_modules"], "No replay of the unchanged geometry PASS"
+n = len(ledger["attempts"]) + 1
+stem = f"attempt{n:02d}"
+snapshot = W / (stem + "_source_PREEXEC.lean.txt")
+launcher_snapshot = W / (stem + "_launcher_PREEXEC.py.txt")
+with snapshot.open("xb") as h:
+    h.write(SRC.read_bytes())
+with launcher_snapshot.open("xb") as h:
+    h.write(Path(__file__).read_bytes())
+env = dict(os.environ)
+env["PYTHONDONTWRITEBYTECODE"] = "1"
+env["LEAN_PATH"] = ";".join(map(str, [W, B / "round20" / "role4",
+    B / "round19" / "judge" / "build", B / "round18" / "judge" / "build",
+    B / "round16" / "judge" / "build", B / "round13" / "role4" / "dependencies",
+    *[CACHE / p / ".lake" / "build" / "lib" for p in PACKAGES]]))
+out = W / (stem + ".olean")
+cmd = [str(LEAN), "-o", str(out), str(SRC)]
+entry = {
+    "attempt": n, "phase": "PREEXEC", "started_utc": now(),
+    "source": str(SRC), "source_sha256": sha(SRC),
+    "source_snapshot": str(snapshot), "source_snapshot_sha256": sha(snapshot),
+    "launcher_snapshot": str(launcher_snapshot), "launcher_snapshot_sha256": sha(launcher_snapshot),
+    "command": cmd, "cwd": str(W), "LEAN_PATH": env["LEAN_PATH"],
+    "gate": str(gate_path), "gate_sha256": sha(gate_path),
+    "preparation_sha256": sha(PREP), "input_bindings": manifest["bindings"],
+    "compiler_sha256": sha(LEAN), "historical_source_compiles": 0, "victory": False}
+started = W / (stem + "_started.json")
+write_new(started, entry)
+run = subprocess.run(cmd, cwd=W, env=env, capture_output=True,
+                     text=True, encoding="utf-8", errors="replace")
+stdout_path = W / (stem + ".stdout.txt")
+stderr_path = W / (stem + ".stderr.txt")
+log = W / (stem + ".log")
+for p, s in [(stdout_path, run.stdout), (stderr_path, run.stderr),
+             (log, run.stdout + run.stderr)]:
+    with p.open("x", encoding="utf-8") as h:
+        h.write(s)
+assert SRC.read_bytes() == snapshot.read_bytes(), "Source changed during compiler invocation"
+entry.update({
+    "phase": "FINISHED", "finished_utc": now(), "exit_code": run.returncode,
+    "started_receipt": str(started), "started_receipt_sha256": sha(started),
+    "stdout": str(stdout_path), "stdout_sha256": sha(stdout_path),
+    "stderr": str(stderr_path), "stderr_sha256": sha(stderr_path),
+    "log": str(log), "log_sha256": sha(log),
+    "olean": str(out) if out.exists() else None,
+    "olean_sha256": sha(out) if out.exists() else None})
+ledger["attempts"].append(entry)
+if run.returncode == 0:
+    assert "sorryAx" not in run.stdout + run.stderr
+    final = SRC.with_suffix(".olean")
+    with final.open("xb") as h:
+        h.write(out.read_bytes())
+    ledger["successful_modules"][SRC.name] = {
+        "attempt": n, "source": str(SRC), "source_sha256": sha(SRC),
+        "olean": str(final), "olean_sha256": sha(final)}
+with ledger_path.open("w", encoding="utf-8") as h:
+    h.write(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n")
+print(json.dumps({"attempt": n, "module": SRC.name, "exit_code": run.returncode,
+                  "log": str(log), "victory": False}, ensure_ascii=False))
+print(run.stdout + run.stderr)
+sys.exit(run.returncode)

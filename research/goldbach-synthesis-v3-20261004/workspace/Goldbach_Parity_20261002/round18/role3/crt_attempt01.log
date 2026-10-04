@@ -1,0 +1,83 @@
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:86:4: error: tauto failed to solve some goals.
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:86:4: error: unsolved goals
+case h.mp.intro.intro.right
+b H : ℕ
+hH : H ≠ 0
+k : ℕ
+right✝¹ : k ∣ b
+left✝ : k ∣ H
+right✝ : H ≠ 0
+a✝ : b.gcd H = 0
+⊢ False
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:87:29: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ∑ i ∈ Nat.divisors ?m.30764, ?m.30763 i
+b H : ℕ
+hH : H ≠ 0
+hfilter : filter (fun k => k ∣ b) H.divisors = (b.gcd H).divisors
+⊢ (if b.Coprime H then 1 else 0) = ∑ a ∈ (b.gcd H).divisors, ↑(μ a)
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:124:18: error: unknown constant 'Nat.zero_succ'
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:153:17: warning: unused variable `k`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:153:19: warning: unused variable `hk`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:195:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ↑(#(filter (fun b => b.Coprime H ∧ ell ∣ b ∧ v ∣ candidate P b) (Ioc A B)))
+P : Parameters
+A B H ell v : ℕ
+hAB : A ≤ B
+hH : 0 < H
+hell : 0 < ell
+hv : 0 < v
+hHd : conductor P ∣ H
+hlH : ell.Coprime H
+hvH : v.Coprime H
+hvl : v.Coprime ell
+hcap : ∀ b ∈ Ioc A B, conductor P * b ≤ P.N
+hdv : (conductor P).Coprime v
+⊢ |↑(#(filter (fun b => b.Coprime H ∧ ell ∣ b ∧ v ∣ candidate P b) (Ioc A B))) -
+        (↑B - ↑A) / (↑ell * ↑v) * arithmeticDensity H| ≤
+    arithmeticFront H
+D:\Users\Utilisateur\Desktop\Maths\Goldbach_Parity_20261002\round18\role3\SeparatedTypeIICount.lean:229:2: error: tactic 'apply' failed, failed to unify
+  Finset.sum ?m.66537 ?m.66532 = Finset.sum ?m.66537 ?m.66533
+with
+  (∑ a ∈ E.product I, if a.1 ∣ candidate P a.2 ∧ a.2.Coprime H ∧ ell ∣ a.2 then 1 else 0) =
+    ∑ x ∈ E, ∑ a ∈ I, if a.Coprime H ∧ ell ∣ a ∧ x ∣ candidate P a then 1 else 0
+P : Parameters
+I E : Finset ℕ
+H ell : ℕ
+⊢ (∑ a ∈ E.product I, if a.1 ∣ candidate P a.2 ∧ a.2.Coprime H ∧ ell ∣ a.2 then 1 else 0) =
+    ∑ x ∈ E, ∑ a ∈ I, if a.Coprime H ∧ ell ∣ a ∧ x ∣ candidate P a then 1 else 0
+'GoldbachRound18.SeparatedTypeII.arithmeticDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmeticFront' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.rowCount' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inverseResidue' depends on axioms: [propext, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.crtResidue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inverse_residue_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.crt_residue_characterization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.residue_front' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.unit_indicator_moebius' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.sifted_count_inclusion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.units_inclusion' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmetic_density_totient' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmetic_density_positive' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.arithmetic_front_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GoldbachRound18.SeparatedTypeII.inclusion_front' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.unit_count_front' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.row_count_front' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'GoldbachRound18.SeparatedTypeII.omitted_count_rows' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
