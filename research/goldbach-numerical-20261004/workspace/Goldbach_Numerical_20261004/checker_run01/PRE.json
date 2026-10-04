@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-04T05:52:42.823456+00:00",
+  "checker": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Numerical_20261004\\checker_dif22_operational.exe",
+  "checker_sha256": "268c4a48169129ac2ed223224d95c4612abce21fe5df375dbab19106596676d3",
+  "backend_sha256": "db6629ad95526c246ed847cef217e4743a48f04dbaf63e542f223c42b12c2c0f",
+  "hardware": {
+    "logical_processors": 24,
+    "physical_memory_bytes": 34269069312,
+    "available_physical_bytes": 19671810048,
+    "memory_load_percent": 42,
+    "available_commit_bytes": 22193893376
+  },
+  "payload_original": {
+    "factors.bin": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01\\payload\\factors.bin",
+      "bytes": 400000020,
+      "sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2"
+    },
+    "records.bin": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01\\payload\\records.bin",
+      "bytes": 92183304,
+      "sha256": "bf6bfeb2d8431326cf677df7605bac3d12caa189f22a87e7e4267aff6a093b6d"
+    },
+    "producer.txt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Parity_20261002\\round22\\role3\\native_numeric_consumer_source01\\actual_numeric04_attempt01\\payload\\producer.txt",
+      "bytes": 194,
+      "sha256": "aeee44e0e6cdc503504d9ea3329ab6b83b3a665462472318265932200ab04383"
+    }
+  },
+  "payload_copy": {
+    "factors.bin": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Numerical_20261004\\checker_run01\\payload\\factors.bin",
+      "bytes": 400000020,
+      "sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2"
+    },
+    "records.bin": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Numerical_20261004\\checker_run01\\payload\\records.bin",
+      "bytes": 92183304,
+      "sha256": "bf6bfeb2d8431326cf677df7605bac3d12caa189f22a87e7e4267aff6a093b6d"
+    },
+    "producer.txt": {
+      "path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Numerical_20261004\\checker_run01\\payload\\producer.txt",
+      "bytes": 194,
+      "sha256": "aeee44e0e6cdc503504d9ea3329ab6b83b3a665462472318265932200ab04383"
+    }
+  },
+  "commit_cap_bytes": 3221225472,
+  "max_wall_seconds": 86400,
+  "working_set_limit_requested": false,
+  "retry_count": 0,
+  "label": "checker",
+  "fresh_producer_invocation": false
+}

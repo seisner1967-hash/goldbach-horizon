@@ -16,3 +16,6 @@ lake-manifest.json text eol=lf
 *.png binary
 *.jpg binary
 *.pdf binary
+
+# Preserve the mixed historical README bytes around documentary additions.
+/README.md -text

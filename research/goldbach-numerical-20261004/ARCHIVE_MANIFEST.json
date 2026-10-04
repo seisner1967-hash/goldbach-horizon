@@ -1,0 +1,376 @@
+{
+  "schema": "GOLDBACH_V3_BYTE_EXACT_RESEARCH_ARCHIVE",
+  "created_at_utc": "2026-10-04T06:29:25.925970+00:00",
+  "source_root_name": "Goldbach_Numerical_20261004",
+  "historical_source_root": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Numerical_20261004",
+  "file_count": 47,
+  "original_bytes": 988288691,
+  "omitted_files": [],
+  "normalization": "none; publication .gitattributes uses -text",
+  "scope": "All files recursively under the engineering research workspace, including failed attempts and receipts.",
+  "scientific_validation": "None performed by this archival script.",
+  "files": [
+    {
+      "path": "__pycache__/audit_receipt.cpython-312.pyc",
+      "bytes": 20748,
+      "sha256": "c2406e102f22328a1934f9aa7860a4164edf0557fb01f7ade939b35a5a45350c",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/__pycache__/audit_receipt.cpython-312.pyc"
+    },
+    {
+      "path": "__pycache__/run_native_n1e8.cpython-312.pyc",
+      "bytes": 20548,
+      "sha256": "a59bd6555b79f24c5a0521823722ed41dd15ee8aff0d9dda59aa2ef5a42b7515",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/__pycache__/run_native_n1e8.cpython-312.pyc"
+    },
+    {
+      "path": "audit_receipt.py",
+      "bytes": 13919,
+      "sha256": "20802d0041b250937d40abdaabb34dc26026121daef2eff11f2b718713144a6d",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/audit_receipt.py"
+    },
+    {
+      "path": "checker_build_receipt.json",
+      "bytes": 2604,
+      "sha256": "b647aa25994f77ecdf4024c388e13a00f79b80a74bad6ea4bbd402a29403b22b",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_build_receipt.json"
+    },
+    {
+      "path": "checker_dif22_operational.cpp",
+      "bytes": 23793,
+      "sha256": "589f61d71717375601ae723da23bf47bb3bab39538bf14f31060c068ffa2cfd1",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_dif22_operational.cpp"
+    },
+    {
+      "path": "checker_dif22_operational.exe",
+      "bytes": 3685981,
+      "sha256": "268c4a48169129ac2ed223224d95c4612abce21fe5df375dbab19106596676d3",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_dif22_operational.exe"
+    },
+    {
+      "path": "checker_run01/checker.stderr.log",
+      "bytes": 18245,
+      "sha256": "5973e8a5a8bd9ed4f995aab2b6ff64b9cf821289c584c75e5900a70cd61d26c2",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/checker.stderr.log"
+    },
+    {
+      "path": "checker_run01/checker.stdout.log",
+      "bytes": 464,
+      "sha256": "07fea8ea8a58dcb4f06d7614bb872d982f0be713944ca52566fa673d605e469d",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/checker.stdout.log"
+    },
+    {
+      "path": "checker_run01/checker_CREATED_SUSPENDED.json",
+      "bytes": 68,
+      "sha256": "2e566bdb5fbf15f3b8d80743ddc70553b9cdb42f89156327a2453ab339ee4360",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/checker_CREATED_SUSPENDED.json"
+    },
+    {
+      "path": "checker_run01/checker_FIN.json",
+      "bytes": 1145,
+      "sha256": "6bde754b344bf8cee379eca71241c929105d86ecfde86426f845a33c328f8928",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/checker_FIN.json"
+    },
+    {
+      "path": "checker_run01/checker_START.json",
+      "bytes": 93,
+      "sha256": "5546b46ee99eee0930253d066efaa80c96280038b38dddb015b140e1866e28e9",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/checker_START.json"
+    },
+    {
+      "path": "checker_run01/coefficient_result.json",
+      "bytes": 847,
+      "sha256": "3118f2db72ea7f88f3af11779088489d60a47f264aeada2e48e3bc8ec703728c",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/coefficient_result.json"
+    },
+    {
+      "path": "checker_run01/payload/factors.bin",
+      "bytes": 400000020,
+      "sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2",
+      "storage": "packed",
+      "payload": {
+        "encoding": "gzip",
+        "original_bytes": 400000020,
+        "original_sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2",
+        "parts": [
+          {
+            "path": "payloads/32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2.gzip.part001",
+            "bytes": 50331648,
+            "sha256": "1185f4516d6b0311cb346ebfa33d212952bec58c26b33ebe686ed0a4902c386b"
+          },
+          {
+            "path": "payloads/32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2.gzip.part002",
+            "bytes": 12285590,
+            "sha256": "2938526b401a75c5718c01e9d17f6015dc582b8f0d5a4ed454cb40f2984daa20"
+          }
+        ]
+      }
+    },
+    {
+      "path": "checker_run01/payload/producer.txt",
+      "bytes": 194,
+      "sha256": "aeee44e0e6cdc503504d9ea3329ab6b83b3a665462472318265932200ab04383",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/payload/producer.txt"
+    },
+    {
+      "path": "checker_run01/payload/records.bin",
+      "bytes": 92183304,
+      "sha256": "bf6bfeb2d8431326cf677df7605bac3d12caa189f22a87e7e4267aff6a093b6d",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/payload/records.bin"
+    },
+    {
+      "path": "checker_run01/POST.json",
+      "bytes": 1895,
+      "sha256": "0f9dc68dcadc68f73a5bccd74215be777169266250c9002185ff7fa9bde34dd1",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/POST.json"
+    },
+    {
+      "path": "checker_run01/PRE.json",
+      "bytes": 2562,
+      "sha256": "20624207028e89560f659e4d31956539c963b2b7aa82359db1623348c1aa0c49",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/PRE.json"
+    },
+    {
+      "path": "checker_run01/progress.jsonl",
+      "bytes": 24257,
+      "sha256": "b633f7a739df09e98a5582a7b40262f34eeae719174c0c6ed9ee145c1fa38bc8",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/progress.jsonl"
+    },
+    {
+      "path": "checker_run01/receipt.json",
+      "bytes": 1671,
+      "sha256": "5f435444318f53d42a2342da83b06981d067fd9d6011b7ba4455e40d059c56d1",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/checker_run01/receipt.json"
+    },
+    {
+      "path": "finalize_run.py",
+      "bytes": 5406,
+      "sha256": "45c0dcf8fb726180454733f7626705a94d960aaccff88620c8903713f7b06a8d",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/finalize_run.py"
+    },
+    {
+      "path": "infrastructure/__pycache__/windows_numeric_job.cpython-312.pyc",
+      "bytes": 28837,
+      "sha256": "8a16d503f85b543a6bb6be67bd6e49989ebfbdd2350e4335dc65757613c65df6",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/infrastructure/__pycache__/windows_numeric_job.cpython-312.pyc"
+    },
+    {
+      "path": "infrastructure/windows_numeric_job.py",
+      "bytes": 18143,
+      "sha256": "db6629ad95526c246ed847cef217e4743a48f04dbaf63e542f223c42b12c2c0f",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/infrastructure/windows_numeric_job.py"
+    },
+    {
+      "path": "numerical_addendum.txt",
+      "bytes": 1575,
+      "sha256": "45ee0047f7dbf9b7034a815df7a7c16e46a571739d6b2dafbaf8586454c21aee",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/numerical_addendum.txt"
+    },
+    {
+      "path": "numerical_contract.json",
+      "bytes": 1792,
+      "sha256": "d1a39dfd274c166bec28ae38baf3e0d373753eeb249350ed7f10102961aeb2e6",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/numerical_contract.json"
+    },
+    {
+      "path": "numerical_verdict.json",
+      "bytes": 7184,
+      "sha256": "ce79d925f56b4641cf45080ccae5ee45af0b0bfd52e012ea60340aa418f665e5",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/numerical_verdict.json"
+    },
+    {
+      "path": "payload_run02/factors.bin",
+      "bytes": 400000020,
+      "sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2",
+      "storage": "packed",
+      "payload": {
+        "encoding": "gzip",
+        "original_bytes": 400000020,
+        "original_sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2",
+        "parts": [
+          {
+            "path": "payloads/32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2.gzip.part001",
+            "bytes": 50331648,
+            "sha256": "1185f4516d6b0311cb346ebfa33d212952bec58c26b33ebe686ed0a4902c386b"
+          },
+          {
+            "path": "payloads/32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2.gzip.part002",
+            "bytes": 12285590,
+            "sha256": "2938526b401a75c5718c01e9d17f6015dc582b8f0d5a4ed454cb40f2984daa20"
+          }
+        ]
+      }
+    },
+    {
+      "path": "payload_run02/producer.txt",
+      "bytes": 194,
+      "sha256": "aeee44e0e6cdc503504d9ea3329ab6b83b3a665462472318265932200ab04383",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/payload_run02/producer.txt"
+    },
+    {
+      "path": "payload_run02/records.bin",
+      "bytes": 92183304,
+      "sha256": "bf6bfeb2d8431326cf677df7605bac3d12caa189f22a87e7e4267aff6a093b6d",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/payload_run02/records.bin"
+    },
+    {
+      "path": "producer_run01/PRE.json",
+      "bytes": 849,
+      "sha256": "cec32d8fbfc17b9151edba033a9d45119f900ff9ce795f65e16382c410ee8bf9",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/PRE.json"
+    },
+    {
+      "path": "producer_run01/producer.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/producer.stderr.log"
+    },
+    {
+      "path": "producer_run01/producer.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/producer.stdout.log"
+    },
+    {
+      "path": "producer_run01/producer_CREATED_SUSPENDED.json",
+      "bytes": 68,
+      "sha256": "fc95dab3f4ab039441c6b2e957731742ec34ca1e03cc66d0d4fe81d784c6f377",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/producer_CREATED_SUSPENDED.json"
+    },
+    {
+      "path": "producer_run01/producer_FIN.json",
+      "bytes": 1150,
+      "sha256": "7b7d88fc02c4d243c0fee3dc20faf8348c48f85aeed75caf10127af0f6e6c00d",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/producer_FIN.json"
+    },
+    {
+      "path": "producer_run01/producer_START.json",
+      "bytes": 93,
+      "sha256": "53b5e6a9f6a08317626685a695a1a636fd7f59efa463d88149271b13b8a67e7c",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/producer_START.json"
+    },
+    {
+      "path": "producer_run01/progress.jsonl",
+      "bytes": 395,
+      "sha256": "78109c8da485ddd70bebb05b46a39ce3ff5bbe816916059a7cc834107e22c693",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/progress.jsonl"
+    },
+    {
+      "path": "producer_run01/receipt.json",
+      "bytes": 1686,
+      "sha256": "74ae21432952cc610dc92884a513672c63e68de65447b6241abb2e716f8c1356",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run01/receipt.json"
+    },
+    {
+      "path": "producer_run02/POST.json",
+      "bytes": 925,
+      "sha256": "91f721c584a9f7d8f67450612975eca5cd281fc2228853b6a1becb38f09573e4",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/POST.json"
+    },
+    {
+      "path": "producer_run02/PRE.json",
+      "bytes": 849,
+      "sha256": "bbb633ff60e9d260ce95b4f71a13f42349c2efe385ac46923f50c2e30002a287",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/PRE.json"
+    },
+    {
+      "path": "producer_run02/producer.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/producer.stderr.log"
+    },
+    {
+      "path": "producer_run02/producer.stdout.log",
+      "bytes": 48,
+      "sha256": "cbc5238b9cac5ebc6723ea59026739701849cc86a726263b2c0c251cfb3f4851",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/producer.stdout.log"
+    },
+    {
+      "path": "producer_run02/producer_CREATED_SUSPENDED.json",
+      "bytes": 68,
+      "sha256": "881fb14d0bdec4645387446aca4ad2d6589e67ebea61d461b3887c5f54cc9190",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/producer_CREATED_SUSPENDED.json"
+    },
+    {
+      "path": "producer_run02/producer_FIN.json",
+      "bytes": 1145,
+      "sha256": "bbb3385ad85b6d1219948885e1a35b7c375ae9c33fcdb6cafcf76aaa1f23aee0",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/producer_FIN.json"
+    },
+    {
+      "path": "producer_run02/producer_START.json",
+      "bytes": 93,
+      "sha256": "1443e43ad2141320fe6e277530f1a773fd1ad79af02e87deb5cdf5dc3d13826c",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/producer_START.json"
+    },
+    {
+      "path": "producer_run02/progress.jsonl",
+      "bytes": 16315,
+      "sha256": "842cd1afe9ac9a05007a42f1ae0a06965d032abdd2ef712ce11e57c28806e5ec",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/progress.jsonl"
+    },
+    {
+      "path": "producer_run02/receipt.json",
+      "bytes": 1656,
+      "sha256": "a9dfea2ffde7571af9d85f6b0486d01dfc3955b22e85a4ec5d3984ddb4505db8",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/producer_run02/receipt.json"
+    },
+    {
+      "path": "run_contract.json",
+      "bytes": 1781,
+      "sha256": "95aefadc652637ba5ddb8801d126ea30d641390d2aaa37639d473897e9929240",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/run_contract.json"
+    },
+    {
+      "path": "run_native_n1e8.py",
+      "bytes": 12757,
+      "sha256": "5d9c0ab538ca365dd4c630510efb72e126ecf4d3b36df19900fcd4f79096235d",
+      "storage": "direct",
+      "published_path": "workspace/Goldbach_Numerical_20261004/run_native_n1e8.py"
+    }
+  ],
+  "companion_files": []
+}

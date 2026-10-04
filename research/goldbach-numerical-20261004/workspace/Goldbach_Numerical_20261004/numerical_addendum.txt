@@ -1,0 +1,19 @@
+ADDENDUM NUMERIQUE - 4 OCTOBRE 2026
+Verdict : PASS numerique fini, N=100000000, K=134217728, S=2^58.
+Catalogue : 5761455 premiers, couverture 0..N et poids A32 controles.
+CRT independante = somme directe A32 : 14616354094337692277256326339388864358034646
+Residus : 577099750, 626366149, 232952773, 2618309304, 2671748987
+Coefficient I_N/S^2 : 175937962.6753246171932162576862099326930458013955734680521890163404618
+Reference B40 : 14616354094337692277256326339388864358034646
+Ecart entier A32/B40 : 0
+Ecart normalise : 0
+Budget fixe 2E_log : 4.440892142909547146941529534764364885748854559143088343048421854199551E-8 < 0.000001.
+Rayon E_log autour du coefficient primaire : 2.220446071454773573470764767382182442874427279571544171524210927099775E-8.
+Producteur : 18 min 18.219 s, CPU 1097.656 s, RSS pic 1743966208 octets.
+Verificateur : 27 min 39.281 s, CPU 1657.844 s, RSS pic 1744252928 octets.
+Duree totale parallele : 27 min 58.253 s.
+Producteur historique inchange, relance sur dossier neuf; trois fichiers identiques par SHA-256 aux fichiers verifies.
+Verificateur : variante operationnelle exacte, Horner/cache log2; 128 comparaisons rationnelles avec la source originale PASS.
+Windows : aucune limite working-set privilegiee; commit Job 3 Gio, suivi CPU/RSS, sorties confirmees avec code 0.
+Portee : budget de quantification A32/B40 valide. Pas de calcul Mellin tronque ni validation de son raccord SOURCE; pas de nouvelle preuve Lean ou de resultat sur D_N.
+Recus : producer_run02/receipt.json, checker_run01/receipt.json, numerical_verdict.json.

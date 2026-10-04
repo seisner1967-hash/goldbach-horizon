@@ -1,0 +1,19 @@
+{
+  "schema": "GOLDBACH_NUMERICAL_ARCHIVE_VERIFICATION_20261004",
+  "archive_manifest_sha256": "a2a33cdf99be057fd2634557c317583e04273294723563739528f146ae23e0d0",
+  "verification_command": "python scripts/restore_goldbach_v3.py research/goldbach-numerical-20261004",
+  "verification_exit_code": 0,
+  "original_files_reconstructed_and_sha256_checked": 47,
+  "original_bytes": 988288691,
+  "all_original_sha256_match": true,
+  "source_files_compared_after_archival": 47,
+  "all_current_source_sha256_match": true,
+  "omitted_source_files": 0,
+  "largest_published_file_bytes": 92183304,
+  "all_published_files_below_100_mib": true,
+  "unique_oversized_payloads": 1,
+  "factor_payload_part_bytes": [50331648, 12285590],
+  "historical_producer_in_v3_snapshot_sha256": "44d2d571a0190f7dbbb975225559d16a012693bda4197738e6311c14892cadb0",
+  "native_calculation_rerun": false,
+  "scientific_validation": "Archival verification only; no new mathematical or native arithmetic validation."
+}

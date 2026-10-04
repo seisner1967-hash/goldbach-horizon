@@ -1,0 +1,181 @@
+{
+  "schema": "GOLDBACH_INDEPENDENT_NUMERICAL_AUDIT_20261004",
+  "status": "EXACT_NUMERICAL_ARITHMETIC_VALIDATED",
+  "N": 100000000,
+  "K": 134217728,
+  "S": "288230376151711744",
+  "prime_moduli": [
+    2013265921,
+    2281701377,
+    3221225473,
+    3489660929,
+    3892314113
+  ],
+  "modular_residues": [
+    577099750,
+    626366149,
+    232952773,
+    2618309304,
+    2671748987
+  ],
+  "CRT_product": "200988950952742247103310192629436327377560928257",
+  "independent_CRT_integer": "14616354094337692277256326339388864358034646",
+  "C_A_integer": "14616354094337692277256326339388864358034646",
+  "direct_A32_integer": "14616354094337692277256326339388864358034646",
+  "C_B40_integer": "14616354094337692277256326339388864358034646",
+  "CRT_equals_producer_equals_direct_A32": true,
+  "coefficient_denominator": "83076749736557242056487941267521536",
+  "coefficient_decimal": "175937962.6753246171932162576862099326930458013955734680521890163404618",
+  "actual_difference_numerator": "0",
+  "actual_difference_decimal": "0",
+  "primary_E_log_numerator": "1844674425817699235409551617",
+  "primary_E_log_decimal": "2.220446071454773573470764767382182442874427279571544171524210927099775E-8",
+  "joint_2E_log_numerator": "3689348851635398470819103234",
+  "joint_2E_log_decimal": "4.440892142909547146941529534764364885748854559143088343048421854199551E-8",
+  "joint_radius_le_1e_minus6": true,
+  "primary_interval_numerators": [
+    "14616354094337690432581900521689628948483029",
+    "14616354094337694121930752157088099767586263"
+  ],
+  "prime_record_count": 5761455,
+  "payload_bindings": {
+    "factors.bin": {
+      "bytes": 400000020,
+      "sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2"
+    },
+    "records.bin": {
+      "bytes": 92183304,
+      "sha256": "bf6bfeb2d8431326cf677df7605bac3d12caa189f22a87e7e4267aff6a093b6d"
+    },
+    "producer.txt": {
+      "bytes": 194,
+      "sha256": "aeee44e0e6cdc503504d9ea3329ab6b83b3a665462472318265932200ab04383"
+    }
+  },
+  "checker_stdout_sha256": "07fea8ea8a58dcb4f06d7614bb872d982f0be713944ca52566fa673d605e469d",
+  "execution_receipt_path": "D:\\Users\\Utilisateur\\Desktop\\Maths\\Goldbach_Numerical_20261004\\checker_run01\\receipt.json",
+  "checker_execution": {
+    "receipt_sha256": "5f435444318f53d42a2342da83b06981d067fd9d6011b7ba4455e40d059c56d1",
+    "wall_seconds": 1661.2660000000033,
+    "cpu_user_seconds": 1656.21875,
+    "cpu_kernel_seconds": 1.625,
+    "cpu_total_seconds": 1657.84375,
+    "peak_rss_bytes": 1744252928,
+    "peak_job_committed_bytes": 1750605824,
+    "execution_and_POST_validated": true
+  },
+  "fresh_producer_execution": {
+    "receipt_sha256": "a9dfea2ffde7571af9d85f6b0486d01dfc3955b22e85a4ec5d3984ddb4505db8",
+    "wall_seconds": 1099.1560000000172,
+    "cpu_user_seconds": 1095.28125,
+    "cpu_kernel_seconds": 2.375,
+    "cpu_total_seconds": 1097.65625,
+    "peak_rss_bytes": 1743966208,
+    "peak_job_committed_bytes": 1750450176,
+    "execution_and_POST_validated": true
+  },
+  "independent_full_catalogue_replay": false,
+  "catalogue_and_A32_words_checked_by_native_checker": true,
+  "native_Lean_refinement": false,
+  "B40_real_log_refinement_Lean": false,
+  "Mellin_coefficient_truncation_chain_compiled": false,
+  "spectral_H1": false,
+  "D_N": false,
+  "WIN": false,
+  "fresh_producer_matches_entire_checked_payload": true,
+  "fresh_checked_payload_identity": {
+    "factors.bin": {
+      "sha256": "32450e19fb3d9d8a567cf03e262ddb4f46f44014da606ed5e27b69cb90c1baa2",
+      "bytes": 400000020
+    },
+    "records.bin": {
+      "sha256": "bf6bfeb2d8431326cf677df7605bac3d12caa189f22a87e7e4267aff6a093b6d",
+      "bytes": 92183304
+    },
+    "producer.txt": {
+      "sha256": "aeee44e0e6cdc503504d9ea3329ab6b83b3a665462472318265932200ab04383",
+      "bytes": 194
+    }
+  },
+  "producer_receipt_sha256": "a9dfea2ffde7571af9d85f6b0486d01dfc3955b22e85a4ec5d3984ddb4505db8",
+  "checker_receipt_sha256": "5f435444318f53d42a2342da83b06981d067fd9d6011b7ba4455e40d059c56d1",
+  "checker_build_receipt_sha256": "b647aa25994f77ecdf4024c388e13a00f79b80a74bad6ea4bbd402a29403b22b",
+  "run_contract_sha256": "95aefadc652637ba5ddb8801d126ea30d641390d2aaa37639d473897e9929240",
+  "executions": {
+    "producer": {
+      "parent_wall_seconds": 1099.1560000000172,
+      "pid": 31716,
+      "created_suspended": true,
+      "resumed": true,
+      "exit_code": 0,
+      "termination_reason": null,
+      "api_or_control_error": null,
+      "wait_signalled": true,
+      "job_empty_confirmed": true,
+      "FIN_kind": "CONFIRMED_DRIVER_AND_JOB_EXIT",
+      "peak_rss_bytes": 1743966208,
+      "observed_peak_private_bytes": 1743917056,
+      "wall_seconds": 1098.2189999999828,
+      "cpu_user_seconds": 1095.28125,
+      "cpu_kernel_seconds": 2.375,
+      "cpu_total_seconds": 1097.65625,
+      "pipe_faults": [],
+      "commit_quota_bytes": 3221225472,
+      "job_limit_flags_requested": 8968,
+      "working_set_limit_flag_requested": false,
+      "rss_os_enforced": false,
+      "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM",
+      "rss_per_process_monitor_bytes": 3221225472,
+      "job_committed_memory_OS_limit_requested": true,
+      "max_active_job_processes": 16,
+      "max_total_job_processes": 32,
+      "total_job_processes": 2,
+      "observed_job_pids": [
+        26360,
+        31716
+      ],
+      "peak_job_committed_bytes": 1750450176,
+      "observed_peak_live_job_rss": 1755426816,
+      "sampled_job_rss_cap_bytes": 4294967296
+    },
+    "checker": {
+      "parent_wall_seconds": 1661.2660000000033,
+      "pid": 24808,
+      "created_suspended": true,
+      "resumed": true,
+      "exit_code": 0,
+      "termination_reason": null,
+      "api_or_control_error": null,
+      "wait_signalled": true,
+      "job_empty_confirmed": true,
+      "FIN_kind": "CONFIRMED_DRIVER_AND_JOB_EXIT",
+      "peak_rss_bytes": 1744252928,
+      "observed_peak_private_bytes": 1744138240,
+      "wall_seconds": 1659.2810000000172,
+      "cpu_user_seconds": 1656.21875,
+      "cpu_kernel_seconds": 1.625,
+      "cpu_total_seconds": 1657.84375,
+      "pipe_faults": [],
+      "commit_quota_bytes": 3221225472,
+      "job_limit_flags_requested": 8968,
+      "working_set_limit_flag_requested": false,
+      "rss_os_enforced": false,
+      "rss_control": "SAMPLED_PROCESS_PEAK_AND_LIVE_JOB_SUM",
+      "rss_per_process_monitor_bytes": 3221225472,
+      "job_committed_memory_OS_limit_requested": true,
+      "max_active_job_processes": 16,
+      "max_total_job_processes": 32,
+      "total_job_processes": 2,
+      "observed_job_pids": [
+        24808,
+        27904
+      ],
+      "peak_job_committed_bytes": 1750605824,
+      "observed_peak_live_job_rss": 1755791360,
+      "sampled_job_rss_cap_bytes": 4294967296
+    }
+  },
+  "parallel_total_wall_seconds": 1678.252969,
+  "initial_infrastructure_stop_receipt": "producer_run01/receipt.json",
+  "initial_infrastructure_stop": "Auxiliary console process exceeded initial process-count monitor; fixed before completed executions."
+}

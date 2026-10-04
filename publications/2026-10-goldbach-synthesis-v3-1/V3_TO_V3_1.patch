@@ -1,0 +1,311 @@
+--- goldbach_synthesis_v3.tex
++++ goldbach_synthesis_v3_1.tex
+@@ -8,7 +8,7 @@
+ \usepackage{booktabs,array,tabularx}
+ \usepackage{microtype}
+ \usepackage[hidelinks,unicode]{hyperref}
+-\hypersetup{pdftitle={Continuous Identities, Formalization and Explicit Budgets for Binary Goldbach -- Synthesis V3},pdfauthor={Durand Serge},pdfsubject={Research synthesis and verification boundary},pdfkeywords={binary Goldbach, von Mangoldt, Mellin, projection, Lean 4}}
++\hypersetup{pdftitle={Continuous Identities, Formalization and Explicit Budgets for Binary Goldbach -- Synthesis V3.1},pdfauthor={Durand Serge},pdfsubject={Research synthesis with completed native numerical addendum},pdfkeywords={binary Goldbach, von Mangoldt, Mellin, projection, Lean 4}}
+ \setlength{\emergencystretch}{3em}
+ \setlength{\parskip}{3pt}
+ \setlength{\tabcolsep}{4pt}
+@@ -32,7 +32,7 @@
+ \DeclareMathOperator{\Log}{Log}
+ \DeclareMathOperator{\sech}{sech}
+ \title{Continuous Identities, Formalization and Explicit Budgets\\
+-for Binary Goldbach\\[5pt]\large Synthesis V3 and Stage Closure}
++for Binary Goldbach\\[5pt]\large Synthesis V3.1 with Numerical Addendum}
+ \author{Durand Serge\\\small Independent researcher\\\small\texttt{seisner1967@gmail.com}}
+ \date{4 October 2026}
+ \begin{document}
+@@ -50,8 +50,13 @@
+ of sum and integral. The weighted truncation envelopes, their uniform geometry
+ and their complete connection to the coefficient remain uncompiled proof
+ sources. An exact rational test validates a scalar upper bound below $10^{-6}$
+-at $N=10^8$; it does not evaluate the coefficient. The independent native
+-checker stops at its time limit without a mathematical verdict.
++at $N=10^8$; it does not evaluate the coefficient. A subsequent complete
++native computation at $N=10^8$, $K=2^{27}$ reconstructs the canonical integer
++$I_N$ by five-modulus CRT and confirms equality with the direct $A32$ sum
++and the auxiliary $B40$ reconstruction. Their observed difference is zero,
++within the fixed quantization budget $2E_{\log}<10^{-6}$. These observations
++do not establish native program refinement in Lean or validate the Mellin
++truncation chain. The formal inventory is unchanged in this numerical revision.
+ The target bound for $D_N$, the global signed contribution and the binary
+ Goldbach conjecture remain open.
+ \end{abstract}
+@@ -182,7 +187,7 @@
+ \clearpage
+ \section{Alias-free finite projector and finite-field projection}\label{sec:finite}
+ The continuous identity has a fully finite counterpart. It provides an exact
+-contract for a possible computation without replacing the genuine function
++contract for the completed finite computation without replacing the genuine function
+ $\Lam$. For $K\ge1$, set $\theta_j=2\pi j/K$.
+ 
+ \begin{theorem}[Discrete orthogonality and extraction; batch 15]
+@@ -334,9 +339,11 @@
+ The native producer and checker were both built in BUILD04: two compilations
+ completed with exit code zero. This establishes the existence of two frozen
+ executable images without proving their refinement of the Lean functions.
+-The checker must still certify the entire catalogue up to $N$, the
+-classification of prime powers, equality of every recorded point to the
+-canonical $A32$ constructor, residues, reconstruction and integer guards.
++The completed operational checker verifies the entire catalogue up to $N$,
++the classification of prime powers, equality of every recorded point to the
++canonical $A32$ constructor, residues, reconstruction and integer guards
++(Section~\ref{sec:numeric}). These are observed native checks, not a Lean
++program-refinement theorem.
+ An auxiliary check using a $B40$ series is not the primary $A32$ constructor;
+ its code and real precision have no complete Lean proof at this stage.
+ 
+@@ -574,7 +581,7 @@
+ measurement of a global Mellin evaluation.
+ 
+ \clearpage
+-\section{Falsifiable numerical contract and native stop without a verdict}\label{sec:numeric}
++\section{Completed native evaluation and its verification boundary}\label{sec:numeric}
+ The finite contract in Section \ref{sec:crt} gives a falsifiable target:
+ produce $I_N$ from the canonical coefficients, reconstruct the same integer
+ from the five residues, and verify all guards. Then \eqref{eq:E-log}
+@@ -583,9 +590,10 @@
+ C_N\in\left[I_N/S^2-E_{\log},\ I_N/S^2+E_{\log}\right].
+ \]
+ The radius is not chosen after observation; its real construction and guard
+-are already compiled. A valid native result still requires correspondence
+-of the records to $A32$, complete catalogue coverage and verification
+-of the integer computation.
++are already compiled. The completed native checker verifies correspondence
++of the records to $A32$, complete catalogue coverage and the integer
++computation. Refinement of its machine implementation to the Lean objects
++remains a separate obligation.
+ 
+ \paper For $K=2^{27}$, a radix-2 transform has
+ $K\cdot27/2=1\,811\,939\,328$ butterflies per transform. The contract counts
+@@ -595,26 +603,53 @@
+ factors occupy 400\,000\,004 bytes. These payload counts are neither a total
+ memory measurement nor a runtime promise.
+ 
+-\textbf{Observed computation: STOP without a verdict.} Consumer05 reuses
++\textbf{Historical V3 observation: STOP without a verdict.} Consumer05 reused
+ three frozen producer04 payloads as identical copies and a checker image
+-from BUILD04. The payloads remain unvalidated until the checker completes
+-its contract. The attempt creates one checker, no producer and no compiler,
++from BUILD04. The payloads were not validated by that stopped attempt.
++The attempt creates one checker, no producer and no compiler,
+ with no retry. The parent budget is 3\,600 seconds; the checker has a deadline
+ at 3\,300 seconds, leaving a 300-second reserve for logs and preservation checks.
+ 
+ The checker stops with code 238 and status \texttt{HARD\_WALL\_NO\_VERDICT}.
+ The parent exits with code 1 after approximately 3\,312 seconds, or 55 minutes.
+-No coefficient is present. Closure documents quiescence and the POST actually
++No coefficient was present in that receipt. Closure documents quiescence and the POST actually
+ produced; the ROOT observation verifies preservation of 6\,576 inputs,
+ 109 capture pairs, three payload pairs and 3\,089 archive files.
+ The stop is a resource failure without a mathematical verdict, not a
+ counterexample to the identity or the constructed precision.
+ 
+-The OS resource controls distinguish a 2 GiB Job commit-memory limit from
++Those OS resource controls distinguish a 2 GiB Job commit-memory limit from
+ RSS monitoring, which is not an OS-enforced RSS limit. Operational trust
+ in Windows/GCC/native code remains declared and bounded in scope; universal
+-loader closure is not asserted. No new attempt or throughput extrapolation
+-is included in this closure.
++loader closure is not asserted. No new attempt was included in the V3
++closure. These historical receipts remain unchanged.
++
++\textbf{New observed computation: exact numerical arithmetic validated.}
++On 4 October 2026, a fresh execution of the unchanged BUILD04 producer and
++the operational checker both finish with exit code zero. The checker retains
++the reference $A32$ construction and uses an exact integer Horner evaluation
++of its rational logarithm series, with a cached rational series for $\log 2$.
++A 128-case comparison of the exact lower and upper bounds against the
++reference implementation passes before the full run. The catalogue,
++prime-power classification, DIF transforms, CRT and direct integer sum
++remain within the same arithmetic contract.
++
++The checker validates 5\,761\,455 prime records, all canonical words and the
++five residues. CRT reconstruction, the direct $A32$ sum and auxiliary $B40$
++reconstruction agree exactly. The fresh producer's three payload files are
++byte-identical to the checked copies. Appendix~\ref{app:numerical} records
++the integer, error radius, resource measurements and receipt bindings.
++The independent Python audit reconstructs CRT and checks receipts and hashes;
++it does not independently replay the full prime catalogue or transforms.
++
++The operational Windows backend avoids privileged working-set quotas,
++the source of error 1314, and requests a 3 GiB Job commit-memory limit.
++RSS is monitored, not enforced as an OS working-set quota.
++The new checker and parent have a 24-hour wall budget; the unchanged producer
++finishes within its original internal deadline. An initial startup stop due
++to the console helper exceeding a one-process monitor is preserved;
++the completed invocations permit 16 active and 32 total Job processes.
++Neither completed launcher invocation performs an automatic retry.
+ 
+ \clearpage
+ \section{Connection to the balance: the signed obligation remains}\label{sec:dn}
+@@ -666,8 +701,9 @@
+ The continuous identities establish exact representations, and the
+ budgets describe a truncation or quantization error. No
+ global cancellation of the true spectral contribution transferred to the
+-ledger has been proved. This obligation remains open even if a future
+-finite computation produces $C_N$ at $10^8$. It must be addressed at the
++ledger has been proved. This obligation remains open after the present
++finite computation of $I_N$ at $10^8$ and the enclosure for $C_N$ under the
++native correspondence assumptions. It must be addressed at the
+ threshold \eqref{eq:onset} and with the finite coverage required by the framework.
+ 
+ \clearpage
+@@ -833,8 +869,9 @@
+ and its dependencies. The checks retain earlier logs,
+ captures, sources and archives; they distinguish full reading of a
+ text, targeted reading, metadata inventory and byte hashing.
+-The companion file \path{evidence_v3.json} specifies this boundary
+-for the main claims of this manuscript.
++The historical companion file \path{evidence_v3.json} specifies the V3
++boundary. The new \path{evidence_v3_1.json} binds this revision to its
++completed numerical receipts without modifying the historical registry.
+ 
+ \clearpage
+ \appendix
+@@ -869,24 +906,127 @@
+ \endgroup
+ 
+ \subsection*{Self-contained handoff contract}
+-The document \path{synthesis_v3/HANDOFF_THEORY_V3.txt} summarizes the objects,
+-parameters, established results and remaining obligations. The computation of $C_N$ at $10^8$ remains
+-absent. Any native resumption would require a new resource
+-contract and a complete verdict; STOP outputs
+-cannot serve as an oracle. Any resumption of analytical implementation
+-would have to compile independently the tail,
+-geometry, coefficient and connecting sources, then establish the primitives and
+-quadratures actually chosen. Theoretical work on the sign of
+-$D_N$ may resume from the compiled foundation, retaining these open statuses.
+-A signed bound on the ledger remains the central obligation.
++The historical document \path{synthesis_v3/HANDOFF_THEORY_V3.txt} is preserved.
++Its successor \path{HANDOFF_FEJER_V3_1.txt} records the completed finite
++integer computation, receipt locations and unchanged proof obligations.
++A future Fej\'er session can resume from the existing PAPER note in
++Section~\ref{sec:fejer}; reconstruction, certified evaluation and the signed
++connection to the ledger must remain distinct. The tail, geometry,
++coefficient and connecting sources still require independent compilation,
++followed by certification of the primitives and quadratures actually chosen.
++No new Fej\'er research or Lean theorem is introduced by this documentary
++revision. A signed bound on the ledger remains an open obligation.
++
++\clearpage
++\section{Numerical addendum at $N=10^8$}\label{app:numerical}
++\textbf{Observed native arithmetic; 4 October 2026.} The finite run uses
++\[
++N=100\,000\,000,\quad K=134\,217\,728=2^{27},\quad
++S=288\,230\,376\,151\,711\,744=2^{58}.
++\]
++The exact reconstructed integer is
++\[
++\boxed{I_N=14616354094337692277256326339388864358034646.}
++\]
++The five residues, in the modulus order of Section~\ref{sec:crt}, are
++\[
++(577099750,\ 626366149,\ 232952773,\ 2618309304,\ 2671748987).
++\]
++An independent Python CRT reconstruction gives the same integer as the
++producer, the native direct $A32$ sum and the auxiliary $B40$ reconstruction:
++\[
++I_{\mathrm{CRT}}=I_{\mathrm{direct},A32}=I_{B40}=I_N.
++\]
++Its normalized value is
++\[
++I_N/S^2=175937962.675324617193216257686209932693\ldots.
++\]
++This number is the normalized canonical integer, not an exact evaluation of
++the real logarithmic coefficient $C_N$ or of a truncated Mellin integral.
++The fixed primary radius from the canonical logarithm contract is
++\[
++E_{\log}=\frac{1844674425817699235409551617}
++{83076749736557242056487941267521536}
++\approx2.2204460714547736\times10^{-8}.
++\]
++The observed normalized difference is zero, and exact rational comparison
++confirms
++\[
++0=|I_{A32}-I_{B40}|/S^2\le2E_{\log}
++\approx4.4408921429095471\times10^{-8}<10^{-6}.
++\]
++The $C_N$ enclosure inherits the canonical correspondence assumptions;
++the auxiliary $B40$ real-log refinement remains unproved in Lean.
++
++\noindent\begin{tabularx}{\textwidth}{@{}Yrrr@{}}
++\toprule
++Process & Wall (s) & CPU (s) & Peak RSS (bytes)\\
++\midrule
++Producer BUILD04 & 1098.219 & 1097.65625 & 1743966208\\
++Operational checker & 1659.281 & 1657.84375 & 1744252928\\
++\bottomrule
++\end{tabularx}
++The corresponding parent wall times are 1099.156 and 1661.266 seconds.
++The overlapping executions and finalization take 1678.252969 seconds
++(27 minutes 58.253 seconds). Both receipts confirm driver exit, an empty
++Job and validated POST observations. The peak RSS is about 1.625 GiB per
++native process; it is distinct from the requested 3 GiB commit quota.
++
++\textbf{Unchanged boundary.} There are still 88 credited Lean modules and
++1\,488 auxiliary declarations, including definitions. Native Lean refinement,
++the complete Mellin coefficient truncation chain, spectral $H1$, control of
++$D_N$ and Goldbach remain unproved. No new theory was undertaken for this run.
++
++\clearpage
++\subsection*{New numerical provenance}
++\begingroup\small
++The following paths are relative to \path{Goldbach_Numerical_20261004}.
++Full SHA-256 values, file sizes, exact fractions and execution metadata are
++retained in \path{numerical_verdict.json} and \path{evidence_v3_1.json}.
++The verdict string of the native checker is
++\path{EXACT_INTEGER_PROJECTION_CHECKED_PENDING_PRIMITIVE_PROOF}.
++It is not a proof-success flag for the open analytic obligations.
++
++\begingroup\small\setlength{\tabcolsep}{3pt}
++\noindent\begin{tabularx}{\textwidth}{@{}p{27mm}Yp{27mm}@{}}
++\toprule
++Item & Relative path & SHA prefix\\
++\midrule
++Producer receipt & \path{producer_run02/receipt.json} & \texttt{a9dfea2ffde7}\\
++Checker receipt & \path{checker_run01/receipt.json} & \texttt{5f435444318f}\\
++Build receipt & \path{checker_build_receipt.json} & \texttt{b647aa25994f}\\
++Checker source & \path{checker_dif22_operational.cpp} & \texttt{589f61d71717}\\
++Checker image & \path{checker_dif22_operational.exe} & \texttt{268c4a481691}\\
++Factor payload & \path{payload_run02/factors.bin} & \texttt{32450e19fb3d}\\
++Prime records & \path{payload_run02/records.bin} & \texttt{bf6bfeb2d843}\\
++Producer claim & \path{payload_run02/producer.txt} & \texttt{aeee44e0e6cd}\\
++\bottomrule
++\end{tabularx}
++\endgroup
++
++The new numerical archive preserves the Windows backend, checker, scripts,
++contracts, logs and receipts, including the initial infrastructure failure.
++The unchanged producer image remains in the historical V3 corpus, with its
++hash bound by the execution receipt.
++
++The repository \href{https://github.com/seisner1967-hash/goldbach-horizon}
++{\texttt{goldbach-horizon}} separates the original V3 publication from the
++new delivery and numerical archive:\par\noindent
++\path{publications/2026-10-goldbach-synthesis-v3-1}\par\noindent
++\path{research/goldbach-numerical-20261004}\par
++The manifest and restore helper recover all original bytes and SHA-256
++values, including losslessly fragmented large payloads. No file is omitted.
++
++The entry point \path{HANDOFF_FEJER_V3_1.txt} accompanies this synthesis and
++its registry. Fej\'er retains PAPER status; this addendum closes the native
++run without starting that future research session.
++\endgroup
+ 
+ \subsection*{Local documentary sources}
+-This synthesis uses the earlier monograph, frozen Lean sources,
+-adjudications and reviews actually consulted. It does not claim
+-to have verified new external references or secondary citations
+-in the notes. The bibliography below identifies the local documents that
+-contain the written arguments and their limitations.
++The following local sources preserve the written arguments and their
++limitations. No new external references or secondary citations were verified.
+ \begin{thebibliography}{9}\small
++\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+ \bibitem{v2} Durand Serge, \emph{Finite Identities and Explicit Error Budgets
+ in a Framework for Binary Goldbach}, V2 synthesis, 1 October 2026.
+ Title, author and continuity recorded from the retained public source.

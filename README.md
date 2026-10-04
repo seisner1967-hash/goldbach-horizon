@@ -11,6 +11,22 @@ is narrower and auditable: decompose the proof architecture into Lean-checked
 modules, prove the finite/combinatorial layer, and expose the remaining
 analytic work as named local infrastructure obligations.
 
+## Synthesis V3.1 and Native Numerical Addendum, 4 October 2026
+
+The [complete revised synthesis and resumption package](publications/2026-10-goldbach-synthesis-v3-1/)
+now records the completed N=100000000, K=2^27 native calculation. Five-modulus
+CRT, direct canonical A32 summation and auxiliary B40 reconstruction agree
+exactly. The observed normalized difference is zero; the fixed joint
+quantization radius is 4.4408921429095471e-8 < 1e-6.
+
+The [byte-exact numerical archive](research/goldbach-numerical-20261004/)
+retains scripts, native checker, receipts, logs and all payloads, including
+failed infrastructure attempts. The original [V3 publication](publications/2026-10-goldbach-synthesis-v3/)
+is unchanged. The French Fejer handoff is a current-state entry point,
+not a new theoretical result. The inventory remains 88 credited modules /
+1488 auxiliary declarations, including definitions. Native Lean refinement,
+the full Mellin coefficient chain, spectral H1, D_N and Goldbach remain open.
+
 ## Binary Goldbach research synthesis, 1 October 2026
 
 Durand Serge's **version 2** research report is now available with an English

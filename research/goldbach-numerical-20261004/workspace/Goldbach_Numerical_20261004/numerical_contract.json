@@ -1,0 +1,32 @@
+{
+  "schema": "GOLDBACH_NATIVE_NUMERICAL_CONTRACT_20261004",
+  "N": 100000000,
+  "K": 134217728,
+  "S": "288230376151711744",
+  "prime_moduli": [2013265921, 2281701377, 3221225473, 3489660929, 3892314113],
+  "cofactors": [15, 17, 24, 26, 29],
+  "root_bases": [31, 3, 5, 3, 3],
+  "CRT_product": "200988950952742247103310192629436327377560928257",
+  "point_bound": "9223372036854775808",
+  "coefficient_bits_upper_exclusive": 153,
+  "primary_E_log_numerator": "1844674425817699235409551617",
+  "joint_2E_log_numerator": "3689348851635398470819103234",
+  "error_denominator_S_squared": "83076749736557242056487941267521536",
+  "error_guard": "joint_2E_log_numerator * 1000000 <= error_denominator_S_squared",
+  "primary_coefficient": "I_N = sum(A32[n] * A32[N-n], n=0..N)",
+  "canonical_A32": "nearest-even(S * midpoint(log32 interval)), clamped to [0,32S]; prime-power weights inherit their prime base; all other weights are zero",
+  "native_success_obligations": [
+    "producer DIT residues equal independently computed checker DIF residues",
+    "CRT reconstructs an integer in the coefficient range",
+    "producer integer = independent CRT = direct canonical A32 fold",
+    "absolute difference of A32 fold and B40 fold <= joint_2E_log_numerator",
+    "joint_2E_log_numerator * 1000000 <= S_squared"
+  ],
+  "error_scope": "E_log bounds quantization of the finite von Mangoldt coefficient; 2E_log is the joint A32/B40 comparison bound",
+  "Mellin_truncation_scope": "The complete coefficient truncation bound and its fixed-parameter bridge are SOURCE and uncompiled in synthesis v3; the separate rational scalar test is not a numerical Mellin coefficient",
+  "native_Lean_refinement": false,
+  "B40_real_log_refinement_Lean": false,
+  "spectral_H1": false,
+  "D_N": false,
+  "WIN": false
+}

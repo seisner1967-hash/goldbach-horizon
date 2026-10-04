@@ -1,0 +1,78 @@
+GOLDBACH - SYNTHESE V3.1 : REMISE POUR UNE NOUVELLE SESSION FEJER
+Durand Serge - 4 octobre 2026
+
+1. Point d'entree
+Lire goldbach_synthesis_v3_1.pdf (synthese integrale revisee, pas seulement
+l'addendum), numerical_addendum.txt, numerical_verdict.json et
+evidence_v3_1.json. La V3 originale reste conservee sans modification.
+Depot : https://github.com/seisner1967-hash/goldbach-horizon
+Publication : publications/2026-10-goldbach-synthesis-v3-1
+Nouvelle archive : research/goldbach-numerical-20261004
+Corpus historique : research/goldbach-synthesis-v3-20261004
+Le script restore_goldbach_v3.py reconstruit les gros fichiers depuis les
+manifestes ; verification SHA-256 obligatoire avant leur reutilisation.
+
+2. Verdict operationnel acquis
+N=M=100000000 ; K=134217728=2^27 ; S=288230376151711744=2^58.
+I_N=14616354094337692277256326339388864358034646.
+CRT independante = producteur = somme directe A32 = controle B40, exactement.
+Residus : 577099750,626366149,232952773,2618309304,2671748987.
+Moduli : 2013265921,2281701377,3221225473,3489660929,3892314113.
+I_N/S^2=175937962.6753246171932162576862099326930458013955734680521890...
+E_log=1844674425817699235409551617/83076749736557242056487941267521536.
+2E_log=4.4408921429095471e-8 < 1e-6 ; difference A32/B40 observee=0.
+Le checker natif verifie 5761455 premiers, les puissances premieres, les
+mots canoniques et les projections. Python audite CRT, recus et SHA, sans
+rejouer lui-meme le catalogue complet ou les NTT. Les trois fichiers du
+producteur neuf sont identiques aux copies effectivement controlees.
+Producteur : wall 1098.219 s, CPU 1097.65625 s, RSS 1743966208 octets.
+Checker : wall 1659.281 s, CPU 1657.84375 s, RSS 1744252928 octets.
+Total chevauche avec finalisation : 1678.252969 s. Deux sorties zero,
+Jobs vides et POST valides. Voir recus complets, pas seulement ce resume.
+
+3. Infrastructure preservee
+Producteur BUILD04 inchange ; checker operationnel avec evaluation Horner
+entiere exacte des series rationnelles et log2 mis en cache. Comparaison
+128 cas des bornes inferieures/superieures contre le constructeur de
+reference : PASS. Le source de reference reste dans le nouveau checker.
+Le backend Windows evite les quotas working-set privilegies (erreur1314).
+Job commit3Gio, RSS surveille distinctement, kill-on-close ; limites16
+processus actifs/32 totaux pour tenir compte du helper console. L'arret
+initial du monitor trop strict est preserve, pas efface. Aucun nouvel
+essai n'est necessaire pour produire le verdict deja obtenu.
+
+4. Frontiere de preuve inchangee
+88 modules Lean credites / 1488 declarations auxiliaires, definitions
+incluses. Aucun nouveau theoreme Lean dans cette revision documentaire.
+Le resultat est un entier canonique normalise, non un C_N reel exact et
+non une quadrature de Mellin. L'enclosure de C_N par E_log repose sur la
+correspondance native/canonique ; raffinement du code machine en Lean
+encore ouvert. Raffinement reel de B40, chaine complete de troncature du
+coefficient Mellin et primitives/quadratures restent ouverts.
+H1 spectral=false ; D_N=false ; WIN=false. Goldbach non prouve.
+Le point 10^8 ne couvre pas le regime analytique fixe log N>=10^24.
+La borne cible D_N<=N/(256 log N log(log N)) reste une obligation signee,
+avec les supports, fronts, coins, puissances propres et raccords conserves.
+
+5. Dossier Fejer deja existant, pas un nouvel acquis
+Voir section13 du manuscrit et les chemins du registre V3 conserve.
+D(t)=sum_(n>=2) Lambda(n)n^(-2-it), c_n=Lambda(n)/n^2 ; c_0=c_1=0.
+La note PAPER existante donne, T>0 et m>=1 :
+A_T(m)=(1/T) integral_[-T,T] (1-|t|/T)D(t)exp(it log m)dt
+      =sum_(n>=2)c_n sinc^2((T/2)log(m/n)), sinc(0)=1.
+0<=A_T(m)-c_m<=24/(T^2 log^2(1+1/m)).
+Cette reconstruction n'est pas compilee dans la presente etape. Il faut
+distinguer trois sujets : reconstruction, evaluation certifiee des vraies
+integrales, et transport vers la dette signee du ledger. Positivite de
+l'average ne fournit pas seule une masse additive commune n,N-n.
+Le contre-modele des puissances de2 au point14 conserve sa portee limitee.
+Une nouvelle session devra recevoir sa mission et ses limites directement
+de l'utilisateur : ce fichier est un etat de reprise, pas une autorisation
+automatique d'executer des calculs ou d'inventer de nouveaux acquis.
+
+6. Cloture de cette session
+La V3.1 et les recus remplacent l'absence historique de verdict par une
+mesure native validee. Les echecs V3 sont conserves comme historiques.
+Aucune recherche Fejer, Weil ou positivite de D_N n'a ete entreprise pour
+ce calcul ou cette mise a jour documentaire. La prochaine session peut
+partir de ces fichiers sans reprendre les longs echanges de cette session.
