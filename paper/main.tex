@@ -1,0 +1,337 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,graphicx}
+% Portable Type1 font settings; no additional packages are loaded.
+\renewcommand{\encodingdefault}{T1}
+\DeclareFontFamily{T1}{paperroman}{}
+\DeclareFontShape{T1}{paperroman}{m}{n}{<-> ec-lmr10}{}
+\DeclareFontShape{T1}{paperroman}{m}{it}{<-> ec-lmri10}{}
+\DeclareFontShape{T1}{paperroman}{m}{sc}{<-> ec-lmcsc10}{}
+\DeclareFontShape{T1}{paperroman}{bx}{n}{<-> ec-lmbx10}{}
+\DeclareFontShape{T1}{paperroman}{b}{n}{<-> ssub * paperroman/bx/n}{}
+\DeclareFontFamily{OT1}{paperoperators}{}
+\DeclareFontShape{OT1}{paperoperators}{m}{n}{<-> rm-lmr10}{}
+\DeclareFontShape{OT1}{paperoperators}{bx}{n}{<-> rm-lmbx10}{}
+\DeclareFontFamily{T1}{papermono}{}
+\DeclareFontShape{T1}{papermono}{m}{n}{<-> ec-lmtt10}{}
+\DeclareFontFamily{OML}{paperletters}{}
+\DeclareFontShape{OML}{paperletters}{m}{it}{<-> lmmi10}{}
+\DeclareFontFamily{OMS}{papersymbols}{}
+\DeclareFontShape{OMS}{papersymbols}{m}{n}{<-> lmsy10}{}
+\DeclareFontFamily{OMX}{paperlarge}{}
+\DeclareFontShape{OMX}{paperlarge}{m}{n}{<-> lmex10}{}
+\renewcommand{\rmdefault}{paperroman}
+\renewcommand{\sfdefault}{paperroman}
+\renewcommand{\ttdefault}{papermono}
+\SetSymbolFont{operators}{normal}{OT1}{paperoperators}{m}{n}
+\SetSymbolFont{letters}{normal}{OML}{paperletters}{m}{it}
+\SetSymbolFont{symbols}{normal}{OMS}{papersymbols}{m}{n}
+\SetSymbolFont{largesymbols}{normal}{OMX}{paperlarge}{m}{n}
+\SetMathAlphabet{\mathbf}{normal}{OT1}{paperoperators}{bx}{n}
+\SetMathAlphabet{\mathit}{normal}{T1}{paperroman}{m}{it}
+\SetMathAlphabet{\mathtt}{normal}{T1}{papermono}{m}{n}
+% Permit line breaks in long formal identifiers and bibliography URLs.
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\_}
+\makeatother
+
+\hypersetup{hidelinks,pdftitle={Obstructions and Formalized Identities in Two Binary Goldbach Research Programmes},pdfauthor={Durand Serge},pdfsubject={Negative results and formalization; no assertion resolving binary Goldbach}}
+\setlength{\textwidth}{16cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\textheight}{23cm}
+\setlength{\topmargin}{-1cm}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\ev}[1]{{\scriptsize[\nolinkurl{#1}]}}
+\newcommand{\evidence}[1]{\ev{#1}}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\status}[1]{\textbf{#1}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Obstructions and Formalized Identities\\in Two Binary Goldbach Research Programmes\\[4pt]\large A Negative-Results and Formalization Report}
+\author{Durand Serge\\\small Independent researcher\\\small\texttt{seisner1967@gmail.com}}
+\date{5 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We record obstructions and established formalizations in an analytic corpus and
+an algebraic certificate campaign concerning binary Goldbach. The analytic
+results include exact coefficient projection, finite character extraction,
+canonical logarithm quantization, finite-field roots, and credited portions of
+the Mellin inversion dependency chain. Their scope is separated from
+uncompiled truncation sources and from the signed estimate still required for
+a prime-pair lower bound. The algebraic results include ordinary-polynomial
+soundness, calibration, uniform common-zero constructions for specified
+constraint families, and a rational static Nullstellensatz degree lower bound.
+Finite measurements attain that bound at the measured points; a universal
+matching construction is not established. Polynomial-calculus measurements
+and its explicitly assumed external lower-bound predicate are kept distinct.
+A completed integer and CRT computation at a single finite input is reported
+without a Lean refinement claim. An evidence map and generated Lean inventory
+identify the supporting artifacts and their exact verification levels. The
+report establishes no conclusion resolving binary Goldbach and excludes
+neither the full analytic programme nor the full algebraic certificate route.
+\end{abstract}
+\noindent\textbf{MSC2020:} 11P32 (primary); 68V20, 03F20, 13P10 (secondary).\ev{R-MSC}
+\par\noindent\textbf{Suggested arXiv classification:} math.NT; possible cross-lists
+cs.LO and cs.CC, subject to the author's submission decision.
+
+\section{Introduction and scope}
+Binary Goldbach asks whether every even integer greater than two is the sum
+of two primes.\ev{R-FROZEN} The distinction between a useful identity and a sufficient
+prime-pair lower bound is central to this report. The classical context
+includes the Hardy--Littlewood formulation, Vinogradov's three-prime theorem,
+Chen's prime and almost-prime theorem, and the ternary theorem of
+Helfgott.\cite{hl1923,vinogradov1937,chen1973,helfgott2013}
+The published finite verification up to $4\cdot10^{18}$ is a different kind
+of evidence from a theorem covering all even integers.\cite{osilva2014}
+
+We consolidate the round-22 analytic corpus as summarized in Synthesis V3.1
+and the stopped AlgebraicGoldbach campaign.\ev{R-CORPORA}
+Existing material from the historical Horizon repository is admitted only
+where an existing Judge record supplies the stated credit; a source file or
+a project README alone is insufficient. No new mathematical execution was
+performed for this manuscript.\ev{R-STOP}
+Classical projection, Mellin inversion and finite counting arguments are
+recorded or formalized here without claims of novelty. Literature on
+Nullstellensatz and polynomial calculus supplies context, rather than a
+replacement for the hypotheses of the project statements.
+\cite{ips1997,cei1996,bikpp1996,razborov1998,alon1999}
+
+\noindent\textbf{How to read this report.}
+\par First read the evidence label attached to a result.
+\par Then read its domain, hypotheses and mathematical object.
+\par Finally consult its evidence key in the machine-readable map and the
+inventory before treating a source or finite observation as a theorem.
+
+\section{Evidence levels and verification protocol}
+\begin{center}\small
+\begin{tabular}{p{2.3cm}p{12.6cm}}
+\toprule
+Level & Meaning in this report\\
+\midrule
+Compiled Lean & An existing successful Lean record covers the declaration;
+the available axiom record is reported. It does not certify a different
+informal statement or remove its explicit hypotheses.\\
+SOURCE & A written Lean source exists without the required successful
+compile credit for that item.\\
+PAPER & An existing written mathematical argument or review is recorded;
+it is not promoted to compiled formal proof.\\
+Observed & An existing process, file or finite measurement was recorded;
+the observation is limited to that run and input.\\
+EVIDENCE & Existing independently checked finite arithmetic, model or
+certificate data support precisely the stated finite claim.\\
+\bottomrule
+\end{tabular}
+\end{center}
+These levels do not form an automatic implication chain. In particular,
+source availability, a passing build, an axiom list and a finite certificate
+answer different questions. Explicit theorem premises remain premises even
+when the declaration uses only the standard logical axioms.\ev{R-PROTOCOL}
+
+The campaign protocol used separate implementation, adversarial reading and
+Judge roles, source pins, exact ordinary polynomial definitions, and
+valid-data-first corruption controls. The accepted evidence identifies the
+actual command and result, rather than treating an agent's summary as a
+proof.\ev{R-PROTOCOL}
+The paper's fresh compilation and claim-to-evidence review concern this
+document only. They neither rerun the mathematical experiments nor add
+Judge credit to their results.\ev{R-STOP}
+
+\subsection{Limitations of the verification arrangement}
+The agent roles share a model provider and are not an external mathematical
+referee panel. Their separation is operational; it does not imply
+statistical independence or third-party validation. The Lean kernel checks
+formal terms under their recorded assumptions. Interpretation of those
+terms, choice of constraints, and correspondence with a native program
+still require human review.\ev{R-PROTOCOL}
+
+The preserved Windows artifacts distinguish raw bytes, Git blobs and
+historical documentary snapshots. CRLF transport and path separators caused
+reader and binding problems; named corrections do not justify silently
+normalizing old reports. The manuscript cites the original artifact hashes
+and keeps documentary transport distinct from mathematics.\ev{R-WINDOWS}
+The repository already contains the LF text policy requested for this
+publication; no existing file was converted for the paper.\ev{R-ATTRIBUTES}
+
+The algebraic frozen target is a bare, unfinished theorem declaration. It
+contains no proof term and is excluded from the auxiliary build. Freezing
+the entire file's bytes prevents adding a proof without changing the file
+hash. Thus the frozen-file rule cannot simultaneously accept a newly added
+proof of that declaration. This is a design flaw in the target acceptance
+contract, not a mathematical obstruction. The frozen bytes remain
+unchanged.\ev{R-FROZEN}
+
+\input{analytic_sections}
+\input{algebraic_tables}
+\input{degree_section}
+
+\section{Obstruction catalogue}
+Table~\ref{tab:obstructions} collects the specific failed implications and
+restricted impossibility statements. Each row refers to the object defined
+in the corresponding section. A common zero for one family rules out a
+certificate for that family; it says nothing universal about all possible
+families. A failed sign argument leaves other analytic arguments open.
+
+\begin{table}[ht]\centering\footnotesize
+\caption{Scope of the recorded obstructions.}\label{tab:obstructions}
+\begin{tabular}{p{3.1cm}p{3.5cm}p{2.1cm}p{5.7cm}}
+\toprule
+Obstruction & Scope & Status & What it does not show\\
+\midrule
+Exact projection lacks a signed lower bound & True additive coefficient &
+Compiled identities; open estimate & It does not supply a positive
+prime-pair margin.\ev{R-ANALYTIC-GAP}\\
+Absolute error control lacks cancellation & Quantization or truncation
+envelopes & Mixed compiled/\allowbreak SOURCE & A small approximation radius does not
+control the sign of the reference-minus-coefficient term.\ev{R-ANALYTIC-GAP}\\
+Boundary term retained & Individual Mellin kernel & Compiled Lean &
+Periodicity of the full trace does not delete each kernel boundary.\ev{R-BOUNDARY}\\
+Positive definite reconstruction lacks paired mass & The recorded
+restricted positive series & PAPER & Positivity alone does not imply a
+uniform strictly positive additive coefficient.\ev{R-FEJER}\\
+Negative direction of the reviewed kernel & Specific operator restriction
+& PAPER & It does not exclude every operator method.\ev{R-KERNEL}\\
+Cost of the proposed tail envelope & Particular written Mellin error
+envelope & PAPER / SOURCE & It is not a lower bound for the true error or
+for every evaluation algorithm.\ev{A-OBSTRUCTION-COST}\\
+Finite arithmetic counterexamples and losses & The guarded block, mask,
+completion, rank and Type-II groups in Appendix A & Compiled Lean &
+They refute the specified intermediate claims, not the full analytic
+programme.\ev{A-ARITHMETIC-OBSTRUCTIONS}\\
+Circular or direct-pinning constraints & Calibration and named family
+equations & Compiled/\allowbreak SOURCE guard & They do not provide new information
+about the prime vector.\ev{R-ALGEBRAIC}\\
+Common zeros & Specified Bertrand, divisor and literal families & Compiled
+Lean / EVIDENCE & They do not exclude the complete certificate
+route.\ev{R-ALGEBRAIC}\\
+Growing certificate degree & Rational static full-count calibration &
+Compiled lower bound & It does not forbid unbounded degree or a different
+constraint family.\ev{R-DEGREE}\\
+Finite computation has finite scope & One completed integer/CRT input &
+EVIDENCE & It is not an all-input native refinement or an analytic
+threshold theorem.\ev{R-NUMERICAL}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The sieve parity limitation is classical background, not a new theorem of
+this project.\cite{selberg1949}
+The algebraic and analytic obstructions in this table have different
+mechanisms; no implication between them is asserted merely because each
+prevents a particular attempted argument.
+
+\input{numerical_section}
+
+\section{What a sufficient approach would still require}
+In the preserved analytic notation, $C_N$ is the von Mangoldt convolution
+and includes proper prime powers, while $R_{\mathrm{ref}}$ is the reference
+quantity of the existing balance framework. A signed estimate for
+$R_{\mathrm{ref}}-C_N$ remains necessary within that framework, together
+with the prime-power correction, boundary terms and its stated bridge
+conditions. A coefficient representation or enclosure does not supply
+that estimate.\ev{R-ANALYTIC-GAP}
+An ingredient sensitive to the prime versus almost-prime distinction is
+still required; invoking parity terminology alone provides no such input.
+
+The analytic onset in the V3.1 framework is $\log N\ge10^{24}$.
+The single finite computation at $N=10^8$ is outside this regime. The
+published verification through $4\cdot10^{18}$ leaves the interval to that
+analytic onset uncovered by the present corpus. No theorem or computation
+in this report fills that interval.\ev{R-THRESHOLD}\cite{osilva2014}
+
+For the algebraic route, a family would need genuinely sufficient
+prime-valid information without circularly assuming the desired
+nonvanishing, and an actual uniform identity with its ordinary degree
+accounted for. Lower bounds for a calibration do not substitute for that
+construction. The open matching static construction and the assumed
+polynomial-calculus lower-bound predicate remain separate obligations.
+\ev{R-DEGREE}\ev{R-PC}
+
+\section{Reproducibility and archival scope}
+The publication repository is
+\url{https://github.com/seisner1967-hash/goldbach-horizon}.
+The pre-publication repository snapshot is \texttt{f7e1fda19a97}; the
+accepted algebraic proof snapshot is \texttt{e5c4e119473e}.
+Their recorded toolchain is Lean~4.15.0 with Mathlib revision
+\texttt{9837ca9d65d9}.\ev{R-REPRO}
+At the appropriate pinned source snapshot the project build command is
+\begin{center}\texttt{lake build}\end{center}
+This manuscript preparation did not execute it. A successful auxiliary
+build does not prove the unfinished frozen target.\ev{R-FROZEN}
+
+The generated inventory records theorem names, the available axiom lists,
+credit levels, source hashes and existing commit identifiers. Its scripts
+derive tables from existing artifacts only. The algebraic
+\texttt{AXIOMS.md} source and analytic audit records are identified in
+\texttt{evidence\_map.json}. Appendix~\ref{app:inventory} explains their
+coverage and records omissions rather than inventing missing credit.
+\ev{R-REPRO}
+
+The arXiv source bundle contains portable TeX, the compiled bibliography
+and figures. Larger binary evidence is not included in this paper commit;
+its hashes and scope are recorded for a separate author-managed release.
+The source bundle does not need a local workspace path to compile.
+
+\clearpage
+\appendix
+\section{Generated Lean inventory}\label{app:inventory}
+The tables and companion CSV/JSON inventories are generated from existing
+source declarations and audit artifacts. Definitions are identified as
+definitions; auxiliary declaration counts are not theorem counts. A
+declaration listed with SOURCE status is not listed as an established
+theorem. Explicit local hypotheses are retained in the informal statement.
+The table column ``axioms'' records what the available audit actually
+prints; an absent per-declaration audit is not filled by inference.
+\input{analytic_appendix}
+\input{analytic_obstructions}
+\input{algebraic_appendix}
+
+\clearpage
+\section{Conditional and out-of-scope material}
+\label{app:conditional}
+The predicate \texttt{KnapsackLowerBound} remains an explicit external
+hypothesis in the credited polynomial-calculus restriction corollary.
+The literature cited in the main text is not a Lean proof of this project
+predicate. No unconditional consequence requiring it is included.
+\ev{R-PC}
+
+The recorded \nolinkurl{EulerAnchor.canonical_least_missing_prime_margin}
+also retains the quantitative premise
+$2541/4096\leq\texttt{twinConstant}$, in addition to its nonzero even-input
+conditions. Its inventory row records a compiled implication under that
+premise. This report supplies no discharge of the quantitative premise and
+asserts no unconditional singular-series margin from that row.
+\ev{analytic.declaration.EulerAnchor.GoldbachRound16.Anchor.canonical_least_missing_prime_margin}
+
+Written analytic truncation and coefficient-connection sources without
+compile credit are reported with SOURCE status. The full signed balance
+estimate and native-program refinement remain open. Existing material
+depending on unproved project axioms or on physical analogies is excluded
+from the established-result inventory. Historical Horizon material lacking
+the required Judge credit is likewise excluded. The review checklist
+identifies these boundaries.\ev{R-OUT-OF-SCOPE}
+
+\section{AI assistance and responsibility}
+AI tools assisted artifact reading, drafting, table generation and review.
+They are not authors. Durand Serge is the sole named author and is
+responsible for the mathematical interpretation, accuracy, citations and
+submission. Agent checks and formal compilation do not imply external
+validation, peer review, journal acceptance or endorsement by a model
+provider. The reproducibility records identify the checks performed and
+their limits.
+
+\bibliographystyle{report}
+\bibliography{references}
+\end{document}

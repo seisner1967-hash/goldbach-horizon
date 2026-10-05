@@ -1,0 +1,190 @@
+{
+  "schema": "fresh-document-compile-claim-review-v1",
+  "status": "PASS",
+  "author": "Durand Serge",
+  "scope": "Document compilation and claim-to-existing-evidence review only",
+  "no_new_mathematical_execution_or_credit": true,
+  "engine": "Tectonic",
+  "engine_version": "Tectonic 0.17.0+20260731",
+  "engine_basename": "tectonic.exe",
+  "cached_resources_only": true,
+  "untrusted_mode": true,
+  "pdflatex_available": false,
+  "compile_exit_code": 0,
+  "actual_bibtex_engine": "BibTeX 0.99d",
+  "bibliography_style": "report.bst; transparent authored style, genuinely processed by BibTeX",
+  "bibliography_entries": 11,
+  "unresolved_citations_or_references": 0,
+  "overfull_boxes": 0,
+  "main_text_pages": 12,
+  "appendix_A_first_page": 13,
+  "total_pdf_pages": 27,
+  "abstract_characters_excluding_terminal_newline": 1288,
+  "claim_count": 2311,
+  "used_manuscript_evidence_keys": 169,
+  "unique_existing_source_bindings_checked": 209,
+  "source_files": {
+    "algebraic_appendix.tex": {
+      "sha256": "1728dbb3f1b5645854b88539987318e41afe37474579c86e639f5b8c2076bc14",
+      "bytes": 18925
+    },
+    "algebraic_tables.tex": {
+      "sha256": "0580190bfba0fafdfedb8e30777779c4e4fce0838d03b376be4b90c80c2c5604",
+      "bytes": 6768
+    },
+    "analytic_appendix.tex": {
+      "sha256": "df5aed92a6a870406db934849907726cb2a852c8f5bb85068425bf224af37f78",
+      "bytes": 30699
+    },
+    "analytic_obstructions.tex": {
+      "sha256": "63d016bf42deeaa2a978fd9c4fecd43f09d20b197e2701154d23407bda537d10",
+      "bytes": 9248
+    },
+    "analytic_sections.tex": {
+      "sha256": "10c03fa9a376c1e6310ccf332e744410cb8c487bcd78688855f170d5729710ec",
+      "bytes": 9900
+    },
+    "degree_section.tex": {
+      "sha256": "a6f1bb029c42c3c22c9581df3b3326bdae714fadd0a6e8581d1f85f408d24070",
+      "bytes": 3345
+    },
+    "main.tex": {
+      "sha256": "e71062ce65a4693839daa8e0f5f0b4d1582d3b3fc60894550eaff7f8bb6eb922",
+      "bytes": 18117
+    },
+    "numerical_section.tex": {
+      "sha256": "3219006f88d4cfa8bb0885a56259053c7035bf59a5ac169aae83e95a02adcc3b",
+      "bytes": 2576
+    },
+    "report.bst": {
+      "sha256": "7600077036624acff6c047ee247fb3ab29721d49a1b393dd2452e7c78de80014",
+      "bytes": 2398
+    },
+    "references.bib": {
+      "sha256": "cdf441656d64673f645a078fcab29eaab475483ea7ca1cfc083dea3b1b2bdf76",
+      "bytes": 4162
+    }
+  },
+  "figure_files": {
+    "figures/degree_curve.pdf": {
+      "sha256": "613fb6898ed3dfd1226e7c07c345c297fab46c24e515dc0487962e6587aa816b",
+      "bytes": 5043
+    }
+  },
+  "outputs": {
+    "main.pdf": {
+      "sha256": "f2d160f6fe4cce6abaebff421e6fad05c79a70130b25f0c04dfb8b80fd0a9349",
+      "bytes": 142758
+    },
+    "main.bbl": {
+      "sha256": "b62a258fb19f9f663fa1cf2a4548be8911ac081a77ff5e174c9dbe1849555235",
+      "bytes": 3390
+    }
+  },
+  "reviewed_metadata_bindings": {
+    "evidence_map.json": {
+      "sha256": "9a8a4215435470b1584c7d51af2eb4ec8668a02947e3eb82e9a2558624436d99",
+      "bytes": 5359204
+    },
+    "analytic_inventory.json": {
+      "sha256": "f35bd69e537665b336c02873e1fb88fbc6e84474c37ce34ab54e2b9601800e6a",
+      "bytes": 3256010
+    },
+    "algebraic_inventory.json": {
+      "sha256": "75a6d347930e9dc40991cd2f0177d64a0b29ec2c6ad09410ac5d28e9beb94145",
+      "bytes": 468180
+    },
+    "analytic_lean_inventory.csv": {
+      "sha256": "def3611e56f0ac0272eb12a82cce6cf1b2229419d8042049e2a0cb8e3e90c104",
+      "bytes": 2105451
+    },
+    "algebraic_lean_inventory.csv": {
+      "sha256": "9b656511f3925cff2d4055b48a0bf0a7f5694819eeb5d78115c6a1f18a911fc5",
+      "bytes": 201146
+    },
+    "abstract.txt": {
+      "sha256": "02277eeb3fe9ef529e838ab51fb073efe3198dc4a1945a47f18bc9b983668999",
+      "bytes": 1289
+    },
+    "bibliography_verification.json": {
+      "sha256": "d78454577ecab7b1d01978394bf9112284bf12c9db5041e5a368bdca56af3eca",
+      "bytes": 13348
+    },
+    "analytic_obstruction_catalogue.json": {
+      "sha256": "e5f072b0a46cbe7d68a4ecd473afc00eff853c8261f8ca7656e1f033dae9ab44",
+      "bytes": 82399
+    }
+  },
+  "manual_scope_checks": [
+    {
+      "claim_ids": [
+        "ALG-NS-LOWER",
+        "ALG-NS-UPPER-LIMIT",
+        "ALG-DEGREE-CURVES"
+      ],
+      "finding": "Main text distinguishes the compiled universal necessary lower bound from finite equality at the measured points; no universal matching construction is asserted.",
+      "status": "PASS: document scope matches existing mapped records"
+    },
+    {
+      "claim_ids": [
+        "ALG-PC-HYPOTHESIS",
+        "ALG-PC-ALPHA-GROUPING"
+      ],
+      "finding": "KnapsackLowerBound remains explicit and conditional in Appendix B; alpha grouping is confined to fourteen finite-field measurements, with no larger-point rational transfer.",
+      "status": "PASS: document scope matches existing mapped records"
+    },
+    {
+      "claim_ids": [
+        "ALG-NO-ELIGIBLE-FAMILY",
+        "ALG-COORDINATE-GUARDS",
+        "ALG-UNIFORM-BERTRAND"
+      ],
+      "finding": "The first-even data are EVIDENCE without Judge/Trophy promotion; coordinate pins remain distinct from whole-vector multiplicity; the composite-nine model is not called a SIEVE model.",
+      "status": "PASS: document scope matches existing mapped records"
+    },
+    {
+      "claim_ids": [
+        "A-PARTIAL-BATCHES",
+        "A-GAMMA-CHAIN",
+        "A-TRUNCATION-BOUNDARY"
+      ],
+      "finding": "Partial global batches retain only the recorded passing modules; weighted Lambda tails and the full coefficient chain retain SOURCE/failed scope.",
+      "status": "PASS: document scope matches existing mapped records"
+    },
+    {
+      "claim_ids": [
+        "A-IBP",
+        "A-OBSTRUCTION-SIGNED-GAP",
+        "A-OBSTRUCTION-COST",
+        "A-ARITHMETIC-OBSTRUCTIONS"
+      ],
+      "finding": "The kernel boundary is retained; a norm envelope is not a signed lower bound; envelope cost and guarded finite obstructions do not exclude whole analytic methods.",
+      "status": "PASS: document scope matches existing mapped records"
+    },
+    {
+      "claim_ids": [
+        "A-NUMERICAL",
+        "A-LOG",
+        "R-THRESHOLD"
+      ],
+      "finding": "The CRT/integer calculation has one-input scope; native and B40 real-log refinement are explicitly unproved; the interval to the stated analytic onset remains uncovered.",
+      "status": "PASS: document scope matches existing mapped records"
+    },
+    {
+      "claim_ids": [
+        "R-FROZEN",
+        "R-PROTOCOL",
+        "R-OUT-OF-SCOPE"
+      ],
+      "finding": "The frozen proofless-file incompatibility is an acceptance-contract flaw; provider-shared reviews are not external validation; uncredited and axiomatic material receives no unconditional credit.",
+      "status": "PASS: document scope matches existing mapped records"
+    }
+  ],
+  "limitations": [
+    "Actual pdflatex execution was unavailable; its compatibility was reviewed from standard source constructs but not executed.",
+    "The existing cached bundle lacked plain.bst and the default large-title OpenType font; portable Type1 settings and an authored BibTeX style were used without installation or network.",
+    "Underfull narrow-table spacing warnings remain; whole-document visual review is separate from this compilation and claim gate.",
+    "No mathematical experiments, Lean builds, certificate replays or provenance/credit audits were run.",
+    "Semantic review compares the manuscript to existing recorded statements; it is not external expert validation of their mathematics."
+  ]
+}

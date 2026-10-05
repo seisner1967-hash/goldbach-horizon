@@ -1,0 +1,353 @@
+{
+  "schema": "publication-bibliography-verification-v1",
+  "checked_on": "2026-10-05",
+  "scope": "Bibliographic and MSC2020 verification for the negative-results manuscript. No new mathematical experiment, theorem audit, or campaign credit is recorded here.",
+  "bibliography": {
+    "path": "paper/references.bib",
+    "sha256": "cdf441656d64673f645a078fcab29eaab475483ea7ca1cfc083dea3b1b2bdf76",
+    "entry_count": 11,
+    "encoding": "ASCII with TeX accent commands"
+  },
+  "method": "Publisher records, author or institution publication records, and published research bibliographies were consulted directly. Scope descriptions below restrict how these references may support the manuscript; they do not certify this project's mathematical claims.",
+  "local_PDF_files_used": [],
+  "references": [
+    {
+      "citekey": "hl1923",
+      "status": "verified",
+      "fields_checked": [
+        "authors",
+        "title",
+        "journal",
+        "year",
+        "volume",
+        "pages",
+        "DOI"
+      ],
+      "doi": "10.1007/BF02403921",
+      "sources": [
+        {
+          "url": "https://link.springer.com/article/10.1007/BF02403921",
+          "kind": "publisher article record",
+          "supports": "1923; Acta Mathematica 44; pages 1-70; authors, title and DOI"
+        }
+      ],
+      "claim_scope": "Historical circle-method treatment of additive prime problems. No unconditional binary Goldbach theorem is attributed to this source."
+    },
+    {
+      "citekey": "vinogradov1937",
+      "status": "verified through primary scholarly bibliographic records",
+      "fields_checked": [
+        "author",
+        "English title",
+        "journal",
+        "year",
+        "volume",
+        "pages"
+      ],
+      "doi": null,
+      "sources": [
+        {
+          "url": "https://www.mathnet.ru/php/person.phtml?option_lang=eng&personid=26537&showmode=sci&wshow=",
+          "kind": "Steklov Mathematical Institute author bibliography",
+          "supports": "1937 original, volume 15 and pages 291-294; Russian title in transliteration"
+        },
+        {
+          "url": "https://arxiv.org/html/1312.7748",
+          "kind": "author-deposited research paper",
+          "supports": "Reference Vin37 supplies the English title and original journal coordinates; introduction states the sufficiently-large-odd-integer scope"
+        }
+      ],
+      "claim_scope": "The three-prime theorem for sufficiently large odd integers; not the binary conjecture.",
+      "limitations": [
+        "The original 1937 article was not retrieved. The bibliography uses the English title supplied by Helfgott's research paper.",
+        "No DOI is supplied."
+      ]
+    },
+    {
+      "citekey": "chen1973",
+      "status": "verified through published primary scholarly bibliographies",
+      "fields_checked": [
+        "author initials",
+        "title variant",
+        "journal",
+        "year",
+        "volume",
+        "pages"
+      ],
+      "doi": null,
+      "sources": [
+        {
+          "url": "https://www.numdam.org/book-part/AST_1979__61__213_0/",
+          "kind": "published research survey by R. C. Vaughan",
+          "supports": "1973 Scientia Sinica 16, pages 157-176, with title using 'larger'"
+        },
+        {
+          "url": "https://www.numdam.org/book-part/SB_1997-1998__40__185_0/",
+          "kind": "published research lecture by Philippe Michel",
+          "supports": "Same author, journal, year, volume and pages; a 'large' title variant"
+        },
+        {
+          "url": "https://arxiv.org/html/1312.7748",
+          "kind": "author-deposited research paper",
+          "supports": "Introduction describes sufficiently large even integers as a prime plus either a prime or a product of two primes"
+        }
+      ],
+      "claim_scope": "A sufficiently large even integer is a prime plus an integer with at most two prime factors, counted with multiplicity. This does not establish a representation by two primes in every case.",
+      "limitations": [
+        "Original publisher full text could not be retrieved.",
+        "Published references differ between 'large' and 'larger'; the entry follows Vaughan's near-contemporary 1979 bibliography.",
+        "No unverified issue, publication day or DOI is included."
+      ]
+    },
+    {
+      "citekey": "helfgott2013",
+      "status": "verified",
+      "fields_checked": [
+        "author",
+        "title",
+        "arXiv identifier",
+        "year",
+        "subject class"
+      ],
+      "doi": null,
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/1312.7748",
+          "kind": "author-deposited preprint record",
+          "supports": "H. A. Helfgott; submitted December 30, 2013; arXiv:1312.7748; math.NT"
+        },
+        {
+          "url": "https://arxiv.org/html/1312.7748",
+          "kind": "author-deposited paper text",
+          "supports": "Main theorem covers every odd integer greater than 5"
+        }
+      ],
+      "claim_scope": "Ternary Goldbach, for all odd integers greater than 5. The citation is a preprint entry and does not invent a journal publication."
+    },
+    {
+      "citekey": "osilva2014",
+      "status": "verified",
+      "fields_checked": [
+        "authors",
+        "title",
+        "journal",
+        "year",
+        "volume",
+        "issue",
+        "pages",
+        "electronic publication date"
+      ],
+      "doi": null,
+      "sources": [
+        {
+          "url": "https://sweet.ua.pt/tos/bib/4.12.html",
+          "kind": "author's institutional publication record and BibTeX",
+          "supports": "Mathematics of Computation 83(288), 2033-2060; July 2014; electronic publication November 18, 2013; abstract and author-supplied BibTeX"
+        }
+      ],
+      "claim_scope": "Published computational verification for even integers up to 4*10^18, inclusive. This is a finite verification, not a proof for arbitrary even integers.",
+      "limitations": [
+        "The publisher PDF was inaccessible in this verification session; the author's detailed record is the metadata source.",
+        "A DOI was not independently recovered from an accessible primary record, so none is supplied."
+      ]
+    },
+    {
+      "citekey": "selberg1949",
+      "status": "verified",
+      "fields_checked": [
+        "author",
+        "title",
+        "proceedings",
+        "conference year",
+        "publication year",
+        "pages"
+      ],
+      "doi": null,
+      "sources": [
+        {
+          "url": "https://www.ias.edu/sites/default/files/library/pdfs/ar/publicationsofme00inst.pdf",
+          "kind": "Institute for Advanced Study publication bibliography",
+          "supports": "Selberg's Trondheim 1949 contribution, pages 13-22, published 1952"
+        },
+        {
+          "url": "https://m.mathnet.ru/php/archive.phtml?WHATTOSHOW=REFERENCES&jrnid=tm&option_lang=rus&paperid=4191&wshow=paper_refs",
+          "kind": "published research paper bibliography",
+          "supports": "Original proceedings coordinates and 1952 publication year"
+        },
+        {
+          "url": "https://www.numdam.org/book-part/SB_1997-1998__40__185_0/",
+          "kind": "published research lecture",
+          "supports": "Selberg work used in discussion of classical sieve limitations; cites the later collected-work reprint"
+        }
+      ],
+      "claim_scope": "Historical context for classical sieve limitations and the parity problem. This supports no claim that all conceivable methods for binary Goldbach are impossible.",
+      "chronology": "The citekey records the 1949 congress; the BibTeX year is the actual 1952 proceedings publication. The 1989 collected-work reprint is not substituted for the original."
+    },
+    {
+      "citekey": "ips1997",
+      "status": "verified",
+      "fields_checked": [
+        "authors",
+        "title",
+        "report identifier",
+        "institution",
+        "year",
+        "posting date"
+      ],
+      "doi": null,
+      "sources": [
+        {
+          "url": "https://eccc.weizmann.ac.il/eccc-reports/1997/TR97-042/index.html",
+          "kind": "original report repository record",
+          "supports": "TR97-042; authors; title; posting September 22, 1997; abstract"
+        },
+        {
+          "url": "https://eccc.weizmann.ac.il/report/1997/042/download/",
+          "kind": "original report PDF",
+          "supports": "Title and authors with accents; PDF dated September 16, 1997; statements concerning pigeonhole and real subset-sum degree bounds"
+        }
+      ],
+      "claim_scope": "Polynomial-calculus lower bounds for the problems and fields specified in that report. An imported knapsack lower-bound hypothesis in this project's Lean code remains a hypothesis; this citation does not discharge it.",
+      "chronology": "PDF date September 16 and repository posting September 22 are distinguished."
+    },
+    {
+      "citekey": "cei1996",
+      "status": "verified",
+      "fields_checked": [
+        "authors",
+        "title",
+        "conference",
+        "year",
+        "pages",
+        "publisher",
+        "DOI"
+      ],
+      "doi": "10.1145/237814.237860",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1145/237814.237860",
+          "kind": "ACM publisher article record",
+          "supports": "Matthew Clegg, Jeffery Edmonds, Russell Impagliazzo; STOC 1996; pages 174-183; DOI"
+        }
+      ],
+      "claim_scope": "The polynomial-calculus and Groebner-basis proof-system framework. The citation supplies background, not a degree lower bound for the manuscript's Goldbach encodings."
+    },
+    {
+      "citekey": "bikpp1996",
+      "status": "verified",
+      "fields_checked": [
+        "authors",
+        "title",
+        "journal",
+        "series",
+        "year",
+        "volume",
+        "issue",
+        "pages",
+        "DOI"
+      ],
+      "doi": "10.1112/plms/s3-73.1.1",
+      "sources": [
+        {
+          "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/plms/s3-73.1.1",
+          "kind": "London Mathematical Society publisher record",
+          "supports": "Five authors; third series volume 73 issue 1; July 1996; pages 1-26; DOI; abstract"
+        }
+      ],
+      "claim_scope": "Nullstellensatz certificate degree bounds for counting principles studied in the cited article. No bound for the project's systems is inferred solely from that literature."
+    },
+    {
+      "citekey": "razborov1998",
+      "status": "verified",
+      "fields_checked": [
+        "author",
+        "title",
+        "journal",
+        "year",
+        "volume",
+        "pages",
+        "DOI"
+      ],
+      "doi": "10.1007/s000370050013",
+      "sources": [
+        {
+          "url": "https://link.springer.com/article/10.1007/s000370050013",
+          "kind": "publisher article record",
+          "supports": "A. A. Razborov; Computational Complexity 7; pages 291-324; 1998; DOI"
+        },
+        {
+          "url": "https://www.people.cs.uchicago.edu/~razborov/research.html",
+          "kind": "author institutional publication list",
+          "supports": "Original publication coordinates"
+        }
+      ],
+      "claim_scope": "Polynomial-calculus lower-bound literature. Its hypotheses and encoded principles must be preserved when discussing any application."
+    },
+    {
+      "citekey": "alon1999",
+      "status": "verified",
+      "fields_checked": [
+        "author",
+        "title",
+        "journal",
+        "year",
+        "volume",
+        "issue",
+        "pages",
+        "DOI"
+      ],
+      "doi": "10.1017/S0963548398003411",
+      "sources": [
+        {
+          "url": "https://cris.tau.ac.il/en/publications/combinatorial-nullstellensatz/",
+          "kind": "author institution publication record with BibTeX",
+          "supports": "Noga Alon; 1999; volume 8 issue 1-2; pages 7-29; DOI; abstract"
+        }
+      ],
+      "claim_scope": "A general algebraic method and its combinatorial applications. This is background for algebraic certificates, not a proof of binary Goldbach."
+    }
+  ],
+  "msc2020": {
+    "status": "verified against official classification",
+    "source_url": "https://mathscinet.ams.org/mathscinet/msc/pdfs/classifications2020.pdf",
+    "issuing_bodies": [
+      "Mathematical Reviews",
+      "zbMATH"
+    ],
+    "descriptions_are": "Concise paraphrases of official meanings, not full quotations.",
+    "primary": {
+      "code": "11P32",
+      "meaning": "Goldbach-type results and additive problems with primes",
+      "pdf_page_zero_based": 23
+    },
+    "secondary": [
+      {
+        "code": "68V20",
+        "meaning": "Mathematical formalization using theorem provers",
+        "pdf_page_zero_based": 177
+      },
+      {
+        "code": "03F20",
+        "meaning": "Complexity of proofs",
+        "pdf_page_zero_based": 9
+      },
+      {
+        "code": "13P10",
+        "meaning": "Groebner bases and related bases for ideals or modules",
+        "pdf_page_zero_based": 32
+      }
+    ]
+  },
+  "excluded_unverified_suggestions": [
+    "bceip1998",
+    "buss1996"
+  ],
+  "publication_checks": {
+    "all_reference_keys_unique": true,
+    "all_current_manuscript_citekeys_available": true,
+    "no_local_absolute_paths": true,
+    "no_private_contact_data": true,
+    "no_AI_authorship": true,
+    "compilation_performed_in_this_stage": false
+  }
+}

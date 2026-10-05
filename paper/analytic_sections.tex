@@ -1,0 +1,214 @@
+\section{Analytic framework and the credited dependency chain}
+\label{sec:analytic}
+
+The analytic corpus supplies exact identities and explicit approximation
+bounds. Its recorded Judge receipts distinguish successful module rows from
+the status of an entire batch. This distinction matters for batches 6, 7, 8,
+9, 11 and 26: each globally failed batch retains only the whole-module PASS
+rows identified in the inventory. No failed or uninvoked module is credited.
+The standard axioms recorded for credited declarations are subsets of
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+Appendix~\ref{app:analytic-inventory} provides a module table; the accompanying
+JSON and CSV retain every extracted axiom-audit row.\ev{A-PARTIAL-BATCHES}
+\ev{A-INVENTORY-COUNTS}
+
+\subsection{The genuine coefficient and its continuous projection}
+
+Throughout this section, $\Lambda$ is the genuine von Mangoldt function:
+$\Lambda(0)=\Lambda(1)=0$, $\Lambda(p^k)=\log p$ for a prime $p$ and
+an integer $k\geq1$, and it vanishes otherwise. For $a>0$, set
+\begin{equation}
+ T_a(\theta)=\sum_{n\geq0}\Lambda(n)e^{-an}e^{in\theta},\qquad
+ C_N=\sum_{n=0}^{N}\Lambda(n)\Lambda(N-n).
+ \label{eq:analytic-definitions}
+\end{equation}
+The series is absolutely convergent. The compiled continuous projection
+identity, for every natural $N$, is
+\begin{equation}
+ C_N=\frac{e^{aN}}{2\pi}\int_0^{2\pi}
+          T_a(\theta)^2e^{-iN\theta}\,d\theta.
+ \label{eq:circle-identity}
+\end{equation}
+This is \nolinkurl{thermalContinuousProjection_eq_vonMangoldt_sum}
+in the module \nolinkurl{ThermalProjectionIdentity22}.
+The source uses the full interval $[0,2\pi]$. Prime powers remain in $C_N$;
+the equality alone is not a lower bound for a prime-pair sum. The square
+$T_a^2$ extracts additive pairs. Replacing it by $|T_a|^2$ extracts
+differences and changes the coefficient being studied.\ev{A-CIRCLE}
+\ev{A-OBSTRUCTION-SIGNED-GAP}
+
+There is also a compiled elementary truncation envelope. With $r=e^{-a}$,
+let
+\begin{equation}
+ U(a)=\frac{r}{(1-r)^2},\qquad
+ B(a,M)=r^{M+1}\left(\frac{M+1}{1-r}+U(a)\right).
+\end{equation}
+If $T_{a,M}$ is the sum through $M$, the corresponding normalized
+projection differs from the full projection by at most
+$2e^{aN}U(a)B(a,M)$ in complex norm. The bound follows from actual
+von Mangoldt terms and a constructed summable majorant, rather than from
+an assumed coefficient bound. Its module is a retained PASS row in failed
+batch 11.\ev{A-CIRCLE}
+
+\subsection{Finite projection and canonical logarithm quantization}
+
+For natural $N\leq M$ and $K>\max(N,2M-N)$, the discrete projector satisfies
+\begin{equation}
+ C_N=\frac{e^{aN}}{K}\sum_{j=0}^{K-1}
+ T_{a,M}(2\pi j/K)^2 e^{-2\pi iNj/K}.
+ \label{eq:discrete-projector}
+\end{equation}
+The condition excludes all unwanted exponents congruent to $N$ modulo $K$.
+This is a finite identity for every real $a$, including $a=0$; it does not
+assert convergence of the infinite series at $a=0$.
+The declaration \nolinkurl{sampled_trueCircle_eq_coefficient}
+in \nolinkurl{DiscreteThermalProjection22}
+records the concrete angular grid.\ev{A-DISCRETE}
+
+The quantized construction uses the fixed scale $S=2^{58}$. Define
+\begin{equation}
+ L_{32}(z)=2\sum_{j=0}^{31}\frac{z^{2j+1}}{2j+1},\qquad
+ \rho_{32}=\frac{9}{4\cdot65\cdot3^{65}}.
+\end{equation}
+For $2\leq p\leq10^8$, write $k=\lfloor\log_2p\rfloor$ and
+$z=(p-2^k)/(p+2^k)$. The rational lower endpoint is
+$b_p=kL_{32}(1/3)+L_{32}(z)$, with interval width
+$(k+1)\rho_{32}$. The constructor rounds the midpoint multiplied by $S$
+to the nearest integer, resolving exact ties toward the even integer,
+then clamps to $[0,32S]$. The proved error is at most $1/S$;
+precision is a conclusion of this fixed constructor.\ev{A-LOG}
+
+Applying the constructor to the base prime of each prime power defines
+integers $A_n$ and $q_n=A_n/S$. Both $q_n$ and $\Lambda(n)$ lie in $[0,32]$
+on $0\leq n\leq10^8$, and $|q_n-\Lambda(n)|\leq1/S$ there. Thus, for
+natural $N\leq10^8$, the canonical integer coefficient
+$I_N=\sum_{n=0}^N A_nA_{N-n}$ satisfies
+\begin{equation}
+ \left|C_N-\frac{I_N}{S^2}\right|
+ \leq E_{\log}(N):=(N+1)\left(\frac{64}{S}+\frac1{S^2}\right).
+ \label{eq:log-envelope}
+\end{equation}
+The fixed integer guard proves $2E_{\log}(10^8)\leq10^{-6}$.
+These statements are in \nolinkurl{RationalLogQuantization22} and
+\nolinkurl{QuantizedLambdaEnvelope22}; no real-logarithm precision
+assumption is inserted.\ev{A-LOG}
+
+\subsection{Finite-field extraction and the five concrete roots}
+
+The generic finite-field module derives character orthogonality from an
+actual primitive root, then instantiates the coefficient projector for the
+canonical integer sequence. The concrete root module proves the primality
+of the five moduli and exact order $K=2^{27}$ of the roots
+$\omega=g^{(p-1)/K}$ in their respective fields. Here $g$ denotes the
+specified bank base; the needed assertion is the order of $\omega$.
+\ev{A-FIELD}
+
+\begin{center}
+\begin{tabular}{rr}
+\toprule Certified prime $p$ & Bank base $g$\\\midrule
+2013265921 & 31\\
+2281701377 & 3\\
+3221225473 & 5\\
+3489660929 & 3\\
+3892314113 & 3\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At $N=M=10^8$, each such field projector returns $I_N$ modulo $p$.
+The compiled results are in \nolinkurl{FiniteFieldProjection22},
+\nolinkurl{ConcreteNTTRoots22} and
+\nolinkurl{ConcreteNTTA32Projection22}. A theorem about this finite
+projector does not by itself refine the native transform or CRT program.
+The saved numerical computation is reported separately in
+Section~\ref{sec:numerical}.\ev{A-FIELD}
+
+\subsection{The actual Gamma inversion dependency chain}
+
+The inversion chain is a sequence of credited source modules with explicit
+imports, rather than an assumed Gamma inversion formula. The closed-strip
+prerequisite bounds the actual Gamma function by
+$2\exp(-\pi|\operatorname{Im}s|/4)$ for
+$1\leq\operatorname{Re}s\leq2$. The positive-real inverse is first proved;
+the local complex module constructs its branch and integrable majorants;
+the holomorphy module then extends the identity to the right half-plane.
+\ev{A-GAMMA-CHAIN}
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.48\textwidth}p{0.12\textwidth}p{0.29\textwidth}@{}}
+\toprule Module & Batch; rows & Retained scope\\\midrule
+\nolinkurl{GammaPrerequisites22} & 2; 23 & Actual rotation and strip bound\\
+\nolinkurl{ThermalGammaMellinInverse22} & 20; 11 & Positive-real inversion\\
+\nolinkurl{ComplexGammaMellinLocal22} & 26; 22 & Local bounds and real agreement; partial PASS\\
+\nolinkurl{ComplexGammaMellinHolomorphy22} & 27; 15 & Complex inversion for $\operatorname{Re}w>0$\\
+\nolinkurl{ComplexGammaMellinLambda22} & 35; 30 & Actual infinite $\Lambda$ interchange\\
+\nolinkurl{ComplexGammaMellinTail22} & 30; 22 & Unweighted Gamma tail\\
+\nolinkurl{ComplexGammaMellinExpTailBridge22} & 32; 2 & Exponential inversion error\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The first five rows follow the import chain in their displayed order.
+Batch 26 failed globally, but its entire local inversion module has the
+retained PASS row. The unweighted tail module imports the local module;
+the exponential-tail bridge imports both holomorphy and tail. The
+$\Lambda$ interchange imports holomorphy. It does not require the
+uncompiled weighted-$\Lambda$ tail module. Counts in this table are saved
+axiom-audit declaration rows, including definitions.\ev{A-GAMMA-CHAIN}
+
+\subsection{The genuine infinite sum--integral interchange}
+
+For real $t$ and complex $w$ with $\operatorname{Re}w>0$, set
+\begin{equation}
+ D(t)=\sum_{n\geq2}\Lambda(n)n^{-2-it},\qquad
+ P(w)=\sum_{n\geq0}\Lambda(n)e^{-nw}.
+\end{equation}
+The source defines these actual arithmetic series. It proves continuity
+of $D$, the bound $|D(t)|\leq6$, and summability of the integrals of norms
+needed for the infinite interchange. In particular, the coefficient
+majorant is bounded by $2n^{-3/2}$ and its total mass by 6. The compiled
+conclusion is
+\begin{equation}
+ P(w)=\frac1{2\pi}\int_{\R}D(t)\Gamma(2+it)w^{-2-it}\,dt,
+ \qquad \operatorname{Re}w>0,
+ \label{eq:true-mellin}
+\end{equation}
+with principal complex powers. The declaration
+\nolinkurl{lambdaMellinThermal_eq_integral}
+in \nolinkurl{ComplexGammaMellinLambda22}
+is therefore an infinite arithmetic interchange result. This module alone
+does not identify $D$ with a zeta logarithmic derivative or supply a
+weighted-$\Lambda$ tail bound uniform on the coefficient contour.
+\ev{A-MELLIN}
+
+\subsection{Angular integration by parts and the remaining boundary}
+
+For $a>0$, natural $N\geq1$ and $q\in\C$, the compiled angular module
+uses
+\begin{equation}
+ J_{a,N}(q)=\frac1{2\pi}\int_{-\pi}^{\pi}
+                  (a-i\theta)^{-q}e^{-iN\theta}\,d\theta.
+\end{equation}
+Its exact recurrence is
+\begin{align}
+ J_{a,N}(q)&=B_{a,N}(q)+\frac qN J_{a,N}(q+1),\\
+ B_{a,N}(q)&=\frac{i(-1)^N}{2\pi N}
+           \bigl((a-i\pi)^{-q}-(a+i\pi)^{-q}\bigr).
+ \label{eq:angular-boundary}
+\end{align}
+The boundary term at $q=1$ is proved nonzero. Periodicity of the complete
+arithmetic trace therefore cannot be substituted for periodicity of an
+individual principal-branch Mellin kernel. This gives a precise boundary
+obstruction to dropping that term; it does not rule out estimates that
+retain it.\ev{A-IBP}\ev{A-OBSTRUCTION-BOUNDARY}
+
+The unweighted Gamma-tail and exponential-inversion-error theorems are
+compiled. The repaired weighted-$\Lambda$ tail, uniform circle geometry,
+coefficient truncation envelope, scalar connectors and coefficient-to-scalar
+bridge are retained source only. Failed batch 36 adds no credit: the
+weighted-tail module failed, and the geometry module was not invoked.
+Consequently the complete Mellin-to-coefficient truncation chain remains
+uncompiled. A norm enclosure, even if supplied by that chain, would still
+leave the signed estimate and prime-power corrections needed for a
+prime-pair conclusion.\ev{A-TRUNCATION-BOUNDARY}
+\ev{A-OBSTRUCTION-SIGNED-GAP}

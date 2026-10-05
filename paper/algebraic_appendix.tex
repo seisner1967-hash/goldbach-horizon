@@ -1,0 +1,170 @@
+% Existing accepted algebraic source inventory. No new compile or theorem audit.
+\subsection{Algebraic corpus inventory}
+The accepted algebraic proof snapshot is \texttt{e5c4e119}; its existing
+Judge batch is \texttt{6f7d181a} and root acceptance is \texttt{3d5f0ff4}.
+The saved audit lists $233$ theorem/lemma axiom entries, $204$ complete frozen
+headers and $25$ imported modules. The electronic inventory contains $356$
+named rows: those $233$ theorems/lemmas, $120$ other named declarations and
+$3$ constructors. Definitions and constructors are not added to the
+theorem/lemma count.\ev{ALG-INVENTORY-SCOPE}
+The full inventory is supplied as \nolinkurl{paper/algebraic_lean_inventory.csv}
+and \nolinkurl{paper/algebraic_inventory.json}; the table below is a compact
+module catalogue followed by a \emph{representative} theorem excerpt.
+The complete CSV records every row's module, exact name, informal reading,
+source line and hash, source header, observed axiom list, credit and proof pin.
+Copied full source modules and original frozen headers are retained in
+\nolinkurl{paper/algebraic_sources/}; this catalogue does not replace their
+typeclass, index, inequality, signed-function or certificate hypotheses.
+
+In the tables, A3 means the existing print contains exactly
+\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}; A2 means
+\texttt{propext}, \texttt{Quot.sound}; A0 means an explicitly empty print.
+P means \texttt{propext} alone.
+NR means no separately reprinted entry in the selected artifacts; it does
+not mean no axioms. CL denotes a compiled theorem/lemma, D a definition/type,
+and C a constructor in an accepted module. CL-C marks the conditional
+corollary whose retained hypothesis is discussed in Appendix B.
+All rows use accepted proof snapshot \texttt{e5c4e119}.
+Module names below omit the common \texttt{AlgebraicGoldbach.} prefix;
+\texttt{Calibration.} is retained. Exact full names are in the CSV/JSON.
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.29\linewidth}p{.05\linewidth}p{.05\linewidth}p{.53\linewidth}@{}}
+\toprule Module & CL & Other & Scope of accepted module\\\midrule
+\texttt{Algebraic\allowbreak Goldbach}\ev{ALG-MODULE-01} & 0 & 0 & Import collection for the accepted auxiliary modules; the frozen open target is excluded. \\
+\texttt{Bertrand\allowbreak Family}\ev{ALG-MODULE-02} & 11 & 6 & Actual rational Bertrand polynomial family, prime truth, and the N>=24 common-zero obstruction. \\
+\texttt{Coprime\allowbreak Divisor}\ev{ALG-MODULE-03} & 12 & 5 & Actual rational coprime-divisor equations are equivalent to at most one prime coordinate differing from one. \\
+\texttt{Coprime\allowbreak Kary\allowbreak Countermodel}\ev{ALG-MODULE-04} & 6 & 2 & An actual Boolean common zero at N=4 excludes a certificate for each k>=2 in this exact class. \\
+\texttt{Coprime\allowbreak Kary\allowbreak Ideal}\ev{ALG-MODULE-05} & 10 & 11 & Equality of the actual rational arithmetic k-ary divisor ideal and the prime k-subset ideal. \\
+\texttt{Coprime\allowbreak Kary\allowbreak Models}\ev{ALG-MODULE-06} & 1 & 0 & Arbitrary rational models are classified by fewer than k prime coordinates differing from one. \\
+\texttt{Factor\allowbreak Coverage}\ev{ALG-MODULE-07} & 16 & 7 & Proper-divisor coverage at horizon M<=N\textasciicircum{}2 is equivalent to pins on primes with p\textasciicircum{}2<=M. \\
+\texttt{Literal\allowbreak Cube}\ev{ALG-MODULE-08} & 17 & 23 & Actual Boolean/coarse/ordered-g cube and a strict finite weighted covering obstruction. \\
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.29\linewidth}p{.05\linewidth}p{.05\linewidth}p{.53\linewidth}@{}}
+\toprule Module & CL & Other & Scope of accepted module\\\midrule
+\texttt{Lower\allowbreak Bound.\allowbreak Boolean\allowbreak Annihilation}\ev{ALG-MODULE-09} & 1 & 0 & Boolean-equation multiples have zero aggregated coefficient image, without asserting ordinary polynomial zero. \\
+\texttt{Lower\allowbreak Bound.\allowbreak Boolean\allowbreak Coefficient\allowbreak Degree}\ev{ALG-MODULE-10} & 2 & 0 & Aggregated coefficients vanish on supports larger than ordinary total degree. \\
+\texttt{Lower\allowbreak Bound.\allowbreak Boolean\allowbreak Coefficients}\ev{ALG-MODULE-11} & 4 & 3 & Ordinary exponent-support aggregation and compatibility with genuine variable multiplication. \\
+\texttt{Lower\allowbreak Bound.\allowbreak Boolean\allowbreak Count\allowbreak Bridge}\ev{ALG-MODULE-12} & 1 & 0 & The genuine ordinary count polynomial maps to the actual count multiplier. \\
+\texttt{Lower\allowbreak Bound.\allowbreak Boolean\allowbreak Lattice}\ev{ALG-MODULE-13} & 11 & 5 & Rational Boolean-lattice adjoints, commutator, and strict low-layer raising injectivity. \\
+\texttt{Lower\allowbreak Bound.\allowbreak Boolean\allowbreak Multiplier\allowbreak Rigidity}\ev{ALG-MODULE-14} & 2 & 1 & Top-layer rigidity for the actual count multiplier, arbitrary rational parameter and signed functions. \\
+\texttt{Lower\allowbreak Bound.\allowbreak Count\allowbreak Variable\allowbreak Commutation}\ev{ALG-MODULE-15} & 1 & 0 & The actual variable and count actions commute on finite types for arbitrary rational parameters. \\
+\texttt{Pinned\allowbreak Control}\ev{ALG-MODULE-16} & 11 & 2 & Circular coordinate-pinning calibration and its certificate equivalence; multiplier and summand degrees are distinct. \\
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.29\linewidth}p{.05\linewidth}p{.05\linewidth}p{.53\linewidth}@{}}
+\toprule Module & CL & Other & Scope of accepted module\\\midrule
+\texttt{Proper\allowbreak Bertrand}\ev{ALG-MODULE-17} & 11 & 4 & Interval-only family with m>=2, every-coordinate Boolean freedom, prime truth, and N>=24 obstruction. \\
+\texttt{Sign\allowbreak Definite}\ev{ALG-MODULE-18} & 5 & 3 & Canonical rational coefficients of one sign preserve every supplied prime-supported common zero. \\
+\texttt{Soundness}\ev{ALG-MODULE-19} & 22 & 12 & Ordinary polynomial certificate soundness, ordered Goldbach count including loops, and explicit faithful-field bounds. \\
+\texttt{Uniform\allowbreak Countermodel}\ev{ALG-MODULE-20} & 14 & 4 & A Boolean coarse/Bertrand common zero for every N>=24, with composite coordinates allowed. \\
+\texttt{Uniform\allowbreak Nonpinning}\ev{ALG-MODULE-21} & 2 & 0 & The uniform coarse model differs from the prime indicator and selects composite nine. \\
+\texttt{Calibration.\allowbreak C1}\ev{ALG-MODULE-22} & 26 & 12 & Full-count calibration, prime support, unordered pairs including loops, and the exact independence threshold. \\
+\texttt{Calibration.\allowbreak Growth}\ev{ALG-MODULE-23} & 5 & 0 & The required ordinary-Q static-NS degree is unbounded along even N, without asserting existence of certificates. \\
+\texttt{Calibration.\allowbreak Lower\allowbreak Bound}\ev{ALG-MODULE-24} & 31 & 14 & Universal ordinary-Q static-NS lower bound for the supplied full-count certificate, not an upper construction. \\
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.29\linewidth}p{.05\linewidth}p{.05\linewidth}p{.53\linewidth}@{}}
+\toprule Module & CL & Other & Scope of accepted module\\\midrule
+\texttt{Calibration.\allowbreak PCRestriction}\ev{ALG-MODULE-25} & 11 & 9 & Genuine ordinary-Q PC restriction preserves rules and line degree; the lower corollary retains an external hypothesis. \\
+\bottomrule\end{tabular}\end{center}
+
+\subsection{Representative algebraic theorem excerpt}
+This selection is not the exhaustive theorem inventory. The electronic rows retain all actual audited names and their exact source headers. Displayed names omit only the common project prefix described above.
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.39\linewidth}p{.43\linewidth}p{.05\linewidth}p{.06\linewidth}@{}}
+\toprule Declaration & Informal reading (source hypotheses retained) & Ax. & Level\\\midrule
+\texttt{certificate\_\allowbreak excludes\_\allowbreak common\_\allowbreak zero}\ev{ALG-REP-01} & A supplied identity excludes a supplied common zero of all its generators. & A3 & CL \\
+\texttt{certificate\_\allowbreak implies\_\allowbreak goldbach}\ev{ALG-REP-02} & A supplied certificate and prime-truth premises imply existence of the corresponding prime pair. & A3 & CL \\
+\texttt{finite\allowbreak Field\allowbreak Policy\_\allowbreak g\_\allowbreak nonzero\_\allowbreak iff}\ev{ALG-REP-03} & The explicit field policy makes prime-point nonzero equivalent to positive integer count. & A3 & CL \\
+\texttt{bit\_\allowbreak boolean}\ev{ALG-REP-04} & The model's integer bit is idempotent. & P & CL \\
+\texttt{uniform\_\allowbreak bertrand\_\allowbreak countermodel}\ev{ALG-REP-05} & For every N>=24 the explicit bit model satisfies Booleanity, coarse constraints, intervals and g=0. & A3 & CL \\
+\texttt{uniform\_\allowbreak model\_\allowbreak selects\_\allowbreak composite\_\allowbreak nine}\ev{ALG-REP-06} & For N>=24 the model selects nine whereas the prime indicator does not. & A3 & CL \\
+\texttt{bertrand\allowbreak Family\_\allowbreak no\_\allowbreak certificate}\ev{ALG-REP-07} & For N>=24 this exact coarse/Bertrand family has no supplied certificate identity. & A3 & CL \\
+\texttt{pinned\_\allowbreak certificate\_\allowbreak iff\_\allowbreak goldbach}\ev{ALG-REP-08} & Existence of a pinned-control certificate is equivalent to positive ordered count. & A3 & CL \\
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.39\linewidth}p{.43\linewidth}p{.05\linewidth}p{.06\linewidth}@{}}
+\toprule Declaration & Informal reading (source hypotheses retained) & Ax. & Level\\\midrule
+\texttt{pinned\_\allowbreak multiplier\_\allowbreak degree\_\allowbreak le\_\allowbreak one}\ev{ALG-REP-09} & The explicit pinned multipliers have ordinary degree at most one. & A3 & CL \\
+\texttt{pinned\_\allowbreak summand\_\allowbreak degree\_\allowbreak le\_\allowbreak two}\ev{ALG-REP-10} & Each explicit pinned multiplier-generator summand has degree at most two. & A3 & CL \\
+\texttt{Factor\allowbreak Coverage.\allowbreak coverage\_\allowbreak iff\_\allowbreak prime\allowbreak Pins}\ev{ALG-REP-11} & Under M<=N\textasciicircum{}2 coverage is equivalent to prime pins for p\textasciicircum{}2<=M. & A3 & CL \\
+\texttt{Factor\allowbreak Coverage.\allowbreak horizon\allowbreak Family\_\allowbreak no\_\allowbreak certificate}\ev{ALG-REP-12} & The explicit smaller-horizon hypotheses exclude a certificate for this combined family. & A3 & CL \\
+\texttt{Proper\allowbreak Bertrand.\allowbreak family\_\allowbreak does\_\allowbreak not\_\allowbreak pin\_\allowbreak any\_\allowbreak coordinate}\ev{ALG-REP-13} & For every coordinate the family has a Boolean model taking each of zero and one there. & A3 & CL \\
+\texttt{Proper\allowbreak Bertrand.\allowbreak family\_\allowbreak no\_\allowbreak certificate}\ev{ALG-REP-14} & For N>=24 the proper interval-only family has no certificate identity. & A3 & CL \\
+\texttt{Sign\allowbreak Definite.\allowbreak sign\_\allowbreak definite\_\allowbreak strengthening\_\allowbreak has\_\allowbreak no\_\allowbreak certificate}\ev{ALG-REP-15} & A supplied prime-supported Boolean/g common zero survives the same-sign strengthening and excludes its certificate. & A3 & CL \\
+\texttt{Coprime\allowbreak Divisor.\allowbreak family\_\allowbreak iff\_\allowbreak at\_\allowbreak most\_\allowbreak one\_\allowbreak omitted\_\allowbreak prime}\ev{ALG-REP-16} & The rational coprime-divisor equations hold iff at most one prime coordinate differs from one. & A3 & CL \\
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.39\linewidth}p{.43\linewidth}p{.05\linewidth}p{.06\linewidth}@{}}
+\toprule Declaration & Informal reading (source hypotheses retained) & Ax. & Level\\\midrule
+\texttt{Coprime\allowbreak Divisor.\allowbreak family\_\allowbreak does\_\allowbreak not\_\allowbreak pin\_\allowbreak any\_\allowbreak coordinate}\ev{ALG-REP-17} & For every coordinate the family has a Boolean model taking each of zero and one there. & A3 & CL \\
+\texttt{Coprime\allowbreak Kary\allowbreak Ideal.\allowbreak arithmetic\allowbreak Ideal\_\allowbreak eq\_\allowbreak prime\allowbreak Ideal}\ev{ALG-REP-18} & The actual rational arithmetic k-ary ideal equals the prime k-subset ideal. & A3 & CL \\
+\texttt{Coprime\allowbreak Kary\allowbreak Models.\allowbreak family\_\allowbreak iff\_\allowbreak omitted\_\allowbreak card\_\allowbreak lt}\ev{ALG-REP-19} & For arbitrary rational points, the k-ary family holds iff fewer than k prime coordinates differ from one. & A3 & CL \\
+\texttt{Coprime\allowbreak Kary\allowbreak Countermodel.\allowbreak family\_\allowbreak no\_\allowbreak certificate\_\allowbreak at\_\allowbreak four}\ev{ALG-REP-20} & For every k>=2 this exact k-ary family has no certificate at N=4. & A3 & CL \\
+\texttt{Literal\allowbreak Cube.\allowbreak weighted\_\allowbreak common\_\allowbreak zero}\ev{ALG-REP-21} & For even N>=6 strict total clause weight below cube size leaves a full family/Boolean/coarse/g common zero. & A3 & CL \\
+\texttt{Boolean\allowbreak Lattice.\allowbreak adjoint}\ev{ALG-REP-22} & The actual total raising and lowering actions are adjoint. & A3 & CL \\
+\texttt{Boolean\allowbreak Lattice.\allowbreak commutator}\ev{ALG-REP-23} & The actual commutator acts by variable count minus twice support size. & A3 & CL \\
+\texttt{Boolean\allowbreak Lattice.\allowbreak up\_\allowbreak injective\_\allowbreak below\_\allowbreak middle}\ev{ALG-REP-24} & On a pure k layer with strict 2k<card sigma, a zero raising image forces the signed function to vanish. & A3 & CL \\
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.39\linewidth}p{.43\linewidth}p{.05\linewidth}p{.06\linewidth}@{}}
+\toprule Declaration & Informal reading (source hypotheses retained) & Ax. & Level\\\midrule
+\texttt{Boolean\allowbreak Coefficients.\allowbreak coefficients\_\allowbreak X\_\allowbreak mul}\ev{ALG-REP-25} & Genuine ordinary variable multiplication maps to the actual finite-support bit action. & A3 & CL \\
+\texttt{Boolean\allowbreak Coefficients.\allowbreak coefficients\_\allowbreak eq\_\allowbreak zero\_\allowbreak of\_\allowbreak total\allowbreak Degree\_\allowbreak lt\_\allowbreak card}\ev{ALG-REP-26} & Aggregated coefficients vanish when support size exceeds ordinary polynomial degree. & A3 & CL \\
+\texttt{Boolean\allowbreak Coefficients.\allowbreak top\_\allowbreak layer\_\allowbreak vanishes\_\allowbreak of\_\allowbreak count\allowbreak Mul\_\allowbreak degree\_\allowbreak le}\ev{ALG-REP-27} & With strict 2k<card sigma, function and count image zero above k force the function zero at and above k. & A3 & CL \\
+\texttt{Boolean\allowbreak Coefficients.\allowbreak coefficients\_\allowbreak count\_\allowbreak mul}\ev{ALG-REP-28} & The genuine ordinary count-polynomial multiple maps to the actual count multiplier. & A3 & CL \\
+\texttt{Boolean\allowbreak Coefficients.\allowbreak coefficients\_\allowbreak boolean\_\allowbreak mul}\ev{ALG-REP-29} & An ordinary Boolean-generator multiple has zero support-coefficient image, including infinite variable types. & A3 & CL \\
+\texttt{Boolean\allowbreak Coefficients.\allowbreak bit\allowbreak Mul\_\allowbreak count\allowbreak Mul}\ev{ALG-REP-30} & On finite types the actual bit and count actions commute for arbitrary rational parameter and signed functions. & A3 & CL \\
+\texttt{Calibration.\allowbreak C1}\ev{ALG-REP-31} & For natural m, a full D\_m pseudo-model exists iff m<=pi(N)-r(N), including loop pairs. & A3 & CL \\
+\texttt{Calibration.\allowbreak D\_\allowbreak full\_\allowbreak count\_\allowbreak pins}\ev{ALG-REP-32} & Every full-count D model agrees with the prime indicator within the horizon. & A3 & CL \\
+\bottomrule\end{tabular}\end{center}
+
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.39\linewidth}p{.43\linewidth}p{.05\linewidth}p{.06\linewidth}@{}}
+\toprule Declaration & Informal reading (source hypotheses retained) & Ax. & Level\\\midrule
+\texttt{Lower\allowbreak Bound.\allowbreak Restriction.\allowbreak Dpi\_\allowbreak multiplier\_\allowbreak degree\_\allowbreak lower\_\allowbreak bound}\ev{ALG-REP-33} & The supplied ordinary-Q full-count certificate has count-multiplier degree at least pi-r. & A3 & CL \\
+\texttt{Lower\allowbreak Bound.\allowbreak Restriction.\allowbreak Dpi\_\allowbreak standard\_\allowbreak degree\_\allowbreak lower\_\allowbreak bound}\ev{ALG-REP-34} & The count summand of a supplied ordinary-Q full-count certificate has degree at least pi-r+1. & A3 & CL \\
+\texttt{Calibration.\allowbreak Dpi\_\allowbreak standard\_\allowbreak degree\_\allowbreak unbounded\_\allowbreak on\_\allowbreak even}\ev{ALG-REP-35} & Necessary count-summand degree for supplied full-count certificates is unbounded along even N>=4. & A3 & CL \\
+\texttt{PCRestriction.\allowbreak dpi\_\allowbreak refutation\_\allowbreak restricts}\ev{ALG-REP-36} & A supplied D\_pi refutation yields a same-degree genuine knapsack refutation. & A3 & CL \\
+\bottomrule\end{tabular}\end{center}
+
+\subsection{Complete finite degree rows (Evidence)}
+\begin{center}\small\begin{tabular}{@{}rrrrrrr@{}}
+\toprule $N$ & $\pi$ & $r$ & $\alpha$ & NS $\mathbb Q/\mathbb F_p$ & PC $\mathbb F_p$ & PC $\mathbb Q$\\\midrule
+10\ev{ALG-DEGREE-N10} & 4 & 2 & 2 & 3 & 3 & 3 \\
+12\ev{ALG-DEGREE-N12} & 5 & 1 & 4 & 5 & 3 & 3 \\
+14\ev{ALG-DEGREE-N14} & 6 & 2 & 4 & 5 & 3 & 3 \\
+16\ev{ALG-DEGREE-N16} & 6 & 2 & 4 & 5 & 3 & 3 \\
+18\ev{ALG-DEGREE-N18} & 7 & 2 & 5 & 6 & 4 & 4 \\
+20\ev{ALG-DEGREE-N20} & 8 & 2 & 6 & 7 & 4 & 4 \\
+22\ev{ALG-DEGREE-N22} & 8 & 3 & 5 & 6 & 4 & 4 \\
+24\ev{ALG-DEGREE-N24} & 9 & 3 & 6 & 7 & 4 & 4 \\
+26\ev{ALG-DEGREE-N26} & 9 & 3 & 6 & 7 & 4 & 4 \\
+28\ev{ALG-DEGREE-N28} & 9 & 2 & 7 & 8 & 5 & 5 \\
+30\ev{ALG-DEGREE-N30} & 10 & 3 & 7 & 8 & 5 & 5 \\
+32\ev{ALG-DEGREE-N32} & 11 & 2 & 9 & 10 & 6 & -- \\
+34\ev{ALG-DEGREE-N34} & 11 & 4 & 7 & 8 & 5 & -- \\
+36\ev{ALG-DEGREE-N36} & 11 & 4 & 7 & 8 & 5 & -- \\
+38\ev{ALG-DEGREE-N38} & 12 & 2 & 10 & 11 & -- & -- \\
+40\ev{ALG-DEGREE-N40} & 12 & 3 & 9 & 10 & -- & -- \\
+42\ev{ALG-DEGREE-N42} & 13 & 4 & 9 & 10 & -- & -- \\
+44\ev{ALG-DEGREE-N44} & 14 & 3 & 11 & 12 & -- & -- \\
+46\ev{ALG-DEGREE-N46} & 14 & 4 & 10 & 11 & -- & -- \\
+48\ev{ALG-DEGREE-N48} & 15 & 5 & 10 & 11 & -- & -- \\
+50\ev{ALG-DEGREE-N50} & 15 & 4 & 11 & 12 & -- & -- \\
+52\ev{ALG-DEGREE-N52} & 15 & 3 & 12 & 13 & -- & -- \\
+54\ev{ALG-DEGREE-N54} & 16 & 5 & 11 & 12 & -- & -- \\
+56\ev{ALG-DEGREE-N56} & 16 & 3 & 13 & 14 & -- & -- \\
+58\ev{ALG-DEGREE-N58} & 16 & 4 & 12 & 13 & -- & -- \\
+60\ev{ALG-DEGREE-N60} & 17 & 6 & 11 & 12 & -- & -- \\
+\bottomrule\end{tabular}\end{center}
+Here $p=1000000007$; a dash denotes an absent measurement, not a bound.

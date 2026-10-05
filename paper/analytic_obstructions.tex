@@ -1,0 +1,60 @@
+\subsection{Existing finite-arithmetic obstruction groups}
+\label{app:analytic-obstructions}
+The following groups summarize existing negative declarations, support exclusions and retained correction terms. Each has its complete source hypotheses in the pinned Lean file and its recorded Judge credit in the electronic catalogue. The grouping is editorial; it introduces no new mathematical result.\ev{A-ARITHMETIC-OBSTRUCTIONS}
+\begin{center}\small
+\begin{tabular}{@{}p{0.19\textwidth}p{0.48\textwidth}p{0.25\textwidth}@{}}
+\toprule Group; status & Guarded statement & What it does not show\\\midrule
+Parity detector retains composites; Compiled Lean & Three distinct prime factors give oddWeight=1 while their product is composite; the explicit 101*103*107 example also has no prime factor at most 100.\ev{A-OBSTRUCTION-PARITY} & This concerns the defined parity detector, not every sieve or the Goldbach coefficient.\\
+Negative four-site block; Compiled Lean & The constructed closed four-site block is negative for every value of its displayed kernel parameter; the literal arithmetic block is negative as well.\ev{A-OBSTRUCTION-MULTIFIBRE} & It refutes positivity of that block, not all possible kernels or arithmetic correlations.\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small
+\begin{tabular}{@{}p{0.19\textwidth}p{0.48\textwidth}p{0.25\textwidth}@{}}
+\toprule Group; status & Guarded statement & What it does not show\\\midrule
+Independent affine forms cannot produce a nonzero constant; Compiled Lean & Over the source field, independent affine forms cannot have an identity f*R+g*S=N at every pair of arguments when N is nonzero. The rational and real specializations are recorded.\ev{A-OBSTRUCTION-AFFINE} & The result concerns a global identity for the specified two affine forms; it does not forbid identities restricted to an admissible arithmetic set.\\
+Expanded determinant signs vary; Compiled Lean & Two explicit expanded determinant tuples have opposite signs, +1 and -1.\ev{A-OBSTRUCTION-SIGN} & No global sign for all determinant-coordinate tuples follows from the common coordinate construction.\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small
+\begin{tabular}{@{}p{0.19\textwidth}p{0.48\textwidth}p{0.25\textwidth}@{}}
+\toprule Group; status & Guarded statement & What it does not show\\\midrule
+Composite-modulus completion retains a nonunit defect; Compiled Lean & The exact finite character completion splits into its unit-frequency term plus nonunitDefect; zero is a nonunit in a nontrivial ZMod ring. Even for functions supported on units, the recorded defect formula is (q-kappa)*the defined arithmetic moment.\ev{A-OBSTRUCTION-COMPLETION} & This records the correction term, not a claim that it is nonzero in every specialization.\\
+Separated Type-II arithmetic and prime weights have different scope; Compiled Lean & Under the complete source guards, the adversarial arithmetic sum equals density times omittedCount. Incorporating ell into the calibrated modulus makes the bilinear term zero; with the stated candidate front the prime-weight bilinear term is also zero. The normalized omitted-ratio lower bound retains all three front/density guards R4a,R4b,R4c.\ev{A-OBSTRUCTION-TYPEII} & An adversarial bounded arithmetic weight cannot be substituted for the actual prime weight; this does not refute a stronger weighted Type-II estimate.\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small
+\begin{tabular}{@{}p{0.19\textwidth}p{0.48\textwidth}p{0.25\textwidth}@{}}
+\toprule Group; status & Guarded statement & What it does not show\\\midrule
+Local collision factors remain in four-form bounds; Compiled Lean & The actual four-form and divided-form Euler lower bounds explicitly retain collisionLoss or switchCollisionLoss. Their truncated G bounds additionally retain ordering, coprimality, nonsaturation, logarithmic-cutoff and prime-log-sum hypotheses.\ev{A-OBSTRUCTION-COLLISION} & These are bounds with explicit factors and guards, not a proof that all collision losses must be large or prevent a sufficient estimate.\\
+Three-small-prime rank faces exclude the arithmetic mask; Compiled Lean & Under the stated distinct-prime, small-square and divisibility assumptions, the three-prime face has beta=0 and is outside the arithmetic mask. With front at least 529 and 1771 dividing the conductor-weighted argument, the canonical profile and both its prime and raw-weight summands are nonpositive. The principal rank-price expression is nonpositive when its mass is nonnegative and t>1.\ev{A-OBSTRUCTION-RANK} & The conclusion applies to these specified faces and canonical profiles; it does not prove a sign for the full reference gap.\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small
+\begin{tabular}{@{}p{0.19\textwidth}p{0.48\textwidth}p{0.25\textwidth}@{}}
+\toprule Group; status & Guarded statement & What it does not show\\\midrule
+Nonminimal prime-divisor switch terms are not positive; Compiled Lean & For the defined composite least-factor domain and its unit assumptions, switching on a prime divisor other than minFac gives a nonpositive odd-Bonferroni weight and a zero rough indicator.\ev{A-OBSTRUCTION-LEASTFACTOR} & The sign is for the displayed switched summands, not a universal estimate for the complete composite correction.\\
+Nonunit progression and resource support is excluded; Compiled Lean & On the specified admissible composite-progression domain, a nonunit modulus cannot satisfy the indicated congruence or divide the switched candidate; the corresponding prime progression sum vanishes. For an admissible ResourceCell, a divisor noncoprime to N cannot divide either resource, and a divisor containing the anchor cannot divide resource0.\ev{A-OBSTRUCTION-NONUNIT-SUPPORT} & These exact support exclusions do not supply the required aggregate error budget.\\
+\bottomrule\end{tabular}\end{center}
+\subsection{Saved finite falsifiers in the historical analytic corpus}
+The following are existing finite Judge verdicts, not freshly evaluated banks or unconditional source-onset theorems. The stated claim is the one refuted within its saved bank. Entries reporting only no counterexample in a window are excluded.\ev{A-FINITE-FALSIFIERS}
+\noindent Round 7 additionally records the original tuple $k=7$: the proposed two-axis twists vanish while the native centered row is $5/6$. This refutes that proposed connection at the recorded tuple only.\ev{A-FINITE-NATIVE-CONNECTION}
+\begin{center}\small
+\begin{tabular}{@{}p{0.09\textwidth}p{0.59\textwidth}p{0.23\textwidth}@{}}
+\toprule Round & Claim refuted in its saved finite bank & Existing Judge status\\\midrule
+14 & every admissible parent has a neighbor in H=2\ev{A-FINITE-FALSIFIER-14-coverage.ERROR_FALSIFIER.0} & \nolinkurl{REFUTED_NEW_ZERO_FULL_H_FAMILY}\\
+14 & the complete expanded fibre P\_all has universal coverage\ev{A-FINITE-FALSIFIER-14-coverage.ERROR_FALSIFIER.1} & \nolinkurl{REFUTED_NEW_ZERO_FRONT_PREFIX}\\
+14 & p-only shifts2,4,6 cover the complete CRT105 cut\ev{A-FINITE-FALSIFIER-14-complement.ERROR_FALSIFIER.0} & \nolinkurl{REFUTED_NEW_COMPLETE_C1_ZERO_CAPACITY}\\
+14 & H2 shifts on both large axes cover the complete mod35 cut\ev{A-FINITE-FALSIFIER-14-complement.ERROR_FALSIFIER.1} & \nolinkurl{REFUTED_NEW_COMPLETE_C2_ZERO_CAPACITY}\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small
+\begin{tabular}{@{}p{0.09\textwidth}p{0.59\textwidth}p{0.23\textwidth}@{}}
+\toprule Round & Claim refuted in its saved finite bank & Existing Judge status\\\midrule
+15 & replace the structural beta mask exactly by its unit density because d141 is small\ev{A-FINITE-FALSIFIER-15-incidence.ERROR_FALSIFIER.0} & \nolinkurl{REFUTED_NEW_COMPLETE_GAMMA_NONZERO}\\
+15 & count each cofactor label as distinct parent capacity\ev{A-FINITE-FALSIFIER-15-fusion.ERROR_FALSIFIER.0} & \nolinkurl{REFUTED_NEW_UNION_MULTIPLICITY}\\
+15 & all source-principal signs can be identified with the actual finite pair signs\ev{A-FINITE-FALSIFIER-15-fusion.ERROR_FALSIFIER.1} & \nolinkurl{REFUTED_NEW_REAL_PAIR_SIGN}\\
+15 & a six-distinct-unit-factor split with a large q>a can lie below N in this finite bank\ev{A-FINITE-FALSIFIER-15-fusion.ERROR_FALSIFIER.3} & \nolinkurl{REFUTED_NEW_RANK_MINIMUM}\\
+\bottomrule\end{tabular}\end{center}
+\begin{center}\small
+\begin{tabular}{@{}p{0.09\textwidth}p{0.59\textwidth}p{0.23\textwidth}@{}}
+\toprule Round & Claim refuted in its saved finite bank & Existing Judge status\\\midrule
+16 & the uniform unit reference is exactly centered for Type I at divisor3 of the candidate\ev{A-FINITE-FALSIFIER-16-typei.ERROR_FALSIFIER.0} & \nolinkurl{REFUTED_NEW_TYPEI3_NONZERO_DRIFT}\\
+16 & the observed least-prime capacity supplies enough once-only resources for the entire selected core family\ev{A-FINITE-FALSIFIER-16-capacity.ERROR_FALSIFIER.0} & \nolinkurl{REFUTED_NEW_FINITE_FULL_PRINCIPAL_DEFICIT}\\
+16 & erase Lambda(e) on all prime cores in the selected bracket\ev{A-FINITE-FALSIFIER-16-capacity.ERROR_FALSIFIER.1} & \nolinkurl{REFUTED_NEW_PRIME_CORE_LAMBDA_TERM}\\
+16 & reuse the same e3 arithmetic capacity for each positive core\ev{A-FINITE-FALSIFIER-16-capacity.ERROR_FALSIFIER.2} & \nolinkurl{REFUTED_NEW_RESOURCE_REUSE}\\
+\bottomrule\end{tabular}\end{center}

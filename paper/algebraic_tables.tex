@@ -1,0 +1,120 @@
+% Generated from existing artifacts; claim identifiers refer to algebraic_claims.json.
+\section{Algebraic certificate setting and family obstructions}
+\label{sec:algebraic}
+We record an auxiliary formalization in the ordinary polynomial ring
+$\mathbb Q[X_0,\ldots,X_N]$. Let $a_i$ be the prime indicator and retain
+the original ordered polynomial, including a square term at the midpoint,
+\[
+ g_N(X)=\sum_{i=0}^{N}X_iX_{N-i}.
+\]
+A supplied certificate has the literal form
+\[
+ 1=\sum_j A_jF_j+\sum_{i=0}^{N}U_i(X_i^2-X_i)+Bg_N.
+\]
+The compiled soundness theorem excludes a common zero of these actual
+generators. Applied to the prime point it still requires both the identity
+and genuine prime truth of the supplied family. It constructs neither.
+This is a certificate meta-theorem, not a proof of binary Goldbach
+\ev{ALG-SETUP}
+
+\subsection{Calibration and circularity}
+The pinned control $F_i=X_i-a_i$ has an identity exactly when the ordered
+prime count is positive. Its explicit multipliers have degree at most one;
+their ordinary multiplier--generator summands have degree at most two.
+These are different conventions. For the calibration $D_m$, consisting of
+Booleanity, nonprime zeros and total selected count $m\in\mathbb N$, the
+compiled C1 equivalence is
+\[
+ \exists x\;(D_m(x)\ \wedge\ g_N(x)=0)
+ \quad\Longleftrightarrow\quad m\leq\pi(N)-r(N),
+\]
+where $r(N)$ counts unordered prime representations, including a central
+loop. At $m=\pi(N)$ the family pins the prime vector. Thus exclusion of
+its pseudo-model is equivalent to positive prime representation count;
+it supplies a circular calibration control.\ev{ALG-C0-C1}
+
+\subsection{Family evidence and coordinate guards}
+Every original family has recorded Boolean pseudo-models at each mandatory
+test value $N\in\{30,60,100,200\}$. The first failure \emph{among that quartet}
+is therefore $30$. The ``first even'' column below has a different, explicit
+scope: even $N\geq4$, with every earlier even case covered by saved finite
+data. Its existing saved-data audit passed and its serialized result was
+reviewed before consolidation, but no scoped Judge/Trophy promotion was
+completed. Those entries are \textsc{Evidence}, not new formal credit.
+No statement about smaller or odd $N$ is implied.
+
+\begin{center}
+\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{.22\linewidth}p{.09\linewidth}p{.07\linewidth}p{.34\linewidth}p{.17\linewidth}@{}}
+\toprule
+Family & Uniform & First even & Coordinate guard & Models without $g$, $N=30$\\
+\midrule
+Coarse parity\ev{ALG-FAMILY-COARSE_PARITY} & Yes & $4$ & No additional prime-coordinate pin & $32768$ \\
+SIEVE only\ev{ALG-FAMILY-SIEVE_ONLY} & Yes & $4$ & Nonprime zeros; no prime-coordinate pin & $1024$ \\
+SIEVE + dyadic intervals\ev{ALG-FAMILY-SIEVE_DYADIC_BERTRAND} & Yes & $8$ & Direct $X_2-1$ pin & $144$ \\
+Full Bertrand coarse\ev{ALG-FAMILY-BERTRAND_COARSE} & Yes & $16$ & $m=1$ interval pins $X_2$ & $2605$ \\
+Full Bertrand SIEVE\ev{ALG-FAMILY-FULL_BERTRAND_SIEVE} & Yes & $20$ & $m=1$ interval pins $X_2$ & $40$ \\
+Bertrand SIEVE + factors\ev{ALG-FAMILY-FACTOR_COVERAGE_BERTRAND_SIEVE} & Yes & $20$ & $m=1$ $X_2$ pin; small-prime factor pins & $\geq2$ \\
+Proper Bertrand only, $m\geq2$\ev{ALG-FAMILY-PROPER_BERTRAND_ONLY} & Yes & $4$ & Every coordinate free in Lean & $1360168984$ \\
+
+\bottomrule
+\end{tabular}
+\end{center}
+All seven rows have closed-form constants and more than one Boolean model
+without $g$ at the quartet values; the displayed counts concern $N=30$ only.
+All seven fail at every quartet value. Whole-vector multiplicity does not
+excuse an equation that fixes a prime coordinate. The dyadic family explicitly
+contains $X_2-1$; the $m=1$ full Bertrand interval also fixes $X_2$.
+Proper-divisor coverage separately fixes small prime coordinates.
+The proper interval-only family starts at $m=2$, contains no coarse or SIEVE
+equations, and has compiled every-coordinate Boolean freedom. Its existing
+candidate credit stops at L5; no eligible family receives L6.
+\ev{ALG-COORDINATE-GUARDS}\ev{ALG-NO-ELIGIBLE-FAMILY}
+
+The calibration and the later density control have a different status:
+\begin{center}\small
+\begin{tabular}{@{}p{.21\linewidth}p{.09\linewidth}p{.20\linewidth}p{.20\linewidth}p{.19\linewidth}@{}}
+\toprule
+Control & Uniform & Coordinate status & Quartet status & First even $N\geq4$\\
+\midrule
+$D_{\pi(N)}$\ev{ALG-C0-C1} & No & Pins full prime vector & Exclusion iff $r(N)>0$ & Not a first-input survey\\
+Coprime-divisor density\ev{ALG-COPRIME-GATE} & Yes & Each coordinate free, all $N$ & Recorded UNSAT at all four & $4$, Boolean common zero\\
+\bottomrule
+\end{tabular}
+\end{center}
+The second control is rejected by its exact near-full-count classification;
+its quartet UNSAT records do not promote it to an eligible candidate.
+
+\subsection{Uniform and structural obstructions}
+The actual coarse/Bertrand and proper interval-only families have compiled
+rational Boolean common zeros with $g_N=0$ for every $N\geq24$.
+The coarse construction selects composite $9$; it must not be silently used
+as a SIEVE model. Prime-supported finite witnesses are separate.
+\ev{ALG-UNIFORM-BERTRAND}
+Proper-divisor coverage through $M\leq N^2$ is equivalent, over arbitrary
+rational points, to $X_p=1$ for the prime coordinates with $p^2\leq M$.
+The combined coarse/Bertrand family retains the explicit common zero under
+$N\geq24$ and $M\leq(\lfloor N/2\rfloor-3)^2$.\ev{ALG-FACTOR-HORIZON}
+Canonical rational equations whose coefficients all have one sign and which
+vanish at the prime point preserve every supplied prime-supported common
+zero. This statement does not cover arbitrary mixed-sign equations.
+\ev{ALG-SIGN-DEFINITE}
+
+The rational coprime-divisor family is exactly near-full prime selection:
+at most one prime coordinate may differ from one. Its literal quartet UNSAT
+data do not make it an eligible weaker family.\ev{ALG-COPRIME-GATE}
+The actual $k$-ary arithmetic
+ideal equals the prime $k$-subset ideal, and its arbitrary rational models
+have fewer than $k$ prime coordinates different from one. For every $k\geq2$
+the compiled $N=4$ Boolean common zero excludes a certificate for that exact
+class. It is not a counterexample to Goldbach.\ev{ALG-KARY-CLASSIFICATION}
+
+Finally, on the actual complement-pair Boolean cube, a literal-product
+family has a common zero when its exact total clause weight is strictly
+smaller than $2^{\dim\mathcal C_N}$, for even $N\geq6$.
+The formalized dimension is the actual finite cube-variable cardinality;
+no closed floor formula is substituted for it.\ev{ALG-LITERAL-CUBE}
+These statements exclude
+certificates for their declared classes and hypotheses only. They do not
+exclude the whole algebraic route. Exact theorem names and source hypotheses
+are catalogued in Appendix A.

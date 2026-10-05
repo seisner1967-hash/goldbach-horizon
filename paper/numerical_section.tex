@@ -1,0 +1,61 @@
+\section{The finite computation at $N=10^8$}
+\label{sec:numerical}
+
+The saved numerical verdict concerns one input,
+$N=100000000$, with transform length $K=134217728=2^{27}$ and
+scale $S=288230376151711744=2^{58}$. It records
+\status{EXACT\_NUMERICAL\_ARITHMETIC\_VALIDATED} for the equality of the
+five-modulus CRT reconstruction, the direct canonical A32 integer sum and
+the auxiliary B40 integer sum. The documentary numerical check is separate
+from the compiled finite-field identities in Section~\ref{sec:analytic}.
+It is not a fresh execution of the transform or the prime catalogue.
+\ev{A-NUMERICAL}
+
+\begin{center}
+\begin{tabular}{rr}
+\toprule Modulus & Saved residue\\\midrule
+2013265921 & 577099750\\
+2281701377 & 626366149\\
+3221225473 & 232952773\\
+3489660929 & 2618309304\\
+3892314113 & 2671748987\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The stored CRT product and reconstructed integer are, respectively,
+\begin{align*}
+ P_{\mathrm{CRT}}&=200988950952742247103310192629436327377560928257,\\
+ I_{10^8}&=14616354094337692277256326339388864358034646.
+\end{align*}
+The same integer is recorded for the direct A32 and B40 sums, with
+actual difference zero. The saved catalogue contains 5761455 prime
+records. The coefficient denominator is
+\[
+ S^2=83076749736557242056487941267521536.
+\]
+This denominator scales the quantized integer coefficient; the integer
+itself is not the real von Mangoldt coefficient.\ev{A-NUMERICAL}
+
+The saved logarithm-envelope numerators, over this denominator, are
+\begin{align*}
+ E_{\log}:&\quad1844674425817699235409551617,\\
+ 2E_{\log}:&\quad3689348851635398470819103234.
+\end{align*}
+Their recorded decimal values are approximately
+\begin{align*}
+ E_{\log}&\approx2.2204460714547736\cdot10^{-8},\\
+ 2E_{\log}&\approx4.4408921429095471\cdot10^{-8}.
+\end{align*}
+The joint radius is below $10^{-6}$. The real-coefficient enclosure theorem in
+\nolinkurl{QuantizedLambdaEnvelope22} applies to its mathematical
+canonical integer constructor. Connecting every native output to that
+constructor would require the native-program refinement that the verdict
+explicitly leaves unproved.\ev{A-NUMERICAL}\ev{A-LOG}
+
+The verdict also explicitly leaves B40 real-logarithm refinement and the
+Mellin coefficient-truncation chain unproved. It establishes neither the
+required signed $D_N$ estimate nor a Goldbach conclusion. In particular,
+this single coefficient computation is not a verification of every even
+integer up to $10^8$, and equality of two saved integer sums does not make
+either unproved analytic refinement automatic.\ev{A-NUMERICAL}

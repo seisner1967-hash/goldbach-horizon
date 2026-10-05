@@ -1,0 +1,681 @@
+{
+  "schema": 1,
+  "awarded_by": "A6 Judge",
+  "verified_proof_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+  "frozen_target_sha256": "4ab456c5219b897d87b28c338ff90f478332724c4a1499a7d63968811339a61c",
+  "verification_report_sha256": {
+    "judge/exact_audit_86eb34c.json": "cbc9b41fc699c31dacf64399dacf40e7affb5ce5c01a5e3237294d93c43cd001",
+    "judge/lean_audit_aefc034.json": "c55009d8d4ddc53e22cbab16ce2ca16359d8cec9f1d73b6eed9088105e16cad5",
+    "judge/additional_audit_aefc034.json": "21bd80e1315362c420333ab4786e97262e6b778eabbf6ba3a98c1ab85513b32c",
+    "judge/lower_bound_audit_6a05df1.json": "8ccb0cd84d4bb4216f0bc573d55c65c8622cdafd5bccbae3dbebbc95f05a6e8c",
+    "judge/lean_audit_cc91459.json": "c2fbc92eb6d39352bcac8ee6bde22a5e55db29648bb24d8d64481fdd7879d889",
+    "judge/axiom_coverage_audit_cc91459.json": "ddd641134b76b8a8eb2cf5ba8d94101d61582420e1e668298dabb72ae7077b6f",
+    "judge/extended_frozen_audit_cc91459.json": "6abfeb19b14da777acc5ddf25d9dfc6d6ea6b89da1aa083ac566a226c92f01b6",
+    "judge/additional_audit_cc91459.json": "3e0a33e875b2393fc16dac5f25ca8af187e1f962dd757fda18d38c8565a5ebb2",
+    "judge/factor_coverage_audit_0887aec.json": "4f5c910323264a6aa802f2cbce52824177c0ea8ced5d7fcfaf64a547edf30c03",
+    "judge/scope_review_98d5c25.json": "f6ad8d988349fafd0dc14d6f2006b5d2db62537b62b40ee24ca3883ca95203b5",
+    "judge/lean_audit_98d5c25.json": "f43af9d1a9960daf7d588a411fa03dd8d395996f8d9cefe8747bdb4ab8a41e4f",
+    "judge/axiom_coverage_audit_98d5c25.json": "d327cd0b81748b6d2682ab92c11bc56f1ff6bb6b331d69d4d9ef5176413a4594",
+    "judge/checkpoint_frozen_audit_98d5c25.json": "739098c7cd8f311cfd9ad5971be9561be20261010cc3c44b7e68049490132ea0",
+    "judge/additional_audit_98d5c25.json": "9e4738a41860f1af71f6f0c1fa72df0680b1d73522a89f1ac881c5584a45f7b9",
+    "judge/q_identity_replay_report.json": "ce21ee7dcd902cc6a3e669487c0d982eea1b0d35849ef1061ce0ef6b99978216",
+    "judge/lean_audit_21f199d.json": "48013e6ec632c6feb6e08760e129b2766d755d77c8b630f10446c53de5bb9e28",
+    "judge/axiom_coverage_audit_21f199d.json": "4c1a6eca3d5331d31fbdb932b691ab4e1371e65185145477cc886274a77d0a39",
+    "judge/proper_checkpoint_frozen_audit_21f199d.json": "79004d416774630bdbb01ba752589a8099fe1f8691685d10970a77550a1ae907",
+    "judge/proper_bertrand_audit_21f199d.json": "72fc646f97e8a319f6d8e7adc6694db11621e3bb001a18536e66c09f7b2cad6d",
+    "judge/prior_evidence_continuity_21f199d.json": "0eb7ac500c730862ffd334d2f46fa6e821702a9991c434d99e72ef690e04c2ea",
+    "judge/pc_trace_audit.json": "9f56df78ea8a13c5135ec03307c82a3535111e2679abf1be8d6f056ba8e53280",
+    "judge/lean_audit_d32e79d.json": "520aac2c5b6068546d1f134d07e75fba2baaf0ae8fa532f3dee704ec6516670d",
+    "judge/axiom_coverage_audit_d32e79d.json": "2e636b000e658246d34aafa755866729454b32a0dee62cbdb4caf92c0b4bff67",
+    "judge/sign_checkpoint_frozen_audit_d32e79d.json": "bd7c3e1a8459da6f1964cc78d6d9f3c7a1c9045644c3f5a37778d7eee2b79f06",
+    "judge/q_pc_provenance_audit_d32e79d.json": "01ce6b7ce727b4928ab1ee74d21b77c4f349cbd59387c6adec7ddb24802a096e",
+    "judge/q_pc_trace_audit_cf0f74c.json": "16d67260e759c2cd8322bcb5320c17d1c714b708daebc6f372545e02f981f46d",
+    "judge/sign_definite_audit_d32e79d.json": "59c3e5c2b15749f3ee8d54975e87efb1fdbf88220f0e4e089ef28959bd1181f0",
+    "judge/lean_audit_37ee03e.json": "7307e1cd2d20504b45fc489b2f5733d04d108f212dfd8efc6d782812837e74ea",
+    "judge/axiom_coverage_audit_37ee03e.json": "9be188034021ca80794862967b4da1e4f0e69f626e52c7c2e6c57fd06c284128",
+    "judge/frozen_coprime_audit_37ee03e.json": "d2ca6d631d778edd6b9ba90973e8496ea20eec62ae1c7b1327f0bb23530c8d55",
+    "judge/coprime_scope_audit_37ee03e.json": "2adafd6f4973d1b43a9111345b46513f6ad79c1adfeb76b32004bdca249ebbf9",
+    "judge/coprime_density_judge_audit_37ee03e.json": "2566ba29c92cdefe352862436a7506e003d4590fede9e93b221b1fe06d6aae4d",
+    "judge/lean_audit_ee09f12.json": "7e96cefdaea3e8e5639480b3c03c317c399a2e55c570135ecdec9f982722504a",
+    "judge/axiom_coverage_audit_ee09f12.json": "d2430d865a94cece81abdc21d7d68f9baea379dacb6f3b683c88d357a559a90e",
+    "judge/complete_frozen_header_audit_ee09f12.json": "ad0e6d41fd7a77e7a66aee2ae13814b4e50e377ffdbd4dd3a4df914b6f1ca6e8",
+    "judge/kary_continuity_scope_audit_ee09f12.json": "6f3a3cb62119b79c3981698a993bbc6663fa169eb69d8c3ef7e0a927179e8e4f",
+    "judge/lean_audit_231218a.json": "3876f4ab78db81446615b295b9583b6ab8503596196ec34d0858f6a31fda0424",
+    "judge/axiom_coverage_audit_231218a.json": "d2ba643f729bd978d8479eba4af18a653122413f10a6938f351b3f82a10724f1",
+    "judge/models_complete_header_audit_231218a.json": "af01a42e7e9de0ae719d596d1c3179d49e881f1cfb73c1c1a8bdf64c8e8bf971",
+    "judge/models_continuity_scope_audit_231218a.json": "1eedee33deb498b414d9c0d2e5dc2211083d9de45ba8505ef0321b68aed228d3",
+    "judge/lean_audit_3f4d742.json": "3411956c9b64fe17bd3f23728226a687412c578482e137ac0d587da8e051d443",
+    "judge/axiom_coverage_audit_3f4d742.json": "9b92450ff45e847b68a675f3062b90ded169f383dd266ae3413be20ff749e2a8",
+    "judge/countermodel_complete_header_audit_3f4d742.json": "1cc9b02240ab793236420d2a59ce486c0b4c9ef0d7a03b93a0cf70587dedb2b1",
+    "judge/countermodel_scope_audit_3f4d742.json": "54d9e31eef775dcc3d2b63edbfec4c06463560d07657422faa8cc0441d307ea9",
+    "judge/heap_increment_judge_audit_3f4d742.json": "378eb39714ad5308e8a217102b3d26f8d3238c7be073f3c17dfc78ac2b686e79",
+    "judge/lean_audit_eda1b01.json": "b2123c66aca14f3c742e5a0cc4df38bf0a839e9cb842e47abb82d72a107de690",
+    "judge/axiom_coverage_audit_eda1b01.json": "93f9e4d24abef6b6a8b5d8570035ecc32acc8e75197820e8c3eb83f9b88d2601",
+    "judge/pc_restriction_complete_header_audit_eda1b01.json": "769d18313b293d2b701c488bf9f233c4c7de5566080abe6a4f5488fa126242c2",
+    "judge/pc_restriction_dependency_audit_eda1b01.json": "7c5c888d7a441c53372b69ae8516c03ec1eec8aad05b1c790c4c3659655b420f",
+    "judge/pc_restriction_continuity_scope_audit_eda1b01.json": "071554793b7b8f348393ee01854e406dd389c7eac36bbaa3fc8ef35436afc18a",
+    "judge/pc_restriction_primary_source_review_eda1b01.json": "64a7506924bb674cd7e3ee94a13aec287ca198d52bf24481d045bf9910f8d13e",
+    "judge/groebner_continuity_audit_43b7b80.json": "2dfcf16a71459b77af54c8684020d97ad44afad4a11c137c32ff4846796c5c75",
+    "judge/groebner_preservation_scope_audit_43b7b80.json": "901cedd3629bc1ca54e5d69429b8257aea07d366000f8b0ec5302ec080976a63",
+    "judge/groebner_judge_audit_43b7b80.json": "2131a8fe4de16f95c7a9cc0be7eb84722c72810c3898df2e5913071d0b728079",
+    "judge/lean_audit_b6a2866.json": "c7edbd18b9018fdcaa07233dab2a78e341b85af40a4f343bb5c698d978e22986",
+    "judge/axiom_coverage_audit_b6a2866.json": "53551971ab11fa6441d3c10dc3bddaab6e445dc3364abc86438615dbe3d3d67e",
+    "judge/literal_cube_complete_header_audit_b6a2866.json": "cebc72f0d7d22c9ae9dd4f91a01815ac8ad8a65e3eccb75b1ff47f4765f3a3eb",
+    "judge/literal_cube_scope_dependency_audit_b6a2866.json": "cfc43bb89f3f8fdad8ba0634b0ab52322e8486d80eabeecfa4865fda48944dc8",
+    "judge/literal_cube_continuity_audit_b6a2866.json": "0dbe3fd180614be6186575210723956738efea583c64594e9c9a065de33af59d",
+    "judge/heap_36_38_judge_audit_b6a2866.json": "8085c53493f061f76583be9f0ac35f9526de962d8b2e166f98c2beffaff127bb",
+    "judge/deferred_recording_judge_audit_80d6893.json": "4cfdf08c56bb1c4abe2baeb7a61e9e1cb18ad83945592ecbe08203a941ce257c",
+    "judge/deferred_recording_continuity_80d6893.json": "879482128898d86991beaf9d5ce742c7f4db27ec7c357a308b7f3033dc418c01",
+    "judge/deferred_recording_provenance_scope_80d6893.json": "1464f280403353b0b8a995821c0b088f2f6d1f3a8720285f6cbedb54f5e04d4f",
+    "judge/lean_audit_4f8724d.json": "7ff4627dcbc0a49f740faf3346c736ae528e3007d1ef9ee50bfce75b58ab5a5c",
+    "judge/axiom_coverage_audit_4f8724d.json": "1af3bda2a7e7f9289e007614c46b7f09c806367da41396823282fe371231a409",
+    "judge/boolean_lattice_complete_header_audit_4f8724d.json": "78d54ba2669823160ab6218abdb3f2bd0f224c8169f8a235873929bbf26240e2",
+    "judge/boolean_lattice_scope_continuity_audit_4f8724d.json": "a4e65362cb8d141d71a86464a904e3e99614f8a745bd5aaf088d88e0b4f0523e",
+    "judge/lean_audit_d9a7e29.json": "a63992c7e73b8f6235f649a1a486cdd2c7fbd68302b53376633a61f25b89bb66",
+    "judge/axiom_coverage_audit_d9a7e29.json": "92a31fe3db85b2088b0a614b77f55855b705051f60efe05268b7ff77a122e640",
+    "judge/boolean_coefficients_complete_header_audit_d9a7e29.json": "1ef2cbace2ad48008460fc0fcfc080545bda646516765ee138d61055bd5f1f85",
+    "judge/boolean_coefficients_scope_continuity_audit_d9a7e29.json": "7f5e22ee0930ec1dcbbf3b2cfded3b25cb36b0d909f9a6377c25efce00968a31",
+    "judge/lean_audit_4eb47ec.json": "1a9c45eae735878c4a2e45b7d1c586f2c7d6ae8c02499e1230f79bc2a74554b5",
+    "judge/axiom_coverage_audit_4eb47ec.json": "a4b0be94cbea144d2250bf389ea856f40f1dc389fa3dc34ce484fea8baaec8c8",
+    "judge/boolean_coefficient_degree_complete_header_audit_4eb47ec.json": "32ca673501b4b30c8fae445b7804341488e4f7364fe89e86e0b226c8ef31aa55",
+    "judge/boolean_coefficient_degree_scope_continuity_audit_4eb47ec.json": "0f0e59f16d0725fdba4a3dde66a6befcb53416e5c951e7b58ed9f6f2487f4679",
+    "judge/count_elimination_judge_audit_74b17fa.json": "c6f85a22f3710998879d3f636c9396e972dc01fcd0e685c9fb8e23a0b4ec8d4d",
+    "judge/count_elimination_continuity_74b17fa.json": "48fd9281bade522b5a07aa3234cdf9e76d55c25f371ee6c99968d9de8b5e5675",
+    "judge/count_elimination_provenance_scope_74b17fa.json": "524ef423adf2ffb4547f29929ec9397a1ecab975225ecae39baa534926a0aa5d",
+    "judge/lean_audit_00616e7.json": "17905da565ac2ee45f0679c8b8f3d3eaacffb7ff8ab678ece909abe36a382150",
+    "judge/axiom_coverage_audit_00616e7.json": "4cb84b80e2b80c9cea6fb37a4744a346fec3a93301fe91cd59a76b4908ceeb46",
+    "judge/boolean_multiplier_rigidity_complete_header_audit_00616e7.json": "e4371250c487a3aed63f1d5a2f900886a2a09802a8b08e960dac1a67749caf10",
+    "judge/boolean_multiplier_rigidity_scope_continuity_audit_00616e7.json": "641afd9342a6fb4ece00b8fec85fb7217b30d8da8cf71e1a74a3269fa183ebcd",
+    "judge/lean_audit_09a6d29.json": "f6b9cf1d1547687aeedeb3e92e018e703715900b3e23403cd75a50c0dc58c521",
+    "judge/axiom_coverage_audit_09a6d29.json": "76f7aecde7c1e7bf071f0ce4b0a545a74980433872c106f756ee1f172709b987",
+    "judge/boolean_count_bridge_complete_header_audit_09a6d29.json": "d24654536d46419e941dea74ad7b0f05ff4903a81717c2d5646c7bcad9f4decb",
+    "judge/boolean_count_bridge_scope_continuity_audit_09a6d29.json": "df76e534a86f52064e6bba305b1e70ea43b8b571dfdc64cdfdfcdb5539cb2d4b",
+    "judge/recipe_compiler_judge_audit_d07dde0.json": "d0bfc67dbabc279f9a27e63427eed5417749f945a535bde54ff8cf97bade1a64",
+    "judge/recipe_compiler_continuity_d07dde0.json": "645c92a57d98946b792b9a0a08e90a9c9aacb9a379547adb68a90dd3424924db",
+    "judge/recipe_compiler_provenance_scope_d07dde0.json": "61bde15c3b68689c408d858369d05819e8b95fac53458b09c2f7b495cf7616d1",
+    "judge/lean_audit_875ab34.json": "d41850bb14c8e5d9e7093fd0f3ba49cb340f3c94cf7dbae927c8f828fc26e5f9",
+    "judge/axiom_coverage_audit_875ab34.json": "59a7197cb0e8410c5e3c21ecc9a98fedebebe95740b2b647a8dcbfc233b312b9",
+    "judge/boolean_annihilation_complete_header_audit_875ab34.json": "5a47c4792d8fa8470399ebd1647463a809f1787b370cfb5e74184e87f84be7ac",
+    "judge/boolean_annihilation_scope_continuity_audit_875ab34.json": "94b30b1559283c32f3a36f915d55fb61549addb69875e2c441cba3d433646739",
+    "judge/lean_audit_e5c4e11.json": "388081521a8caf3640677caa56b6c6faa1e3b9330f704fced9e7d86c20b02ba1",
+    "judge/axiom_coverage_audit_e5c4e11.json": "00bc0dacf4263cfe137d415f0afb074b90d2c9bedfc29230368983c4aed9b9db",
+    "judge/count_variable_commutation_complete_header_audit_e5c4e11.json": "c895b6407b8784c2e8d524074e7a0c2003032e8e5f68c10265561ad5bebf39fb",
+    "judge/count_variable_commutation_scope_continuity_audit_e5c4e11.json": "d6b01617bd575867d4d4b0f8aa1bfab5f9c320d588ef78c5e8a03c6197490ec7"
+  },
+  "WON": false,
+  "highest_rung": 5,
+  "credited": [
+    {
+      "rung": "L1",
+      "credit": "Fresh clone standard lake build rebuilt all credited modules and regenerated AXIOMS.md; pinned clean dependency sources; no project build artifacts inherited."
+    },
+    {
+      "rung": "L2",
+      "credit": "Actual finite MvPolynomial ring, Boolean/coarse constraints, g, field policy and certificate soundness; given cert and true-point zeros, positive rational Goldbach count."
+    },
+    {
+      "rung": "L3",
+      "credit": "Full C1 over Q with m:Nat, actual prime support, unordered representations including loops, primeCounting equivalence and full-count pinning."
+    },
+    {
+      "rung": "L4",
+      "family": "PROPER_BERTRAND_ONLY",
+      "credit": "Distinct actual Q polynomial family of intervals (m,2m] with m>=2 and2m<=N, only closed-form constants/indexing and no coarse/SIEVE equations. Entire Boolean family permits each coordinate value0 and1 at every N."
+    },
+    {
+      "rung": "L5",
+      "family": "PROPER_BERTRAND_ONLY",
+      "credit": "primePoint_family proves each actual family polynomial vanishes unconditionally at the true prime point, all N; prime Boolean truth is independently checked."
+    }
+  ],
+  "not_credited": {
+    "L6": "No eligible research family receives L6. ProperBertrand has SAT common zeros. CoprimeDivisor literally passes the quartet with independently verified full CNF/RUP proofs and every-bit freedom. Its exact strength is near-full prime counting, and section 4 rejects its promotion as a viable family.",
+    "L7": "D_pi(N) identities are rejected calibration-control evidence only, not certificates for a viable family.",
+    "L8": "No uniform identity for a viable family. For every fixed k>=2, the actual k-ary arithmetic density-control family has a formally verified N=4 Boolean/family/g common zero and no certificate. This excludes uniform L8 for this exact class only.",
+    "L9": "goldbach_binary is unproved and the immutable target file is not imported into auxiliary builds."
+  },
+  "signature_hash_checks": {
+    "AlgebraicGoldbach/LowerBound/BooleanLattice.lean": "1ababb31aa4a5c23701b7a3b62d249fb83e6680115124949c3eda2aa92c63dad",
+    "Frozen/BOOLEAN_LATTICE_STATEMENTS.md": "8d8458171fab1a1deb37e5dc04a037dd2bbb3283ae341404a3c4ccdbf8706a79",
+    "Frozen/BOOLEAN_LATTICE_STATEMENTS.sha256": "3e168a9094a5ec417b08438049f9ba27a7c5baa8b13751197249f82faf203743",
+    "Frozen/BertrandFamily_STATEMENTS.md": "bff2465bd8d21e991dc64688ceff5d7a3da479ddf225f2a522d96d59a2643a66",
+    "AlgebraicGoldbach/BertrandFamily.lean": "2adc9e058d7c7bcdb2f9114489c7990d21fb59f7b8c22027ee559481a26860ea",
+    "Frozen/C0_STATEMENTS.md": "38ae7f4274293987d2fde37fc154d8279a162abcfd28b07a703b0f57fd5ad9f5",
+    "Frozen/C1_STATEMENTS.md": "10f320504968a61fa5bbfa3f9863ceda1d6b415c7f60610c79f6825739e53e76",
+    "Frozen/COPRIME_DIVISOR_STATEMENTS.md": "5d702c68e42e52fe910a36c55c0d5f7e7dfb8a2d60b671e5d5cff1fdbf52c490",
+    "Frozen/FACTOR_HORIZON_STATEMENTS.md": "f05626e7ae21d7fb890bbae97454c38e6a35a9cd23d3a757c0c05e9f239bb473",
+    "Frozen/GROWTH_STATEMENTS.md": "82c89bc6d9983c7626875fb63010a2d97e23f1ac64f5b985ab8e36bba4e3a370",
+    "Frozen/KARY_COUNTERMODEL_STATEMENTS.md": "431c273ccd8fd08e3fc32e05044efb67e13b1b6f7e7f2aee7940bbe1a9830e06",
+    "Frozen/KARY_IDEAL_STATEMENTS.md": "50519ddaef945cb16f3a7e05f6cf205bef6cdd85055dd38c435fc78e60467112",
+    "Frozen/KARY_MODELS_STATEMENTS.md": "95e52154a00488395a21caff1a743e3f155ba19901bd520aabe0379721e4208b",
+    "Frozen/L2_STATEMENTS.md": "ea5b27f1c8041470a9e5764159a66c32655d0606487afabd8eb2eea1bc49d19e",
+    "Frozen/LITERAL_CUBE_STATEMENTS.md": "818fde1a025c73ff420ceb312700dd58db29be9ea3c646ab1d7cee5a7556d224",
+    "Frozen/LOWER_BOUND_STATEMENTS.md": "4974e677924e9efdc0dcc0de3a5501bba8b3ea9415dce11a5ae4f557433c83e4",
+    "Frozen/PC_RESTRICTION_STATEMENTS.md": "c89e593a6999acc4d8ccf1a68c3b1d22a60e9f49cb2e2a3383d3af5733b3cf03",
+    "Frozen/PROPER_BERTRAND_STATEMENTS.md": "2714524136c7b560e11415a34b8b7ca1cf1ba7c2e42fe924f42ca68c1cad42b1",
+    "Frozen/SIGN_DEFINITE_STATEMENTS.md": "df539fa2811743bd16675bc1bfcf01afdd2e635e7ddbaa121e69c327140e4c4d",
+    "Frozen/UNIFORM_STATEMENTS.md": "466f8d1dc8ee61517501fa51c0e554eb61819061cc14c4ab798b80865e80fb1b",
+    "AlgebraicGoldbach/LowerBound/BooleanCoefficients.lean": "75eef96c3063d40b761d24212535c9d4445bc318ddb31d759a8dc98f4905fe06",
+    "Frozen/BOOLEAN_COEFFICIENTS_STATEMENTS.md": "a0d7df27dc3b29141446327f446950aec8063bed8176d7de5d22723d560ba936",
+    "Frozen/BOOLEAN_COEFFICIENTS_STATEMENTS.sha256": "d4008b664be444e5708fa81b8111f483ff23361f13f95de7d18fac41565f5737",
+    "AlgebraicGoldbach/LowerBound/BooleanCoefficientDegree.lean": "4010f0ebf76e1a02c6f0a000935b6c2e1a095fee52a301174825f9c3609345f7",
+    "Frozen/BOOLEAN_COEFFICIENT_DEGREE_STATEMENTS.md": "29fef27747b6cfafb8d1adccbc05e156aad32eb17e3d2595449692ad3518ec87",
+    "Frozen/BOOLEAN_COEFFICIENT_DEGREE_STATEMENTS.sha256": "58d1b082009dcd957aa9d87748dc86745b91dda98c8a6704e5dbfdb861ba268b",
+    "AlgebraicGoldbach/LowerBound/BooleanMultiplierRigidity.lean": "ffd9df07ade4711da8ccd866b97c3f9752993102fa3e4c2e2f1d245d5adba571",
+    "Frozen/BOOLEAN_MULTIPLIER_RIGIDITY_STATEMENTS.md": "73085114156d0e29f10a8bec2aa74eb650412c800c689c5709369b71da22848c",
+    "Frozen/BOOLEAN_MULTIPLIER_RIGIDITY_STATEMENTS.sha256": "a7a8ca8aad93f3da2b00da5601a207dc844d6bab73b2ebfda0af0d3bf5ab9444",
+    "AlgebraicGoldbach/LowerBound/BooleanCountBridge.lean": "18168233d90481e99d3bda3fb39edb46c23cb66450827acefc10570ae9b811b8",
+    "Frozen/BOOLEAN_COUNT_BRIDGE_STATEMENTS.md": "4a0ffb8e347f997e92ac1d3d3ee37e486ef4d218957be8da1b9a842ce975df29",
+    "Frozen/BOOLEAN_COUNT_BRIDGE_STATEMENTS.sha256": "df57492fb0ae33f0e61e8d859a0fb286e8e84e95ab06428fc3efe19974b50d7b",
+    "AlgebraicGoldbach/LowerBound/BooleanAnnihilation.lean": "1798f2383c6b87980e94aff4b4fde9798073431913a35e87b130b348e7fef1b7",
+    "Frozen/BOOLEAN_ANNIHILATION_STATEMENTS.md": "5aed5be89701a0299e5c508d259dc447b1e2dbe9372b85d68ef86ec85f101673",
+    "Frozen/BOOLEAN_ANNIHILATION_STATEMENTS.sha256": "692b6eb5c5c911147752763c2c524ee14cf19107c07b06a20e83b3b4d8156329",
+    "AlgebraicGoldbach/LowerBound/CountVariableCommutation.lean": "44055a0a8f0c3201e05123e2d440c7b6105135e40f6826769891418ffe1eebb9",
+    "Frozen/COUNT_VARIABLE_COMMUTATION_STATEMENTS.md": "bfdb550593de1cc386dad9516e1a03fed77a71b689ecd5348fc45f2ba28d78a4",
+    "Frozen/COUNT_VARIABLE_COMMUTATION_STATEMENTS.sha256": "385e42f45cf3bcdf18dd4c5f91012dd8a06b9fe4560ec68552c2b657ec3a6373"
+  },
+  "all_project_axiom_entries_checked": 233,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "previous_verified_proof_commits": [
+    "00616e79c1b19baf87d235a849ab2cea7d09295e",
+    "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "21f199db39d3049d8515432982b323f900168956",
+    "231218a03095a20ca6b2031fbce0abd2c7765339",
+    "37ee03e4bdbeaf184f33275c9745d3552ae22e27",
+    "3f4d74269511a6b5355cf83ac219c0026ca7a75f",
+    "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "4f8724d52b5e12b2a1b9d6ef63865b6c1e5a7978",
+    "875ab3489f6116ec56449f4f62a6d2e84b42cb78",
+    "98d5c25d3701755f88e8f4c2aded033bc1ada23b",
+    "aefc034f4dcb5b646ec99f334da3f2d6e9d26ef3",
+    "b6a2866aa60a99e9d1b19885b9783fced2cf4e41",
+    "cc91459b49b66742583bc4937f108e53381b42c6",
+    "d32e79d6bc0a10582afcff967a3c957636eb94c0",
+    "d9a7e29102357eeac23460fa7e7ac87a067b5c14",
+    "eda1b010c79dcc69cf30ce6da37d88d3b6b37204",
+    "ee09f12f6d66f8c1f23954bb8c6b17036df391f0"
+  ],
+  "additional_verified_calibration_modules": [
+    "Calibration.LowerBound (Q only)",
+    "Calibration.Growth (Q D_pi only)",
+    "AlgebraicGoldbach.PinnedControl (circular conditional C0 control)",
+    "Calibration.PCRestriction (ordinary Q derivation restriction; explicit external-premise lower corollary only)"
+  ],
+  "direct_pinning_guard_review": {
+    "guard": "Mission section9 rejects any family polynomial that directly pins a prime coordinate. Explicitly allowed coarse coordinates remain the section3 exception.",
+    "finding": "For every N>=2, m=1 is a BertrandIndex and its window is {2}, giving the literal polynomial 1-X_2. Therefore BERTRAND_COARSE fails the mandatory direct-coordinate guard.",
+    "gate_ii_does_not_override_guard": true,
+    "previous_judge_credit_error": "Earlier L4/L5 credit overlooked the direct m=1 pin.",
+    "action": "Retract L4/L5 at this checkpoint; retain valid prime-truth and countermodel theorems only as information results. A proper subfamily needs its own frozen actual polynomial statement and fresh verification."
+  },
+  "additional_verified_information_modules": [
+    "AlgebraicGoldbach.FactorCoverage (Q class only; guard-rejected)",
+    "AlgebraicGoldbach.ProperBertrand (Q actual family; uniform countermodel)",
+    "AlgebraicGoldbach.SignDefinite (Q canonical-coefficient class; conditional transfer of existing prime-supported common zeros)",
+    "AlgebraicGoldbach.CoprimeDivisor (Q exact near-full prime-density classifier; rejected density control only)",
+    "AlgebraicGoldbach.CoprimeKaryIdeal (exact ordinary Q ideal reduction of k-ary arithmetic density controls)",
+    "AlgebraicGoldbach.CoprimeKaryModels (unrestricted Q point classification for k-ary arithmetic density controls)",
+    "AlgebraicGoldbach.CoprimeKaryCountermodel (Q N=4 exclusion for every fixed k>=2; rejected density-control class only)",
+    "AlgebraicGoldbach.LiteralCube (Q literal-product covering class common zero; exact finite-cardinality dimension only)"
+  ],
+  "proper_family_guard_review": "Distinct actual family m>=2; all windows have at least two coordinates. The whole-family Boolean coordinate-freedom theorem supplies each coordinate value0 and1 for every N. Direct or indirect coordinate pins are excluded; no prime-case certificate or prime-count constant is used.",
+  "old_full_bertrand_family_guard_rejection_retained": true,
+  "verified_evidence_commit": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+  "coprime_density_guard_review": {
+    "classification": "REJECTED_DENSITY_CALIBRATION",
+    "candidate_L4_L5_credit": false,
+    "literal_quartet_gate_status": "PASS: all four full CNFs independently reconstructed; three literal RUP additions each independently verified. Every-bit and second Boolean models withoutg, exact counts and uniform syntax checked. Section4 eligibility still fails.",
+    "eligible_viable_family_L6": false,
+    "reason": "Its exact strength is near-full prime selection. Every-bit freedom and closed arithmetic constants do not satisfy the explicit section4 demand for strength other than prime counting. Record the formal truth/freedom and literal gates as control information without promoting the candidate ladder.",
+    "highest_rung_retained": 5,
+    "highest_family_retained": "PROPER_BERTRAND_ONLY",
+    "uniform_L8": "Excluded for this exact family: independently reconstructedN4 Boolean/family/g common zero supported on{3}. No route-wide conclusion.",
+    "not_inferred": [
+      "whole-route impossibility",
+      "Goldbach",
+      "uniform all-N quartet UNSAT",
+      "multipliers",
+      "arbitrary-field classification",
+      "nonBoolean pseudo iff r<=1"
+    ]
+  },
+  "complete_frozen_header_review": {
+    "complete_headers_independently_checked": 204,
+    "prior_complete_headers_unchanged": 203,
+    "prior_catalogues_and_ledgers_byte_identical": 22,
+    "new_literal_cube_catalogue_complete_headers": 17,
+    "nested_named_argument_preserved": "leastFactor (N := N)",
+    "historical_draft": "One malformed uncredited ideal header remains archived and rejected; all corrected prior catalogues unchanged.",
+    "new_boolean_lattice_catalogue_complete_headers": 11,
+    "independent_section_binder_closure": "{σ : Type*} [Fintype σ] [DecidableEq σ]",
+    "new_boolean_coefficients_catalogue_complete_headers": 4,
+    "boolean_coefficients_helper_section_binder_closure": "{σ : Type*} [DecidableEq σ]",
+    "boolean_coefficients_main_explicit_shadowing_without_duplicate_binders": true,
+    "new_boolean_coefficient_degree_catalogue_complete_headers": 2,
+    "boolean_coefficient_degree_every_context_binder_explicit": true,
+    "new_boolean_multiplier_rigidity_catalogue_complete_headers": 2,
+    "boolean_multiplier_rigidity_every_context_binder_explicit": true,
+    "new_boolean_count_bridge_catalogue_complete_headers": 1,
+    "boolean_count_bridge_every_context_binder_explicit": true,
+    "new_boolean_annihilation_catalogue_complete_headers": 1,
+    "boolean_annihilation_every_context_binder_explicit": true,
+    "new_count_variable_commutation_catalogue_complete_headers": 1,
+    "count_variable_commutation_every_context_binder_explicit": true
+  },
+  "separately_verified_instance_axioms": {
+    "name": "AlgebraicGoldbach.CoprimeKaryCountermodel.arithmeticIndexFintype",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "input_sha256": "d22cf07e168c6ef1d72f3b184f35d3c7fa96b085143baeec6dd859cf05642172",
+    "output_sha256": "82d7329cb8427ecb55b26c966495a4fbac96e1ac8eccb550fbb9ca2eb2f5e7c2"
+  },
+  "separately_verified_PC_definition_and_constructor_axioms": {
+    "definitions_or_inductive_types": [
+      "AlgebraicGoldbach.PCRestriction.Derives",
+      "AlgebraicGoldbach.PCRestriction.dpiGenerators",
+      "AlgebraicGoldbach.PCRestriction.knapsackCount",
+      "AlgebraicGoldbach.PCRestriction.knapsackGenerators",
+      "AlgebraicGoldbach.PCRestriction.Refutation",
+      "AlgebraicGoldbach.PCRestriction.KnapsackLowerBound"
+    ],
+    "constructors": [
+      "AlgebraicGoldbach.PCRestriction.Derives.input",
+      "AlgebraicGoldbach.PCRestriction.Derives.linear",
+      "AlgebraicGoldbach.PCRestriction.Derives.mulVar"
+    ],
+    "axiom_entries": {
+      "AlgebraicGoldbach.PCRestriction.Derives": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.Derives.input": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.Derives.linear": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.Derives.mulVar": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.dpiGenerators": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.knapsackCount": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.knapsackGenerators": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.Refutation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.PCRestriction.KnapsackLowerBound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "axiom_input_sha256": "d1945fb9f5e0f09b9a4ee60e68258c415c37517f44f65c486cb86a801b83f2fa",
+    "axiom_output_sha256": "bcd5f3cf63b3adebe7d37df5753c839c395b2f8beb2ab9d243359a713011cda0"
+  },
+  "previous_verified_evidence_commits": [
+    "43b7b80d02afaff5f4fffcb4d20efd54fa81c4a9",
+    "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "b6a2866aa60a99e9d1b19885b9783fced2cf4e41",
+    "eda1b010c79dcc69cf30ce6da37d88d3b6b37204"
+  ],
+  "proof_source_continuity_verified_at_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+  "proof_build_inherited_from_commit": null,
+  "fresh_Lean_build_performed_at_evidence_commit": false,
+  "deferred_recording_continuity": {
+    "report": "judge/deferred_recording_continuity_80d6893.json",
+    "report_sha256": "879482128898d86991beaf9d5ce742c7f4db27ec7c357a308b7f3033dc418c01",
+    "prior_raw_Git_and_clone_paths_identical": 531,
+    "prior_unique_report_hashes_unchanged": 60,
+    "new_mathematical_sources_at_this_checkpoint": false,
+    "old_matrices_gates_PC_or_GB_reexecuted": false,
+    "old_Q_Fp_NS_minima_Q_PC_R4_and_viable_rungs_unchanged": true
+  },
+  "fresh_Lean_build_performed_at_proof_commit": true,
+  "evidence_verification_inherited_from_commit": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+  "boolean_lattice_fresh_audit": {
+    "proof_source_commit": "4f8724d52b5e12b2a1b9d6ef63865b6c1e5a7978",
+    "numerical_source_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 222,
+    "complete_frozen_signatures": 193,
+    "imported_modules": 19,
+    "catalogues": 17,
+    "prior_211_command_prefix_and_32_freeze_files_preserved": true,
+    "new_11_complete_headers_with_independent_section_closure_and_actual_types": true,
+    "new_16_direct_axiom_entries": {
+      "AlgebraicGoldbach.BooleanLattice.up": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.down": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.raiseAt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.lowerAt": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.toggle": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.toggle_involutive": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.up_eq_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.down_eq_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.raiseAt_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.lowerAt_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.coordinate_adjoint": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.coordinate_commute": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.coordinate_diagonal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.adjoint": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.commutator": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.up_injective_below_middle": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_axiom_input_sha256": "9e636d215bb49f9b9b83060f7c38346dac2029d85efceba57f29dfa7843172d3",
+    "new_axiom_output_sha256": "605839fe790428af87a942c2ce0a79c8542ba3c519f160e667525e3bcfb0985c",
+    "fresh_build_log_sha256": "d38c07921bdca4ee1fc1f5b450315c37fae11f2a35a787bdb706762d34f5a08f",
+    "project_build_outputs_inherited": false,
+    "old_63_reports_and_212_numeric_inputs_inherited_without_reexecution": true,
+    "unreviewed_later_N38_inputs_or_claims_credited": false
+  },
+  "boolean_coefficients_fresh_audit": {
+    "proof_source_commit": "d9a7e29102357eeac23460fa7e7ac87a067b5c14",
+    "numerical_source_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 226,
+    "complete_frozen_signatures": 197,
+    "imported_modules": 20,
+    "catalogues": 18,
+    "prior_222_command_prefix_and_34_freeze_files_preserved": true,
+    "new_4_complete_headers_with_independent_helper_section_closure_and_explicit_main_shadowing": true,
+    "new_7_direct_axiom_entries": {
+      "AlgebraicGoldbach.BooleanCoefficients.coefficientAtom": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.bitMul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.support_single_one_add": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficientAtom_single_one_add": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients_monomial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients_X_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_axiom_input_sha256": "72b4de4383c82185a8617dabb2f06ec1ee7aa5cd7b8f54321796356a445d4141",
+    "new_axiom_output_sha256": "e9f3347bab0f8c94ed0cd5672027f715f840ad98b763658ecfbe3d167794f74f",
+    "fresh_build_log_sha256": "996e8ef4aca2e52c0cc7e513239ce942bc668e85f0df96e515e0f3554e20f9aa",
+    "project_build_outputs_inherited": false,
+    "old_67_reports_and_212_numeric_inputs_inherited_without_reexecution": true,
+    "later_N38_timeout_or_unreviewed_retry_credited": false
+  },
+  "boolean_coefficient_degree_fresh_audit": {
+    "proof_source_commit": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "numerical_source_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 228,
+    "complete_frozen_signatures": 199,
+    "imported_modules": 21,
+    "catalogues": 19,
+    "prior_226_command_prefix_and_36_freeze_files_preserved": true,
+    "new_2_complete_headers_every_binder_explicit": true,
+    "new_2_direct_axiom_entries": {
+      "AlgebraicGoldbach.BooleanCoefficients.support_card_le_exponent_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients_eq_zero_of_totalDegree_lt_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_axiom_input_sha256": "683c0d1911a8268edbc21a40ba375c781404d8edbe9a14ec2d0bf879e14d502a",
+    "new_axiom_output_sha256": "bc37b5a93d409788dc90dbe036649d6f575dddaf872185d2758dabb86e4d2ed0",
+    "fresh_build_log_sha256": "1e6a798f8846c3f3b89cacf5f57e50648d19bbf87b565ffb59626c1e2644c166",
+    "project_build_outputs_inherited": false,
+    "old_71_reports_and_212_numeric_inputs_inherited_without_reexecution": true,
+    "later_N38_timeout_count_elimination_or_unreviewed_retry_credited": false
+  },
+  "count_elimination_partial_method_audit": {
+    "method_evidence_commit": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "scope": "only complete N10/N16 ordinary method witnesses; N30 censored",
+    "old_numeric_verification_inherited_without_reexecution_at": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "accepted_proof_verification_inherited_without_rebuild_at": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "new_math_lemma_or_fresh_Lean_build": false,
+    "reports": {
+      "judge/count_elimination_judge_audit_74b17fa.json": "c6f85a22f3710998879d3f636c9396e972dc01fcd0e685c9fb8e23a0b4ec8d4d",
+      "judge/count_elimination_continuity_74b17fa.json": "48fd9281bade522b5a07aa3234cdf9e76d55c25f371ee6c99968d9de8b5e5675",
+      "judge/count_elimination_provenance_scope_74b17fa.json": "524ef423adf2ffb4547f29929ec9397a1ecab975225ecae39baa534926a0aa5d"
+    },
+    "registered_unique_reports": 78,
+    "total_report_references_across_two_Trophies": 156,
+    "old_numeric_current_raw_scope": "208 raw=immutable Git; four named raw!=Git exact LF-to-CRLF forward reconstruction only",
+    "current_lake_manifest_raw_scope": {
+      "path": "lake-manifest.json",
+      "current_raw_equals_Git": false,
+      "current_raw_sha256": "f862cd2270d11a39e2f2be6945654e14e0c99752457b4414c4ba817740a37705",
+      "immutable_Git_LF_sha256": "0a359781a08327f02d4a89017abcfa38d26807ee851577c1a0272e18a0c4df99",
+      "exact_immutable_LF_to_current_CRLF_reconstruction": true,
+      "historical_filesystem_equality_inferred": false
+    },
+    "initial_overstrict_audit_stop_unaccepted": "judge/count_elimination_initial_scope_stop_74b17fa.json",
+    "initial_overstrict_audit_stop_sha256": "994086d5a6b612734b052d02a2895750a56a09a008b06640c50d92993d1960bc"
+  },
+  "boolean_multiplier_rigidity_fresh_audit": {
+    "proof_source_commit": "00616e79c1b19baf87d235a849ab2cea7d09295e",
+    "numerical_source_commit_retained": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 230,
+    "complete_frozen_signatures": 201,
+    "imported_modules": 22,
+    "catalogues": 20,
+    "old228_command_prefix_and38_old_freeze_files_preserved": true,
+    "new_two_complete_actual_headers_and_actual_countMul_definition_and_three_axiom_prints": true,
+    "fresh_default_lake_build_seconds": 142.867383,
+    "fresh_dependency_cache_only_from_proof_commit": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "all78_previous_registered_reports_preserved": true,
+    "all22_method_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "current_lake_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_00616e7.json": "17905da565ac2ee45f0679c8b8f3d3eaacffb7ff8ab678ece909abe36a382150",
+      "judge/axiom_coverage_audit_00616e7.json": "4cb84b80e2b80c9cea6fb37a4744a346fec3a93301fe91cd59a76b4908ceeb46",
+      "judge/boolean_multiplier_rigidity_complete_header_audit_00616e7.json": "e4371250c487a3aed63f1d5a2f900886a2a09802a8b08e960dac1a67749caf10",
+      "judge/boolean_multiplier_rigidity_scope_continuity_audit_00616e7.json": "641afd9342a6fb4ece00b8fec85fb7217b30d8da8cf71e1a74a3269fa183ebcd"
+    }
+  },
+  "boolean_count_bridge_fresh_audit": {
+    "proof_source_commit": "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "numerical_source_commit_retained": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 231,
+    "complete_frozen_signatures": 202,
+    "imported_modules": 23,
+    "catalogues": 21,
+    "old230_command_prefix_and40_old_freeze_files_preserved": true,
+    "one_complete_actual_bridge_header_zero_definitions_helpers_one_axiom_print": true,
+    "fresh_default_lake_build_seconds": 143.633455,
+    "fresh_dependency_cache_only_from_proof_commit": "00616e79c1b19baf87d235a849ab2cea7d09295e",
+    "all82_previous_registered_reports_preserved": true,
+    "all22_method_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "current_lake_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_09a6d29.json": "f6b9cf1d1547687aeedeb3e92e018e703715900b3e23403cd75a50c0dc58c521",
+      "judge/axiom_coverage_audit_09a6d29.json": "76f7aecde7c1e7bf071f0ce4b0a545a74980433872c106f756ee1f172709b987",
+      "judge/boolean_count_bridge_complete_header_audit_09a6d29.json": "d24654536d46419e941dea74ad7b0f05ff4903a81717c2d5646c7bcad9f4decb",
+      "judge/boolean_count_bridge_scope_continuity_audit_09a6d29.json": "df76e534a86f52064e6bba305b1e70ea43b8b571dfdc64cdfdfcdb5539cb2d4b"
+    }
+  },
+  "recipe_compiler_method_fresh_audit": {
+    "scope": "three complete fixed Fp saved pairs, duplicate known degrees and constructive macro sizes only",
+    "source_commit": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+    "accepted_proof_verification_inherited_without_rebuild_at": "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "old_numeric_math_inherited_without_reexecution_at": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "old_partial74_method_and_censored_N30_scope_retained": true,
+    "reports": {
+      "judge/recipe_compiler_judge_audit_d07dde0.json": "d0bfc67dbabc279f9a27e63427eed5417749f945a535bde54ff8cf97bade1a64",
+      "judge/recipe_compiler_continuity_d07dde0.json": "645c92a57d98946b792b9a0a08e90a9c9aacb9a379547adb68a90dd3424924db",
+      "judge/recipe_compiler_provenance_scope_d07dde0.json": "61bde15c3b68689c408d858369d05819e8b95fac53458b09c2f7b495cf7616d1"
+    },
+    "registered_unique_reports": 89,
+    "total_report_references_across_two_Trophies": 178,
+    "new_mathematics_Lean_build_curve_or_Goldbach_claim": false
+  },
+  "boolean_annihilation_fresh_audit": {
+    "proof_source_commit": "875ab3489f6116ec56449f4f62a6d2e84b42cb78",
+    "numerical_source_commit_retained": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 232,
+    "complete_frozen_signatures": 203,
+    "imported_modules": 24,
+    "catalogues": 22,
+    "old231_command_prefix_and42_old_freeze_files_preserved": true,
+    "one_complete_actual_annihilation_header_zero_public_definitions_helpers_one_axiom_print": true,
+    "fresh_default_lake_build_seconds": 146.463015,
+    "fresh_dependency_cache_only_from_proof_commit": "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "all89_previous_registered_reports_preserved": true,
+    "all22_partial_and28_recipe_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "current_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "historical_recipe_audit_and_all_old_R1_R2_R3_R4_scopes_retained": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_875ab34.json": "d41850bb14c8e5d9e7093fd0f3ba49cb340f3c94cf7dbae927c8f828fc26e5f9",
+      "judge/axiom_coverage_audit_875ab34.json": "59a7197cb0e8410c5e3c21ecc9a98fedebebe95740b2b647a8dcbfc233b312b9",
+      "judge/boolean_annihilation_complete_header_audit_875ab34.json": "5a47c4792d8fa8470399ebd1647463a809f1787b370cfb5e74184e87f84be7ac",
+      "judge/boolean_annihilation_scope_continuity_audit_875ab34.json": "94b30b1559283c32f3a36f915d55fb61549addb69875e2c441cba3d433646739"
+    }
+  },
+  "count_variable_commutation_fresh_audit": {
+    "proof_source_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+    "numerical_source_commit_retained": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 233,
+    "complete_frozen_signatures": 204,
+    "imported_modules": 25,
+    "catalogues": 23,
+    "old232_command_prefix_and44_old_freeze_files_preserved": true,
+    "one_complete_actual_commutation_header_zero_public_definitions_helpers_one_axiom_print": true,
+    "fresh_default_lake_build_seconds": 146.251355,
+    "fresh_dependency_cache_only_from_proof_commit": "875ab3489f6116ec56449f4f62a6d2e84b42cb78",
+    "all93_previous_registered_reports_preserved": true,
+    "all22_partial_and28_recipe_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "all609_leaf605_A5_and61_selected60_rootpresent_one_leafonly_current_bindings_rebound": true,
+    "current_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "historical_recipe_and_annihilation_audits_all_old_R1_R2_R3_R4_scopes_retained": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_e5c4e11.json": "388081521a8caf3640677caa56b6c6faa1e3b9330f704fced9e7d86c20b02ba1",
+      "judge/axiom_coverage_audit_e5c4e11.json": "00bc0dacf4263cfe137d415f0afb074b90d2c9bedfc29230368983c4aed9b9db",
+      "judge/count_variable_commutation_complete_header_audit_e5c4e11.json": "c895b6407b8784c2e8d524074e7a0c2003032e8e5f68c10265561ad5bebf39fb",
+      "judge/count_variable_commutation_scope_continuity_audit_e5c4e11.json": "d6b01617bd575867d4d4b0f8aa1bfab5f9c320d588ef78c5e8a03c6197490ec7"
+    }
+  }
+}

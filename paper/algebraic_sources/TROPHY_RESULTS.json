@@ -1,0 +1,3878 @@
+{
+  "schema": 1,
+  "awarded_by": "A6 Judge",
+  "verified_proof_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+  "frozen_target_sha256": "4ab456c5219b897d87b28c338ff90f478332724c4a1499a7d63968811339a61c",
+  "verification_report_sha256": {
+    "judge/exact_audit_86eb34c.json": "cbc9b41fc699c31dacf64399dacf40e7affb5ce5c01a5e3237294d93c43cd001",
+    "judge/lean_audit_aefc034.json": "c55009d8d4ddc53e22cbab16ce2ca16359d8cec9f1d73b6eed9088105e16cad5",
+    "judge/additional_audit_aefc034.json": "21bd80e1315362c420333ab4786e97262e6b778eabbf6ba3a98c1ab85513b32c",
+    "judge/lower_bound_audit_6a05df1.json": "8ccb0cd84d4bb4216f0bc573d55c65c8622cdafd5bccbae3dbebbc95f05a6e8c",
+    "judge/lean_audit_cc91459.json": "c2fbc92eb6d39352bcac8ee6bde22a5e55db29648bb24d8d64481fdd7879d889",
+    "judge/axiom_coverage_audit_cc91459.json": "ddd641134b76b8a8eb2cf5ba8d94101d61582420e1e668298dabb72ae7077b6f",
+    "judge/extended_frozen_audit_cc91459.json": "6abfeb19b14da777acc5ddf25d9dfc6d6ea6b89da1aa083ac566a226c92f01b6",
+    "judge/additional_audit_cc91459.json": "3e0a33e875b2393fc16dac5f25ca8af187e1f962dd757fda18d38c8565a5ebb2",
+    "judge/factor_coverage_audit_0887aec.json": "4f5c910323264a6aa802f2cbce52824177c0ea8ced5d7fcfaf64a547edf30c03",
+    "judge/scope_review_98d5c25.json": "f6ad8d988349fafd0dc14d6f2006b5d2db62537b62b40ee24ca3883ca95203b5",
+    "judge/lean_audit_98d5c25.json": "f43af9d1a9960daf7d588a411fa03dd8d395996f8d9cefe8747bdb4ab8a41e4f",
+    "judge/axiom_coverage_audit_98d5c25.json": "d327cd0b81748b6d2682ab92c11bc56f1ff6bb6b331d69d4d9ef5176413a4594",
+    "judge/checkpoint_frozen_audit_98d5c25.json": "739098c7cd8f311cfd9ad5971be9561be20261010cc3c44b7e68049490132ea0",
+    "judge/additional_audit_98d5c25.json": "9e4738a41860f1af71f6f0c1fa72df0680b1d73522a89f1ac881c5584a45f7b9",
+    "judge/q_identity_replay_report.json": "ce21ee7dcd902cc6a3e669487c0d982eea1b0d35849ef1061ce0ef6b99978216",
+    "judge/lean_audit_21f199d.json": "48013e6ec632c6feb6e08760e129b2766d755d77c8b630f10446c53de5bb9e28",
+    "judge/axiom_coverage_audit_21f199d.json": "4c1a6eca3d5331d31fbdb932b691ab4e1371e65185145477cc886274a77d0a39",
+    "judge/proper_checkpoint_frozen_audit_21f199d.json": "79004d416774630bdbb01ba752589a8099fe1f8691685d10970a77550a1ae907",
+    "judge/proper_bertrand_audit_21f199d.json": "72fc646f97e8a319f6d8e7adc6694db11621e3bb001a18536e66c09f7b2cad6d",
+    "judge/prior_evidence_continuity_21f199d.json": "0eb7ac500c730862ffd334d2f46fa6e821702a9991c434d99e72ef690e04c2ea",
+    "judge/pc_trace_audit.json": "9f56df78ea8a13c5135ec03307c82a3535111e2679abf1be8d6f056ba8e53280",
+    "judge/lean_audit_d32e79d.json": "520aac2c5b6068546d1f134d07e75fba2baaf0ae8fa532f3dee704ec6516670d",
+    "judge/axiom_coverage_audit_d32e79d.json": "2e636b000e658246d34aafa755866729454b32a0dee62cbdb4caf92c0b4bff67",
+    "judge/sign_checkpoint_frozen_audit_d32e79d.json": "bd7c3e1a8459da6f1964cc78d6d9f3c7a1c9045644c3f5a37778d7eee2b79f06",
+    "judge/q_pc_provenance_audit_d32e79d.json": "01ce6b7ce727b4928ab1ee74d21b77c4f349cbd59387c6adec7ddb24802a096e",
+    "judge/q_pc_trace_audit_cf0f74c.json": "16d67260e759c2cd8322bcb5320c17d1c714b708daebc6f372545e02f981f46d",
+    "judge/sign_definite_audit_d32e79d.json": "59c3e5c2b15749f3ee8d54975e87efb1fdbf88220f0e4e089ef28959bd1181f0",
+    "judge/lean_audit_37ee03e.json": "7307e1cd2d20504b45fc489b2f5733d04d108f212dfd8efc6d782812837e74ea",
+    "judge/axiom_coverage_audit_37ee03e.json": "9be188034021ca80794862967b4da1e4f0e69f626e52c7c2e6c57fd06c284128",
+    "judge/frozen_coprime_audit_37ee03e.json": "d2ca6d631d778edd6b9ba90973e8496ea20eec62ae1c7b1327f0bb23530c8d55",
+    "judge/coprime_scope_audit_37ee03e.json": "2adafd6f4973d1b43a9111345b46513f6ad79c1adfeb76b32004bdca249ebbf9",
+    "judge/coprime_density_judge_audit_37ee03e.json": "2566ba29c92cdefe352862436a7506e003d4590fede9e93b221b1fe06d6aae4d",
+    "judge/lean_audit_ee09f12.json": "7e96cefdaea3e8e5639480b3c03c317c399a2e55c570135ecdec9f982722504a",
+    "judge/axiom_coverage_audit_ee09f12.json": "d2430d865a94cece81abdc21d7d68f9baea379dacb6f3b683c88d357a559a90e",
+    "judge/complete_frozen_header_audit_ee09f12.json": "ad0e6d41fd7a77e7a66aee2ae13814b4e50e377ffdbd4dd3a4df914b6f1ca6e8",
+    "judge/kary_continuity_scope_audit_ee09f12.json": "6f3a3cb62119b79c3981698a993bbc6663fa169eb69d8c3ef7e0a927179e8e4f",
+    "judge/lean_audit_231218a.json": "3876f4ab78db81446615b295b9583b6ab8503596196ec34d0858f6a31fda0424",
+    "judge/axiom_coverage_audit_231218a.json": "d2ba643f729bd978d8479eba4af18a653122413f10a6938f351b3f82a10724f1",
+    "judge/models_complete_header_audit_231218a.json": "af01a42e7e9de0ae719d596d1c3179d49e881f1cfb73c1c1a8bdf64c8e8bf971",
+    "judge/models_continuity_scope_audit_231218a.json": "1eedee33deb498b414d9c0d2e5dc2211083d9de45ba8505ef0321b68aed228d3",
+    "judge/lean_audit_3f4d742.json": "3411956c9b64fe17bd3f23728226a687412c578482e137ac0d587da8e051d443",
+    "judge/axiom_coverage_audit_3f4d742.json": "9b92450ff45e847b68a675f3062b90ded169f383dd266ae3413be20ff749e2a8",
+    "judge/countermodel_complete_header_audit_3f4d742.json": "1cc9b02240ab793236420d2a59ce486c0b4c9ef0d7a03b93a0cf70587dedb2b1",
+    "judge/countermodel_scope_audit_3f4d742.json": "54d9e31eef775dcc3d2b63edbfec4c06463560d07657422faa8cc0441d307ea9",
+    "judge/heap_increment_judge_audit_3f4d742.json": "378eb39714ad5308e8a217102b3d26f8d3238c7be073f3c17dfc78ac2b686e79",
+    "judge/lean_audit_eda1b01.json": "b2123c66aca14f3c742e5a0cc4df38bf0a839e9cb842e47abb82d72a107de690",
+    "judge/axiom_coverage_audit_eda1b01.json": "93f9e4d24abef6b6a8b5d8570035ecc32acc8e75197820e8c3eb83f9b88d2601",
+    "judge/pc_restriction_complete_header_audit_eda1b01.json": "769d18313b293d2b701c488bf9f233c4c7de5566080abe6a4f5488fa126242c2",
+    "judge/pc_restriction_dependency_audit_eda1b01.json": "7c5c888d7a441c53372b69ae8516c03ec1eec8aad05b1c790c4c3659655b420f",
+    "judge/pc_restriction_continuity_scope_audit_eda1b01.json": "071554793b7b8f348393ee01854e406dd389c7eac36bbaa3fc8ef35436afc18a",
+    "judge/pc_restriction_primary_source_review_eda1b01.json": "64a7506924bb674cd7e3ee94a13aec287ca198d52bf24481d045bf9910f8d13e",
+    "judge/groebner_continuity_audit_43b7b80.json": "2dfcf16a71459b77af54c8684020d97ad44afad4a11c137c32ff4846796c5c75",
+    "judge/groebner_preservation_scope_audit_43b7b80.json": "901cedd3629bc1ca54e5d69429b8257aea07d366000f8b0ec5302ec080976a63",
+    "judge/groebner_judge_audit_43b7b80.json": "2131a8fe4de16f95c7a9cc0be7eb84722c72810c3898df2e5913071d0b728079",
+    "judge/lean_audit_b6a2866.json": "c7edbd18b9018fdcaa07233dab2a78e341b85af40a4f343bb5c698d978e22986",
+    "judge/axiom_coverage_audit_b6a2866.json": "53551971ab11fa6441d3c10dc3bddaab6e445dc3364abc86438615dbe3d3d67e",
+    "judge/literal_cube_complete_header_audit_b6a2866.json": "cebc72f0d7d22c9ae9dd4f91a01815ac8ad8a65e3eccb75b1ff47f4765f3a3eb",
+    "judge/literal_cube_scope_dependency_audit_b6a2866.json": "cfc43bb89f3f8fdad8ba0634b0ab52322e8486d80eabeecfa4865fda48944dc8",
+    "judge/literal_cube_continuity_audit_b6a2866.json": "0dbe3fd180614be6186575210723956738efea583c64594e9c9a065de33af59d",
+    "judge/heap_36_38_judge_audit_b6a2866.json": "8085c53493f061f76583be9f0ac35f9526de962d8b2e166f98c2beffaff127bb",
+    "judge/deferred_recording_judge_audit_80d6893.json": "4cfdf08c56bb1c4abe2baeb7a61e9e1cb18ad83945592ecbe08203a941ce257c",
+    "judge/deferred_recording_continuity_80d6893.json": "879482128898d86991beaf9d5ce742c7f4db27ec7c357a308b7f3033dc418c01",
+    "judge/deferred_recording_provenance_scope_80d6893.json": "1464f280403353b0b8a995821c0b088f2f6d1f3a8720285f6cbedb54f5e04d4f",
+    "judge/lean_audit_4f8724d.json": "7ff4627dcbc0a49f740faf3346c736ae528e3007d1ef9ee50bfce75b58ab5a5c",
+    "judge/axiom_coverage_audit_4f8724d.json": "1af3bda2a7e7f9289e007614c46b7f09c806367da41396823282fe371231a409",
+    "judge/boolean_lattice_complete_header_audit_4f8724d.json": "78d54ba2669823160ab6218abdb3f2bd0f224c8169f8a235873929bbf26240e2",
+    "judge/boolean_lattice_scope_continuity_audit_4f8724d.json": "a4e65362cb8d141d71a86464a904e3e99614f8a745bd5aaf088d88e0b4f0523e",
+    "judge/lean_audit_d9a7e29.json": "a63992c7e73b8f6235f649a1a486cdd2c7fbd68302b53376633a61f25b89bb66",
+    "judge/axiom_coverage_audit_d9a7e29.json": "92a31fe3db85b2088b0a614b77f55855b705051f60efe05268b7ff77a122e640",
+    "judge/boolean_coefficients_complete_header_audit_d9a7e29.json": "1ef2cbace2ad48008460fc0fcfc080545bda646516765ee138d61055bd5f1f85",
+    "judge/boolean_coefficients_scope_continuity_audit_d9a7e29.json": "7f5e22ee0930ec1dcbbf3b2cfded3b25cb36b0d909f9a6377c25efce00968a31",
+    "judge/lean_audit_4eb47ec.json": "1a9c45eae735878c4a2e45b7d1c586f2c7d6ae8c02499e1230f79bc2a74554b5",
+    "judge/axiom_coverage_audit_4eb47ec.json": "a4b0be94cbea144d2250bf389ea856f40f1dc389fa3dc34ce484fea8baaec8c8",
+    "judge/boolean_coefficient_degree_complete_header_audit_4eb47ec.json": "32ca673501b4b30c8fae445b7804341488e4f7364fe89e86e0b226c8ef31aa55",
+    "judge/boolean_coefficient_degree_scope_continuity_audit_4eb47ec.json": "0f0e59f16d0725fdba4a3dde66a6befcb53416e5c951e7b58ed9f6f2487f4679",
+    "judge/count_elimination_judge_audit_74b17fa.json": "c6f85a22f3710998879d3f636c9396e972dc01fcd0e685c9fb8e23a0b4ec8d4d",
+    "judge/count_elimination_continuity_74b17fa.json": "48fd9281bade522b5a07aa3234cdf9e76d55c25f371ee6c99968d9de8b5e5675",
+    "judge/count_elimination_provenance_scope_74b17fa.json": "524ef423adf2ffb4547f29929ec9397a1ecab975225ecae39baa534926a0aa5d",
+    "judge/lean_audit_00616e7.json": "17905da565ac2ee45f0679c8b8f3d3eaacffb7ff8ab678ece909abe36a382150",
+    "judge/axiom_coverage_audit_00616e7.json": "4cb84b80e2b80c9cea6fb37a4744a346fec3a93301fe91cd59a76b4908ceeb46",
+    "judge/boolean_multiplier_rigidity_complete_header_audit_00616e7.json": "e4371250c487a3aed63f1d5a2f900886a2a09802a8b08e960dac1a67749caf10",
+    "judge/boolean_multiplier_rigidity_scope_continuity_audit_00616e7.json": "641afd9342a6fb4ece00b8fec85fb7217b30d8da8cf71e1a74a3269fa183ebcd",
+    "judge/lean_audit_09a6d29.json": "f6b9cf1d1547687aeedeb3e92e018e703715900b3e23403cd75a50c0dc58c521",
+    "judge/axiom_coverage_audit_09a6d29.json": "76f7aecde7c1e7bf071f0ce4b0a545a74980433872c106f756ee1f172709b987",
+    "judge/boolean_count_bridge_complete_header_audit_09a6d29.json": "d24654536d46419e941dea74ad7b0f05ff4903a81717c2d5646c7bcad9f4decb",
+    "judge/boolean_count_bridge_scope_continuity_audit_09a6d29.json": "df76e534a86f52064e6bba305b1e70ea43b8b571dfdc64cdfdfcdb5539cb2d4b",
+    "judge/recipe_compiler_judge_audit_d07dde0.json": "d0bfc67dbabc279f9a27e63427eed5417749f945a535bde54ff8cf97bade1a64",
+    "judge/recipe_compiler_continuity_d07dde0.json": "645c92a57d98946b792b9a0a08e90a9c9aacb9a379547adb68a90dd3424924db",
+    "judge/recipe_compiler_provenance_scope_d07dde0.json": "61bde15c3b68689c408d858369d05819e8b95fac53458b09c2f7b495cf7616d1",
+    "judge/lean_audit_875ab34.json": "d41850bb14c8e5d9e7093fd0f3ba49cb340f3c94cf7dbae927c8f828fc26e5f9",
+    "judge/axiom_coverage_audit_875ab34.json": "59a7197cb0e8410c5e3c21ecc9a98fedebebe95740b2b647a8dcbfc233b312b9",
+    "judge/boolean_annihilation_complete_header_audit_875ab34.json": "5a47c4792d8fa8470399ebd1647463a809f1787b370cfb5e74184e87f84be7ac",
+    "judge/boolean_annihilation_scope_continuity_audit_875ab34.json": "94b30b1559283c32f3a36f915d55fb61549addb69875e2c441cba3d433646739",
+    "judge/lean_audit_e5c4e11.json": "388081521a8caf3640677caa56b6c6faa1e3b9330f704fced9e7d86c20b02ba1",
+    "judge/axiom_coverage_audit_e5c4e11.json": "00bc0dacf4263cfe137d415f0afb074b90d2c9bedfc29230368983c4aed9b9db",
+    "judge/count_variable_commutation_complete_header_audit_e5c4e11.json": "c895b6407b8784c2e8d524074e7a0c2003032e8e5f68c10265561ad5bebf39fb",
+    "judge/count_variable_commutation_scope_continuity_audit_e5c4e11.json": "d6b01617bd575867d4d4b0f8aa1bfab5f9c320d588ef78c5e8a03c6197490ec7"
+  },
+  "WON": false,
+  "credited": {
+    "R1": {
+      "type": "PROOF-Lean and exact finite countermodels",
+      "uniform_family": "BERTRAND_COARSE (without SIEVE)",
+      "uniform_range": "Every natural N>=24, hence every even N>=24",
+      "uniform_theorems": [
+        "AlgebraicGoldbach.bertrandFamily_common_zero",
+        "AlgebraicGoldbach.bertrandFamily_no_certificate",
+        "AlgebraicGoldbach.bertrandFamily_has_second_boolean_solution"
+      ],
+      "finite_cases": [
+        {
+          "family": "coarse",
+          "N": 30,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 32768
+        },
+        {
+          "family": "coarse",
+          "N": 60,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 1073741824
+        },
+        {
+          "family": "coarse",
+          "N": 100,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 1125899906842624
+        },
+        {
+          "family": "coarse",
+          "N": 200,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 1267650600228229401496703205376
+        },
+        {
+          "family": "sieve_only",
+          "N": 30,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 1024
+        },
+        {
+          "family": "sieve_only",
+          "N": 60,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 131072
+        },
+        {
+          "family": "sieve_only",
+          "N": 100,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 33554432
+        },
+        {
+          "family": "sieve_only",
+          "N": 200,
+          "support": [],
+          "g": 0,
+          "boolean_solutions_without_g": 70368744177664
+        },
+        {
+          "family": "sieve_dyadic_bertrand",
+          "N": 30,
+          "support": [
+            2,
+            3,
+            5,
+            11
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": 144
+        },
+        {
+          "family": "sieve_dyadic_bertrand",
+          "N": 60,
+          "support": [
+            2,
+            3,
+            5,
+            11,
+            17
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": 17856
+        },
+        {
+          "family": "sieve_dyadic_bertrand",
+          "N": 100,
+          "support": [
+            2,
+            3,
+            5,
+            11,
+            17,
+            37
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": 4535424
+        },
+        {
+          "family": "sieve_dyadic_bertrand",
+          "N": 200,
+          "support": [
+            2,
+            3,
+            5,
+            11,
+            17,
+            37,
+            67
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": 9510312443904
+        },
+        {
+          "family": "full_bertrand_sieve",
+          "N": 30,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            17
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        },
+        {
+          "family": "full_bertrand_coarse",
+          "N": 30,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            17
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        },
+        {
+          "family": "full_bertrand_sieve",
+          "N": 60,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            31
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        },
+        {
+          "family": "full_bertrand_coarse",
+          "N": 60,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            31
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        },
+        {
+          "family": "full_bertrand_sieve",
+          "N": 100,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            53
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        },
+        {
+          "family": "full_bertrand_coarse",
+          "N": 100,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            53
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        },
+        {
+          "family": "full_bertrand_sieve",
+          "N": 200,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            37,
+            41,
+            43,
+            47,
+            53,
+            59,
+            67,
+            71,
+            79,
+            89,
+            97,
+            101
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        },
+        {
+          "family": "full_bertrand_coarse",
+          "N": 200,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            37,
+            41,
+            43,
+            47,
+            53,
+            59,
+            67,
+            71,
+            79,
+            89,
+            97,
+            101
+          ],
+          "g": 0,
+          "boolean_solutions_without_g": "at least 2"
+        }
+      ],
+      "SIEVE_calibration": "L3 independently verified before this credit.",
+      "scope": "Only the declared families. The uniform model selects composite 9, so it does not give uniform SIEVE rejection.",
+      "additional_factor_coverage_finite_cases": [
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 30,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            17
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 19,
+          "interval_constraints_checked": 15,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5
+          ],
+          "coverage_only_model_count": 128,
+          "combined_boolean_models_at_least": 2
+        },
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 60,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            31
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 42,
+          "interval_constraints_checked": 30,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "coverage_only_model_count": 8192,
+          "combined_boolean_models_at_least": 2
+        },
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 100,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            53
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 74,
+          "interval_constraints_checked": 50,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "coverage_only_model_count": 2097152,
+          "combined_boolean_models_at_least": 2
+        },
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 200,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            37,
+            41,
+            43,
+            47,
+            53,
+            59,
+            67,
+            71,
+            79,
+            89,
+            97,
+            101
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 153,
+          "interval_constraints_checked": 100,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13
+          ],
+          "coverage_only_model_count": 1099511627776,
+          "combined_boolean_models_at_least": 2
+        }
+      ],
+      "factor_coverage_scope": "Finite R1/R2 evidence for this declared SIEVE family only. No uniform combined-family rejection, route-wide impossibility, C1 inference or new Lean rung.",
+      "factor_coverage_coordinate_pinning_rejection": "Divisor square instances are individual equations 1-X_p=0 for primes p^2<=N. This violates the strict coordinate-pinning guard and must remain explicit, although the full prime vector is not pinned at the tested N.",
+      "guard_rejected_full_bertrand_family": "For every N>=2, m=1 is a BertrandIndex and its window is {2}, giving the literal polynomial 1-X_2. Therefore BERTRAND_COARSE fails the mandatory direct-coordinate guard.",
+      "factor_horizon_uniform_information": {
+        "type": "PROOF-Lean over Q",
+        "family": "Coarse + every Bertrand interval + truncated proper-divisor products; no SIEVE",
+        "range": "Every N>=24 and M<=(floor(N/2)-3)^2",
+        "conclusion": "Explicit different Boolean common zero with g_N=0; every certificate excluded.",
+        "theorems": [
+          "AlgebraicGoldbach.FactorCoverage.horizonFamily_common_zero",
+          "AlgebraicGoldbach.FactorCoverage.horizonFamily_no_certificate",
+          "AlgebraicGoldbach.FactorCoverage.horizonFamily_has_second_boolean_solution"
+        ],
+        "scope": "Information about this exact guard-rejected class only. No uniform SIEVE result or statement about larger horizons or all families."
+      },
+      "proper_bertrand_information": {
+        "type": "PROOF-Lean over Q plus four exact finite gates",
+        "family": "PROPER_BERTRAND_ONLY: m>=2, no coarse/SIEVE equations",
+        "formal_range": "Every natural N>=24",
+        "conclusion": "Actual Boolean/family/g common zero, hence no certificate. This family is admissible at L4/L5 and DEAD at L6.",
+        "uniform_theorems": [
+          "AlgebraicGoldbach.ProperBertrand.family_common_zero",
+          "AlgebraicGoldbach.ProperBertrand.family_no_certificate"
+        ],
+        "all_N_nonpinning_theorem": "AlgebraicGoldbach.ProperBertrand.family_does_not_pin_any_coordinate",
+        "gate_rows": [
+          {
+            "family": "PROPER_BERTRAND_ONLY",
+            "N": 30,
+            "intervals_checked": 14,
+            "sat_support": [
+              2,
+              3,
+              5,
+              7,
+              9,
+              11,
+              17
+            ],
+            "g_integer": 0,
+            "boolean_models_without_g": 1360168984,
+            "every_coordinate_zero_and_one_family_models_checked": 31
+          },
+          {
+            "family": "PROPER_BERTRAND_ONLY",
+            "N": 60,
+            "intervals_checked": 29,
+            "sat_support": [
+              2,
+              3,
+              5,
+              7,
+              9,
+              11,
+              13,
+              15,
+              17,
+              19,
+              21,
+              23,
+              25,
+              27,
+              31
+            ],
+            "g_integer": 0,
+            "boolean_models_without_g": 1460447976571497408,
+            "every_coordinate_zero_and_one_family_models_checked": 61
+          },
+          {
+            "family": "PROPER_BERTRAND_ONLY",
+            "N": 100,
+            "intervals_checked": 49,
+            "sat_support": [
+              2,
+              3,
+              5,
+              7,
+              9,
+              11,
+              13,
+              15,
+              17,
+              19,
+              21,
+              23,
+              25,
+              27,
+              29,
+              31,
+              33,
+              35,
+              37,
+              39,
+              41,
+              43,
+              45,
+              47,
+              51
+            ],
+            "g_integer": 0,
+            "boolean_models_without_g": 1605779531254534169267479998816,
+            "every_coordinate_zero_and_one_family_models_checked": 101
+          },
+          {
+            "family": "PROPER_BERTRAND_ONLY",
+            "N": 200,
+            "intervals_checked": 99,
+            "sat_support": [
+              2,
+              3,
+              5,
+              7,
+              9,
+              11,
+              13,
+              15,
+              17,
+              19,
+              21,
+              23,
+              25,
+              27,
+              29,
+              31,
+              33,
+              35,
+              37,
+              39,
+              41,
+              43,
+              45,
+              47,
+              49,
+              51,
+              53,
+              55,
+              57,
+              59,
+              61,
+              63,
+              65,
+              67,
+              69,
+              71,
+              73,
+              75,
+              77,
+              79,
+              81,
+              83,
+              85,
+              87,
+              89,
+              91,
+              93,
+              95,
+              97,
+              101
+            ],
+            "g_integer": 0,
+            "boolean_models_without_g": 2035567386629014189772777661745725556916470813194361691441184,
+            "every_coordinate_zero_and_one_family_models_checked": 201
+          }
+        ],
+        "scope": "Only this family; no viable candidate, all-field Lean statement or route-wide impossibility."
+      },
+      "sign_definite_strengthening_information": {
+        "type": "PROOF-Lean over Q with independently checked four finite applications",
+        "theorems": [
+          "AlgebraicGoldbach.SignDefinite.coefficient_on_primes_eq_zero",
+          "AlgebraicGoldbach.SignDefinite.nonnegative_equation_vanishes_on_sievePoint",
+          "AlgebraicGoldbach.SignDefinite.sign_definite_equation_vanishes_on_sievePoint",
+          "AlgebraicGoldbach.SignDefinite.sign_definite_family_preserves_sieve_common_zero",
+          "AlgebraicGoldbach.SignDefinite.sign_definite_strengthening_has_no_certificate"
+        ],
+        "scope_review": {
+          "field": "Q only",
+          "accepted": true,
+          "coefficient_condition": "Every canonical monomial coefficient is nonnegative, or every one is nonpositive; each polynomial may choose its sign. Function nonnegativity or signs in an unexpanded expression do not suffice.",
+          "truth_condition": "Each added equation must vanish at the actual prime indicator.",
+          "transfer": "It then vanishes at every Q point whose nonprime coordinates are zero, with no Boolean, positivity or degree assumption on the prime coordinates.",
+          "certificate_exclusion": "Given an existing such common zero also satisfying Boolean equations and original g, the actual enlarged-family Certificate identity is impossible.",
+          "constant_monomial": "Empty support is prime-only; the first coefficient-zero theorem includes the constant term.",
+          "finite_application": "The independently replayed four prime-supported full/ProperBertrand common zeros survive any additions in this class.",
+          "not_inferred": [
+            "universal strengthened-family common zero for all N",
+            "mixed-sign constraint obstruction",
+            "modular coefficient-order theorem",
+            "Lean ideal-membership statement",
+            "whole-route impossibility",
+            "new viable family"
+          ],
+          "uniform_model_limitation": "The old all-N coarse/proper model selects composite9, so the same-sign equation X_9=0 can exclude it. The four-point transfer is not a uniform strengthened-family theorem.",
+          "paper_ideal_membership": "Accepted on paper from the coefficient-support argument, not a formal ideal statement in this Lean module."
+        },
+        "four_gate_applications": [
+          {
+            "N": 30,
+            "prime_supported_boolean_support": [
+              2,
+              3,
+              5,
+              7,
+              11,
+              17
+            ],
+            "all_full_and_proper_intervals_zero": true,
+            "integer_g": 0,
+            "two_distinct_original_family_models_checked": true,
+            "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+          },
+          {
+            "N": 60,
+            "prime_supported_boolean_support": [
+              2,
+              3,
+              5,
+              7,
+              11,
+              13,
+              17,
+              31
+            ],
+            "all_full_and_proper_intervals_zero": true,
+            "integer_g": 0,
+            "two_distinct_original_family_models_checked": true,
+            "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+          },
+          {
+            "N": 100,
+            "prime_supported_boolean_support": [
+              2,
+              3,
+              5,
+              7,
+              11,
+              13,
+              17,
+              19,
+              23,
+              29,
+              31,
+              53
+            ],
+            "all_full_and_proper_intervals_zero": true,
+            "integer_g": 0,
+            "two_distinct_original_family_models_checked": true,
+            "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+          },
+          {
+            "N": 200,
+            "prime_supported_boolean_support": [
+              2,
+              3,
+              5,
+              7,
+              11,
+              13,
+              17,
+              19,
+              23,
+              29,
+              31,
+              37,
+              41,
+              43,
+              47,
+              53,
+              59,
+              67,
+              71,
+              79,
+              89,
+              97,
+              101
+            ],
+            "all_full_and_proper_intervals_zero": true,
+            "integer_g": 0,
+            "two_distinct_original_family_models_checked": true,
+            "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+          }
+        ],
+        "scope": "Every added polynomial must have canonical coefficients of one sign and vanish at the prime indicator. It preserves an existing nonprime-zero common zero; only the four reconstructed prime-supported points supply these applications. This does not yield a universal strengthened-family model or a new candidate family."
+      },
+      "coprime_divisor_density_control": {
+        "type": "PROOF-Lean arbitrary-Q structural classification and truth/freedom; exact numeric N=4 common zero; scoped paper Boolean criterion",
+        "formal_scope": {
+          "field": "Q",
+          "accepted": true,
+          "public_theorems": [
+            "AlgebraicGoldbach.CoprimeDivisor.exceptPoint_family",
+            "AlgebraicGoldbach.CoprimeDivisor.family_does_not_pin_any_coordinate",
+            "AlgebraicGoldbach.CoprimeDivisor.family_has_second_boolean_solution",
+            "AlgebraicGoldbach.CoprimeDivisor.family_iff_at_most_one_omitted_prime",
+            "AlgebraicGoldbach.CoprimeDivisor.family_iff_nearFullPrimeSelection",
+            "AlgebraicGoldbach.CoprimeDivisor.family_implies_nearFullPrimeSelection",
+            "AlgebraicGoldbach.CoprimeDivisor.family_implies_ordered_prime_pair_selected",
+            "AlgebraicGoldbach.CoprimeDivisor.nearFullPrimeSelection_iff_omitted_card_le_one",
+            "AlgebraicGoldbach.CoprimeDivisor.nearFullPrimeSelection_implies_family",
+            "AlgebraicGoldbach.CoprimeDivisor.onePoint_family",
+            "AlgebraicGoldbach.CoprimeDivisor.pairDivisors_prime_pair",
+            "AlgebraicGoldbach.CoprimeDivisor.primePoint_family"
+          ],
+          "actual_family": "For every coprime 2<=u<v<=N, the product of 1-X_d over all nonunit divisors of u or v, including u and v. No coarse or SIEVE equations.",
+          "arbitrary_assignment_classification": "All actual family equations hold iff at most one prime coordinate differs from1. No Boolean, SIEVE, positivity, parity or numerical N hypothesis.",
+          "unconditional_properties": "True prime point, all-one point, and each single-coordinate-zero point satisfy the entire family, for allN. Both bits of every coordinate occur in whole-family Boolean solutions.",
+          "syntactic_constants": "Finite arithmetic order/gcd/divisibility indexing inN; coefficients0,1,-1; no prime-count constants or prime-index restriction.",
+          "section9": "Passes the coordinate-pin guard: formal whole-family every-bit freedom excludes even indirect coordinate pins."
+        },
+        "paper_scope": {
+          "accepted": true,
+          "Boolean_model_count": "(pi(N)+1)*2^(N+1-pi(N)); a paper consequence of the formal arbitrary-Q classification, not an additional Lean count theorem.",
+          "pseudo_solution_criterion": "With Boolean equations, a family/g common zero exists iff r(N)<=1. C1/matching interpretation reviewed; not asserted as a Lean theorem in this module.",
+          "nonBoolean_limit": "N30: X7=-2, all other prime coordinates1 and nonprimes0 satisfy family/g though r=3. The Boolean equation at7 fails. This is not a common zero of the full Boolean certificate system.",
+          "finite_field_limit": "Only Boolean CNF/g semantics when p>N+1; no arbitrary-field Lean classification credited."
+        },
+        "guard_judgement": {
+          "classification": "REJECTED_DENSITY_CALIBRATION",
+          "candidate_L4_L5_credit": false,
+          "literal_quartet_gate_status": "PASS: all four full CNFs independently reconstructed; three literal RUP additions each independently verified. Every-bit and second Boolean models withoutg, exact counts and uniform syntax checked. Section4 eligibility still fails.",
+          "eligible_viable_family_L6": false,
+          "reason": "Its exact strength is near-full prime selection. Every-bit freedom and closed arithmetic constants do not satisfy the explicit section4 demand for strength other than prime counting. Record the formal truth/freedom and literal gates as control information without promoting the candidate ladder.",
+          "highest_rung_retained": 5,
+          "highest_family_retained": "PROPER_BERTRAND_ONLY",
+          "uniform_L8": "Excluded for this exact family: independently reconstructedN4 Boolean/family/g common zero supported on{3}. No route-wide conclusion.",
+          "not_inferred": [
+            "whole-route impossibility",
+            "Goldbach",
+            "uniform all-N quartet UNSAT",
+            "multipliers",
+            "arbitrary-field classification",
+            "nonBoolean pseudo iff r<=1"
+          ]
+        },
+        "first_failed_even_N_at_least4": 4,
+        "N4_common_zero": {
+          "support": [
+            3
+          ],
+          "all_full_clauses_satisfied": true,
+          "original_ordered_g": 0,
+          "all_Boolean_residuals_zero": true
+        },
+        "uniform_identity_limit": "A Boolean/family/g common zero at N=4 excludes a certificate uniform over every even N>=4 for this exact family. No whole-route impossibility is inferred.",
+        "nonBoolean_scope_check": {
+          "N": 30,
+          "field": "Q",
+          "exceptional_coordinate": 7,
+          "exceptional_value": "-2",
+          "other_prime_coordinates": "1",
+          "nonprime_coordinates": "0",
+          "family_polynomials_evaluated": 248,
+          "nonzero_family_residual_count": 0,
+          "original_ordered_g_residual": "0",
+          "prime_pairs": [
+            [
+              7,
+              23
+            ],
+            [
+              11,
+              19
+            ],
+            [
+              13,
+              17
+            ]
+          ],
+          "prime_pair_contributions": [
+            "-4",
+            "2",
+            "2"
+          ],
+          "failed_Boolean_equations": {
+            "7": "6"
+          },
+          "counterexample_requires_omitting_Boolean_equations": true,
+          "no_inference_about_certificates_including_Boolean_from_this_counterexample": true
+        },
+        "multiplier_search": false
+      },
+      "coprime_kary_N4_uniform_identity_exclusion": {
+        "type": "PROOF-Lean over Q, class-specific R1 only",
+        "field": "Q only",
+        "N": 4,
+        "k_range": "Every natural k>=2",
+        "support": [
+          3
+        ],
+        "omitted_true_primes": [
+          2
+        ],
+        "family": "Actual CoprimeKaryIdeal.arithmeticFamily 4 k; no added coarse or SIEVE equations",
+        "formal_theorems": [
+          "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_omittedPrimes",
+          "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_omitted_card",
+          "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_family",
+          "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_boolean",
+          "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_g_zero",
+          "AlgebraicGoldbach.CoprimeKaryCountermodel.family_no_certificate_at_four"
+        ],
+        "common_zero": "All actual family equations, Boolean equations, and original ordered g_4 vanish; original X_2^2 loop retained",
+        "no_certificate": "Every actual A/U/B Certificate for this family at N=4 is excluded",
+        "uniform_exclusion": "For each fixed k>=2, there can be no identity for this family over all even N>=4",
+        "instance_axioms": {
+          "name": "AlgebraicGoldbach.CoprimeKaryCountermodel.arithmeticIndexFintype",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "input_sha256": "d22cf07e168c6ef1d72f3b184f35d3c7fa96b085143baeec6dd859cf05642172",
+          "output_sha256": "82d7329cb8427ecb55b26c966495a4fbac96e1ac8eccb550fbb9ca2eb2f5e7c2"
+        },
+        "not_inferred": [
+          "Goldbach counterexample",
+          "other-family obstruction",
+          "viable-family rung",
+          "general Boolean r<k theorem",
+          "arbitrary field extension",
+          "whole-route impossibility"
+        ]
+      },
+      "literal_product_covering_obstruction": {
+        "type": "PROOF-Lean over Q; scoped R1 class obstruction only",
+        "formal_theorem": "AlgebraicGoldbach.LiteralCube.weighted_common_zero",
+        "N_scope": "Every even N>=6",
+        "field": "Q only",
+        "family": "Any finite family of scalar times a list-product of actual literals X_i or1-X_i",
+        "strict_integer_hypothesis": "sum_j weight(C_j) < 2^(Fintype.card CubeVar N)",
+        "dimension": "Actual Fintype.card CubeVar N; no closed-form dimension premise",
+        "weight": "0 for zero coefficient/zero effective literal/opposite bit literals; otherwise2^(dimension-distinct effective support.card)",
+        "formal_result": "An actual full-coordinate common zero of every family polynomial, Boolean equation, coarse equation and original ordered g, including its center square",
+        "actual_counts_formally_proved": "Each badSet.card=weight; cube.card=2^dimension; not assumed",
+        "no_prime_truth_SIEVE_or_supplied_cube_count_commonzero_premise": true,
+        "SIEVE_or_extra_clauses": "Not included automatically; applicable literal clauses must be counted in the actual family",
+        "no_certificate_scope": "Rational actual-family common zero excludes certificates via existing L2 soundness; scoped class obstruction only",
+        "closed_floor_N_over_four_plus_one_dimension_formula": "Paper only, no formal credit",
+        "ordinary_substituted_g_identically_zero_off_cube": false,
+        "source_sha256": "162538cf6baca5a76feb5e7fa859c28b83179db1838d49e44a6aaf3cb6671b5d",
+        "full_catalogue_sha256": "818fde1a025c73ff420ceb312700dd58db29be9ea3c646ab1d7cee5a7556d224",
+        "32_direct_definition_constructor_projection_axiom_prints_verified": true,
+        "not_inferred": [
+          "UNSAT if covering inequality fails",
+          "sums of literal products or general polynomials",
+          "generic field transfer",
+          "new candidate or rung",
+          "whole-route obstruction",
+          "Goldbach"
+        ]
+      }
+    },
+    "R2": {
+      "type": "Verified family table",
+      "first_failed_N_TESTED": 4,
+      "gate_N": [
+        30,
+        60,
+        100,
+        200
+      ],
+      "rows": "evidence/gates.json and results/full_bertrand_gate.json",
+      "all_interval_counts_independently_verified": [
+        {
+          "N": 30,
+          "bertrand_coarse": 2605,
+          "bertrand_sieve": 40,
+          "N30_brute_force_checked": true
+        },
+        {
+          "N": 60,
+          "bertrand_coarse": 85011864,
+          "bertrand_sieve": 4608,
+          "N30_brute_force_checked": false
+        },
+        {
+          "N": 100,
+          "bertrand_coarse": 89138673060348,
+          "bertrand_sieve": 1169766,
+          "N30_brute_force_checked": false
+        },
+        {
+          "N": 200,
+          "bertrand_coarse": 100361220703408430148554030100,
+          "bertrand_sieve": 2451642922548,
+          "N30_brute_force_checked": false
+        }
+      ],
+      "calibration_control": "D_pi(N) is pins-the-prime-vector and uses non-uniform prime-count constants; rejected as research family.",
+      "additional_factor_coverage_evidence": "evidence/factor_coverage_gate.json",
+      "factor_coverage_rows": [
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 30,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            17
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 19,
+          "interval_constraints_checked": 15,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5
+          ],
+          "coverage_only_model_count": 128,
+          "combined_boolean_models_at_least": 2
+        },
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 60,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            31
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 42,
+          "interval_constraints_checked": 30,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "coverage_only_model_count": 8192,
+          "combined_boolean_models_at_least": 2
+        },
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 100,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            53
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 74,
+          "interval_constraints_checked": 50,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "coverage_only_model_count": 2097152,
+          "combined_boolean_models_at_least": 2
+        },
+        {
+          "family": "sieve_full_bertrand_factor_coverage",
+          "N": 200,
+          "support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            37,
+            41,
+            43,
+            47,
+            53,
+            59,
+            67,
+            71,
+            79,
+            89,
+            97,
+            101
+          ],
+          "g_integer": 0,
+          "composite_constraints_checked": 153,
+          "interval_constraints_checked": 100,
+          "forced_prime_coordinates": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13
+          ],
+          "coverage_only_model_count": 1099511627776,
+          "combined_boolean_models_at_least": 2
+        }
+      ],
+      "proper_bertrand_evidence": "results/proper_bertrand_gate.json",
+      "proper_bertrand_exact_rows": [
+        {
+          "family": "PROPER_BERTRAND_ONLY",
+          "N": 30,
+          "intervals_checked": 14,
+          "sat_support": [
+            2,
+            3,
+            5,
+            7,
+            9,
+            11,
+            17
+          ],
+          "g_integer": 0,
+          "boolean_models_without_g": 1360168984,
+          "every_coordinate_zero_and_one_family_models_checked": 31
+        },
+        {
+          "family": "PROPER_BERTRAND_ONLY",
+          "N": 60,
+          "intervals_checked": 29,
+          "sat_support": [
+            2,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            31
+          ],
+          "g_integer": 0,
+          "boolean_models_without_g": 1460447976571497408,
+          "every_coordinate_zero_and_one_family_models_checked": 61
+        },
+        {
+          "family": "PROPER_BERTRAND_ONLY",
+          "N": 100,
+          "intervals_checked": 49,
+          "sat_support": [
+            2,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31,
+            33,
+            35,
+            37,
+            39,
+            41,
+            43,
+            45,
+            47,
+            51
+          ],
+          "g_integer": 0,
+          "boolean_models_without_g": 1605779531254534169267479998816,
+          "every_coordinate_zero_and_one_family_models_checked": 101
+        },
+        {
+          "family": "PROPER_BERTRAND_ONLY",
+          "N": 200,
+          "intervals_checked": 99,
+          "sat_support": [
+            2,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31,
+            33,
+            35,
+            37,
+            39,
+            41,
+            43,
+            45,
+            47,
+            49,
+            51,
+            53,
+            55,
+            57,
+            59,
+            61,
+            63,
+            65,
+            67,
+            69,
+            71,
+            73,
+            75,
+            77,
+            79,
+            81,
+            83,
+            85,
+            87,
+            89,
+            91,
+            93,
+            95,
+            97,
+            101
+          ],
+          "g_integer": 0,
+          "boolean_models_without_g": 2035567386629014189772777661745725556916470813194361691441184,
+          "every_coordinate_zero_and_one_family_models_checked": 201
+        }
+      ],
+      "proper_count_convention": "All N+1 coordinates are unrestricted except the m>=2 interval equations; new independent DP and small exhaustive counts. Prior coarse/SIEVE counts are not reused.",
+      "sign_definite_class_four_gate_inheritance": [
+        {
+          "N": 30,
+          "prime_supported_boolean_support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            17
+          ],
+          "all_full_and_proper_intervals_zero": true,
+          "integer_g": 0,
+          "two_distinct_original_family_models_checked": true,
+          "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+        },
+        {
+          "N": 60,
+          "prime_supported_boolean_support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            31
+          ],
+          "all_full_and_proper_intervals_zero": true,
+          "integer_g": 0,
+          "two_distinct_original_family_models_checked": true,
+          "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+        },
+        {
+          "N": 100,
+          "prime_supported_boolean_support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            53
+          ],
+          "all_full_and_proper_intervals_zero": true,
+          "integer_g": 0,
+          "two_distinct_original_family_models_checked": true,
+          "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+        },
+        {
+          "N": 200,
+          "prime_supported_boolean_support": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            37,
+            41,
+            43,
+            47,
+            53,
+            59,
+            67,
+            71,
+            79,
+            89,
+            97,
+            101
+          ],
+          "all_full_and_proper_intervals_zero": true,
+          "integer_g": 0,
+          "two_distinct_original_family_models_checked": true,
+          "transfer_scope": "Any added Q polynomial family with canonical coefficients of either one sign and true-prime-point zeros preserves this point by the verified general theorem."
+        }
+      ],
+      "coprime_divisor_density_control": {
+        "type": "Exact independent full CNF/RUP finite gates and every-bit model counts; rejected density control",
+        "rows": [
+          {
+            "N": 4,
+            "result": "SAT",
+            "full_clause_count": 5,
+            "family_index_count": 2,
+            "exact_family_models_without_g": 24,
+            "fresh_RUP_additions_verified": 0
+          },
+          {
+            "N": 30,
+            "result": "UNSAT_WITH_RUP_LOG",
+            "full_clause_count": 264,
+            "family_index_count": 248,
+            "exact_family_models_without_g": 23068672,
+            "fresh_RUP_additions_verified": 3
+          },
+          {
+            "N": 60,
+            "result": "UNSAT_WITH_RUP_LOG",
+            "full_clause_count": 1073,
+            "family_index_count": 1042,
+            "exact_family_models_without_g": 316659348799488,
+            "fresh_RUP_additions_verified": 3
+          },
+          {
+            "N": 100,
+            "result": "UNSAT_WITH_RUP_LOG",
+            "full_clause_count": 2995,
+            "family_index_count": 2944,
+            "exact_family_models_without_g": 1964504456873772408897536,
+            "fresh_RUP_additions_verified": 3
+          },
+          {
+            "N": 200,
+            "result": "UNSAT_WITH_RUP_LOG",
+            "full_clause_count": 12133,
+            "family_index_count": 12032,
+            "exact_family_models_without_g": 2146580529829763661111662098052040685119650922496,
+            "fresh_RUP_additions_verified": 3
+          }
+        ],
+        "literal_quartet_gate_passed": true,
+        "eligible_L6_credited": false,
+        "all_original_coordinate_and_midpoint_terms_retained": true,
+        "all_399_every_bit_zero_models_checked": true,
+        "RUP_additions_independently_verified": 12,
+        "stored_propagation_log_steps_separately_verified": true,
+        "exhaustive_N0_to10_assignments_checked": 4094,
+        "exact_count_formula": "(pi(N)+1)*2^(N+1-pi(N)); after removing g. Both necessity and sufficiency reconstructed directly from every prime-pair clause and distinct prime factors of every divisor-union clause.",
+        "no_coarse_or_SIEVE_constraints": true,
+        "field_scope": "Q Boolean semantics; the same Boolean g translation requires p>N+1 to exclude modular wrap. No general-field Lean theorem."
+      },
+      "first_failed_N_TESTED_in_original_family_table": 30
+    },
+    "R3": {
+      "type": "Exact finite static-NS and ordinary-PC calibration minima over independently verified Q/F_1000000007; finite growth evidence only",
+      "family": "D_pi(N)",
+      "field_prime": 1000000007,
+      "degree_convention": "Maximum ordinary total degree of each generator-multiplier product, before Boolean reduction.",
+      "solver": "Exact modular Gaussian elimination in Python 3.12 standard library; independently reconstructed invariant matrices, every rank, dual and full lift checked.",
+      "curve": [
+        {
+          "N": 10,
+          "standard_total_degree": 3,
+          "sizes": {
+            "A_terms": 11,
+            "B_terms": 3,
+            "U_terms": 17,
+            "H_terms": 4
+          }
+        },
+        {
+          "N": 12,
+          "standard_total_degree": 5,
+          "sizes": {
+            "A_terms": 31,
+            "B_terms": 1,
+            "U_terms": 75,
+            "H_terms": 6
+          }
+        },
+        {
+          "N": 14,
+          "standard_total_degree": 5,
+          "sizes": {
+            "A_terms": 57,
+            "B_terms": 5,
+            "U_terms": 157,
+            "H_terms": 6
+          }
+        },
+        {
+          "N": 16,
+          "standard_total_degree": 5,
+          "sizes": {
+            "A_terms": 57,
+            "B_terms": 2,
+            "U_terms": 156,
+            "H_terms": 7
+          }
+        },
+        {
+          "N": 18,
+          "standard_total_degree": 6,
+          "sizes": {
+            "A_terms": 120,
+            "B_terms": 4,
+            "U_terms": 399,
+            "H_terms": 8
+          }
+        },
+        {
+          "N": 20,
+          "standard_total_degree": 7,
+          "sizes": {
+            "A_terms": 247,
+            "B_terms": 5,
+            "U_terms": 960,
+            "H_terms": 9
+          }
+        },
+        {
+          "N": 22,
+          "standard_total_degree": 6,
+          "sizes": {
+            "A_terms": 219,
+            "B_terms": 14,
+            "U_terms": 799,
+            "H_terms": 9
+          }
+        },
+        {
+          "N": 24,
+          "standard_total_degree": 7,
+          "sizes": {
+            "A_terms": 466,
+            "B_terms": 19,
+            "U_terms": 1971,
+            "H_terms": 10
+          }
+        },
+        {
+          "N": 26,
+          "standard_total_degree": 7,
+          "sizes": {
+            "A_terms": 466,
+            "B_terms": 22,
+            "U_terms": 1982,
+            "H_terms": 11
+          }
+        },
+        {
+          "N": 28,
+          "standard_total_degree": 8,
+          "sizes": {
+            "A_terms": 502,
+            "B_terms": 6,
+            "U_terms": 2223,
+            "H_terms": 13
+          }
+        },
+        {
+          "N": 30,
+          "standard_total_degree": 8,
+          "sizes": {
+            "A_terms": 968,
+            "B_terms": 23,
+            "U_terms": 4660,
+            "H_terms": 13
+          }
+        },
+        {
+          "N": 32,
+          "standard_total_degree": 10,
+          "sizes": {
+            "A_terms": 2036,
+            "B_terms": 8,
+            "U_terms": 11143,
+            "H_terms": 15
+          }
+        },
+        {
+          "N": 34,
+          "standard_total_degree": 8,
+          "sizes": {
+            "A_terms": 1816,
+            "B_terms": 43,
+            "U_terms": 9343,
+            "H_terms": 14
+          }
+        },
+        {
+          "N": 36,
+          "standard_total_degree": 8,
+          "sizes": {
+            "A_terms": 1808,
+            "B_terms": 104,
+            "U_terms": 9272,
+            "H_terms": 15
+          }
+        },
+        {
+          "N": 38,
+          "standard_total_degree": 11,
+          "sizes": {
+            "A_terms": 4083,
+            "B_terms": 11,
+            "U_terms": 24433,
+            "H_terms": 18
+          }
+        },
+        {
+          "N": 40,
+          "standard_total_degree": 10,
+          "sizes": {
+            "A_terms": 3837,
+            "B_terms": 34,
+            "U_terms": 22872,
+            "H_terms": 18
+          }
+        },
+        {
+          "N": 42,
+          "standard_total_degree": 10,
+          "sizes": {
+            "A_terms": 7814,
+            "B_terms": 170,
+            "U_terms": 49361,
+            "H_terms": 18
+          }
+        },
+        {
+          "N": 44,
+          "standard_total_degree": 12,
+          "sizes": {
+            "A_terms": 16278,
+            "B_terms": 49,
+            "U_terms": 113400,
+            "H_terms": 20
+          }
+        },
+        {
+          "N": 46,
+          "standard_total_degree": 11,
+          "sizes": {
+            "A_terms": 15914,
+            "B_terms": 175,
+            "U_terms": 109460,
+            "H_terms": 20
+          }
+        },
+        {
+          "N": 48,
+          "standard_total_degree": 11,
+          "sizes": {
+            "A_terms": 30827,
+            "B_terms": 751,
+            "U_terms": 223695,
+            "H_terms": 20
+          }
+        },
+        {
+          "N": 50,
+          "standard_total_degree": 12,
+          "sizes": {
+            "A_terms": 32192,
+            "B_terms": 256,
+            "U_terms": 238710,
+            "H_terms": 22
+          }
+        },
+        {
+          "N": 52,
+          "standard_total_degree": 13,
+          "sizes": {
+            "A_terms": 32647,
+            "B_terms": 58,
+            "U_terms": 244170,
+            "H_terms": 24
+          }
+        },
+        {
+          "N": 54,
+          "standard_total_degree": 12,
+          "sizes": {
+            "A_terms": 63019,
+            "B_terms": 1017,
+            "U_terms": 493232,
+            "H_terms": 23
+          }
+        },
+        {
+          "N": 56,
+          "standard_total_degree": 14,
+          "sizes": {
+            "A_terms": 65399,
+            "B_terms": 68,
+            "U_terms": 522352,
+            "H_terms": 26
+          }
+        },
+        {
+          "N": 58,
+          "standard_total_degree": 13,
+          "sizes": {
+            "A_terms": 64839,
+            "B_terms": 398,
+            "U_terms": 515202,
+            "H_terms": 26
+          }
+        },
+        {
+          "N": 60,
+          "standard_total_degree": 12,
+          "sizes": {
+            "A_terms": 121658,
+            "B_terms": 3032,
+            "U_terms": 996935,
+            "H_terms": 25
+          }
+        }
+      ],
+      "not_computed": [
+        "Q PC beyond N30",
+        "Fp PC beyond N36; N38 censored",
+        "Groebner cross-check beyond N10/N12 over Q and F_1000000007"
+      ],
+      "not_inferred": [
+        "Generic equality of minimum degree over Q and Fp",
+        "Asymptotic upper growth from the finite curve",
+        "A lower bound for a different family",
+        "Universal loop upper bound"
+      ],
+      "rational_minimum_curve": [
+        {
+          "N": 10,
+          "minimum_ordinary_Q_total_degree": 3,
+          "pi_N": 4,
+          "r_N_including_loop": 2,
+          "alpha": 2,
+          "prime_loop": [
+            5
+          ],
+          "A_terms": 11,
+          "B_terms": 3,
+          "U_terms": 17,
+          "C_terms": 87
+        },
+        {
+          "N": 12,
+          "minimum_ordinary_Q_total_degree": 5,
+          "pi_N": 5,
+          "r_N_including_loop": 1,
+          "alpha": 4,
+          "prime_loop": [],
+          "A_terms": 31,
+          "B_terms": 1,
+          "U_terms": 75,
+          "C_terms": 251
+        },
+        {
+          "N": 14,
+          "minimum_ordinary_Q_total_degree": 5,
+          "pi_N": 6,
+          "r_N_including_loop": 2,
+          "alpha": 4,
+          "prime_loop": [
+            7
+          ],
+          "A_terms": 57,
+          "B_terms": 5,
+          "U_terms": 157,
+          "C_terms": 531
+        },
+        {
+          "N": 16,
+          "minimum_ordinary_Q_total_degree": 5,
+          "pi_N": 6,
+          "r_N_including_loop": 2,
+          "alpha": 4,
+          "prime_loop": [],
+          "A_terms": 57,
+          "B_terms": 2,
+          "U_terms": 156,
+          "C_terms": 639
+        },
+        {
+          "N": 18,
+          "minimum_ordinary_Q_total_degree": 6,
+          "pi_N": 7,
+          "r_N_including_loop": 2,
+          "alpha": 5,
+          "prime_loop": [],
+          "A_terms": 120,
+          "B_terms": 4,
+          "U_terms": 399,
+          "C_terms": 1463
+        },
+        {
+          "N": 20,
+          "minimum_ordinary_Q_total_degree": 7,
+          "pi_N": 8,
+          "r_N_including_loop": 2,
+          "alpha": 6,
+          "prime_loop": [],
+          "A_terms": 247,
+          "B_terms": 5,
+          "U_terms": 960,
+          "C_terms": 3240
+        },
+        {
+          "N": 22,
+          "minimum_ordinary_Q_total_degree": 6,
+          "pi_N": 8,
+          "r_N_including_loop": 3,
+          "alpha": 5,
+          "prime_loop": [
+            11
+          ],
+          "A_terms": 219,
+          "B_terms": 14,
+          "U_terms": 799,
+          "C_terms": 3387
+        },
+        {
+          "N": 24,
+          "minimum_ordinary_Q_total_degree": 7,
+          "pi_N": 9,
+          "r_N_including_loop": 3,
+          "alpha": 6,
+          "prime_loop": [],
+          "A_terms": 466,
+          "B_terms": 19,
+          "U_terms": 1971,
+          "C_terms": 7598
+        },
+        {
+          "N": 26,
+          "minimum_ordinary_Q_total_degree": 7,
+          "pi_N": 9,
+          "r_N_including_loop": 3,
+          "alpha": 6,
+          "prime_loop": [
+            13
+          ],
+          "A_terms": 466,
+          "B_terms": 22,
+          "U_terms": 1982,
+          "C_terms": 8574
+        },
+        {
+          "N": 28,
+          "minimum_ordinary_Q_total_degree": 8,
+          "pi_N": 9,
+          "r_N_including_loop": 2,
+          "alpha": 7,
+          "prime_loop": [],
+          "A_terms": 502,
+          "B_terms": 6,
+          "U_terms": 2223,
+          "C_terms": 10093
+        },
+        {
+          "N": 30,
+          "minimum_ordinary_Q_total_degree": 8,
+          "pi_N": 10,
+          "r_N_including_loop": 3,
+          "alpha": 7,
+          "prime_loop": [],
+          "A_terms": 968,
+          "B_terms": 23,
+          "U_terms": 4660,
+          "C_terms": 20551
+        },
+        {
+          "N": 32,
+          "minimum_ordinary_Q_total_degree": 10,
+          "pi_N": 11,
+          "r_N_including_loop": 2,
+          "alpha": 9,
+          "prime_loop": [],
+          "A_terms": 2036,
+          "B_terms": 8,
+          "U_terms": 11143,
+          "C_terms": 44863
+        },
+        {
+          "N": 34,
+          "minimum_ordinary_Q_total_degree": 8,
+          "pi_N": 11,
+          "r_N_including_loop": 4,
+          "alpha": 7,
+          "prime_loop": [
+            17
+          ],
+          "A_terms": 1816,
+          "B_terms": 43,
+          "U_terms": 9343,
+          "C_terms": 44074
+        },
+        {
+          "N": 36,
+          "minimum_ordinary_Q_total_degree": 8,
+          "pi_N": 11,
+          "r_N_including_loop": 4,
+          "alpha": 7,
+          "prime_loop": [],
+          "A_terms": 1808,
+          "B_terms": 104,
+          "U_terms": 9272,
+          "C_terms": 48340
+        },
+        {
+          "N": 38,
+          "minimum_ordinary_Q_total_degree": 11,
+          "pi_N": 12,
+          "r_N_including_loop": 2,
+          "alpha": 10,
+          "prime_loop": [
+            19
+          ],
+          "A_terms": 4083,
+          "B_terms": 11,
+          "U_terms": 24433,
+          "C_terms": 110349
+        },
+        {
+          "N": 40,
+          "minimum_ordinary_Q_total_degree": 10,
+          "pi_N": 12,
+          "r_N_including_loop": 3,
+          "alpha": 9,
+          "prime_loop": [],
+          "A_terms": 3837,
+          "B_terms": 34,
+          "U_terms": 22872,
+          "C_terms": 111717
+        },
+        {
+          "N": 42,
+          "minimum_ordinary_Q_total_degree": 10,
+          "pi_N": 13,
+          "r_N_including_loop": 4,
+          "alpha": 9,
+          "prime_loop": [],
+          "A_terms": 7814,
+          "B_terms": 170,
+          "U_terms": 49361,
+          "C_terms": 236805
+        },
+        {
+          "N": 44,
+          "minimum_ordinary_Q_total_degree": 12,
+          "pi_N": 14,
+          "r_N_including_loop": 3,
+          "alpha": 11,
+          "prime_loop": [],
+          "A_terms": 16278,
+          "B_terms": 49,
+          "U_terms": 113400,
+          "C_terms": 505270
+        },
+        {
+          "N": 46,
+          "minimum_ordinary_Q_total_degree": 11,
+          "pi_N": 14,
+          "r_N_including_loop": 4,
+          "alpha": 10,
+          "prime_loop": [
+            23
+          ],
+          "A_terms": 15914,
+          "B_terms": 175,
+          "U_terms": 109460,
+          "C_terms": 527885
+        },
+        {
+          "N": 48,
+          "minimum_ordinary_Q_total_degree": 11,
+          "pi_N": 15,
+          "r_N_including_loop": 5,
+          "alpha": 10,
+          "prime_loop": [],
+          "A_terms": 30827,
+          "B_terms": 751,
+          "U_terms": 223695,
+          "C_terms": 1060458
+        },
+        {
+          "N": 50,
+          "minimum_ordinary_Q_total_degree": 12,
+          "pi_N": 15,
+          "r_N_including_loop": 4,
+          "alpha": 11,
+          "prime_loop": [],
+          "A_terms": 32192,
+          "B_terms": 256,
+          "U_terms": 238710,
+          "C_terms": 1163074
+        },
+        {
+          "N": 52,
+          "minimum_ordinary_Q_total_degree": 13,
+          "pi_N": 15,
+          "r_N_including_loop": 3,
+          "alpha": 12,
+          "prime_loop": [],
+          "A_terms": 32647,
+          "B_terms": 58,
+          "U_terms": 244170,
+          "C_terms": 1241537
+        },
+        {
+          "N": 54,
+          "minimum_ordinary_Q_total_degree": 12,
+          "pi_N": 16,
+          "r_N_including_loop": 5,
+          "alpha": 11,
+          "prime_loop": [],
+          "A_terms": 63019,
+          "B_terms": 1017,
+          "U_terms": 493232,
+          "C_terms": 2476626
+        },
+        {
+          "N": 56,
+          "minimum_ordinary_Q_total_degree": 14,
+          "pi_N": 16,
+          "r_N_including_loop": 3,
+          "alpha": 13,
+          "prime_loop": [],
+          "A_terms": 65399,
+          "B_terms": 68,
+          "U_terms": 522352,
+          "C_terms": 2682547
+        },
+        {
+          "N": 58,
+          "minimum_ordinary_Q_total_degree": 13,
+          "pi_N": 16,
+          "r_N_including_loop": 4,
+          "alpha": 12,
+          "prime_loop": [
+            29
+          ],
+          "A_terms": 64839,
+          "B_terms": 398,
+          "U_terms": 515202,
+          "C_terms": 2796013
+        },
+        {
+          "N": 60,
+          "minimum_ordinary_Q_total_degree": 12,
+          "pi_N": 17,
+          "r_N_including_loop": 6,
+          "alpha": 11,
+          "prime_loop": [],
+          "A_terms": 121658,
+          "B_terms": 3032,
+          "U_terms": 996935,
+          "C_terms": 5418172
+        }
+      ],
+      "Q_minimum_justification": "All26 full ordinary rational identities are independently reconstructed and coefficient-checked; the verified general Q restriction lower bound equals each upper product degree alpha+1. No mod-p feasibility transfer is used.",
+      "Q_solver_and_checker": "Q upper search: exact rational Gaussian elimination, Python standard library. Independent replay: checked common denominators and integer coefficient arithmetic, original loop squares, full Boolean/nonprime lift, all gzip/secondary coefficient hashes.",
+      "finite_field_comparison": "At the same26 even N10..60, separately established Q and F_1000000007 minima happen to agree. This is no generic field-equivalence theorem.",
+      "polynomial_calculus": {
+        "type": "Exact finite computation with independently checked constructive traces and closed obstruction spaces",
+        "family": "Full rejected D_pi(N) calibration only",
+        "field_prime": 1000000007,
+        "range": "Fourteen even N10..36 over F_1000000007; N32/N34/N36 points are Fp-only",
+        "degree_convention": "Maximum ordinary total degree of every actual derivation line, with original g squares and explicit Boolean axioms; no Boolean quotient reduction.",
+        "size_convention": "One arbitrary finite multi-premise field-linear combination is one line. The recorded constructive sizes are not optimal or standard binary-rule line counts.",
+        "method": "Full-system traces reconstruct all axioms and rules. Preceding-degree spaces independently contain every restricted axiom, have complete low-degree intersections, are closed under all low-basis variable products, and exclude1. Full-system restriction/lift is independently checked.",
+        "arithmetic_and_software": "Exact modular integer arithmetic in Python standard library. Producer ordinary graded-echelon closure; independent checker ordinary exponent vectors and separate row/high-projection elimination. No producer/check_pc code imported or executed.",
+        "curve": [
+          {
+            "N": 10,
+            "minimal_ordinary_PC_degree": 3,
+            "pruned_multi_premise_lines": 55,
+            "monomial_occurrences": 173,
+            "largest_line_monomials": 12,
+            "preceding_fixed_point_rank": 10,
+            "preceding_low_span_dimension": 1,
+            "low_basis_variable_products_checked": 4
+          },
+          {
+            "N": 12,
+            "minimal_ordinary_PC_degree": 3,
+            "pruned_multi_premise_lines": 84,
+            "monomial_occurrences": 394,
+            "largest_line_monomials": 14,
+            "preceding_fixed_point_rank": 12,
+            "preceding_low_span_dimension": 1,
+            "low_basis_variable_products_checked": 5
+          },
+          {
+            "N": 14,
+            "minimal_ordinary_PC_degree": 3,
+            "pruned_multi_premise_lines": 126,
+            "monomial_occurrences": 839,
+            "largest_line_monomials": 29,
+            "preceding_fixed_point_rank": 14,
+            "preceding_low_span_dimension": 1,
+            "low_basis_variable_products_checked": 6
+          },
+          {
+            "N": 16,
+            "minimal_ordinary_PC_degree": 3,
+            "pruned_multi_premise_lines": 109,
+            "monomial_occurrences": 685,
+            "largest_line_monomials": 23,
+            "preceding_fixed_point_rank": 14,
+            "preceding_low_span_dimension": 1,
+            "low_basis_variable_products_checked": 6
+          },
+          {
+            "N": 18,
+            "minimal_ordinary_PC_degree": 4,
+            "pruned_multi_premise_lines": 366,
+            "monomial_occurrences": 3269,
+            "largest_line_monomials": 50,
+            "preceding_fixed_point_rank": 92,
+            "preceding_low_span_dimension": 16,
+            "low_basis_variable_products_checked": 112
+          },
+          {
+            "N": 20,
+            "minimal_ordinary_PC_degree": 4,
+            "pruned_multi_premise_lines": 564,
+            "monomial_occurrences": 8186,
+            "largest_line_monomials": 94,
+            "preceding_fixed_point_rank": 117,
+            "preceding_low_span_dimension": 18,
+            "low_basis_variable_products_checked": 144
+          },
+          {
+            "N": 22,
+            "minimal_ordinary_PC_degree": 4,
+            "pruned_multi_premise_lines": 570,
+            "monomial_occurrences": 8171,
+            "largest_line_monomials": 97,
+            "preceding_fixed_point_rank": 117,
+            "preceding_low_span_dimension": 18,
+            "low_basis_variable_products_checked": 144
+          },
+          {
+            "N": 24,
+            "minimal_ordinary_PC_degree": 4,
+            "pruned_multi_premise_lines": 805,
+            "monomial_occurrences": 18870,
+            "largest_line_monomials": 160,
+            "preceding_fixed_point_rank": 145,
+            "preceding_low_span_dimension": 20,
+            "low_basis_variable_products_checked": 180
+          },
+          {
+            "N": 26,
+            "minimal_ordinary_PC_degree": 4,
+            "pruned_multi_premise_lines": 812,
+            "monomial_occurrences": 18763,
+            "largest_line_monomials": 192,
+            "preceding_fixed_point_rank": 145,
+            "preceding_low_span_dimension": 20,
+            "low_basis_variable_products_checked": 180
+          },
+          {
+            "N": 28,
+            "minimal_ordinary_PC_degree": 5,
+            "pruned_multi_premise_lines": 1859,
+            "monomial_occurrences": 37331,
+            "largest_line_monomials": 210,
+            "preceding_fixed_point_rank": 630,
+            "preceding_low_span_dimension": 150,
+            "low_basis_variable_products_checked": 1350
+          },
+          {
+            "N": 30,
+            "minimal_ordinary_PC_degree": 5,
+            "pruned_multi_premise_lines": 3027,
+            "monomial_occurrences": 110339,
+            "largest_line_monomials": 407,
+            "preceding_fixed_point_rank": 836,
+            "preceding_low_span_dimension": 176,
+            "low_basis_variable_products_checked": 1760
+          },
+          {
+            "N": 32,
+            "minimal_ordinary_PC_degree": 6,
+            "pruned_multi_premise_lines": 9475,
+            "monomial_occurrences": 540062,
+            "largest_line_monomials": 1071,
+            "preceding_fixed_point_rank": 4067,
+            "preceding_high_degree_projection_rank": 2961,
+            "preceding_low_span_dimension": 1106,
+            "low_basis_variable_products_checked": 12166
+          },
+          {
+            "N": 34,
+            "minimal_ordinary_PC_degree": 5,
+            "pruned_multi_premise_lines": 4686,
+            "monomial_occurrences": 290645,
+            "largest_line_monomials": 817,
+            "preceding_fixed_point_rank": 1090,
+            "preceding_high_degree_projection_rank": 880,
+            "preceding_low_span_dimension": 210,
+            "low_basis_variable_products_checked": 2310
+          },
+          {
+            "N": 36,
+            "minimal_ordinary_PC_degree": 5,
+            "pruned_multi_premise_lines": 4600,
+            "monomial_occurrences": 300303,
+            "largest_line_monomials": 1027,
+            "preceding_fixed_point_rank": 1090,
+            "preceding_high_degree_projection_rank": 880,
+            "preceding_low_span_dimension": 210,
+            "low_basis_variable_products_checked": 2310
+          }
+        ],
+        "total_pruned_trace_lines_verified": 27138,
+        "total_pruned_monomial_occurrences_verified": 1338030,
+        "total_low_basis_variable_products_verified": 20677,
+        "regression": {
+          "ordinary_degree_two_explicit_rules_verified": true,
+          "degree_one_unit_excluded": true,
+          "explicit_multi_premise_trace_lines": 13,
+          "degree_one_span_dimension": 1,
+          "degree_two_span_dimension": 6
+        },
+        "instance_binding": "First eleven cases retain their historical independent bindings and seven corruption controls per case. New N32/N34 cases pass a separate strict binder before all 48 mutations per case are rejected; the old N10..30 range binder and numeric cores remain byte-identical. New N36 passes its own strict source/case binder and full arithmetic before55 binding and5 genuine integer-alias mutations are rejected; N38 remains censored without a witness.",
+        "unverified_historical_metadata": [
+          "unpruned historical trace line count (cross-bound only)",
+          "other attempted degree closure dimensions and generator queue/product counts"
+        ],
+        "not_inferred": [
+          "Q PC minima",
+          "generic Q/Fp equivalence",
+          "asymptotic PC lower bound",
+          "binary-rule optimal size",
+          "different-family lower bound",
+          "Goldbach or route-wide impossibility"
+        ],
+        "heap_increment_independent_audit": {
+          "new_cases": [
+            32,
+            34
+          ],
+          "field": "F_1000000007 only",
+          "checker_sha256": "16b2fa995bcf3ce9646f2b28adf056cb7fbcf93d1305d58e4c15dc232b09a623",
+          "report_sha256": "378eb39714ad5308e8a217102b3d26f8d3238c7be073f3c17dfc78ac2b686e79",
+          "unchanged_numeric_core_sha256": "9a4f3b2fa561ee91e63c9ae6988628250795ca554b92f8f3e9514c5a34d744ed",
+          "numeric_functions": [
+            "audit_trace",
+            "audit_fixed"
+          ],
+          "old_binder_called_or_monkeypatched": false,
+          "producer_or_project_wrapper_imported_or_executed": false,
+          "valid_metadata_before_negative_controls": true,
+          "negative_metadata_controls_rejected": 96,
+          "source_provenance_binding": "Actual producer/helper/wrapper source hashes, N/prime list/field/count/degree, literal output paths, compressed/decompressed artifact hashes, original run and completion are independently bound",
+          "protected_prior_files_byte_identical": 98,
+          "accepted_gzip_bytes_preserved": 44,
+          "heap_duplicate_gzip_bytes_preserved": 10,
+          "old_eleven_cases_reexecuted": false,
+          "initial_failure_history": {
+            "run_json_sha256": "2c7ebb47aaeea494e9fb3df6c09264eb3a163432d1ac55a9b46870e88669d868",
+            "statuses_preserved": [
+              "EVIDENCE_INCOMPLETE_REPLAY_FAILURE",
+              "EVIDENCE_INCOMPLETE_REPLAY_FAILURE"
+            ],
+            "degree_evidence_preserved": [
+              null,
+              null
+            ],
+            "reason": "Original wrapper called the unchanged historical N10..30 metadata binder; the new valid independent binder handles exactly32/34"
+          },
+          "size_convention": "one arbitrary finite multi-premise field-linear combination is one line",
+          "historical_timing_scope": "Only cross-binding, UTC ordering, source/cap/deadline metadata checked; past CPU, queue and heap statistics not independently reexecuted",
+          "unverified_historical_metadata": [
+            "unpruned trace size beyond cross-binding",
+            "heap search counters",
+            "earlier attempt ranks/products",
+            "successful search rank/products",
+            "historical producer/replay performance and CPU load"
+          ],
+          "no_Q_transfer_or_binary_size_or_asymptotic_credit": true
+        },
+        "heap_36_38_independent_audit": {
+          "new_complete_cases": [
+            36
+          ],
+          "field": "F_1000000007 only",
+          "checker_sha256": "51ca454e33631a0835bca41384521bac4864e056c5e3e4beb5308b95585d5353",
+          "report_sha256": "8085c53493f061f76583be9f0ac35f9526de962d8b2e166f98c2beffaff127bb",
+          "unchanged_numeric_core_sha256": "9a4f3b2fa561ee91e63c9ae6988628250795ca554b92f8f3e9514c5a34d744ed",
+          "numeric_functions": [
+            "audit_trace",
+            "audit_fixed"
+          ],
+          "old_binder_called_or_monkeypatched": false,
+          "producer_or_project_wrapper_imported_or_executed": false,
+          "valid_actual_bindings_and_full_arithmetic_before_negative_controls": true,
+          "own_negative_binding_controls_rejected": 55,
+          "own_integer_schema_controls_rejected": 5,
+          "preservation_current_297_paths_match_producer_baseline_raw_Git": true,
+          "four_later_source_audit_integration_changes_explicit": [
+            "AXIOMS.md",
+            "AlgebraicGoldbach.lean",
+            "audit/Axioms.lean",
+            "scripts/generate_axiom_audit.py"
+          ],
+          "producer_record_to_Git_raw_equalities_rejected": {
+            "evidence/degree_curve.svg": {
+              "producer_recorded_raw_sha256": "1a16e7c4cd9d7e9effd9f84c2e84bb5a0628ebe4d5a0f1755fecb42ee13160bf",
+              "baseline_Git_raw_sha256": "cf464a06ca4559d0c3b2c945cbdb76c58307d09953eadb3030fbaac42b922cb9",
+              "current_clone_raw_sha256": "cf464a06ca4559d0c3b2c945cbdb76c58307d09953eadb3030fbaac42b922cb9",
+              "producer_record_hash_equals_baseline_Git_raw_hash": false,
+              "raw_Git_equality_rejected": true,
+              "reconstructed_CRLF_bytes_sha256": "1a16e7c4cd9d7e9effd9f84c2e84bb5a0628ebe4d5a0f1755fecb42ee13160bf",
+              "producer_record_hash_equals_exact_CRLF_serialization": true,
+              "current_clone_equals_baseline_Git_bytes": true,
+              "historical_producer_filesystem_bytes_independently_observed": false
+            },
+            "evidence/pc_checker.json": {
+              "producer_recorded_raw_sha256": "807bc504e8259244d543ca975ffd1270e2f093991517f8be8d13ea63241d02b6",
+              "baseline_Git_raw_sha256": "3e634ea6f3b900a2a0b8338fff32f72079da10d1516fe321b0e65c4cb11c590b",
+              "current_clone_raw_sha256": "3e634ea6f3b900a2a0b8338fff32f72079da10d1516fe321b0e65c4cb11c590b",
+              "producer_record_hash_equals_baseline_Git_raw_hash": false,
+              "raw_Git_equality_rejected": true,
+              "reconstructed_CRLF_bytes_sha256": "807bc504e8259244d543ca975ffd1270e2f093991517f8be8d13ea63241d02b6",
+              "producer_record_hash_equals_exact_CRLF_serialization": true,
+              "current_clone_equals_baseline_Git_bytes": true,
+              "historical_producer_filesystem_bytes_independently_observed": false
+            },
+            "evidence/pc_extension_checker.json": {
+              "producer_recorded_raw_sha256": "aa3fd0b8f280a384afa4bd8da25c59608e8db25fd05651d73a9f680d3a2ab82d",
+              "baseline_Git_raw_sha256": "a373ad49e371760f6e86cf9bdacc83fc5b999839a9279d8b84de10259f2df5ac",
+              "current_clone_raw_sha256": "a373ad49e371760f6e86cf9bdacc83fc5b999839a9279d8b84de10259f2df5ac",
+              "producer_record_hash_equals_baseline_Git_raw_hash": false,
+              "raw_Git_equality_rejected": true,
+              "reconstructed_CRLF_bytes_sha256": "aa3fd0b8f280a384afa4bd8da25c59608e8db25fd05651d73a9f680d3a2ab82d",
+              "producer_record_hash_equals_exact_CRLF_serialization": true,
+              "current_clone_equals_baseline_Git_bytes": true,
+              "historical_producer_filesystem_bytes_independently_observed": false
+            },
+            "evidence/pc_heap/verified_increment_curve.csv": {
+              "producer_recorded_raw_sha256": "e15fcf9edcdd1882a9a81e88584cc5c80411857e5cf17864d88c7c8b67c83392",
+              "baseline_Git_raw_sha256": "72ff42412957b385c42cb9af1882ca874b843e29665f0504909332dd37edebb3",
+              "current_clone_raw_sha256": "72ff42412957b385c42cb9af1882ca874b843e29665f0504909332dd37edebb3",
+              "producer_record_hash_equals_baseline_Git_raw_hash": false,
+              "raw_Git_equality_rejected": true,
+              "reconstructed_CRLF_bytes_sha256": "e15fcf9edcdd1882a9a81e88584cc5c80411857e5cf17864d88c7c8b67c83392",
+              "producer_record_hash_equals_exact_CRLF_serialization": true,
+              "current_clone_equals_baseline_Git_bytes": true,
+              "historical_producer_filesystem_bytes_independently_observed": false
+            },
+            "lake-manifest.json": {
+              "producer_recorded_raw_sha256": "f862cd2270d11a39e2f2be6945654e14e0c99752457b4414c4ba817740a37705",
+              "baseline_Git_raw_sha256": "0a359781a08327f02d4a89017abcfa38d26807ee851577c1a0272e18a0c4df99",
+              "current_clone_raw_sha256": "0a359781a08327f02d4a89017abcfa38d26807ee851577c1a0272e18a0c4df99",
+              "producer_record_hash_equals_baseline_Git_raw_hash": false,
+              "raw_Git_equality_rejected": true,
+              "reconstructed_CRLF_bytes_sha256": "f862cd2270d11a39e2f2be6945654e14e0c99752457b4414c4ba817740a37705",
+              "producer_record_hash_equals_exact_CRLF_serialization": true,
+              "current_clone_equals_baseline_Git_bytes": true,
+              "historical_producer_filesystem_bytes_independently_observed": false
+            }
+          },
+          "producer_record_raw_Git_matches": 296,
+          "producer_historical_filesystem_bytes_independently_observed": false,
+          "historical_serialization_interpretation": "Five stored producer filesystem hashes differ from Git raw bytes but equal exactly reconstructed CRLF serializations. Raw Git equality is rejected for those paths; current Git byte continuity remains exact. Past producer filesystem bytes were not independently observed.",
+          "historical_producer_pending_null_degree_records_retained": true,
+          "censored_N38": {
+            "N": 38,
+            "field_prime": 1000000007,
+            "status": "INCOMPLETE_TIMEOUT_NO_DEGREE_CREDIT",
+            "recorded_producer_killed_and_reaped": true,
+            "degree_evidence": null,
+            "ordinary_PC_degree_evidence_Fp": null,
+            "numeric_replay_performed": false,
+            "censored_run_metadata_source_path_and_hash_bindings_verified": true,
+            "recorded_elapsed_seconds": 600.039,
+            "historical_process_termination_or_elapsed_time_reexecuted": false,
+            "actual_complete_witnesses_absent": true,
+            "files_if_any": [],
+            "no_degree_or_size_inferred": true
+          },
+          "size_convention": "one arbitrary finite multi-premise field-linear combination is one line",
+          "unverified_historical_metadata": [
+            "past producer/replay timings and OS kill/reap beyond source/record bindings",
+            "unpruned trace count beyond cross-binding",
+            "heap/queue statistics",
+            "earlier/successful search ranks and products"
+          ],
+          "no_Q_transfer_binary_size_minimum_size_asymptotic_or_Goldbach_credit": true
+        }
+      },
+      "rational_polynomial_calculus": {
+        "type": "Exact direct rational computation with independently replayed full traces and preceding-degree invariant spaces",
+        "field": "Q",
+        "family": "Rejected full D_pi calibration",
+        "range": "Eleven even N10..30",
+        "curve": [
+          {
+            "N": 10,
+            "minimal_ordinary_PC_degree_Q": 3,
+            "macro_multi_premise_lines": 55,
+            "specified_binary_scalar_lines": 123,
+            "stored_monomial_occurrences": 173,
+            "binary_expanded_monomial_occurrences": 532,
+            "preceding_obstruction_rank": 10,
+            "preceding_complete_low_span_dimension": 1,
+            "preceding_variable_products_checked": 4
+          },
+          {
+            "N": 12,
+            "minimal_ordinary_PC_degree_Q": 3,
+            "macro_multi_premise_lines": 84,
+            "specified_binary_scalar_lines": 218,
+            "stored_monomial_occurrences": 394,
+            "binary_expanded_monomial_occurrences": 1571,
+            "preceding_obstruction_rank": 12,
+            "preceding_complete_low_span_dimension": 1,
+            "preceding_variable_products_checked": 5
+          },
+          {
+            "N": 14,
+            "minimal_ordinary_PC_degree_Q": 3,
+            "macro_multi_premise_lines": 126,
+            "specified_binary_scalar_lines": 463,
+            "stored_monomial_occurrences": 839,
+            "binary_expanded_monomial_occurrences": 6933,
+            "preceding_obstruction_rank": 14,
+            "preceding_complete_low_span_dimension": 1,
+            "preceding_variable_products_checked": 6
+          },
+          {
+            "N": 16,
+            "minimal_ordinary_PC_degree_Q": 3,
+            "macro_multi_premise_lines": 109,
+            "specified_binary_scalar_lines": 252,
+            "stored_monomial_occurrences": 685,
+            "binary_expanded_monomial_occurrences": 3064,
+            "preceding_obstruction_rank": 14,
+            "preceding_complete_low_span_dimension": 1,
+            "preceding_variable_products_checked": 6
+          },
+          {
+            "N": 18,
+            "minimal_ordinary_PC_degree_Q": 4,
+            "macro_multi_premise_lines": 366,
+            "specified_binary_scalar_lines": 2216,
+            "stored_monomial_occurrences": 3269,
+            "binary_expanded_monomial_occurrences": 63047,
+            "preceding_obstruction_rank": 92,
+            "preceding_complete_low_span_dimension": 16,
+            "preceding_variable_products_checked": 112
+          },
+          {
+            "N": 20,
+            "minimal_ordinary_PC_degree_Q": 4,
+            "macro_multi_premise_lines": 564,
+            "specified_binary_scalar_lines": 5060,
+            "stored_monomial_occurrences": 8186,
+            "binary_expanded_monomial_occurrences": 268487,
+            "preceding_obstruction_rank": 117,
+            "preceding_complete_low_span_dimension": 18,
+            "preceding_variable_products_checked": 144
+          },
+          {
+            "N": 22,
+            "minimal_ordinary_PC_degree_Q": 4,
+            "macro_multi_premise_lines": 570,
+            "specified_binary_scalar_lines": 5870,
+            "stored_monomial_occurrences": 8171,
+            "binary_expanded_monomial_occurrences": 352644,
+            "preceding_obstruction_rank": 117,
+            "preceding_complete_low_span_dimension": 18,
+            "preceding_variable_products_checked": 144
+          },
+          {
+            "N": 24,
+            "minimal_ordinary_PC_degree_Q": 4,
+            "macro_multi_premise_lines": 805,
+            "specified_binary_scalar_lines": 9069,
+            "stored_monomial_occurrences": 18870,
+            "binary_expanded_monomial_occurrences": 835983,
+            "preceding_obstruction_rank": 145,
+            "preceding_complete_low_span_dimension": 20,
+            "preceding_variable_products_checked": 180
+          },
+          {
+            "N": 26,
+            "minimal_ordinary_PC_degree_Q": 4,
+            "macro_multi_premise_lines": 812,
+            "specified_binary_scalar_lines": 8096,
+            "stored_monomial_occurrences": 18763,
+            "binary_expanded_monomial_occurrences": 840118,
+            "preceding_obstruction_rank": 145,
+            "preceding_complete_low_span_dimension": 20,
+            "preceding_variable_products_checked": 180
+          },
+          {
+            "N": 28,
+            "minimal_ordinary_PC_degree_Q": 5,
+            "macro_multi_premise_lines": 1859,
+            "specified_binary_scalar_lines": 31587,
+            "stored_monomial_occurrences": 37331,
+            "binary_expanded_monomial_occurrences": 4192300,
+            "preceding_obstruction_rank": 630,
+            "preceding_complete_low_span_dimension": 150,
+            "preceding_variable_products_checked": 1350
+          },
+          {
+            "N": 30,
+            "minimal_ordinary_PC_degree_Q": 5,
+            "macro_multi_premise_lines": 3027,
+            "specified_binary_scalar_lines": 90783,
+            "stored_monomial_occurrences": 110339,
+            "binary_expanded_monomial_occurrences": 22868396,
+            "preceding_obstruction_rank": 836,
+            "preceding_complete_low_span_dimension": 176,
+            "preceding_variable_products_checked": 1760
+          }
+        ],
+        "method": "Independent exact fractions.Fraction, ordinary exponent vectors, every actual full generator/rule/final1, whole low-span ranks, axiom containment, variable closure and unit exclusion. No producer/checker execution, modular proof conversion or NS-lower-bound transfer.",
+        "degree_convention": "Maximum ordinary degree of every actual PC line, including original g squares and explicit Boolean rules.",
+        "size_convention": "Constructed macro multi-premise lines and separately replayed specified left-fold binary alphaP+betaQ/unary-scalar expansion; neither size is optimal. Expanded monomial occurrences differ from stored occurrences.",
+        "macro_lines_verified": 8377,
+        "specified_binary_scalar_lines_verified": 153737,
+        "specified_binary_scalar_monomial_occurrences_verified": 29433075,
+        "finite_comparison": "Q and F_1000000007 PC minima agree at these same11 cases; each has a separate direct upper/lower audit, with no generic Q/Fp theorem.",
+        "provenance_resolution": "The frozen cf numeric replay detected four stale original-baseline text flags. They were corrected at d32e79d and independently validated against the integration baseline21f199d; all22 Q and22 Fp gzip artifacts remain byte-identical. The stale cf document claim is not credited.",
+        "unverified_historical_metadata": [
+          "unpruned historical trace line count (cross-bound only)",
+          "other attempted degree closure dimensions and generator queue/product counts"
+        ],
+        "not_inferred": [
+          "generic Q/Fp equality",
+          "asymptotic PC lower bound",
+          "optimal proof size",
+          "different-family obstruction",
+          "uniform loop NS upper",
+          "Goldbach"
+        ]
+      },
+      "groebner_crosscheck": {
+        "type": "Independently replayed finite ordinary-Buchberger/unit-ideal existence cross-check, rejected D_pi calibration only",
+        "range": "N=10 and N=12 separately over Q and F_1000000007; exactly four cases",
+        "cases": [
+          {
+            "N": 10,
+            "field": "Q",
+            "path": "experiments/groebner_crosscheck/N10_Q.json",
+            "artifact_sha256": "0c2c118734f809004d33034d53210373970b0b3e26876937323c6762e4433a3b",
+            "full_input_slots": 24,
+            "computed_algorithm_and_certificate_statistics": {
+              "s_polynomials": 82,
+              "division_steps": 176,
+              "constructed_basis_elements": 19,
+              "maximum_ordinary_polynomial_degree": 3,
+              "maximum_polynomial_terms": 12,
+              "maximum_tracked_summand_degree": 5,
+              "final_certificate_standard_degree": 5,
+              "final_certificate_multiplier_terms": 307
+            },
+            "remaining_earlier_basis_pairs_unprocessed": 89,
+            "valid_exact_replay_before_own_mutations": true,
+            "own_corruptions_rejected": 22
+          },
+          {
+            "N": 10,
+            "field": "F_1000000007",
+            "path": "experiments/groebner_crosscheck/N10_Fp.json",
+            "artifact_sha256": "ff0fad778af429ead6623fecb0933f2ed271c5cbeb81b139016b892bf8e6bc54",
+            "full_input_slots": 24,
+            "computed_algorithm_and_certificate_statistics": {
+              "s_polynomials": 82,
+              "division_steps": 176,
+              "constructed_basis_elements": 19,
+              "maximum_ordinary_polynomial_degree": 3,
+              "maximum_polynomial_terms": 12,
+              "maximum_tracked_summand_degree": 5,
+              "final_certificate_standard_degree": 5,
+              "final_certificate_multiplier_terms": 307
+            },
+            "remaining_earlier_basis_pairs_unprocessed": 89,
+            "valid_exact_replay_before_own_mutations": true,
+            "own_corruptions_rejected": 22
+          },
+          {
+            "N": 12,
+            "field": "Q",
+            "path": "experiments/groebner_crosscheck/N12_Q.json",
+            "artifact_sha256": "aaead8c30db12f9851ab3c3a8a508c38f35933f7c24dcfe5b9a1c2fe23248b8f",
+            "full_input_slots": 28,
+            "computed_algorithm_and_certificate_statistics": {
+              "s_polynomials": 96,
+              "division_steps": 326,
+              "constructed_basis_elements": 24,
+              "maximum_ordinary_polynomial_degree": 3,
+              "maximum_polynomial_terms": 15,
+              "maximum_tracked_summand_degree": 8,
+              "final_certificate_standard_degree": 8,
+              "final_certificate_multiplier_terms": 2157
+            },
+            "remaining_earlier_basis_pairs_unprocessed": 180,
+            "valid_exact_replay_before_own_mutations": true,
+            "own_corruptions_rejected": 22
+          },
+          {
+            "N": 12,
+            "field": "F_1000000007",
+            "path": "experiments/groebner_crosscheck/N12_Fp.json",
+            "artifact_sha256": "461950157e0f6e0b8307df6a1fcad238d94f00738819e8b21337efb8f78c9bf2",
+            "full_input_slots": 28,
+            "computed_algorithm_and_certificate_statistics": {
+              "s_polynomials": 96,
+              "division_steps": 326,
+              "constructed_basis_elements": 24,
+              "maximum_ordinary_polynomial_degree": 3,
+              "maximum_polynomial_terms": 15,
+              "maximum_tracked_summand_degree": 8,
+              "final_certificate_standard_degree": 8,
+              "final_certificate_multiplier_terms": 2157
+            },
+            "remaining_earlier_basis_pairs_unprocessed": 180,
+            "valid_exact_replay_before_own_mutations": true,
+            "own_corruptions_rejected": 22
+          }
+        ],
+        "actual_full_inputs": "All N+1 nonprime slots, including actual prime-index zeros; every ordinary Boolean equation; count sum X_i-pi(N); original ordered g including center square",
+        "monomial_order": "Graded lexicographic x_0>x_1>...>x_N with ordinary exponents; no Boolean quotient reduction",
+        "verified_algorithm": "Every recorded selected S-pair, individual leading-term multiple, deterministic division, monic normalization and tracked full-generator representation is reconstructed and checked exactly",
+        "division_invariant": "The full-generator representation equals work plus remainder at every logged step; this is not a supplied PC derivation of each separate value",
+        "verified_unit_identity": "Final explicit 1=sum M_j G_j expanded in the ordinary full ring, independently in each coefficient field",
+        "final_basis": "Singleton {1}; every original generator explicitly divides to zero; its distinct S-pair condition is vacuous",
+        "pending_pair_scope": "Stops at the first unit; 89 earlier-basis pending pairs at N10 and 180 at N12 are counted, not replayed. No reduced/minimal or fully processed earlier-basis claim",
+        "degree_and_size_scope": "Maximum algorithm polynomial degree3 is only a work/remainder statistic. Final standard certificate degrees5/8 and multiplier term counts307/2157 are constructive and nonminimal; accepted NS minima3/5 remain unchanged. No new PC degree/size measurement",
+        "independent_checker_sha256": "bf22583b7401e5a80ef258576dab80c55c6daec4fda3b23ab69c1d761b7a12a6",
+        "independent_report_sha256": "2131a8fe4de16f95c7a9cc0be7eb84722c72810c3898df2e5913071d0b728079",
+        "producer_or_project_checker_imported_or_executed": false,
+        "positive_actual_bindings_and_full_replays_before_negative_controls": true,
+        "own_corruptions_rejected": 88,
+        "strict_decoder_hardening_before_credit": "Separate final singleton is decoded through the strict polynomial decoder; the dedicated Boolean-exponent alias control is rejected",
+        "all_prior_main_paths_byte_preserved": 462,
+        "Lean_proof_build_inherited": "eda1b010c79dcc69cf30ce6da37d88d3b6b37204",
+        "historical_time_scope": "Source/report equality and cap bounds checked only; past execution times/performance not independently reproduced",
+        "not_inferred": [
+          "minimum NS/certificate degree",
+          "PC degree or size",
+          "generic Q/Fp equality or transfer",
+          "larger N",
+          "asymptotic growth",
+          "viable-family rung",
+          "Goldbach",
+          "whole-route obstruction"
+        ]
+      },
+      "deferred_recording_method": {
+        "scope": "R3 recording method engineering only; no new degree/minimum/curve, candidate rung, Q transfer or Goldbach credit",
+        "source_commit": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+        "producer_path": "scripts/pc_calibration_deferred.py",
+        "producer_sha256": "629e2394299949571ab5f8607df858653241b4bf160e9a2cd649350697e3b4c8",
+        "checker_path": "judge/deferred_recording_judge_checker.py",
+        "checker_sha256": "7bd07de0eaa2f436a38c4c1f54057e0d027cdbd9cdce2833932a5b1dca9e52bd",
+        "numeric_report": "judge/deferred_recording_judge_audit_80d6893.json",
+        "numeric_report_sha256": "4cfdf08c56bb1c4abe2baeb7a61e9e1cb18ad83945592ecbe08203a941ce257c",
+        "source_process_scope_report": "judge/deferred_recording_provenance_scope_80d6893.json",
+        "source_process_scope_report_sha256": "1464f280403353b0b8a995821c0b088f2f6d1f3a8720285f6cbedb54f5e04d4f",
+        "unchanged_exact_vector_core_sha256": "9a4f3b2fa561ee91e63c9ae6988628250795ca554b92f8f3e9514c5a34d744ed",
+        "fresh_valid_trace_and_complete_fixed_span_replays": 4,
+        "own_corruption_controls_rejected_after_valid_replays": 156,
+        "cases": [
+          {
+            "label": "pilot_N10",
+            "N": 10,
+            "field_prime": 1000000007,
+            "actual_serialized_multi_premise_lines_verified": 55,
+            "reported_virtual_old_unpruned_lines": 61
+          },
+          {
+            "label": "pilot_N16",
+            "N": 16,
+            "field_prime": 1000000007,
+            "actual_serialized_multi_premise_lines_verified": 109,
+            "reported_virtual_old_unpruned_lines": 129
+          },
+          {
+            "label": "pilot_N30",
+            "N": 30,
+            "field_prime": 1000000007,
+            "actual_serialized_multi_premise_lines_verified": 3027,
+            "reported_virtual_old_unpruned_lines": 3716
+          },
+          {
+            "label": "matched_new_N30",
+            "N": 30,
+            "field_prime": 1000000007,
+            "actual_serialized_multi_premise_lines_verified": 3027,
+            "reported_virtual_old_unpruned_lines": 3716
+          }
+        ],
+        "ten_new_gzip_copies_exactly_match_accepted_bytes": true,
+        "all_full_reported_attempt_heap_product_metadata_matches_accepted": true,
+        "historical_earlier_closure_statistics_independently_reexecuted": false,
+        "recipe_virtual_counts": "Cross-bound source/metadata; virtual lines are not serialized or physically materialized proof size",
+        "complete_preceding_fixed_points_and_actual_full_system_ordinary_rules_replayed": true,
+        "measured_old_new_N30_observation": {
+          "N": 30,
+          "field_prime": 1000000007,
+          "order": [
+            "accepted_old_N30",
+            "deferred_new_N30"
+          ],
+          "old_supervisor_wall_seconds": 22.669664,
+          "new_supervisor_wall_seconds": 11.677768,
+          "old_producer_seconds": 22.531,
+          "new_producer_seconds": 11.547,
+          "new_phase_times_seconds": {
+            "full_nonprime_prelude": 0.0,
+            "reachable_reconstruction": 0.6099999999860302,
+            "pruning_remapping": 0.062000000034458935,
+            "json_encoding": 0.125,
+            "compression_write": 0.7349999999860302,
+            "degree_closures": [
+              {
+                "degree_bound": 1,
+                "seconds": 0.0
+              },
+              {
+                "degree_bound": 2,
+                "seconds": 0.0
+              },
+              {
+                "degree_bound": 3,
+                "seconds": 0.01600000000325963
+              },
+              {
+                "degree_bound": 4,
+                "seconds": 0.25
+              },
+              {
+                "degree_bound": 5,
+                "seconds": 9.64000000001397
+              }
+            ],
+            "complete_failed_basis_exports": [
+              {
+                "degree_bound": 1,
+                "seconds": 0.0
+              },
+              {
+                "degree_bound": 2,
+                "seconds": 0.0
+              },
+              {
+                "degree_bound": 3,
+                "seconds": 0.01600000000325963
+              },
+              {
+                "degree_bound": 4,
+                "seconds": 0.0779999999795109
+              }
+            ]
+          },
+          "old_phase_times_seconds": null,
+          "old_phase_limitation": "Accepted producer unchanged and has no per-phase timing instrumentation",
+          "old_peak_memory_observation": {
+            "available": true,
+            "samples": 412,
+            "sampling_interval_seconds": 0.05,
+            "method": "largest observed Windows lifetime-peak counters; final interval may be missed",
+            "largest_observed_peak_working_set_bytes": 124674048,
+            "largest_observed_peak_pagefile_bytes": 119779328
+          },
+          "new_peak_memory_observation": {
+            "available": true,
+            "samples": 213,
+            "sampling_interval_seconds": 0.05,
+            "method": "largest observed Windows lifetime-peak counters; final interval may be missed",
+            "largest_observed_peak_working_set_bytes": 88023040,
+            "largest_observed_peak_pagefile_bytes": 82792448
+          },
+          "new_self_observed_peak_memory": {
+            "available": true,
+            "peak_working_set_bytes": 88023040,
+            "peak_pagefile_bytes": 82792448,
+            "method": "Windows process lifetime peak before final manifest export"
+          },
+          "runtime_scope": "One same-host ordered N30/Fp pair only; no load/cache normalization or N38 inference"
+        },
+        "benchmark_reproduced_by_Judge": false,
+        "general_speedup_or_N38_completion_prediction": false,
+        "no_N38_dispatch_artifacts_or_additional_case_authorization": true,
+        "memory_and_clock_limits": [
+          "Largest sampled Windows lifetime-peak counters; terminal interval may be missed; producer self-observed peak precedes manifest export",
+          "15.625 ms monotonic producer clock: recorded zero short phases are below resolution; supervisor perf_counter100ns; old phases unavailable",
+          "One ordered same-host N30 pair; no exclusive load or cache normalization, no general speedup or N38 completion prediction"
+        ],
+        "initial_uncredited_Judge_fixture_error_history": "judge/deferred_recording_initial_fixture_failure_80d6893.json",
+        "initial_fixture_error_history_sha256": "2cf5a1e69d4055f9d478a1109757cc356d0c713042f95e0794c038fb681e53eb",
+        "old_accepted_numeric_curves_and_minima_unchanged": true
+      },
+      "count_elimination_partial_method": {
+        "scope": "PARTIAL_TWO_COMPLETE_CASES_METHOD_ONLY; failed three-case plan remains STOPPED_NO_NEW_CREDIT",
+        "source_commit": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+        "inherited_old_numeric_commit": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+        "inherited_proof_commit": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+        "source_sha256": {
+          "scripts/pc_calibration_count_elimination.py": "12cfe18bc37381af7252304d60277bfb4d4cf377548c6bb90069b7b107738498",
+          "scripts/check_pc_count_elimination.py": "23cad74a28e9ec9296745ddce8266d4a9f6f76d299f455dc33c4b64d64067e69",
+          "scripts/run_pc_count_elimination_pilots.py": "78087c1523dcb8943c0fffc6781561d7f508f16a9bd32e9c573f073cf90f3025"
+        },
+        "judge_checker_path": "judge/count_elimination_checker.py",
+        "judge_checker_sha256": "bbcab9b2a343492c3d31dd46364ba2b1ac484cebbb408e2446147ab1ff5166a8",
+        "reports": {
+          "judge/count_elimination_judge_audit_74b17fa.json": "c6f85a22f3710998879d3f636c9396e972dc01fcd0e685c9fb8e23a0b4ec8d4d",
+          "judge/count_elimination_continuity_74b17fa.json": "48fd9281bade522b5a07aa3234cdf9e76d55c25f371ee6c99968d9de8b5e5675",
+          "judge/count_elimination_provenance_scope_74b17fa.json": "524ef423adf2ffb4547f29929ec9397a1ecab975225ecae39baa534926a0aa5d"
+        },
+        "unchanged_exact_vector_core_sha256": "9a4f3b2fa561ee91e63c9ae6988628250795ca554b92f8f3e9514c5a34d744ed",
+        "fresh_valid_full_upper_and_full_preceding_lower_replays": 2,
+        "own_corruption_controls_rejected_after_valid_replays": 108,
+        "cases": [
+          {
+            "N": 10,
+            "field_prime": 1000000007,
+            "duplicate_existing_ordinary_PC_degree": 3,
+            "actual_serialized_multi_premise_lines": 50,
+            "actual_monomial_occurrences": 221,
+            "actual_max_line_monomials": 13,
+            "preceding_bound": 2,
+            "full_rank": 10,
+            "high_rank": 9,
+            "entire_low_intersection_dimension": 1,
+            "all_original_prime_variable_products_checked_including_X2": 4,
+            "actual_full_rules_ordinary_loops_and_ancestor_pruning_verified": true,
+            "substitution_source_births_and_aliases_independently_verified": true,
+            "complete_full_ordinary_count_kernel_and_zero_FIRST_complement_verified": true,
+            "stored_and_decompressed_artifact_bindings": [
+              {
+                "stored_sha256": "68cb314b21b0479a6e8a253a9e82c3186049f70042a8754d5f839e75f94cc947",
+                "decompressed_sha256": "0a42a7a9ded7ce964cd80b26e6e670ce29733cf732ca3e4243560aa7951859b1",
+                "stored_bytes": 1990,
+                "decompressed_bytes": 13456,
+                "path": "evidence/pc_count_elimination/pilots/N10/N10_trace.json.gz"
+              },
+              {
+                "stored_sha256": "6aad02cc71665f99eabbd54d1b70fe6076f2aca7d4f8aa43fee66b3d10ca6b1e",
+                "decompressed_sha256": "6017782c1a5e65735cd0b57bddbe26bd1c644da344c89ec4089f24c560dc796a",
+                "stored_bytes": 641,
+                "decompressed_bytes": 1622,
+                "path": "evidence/pc_count_elimination/pilots/N10/N10_lower_degree2.json.gz"
+              }
+            ],
+            "fresh_valid_before_54_own_rejected_controls": true
+          },
+          {
+            "N": 16,
+            "field_prime": 1000000007,
+            "duplicate_existing_ordinary_PC_degree": 3,
+            "actual_serialized_multi_premise_lines": 116,
+            "actual_monomial_occurrences": 1253,
+            "actual_max_line_monomials": 47,
+            "preceding_bound": 2,
+            "full_rank": 14,
+            "high_rank": 13,
+            "entire_low_intersection_dimension": 1,
+            "all_original_prime_variable_products_checked_including_X2": 6,
+            "actual_full_rules_ordinary_loops_and_ancestor_pruning_verified": true,
+            "substitution_source_births_and_aliases_independently_verified": true,
+            "complete_full_ordinary_count_kernel_and_zero_FIRST_complement_verified": true,
+            "stored_and_decompressed_artifact_bindings": [
+              {
+                "stored_sha256": "e1d44c357b72f3da71767ee3b109c413c0e72c4f6a8f1c3bca0593c23f870342",
+                "decompressed_sha256": "d173b9e9576358d06522a072d4c12571c85b0bc99c5370dea923f093a6250214",
+                "stored_bytes": 6919,
+                "decompressed_bytes": 43384,
+                "path": "evidence/pc_count_elimination/pilots/N16/N16_trace.json.gz"
+              },
+              {
+                "stored_sha256": "b83ba8784742d0188b67ce7770361c092c343897fda7c94eb41ffe05d779bc53",
+                "decompressed_sha256": "881414dde75ac39dace37cae5658e7514b9dea6a1fde9b66f11030961e061981",
+                "stored_bytes": 773,
+                "decompressed_bytes": 2267,
+                "path": "evidence/pc_count_elimination/pilots/N16/N16_lower_degree2.json.gz"
+              }
+            ],
+            "fresh_valid_before_54_own_rejected_controls": true
+          }
+        ],
+        "size_rule_convention": "one arbitrary finite multi-premise field-linear combination is one line",
+        "size_binary_optimality_or_degree_curve_advancement": false,
+        "original_full_system_field_count_prime_order_and_g_with_loops_reconstructed": true,
+        "actual_single_variable_and_field_linear_rules_ordinary_powers_preserved": true,
+        "all_full_preceding_generators_and_entire_low_span_variable_products_verified": true,
+        "producer_full_membership_checks_performed": false,
+        "membership_TARGETs_not_observed_work_and_constructed_rows_not_full_FIFO_ranks": true,
+        "other_attempt_rank_queue_heap_recipe_and_virtual_history": "source-bound observations only; not independently reexecuted",
+        "N30": {
+          "status": "INCOMPLETE_KILLED_AND_REAPED_NO_CREDIT",
+          "new_witness_or_degree_credit": false,
+          "supervisor_wall_seconds": 240.09738,
+          "cap_seconds": 240,
+          "PID": 24880,
+          "saved_manifest_trace_lower_or_replay": false,
+          "sixth_checker_child_dispatched": false,
+          "partial_reduced_unit_bound5_and_constructed3000rows": "unreplayed producer observations; no saved ordinary proof",
+          "incomplete_memo": "judge/COUNT_ELIMINATION_N30_INCOMPLETE_REVIEW.md",
+          "incomplete_memo_sha256": "b8b30eb4bd4aabf2ce73a8e8d489bd4bcfa552cb8ae16296177bf2357df90ae6",
+          "original_run_sha256": "66d660e33c684a696e452a90b6d8b926eba8fa9458c2870b013f78f5ee0eb8df"
+        },
+        "three_case_plan_completed_or_generic_method_readiness": false,
+        "performance_speedup_memory_generalization_or_timing_pair": false,
+        "new_curve_point_Q_transfer_candidate_rung_or_Goldbach": false,
+        "retry_N38_or_further_producer_dispatch_authorized_by_this_credit": false,
+        "historical_filesystem_preservation_independently_observed": false,
+        "exact_22_terminal_raw_Git_bindings_19_inventory_and854_current_snapshot_rebindings": true,
+        "stdout_CRLF_and_stage_actual_LF_preserved_as_observed": true,
+        "old_R1_R2_R3_R4_curves_minima_and_proof_inventory_unchanged": true,
+        "initial_overstrict_final_audit_transport_stop_retained_unaccepted": "judge/count_elimination_initial_scope_stop_74b17fa.json",
+        "initial_overstrict_final_audit_transport_stop_sha256": "994086d5a6b612734b052d02a2895750a56a09a008b06640c50d92993d1960bc"
+      },
+      "checked_recipe_compiler_method": {
+        "scope": "THREE_COMPLETE_FIXED_Fp_RECIPE_COMPILER_METHOD_CASES_ONLY; duplicate known degrees and constructive macro sizes",
+        "source_commit": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+        "inherited_proof_commit": "09a6d296247197cc42ac0df486f60d5074b77c66",
+        "old_partial_method_commit_preserved": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+        "inherited_numeric_math_commit": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+        "cases": [
+          {
+            "N": 10,
+            "field_prime": 1000000007,
+            "duplicate_existing_ordinary_PC_degree": 3,
+            "actual_constructive_multi_premise_lines": 50,
+            "actual_monomial_occurrences": 221,
+            "actual_largest_line_terms": 13,
+            "preceding_bound": 2,
+            "full_rank": 10,
+            "high_rank": 9,
+            "entire_low_intersection_dimension": 1,
+            "all_full_prime_variable_products_including_X2": 4,
+            "all_available_original_inputs": 6,
+            "ALL_ordinary_full_count_multiples": 5,
+            "ALL_zero_FIRST_embedded_reduced_rows": 5,
+            "unit_excluded": true,
+            "actual_ordinary_original_g_loop_and_count_full_rules_verified": true,
+            "actual_auxiliary_source_birth_alias_and_X2_substitution_verified": true,
+            "actual_dense_remap_named_ancestry_and_global_upper_aux_term_order_verified": true,
+            "fresh_71_own_controls_rejected_after_all_three_valid_pairs": true,
+            "stored_and_decompressed_artifacts": [
+              {
+                "stored_sha256": "8e2753a286939842771688f547eeeb1a3835e7701e0b8adfce3b5b630761c25a",
+                "decompressed_sha256": "57f45aecc194dc37e92352f1c746b65ecb65332ac83ff4ab14ab85e2211096af",
+                "stored_bytes": 2180,
+                "decompressed_bytes": 13845,
+                "path": "evidence/pc_recipe_compiler/pilots/N10/N10_trace.json.gz"
+              },
+              {
+                "stored_sha256": "6aad02cc71665f99eabbd54d1b70fe6076f2aca7d4f8aa43fee66b3d10ca6b1e",
+                "decompressed_sha256": "6017782c1a5e65735cd0b57bddbe26bd1c644da344c89ec4089f24c560dc796a",
+                "stored_bytes": 641,
+                "decompressed_bytes": 1622,
+                "path": "evidence/pc_recipe_compiler/pilots/N10/N10_lower_degree2.json.gz"
+              }
+            ]
+          },
+          {
+            "N": 16,
+            "field_prime": 1000000007,
+            "duplicate_existing_ordinary_PC_degree": 3,
+            "actual_constructive_multi_premise_lines": 116,
+            "actual_monomial_occurrences": 1253,
+            "actual_largest_line_terms": 47,
+            "preceding_bound": 2,
+            "full_rank": 14,
+            "high_rank": 13,
+            "entire_low_intersection_dimension": 1,
+            "all_full_prime_variable_products_including_X2": 6,
+            "all_available_original_inputs": 8,
+            "ALL_ordinary_full_count_multiples": 7,
+            "ALL_zero_FIRST_embedded_reduced_rows": 7,
+            "unit_excluded": true,
+            "actual_ordinary_original_g_loop_and_count_full_rules_verified": true,
+            "actual_auxiliary_source_birth_alias_and_X2_substitution_verified": true,
+            "actual_dense_remap_named_ancestry_and_global_upper_aux_term_order_verified": true,
+            "fresh_71_own_controls_rejected_after_all_three_valid_pairs": true,
+            "stored_and_decompressed_artifacts": [
+              {
+                "stored_sha256": "a1b4f242276780f37b4b0f04f9a8a1694c5ac08de4b8230656249b8d2602a231",
+                "decompressed_sha256": "7b1d63f2337a5ad150a6fb6ff3ec9264a99249fee9b18757899d7e0b40dfed7c",
+                "stored_bytes": 7258,
+                "decompressed_bytes": 43988,
+                "path": "evidence/pc_recipe_compiler/pilots/N16/N16_trace.json.gz"
+              },
+              {
+                "stored_sha256": "b83ba8784742d0188b67ce7770361c092c343897fda7c94eb41ffe05d779bc53",
+                "decompressed_sha256": "881414dde75ac39dace37cae5658e7514b9dea6a1fde9b66f11030961e061981",
+                "stored_bytes": 773,
+                "decompressed_bytes": 2267,
+                "path": "evidence/pc_recipe_compiler/pilots/N16/N16_lower_degree2.json.gz"
+              }
+            ]
+          },
+          {
+            "N": 30,
+            "field_prime": 1000000007,
+            "duplicate_existing_ordinary_PC_degree": 5,
+            "actual_constructive_multi_premise_lines": 3472,
+            "actual_monomial_occurrences": 1364428,
+            "actual_largest_line_terms": 1745,
+            "preceding_bound": 4,
+            "full_rank": 836,
+            "high_rank": 660,
+            "entire_low_intersection_dimension": 176,
+            "all_full_prime_variable_products_including_X2": 1760,
+            "all_available_original_inputs": 12,
+            "ALL_ordinary_full_count_multiples": 286,
+            "ALL_zero_FIRST_embedded_reduced_rows": 550,
+            "unit_excluded": true,
+            "actual_ordinary_original_g_loop_and_count_full_rules_verified": true,
+            "actual_auxiliary_source_birth_alias_and_X2_substitution_verified": true,
+            "actual_dense_remap_named_ancestry_and_global_upper_aux_term_order_verified": true,
+            "fresh_71_own_controls_rejected_after_all_three_valid_pairs": true,
+            "stored_and_decompressed_artifacts": [
+              {
+                "stored_sha256": "199e7d9cdc0a81df0f66d8fe8da58e8b132c082ea2c6ec6e16fb502b3a854ec9",
+                "decompressed_sha256": "bba8557e33f8d780b6d117b94818b723b6c39cbbc26eff86a48d41069d02b64b",
+                "stored_bytes": 5958257,
+                "decompressed_bytes": 34730409,
+                "path": "evidence/pc_recipe_compiler/pilots/N30/N30_trace.json.gz"
+              },
+              {
+                "stored_sha256": "0e57c94b8c3e4cd1f232535e749280d10e983b0d3129c9c07bcfb6e47ba14826",
+                "decompressed_sha256": "8c5a3401a3ad9e8a19bc3ba6801f830f4e65ab1a96817cff877fc748ecab6226",
+                "stored_bytes": 155245,
+                "decompressed_bytes": 1954405,
+                "path": "evidence/pc_recipe_compiler/pilots/N30/N30_lower_degree4.json.gz"
+              }
+            ]
+          }
+        ],
+        "reports": {
+          "judge/recipe_compiler_judge_audit_d07dde0.json": "d0bfc67dbabc279f9a27e63427eed5417749f945a535bde54ff8cf97bade1a64",
+          "judge/recipe_compiler_continuity_d07dde0.json": "645c92a57d98946b792b9a0a08e90a9c9aacb9a379547adb68a90dd3424924db",
+          "judge/recipe_compiler_provenance_scope_d07dde0.json": "61bde15c3b68689c408d858369d05819e8b95fac53458b09c2f7b495cf7616d1"
+        },
+        "independent_checker_path": "judge/recipe_compiler_judge_checker.py",
+        "independent_checker_sha256": "7ce0151b45b41a746b64053fbfe7e8eb6ac2a87d264f2a3f3239a0bc6578c26c",
+        "unchanged_vector_core_sha256": "9a4f3b2fa561ee91e63c9ae6988628250795ca554b92f8f3e9514c5a34d744ed",
+        "fresh_valid_full_pairs_before_any_own_control": 3,
+        "own_corruption_controls_rejected": 213,
+        "original_local228_controls_not_substituted_for_independent_controls": true,
+        "immutable_case_Codec_namespace_global_nonfinite_canonical_term_and_original_input_guards_independently_checked": true,
+        "genuine_ordinary_linear_scalars_used_once_from_actual_checked_parents_and_variable_degree_guards_replayed": true,
+        "no_Boolean_quotient_rule_or_ordinary_power_collapse": true,
+        "ALL_full_count_multiples_and_ALL_drained_W_in_preceding_lower_verified": true,
+        "all_full_rank_highlow_inputs_variable_products_and_unit_exclusion_independently_replayed": true,
+        "size_convention": "one arbitrary finite multi-premise field-linear combination is one line",
+        "minimum_size_binary_size_Q_transfer_new_curve_asymptotic_performance_memory_capfit_rung_or_Goldbach_claim": false,
+        "descriptor_cache_normalized_recipe_edge_allocation_and_other_queue_history": "source-bound observed metadata, not independently reconstructed producer history",
+        "ordinary_emitted_rules_and_actual_serialized_counts": "independently replayed and recounted",
+        "producer_full_membership_checks_performed": false,
+        "constructed_candidate_dimensions_and_membership_TARGETs_not_full_FIFO_history": true,
+        "all_six_original_pilot_children_terminal_complete_and_reaped": true,
+        "original_partial74_censored_N30_plan_unchanged_and_not_resumed": true,
+        "all28_terminal_raw_Git_and942_current_selected_raw_and551_old_leaf_bindings_rebound": true,
+        "four_named_snapshot_primary_raw_Git_inequalities_retained_exact_CRLF_transports": true,
+        "historical_filesystem_preservation_independently_observed": false,
+        "retry_further_N_or_producer_dispatch_authorized_by_this_credit": false,
+        "fresh_execution_report_sha256": "b9257ba2fe11ac07309f4aa633fb7ee080bb60109e134c90da1828fff6254176",
+        "fresh_raw_replay_log_sha256": "03c82d1a849174045308909eaac326d779375903e3afddcab503d6ca12b8e7c5",
+        "old_R1_R2_R3_R4_and_proof_inventory_unchanged": true
+      }
+    },
+    "R4": {
+      "type": "PROOF-Lean for Q; PROOF-paper for the general finite-field extension",
+      "formal_field": "Q only",
+      "formal_statement": "For every natural N and every actual rational DpiCertificate, deg(A)>=pi(N)-r(N) and ordinary deg(A*countConstraint N)>=pi(N)-r(N)+1. No extra Goldbach, positive-r, evenness or N-threshold hypothesis.",
+      "formal_theorems": [
+        "AlgebraicGoldbach.LowerBound.Restriction.Dpi_multiplier_degree_lower_bound",
+        "AlgebraicGoldbach.LowerBound.Restriction.Dpi_standard_degree_lower_bound",
+        "AlgebraicGoldbach.LowerBound.Restriction.Dpi_certificate_degree_bound"
+      ],
+      "formal_unbounded_degree_statement": "For every d:Nat, some even N>=4 has every actual rational D_pi(N) certificate satisfying d<ordinary deg(A*countConstraint N). Certificate existence is not asserted.",
+      "formal_growth_theorem": "AlgebraicGoldbach.Calibration.Dpi_standard_degree_unbounded_on_even",
+      "standard_degree_interpretation": "A maximum degree bound on all ordinary generator-multiplier products controls the count summand, so it inherits both conclusions.",
+      "paper": "evidence/LOWER_BOUND.md",
+      "paper_sha256": "d6fd7b0b2b7f194761534c69cba89709df545763afa221aeacc5012acd024b21",
+      "paper_finite_field_extension": "For r>0, the same lower bound in prime characteristic p>pi(N) remains accepted paper proof; no general Fp Lean credit.",
+      "mission_finite_field_use": "Retains the mission's stronger admissible residual-value bound; measured p>N+1 satisfies both requirements.",
+      "supporting_independent_checks": "1830 rational finite-difference cases plus26 restrictions and rational/modular inverses. These finite checks do not prove the general theorem by enumeration.",
+      "scope": "Only the rejected pinning/non-uniform D_pi(N) calibration. It excludes a fixed standard degree at all even N for that family; it does not exclude increasing-degree identities or a different constraint family.",
+      "not_inferred": [
+        "Universal loop matching upper bound",
+        "Generic Q/Fp minimum equality",
+        "General finite-field Lean formalization",
+        "Route-wide impossibility"
+      ],
+      "no_loop_upper": {
+        "accepted": true,
+        "type": "PROOF-paper, not Lean formal upper bound",
+        "hypotheses": "Q calibration graph with k>=1 disjoint nonloop pairs, s>=0 isolated vertices, and no loop.",
+        "conclusion_reviewed": "The displayed finite formal-series coefficient construction supplies full ordinary D_pi products of degree<=alpha+1, including the Boolean lift and nonprime corrections.",
+        "checks_reviewed": [
+          "H starts at formal degree2",
+          "weighted degree controls original ordinary degree",
+          "Boolean coefficient of order alpha+1 vanishes",
+          "binomial(t,alpha+1) is nonzero under k>=1",
+          "A and B divisions are polynomial",
+          "ordinary Boolean division preserves product degree",
+          "C_c=-A-BH_c restores original g"
+        ],
+        "universal_loop_extension": "BLOCKED after the three documented attempts; no universal loop upper statement is credited.",
+        "no_banned_analytic_method_used": true,
+        "not_inferred": [
+          "universal Goldbach matching upper bound",
+          "generic Q/Fp equality",
+          "Goldbach",
+          "viable research-family certificate"
+        ]
+      },
+      "no_loop_Q_minimum": "Accepted paper upper plus formal Q lower: alpha+1 for every no-loop D_pi graph with k>=1 nonloop pairs and s>=0 isolates. Upper is paper, not a general Lean upper theorem.",
+      "finite_Q_minima": "Exact ordinary Q minimum alpha+1 independently established for all26 even N10..60, including the recorded loops.",
+      "universal_loop_upper_status": "BLOCKED after three documented approaches; finite loop successes do not close the universal statement.",
+      "ordinary_Q_kary_ideal_reduction": {
+        "type": "PROOF-Lean exact ordinary-polynomial ideal equality for a rejected density-control class",
+        "field": "Q",
+        "ring": "MvPolynomial (Fin (N+1)) Q",
+        "range": "Every natural N and k, including k=0 and empty index cases",
+        "formal_theorem": "AlgebraicGoldbach.CoprimeKaryIdeal.arithmeticIdeal_eq_primeIdeal",
+        "ten_public_theorems_freshly_verified": [
+          "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_val",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_prime",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_dvd",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_injective_on",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_image_primeAllowed",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_image_subset_divisors",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.primeAllowed_arithmeticAllowed",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.prime_divisors_eq",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.arithmetic_factorization",
+          "AlgebraicGoldbach.CoprimeKaryIdeal.arithmeticIdeal_eq_primeIdeal"
+        ],
+        "formal_statement": "arithmeticIdeal N k = primeIdeal N k",
+        "arithmetic_generators": "Product of 1-X_d over all nonunit divisors of a k-element finite set of values>=2 that are pairwise coprime at distinct members. Self divisors included; divisor support is a set.",
+        "prime_generators": "Product of 1-X_p over every k-element finite set of primes<=N.",
+        "ordinary_scope": "Equality of actual Ideal.span objects in the full ordinary Q polynomial ring; no Boolean quotient, evaluation replacement, Boolean/SIEVE/g hypothesis or lower bound on N/k.",
+        "formal_helpers": "Injective least-factor image has exactly card k and belongs to the divisor support; literal polynomial factorization and the reverse prime-subset inclusion prove the ideal reduction.",
+        "paper_only": [
+          "Boolean pseudo-solution iff r(N)<k",
+          "general k Boolean model-count formula",
+          "arbitrary commutative coefficient-ring ideal equality",
+          "integral-domain point classification"
+        ],
+        "paper_edge_interpretations": "k=0 gives both unit ideals; k>pi(N) gives no index and both zero ideals; k=1 contains direct prime-coordinate pins. These interpretations are not separately asserted as Lean theorems in this module.",
+        "new_numeric_sanity_not_replayed_or_credited": [
+          {
+            "path": "evidence/coprime_kary_classification/sanity.json",
+            "sha256": "0e4141a004550bedcb9d13b223b750c4eef9bdc3d5253a0c5248122429e52ca4",
+            "bytes": 19700,
+            "numeric_reexecution_performed": false,
+            "classification": "new uncredited metadata; no inherited mathematical replay"
+          }
+        ],
+        "not_inferred": [
+          "viable family rung",
+          "Goldbach",
+          "uniform certificate",
+          "new multiplier degree/size bounds",
+          "generic asymptotic lower bound",
+          "whole-route impossibility"
+        ],
+        "formal_semantic_upgrade_in_separate_module": "AlgebraicGoldbach.CoprimeKaryModels.family_iff_omitted_card_lt"
+      },
+      "ordinary_Q_kary_point_classification": {
+        "type": "PROOF-Lean unrestricted ordinary-Q point classification of a rejected density-control class",
+        "formal_theorem": "AlgebraicGoldbach.CoprimeKaryModels.family_iff_omitted_card_lt",
+        "field": "Q only",
+        "ring": "MvPolynomial (Fin (N+1)) Q",
+        "range": "Every natural N,k and every assignment x:Fin(N+1)->Q, including negative/nonBoolean values and all empty-index cases",
+        "formal_statement": "All actual arithmeticFamily N k S evaluations vanish iff (CoprimeDivisor.omittedPrimes N x).card < k",
+        "omitted_primes": "Genuine Nat.Prime coordinates p<=N with x_p !=1",
+        "arithmetic_index": "Exact k-element finite subsets of 2..N with coprimality at every distinct pair; divisor products include self divisors and count each divisor once",
+        "no_additional_hypotheses": [
+          "Boolean",
+          "SIEVE",
+          "g=0",
+          "prime point",
+          "parity",
+          "N threshold",
+          "k threshold",
+          "positivity of coordinate values"
+        ],
+        "formal_upgrade_only": "The formerly paper-only general-k Q omitted-card equivalence is now formally verified in this separate one-theorem module. Prior ordinary-Q ideal equality remains unchanged.",
+        "paper_only": [
+          "Boolean model-count formula",
+          "Boolean family/g pseudo-solution iff r(N)<k",
+          "integral-domain point classification and zero-divisor qualifications",
+          "arbitrary commutative-ring ideal equality",
+          "finite-field no-wrap qualifications"
+        ],
+        "not_inferred": [
+          "viable family rung",
+          "uniform certificate",
+          "Goldbach",
+          "generic barrier",
+          "new degree/size bound",
+          "new PC or heap-pilot numerical credit"
+        ]
+      },
+      "ordinary_Q_PC_knapsack_restriction": {
+        "type": "PROOF-Lean precise ordinary-Q PC reduction of rejected D_pi calibration, plus an explicitly conditional corollary",
+        "source_module": "Calibration/PCRestriction.lean",
+        "source_sha256": "dfdef4248de8d6fface2c826422457383b0df45c0483a3add0e9b55e2976e142",
+        "field": "Q only",
+        "derivation_rules": "Only actual input loading, binary scalar linear combinations and multiplication by one variable; every actual input and inferred polynomial line has ordinary totalDegree<=d",
+        "refutation_definition": "Derives G d 1; no Boolean quotient, arbitrary polynomial multiplication, free zero input, or higher-degree parent cancellation rule",
+        "zero_image_handling": "Zero restriction images are explicitly omitted. Scaling is derived by a legitimate binary linear combination of a bounded parent with itself.",
+        "source_generators": "Actual full D_pi nonprime constraints, every Boolean equation, original ordered g including midpoint square, and count sum X_i-pi(N)",
+        "restriction_map": "The previously verified polynomial substitution on the actual maximum independent prime support; surviving variables become genuine target indeterminates and all other original coordinates become zero",
+        "target_generators": "Ordinary Boolean equations on Vars N plus sum surviving X_i-pi(N), with cardinal Vars N=alpha=pi(N)-r(N)",
+        "unconditional_range": "Every natural N,d; supplied actual full-system degree-d PC refutation restricts to an actual knapsack degree-d PC refutation ending at 1",
+        "unconditional_theorems": [
+          "AlgebraicGoldbach.PCRestriction.polynomial_nonprime",
+          "AlgebraicGoldbach.PCRestriction.polynomial_boolean",
+          "AlgebraicGoldbach.PCRestriction.polynomial_g_zero",
+          "AlgebraicGoldbach.PCRestriction.restrictedVariable_sum",
+          "AlgebraicGoldbach.PCRestriction.polynomial_count",
+          "AlgebraicGoldbach.PCRestriction.generator_image",
+          "AlgebraicGoldbach.PCRestriction.derivation_restriction",
+          "AlgebraicGoldbach.PCRestriction.dpi_refutation_restricts"
+        ],
+        "derived_rule_theorems": [
+          "AlgebraicGoldbach.PCRestriction.Derives.degree_le",
+          "AlgebraicGoldbach.PCRestriction.Derives.scalar"
+        ],
+        "conditional_corollary": {
+          "formal_theorem": "AlgebraicGoldbach.PCRestriction.dpi_degree_lower_bound_conditional",
+          "required_external_parameter": "hlower : KnapsackLowerBound (Vars N)",
+          "other_required_premises": [
+            "halpha : 1<=pi(N)-r(N)",
+            "href : Refutation (dpiGenerators N) d"
+          ],
+          "parameter_definition": "For a nonempty finite variable set of size n, every ordinary rational refutation of Boolean equations and sum Y_i-m at every natural m has degree at least ceil(n/2)+1",
+          "conclusion": "(pi(N)-r(N)+1)/2+1 <= d, using natural division; equivalently ceil(alpha/2)+1<=d",
+          "external_knapsack_lower_bound_formalized": false,
+          "external_knapsack_lower_bound_installed_as_axiom": false,
+          "unconditional_generic_PC_degree_or_growth_credit": false
+        },
+        "primary_source_review": {
+          "URL": "https://eccc.weizmann.ac.il/report/1997/042/download",
+          "PDF_sha256": "aa93e92d8b4cd82cdbb573cfc0014978b2a4dc8e63ffcb887dd7916dd2e68f44",
+          "printed_pages_reviewed": [
+            2,
+            8,
+            9
+          ],
+          "scope": "Original real-coefficient subset-sum theorem requires every coefficient nonzero and has arbitrary target. Project all-one coefficients meet that paper condition; Q-to-real specialization is paper-level and not installed in Lean."
+        },
+        "six_dependencies_and_three_constructors_axioms_independently_checked": true,
+        "not_inferred": [
+          "converse lift of arbitrary knapsack proofs",
+          "unconditional generic PC lower or growth theorem",
+          "universal upper",
+          "empirical minimum formula",
+          "new numeric degree/size point",
+          "Fp/Q transfer",
+          "certificate existence",
+          "new viable family rung",
+          "Goldbach",
+          "whole-route impossibility"
+        ]
+      },
+      "boolean_lattice_engine": {
+        "type": "PROOF-Lean over Q, finite-subset lattice engine only",
+        "source_commit": "4f8724d52b5e12b2a1b9d6ef63865b6c1e5a7978",
+        "source": "AlgebraicGoldbach/LowerBound/BooleanLattice.lean",
+        "source_sha256": "1ababb31aa4a5c23701b7a3b62d249fb83e6680115124949c3eda2aa92c63dad",
+        "theorem": "AlgebraicGoldbach.BooleanLattice.up_injective_below_middle",
+        "statement": "For arbitrary finite sigma and rational f on finite subsets, support on the k-layer and 2*k<card sigma and actual up(f)=0 imply f=0",
+        "actual_up": "up f s = sum(i in s) f(s.erase i)",
+        "actual_down": "down f s = sum(i outside s) f(insert i s)",
+        "commutator": "down(up f)(s)-up(down f)(s) = ((card sigma:Q)-2*(card s:Q))*f(s), signed rational subtraction for every subset",
+        "all_subset_adjointness_and_rational_sum_of_squares_positivity_proved": true,
+        "strict_threshold": "Includes k=0 and odd middle; excludes even middle",
+        "eleven_complete_headers_section_binders_and_actual_elaborated_types_independently_checked": true,
+        "all_16_definitions_and_theorems_direct_axiom_printed_standard_only": true,
+        "rank_incidence_injectivity_or_external_lower_bound_assumed": false,
+        "Boolean_normal_form_API_multiplier_growth_bounded_Derives_or_PC_lower_bound_credit": false,
+        "KnapsackLowerBound_parameter_removed": false,
+        "finite_field_Q_transfer_prime_count_Goldbach_candidate_or_higher_rung_claim": false,
+        "source_scope_report": "judge/boolean_lattice_scope_continuity_audit_4f8724d.json",
+        "source_scope_report_sha256": "a4e65362cb8d141d71a86464a904e3e99614f8a745bd5aaf088d88e0b4f0523e",
+        "complete_header_report": "judge/boolean_lattice_complete_header_audit_4f8724d.json",
+        "complete_header_report_sha256": "78d54ba2669823160ab6218abdb3f2bd0f224c8169f8a235873929bbf26240e2"
+      },
+      "boolean_coefficients_variable_compatibility": {
+        "type": "PROOF-Lean over Q, actual coefficient variable compatibility component only",
+        "source_commit": "d9a7e29102357eeac23460fa7e7ac87a067b5c14",
+        "source": "AlgebraicGoldbach/LowerBound/BooleanCoefficients.lean",
+        "source_sha256": "75eef96c3063d40b761d24212535c9d4445bc318ddb31d759a8dc98f4905fe06",
+        "theorem": "AlgebraicGoldbach.BooleanCoefficients.coefficients_X_mul",
+        "complete_header": "theorem coefficients_X_mul {σ : Type*} [DecidableEq σ] (i : σ) (p : MvPolynomial σ ℚ) : coefficients (MvPolynomial.X i * p) = bitMul i (coefficients p)",
+        "coefficient_projection": "Actual rational Finsupp.linearCombination of atoms indexed by ordinary exponent support, retaining collisions and cancellation",
+        "actual_bit_multiplication": "bitMul i f s = if i in s then f(s)+f(s.erase i) else0",
+        "only_variable_type_hypotheses": "sigma:Type*, DecidableEq sigma; no Fintype or Nonempty",
+        "zero_negative_scalars_repeated_powers_support_collisions_and_cancellation_included": true,
+        "empty_and_infinite_variable_type_scope": true,
+        "three_actual_definitions_unchanged_from_independently_reviewed_unassumed_scratch": true,
+        "three_necessary_helper_theorems_plus_exact_main_header_freshly_checked": true,
+        "all_7_definitions_and_theorems_actual_types_and_direct_axioms_checked_standard_only": true,
+        "Boolean_axiom_annihilation_support_degree_growth_count_action_bounded_PC_invariant_credit": false,
+        "KnapsackLowerBound_parameter_removed": false,
+        "PC_lower_Fp_transfer_generic_Q_Fp_equality_numeric_point_curve_candidate_or_Goldbach_claim": false,
+        "source_scope_report": "judge/boolean_coefficients_scope_continuity_audit_d9a7e29.json",
+        "source_scope_report_sha256": "7f5e22ee0930ec1dcbbf3b2cfded3b25cb36b0d909f9a6377c25efce00968a31",
+        "complete_header_report": "judge/boolean_coefficients_complete_header_audit_d9a7e29.json",
+        "complete_header_report_sha256": "1ef2cbace2ad48008460fc0fcfc080545bda646516765ee138d61055bd5f1f85"
+      },
+      "boolean_coefficient_support_degree": {
+        "type": "PROOF-Lean over Q, actual coefficient support-degree upper control only",
+        "source_commit": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+        "source": "AlgebraicGoldbach/LowerBound/BooleanCoefficientDegree.lean",
+        "source_sha256": "4010f0ebf76e1a02c6f0a000935b6c2e1a095fee52a301174825f9c3609345f7",
+        "theorem": "AlgebraicGoldbach.BooleanCoefficients.coefficients_eq_zero_of_totalDegree_lt_card",
+        "complete_header": "theorem coefficients_eq_zero_of_totalDegree_lt_card {σ : Type*} [DecidableEq σ] (p : MvPolynomial σ ℚ) (s : Finset σ) (h : p.totalDegree < s.card) : coefficients p s = 0",
+        "necessary_helper": "AlgebraicGoldbach.BooleanCoefficients.support_card_le_exponent_sum",
+        "coefficient_projection": "Unchanged actual rational Finsupp.linearCombination of atoms on ordinary exponent support",
+        "only_variable_type_hypotheses": "sigma:Type*, DecidableEq sigma; no Fintype or Nonempty",
+        "sole_mathematical_main_premise": "actual ordinary p.totalDegree < s.card",
+        "arbitrary_signed_zero_canceling_coefficients_repeated_powers_empty_and_infinite_types": true,
+        "strict_inequality_no_equality_empty_coefficient_injectivity_or_lower_degree_claim": true,
+        "2_actual_types_and_2_direct_axioms_checked_standard_only": true,
+        "Boolean_annihilation_multiplier_growth_count_action_or_bounded_PC_invariant_credit": false,
+        "KnapsackLowerBound_parameter_removed": false,
+        "PC_lower_Fp_transfer_generic_Q_Fp_equality_numeric_point_curve_candidate_or_Goldbach_claim": false,
+        "source_scope_report": "judge/boolean_coefficient_degree_scope_continuity_audit_4eb47ec.json",
+        "source_scope_report_sha256": "0f0e59f16d0725fdba4a3dde66a6befcb53416e5c951e7b58ed9f6f2487f4679",
+        "complete_header_report": "judge/boolean_coefficient_degree_complete_header_audit_4eb47ec.json",
+        "complete_header_report_sha256": "32ca673501b4b30c8fae445b7804341488e4f7364fe89e86e0b226c8ef31aa55"
+      },
+      "boolean_multiplier_top_layer_rigidity": {
+        "scope": "Rational function-level top-layer count-multiplier rigidity only",
+        "proof_source_commit": "00616e79c1b19baf87d235a849ab2cea7d09295e",
+        "source_path": "AlgebraicGoldbach/LowerBound/BooleanMultiplierRigidity.lean",
+        "source_sha256": "ffd9df07ade4711da8ccd866b97c3f9752993102fa3e4c2e2f1d245d5adba571",
+        "actual_countMul_definition": "(sum over all i: sigma of actual bitMul i f s) - m*f(s)",
+        "public_definition": "AlgebraicGoldbach.BooleanCoefficients.countMul",
+        "necessary_identity_helper": "AlgebraicGoldbach.BooleanCoefficients.countMul_eq_diagonal_add_up",
+        "main_theorem": "AlgebraicGoldbach.BooleanCoefficients.top_layer_vanishes_of_countMul_degree_le",
+        "complete_main_header": "theorem top_layer_vanishes_of_countMul_degree_le {σ : Type*} [Fintype σ] [DecidableEq σ] (m : ℚ) (k : ℕ) (hk : 2 * k < Fintype.card σ) (f : Finset σ → ℚ) (habove : ∀ s : Finset σ, k < s.card → f s = 0) (himage : ∀ s : Finset σ, k < s.card → countMul m f s = 0) : ∀ s : Finset σ, k ≤ s.card → f s = 0",
+        "finite_type_and_decidable_equality_explicit": true,
+        "m_arbitrary_rational_signed_function_values": true,
+        "strict_middle_threshold": "2*k < Fintype.card sigma",
+        "explicit_above_and_actual_count_image_above_hypotheses_retained": true,
+        "conclusion": "f(s)=0 for every s with k <= card(s)",
+        "proof": "Finite bit sum gives cardinality diagonal plus actual up. The local cardinality-k slice has zero up by membership-conditioned erase cardinality and the two higher-layer hypotheses. Accepted rational strict below-middle injectivity makes the slice zero.",
+        "actual_effective_definition_and_all_three_new_types_axioms_checked": true,
+        "Empty_Fin0_1_2_3_general_Fin_arbitrary_m_signed_function_boundaries": "TYPECHECK ONLY; no absent strict-premise witnesses or new boundary proofs",
+        "no_new_sign_nonempty_prime_count_rank_normalform_or_external_lower_premise": true,
+        "ordinary_polynomial_count_bridge_Boolean_annihilation_or_commutation": false,
+        "PC_parent_degree_guard_invariant_induction_or_unit_exclusion": false,
+        "external_KnapsackLowerBound_removed": false,
+        "unchanged_explicit_hlower_in_PCRestriction": true,
+        "Fp_transfer_numeric_degree_curve_minimum_candidate_or_Goldbach_inferred": false,
+        "substantive_failed_approaches": 0,
+        "notation_API_repairs": [
+          "One parenthesization repair around the double-sum body; no change to the mathematical approach."
+        ],
+        "decisive_reports": {
+          "judge/lean_audit_00616e7.json": "17905da565ac2ee45f0679c8b8f3d3eaacffb7ff8ab678ece909abe36a382150",
+          "judge/axiom_coverage_audit_00616e7.json": "4cb84b80e2b80c9cea6fb37a4744a346fec3a93301fe91cd59a76b4908ceeb46",
+          "judge/boolean_multiplier_rigidity_complete_header_audit_00616e7.json": "e4371250c487a3aed63f1d5a2f900886a2a09802a8b08e960dac1a67749caf10",
+          "judge/boolean_multiplier_rigidity_scope_continuity_audit_00616e7.json": "641afd9342a6fb4ece00b8fec85fb7217b30d8da8cf71e1a74a3269fa183ebcd"
+        }
+      },
+      "ordinary_count_polynomial_coefficients_bridge": {
+        "scope": "Exact rational ordinary-polynomial count coefficient bridge only",
+        "proof_source_commit": "09a6d296247197cc42ac0df486f60d5074b77c66",
+        "source_path": "AlgebraicGoldbach/LowerBound/BooleanCountBridge.lean",
+        "source_sha256": "18168233d90481e99d3bda3fb39edb46c23cb66450827acefc10570ae9b811b8",
+        "main_theorem": "AlgebraicGoldbach.BooleanCoefficients.coefficients_count_mul",
+        "complete_main_header": "theorem coefficients_count_mul {σ : Type*} [Fintype σ] [DecidableEq σ] (m : ℚ) (p : MvPolynomial σ ℚ) : coefficients (((∑ i : σ, (MvPolynomial.X i : MvPolynomial σ ℚ)) - MvPolynomial.C m) * p) = countMul m (coefficients p)",
+        "actual_coefficients": "Accepted rational linear support-collision coefficients of genuine ordinary exponent vectors",
+        "actual_countMul": "Finite sum of accepted bitMul minus m*f(s)",
+        "finite_sigma_DecidableEq_arbitrary_rational_m_actual_ordinary_signed_p": true,
+        "no_extra_premise_or_new_definition_or_helper": true,
+        "proof": "Ordinary subtraction and finite sum multiplication distribute. Actual coefficients linearity transports subtraction, finite sum and rational scalar action. Pinned C_mul prime identifies constant multiplication with scalar action; accepted coefficients_X_mul identifies each real variable product. Pointwise sum/sub/scalar gives exact unchanged countMul.",
+        "complete_actual_type_expanded_subtraction_outside_sum_and_effective_operators_checked": true,
+        "actual_theorem_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Empty_Fin0_1_2_3_general_Fin_arbitrary_m_signed_powers_cancellation": "TYPECHECK ONLY; no new example proof authored",
+        "Nat_count_corollary_Boolean_annihilation_or_commutation": false,
+        "PC_parent_degree_guard_invariant_induction_or_unit_exclusion": false,
+        "external_KnapsackLowerBound_removed": false,
+        "unchanged_explicit_hlower_in_PCRestriction": true,
+        "Fp_transfer_numeric_degree_curve_minimum_candidate_or_Goldbach_inferred": false,
+        "substantive_failed_approaches": 0,
+        "Lean_compiler_or_API_repairs": [],
+        "Judge_metadata_drafting_repairs": {
+          "initial_draft_checker_sha256": "77a55c5624eab238fef6a9a34de0d18c1a9a95c6dd78186a095e25e28a8b252b",
+          "initial_stop": "KeyError: helper_count before actual type input or Lean execution; corrected to existing exact ledger field public_helper_count. No source or mathematical failure.",
+          "initial_scope_draft_sha256": "2271a9e4e1843240fba4f160b22254e7ba46c45ecf0b0cd8ec13e05383a980c1",
+          "scope_stop": "Invalid BASE hash from mechanical short-id replacement; Git ls-tree stopped before continuity report. Corrected to exact accepted 00616e79c1b19baf87d235a849ab2cea7d09295e, old230 prefix remains strict. No mathematical failure."
+        },
+        "decisive_reports": {
+          "judge/lean_audit_09a6d29.json": "f6b9cf1d1547687aeedeb3e92e018e703715900b3e23403cd75a50c0dc58c521",
+          "judge/axiom_coverage_audit_09a6d29.json": "76f7aecde7c1e7bf071f0ce4b0a545a74980433872c106f756ee1f172709b987",
+          "judge/boolean_count_bridge_complete_header_audit_09a6d29.json": "d24654536d46419e941dea74ad7b0f05ff4903a81717c2d5646c7bcad9f4decb",
+          "judge/boolean_count_bridge_scope_continuity_audit_09a6d29.json": "df76e534a86f52064e6bba305b1e70ea43b8b571dfdc64cdfdfcdb5539cb2d4b"
+        }
+      },
+      "ordinary_boolean_polynomial_coefficients_annihilation": {
+        "scope": "Actual rational ordinary Boolean-multiple coefficient-image annihilation only",
+        "proof_source_commit": "875ab3489f6116ec56449f4f62a6d2e84b42cb78",
+        "source_path": "AlgebraicGoldbach/LowerBound/BooleanAnnihilation.lean",
+        "source_sha256": "1798f2383c6b87980e94aff4b4fde9798073431913a35e87b130b348e7fef1b7",
+        "main_theorem": "AlgebraicGoldbach.BooleanCoefficients.coefficients_boolean_mul",
+        "complete_main_header": "theorem coefficients_boolean_mul {σ : Type*} [DecidableEq σ] (i : σ) (p : MvPolynomial σ ℚ) : coefficients (((MvPolynomial.X i : MvPolynomial σ ℚ) ^ 2 - MvPolynomial.X i) * p) = 0",
+        "actual_coefficients": "Unchanged rational linear support-collision coefficients of genuine ordinary exponent vectors",
+        "arbitrary_sigma_DecidableEq_only_actual_ordinary_signed_p": true,
+        "no_extra_premise_or_new_public_definition_or_helper": true,
+        "proof": "Actual bitMul_i is idempotent by finite-set membership and erase, locally inside the sole theorem. Ordinary pow_two/sub_mul/mul_assoc and actual map_sub transport the ordinary Boolean multiple to bitMul_i applied twice minus once via accepted coefficients_X_mul. The image is the zero function.",
+        "complete_actual_type_expanded_Boolean_difference_full_ordinary_product_and_effective_operators_checked": true,
+        "actual_theorem_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Empty_Fin0_1_2_3_infinite_Nat_general_universes_signed_powers_cancellation": "TYPECHECK ONLY; no example proof or empty inhabitant authored by Judge",
+        "coefficient_image_zero_not_ordinary_polynomial_zero_or_new_PC_rule": true,
+        "count_variable_commutation_PC_parent_guard_invariant_or_unit_exclusion": false,
+        "external_KnapsackLowerBound_removed": false,
+        "unchanged_explicit_hlower_in_PCRestriction": true,
+        "Fp_transfer_numeric_degree_curve_minimum_candidate_rung_or_Goldbach_inferred": false,
+        "substantive_failed_approaches": 0,
+        "Lean_compiler_API_or_audit_repairs": [],
+        "new_Judge_metadata_draft_repairs": [],
+        "decisive_reports": {
+          "judge/lean_audit_875ab34.json": "d41850bb14c8e5d9e7093fd0f3ba49cb340f3c94cf7dbae927c8f828fc26e5f9",
+          "judge/axiom_coverage_audit_875ab34.json": "59a7197cb0e8410c5e3c21ecc9a98fedebebe95740b2b647a8dcbfc233b312b9",
+          "judge/boolean_annihilation_complete_header_audit_875ab34.json": "5a47c4792d8fa8470399ebd1647463a809f1787b370cfb5e74184e87f84be7ac",
+          "judge/boolean_annihilation_scope_continuity_audit_875ab34.json": "94b30b1559283c32f3a36f915d55fb61549addb69875e2c441cba3d433646739"
+        }
+      },
+      "actual_boolean_count_variable_commutation": {
+        "scope": "Actual finite rational Boolean variable action commutes with the actual count action on arbitrary signed subset functions only",
+        "proof_source_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+        "source_path": "AlgebraicGoldbach/LowerBound/CountVariableCommutation.lean",
+        "source_sha256": "44055a0a8f0c3201e05123e2d440c7b6105135e40f6826769891418ffe1eebb9",
+        "main_theorem": "AlgebraicGoldbach.BooleanCoefficients.bitMul_countMul",
+        "complete_main_header": "theorem bitMul_countMul {σ : Type*} [Fintype σ] [DecidableEq σ] (i : σ) (m : ℚ) (f : Finset σ → ℚ) : bitMul i (countMul m f) = countMul m (bitMul i f)",
+        "actual_bitMul_countMul": "Unchanged accepted membership/erase bit action and finite count sum minus m times identity; subtraction remains outside sum",
+        "finite_sigma_Fintype_DecidableEq_only_arbitrary_Q_parameter_signed_function_not_polynomial_image": true,
+        "no_extra_premise_or_new_public_definition_or_helper": true,
+        "proof": "Local coordinate actions commute: diagonal identical, off-diagonal membership/erase cases use commuting erasures and rational addition. Local finite sum equality reorders composition; present/absent i cases distribute actual count sum and outer rational scalar subtraction pointwise.",
+        "complete_actual_type_two_full_effective_operator_types_and_expanded_definitions_checked": true,
+        "actual_theorem_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Empty_Fin0_1_2_3_general_Fin_n_universes_arbitrary_signed_Q_zero_cancellation": "TYPECHECK ONLY; no empty inhabitant or new proof authored by Judge",
+        "PC_parent_guard_invariant_or_unit_exclusion": false,
+        "external_KnapsackLowerBound_removed": false,
+        "unchanged_explicit_hlower_in_PCRestriction": true,
+        "Fp_transfer_numeric_degree_curve_minimum_candidate_rung_or_Goldbach_inferred": false,
+        "substantive_failed_approaches": 0,
+        "production_Lean_compiler_API_repairs": [
+          "Replace unavailable Finset.erase_comm by pinned Finset.erase_right_comm.",
+          "Unfold countMul again after bitMul exposes fully applied count arguments in the present-coordinate branch."
+        ],
+        "new_Judge_metadata_draft_repairs": [
+          {
+            "first_draft_sha256": "361ec65608e66cf3d97294d84fcbad2b4d974ba50324267626ff15ce40c44c8a",
+            "first_draft_cache_pin": "e5c4e1189f6116ec56449f4f62a6d2e84b42cb78",
+            "exit_code": 1,
+            "phase": "Pre-clone exact dependency-cache commit assertion",
+            "repair": "Restore complete accepted875 cache pin after filename-prefix replacement affected that new literal",
+            "no_clone_build_or_report_created_by_failed_draft": true,
+            "mathematical_source_edited": false
+          },
+          {
+            "first_scope_draft_sha256": "e6e37bf0a98e87549b9ebbe8080dbe42d51caa587786e8a02904c4058da4272f",
+            "phase": "Read-only leaf211/root232 command sequence binding",
+            "exit_code": 1,
+            "repair": "Hash complete #print axioms command lines, exactly as producer documented, instead of declaration names alone",
+            "no_report_written_by_failed_scope_draft": true,
+            "math_source_type_header_build_and_previously_passed_axiom_execution_changed_or_repeated": false,
+            "scope_only_resume_after_repair": true
+          }
+        ],
+        "auxiliary_readonly_preparation_summary_stop": "credited-list AttributeError corrected by distinct list/dict handling; complete Trophy/FINAL/report checks rerun before clone; no file/index mutation",
+        "decisive_reports": {
+          "judge/lean_audit_e5c4e11.json": "388081521a8caf3640677caa56b6c6faa1e3b9330f704fced9e7d86c20b02ba1",
+          "judge/axiom_coverage_audit_e5c4e11.json": "00bc0dacf4263cfe137d415f0afb074b90d2c9bedfc29230368983c4aed9b9db",
+          "judge/count_variable_commutation_complete_header_audit_e5c4e11.json": "c895b6407b8784c2e8d524074e7a0c2003032e8e5f68c10265561ad5bebf39fb",
+          "judge/count_variable_commutation_scope_continuity_audit_e5c4e11.json": "d6b01617bd575867d4d4b0f8aa1bfab5f9c320d588ef78c5e8a03c6197490ec7"
+        }
+      }
+    }
+  },
+  "entire_route_status": "NOT declared DEAD; Goldbach remains unproved.",
+  "previous_verified_proof_commits": [
+    "00616e79c1b19baf87d235a849ab2cea7d09295e",
+    "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "21f199db39d3049d8515432982b323f900168956",
+    "231218a03095a20ca6b2031fbce0abd2c7765339",
+    "37ee03e4bdbeaf184f33275c9745d3552ae22e27",
+    "3f4d74269511a6b5355cf83ac219c0026ca7a75f",
+    "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "4f8724d52b5e12b2a1b9d6ef63865b6c1e5a7978",
+    "875ab3489f6116ec56449f4f62a6d2e84b42cb78",
+    "98d5c25d3701755f88e8f4c2aded033bc1ada23b",
+    "aefc034f4dcb5b646ec99f334da3f2d6e9d26ef3",
+    "b6a2866aa60a99e9d1b19885b9783fced2cf4e41",
+    "cc91459b49b66742583bc4937f108e53381b42c6",
+    "d32e79d6bc0a10582afcff967a3c957636eb94c0",
+    "d9a7e29102357eeac23460fa7e7ac87a067b5c14",
+    "eda1b010c79dcc69cf30ce6da37d88d3b6b37204",
+    "ee09f12f6d66f8c1f23954bb8c6b17036df391f0"
+  ],
+  "verified_C0_control": {
+    "scope": "Rejected full-vector pinned control only; no research-family, L7/L8 or Goldbach credit.",
+    "conditional_identity": "Requires the actual Goldbach count nonzero; explicit pinned multipliers verified.",
+    "equivalence": "Pinned certificate existence iff positive actual Goldbach count, and pinned family fixes every coordinate to the prime point.",
+    "formal_degree_bounds": "Multiplier totalDegree<=1, constant B totalDegree=0, ordinary summand totalDegree<=2.",
+    "not_claimed": "A Lean-verified minimum standard degree equality of2."
+  },
+  "direct_pinning_guard_review": {
+    "guard": "Mission section9 rejects any family polynomial that directly pins a prime coordinate. Explicitly allowed coarse coordinates remain the section3 exception.",
+    "finding": "For every N>=2, m=1 is a BertrandIndex and its window is {2}, giving the literal polynomial 1-X_2. Therefore BERTRAND_COARSE fails the mandatory direct-coordinate guard.",
+    "gate_ii_does_not_override_guard": true,
+    "previous_judge_credit_error": "Earlier L4/L5 credit overlooked the direct m=1 pin.",
+    "action": "Retract L4/L5 at this checkpoint; retain valid prime-truth and countermodel theorems only as information results. A proper subfamily needs its own frozen actual polynomial statement and fresh verification."
+  },
+  "verified_factor_horizon_classification": {
+    "type": "PROOF-Lean over Q",
+    "statement": "For arbitrary Q assignments and M<=N^2, all truncated proper-divisor products vanish iff every prime p<=N with p^2<=M is1. No Boolean or SIEVE assumption.",
+    "theorem": "AlgebraicGoldbach.FactorCoverage.coverage_iff_primePins",
+    "square_horizon": "M=N^2 pins all prime coordinates; SIEVE then pins the entire vector. Audit-only circular control.",
+    "guard": "Literal prime-square equations1-X_p violate the direct-coordinate guard; full-vector nonpinning does not override it.",
+    "not_claimed": "Lean formalization over every field or any conclusion for M>N^2."
+  },
+  "proper_family_guard_review": "Distinct actual family m>=2; all windows have at least two coordinates. The whole-family Boolean coordinate-freedom theorem supplies each coordinate value0 and1 for every N. Direct or indirect coordinate pins are excluded; no prime-case certificate or prime-count constant is used.",
+  "old_full_bertrand_family_guard_rejection_retained": true,
+  "verified_evidence_commit": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+  "new_numeric_inputs_without_judge_replay_or_credit": [
+    {
+      "path": "evidence/coprime_kary_classification/sanity.json",
+      "sha256": "0e4141a004550bedcb9d13b223b750c4eef9bdc3d5253a0c5248122429e52ca4",
+      "bytes": 19700,
+      "numeric_reexecution_performed": false,
+      "classification": "new uncredited metadata; no inherited mathematical replay"
+    },
+    {
+      "path": "evidence/pc_increment_32_34/metadata_audit.json",
+      "sha256": "472b6a31324f92167691f1c9cbb44f9b76ffc9c3e358cc3922a3400ab7012008",
+      "bytes": 833,
+      "numeric_reexecution_performed": false,
+      "classification": "new uncredited metadata; no inherited mathematical replay"
+    },
+    {
+      "path": "evidence/pc_increment_32_34/run.json",
+      "sha256": "7b8951b7d0ffb8b014000c8ad799446456110fba611bd606ea37a22e8cecedaa",
+      "bytes": 4366,
+      "numeric_reexecution_performed": false,
+      "classification": "new uncredited metadata; no inherited mathematical replay"
+    }
+  ],
+  "prior_numeric_verification_inherited_without_reexecution": {
+    "baseline_proof_commit": "eda1b010c79dcc69cf30ce6da37d88d3b6b37204",
+    "baseline_evidence_commit": "43b7b80d02afaff5f4fffcb4d20efd54fa81c4a9",
+    "accepted_old_numeric_inputs_byte_identical": 188,
+    "accepted_old_compressed_artifacts_byte_identical": 115,
+    "prior_unique_report_hashes_unchanged": 54,
+    "old_matrices_gates_PC_or_GB_reexecuted": false,
+    "old_Q_Fp_NS_minima_Q_PC_and_R4_credits_unchanged": true,
+    "new_numeric_point_only": "Fp N36 ordinary PC minimum5, constructive macro sizes only",
+    "whole_prior_tree_byte_unchanged_claimed": false
+  },
+  "previous_verified_evidence_commits": [
+    "43b7b80d02afaff5f4fffcb4d20efd54fa81c4a9",
+    "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "b6a2866aa60a99e9d1b19885b9783fced2cf4e41",
+    "eda1b010c79dcc69cf30ce6da37d88d3b6b37204"
+  ],
+  "proof_source_continuity_verified_at_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+  "proof_build_inherited_from_commit": null,
+  "fresh_Lean_build_performed_at_evidence_commit": false,
+  "deferred_recording_continuity": {
+    "report": "judge/deferred_recording_continuity_80d6893.json",
+    "report_sha256": "879482128898d86991beaf9d5ce742c7f4db27ec7c357a308b7f3033dc418c01",
+    "prior_raw_Git_and_clone_paths_identical": 531,
+    "prior_unique_report_hashes_unchanged": 60,
+    "new_mathematical_sources_at_this_checkpoint": false,
+    "old_matrices_gates_PC_or_GB_reexecuted": false,
+    "old_Q_Fp_NS_minima_Q_PC_R4_and_viable_rungs_unchanged": true
+  },
+  "fresh_Lean_build_performed_at_proof_commit": true,
+  "evidence_verification_inherited_from_commit": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+  "all_project_axiom_entries_checked": 233,
+  "boolean_lattice_fresh_audit": {
+    "proof_source_commit": "4f8724d52b5e12b2a1b9d6ef63865b6c1e5a7978",
+    "numerical_source_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 222,
+    "complete_frozen_signatures": 193,
+    "imported_modules": 19,
+    "catalogues": 17,
+    "prior_211_command_prefix_and_32_freeze_files_preserved": true,
+    "new_11_complete_headers_with_independent_section_closure_and_actual_types": true,
+    "new_16_direct_axiom_entries": {
+      "AlgebraicGoldbach.BooleanLattice.up": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.down": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.raiseAt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.lowerAt": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.toggle": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.toggle_involutive": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.up_eq_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.down_eq_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.raiseAt_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.lowerAt_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.coordinate_adjoint": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.coordinate_commute": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.coordinate_diagonal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.adjoint": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.commutator": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanLattice.up_injective_below_middle": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_axiom_input_sha256": "9e636d215bb49f9b9b83060f7c38346dac2029d85efceba57f29dfa7843172d3",
+    "new_axiom_output_sha256": "605839fe790428af87a942c2ce0a79c8542ba3c519f160e667525e3bcfb0985c",
+    "fresh_build_log_sha256": "d38c07921bdca4ee1fc1f5b450315c37fae11f2a35a787bdb706762d34f5a08f",
+    "project_build_outputs_inherited": false,
+    "old_63_reports_and_212_numeric_inputs_inherited_without_reexecution": true,
+    "unreviewed_later_N38_inputs_or_claims_credited": false
+  },
+  "boolean_coefficients_fresh_audit": {
+    "proof_source_commit": "d9a7e29102357eeac23460fa7e7ac87a067b5c14",
+    "numerical_source_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 226,
+    "complete_frozen_signatures": 197,
+    "imported_modules": 20,
+    "catalogues": 18,
+    "prior_222_command_prefix_and_34_freeze_files_preserved": true,
+    "new_4_complete_headers_with_independent_helper_section_closure_and_explicit_main_shadowing": true,
+    "new_7_direct_axiom_entries": {
+      "AlgebraicGoldbach.BooleanCoefficients.coefficientAtom": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.bitMul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.support_single_one_add": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficientAtom_single_one_add": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients_monomial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients_X_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_axiom_input_sha256": "72b4de4383c82185a8617dabb2f06ec1ee7aa5cd7b8f54321796356a445d4141",
+    "new_axiom_output_sha256": "e9f3347bab0f8c94ed0cd5672027f715f840ad98b763658ecfbe3d167794f74f",
+    "fresh_build_log_sha256": "996e8ef4aca2e52c0cc7e513239ce942bc668e85f0df96e515e0f3554e20f9aa",
+    "project_build_outputs_inherited": false,
+    "old_67_reports_and_212_numeric_inputs_inherited_without_reexecution": true,
+    "later_N38_timeout_or_unreviewed_retry_credited": false
+  },
+  "boolean_coefficient_degree_fresh_audit": {
+    "proof_source_commit": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "numerical_source_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 228,
+    "complete_frozen_signatures": 199,
+    "imported_modules": 21,
+    "catalogues": 19,
+    "prior_226_command_prefix_and_36_freeze_files_preserved": true,
+    "new_2_complete_headers_every_binder_explicit": true,
+    "new_2_direct_axiom_entries": {
+      "AlgebraicGoldbach.BooleanCoefficients.support_card_le_exponent_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AlgebraicGoldbach.BooleanCoefficients.coefficients_eq_zero_of_totalDegree_lt_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_axiom_input_sha256": "683c0d1911a8268edbc21a40ba375c781404d8edbe9a14ec2d0bf879e14d502a",
+    "new_axiom_output_sha256": "bc37b5a93d409788dc90dbe036649d6f575dddaf872185d2758dabb86e4d2ed0",
+    "fresh_build_log_sha256": "1e6a798f8846c3f3b89cacf5f57e50648d19bbf87b565ffb59626c1e2644c166",
+    "project_build_outputs_inherited": false,
+    "old_71_reports_and_212_numeric_inputs_inherited_without_reexecution": true,
+    "later_N38_timeout_count_elimination_or_unreviewed_retry_credited": false
+  },
+  "count_elimination_partial_method_audit": {
+    "method_evidence_commit": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "scope": "only complete N10/N16 ordinary method witnesses; N30 censored",
+    "old_numeric_verification_inherited_without_reexecution_at": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "accepted_proof_verification_inherited_without_rebuild_at": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "new_math_lemma_or_fresh_Lean_build": false,
+    "reports": {
+      "judge/count_elimination_judge_audit_74b17fa.json": "c6f85a22f3710998879d3f636c9396e972dc01fcd0e685c9fb8e23a0b4ec8d4d",
+      "judge/count_elimination_continuity_74b17fa.json": "48fd9281bade522b5a07aa3234cdf9e76d55c25f371ee6c99968d9de8b5e5675",
+      "judge/count_elimination_provenance_scope_74b17fa.json": "524ef423adf2ffb4547f29929ec9397a1ecab975225ecae39baa534926a0aa5d"
+    },
+    "registered_unique_reports": 78,
+    "total_report_references_across_two_Trophies": 156,
+    "old_numeric_current_raw_scope": "208 raw=immutable Git; four named raw!=Git exact LF-to-CRLF forward reconstruction only",
+    "current_lake_manifest_raw_scope": {
+      "path": "lake-manifest.json",
+      "current_raw_equals_Git": false,
+      "current_raw_sha256": "f862cd2270d11a39e2f2be6945654e14e0c99752457b4414c4ba817740a37705",
+      "immutable_Git_LF_sha256": "0a359781a08327f02d4a89017abcfa38d26807ee851577c1a0272e18a0c4df99",
+      "exact_immutable_LF_to_current_CRLF_reconstruction": true,
+      "historical_filesystem_equality_inferred": false
+    },
+    "initial_overstrict_audit_stop_unaccepted": "judge/count_elimination_initial_scope_stop_74b17fa.json",
+    "initial_overstrict_audit_stop_sha256": "994086d5a6b612734b052d02a2895750a56a09a008b06640c50d92993d1960bc"
+  },
+  "boolean_multiplier_rigidity_fresh_audit": {
+    "proof_source_commit": "00616e79c1b19baf87d235a849ab2cea7d09295e",
+    "numerical_source_commit_retained": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 230,
+    "complete_frozen_signatures": 201,
+    "imported_modules": 22,
+    "catalogues": 20,
+    "old228_command_prefix_and38_old_freeze_files_preserved": true,
+    "new_two_complete_actual_headers_and_actual_countMul_definition_and_three_axiom_prints": true,
+    "fresh_default_lake_build_seconds": 142.867383,
+    "fresh_dependency_cache_only_from_proof_commit": "4eb47ec33c3f3d57906210c7a7cd2b4d4c9b7155",
+    "all78_previous_registered_reports_preserved": true,
+    "all22_method_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "current_lake_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_00616e7.json": "17905da565ac2ee45f0679c8b8f3d3eaacffb7ff8ab678ece909abe36a382150",
+      "judge/axiom_coverage_audit_00616e7.json": "4cb84b80e2b80c9cea6fb37a4744a346fec3a93301fe91cd59a76b4908ceeb46",
+      "judge/boolean_multiplier_rigidity_complete_header_audit_00616e7.json": "e4371250c487a3aed63f1d5a2f900886a2a09802a8b08e960dac1a67749caf10",
+      "judge/boolean_multiplier_rigidity_scope_continuity_audit_00616e7.json": "641afd9342a6fb4ece00b8fec85fb7217b30d8da8cf71e1a74a3269fa183ebcd"
+    }
+  },
+  "boolean_count_bridge_fresh_audit": {
+    "proof_source_commit": "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "numerical_source_commit_retained": "74b17fa54b1c65878ee86576bb7dda249a860a9a",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 231,
+    "complete_frozen_signatures": 202,
+    "imported_modules": 23,
+    "catalogues": 21,
+    "old230_command_prefix_and40_old_freeze_files_preserved": true,
+    "one_complete_actual_bridge_header_zero_definitions_helpers_one_axiom_print": true,
+    "fresh_default_lake_build_seconds": 143.633455,
+    "fresh_dependency_cache_only_from_proof_commit": "00616e79c1b19baf87d235a849ab2cea7d09295e",
+    "all82_previous_registered_reports_preserved": true,
+    "all22_method_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "current_lake_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_09a6d29.json": "f6b9cf1d1547687aeedeb3e92e018e703715900b3e23403cd75a50c0dc58c521",
+      "judge/axiom_coverage_audit_09a6d29.json": "76f7aecde7c1e7bf071f0ce4b0a545a74980433872c106f756ee1f172709b987",
+      "judge/boolean_count_bridge_complete_header_audit_09a6d29.json": "d24654536d46419e941dea74ad7b0f05ff4903a81717c2d5646c7bcad9f4decb",
+      "judge/boolean_count_bridge_scope_continuity_audit_09a6d29.json": "df76e534a86f52064e6bba305b1e70ea43b8b571dfdc64cdfdfcdb5539cb2d4b"
+    }
+  },
+  "recipe_compiler_method_fresh_audit": {
+    "scope": "three complete fixed Fp saved pairs, duplicate known degrees and constructive macro sizes only",
+    "source_commit": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+    "accepted_proof_verification_inherited_without_rebuild_at": "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "old_numeric_math_inherited_without_reexecution_at": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "old_partial74_method_and_censored_N30_scope_retained": true,
+    "reports": {
+      "judge/recipe_compiler_judge_audit_d07dde0.json": "d0bfc67dbabc279f9a27e63427eed5417749f945a535bde54ff8cf97bade1a64",
+      "judge/recipe_compiler_continuity_d07dde0.json": "645c92a57d98946b792b9a0a08e90a9c9aacb9a379547adb68a90dd3424924db",
+      "judge/recipe_compiler_provenance_scope_d07dde0.json": "61bde15c3b68689c408d858369d05819e8b95fac53458b09c2f7b495cf7616d1"
+    },
+    "registered_unique_reports": 89,
+    "total_report_references_across_two_Trophies": 178,
+    "new_mathematics_Lean_build_curve_or_Goldbach_claim": false
+  },
+  "boolean_annihilation_fresh_audit": {
+    "proof_source_commit": "875ab3489f6116ec56449f4f62a6d2e84b42cb78",
+    "numerical_source_commit_retained": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 232,
+    "complete_frozen_signatures": 203,
+    "imported_modules": 24,
+    "catalogues": 22,
+    "old231_command_prefix_and42_old_freeze_files_preserved": true,
+    "one_complete_actual_annihilation_header_zero_public_definitions_helpers_one_axiom_print": true,
+    "fresh_default_lake_build_seconds": 146.463015,
+    "fresh_dependency_cache_only_from_proof_commit": "09a6d296247197cc42ac0df486f60d5074b77c66",
+    "all89_previous_registered_reports_preserved": true,
+    "all22_partial_and28_recipe_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "current_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "historical_recipe_audit_and_all_old_R1_R2_R3_R4_scopes_retained": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_875ab34.json": "d41850bb14c8e5d9e7093fd0f3ba49cb340f3c94cf7dbae927c8f828fc26e5f9",
+      "judge/axiom_coverage_audit_875ab34.json": "59a7197cb0e8410c5e3c21ecc9a98fedebebe95740b2b647a8dcbfc233b312b9",
+      "judge/boolean_annihilation_complete_header_audit_875ab34.json": "5a47c4792d8fa8470399ebd1647463a809f1787b370cfb5e74184e87f84be7ac",
+      "judge/boolean_annihilation_scope_continuity_audit_875ab34.json": "94b30b1559283c32f3a36f915d55fb61549addb69875e2c441cba3d433646739"
+    }
+  },
+  "count_variable_commutation_fresh_audit": {
+    "proof_source_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+    "numerical_source_commit_retained": "d07dde0b3de1c0489178a31079c97ee2dcdcc78e",
+    "old_numeric_math_commit_retained": "80d6893b9ed2ec355955534a62dfa08e9ab9594b",
+    "public_theorem_lemma_entries": 233,
+    "complete_frozen_signatures": 204,
+    "imported_modules": 25,
+    "catalogues": 23,
+    "old232_command_prefix_and44_old_freeze_files_preserved": true,
+    "one_complete_actual_commutation_header_zero_public_definitions_helpers_one_axiom_print": true,
+    "fresh_default_lake_build_seconds": 146.251355,
+    "fresh_dependency_cache_only_from_proof_commit": "875ab3489f6116ec56449f4f62a6d2e84b42cb78",
+    "all93_previous_registered_reports_preserved": true,
+    "all22_partial_and28_recipe_terminal_raw_files_unchanged": true,
+    "old212_numeric_Git_clone_bytes_208_current_raw_plus_four_exact_CRLF_transports_preserved": true,
+    "all609_leaf605_A5_and61_selected60_rootpresent_one_leafonly_current_bindings_rebound": true,
+    "current_manifest_only_exact_LF_to_CRLF_transport_and_leaf_only_scratch_distinguished": true,
+    "historical_recipe_and_annihilation_audits_all_old_R1_R2_R3_R4_scopes_retained": true,
+    "no_numeric_producer_solver_or_old_arithmetic_replay": true,
+    "reports": {
+      "judge/lean_audit_e5c4e11.json": "388081521a8caf3640677caa56b6c6faa1e3b9330f704fced9e7d86c20b02ba1",
+      "judge/axiom_coverage_audit_e5c4e11.json": "00bc0dacf4263cfe137d415f0afb074b90d2c9bedfc29230368983c4aed9b9db",
+      "judge/count_variable_commutation_complete_header_audit_e5c4e11.json": "c895b6407b8784c2e8d524074e7a0c2003032e8e5f68c10265561ad5bebf39fb",
+      "judge/count_variable_commutation_scope_continuity_audit_e5c4e11.json": "d6b01617bd575867d4d4b0f8aa1bfab5f9c320d588ef78c5e8a03c6197490ec7"
+    }
+  }
+}

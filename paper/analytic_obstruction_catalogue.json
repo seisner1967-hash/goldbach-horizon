@@ -1,0 +1,1133 @@
+{
+  "schema": "EXISTING_ANALYTIC_OBSTRUCTIONS_V1",
+  "scope": "Grouped existing negative/support/correction declarations; no new obstruction is proved.",
+  "groups": [
+    {
+      "claim_id": "A-OBSTRUCTION-PARITY",
+      "title": "Parity detector retains composites",
+      "statement": "Three distinct prime factors give oddWeight=1 while their product is composite; the explicit 101*103*107 example also has no prime factor at most 100.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/lean/ParityWeights.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "8c4954596ac6f5edf48baf3db54a51c355e81b9ac0de256ccb912596b0048284",
+          "bytes": 6950
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/judge_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "72f72df35dcf6aaf812e7ea5d400e3073ea5b4296ef9550602ac0ab130a0e86c",
+          "bytes": 25431
+        }
+      ],
+      "declarations": [
+        {
+          "module": "ParityWeights",
+          "declaration": "GoldbachResearch.ParityWeights.parity_detector_retains_composite",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem parity_detector_retains_composite {p q r : ℕ} (hp : p.Prime) (hq : q.Prime) (hr : r.Prime) (hpq : p ≠ q) (hpr : p ≠ r) (hqr : q ≠ r) : oddWeight (p * q * r) = 1 ∧ ¬ (p * q * r).Prime",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/lean/ParityWeights.lean",
+          "source_sha256": "8c4954596ac6f5edf48baf3db54a51c355e81b9ac0de256ccb912596b0048284",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/judge_receipt.json",
+          "judge_receipt_sha256": "72f72df35dcf6aaf812e7ea5d400e3073ea5b4296ef9550602ac0ab130a0e86c",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/judge_receipt.json",
+          "axiom_evidence_sha256": "72f72df35dcf6aaf812e7ea5d400e3073ea5b4296ef9550602ac0ab130a0e86c",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "ParityWeights",
+          "declaration": "GoldbachResearch.ParityWeights.concrete_prime_triprime_same_parity",
+          "kind": "theorem",
+          "informal_statement": "The prime 101 and the composite 101*103*107 have the same odd parity weight; the composite lies between 100 and 100000000 and has no prime divisor at most 100.",
+          "lean_statement": "theorem concrete_prime_triprime_same_parity : oddWeight 101 = 1 ∧ oddWeight (101 * 103 * 107) = 1 ∧ ¬ (101 * 103 * 107).Prime ∧ 100 < 101 * 103 * 107 ∧ 101 * 103 * 107 < 100000000 ∧ (∀ t : ℕ, t.Prime → t ∣ 101 * 103 * 107 → 100 < t)",
+          "informal_statement_status": "human paraphrase of selected existing declaration",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/lean/ParityWeights.lean",
+          "source_sha256": "8c4954596ac6f5edf48baf3db54a51c355e81b9ac0de256ccb912596b0048284",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/judge_receipt.json",
+          "judge_receipt_sha256": "72f72df35dcf6aaf812e7ea5d400e3073ea5b4296ef9550602ac0ab130a0e86c",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/judge_receipt.json",
+          "axiom_evidence_sha256": "72f72df35dcf6aaf812e7ea5d400e3073ea5b4296ef9550602ac0ab130a0e86c",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "This concerns the defined parity detector, not every sieve or the Goldbach coefficient."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-MULTIFIBRE",
+      "title": "Negative four-site block",
+      "statement": "The constructed closed four-site block is negative for every value of its displayed kernel parameter; the literal arithmetic block is negative as well.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/lean/MultifibreObstruction.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "93a5d98934c2f2349ddcc8b61e90a7fc393a03d1c100bc081f3bc92379b76902",
+          "bytes": 11861
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/judge_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "03f048467de70e1ef2a7b4c50d97a30db2dcdae63d7b1c4b0fe673bee850b381",
+          "bytes": 24417
+        }
+      ],
+      "declarations": [
+        {
+          "module": "MultifibreObstruction",
+          "declaration": "GoldbachResearch.MultifibreObstruction.closedFourSiteBlock_neg",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem closedFourSiteBlock_neg (kernel2121 : ℝ) : closedFourSiteBlock kernel2121 < 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/lean/MultifibreObstruction.lean",
+          "source_sha256": "93a5d98934c2f2349ddcc8b61e90a7fc393a03d1c100bc081f3bc92379b76902",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/judge_receipt.json",
+          "judge_receipt_sha256": "03f048467de70e1ef2a7b4c50d97a30db2dcdae63d7b1c4b0fe673bee850b381",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/judge_receipt.json",
+          "axiom_evidence_sha256": "03f048467de70e1ef2a7b4c50d97a30db2dcdae63d7b1c4b0fe673bee850b381",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "MultifibreObstruction",
+          "declaration": "GoldbachResearch.MultifibreObstruction.literalFourSiteBlock_neg",
+          "kind": "theorem",
+          "informal_statement": "The explicitly defined four-site block is negative.",
+          "lean_statement": "theorem literalFourSiteBlock_neg : literalFourSiteBlock < 0",
+          "informal_statement_status": "human paraphrase of selected existing declaration",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/lean/MultifibreObstruction.lean",
+          "source_sha256": "93a5d98934c2f2349ddcc8b61e90a7fc393a03d1c100bc081f3bc92379b76902",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/judge_receipt.json",
+          "judge_receipt_sha256": "03f048467de70e1ef2a7b4c50d97a30db2dcdae63d7b1c4b0fe673bee850b381",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round3/judge_receipt.json",
+          "axiom_evidence_sha256": "03f048467de70e1ef2a7b4c50d97a30db2dcdae63d7b1c4b0fe673bee850b381",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "It refutes positivity of that block, not all possible kernels or arithmetic correlations."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-AFFINE",
+      "title": "Independent affine forms cannot produce a nonzero constant",
+      "statement": "Over the source field, independent affine forms cannot have an identity f*R+g*S=N at every pair of arguments when N is nonzero. The rational and real specializations are recorded.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/lean/AffineHHObstruction.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "9e3274b7f220bd59b49a31abff47301451f907eb6af8ebcb38a653f07d1e9baa",
+          "bytes": 4032
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "bytes": 9731
+        }
+      ],
+      "declarations": [
+        {
+          "module": "AffineHHObstruction",
+          "declaration": "GoldbachResearch.AffineHHObstruction.independent_cross_forms_cannot_have_constant_nonzero_sum",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem independent_cross_forms_cannot_have_constant_nonzero_sum {a b c d e f N : K} (hdet : a * e - b * d ≠ 0) (hN : N ≠ 0) : ¬ ∃ R S : K → K → K, ∀ X Y : K, affine a b c X Y * R X Y + affine d e f X Y * S X Y = N",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/lean/AffineHHObstruction.lean",
+          "source_sha256": "9e3274b7f220bd59b49a31abff47301451f907eb6af8ebcb38a653f07d1e9baa",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "judge_receipt_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "axiom_evidence_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "AffineHHObstruction",
+          "declaration": "GoldbachResearch.AffineHHObstruction.rational_affine_obstruction",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem rational_affine_obstruction (a b c d e f N : ℚ) (R S : ℚ → ℚ → ℚ) (hN : N ≠ 0) (hidentity : ∀ X Y : ℚ, (a * X + b * Y + c) * R X Y + (d * X + e * Y + f) * S X Y = N) : a * e - b * d = 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/lean/AffineHHObstruction.lean",
+          "source_sha256": "9e3274b7f220bd59b49a31abff47301451f907eb6af8ebcb38a653f07d1e9baa",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "judge_receipt_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "axiom_evidence_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "AffineHHObstruction",
+          "declaration": "GoldbachResearch.AffineHHObstruction.real_affine_obstruction",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem real_affine_obstruction (a b c d e f N : ℝ) (R S : ℝ → ℝ → ℝ) (hN : N ≠ 0) (hidentity : ∀ X Y : ℝ, (a * X + b * Y + c) * R X Y + (d * X + e * Y + f) * S X Y = N) : a * e - b * d = 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/lean/AffineHHObstruction.lean",
+          "source_sha256": "9e3274b7f220bd59b49a31abff47301451f907eb6af8ebcb38a653f07d1e9baa",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "judge_receipt_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "axiom_evidence_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "The result concerns a global identity for the specified two affine forms; it does not forbid identities restricted to an admissible arithmetic set."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-SIGN",
+      "title": "Expanded determinant signs vary",
+      "statement": "Two explicit expanded determinant tuples have opposite signs, +1 and -1.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/lean/DeterminantCoordinates.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "aafce8f549d2824b1bcf2910e2f331acdb01beebe59a7350bc68525ae46f0413",
+          "bytes": 8976
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/judge_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "8a1321107822271dd1c1836bd5a7f8b8f0003bc16b91ca95676f3bb07345aa89",
+          "bytes": 15338
+        }
+      ],
+      "declarations": [
+        {
+          "module": "DeterminantCoordinates",
+          "declaration": "GoldbachResearch.DeterminantCoordinates.concrete_expanded_tuple_sign_change",
+          "kind": "theorem",
+          "informal_statement": "The two displayed expanded determinant tuples have signs +1 and -1 respectively.",
+          "lean_statement": "theorem concrete_expanded_tuple_sign_change : expandedTupleSign 3 7 7951 12577 = 1 ∧ expandedTupleSign 3 75469 7717 12577 = -1",
+          "informal_statement_status": "human paraphrase of selected existing declaration",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/lean/DeterminantCoordinates.lean",
+          "source_sha256": "aafce8f549d2824b1bcf2910e2f331acdb01beebe59a7350bc68525ae46f0413",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/judge_receipt.json",
+          "judge_receipt_sha256": "8a1321107822271dd1c1836bd5a7f8b8f0003bc16b91ca95676f3bb07345aa89",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/judge_receipt.json",
+          "axiom_evidence_sha256": "8a1321107822271dd1c1836bd5a7f8b8f0003bc16b91ca95676f3bb07345aa89",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "No global sign for all determinant-coordinate tuples follows from the common coordinate construction."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-COMPLETION",
+      "title": "Composite-modulus completion retains a nonunit defect",
+      "statement": "The exact finite character completion splits into its unit-frequency term plus nonunitDefect; zero is a nonunit in a nontrivial ZMod ring. Even for functions supported on units, the recorded defect formula is (q-kappa)*the defined arithmetic moment.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/lean/CompositeCompletion.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "af643e3021ee08569154c2a74f12f554fdf09534b4b4ad31601bfddafc8557c7",
+          "bytes": 7484
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "bytes": 9731
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/lean/UnitSupportedCompletion.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "7d84fa747313ddbc3e106db95781505d3f618447672da6159ede48729e198352",
+          "bytes": 6237
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/judge_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "8a1321107822271dd1c1836bd5a7f8b8f0003bc16b91ca95676f3bb07345aa89",
+          "bytes": 15338
+        }
+      ],
+      "declarations": [
+        {
+          "module": "CompositeCompletion",
+          "declaration": "GoldbachResearch.CompositeCompletion.nonunit_partition",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem nonunit_partition (χ : DirichletCharacter ℂ q) (F : ZMod q → ℂ) : (∑ h : ZMod q, fourierWeight F h * characterPhase χ h) = gaussSum χ⁻¹ ZMod.stdAddChar * unitFrequencyMoment χ F + nonunitDefect χ F",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/lean/CompositeCompletion.lean",
+          "source_sha256": "af643e3021ee08569154c2a74f12f554fdf09534b4b4ad31601bfddafc8557c7",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "judge_receipt_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "axiom_evidence_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "CompositeCompletion",
+          "declaration": "GoldbachResearch.CompositeCompletion.zero_frequency_is_nonunit",
+          "kind": "theorem",
+          "informal_statement": "In a nontrivial ZMod ring, zero belongs to the set of nonunits.",
+          "lean_statement": "theorem zero_frequency_is_nonunit [Nontrivial (ZMod q)] : (0 : ZMod q) ∈ (Finset.univ : Finset (ZMod q)).filter (fun h => ¬ IsUnit h)",
+          "informal_statement_status": "human paraphrase of selected existing declaration",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/lean/CompositeCompletion.lean",
+          "source_sha256": "af643e3021ee08569154c2a74f12f554fdf09534b4b4ad31601bfddafc8557c7",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "judge_receipt_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round4/judge_receipt.json",
+          "axiom_evidence_sha256": "8db7768219f8bb51438cd2946947330420bd0d113e0440ac3137060f9730da3b",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "UnitSupportedCompletion",
+          "declaration": "GoldbachResearch.UnitSupportedCompletion.unit_supported_nonunitDefect",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem unit_supported_nonunitDefect (χ : DirichletCharacter ℂ q) (F : ZMod q → ℂ) (hF : ∀ z, ¬ IsUnit z → F z = 0) : nonunitDefect χ F = ((q : ℂ) - kappa χ) * physicalMoment χ F",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/lean/UnitSupportedCompletion.lean",
+          "source_sha256": "7d84fa747313ddbc3e106db95781505d3f618447672da6159ede48729e198352",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/judge_receipt.json",
+          "judge_receipt_sha256": "8a1321107822271dd1c1836bd5a7f8b8f0003bc16b91ca95676f3bb07345aa89",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round5/judge_receipt.json",
+          "axiom_evidence_sha256": "8a1321107822271dd1c1836bd5a7f8b8f0003bc16b91ca95676f3bb07345aa89",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "This records the correction term, not a claim that it is nonzero in every specialization."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-TYPEII",
+      "title": "Separated Type-II arithmetic and prime weights have different scope",
+      "statement": "Under the complete source guards, the adversarial arithmetic sum equals density times omittedCount. Incorporating ell into the calibrated modulus makes the bilinear term zero; with the stated candidate front the prime-weight bilinear term is also zero. The normalized omitted-ratio lower bound retains all three front/density guards R4a,R4b,R4c.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role3/SeparatedTypeII.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+          "bytes": 26493
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "bytes": 187779
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role3/SeparatedTypeIIPrice.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+          "bytes": 9940
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role3/SeparatedTypeIILower.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+          "bytes": 9265
+        }
+      ],
+      "declarations": [
+        {
+          "module": "SeparatedTypeII",
+          "declaration": "GoldbachRound18.SeparatedTypeII.adversarial_sum_identity",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem adversarial_sum_identity (P : Parameters) (I : Finset ℕ) (V h ell : ℕ) (hd : 0 < conductor P) (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P) (hdel : Nat.Coprime ell (conductor P)) (hell : ell.Prime) (hellSmall : ell * ell ≤ P.a) (hsmall : ∀ p : ℕ, p.Prime → p ∣ h → p * p ≤ P.a) (hcap : ∀ b ∈ I, conductor P * b ≤ P.N) : adversarialSum P I (P.N * conductor P * h) ell (rows P V h ell) = density P I (P.N * conductor P * h) * (omittedCount P I (P.N * conductor P * h) ell (rows P V h ell) : ℝ)",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role3/SeparatedTypeII.lean",
+          "source_sha256": "4513f3323bbf475b329daf423de805eb207d3fe88793f91016369bcb0d5228d7",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "judge_receipt_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "SeparatedTypeIIPrice",
+          "declaration": "GoldbachRound18.SeparatedTypeII.calibrated_adversarial_zero",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem calibrated_adversarial_zero (P : Parameters) (I : Finset ℕ) (V h ell H : ℕ) (weight : ℕ → ℝ) (hd : 0 < conductor P) (hNd : Nat.Coprime P.N (conductor P)) (hwidth : V < conductor P) (hdel : Nat.Coprime ell (conductor P)) (hell : ell.Prime) (hellSmall : ell * ell ≤ P.a) (hcap : ∀ b ∈ I, conductor P * b ≤ P.N) : weightedBilinear P I (H * ell) ell (rows P V h ell) weight = 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role3/SeparatedTypeIIPrice.lean",
+          "source_sha256": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "judge_receipt_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "SeparatedTypeIIPrice",
+          "declaration": "GoldbachRound18.SeparatedTypeII.prime_weight_bilinear_zero",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem prime_weight_bilinear_zero (P : Parameters) (I : Finset ℕ) (V h ell H : ℕ) (hd : 0 < conductor P) (hcap : ∀ b ∈ I, conductor P * b ≤ P.N) (hfront : ∀ b ∈ I, 2 * V < candidate P b) : weightedBilinear P I H ell (rows P V h ell) (theta P.N) = 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role3/SeparatedTypeIIPrice.lean",
+          "source_sha256": "dd971712c281236332d272e645498b6ace83b6b6a80915b5f6bca4fa8cc2551c",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "judge_receipt_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "SeparatedTypeIILower",
+          "declaration": "GoldbachRound18.SeparatedTypeII.omitted_ratio_lower_R5",
+          "kind": "theorem",
+          "informal_statement": "Under the explicit conductor, interval, unit-count and three front/density guards, the omitted-to-unit ratio is at least density(H*ell)/(16*ell).",
+          "lean_statement": "theorem omitted_ratio_lower_R5 (P : Parameters) {A B H ell V : ℕ} (hAB : A ≤ B) (hH : 0 < H) (hell : 0 < ell) (hV : 0 < V) (hHd : conductor P ∣ H) (hlH : Nat.Coprime ell H) (hcap : ∀ b ∈ Ioc A B, conductor P * b ≤ P.N) (hJ : 0 < unitCount (Ioc A B) H) (R4a : 2 * arithmeticFront (H * ell) ≤ (V : ℚ) * arithmeticDensity (H * ell)) (R4b : arithmeticFront H ≤ ((B : ℚ) - A) * arithmeticDensity H) (R4c : (V : ℚ) * arithmeticFront H ≤ ((B : ℚ) - A) * arithmeticDensity H * arithmeticDensity (H * ell) / (8 * ell)) : arithmeticDensity (H * ell) / (16 * ell) ≤ (omittedCount P (Ioc A B) H ell (units (Ioc V (2 * V)) (H * ell)) : ℚ) / (unitCount (Ioc A B) H : ℚ)",
+          "informal_statement_status": "human paraphrase of selected existing declaration",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role3/SeparatedTypeIILower.lean",
+          "source_sha256": "5676b1d3be3ae3595b59f5235b53b2813b72def907a855ef057bf940b519a68e",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "judge_receipt_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "An adversarial bounded arithmetic weight cannot be substituted for the actual prime weight; this does not refute a stronger weighted Type-II estimate."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-COLLISION",
+      "title": "Local collision factors remain in four-form bounds",
+      "statement": "The actual four-form and divided-form Euler lower bounds explicitly retain collisionLoss or switchCollisionLoss. Their truncated G bounds additionally retain ordering, coprimality, nonsaturation, logarithmic-cutoff and prime-log-sum hypotheses.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/role4/FourFormCollisionLoss.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5",
+          "bytes": 5123
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/judge/audit_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "f44584f6a6a39679ad61108fe2d660d05f64769301a9f7c8f71b0227f008117e",
+          "bytes": 78470
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role4/DividedSelbergBridge.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "2b5f1edaaab665560e5e1b6668f29794e3e10e2305b28428082f590458150db3",
+          "bytes": 13443
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "bytes": 187779
+        }
+      ],
+      "declarations": [
+        {
+          "module": "FourFormCollisionLoss",
+          "declaration": "GoldbachRound17.FourFormCollisionLoss.actualEuler_collision_loss",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem actualEuler_collision_loss {N e p0 y : ℕ} (h1 : 1 ≤ p0) (hpe : p0 ≤ e) (hns : ∀ p ∈ Selberg.primeSupport y, FourFormRoots.actualRho p N e p0 < p) : (mertensEuler y)^4 * collisionLoss N e p0 y ≤ FourFormTruncation.actualEuler N e p0 y",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/role4/FourFormCollisionLoss.lean",
+          "source_sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/judge/audit_receipt.json",
+          "judge_receipt_sha256": "f44584f6a6a39679ad61108fe2d660d05f64769301a9f7c8f71b0227f008117e",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "f44584f6a6a39679ad61108fe2d660d05f64769301a9f7c8f71b0227f008117e",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "FourFormCollisionLoss",
+          "declaration": "GoldbachRound17.FourFormCollisionLoss.actualG_collision_loss_half",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem actualG_collision_loss_half {N e p0 y z : ℕ} (hyz : y ≤ z) (hz : 0 < (z : ℝ)) (h1 : 1 ≤ p0) (hpe : p0 ≤ e) (heN : e.Coprime N) (hpN : p0.Coprime N) (hns : ∀ p ∈ Selberg.primeSupport z, FourFormRoots.actualRho p N e p0 < p) (hlogz : 32 ≤ Real.log z) (hlogy : 32 * Real.log y ≤ Real.log z) (hprime : (∑ p ∈ Selberg.primeSupport y, Real.log p / p) ≤ 2 + 2 * Real.log y) : (mertensEuler y)^4 * collisionLoss N e p0 y / 2 ≤ Selberg.actualG N e p0 z",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/role4/FourFormCollisionLoss.lean",
+          "source_sha256": "000cade7cac3a1c9472a2fd465e992de71a49c6ad65ae85635726d196392d9a5",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/judge/audit_receipt.json",
+          "judge_receipt_sha256": "f44584f6a6a39679ad61108fe2d660d05f64769301a9f7c8f71b0227f008117e",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round17/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "f44584f6a6a39679ad61108fe2d660d05f64769301a9f7c8f71b0227f008117e",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "DividedSelbergBridge",
+          "declaration": "GoldbachRound18.DoubleExtraction.switchEuler_collision_loss",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem switchEuler_collision_loss (h : Cell N q) (hg : TargetGuards N e q) (hns : ∀ p ∈ Selberg.primeSupport y, dividedRho p N e q < p) : (FourFormCollisionLoss.mertensEuler y)^4 * switchCollisionLoss N e q y ≤ switchEuler N e q y",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role4/DividedSelbergBridge.lean",
+          "source_sha256": "2b5f1edaaab665560e5e1b6668f29794e3e10e2305b28428082f590458150db3",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "judge_receipt_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "DividedSelbergBridge",
+          "declaration": "GoldbachRound18.DoubleExtraction.switchG_collision_loss_half",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem switchG_collision_loss_half (h : Cell N q) (hg : TargetGuards N e q) (hyz : y ≤ z) (hz : 0 < (z : ℝ)) (hns : ∀ p ∈ Selberg.primeSupport z, dividedRho p N e q < p) (hlogz : 32 ≤ Real.log z) (hlogy : 32 * Real.log y ≤ Real.log z) (hprime : (∑ p ∈ Selberg.primeSupport y, Real.log p / p) ≤ 2 + 2 * Real.log y) : (FourFormCollisionLoss.mertensEuler y)^4 * switchCollisionLoss N e q y / 2 ≤ switchG N e q z",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/role4/DividedSelbergBridge.lean",
+          "source_sha256": "2b5f1edaaab665560e5e1b6668f29794e3e10e2305b28428082f590458150db3",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "judge_receipt_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round18/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "1f694b4e7369ddf12a73970ae8c4ef5cdbc7855669f2179285647b25ce354938",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "These are bounds with explicit factors and guards, not a proof that all collision losses must be large or prevent a sufficient estimate."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-RANK",
+      "title": "Three-small-prime rank faces exclude the arithmetic mask",
+      "statement": "Under the stated distinct-prime, small-square and divisibility assumptions, the three-prime face has beta=0 and is outside the arithmetic mask. With front at least 529 and 1771 dividing the conductor-weighted argument, the canonical profile and both its prime and raw-weight summands are nonpositive. The principal rank-price expression is nonpositive when its mass is nonnegative and t>1.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationFace.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+          "bytes": 11658
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationFace_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "dd1876833f4b8b789f3df57324bae2fca63616cf303cffc2c2fce729f8891084",
+          "bytes": 13037
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationPrice.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "ce00b2b3d416d43d522cdd64f23fc075e179a669df551b87cb002b9444563574",
+          "bytes": 14658
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationPrice_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "f61d0933caf8ad79cf971912dc831c3732a8a01bb41ccb2e019936f29ee72b49",
+          "bytes": 15948
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationArithmetic.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "3ac4ec121db2be08222863ba188277ed87151f8466e00bbbd140a030faabe11d",
+          "bytes": 11882
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/06_fresh_independent_Lean_PASS.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "e54cefb8364d86e5f933eaa5bc42210494c8e7c617937ed2e48e81563dc60ae9",
+          "bytes": 162865
+        }
+      ],
+      "declarations": [
+        {
+          "module": "RankCalibrationFace",
+          "declaration": "GoldbachRound19.RankCalibration.three_small_primes_face_beta_zero",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem three_small_primes_face_beta_zero (F : Parameters) {b p₁ p₂ p₃ : ℕ} (h₁ : p₁.Prime) (h₂ : p₂.Prime) (h₃ : p₃.Prime) (h₁₂ : p₁ ≠ p₂) (h₁₃ : p₁ ≠ p₃) (h₂₃ : p₂ ≠ p₃) (hs₁ : p₁ * p₁ ≤ F.a) (hs₂ : p₂ * p₂ ≤ F.a) (hs₃ : p₃ * p₃ ≤ F.a) (hd : rankProduct p₁ p₂ p₃ ∣ conductor F * b) : beta F b = 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationFace.lean",
+          "source_sha256": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationFace_receipt.json",
+          "judge_receipt_sha256": "dd1876833f4b8b789f3df57324bae2fca63616cf303cffc2c2fce729f8891084",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationFace_receipt.json",
+          "axiom_evidence_sha256": "dd1876833f4b8b789f3df57324bae2fca63616cf303cffc2c2fce729f8891084",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "RankCalibrationFace",
+          "declaration": "GoldbachRound19.RankCalibration.three_small_primes_face_excludes_physicalMask",
+          "kind": "theorem",
+          "informal_statement": "Three distinct prime divisors whose squares are at most the front exclude the defined arithmetic mask when their product divides the conductor-weighted argument.",
+          "lean_statement": "theorem three_small_primes_face_excludes_physicalMask (F : Parameters) {b p₁ p₂ p₃ : ℕ} (h₁ : p₁.Prime) (h₂ : p₂.Prime) (h₃ : p₃.Prime) (h₁₂ : p₁ ≠ p₂) (h₁₃ : p₁ ≠ p₃) (h₂₃ : p₂ ≠ p₃) (hs₁ : p₁ * p₁ ≤ F.a) (hs₂ : p₂ * p₂ ≤ F.a) (hs₃ : p₃ * p₃ ≤ F.a) (hd : rankProduct p₁ p₂ p₃ ∣ conductor F * b) : ¬ physicalMask F b",
+          "informal_statement_status": "human paraphrase of selected existing declaration",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationFace.lean",
+          "source_sha256": "8bd774d17ae54261064be773576b37d68590c4f5e047c65de6eabab9557a9b2b",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationFace_receipt.json",
+          "judge_receipt_sha256": "dd1876833f4b8b789f3df57324bae2fca63616cf303cffc2c2fce729f8891084",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationFace_receipt.json",
+          "axiom_evidence_sha256": "dd1876833f4b8b789f3df57324bae2fca63616cf303cffc2c2fce729f8891084",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "RankCalibrationPrice",
+          "declaration": "GoldbachRound19.RankCalibration.canonical_profile_on_rank_face_nonpositive",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem canonical_profile_on_rank_face_nonpositive (F : Parameters) (I U : Finset ℕ) {b : ℕ} (ha : 529 ≤ F.a) (hd : 1771 ∣ conductor F * b) : beta F b - normalizedReference (structureCount F I) U b ≤ 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationPrice.lean",
+          "source_sha256": "ce00b2b3d416d43d522cdd64f23fc075e179a669df551b87cb002b9444563574",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationPrice_receipt.json",
+          "judge_receipt_sha256": "f61d0933caf8ad79cf971912dc831c3732a8a01bb41ccb2e019936f29ee72b49",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationPrice_receipt.json",
+          "axiom_evidence_sha256": "f61d0933caf8ad79cf971912dc831c3732a8a01bb41ccb2e019936f29ee72b49",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "RankCalibrationPrice",
+          "declaration": "GoldbachRound19.RankCalibration.rank_face_prime_summand_nonpositive",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem rank_face_prime_summand_nonpositive (F : Parameters) (I U : Finset ℕ) {b : ℕ} (ha : 529 ≤ F.a) (hd : 1771 ∣ conductor F * b) : (beta F b - normalizedReference (structureCount F I) U b) * theta F.N (candidate F b) ≤ 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationPrice.lean",
+          "source_sha256": "ce00b2b3d416d43d522cdd64f23fc075e179a669df551b87cb002b9444563574",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationPrice_receipt.json",
+          "judge_receipt_sha256": "f61d0933caf8ad79cf971912dc831c3732a8a01bb41ccb2e019936f29ee72b49",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationPrice_receipt.json",
+          "axiom_evidence_sha256": "f61d0933caf8ad79cf971912dc831c3732a8a01bb41ccb2e019936f29ee72b49",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "RankCalibrationPrice",
+          "declaration": "GoldbachRound19.RankCalibration.rank_face_raw_summand_nonpositive",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem rank_face_raw_summand_nonpositive (F : Parameters) (I U : Finset ℕ) {b : ℕ} (ha : 529 ≤ F.a) (hd : 1771 ∣ conductor F * b) : (beta F b - normalizedReference (structureCount F I) U b) * rawLambda F.N (candidate F b) ≤ 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationPrice.lean",
+          "source_sha256": "ce00b2b3d416d43d522cdd64f23fc075e179a669df551b87cb002b9444563574",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationPrice_receipt.json",
+          "judge_receipt_sha256": "f61d0933caf8ad79cf971912dc831c3732a8a01bb41ccb2e019936f29ee72b49",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/RankCalibrationPrice_receipt.json",
+          "axiom_evidence_sha256": "f61d0933caf8ad79cf971912dc831c3732a8a01bb41ccb2e019936f29ee72b49",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "RankCalibrationArithmetic",
+          "declaration": "GoldbachRound19.RankCalibration.rank_price_principal_nonpositive",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem rank_price_principal_nonpositive {t : ℕ} (ht : 1 < t) {M : ℝ} (hM : 0 ≤ M) : -M * rankChi t ≤ 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/role3/RankCalibrationArithmetic.lean",
+          "source_sha256": "3ac4ec121db2be08222863ba188277ed87151f8466e00bbbd140a030faabe11d",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/06_fresh_independent_Lean_PASS.json",
+          "judge_receipt_sha256": "e54cefb8364d86e5f933eaa5bc42210494c8e7c617937ed2e48e81563dc60ae9",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round19/judge/06_fresh_independent_Lean_PASS.json",
+          "axiom_evidence_sha256": "e54cefb8364d86e5f933eaa5bc42210494c8e7c617937ed2e48e81563dc60ae9",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "The conclusion applies to these specified faces and canonical profiles; it does not prove a sign for the full reference gap."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-LEASTFACTOR",
+      "title": "Nonminimal prime-divisor switch terms are not positive",
+      "statement": "For the defined composite least-factor domain and its unit assumptions, switching on a prime divisor other than minFac gives a nonpositive odd-Bonferroni weight and a zero rough indicator.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/LeastFactorComposite.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "4c114ae1b7300a046164eedaa0823aa2051f39ae33043c5876369a13b863962a",
+          "bytes": 6115
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "bytes": 255769
+        }
+      ],
+      "declarations": [
+        {
+          "module": "LeastFactorComposite",
+          "declaration": "GoldbachRound20.SwitchedComposite.nonminimal_prime_oddBonferroni_nonpos",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem nonminimal_prime_oddBonferroni_nonpos {N t j p K : ℕ} (hj : compositeLeastFactor j) (hunit : Nat.Coprime j (t * N)) (hp : p.Prime) (hpd : p ∣ j) (hneq : p ≠ j.minFac) : oddBonferroniWeight N t p K (j / p) ≤ 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/LeastFactorComposite.lean",
+          "source_sha256": "4c114ae1b7300a046164eedaa0823aa2051f39ae33043c5876369a13b863962a",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "LeastFactorComposite",
+          "declaration": "GoldbachRound20.SwitchedComposite.nonminimal_prime_roughIndicator_zero",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem nonminimal_prime_roughIndicator_zero {N t j p : ℕ} (hj : compositeLeastFactor j) (hunit : Nat.Coprime j (t * N)) (hp : p.Prime) (hpd : p ∣ j) (hneq : p ≠ j.minFac) : roughIndicator N t p (j / p) = 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/LeastFactorComposite.lean",
+          "source_sha256": "4c114ae1b7300a046164eedaa0823aa2051f39ae33043c5876369a13b863962a",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "The sign is for the displayed switched summands, not a universal estimate for the complete composite correction."
+    },
+    {
+      "claim_id": "A-OBSTRUCTION-NONUNIT-SUPPORT",
+      "title": "Nonunit progression and resource support is excluded",
+      "statement": "On the specified admissible composite-progression domain, a nonunit modulus cannot satisfy the indicated congruence or divide the switched candidate; the corresponding prime progression sum vanishes. For an admissible ResourceCell, a divisor noncoprime to N cannot divide either resource, and a divisor containing the anchor cannot divide resource0.",
+      "status": "Compiled Lean / existing guarded declarations",
+      "evidence": [
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/CompositeAPConductor.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c",
+          "bytes": 10926
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "bytes": 255769
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/SwitchedIncidenceEstimator.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "7ea6cc8506983c09c0700dec5ff6507aebfb2d79d581a602d07889048a7c7413",
+          "bytes": 21530
+        },
+        {
+          "path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role4/FriablePhysicalPrefix.lean",
+          "commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+          "sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+          "bytes": 7020
+        }
+      ],
+      "declarations": [
+        {
+          "module": "CompositeAPConductor",
+          "declaration": "GoldbachRound20.SwitchedComposite.physical_nonunit_AP_impossible",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem physical_nonunit_AP_impossible {F : Parameters} {s z q nu : ℕ} {J : Finset ℕ} (hq : q ∈ physicalQDomain F s z J) (hn : ¬ Nat.Coprime nu (switchedConductor F s * F.N)) : ¬ Nat.ModEq nu (switchedConductor F s * q) F.N",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/CompositeAPConductor.lean",
+          "source_sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "CompositeAPConductor",
+          "declaration": "GoldbachRound20.SwitchedComposite.physical_nonunit_conductor_zero",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem physical_nonunit_conductor_zero {F : Parameters} {s z q nu : ℕ} {J : Finset ℕ} (hq : q ∈ physicalQDomain F s z J) (hn : ¬ Nat.Coprime nu (switchedConductor F s * F.N)) : ¬ nu ∣ switchedCandidate F s q",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/CompositeAPConductor.lean",
+          "source_sha256": "04809ca5369c30f6c8fabaf06fbf969e4edd472abbe526748e4aa1a88046931c",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "SwitchedIncidenceEstimator",
+          "declaration": "GoldbachRound20.SwitchedComposite.actualPrimeAP_nonunit_zero",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem actualPrimeAP_nonunit_zero (F : Parameters) (s z nu : ℕ) (J : Finset ℕ) (hn : ¬ Nat.Coprime nu (switchedConductor F s * F.N)) : actualPrimeAP F s z nu J = 0",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role3/SwitchedIncidenceEstimator.lean",
+          "source_sha256": "7ea6cc8506983c09c0700dec5ff6507aebfb2d79d581a602d07889048a7c7413",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "FriablePhysicalPrefix",
+          "declaration": "GoldbachRound20.Friable.resource0_N_nonunit_impossible",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem resource0_N_nonunit_impossible {N q d : ℕ} (h : ResourceCell N q) (hd : ¬ d.Coprime N) : ¬ d ∣ resource0 N q",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role4/FriablePhysicalPrefix.lean",
+          "source_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "FriablePhysicalPrefix",
+          "declaration": "GoldbachRound20.Friable.resource0_anchor_nonunit_impossible",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem resource0_anchor_nonunit_impossible {N q d : ℕ} (h : ResourceCell N q) (hd : anchor N ∣ d) : ¬ d ∣ resource0 N q",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role4/FriablePhysicalPrefix.lean",
+          "source_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        },
+        {
+          "module": "FriablePhysicalPrefix",
+          "declaration": "GoldbachRound20.Friable.resource1_N_nonunit_impossible",
+          "kind": "theorem",
+          "informal_statement": "",
+          "lean_statement": "theorem resource1_N_nonunit_impossible {N q d : ℕ} (h : ResourceCell N q) (hd : ¬ d.Coprime N) : ¬ d ∣ resource1 N q",
+          "informal_statement_status": "no separate informal paraphrase; textual header and pinned source available",
+          "statement_scope_note": "Textual declaration header, not an elaborated type; contextual variables and hypotheses are in the pinned source. A first internal := may terminate extraction in a let-based statement.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "credit_level": "Compiled Lean",
+          "module_credit_status": "HISTORICAL_INDEPENDENT_COMPILE_STANDARD_AXIOMS",
+          "batch_status": null,
+          "partial_batch_credit": false,
+          "source_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/role4/FriablePhysicalPrefix.lean",
+          "source_sha256": "4286a04e155ab9f664a031dc8b0c6cff3fae6d5e01c59f75e4e735d3fcaf8c83",
+          "judge_receipt_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "judge_receipt_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "axiom_evidence_path": "research/goldbach-synthesis-v3-20261004/workspace/Goldbach_Parity_20261002/round20/judge/audit_receipt.json",
+          "axiom_evidence_sha256": "db49cb3bfcb3f1baf5644d48ae68f919e3484e29567a8e6498dfb4def3e7f94a",
+          "existing_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460"
+        }
+      ],
+      "what_it_does_not_show": "These exact support exclusions do not supply the required aggregate error budget."
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "schema": 1,
+  "family": "coprime_divisor_density",
+  "definition": "For 2<=u<v<=N with gcd(u,v)=1, product_(1<d<=N,d|u or d|v)(1-X_d)=0.",
+  "field": "Q; CNF Boolean semantics; g integer no-wrap also valid when p>N+1",
+  "no_multiplier_search": true,
+  "not_a_viable_candidate": true,
+  "first_pseudo_solution_even_N_at_least_4": 4,
+  "mandatory_gate_N": [
+    30,
+    60,
+    100,
+    200
+  ],
+  "independent_RUP_replay": "REQUIRED",
+  "rows": [
+    {
+      "N": 4,
+      "variables": 5,
+      "family_positive_clause_count": 2,
+      "goldbach_negative_clause_count": 3,
+      "full_clause_count": 5,
+      "gate_result": "SAT",
+      "full_cnf": "evidence/coprime_density/N4.cnf",
+      "full_cnf_sha256": "88698709673ef9068f6218c8f577d7149374872a8222a03049b72d8a92583ae7",
+      "proof": null,
+      "models": "evidence/coprime_density/N4_models.json.gz",
+      "models_decompressed_sha256": "f9e024da71c034fb0c7421690a784229515f8cb991589e60722c0da6c3bdf702",
+      "Boolean_solutions_without_g_lower_bound": 6,
+      "Boolean_solutions_without_g_exact": 24,
+      "prime_count": 2,
+      "every_coordinate_free": true,
+      "uniform_constants": true,
+      "SIEVE": false,
+      "coarse_constraints": false,
+      "classification": "REJECTED_DENSITY_CALIBRATION",
+      "family_index_count": 2
+    },
+    {
+      "N": 30,
+      "variables": 31,
+      "family_positive_clause_count": 248,
+      "goldbach_negative_clause_count": 16,
+      "full_clause_count": 264,
+      "gate_result": "UNSAT_WITH_RUP_LOG",
+      "full_cnf": "evidence/coprime_density/N30.cnf",
+      "full_cnf_sha256": "6dc375eb6d32ca00715ccdbe798e7d51d61b9b702242313624f7d6505bd9992b",
+      "proof": {
+        "path": "evidence/coprime_density/N30.drat",
+        "sha256": "52021abf484eb638ff6e98363b401de974894868916aef07be926b0e7b316fd9",
+        "format": "literal DRAT additions; all three clauses are RUP",
+        "disjoint_prime_pairs": [
+          [
+            7,
+            23
+          ],
+          [
+            11,
+            19
+          ]
+        ],
+        "six_clause_core": [
+          {
+            "clause": [
+              8,
+              12
+            ],
+            "full_cnf_clause_id": 77
+          },
+          {
+            "clause": [
+              8,
+              20
+            ],
+            "full_cnf_clause_id": 84
+          },
+          {
+            "clause": [
+              24,
+              12
+            ],
+            "full_cnf_clause_id": 137
+          },
+          {
+            "clause": [
+              24,
+              20
+            ],
+            "full_cnf_clause_id": 209
+          },
+          {
+            "clause": [
+              -8,
+              -24
+            ],
+            "full_cnf_clause_id": 256
+          },
+          {
+            "clause": [
+              -12,
+              -20
+            ],
+            "full_cnf_clause_id": 260
+          }
+        ],
+        "added_clauses": [
+          [
+            8
+          ],
+          [
+            24
+          ],
+          []
+        ]
+      },
+      "models": "evidence/coprime_density/N30_models.json.gz",
+      "models_decompressed_sha256": "5ceb789c824e6492d5a12bb44f33d54ae0c271ed09da99cf17055b161e97fb67",
+      "Boolean_solutions_without_g_lower_bound": 32,
+      "Boolean_solutions_without_g_exact": 23068672,
+      "prime_count": 10,
+      "every_coordinate_free": true,
+      "uniform_constants": true,
+      "SIEVE": false,
+      "coarse_constraints": false,
+      "classification": "REJECTED_DENSITY_CALIBRATION",
+      "family_index_count": 248
+    },
+    {
+      "N": 60,
+      "variables": 61,
+      "family_positive_clause_count": 1042,
+      "goldbach_negative_clause_count": 31,
+      "full_clause_count": 1073,
+      "gate_result": "UNSAT_WITH_RUP_LOG",
+      "full_cnf": "evidence/coprime_density/N60.cnf",
+      "full_cnf_sha256": "cc58f94bd8b69f985077f465a8ccb7b5b8ab5bc038fd6f487c9199101e1b7d6e",
+      "proof": {
+        "path": "evidence/coprime_density/N60.drat",
+        "sha256": "8613f22fd46ff09553fcaf6bca6d411ed3bfa70ba448f335a36440518adf3e98",
+        "format": "literal DRAT additions; all three clauses are RUP",
+        "disjoint_prime_pairs": [
+          [
+            7,
+            53
+          ],
+          [
+            13,
+            47
+          ]
+        ],
+        "six_clause_core": [
+          {
+            "clause": [
+              8,
+              14
+            ],
+            "full_cnf_clause_id": 163
+          },
+          {
+            "clause": [
+              8,
+              48
+            ],
+            "full_cnf_clause_id": 192
+          },
+          {
+            "clause": [
+              54,
+              14
+            ],
+            "full_cnf_clause_id": 381
+          },
+          {
+            "clause": [
+              54,
+              48
+            ],
+            "full_cnf_clause_id": 988
+          },
+          {
+            "clause": [
+              -8,
+              -54
+            ],
+            "full_cnf_clause_id": 1050
+          },
+          {
+            "clause": [
+              -14,
+              -48
+            ],
+            "full_cnf_clause_id": 1056
+          }
+        ],
+        "added_clauses": [
+          [
+            8
+          ],
+          [
+            54
+          ],
+          []
+        ]
+      },
+      "models": "evidence/coprime_density/N60_models.json.gz",
+      "models_decompressed_sha256": "4af417a44ef4b234fd8699c19a13552d751edb4914e4f50b83697f035f7a5ae8",
+      "Boolean_solutions_without_g_lower_bound": 62,
+      "Boolean_solutions_without_g_exact": 316659348799488,
+      "prime_count": 17,
+      "every_coordinate_free": true,
+      "uniform_constants": true,
+      "SIEVE": false,
+      "coarse_constraints": false,
+      "classification": "REJECTED_DENSITY_CALIBRATION",
+      "family_index_count": 1042
+    },
+    {
+      "N": 100,
+      "variables": 101,
+      "family_positive_clause_count": 2944,
+      "goldbach_negative_clause_count": 51,
+      "full_clause_count": 2995,
+      "gate_result": "UNSAT_WITH_RUP_LOG",
+      "full_cnf": "evidence/coprime_density/N100.cnf",
+      "full_cnf_sha256": "0a3f3c2877c913b244e43b1c37177e4830b996203a76d4d76bb997be6d24d265",
+      "proof": {
+        "path": "evidence/coprime_density/N100.drat",
+        "sha256": "78a2464e3863cc9d3e9a1777358b14417176b1fe27f21720534a5447bc3f1807",
+        "format": "literal DRAT additions; all three clauses are RUP",
+        "disjoint_prime_pairs": [
+          [
+            3,
+            97
+          ],
+          [
+            11,
+            89
+          ]
+        ],
+        "six_clause_core": [
+          {
+            "clause": [
+              4,
+              12
+            ],
+            "full_cnf_clause_id": 55
+          },
+          {
+            "clause": [
+              4,
+              90
+            ],
+            "full_cnf_clause_id": 107
+          },
+          {
+            "clause": [
+              98,
+              12
+            ],
+            "full_cnf_clause_id": 571
+          },
+          {
+            "clause": [
+              98,
+              90
+            ],
+            "full_cnf_clause_id": 2909
+          },
+          {
+            "clause": [
+              -4,
+              -98
+            ],
+            "full_cnf_clause_id": 2948
+          },
+          {
+            "clause": [
+              -12,
+              -90
+            ],
+            "full_cnf_clause_id": 2956
+          }
+        ],
+        "added_clauses": [
+          [
+            4
+          ],
+          [
+            98
+          ],
+          []
+        ]
+      },
+      "models": "evidence/coprime_density/N100_models.json.gz",
+      "models_decompressed_sha256": "d49d5a6f1b994a0b08856a0d219bb19b45f72db9d0fd51845dc11dfc8f1a92c7",
+      "Boolean_solutions_without_g_lower_bound": 102,
+      "Boolean_solutions_without_g_exact": 1964504456873772408897536,
+      "prime_count": 25,
+      "every_coordinate_free": true,
+      "uniform_constants": true,
+      "SIEVE": false,
+      "coarse_constraints": false,
+      "classification": "REJECTED_DENSITY_CALIBRATION",
+      "family_index_count": 2944
+    },
+    {
+      "N": 200,
+      "variables": 201,
+      "family_positive_clause_count": 12032,
+      "goldbach_negative_clause_count": 101,
+      "full_clause_count": 12133,
+      "gate_result": "UNSAT_WITH_RUP_LOG",
+      "full_cnf": "evidence/coprime_density/N200.cnf",
+      "full_cnf_sha256": "8656e493b827a32ae11c43f9732f27c66ebc121b8b69ae51a88de3d34da36920",
+      "proof": {
+        "path": "evidence/coprime_density/N200.drat",
+        "sha256": "6ffcbd618e931df8b9f3dfe6b33cf0934a532876691cef7f1ca44af0cd71d4e6",
+        "format": "literal DRAT additions; all three clauses are RUP",
+        "disjoint_prime_pairs": [
+          [
+            3,
+            197
+          ],
+          [
+            7,
+            193
+          ]
+        ],
+        "six_clause_core": [
+          {
+            "clause": [
+              4,
+              8
+            ],
+            "full_cnf_clause_id": 102
+          },
+          {
+            "clause": [
+              4,
+              194
+            ],
+            "full_cnf_clause_id": 226
+          },
+          {
+            "clause": [
+              198,
+              8
+            ],
+            "full_cnf_clause_id": 713
+          },
+          {
+            "clause": [
+              198,
+              194
+            ],
+            "full_cnf_clause_id": 12016
+          },
+          {
+            "clause": [
+              -4,
+              -198
+            ],
+            "full_cnf_clause_id": 12036
+          },
+          {
+            "clause": [
+              -8,
+              -194
+            ],
+            "full_cnf_clause_id": 12040
+          }
+        ],
+        "added_clauses": [
+          [
+            4
+          ],
+          [
+            198
+          ],
+          []
+        ]
+      },
+      "models": "evidence/coprime_density/N200_models.json.gz",
+      "models_decompressed_sha256": "597eb1d80d356fe5a13afb5fe3e88d37749debc2b9f325845400172df88c2b91",
+      "Boolean_solutions_without_g_lower_bound": 202,
+      "Boolean_solutions_without_g_exact": 2146580529829763661111662098052040685119650922496,
+      "prime_count": 46,
+      "every_coordinate_free": true,
+      "uniform_constants": true,
+      "SIEVE": false,
+      "coarse_constraints": false,
+      "classification": "REJECTED_DENSITY_CALIBRATION",
+      "family_index_count": 12032
+    }
+  ]
+}

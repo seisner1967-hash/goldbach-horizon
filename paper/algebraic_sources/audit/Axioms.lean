@@ -1,0 +1,283 @@
+import AlgebraicGoldbach
+
+-- AlgebraicGoldbach/Soundness.lean
+#print axioms AlgebraicGoldbach.booleanConstraint_eval
+#print axioms AlgebraicGoldbach.booleanConstraint_zero_iff
+#print axioms AlgebraicGoldbach.primePoint_boolean
+#print axioms AlgebraicGoldbach.primePoint_zero
+#print axioms AlgebraicGoldbach.primePoint_one
+#print axioms AlgebraicGoldbach.primePoint_even_gt_two
+#print axioms AlgebraicGoldbach.primePoint_coarse
+#print axioms AlgebraicGoldbach.certificate_excludes_common_zero
+#print axioms AlgebraicGoldbach.certificate_nonzero_at_primePoint
+#print axioms AlgebraicGoldbach.eval_g_primePoint
+#print axioms AlgebraicGoldbach.goldbachCount_positive_iff
+#print axioms AlgebraicGoldbach.goldbachCount_le
+#print axioms AlgebraicGoldbach.certificate_goldbachCount_positive
+#print axioms AlgebraicGoldbach.certificate_implies_goldbach
+#print axioms AlgebraicGoldbach.eval_g_rat_nonzero_iff
+#print axioms AlgebraicGoldbach.certificate_g_rat_positive
+#print axioms AlgebraicGoldbach.bounded_zmod_cast_injective
+#print axioms AlgebraicGoldbach.bounded_zmod_cast_zero_iff
+#print axioms AlgebraicGoldbach.goldbachCount_le_momentBound
+#print axioms AlgebraicGoldbach.bounded_sum_le_momentBound
+#print axioms AlgebraicGoldbach.finiteFieldPolicy_g_nonzero_iff
+#print axioms AlgebraicGoldbach.finiteFieldPolicy_g_zero_iff
+
+-- Calibration/C1.lean
+#print axioms AlgebraicGoldbach.Calibration.mem_primes
+#print axioms AlgebraicGoldbach.Calibration.mem_pairRepresentatives
+#print axioms AlgebraicGoldbach.Calibration.pair_sets_injective
+#print axioms AlgebraicGoldbach.Calibration.mem_unorderedPrimePairs
+#print axioms AlgebraicGoldbach.Calibration.pi_eq_primeCounting
+#print axioms AlgebraicGoldbach.Calibration.r_eq_card_representatives
+#print axioms AlgebraicGoldbach.Calibration.upperEndpoints_subset
+#print axioms AlgebraicGoldbach.Calibration.upperEndpoints_card
+#print axioms AlgebraicGoldbach.Calibration.maximumSupport_card
+#print axioms AlgebraicGoldbach.Calibration.maximumSupport_independent
+#print axioms AlgebraicGoldbach.Calibration.independent_card_le
+#print axioms AlgebraicGoldbach.Calibration.independent_exists_iff
+#print axioms AlgebraicGoldbach.Calibration.boolean_iff
+#print axioms AlgebraicGoldbach.Calibration.mem_support
+#print axioms AlgebraicGoldbach.Calibration.support_subset_primes
+#print axioms AlgebraicGoldbach.Calibration.sum_eq_support_card
+#print axioms AlgebraicGoldbach.Calibration.g_zero_iff_independent
+#print axioms AlgebraicGoldbach.Calibration.characteristic_boolean
+#print axioms AlgebraicGoldbach.Calibration.support_characteristic
+#print axioms AlgebraicGoldbach.Calibration.C1
+#print axioms AlgebraicGoldbach.Calibration.C1_primeCounting
+#print axioms AlgebraicGoldbach.Calibration.r_le_pi
+#print axioms AlgebraicGoldbach.Calibration.no_pseudo_solution_at_full_count_iff
+#print axioms AlgebraicGoldbach.Calibration.r_positive_iff
+#print axioms AlgebraicGoldbach.Calibration.D_true_prime_indicator
+#print axioms AlgebraicGoldbach.Calibration.D_full_count_pins
+
+-- AlgebraicGoldbach/UniformCountermodel.lean
+#print axioms AlgebraicGoldbach.high_bounds
+#print axioms AlgebraicGoldbach.high_odd
+#print axioms AlgebraicGoldbach.bit_boolean
+#print axioms AlgebraicGoldbach.selected_coarse
+#print axioms AlgebraicGoldbach.selected_no_sum
+#print axioms AlgebraicGoldbach.selected_bertrand
+#print axioms AlgebraicGoldbach.bit_goldbach_zero
+#print axioms AlgebraicGoldbach.prime_indicator_bertrand
+#print axioms AlgebraicGoldbach.bit_bertrand_product
+#print axioms AlgebraicGoldbach.prime_bit_boolean
+#print axioms AlgebraicGoldbach.prime_bit_coarse
+#print axioms AlgebraicGoldbach.prime_bit_bertrand_product
+#print axioms AlgebraicGoldbach.bit_coarse
+#print axioms AlgebraicGoldbach.uniform_bertrand_countermodel
+
+-- AlgebraicGoldbach/UniformNonpinning.lean
+#print axioms AlgebraicGoldbach.uniform_model_selects_composite_nine
+#print axioms AlgebraicGoldbach.uniform_model_differs_from_primes
+
+-- AlgebraicGoldbach/BertrandFamily.lean
+#print axioms AlgebraicGoldbach.primePoint_bertrandPolynomial
+#print axioms AlgebraicGoldbach.primePoint_bertrandFamily
+#print axioms AlgebraicGoldbach.modelPoint_boolean
+#print axioms AlgebraicGoldbach.modelPoint_coarse
+#print axioms AlgebraicGoldbach.modelPoint_bertrandPolynomial
+#print axioms AlgebraicGoldbach.modelPoint_bertrandFamily
+#print axioms AlgebraicGoldbach.modelPoint_g_zero
+#print axioms AlgebraicGoldbach.modelPoint_differs_from_primePoint
+#print axioms AlgebraicGoldbach.bertrandFamily_common_zero
+#print axioms AlgebraicGoldbach.bertrandFamily_has_second_boolean_solution
+#print axioms AlgebraicGoldbach.bertrandFamily_no_certificate
+
+-- AlgebraicGoldbach/PinnedControl.lean
+#print axioms AlgebraicGoldbach.complement_involutive
+#print axioms AlgebraicGoldbach.pinned_cross_sum
+#print axioms AlgebraicGoldbach.pinned_telescoping
+#print axioms AlgebraicGoldbach.pinned_control_certificate
+#print axioms AlgebraicGoldbach.pinned_family_pins
+#print axioms AlgebraicGoldbach.pinned_certificate_iff_goldbach
+#print axioms AlgebraicGoldbach.pinned_multiplier_degree_le_one
+#print axioms AlgebraicGoldbach.pinned_B_degree_zero
+#print axioms AlgebraicGoldbach.pinned_summand_degree_le_two
+#print axioms AlgebraicGoldbach.g_degree_le_two
+#print axioms AlgebraicGoldbach.pinned_g_summand_degree_le_two
+
+-- Calibration/LowerBound.lean
+#print axioms AlgebraicGoldbach.LowerBound.falling_ne_zero
+#print axioms AlgebraicGoldbach.LowerBound.falling_back
+#print axioms AlgebraicGoldbach.LowerBound.falling_front
+#print axioms AlgebraicGoldbach.LowerBound.inverse_count_fwdDiff
+#print axioms AlgebraicGoldbach.LowerBound.inverse_count_fwdDiff_ne_zero
+#print axioms AlgebraicGoldbach.LowerBound.cubeContrast_monomial_zero
+#print axioms AlgebraicGoldbach.LowerBound.cubeContrast_eval_zero_of_totalDegree_lt
+#print axioms AlgebraicGoldbach.LowerBound.cubeWeight_indicator
+#print axioms AlgebraicGoldbach.LowerBound.boolValue_indicator_sum
+#print axioms AlgebraicGoldbach.LowerBound.cubeContrast_cardinality
+#print axioms AlgebraicGoldbach.LowerBound.inverse_count_cubeContrast
+#print axioms AlgebraicGoldbach.LowerBound.boolean_inverse_totalDegree_ge
+#print axioms AlgebraicGoldbach.LowerBound.totalDegree_substitution_le
+#print axioms AlgebraicGoldbach.LowerBound.totalDegree_eq_degLex_degree
+#print axioms AlgebraicGoldbach.LowerBound.totalDegree_mul_eq
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.vars_card
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.polynomial_degree_le
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.polynomial_eval
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.point_boolean
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.point_nonprime_zero
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.point_g_zero
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.point_sum
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.certificate_inverse
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.certificate_count_gt_vars
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.certificate_multiplier_ne_zero
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.Dpi_multiplier_degree_lower_bound
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.countConstraint_coeff
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.countConstraint_ne_zero
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.countConstraint_totalDegree
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.Dpi_standard_degree_lower_bound
+#print axioms AlgebraicGoldbach.LowerBound.Restriction.Dpi_certificate_degree_bound
+
+-- Calibration/Growth.lean
+#print axioms AlgebraicGoldbach.Calibration.representatives_subset_maximumSupport_insert
+#print axioms AlgebraicGoldbach.Calibration.pair_count_le_independence_plus_one
+#print axioms AlgebraicGoldbach.Calibration.independence_ge_half_prime_count
+#print axioms AlgebraicGoldbach.Calibration.independence_unbounded_on_even
+#print axioms AlgebraicGoldbach.Calibration.Dpi_standard_degree_unbounded_on_even
+
+-- AlgebraicGoldbach/FactorCoverage.lean
+#print axioms AlgebraicGoldbach.FactorCoverage.minFac_le_horizon
+#print axioms AlgebraicGoldbach.FactorCoverage.primePoint_factorPolynomial
+#print axioms AlgebraicGoldbach.FactorCoverage.primePoint_coverage
+#print axioms AlgebraicGoldbach.FactorCoverage.properDivisors_prime_square
+#print axioms AlgebraicGoldbach.FactorCoverage.coverage_implies_primePins
+#print axioms AlgebraicGoldbach.FactorCoverage.primePins_implies_coverage
+#print axioms AlgebraicGoldbach.FactorCoverage.coverage_iff_primePins
+#print axioms AlgebraicGoldbach.FactorCoverage.square_horizon_pins_prime_coordinates
+#print axioms AlgebraicGoldbach.FactorCoverage.square_horizon_and_sieve_pin_vector
+#print axioms AlgebraicGoldbach.FactorCoverage.modelPoint_small_prime
+#print axioms AlgebraicGoldbach.FactorCoverage.modelPoint_coverage
+#print axioms AlgebraicGoldbach.FactorCoverage.primePoint_horizonFamily
+#print axioms AlgebraicGoldbach.FactorCoverage.modelPoint_horizonFamily
+#print axioms AlgebraicGoldbach.FactorCoverage.horizonFamily_common_zero
+#print axioms AlgebraicGoldbach.FactorCoverage.horizonFamily_no_certificate
+#print axioms AlgebraicGoldbach.FactorCoverage.horizonFamily_has_second_boolean_solution
+
+-- AlgebraicGoldbach/ProperBertrand.lean
+#print axioms AlgebraicGoldbach.ProperBertrand.primePoint_family
+#print axioms AlgebraicGoldbach.ProperBertrand.onePoint_boolean
+#print axioms AlgebraicGoldbach.ProperBertrand.exceptPoint_boolean
+#print axioms AlgebraicGoldbach.ProperBertrand.onePoint_family
+#print axioms AlgebraicGoldbach.ProperBertrand.exceptPoint_family
+#print axioms AlgebraicGoldbach.ProperBertrand.onePoint_differs_from_primePoint
+#print axioms AlgebraicGoldbach.ProperBertrand.family_has_second_boolean_solution
+#print axioms AlgebraicGoldbach.ProperBertrand.family_does_not_pin_any_coordinate
+#print axioms AlgebraicGoldbach.ProperBertrand.modelPoint_family
+#print axioms AlgebraicGoldbach.ProperBertrand.family_common_zero
+#print axioms AlgebraicGoldbach.ProperBertrand.family_no_certificate
+
+-- AlgebraicGoldbach/SignDefinite.lean
+#print axioms AlgebraicGoldbach.SignDefinite.coefficient_on_primes_eq_zero
+#print axioms AlgebraicGoldbach.SignDefinite.nonnegative_equation_vanishes_on_sievePoint
+#print axioms AlgebraicGoldbach.SignDefinite.sign_definite_equation_vanishes_on_sievePoint
+#print axioms AlgebraicGoldbach.SignDefinite.sign_definite_family_preserves_sieve_common_zero
+#print axioms AlgebraicGoldbach.SignDefinite.sign_definite_strengthening_has_no_certificate
+
+-- AlgebraicGoldbach/CoprimeDivisor.lean
+#print axioms AlgebraicGoldbach.CoprimeDivisor.nearFullPrimeSelection_iff_omitted_card_le_one
+#print axioms AlgebraicGoldbach.CoprimeDivisor.pairDivisors_prime_pair
+#print axioms AlgebraicGoldbach.CoprimeDivisor.family_implies_ordered_prime_pair_selected
+#print axioms AlgebraicGoldbach.CoprimeDivisor.family_implies_nearFullPrimeSelection
+#print axioms AlgebraicGoldbach.CoprimeDivisor.nearFullPrimeSelection_implies_family
+#print axioms AlgebraicGoldbach.CoprimeDivisor.family_iff_nearFullPrimeSelection
+#print axioms AlgebraicGoldbach.CoprimeDivisor.family_iff_at_most_one_omitted_prime
+#print axioms AlgebraicGoldbach.CoprimeDivisor.primePoint_family
+#print axioms AlgebraicGoldbach.CoprimeDivisor.onePoint_family
+#print axioms AlgebraicGoldbach.CoprimeDivisor.exceptPoint_family
+#print axioms AlgebraicGoldbach.CoprimeDivisor.family_does_not_pin_any_coordinate
+#print axioms AlgebraicGoldbach.CoprimeDivisor.family_has_second_boolean_solution
+
+-- AlgebraicGoldbach/CoprimeKaryIdeal.lean
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_val
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_prime
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_dvd
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_injective_on
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_image_primeAllowed
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_image_subset_divisors
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.primeAllowed_arithmeticAllowed
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.prime_divisors_eq
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.arithmetic_factorization
+#print axioms AlgebraicGoldbach.CoprimeKaryIdeal.arithmeticIdeal_eq_primeIdeal
+
+-- AlgebraicGoldbach/CoprimeKaryModels.lean
+#print axioms AlgebraicGoldbach.CoprimeKaryModels.family_iff_omitted_card_lt
+
+-- AlgebraicGoldbach/CoprimeKaryCountermodel.lean
+#print axioms AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_omittedPrimes
+#print axioms AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_omitted_card
+#print axioms AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_family
+#print axioms AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_boolean
+#print axioms AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_g_zero
+#print axioms AlgebraicGoldbach.CoprimeKaryCountermodel.family_no_certificate_at_four
+
+-- Calibration/PCRestriction.lean
+#print axioms AlgebraicGoldbach.PCRestriction.Derives.degree_le
+#print axioms AlgebraicGoldbach.PCRestriction.Derives.scalar
+#print axioms AlgebraicGoldbach.PCRestriction.polynomial_nonprime
+#print axioms AlgebraicGoldbach.PCRestriction.polynomial_boolean
+#print axioms AlgebraicGoldbach.PCRestriction.polynomial_g_zero
+#print axioms AlgebraicGoldbach.PCRestriction.restrictedVariable_sum
+#print axioms AlgebraicGoldbach.PCRestriction.polynomial_count
+#print axioms AlgebraicGoldbach.PCRestriction.generator_image
+#print axioms AlgebraicGoldbach.PCRestriction.derivation_restriction
+#print axioms AlgebraicGoldbach.PCRestriction.dpi_refutation_restricts
+#print axioms AlgebraicGoldbach.PCRestriction.dpi_degree_lower_bound_conditional
+
+-- AlgebraicGoldbach/LiteralCube.lean
+#print axioms AlgebraicGoldbach.LiteralCube.Factor.value_boolean
+#print axioms AlgebraicGoldbach.LiteralCube.Factor.value_negate
+#print axioms AlgebraicGoldbach.LiteralCube.cubePoint_boolean
+#print axioms AlgebraicGoldbach.LiteralCube.cubePoint_coarse_zero
+#print axioms AlgebraicGoldbach.LiteralCube.cubePoint_coarse
+#print axioms AlgebraicGoldbach.LiteralCube.cubePoint_complement_product
+#print axioms AlgebraicGoldbach.LiteralCube.cubePoint_g_zero
+#print axioms AlgebraicGoldbach.LiteralCube.literal_eval
+#print axioms AlgebraicGoldbach.LiteralCube.clause_eval
+#print axioms AlgebraicGoldbach.LiteralCube.automatic_eval_zero
+#print axioms AlgebraicGoldbach.LiteralCube.clause_nonzero_iff
+#print axioms AlgebraicGoldbach.LiteralCube.choices_mem_iff
+#print axioms AlgebraicGoldbach.LiteralCube.badSet_eq_piFinset
+#print axioms AlgebraicGoldbach.LiteralCube.choices_card
+#print axioms AlgebraicGoldbach.LiteralCube.badSet_card
+#print axioms AlgebraicGoldbach.LiteralCube.cube_card
+#print axioms AlgebraicGoldbach.LiteralCube.weighted_common_zero
+
+-- AlgebraicGoldbach/LowerBound/BooleanLattice.lean
+#print axioms AlgebraicGoldbach.BooleanLattice.toggle_involutive
+#print axioms AlgebraicGoldbach.BooleanLattice.up_eq_sum
+#print axioms AlgebraicGoldbach.BooleanLattice.down_eq_sum
+#print axioms AlgebraicGoldbach.BooleanLattice.raiseAt_sum
+#print axioms AlgebraicGoldbach.BooleanLattice.lowerAt_sum
+#print axioms AlgebraicGoldbach.BooleanLattice.coordinate_adjoint
+#print axioms AlgebraicGoldbach.BooleanLattice.coordinate_commute
+#print axioms AlgebraicGoldbach.BooleanLattice.coordinate_diagonal
+#print axioms AlgebraicGoldbach.BooleanLattice.adjoint
+#print axioms AlgebraicGoldbach.BooleanLattice.commutator
+#print axioms AlgebraicGoldbach.BooleanLattice.up_injective_below_middle
+
+-- AlgebraicGoldbach/LowerBound/BooleanCoefficients.lean
+#print axioms AlgebraicGoldbach.BooleanCoefficients.support_single_one_add
+#print axioms AlgebraicGoldbach.BooleanCoefficients.coefficientAtom_single_one_add
+#print axioms AlgebraicGoldbach.BooleanCoefficients.coefficients_monomial
+#print axioms AlgebraicGoldbach.BooleanCoefficients.coefficients_X_mul
+
+-- AlgebraicGoldbach/LowerBound/BooleanCoefficientDegree.lean
+#print axioms AlgebraicGoldbach.BooleanCoefficients.support_card_le_exponent_sum
+#print axioms AlgebraicGoldbach.BooleanCoefficients.coefficients_eq_zero_of_totalDegree_lt_card
+
+-- AlgebraicGoldbach/LowerBound/BooleanMultiplierRigidity.lean
+#print axioms AlgebraicGoldbach.BooleanCoefficients.countMul_eq_diagonal_add_up
+#print axioms AlgebraicGoldbach.BooleanCoefficients.top_layer_vanishes_of_countMul_degree_le
+
+-- AlgebraicGoldbach/LowerBound/BooleanCountBridge.lean
+#print axioms AlgebraicGoldbach.BooleanCoefficients.coefficients_count_mul
+
+-- AlgebraicGoldbach/LowerBound/BooleanAnnihilation.lean
+#print axioms AlgebraicGoldbach.BooleanCoefficients.coefficients_boolean_mul
+
+-- AlgebraicGoldbach/LowerBound/CountVariableCommutation.lean
+#print axioms AlgebraicGoldbach.BooleanCoefficients.bitMul_countMul
+

@@ -1,0 +1,1175 @@
+{
+  "transcription": "Selected existing audit fields; local clone path and unrelated inventory omitted, no fresh verification",
+  "original_artifact": {
+    "source_collection": "AlgebraicGoldbach_20261004",
+    "path": "judge/lean_audit_e5c4e11.json",
+    "source_commit": "6f7d181a5440ad9c7c94c362efa968892dcd17c3",
+    "sha256": "388081521a8caf3640677caa56b6c6faa1e3b9330f704fced9e7d86c20b02ba1"
+  },
+  "role": "A6 Judge",
+  "source_commit": "e5c4e119473e0023b0f500e322b5ed1ac4013e00",
+  "project_build_artifacts_inherited": false,
+  "build": "lake build",
+  "pinned_lake_version": "Lake version 5.0.0-1165156 (Lean version 4.15.0)",
+  "frozen_target_sha256": "4ab456c5219b897d87b28c338ff90f478332724c4a1499a7d63968811339a61c",
+  "axioms_independently_reprinted": {
+    "AlgebraicGoldbach.booleanConstraint_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.booleanConstraint_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.primePoint_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.primePoint_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.primePoint_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.primePoint_even_gt_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.primePoint_coarse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.certificate_excludes_common_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.certificate_nonzero_at_primePoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.eval_g_primePoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.goldbachCount_positive_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.goldbachCount_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.certificate_goldbachCount_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.certificate_implies_goldbach": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.eval_g_rat_nonzero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.certificate_g_rat_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bounded_zmod_cast_injective": [
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bounded_zmod_cast_zero_iff": [
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.goldbachCount_le_momentBound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bounded_sum_le_momentBound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.finiteFieldPolicy_g_nonzero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.finiteFieldPolicy_g_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.mem_primes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.mem_pairRepresentatives": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.pair_sets_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.mem_unorderedPrimePairs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.pi_eq_primeCounting": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.r_eq_card_representatives": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.upperEndpoints_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.upperEndpoints_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.maximumSupport_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.maximumSupport_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.independent_card_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.independent_exists_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.boolean_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.mem_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.support_subset_primes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.sum_eq_support_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.g_zero_iff_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.characteristic_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.support_characteristic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.C1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.C1_primeCounting": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.r_le_pi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.no_pseudo_solution_at_full_count_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.r_positive_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.D_true_prime_indicator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.D_full_count_pins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.high_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.high_odd": [
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bit_boolean": [
+      "propext"
+    ],
+    "AlgebraicGoldbach.selected_coarse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.selected_no_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.selected_bertrand": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bit_goldbach_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.prime_indicator_bertrand": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bit_bertrand_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.prime_bit_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.prime_bit_coarse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.prime_bit_bertrand_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bit_coarse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.uniform_bertrand_countermodel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.uniform_model_selects_composite_nine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.uniform_model_differs_from_primes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.primePoint_bertrandPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.primePoint_bertrandFamily": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.modelPoint_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.modelPoint_coarse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.modelPoint_bertrandPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.modelPoint_bertrandFamily": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.modelPoint_g_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.modelPoint_differs_from_primePoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bertrandFamily_common_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bertrandFamily_has_second_boolean_solution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.bertrandFamily_no_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.complement_involutive": [
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_cross_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_telescoping": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_control_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_family_pins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_certificate_iff_goldbach": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_multiplier_degree_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_B_degree_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_summand_degree_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.g_degree_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.pinned_g_summand_degree_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.falling_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.falling_back": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.falling_front": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.inverse_count_fwdDiff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.inverse_count_fwdDiff_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.cubeContrast_monomial_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.cubeContrast_eval_zero_of_totalDegree_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.cubeWeight_indicator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.boolValue_indicator_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.cubeContrast_cardinality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.inverse_count_cubeContrast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.boolean_inverse_totalDegree_ge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.totalDegree_substitution_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.totalDegree_eq_degLex_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.totalDegree_mul_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.vars_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.polynomial_degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.polynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.point_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.point_nonprime_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.point_g_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.point_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.certificate_inverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.certificate_count_gt_vars": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.certificate_multiplier_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.Dpi_multiplier_degree_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.countConstraint_coeff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.countConstraint_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.countConstraint_totalDegree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.Dpi_standard_degree_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LowerBound.Restriction.Dpi_certificate_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.representatives_subset_maximumSupport_insert": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.pair_count_le_independence_plus_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.independence_ge_half_prime_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.independence_unbounded_on_even": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.Calibration.Dpi_standard_degree_unbounded_on_even": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.minFac_le_horizon": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.primePoint_factorPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.primePoint_coverage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.properDivisors_prime_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.coverage_implies_primePins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.primePins_implies_coverage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.coverage_iff_primePins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.square_horizon_pins_prime_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.square_horizon_and_sieve_pin_vector": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.modelPoint_small_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.modelPoint_coverage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.primePoint_horizonFamily": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.modelPoint_horizonFamily": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.horizonFamily_common_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.horizonFamily_no_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.FactorCoverage.horizonFamily_has_second_boolean_solution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.primePoint_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.onePoint_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.exceptPoint_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.onePoint_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.exceptPoint_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.onePoint_differs_from_primePoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.family_has_second_boolean_solution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.family_does_not_pin_any_coordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.modelPoint_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.family_common_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.ProperBertrand.family_no_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.SignDefinite.coefficient_on_primes_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.SignDefinite.nonnegative_equation_vanishes_on_sievePoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.SignDefinite.sign_definite_equation_vanishes_on_sievePoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.SignDefinite.sign_definite_family_preserves_sieve_common_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.SignDefinite.sign_definite_strengthening_has_no_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.nearFullPrimeSelection_iff_omitted_card_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.pairDivisors_prime_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.family_implies_ordered_prime_pair_selected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.family_implies_nearFullPrimeSelection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.nearFullPrimeSelection_implies_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.family_iff_nearFullPrimeSelection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.family_iff_at_most_one_omitted_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.primePoint_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.onePoint_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.exceptPoint_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.family_does_not_pin_any_coordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeDivisor.family_has_second_boolean_solution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_val": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_dvd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_injective_on": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_image_primeAllowed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.leastFactor_image_subset_divisors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.primeAllowed_arithmeticAllowed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.prime_divisors_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.arithmetic_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryIdeal.arithmeticIdeal_eq_primeIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryModels.family_iff_omitted_card_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_omittedPrimes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_omitted_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryCountermodel.modelAtFour_g_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.CoprimeKaryCountermodel.family_no_certificate_at_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.Derives.degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.Derives.scalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.polynomial_nonprime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.polynomial_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.polynomial_g_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.restrictedVariable_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.polynomial_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.generator_image": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.derivation_restriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.dpi_refutation_restricts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.PCRestriction.dpi_degree_lower_bound_conditional": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.Factor.value_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.Factor.value_negate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.cubePoint_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.cubePoint_coarse_zero": [
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.cubePoint_coarse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.cubePoint_complement_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.cubePoint_g_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.literal_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.clause_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.automatic_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.clause_nonzero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.choices_mem_iff": [
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.badSet_eq_piFinset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.choices_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.badSet_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.cube_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.LiteralCube.weighted_common_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.toggle_involutive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.up_eq_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.down_eq_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.raiseAt_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.lowerAt_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.coordinate_adjoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.coordinate_commute": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.coordinate_diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.adjoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.commutator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanLattice.up_injective_below_middle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.support_single_one_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.coefficientAtom_single_one_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.coefficients_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.coefficients_X_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.support_card_le_exponent_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.coefficients_eq_zero_of_totalDegree_lt_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.countMul_eq_diagonal_add_up": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.top_layer_vanishes_of_countMul_degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.coefficients_count_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.coefficients_boolean_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AlgebraicGoldbach.BooleanCoefficients.bitMul_countMul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "scope": "Auxiliary Lean ladder/results only; the frozen open target is not imported or proved, so WON is forbidden."
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "negative-results-publication-delivery-v1",
+  "author": "Durand Serge",
+  "branch": "paper-negative-results-2026-10",
+  "repository_base_commit": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+  "total_pdf_pages": 27,
+  "main_text_pages": 12,
+  "abstract_characters": 1288,
+  "document_compile_and_claim_review": "PASS",
+  "visual_review": "PASS",
+  "publication_commit": "The Git commit containing this manifest; inspect repository history.",
+  "pdflatex_executed": false,
+  "actual_engine": "Tectonic 0.17.0+20260731",
+  "actual_bibliography_engine": "BibTeX 0.99d",
+  "files": [
+    {
+      "path": "paper/main.pdf",
+      "sha256": "f2d160f6fe4cce6abaebff421e6fad05c79a70130b25f0c04dfb8b80fd0a9349",
+      "bytes": 142758
+    },
+    {
+      "path": "paper/main.tex",
+      "sha256": "e71062ce65a4693839daa8e0f5f0b4d1582d3b3fc60894550eaff7f8bb6eb922",
+      "bytes": 18117
+    },
+    {
+      "path": "paper/main.bbl",
+      "sha256": "b62a258fb19f9f663fa1cf2a4548be8911ac081a77ff5e174c9dbe1849555235",
+      "bytes": 3390
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "cdf441656d64673f645a078fcab29eaab475483ea7ca1cfc083dea3b1b2bdf76",
+      "bytes": 4162
+    },
+    {
+      "path": "paper/report.bst",
+      "sha256": "7600077036624acff6c047ee247fb3ab29721d49a1b393dd2452e7c78de80014",
+      "bytes": 2398
+    },
+    {
+      "path": "paper/arxiv_submission.tar.gz",
+      "sha256": "5324c125bdcfee18c4adb51b95fa856c49f1ad195d0dab89d29774dd664481f3",
+      "bytes": 37562
+    },
+    {
+      "path": "paper/arxiv_bundle_manifest.json",
+      "sha256": "1898acf09ed8d9217366582904f04e4b37addea7d4280a2280fa7f40a04b2daa",
+      "bytes": 2185
+    },
+    {
+      "path": "paper/evidence_map.json",
+      "sha256": "9a8a4215435470b1584c7d51af2eb4ec8668a02947e3eb82e9a2558624436d99",
+      "bytes": 5359204
+    },
+    {
+      "path": "paper/REVIEW_CHECKLIST.md",
+      "sha256": "4b9ffc5fcb2b11814991d9cd32ffbba0467117cf0a24a4e7258014b7461c729b",
+      "bytes": 4200
+    },
+    {
+      "path": "paper/analytic_inventory.json",
+      "sha256": "f35bd69e537665b336c02873e1fb88fbc6e84474c37ce34ab54e2b9601800e6a",
+      "bytes": 3256010
+    },
+    {
+      "path": "paper/analytic_lean_inventory.csv",
+      "sha256": "def3611e56f0ac0272eb12a82cce6cf1b2229419d8042049e2a0cb8e3e90c104",
+      "bytes": 2105451
+    },
+    {
+      "path": "paper/algebraic_inventory.json",
+      "sha256": "75a6d347930e9dc40991cd2f0177d64a0b29ec2c6ad09410ac5d28e9beb94145",
+      "bytes": 468180
+    },
+    {
+      "path": "paper/algebraic_lean_inventory.csv",
+      "sha256": "9b656511f3925cff2d4055b48a0bf0a7f5694819eeb5d78115c6a1f18a911fc5",
+      "bytes": 201146
+    },
+    {
+      "path": "paper/A5_REVIEW.json",
+      "sha256": "3c6ada3c669ce575347ac596a37286929ec18d1d11b03ec2d521d6b341a43192",
+      "bytes": 18010
+    },
+    {
+      "path": "paper/A6_COMPILE_CLAIM_REVIEW.json",
+      "sha256": "c511ea2399679a9777205bb1ff11bb38d4a3a2bee2585f5ed6aa43bd115781ee",
+      "bytes": 7488
+    },
+    {
+      "path": "paper/PDF_VISUAL_REVIEW.json",
+      "sha256": "1debc0d161e3724fb97ed673e682e3fe169dfa41a34e60f58eea50ce5e3577b1",
+      "bytes": 970
+    },
+    {
+      "path": "paper/BUILDING.md",
+      "sha256": "bf1b5394272456a1574aba4444913ac8a8fba013cc8ec73a4d00699b61f650d0",
+      "bytes": 1295
+    }
+  ],
+  "scope": "Existing-artifact negative results and formalization; no new mathematical executions or credit. Staged-publication scan is recorded separately."
+}

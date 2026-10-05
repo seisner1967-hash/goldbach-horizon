@@ -1,0 +1,365 @@
+{
+  "schema": "publication-document-review-v1",
+  "reviewer_role": "A5 manuscript adversary",
+  "review_date": "2026-10-05",
+  "author": "Durand Serge",
+  "verdict": "PASS_SCOPED_MANUSCRIPT_CLAIM_REVIEW",
+  "scope": "Document review against existing recorded artifacts. No new mathematical executions, formal builds, experiment reruns, campaign audits, credit decisions or Git mutations were performed by this reviewer.",
+  "publication_snapshot": "f7e1fda19a9781b6f4ae6ebcae1dfc81b1b41460",
+  "reviewed_inputs": [
+    {
+      "path": "paper/REVIEW_CHECKLIST.md",
+      "bytes": 4200,
+      "sha256": "4b9ffc5fcb2b11814991d9cd32ffbba0467117cf0a24a4e7258014b7461c729b"
+    },
+    {
+      "path": "paper/abstract.txt",
+      "bytes": 1289,
+      "sha256": "02277eeb3fe9ef529e838ab51fb073efe3198dc4a1945a47f18bc9b983668999"
+    },
+    {
+      "path": "paper/algebraic_appendix.tex",
+      "bytes": 18925,
+      "sha256": "1728dbb3f1b5645854b88539987318e41afe37474579c86e639f5b8c2076bc14"
+    },
+    {
+      "path": "paper/algebraic_tables.tex",
+      "bytes": 6768,
+      "sha256": "0580190bfba0fafdfedb8e30777779c4e4fce0838d03b376be4b90c80c2c5604"
+    },
+    {
+      "path": "paper/analytic_appendix.tex",
+      "bytes": 30699,
+      "sha256": "df5aed92a6a870406db934849907726cb2a852c8f5bb85068425bf224af37f78"
+    },
+    {
+      "path": "paper/analytic_obstructions.tex",
+      "bytes": 9248,
+      "sha256": "63d016bf42deeaa2a978fd9c4fecd43f09d20b197e2701154d23407bda537d10"
+    },
+    {
+      "path": "paper/analytic_sections.tex",
+      "bytes": 9900,
+      "sha256": "10c03fa9a376c1e6310ccf332e744410cb8c487bcd78688855f170d5729710ec"
+    },
+    {
+      "path": "paper/degree_section.tex",
+      "bytes": 3345,
+      "sha256": "a6f1bb029c42c3c22c9581df3b3326bdae714fadd0a6e8581d1f85f408d24070"
+    },
+    {
+      "path": "paper/evidence_map.json",
+      "bytes": 5359204,
+      "sha256": "9a8a4215435470b1584c7d51af2eb4ec8668a02947e3eb82e9a2558624436d99"
+    },
+    {
+      "path": "paper/main.tex",
+      "bytes": 18117,
+      "sha256": "e71062ce65a4693839daa8e0f5f0b4d1582d3b3fc60894550eaff7f8bb6eb922"
+    },
+    {
+      "path": "paper/numerical_section.tex",
+      "bytes": 2576,
+      "sha256": "3219006f88d4cfa8bb0885a56259053c7035bf59a5ac169aae83e95a02adcc3b"
+    },
+    {
+      "path": "paper/references.bib",
+      "bytes": 4162,
+      "sha256": "cdf441656d64673f645a078fcab29eaab475483ea7ca1cfc083dea3b1b2bdf76"
+    },
+    {
+      "path": "paper/scope_statement.json",
+      "bytes": 1208,
+      "sha256": "c17bef20623589986a708a570cb618f87207ab132d8704fe04f3dd05ae4eb71a"
+    },
+    {
+      "path": "paper/report.bst",
+      "bytes": 2398,
+      "sha256": "7600077036624acff6c047ee247fb3ab29721d49a1b393dd2452e7c78de80014"
+    },
+    {
+      "path": "paper/A6_COMPILE_CLAIM_REVIEW.json",
+      "bytes": 7488,
+      "sha256": "c511ea2399679a9777205bb1ff11bb38d4a3a2bee2585f5ed6aa43bd115781ee"
+    }
+  ],
+  "structural_evidence_map_checks": {
+    "claims": 2311,
+    "unique_claim_ids": 2311,
+    "distinct_source_bindings": 209,
+    "used_manuscript_evidence_keys": 169,
+    "unresolved_used_keys": 0,
+    "empty_claim_status_statement_or_evidence": 0,
+    "binding_checks": "Each source binding has a portable repository-relative path, a 64-character SHA-256 field and an existing referenced file. Commit identifiers, when present, are full 40-character hexadecimal identifiers. TeX macro parameter placeholders are excluded from the key-use count.",
+    "limitation": "These checks establish documentary completeness and key resolution. They do not replay the historical checks or independently verify every mathematical proof or source hash."
+  },
+  "manual_claim_checks": [
+    {
+      "claim_ids": [
+        "R-STOP",
+        "R-FROZEN",
+        "R-PROTOCOL",
+        "R-OUT-OF-SCOPE"
+      ],
+      "result": "PASS",
+      "finding": "The report is a consolidation of established formalizations, recorded obstructions and finite observations. It makes no conclusion resolving binary Goldbach, excludes neither complete programme, does not claim novelty for classical facts, and identifies the sole human author and model-provider/referee limitations."
+    },
+    {
+      "claim_ids": [
+        "R-DEGREE",
+        "ALG-PC-HYPOTHESIS",
+        "R-PC"
+      ],
+      "result": "PASS",
+      "finding": "The rational static Nullstellensatz lower bound is universal only in its stated calibration and assumptions. Equality is limited to 26 measured instances. The matching universal construction remains open. The polynomial-calculus restriction is formalized, while the external KnapsackLowerBound predicate remains an explicit hypothesis and its conditional consequence stays in Appendix B."
+    },
+    {
+      "claim_ids": [
+        "ALG-PC-ALPHA-GROUPING",
+        "R-ALGEBRAIC"
+      ],
+      "result": "PASS",
+      "finding": "The 26 NS rows, 11 rational/finite-field PC rows, three finite-field-only PC rows and repeated-alpha grouping match the existing finite CSV/JSON tables. Grouping is described as finite consistency and is not promoted to a universal PC formula."
+    },
+    {
+      "claim_ids": [
+        "R-ALGEBRAIC"
+      ],
+      "result": "PASS",
+      "finding": "Common-zero claims name their constraint families, uniformity and direct-pinning controls. Coarse, sieve, dyadic, full, factor-horizon and proper Bertrand families are kept distinct. The proper family retains the m>=2 condition. C0/C1 circularity, finite literal models, the arbitrary rational factor-horizon statement and ordinary degree conventions are scoped to their recorded objects."
+    },
+    {
+      "claim_ids": [
+        "ALG-INVENTORY-SCOPE",
+        "R-REPRO"
+      ],
+      "result": "PASS",
+      "finding": "The accepted algebraic bundle is identified by its existing proof/Judge/source snapshots. Counts distinguish 25 modules, 233 theorem/lemma names, 204 printed theorem/lemma axiom headers and 356 inventory rows (233 theorem/lemma, 120 other named declarations, three constructors). Additional definition or constructor axiom prints are not counted as theorems. Missing separate axiom prints use NR and are not represented as empty axiom lists."
+    },
+    {
+      "claim_ids": [
+        "A-GAMMA-CHAIN",
+        "A-TRUNCATION-BOUNDARY",
+        "R-ANALYTIC-GAP"
+      ],
+      "result": "PASS",
+      "finding": "The analytic text preserves the actual additive Lambda projection, prime-power scope, canonical quantization, infinite-sum interchange requirements and nonzero individual-kernel integration-by-parts boundary. Absolute-square substitutes and envelope-to-sign implications are not asserted. A written weighted-Lambda tail remains SOURCE where the saved build failed."
+    },
+    {
+      "claim_ids": [
+        "A-GAMMA-CHAIN",
+        "R-PROTOCOL"
+      ],
+      "result": "PASS",
+      "finding": "Existing successful rows within globally failed audit batches are marked rowPASS, never whole-batch PASS. The Gamma local module in failed batch 26, other retained rows of failed batches 6, 7, 8, 9 and 11, and failed batch 36 tail/geometry outcomes are distinguished. Existing credit is not increased by manuscript preparation."
+    },
+    {
+      "claim_ids": [
+        "A-NUMERICAL",
+        "R-NUMERICAL",
+        "R-THRESHOLD"
+      ],
+      "result": "PASS",
+      "finding": "The numerical section was compared manually with the saved numerical_verdict.json: its single N=100000000 input, K=2^27, S=2^58, five modular residues, CRT product, reconstructed integer, 5761455 prime records and quantization-envelope values agree. The native Lean refinement, real-log quantization, Mellin truncation, D_N and WIN flags are false. The finite computation is outside the stated log N>=10^24 analytic onset and supplies no verification of the intervening interval."
+    },
+    {
+      "claim_ids": [
+        "A-ARITHMETIC-OBSTRUCTIONS",
+        "A-FINITE-FALSIFIERS"
+      ],
+      "result": "PASS",
+      "finding": "Ten credited compiled obstruction groups retain their guarded intermediate scopes. Thirteen historical finite falsifiers retain Observed status and their exact saved inputs. The native connection counterexample is finite arithmetic. Finite-window absence of a counterexample is not promoted to a theorem."
+    },
+    {
+      "claim_ids": [
+        "R-OUT-OF-SCOPE",
+        "analytic.declaration.EulerAnchor.GoldbachRound16.Anchor.canonical_least_missing_prime_margin"
+      ],
+      "result": "PASS",
+      "finding": "Appendix B retains the quantitative premise 2541/4096<=twinConstant and the even/nonzero-input conditions. No discharge or unconditional singular-series margin is claimed. Material relying on unproved project axioms or physical analogies is excluded from established results; historical repository material requires existing Judge credit."
+    },
+    {
+      "claim_ids": [
+        "R-MSC"
+      ],
+      "result": "PASS",
+      "finding": "The eleven bibliography records and MSC metadata are supported by the saved bibliography verification artifact. This reviewer read that verification and did not perform a new literature-verification campaign."
+    }
+  ],
+  "inventory_interpretation": {
+    "result": "PASS",
+    "selected_analytic_human_paraphrases": 88,
+    "electronic_analytic_declaration_rows": 1768,
+    "source_comment_fallbacks": 149,
+    "explicit_missing_paraphrase_labels": 1531,
+    "qualification": "Extracted local headers are explicitly textual rather than elaborated Lean types. Ambient binders and contexts are retained in the pinned full sources; the table does not pretend that a generic source locator is an informal theorem statement. Genuine mathematical source identifiers remain exact, without being used as physical arguments."
+  },
+  "resolved_review_findings": [
+    "Selected analytic rows now contain human, scope-qualified paraphrases; remaining electronic omissions are labelled explicitly.",
+    "Textual header scope and ambient-context limitations are stated in the inventory and appendix.",
+    "The tail-envelope cost row is confined to the proposed written envelope, rather than the true error or all algorithms.",
+    "Algebraic row evidence keys, uniformity and direct-pinning controls are explicit.",
+    "The Boolean axiom legend uses its concrete standard-axiom label; no undefined abbreviation remains in the reviewed representative table.",
+    "The quantitative EulerAnchor premise is recorded explicitly in Appendix B.",
+    "The unordered-pair moment paraphrase says one half of the sum of the squared total and the diagonal square sum.",
+    "New generated text avoids machine-specific validation literals; compiler dependency caches are outside intended publication content."
+  ],
+  "pre_staging_source_scan": {
+    "status": "PASS_FOR_SCANNED_TEXT",
+    "text_files_scanned": 113,
+    "temporary_compiler_files_excluded": 432,
+    "roots": "New UTF-8 publication text under paper plus README.md and CITATION.cff; temporary compilation directories excluded.",
+    "categories": [
+      "local drive or home-path literals",
+      "machine-specific identity literals",
+      "obvious API credentials or tokens",
+      "unapproved private email addresses"
+    ],
+    "findings_count": 0,
+    "allowed_public_author_email": "seisner1967@gmail.com",
+    "qualification": "This scan preceded creation of this review artifact and completion of the PDF/source archive. The final staged scan must include the review artifact and the actual publication deliverables after cache cleanup. Suspect values are never echoed into a report."
+  },
+  "abstract_check": {
+    "characters_excluding_terminal_newline": 1288,
+    "maximum": 1900,
+    "result": "PASS"
+  },
+  "remaining_publication_gates": [
+    "Root final staged scan of the PDF, compiled bibliography, source archive and all new publication files after compiler-cache cleanup.",
+    "Refresh snapshot bindings and rereview affected wording if any reviewed file changes after this report."
+  ],
+  "limitations": [
+    "PASS is a manuscript claim-to-existing-evidence review, not external mathematical validation or peer review.",
+    "No new Lean, solver, certificate, numerical experiment or frozen-target execution was performed.",
+    "A well-formed key and recorded status do not independently establish the correctness of the underlying interpretation.",
+    "Publication, repository mutation and final release decisions remain with the coordinating agent and author."
+  ],
+  "open_manuscript_claim_blockers": [],
+  "release_authorized_by_this_report": false,
+  "review_history": [
+    {
+      "event": "Initial scoped manuscript claim review",
+      "review_date": "2026-10-05",
+      "report_sha256_before_refresh": "3b5a53238c70fa5a530d73fe04166b8509e99df5c86b041f7babef6c2b8702fa",
+      "verdict": "PASS_SCOPED_MANUSCRIPT_CLAIM_REVIEW",
+      "reviewed_inputs": [
+        {
+          "path": "paper/REVIEW_CHECKLIST.md",
+          "bytes": 4200,
+          "sha256": "4b9ffc5fcb2b11814991d9cd32ffbba0467117cf0a24a4e7258014b7461c729b"
+        },
+        {
+          "path": "paper/abstract.txt",
+          "bytes": 1289,
+          "sha256": "02277eeb3fe9ef529e838ab51fb073efe3198dc4a1945a47f18bc9b983668999"
+        },
+        {
+          "path": "paper/algebraic_appendix.tex",
+          "bytes": 18925,
+          "sha256": "1728dbb3f1b5645854b88539987318e41afe37474579c86e639f5b8c2076bc14"
+        },
+        {
+          "path": "paper/algebraic_tables.tex",
+          "bytes": 6768,
+          "sha256": "ac00ead7fd9effc363bfc5605904917556e5c1548a599edbdbd5ecec47b02933"
+        },
+        {
+          "path": "paper/analytic_appendix.tex",
+          "bytes": 30699,
+          "sha256": "df5aed92a6a870406db934849907726cb2a852c8f5bb85068425bf224af37f78"
+        },
+        {
+          "path": "paper/analytic_obstructions.tex",
+          "bytes": 9248,
+          "sha256": "63d016bf42deeaa2a978fd9c4fecd43f09d20b197e2701154d23407bda537d10"
+        },
+        {
+          "path": "paper/analytic_sections.tex",
+          "bytes": 9900,
+          "sha256": "10c03fa9a376c1e6310ccf332e744410cb8c487bcd78688855f170d5729710ec"
+        },
+        {
+          "path": "paper/degree_section.tex",
+          "bytes": 3345,
+          "sha256": "a6f1bb029c42c3c22c9581df3b3326bdae714fadd0a6e8581d1f85f408d24070"
+        },
+        {
+          "path": "paper/evidence_map.json",
+          "bytes": 5359204,
+          "sha256": "9a8a4215435470b1584c7d51af2eb4ec8668a02947e3eb82e9a2558624436d99"
+        },
+        {
+          "path": "paper/main.tex",
+          "bytes": 18093,
+          "sha256": "2688c1f501ea5287702126be3bcf84e63d98a02fe2d5bfa82996b2072889c5ab"
+        },
+        {
+          "path": "paper/numerical_section.tex",
+          "bytes": 2532,
+          "sha256": "3453c6ab1053aad5b0a76974151ef8d0ec39f807d8dae56c10f53fa5d820ea9c"
+        },
+        {
+          "path": "paper/references.bib",
+          "bytes": 4162,
+          "sha256": "cdf441656d64673f645a078fcab29eaab475483ea7ca1cfc083dea3b1b2bdf76"
+        },
+        {
+          "path": "paper/scope_statement.json",
+          "bytes": 1208,
+          "sha256": "c17bef20623589986a708a570cb618f87207ab132d8704fe04f3dd05ae4eb71a"
+        }
+      ],
+      "pending_at_that_time": [
+        "A6 document compilation and layout checks",
+        "Final source archive and staged content scan"
+      ]
+    },
+    {
+      "event": "Post-compilation formatting review and source-binding refresh",
+      "review_date": "2026-10-05",
+      "changed_input_bindings": [
+        {
+          "path": "paper/algebraic_tables.tex",
+          "previous_sha256": "ac00ead7fd9effc363bfc5605904917556e5c1548a599edbdbd5ecec47b02933",
+          "final_sha256": "0580190bfba0fafdfedb8e30777779c4e4fce0838d03b376be4b90c80c2c5604"
+        },
+        {
+          "path": "paper/main.tex",
+          "previous_sha256": "2688c1f501ea5287702126be3bcf84e63d98a02fe2d5bfa82996b2072889c5ab",
+          "final_sha256": "e71062ce65a4693839daa8e0f5f0b4d1582d3b3fc60894550eaff7f8bb6eb922"
+        },
+        {
+          "path": "paper/numerical_section.tex",
+          "previous_sha256": "3453c6ab1053aad5b0a76974151ef8d0ec39f807d8dae56c10f53fa5d820ea9c",
+          "final_sha256": "3219006f88d4cfa8bb0885a56259053c7035bf59a5ac169aae83e95a02adcc3b"
+        }
+      ],
+      "manual_read_files": [
+        "paper/main.tex",
+        "paper/algebraic_tables.tex",
+        "paper/numerical_section.tex",
+        "paper/report.bst",
+        "paper/A6_COMPILE_CLAIM_REVIEW.json"
+      ],
+      "finding": "Changes are typography and layout only: Type1 font and math-alphabet declarations, identifier/URL breaks, table column widths, bibliography style and decimal display rows. The recorded mathematical values, hypotheses, status qualifiers and evidence keys are unchanged.",
+      "claim_map_unchanged": true,
+      "verdict": "PASS_SCOPED_MANUSCRIPT_CLAIM_REVIEW"
+    }
+  ],
+  "fresh_document_compile_evidence": {
+    "path": "paper/A6_COMPILE_CLAIM_REVIEW.json",
+    "sha256": "c511ea2399679a9777205bb1ff11bb38d4a3a2bee2585f5ed6aa43bd115781ee",
+    "status": "PASS",
+    "engine": "Tectonic",
+    "actual_bibtex_engine": "BibTeX 0.99d",
+    "total_pdf_pages": 27,
+    "main_text_pages": 12,
+    "overfull_boxes": 0,
+    "unresolved_citations_or_references": 0,
+    "pdf_path": "paper/main.pdf",
+    "pdf_sha256": "f2d160f6fe4cce6abaebff421e6fad05c79a70130b25f0c04dfb8b80fd0a9349",
+    "qualification": "A6 performed a separate fresh document compilation and claim-to-existing-evidence review. A5 read its report and the changed manuscript sources; this is not external mathematical validation.",
+    "visual_review": "The coordinating agent reported visual inspection of all 27 pages plus selected full-size pages, with no clipping or readability blocker. A5 did not independently repeat that visual inspection.",
+    "compatibility_limitation": "Actual pdflatex was unavailable. A6 executed Tectonic and genuine BibTeX, using cached resources, an authored bibliography style and portable Type1 fonts."
+  }
+}
